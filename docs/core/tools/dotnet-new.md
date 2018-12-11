@@ -1,15 +1,13 @@
 ---
-title: Yeni komut dotnet - .NET Core CLI
+title: DotNet yeni komutu
 description: Belirtilen şablonu temel alan yeni .NET Core projeleri dotnet yeni bir komut oluşturur.
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188214"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169699"
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -71,6 +69,7 @@ Komutu, şablonları, varsayılan listesini içerir. Kullanım `dotnet new -l` k
 | Sınıf kitaplığı                                | `classlib`       | [C#], F#, VB  |
 | Birim testi projesi                            | `mstest`         | [C#], F#, VB  |
 | xUnit test projesi                           | `xunit`          | [C#], F#, VB  |
+| NUnit test projesi                           | `nunit`          | [C#], F#, VB  |
 | Razor sayfası                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |
@@ -507,7 +506,7 @@ Her proje şablonu, ek seçenekler kullanılabilir olabilir. Çekirdek şablonla
 
 ## <a name="examples"></a>Örnekler
 
-Geçerli dizinde bir F # konsol uygulaması projesi oluşturun:
+Oluşturma bir F# konsol uygulama projesi geçerli dizin:
 
 `dotnet new console -lang F#`
 

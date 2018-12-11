@@ -3,19 +3,19 @@ title: Sürüm oluşturma ve .NET kitaplıkları
 description: Sürüm oluşturma .NET kitaplıkları için en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187864"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169605"
 ---
 # <a name="versioning"></a>Sürüm oluşturma
 
 Yazılım kitaplığı sürüm 1.0 nadiren tamamlanmıştır. İyi kitaplıkları ekleme özellikleri, hataları düzeltiyor ve performansı iyileştirme zamanla evrim. Mevcut kullanıcıları bozmadan her sürümü ile ek değer sağlayan bir .NET Kitaplığı'nın yeni sürümleri serbest bırakabilirsiniz önemlidir.
 
-## <a name="breaking-changes"></a>Bozucu değişiklikler
+## <a name="breaking-changes"></a>Yeni değişiklikler
 
 Sürümleri arasında bozucu değişiklikleri işleme hakkında daha fazla bilgi için bkz: [bozucu değişiklikler](./breaking-changes.md).
 
@@ -77,12 +77,13 @@ Derleme dosyası sürümü Windows dosya sürümünü görüntülemek için kull
 
 ![Windows Gezgini](./media/versioning/win-properties.png "Windows Gezgini")
 
-> [!NOTE]
-> Bu sürüm biçimi izlemiyorsa zararsız bir yapı uyarısı tetiklenir `Major.Minor.Build.Revision`. Uyarıyı güvenle yoksayılabilir.
-
 **✔️ DÜŞÜNÜN** sürekli tümleştirme dahil olmak üzere, yapı numarası olarak AssemblyFileVersion düzeltme.
 
 > Örneğin, sürüm 1.0.0 projenizin oluşturuyorsanız ve, AssemblyFileVersion 1.0.0.99 sürekli tümleştirme yapı numarası 99 olduğundan.
+
+**✔️ YAPMAK** biçimini kullanın `Major.Minor.Build.Revision` dosya sürümü için.
+
+> Dosya sürümü .NET tarafından hiçbir zaman kullanılırken [Windows dosya sürümünü bekliyor](/windows/desktop/menurc/versioninfo-resource) olması `Major.Minor.Build.Revision` biçimi. Sürüm şu biçimi takip değil, bir uyarı oluşturulur.
 
 ### <a name="assembly-informational-version"></a>Derleme Bilgilendirme sürümü
 
@@ -92,10 +93,13 @@ Derleme Bilgilendirme sürümü ek sürüm bilgileri kaydetmek için kullanılı
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
 
+> [!NOTE]
+> Bu sürüm biçimi izleyin değil, bir yapı uyarısı Visual Studio'nun eski sürümlerini yükseltmek `Major.Minor.Build.Revision`. Uyarıyı güvenle yoksayılabilir.
+
 **❌ KAÇININ** derleme Bilgilendirme sürümü kendiniz ayarlama.
 
 > NuGet ve kaynak denetimi meta verilerini içeren sürüm otomatik olarak oluşturulacak SourceLink izin verir.
 
 >[!div class="step-by-step"]
-[Önceki](./publish-nuget-package.md)
-[İleri](./breaking-changes.md)
+>[Önceki](publish-nuget-package.md)
+>[İleri](breaking-changes.md)

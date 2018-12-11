@@ -1,15 +1,15 @@
 ---
 title: Platformlar arası araçlarla kitaplıkları ile geliştirme
-description: .NET Core CLI araçları ile .NET kitaplıkları oluşturmayı öğrenin.
+description: .NET Core CLI araçları ile .NET Core kitaplıkları oluşturmayı öğrenin. Birden çok çerçevelerini destekleyen bir kitaplık oluşturmayı öğreneceksiniz.
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: eb1dc404f9a08940464eca83a6848076b589afa8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.custom: seodec18
+ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188267"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169371"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar arası araçlarla kitaplıkları ile geliştirme
 
@@ -19,9 +19,9 @@ Bu makale için platformlar arası CLI araçları ile .NET kitaplıkları yazma 
 
 Gereksinim duyduğunuz [CLI ve .NET Core SDK'sı](https://www.microsoft.com/net/core) makinenizde yüklü.
 
-Bu belge uğraşmanızı .NET Framework sürümleri için bölümlere gereksinim [.NET Framework](http://getdotnet.azurewebsites.net/) bir Windows makinede yüklü.
+Bu belge uğraşmanızı .NET Framework sürümleri için bölümlere gereksinim [.NET Framework](https://dotnet.microsoft.com) bir Windows makinede yüklü.
 
-Eski .NET Framework hedefleri desteklemek isterseniz, ayrıca, daha eski framework sürümlerini hedefleme Geliştirici paketleri yüklemeniz gerekir [.NET hedef platformları sayfası](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). Bu tabloya bakın:
+Eski .NET Framework hedefleri desteklemek isterseniz, ayrıca, daha eski framework sürümlerini hedefleme Geliştirici paketleri yüklemeniz gerekir [.NET indirme sayfası arşivleri](https://dotnet.microsoft.com/download/archives). Bu tabloya bakın:
 
 | .NET Framework Sürümü | Ne yüklemek için                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +39,7 @@ Eski .NET Framework hedefleri desteklemek isterseniz, ayrıca, daha eski framewo
 
 Bu makalede, çeşitli uygulamalar için .NET Standard sürümleri eşleyen bir tablo vardır:
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Bu tabloda bir kitaplık oluşturmak amacıyla anlamı aşağıda verilmiştir:
 
@@ -136,7 +136,7 @@ Burada üç önemli değişiklikler fark edeceksiniz:
 
 Derleme Sistemi kullanılan aşağıdaki önişlemci sembolleri farkında `#if` yönergeleri:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 Koşullu derleme başına-hedef örnek yapmayı kullanımını aşağıda verilmiştir:
 
@@ -253,7 +253,7 @@ Platformlar arasında test edebilmek önemlidir. Kullanabilirsiniz [xUnit](https
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Bu xUnit çalıştığını yürüterek doğrulama `dotnet test` komutu. MSTest kullanmayı seçerseniz, MSTest konsol Çalıştırıcısı yerine çalıştırmalısınız.
     
@@ -268,7 +268,7 @@ Ve İşte bu kadar! Artık kitaplığınızı komut satırı araçlarını kulla
 
 Daha büyük kitaplıkları için ortak bir gereksinimi, farklı projelerde işlevselliği yerleştirmektir.
 
-Kullanılan deyimsel C# ve F # tüketilebilecek kitaplık oluşturmak istediğinizde düşünün. Bu, kitaplığınızı kullanan Tüketiciler, bunları, C# veya F # için doğal bir şekilde kullandığını anlamına gelir. Örneğin, C# Kitaplığı gibi bu tükettiğiniz:
+İçinde kullanılan deyimsel tüketilebilecek kitaplık oluşturmak, onlardan Imagine C# ve F#. Anlamına kitaplığınızı kullanan Tüketiciler, bunları olduğu için doğal bir şekilde kullandığını C# veya F#. Örneğin, C# Kitaplığı gibi bu tükettiğiniz:
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -281,7 +281,7 @@ public Task DoThings(Data data)
 }
 ```
 
-F #'ta, şuna benzeyebilir:
+İçinde F#, şuna benzeyebilir:
 
 ```fsharp
 open AwesomeLibrary.FSharp
@@ -292,11 +292,11 @@ let doWork data = async {
 }
 ```
 
-Gibi tüketim senaryolar, erişilen API'leri C# ve F # için farklı bir yapıya sahip olması anlamına gelir.  Bu işlemi gerçekleştirmek için yaygın bir yaklaşım tüm kitaplık mantığı, core projesine çağıran API katmanları tanımlama C# ve F # projeleri ile bir çekirdek projesine faktörü sağlamaktır.  Bölümün geri kalanında, aşağıdaki adlarını kullanır:
+Erişilen API'leri için farklı bir yapıya sahip olması bu anlama gelir gibi tüketim senaryolar C# ve F#.  Tüm kitaplık mantığı ile bir çekirdek projeye etkimesi için bu işlemi gerçekleştirmek için yaygın bir yaklaşım olan C# ve F# API tanımlama projeleri Katmanlar bu çağrı, core projesi.  Bölümün geri kalanında, aşağıdaki adlarını kullanır:
 
 * **AwesomeLibrary.Core** -kitaplığının tüm mantığı içeren bir temel proje
 * **AwesomeLibrary.CSharp** -C# tüketim yönelik ortak API'ler ile bir proje
-* **AwesomeLibrary.FSharp** -F # tüketimini yönelik ortak API'ler ile bir proje
+* **AwesomeLibrary.FSharp** -ortak sahip bir proje tüketimini API'leri yönelikF#
 
 Bu kılavuzda aynı yapısını oluşturmak için terminalde aşağıdaki komutları çalıştırabilirsiniz:
 

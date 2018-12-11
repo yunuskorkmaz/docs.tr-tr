@@ -1,19 +1,19 @@
 ---
 title: Visual Studio 2017'de .NET Core ile bir sınıf kitaplığını test etme
-description: Visual Studio 2017 kullanılarak C# dilinde yazılmış bir sınıf kitaplığı test öğrenin
+description: .NET Core sınıf kitaplığı için birim testi projesi oluşturun. .NET Core sınıf kitaplığı ile birim testleri doğru şekilde çalıştığını doğrulayın.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170801"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir sınıf kitaplığını test etme
 
@@ -28,14 +28,14 @@ Birim test projesi oluşturmak için aşağıdakileri yapın:
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual C#** düğümü. Ardından **.NET Core** düğümünü ve ardından **MSTest Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibraryTest" girin. Seçin **Tamam** birim test projesi oluşturmak için.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/testing-library-with-visual-studio/testproject.png)
+   ![Yeni Proje iletişim kutusunda görüntülenen birim testi projesi ekleyin-C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > MSTest Test projesinde ek olarak, .NET Core için bir xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
 
 1. Visual Studio projesi oluşturur ve açar *UnitTest1.cs* kod penceresinde dosya.
 
-   ![Visual Studio kod penceresini gösteren varsayılan birim test projesi UnitTest1 sınıfı ve TestMethod1 yöntemi](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Visual Studio kod penceresi biriminin proje sınıf ve metod test-C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    Birim test şablon tarafından oluşturulan kaynak kodu şunları yapar:
 
@@ -47,24 +47,24 @@ Birim test projesi oluşturmak için aşağıdakileri yapın:
 
 1. İçinde **Çözüm Gezgini**, sağ **bağımlılıkları** düğümünün **StringLibraryTest** seçin ve proje **Başvuru Ekle** gelen bağlam menüsü.
 
-   ![StringLibraryTest bağımlılıkları bağlam menüsü](./media/testing-library-with-visual-studio/addreference.png)
+   ![Bağlam menüsü StringLibraryTest bağımlılıklarının-C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. Seçin **Tamam** düğmesi. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
+1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. **Tamam** düğmesini seçin. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
 
-   ![Başvuru Yöneticisi](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+   ![Visual Studio eklenti proje başvuru iletişim kutusu](./media/testing-library-with-visual-studio/project-reference-manager.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. İçinde **Çözüm Gezgini**, bağlam menüsünü **ClassLibraryProjects** çözüm düğümüne ve select **Ekle** > **YeniProje**.
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümü. Ardından **.NET Core** düğümünü ve ardından **MSTest Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibraryTest" girin. Seçin **Tamam** birim test projesi oluşturmak için.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![Yeni Proje iletişim kutusunda görüntülenen - birim testi projesi ile Visual Basic Ekle](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > MSTest Test projesinde ek olarak, .NET Core için bir xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
 
 1. Visual Studio projesi oluşturur ve açar *UnitTest1.vb* kod penceresinde dosya.
 
-   ![Visual Studio kod penceresini gösteren varsayılan birim test projesi UnitTest1 sınıfı ve TestMethod1 yöntemi](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Visual Studio kod penceresi için birim test proje sınıfı ve yöntemi - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    Birim test şablon tarafından oluşturulan kaynak kodu şunları yapar:
 
@@ -76,11 +76,11 @@ Birim test projesi oluşturmak için aşağıdakileri yapın:
 
 1. İçinde **Çözüm Gezgini**, sağ **bağımlılıkları** düğümünün **StringLibraryTest** seçin ve proje **Başvuru Ekle** gelen bağlam menüsü.
 
-   ![StringLibraryTest bağımlılıkları bağlam menüsü](./media/testing-library-with-visual-studio/addreference.png)
+   ![StringLibraryTest bağımlılıkları bağlam menüsü](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. Seçin **Tamam** düğmesi. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
+1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. **Tamam** düğmesini seçin. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
 
-   ![Başvuru Yöneticisi](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio eklenti proje başvuru iletişim kutusu - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Ekleme ve birim test yöntemleri
@@ -115,8 +115,8 @@ Test yöntemlerini oluşturmak için:
 
 1. Menü çubuğunda, seçin **dosya** > **UnitTest1.cs Kaydet**. İçinde **dosyayı farklı Kaydet** iletişim kutusunda, yanındaki oku seçerek **Kaydet** düğmesini ve **kodlama ile Kaydet**.
 
-   ![İletişim dosyayı farklı kaydet](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+   ![Visual Studio dosyayı farklı Kaydet iletişim kutusu-C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. İçinde *UnitTest1.vb* kod penceresi, kodu aşağıdaki kodla değiştirin:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -125,20 +125,20 @@ Test yöntemlerini oluşturmak için:
 
 1. Menü çubuğunda, seçin **dosya** > **UnitTest1.vb Kaydet**. İçinde **dosyayı farklı Kaydet** iletişim kutusunda, yanındaki oku seçerek **Kaydet** düğmesini ve **kodlama ile Kaydet**.
 
-   ![İletişim dosyayı farklı kaydet](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio dosyayı farklı Kaydet iletişim kutusu - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. İçinde **Kaydet onaylayın** iletişim kutusunda **Evet** düğmesini kullanarak dosyayı kaydedin.
 
 1. İçinde **Gelişmiş kaydetme seçenekleri** iletişim kutusunda **Unicode (UTF-8 imzayla) - kod sayfası 65001** gelen **kodlama** aşağı açılan listesinden **Tamam** .
 
-   ![Gelişmiş Kaydetme Seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Visual Studio Gelişmiş Kaydetme Seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    Kaynak kodunuzu UTF8 ile kodlanan dosya olarak kaydetmek başarısız olursa, Visual Studio, bir ASCII dosyası olarak kaydedebilirsiniz. Bu durum oluştuğunda, çalışma zamanı ASCII aralığı dışındaki UTF8 karakterleri doğru bir şekilde kod çözme değil ve test sonuçlarını doğru olmaz.
 
 1. Menü çubuğunda, seçin **Test** > **çalıştırma** > **tüm testleri**. **Test Gezgini** penceresi açılır ve testlerin başarıyla çalıştığını gösterir. Üç testi de listelenen **başarılı testler** bölümünde ve **özeti** bölüm test çalışması sonucu bildirir.
 
-   ![Test Gezgini penceresi](./media/testing-library-with-visual-studio/firsttest.png)
+   ![Test Gezgini penceresi ile testleri geçirme](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>Test hatalarını işleme
 
@@ -157,11 +157,11 @@ Test çalıştırmanızın herhangi bir hata vardı, ancak test yöntemi başar�
    ```
 1. Seçerek test çalıştırması **Test** > **çalıştırma** > **tüm testleri** menü çubuğundan. **Test Gezgini** iki testleri başarılı ve başarısız bir pencerede gösterilir.
 
-   ![Test Gezgini penceresi](./media/testing-library-with-visual-studio/failedtest.png)
+   ![Başarısız testleri içeren test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. İçinde **başarısız testler** bölümünde, başarısız bir test seçin `TestDoesNotStartWith`. **Test Gezgini** penceresi assert tarafından üretilen iletisini görüntüler: "Assert.IsFalse başarısız oldu. 'Hata' için bekleniyor: false; Gerçek: True ". Hatasından sonra "Error" dizisindeki tüm dizeleri sınanmamıştır.
+1. İçinde **başarısız testler** bölümünde, başarısız bir test seçin `TestDoesNotStartWith`. **Test Gezgini** penceresi assert tarafından üretilen iletisini görüntüler: "Assert.IsFalse başarısız oldu. 'Hata' için bekleniyor: false; Gerçek: True". Hatasından sonra "Error" dizisindeki tüm dizeleri sınanmamıştır.
 
-   ![Test Gezgini penceresi olan False onaylama işlemi hatası gösteriliyor](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Test Gezgini penceresi olan False onaylama işlemi hatası gösteriliyor](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. Eklemiş olduğunuz koddan kaldırın (`"Error", `) ve testi yeniden çalıştırın. Testler başarılı.
 
@@ -173,11 +173,11 @@ Yayın derlemesi test etmek için:
 
 1. Visual Studio araç çubuğunda, değiştirmek derleme yapılandırmasından **hata ayıklama** için **yayın**.
 
-   ![Visual Studio araç çubuğu](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Visual Studio araç ile vurgulanmış yayın derlemesi](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. İçinde **Çözüm Gezgini**, sağ tıklayın **StringLibrary** seçin ve proje **derleme** bağlam menüsünden kitaplığı yeniden derleyin.
 
-   ![StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![Derleme komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Kullanarak birim testlerini çalıştırmak **Test** > **çalıştırma** > **tüm testleri** menü çubuğundan. Testler başarılı.
 

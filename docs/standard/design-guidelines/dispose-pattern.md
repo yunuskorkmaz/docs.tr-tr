@@ -1,6 +1,6 @@
 ---
 title: Dispose deseni
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Dispose method
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff52e17cfe4a4236e4d165c0961ca3a23fed9a72
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: ee6e9898ae93e2e6628eadec150a3c9c05f5d9c5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864650"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147723"
 ---
 # <a name="dispose-pattern"></a>Dispose deseni
 Tüm Programlar kursu, yürütme sırasında bir veya daha fazla sistem kaynakları, bellek, sistemi işleyicilerini veya veritabanı bağlantıları gibi edinin. Geliştiriciler alınan ve kullanılan sonra bunlar serbest bırakılması gerekir çünkü bu tür sistem kaynakları kullanırken dikkatli olmanız gerekir.  
@@ -213,7 +212,7 @@ public class ComplexResourceHolder : IDisposable {
     }  
   
     protected virtual void Dispose(bool disposing) {  
-            ReleaseBuffer(buffer); // release unmanaged memory  
+        ReleaseBuffer(buffer); // release unmanaged memory  
         if (disposing) { // release other disposable objects  
             if (resource!= null) resource.Dispose();  
         }  
@@ -277,7 +276,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

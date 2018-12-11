@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: 15ead0a99782fcb329767395a316d9287337173a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170841"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144604"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 Bu konuda, X.509 sertifikaları aktarım güvenliği kullanarak sunucu ve istemci kimlik doğrulaması kullanılarak anlatılmaktadır. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Sertifikaları çoğunlukla sertifika bir üçüncü taraf veren olduğu bir sertifika yetkilisi tarafından verilmiş olması gerekir. Bir Windows Server etki alanı Active Directory Sertifika Hizmetleri, etki alanındaki istemci bilgisayarlar için sertifikaları vermek için kullanılabilir. Daha fazla bilgi için [Windows 2008 R2 Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Bu senaryoda, hizmetin altında Internet Information Services (Güvenli Yuva Katmanı (SSL) ile yapılandırılmış olan IIS) barındırılır. Hizmet, istemcilerin kimliğini doğrulamak bir SSL (X.509) sertifikası ile yapılandırılır. İstemci, istemcinin kimliğini doğrulamak hizmet veren bir X.509 sertifikası ile de yapılandırılır. Sunucu sertifikasının istemci tarafından güvenilir olması gerekir ve istemcinin sertifika sunucusu tarafından güvenilir olması gerekir. Gerçek mekanizması nasıl hizmet ve istemci doğrular birbirlerinin kimliğini, bu konunun kapsamı dışındadır ' dir. Daha fazla bilgi için [wikipedia dijital imza](https://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -18,7 +18,7 @@ Bu konuda, X.509 sertifikaları aktarım güvenliği kullanarak sunucu ve istemc
   
  ![Güvenli aktarım sertifikaları kullanarak](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). Aşağıdaki tabloda çeşitli senaryo özelliklerini açıklar.  
+ Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). Aşağıdaki tabloda çeşitli senaryo özelliklerini açıklar.  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  

@@ -2,20 +2,20 @@
 title: F# Etkileşimli (fsi.exe) Başvurusu
 description: Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8f6d261c6570935b665fc8a826b0829b3953a587
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153637"
 ---
 # <a name="interactive-programming-with-f"></a>Etkileşimli ile programlamaF# #
 
 > [!NOTE]
-Bu makalede, şu anda Windows deneyimi yalnızca açıklanmıştır.  Yazılacak.
+> Bu makalede, şu anda Windows deneyimi yalnızca açıklanmıştır.  Yazılacak.
 
 > [!NOTE]
-MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
+> MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
 
 F#Etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli konsolu veya yürütülecek kodu F# betikler. Diğer bir deyişle, F# için etkileşimli REPL (okuma, Evaluate, yazdırma döngüsü) yürütür F# dili.
 
@@ -86,7 +86,7 @@ for arg in fsi.CommandLineArgs do
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 Command line arguments: 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir derlemeyi belirlemek&#39;s tam adı'
+title: 'Nasıl Yapılır: Bir derlemeyi belirlemek&#39;s tam adı'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041108"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142729"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Nasıl yapılır: bir derlemeyi belirlemek&#39;s tam adı
-Genel Derleme Önbelleği Aracı genel bütünleştirilmiş kod önbelleğindeki bir derleme tam olarak nitelenmiş adını bulmak için kullanın ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Bkz: [nasıl yapılır: genel derleme önbelleğinin içeriğini görüntülemek](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Nasıl Yapılır: Bir derlemeyi belirlemek&#39;s tam adı
+Genel Derleme Önbelleği Aracı genel bütünleştirilmiş kod önbelleğindeki bir derleme tam olarak nitelenmiş adını bulmak için kullanın ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Bkz: [nasıl yapılır: Genel derleme önbelleğinin içeriğini görüntülemek](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Genel derleme önbelleğinde bulunmayan derlemeler için çeşitli yollarla tam derleme adını alabilirsiniz: kod, bilgileri konsola veya bir değişkene çıkarmak için kullanabilirsiniz veya kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)tam adını içeren derlemenin meta verilerini incelemek için.  
   

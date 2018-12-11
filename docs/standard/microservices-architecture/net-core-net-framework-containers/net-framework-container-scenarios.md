@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128758"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>.NET Framework Docker kapsayıcıları için ne zaman
 
@@ -65,9 +65,6 @@ Bu arada, herhangi bir platform veya Azure hizmeti yine de .NET Core API istemci
 -   **.NET bileşenleri'ne genel bakış**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
-
-
-
 >[!div class="step-by-step"]
-[Önceki](net-core-container-scenarios.md)
-[İleri](container-framework-choice-factors.md)
+>[Önceki](net-core-container-scenarios.md)
+>[İleri](container-framework-choice-factors.md)

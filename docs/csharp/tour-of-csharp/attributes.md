@@ -3,12 +3,12 @@ title: C# öznitelikleri - C# dili turu
 description: Öznitelikleri kullanarak C# ' de bildirim temelli programlama hakkında bilgi edinin
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a8ee40e5d4956667dd54cf25cc7993d041cba6e7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34312241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151089"
 ---
 # <a name="attributes"></a>Öznitelikler
 
@@ -31,4 +31,4 @@ Aşağıdaki kod örneği nasıl alındığını anlatan `HelpAttribute` ilişki
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
-[Önceki](delegates.md)
+>[Önceki](delegates.md)

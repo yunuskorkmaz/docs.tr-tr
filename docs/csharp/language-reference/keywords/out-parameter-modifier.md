@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 58654133b7bd7197502ec1550bc78c99aeb0bf0e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837886"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155307"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 `out` Anahtar sözcüğü, başvuruya göre geçirilecek bağımsız değişkenleri neden olur. Nasıl olduğunu [ref](ref.md) hariç anahtar sözcüğü `ref` kendisine geçirilen önce değişkenin başlatılması gerekir. Aynı zamanda gibi olan [içinde](in-parameter-modifier.md) hariç anahtar sözcüğü `in` çağrılan yöntem bağımsız değişken değerini değiştirmek izin vermez. Kullanılacak bir `out` parametresi, yöntem tanımının hem yöntemi çağrılırken açıkça kullanmalıdır `out` anahtar sözcüğü. Örneğin:  
@@ -53,7 +53,7 @@ Kullanamazsınız `in`, `ref`, ve `out` yöntemleri aşağıdaki türde için an
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [Deneyin deseni](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) döndüren içerir bir `bool` bir işlemi başarılı veya başarısız, hem değer döndürüyor üretilen işlemde tarafından belirtmenize olanak bir `out` bağımsız değişken. Bir sayı gibi yöntemleri ayrıştırma [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) yöntemi, bu düzeni kullanın.
+ [Deneyin deseni](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods) döndüren içerir bir `bool` bir işlemi başarılı veya başarısız, hem değer döndürüyor üretilen işlemde tarafından belirtmenize olanak bir `out` bağımsız değişken. Bir sayı gibi yöntemleri ayrıştırma [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) yöntemi, bu düzeni kullanın.
    
 ## <a name="calling-a-method-with-an-out-argument"></a>Bir yöntemi çağırmak bir `out` bağımsız değişken
 

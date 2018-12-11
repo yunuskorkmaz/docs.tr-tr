@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2e725ecb2208256f6d0e025d4cc79339f385cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387867"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130123"
 ---
 # <a name="reentrancy-mda"></a>yeniden giriş MDA'sı
-`reentrancy` Yönetilen hata ayıklama Yardımcısı (MDA) girişiminde durumlarda burada yerel için yönetilen kod önceki anahtardan gerçekleştirilmediği düzenli geçiş yönetilen kod Yerelden geçiş yapılırken etkinleştirilir.  
+`reentrancy` Girişiminde durumlarda burada yönetilen yerel kod önceki bir geçiş gerçekleştirilmediği düzenli bir geçiş yönetilen kod Yerelden geçiş yapıldığında yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Nesne yığın bozulmuş veya diğer ciddi hatalar yönetilen kod Yerelden geçiş olduğunda ortaya çıkan.  
+ Nesne yığını bozuk ya da diğer önemli hataları yönetilen koda yerel'den geçiş sırasında gerçekleşiyor.  
   
- Her iki yönde yerel ve yönetilen kod arasında geçiş iş parçacığı düzenli geçiş gerçekleştirmeniz gerekir. Ancak, belirli alt düzey genişletilebilirlik noktaları Vektörlü özel durum işleyici gibi işletim sistemi yerel koda düzenli geçiş yapmadan yönetilen anahtarlardan izin verir.  Bu anahtarlar, işletim sistemi denetimindeki yerine, ortak dil çalışma zamanı (CLR) denetimi altında şunlardır.  Bu genişletilebilirlik noktaları içinde yürüten yerel kod yönetilen kodu geri çağırma kaçınmalısınız.  
+ Herhangi bir yönde yerel ve yönetilen kod arasında geçiş iş parçacıkları düzenli geçiş gerçekleştirmeniz gerekir. Ancak, belirli alt düzey genişletilebilirlik noktaları işletim sistemindeki Vektörlü özel durum işleyicisi gibi düzenli geçiş yapmadan yerel kod için yönetilen anahtarları izin verir.  Bu anahtarlar, ortak dil çalışma zamanı (CLR) denetimi altında değil, işletim sistemi denetimi altında şunlardır.  Bu genişletilebilirlik noktaları içinde yürütülen herhangi bir yerel kod yönetilen koda geri çağırma kaçınmalısınız.  
   
 ## <a name="cause"></a>Sebep  
- Yönetilen kod yürütülürken Vektörlü özel durum işleyici gibi bir alt düzey işletim sistemi genişletilebilirlik noktası etkinleştirdi.  Bu genişletilebilirlik noktası aracılığıyla çağrılır uygulama kodu geri yönetilen koda çağrı çalışıyor.  
+ Yönetilen kod yürütülürken Vektörlü özel durum işleyicisi gibi bir alt düzey işletim sistemi genişletilebilirlik noktası etkinleştirdi.  Uygulama kodu bu genişletilebilirlik noktası üzerinden çağrılan geri yönetilen koda çağrı çalışıyor.  
   
- Bu sorun uygulama kodu tarafından her zaman kaynaklanır.  
+ Bu sorun, uygulama kodu tarafından her zaman kaynaklanır.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu MDA etkinleştirdi iş parçacığı için yığın izlemesi inceleyin.  İş parçacığı yasadışı yönetilen koda çağrı çalışıyor.  Yığın izleme, bu genişletilebilirlik noktasını kullanarak uygulama kodu, bu genişletilebilirlik noktasıdır işletim sistemi kodu ve genişletilebilirlik noktası tarafından kesildi yönetilen kod ortaya çıkarır.  
+ Bu mda'nın etkinleştirilmiş iş parçacığı için yığın izlemesi inceleyin.  İş parçacığı yasadışı yönetilen koda çağrı çalışıyor.  Yığın izleme, bu genişletilebilirlik noktası kullanarak uygulama kodu, işletim sistemi kodu, bu genişletilebilirlik noktası sağlar ve genişletilebilirlik noktası tarafından kesildi yönetilen kodu ortaya.  
   
- Örneğin, yönetilen koddan Vektörlü özel durum işleyicisi içine çağrı girişimi etkinleştirilmiş MDA görürsünüz.  İşletim sistemi özel durum kodu ve bir özel durum harekete gibi bazı yönetilen kod işleme göreceğiniz yığında bir <xref:System.DivideByZeroException> veya bir <xref:System.AccessViolationException>.  
+ Örneğin, bir Vektörlü özel durum işleyicisi içindeki yönetilen koddan çağırmak girişimi etkinleştirilmiş MDA görürsünüz.  İşletim sistemi özel durum kodu ve bazı yönetilen kodu gibi bir özel durum harekete işleme göreceğiniz yığında bir <xref:System.DivideByZeroException> veya <xref:System.AccessViolationException>.  
   
- Bu örnekte, doğru çözünürlüğü Vektörlü özel durum işleyici tamamen yönetilmeyen kodunda uygulamaktır.  
+ Bu örnekte, doğru çözüm Vektörlü özel durum işleyicisi tamamen yönetilmeyen kodda uygulamaktır.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Geçersiz yeniden giriş yapılmaya çalışılan MDA bildirir.  Bu neden olmuyor ve sorunun nasıl giderileceği belirlemek için iş parçacığının yığın inceleyin. Örnek çıktı verilmiştir.  
+ Geçersiz yeniden giriş yapılmaya çalışılan MDA bildirir.  Bu neden oluyor ve sorunun nasıl giderileceği belirlemek için iş parçacığı yığınının inceleyin. Örnek çıktı verilmiştir.  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -67,9 +67,9 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği neden bir <xref:System.AccessViolationException> oluşturulmasına.  Vektörlü özel durum işleme destekleyen Windows sürümlerinde bu çağrılacak yönetilen Vektörlü özel durum işleyici neden olur.  Varsa `reentrancy` MDA etkinleştirildiğinde, MDA denenen çağrı sırasında etkinleşir `MyHandler` destek kod işleme işletim sisteminin Vektörlü özel durum.  
+ Aşağıdaki kod örneği neden bir <xref:System.AccessViolationException> oluşturulması için.  Vektörlü özel durum işleme destekleyen Windows sürümlerinde bu Vektörlü yönetilen özel durum işleyici çağrılması neden olur.  Varsa `reentrancy` MDA etkinleştirildiğinde, denenen çağrı sırasında MDA etkinleştirmesi `MyHandler` destek kodunu işleme işletim sisteminin Vektörlü özel durumdan.  
   
-```  
+```csharp
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   

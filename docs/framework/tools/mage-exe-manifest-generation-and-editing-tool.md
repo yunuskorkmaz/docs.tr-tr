@@ -1,16 +1,16 @@
 ---
 title: Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: acb9af688025fc6cbcd9e41fbc5a0c85f6ebb29e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009788"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146202"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -24,13 +24,13 @@ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalışt
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 Mage [commands] [commandOptions]
 ```
 
 ### <a name="parameters"></a>Parametreler
 
-Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu komutlar tarafından desteklenen seçenekleri hakkında daha fazla bilgi için bkz. [New ve Update komut seçenekleri](#NewUpdate) ve [Sign komut seçenekleri](#Sign).
+Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu komutlar tarafından desteklenen seçenekleri hakkında daha fazla bilgi için bkz. [New ve Update komut seçenekleri](#new-and-update-command-options) ve [oturum komut seçenekleri](#sign-command-options).
 
 |Komut|Açıklama|
 |-------------|-----------------|
@@ -38,6 +38,7 @@ Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu k
 |**-n, - yeni** *fileType [newOptions]*|Belirtilen türde yeni bir dosya oluşturur. Geçerli türler şunlardır:<br /><br /> -   `Deployment`: Yeni bir dağıtım bildirimi oluşturur.<br />-   `Application`: Yeni bir uygulama bildirimi oluşturur.<br /><br /> Eğer bu komutla birlikte hiçbir ek parametre belirtmezseniz, uygun türde ve uygun varsayılan etiketlere ve öznitelik değerlerine sahip bir dosya oluşturur.<br /><br /> Kullanım **- ToFile** seçeneğini (aşağıdaki tabloya bakın) yeni dosya yolunu ve dosya adını belirtmek için.<br /><br /> Kullanım **- FromDirectory** seçeneğini (aşağıdaki tabloya bakın) tüm derlemelerin eklenen bir uygulama için bir uygulama bildirimi oluşturmak için \<bağımlılık > bölümüne bildirim.|
 |**-u,-güncelleştirme** *[filePath] [updateOptions]*|Bir bildirim dosyasına bir veya daha fazla değişiklik yapar. Düzenlediğiniz dosya türünü belirtmeniz gerekli değildir. Mage.exe, bir buluşsal yöntem kümesi kullanarak dosyayı inceler ve bir dağıtım bildirimi ya da uygulama bildirimi olup olmadığını belirler.<br /><br /> Bir dosyayı bir sertifika ile imzaladıysanız **-güncelleştirme** anahtar imzası bloğunu kaldırır. Bunun nedeni, anahtar imzasının dosyasının bir karmasını içermesi ve dosyayı değiştirmenin karmayı geçersiz kılmasıdır.<br /><br /> Kullanım **- ToFile** seçeneğini (aşağıdaki tabloya bakın) yeni dosya adı ve yolu varolan dosyanın üzerine yazmak yerine belirtmek için.|
 |**-s-oturum** `[signOptions]`|Bir dosyayı imzalamak için bir anahtar çifti veya X509 sertifikası kullanır. İmzalar, dosyaların içine XML öğeleri olarak eklenir.<br /><br /> Belirten bir bildirimi imzalarken Internet'e gereken bir **- TimestampUri** değeri.|
+|**-ver'dir;-doğrulayın** *[filename bildirimi]*|Bildirim doğru şekilde imzalanmış doğrular. Diğer komutları ile birleştirilemez. <br/><br/>**.NET Framework 4.7 ve sonraki sürümlerinde kullanılabilir.**|
 |**-h-?, - yardımcı** *[ayrıntılı]*|Tüm kullanılabilir komutları ve seçeneklerini açıklar. Belirtin `verbose` ayrıntılı yardım almak için.|
 
 ## <a name="new-and-update-command-options"></a>Yeni ve Update komutu seçenekleri
@@ -49,14 +50,16 @@ Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-New` ve `-Up
 |**-bir,-algoritması**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
 |**-appc, - AppCodeBase** `manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
 |**-appm, - AppManifest** `manifestPath`||Dağıtım bildirimleri.|Bir dağıtım bildirimine, dağıtımın uygulama bildirimindeki bir başvuruyu ekler.<br /><br /> Tarafından belirtilen dosya `manifestPath` mevcut olmalıdır veya *Mage.exe* bir hata verir. Tarafından başvurulan dosya `manifestPath` bir uygulama bildirimi değil *Mage.exe* bir hata verir.|
-|**-cf, - CertFile** `filePath`||Tüm dosya türleri.|Bildirim imzalamak için bir X509 dijital sertifikasının konumunu belirtir. Bu seçeneği ile birlikte kullanılabilir **-parola** seçeneğini sertifika için parola gereklidir.<br/><br/>Visual Studio, Windows SDK ve .NET Framework 4.6.2 Geliştirici paketi dağıtılır, .NET Framework 4.6.2 SDK ile başlayarak *Mage.exe* işaretleri, sertifikaları CAPI yanı sıra CNG bildirimleri.|
+|**-cf, - CertFile** `filePath`||Tüm dosya türleri.|X X509 konumunu belirten bir bildirim veya lisans dosyasını imzalamak için dijital sertifika. Bu seçeneği ile birlikte kullanılabilir **-parola** sertifikası kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa seçeneği. Dosya bir birleşimi bir özel anahtar içermiyorsa, .NET Framework 4.7 ile başlayan **- CryptoProvider** ve **- Keycontaıner** seçenekleri gereklidir.<br/><br/>.NET Framework 4.6.2, ile başlayarak *Mage.exe* işaretleri, sertifikaları CAPI yanı sıra CNG bildirimleri.|
 |**-ch, - CertHash** `hashSignature`||Tüm dosya türleri.|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi dizesine karşılık gelir.<br /><br /> `hashSignature` ya da büyük harf veya küçük harf ve tek bir dize olarak veya izinin her sekizliğini boşluk ve tırnak işaretleri arasına parmak ayırarak ve parmak izini sağlanabilir olabilir.|
-|**-fd, - FromDirectory** `directoryPath`||Uygulama bildirimleri.|Tüm derlemeleri ve dosyaları bulunan uygulama bildirimini doldurur `directoryPath`, tüm alt dizinleri dahil olmak üzere burada `directoryPath` dağıtmak istediğiniz uygulamayı içeren dizindir. Dizindeki her dosya için *Mage.exe* dosyanın bir derleme veya statik dosya olup olmadığına karar verir. Eğer bir derleme ise, ekler bir `<dependency>` etiketi ve `installFrom` özniteliği uygulamaya derlemenin adı, kod tabanı ve sürüm. Eğer statik bir dosya ise, ekler bir `<file>` etiketi. *Mage.exe* ayrıca uygulamanın temel yürütülebilir dosyasını algılamak için basit bir buluşsal yöntem kümesi kullanır ve onu bildirimde ClickOnce uygulamasının giriş noktası olarak işaretler.<br /><br /> *Mage.exe* hiçbir zaman otomatik olarak işaretle "veri" dosyası olarak bir dosya olacaktır. Bunu elle yapmanız gerekir. Daha fazla bilgi için [nasıl yapılır: ClickOnce uygulamasına bir veri dosyası dahil](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* ayrıca boyutuna göre her dosya için bir karma oluşturur. ClickOnce bu karmaları kullanarak, bildirim oluşturulduktan sonra dağıtımın dosyaları üzerinde kimsenin değişiklik yapmadığından emin olur. Dağıtımınızdaki dosyalardan herhangi birini değiştirirseniz, çalıştırabileceğiniz *Mage.exe* ile **-güncelleştirme** komut ve **- FromDirectory** seçeneği ve karmalarını ve derleme güncelleştirir başvurulan tüm dosyaların sürümleri.<br /><br /> **-FromDirectory** içinde bulunan tüm alt dizinlerindeki tüm dosyaları içerir `directoryPath`.<br /><br /> Kullanırsanız **- FromDirectory** ile **-güncelleştirme** komutu *Mage.exe* dizinde artık uygulama bildiriminde dosyaları kaldırır.|
+|**-csp, - CryptoProvider** `provider-name`||Tüm dosya türleri.|Özel anahtar kapsayıcısı içeren şifreleme hizmet sağlayıcısı (CSP) adını belirtir. Bu seçenek gerektirir **- Keycontaıner** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
+|**-fd, - FromDirectory** `directoryPath`||Uygulama bildirimleri.|Tüm derlemeleri ve dosyaları bulunan uygulama bildirimini doldurur `directoryPath`, tüm alt dizinleri dahil olmak üzere burada `directoryPath` dağıtmak istediğiniz uygulamayı içeren dizindir. Dizindeki her dosya için *Mage.exe* dosyanın bir derleme veya statik dosya olup olmadığına karar verir. Eğer bir derleme ise, ekler bir `<dependency>` etiketi ve `installFrom` özniteliği uygulamaya derlemenin adı, kod tabanı ve sürüm. Eğer statik bir dosya ise, ekler bir `<file>` etiketi. *Mage.exe* ayrıca uygulamanın temel yürütülebilir dosyasını algılamak için basit bir buluşsal yöntem kümesi kullanır ve onu bildirimde ClickOnce uygulamasının giriş noktası olarak işaretler.<br /><br /> *Mage.exe* hiçbir zaman otomatik olarak işaretle "veri" dosyası olarak bir dosya olacaktır. Bunu elle yapmanız gerekir. Daha fazla bilgi için [nasıl yapılır: Bir ClickOnce uygulamasına bir veri dosyası dahil etme](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* ayrıca boyutuna göre her dosya için bir karma oluşturur. ClickOnce bu karmaları kullanarak, bildirim oluşturulduktan sonra dağıtımın dosyaları üzerinde kimsenin değişiklik yapmadığından emin olur. Dağıtımınızdaki dosyalardan herhangi birini değiştirirseniz, çalıştırabileceğiniz *Mage.exe* ile **-güncelleştirme** komut ve **- FromDirectory** seçeneği ve karmalarını ve derleme güncelleştirir başvurulan tüm dosyaların sürümleri.<br /><br /> **-FromDirectory** içinde bulunan tüm alt dizinlerindeki tüm dosyaları içerir `directoryPath`.<br /><br /> Kullanırsanız **- FromDirectory** ile **-güncelleştirme** komutu *Mage.exe* dizinde artık uygulama bildiriminde dosyaları kaldırır.|
 |**-IF, - IconFile**  `filePath`||Uygulama bildirimleri.|Bir .ICO simge dosyasının tam yolunu belirtir. Bu simge başlat menüsünde uygulamanızın adının yanında ve Program Ekle/Kaldır girdisinde görünür. Eğer simge sağlanmazsa, varsayılan bir simge kullanılır.|
 |**-IP, - IncludeProviderURL**  `url`|true|Dağıtım bildirimleri.|Dağıtım bildirimi ayarlanan güncelleştirme konumunu içerip içermediğini belirten **- ProviderURL**.|
 |**-i,-yükleme** `willInstall`|true|Dağıtım bildirimleri.|ClickOnce uygulamasının yerel bilgisayara yüklenip yüklenmeyeceğini veya Web'den çalışıp çalışmayacağını belirtir. Bir uygulamayı yüklemek, bu uygulamayı Windows bulunması verir **Başlat** menüsü. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Belirtirseniz **- MinVersion** seçeneği ve bir kullanıcı bir sürümüne sahip küçüktür **- MinVersion** yüklüyse, geçirdiğiniz değerinden bağımsız olarak yüklemek üzere uygulamayı zorlayacak **- Yükleme**.<br /><br /> Bu seçenek kullanılamaz **- BrowserHosted** seçeneği. Aynı bildirimde ikisini de belirtmeyi denemek hata oluşturur.|
+|**-kc, - Keycontaıner** `name`||Tüm dosya türleri.|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CyproProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
 |**-mv, - MinVersion**  `[version]`|ClickOnce dağıtım bildirimi tarafından belirtilen sürüm listelenen **-sürüm** bayrağı.|Dağıtım bildirimleri.|Bir kullanıcının çalıştırabileceği bu uygulamanın en düşük sürümü. Bu bayrak uygulamanızın adlandırılmış sürümünü gereken bir güncelleştirme yapar. Eğer ürününüzün bir sürümünü bozucu bir değişiklik veya kritik bir güvenlik açığı için güncelleştirirseniz, bu bayrağı kullanarak bu güncelleştirmenin yüklenmesi gerektiğini ve kullanıcının önceki sürümleri kullanamayacağını belirtebilirsiniz.<br /><br /> `version` bağımsız değişkeni ile aynı semantiğe sahip **-sürüm** bayrağı.|
-|**-n, - ad** `nameString`|Dağıt|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce, uygulamayı tanımlamak için bu ad kullanacağı **Başlat** (uygulama kendisini yükleyecek şekilde yapılandırılmışsa) menüsünde ve izin yükseltme iletişim kutularında. **Not:** varolan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage.exe* bildirimi bilgisayarda tanımlı olan kuruluş adı ile güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
+|**-n, - ad** `nameString`|Dağıt|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce, uygulamayı tanımlamak için bu ad kullanacağı **Başlat** (uygulama kendisini yükleyecek şekilde yapılandırılmışsa) menüsünde ve izin yükseltme iletişim kutularında. **Not:**  Varolan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage.exe* bildirimi bilgisayarda tanımlı olan kuruluş adı ile güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
 |**-pwd,-parola** `passwd`||Tüm dosya türleri.|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. İle birlikte kullanılmalıdır **- CertFile** seçeneği.|
 |**-p, işlemci** `processorValue`|Msil|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu dağıtımın çalışabileceği mikro işlemci mimarisi. Eğer derlemeleri belirli bir mikro işlemci için önceden derlenmiş olan bir veya daha fazla yükleme için hazırlanıyorsanız bu değer gereklidir. Geçerli değerler `msil`, `x86`, `ia64`, ve `amd64`. `msil` Tüm bütünleştirilmiş kodlarınızı platformdan bağımsız ve ortak dil çalışma zamanı (CLR) yalnızca saat olacak anlamına gelir. Ara dil, derleme, bunları, uygulamanız ilk çalıştırma olduğunda Microsoft'tur.|
 |**-pu,** **- ProviderURL** `url`||Dağıtım bildirimleri.|ClickOnce'ın uygulama güncelleştirmeleri için inceleyeceği URL'yi belirtir.|
@@ -75,8 +78,10 @@ Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-Sign` tüm d
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
-|**-cf, - CertFile** `filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Bu seçeneği ile birlikte kullanılabilir **-parola** seçeneği.|
+|**-cf, - CertFile** `filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Bu seçeneği ile birlikte kullanılabilir **-parola** sertifikası kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa seçeneği. Dosya bir birleşimi bir özel anahtar içermiyorsa, .NET Framework 4.7 ile başlayan **- CryptoProvider** ve **- Keycontaıner** seçenekleri gereklidir.<br/><br/>.NET Framework 4.6.2, ile başlayarak *Mage.exe* işaretleri, sertifikaları CAPI yanı sıra CNG bildirimleri.|
 |**-ch, - CertHash** `hashSignature`|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi özelliğine karşılık gelir.<br /><br /> `hashSignature` ya da büyük harf veya küçük harf ve tek bir dize olarak ya da izinin her sekizliğini boşluk ve tırnak işaretleri arasına parmak ayırarak ve parmak izini sağlanabilir olabilir.|
+**-csp, - CryptoProvider** `provider-name`|Özel anahtar kapsayıcısı içeren şifreleme hizmet sağlayıcısı (CSP) adını belirtir. Bu seçenek gerektirir **- Keycontaıner** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
+|**-kc, - Keycontaıner** `name`|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CyproProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
 |**-pwd,-parola** `passwd`|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. İle birlikte kullanılmalıdır **- CertFile** seçeneği.|
 |**-t, - ToFile** `filePath`|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.|
 
@@ -86,7 +91,7 @@ Tüm bağımsız değişkenleri *Mage.exe* büyük küçük harf duyarlıdır. K
 
 Tüm bağımsız değişkenleri ile kullanılan **-oturum** komutu ile herhangi bir zamanda kullanılabilir **-yeni** veya **-güncelleştirme** komutlarıyla da. Aşağıdaki komutlar eşdeğerdir.
 
-```
+```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
@@ -146,64 +151,76 @@ Bir örnek verilmiştir `<framework>` hedefleyen öğesi [!INCLUDE[net_client_v4
 
 Aşağıdaki örnek Mage için kullanıcı arabirimini açar (*MageUI.exe*).
 
-```
+```console
 mage
 ```
 
 Aşağıdaki örnekler varsayılan bir dağıtım bildirimi ve uygulama bildirimi oluşturur. Bu dosyaların hepsi geçerli çalışma dizininde oluşturulur ve sırasıyla deploy.application ve application.exe.manifest olarak adlandırılır.
 
-```
+```console
 mage -New Deployment
 mage -New Application
 ```
 
-Aşağıdaki örnek, tüm Derlemelerle ve kaynak dosyaları geçerli dizinden doldurulan bir uygulama bildirimi oluşturur.
+Aşağıdaki örnek, tüm Derlemelerle ve kaynak dosyaları geçerli dizindeki doldurulan bir uygulama bildirimi oluşturur.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
 ```
 
 Aşağıdaki örnek önceki örneği devam ettirerek dağıtım adımı ve hedef mikro işlemciyi belirtir. Ayrıca ClickOnce'ın güncelleştirmeler için denetleyeceği bir URL belirtir.
 
-```
+```console
 mage -New Application -FromDirectory . -Name "Hello, World! Application" -Version 1.0.0.0 -Processor "x86" -ProviderUrl http://internalserver/HelloWorld/
 ```
 
 Aşağıdaki örnek, Internet Explorer'da barındırılacak bir WPF uygulamasını dağıtmak için bir bildirim çiftinin nasıl oluşturulacağını gösterir.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
+Aşağıdaki örnek, tüm Derlemelerle ve kaynak dosyaları geçerli dizin ve işaretleri ile doldurulan bir uygulama bildirimi oluşturur.
+
+```console
+mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
+```
+
 Aşağıdaki örnek dağıtım bildirimini bir uygulama bildirimindeki bilgiyle güncelleştirir, ve uygulama bildiriminin konumu için kod temelini ayarlar.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppManifest 1.0.0.0\application.manifest -AppCodeBase http://internalserver/HelloWorld.deploy
 ```
 
 Aşağıdaki örnek dağıtım bildirimini düzenleyerek kullanıcının yüklü sürümünün zorla güncelleştirilmesini sağlar.
 
-```
+```console
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -MinVersion 1.1.0.0
 ```
 
 Aşağıdaki örnek dağıtım bildiriminin uygulama bildirimini ayrı bir dizinden almasını sağlar.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.0.0/
 ```
 
 Aşağıdaki örnek geçerli çalışma dizinindeki bir dijital sertifikayı kullanarak varolan bir dağıtım bildirimini imzalar.
 
-```
+```console
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
+```
+
+Aşağıdaki örnek, geçerli çalışma dizinindeki bir dijital sertifika ve özel anahtarı kullanarak varolan bir dağıtım bildirimini imzalar.
+
+```console
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
-- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)
 - [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

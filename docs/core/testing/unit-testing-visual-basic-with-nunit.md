@@ -5,19 +5,21 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: bcddd6cbb2dc3138b8343ef5e34440a93da70d1e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836936"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169072"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Birim testi dotnet testi ve NUnit kullanarak Visual Basic .NET Core kitaplıkları
 
 Bu öğretici örnek bir çözüm birim testi kavramlarını öğrenmek için adım adım oluşturmaya etkileşimli deneyim gösterir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi uygulamak isterseniz [görüntülemek veya örnek kodu indirdikten](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) başlamadan önce. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Önkoşullar 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) veya sonraki sürümler. 
+## <a name="prerequisites"></a>Önkoşullar
+
+- [.NET core 2.1 SDK](https://www.microsoft.com/net/download) veya sonraki sürümler.
 - Bir metin düzenleyicisi veya tercih ettiğiniz Kod Düzenleyicisi.
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
@@ -152,7 +154,7 @@ End Function
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Diğer basit bazı durumlar için asal sayıları: 0, -1. Bu gibi durumlarda, yeni testleriyle olarak ekleyebilirsiniz `<Test>` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer xUnit öznitelikleri vardır.  A `<TestCase>` öznitelik aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi temsil eder. Kullanabileceğiniz `<TestCase>` bu girişleri değerlerini belirtmek için özniteliği.
+Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Birkaç basit durumlardaysa asal sayıları için vardır: 0, -1. Bu gibi durumlarda, yeni testleriyle olarak ekleyebilirsiniz `<Test>` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer xUnit öznitelikleri vardır.  A `<TestCase>` öznitelik aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi temsil eder. Kullanabileceğiniz `<TestCase>` bu girişleri değerlerini belirtmek için özniteliği.
 
 Yeni testler oluşturmak yerine, asal numarası en düşük olan değerlerden küçüktür iki test bir test dizisi oluşturmak için bu iki öznitelikler uygulanır:
 

@@ -1,5 +1,6 @@
 ---
 title: Ortak Tür Sistemi
+description: .NET içinde tür sistemi hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151232"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve çalışma zamanının diller arası tümleştirme desteğinin önemli bir bölümü de olan. Ortak tür sistemi şu işlevleri gerçekleştirir:  

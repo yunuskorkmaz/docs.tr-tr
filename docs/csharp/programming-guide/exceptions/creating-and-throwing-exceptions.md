@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260077"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145601"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar programı çalıştırılırken bir hata oluştu belirtmek için kullanılır. Bir hata açıklayan özel durum nesneleri oluşturulur ve ardından *durum* ile [throw](../../../csharp/language-reference/keywords/throw.md) anahtar sözcüğü. Çalışma zamanı sonra en uyumlu özel durum işleyicisi arar.  
@@ -41,7 +41,7 @@ ms.locfileid: "44260077"
   
  Tüm özel durumları adlı bir özellik içeren <xref:System.Exception.Message%2A>. Bu dize, özel durumun nedenini açıklayacak şekilde ayarlanmalıdır. Güvenlik için hassas bilgileri metinde sokulmalıdır değil olduğunu unutmayın. Ek olarak <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> adlı bir özellik içeren <xref:System.ArgumentException.ParamName%2A> özel durum oluşturulmasına neden olan bir bağımsız değişken adına ayarlanmalıdır. Bir özellik ayarlayıcısı söz konusu olduğunda <xref:System.ArgumentException.ParamName%2A> ayarlanmalıdır `value`.  
   
- Bunlar, hedeflenen işlevlerini tamamlanamıyor her ortak ve korunan metotlara üyeleri özel durum oluşturmamalıdır. Hata koşulları, en uygun kullanılabilir en belirli özel durum harekete geçirilen özel durum sınıfı olmalıdır. Bu özel durum sınıfı işlevselliğe bir parçası olarak belgelenmelidir ve türetilmiş sınıflar veya orijinal sınıfta güncelleştirmeleri geriye dönük uyumluluk için aynı davranışı korurlar.  
+ Bunlar, hedeflenen işlevlerini tamamlanamıyor her ortak ve korunan metotlara özel durum oluşturmamalıdır. Hata koşulları, en uygun kullanılabilir en belirli özel durum harekete geçirilen özel durum sınıfı olmalıdır. Bu özel durum sınıfı işlevselliğe bir parçası olarak belgelenmelidir ve türetilmiş sınıflar veya orijinal sınıfta güncelleştirmeleri geriye dönük uyumluluk için aynı davranışı korurlar.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Özel durumları atma önlemek şeyler  
  Aşağıdaki liste, özel durumlar oluşturulduğunda Kaçınılacak yöntemler tanımlar:  

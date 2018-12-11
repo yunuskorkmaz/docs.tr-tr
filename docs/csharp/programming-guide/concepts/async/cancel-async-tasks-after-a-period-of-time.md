@@ -2,12 +2,12 @@
 title: Bir süre (C#) sonra zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 157b1de664254e9bdf9e4a5a381f8f35eeb10e9a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453326"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125775"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Bir süre (C#) sonra zaman uyumsuz görevleri iptal etme
 
@@ -20,7 +20,7 @@ Bu örnek içinde geliştirilen koda eklenir [zaman uyumsuz bir görev veya bir 
 
 ## <a name="download-the-example"></a>Örneği indirme
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
 
 1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
 
@@ -92,7 +92,7 @@ Aşağıdaki kod örneği için MainWindow.xaml.cs dosyasının tam metindir. Y�
 
 İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http>.
 
-Projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -184,7 +184,7 @@ namespace CancelAfterTime
                 byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);
+                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             }
         }
 
@@ -218,7 +218,7 @@ namespace CancelAfterTime
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

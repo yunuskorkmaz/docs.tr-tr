@@ -4,14 +4,14 @@ description: Azure Event Grid, güvenilir olay teslimi ve çok büyük ölçekte
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405029"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143668"
 ---
-# <a name="event-grid"></a>Olay Kılavuzu
+# <a name="event-grid"></a>Event Grid
 
 [Azure Event Grid](/azure-event-grid/overview) olay tabanlı uygulamalar için sunucusuz bir altyapı sağlar. Event Grid için herhangi bir kaynaktan yayımlayabilir ve herhangi bir platform gelen iletileri kullanır. Event Grid, ayrıca uygulamalarınız ile tümleştirmeyi kolaylaştırmak için Azure kaynaklardan gelen olaylar için yerleşik destek sunmaktadır. Örneğin, bir dosya yüklendiğinde uygulamanızı bildirmek için blob depolama olaylarına abone olabilirsiniz. Uygulamanızı daha sonra diğer bulut tarafından tüketilen ya da şirket içi uygulamaların bir özel olay Kılavuzu ileti yayımlayabilirsiniz. Event Grid, çok büyük ölçekte güvenilir bir şekilde yönetmek amacıyla oluşturulmuştur. Yayımlama ve gerekli altyapı Kurulumu ek yükü olmadan iletilerine abone avantajları sahip olursunuz.
 
@@ -33,9 +33,9 @@ Olay Kılavuzu birkaç farklı senaryolar ele alır. Bu bölüm, en yaygın olan
 
 Event Grid yardımcı hızı otomasyon ve bildirerek ilke uygulamayı basitleştirmenizi [Azure Otomasyonu](https://docs.microsoft.com/azure/automation) altyapı zaman hazırlanır.
 
-### <a name="application-integration"></a>Uygulama Tümleştirme
+### <a name="application-integration"></a>Uygulama tümleştirme
 
-![Uygulama Tümleştirme](./media/app-integration.png)
+![Uygulama tümleştirme](./media/app-integration.png)
 
 Event Grid, uygulamanızı diğer hizmetlere bağlamak için kullanabilirsiniz. Standart HTTP protokolü kullanarak, daha eski uygulamaları kolayca Event Grid iletileri yayımlamak için değiştirilebilir. Web kancaları, diğer hizmetler ve Event Grid iletileri tüketmeye platformlar için kullanılabilir.
 
@@ -58,7 +58,7 @@ Daha ayrıntılı bir karşılaştırması için bkz. [Mesajlaşma hizmetlerini 
 Aşağıdaki performans yararlanabilir Event Grid kullanarak garanti eder:
 
 * 99. yüzdebirlik dilimde uçtan uca gecikme subsecond.
-* % 99,99 kullanılabilirlik.
+* %99,99 kullanılabilirlik.
 * Bölge başına saniyede 10 milyon olay.
 * 100 milyon bölge başına abonelik sayısı.
 * Yayımcı gecikme 50 MS'den.
@@ -98,10 +98,10 @@ Azure tarafından üretilen otomatik iletiler Event Grid kullanarak, önemli bir
 |  | Microsoft.Resources.ResourceDeleteSuccess | Bir kaynak silme işlemi başarılı olduğunda oluşturulur. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Bir kaynak silme işlemi başarısız olduğunda oluşturulur. |
 | | Microsoft.Resources.ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde oluşturulur. Bu olay, bir şablon dağıtımı iptal edildiğinde gerçekleşir. |
-| BLOB Depolama | Microsoft.Storage.BlobCreated | Bir blob oluşturulduğunda oluşturulur. |
+| Blob depolama | Microsoft.Storage.BlobCreated | Bir blob oluşturulduğunda oluşturulur. |
 | | Microsoft.Storage.BlobDeleted | Bir blob silindiğinde oluşturulur. |
-| Olay hub'ları | Microsoft.EventHub.CaptureFileCreated | Yakalama dosyası oluşturulduğunda oluşturulur.
-| IOT hub'ı | Microsoft.Devices.DeviceCreated | IOT hub'a bir cihaz kaydedildiğinde yayımladı. |
+| Event Hubs | Microsoft.EventHub.CaptureFileCreated | Yakalama dosyası oluşturulduğunda oluşturulur.
+| IoT Hub | Microsoft.Devices.DeviceCreated | IOT hub'a bir cihaz kaydedildiğinde yayımladı. |
 | | Microsoft.Devices.DeviceDeleted | Bir cihaz IOT hub'ından silindiğinde yayımladı. |
 | Kaynak grupları | Microsoft.Resources.ResourceWriteSuccess | Oluşturulan, ne zaman bir kaynak oluşturma veya güncelleştirme işlemi başarılı olur. |
 | | Microsoft.Resources.ResourceWriteFailure | Kaynak oluşturma veya güncelleştirme işlemi başarısız olduğunda oluşturulur. |
@@ -123,15 +123,15 @@ Bu bölümde, Azure işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz
 * [App service planları](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure: uygulamanızı sunucusuz Azure işlevleri ile buluta taşıyın.](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure olay ızgarası](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure: Uygulamanızı sunucusuz Azure işlevleri ile buluta taşıyın](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
 * [Azure Event Grid olay şeması](https://docs.microsoft.com/azure/event-grid/event-schema)
-* [Azure olay hub'ları](https://docs.microsoft.com/azure/event-hubs)
+* [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Azure işlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions)
 * [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
 * [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 * [Azure hizmet veri yolu](https://docs.microsoft.com/azure/service-bus-messaging)
-* [Azure tablo depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+* [Azure Tablo Depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 * [1.x ve 2.x'i karşılaştırma işlevleri](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 * [Azure şirket içi veri ağ geçidi ile şirket içi veri kaynaklarına bağlanma](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 * [Azure portalında ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
@@ -142,5 +142,5 @@ Bu bölümde, Azure işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz
 * [Azure işlev proxy'leri ile çalışma](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[Önceki](logic-apps.md)
-[İleri](durable-azure-functions.md)
+>[Önceki](logic-apps.md)
+>[İleri](durable-azure-functions.md)

@@ -1,18 +1,18 @@
 ---
-title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü (F#)'
-description: Tam adı kullanmadan başvurabilirsiniz öğeleri, F# içeri aktarma bildirimleri ve bir modülde veya ad alanı nasıl belirlediği hakkında bilgi edinin.
+title: 'İçeri aktarma bildirimleri: Open anahtar sözcüğü (F#)'
+description: Hakkında bilgi edinin F# bildirimleri ve bir modülde veya öğeleri bir tam adı kullanmadan başvuru ad alanı nasıl belirlediği içeri aktarın.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1f6fa791f993459178646687195037563da82540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127309"
 ---
-# <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü
+# <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` Anahtar sözcüğü
 
 > [!NOTE]
-Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
 Bir *bildirim alma* bir modülde veya öğeleri bir tam adı kullanmadan başvuru ad alanı belirtir.
 
@@ -36,7 +36,7 @@ Aşağıdaki kod kullanımını gösterir `open` kodu basitleştirmek için anah
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-Aynı adlı birden fazla açık bir modülde veya ad alanı içinde oluştuğunda belirsizlikleri meydana geldiğinde F# derleyicisi bir hata veya uyarı vermez. Belirsizlikler meydana geldiğinde, F# tercihi daha açık bir modülde veya ad alanı sağlar. Örneğin, aşağıdaki kodda, `empty` anlamına gelir `Seq.empty`rağmen `empty` her ikisinde de bulunuyorsa `List` ve `Seq` modüller.
+F# Derleyici ktıları bir hata veya uyarı belirsizlikleri aynı adlı birden fazla açık bir modülde veya ad alanı içinde oluştuğunda meydana geldiğinde. Belirsizlikler meydana geldiğinde F# tercihi daha açık bir modülde veya ad alanı sağlar. Örneğin, aşağıdaki kodda, `empty` anlamına gelir `Seq.empty`rağmen `empty` her ikisinde de bulunuyorsa `List` ve `Seq` modüller.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ Modüllerde veya ad gibi açtığınızda, bu nedenle dikkatli olun `List` veya 
 
 ## <a name="namespaces-that-are-open-by-default"></a>Varsayılan olarak açık olan ad alanları
 
-Bazı ad alanları, bunlar örtük olarak açık içeri aktarma bildirimi gerek olmadan açık olan dosyalardaki F# kodu, sık sık kullanılır. Aşağıdaki tabloda, varsayılan olarak açık olan ad alanlarını gösterir.
+Bazı ad alanları, sık sık kullanılır F# kod, örtük olarak açık içeri aktarma bildirimi gerek kalmadan açılmadı. Aşağıdaki tabloda, varsayılan olarak açık olan ad alanlarını gösterir.
 
 |Ad Alanı|Açıklama|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Temel F# için tür tanımları yerleşik türler gibi içeren `int` ve `float`.|
+|`Microsoft.FSharp.Core`|Temel içeren F# yerleşik türleri için tanımları gibi yazın `int` ve `float`.|
 |`Microsoft.FSharp.Core.Operators`|Temel aritmetik işlemleri gibi içeren `+` ve `*`.|
 |`Microsoft.FSharp.Collections`|Değişmez koleksiyon sınıfları içeren `List` ve `Array`.|
 |`Microsoft.FSharp.Control`|Geç değerlendirme ve zaman uyumsuz iş akışları gibi denetim yapıları için türler içerir.|

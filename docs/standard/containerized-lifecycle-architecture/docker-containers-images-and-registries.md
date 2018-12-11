@@ -1,38 +1,38 @@
 ---
-title: Docker kapsayıcıları, görüntüler ve kayıt defterleri
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+title: Docker kapsayıcıları, görüntüleri ve kayıt defterleri
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106369"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142755"
 ---
-# <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüler ve kayıt defterleri
+# <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüleri ve kayıt defterleri
 
-Docker kullanırken, bir uygulama veya hizmeti ve paketi ve bağımlılıklarını kapsayıcı görüntüsü oluşturun. Görüntü uygulama veya hizmet ve yapılandırma ve bağımlılıkları statik bir gösterimidir.
+Docker'ı kullanarak bir uygulama veya hizmeti ve paketi ve bağımlılıkları bir kapsayıcı görüntüsü oluşturduğunuzda. Görüntü uygulamayı veya hizmeti ve kendi yapılandırma ve bağımlılıklarla statik bir gösterimidir.
 
-Uygulama veya hizmeti çalıştırmak için uygulamanın görüntü Docker ana bilgisayarda çalışan bir kapsayıcı oluşturmak için örneği. Kapsayıcılar, başlangıçta bir geliştirme ortamı veya PC sınanır.
+Uygulamanızı veya hizmetinizi çalıştırmak için uygulamanın resmi Docker ana bilgisayarda çalışan bir kapsayıcı oluşturmak için örneği oluşturulur. Kapsayıcı başlangıçta bir geliştirme ortamı veya bilgisayar test edilmez.
 
-Görüntü resimlerinin kitaplık olarak davranan bir kayıt defteri depolayın. Bir kayıt defteri üretim orchestrators dağıtırken gerekir. Docker tutar ortak kayıt defterinden [Docker hub'a](https://hub.docker.com/); diğer satıcılar görüntüleri farklı koleksiyonlar için kayıt defterleri sağlayın. Alternatif olarak, kuruluşların özel bir kayıt defteri olabilir şirket içi kendi Docker görüntüler.
+Görüntü kitaplığı hareket eden bir kayıt defteri, görüntüleri depolayın. Bir kayıt defteri için üretim düzenleyicileri dağıtırken gerekir. Genel bir kayıt defterinden docker tutar [Docker Hub](https://hub.docker.com/); diğer satıcıları görüntüleri farklı koleksiyonlar için kayıt defterleri sağlayın. Alternatif olarak, kuruluşlar, özel bir kayıt defteri sahip olabilir, kendi Docker görüntüleri için şirket içi.
 
-Şekil 1-4 ne görüntüleri ve kayıt defterleri Docker içindeki diğer bileşenlere ilişkili gösterir. Ayrıca birden çok kayıt defteri teklifleri satıcılardan gösterir.
+Şekil 1-4 nasıl görüntüler ve Docker kayıt defterleri için diğer bileşenleri ilişkilendirilmesi gösterir. Ayrıca birden çok kayıt defteri teklifleri satıcılardan gösterir.
 
 ![](./media/image4.png)
 
-Şekil 1-4: sınıflandırma Docker terimleri ve kavramları
+Şekil 1-4: Docker terimleri ve kavramları'nin Taksonomisi
 
-Kayıt defterinde görüntüleri koyarak framework düzeyinde, bağımlılıklarının tümü de dahil olmak üzere sabit ve değişmez uygulama BITS depolayabilirsiniz. Ardından sürüm ve birden çok ortamlarda görüntüleri dağıtabilir ve böylece tutarlı bir dağıtım birimi sağlayın.
+Kayıt defterindeki görüntüleri koyarak çerçevesi düzeyinde, bağımlılıklarının tümü de dahil olmak üzere, statik ve sabit uygulama BITS depolayabilirsiniz. Ardından sürüm ve birden çok ortama görüntülerde dağıtabilir ve bu nedenle, tutarlı dağıtım birimi sağlayın.
 
-Özel görüntü kayıt defterleri, şirket içi barındırılan veya bulutta, aşağıdaki durumlarda önerilir:
+Özel görüntü kayıt defterleri, şirket içinde barındırılan veya bulutta, aşağıdaki durumlarda önerilir:
 
--   Görüntülerinizi herkese açık şekilde nedeniyle gizliliği paylaşılması değil.
+-   Nedeniyle gizlilik görüntülerinizin herkese açık şekilde paylaşılmamalı.
 
--   Görüntülerinizi seçilen dağıtım ortamınızı arasındaki en düşük ağ gecikmesini olmasını istiyorsunuz. Üretim ortamınıza Azure ise, örneğin, büyük olasılıkla ağ gecikme süresi en az olması görüntülerinizi Azure kapsayıcı kayıt defterine depolamak istediğiniz. Üretim ortamınıza şirket ise benzer şekilde, bir şirket içi Docker güvenilen kayıt defteri aynı yerel ağ içinde kullanılabilir olmasını istiyorsanız.
+-   Görüntüleri ve seçilen dağıtım ortamınız arasında düşük ağ gecikme süresine sahiptir istiyorsunuz. Üretim ortamınızı Azure ise, örneğin, büyük olasılıkla ağ gecikme süresi çok az olması görüntülerinizi Azure Container Registry'de depolamak istediğiniz. Üretim ortamınıza şirket içinde ise benzer şekilde, bu, bir şirket içi Docker Trusted Registry aynı yerel ağda kullanılabilir olmasını isteyebilirsiniz.
 
 >[!div class="step-by-step"]
-[Önceki](docker-terminology.md)
-[sonraki](Docker-application-lifecycle/index.md)
+>[Önceki](docker-terminology.md)
+>[İleri](Docker-application-lifecycle/index.md)

@@ -1,20 +1,19 @@
 ---
 title: Sanal üyeler
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121071"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128940"
 ---
 # <a name="virtual-members"></a>Sanal üyeler
 Sanal üyeler, bu nedenle alt davranışını değiştirme geçersiz kılınabilir. Bunlar geri çağırmaları sağladıkları genişletilebilirlik açısından oldukça benzer, ancak bunlar yürütme performans ve bellek tüketimi açısından daha iyi. Ayrıca, sanal üyeleri özel bir tür var olan bir tür (özelleştirmesi) oluşturma gerektiren senaryolar daha doğal gönderebilirsiniz.  
@@ -37,7 +36,7 @@ Sanal üyeler, bu nedenle alt davranışını değiştirme geçersiz kılınabil
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

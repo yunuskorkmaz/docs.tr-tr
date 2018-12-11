@@ -3,12 +3,12 @@ title: '&lt;Bağımsız değişken&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-ms.openlocfilehash: bfcb98085e0b2292d46acfd0a57096219afff606
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8172093f36bd09ea33b1a447ee61dc36afb1b358
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756325"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154235"
 ---
 # <a name="ltargumentgt"></a>&lt;Bağımsız değişken&gt;
 Bir etkinlik durumu sorgusu ile ilişkili bir bağımsız değişken temsil eden bir yapılandırma öğesi.  
@@ -21,8 +21,8 @@ Bir etkinlik durumu sorgusu ile ilişkili bir bağımsız değişken temsil eden
 \<İş akışı >  
 \<activityStateQueries >  
 \<activityStateQuery >  
-\<bağımsız değişkenler >  
-\<bağımsız değişkeni >  
+\<bağımsız değişken >  
+\<bağımsız değişken >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -57,10 +57,10 @@ Bir etkinlik durumu sorgusu ile ilişkili bir bağımsız değişken temsil eden
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağımsız değişkenler >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Bu etkinlik sorgusu ile ilişkili bağımsız değişken koleksiyonu.|  
+|[\<bağımsız değişken >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Bu etkinlik sorgusu ile ilişkili bağımsız değişken koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir benzersiz bir ActivityStateQuery bir iş akışının yürütülmesini izlerken veri çıkarma özelliğidir. İzleme erişme post kaydettiğinde bu yürütme ek bağlam sağlar. Kullanabileceğiniz [ \<bağımsız değişkenleri >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) ve [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) herhangi bir değişken veya değişken ayıklamak için öğeleri bir iş akışındaki herhangi bir etkinlikten. Aşağıdaki örnek, değişkenler ve bağımsız değişkenler ayıklar bir etkinlik durumu sorgu gösterir, etkinliğin `Closed` izleme kaydı yayılan. Değişkenleri ve bağımsız değişkenler ile yalnızca bir ActivityStateRecord ayıklanabilir ve bu nedenle bir izleme içinde abone olduğunuz kullanarak profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
+ Bir benzersiz bir ActivityStateQuery bir iş akışı yürütülmesini izlerken veri çıkarma özelliğidir. İzleme erişme post düzenlediğinizde bu yürütme ek bağlam sağlar. Kullanabileceğiniz [ \<bağımsız değişkenleri >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) ve [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) öğeleri herhangi bir değişken veya bağımsız değişken ayıklamak için bir iş akışındaki herhangi bir etkinlikten. Aşağıdaki örnek, değişkenler ve bağımsız değişkenler ayıklar bir etkinlik durumu sorgusu gösterir, etkinliğin `Closed` izleme kaydını yayılan. Değişkenler ve bağımsız değişkenler yalnızca bir ActivityStateRecord ile ayıklanabileceği ve bu nedenle içinde bir izleme abone olduğunuz kullanarak profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  

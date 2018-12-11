@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185933"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153871"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -83,5 +83,5 @@ Görüntüsü, işletim sistemi zaten yüklü olduğu bir ikincil salt okunur sa
 Benzer şekilde, "yüklü bilgisayar" resim sabit diski olan bir kapsayıcının düşünebilirsiniz. Bir bilgisayar gibi kapsayıcı açılıp kapatılabilir.
 
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](docker-terminology.md)
+>[Önceki](index.md)
+>[İleri](docker-terminology.md)

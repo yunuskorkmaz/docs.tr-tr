@@ -1,16 +1,15 @@
 ---
 title: Koleksiyonlar için yönergeler
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964853"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145588"
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
 Özellikle bazı genel özelliği içeren nesnelerin bir grup yönetmek üzere tasarlanmış herhangi bir türü bir koleksiyon kabul edilebilir. Neredeyse her zaman böyle türleri uygulamak uygun olan <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>, bu bölümde biz yalnızca birini veya her ikisini bu arabirimleri uygulayan türleri, koleksiyonları olmasını düşünün.  
@@ -109,7 +108,7 @@ ms.locfileid: "45964853"
  **X DO NOT** nongeneric temel koleksiyonlarından gibi devral `CollectionBase`. Kullanım `Collection<T>`, `ReadOnlyCollection<T>`, ve `KeyedCollection<TKey,TItem>` yerine.  
   
 ### <a name="naming-custom-collections"></a>Özel koleksiyonlar adlandırma  
- Koleksiyonlar (türleri uygulayan `IEnumerable`) genellikle iki nedenden dolayı oluşturulur: Varolan veri yapılarına değerinden farklı performans özellikleri yapısı özgü işlemleri ve genellikle yeni bir veri yapısı oluşturmak için (1) (örneğin, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) ve (2) belirli bir öğe kümesini tutmak için özel bir koleksiyon oluşturmak için (örneğin, <xref:System.Collections.Specialized.StringCollection>). Veri yapıları, uygulamaları ve kitaplıkları iç uygulamasında en sık kullanılır. Özelleştirilmiş koleksiyonlar çoğunlukla API (özelliği, parametre türleri) olarak gösterilmesini üzeresiniz.  
+ Koleksiyonlar (türleri uygulayan `IEnumerable`) genellikle iki nedenden dolayı oluşturulur: (1) varolan veri yapılarına değerinden farklı performans özellikleri yapısı özgü işlemleri ve genellikle yeni bir veri yapısı oluşturmak için (örneğin, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) ve özel bir koleksiyon için oluşturma (2) belirli bir öğe kümesini bulunduran (örneğin, <xref:System.Collections.Specialized.StringCollection>). Veri yapıları, uygulamaları ve kitaplıkları iç uygulamasında en sık kullanılır. Özelleştirilmiş koleksiyonlar çoğunlukla API (özelliği, parametre türleri) olarak gösterilmesini üzeresiniz.  
   
  **✓ DO** uygulama soyutlamalar adlarında "Sözlük" soneki kullanan `IDictionary` veya `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "45964853"
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

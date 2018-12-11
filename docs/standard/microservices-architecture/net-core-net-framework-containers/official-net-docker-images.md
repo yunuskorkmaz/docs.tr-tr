@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131384"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
@@ -50,7 +50,6 @@ Docker Hub .NET resmi depoları geçirirken, Sınıflandırılmamış veya etike
 | Microsoft/dotnet:**2.1-aspnetcore-çalışma zamanı** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeler, Linux ve Windows (çok arch) |
 | Microsoft/dotnet:**sdk 2.1**                | .NET core SDK'ları dahil, Linux ve Windows (çok arch)                                  |
 
-
 >[!div class="step-by-step"]
-[Önceki](net-container-os-targets.md)
-[İleri](../architect-microservice-container-applications/index.md)
+>[Önceki](net-container-os-targets.md)
+>[İleri](../architect-microservice-container-applications/index.md)

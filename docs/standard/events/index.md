@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192491"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127933"
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
-.NET Framework olayları temsilci modeline dayanır. Temsilci modeli kaydedin ve bir sağlayıcıdan bildirimleri almak abone sağlayan gözlemci tasarım deseni izler. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  
+.NET Framework olayları temsilci modeline dayanır. Temsilci modeli ile kaydetmek ve bildirim sağlayıcıdan almak abone sağlayan gözlemci tasarım deseni izler. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  
   
  Windows 8.x Store uygulamalarında olayları işleme hakkında daha fazla bilgi için bkz: [olaylar ve yönlendirilmiş olaylara genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
@@ -76,16 +76,16 @@ ms.locfileid: "44192491"
 ## <a name="raising-multiple-events"></a>Birden Çok Olay Oluşturma  
  Sınıfınız birden çok olayı harekete geçirirse derleyici olay temsilci örneği başına tek alan oluşturur. Olay sayısı büyükse, her temsilci tek bir alanın depolama maliyeti kabul edilebilir olmayabilir. Bu durumlarda, .NET Framework olay özelliklerini sağlar. olay temsilcilerini depolamak için seçtiğiniz başka bir veri yapısı ile kullanabilirsiniz.  
   
- Olay özellikleri, olay erişimcileri ile birlikte olay bildirimlerinden oluşur. Olay erişimcileri eklemek veya olay temsilci örneklerini depolama veri yapısından kaldırmak için tanımladığınız yöntemlerdir. Her olay temsilcisinin çağrılmadan önce alınması gerektiğinden olay özelliklerinin olay alanlarından yavaş olduğunu unutmayın. Denge, bellek ve hız arasında olur. Sınıfınız seyrek oluşan birçok olay tanımlıyorsa olay özelliklerini uygulamak isteyeceksiniz. Daha fazla bilgi için [nasıl yapılır: işleme birden çok olayları kullanarak olay özelliklerini](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Olay özellikleri, olay erişimcileri ile birlikte olay bildirimlerinden oluşur. Olay erişimcileri eklemek veya olay temsilci örneklerini depolama veri yapısından kaldırmak için tanımladığınız yöntemlerdir. Her olay temsilcisinin çağrılmadan önce alınması gerektiğinden olay özelliklerinin olay alanlarından yavaş olduğunu unutmayın. Denge, bellek ve hız arasında olur. Sınıfınız seyrek oluşan birçok olay tanımlıyorsa olay özelliklerini uygulamak isteyeceksiniz. Daha fazla bilgi için [nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Olaylar Oluşturma ve Kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Olayları oluşturma ve tüketme örnekleri içerir.|  
-|[Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işlemek için nasıl kullanılacağını gösterir.|  
+|[Nasıl Yapılır: Olaylar oluşturma ve kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Olayları oluşturma ve tüketme örnekleri içerir.|  
+|[Nasıl Yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işlemek için nasıl kullanılacağını gösterir.|  
 |[Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)|Kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlayan tasarım düzenini açıklar.|  
-|[Nasıl yapılır: Bir Windows Forms Uygulamasında Olayları Kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
+|[Nasıl Yapılır: Web formları uygulamasında olayları kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

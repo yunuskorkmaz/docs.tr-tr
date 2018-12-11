@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883928"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126282"
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -91,7 +91,7 @@ End Event
   
  Kullanabileceğiniz `Event` yalnızca Modül düzeyinde. Başka bir deyişle *bildirim içeriğinin* bir olay, bir sınıf, yapı, modül veya arabirimi olması gerekir ve bir kaynak dosyası, ad alanı, yordam veya blok olamayacağı için. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Çoğu durumda, olayları bildirmek için bu konunun söz dizimi bölümünde ilk sözdizimini kullanabilirsiniz. Ancak, bazı senaryolar, olayın ayrıntılı davranışı hakkında daha fazla denetime sahip olmasını gerektirir. Son söz dizimini kullanan bu konu, sözdizimi bölümündeki `Custom` anahtar sözcüğü, özel olaylar tanımlamanıza olanak sağlayarak bu denetim sağlar. Özel bir olay tam olarak bir olay işleyicisi için kod ekler veya kaldırdığında veya olaydan neler veya ne zaman kod olayını belirtin. Örnekler için bkz [nasıl yapılır: tasarrufu bellek için olan özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) ve [nasıl yapılır: bildirmek özel olayları önlemek engellemesine](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ Çoğu durumda, olayları bildirmek için bu konunun söz dizimi bölümünde ilk sözdizimini kullanabilirsiniz. Ancak, bazı senaryolar, olayın ayrıntılı davranışı hakkında daha fazla denetime sahip olmasını gerektirir. Son söz dizimini kullanan bu konu, sözdizimi bölümündeki `Custom` anahtar sözcüğü, özel olaylar tanımlamanıza olanak sağlayarak bu denetim sağlar. Özel bir olay tam olarak bir olay işleyicisi için kod ekler veya kaldırdığında veya olaydan neler veya ne zaman kod olayını belirtin. Örnekler için bkz [nasıl yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) ve [nasıl yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, 0, 10 saniye basılı saymak için olayları kullanır. Kod birkaç ilgili olay yöntemleri, özellikleri ve ifadeleri gösterir. Bu içerir `RaiseEvent` deyimi.  
@@ -115,7 +115,7 @@ End Event
  Önceki örneği çalıştırmak ve etiketli düğmeye tıklayın için F5 tuşuna basın **Başlat**. İlk metin kutusuna saniye sayısı başlar. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Yöntemi olayları form mu aynı şekilde işlemez. Doğrudan olaylarını işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [parçacıkları](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Yöntemi olayları form mu aynı şekilde işlemez. Doğrudan olaylarını işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [yönetilen iş parçacığı](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
@@ -125,7 +125,7 @@ End Event
  [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
  [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)  
  [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [Nasıl Yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [Nasıl Yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

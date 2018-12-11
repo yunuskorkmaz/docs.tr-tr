@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7.2 hedefleyen bir geliştirici ya da daha büyük ve SHA1 karma davranışa dönmek istediği aşağıdaki AppContext bayrak ayarlamanız gerekir.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Bir aşağıda 4.7.2 .NET framework sürümünü hedefleme kümesi SHA256 karma yararlanmak isteyen bir geliştirici AppContext bayrağı altında.  .NET Framework'ün yüklü sürümü 4.7.2 olmasına dikkat edin veya daha büyük.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=false&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Kapsam|Geçirgen|
 |Sürüm|4.7.2|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

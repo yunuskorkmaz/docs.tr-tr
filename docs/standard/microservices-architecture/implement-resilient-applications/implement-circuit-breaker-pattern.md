@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453159"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147274"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 
@@ -146,14 +146,11 @@ Ne zaman açık/bağlantı hattı kesme farklı mantığı uygulayabilir. Ya da 
 
 Son olarak, başka bir olasılık için `CircuitBreakerPolicy` kullanmaktır `Isolate` (açık zorlar ve bağlantı hattı açık tutar) ve `Reset` (hangi kapatır, yeniden). Bu ilkenin üzerine ayırma ve sıfırlama doğrudan çağıran bir yardımcı programı HTTP uç noktası oluşturmak için kullanılabilir.  Bu tür, bir HTTP uç nokta da, uygun şekilde, geçici olarak yükseltmek istediğinizde gibi bir aşağı akış sistem yalıtmak için üretim ortamında güvenli kullanılabilir. Veya bir aşağı akış sistem hatalı olması şüphelendiğiniz el ile korunacak bağlantı hattını geçirmek.
 
-
 ## <a name="additional-resources"></a>Ek kaynaklar
-
 
 -   **Devre kesici düzeni**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Önceki](implement-http-call-retries-exponential-backoff-polly.md)
-[İleri](monitor-app-health.md)
+>[Önceki](implement-http-call-retries-exponential-backoff-polly.md)
+>[İleri](monitor-app-health.md)

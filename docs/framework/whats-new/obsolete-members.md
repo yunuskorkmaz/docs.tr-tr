@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185254"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151414"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -177,12 +177,12 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Bu oluşturucu kullanımdan kaldırılmıştır. Lütfen kullanın <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29?displayProperty=nameWithType> yerine.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|Bu özellik kullanım dışı bırakıldı. Lütfen kullanın <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType> yerine.|  
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|Bu özellik kullanım dışı bırakıldı.|  
-|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Alternatif bir API mevcuttur: yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
+|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Alternatif bir API kullanılabilir: Yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
 |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Bu API kullanım dışıdır.|  
-|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Alternatif bir API mevcuttur: yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
+|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Alternatif bir API kullanılabilir: Yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
 |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Bu API kullanım dışıdır.|  
 |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Bu API kullanım dışıdır.|  
-|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Alternatif bir API mevcuttur: yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
+|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Alternatif bir API kullanılabilir: Yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|Çağrı <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> yerine.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> Yöntemi kullanım dışıdır ve gelecek sürümde kaldırılacak.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> Yöntemi kullanımdan kaldırıldı. Barındırma API'si, bu işlemi gerçekleştirmek için kullanın.|  
@@ -731,7 +731,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
  Aşağıdaki tablolarda, Microsoft derlemelerde eski üyelerini listeleyin. Bunlar özel amaçlı derlemeleri ve (Microsoft.VisualBasic.dll gibi) ayrı bir dil veya bir yapı sistemi (örneğin, Microsoft.Build.Engine.dll) hedef derlemeleri içerir.  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Bütünleştirilmiş kod: IEHost.dll ve IEExec.exe  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Derleme: IEHost.dll ve IEExec.exe  
  IEHost.dll ve IEExec.exe derlemeler .NET Framework'den kaldırıldı. Tüm türleri ve üyeleri artık kullanılmayan ve desteklenmeyen [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Bu derlemeler, Internet Explorer'da yürütülebilir dosyaları çalışan ve Windows Forms denetimleri barındırmak için kullanıldı. Bu teknoloji alternatifleri, ClickOnce, XAML tarayıcı uygulamaları (XBAP) ve Microsoft Silverlight içerir.  
   
 <a name="isymwrapper"></a>   

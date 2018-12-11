@@ -1,21 +1,21 @@
 ---
-title: Platformlar arası hedefleme
+title: Platformlar arası .NET kitaplıkları için hedefleme
 description: Platformlar arası .NET kitaplıkları oluşturmak için en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129720"
 ---
 # <a name="cross-platform-targeting"></a>Platformlar arası hedefleme
 
 Birden çok işletim sistemleri ve cihazların modern .NET destekler. Azure veya bir .NET oyununuzu Unity barındırılan ASP.NET Web sitesi oluşturuyor mümkün olduğu kadar çok geliştiricileri desteklemek .NET açık kaynak kitaplıkları için önemlidir.
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 .NET standard platformlar arası destek .NET Kitaplığı'na eklemek için en iyi yoludur. [.NET standard](../net-standard.md) bir belirtimi .NET API'leri, tüm .NET uygulamalarında kullanılabilir. .NET Standard hedefleyen Standard'ın .NET, .NET Standard sürümünü kullanan tüm platformlar tarafından kullanılabilir olması anlamına gelir, belirli bir sürümü olan API'leri kullanmak için kısıtlanır kitaplıkları oluşturmak olanak tanır.
 
@@ -59,7 +59,7 @@ Tüketicileriniz, tek tek çerçeveleri için yapı zorunda korumak için .NET s
 >
 > Bunu yaptığınızda, .NET Standard desteği bırak değil. Bunun yerine, uygulamadan throw ve API'leri becerisi sağlar. Bu şekilde kitaplığınızı her yerde kullanılabilir ve çalışma zamanı açık yukarı özelliklerini destekler.
 
-**❌ KAÇININ** çoklu hedefleme-.NET Standard ile tüm hedefler için aynı kaynak kodunuzu ise kullanarak.
+**❌ KAÇININ** tüm hedefler için aynı kaynak kodunuzu ise .NET Standard hedefleyen yanı sıra çoklu sürüm desteği.
 
 > .NET Standard derleme NuGet tarafından otomatik olarak kullanılır. Tek tek .NET uygulamalarını hedefleme artırır `*.nupkg` hiçbir avantajı olmadan boyutu.
 
@@ -95,5 +95,5 @@ Tüketicileriniz, tek tek çerçeveleri için yapı zorunda korumak için .NET s
 **❌ SAĞLAMADIĞI** artık desteklenmeyen bir .NET platformları için hedefler içerir. Örneğin, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
-[Önceki](./get-started.md)
-[İleri](./strong-naming.md)
+>[Önceki](get-started.md)
+>[İleri](strong-naming.md)

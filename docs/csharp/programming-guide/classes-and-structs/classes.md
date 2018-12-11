@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 656e16352e8a88cc2c95483551dd71600f3fec0e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126295"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ ms.locfileid: "44081482"
 Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak sınıfının bir örneğini oluşturana kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci veya bir nesne atama bir başka bir yerde, aşağıdaki örnekte gösterildiği gibi oluşturulmuş olabilir uyumlu türü:
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.

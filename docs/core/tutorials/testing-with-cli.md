@@ -2,14 +2,14 @@
 title: Düzenleme ve .NET Core komut satırı ile projeleri test etme
 description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core projeleri açıklanmaktadır.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 960d6e98f39b1d1d07c980c021b1029201f1f631
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415230"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169669"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
 
@@ -97,13 +97,13 @@ Woof!
 Meow!
 ```
 
-İsteğe bağlı alıştırma: yeni bir evcil hayvan türü gibi ekleyebilirsiniz bir `Bird`, bu proje genişleterek. Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine. Uygulamayı yeniden çalıştırın. Çıkış içerir `Tweet!`
+İsteğe bağlı alıştırma: Yeni bir evcil hayvan türü gibi ekleyebilirsiniz bir `Bird`, bu proje genişleterek. Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine. Uygulamayı yeniden çalıştırın. Çıkış içerir `Tweet!`
 
 ### <a name="testing-the-sample"></a>Örnek test etme
 
 `NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz. Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi. Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinizi davranışını denetlemesine olanak tanır.
 
-Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
+Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu, iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
 
 Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje. Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-İsteğe bağlı alıştırma: eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` türü.
+İsteğe bağlı alıştırma: Eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` yazın.
 
 > [!NOTE]
 > Beklediğiniz ancak `expected` ve `actual` değerler eşit olan ilk onaylama `Assert.NotEqual` denetimini, bu değerler olduğunu belirtir *eşit değil*. Her zaman başlangıçta test mantığını denetlemek için başarısız bir test oluşturun. Testin başarısız olduğunu onayladıktan sonra onaylama test geçmesine izin verecek şekilde ayarlayın.

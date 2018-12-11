@@ -2,12 +2,12 @@
 title: Değişiklik SQL oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836945"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127075"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölümde bir değişiklik SQL oluşturma modülü için geliştirme anlatılmaktadır, (SQL:1999-uyumlu veritabanı) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimlerine bir değişikliği komut ağacı çevirmek için sorumludur.  
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Örnek sağlayıcısında değişiklik SQL oluşturma  
- [Entity Framework örnek sağlayıcısı](https://go.microsoft.com/fwlink/?LinkId=180616) destekleyen bir ADO.NET veri sağlayıcıları bileşenlerini gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bu, bir SQL Server 2005 veritabanını hedefler ve System.Data.SqlClient ADO.NET 2.0 veri sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.  
+ [Entity Framework örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) destekleyen bir ADO.NET veri sağlayıcıları bileşenlerini gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bu, bir SQL Server 2005 veritabanını hedefler ve System.Data.SqlClient ADO.NET 2.0 veri sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.  
   
  Değişiklik SQL oluşturma Modülü (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) örnek sağlayıcısı bir giriş DbModificationCommandTree alır ve tek bir değişiklik büyük olasılıkla döndürmek için bir select deyimi tarafından izlenen SQL deyimini oluşturan bir okuyucu tarafından DbModificationCommandTree belirtildi. Hedef SQL Server veritabanı tarafından oluşturulan komutları şeklini etkileyeceğini unutmayın.  
   

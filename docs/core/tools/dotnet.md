@@ -1,15 +1,13 @@
 ---
-title: DotNet command - .NET Core CLI
+title: DotNet komutu
 description: Dotnet komut (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170865"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -176,7 +174,7 @@ Kullanımda .NET Core SDK'sı sürümünü yazdırır.
 | [dotnet help](dotnet-help.md)                 | Komut için çevrimiçi belgeleri ayrıntılı gösterir.           |
 | [dotnet migrate](dotnet-migrate.md)           | Geçerli bir önizleme 2 projesi bir .NET Core SDK'sı 1.0 projesine geçirir.  |
 | [dotnet msbuild](dotnet-msbuild.md)           | MSBuild komut satırını erişim sağlar.                        |
-| [dotnet new](dotnet-new.md)                   | Bir C# veya F # projesi için belirli bir şablon başlatır.                |
+| [dotnet new](dotnet-new.md)                   | Başlatan bir C# veya F# verilen şablonu için proje.                |
 | [dotnet pack](dotnet-pack.md)                 | Kodunuzun bir NuGet paketi oluşturur.                               |
 | [dotnet publish](dotnet-publish.md)           | .NET framework bağımlı veya kendi içinde uygulama yayımlar. |
 | [dotnet restore](dotnet-restore.md)           | Belirli bir uygulama için bağımlılıkları yükler.                  |
@@ -194,7 +192,7 @@ Kullanımda .NET Core SDK'sı sürümünü yazdırır.
 | [dotnet help](dotnet-help.md)       | Komut için çevrimiçi belgeleri ayrıntılı gösterir.           |
 | [dotnet migrate](dotnet-migrate.md) | Geçerli bir önizleme 2 projesi bir .NET Core SDK'sı 1.0 projesine geçirir.  |
 | [dotnet msbuild](dotnet-msbuild.md) | MSBuild komut satırını erişim sağlar.                        |
-| [dotnet new](dotnet-new.md)         | Bir C# veya F # projesi için belirli bir şablon başlatır.                |
+| [dotnet new](dotnet-new.md)         | Başlatan bir C# veya F# verilen şablonu için proje.                |
 | [dotnet pack](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
 | [dotnet publish](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde uygulama yayımlar. |
 | [dotnet restore](dotnet-restore.md) | Belirli bir uygulama için bağımlılıkları yükler.                  |
@@ -211,7 +209,7 @@ Kullanımda .NET Core SDK'sı sürümünü yazdırır.
 | [dotnet clean](dotnet-clean.md)     | Temiz yapı çıkarır.                                              |
 | [dotnet migrate](dotnet-migrate.md) | Geçerli bir önizleme 2 projesi bir .NET Core SDK'sı 1.0 projesine geçirir.  |
 | [dotnet msbuild](dotnet-msbuild.md) | MSBuild komut satırını erişim sağlar.                        |
-| [dotnet new](dotnet-new.md)         | Bir C# veya F # projesi için belirli bir şablon başlatır.                |
+| [dotnet new](dotnet-new.md)         | Başlatan bir C# veya F# verilen şablonu için proje.                |
 | [dotnet pack](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
 | [dotnet publish](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde uygulama yayımlar. |
 | [dotnet restore](dotnet-restore.md) | Belirli bir uygulama için bağımlılıkları yükler.                  |

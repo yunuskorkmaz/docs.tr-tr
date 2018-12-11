@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296457"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151322"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme (Visual Basic)
 Çağırdığınızda bir `Sub` veya `Function` yordamı, bağımsız değişkenleri iletebilir *konuma göre* — yordam tanımında göründükleri sırayla — veya geçirebileceğiniz gibi *ada göre*, olmadan konuma haklısın.  
@@ -64,7 +64,7 @@ Aşağıdaki örnekte gösterildiği gibi hem konuma ve ada göre tek bir yordam
   
  Önceki örnekte, hiçbir ek virgülle belirtilmemişse yerini tutmak için gerekli `age` bağımsız değişkeni, bu yana `birth` adına göre geçirilir.  
   
-Bağımsız değişken bir karışımını konumu ve adı, konumsal bağımsız değişkenler sağladığında 15.5 önce'sürümlerinde Visual Basic'in tüm ilk sırada olması gerekir. Kalan herhangi bir bağımsız değişken adına göre bağımsız değişken sağlayın, sonra tüm adına göre geçirilmelidir.  Örneğin, için aşağıdaki çağrı `Display` yöntemi derleyici hatası görüntüler [BC30241: adlandırılmış bağımsız değişken bekleniyor](../../../misc/bc30241.md).
+Bağımsız değişken bir karışımını konumu ve adı, konumsal bağımsız değişkenler sağladığında 15.5 önce'sürümlerinde Visual Basic'in tüm ilk sırada olması gerekir. Kalan herhangi bir bağımsız değişken adına göre bağımsız değişken sağlayın, sonra tüm adına göre geçirilmelidir.  Örneğin, için aşağıdaki çağrı `Display` yöntemi derleyici hatası görüntüler [BC30241: Adlandırılmış bağımsız değişken bekleniyor](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ Ada göre bir parametre dizisi geçiremezsiniz. Bu yordamı çağırdığınızd
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yordamlar](./index.md)  
  [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
+ [Nasıl Yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)  
  [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
  [İsteğe Bağlı Parametreler](./optional-parameters.md)  
  [Parametre Dizileri](./parameter-arrays.md)  

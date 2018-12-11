@@ -1,16 +1,15 @@
 ---
 title: Bağımlılık özellikleri
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75c83dc75d1c86c89169fcc54220ced2a195bfbe
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: b577f42c98cb56fb367cb57a550cb094a8ef105e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079093"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145247"
 ---
 # <a name="dependency-properties"></a>Bağımlılık özellikleri
 Bağımlılık özelliği (DP) bir tür değişken (alan), örneğin depolamak yerine bir özellik deposu değerini depolayan bir normal bir özelliktir.  
@@ -96,7 +95,7 @@ public class Grid {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

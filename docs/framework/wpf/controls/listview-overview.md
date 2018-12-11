@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562287"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148918"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
@@ -75,13 +75,11 @@ ms.locfileid: "46562287"
 ## <a name="sharing-the-same-view-mode"></a>Aynı görünüm modunu paylaşma  
  İki <xref:System.Windows.Controls.ListView> denetimleri, aynı anda aynı görünüm modu paylaşamaz. Birden fazla ile aynı görünüm modunu kullanmayı denerseniz <xref:System.Windows.Controls.ListView> denetimi, bir özel durum oluşur.  
   
- Aynı anda birden fazla tarafından kullanılan bir görünüm modu belirtmek için <xref:System.Windows.Controls.ListView>, şablon veya stil kullanın. Görünüm olarak tanımlamak nasıl bir örnek için <xref:System.Windows.FrameworkElement.Resources%2A>, bkz: [birden çok örneği ile ListView](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Aynı anda birden fazla tarafından kullanılan bir görünüm modu belirtmek için <xref:System.Windows.Controls.ListView>, şablon veya stil kullanın.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Özel Görünüm modu oluşturma  
- Özelleştirilmiş görünümleri gibi <xref:System.Windows.Controls.GridView> türetilmiştir <xref:System.Windows.Controls.ViewBase> soyut olarak temsil edilen veri öğelerini görüntülemek için araçlar sağlar sınıfını <xref:System.Windows.Controls.ListViewItem> nesneleri.  
-  
- Özel Görünüm modu örneği için bkz: [birden çok örneği ile ListView](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Özelleştirilmiş görünümleri gibi <xref:System.Windows.Controls.GridView> türetilmiştir <xref:System.Windows.Controls.ViewBase> soyut olarak temsil edilen veri öğelerini görüntülemek için araçlar sağlar sınıfını <xref:System.Windows.Controls.ListViewItem> nesneleri.    
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.GridView>  

@@ -1,42 +1,41 @@
 ---
-title: Oluşturma, Gelişmekte olan ve sürüm oluşturma mikro hizmet API'leri ve sözleşmeler
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Oluşturma, Gelişmekte olan ve sürüm oluşturma mikro hizmet API'leri ve sözleşmeler
+title: Oluşturma, geliştirme ve sürüm oluşturma mikro hizmet API'leri ve anlaşmaları
+description: Mikro hizmet API'leri oluşturmak ve gereksinimleriniz değiştiğinde uygun evrimi ve sürüm çünkü dikkate sözleşme.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105699"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152545"
 ---
-# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Oluşturma, Gelişmekte olan ve sürüm oluşturma mikro hizmet API'leri ve sözleşmeler
+# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Oluşturma, geliştirme ve sürüm oluşturma mikro hizmet API'leri ve anlaşmaları
 
-Mikro hizmet API, hizmet ve istemcileri arasında bir sözleşmedir. Yalnızca çok önemli bir sözleşmedir neden olan API sözleşmesinin bozmadığını varsa bir mikro hizmet bağımsız olarak gelişmesi kuramaz. Sözleşme değiştirirseniz, istemci uygulamaları veya API ağ geçidi etkiler.
+Mikro hizmet API, hizmet ve istemcileri arasında bir sözleşmedir. Bir mikro hizmet bağımsız olarak yalnızca çok önemli sözleşme, bu yüzden API sözleşmesinin bölmediğinizden varsa gelişmek mümkün olacaktır. Sözleşme değiştirirseniz, istemci uygulamalarınız veya API ağ geçidinizin etkiler.
 
-API tanımı yapısını hangi protokolünü kullandığınıza bağlıdır. Örneğin, ileti kullanıyorsanız (gibi [AMQP](https://www.amqp.org/)), ileti türlerini API oluşur. HTTP ve RESTful hizmetlerini kullanıyorsanız, API URL'leri ve istek ve yanıt JSON biçimleri oluşur.
+API tanımı doğasını hangi protokolünü kullandığınız bağlıdır. Örneğin, Mesajlaşma kullanıyorsanız (gibi [AMQP](https://www.amqp.org/)), ileti türlerini API oluşur. HTTP ve RESTful hizmetlerini kullanıyorsanız, API URL ve istek ve yanıt JSON biçimleri oluşur.
 
-Ancak, ilk sözleşme hakkında Düşünceli olsa bile, bir hizmeti API'si zamanla değiştirmeniz gerekir. Bu durumda — ve özellikle, API birden çok istemci uygulamaları tarafından kullanılan ortak bir API olduğunda — tüm istemcilerin yeni API sözleşmesine yükseltmek için genellikle zorlayamaz. Genellikle, aynı anda bir hizmet sözleşmesini hem eski hem de yeni sürümlerini çalıştıran bir şekilde bir hizmetin yeni sürümler artımlı olarak dağıtmanız gerekir. Bu nedenle, bir strateji, hizmet sürümü oluşturma için önemlidir.
+Ancak, ilk sözleşmeniz hakkında özenli olsa bile, bir hizmeti API zamanla değiştirmeniz gerekir. Bu durumda — ve özellikle API'NİZİN birden çok istemci uygulamalar tarafından kullanılan ortak bir API olduğunda — genellikle tüm istemcilerin yeni API sözleşmesine yükseltme tutamaz. Genellikle yeni bir hizmet sözleşmesini eski ve yeni sürümleri aynı anda çalışan bir şekilde bir hizmet sürümlerini artımlı olarak dağıtmanız gerekebilir. Bu nedenle, hizmet sürümü oluşturma için bir stratejiniz olması önemlidir.
 
-API değişiklikleri API'nize öznitelikleri veya parametrelerini eklerseniz gibi küçük olduğunda, daha eski bir API kullanan istemciler geçin ve hizmet yeni sürümü ile çalışma. Gerekli olan eksik öznitelikleri için varsayılan değerler sağlamak mümkün olabilir ve istemcilerin ek yanıt öznitelikleri yoksay olabilir.
+API değişiklikleri API'nize öznitelikleri veya parametreleri eklerseniz gibi küçük olduğunda, daha eski bir API kullanan istemciler geçin ve hizmetin yeni sürümle çalışır. Gerekli olan eksik öznitelikler için varsayılan değerler sağlamak mümkün olabilir ve istemcilerin herhangi bir ek yanıt özniteliği yok saymak mümkün olabilir.
 
-Ancak, bazen büyük uyumsuz bir hizmet API değişiklik yapmak ve gerekir. İstemci uygulamaları veya hizmetleri hemen en yeni sürüme yükseltmek için zorlamak kuramamış olabilir çünkü bir hizmeti belirli bir süre için API eski sürümleri desteklemesi gerekir. Bir HTTP tabanlı mekanizması REST gibi kullanıyorsanız, bir URL veya bir HTTP üstbilgisi içine API sürüm numarası katıştırmak için yaklaşımdır. Sonra hizmet aynı anda aynı hizmet örneği içinde her iki sürümü uygulama veya her bir API sürümü işlemek farklı örnekleri dağıtma arasında karar verebilirsiniz. Bunun için iyi bir yaklaşımdır [Dünyası düzeni](https://en.wikipedia.org/wiki/Mediator_pattern) (örneğin, [MediatR Kitaplığı](https://github.com/jbogard/MediatR)) bağımsız işleyicileri farklı uygulama sürümleri aynı şekilde.
+Ancak, bazen büyük ve uyumsuz değişiklik, bir hizmeti API'sine gerekir. İstemci uygulamaları veya hizmetleri hemen yeni sürüme yükseltmek için zorlamak mümkün olmayabilir çünkü bir hizmeti API eski sürümleri için belirli bir süre desteklemesi gerekir. Bir HTTP tabanlı mekanizması gibi REST kullanıyorsanız, bir URL veya bir HTTP üst bilgisi API sürüm numarasını ekleyin yaklaşımdır. Sonra iki sürümü de aynı hizmet örneği hizmetinde aynı anda uygulama veya her bir API sürümünü işlemek farklı örnekleri dağıtma arasında karar verebilirsiniz. Bunun iyi bir yaklaşımdır [Dünyası deseni](https://en.wikipedia.org/wiki/Mediator_pattern) (örneğin, [MediatR Kitaplığı](https://github.com/jbogard/MediatR)) farklı sürümler bağımsız işleyicileri ayırmak için.
 
-Son olarak, bir REST mimarisi kullanıyorsanız [iletilir](https://www.infoq.com/articles/mark-baker-hypermedia) hizmetlerinizi sürüm oluşturma için en iyi çözüm olduğunu ve evolvable API'leri izin verme.
+Son olarak, bir REST mimarisi kullanıyorsanız [gösterimde](https://www.infoq.com/articles/mark-baker-hypermedia) hizmetlerinizi ve evolvable API'leri sağlayan sürüm oluşturma için en iyi bir çözümdür.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Scott Hanselman. Kolay ASP.NET Core RESTful Web API'si sürüm oluşturma**
-    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+- **Scott Hanselman. ASP.NET Core RESTful Web API'si sürümü oluşturma artık daha kolay** \
+  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Sürüm oluşturma bir RESTful web API'si**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **RESTful web API'si sürümü oluşturma** \
+  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Sürüm oluşturma, iletilir ve REST**
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
-
+- **Roy Fielding. Sürüm oluşturma, iletilir ve REST** \
+  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
-[Önceki](asynchronous-message-based-communication.md)
-[sonraki](microservices-addressability-service-registry.md)
+>[Önceki](asynchronous-message-based-communication.md)
+>[İleri](microservices-addressability-service-registry.md)

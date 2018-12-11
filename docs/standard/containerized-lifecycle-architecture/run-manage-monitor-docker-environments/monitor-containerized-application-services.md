@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232930"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153933"
 ---
 # <a name="monitor-containerized-application-services"></a>Kapsayıcı uygulama hizmetlerini izleme
 
@@ -31,7 +31,7 @@ Docker için ilgili olarak yaşam döngüsü olayları ve performans sayaçları
 
 -   Yaşam döngüsü ana bilgisayarda çalışan tüm kapsayıcılar hakkında telemetri — başlatma, durdurma ve benzeri.
 
--   Tüm kapsayıcılar için performans sayaçları: CPU, bellek, ağ kullanımı ve daha fazlası.
+-   Tüm kapsayıcıları için performans sayaçları: CPU, bellek, ağ kullanımı ve daha fazlası.
 
 -   Ayrıca yüklediyseniz [Application Insights SDK'sı](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) kapsayıcılarda çalıştırılan uygulamalar, bu uygulamaların tüm telemetri kapsayıcı ve ana makine tanımlayan ek özelliklere sahip. Birden fazla ana çalışan bir uygulamanın örneğine sahipseniz, bu nedenle, örneğin, kolayca uygulama telemetrinizi konağa göre filtrelemek mümkün olacaktır.
 
@@ -60,7 +60,7 @@ Değerli hizmetleri, kendi sağlamanın yanı sıra Operations Management Suite 
 
 ![](./media/image2.png)
 
-Şekil 6-2: bilgi Operations Management Suite tarafından gösterilen Docker kapsayıcıları hakkında
+Şekil 6-2: Operations Management Suite tarafından gösterilen Docker kapsayıcıları hakkında bilgi
 
 Application Insights ve Operations Management Suite izleme etkinlikleri odaklanın; Ancak, Application Insights daha uygulama içinde çalışan kendi SDK sayesinde uygulamaları kendilerini izlemeyi üzerinde odaklanır. Ancak, Operations Management Suite altyapı konakları etrafında çok daha odaklanan yanı sıra çok esnek veri odaklı arama/sorgu sistem sunarken uygun ölçekte günlükleri üzerinde ayrıntılı analiz sunar.
 
@@ -90,12 +90,12 @@ Sorgu türü gibi çalıştırarak performans bilgileri görebilir performans, �
 
 ![DockerPerfMetricsView](./media/image3.png){width = "5.78625 in" height = "3,25 in"}
 
-Şekil 6-3: performans ölçümlerini Operations Management Suite tarafından gösterilen Docker ana bilgisayarları
+Şekil 6-3: Docker ana bilgisayarları Operations Management Suite tarafından gösterilen performans ölçümleri
 
 Ayrıca Operations Management Suite'teki standart bir özellik olan sorguları kaydetme ve yardımcı olabilecek yararlı buldunuz ve sisteminizdeki eğilimleri sorguları tutun.
 
 **Daha fazla bilgi** kapsayıcı çözümü, yükleme ve Docker yapılandırma bilgileri bulmak için [Operations Management Suite](https://microsoft.com/oms)Git <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Önceki](manage-production-docker-environments.md)
-[İleri](../key-takeaways/index.md)
+>[Önceki](manage-production-docker-environments.md)
+>[İleri](../key-takeaways/index.md)

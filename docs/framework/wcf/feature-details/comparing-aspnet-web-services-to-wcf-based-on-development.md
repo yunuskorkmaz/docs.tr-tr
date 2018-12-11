@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 6292c863e4e72187b78d28e32044633fe938abc8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580718"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127374"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 Windows Communication Foundation (WCF) WCF programlanmış ve ASP.NET Web Hizmetleri gibi yapılandırılmış uygulamaların sağlar ve davranışlarını taklit etmek için ASP.NET uyumluluk modu seçeneği vardır. Aşağıdaki bölümlerde ASP.NET Web hizmetlerini karşılaştırın ve WCF ne hem teknolojiler kullanarak uygulama geliştirmek için gerekli olduğuna bağlı olarak.  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) WCF programlanmış ve ASP.NET Web Hizmet
   
  WCF<xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> türün örneklerinin içine XML ve hangi belirli alanlar veya tür özelliklerini seri hale getirilmesi için aşağıdaki örnek kodda gösterildiği gibi seri hale olduğunu belirtmek için .NET Framework türleri eklenebilir.  
   
-```  
+```csharp  
 //Example One:   
 [DataContract]  
 public class LineItem  
@@ -149,7 +149,7 @@ public class LineItem
   
 -   <xref:System.Xml.Serialization.XmlSerializer> Ve özniteliklerini <xref:System.Xml.Serialization> ad alanı, XML Şeması'nda tanımlanan herhangi bir geçerli türü .NET Framework türleriyle eşlemek olanak sağlamak için tasarlanmıştır ve bu nedenle sağlamaları için bir tür XML'de nasıl temsil edildiğini üzerinde kesin denetim. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> türü XML'de nasıl temsil edildiğini üzerinde çok az bir denetim sağlar. Yalnızca ad alanları ve tür ve alanlarını veya XML ve alanlar ve Özellikler XML dosyasında göründükleri sıra özelliklerinde temsil etmek için kullanılan adları belirtebilirsiniz:  
   
-    ```  
+    ```csharp  
     [DataContract(  
     Namespace="urn:Contoso:2006:January:29",  
     Name="LineItem")]  
@@ -184,7 +184,7 @@ public class LineItem
   
  Tüm farklılıklar da XML'e rağmen <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlamı da XML'e aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir türü seri hale getirir. Anlamsal olarak aynı XML tarafından öznitelikleri hem seri hale getiricileri genişletme ile kullanmak için aşağıdaki sınıf çevrilir <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute>:  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(Namespace="urn:Contoso:2006:January:29")]  
 [DataContract(Namespace="urn:Contoso:2006:January:29")]  
@@ -207,7 +207,7 @@ public class LineItem
 ## <a name="service-development"></a>Hizmet geliştirme  
  ASP.NET kullanarak bir hizmeti geliştirmek için eklemek için her zamanki geçtiğine <xref:System.Web.Services.WebService> öznitelik bir sınıfa ve <xref:System.Web.Services.WebMethodAttribute> herhangi bir hizmet işlemlerini olacak bu sınıfı yöntemleri:  
   
-```  
+```csharp  
 [WebService]  
 public class Service : T:System.Web.Services.WebService  
 {  
@@ -221,7 +221,7 @@ public class Service : T:System.Web.Services.WebService
   
  ASP.NET 2.0 kullanılmaya öznitelik ekleme seçeneğiniz <xref:System.Web.Services.WebService> ve <xref:System.Web.Services.WebMethodAttribute> bir arabirim yerine bir sınıf ve arabirim uygulamak için bir sınıf yazma:  
   
-```  
+```csharp  
 [WebService]  
 public interface IEcho  
 {  
@@ -245,7 +245,7 @@ public class Service : IEcho
   
  Hizmet sözleşmesi genellikle ilk olarak ekleyerek tanımlanan <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> bir arabirim için:  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface IEcho  
 {  
@@ -258,7 +258,7 @@ public interface IEcho
   
  Bir hizmet sözleşmesini tanımlandıktan sonra hizmet sözleşmesi tanımlandığı arabirimini uygulayan sınıf sağlayarak bir sınıfta uygulanır:  
   
-```  
+```csharp  
 public class Service : IEcho  
 {  
     public string Echo(string input)  
@@ -308,7 +308,7 @@ public class Service : IEcho
   
  Hizmet türlerini iç davranışını davranışları adlı sınıflar ailesini özelliklerini kullanarak ayarlanabilir. Burada, <xref:System.ServiceModel.ServiceBehaviorAttribute> sınıfı hizmet türü birden çok iş parçacıklı değer olduğunu belirtmek için kullanılır.  
   
-```  
+```csharp  
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]  
 public class DerivativesCalculatorServiceType: IDerivativesCalculator  
 ```  
@@ -346,7 +346,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  Bir .NET uygulamasından bir WCF Hizmeti barındırma için hizmet türü uygulama tarafından başvurulan bir sınıf kitaplık derlemesine derlemek ve konak hizmetini kullanarak uygulamayı programlama <xref:System.ServiceModel.ServiceHost> sınıfı. Gerekli temel programlama örneği verilmiştir:  
   
-```  
+```csharp  
 string httpBaseAddress = "http://www.contoso.com:8000/";  
 string tcpBaseAddress = "net.tcp://www.contoso.com:8080/";  
   
@@ -375,7 +375,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
 1.  Programcı eklemelisiniz <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> özniteliği için hizmet türü ve ASP.NET uyumluluk modunun izin verilen veya gerekli belirtin.  
   
-    ```  
+    ```csharp  
     [System.ServiceModel.Activation.AspNetCompatibilityRequirements(  
           RequirementsMode=AspNetCompatbilityRequirementsMode.Require)]  
     public class DerivativesCalculatorServiceType: IDerivativesCalculator  
@@ -426,7 +426,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
 ## <a name="message-representation"></a>İleti gösterimi  
  ASP.NET Web Hizmetleri tarafından alınan SOAP iletilerinin üstbilgisi özelleştirilebilir. Öğesinden türetilen bir sınıf <xref:System.Web.Services.Protocols.SoapHeader> başlık yapısını tanımlamak için ve ardından <xref:System.Web.Services.Protocols.SoapHeaderAttribute> üst bilgisi varlığını göstermek için kullanılır.  
   
-```  
+```csharp  
 public class SomeProtocol : SoapHeader  
 {  
      public long CurrentValue;  
@@ -473,7 +473,7 @@ public class Service: WebService, IEcho
   
  WCF öznitelikleri sağlar <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, ve <xref:System.ServiceModel.MessageBodyMemberAttribute> SOAP iletilerini bir hizmeti tarafından gönderilen ve alınan yapısını tanımlamak için.  
   
-```  
+```csharp  
 [DataContract]  
 public class SomeProtocol  
 {  
@@ -536,7 +536,7 @@ public interface IItemService
   
  ASP.NET 2.0 yapılan bu hizmet Web Hizmetleri birlikte çalışabilirlik kuruluşun Basic Profile 1.1 ile uyumlu olduğunu doğrulamak olası (WS-ı) ve hizmet içinde WSDL uyumlu bir talep eklemek için. Diğer bir deyişle bitti kullanarak `ConformsTo` ve `EmitConformanceClaims` parametrelerinin <xref:System.Web.Services.WebServiceBindingAttribute> özniteliği.  
   
-```  
+```csharp  
 [WebService(Namespace = "http://tempuri.org/")]  
 [WebServiceBinding(  
      ConformsTo = WsiProfiles.BasicProfile1_1,  
@@ -572,7 +572,7 @@ public interface IEcho
   
  SOAP hataları istemcilere dönmek için genel türün örneklerini oluşturabilecek <xref:System.ServiceModel.FaultException%601>kullanarak veri anlaşması türü olarak genel tür. Ayrıca ekleyebilirsiniz <xref:System.ServiceModel.FaultContractAttribute> öznitelikleri, işlemleri bir işlem yield hataları belirlemek için.  
   
-```  
+```csharp  
 [DataContract]  
 public class MathFault  
 {   
@@ -593,7 +593,7 @@ public interface ICalculator
   
  Olası hataları sonuçlarında hizmeti için WSDL içinde tanıtılan şekilde yaptığını, hangi hataların öngörmek programcılar rotasyonunun bir işlemden neden ve uygun catch deyimleri yazma.  
   
-```  
+```csharp  
 try  
 {  
      result = client.Divide(value1, value2);  
@@ -610,7 +610,7 @@ catch (FaultException<MathFault> e)
 ## <a name="state-management"></a>Durum Yönetimi  
  Bir ASP.NET Web hizmeti uygulamak için kullanılan sınıfı türetilen <xref:System.Web.Services.WebService>.  
   
-```  
+```csharp  
 public class Service : WebService, IEcho  
 {  
   
@@ -629,14 +629,14 @@ public class Service : WebService, IEcho
   
  Burada, hizmet türü `TradingSystem`, sahip bir <xref:System.ServiceModel.ServiceBehaviorAttribute> belirten tüm çağrıların aynı WCF istemci örneğinin aynı hizmet türü örneğine yönlendirilir.  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class TradingSystem: ITradingService  
 ```  
   
  Sınıf `DealData`, bir hizmet türünün aynı örneğinde çalışan herhangi bir kod tarafından erişilebilecek bir durum tanımlar.  
   
-```  
+```csharp  
 internal class DealData: IExtension<InstanceContext>  
 {  
  public string DealIdentifier = null;  
@@ -646,7 +646,7 @@ internal class DealData: IExtension<InstanceContext>
   
  Hizmet türünün hizmet sözleşmesinin işlemlerden uygulayan kod bir `DealData` durum nesnesi, geçerli hizmet türü örneği durumuna eklenir.  
   
-```  
+```csharp  
 string ITradingService.BeginDeal()  
 {  
  string dealIdentifier = Guid.NewGuid().ToString();  
@@ -658,7 +658,7 @@ string ITradingService.BeginDeal()
   
  Bu durum nesnesi alınır ve başka bir hizmet sözleşme işlemleri uygulayan kodu tarafından değiştirildi.  
   
-```  
+```csharp  
 void ITradingService.AddTrade(Trade trade)  
 {  
  DealData dealData =  OperationContext.Current.InstanceContext.Extensions.Find<DealData>();  
@@ -671,10 +671,10 @@ void ITradingService.AddTrade(Trade trade)
 ## <a name="security"></a>Güvenlik  
  ASP.NET Web hizmetlerinin güvenliğini sağlamak için seçenekleri herhangi bir IIS uygulama güvenliğini sağlamak için olanlardır. WCF uygulamaları barındırılabilir, yalnızca IIS içinde aynı zamanda herhangi bir .NET yürütülebilir dosya içinde olduğundan, WCF uygulamalarının güvenliğini sağlama seçenekleri IIS akreditasyonlu bağımsız olarak yapılmalıdır. Ancak, ASP.NET Web Hizmetleri için sağlanan özellikleri de ASP.NET uyumluluk modunda çalışan WCF hizmetleri için kullanılabilir.  
   
-### <a name="security-authentication"></a>Güvenlik: kimlik doğrulaması  
- IIS tarafından seçebileceğiniz Anonim erişim veya kimlik doğrulama modları çeşitli uygulamalara erişimi denetleme olanakları sağlar: Windows kimlik doğrulamasını, Özet kimlik doğrulaması, temel kimlik doğrulaması ve .NET Passport kimlik doğrulaması. ASP.NET Web hizmetlerini erişimi denetlemek için Windows kimlik doğrulaması seçeneği kullanılabilir. Ancak, WCF uygulamaları IIS içinde barındırıldığında, söz konusu kimlik doğrulamasını çeşitli seçenekler arasında Windows kimlik doğrulamasını destekleyen WCF kendisi tarafından yönetilebilmesi için uygulama anonim erişime izin vermek için IIS yapılandırılmalıdır. Kullanıcı adı belirteçleri, X.509 sertifikaları, SAML belirteçlerini ve CardSpace kart yerleşik diğer seçenekleri içerir, ancak özel kimlik doğrulama mekanizmaları da tanımlanabilir.  
+### <a name="security-authentication"></a>Güvenlik: Kimlik doğrulaması  
+ IIS tarafından anonim erişim veya kimlik doğrulama modları çeşitli seçebilirsiniz uygulamalara erişimi denetlemek için olanakları sağlar: Windows kimlik doğrulamasını, Özet kimlik doğrulaması, temel kimlik doğrulaması ve .NET Passport kimlik doğrulaması. ASP.NET Web hizmetlerini erişimi denetlemek için Windows kimlik doğrulaması seçeneği kullanılabilir. Ancak, WCF uygulamaları IIS içinde barındırıldığında, söz konusu kimlik doğrulamasını çeşitli seçenekler arasında Windows kimlik doğrulamasını destekleyen WCF kendisi tarafından yönetilebilmesi için uygulama anonim erişime izin vermek için IIS yapılandırılmalıdır. Kullanıcı adı belirteçleri, X.509 sertifikaları, SAML belirteçlerini ve CardSpace kart yerleşik diğer seçenekleri içerir, ancak özel kimlik doğrulama mekanizmaları da tanımlanabilir.  
   
-### <a name="security-impersonation"></a>Güvenlik: kimliğe bürünme  
+### <a name="security-impersonation"></a>Güvenlik: Kimliğe bürünme  
  ASP.NET, ASP.NET Web hizmeti, belirli bir kullanıcının kimliğine bürünmesine yapılabilir veya hangi kullanıcının kimlik bilgilerinin geçerli istekle birlikte sağlanan bir kimlik öğesi sağlar. Bu öğe, kimliğe bürünme ASP.NET uyumluluk modunda çalışan WCF uygulamaları yapılandırmak için kullanılabilir.  
   
  WCF yapılandırma sistemi, belirli bir kullanıcının kimliğine bürünmek üzere atamak için kendi kimlik öğesi sağlar. Ayrıca, WCF istemciler ve hizmetler bağımsız olarak kimliğe bürünme için yapılandırılabilir. İstemci isteklerini iletebileceği, geçerli kullanıcının kimliğine bürünmek için yapılandırılabilir.  
@@ -691,7 +691,7 @@ void ITradingService.AddTrade(Trade trade)
   
  Hizmet işlemleri, hangi kullanıcının kimlik bilgilerinin geçerli istekle birlikte sağlanan kimliğine bürünmek için yapılandırılabilir.  
   
-```  
+```csharp  
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public void Receive(Message input)  
 ```  
@@ -725,7 +725,7 @@ public void Receive(Message input)
 </system.serviceModel>  
 ```  
   
-### <a name="security-claims-based-authorization"></a>Güvenlik: Talep tabanlı yetkilendirme  
+### <a name="security-claims-based-authorization"></a>Güvenlik: Beyana Dayalı Yetkilendirme  
  WCF en önemli yeniliklerden taleplere göre korumalı kaynaklara erişimi yetkilendirmek için kapsamlı desteklemesidir. Talep türü, bir hak ve bir değer, bir sürücü lisans, örneğin oluşur. Doğum tarihi taşıyıcı'nın biri olan taşıyıcı hakkında talepler kümesi kolaylaştırır. Talep değeri sürücünün doğum tarihi olsa da bu talebi doğum tarihi, türüdür. Bir talep üzerinde taşıyıcı confers sağ taşıyıcı talebin değer ile neler yapabileceğinizi belirtir. Doğum tarihi sürücünün talep söz konusu olduğunda, sağ mülkü olduğundan: sürücü doğum tarihi ancak, örneğin yükleyemediği sahip, üzerinde değişiklik. Beyana dayalı yetkilendirme, rol talep türü olduğundan rol tabanlı yetkilendirme barındırır.  
   
  Taleplere göre yetkilendirme Karşılaştırma işleminin ve bu karşılaştırma sonucunu bağlı olarak erişim gereksinimlerini için talepler kümesi vererek ya da işlemi erişimi reddetmeden gerçekleştirilir. WCF'de, beyana dayalı yetkilendirme, bir değere atayarak yeniden çalıştırmak için kullanılacak bir sınıf belirtebilirsiniz `ServiceAuthorizationManager` özelliği <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.  
@@ -744,7 +744,7 @@ public void Receive(Message input)
   
  Kimlik doğrulama mekanizması tamamen bağımsız taleplere göre yetkilendirme kodunu kolaylaştırır WCF güvenlik herhangi bir türden otomatik olarak talep çeviren son derece önemli bir yenilik belirteci olmasıdır. Aksine, ASP.NET'te ACL'leri ya da rolleri kullanarak yetkilendirme için Windows kimlik doğrulaması yakından bağlanır.  
   
-### <a name="security-confidentiality"></a>Güvenlik: gizlilik  
+### <a name="security-confidentiality"></a>Güvenlik: Gizliliği  
  ASP.NET Web Hizmetleri ile değiştirilen iletilerin gizliliğini taşıma düzeyinde IIS içinde uygulamayı Güvenli Köprü Metni Aktarım Protokolü (HTTPS) kullanacak şekilde yapılandırarak güvence altına alınabilir. Aynı içinde IIS barındırılan WCF uygulamaları için yapılabilir. Ancak, dışında IIS barındırılan WCF uygulamaları güvenli aktarım protokolünü kullanmak için de yapılandırılabilir. Daha da önemlisi, WCF uygulamaları, bunlar, WS-güvenlik protokolü kullanarak taşınacağını önce iletileri güvenli hale getirmek için de yapılandırılabilir. WS-güvenlik kullanarak ileti gövdesi güvenli hale getirme aracılar son hedefine ulaşmadan önce ilkemiz aktarılan izin verir.  
   
 ## <a name="globalization"></a>Genelleştirme  

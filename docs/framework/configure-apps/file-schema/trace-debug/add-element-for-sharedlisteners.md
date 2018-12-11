@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845378"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151172"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;ekleme&gt; öğesi için &lt;sharedListeners&gt;
 Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhangi bir koleksiyonudur [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) başvurabilirsiniz.  Varsayılan olarak, dinleyicileri `sharedListeners` koleksiyon yerleştirildiğinde değil bir `Listeners` koleksiyonu. Ada göre eklenmelidir [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Dinleyiciler almak mümkün değildir `sharedListeners` çalışma zamanında kod koleksiyonu.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
-\<sharedListeners > öğesi  
-\<Ekle >  
+&nbsp;&nbsp;\<System.Diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > öğesi  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
@@ -43,7 +45,8 @@ Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhang
 |`name`|Gerekli öznitelik.<br /><br /> Paylaşılan dinleyici için eklemek için kullanılan dinleyicisinin adını belirten bir `Listeners` koleksiyonu.|  
 |`type`|Gerekli öznitelik.<br /><br /> Dinleyici türünü belirtir. Belirtilen gereksinimleri karşılayan bir dize kullanmalısınız [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dizesi.|  
-  
+|`traceOutputOptions`|İsteğe bağlı öznitelik.<br/><br/>Bir veya daha fazla dize gösterimi <xref:System.Diagnostics.TraceOptions> izleme çıktısına yazılmasına verileri gösteren numaralandırma üyeleri. Birden çok öğe virgülle ayrılır. Varsayılan değer "None" dir.|
+
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  

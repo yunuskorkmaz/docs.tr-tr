@@ -1,15 +1,16 @@
 ---
-title: ML.NET kaynakları
+title: Machine learning kaynaklarını - ML.NET
 description: Özel yapay ZEKA çözümleri oluşturma ve .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere bu ML.NET kaynakları keşfedin.
+ms.custom: seodec18
 ms.date: 07/27/2018
-ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 98c89e921e24a0007c165d0a77e2abc34a4c8518
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798042"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152225"
 ---
-# <a name="mlnet-resources"></a>ML.NET kaynakları
+# <a name="machine-learning-resources---mlnet"></a>Machine learning kaynaklarını - ML.NET
 
 Aşağıdaki [ML.NET](../index.md) kaynakları özel yapay ZEKA çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirmek yararlı olabilir:
 

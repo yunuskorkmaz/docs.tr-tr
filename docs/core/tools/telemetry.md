@@ -2,14 +2,14 @@
 title: .NET core SDK'sı telemetri
 description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgileri toplamasına .NET Core SDK'sı telemetri özellikleri keşfedin.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841632"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168851"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
@@ -52,7 +52,7 @@ Bu özellik aşağıdaki verileri toplar:
 
 &#8224;Bu ölçüm yayımlanır.
 
-.NET Core SDK 2.0 ile başlayarak, yeni veri noktaları toplanır:
+.NET Core 2.0 SDK'sı ile başlayarak, yeni veri noktaları toplanır:
 
 - `dotnet` komut bağımsız değişkenleri ve seçenekleri: yalnızca bağımsız değişkenleri ve seçenekleri toplanan (değil rasgele dizeleri) bilinir.
 - SDK'sı bir kapsayıcıda kullanılıp kullanılmadığını.
@@ -74,7 +74,7 @@ Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core 
 - Coğrafi konum&#8225;
 - OSFamily
 - RuntimeID
-- İşletim sistemi sürümü
+- OSVersion
 - SDKVersion
 
 &#8224;*Oluşum* sütunu bu komutun kullanın, sıranın ölçümler için o gün toplam sayısını görüntüler.
@@ -83,7 +83,7 @@ Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core 
 
 ### <a name="example"></a>Örnek
 
-| Zaman damgası      | Örnekleri | Komut | Coğrafi konum | OSFamily | RuntimeID     | İşletim sistemi sürümü | SDKVersion |
+| Zaman damgası      | Örnekleri | Komut | Coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | Çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
 

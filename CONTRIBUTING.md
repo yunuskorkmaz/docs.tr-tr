@@ -24,7 +24,7 @@ Sorunlar ve bu depolar için görevleri buraya izlenir.
 
 Temel bir anlayış ihtiyacınız [Git ve GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**1. adım:** küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
+**1. adım:** Küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
 İçindeki içeriği **docs** klasörü, tablo, içeriği (İçindekiler tablosunda) yansıtılır bölümlere düzenlenir. Konunun TOC'de nerede yer alır tanımlayın. Teklifiniz hakkında geri bildirim alın.
 
 veya
@@ -39,11 +39,11 @@ Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih
 
 Ayrıca bakabilirsiniz bizim [açık sorun](https://github.com/dotnet/docs/issues) listelemek ve ilgilendiğiniz olanları üzerinde çalışılacak volunteer. Kullandığımız [yukarı-için-Dallarınızla](https://github.com/dotnet/docs/labels/up-for-grabs) etiketi sorunları katkısı için açık etiketi. 
 
-**2. adım:** çatal `/dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
+**2. adım:** Çatal `/dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
 
 Küçük değişiklikler için GitHub'ın web arabirimi kullanabilirsiniz. Tıklamanız yeterlidir **çatalınızı bu projenin dosyayı düzenleyin** değiştirmek için istediğiniz dosya çubuğunda. Değişiklikleri gönderdiğinizde GitHub yeni bir dal oluşturur.
 
-**3. adım:** bu dalı değişiklikleri yapın.
+**3. adım:** Bu yeni dalda değişiklikleri yapın.
 
 Yeni bir konu varsa bunu kullanabilirsiniz [şablon dosyası](./styleguide/template.md) , başlangıç noktası olarak. Bu yazma yönergeleri içerir ve ayrıca Yazar bilgileri gibi her bir makaleyi için gerekli meta veriler açıklanmaktadır.
 
@@ -66,7 +66,7 @@ Uygun Markdown söz dizimini takip ettiğinizden emin olun. Daha fazla bilgi iç
             /porting-overview
                 portability_report.png
 
-**4. adım:** bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
+**4. adım:** Bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
 
 Her çekme isteği, genellikle aynı anda bir sorun gidermelidir. Çekme isteği, bir veya birden çok dosyalarda değişiklik yapabilir. Farklı dosya çubuğunda birden çok düzeltmesi ele alan ise ayrı bir PR tercih edilir.
 
@@ -74,7 +74,7 @@ Her çekme isteği, genellikle aynı anda bir sorun gidermelidir. Çekme isteği
 
 .NET ekibi, çekme isteği gözden geçirin ve onaylayın için gerekli diğer güncelleştirmeleri/değişiklikler olup olmadığını size bildirmek.
 
-**5. adım:** ekiple açıklandığı gibi gerekli güncelleştirmeleri dalınızda olun.
+**5. adım:** Gerekli güncelleştirmeleri dalınızda ekiple açıklandığı gibi olun.
 
 Maintainers Çekme geri bildirim uygulandıktan sonra değişiklik onaylandıktan ana dal ile birleştirilecek.
 

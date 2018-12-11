@@ -3,12 +3,12 @@ title: Dallar ve döngüler - Giriş C# Öğreticisi
 description: Dallar ve döngüler hakkındaki Bu öğreticide, yazdığınız C# koşullu dallar ve döngüler deyimleri tekrar tekrar yürütmenin destekleyen dili sözdizimi keşfetmek için kod.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153780"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleriyle koşullu mantık öğrenin
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 Bu aynı işlevi görür `while` döngü ve `do` zaten kullandığınız döngü. `for` Deyimi nasıl çalıştığını denetleyen üç bölümü vardır.
 
-İlk bölüm **for başlatıcısıdır**: `for index = 0;` bildiren `index` Döngü değişkeninin ve bunun başlangıçtaki değerini ayarlar `0`.
+İlk bölüm **for başlatıcısıdır**: `int index = 0;` bildiren `index` Döngü değişkeninin ve bunun başlangıçtaki değerini ayarlar `0`.
 
 Ortadaki bölüm **koşulu**: `index < 10` bildirir bu `for` döngü sayacının değerini 10'dan az olduğu sürece yürütülmeye devam eder.
 

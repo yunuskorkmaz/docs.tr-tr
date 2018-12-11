@@ -1,15 +1,13 @@
 ---
-title: DotNet yapı sunucu command - .NET Core CLI
+title: DotNet yapı sunucu komutu
 description: Dotnet yapı sunucu komut, bir derleme tarafından başlatılan sunucularıyla etkileşim kurar.
-author: mairaw
-ms.author: mairaw
-ms.date: 07/02/2018
-ms.openlocfilehash: 1c59c85f246b79c7e2552f704db5b4f076f9b502
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 12/04/2018
+ms.openlocfilehash: 7f78a0cae6e3297f3084754dc56b0da4eac38caf
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169670"
 ---
 # <a name="dotnet-build-server"></a>DotNet yapı sunucu
 
@@ -29,24 +27,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>Komutlar
 
-`shutdown`
+* **`shutdown`**
 
-Dotnet başlatılan yapı sunucularını kapatır. Varsayılan olarak, tüm sunucuların kapatılır.
+  Dotnet başlatılan yapı sunucularını kapatır. Varsayılan olarak, tüm sunucuların kapatılır.
 
 ## <a name="options"></a>Seçenekler
 
-`-h|--help`
+* **`-h|--help`**
 
-Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
-`--msbuild`
+* **`--msbuild`**
 
-Yapı sunucusunda MSBuild kapatır.
+  Yapı sunucusunda MSBuild kapatır.
 
-`--razor`
+* **`--razor`**
 
-Yapı sunucusunda Razor kapatır.
+  Yapı sunucusunda Razor kapatır.
 
-`--vbcscompiler`
+* **`--vbcscompiler`**
 
-Kapatan VB / C# Derleyici sunucusu derleme.
+  Kapatan VB / C# Derleyici sunucusu derleme.

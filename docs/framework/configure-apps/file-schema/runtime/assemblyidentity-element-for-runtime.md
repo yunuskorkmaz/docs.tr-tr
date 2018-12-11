@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128212"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; öğesi için &lt;çalışma zamanı&gt;
 Derleme hakkında tanımlayıcı bilgileri içerir.  
@@ -46,16 +46,16 @@ culture="assembly culture"/>
 |`name`|Gerekli öznitelik.<br /><br /> Derlemenin adı|  
 |`culture`|İsteğe bağlı öznitelik.<br /><br /> Dil ve ülke/bölge derlemenin belirten bir dize.|  
 |`publicKeyToken`|İsteğe bağlı öznitelik.<br /><br /> Bir onaltılık değer derlemenin tanımlayıcı adını belirtir.|  
-|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> Biri değerleri "x86", "amd64", "msil" veya "ia64" İşlemci mimarisi işlemciye özgü kodu içeren bir derleme için belirtme. Değerler büyük küçük harfe duyarlı değildir. Öznitelik başka bir değer tüm atanıp atanmadığını `<assemblyIdentity>` öğesi göz ardı edilir. Bkz: <xref:System.Reflection.ProcessorArchitecture>.|  
+|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> Biri değerleri "x86", "amd64", "msil" veya "ia64" İşlemci mimarisi işlemciye özgü kodu içeren bir derleme için belirtme. Değerler büyük küçük harfe duyarlı değildir. Öznitelik başka bir değer tüm atanıp atanmadığını `<assemblyIdentity>` öğesi göz ardı edilir. Bkz. <xref:System.Reflection.ProcessorArchitecture>.|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`amd64`|Bir 64 bitlik AMD işlemci yalnızca.|  
-|`ia64`|Bir 64-bit Intel işlemci yalnızca.|  
-|`msil`|Nötr göre işlemcisi ve sözcük başına bit|  
-|`x86`|Bir 32-bit Intel işlemci, ya da yerel ya da Windows 64-bit platformlarda ortamında Windows (WOW).|  
+|`amd64`|Yalnızca AMD x86 64 mimari.|  
+|`ia64`|Yalnızca Intel Itanium mimarisini.|  
+|`msil`|Nötr işlemcisi ve sözcük başına bit göre.|  
+|`x86`|Bir 32-bit x86 işlemci, ya da yerel ya da Windows 64-bit platformlarda ortamında Windows (WOW).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: d3c59b667c05be083e44de8cc3e7e44d50fefc71
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43516797"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155359"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
 Kullanarak verileri almak için bir **DataReader**, bir örneğini oluşturmak **komut** nesne ve oluşturup bir **DataReader** çağırarak **Command.ExecuteReader**  satırları bir veri kaynağından almak için. **DataReader** arabellekten çıkarılan bir yordam mantığı verimli bir şekilde bir veri kaynağından sonuçları sıralı olarak işlediğinden sağlayan veri akışını sağlar. **DataReader** verileri bellek içinde önbelleğe alınmamış çünkü büyük miktarlarda veri alınırken iyi bir seçimdir.
@@ -144,7 +144,7 @@ using (OleDbConnection connection = new OleDbConnection(
   
  Örneğin, aşağıdaki Oracle paket ve paket gövdesi göz önünde bulundurun.  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
   TYPE T_CURSOR IS REF CURSOR;   
   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   

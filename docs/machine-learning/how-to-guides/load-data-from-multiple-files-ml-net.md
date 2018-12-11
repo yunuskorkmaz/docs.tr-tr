@@ -4,11 +4,11 @@ description: Bilgi nasıl makine öğrenme modeli oluşturma, eğitim ve puanlam
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672368"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150738"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Machine learning hizmetinin işlem - ML.NET için birden fazla dosyalardan veri yükleme
 

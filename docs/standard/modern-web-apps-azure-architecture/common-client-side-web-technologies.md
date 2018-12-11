@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404612"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153897"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
@@ -155,7 +155,7 @@ Yeni JavaScript çerçevesi breakneck hızıyla iyileşmeye devam etmektedir. Ba
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
 > <https://angular.io/>
-> - **react**  
+> - **React**  
 > <https://facebook.github.io/react/>
 > - **React Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
@@ -165,5 +165,5 @@ Yeni JavaScript çerçevesi breakneck hızıyla iyileşmeye devam etmektedir. Ba
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Önceki](common-web-application-architectures.md)
-[İleri](develop-asp-net-core-mvc-apps.md)
+>[Önceki](common-web-application-architectures.md)
+>[İleri](develop-asp-net-core-mvc-apps.md)

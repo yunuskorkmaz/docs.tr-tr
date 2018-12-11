@@ -8,11 +8,11 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e192266aa7b98637cb05f400901f51afd3046a72
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "49415210"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142726"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Derlemeler ve Yan Yana Yürütme
 Yan yana yürütme, aynı bilgisayarda bir uygulama veya bileşenin birden çok sürümünü saklama ve yürütme olanağıdır. Bu da ortak dil çalışma zamanı sürümünün birden çok sürümünün ve çalışma zamanının bir sürümünü kullanan uygulama ve bileşenlerin birden çok sürümünün bir bilgisayar üzerinde aynı anda bulunabileceği anlamına gelir. Yan yana yürütme olanağı, bir uygulamanın bir bileşenin hangi sürümüne bağlanacağını ve bir uygulamanın hangi çalışma zamanını kullanacağı konusunda daha fazla denetim sağlar.  

@@ -1,20 +1,20 @@
 ---
-title: Visual Basic ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma
-description: Visual Studio 2017'yi kullanarak Visual Basic'te yazılmış bir sınıf kitaplığı derleme hakkında bilgi edinin
+title: Visual Studio 2017'de bir Visual Basic .NET Core sınıf kitaplığı oluşturma
+description: Visual Studio 2017'yi kullanarak Visual Basic'te yazılmış bir .NET Core sınıf kitaplığı derleme hakkında bilgi edinin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035980"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168838"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma
+# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core SDK'sı ile bir sınıf kitaplığı derleme
 
 A *sınıf kitaplığı* türlerini ve bir uygulama tarafından çağrılan yöntemlere tanımlar. .NET Standard 2.0 hedefleyen bir sınıf kitaplığı, .NET Standard sürümünü destekleyen herhangi bir .NET uygulaması tarafından çağrılacak kitaplığınızı sağlar. Sınıf kitaplığınıza bitirdikten sonra bir üçüncü taraf bileşeni veya bir veya daha fazla uygulama ile birlikte gelen bir bileşeni olarak dahil etmek isteyip istemediğinizi olarak dağıtmak isteyip istemediğinize karar verebilirsiniz.
 
@@ -31,7 +31,7 @@ Sınıf kitaplığı projenizi ve ilgili projeleri çözüm oluşturmaya başlay
 
 1. İçinde **yeni proje** iletişim kutusunda genişletin **diğer proje türleri** düğüm ve select **Visual Studio çözümleri**. Seçin ve "ClassLibraryProjects" çözümünü arlandırın **Tamam** düğmesi.
 
-   ![Yeni Proje iletişim kutusu](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio test yeni proje iletişim kutusu oluşturma](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Sınıf kitaplığı projesi oluşturma
 
@@ -41,15 +41,15 @@ Sınıf kitaplığı projenizi oluşturun:
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual Basic** düğümünü seçip **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)**  proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibrary" girin. Seçin **Tamam** sınıf kitaplığı projesi oluşturmak için.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio eklenti kitaplığı yeni proje iletişim kutusu](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    Kod penceresi, ardından Visual Studio geliştirme ortamında açar. 
  
-   ![Visual Studio uygulama penceresinin varsayılan sınıf kitaplığı şablonu kodu gösterme](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio uygulama penceresinin varsayılan sınıf kitaplığı şablonu kodu gösterme](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. Kitaplık .NET Standard doğru sürümünü hedefleyen emin olun. Kitaplığı projesinde sağ **Çözüm Gezgini** windows, ardından **özellikleri**. **Hedef Framework'ü** metin kutusuna .NET Standard 2.0 hedeflediğiniz gösterir.
 
-   ![Sınıf kitaplığı için proje özellikleri](./media/library-with-visual-studio/properties.png)
+   ![Sınıf kitaplığı için proje özellikleri](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Ayrıca **özellikleri** iletişim kutusunda, metni silmek **kök ad alanı** metin kutusu. Her proje için Visual Basic proje adına karşılık gelen bir ad alanı otomatik olarak oluşturur ve bu ad alanının üst kaynak kodu dosyalarında tanımlanan tüm ad alanları olan. Kullanarak bir en üst düzey ad alanı tanımlamak istediğimiz [ `namespace` ](../../visual-basic/language-reference/statements/namespace-statement.md) anahtar sözcüğü.
   
@@ -61,7 +61,7 @@ Sınıf kitaplığı projenizi oluşturun:
 
 1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Projenin hatasız derlemeniz gerekir.
 
-   ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

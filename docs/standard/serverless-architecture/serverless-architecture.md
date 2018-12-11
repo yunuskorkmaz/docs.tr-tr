@@ -4,12 +4,12 @@ description: Çeşitli mimarileri ve web uygulamaları, mobil ve IOT gibi sunucu
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405027"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150309"
 ---
 # <a name="serverless-architecture"></a>Sunucusuz mimari
 
@@ -42,7 +42,7 @@ Ortak bir challenge, mevcut tek parça bir uygulamayı buluta geçiriyor. Az ris
 
 ![Sunucusuz tek geçiş](./media/serverless-monolith-migration.png)
 
-Bu yaklaşımı hakkında daha fazla bilgi edinmek için videoyu izleyin: [bulutta olan sunucusuz Azure işlevleri ile uygulamanızı taşıyın](https://channel9.msdn.com/Events/Connect/2017/E102).
+Bu yaklaşımı hakkında daha fazla bilgi edinmek için videoyu izleyin: [Sunucusuz Azure işlevleri ile bulut uygulamanızı taşıyın](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Web uygulamaları
 
@@ -74,5 +74,5 @@ IOT birlikte ağa fiziksel nesnelere başvurur. Bunlar bazen "bağlı cihazlar" 
 IOT kapsamlılığıyla sunucusuz çeşitli ürünleri, IOT sorunları, özel olarak odaklanan gibi sonuçlandı [Azure IOT hub'ı](https://docs.microsoft.com/azure/iot-hub). Sunucusuz, cihaz kaydı, ilke zorlaması, izleme ve kod cihazlara bile dağıtım gibi görevleri otomatik hale getiren *edge*. Edge sensörlerden ve bağlı çalıştırıcılar, ancak bir active parçası değil, Internet gibi cihazları ifade eder.
 
 >[!div class="step-by-step"]
-[Önceki](architecture-approaches.md)
-[İleri](serverless-architecture-considerations.md)
+>[Önceki](architecture-approaches.md)
+>[İleri](serverless-architecture-considerations.md)

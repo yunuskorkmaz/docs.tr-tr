@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514758"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129395"
 ---
 # <a name="dataviews"></a>DataView
 A <xref:System.Data.DataView> depolanan veriler alanının farklı görünümlerini oluşturmanızı sağlayan bir <xref:System.Data.DataTable>, veri bağlama uygulamalarda sık kullanılan bir özellik. Kullanarak bir **DataView**sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz.  
   
- A **DataView** temel alınan verileri dinamik bir görünümünü sağlar **DataTable**: oluşunca içerik, sıralama ve üyelik değişiklikleri yansıtacak. Bu davranışı farklıdır **seçin** yöntemi **DataTable**, döndüren bir <xref:System.Data.DataRow> alan bir tablodaki dizisi üzerinde belirli bir filtre ve/veya sıralama düzeni: thiscontent değişiklikleri yansıtır Tablo, ancak üyeliğini temel alınan ve sıralama statik kalır. Dinamik yeteneklerini **DataView** veri bağlama uygulamalar için ideal bir çözüm oluşturur.  
+ A **DataView** temel alınan verileri dinamik bir görünümünü sağlar **DataTable**: oluşunca içerik, sıralama ve üyelik değişiklikleri yansıtacak. Bu davranışı farklıdır **seçin** yöntemi **DataTable**, döndüren bir <xref:System.Data.DataRow> alan bir tablodaki dizisi üzerinde belirli bir filtre ve/veya sıralama düzeni: Bu içeriği değişiklikleri yansıtır. Tablo, ancak üyeliğini temel alınan ve sıralama statik kalır. Dinamik yeteneklerini **DataView** veri bağlama uygulamalar için ideal bir çözüm oluşturur.  
   
  A **DataView** dinamik veri için uygulayabileceğiniz farklı sıralama ve filtreleme ölçütlerini çok veritabanı görünümü, tek bir dizi görünümünü sağlar. Ancak, bir veritabanı görünümü aksine bir **DataView** tablo olarak işlenemiyorsa ve birleştirilmiş tablolar görünümünü sağlayamaz. Ayrıca kaynak tablosunda mevcut sütunları hariç tutamazsınız ya da kaynak tablosunda bulunmayan hesaplama sütunlar gibi bir sütun ekleyebilirsiniz.  
   

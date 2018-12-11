@@ -1,15 +1,13 @@
 ---
 title: .NET core çalışma zamanı tanımlayıcı (RID) Kataloğu
 description: Çalışma zamanı tanımlayıcı (RID) ve RID'de .NET Core nasıl kullanıldığı hakkında bilgi edinin.
-author: mairaw
-ms.author: mairaw
 ms.date: 07/19/2018
-ms.openlocfilehash: ff0449f7c6f878131f0ec4b16d685d2c02d26719
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b801b7866b563ae06499d8ccd2d07cf5fd52b928
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517385"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170216"
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -29,9 +27,9 @@ Tek bir RID ayarlanabilir `<RuntimeIdentifier>` proje dosyanızın öğesi. Proj
 
 Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: `[os].[version]-[architecture]-[additional qualifiers]` burada:
 
-- `[os]` / platform işletim sistemi addır. Örneğin, `ubuntu`.
+- `[os]` / platform işletim sistemi addır. Örneğin: `ubuntu`
 
-- `[version]` işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası. Örneğin, `15.10`.
+- `[version]` işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası. Örneğin: `15.10`
 
   - Sürüm **olmamalıdır** pazarlama sürümleri gibi bunlar genellikle ayrı birden çok platformu API yüzey alanı değişen ile işletim sistemi sürümünü temsil eder.
 

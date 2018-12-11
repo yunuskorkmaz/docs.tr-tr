@@ -1,96 +1,96 @@
 ---
-title: C# ifadeleri - C# dili turu
-description: 'C# dili yapı taşlarını şunlardır: ifadeleri, işlenen ve işleçler'
+title: C#İfadeleri - Turu C# dil
+description: ifadeleri ve işlenenleri işleçleri olan yapı taşları C# dil
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352311"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154940"
 ---
 # <a name="expressions"></a>İfadeler
 
-*İfadeleri* gelen oluşturulan *işlenenler* ve *işleçleri*. İfade işleçleri işlenenlerine uygulamak için hangi işlemleri gösterir. İşleçler örneklerindendir `+`, `-`, `*`, `/`, ve `new`. Değişmez değerler, alanlar, yerel değişkenleri ve ifadeler işlenenler örneklerindendir.
+*İfadeleri* oluşturulan *işlenenler* ve *işleçleri*. İfade işleçleri işlenenlere uygulamak için hangi işlemleri gösterir. İşleçler örnekler `+`, `-`, `*`, `/`, ve `new`. Değişmez değerler, alanlar, yerel değişkenleri ve ifadeleri işlenenler örnekleridir.
 
-Bir ifade birden çok işleç içerdiğinde *öncelik* işleçleri tek tek işleçleri değerlendirilir sırasını denetler. Örneğin, ifade `x + y * z` olarak değerlendirilir `x + (y * z)` çünkü `*` daha yüksek önceliğe sahip `+` işleci.
+Bir ifade birden çok işleç içeren *öncelik* işleçleri tek tek işleçler değerlendirilme sırası denetler. Örneğin, ifade `x + y * z` değerlendirmesinde `x + (y * z)` çünkü `*` işleci daha yüksek önceliğe sahip `+` işleci.
 
-İşleneni aynı önceliğe sahip iki işleç arasında oluştuğunda *birleşim* operatörleri işlemler gerçekleştirilir sırasını denetler:
+Bir işlenen aynı önceliğe sahip iki işleç arasında gerçekleştiğinde *ilişkilendirilebilirliği* operatörleri işlemleri gerçekleştirilir sırasını denetler:
 
-*   Atama işleçleri hariç tüm ikili işleçler şunlardır: *sola ilişkilendirilebilir*, işlemler soldan sağa gerçekleştirilir anlamına gelir. Örneğin, `x + y + z` olarak değerlendirilir `(x + y) + z`.
-*   Atama işleçleri ve koşullu işleç (`?:`) olan *sağa ilişkilendirilebilir*, işlemler arasında sağdan sola gerçekleştirilir anlamına gelir. Örneğin, `x = y = z` olarak değerlendirilir `x = (y = z)`.
+*   Atama işleçleri hariç tüm ikili işleçler şunlardır *ilişkilendirilebilir*, yani işlemler soldan sağa doğru gerçekleştirilir. Örneğin, `x + y + z` değerlendirmesinde `(x + y) + z`.
+*   Atama işleçleri ve koşullu işleç (`?:`) olan *sağla ilişkilendirilebilir*, sağdan sola işlemler gerçekleştirilir anlamına gelir. Örneğin, `x = y = z` değerlendirmesinde `x = (y = z)`.
 
-Öncelik ve birleşim parantez kullanılarak denetlenebilir. Örneğin, `x + y * z` ilk çarpar `y` tarafından `z` ve sonucu ekler `x`, ancak `(x + y) * z` ilk ekler `x` ve `y` ve sonuç olarak çoğaltır `z`.
+Öncelik ve ilişkisellik parantez kullanılarak denetlenebilir. Örneğin, `x + y * z` ilk çarpar `y` tarafından `z` ve ardından sonuca ekler `x`, ancak `(x + y) * z` ilk ekler `x` ve `y` ve sonucu çarpan `z`.
 
-Çoğu işleçleri olabilir *aşırı*. İşleç aşırı yüklemesi, birini veya her ikisini işlenen kullanıcı tanımlı sınıfta veya yapı türü nerede işlemleri için belirtilmesi için kullanıcı tanımlı işleci uygulamaları izin verir.
+Çoğu işleçleri olabilir *aşırı*. İşleç aşırı yüklemesi, aşağıdakilerden birini veya her iki işlenen kullanıcı tanımlı sınıf veya yapı türü olduğu işlemlerinde belirtilmesi için kullanıcı tanımlı işleç uygulamalarına izin verir.
 
-Yüksekten en düşüğe öncelik sırasına işleci kategorilerini liste C# ' ın işleçleri, aşağıda özetlenmiştir. Aynı kategoride operatörleri eşit önceliğe sahiptir. Her kategori altında bu ifade türünün açıklaması yanı sıra bu kategorideki ifadeleri listesidir.
+Aşağıdaki özetler C#'s işleçlerini, en düşük yüksekten öncelik sırasına işleci kategorileri listeleme. Aynı kategoride işleçleri eşit önceliğe sahiptir. Her kategori altında bu ifade türünün açıklaması ile birlikte bu kategorideki ifadeleri listesidir.
 
-* birincil
+* Birincil
     - `x.m`: Üye erişimi
-    - `x(...)`: Yöntemi ve temsilci çağırma
-    - `x[...]`: Dizi ve dizin oluşturucu erişim
-    - `x++`: Sonrası artırma
-    - `x--`: Sonrası azaltma
+    - `x(...)`: Yöntem ve temsilci çağırma
+    - `x[...]`: Dizi ve dizinleyici erişimi
+    - `x++`: Artırım sonrası
+    - `x--`: Azaltım sonrası
     - `new T(...)`: Nesne ve temsilci oluşturma
-    - `new T(...){...}`: Başlatıcısı ile nesne oluşturma
-    - `new {...}`: Anonim nesne Başlatıcı
+    - `new T(...){...}`: Başlatıcı ile nesne oluşturma
+    - `new {...}`:  Anonim nesne Başlatıcı
     - `new T[...]`: Dizi oluşturma
     - `typeof(T)`: Elde <xref:System.Type> nesnesi `T`
-    - `checked(x)`: Checked bağlamda ifade değerlendirme
-    - `unchecked(x)`: Denetlenmeyen bağlamda ifade değerlendirme
-    - `default(T)`: Türü varsayılan değerini edinme `T`
+    - `checked(x)`: İşaretli bağlamında ifade değerlendirme
+    - `unchecked(x)`: İşaretlenmemiş bağlamında ifade değerlendirme
+    - `default(T)`: Türünün varsayılan değerini alın `T`
     - `delegate {...}`: Anonim işlevi (anonim yöntemi)
 * Birli
     - `+x`: Kimlik
-    - `-x`: Değilleme
-    - `!x`: Mantıksal olumsuzlaştırma
-    - `~x`: Bit tabanlı değil işlecini
-    - `++x`: Ön artırma
-    - `--x`: Ön azaltma
-    - `(T)x`: Açıkça dönüştürme `x` yazmak için `T`
+    - `-x`: Olumsuzlama
+    - `!x`: Mantıksal olumsuzlama
+    - `~x`: Bitwise olumsuzlama
+    - `++x`: Artırım öncesi
+    - `--x`: Azaltım öncesi
+    - `(T)x`: Açıkça dönüştürmek `x` yazmak için `T`
     - `await x`: Zaman uyumsuz olarak bekleyin `x` tamamlamak için
 * Çarpma
     - `x * y`: Çarpma
     - `x / y`: Bölme
     - `x % y`: Kalan
-* ADDITIVE
-    - `x + y`: Eklenmesi, dize birleştirme, temsilci birleşimi
+* Eklenebilir
+    - `x + y`: Toplama, dize bitiştirme, temsilci birleşimi
     - `x – y`: Çıkarma, temsilci kaldırma
-* Kaydırma
-    - `x << y`: Shift sol
+* Shift
+    - `x << y`: Sola kaydırma
     - `x >> y`: Sağa kaydırma
-* İlişkisel ve türü test etme
+* İlişkisel ve tür testi
     - `x < y`: Küçüktür
     - `x > y`: Büyüktür
-    - `x <= y`: Küçüktür veya eşittir
-    - `x >= y`: Büyüktür veya eşittir
-    - `x is T`: Dönüş `true` varsa `x` olan bir `T`, `false` Aksi takdirde
+    - `x <= y`: Küçük veya eşittir
+    - `x >= y`: Büyük veya eşittir
+    - `x is T`: Dönüş `true` varsa `x` olduğu bir `T`, `false` Aksi takdirde
     - `x as T`: Dönüş `x` olarak yazılan `T`, veya `null` varsa `x` değil bir `T`
 * Eşitlik
-    - `x == y`: Eşit
-    - `x != y`: Eşit değil
+    - `x == y`: Eşittir
+    - `x != y`: Eşit değildir
 * Mantıksal VE
-    - `x & y`: Tamsayı Bitsel ve, Boole mantıksal ve
+    - `x & y`: Tamsayı bitwise ve, boolean mantıksal ve
 * Mantıksal XOR
-    - `x ^ y`: Bit düzeyinde XOR tamsayı, boolean mantıksal XOR
+    - `x ^ y`: Tamsayı bitwise XOR, Boolean mantıksal XOR
 * Mantıksal VEYA
-    - `x | y`: Tamsayı Bitsel veya boolean mantıksal OR
+    - `x | y`: Tamsayı bitwise VEYA, boolean mantıksal VEYA
 * Koşullu VE
-    - `x && y`: Hesaplar `y` yalnızca `x` değil `false`
+    - `x && y`: Değerlendirilen `y` yalnızca `x` değil `false`
 * Koşullu VEYA
-    - `x || y`: Hesaplar `y` yalnızca `x` değil `true`
+    - `x || y`: Değerlendirilen `y` yalnızca `x` değil `true`
 * Null birleşim
     - `x ?? y`: Değerlendiren `y` varsa `x` için null `x` Aksi takdirde
 * Koşullu
-    - `x ? y : z`: Hesaplar `y` varsa `x` olan `true`, `z` varsa `x` olduğu `false`
-* Atama veya anonim işlevi
+    - `x ? y : z`: Değerlendirir `y` varsa `x` olduğu `true`, `z` varsa `x` olduğu `false`
+* Atama ve anonim işlev
     - `x = y`: Atama
     - `x op= y`: Bileşik atama; desteklenen işleçler şunlardır:
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`: Anonim işlevi (lambda ifadesi)
 
 >[!div class="step-by-step"]
-[Önceki](types-and-variables.md)
-[sonraki](statements.md)
+>[Önceki](types-and-variables.md)
+>[İleri](statements.md)

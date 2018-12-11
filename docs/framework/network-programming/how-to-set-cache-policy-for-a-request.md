@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir istek için önbellek İlkesi ayarlama'
+title: 'Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190664"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155018"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: bir istek için önbellek İlkesi ayarlama
+# <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama
 Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek Giriş bir URI gibi `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Örnek  

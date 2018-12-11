@@ -2,12 +2,12 @@
 title: REF CURSOR örnekleri
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7edb9cd41c7949dba6c4a5c24179c30d01309214
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406065"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127959"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR örnekleri
 REF CURSOR örnekleri REF CURSOR kullanımını gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  
@@ -26,7 +26,7 @@ REF CURSOR örnekleri REF CURSOR kullanımını gösteren aşağıdaki üç Micr
 ## <a name="creating-the-oracle-package-and-package-body"></a>Paket gövdesi ve Oracle paket oluşturma  
  Bu örnekler, aşağıdaki PL/SQL paketi ve paket gövdesi sunucunuzdaki gerektirir. Oracle sunucu üzerinde aşağıdaki Oracle paketini oluşturun.  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
     TYPE T_CURSOR IS REF CURSOR;   
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
@@ -39,7 +39,7 @@ END CURSPKG;
   
  Aşağıdaki Oracle paket gövdesi, Oracle sunucusunda oluşturun.  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,  
                                IO_CURSOR IN OUT T_CURSOR)  

@@ -1,15 +1,15 @@
 ---
-title: ÇAKIŞMALAR (varlık SQL)
+title: Çakışma (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 9b67e6824317b032f420501ffba385ec6fd651b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f0c5d79b437ff06603ea10404357aa0b3270bc53
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762682"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150784"
 ---
-# <a name="overlaps-entity-sql"></a>ÇAKIŞMALAR (varlık SQL)
+# <a name="overlaps-entity-sql"></a>Çakışma (varlık SQL)
 İki koleksiyon ortak öğeler sahip olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -20,24 +20,24 @@ expression OVERLAPS expression
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Başka bir sorgu ifadesinden döndürülen koleksiyonu ile karşılaştırmak için bir koleksiyon döndürür herhangi bir geçerli sorgu ifade. Tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş türünde olması gerekir `expression`.  
+ Başka bir sorgu ifadesinden döndürülen koleksiyon karşılaştırmak için bir koleksiyon döndürür herhangi bir geçerli ifade. Tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş tür olarak olmalıdır `expression`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` iki koleksiyon ortak öğeler varsa; Aksi takdirde `false`.  
+ `true` iki koleksiyon ortak öğeler varsa, Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlevsel olarak eşdeğerdir aşağıdaki ÇAKIŞMALAR sağlar:  
+ İşlevsel olarak eşdeğerdir aşağıdaki ÇAKIŞAN sağlar:  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- ÇAKIŞMALAR biridir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri ayarlayın. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. Öncelik bilgilerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri, bakın [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ ÇAKIŞAN biridir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri ayarlayın. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] küme işleci soldan sağa doğru değerlendirilir. Öncelik bilgilerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri, bakın [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusunu ÇAKIŞMALAR işleci belirler için iki koleksiyon ortak bir değere sahip olup olmadığını kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bunu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusu ÇAKIŞIYOR işleci belirler için iki koleksiyon ortak değerine sahip olup olmadığını kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu çalıştırma için şu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   

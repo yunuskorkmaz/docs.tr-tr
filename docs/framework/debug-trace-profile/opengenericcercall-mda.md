@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 486c3c44b69c69a472b7405b6c14f9d27a29d756
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2cb99a1bda8223ddece4b4aff4a87d95357d90e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387526"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153702"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
-`openGenericCERCall` Yönetilen hata ayıklama Yardımcısı JIT derleme veya yerel görüntü oluşturma zamanı ve en az bir genel kısıtlı yürütme bölge (CER) grafiğe kök yöntemi en genel tür değişkenlerle birlikte işleniyor uyarmak için etkinleştirildi türü değişkenleri olan bir nesne başvurusu türü.  
+`openGenericCERCall` Yönetilen hata ayıklama Yardımcısı, genel tür değişkenleri kök yöntemi ile kısıtlı yürütme bölge (CER) grafik JIT derleme veya yerel görüntü oluşturma zamanına ve en az bir genel işlenmekte olduğunu uyarmak için etkinleştirildi türü değişkenler olan bir nesne başvuru türü.  
   
 ## <a name="symptoms"></a>Belirtiler  
- CER kod, bir iş parçacığı iptal edildiğinde veya uygulama etki alanı kaldırıldığında çalışmaz.  
+ Bir iş parçacığı iptal edildiğinde veya uygulama etki alanı kaldırıldığında CER kod çalıştırmaz.  
   
 ## <a name="cause"></a>Sebep  
- JIT derleme zamanında bir nesne başvurusu türü içeren bir örnek oluşturma yalnızca Sonuç kodu paylaşılan ve her nesne başvurusu türü değişkenleri herhangi bir nesne başvurusu türünün olabilir çünkü temsilcisidir. Bu, bazı çalışma zamanı kaynaklar önceden hazırlanması engelleyebilir.  
+ JIT derleme zamanında örneklemesi içeren bir nesne başvuru türü yalnızca Sonuç kodu paylaşılır ve her nesne başvuru türü değişkenlerin herhangi bir nesne başvuru türü olabilir çünkü temsilcisidir. Bu, bazı çalışma zamanı kaynaklar önceden hazırlanması engelleyebilir.  
   
- Özellikle, genel tür değişken içeren yöntemlerin gevşek arka planda kaynakları tahsis edebilirsiniz. Bunlar, genel bir sözlük girişleri olarak adlandırılır. Örneğin, deyim için `List<T> list = new List<T>();` nerede `T` çalışma zamanı aramak ve büyük olasılıkla tam örnek oluşturma zamanında, örneğin, oluşturma genel tür değişken `List<Object>, List<String>`, vb. Bu, çeşitli nedenlerle çalışan yetersiz bellek gibi geliştirici denetim ötesinde için başarısız olabilir.  
+ Özellikle, genel tür değişkenleri olan yöntemleri gevşek arka planda kaynakları tahsis edebilirsiniz. Bunlar, genel bir sözlük girişleri olarak adlandırılır. Deyim için örneği için `List<T> list = new List<T>();` burada `T` çalışma zamanı aramak ve büyük olasılıkla tam oluşturmada çalışma zamanında, örneğin, oluşturun bir genel tür değişken `List<Object>, List<String>`ve böyle devam eder. Bu, çeşitli nedenlerle yetersiz bellek çalışıyor gibi geliştiricinin kontrolü için başarısız olabilir.  
   
- Bu MDA JIT derleme zamanında, tam bir örnek oluşturma olduğunda değil yalnızca etkinleştirilmesi.  
+ Bu MDA, JIT derleme zamanında tam örneklemesi olduğunda değil yalnızca etkinleştirilmelidir.  
   
- Bu MDA etkinleştirildiğinde, büyük olasılıkla Belirtiler CERs için hatalı örneklemesi işlevsel olduğundan emin olan. Aslında, çalışma zamanı CER etkinleştirilecek MDA neden olduğu durumlarda uygulamak çalıştı değil. Bu nedenle paylaşılan örneklemesi sonra JIT derleme CER, geliştirici kullanıyorsa, genel türler yükleme hataları yazın veya hedeflenen CER bölge içinde iş parçacığı iptalleri yakalanan değil.  
+ Bu MDA etkinleştirildiğinde, büyük olasılıkla Belirtiler CERs hatalı örneklemesi için işlevsel olmayan olan. Aslında, çalışma zamanı etkinleştirilecek MDA neden koşullarda bir CER uygulamak çalıştı değil. Bu nedenle Geliştirici sonra JIT derleme CER paylaşılan bir örneğinin kullanıyorsa, genel türler yükleme hataları yazın ya da iş parçacığı iptalleri hedeflenen CER bölge içinde yakalanır değil.  
   
 ## <a name="resolution"></a>Çözüm  
- Nesne başvurusu türü bir CER içerebilir yöntemleri için genel tür değişkenler kullanmayın.  
+ Nesne başvuru türü bir CER içerebilir yöntemleri için genel tür değişkenler kullanmayın.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
  Bu MDA çıktısı bir örnek verilmiştir.  
@@ -62,9 +62,9 @@ ms.locfileid: "33387526"
 ```  
   
 ## <a name="example"></a>Örnek  
- CER kod yürütülmedi.  
+ CER kod yürütülmez.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Runtime.CompilerServices;  

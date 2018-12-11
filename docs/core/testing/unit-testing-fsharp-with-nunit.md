@@ -1,23 +1,25 @@
 ---
-title: 'Birim F # kitaplıkları, .NET Core dotnet testi ve NUnit kullanarak test etme'
-description: "Adım adım örnek çözüm oluşturma etkileşimli deneyim için F #'de .NET Core birim testi kavramları öğrenin dotnet testi ve NUnit kullanarak."
+title: Birim testi F# dotnet testi ve NUnit kullanarak .NET core'da kitaplıkları
+description: Birim test kavramlarını öğrenin F# dotnet testi ve NUnit kullanarak .NET core'da adım adım örnek çözüm oluşturma etkileşimli bir deneyim.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.custom: seodec18
+ms.openlocfilehash: 4135ef1a0f3ef86ae8ab344d27ee8968944bb728
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308440"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169098"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Birim F # kitaplıkları, .NET Core dotnet testi ve NUnit kullanarak test etme
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Birim testi F# dotnet testi ve NUnit kullanarak .NET core'da kitaplıkları
 
 Bu öğretici örnek bir çözüm birim testi kavramlarını öğrenmek için adım adım oluşturmaya etkileşimli deneyim gösterir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi uygulamak isterseniz [görüntülemek veya örnek kodu indirdikten](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) başlamadan önce. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Önkoşullar 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) veya sonraki sürümler. 
+## <a name="prerequisites"></a>Önkoşullar
+
+- [.NET core 2.1 SDK](https://www.microsoft.com/net/download) veya sonraki sürümler.
 - Bir metin düzenleyicisi veya tercih ettiğiniz Kod Düzenleyicisi.
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma

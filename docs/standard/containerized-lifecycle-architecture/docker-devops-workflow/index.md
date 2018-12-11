@@ -4,12 +4,12 @@ description: Microsoft araçları ile Microsoft Platformu ve Toolsdevops iş ak�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086599"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128446"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulaması DevOps iş akışı
 
@@ -33,7 +33,6 @@ Kapsayıcılı uygulama geliştirme karmaşıklığını iş karmaşıklığın�
 
 -   Kuruluşların kolayca sağlayabilirsiniz (veri, PaaS, vb.) Azure bileşenlerini bağımlılığın yanı sıra Azure Container Registry'de depolanan özel görüntülerden Docker kapsayıcıları oldukları zaten araçlarıyla Azure Resource Manager şablonlarını kullanma deneyimli çalışma.
 
-
 >[!div class="step-by-step"]
-[Önceki](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[İleri](docker-application-outer-loop-devops-workflow.md)
+>[Önceki](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[İleri](docker-application-outer-loop-devops-workflow.md)

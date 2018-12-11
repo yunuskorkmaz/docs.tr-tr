@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme'
+title: 'Nasıl Yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: e809ea3c2b2bcc0f547dd53280835a83f52e079b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66636476d0c76f26f87198bc58146e034bdad6af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188046"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151128"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme
-İçinde zaman uyumsuz çözümün performansını artırabilirsiniz [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri topluluğu temsil edilen birden çok zaman uyumsuz işlemler bekler.  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Nasıl Yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)
+İçinde zaman uyumsuz çözümün performansını artırabilirsiniz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri topluluğu temsil edilen birden çok zaman uyumsuz işlemler bekler.  
   
  Web sitelerinin indirme hızlarının farklı izlenecek yolda etmiş olabilirsiniz. Bazen, Web siteleri, kalan tüm indirmeleri geciktirir çok yavaş biridir. Anlatımda oluşturduğunuz zaman uyumsuz çözümleri çalıştırdığınızda, program kolayca beklemek istemiyorsanız, ancak tüm indirmeleri aynı anda başlatmak ve devam etmek için beklemenize gerek kalmadan daha hızlı indirmeler izin vermek için daha iyi bir seçenek olacaktır sona erdirebilirsiniz ait  ertelendi.  
   
  Uyguladığınız `Task.WhenAll` yöntemi için bir görev koleksiyonu. Uygulamayı `WhenAll` koleksiyondaki her görev tamamlanıncaya kadar tam olmayan tek bir görev döndürür. Görevler paralel olarak çalışır gibigörünür, ancak hiçbir ek iş parçacığı oluşturulmaz. Görevler herhangi bir sırada tamamlayabilir.  
   
 > [!IMPORTANT]
->  Aşağıdaki yordamlar içinde geliştirilen zaman uyumsuz uygulamaların uzantılarını açıklamaktadır [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İzlenecek yolu tamamlayarak veya kodu indiriliyor tarafından uygulamalar geliştirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+>  Aşağıdaki yordamlar içinde geliştirilen zaman uyumsuz uygulamaların uzantılarını açıklamaktadır [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İzlenecek yolu tamamlayarak veya kodu indiriliyor tarafından uygulamalar geliştirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
 >   
 >  Örneği çalıştırmak için Visual Studio 2012 olmalıdır veya üzeri yüklü.  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync çözümünüze Task.WhenAll eklemek için  
   
-1.  Ekleme `ProcessURLAsync` yöntemi içinde geliştirilen ilk uygulamaya [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Ekleme `ProcessURLAsync` yöntemi içinde geliştirilen ilk uygulamaya [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Koddan indirdiyseniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), AsyncWalkthrough projesini açın ve ardından eklemek `ProcessURLAsync` MainWindow.xaml.cs dosyasına.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "50188046"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync çözümüne Task.WhenAll eklemek için  
   
-1.  Aşağıdaki sürümü ekleme `ProcessURLAsync` içinde geliştirilen ikinci uygulamaya [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Aşağıdaki sürümü ekleme `ProcessURLAsync` içinde geliştirilen ikinci uygulamaya [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Koddan indirdiyseniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), AsyncWalkthrough_HttpClient projesini açın ve ardından eklemek `ProcessURLAsync` MainWindow.xaml.cs dosyasına.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "50188046"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll çözümlerini test etmek için  
   
--   Her çözüm için programı çalıştırmak için F5 tuşuna basın ve ardından **Başlat** düğmesi. Zaman uyumsuz çözümleri çıkışı çıktıya benzemelidir [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Ancak, Web sitelerinin her seferinde farklı bir sırada görüntülendiğine dikkat edin.  
+-   Her çözüm için programı çalıştırmak için F5 tuşuna basın ve ardından **Başlat** düğmesi. Zaman uyumsuz çözümleri çıkışı çıktıya benzemelidir [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Ancak, Web sitelerinin her seferinde farklı bir sırada görüntülendiğine dikkat edin.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kodu kullanan proje uzantılarını göstermektedir `GetURLContentsAsync` içeriği Web'den yüklemek için yöntemi.  
@@ -246,7 +246,7 @@ namespace AsyncExampleWPF_WhenAll
   
             // Display the total count for all of the websites.  
             resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         private List<string> SetUpURLList()  
@@ -307,9 +307,8 @@ namespace AsyncExampleWPF_WhenAll
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
-  
-        }  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
+        }
     }  
 }  
 ```  
@@ -393,7 +392,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
             // Display the total count for all of the web addresses.  
             resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         private List<string> SetUpURLList()  
@@ -429,7 +428,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }  
     }  
 }  
@@ -438,4 +437,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

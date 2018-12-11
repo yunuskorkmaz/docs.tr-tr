@@ -1,5 +1,6 @@
 ---
 title: . NET'te dizeleri kullanmak için en iyi uygulamalar
+description: Dizeleri .NET uygulamalarında etkili bir şekilde kullanmayı öğrenin.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080344"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150985"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>. NET'te dizeleri kullanmak için en iyi uygulamalar
 <a name="top"></a> .NET, yerelleştirilmiş ve genelleştirilmiş uygulamalar geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi yaygın işlemleri gerçekleştirirken geçerli kültürün veya belirli bir kültürün kurallarını uygulamak kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
@@ -120,7 +122,7 @@ ms.locfileid: "47080344"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Dize Karşılaştırma Ayrıntıları  
- Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeler belirli bir düzende sıralanır: Eğer dizelerin sıralı bir listesinde "my" dizesi "string" dizesinden önce görünüyorsa, "my" dizesi "string" dizesi ile karşılaştırıldığında daha küçük veya eşit olmalıdır. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.  
+ Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeleri sıralama belirlenmiş bir sırada: "My" dizeleri sıralanmış bir listede "dize" önce görünüyorsa, "my" "dize" küçüktür veya eşittir karşılaştırmanız gerekir. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.  
 
 > [!NOTE]
 > İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/en-us/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablonun en son sürümü. Linux ve Macos'ta sıralama ağırlık tablosu belirli bir sürümünü sürümüne bağlıdır [Unicode için Uluslararası bileşenleri](http://site.icu-project.org/) sistemde yüklü kitaplıkları. ICU ve uyguladıkları Unicode sürümleri hakkında daha fazla bilgi için bkz: [indirme ICU](http://site.icu-project.org/download).
@@ -242,7 +244,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
 |----------|--------------|-----------------------------------------------------|  
 |Büyük/küçük harfe duyarlı dahili tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarlı tanımlayıcılar.<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarlı ayarlar.|Baytların tam olarak eşleştiği dilsel olmayan bir tanımlayıcı.|<xref:System.StringComparison.Ordinal>|  
 |Büyük/küçük harfe duyarsız iç tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarsız tanımlayıcılar.<br /><br /> Dosya yolları.<br /><br /> Kayıt defteri anahtarları ve değerleri.<br /><br /> Ortam değişkenleri.<br /><br /> Kaynak tanımlayıcıları (örneğin, işleyici adları).<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarsız ayarlar.|Büyük/küçük harfin alakasız olduğu dilsel olmayan bir tanımlayıcı; özellikle çoğu Windows sistem hizmetinde depolanan veriler.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Kalıcı olan bazı dilsel veriler.<br /><br /> Sabit bir sıralama düzeni gerektiren dilsel verinin görüntülenmesi.|Dilsel olan ancak kültüre duyarlı olmayan veri.|<xref:System.StringComparison.InvariantCulture><br /><br /> veya<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Kalıcı olan bazı dilsel veriler.<br /><br /> Sabit bir sıralama düzeni gerektiren dilsel verinin görüntülenmesi.|Dilsel olan ancak kültüre duyarlı olmayan veri.|<xref:System.StringComparison.InvariantCulture><br /><br /> -veya-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
 |Kullanıcıya görüntülenen veri.<br /><br /> Çoğu kullanıcı girişi.|Yerel dilsel özellikleri gerektiren veriler.|<xref:System.StringComparison.CurrentCulture><br /><br /> veya<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Başa dön](#top)  
@@ -335,7 +337,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>Koleksiyon Örnekleri: Karma Tablosu Oluşturucu  
+### <a name="collections-example-hashtable-constructor"></a>Koleksiyon örnekleri: Karma tablosu Oluşturucu  
  Karma dizeleri, dizelerin karşılaştırılma şeklinden etkilenen bir işlemin ikinci bir örneğini sağlar.  
   
  Aşağıdaki örnek, <xref:System.Collections.Hashtable> özelliği tarafından döndürülen <xref:System.StringComparer> nesnesini geçirerek bir <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> nesnesi oluşturur. <xref:System.StringComparer>'dan türetilen bir <xref:System.StringComparer> sınıfı <xref:System.Collections.IEqualityComparer> arabirimini uyguladığından <xref:System.Collections.IEqualityComparer.GetHashCode%2A> yöntemi, karma tablosundaki dizelerin karma kodunu hesaplamak için kullanılır.  

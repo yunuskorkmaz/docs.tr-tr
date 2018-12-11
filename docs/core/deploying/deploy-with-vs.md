@@ -1,21 +1,21 @@
 ---
-title: Visual Studio ile .NET core uygulama dağıtımı
-description: Visual Studio ile .NET Core uygulama dağıtımı öğrenin
+title: Dağıtma .NET Core uygulamaları Visual Studio ile
+description: Visual Studio ile .NET Core uygulaması dağıtmayı öğrenin.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584402"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127114"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Dağıtımı .NET Core uygulamaları Visual Studio ile
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Dağıtma .NET Core uygulamaları Visual Studio ile
 
 Dağıtabileceğiniz bir .NET Core uygulaması ya da farklı bir *framework bağımlı dağıtım*, uygulama ikili dosyalarını içerir, ancak hedef sistem üzerinde veya olarak .NET Core varlığını bağımlı bir *müstakil Dağıtım*, hem uygulama hem de .NET Core ikili dosyalarını içerir. .NET Core uygulama dağıtımı genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md).
 
@@ -34,7 +34,7 @@ Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı 
 
 1. Projeyi oluşturun.
 
-   Seçin **dosya** > **yeni** > **proje**. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "FDD" gibi bir proje adı girin **adı** metin kutusu. Seçin **Tamam** düğmesi.
+   **Dosya** > **Yeni** > **Proje**’yi seçin. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "FDD" gibi bir proje adı girin **adı** metin kutusu. **Tamam** düğmesini seçin.
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
@@ -85,7 +85,7 @@ Bir veya daha fazla üçüncü taraf bağımlılıkları olan bir framework bağ
 
 1. Projeyi oluşturun.
 
-   Seçin **dosya** > **yeni** > **proje**. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "SCD" gibi bir proje adı girin **adı** metin kutusu ve select **Tamam** düğmesi.
+   **Dosya** > **Yeni** > **Proje**’yi seçin. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "SCD" gibi bir proje adı girin **adı** metin kutusu ve select **Tamam** düğmesi.
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
@@ -150,7 +150,7 @@ Uygulamanızı Visual Studio'dan yayımlamak için aşağıdakileri yapın:
 
          1. Seçin **yeni profil oluşturma** içinde **Yayımla** iletişim.
 
-         1. İçinde **yayımlama hedefi seçin** iletişim kutusunda değişiklik **bir klasör seçin** konumuna *bin\Release\PublishOutput\win10 x64*. Seçin **Tamam**.
+         1. İçinde **yayımlama hedefi seçin** iletişim kutusunda değişiklik **bir klasör seçin** konumuna *bin\Release\PublishOutput\win10 x64*. **Tamam**’ı seçin.
 
          1. Yeni profili seçin (**FolderProfile1**) profilleri listesinde olduğundan emin olun **hedef çalışma zamanı** olduğu `win10-x64`. Aksi takdirde seçin **ayarları**. İçinde **profil ayarları** iletişim kutusunda değişiklik **hedef çalışma zamanı** için `win10-x64` seçip **Kaydet**. Aksi takdirde seçin **iptal**.
 

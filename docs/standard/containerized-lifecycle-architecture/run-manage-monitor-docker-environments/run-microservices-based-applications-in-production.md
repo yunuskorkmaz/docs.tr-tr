@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126308"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Üretim ortamlarında oluşturulan ve mikro hizmet tabanlı uygulamaları çalıştırma
 
@@ -33,7 +33,6 @@ Uygulamalar arasında birden fazla konak sistemi genişletilmiş olduğunda, her
 
 Düzenleyiciler ve zamanlayıcılar tarafından sağlanan özellikler geliştirmek ve sıfırdan oluşturmak için son derece karmaşık ve bu nedenle, genellikle yapmak istersiniz kullanım düzenleme çözümlerinin satıcıları tarafından sunulan.
 
-
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](manage-production-docker-environments.md)
+>[Önceki](index.md)
+>[İleri](manage-production-docker-environments.md)

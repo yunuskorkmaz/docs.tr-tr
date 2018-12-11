@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387042"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150673"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
-`jitCompilationStart` Yönetilen hata ayıklama Yardımcısı (MDA) bir işlev derlemek tam zamanında (JIT) derleyici başladığında, rapor için etkinleştirildi.  
+`jitCompilationStart` Yönetilen hata ayıklama Yardımcısı (MDA), rapora etkinleştirilirse, just-in-time (JIT) derleyici bir işlevi derlemeye yürütülmeye başladığı zaman.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Çalışan boyutu artar mscorjit.dll işlemine yüklendiği yerel görüntü biçiminde zaten bir program için ayarlayın.  
+ Çalışan boyutu arttıkça mscorjit.dll işlem içine yüklenmiş olduğundan, yerel görüntü biçiminde olan bir program için ayarlayın.  
   
 ## <a name="cause"></a>Sebep  
- Program bağımlı tüm derlemeler yerel biçimine oluşturulmuş veya olan doğru kayıtlı değil.  
+ Programa bağımlı tüm bütünleştirilmiş kodları yerel biçiminde oluşturulmuş veya sahip doğru şekilde kaydedilmemiş.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu MDA etkinleştirme JIT derlenmiş hangi işlevi belirlemenize olanak sağlar. İşlevi içeren derlemenin oluşturulan yerel biçimi ve düzgün şekilde kayıtlı olup olmadığını belirler.  
+ Bu MDA etkinleştirme JIT olarak derlenmiş hangi işlevi belirlemenize olanak sağlar. İşlevi içeren bütünleştirilmiş kodun yerel biçiminde oluşturulur ve düzgün şekilde kayıtlı olup olmadığını belirler.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA etkinleştirme önemli performans üzerinde etkisi için yalnızca bir yöntem JIT derlenmiş önce bu MDA bir ileti kaydeder. Satır içi bir yöntem ise, bu MDA ayrı bir ileti oluşturmaz unutmayın.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu MDA, bu MDA etkinleştirme performansı üzerinde önemli bir etkisi yoktur, dolayısıyla yalnızca bir yöntem JIT olarak derlenmiş, önce bir ileti kaydeder. Satır içi bir yöntem ise bu mda'nın ayrı bir ileti oluşturmaz unutmayın.  
   
 ## <a name="output"></a>Çıkış  
- Aşağıdaki kod örneği, örnek çıktı gösterir. Bu durumda Test sınıfı "ns2.CO" üzerindeki "m" yöntemi, derlemesindeki çıktısında JIT derlenmiş.  
+ Aşağıdaki kod örneği, örnek çıktı gösterilmektedir. Bu durumda, "ns2.CO" sınıfı "m" metodunda Test derlemesindeki çıkışın gösterdiği JIT olarak derlenmiş.  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma dosyası, hangi yöntemlerin bildirilen ilk JIT derlenmiş olduklarında filtrelemek için işe filtreleri çeşitli gösterir. Tüm yöntemleri için adı özniteliğinin değeri ayarlayarak bildirilmesini belirtebilirsiniz *.  
+ Aşağıdaki yapılandırma dosyası, hangi yöntemlerin JIT olarak derlenmiş olsalar ilk raporlanır filtrelemek üzere kullanılan filtreler çeşitli gösterir. Tüm yöntemleri ad özniteliğini ayarlayarak bildirilmesini belirtebilirsiniz \*.  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, önceki yapılandırma dosyası ile kullanılmak üzere tasarlanmıştır.  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  

@@ -1,6 +1,6 @@
 ---
 title: Visual Studio'da WPF uygulaması oluşturma
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007262"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150751"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 
-Bu makalede, çoğu WPF uygulamaları için ortak olan öğeler içeren basit bir Windows Presentation Foundation (WPF) uygulaması geliştirme işlemini göstermektedir: Extensible Application Markup Language (XAML) işaretleme, arka plan kod, uygulama tanımları denetimler, düzen, veri bağlama ve stilleri.
+Bu makalede, çoğu WPF uygulamaları için ortak olan öğeler içeren basit bir Windows Presentation Foundation (WPF) uygulaması geliştirme işlemini göstermektedir: Extensible Application Markup Language (XAML) işaretleme, arka plan kod, uygulama tanımları, denetimler, düzen, veri bağlama ve stilleri.
 
 Bu izlenecek yol aşağıdaki adımları içerir:
 
@@ -43,7 +43,7 @@ Bu izlenecek yol aşağıdaki adımları içerir:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- (Bu makalede, Visual Studio 2017'de bağlıdır) visual Studio 2012 veya üzeri
+- Visual Studio 2017 veya üstü
 
    Visual Studio'nun en son sürümü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio'yu yükleyin](/visualstudio/install/install-visual-studio).
 
@@ -57,7 +57,7 @@ Bu izlenecek yol aşağıdaki adımları içerir:
 
       **Yeni proje** iletişim kutusu açılır.
 
-   2. Altında **yüklü** kategorisini genişletin **Visual C#** veya **Visual Basic** düğümüne tıklayın ve ardından **Windows Klasik Masaüstü**.
+   2. Altında **yüklü** kategorisini genişletin **Visual C#**  veya **Visual Basic** düğümüne tıklayın ve ardından **Windows Masaüstü**.
 
    3. Seçin **WPF uygulaması (.NET Framework)** şablonu. Bir ad girin **`ExpenseIt`** seçip **Tamam**.
 
@@ -254,7 +254,7 @@ Bölümünde, bir tek sütunlu tablo üç satır ve 10-piksel kenar boşluğu il
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    <xref:System.Windows.Controls.RowDefinition.Height%2A> İki satır kümesine <xref:System.Windows.GridLength.Auto%2A>, satırları boyutlandırılır anlamına temel satırları içerikte. Varsayılan <xref:System.Windows.Controls.RowDefinition.Height%2A> olduğu <xref:System.Windows.GridUnitType.Star> boyutlandırma, satır yüksekliğini kullanılabilir alanı ağırlıklı oranını olduğu anlamına gelir. Örneğin her iki satır varsa bir <xref:System.Windows.Controls.RowDefinition.Height%2A> , "*", sahip oldukları her ikiye kadar kullanılabilir alan olduğundan bir yükseklik.
+    <xref:System.Windows.Controls.RowDefinition.Height%2A> İki satır kümesine <xref:System.Windows.GridLength.Auto%2A>, satırları içeriği temel satırları boyutlandırılır anlamına gelir. Varsayılan <xref:System.Windows.Controls.RowDefinition.Height%2A> olduğu <xref:System.Windows.GridUnitType.Star> boyutlandırma, satır yüksekliğini kullanılabilir alanı ağırlıklı oranını olduğu anlamına gelir. Örneğin her iki satır varsa bir <xref:System.Windows.Controls.RowDefinition.Height%2A> , "*", sahip oldukları her ikiye kadar kullanılabilir alan olduğundan bir yükseklik.
 
     <xref:System.Windows.Controls.Grid> Aşağıdaki XAML gibi görünmelidir:
 
@@ -375,17 +375,17 @@ Eklenen kullanıcı Arabirimi öğeleri aşağıdaki çizimde *ExpenseReportPage
 
     Bu XAML aşağıdaki stilleri ekler:
 
-    - `headerTextStyle`: Sayfa başlığı biçimine <xref:System.Windows.Controls.Label>.
+    - `headerTextStyle`: Sayfa başlığı biçimlendirmek için <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`: Biçimine <xref:System.Windows.Controls.Label> kontrol eder.
+    - `labelStyle`: Biçimlendirilecek <xref:System.Windows.Controls.Label> kontrol eder.
 
-    - `columnHeaderStyle`: Biçimine <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
+    - `columnHeaderStyle`: Biçimlendirilecek <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`: List üstbilgisi biçimine <xref:System.Windows.Controls.Border> kontrol eder.
+    - `listHeaderStyle`: List üstbilgisi biçimlendirmek için <xref:System.Windows.Controls.Border> kontrol eder.
 
-    - `listHeaderTextStyle`: List üstbilgisi biçimine <xref:System.Windows.Controls.Label>.
+    - `listHeaderTextStyle`: List üstbilgisi biçimlendirmek için <xref:System.Windows.Controls.Label>.
 
-    - `buttonStyle`: Biçimine <xref:System.Windows.Controls.Button> üzerinde `ExpenseItHome.xaml`.
+    - `buttonStyle`: Biçimlendirilecek <xref:System.Windows.Controls.Button> üzerinde `ExpenseItHome.xaml`.
 
     Stilleri kaynakları ve alt olduğunu fark <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> özellik öğesi. Bu konumda, stilleri bir uygulamadaki tüm öğelere uygulanır. Bir .NET Framework uygulamasında kaynakları kullanma örneği için bkz: [kullanım uygulama kaynaklarını](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md).
 

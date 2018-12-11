@@ -1,5 +1,6 @@
 ---
-title: .NET Framework'te Büyük/Küçük Harf Değiştirme
+title: . NET'te değiştirme
+description: . NET'te dizeleri söz konusu olduğunda değiştirmeyi öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003678"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128654"
 ---
 # <a name="changing-case-in-net"></a>. NET'te değiştirme
 Bir kullanıcı girişi kabul eden bir uygulama yazıyorsanız, hiçbir zaman isterse veri girmek için kullanacağı hangi çalışması emin olabilirsiniz. Genellikle, özellikle, bunların kullanıcı arabiriminde görüntülüyorsanız dizeleri tutarlı olarak büyük küçük harfleri istersiniz. Aşağıdaki tabloda, üç durum değiştirme yöntemleri açıklar. İlk iki yöntem bir kültür kabul eden bir aşırı yüklemesini sağlar.  

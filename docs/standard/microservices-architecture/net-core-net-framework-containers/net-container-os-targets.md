@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970831"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147206"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Hedef .NET kapsayıcıları ile hangi işletim sistemi
 
@@ -39,11 +39,11 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, işletim sistemi ve sür�
 <tbody>
 <tr>
 <td>Microsoft / dotnet:2.1-çalışma zamanı</td>
-<td>.NET core 2.1 çok mimari: destekleyen Linux ve Docker konağı bağlı olarak Windows Nano sunucu.</td>
+<td>.NET core 2.1 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</td>
 </tr>
 <tr class="odd">
 <td>Microsoft / dotnet:2.1-aspnetcore-çalışma zamanı</td>
-<td><p>ASP.NET Core 2.1 çok mimari: destekleyen Linux ve Docker konağı bağlı olarak Windows Nano sunucu.</p>
+<td><p>ASP.NET Core 2.1 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</p>
 <p>ASP.NET Core için birkaç en iyi duruma getirme aspnetcore görüntüsü vardır.</p></td>
 </tr>
 <tr class="even">
@@ -58,5 +58,5 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, işletim sistemi ve sür�
 </table>
 
 >[!div class="step-by-step"]
-[Önceki](container-framework-choice-factors.md)
-[İleri](official-net-docker-images.md)
+>[Önceki](container-framework-choice-factors.md)
+>[İleri](official-net-docker-images.md)

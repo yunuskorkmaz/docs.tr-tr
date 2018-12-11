@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192440"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147238"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
 Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuvası uygulama programı askıya alır. Eşzamanlı yuva kendi işlemleri için ağ ağır olarak kullanan uygulamalar için uygun değildir, ancak bunlar diğer uygulamalar için Ağ Hizmetleri için basit erişim sağlar.  

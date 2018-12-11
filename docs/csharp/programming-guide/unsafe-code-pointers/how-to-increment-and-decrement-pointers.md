@@ -1,21 +1,22 @@
 ---
-title: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)'
+title: 'Nasıl yapılır: işaretçileri artırma ve azaltma (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206477"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128342"
 ---
-# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)
-Artırma ve azaltma işleçleri kullanan `++` ve `--`işaretçi konuma göre değişmesini [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) işaretçi işaretçisi-türü *. Artırma ve azaltma ifadeleri aşağıdaki biçiminde:  
+# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Nasıl yapılır: işaretçileri artırma ve azaltma (C# Programlama Kılavuzu)
+
+Artırma ve azaltma işleçleri kullanan `++` ve `--`işaretçi konuma göre değişmesini `sizeof(pointer-type)` türünde bir işaretçi için `pointer-type*`. Artırma ve azaltma ifadeleri aşağıdaki biçiminde:  
   
-```  
+```csharp
 ++p;  
 p++;  
 --p;  
@@ -24,9 +25,9 @@ p--;
   
  Tür dışında herhangi bir türde işaretçileri artırma ve azaltma işleçleri uygulanabilir `void*`.  
   
- Artırım işleci türünde bir işaretçiye uygulamak etkisini `pointer-type` eklemektir [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) adresine işaretçi değişkeninde yer alır.  
+ Artırım işleci türünde bir işaretçiye uygulamak etkisini `pointer-type*` eklemektir `sizeof(pointer-type)` adresine işaretçi değişkeninde yer alır.  
   
- Azaltma işleci türünde bir işaretçiye uygulamak etkisini `pointer-type` çıkarılacak olan `sizeof` (`pointer-type`) adresinden işaretçi değişkeninde yer alır.  
+ Azaltma işleci türünde bir işaretçiye uygulamak etkisini `pointer-type*` çıkarılacak olan `sizeof(pointer-type)` adresinden işaretçi değişkeninde yer alır.  
   
  Hiçbir özel durum, etki alanı işaretçinin işlemi taşıyor ve sonuç uygulamasının bağlıdır, üretilir.  
   
@@ -43,7 +44,7 @@ p--;
 **değer: 3 @ adresi : 12860284**
 **değer: 4 @ adresi: 12860288**
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
 - [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
@@ -54,3 +55,4 @@ p--;
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
 - [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+- [sizeof](../../../csharp/language-reference/keywords/sizeof.md)

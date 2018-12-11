@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297484"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145273"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler. ValueObject düzeni** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım kalbi karmaşıklığı bağlayabileceğiniz.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) \
+- **Eric Evans. Etki alanı Odaklı Tasarım: Kuruluşlarda karmaşık yazılım kalbidir.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon. Uygulama etki alanı Odaklı Tasarım.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) \
@@ -331,5 +331,5 @@ public class Address
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
-[Önceki](seedwork-domain-model-base-classes-interfaces.md)
-[İleri](enumeration-classes-over-enum-types.md)
+>[Önceki](seedwork-domain-model-base-classes-interfaces.md)
+>[İleri](enumeration-classes-over-enum-types.md)

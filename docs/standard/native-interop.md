@@ -1,38 +1,38 @@
 ---
 title: Yerel birlikte çalışabilirliği
-description: .NET yerel bileşenleriyle arabirim öğrenin.
+description: . NET'te yerel bileşenleriyle arabirim öğrenin.
 author: blackdwarf
 ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591930"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143194"
 ---
 # <a name="native-interoperability"></a>Yerel birlikte çalışabilirliği
 
-Bu belgede, biz biraz daha derin "yerel birlikte çalışabilirliği" bulunurken tüm üç yolu dalın .NET ile kullanılabilir.
+Bu belgede, biz biraz daha derin "yerel birlikte çalışabilirliği" yapılması, tüm üç yolu içinde ayrıntılı olarak incelenecektir .NET ile kullanılabilir.
 
-Birkaç neden yerel kod içine çağırmak için istersiniz nedenleri şunlardır:
+Birkaç neden yerel kod içine çağırmak istiyorsunuz nedenleri şunlardır:
 
-*   İşletim sistemleri, yüksek hacimli bir yönetilen sınıf kitaplıkları mevcut olmayan API'leri ile gelir. Bu prime örneğin donanım veya işletim sistemi yönetim işlevlerini erişimi olacaktır.
-*   C türü ABIs (yerel ABIs) oluşturabilir veya diğer bileşenlerle iletişim kurarak. Bu, örneğin, aracılığıyla sunulan Java kod kapsar [Java yerel arabirimi (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşeni üretebilir herhangi bir yönetilen dili.
-*   Windows, Microsoft Office suite gibi yüklendiğini yazılım çoğunu programlarını temsil eder ve bunları otomatikleştirmek veya bunları kullanmayı geliştiriciler izin veren COM bileşenleri kaydeder. Bu da yerel birlikte çalışabilirliği gerektirir.
+*   İşletim sistemleri, büyük hacimli yönetilen sınıf kitaplıklarında mevcut olmayan API'leri ile gelir. Bu prime Örneğin, donanım veya işletim sistemi yönetim işlevlerine erişimi olacaktır.
+*   C stili Abı'ler (yerel Abı'ler) oluşturabilir veya diğer bileşenleri ile iletişim kurma. Bu, örneğin, Java kodu aracılığıyla gösterilir kapsar [Java yerel arabirimi (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşeni oluşturabilecek herhangi bir yönetilen dil.
+*   Windows üzerinde çoğu, Microsoft Office suite gibi yüklenen yazılım programlarını temsil eder ve bunları otomatik hale getirmek ya da kullandığınız geliştiricilerin izin veren COM bileşenlerini kaydeder. Bu ayrıca yerel birlikte çalışabilirliği gerektirir.
 
-Elbette, yukarıdaki listeye tüm olası durumlar ve geliştirici gibi/istediğiniz/gerek yerel bileşenleriyle arabirim için misiniz senaryoları kapsamaz. .NET sınıf kitaplığı, yerel birlikte çalışabilirliği destek Orta API'lerini Konsolu desteği ve işleme, dosya sistemi erişimi ve diğerleri gibi çeşitli uygulamak için örneği için kullanır. Ancak, önemli bir seçenek olduğuna dikkat edin, bir da gerekir.
+Elbette, yukarıdaki listede tüm olası durumlar ve senaryoları, geliştirici istediğiniz/gibi/yerel bileşenleriyle arabirim oluşturmak için gerekecek kapsamaz. .NET sınıf kitaplığı, yerel birlikte çalışabilirliği destek adil birkaç Konsolu desteği ve işleme, dosya sistemi erişimini ve diğerleri gibi kendi API uygulamak için örneği için kullanır. Ancak, önemli bir seçenek olduğuna dikkat edin, bir da gerekir.
 
 > [!NOTE]
-> Bu belgedeki örneklerde çoğu için üç tüm desteklenen platformlar için .NET Core (Windows, Linux ve macOS) sunulur. Ancak, bazı kısa ve yalnızca tanım örnekler için Windows dosya adları ve uzantıları (diğer bir deyişle, kitaplıkları için "dll") kullanan tek bir örnek gösterilir. Bu gelmez bu özellikleri Linux veya macOS üzerinde kullanılabilir değil, yalnızca kolaylık artırmak amacıyla için yapılmıştır.
+> Bu belgedeki örnekler çoğu için üç tüm desteklenen platformlar için .NET Core (Windows, Linux ve macOS) sunulur. Ancak, bazı kısa ve yalnızca tanım örnekler için Windows dosya adları ve uzantıları (diğer bir deyişle, kitaplıkları için "dll") kullanan tek bir örnek gösterilir. Bu gelmez bu özellikleri Linux veya Macos'ta kullanılabilir değil, yalnızca bu çok kolaylık sağlamak için yapılmıştır.
 
 ## <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
-P/Invoke yapılar, geri çağrılar ve yönetilmeyen kitaplıkları işlevlerde yönetilen koddan erişmenize olanak sağlayan bir teknolojidir. P/Invoke API çoğunu iki ad alanlarında bulunan: `System` ve `System.Runtime.InteropServices`. Bu iki ad alanlarını kullanma nasıl yerel bileşeni ile iletişim kurmak istediğinizi açıklayan öznitelikleri için size erişim izin verir.
+P/Invoke, yapılar, geri çağrılar ve işlevleri yönetilmeyen kitaplıklarında, yönetilen koddan erişmenize olanak sağlayan bir teknolojidir. Çoğu P/Invoke API'sinin iki ad alanlarında bulunan: `System` ve `System.Runtime.InteropServices`. Bu iki ad alanlarını kullanarak yerel bir bileşeni ile iletişim kurmak istediğiniz açıklayan öznitelikler erişmenizi sağlayacak.
 
-En yaygın örnekten başlayalım ve, yönetilen kodda yönetilmeyen işlevleri çağırma. Şimdi bir komut satırı uygulamasından bir ileti kutusu göster:
+En yaygın örnekten başlayalım ve, yönetilmeyen işlevleri, yönetilen kodda çağırma. Bir komut satırı uygulamasından bir ileti kutusu gösterelim:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -51,15 +51,15 @@ public class Program {
 }
 ```
 
-Yukarıdaki örnekte oldukça basittir ancak yönetilen koddan yönetilmeyen işlevleri çağırmak için gerekenleri kapalı göstermez. Şimdi örnek adım:
+Yukarıdaki örnek oldukça basittir ancak yönetilen koddan yönetilmeyen işlevleri çağırmak için ihtiyacınız olan şey kapalı göstermez. Şimdi örnek adım:
 
-*   Satır #1 gösterir using deyimini `System.Runtime.InteropServices` ihtiyacımız öğelerin tümünü tutan ad olduğu.
-*   Satırı #5 tanıtır `DllImport` özniteliği. Yönetilmeyen DLL yükleyeceğini çalışma zamanı bildirdiğinde bu öznitelik önemlidir. İçine çağırmak istediğimiz DLL budur.
-*   #6 P/Invoke iş crux satırıdır. Sahip yönetilen bir yöntemi tanımlar **tam aynı imza** yönetilmeyen olarak. Fark yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, bu çalışma zamanı bu söyleyen bir dış yöntemi ve bu, çalışma zamanı belirtilen DLL'de bulmalısınız `DllImport` özniteliği.
+*   Satır #1 gösterir kullanarak deyimi için `System.Runtime.InteropServices` ihtiyacımız öğelerin tümünü tutan ad olduğu.
+*   Satırı #5 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. DLL içine çağırmak istediğimiz budur.
+*   #6 P/Invoke iş nin en önemli özelliği satırıdır. Bir yönetilen yöntemin tanımlar **tam aynı imzaya** yönetilmeyen olarak. Fark, yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, çalışma zamanı bu söyleyen dış bir Metoda ve, çalışma zamanı içinde belirtilen DLL bulmalısınız `DllImport` özniteliği.
 
-Yönetilen herhangi bir yöntemini gibi örneğin geri kalanı yalnızca yöntemini çağıran.
+Yönetilen herhangi bir yöntemi gibi örneğin geri kalanı yöntemi yalnızca çalıştırır.
 
-Örnek için macOS benzer. Değiştirmek için gereken tek şey adıdır, doğal olarak, Kitaplık'ta `DllImport` macOS dinamik kitaplıkları adlandırma farklı bir düzeni içerdiğinden, öznitelik. Örnek kullanır `getpid(2)` uygulamasının işlem kimliği alın ve konsola yazdırmanız işlevi.
+MacOS için örneğe benzerdir. Değiştirmek için gereken bir şey adıdır, Elbette, kitaplıkta `DllImport` macOS dinamik kitaplıklar adlandırma farklı bir düzene sahip olduğundan, öznitelik. Örnek kullanımlar aşağıda `getpid(2)` işlevi uygulamanın işlem Kimliğini alın ve konsola yazdırabilirsiniz.
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ namespace PInvokeSamples {
 }
 ```
 
-Ayrıca, Linux üzerinde de benzer. İşlev adı, beri aynıdır `getpid(2)` bir standarttır [POSIX](https://en.wikipedia.org/wiki/POSIX) sistem çağrısı.
+Ayrıca, Linux üzerinde de benzerdir. İşlev adı, beri aynıdır `getpid(2)` standardıdır [POSIX](https://en.wikipedia.org/wiki/POSIX) sistem çağrısı.
 
 ```csharp
 using System;
@@ -105,9 +105,9 @@ namespace PInvokeSamples {
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>Yönetilen koddan yönetilmeyen kodu çağırma
 
-Elbette, çalışma zamanı çağrılacak işlev işaretçileri kullanarak yerel işlevler yönetilen yapılardan içine sağlayan her iki yönde akmasını iletişim sağlar. Yönetilen kod için işlev işaretçisi en yakın şey bir **temsilci**bu geri aramalar yerel koddan yönetilen koda izin vermek için kullanılan gelir.
+Elbette, çalışma zamanı yerel İşlevler, işlev işaretçileri kullanarak yönetilen yapılardan içine çağırmanızı sağlayan her iki yönde akmasına izin iletişime olanak sağlar. Yönetilen kodda işaretçisinin bir işlev işaretçisine en yakın şey bir **temsilci**, geri çağırmaları yerel koddan yönetilen koda izin vermek için kullanılan budur.
 
-Bu özelliği kullanmak için yol yönetilen yukarıda açıklanan yerel işlemine benzer. Belirli bir geri çağırma için imza eşleşen bir temsilci tanımlayın ve dış yönteme geçirin. Çalışma zamanı her şeyi dikkatli olun.
+Bu özelliği kullanmak için yönetilen yerel işlem yukarıda açıklanan benzer yoludur. Belirli bir geri çağırma için imzayla eşleşen bir temsilci tanımlama ve, dış metoduna geçirin. Çalışma zamanı her şeyi ilgileniriz.
 
 ```csharp
 using System;
@@ -139,18 +139,18 @@ namespace ConsoleApplication1 {
 }
 ```
 
-Biz örneğimizde yol önce çalışmak üzere ihtiyacımız yönetilmeyen işlevleri imzalarını üzerinden gitmek uygundur. Tüm windows numaralandırmak için aranacak istiyoruz işlevi aşağıdaki imzası vardır: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+Bizim örneğimizde inceleyeceğiz önce çalışmak için ihtiyacımız yönetilmeyen işlevleri imzalarını inceleyeceğiz daha iyidir. Tüm windows numaralandırın çağrı istiyoruz işlevi aşağıdaki imzası vardır: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
 
-İlk parametresi, bir geri çağırma olduğu. Konusu geri çağırma aşağıdaki imzası vardır: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+İlk parametre bir geri çağırma ' dir. Aşağıdaki imza söz konusu geri çağırma vardır: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
 
-Bu durum dikkate alınarak, şimdi örnek yol:
+Bunu aklınızda örneği atalım:
 
-*   Satır #8 örnekte yönetilmeyen koddan geri çağırma imzası eşleşen bir temsilci tanımlar. LPARAM ve HWND türlerini nasıl temsil edildiğini fark kullanarak `IntPtr` yönetilen kod.
-*   Satırları #10 ve #11 tanıtmak `EnumWindows` user32.dll kitaplığından işlevi.
-*   Satırları #13-16 temsilci uygulayın. Bu basit örnekte, yalnızca tanıtıcı konsola çıktı istiyoruz.
-*   Son olarak, satır #19 biz dış yöntemini çağırmak ve temsilci geçirin.
+*   #8. satır örnekte geri çağırma, yönetilmeyen koddan imzayla eşleşen bir temsilci tanımlar. LPARAM ve HWND türleri nasıl temsil edildiğini fark kullanarak `IntPtr` yönetilen kod.
+*   #10 ve #11 satır tanıtmak `EnumWindows` user32.dll kitaplığından işlevi.
+*   Satırları #13-16 temsilci uygulayın. Bu basit örnekte, yalnızca tutamaç konsola çıktı istiyoruz.
+*   Son olarak, #19. satırdaki biz dış yöntemi çağırmak ve bir Temsilcide geçirin.
 
-Linux ve macOS örnekleri aşağıda verilmiştir. Bunlar için kullandığımız `ftw` bulunabilir işlevi `libc`, C Kitaplığı. Bu işlev dizin hiyerarşileri geçiş yapmak için kullanılır ve bir işlev işaretçisi parametrelerinden biri olarak alır. Aşağıdaki imzası konusu işlevi içeriyor: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
+Linux ve Macos'ta örnekleri aşağıda gösterilmiştir. Bunlar için kullandığımız `ftw` bulunabilir işlevi `libc`, C Kitaplığı. Bu işlev, dizin hiyerarşileri geçirmek için kullanılır ve bir işlev işaretçisi, parametrelerinden biri alır. Aşağıdaki imza söz konusu işlev vardır: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
 ```csharp
 using System;
@@ -202,7 +202,7 @@ namespace PInvokeSamples {
 }
 ```
 
-macOS örnek aynı işlevini kullanır ve bağımsız değişkeni yalnızca farktır `DllImport` özniteliği macOS tutar gibi `libc` farklı bir yerde.
+macOS örnek aynı işlevi kullanır ve tek fark, bağımsız değişkeni `DllImport` macOS tutar gibi öznitelik `libc` farklı bir yerde.
 
 ```csharp
 using System;
@@ -254,22 +254,22 @@ namespace PInvokeSamples {
 }
 ```
 
-Yönetilen türler olarak verilen her iki durumda da, parametre ve Yukarıdaki örneklerde her ikisi de parametrelere bağlıdır. Çalışma zamanı "sağ şeyi" yapar ve bunları kendi eşdeğerlerini diğer taraftaki işler. Bu işlem kalite yerel birlikte çalışma kod yazmaya gerçekten önemli olduğundan, ne olacağını bir bakalım zaman çalışma zamanı _sıraladığında_ türleri.
+Yukarıdaki örneklerde hem de parametrelere bağlı ve her iki durumda da, yönetilen türleri olarak verilen parametre. Çalışma zamanı "doğru şeyi" mu ve bunları kendi eşdeğerleri diğer tarafındaki işler. Bu işlem, kalite yerel birlikte çalışma kodu yazmak için çok önemli olduğundan, ne olacağını göz atalım, çalışma zamanı _sıraladığında_ türleri.
 
-## <a name="type-marshalling"></a>Dizimi yazın
+## <a name="type-marshalling"></a>Türü taşıma
 
-**Dizimi** yönetilen sınır yerel ve tersi yönde çapraz gerektiğinde türleri dönüştürme işlemidir.
+**Taşıma** yönetilen bir sınır içine yerel ve çapraz ihtiyaç duyduğunda, tür dönüştürme işlemidir.
 
-Neden dizimi gereklidir yönetilen ve yönetilmeyen kodu türlerinde farklı olmasıdır. Yönetilen kodda, örneğin, elinizde bir `String`, yönetilmeyen dünyada Unicode ("geniş"), Unicode olmayan, boş sonlandırılmış ASCII, dizeleri olabileceği vs. Varsayılan olarak, P/Invoke alt sağ üzerinde görebileceğiniz varsayılan davranışa göre şeyler dener [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Ancak, burada gereksinim duyduğunuz ek denetimi bu durumlar için uygulayabileceğiniz `MarshalAs` özniteliği yönetilmeyen tarafında beklenen tür belirtin. Null ile sonlandırılmış ANSI dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
+Taşıma neden gerekli yönetilen ve yönetilmeyen kod türleri farklı olduğundan. Yönetilen kodda, örneğin, elinizde bir `String`, dizeleri Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII, yönetilmeyen dünyada olabileceği vs. Varsayılan olarak, P/Invoke alt göre doğru şeyleri yapacakları konusunda deneyin [varsayılan davranışı](../../docs/framework/interop/default-marshaling-behavior.md). Ancak, bu durumlar için ek denetlemeniz dağıtabileceklerinizle [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) yönetilmeyen tarafında beklenen tür belirtmek için özniteliği. ANSI null ile sonlandırılmış dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 ```
 
-### <a name="marshalling-classes-and-structs"></a>Sıralama sınıflar ve yapılar
+### <a name="marshalling-classes-and-structs"></a>Sınıfları ve yapıları taşıma
 
-Türü dizimi başka bir nokta yapıda yönetilmeyen bir yönteme geçirin şeklidir. Örneğin, yönetilmeyen yöntemlerin bazıları yapı parametre olarak gerektirir. Bu durumda, biz parametre olarak kullanmak için dünyanın yönetilen bölümünde karşılık gelen bir yapı ya da bir sınıf oluşturmanız gerekir. Ancak, yalnızca sınıf tanımlama yeterli değil, aynı zamanda Sıralayıcı yönetilmeyen yapısı sınıf alanları eşleme istemek üzere ihtiyacımız. Bu yerdir `StructLayout` öznitelik oyuna gelir.
+Taşıma türü, başka bir yapıda, yönetilmeyen bir yönteme geçirmek nasıl yönüdür. Örneğin, bazı yönetilmeyen yöntemler yapı parametre olarak gerektirir. Bu durumlarda, biz bir parametresi olarak kullanılabilmesi için dünyanın yönetilen bölümünde karşılık gelen bir yapı ya da bir sınıf oluşturmanız gerekir. Ancak, yalnızca bir sınıf tanımlama yeterli değil, aynı zamanda Sıralayıcı, yönetilmeyen yapı için sınıf alanları eşlemeyle ilgili bilgi istemek ihtiyacımız. Burada `StructLayout` öznitelik oyuna gelir.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -294,7 +294,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Yukarıdaki örnekte arama içine basit bir örneği kapalı gösterir `GetSystemTime()` işlevi. Satır 4 ilginç bitidir. Öznitelik, sınıfın alanları diğer (yönetilmeyen) tarafında struct sırayla eşlenmelidir belirtir. Bu bunların sırası önemlidir yalnızca alanlarını adlandırma değil önemli olduğu anlamına gelir yönetilmeyen yapısı karşılık gelecek şekilde gereksinimleriniz değiştikçe aşağıda gösterilmektedir:
+Yukarıdaki örnekte basit bir örnek, çağırma kapalı gösterir `GetSystemTime()` işlevi. 4. satırda ilginç bitidir. Öznitelik sınıfı alanlarını (yönetilmeyen) diğer tarafında struct sırayla eşlenmelidir belirtir. Bu yalnızca bunların sırası önemlidir alanlarını adlandırma önemli değil anlamına gelir, yönetilmeyen yapısına karşılık olarak gerektiğinde, aşağıda gösterilen:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -330,10 +330,10 @@ public class StatClass {
 }
 ```
 
-`StatClass` Sınıfı tarafından döndürülen bir yapıyı temsil eden `stat` UNIX sistemlerinde sistem çağrısı. Belirli bir dosya hakkında bilgi gösterir. Yukarıdaki stat yapısı gösterimi yönetilen kodda sınıftır. Yeniden sınıf alanları (Bu, sık kullanılan UNIX uygulamanızı adam sayfalarında harcadığı tarafından bulabilirsiniz) yerel yapısı aynı sırada olması gerekir ve aynı temel türde olması gerekir.
+`StatClass` Sınıfı tarafından döndürülen bir yapıyı temsil eden `stat` UNIX sistemlerde sistem çağrısı. Bu, belirli bir dosya ilgili bilgileri temsil eder. Yukarıdaki sınıfı yönetilen kodda stat yapısı gösterimidir. Yine, sınıf alanları (bunlar sık kullanılan UNIX uygulamanız man sayfalarında harcadığı tarafından bulabilirsiniz) yerel yapı aynı sırada olması gerekir ve aynı temel türünde olması gerekir.
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-*   [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ortak Win32 API'ları ve bunları nasıl bilgi.
+*   [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ile ortak Win32 API'ları ve bunları çağırma hakkında bilgi.
 *   [P/Invoke MSDN'de](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [P/Invoke Mono belgeler](https://www.mono-project.com/docs/advanced/pinvoke/)
+*   [P/Invoke üzerinde Mono belgeleri](https://www.mono-project.com/docs/advanced/pinvoke/)

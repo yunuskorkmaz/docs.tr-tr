@@ -1,6 +1,6 @@
 ---
 title: Sınıf, yapı ve arabirimlerin adları
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
 - classes [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: ce0daae9b5994808a6ef5d35f09533d96d1d697f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454334"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127946"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Sınıf, yapı ve arabirimlerin adları
 Adlandırma yönergeleri izleyin, genel bir tür adlandırma için geçerlidir.  
@@ -99,7 +98,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

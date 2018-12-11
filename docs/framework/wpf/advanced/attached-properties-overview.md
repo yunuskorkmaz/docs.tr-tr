@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702913"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129486"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -60,7 +60,7 @@ Bir üst öğesi bir alt öğe koleksiyonu destekler ve ayrıca bir davranışı
 
 ## Kodda ekli özellikler <a name="attached_properties_code"></a>
 
-Ekli Özellikler ' WPF'de tipik gerekmez [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] get/set kolay erişim için "sarmalayıcı" yöntemleri. Ekli özellik olmadığından budur mutlaka parçası [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı için örnekler özelliğinin ayarlandığı. Ancak, XAML işlemci XAML ayrıştırıldığında bu değerleri ayarlayabilirsiniz olması gerekir. Bir etkin ekli özellik kullanımı desteklemek için ekli özellik sahibi türü özel erişimci metotlarını biçiminde uygulamalıdır **alın * PropertyName*** ve **ayarlamak*PropertyName ***. Bu özel erişimci metotlarını almak veya kodda ekli özellik ayarlamak de kullanışlıdır. Kod açısından bakıldığında, ekli özelliği özellik erişimcileri yerine yöntemi erişimcileri sahip destek alanı benzer ve Destek alanı'nün herhangi bir nesne yerine özellikle tanımlanmasına gerek kalmadan bulunabilir var.
+Ekli Özellikler ' WPF'de tipik gerekmez [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] get/set kolay erişim için "sarmalayıcı" yöntemleri. Ekli özellik olmadığından budur mutlaka parçası [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı için örnekler özelliğinin ayarlandığı. Ancak, XAML işlemci XAML ayrıştırıldığında bu değerleri ayarlayabilirsiniz olması gerekir. Bir etkin ekli özellik kullanımı desteklemek için ekli özellik sahibi türü özel erişimci metotlarını biçiminde uygulamalıdır **Get_PropertyName_** ve **Set_PropertyName_**. Bu özel erişimci metotlarını almak veya kodda ekli özellik ayarlamak de kullanışlıdır. Kod açısından bakıldığında, ekli özelliği özellik erişimcileri yerine yöntemi erişimcileri sahip destek alanı benzer ve Destek alanı'nün herhangi bir nesne yerine özellikle tanımlanmasına gerek kalmadan bulunabilir var.
 
 Aşağıdaki örnek kodda ekli özelliği nasıl ayarlayabileceğinizi gösterir. Bu örnekte, `myCheckBox` örneğidir <xref:System.Windows.Controls.CheckBox> sınıfı.
 
@@ -91,14 +91,14 @@ Visual Studio WPF Tasarımcısı desteği gibi almak için başka bir senaryodur
 
 Sınıfınıza ekli özellik kullanımı için kesin olarak diğer türlerde tanımlanıyor demektir sınıfın türetilmesi gerekmez, <xref:System.Windows.DependencyObject>. Ancak türetilmesi gerekir <xref:System.Windows.DependencyObject> bağımlılık özelliği de, ekli özellik yaşama genel WPF modeli izleyin.
 
-Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `public static readonly` türü alanını <xref:System.Windows.DependencyProperty>. Dönüş değerini kullanarak bu alan tanımladığınız <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi. İliştirilmiş özellik adı dizesi ile eklenen alan adı eşleşmelidir `Property`, tanımlayıcı alanları temsil ettikleri özellikleri karşı adlandırma kurulan WPF desenini izler. İliştirilmiş özellik sağlayıcısı ayrıca statik sağlamalısınız **alın * PropertyName*** ve **ayarlamak * PropertyName***; iliştirilmiş özellik erişimcileri olarak yöntemler Bunu yapmak, başarısız özelliğin neden olur Sistem, ekli özellik erişememe.
+Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `public static readonly` türü alanını <xref:System.Windows.DependencyProperty>. Dönüş değerini kullanarak bu alan tanımladığınız <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi. İliştirilmiş özellik adı dizesi ile eklenen alan adı eşleşmelidir `Property`, tanımlayıcı alanları temsil ettikleri özellikleri karşı adlandırma kurulan WPF desenini izler. İliştirilmiş özellik sağlayıcısı ayrıca statik sağlamalısınız **Get_PropertyName_** ve **Set_PropertyName_** ; iliştirilmiş özellik erişimcileri olarak yöntemler Bunu yapmak, başarısız özelliğin neden olur Sistem, ekli özellik erişememe.
 
 > [!NOTE]
 > Eklenen özelliğin get erişimcisine atlarsanız, veri bağlama özelliğini temel alan Tasarım araçları, Visual Studio ve Expression Blend gibi çalışmaz.
 
 #### <a name="the-get-accessor"></a>Get erişimcisi
 
-İmzası **alın * PropertyName*** erişimcisi olmalıdır:
+İmzası **Get_PropertyName_** erişimcisi olmalıdır:
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `
 
 #### <a name="the-set-accessor"></a>Set erişimcileri
 
-İmzası **ayarlamak * PropertyName*** erişimcisi olmalıdır:
+İmzası **Set_PropertyName_** erişimcisi olmalıdır:
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `
 
 -   `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi türleri olarak <xref:System.Windows.Controls.Dock>, değeri yalnızca, sabit listesine ayarlanabilir. Bu yöntem değeri, ekli özellik biçimlendirmede ekli özellik kullanımı karşılaştığında XAML yükleyicisinden gelen giriş olduğunu unutmayın. Söz konusu giriş biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle olmalıdır tür dönüştürme, değeri seri hale getirici veya kullanın, türü için işaretleme uzantısı desteği sağlayacak şekilde uygun türde (olan sonuç olarak bir dize) öznitelik değerinden oluşturulabilir.
 
-Aşağıdaki örnek, bağımlılık özelliği kayıt gösterir (kullanarak <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi), hem de **alın * PropertyName*** ve **ayarlamak * PropertyName*** erişimcileri. Örnekte, ekli özellik addır `IsBubbleSource`. Bu nedenle, erişimcileri adlandırılmalıdır `GetIsBubbleSource` ve `SetIsBubbleSource`.
+Aşağıdaki örnek, bağımlılık özelliği kayıt gösterir (kullanarak <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi), hem de **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri. Örnekte, ekli özellik addır `IsBubbleSource`. Bu nedenle, erişimcileri adlandırılmalıdır `GetIsBubbleSource` ve `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

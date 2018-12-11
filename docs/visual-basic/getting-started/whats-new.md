@@ -1,6 +1,6 @@
 ---
 title: Visual Basic'teki yenilikler
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194065"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146163"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic'teki yenilikler
 
@@ -21,10 +21,13 @@ Bu konu, her bir Visual Basic sürümü ile dil en son sürümlerindeki yeni ve 
   
 ## <a name="current-version"></a>Geçerli sürüm
 
-Visual Basic 15.5 / Visual Studio 2017 sürüm 15.5  
-Yeni özellikler için bkz: [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15,8 / Visual Studio 2017 sürüm 15,8  
+Yeni özellikler için bkz: [Visual Basic 15,8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Önceki sürümler
+
+Visual Basic 15.5 / Visual Studio 2017 sürüm 15.5  
+Yeni özellikler için bkz: [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3 / Visual Studio 2017 sürüm 15.3  
 Yeni özellikler için bkz: [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Bit düzeyinde kaydırma işleçleri, döngü değişken bildirimi
 
 Visual Basic / Visual Studio .NET 2002   
 Visual Basic .NET ilk sürümü
+
+## <a name="visual-basic-158"></a>Visual Basic 15,8
+
+**Tamsayı dönüştürmesi kayan nokta en iyi duruma getirilmiş**
+
+Visual Basic dönüştürme önceki sürümlerinde [çift](../language-reference/data-types/double-data-type.md) ve [tek](../language-reference/data-types/single-data-type.md) tamsayı değerine sunulan nispeten düşük performans. Visual Basic 15,8 biri olarak aşağıdaki yöntemlerden birini tarafından döndürülen değer geçirdiğinizde tamsayılar kayan nokta dönüştürme performansını önemli ölçüde geliştirir [iç Visual Basic tamsayı dönüştürme işlevleri](../language-reference/functions/type-conversion-functions.md) () CByte CShort, CInt, CLng, CSByte, CUShort, Cuınt, CULng), veya aşağıdaki yöntemlerden birini tarafından döndürülen değer örtülü olarak olduğunda, bir tam sayıya dönüştürme türü [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) ayarlanır `Off`:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Bu iyileştirme, daha hızlı--kadar çok sayıda tamsayı türlerine dönüştürme yapan kod için hızlı olarak iki kez çalıştırmak için kod sağlar. Aşağıdaki örnek, bu en iyi duruma getirme etkilenen bazı basit bir yöntem çağrılarını gösterir:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Bunun yerine yuvarlar kayan nokta değerleri kestiğini unutmayın.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

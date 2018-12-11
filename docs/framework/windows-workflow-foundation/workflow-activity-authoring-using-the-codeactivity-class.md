@@ -3,11 +3,11 @@ title: CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296145"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127101"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel kesinlik temelli davranışını geçersiz kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.

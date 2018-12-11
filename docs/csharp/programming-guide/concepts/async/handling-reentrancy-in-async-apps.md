@@ -2,12 +2,12 @@
 title: (C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: c641c217b01e820e9a68065b0a56277a656ccc25
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 2f66859e90ad0b4745069fc5065477a16ea24476
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034474"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126997"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Başlat düğmesini devre dışı bırak  
  Engelleyebilirsiniz **Başlat** en üstündeki düğmesini devre dışı bırakarak işlem çalışırken `StartButton_Click` olay işleyicisi. İçinden düğmeyi ardından etkinleştirebileceğiniz bir `finally` böylece kullanıcılar uygulamayı yeniden çalıştırabilir işlem tamamlandığında engelleyin.  
   
- Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje adı disablestartbutton.  
+ Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje adı disablestartbutton.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -138,7 +138,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  İptal işlemleri hakkında daha fazla bilgi için bkz. [Fine-Tuning Async uygulamanızda (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Projenin adı CancelAndRestart'tır.  
+ Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Projenin adı CancelAndRestart'tır.  
   
 1.  Bildirme bir <xref:System.Threading.CancellationTokenSource> değişken `cts`, tüm yöntemler için kapsam dahilinde olan.  
   
@@ -259,7 +259,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
   
     // Display the total count for all of the websites.  
     ResultsTextBox.Text +=  
-        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+        $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }     
 ```  
   
@@ -298,7 +298,7 @@ TOTAL bytes returned:  890591
   
  İşlemleri genel paylaşım <xref:System.Threading.Tasks.Task>, `pendingWork`, görüntüleme işlemi için bir ağ geçidi olarak görev gören.  
 
- Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje QueueResults adıdır.  
+ Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje QueueResults adıdır.  
    
  Aşağıdaki çıktı, kullanıcı seçtiğinde görülecek sonucu gösterir **Başlat** düğmesini yalnızca bir defa. Harf etiketi A, sonucun ilk kez gösterir **Başlat** düğmesi seçilir. Sayılar, yükleme hedefleri listesinde URL'lerin sırasını gösterir.  
   
@@ -402,7 +402,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     // ***Verify that each group's results are displayed together, and that  
     // the groups display in order, by marking each group with a letter.  
     group = (char)(group + 1);  
-    ResultsTextBox.Text += string.Format("\r\n\r\n#Starting group {0}.", group);  
+    ResultsTextBox.Text += $"\r\n\r\n#Starting group {group}.";
   
     try  
     {  
@@ -411,7 +411,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
         // The following line verifies a successful return from the download and  
         // display procedures.   
-        ResultsTextBox.Text += string.Format("\r\n\r\n#Group {0} is complete.\r\n", finishedGroup);  
+        ResultsTextBox.Text += $"\r\n\r\n#Group {finishedGroup} is complete.\r\n";
     }  
     catch (Exception)  
     {  
@@ -442,7 +442,7 @@ private async Task<char> AccessTheWebAsync(char grp)
     // Assign the Task that FinishOneGroupAsync returns to the gatekeeper task, pendingWork.  
     pendingWork = FinishOneGroupAsync(urlList, getContentTasks, grp);  
   
-    ResultsTextBox.Text += string.Format("\r\n#Task assigned for group {0}. Download tasks are active.\r\n", grp);  
+    ResultsTextBox.Text += $"\r\n#Task assigned for group {grp}. Download tasks are active.\r\n";
   
     // ***This task is complete when a group has finished downloading and displaying.  
     await pendingWork;  
@@ -477,7 +477,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
     // Display the total count for all of the websites.  
     ResultsTextBox.Text +=  
-        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+        $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }  
 ```  
   
@@ -542,7 +542,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Uygulamayı karşıdan yükleme  
   
-1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
@@ -559,7 +559,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ##### <a name="to-build-a-wpf-app"></a>Bir WPF uygulaması derlemek için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -672,7 +672,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
                 // Display the total count for all of the websites.  
                 ResultsTextBox.Text +=  
-                    string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+                    $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
             }  
   
             private List<string> SetUpURLList()  
@@ -700,7 +700,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
                 // Strip off the "https://".  
                 var displayURL = url.Replace("https://", "");  
                 // Display position in the URL list, the URL, and the number of bytes.  
-                ResultsTextBox.Text += string.Format("\n{0}. {1,-58} {2,8}", pos, displayURL, content.Length);  
+                ResultsTextBox.Text += $"\n{pos}. {displayURL,-58} {content.Length,8}";
             }  
         }  
     }  
@@ -712,5 +712,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

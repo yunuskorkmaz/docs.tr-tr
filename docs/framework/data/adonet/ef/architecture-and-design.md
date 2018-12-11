@@ -2,15 +2,15 @@
 title: Mimari ve tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530476"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154274"
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
-SQL üretimi modülünde [örnek sağlayıcısı](https://go.microsoft.com/fwlink/?LinkId=180616) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
+SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
   
  Ağaç düğümleri aşağıdan yukarı işlenir. İlk olarak, bir ara yapı üretilir: SqlSelectStatement veya SqlBuilder, her iki uygulama ISqlFragment. Ardından, dize SQL deyimi, yapısından oluşturulur. Ara yapı için iki nedeni vardır:  
   
@@ -25,7 +25,7 @@ SQL üretimi modülünde [örnek sağlayıcısı](https://go.microsoft.com/fwlin
  Gerçek dize üretme sırasında İkinci aşamada, diğer adlar yeniden adlandırılır.  
   
 ## <a name="data-structures"></a>Veri yapıları  
- Bu bölümde kullanılan türleri ele alınmaktadır [örnek sağlayıcısı](https://go.microsoft.com/fwlink/?LinkId=180616) bir SQL deyimi oluşturmak için kullanın.  
+ Bu bölümde kullanılan türleri ele alınmaktadır [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) bir SQL deyimi oluşturmak için kullanın.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Bu bölüm iki amaca hizmet eder ISqlFragment arabirimi uygulayan sınıflar kapsamaktadır:  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  DbPropertyExpression başlıklı bölümde açıklanan şekilde bir DbPropertyExpression ziyaret, diğer ad birleştirme düzleştirme elde edilir.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Sütun adı ve uzantısı diğer adını yeniden adlandırma  
- İkinci aşamada ikinci aşaması, SQL Oluşturma başlıklı bölümde açıklanan oluşturma diğer adları ile yalnızca değiştirilen simgeler kullanarak sütun adı ve diğer ad uzantısı yeniden adlandırma sorunu ele: dize komutu oluşturuluyor.  
+ İkinci aşamada ikinci aşaması, SQL Oluşturma başlıklı bölümde açıklanan oluşturma diğer adları ile yalnızca değiştirilen simgeler kullanarak sorunu sütun adı ve diğer ad uzantısı yeniden adlandırma gönderilir: STRING komutu oluşturuluyor.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL üretimi ilk aşaması: ifade ağacı ziyaret edin  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Birinci aşama SQL oluşturma: İfade ağacı ziyaret edin  
  Bu bölümde, sorgu ziyaret edilen ifade gösteren ve bir ara yapı oluşturulur, SQL oluşturma, ilk aşaması ya da bir SqlSelectStatement veya bir SqlBuilder açıklanmaktadır.  
   
  Bu bölümde, ilkeler ziyaret farklı ifade düğüm kategoriler ve belirli bir ifade türleri ziyaret ayrıntılarını açıklar.  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL üretimi ikinci aşaması: dize komutu oluşturma  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>İkinci aşama SQL oluşturma: STRING komutu oluşturma  
  Bir SQL komut dizesi oluştururken SqlSelectStatement olan sütun adı ve diğer ad uzantısı yeniden adlandırma sorunu giderir sembolleri için gerçek diğer adlar üretir.  
   
  Diğer ad uzantısı yeniden adlandırma, bir dizeye SqlSelectStatement nesne yazarken gerçekleşir. İlk dış kapsam tarafından kullanılan tüm diğer adları listesi oluşturun. Her simge FromExtents (veya null olmayan ise AllJoinExtents), herhangi bir dış kapsam ile çakışırsa adı. Yeniden adlandırma gerekirse tüm AllExtentNames içinde toplanan yerleşimi çakışmayacağı.  

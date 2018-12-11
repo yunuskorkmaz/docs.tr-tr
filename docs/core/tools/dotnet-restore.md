@@ -1,15 +1,13 @@
 ---
-title: DotNet restore komutu - .NET Core CLI
+title: DotNet restore komutu
 description: Bağımlılıklar ve projeye özgü araçları dotnet restore komutu ile geri yüklemeyi öğreneceksiniz.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 0eaab1aa1bc52bd5b3c51a6ed2dd7a59c35a4aa5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960602"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170788"
 ---
 # <a name="dotnet-restore"></a>DotNet restore
 
@@ -24,7 +22,7 @@ ms.locfileid: "37960602"
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -119,6 +117,10 @@ Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirt
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
+`--interactive`
+
+Durdurmak ve kullanıcı girişi veya eylem (örneğin kimlik doğrulamasını tamamlamak için) için beklemek için komutu sağlar. .NET Core 2.1.400 itibaren.
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
@@ -160,6 +162,8 @@ Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirt
 `--verbosity <LEVEL>`
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Örnekler
 

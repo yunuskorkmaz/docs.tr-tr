@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579852"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153949"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
@@ -38,7 +38,7 @@ C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluş
   
 - [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] çeşitli veri kaynakları yerleşik sorgu yetenekleri sağlar.  
   
- COM nesneleri veya yerel Win32 DLL'leri gibi başka bir Windows yazılımıyla etkileşim kurmak varsa, C# içinde "Interop" olarak adlandırılan bir işlem üzerinden bunu yapabilirsiniz Birlikte çalışma, neredeyse her şeyi bir yerel C++ uygulamalarının yapmak C# programları sağlar. C# dahi işaretçileri ve "güvenli olmayan" kod kavramını doğrudan bellek erişimi son derece kritik olduğu durumlarda destekler.  
+ COM nesneleri veya yerel Win32 DLL'leri gibi başka bir Windows yazılımıyla etkileşim kurmak varsa, bunu yapabilirsiniz C# "Interop" olarak adlandırılan bir işlem aracılığıyla. Birlikte çalışma, neredeyse her şeyi bir yerel C++ uygulamalarının yapmak C# programları sağlar. C# dahi işaretçileri ve "güvenli olmayan" kod kavramını doğrudan bellek erişimi son derece kritik olduğu durumlarda destekler.  
   
  C# derleme işlem basittir C ve C++ karşılaştırıldığında ve Java olduğundan daha esnektir. Hiçbir ayrı üstbilgi dosyası ve yöntemler ve türleri, belirli bir sırada bildirilmesi gereken gereksinimi vardır. Bir C# kaynak dosyası sınıflar, yapılar, arabirimler ve olaylar herhangi bir sayıda tanımlayabilir.  
   

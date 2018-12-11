@@ -1,17 +1,17 @@
 ---
-title: .NET core sürüm oluşturma
-description: .NET Core sürüm nasıl çalıştığını anlayın.
+title: SDK ve .NET Core çalışma zamanı nasıl belirlendiği
+description: Bu makalede çalışma zamanı ve .NET Core SDK'sı sürümü (benzer anlamsal sürüm) şeklini öğretir.
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188475"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170723"
 ---
-# <a name="net-core-versioning"></a>.NET core sürüm oluşturma
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core nasıl tutulan genel bakış
 
 .NET core, .NET Core çalışma zamanı ve .NET Core uygulamaları geliştirmek için ihtiyacınız olan araçları içeren SDK, ifade eder. .NET core SDK'ları, .NET Core çalışma zamanı'nın önceki bir sürümüyle çalışacak şekilde tasarlanmıştır. Bu makalede, çalışma zamanını ve SDK sürüm stratejisi açıklanmaktadır. .NET Standard için sürüm numaraları açıklaması ile tanışın makalede bulunabilir [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
@@ -98,7 +98,7 @@ Her platformda uygulamaları, genellikle platform sürümü ve bu nedenle olmaya
 
 Her sürümünde .NET Core, .NET Standard'ın bir sürümünü uygular. .NET Standard'ın bir sürümünü uygulama, .NET Standard'ın önceki sürümleri için destek anlamına gelir. .NET standard ve .NET Core sürümünün bağımsız olarak. Bu, .NET Core 2.0 .NET Standard 2.0 uygulayan bir rastlantı olur. .NET core 2.1 ayrıca .NET Standard 2.0 uygular. .NET core, .NET Standard'ın gelecek sürümlerinde kullanıma sunuldukça destekleyecektir.
 
-| .NET Core | .NET standard |
+| .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | en fazla 1.6     |
 | 2,0       | 2.0     |

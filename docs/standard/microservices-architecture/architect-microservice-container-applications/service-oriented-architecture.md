@@ -1,31 +1,28 @@
 ---
 title: Hizmet odaklı mimari
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Hizmet odaklı mimari
+description: Mikro hizmetler ve hizmet odaklı mimari (SOA) arasındaki temel farklar öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 67560cc93b3d147be36a691af440bb78f2315557
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: d19053d8296dbe75ac1e0ce037d6a713d9f5687c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105011"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148619"
 ---
-# <a name="service-oriented-architecture"></a>Hizmet odaklı mimari 
+# <a name="service-oriented-architecture"></a>Hizmet odaklı mimari
 
-Hizmet odaklı mimari (SOA) aşırı kullanılmasına bir terim oldu ve farklı kişilere farklı işlemler amacı. Ancak ortak payda olarak farklı alt sistemleri veya katmanları gibi olarak sınıflandırılan birden çok hizmetlerine (en yaygın olarak HTTP Hizmetleri) ayırma tarafından uygulamanızı yapısı SOA anlamına gelir.
+Hizmet odaklı mimari (SOA) olan bir aşırı kullanılmasına terim ve farklı kişiler için farklı şeyler hazırlanmıştır. Ancak, bir ortak paydası (en yaygın olarak HTTP Hizmetleri) farklı alt sistemler veya katmanları gibi olarak sınıflandırılan birden çok hizmetlerine parçalama tarafından uygulamanızı yapı SOA anlamına gelir.
 
-Kapsayıcı görüntüde tüm bağımlılıkları içerdiğinden bu hizmetleri artık Docker kapsayıcılar olarak hangi dağıtım sorunlarını çözer dağıtılabilir. Ancak, SOA uygulamaları ölçeklendirme gerektiğinde ölçeklenebilirlik olabilir ve tek Docker konaklarda dağıtıyorsanız kullanılabilirlik zorluklar tabanlı. Burada yazılım ya da bir orchestrator kümeleme Docker çıkışı, yardımcı olacak burada biz mikro dağıtım yaklaşımlar açıklamak sonraki bölümlerde açıklandığı gibi budur.
+Kapsayıcı görüntüsü dahil tüm bağımlılıkları olmadığından bu hizmetleri artık Docker kapsayıcıları olarak hangi dağıtım sorunlarını çözer dağıtılabilir. Ancak, SOA uygulamaları Ölçeklendirmesi gerektiğinde, ölçeklenebilirlik olabilir ve dağıtım yapıyorsanız kullanılabilirlik sorunları tek Docker konakları üzerinde temel. Docker kümeleme yazılım ya da bir orchestrator, burada sağlayabilirsiniz mikro hizmetlere yönelik dağıtım yaklaşımları burada açıklanan sonraki bölümlerde açıklandığı gibi budur.
 
-Docker kapsayıcıları yararlı (ancak gerekli değildir) geleneksel hizmet odaklı mimari ve daha gelişmiş mikro mimarileri için.
+Docker kapsayıcıları yararlı (ancak gerekli değil) hizmet odaklı geleneksel mimarilerde hem de daha gelişmiş bir mikro hizmet mimarileri için.
 
-Mikro SOA türetilen ancak SOA mikro mimarisinden farklı. Büyük merkezi aracıları gibi özellikleri, kuruluş düzeyinde merkezi orchestrators ve [Kurumsal hizmet veri yolu (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) içinde SOA tipik değerlerdir. Ancak, çoğu durumda bunlar mikro hizmet topluluk koruma düzenleri. Aslında, bazı kişiler "mikro hizmet mimarisi doğru şekilde yapabilmeniz SOA olduğunu." karşıdır
+Mikro hizmetler SOA türetilen ancak mikro hizmetler mimarisi SOA farklıdır. Büyük merkezi aracıları gibi özellikler, kuruluş düzeyindeki merkez düzenleyiciler ve [Enterprise Service Bus'ı (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) SOA içinde normal. Ancak, çoğu durumda, bunlar mikro hizmet topluluğundaki ters desenler. Aslında, bazı kişiler "mikro hizmet mimarisi doğru yapıldığında SOA olduğunu." buna
 
-Bir SOA yaklaşım mikro hizmet mimarisinde kullanılan teknikleri ve gereksinimleri daha az Düzenleyici olduğundan bu kılavuz mikro üzerinde odaklanmıştır. Mikro hizmet tabanlı bir uygulama oluşturmak nasıl biliyorsanız, ayrıca daha basit bir hizmet odaklı uygulamasının nasıl oluşturulacağını bilmeniz.
-
-
-
+Bir mikro hizmet mimarisinde kullanılır teknikler ve gereksinimleri daha az öngörücü SOA yaklaşımdır çünkü bu kılavuz, mikro hizmetler üzerinde odaklanır. Bir mikro hizmet tabanlı uygulama oluşturmayı biliyorsanız, ayrıca hizmet odaklı basit bir uygulamanın nasıl oluşturulacağını bilmeniz.
 
 >[!div class="step-by-step"]
-[Önceki](docker-application-state-data.md)
-[sonraki](microservices-architecture.md)
+>[Önceki](docker-application-state-data.md)
+>[İleri](microservices-architecture.md)

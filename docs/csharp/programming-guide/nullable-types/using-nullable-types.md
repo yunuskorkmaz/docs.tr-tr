@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c9ab5c3ca1dd49f011bf9c980945fa9da0d8cfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515443"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148359"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Boş değer atanabilir türler (C# programlama Kılavuzu) kullanma
 
@@ -88,7 +88,7 @@ Aşağıdaki örnekte gösterildiği gibi kutulanmış değer türüne karşıl�
 
 ## <a name="the-bool-type"></a>Bool? türü
 
-`bool?` Null olabilen türü üç farklı değer içerebilir: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) ve [null](../../language-reference/keywords/null.md). `bool?` SQL'de kullanılan Boole değişken türü gibi türüdür. Tarafından üretilen sonuçlar emin olmak için `&` ve `|` işleçleridir üç değerli Boole türü ile tutarlı SQL'de aşağıdaki önceden tanımlı operatörler sağlanır:
+`bool?` Null olabilen türü üç farklı değer içerebilir: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md), ve [null](../../language-reference/keywords/null.md). `bool?` SQL'de kullanılan Boole değişken türü gibi türüdür. Tarafından üretilen sonuçlar emin olmak için `&` ve `|` işleçleridir üç değerli Boole türü ile tutarlı SQL'de aşağıdaki önceden tanımlı operatörler sağlanır:
 
 - `bool? operator &(bool? x, bool? y)`  
 - `bool? operator |(bool? x, bool? y)`  

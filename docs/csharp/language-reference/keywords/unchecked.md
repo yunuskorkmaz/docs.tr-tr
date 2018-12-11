@@ -1,5 +1,5 @@
 ---
-title: unchecked (C# Başvurusu)
+title: unchecked anahtar sözcüğü (C# Başvurusu)
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -7,38 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: daccd7916a9f81f26f468ab0f64833d9537cff8e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 301e054c627ae7fc9a07c55c9d2b9a7738b9fb73
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206016"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146712"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# Başvurusu)
-`unchecked` Anahtar sözcüğü, Tamsayı türünde aritmetik işlemler ve dönüştürmeler için taşma denetimi gizlemek için kullanılır.  
-  
- Bir ifade hedef türün aralığı dışında bir değer veriyorsa işaretlenmemiş bir bağlamda taşma işaretlenmemiştir. Örneğin, aşağıdaki örnekte hesaplama yapıldığından bir `unchecked` blok veya ifade, bir tamsayı göz ardı edilir için sonuç çok büyük olduğunu ve `int1` -2,147,483,639 değeri atanır.  
-  
- [!code-csharp[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
-  
- Varsa `unchecked` ortam kaldırılır, bir derleme hatası oluşur. İfadenin tüm koşulları sabitleri olduğundan overflow derleme zamanında algılanabilir.  
-  
- Sabit olmayan terimleri içeren ifadeler, derleme zamanında varsayılan olarak işaretli ve çalışma zamanı. Bkz: [işaretli](../../../csharp/language-reference/keywords/checked.md) denetlenmiş bir ortamda etkinleştirme hakkında bilgi için.  
-  
- Taşma sürüyor, durumlarda denetlenmeyen kod kullanımı için denetimi olduğundan, tehlike olduğu taşma performansı iyileştirebilir. Ancak, denetlenmiş bir ortamda taşma olasılığı varsa kullanılmalıdır.  
-  
-## <a name="example"></a>Örnek  
- Bu örnek nasıl kullanılacağını gösterir `unchecked` anahtar sözcüğü.  
-  
- [!code-csharp[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [İşaretli ve İşaretsiz](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
-- [checked](../../../csharp/language-reference/keywords/checked.md)
+`unchecked` Anahtar sözcüğü, Tamsayı türünde aritmetik işlemler ve dönüştürmeler için taşma denetimi gizlemek için kullanılır.
+
+Bir ifade hedef türün aralığı dışında bir değer veriyorsa işaretlenmemiş bir bağlamda taşma işaretlenmemiştir. Örneğin, aşağıdaki örnekte hesaplama yapıldığından bir `unchecked` blok veya ifade, bir tamsayı göz ardı edilir için sonuç çok büyük olduğunu ve `int1` -2,147,483,639 değeri atanır.
+
+[!code-csharp[csrefKeywordsChecked#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#5)]
+
+Varsa `unchecked` ortam kaldırılır, bir derleme hatası oluşur. İfadenin tüm koşulları sabitleri olduğundan overflow derleme zamanında algılanabilir.
+
+Sabit olmayan terimleri içeren ifadeler, derleme zamanında varsayılan olarak işaretli ve çalışma zamanı. Bkz: [işaretli](checked.md) denetlenmiş bir ortamda etkinleştirme hakkında bilgi için.
+
+Taşma sürüyor, durumlarda denetlenmeyen kod kullanımı için denetimi olduğundan, tehlike olduğu taşma performansı iyileştirebilir. Ancak, denetlenmiş bir ortamda taşma olasılığı varsa kullanılmalıdır.
+
+## <a name="example"></a>Örnek
+
+Bu örnek nasıl kullanılacağını gösterir `unchecked` anahtar sözcüğü.
+
+[!code-csharp[csrefKeywordsChecked#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#2)]
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [İşaretli ve İşaretsiz](checked-and-unchecked.md)
+- [checked](checked.md)

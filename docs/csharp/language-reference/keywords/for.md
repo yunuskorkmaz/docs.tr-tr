@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511734"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149243"
 ---
 # <a name="for-c-reference"></a>(için C# Başvurusu)
 
@@ -105,14 +105,12 @@ Aşağıdaki örnek, sınırsız tanımlar `for` döngü:
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için [deyimi için](~/_csharplang/spec/statements.md#the-for-statement) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [For deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [foreach, in](foreach-in.md)
-- [for Deyimi (C++)](/cpp/cpp/for-statement-cpp)
 - [Yineleme Deyimleri](iteration-statements.md)
+- [foreach, in](foreach-in.md)

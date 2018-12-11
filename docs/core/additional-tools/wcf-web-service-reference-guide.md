@@ -1,87 +1,87 @@
 ---
-title: Microsoft WCF Web hizmeti başvuru sağlayıcısı aracı
-description: Microsoft WCF Web hizmeti başvuru sağlayıcısı .NET Core ve ASP.NET Core projeleri, .NET Framework projeleri için hizmet Başvurusu Ekle benzer işlevsellik ekleyen aracı genel bakış.
+title: WCF Web servisi Başvurusu Ekle
+description: Microsoft WCF Web Service Reference Provider .NET Core ve ASP.NET Core projeleri için .NET Framework projeleri için hizmet Başvurusu Ekle benzer işlevsellik ekleyen aracı genel bakış.
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3e1080dcb65eb3b08df44b36274e3da8d943982b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215384"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168630"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web hizmeti başvuru sağlayıcısı aracı
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web hizmeti başvurusu sağlayıcısı aracını kullanma
 
-Yıllar içinde birçok Visual Studio Geliştirici üretkenliği keyif aldığınızı, [ **hizmet Başvurusu Ekle** ](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) web hizmetlerine erişmek .NET Framework projelerini gerektiğinde sağlanan aracı.  **WCF Web hizmeti başvuru** projeleri .NET Core ve ASP.NET Core için hizmet Başvurusu Ekle işlevleri gibi bir deneyim sağlar bir Visual Studio bağlı hizmet uzantısı araçtır. Bu araç, bir web hizmeti geçerli çözümdeki bir ağ konumu veya WSDL dosya meta verileri alır ve web erişmek için kullanabileceğiniz Windows Communication Foundation (WCF) istemci proxy kodu içeren bir .NET Core uyumlu kaynak dosyası oluşturur hizmet.
+Yıllar içinde birçok Visual Studio Geliştirici üretkenliğini keyif aldığınızı, [ **hizmet Başvurusu Ekle** ](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) .NET Framework projelerini web hizmetlerine erişmek gerektiğinde sağlanan aracı.  **WCF Web Service Reference** sağlayan bir hizmet Başvurusu Ekle işlev gibi bir deneyim için .NET Core ve ASP.NET Core projeleri Visual Studio bağlı hizmeti uzantısı bir araçtır. Bu araç, bir ağ konumu üzerinde mevcut çözümde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve web erişmek için kullanabileceğiniz Windows Communication Foundation (WCF) istemci proxy kodu içeren bir .NET Core uyumlu kaynak dosyası oluşturur hizmeti.
 
 > [!IMPORTANT]
-> Yalnızca güvenilir bir kaynaktan Hizmetleri başvuruda bulunmalıdır. Güvenilmeyen bir kaynaktan başvuruları ekleme, güvenliği tehlikeye atabilir. 
+> Yalnızca güvenilir bir kaynaktan Hizmetleri başvuruda bulunmalıdır. Güvenilmeyen bir kaynaktan başvurularının eklenmesi, güvenliği tehlikeye atabilir. 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Visual Studio 2017 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) veya sonraki sürümler
+* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) veya sonraki sürümler
 
-## <a name="how-to-use-the-extension"></a>Uzantı kullanma
+## <a name="how-to-use-the-extension"></a>Uzantısını kullanma
 
 > [!NOTE]
-> **WCF Web hizmeti başvuru** seçenektir aşağıdaki proje şablonları kullanılarak oluşturulmuş projeler için geçerlidir:
-> * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET standart**
-> * **Visual C#** > **Web** > **ASP.NET Core Web uygulaması**
+> **WCF Web Service Reference** seçenektir aşağıdaki proje şablonları kullanılarak oluşturulan projeler için geçerlidir:
+> * **Görsel C#**   >  **.NET Core**
+> * **Görsel C#**   >  **.NET Standard**
+> * **Görsel C#**   >  **Web** > **ASP.NET Core Web uygulaması**
 
-Kullanarak **ASP.NET çekirdek Web uygulaması** proje şablonu bir örnek olarak, bu makalede anlatılmaktadır, projeye bir WCF Hizmeti başvuru eklerken size:
+Kullanarak **ASP.NET Core Web uygulaması** proje şablonu örnek olarak, bu makalede gösterilmektedir, projeye WCF hizmet başvurusu ekleme yoluyla:
 
-1. Çözüm Gezgini'nde çift tıklayarak **bağlantılı Hizmetler** proje düğümünün (için .NET Core veya .NET standart bir proje üzerinde sağ tıklattığınızda bu seçenek kullanılabilir **bağımlılıkları** düğümü Çözüm Gezgini'nde projeye).
+1. Çözüm Gezgini'nde çift tıklayarak **bağlı hizmetler** proje düğümü (.NET Core veya .NET Standard projesi üzerinde sağ tıkladığınızda bu seçenek kullanılabilir **bağımlılıkları** düğümü Çözüm Gezgini'nde projeye).
 
-**Bağlantılı Hizmetler** sayfası aşağıdaki görüntüde gösterildiği gibi görünür:
+**Bağlı hizmetler** sayfası, aşağıdaki görüntüde gösterildiği gibi görünür:
 
-![Bağlı hizmetler sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![.NET Core için Visual Studio bağlı Hizmetler'i sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
-2. Üzerinde **bağlantılı Hizmetler** sayfasında, **Microsoft WCF Web hizmeti başvuru sağlayıcısı**. Bu işlem sonrasında **yapılandırma WCF Web hizmeti başvuru** Sihirbazı:
+2. Üzerinde **bağlı hizmetler** sayfasında **Microsoft WCF Web Service Reference Provider**. Bu işlem sonrasında **yapılandırma WCF Web Service Reference** Sihirbazı:
 
-![Hizmet uç noktası sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![.NET Core için Visual Studio hizmet uç noktası sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
-3. Bir hizmeti seçin.
+3. Bir hizmet seçin.
 
-    3a. Çeşitli hizmetler arama seçenekleri içinde kullanılabilir **yapılandırma WCF Web hizmeti başvuru** Sihirbazı:
+    3a. Çeşitli Hizmetleri arama seçenekleri kapsamında sunulan **yapılandırma WCF Web Service Reference** Sihirbazı:
     
-     * Geçerli çözümde tanımlanan Hizmetleri aramak için tıklatın **bulma** düğmesi. 
-     * Belirtilen bir adres barındırılan hizmetleri aramak için bir hizmet URL'si girin **adresi** kutusuna ve tıklatın **Git** düğmesi.
-     * Web hizmeti meta veri bilgileri içeren bir WSDL dosya seçmek için tıklatın **Gözat** düğmesi. 
+     * Geçerli çözümde tanımlanan Hizmetleri aramak için tıklayın **bulma** düğmesi. 
+     * Belirtilen adresteki barındırılan hizmetler aramak için bir hizmeti URL'sini girin. **adresi** kutusuna ve tıklatın **Git** düğmesi.
+     * Web hizmeti meta veri bilgilerini içeren bir WSDL dosyası seçmek için tıklatın **Gözat** düğmesi. 
      
-    3b. Arama sonuçları listesinden hizmeti seçin **Hizmetleri** kutusu. Gerekirse, karşılık gelen üretilen kod için ad alanı girin **Namespace** metin kutusu.
+    3b. Arama sonuçları listesinden hizmeti seçin **Hizmetleri** kutusu. Gerekirse, karşılık gelen oluşturulan kodun ad alanını girin **Namespace** metin kutusu.
     
-    3c. Tıklatın **sonraki** açmak için düğmeye **veri türü seçenekleri** ve **istemci seçenekleri** sayfaları. Alternatif olarak, **son** düğmesi varsayılan seçenekleri kullanın.
+    3c. Tıklayın **sonraki** açmak için düğmeyi **veri türü seçenekleri** ve **istemci seçenekleri** sayfaları. Alternatif olarak, **son** düğmesine varsayılan seçenekleri kullanın.
 
 
-4. **Veri türü seçenekleri** form oluşturulan hizmet başvurusu yapılandırma ayarlarını İyileştir olanak sağlar:
+4. **Veri türü seçenekleri** form, oluşturulan hizmet başvurusu yapılandırma ayarları iyileştirmek sağlar:
 
-![Veri türü Seçenekler sekmesi](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![.NET Core için Visual Studio veri türü Seçenekleri sekmesi](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
-> **Yeniden başvurulan derlemelerin türlerinde** onay kutusu seçeneği, hizmet başvurusu kod oluşturma için gerekli veri türleri, projenizin başvurulan derlemelerin birinde tanımlandığında yararlıdır.  Derleme zamanı tür çakışmasından veya çalışma zamanı sorunlarını önlemek için bu var olan veri türleri yeniden önemlidir.
+> **Bütünleştirilmiş kodlardaki türleri yeniden** onay kutusu seçeneğini, hizmet başvurusu kod oluşturma için gerekli veri türleri, projenizin başvurulan derlemeleri birinde tanımlandığında yararlıdır.  Derleme zamanı tür çakışmasına veya çalışma zamanı sorunlarını önlemek için bu var olan veri türleri yeniden kullan önemlidir.
 
-Tür bilgileri, proje bağımlılıklarını sayısı ve diğer sistem performans etkenlere bağlı olarak yüklenirken bir gecikme olabilir. **Son** düğmesi devre dışı sürece yükleme sırasında **yeniden başvurulan derlemelerin türlerinde** onay kutusunun işaretli olduğundan.
+Tür bilgileri yüklenirken proje bağımlılıkları sayısı ve diğer sistem performans etkenlere bağlı olarak bir gecikme olabilir. **Son** düğmesi devre sürece yükleme sırasında **bütünleştirilmiş kodlardaki türleri yeniden** onay kutusu olarak işaretli değildir.
 
-5. Tıklatın **son** işiniz bittiğinde.
+5. Tıklayın **son** işiniz bittiğinde.
 
 
-İlerleme durumunu, aracı görüntüleme oluştu:
+İlerleme durumunu, aracın görüntüleme oluştu:
 
 * WCF hizmetinden meta verileri indirir. 
-* Hizmet başvurusu kod adındaki bir dosyada oluşturur *reference.cs*ve altında projenize ekler **bağlantılı Hizmetler** düğümü. 
-* NuGet paket başvurularıyla derlemek ve hedef platformu üzerinde çalıştırmak için gerekli proje dosyası (.csproj) güncelleştirir.
+* Hizmet başvuru kodu adındaki bir dosyada oluşturur *reference.cs*ve projenizi altına ekler **bağlı hizmetler** düğümü. 
+* Derleme ve hedef platformda çalıştırmak için gerekli NuGet paket başvuruları içeren proje dosyasına (.csproj) güncelleştirir.
 
-![İlerleme penceresi](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Visual Studio ilerleme durumu penceresi](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
-Bu işlemleri tamamladığınızda, oluşturulan WCF istemci türünün bir örneği oluşturun ve hizmet işlemlerini çağırma.
+Bu işlemleri tamamladığınızda, oluşturulan WCF istemci türü örneği oluşturun ve hizmet işlemleri çağırma.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-### <a name="feedback--questions"></a>Geri bildirim & sorular
-Sorularınız veya geri bildirim, varsa [github'da bir sorun açın](https://github.com/dotnet/wcf/issues/new). Herhangi bir varolan sorular veya sorunlar gözden geçirebilirsiniz [WCF bağlantıların github'da adresindeki](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
+### <a name="feedback--questions"></a>Geri bildirim ve sorular
+Sorularınız veya geri bildirim, varsa [github'da bir sorun açın](https://github.com/dotnet/wcf/issues/new). Mevcut bir soru veya sorunlarla gözden geçirebilirsiniz [WCF deponun GitHub üzerinde en](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
 ### <a name="release-notes"></a>Sürüm notları
 * Başvurmak [sürüm notları](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) güncelleştirilmiş sürüm bilgileri için bilinen sorunlar da dahil olmak üzere. 

@@ -4,11 +4,11 @@ description: .NET olay desenleri ve abone standart olay kaynakları oluşturmak 
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
 ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297042"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129408"
 ---
 # <a name="standard-net-event-patterns"></a>Standart .NET olay desenleri
 
@@ -69,7 +69,7 @@ Sınıf dışındaki kod olay oluşturamaz veya diğer tüm işlemleri gerçekle
 
 ## <a name="returning-values-from-event-subscribers"></a>Etkinlik Abonelerinden değerler döndüren
 
-Basit sürümünüzü düzgün çalışıyor. Başka bir özellik ekleyelim: iptal.
+Basit sürümünüzü düzgün çalışıyor. Başka bir özellik ekleyelim: İptali.
 
 Bulunan olay yükselttiğinizde, bu dosya, sonuncu Aranan ise dinleyicileri daha fazla işleme, durdurmak için olmalıdır.
 

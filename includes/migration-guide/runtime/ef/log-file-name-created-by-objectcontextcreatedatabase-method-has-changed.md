@@ -7,5 +7,5 @@
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|
-|Etkilenen API'leri|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
+|Etkilenen API’ler|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
 

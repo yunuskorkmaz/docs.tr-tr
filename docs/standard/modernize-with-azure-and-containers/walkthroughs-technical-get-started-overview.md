@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150596"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -79,7 +79,7 @@ Aşağıdaki şekilde, özgün 3 katmanlı eski uygulamayı basit bir senaryo g�
 
 ### <a name="benefits"></a>Yararları
 
-Bu izlenecek yolda avantajlarını basittir: yalnızca ilk uygulamaları ve kod ile hakkında bilgi edinin.
+Bu izlenecek yolda avantajlarını basittir: Yalnızca ilk uygulamaları ve kod ile hakkında bilgi edinin.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 
@@ -107,7 +107,7 @@ Bu kılavuzun amacı, size var olan bir .NET Framework uygulamasını kapsayıc�
 
 Bu izlenecek yol, Docker yaklaşım için Visual Studio 2017 araçları odaklanır, ancak diğer iki yaklaşım dockerfile'ları kullanarak in regard to oldukça benzerdir.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Senaryo 1: Kapsayıcılı ASP.NET web uygulamaları
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Senaryo 1: Kapsayıcıda barındırılan ASP.NET web uygulamaları
 
 Aşağıdaki şekilde, kapsayıcılı Elektronik Mağaza eski web apps uygulamaları için bir senaryo gösterilmektedir.
 
@@ -115,7 +115,7 @@ Aşağıdaki şekilde, kapsayıcılı Elektronik Mağaza eski web apps uygulamal
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Senaryo 2: Kapsayıcılı WCF Hizmeti
+### <a name="scenario-2-containerized-wcf-service"></a>Senaryo 2: Kapsayıcı WCF Hizmeti
 
 Aşağıdaki şekilde kapsayıcı bir WCF Hizmeti ile bir 3 katmanlı uygulama için bir senaryo gösterilmektedir. 
 
@@ -159,19 +159,19 @@ Bu kılavuzun amacı, Windows Server 2016 veya sonraki sürümler göre Azure Vm
 
 Çeşitli senaryolar bu kılavuzda ele alınmaktadır.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Senaryo A: Docker altyapısı bağlantısı üzerinden bir geliştirme bilgisayarı'ndan Azure VM'ye Dağıt
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Senaryo A: Docker altyapısı bağlantısı üzerinden bir geliştirme bilgisayarı bir Azure VM'ye dağıtan
 
 ![Bir Azure sanal makinesi için bir Docker altyapısının bağlantısı üzerinden bir geliştirme bilgisayarı dağıtan](./media/image5-4.png)
 
 > **Şekil 5-4.** Bir Azure sanal makinesi için bir Docker altyapısının bağlantısı üzerinden bir geliştirme bilgisayarı dağıtan
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Senaryo B: bir Docker kayıt defteri aracılığıyla Azure VM dağıtma
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Senaryo B: Bir Docker kayıt defteri aracılığıyla Azure VM dağıtma
 
 ![Bir Docker kayıt defteri aracılığıyla Azure VM dağıtma](./media/image5-5.png)
 
 > **Şekil 5-5.** Bir Docker kayıt defteri aracılığıyla Azure VM dağıtma
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Azure DevOps Hizmetleri'nde senaryo C: dağıtma Azure VM'ye gelen CI/CD işlem hatları
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>C: senaryosu Azure DevOps Hizmetleri'nde CI/CD işlem hatları bir Azure VM'ye dağıtan
 
 ![Azure DevOps Hizmetleri'nde CI/CD işlem hatları bir Azure VM'ye dağıtan](./media/image5-6.png)
 
@@ -232,7 +232,7 @@ Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>İzlenecek yol: 5: Azure Container Service'te Kubernetes için Windows kapsayıcı tabanlı uygulamalarınızı dağıtın.
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>İzlenecek yol: 5: Azure Container Service'te Kubernetes için Windows kapsayıcı tabanlı uygulamalarınızı dağıtın
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirlik
 
@@ -254,13 +254,13 @@ Kubernetes için Windows kapsayıcı tabanlı bir uygulama dağıtma hakkında b
 
 ### <a name="scenarios"></a>Senaryolar
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Senaryo A: bir geliştirme ortamından bir Kubernetes kümesi için doğrudan Dağıt
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Senaryo A: Bir geliştirme ortamından doğrudan bir Kubernetes kümesi dağıtma
 
 ![Bir geliştirme ortamından doğrudan bir Kubernetes kümesi dağıtma](./media/image5-7.png)
 
 > **Şekil 5-7.** Bir geliştirme ortamından doğrudan bir Kubernetes kümesi dağıtma
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Azure DevOps Hizmetleri'nde senaryo B: dağıtma bir Kubernetes kümesine gelen CI/CD işlem hatları
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: Azure DevOps Hizmetleri'nde CI/CD işlem hatları gelen bir Kubernetes kümesine dağıtın
 
 ![Azure DevOps Hizmetleri'nde CI/CD işlem hatları gelen bir Kubernetes kümesine dağıtın](./media/image5-8.png)
 
@@ -292,7 +292,7 @@ Kubernetes ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmey
 
 Bu içerik daha derinlemesine GitHub Wiki'de keşfedin: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 6: Azure Service Fabric'e Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 6: Azure Service Fabric'e Windows kapsayıcıları tabanlı uygulamalarınızı dağıtın
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirlik
 
@@ -314,13 +314,13 @@ Windows kapsayıcı tabanlı bir uygulamayı azure'da bir Service Fabric kümesi
 
 ### <a name="scenarios"></a>Senaryolar
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Senaryo A: bir geliştirme ortamından bir Service Fabric kümesine doğrudan Dağıt
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Senaryo A: Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma
 
 ![Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma](./media/image5-9.png)
 
 > **Şekil 5-9.** Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: dağıtma bir Service Fabric kümesine CI/CD gelen Azure DevOps Hizmetleri'nde işlem hatları
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: Bir Service Fabric kümesine CI/CD işlem hatları Azure DevOps Hizmetleri'nde dağıtan
 
 ![Bir Service Fabric kümesine CI/CD işlem hatları Azure DevOps Hizmetleri'nde dağıtan](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Önceki](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[İleri](conclusions.md)
+>[Önceki](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[İleri](conclusions.md)

@@ -2,14 +2,13 @@
 title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6dff2544d58d9907d0105dd5e5ff6a84ad3fbdb3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169625"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -30,7 +29,7 @@ Meta paketler dolaylı olarak başvurulan belirtilen hedef çerçeveleri göre `
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Önerileri
+### <a name="recommendations"></a>Öneriler
 Bu yana `Microsoft.NETCore.App` veya `NetStandard.Library` meta paketler dolaylı olarak başvurulan, önerilen en iyi yöntemlerimizi aşağıda verilmiştir:
 
 * .NET Core veya .NET Standard hedeflenirken açık bir başvuru hiçbir zaman sahip `Microsoft.NETCore.App` veya `NetStandard.Library` meta paketler aracılığıyla bir `<PackageReference>` proje dosyanızda öğesi.
@@ -50,7 +49,7 @@ Aşağıdaki tablo, hangi öğe ve hangi gösterir [eğik çizgi genelleştirmel
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | Yok                        |
-| Yok.              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
 
 Projenizde eğik çizgi genelleştirmeler sahip ve en son SDK'sını kullanarak oluşturmaya çalışırsanız, aşağıdaki hatayı alırsınız:
 
@@ -75,9 +74,6 @@ Devre dışı bırakmak için **tüm örtük eğik çizgi genelleştirmeler**, a
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Öneri
-Csproj ile varsayılan eğik çizgi genelleştirmeler projenizden kaldırmak ve eğik çizgi genelleştirmeler için çeşitli senaryolar için (örneğin, çalışma zamanı ve NuGet paket) uygulamasını/kitaplık gerektiren yapıların ile dosya yolları yalnızca ekleme öneririz.
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>MSBuild gördüğünde gibi tüm proje görme
 
@@ -195,8 +191,12 @@ Nuget.org ve Visual Studio'da Paket Yöneticisi UI görünümlerde genellikle ku
 ### <a name="authors"></a>Yazarlar
 Nuget.org profil adları eşleşen paketleri yazar, noktalı virgülle ayrılmış listesi. Bunlar nuget.org NuGet galerisinde görüntülenir ve paketleri çapraz başvuru için aynı yazarları tarafından kullanılır.
 
-### <a name="description"></a>Açıklama
+### <a name="packagedescription"></a>PackageDescription
+
 Kullanıcı Arabirimi ekranı için paketinin uzun açıklaması.
+
+### <a name="description"></a>Açıklama
+Derleme için uzun açıklaması. Varsa `PackageDescription` bu özellik paketi açıklama olarak da kullanılır belirtilmedi.
 
 ### <a name="copyright"></a>Telif Hakkı
 Paketi için telif hakkı ayrıntıları.

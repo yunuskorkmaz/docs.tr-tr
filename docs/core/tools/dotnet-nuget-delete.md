@@ -1,15 +1,14 @@
 ---
-title: DotNet nuget command - .NET Core CLI Sil
+title: DotNet nuget delete komutu
 description: Dotnet-nuget-delete komutu siler veya sunucu bir paketten unlists.
 author: karann-msft
-ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180889"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168318"
 ---
 # <a name="dotnet-nuget-delete"></a>DotNet nuget Sil
 
@@ -21,16 +20,10 @@ ms.locfileid: "50180889"
 
 ## <a name="synopsis"></a>Özeti
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 ```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -47,92 +40,80 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="arguments"></a>Arguments
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-Ad/silmek için paket kimliği.
+  Ad/silmek için paket kimliği.
 
-`PACKAGE_VERSION`
+* **`PACKAGE_VERSION`**
 
-Silmek için Paket sürümü.
+  Silmek için Paket sürümü.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
+  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
 
-`-h|--help`
+* **`-h|--help`**
 
-Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-Sunucusu için API anahtarı.
+  Engellemek bir komut verir ve kimlik doğrulaması gibi işlemler için el ile gerçekleştirilen eylem gerektirir. Seçeneği bu yana .NET Core 2.2 SDK kullanılabilir.
 
-`--no-service-endpoint` "API/v2/paket" kaynak URL'ye değil.
+* **`-k|--api-key <API_KEY>`**
 
-`--non-interactive`
+  Sunucusu için API anahtarı.
 
-Kullanıcı girişini veya onayları için istemde değil.
+* **`--no-service-endpoint`**
 
-`-s|--source <SOURCE>`
+  "API/v2/paket" kaynak URL'ye değil. Seçeneği bu yana .NET Core 2.1 SDK kullanılabilir.
 
-Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
+* **`--non-interactive`**
 
-# <a name="net-core-20tabnetcore20"></a>[.NET core 2.0](#tab/netcore20)
+  Kullanıcı girişini veya onayları için istemde değil.
 
-`--force-english-output`
+* **`-s|--source <SOURCE>`**
 
- Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
-
-`-h|--help`
-
-Komut için kısa bir Yardım yazdırır.
-
-`-k|--api-key <API_KEY>`
-
-Sunucusu için API anahtarı.
-
-`--non-interactive`
-
-Kullanıcı girişini veya onayları için istemde değil.
-
-`-s|--source <SOURCE>`
-
-Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
+  Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
+  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
 
-`-h|--help`
+* **`-h|--help`**
 
-Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-Sunucusu için API anahtarı.
+  Sunucusu için API anahtarı.
 
-`--non-interactive`
+* **`--non-interactive`**
 
-Kullanıcı girişini veya onayları için istemde değil.
+  Kullanıcı girişini veya onayları için istemde değil.
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
+  Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
 
 ---
 
 ## <a name="examples"></a>Örnekler
 
-Paketin sürümü 1.0 siler `Microsoft.AspNetCore.Mvc`:
+* Paketin sürümü 1.0 siler `Microsoft.AspNetCore.Mvc`:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
+  ```
 
-Paketin sürümü 1.0 siler `Microsoft.AspNetCore.Mvc`, kullanıcıdan istemeden olmayan kimlik bilgilerini veya diğer giriş:
+* Paketin sürümü 1.0 siler `Microsoft.AspNetCore.Mvc`, kullanıcıdan istemeden olmayan kimlik bilgilerini veya diğer giriş:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
+  ```

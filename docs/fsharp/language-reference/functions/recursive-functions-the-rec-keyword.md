@@ -1,15 +1,15 @@
 ---
-title: 'Özyinelemeli İşlevler: rec Anahtar Sözcüğü (F#)'
-description: "'F# rec' anahtar sözcüğü bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile nasıl kullanıldığını öğrenin."
+title: 'Özyinelemeli İşlevler: Rec anahtar sözcüğü (F#)'
+description: Bilgi nasıl F# 'rec' anahtar sözcüğü, bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024525"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127738"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli İşlevler: rec Anahtar Sözcüğü
+# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli İşlevler: Rec anahtar sözcüğü
 
 `rec` Anahtar sözcüğü ile birlikte kullanılır `let` özyinelemeli işlev tanımlamak için anahtar sözcüğü.
 
@@ -30,14 +30,14 @@ function2-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özyinelemeli İşlevler, kendileri çağıran İşlevler F# dilinde açıkça tanımlanır. Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.
+Özyinelemeli İşlevler, kendileri çağıran işlevler açıkça tanımlanır F# dili. Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.
 
 Aşağıdaki kod hesaplar bir özyinelemeli işlev göstermektedir *n*<sup>th</sup> Fibonacci sayı.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-Yeniden hesaplama yapmayı daha önce hesaplanan değerler içerdiğinden, yukarıdaki kod bellek ve işlemci zamanı kısıp uygulamadır.
+> [!NOTE]
+> Yeniden hesaplama yapmayı daha önce hesaplanan değerler içerdiğinden, yukarıdaki kod bellek ve işlemci zamanı kısıp uygulamadır.
 
 Yöntem türü içinde dolaylı olarak özyinelemelidir; eklemenize gerek yoktur `rec` anahtar sözcüğü. Sınıflardaki let bağlamaları örtülü olarak özyinelemeli değildir.
 

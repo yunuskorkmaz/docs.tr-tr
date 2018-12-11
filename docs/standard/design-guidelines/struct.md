@@ -1,6 +1,6 @@
 ---
 title: Yapı tasarımı
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+author: KrzysztofCwalina
+ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153117"
 ---
 # <a name="struct-design"></a>Yapı tasarımı
 Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölümde, genel yapı tasarımı için yönergeler sağlar.  
@@ -45,7 +44,7 @@ Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir ya
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

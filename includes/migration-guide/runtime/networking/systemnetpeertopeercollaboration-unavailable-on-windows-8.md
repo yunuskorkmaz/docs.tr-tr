@@ -4,8 +4,8 @@
 |---|---|
 |Ayrıntılar|System.Net.PeerToPeer.Collaboration ad alanı, Windows 8 veya üzeri kullanılamıyor.|
 |Öneri|Destekleyen Windows 8 veya üzeri bu ad alanı veya üyeleri bağımlı olmayan şekilde güncelleştirilmesi gerekir uygulamaları.|
-|Kapsam|Büyük|
+|Kapsam|Ana|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|
-|Etkilenen API'leri|<ul><li><xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|
+|Etkilenen API’ler|<ul><li><xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|
 

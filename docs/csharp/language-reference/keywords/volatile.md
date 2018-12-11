@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199974"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152792"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# Başvurusu)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50199974"
 
 Diğer türleri dahil olmak üzere, `double` ve `long`, işaretlenemiyor `volatile` çünkü okuma ve yazma işlemleri bu türlerin alanları atomik olmasını garanti edilemez. Bu tür alanlar çok iş parçacıklı erişimi korumak için kullanmak <xref:System.Threading.Interlocked> sınıf üyeleri veya erişim kullanarak koruma [ `lock` ](lock-statement.md) deyimi.
 
-Volatile anahtar sözcüğü yalnızca alanlarına uygulanabilir bir `class` veya `struct`. Yerel değişkenler bildirilemez `volatile`.
+`volatile` Anahtar sözcüğü yalnızca alanlarına uygulanabilir bir `class` veya `struct`. Yerel değişkenler bildirilemez `volatile`.
   
 ## <a name="example"></a>Örnek
 
@@ -37,7 +37,7 @@ Aşağıdaki örnek, bir ortak alan değişken olarak bildirmek gösterilmektedi
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-Aşağıdaki örnek nasıl yardımcı veya çalışan iş parçacığı oluşturulabilir ve birincil iş parçacığının ile paralel işleme gerçekleştirmek için kullanılan gösterir. Arka plan bilgileri için çoklu iş parçacığı hakkında bkz: [yönetilen iş parçacığı](../../../standard/threading/index.md) ve [parçacıkları (C#)](../../programming-guide/concepts/threading/index.md).  
+Aşağıdaki örnek nasıl yardımcı veya çalışan iş parçacığı oluşturulabilir ve birincil iş parçacığının ile paralel işleme gerçekleştirmek için kullanılan gösterir. Daha fazla bilgi için ilgili çoklu iş parçacığı bakın [yönetilen iş parçacığı](../../../standard/threading/index.md).
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

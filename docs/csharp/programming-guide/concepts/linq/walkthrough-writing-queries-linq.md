@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: C#'de Sorgu Yazma (LINQ)"
+title: 'İzlenecek yol: C# (LINQ) sorgu yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745329"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154092"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C# (LINQ) sorgu yazma
 Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri gösterir.  
   
 ## <a name="create-a-c-project"></a>Bir C# Projesi Oluşturma  
@@ -24,7 +24,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio'da bir proje oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -87,7 +87,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Birden çok Boole koşulu birleştirebilirsiniz `where` sorgu iyice daraltmak için yan tümcesi. Aşağıdaki kod, böylece sorgu bu Öğrenciler, ilk puanı döndürür. bir koşul üzerinde 90 ve son, puan 80 şeklindeydi ekler. `where` Yan tümcesi, aşağıdaki kod benzemesi gerekir.  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Sipariş çeşit olmaları durumunda tarama sonuçlarını daha kolay olacaktır. Döndürülen dizi kaynak öğeleri erişilebilen herhangi bir alana göre sıralayabilirsiniz. Örneğin, aşağıdaki `orderby` yan tümcesi siparişleri sonuçları alfabetik sırada A'dan Z'ye son her öğrencinin adına göre. Aşağıdaki `orderby` sorgunuzu, sonra sağ yan tümcesini `where` deyimi ve önce `select` deyimi:  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  Şimdi değiştir `orderby` BT'nin sonuçlarını ters sırada puanına göre ilk testten en yüksek puanı düşük puana göre sıralar için yan tümcesi.  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  Değişiklik `WriteLine` puanları görebilmeniz için biçimlendirme dizesi:  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Bir sorgu ifadesinde yöntem sözdizimini kullanmak için  
   
-1.  Bölümünde anlatıldığı gibi [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), bazı sorgu işlemlerinin yalnızca yöntemi söz dizimi kullanılarak belirtilebilir. Toplam puanı her biri için aşağıdaki kodu hesaplar `Student` kaynak dizisi, ve ardından aramaları `Average()` sınıfının ortalama puanını hesaplamak için bu sorgunun sonuçlarının yöntemi. Sorgu ifadesi parantez içine yerleşimini unutmayın.  
+1.  Bölümünde anlatıldığı gibi [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), bazı sorgu işlemlerinin yalnızca yöntemi söz dizimi kullanılarak belirtilebilir. Toplam puanı her biri için aşağıdaki kodu hesaplar `Student` kaynak dizisi, ve ardından aramaları `Average()` sınıfının ortalama puanını hesaplamak için bu sorgunun sonuçlarının yöntemi.
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   

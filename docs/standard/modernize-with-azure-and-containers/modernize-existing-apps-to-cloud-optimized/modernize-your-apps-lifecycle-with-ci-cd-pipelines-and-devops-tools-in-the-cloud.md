@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070792"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128186"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Uygulamanızın yaşam döngüsü ile CI/CD işlem hatları ve DevOps araçları bulutta modernleştirin
 
@@ -36,5 +36,5 @@ Hızlı Dağıtım etkinleştirme devam etmek için bu araçlar, geliştirme ve 
 > **Şekil 4-12.** Azure DevOps Hizmetleri sürekli dağıtım ardışık, bir Kubernetes kümesine dağıtma
 
 >[!div class="step-by-step"]
-[Önceki](modernize-your-apps-with-monitoring-and-telemetry.md)
-[İleri](migrate-to-hybrid-cloud-scenarios.md)
+>[Önceki](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[İleri](migrate-to-hybrid-cloud-scenarios.md)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297185"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145260"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama 
 
@@ -448,11 +448,11 @@ Kapsayıcı ve mikro hizmetler modeli sürekli kapsayıcıları başlıyor. Kaps
 
 .NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım üç ana senaryo için en iyi duruma getirilmiş Docker görüntüleri odaklanan ve bunları Docker Hub kayıt defterinde yayımlanan <span class="underline">microsoft/dotnet</span>, sürüm 2.1 ile başlangıç:
 
-1.  **Geliştirme**: öncelik yeteneği hızla olduğu interate ve hata ayıklama değişiklikleri ve boyutu ikincil.
+1.  **Geliştirme**: Burada hızlıca interate olanağı önceliği, hata ayıklama değişiklikleri ve boyutu ise ikincil.
 
-2.  **Derleme**: öncelikli uygulama derlemek ve ikili dosyalar ve ikili dosyaları iyileştirmek için diğer bağımlılıklar içerir.
+2.  **Derleme**: Öncelikli uygulama derlemek ve ikili dosyalar ve ikili dosyaları iyileştirmek için diğer bağımlılıklar içerir.
 
-3.  **Üretim**: odağı hızlı dağıtma ve kapsayıcılar başlangıç olduğunda, böylece bu görüntüleri ikili dosyaları ve uygulamayı çalıştırmak için içerik nedded ile sınırlıdır.
+3.  **Üretim**: Burada odağı hızlı dağıtma ve bu görüntüleri ikili dosyaları ve uygulamayı çalıştırmak için içerik nedded sınırlı olacak şekilde kapsayıcılar, başlatılıyor.
 
 Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (en Docker hub'ı):
 
@@ -471,5 +471,5 @@ Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotn
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Önceki](data-driven-crud-microservice.md)
-[İleri](database-server-container.md)
+>[Önceki](data-driven-crud-microservice.md)
+>[İleri](database-server-container.md)

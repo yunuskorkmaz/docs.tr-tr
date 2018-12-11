@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131306"
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
 Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Aşağıdaki konularda daha ayrıntılı bilgi verilmiştir:  
@@ -31,7 +31,7 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
   
  [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 >  Zaten bir sorgu dili SQL veya XQuery gibi alışık olduğunuz, bu konunun en atlayabilirsiniz. Hakkında bilgi edinin "`from` yan tümcesi" yan tümcelerinde sırası hakkında bilgi edinmek için sonraki bölümde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde.  
@@ -44,7 +44,7 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
  Yineleme değişkeni aralık değişkeni benzer bir `foreach` dışında bir sorgu ifadesinde gerçek yineleme gerçekleşir, döngü. Sorgu yürütüldüğünde, aralık değişkeni art arda gelen her öğe için bir başvuru olarak hizmet verecektir `customers`. Derleyicinin türü çıkarsayabilir `cust`, açıkça belirtmeniz gerekmez. Ek aralık değişkenleri sunulan tarafından bir `let` yan tümcesi. Daha fazla bilgi için [let yan tümcesi](../../../../csharp/language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Genel olmayan veri kaynakları gibi <xref:System.Collections.ArrayList>, Aralık değişkeninin türü açıkça belirtilmelidir. Daha fazla bilgi için [nasıl yapılır: LINQ (C#) ile ArrayList sorgulama](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesinde](../../../../csharp/language-reference/keywords/from-clause.md).  
+>  Genel olmayan veri kaynakları gibi <xref:System.Collections.ArrayList>, Aralık değişkeninin türü açıkça belirtilmelidir. Daha fazla bilgi için [nasıl yapılır: LINQ ile ArrayList sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesi](../../../../csharp/language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtreleme  
  Bir Boolean ifadesinin biçiminde bir filtre uygulamak için en yaygın sorgu işlemi olabilir. Filtre ifadesi doğru öğeleri döndürmek için sorguyu neden olur. Kullanarak bir sonuç getirdi `where` yan tümcesi. Filtre, geçerli kaynak sırasından çıkarılacak öğeleri belirtir. Aşağıdaki örnekte, yalnızca `customers` Londra bir adrese sahip döndürülür.  
@@ -90,7 +90,7 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
   
  İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kullanmak zorunda değil `join` SQL'de çünkü bunu sıklıkta yabancı anahtarları [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesne modelinde öğelerin bir koleksiyonunu tutan özellikleri olarak temsil edilir. Örneğin, bir `Customer` nesneyi içeren koleksiyonu `Order` nesneleri. Birleşim gerçekleştirme yerine nokta gösterimi kullanılarak siparişleri erişin:  
   
-```  
+```csharp
 from order in Customer.Orders...  
 ```  
   
@@ -103,6 +103,6 @@ from order in Customer.Orders...
 
 - [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
 - [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
 - [Sorgu anahtar sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
 - [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

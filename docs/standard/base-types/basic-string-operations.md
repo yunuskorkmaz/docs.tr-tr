@@ -1,5 +1,6 @@
 ---
-title: .NET Framework'te Temel Dize İşlemleri
+title: .NET içinde temel dize işlemleri
+description: Dizeleri gerçekleştirebileceğiniz temel işlemleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,41 +9,42 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567490"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150686"
 ---
-# <a name="basic-string-operations-in-net"></a>.NET temel dize işlemleri
-Uygulamalar genellikle kullanıcı girişini temel alarak iletileri oluşturarak kullanıcılara yanıt verir. Örneğin, yeni oturum açmış olan bir kullanıcı kullanıcı adını içeren özelleştirilmiş bir karşılama yanıtlamak Web siteleri için seyrek değil. Çeşitli yöntemlerin <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları dinamik olarak, kullanıcı arabiriminde görüntülenecek özel dizeleri oluşturmak izin verir. Bu yöntemler bir dizi bayt dizileri yeni dizeler oluşturma, dize değerleri karşılaştırma ve varolan dizeleri değiştirme gibi temel dize işlemleri gerçekleştirmenize yardımcı.  
+# <a name="basic-string-operations-in-net"></a>.NET içinde temel dize işlemleri
+Uygulamalar genellikle kullanıcılar için kullanıcı girişini temel alarak iletileri oluşturarak yanıt. Örneğin, yeni oturum açan bir kullanıcı kullanıcı adını içeren özelleştirilmiş bir Karşılama ile yanıt vermek Web siteleri için sık karşılaşılan bir durum değil. Çeşitli yöntemlerin <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları, kullanıcı arabiriminde görüntülenecek özel dizeleri dinamik olarak oluşturmak sağlar. Bu yöntemler bir dizi bayt dizilerden yeni dizeler oluşturma, değerleri dize karşılaştırma ve mevcut dizeleri değiştirme gibi temel dize işlemleri gerçekleştirmenize yardımcı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yeni Dizeler Oluşturma](../../../docs/standard/base-types/creating-new.md)  
- Nesneleri dizelere dönüştürme ve dizeleri birleştirmek için temel yolları açıklanmaktadır.  
+ Nesneleri dizeleri dönüştürmek için ve dizeleri birleştirmek için temel yolu anlatılmaktadır.  
   
  [Karakterleri Kırpma ve Kaldırma](../../../docs/standard/base-types/trimming.md)  
- Kırpma veya bir dizedeki karakterleri Kaldır açıklar.  
+ Bir dizedeki karakterleri kaldırın veya Trim açıklar.  
   
  [Dizeleri Doldurma](../../../docs/standard/base-types/padding.md)  
- Karakter veya boş alanları bir dizeye nasıl ekleneceği açıklanmaktadır.  
+ Karakterler veya boşluk boş bir dizeye nasıl ekleneceğini açıklar.  
   
  [Dizeleri Karşılaştırma](../../../docs/standard/base-types/comparing.md)  
- İki veya daha fazla içeriğini karşılaştırmak açıklar.  
+ İki veya daha fazla dizeleri içeriğini karşılaştırma açıklar.  
   
  [Büyük/Küçük Harf Değiştirme](../../../docs/standard/base-types/changing-case.md)  
- Bir dize karakterlerine durumunun değiştirmek açıklar.  
+ Bir dizedeki karakterlerin değiştirmek açıklar.  
   
  [StringBuilder Sınıfını Kullanma](../../../docs/standard/base-types/stringbuilder.md)  
  İle dinamik dize nesneleri oluşturup değiştirmesi açıklar <xref:System.Text.StringBuilder> sınıfı.  
   
- [Nasıl yapılır: Temel Dize İşlemeleri Gerçekleştirme](../../../docs/standard/base-types/basic-manipulations.md)  
- Temel dize işlemleri kullanımını göstermektedir.  
+ [Nasıl Yapılır: Temel dize işlemeleri gerçekleştirme](../../../docs/standard/base-types/basic-manipulations.md)  
+ Temel dize işlemleri kullanımını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
- Bir tür başka bir türüne dönüştürün açıklar.  
+ Bir tür başka bir türe dönüştürmenize olanak açıklar.  
   
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
- Biçim dizeleri biçim belirticilerini kullanma açıklar.
+ Biçim belirticilerini kullanarak dizelerinin nasıl biçimlendirileceğini açıklar.

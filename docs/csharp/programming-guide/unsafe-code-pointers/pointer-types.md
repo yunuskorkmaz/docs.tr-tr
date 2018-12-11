@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509284"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146848"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -20,7 +20,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-Önce belirtilen tür `*` bir işaretçi türü olarak adlandırılır **referrent türü**. Şu türlerden birini referrent türü olabilir:
+Önce belirtilen tür `*` bir işaretçi türü olarak adlandırılır **başvurulan türü**. Aşağıdaki türlerde herhangi bir grup türü olabilir:
 
 - Herhangi bir tamsayı türü: [sbyte](../../language-reference/keywords/sbyte.md), [bayt](../../language-reference/keywords/byte.md), [kısa](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [uzun](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).
 - Herhangi bir kayan nokta türü: [float](../../language-reference/keywords/float.md), [çift](../../language-reference/keywords/double.md).

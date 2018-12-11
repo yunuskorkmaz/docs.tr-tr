@@ -3,11 +3,11 @@ title: Nesne odaklı programlama (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297094"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153936"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Nesne odaklı programlama (Visual Basic)
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-Daha fazla bilgi için bkz: [nesne ömrü: nesneleri oluşturma ve Destroyed şeklini](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Daha fazla bilgi için bkz.: [Nesne ömrü: Nesneler nasıl oluşturulur ve imha](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Yıkıcılar
 
@@ -254,7 +254,7 @@ Dim sampleObject = New SampleClass With
 Daha fazla bilgi için bkz.:
 
 - [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>Paylaşılan sınıflar ve Üyeler
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Daha fazla bilgi için bkz: [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Daha fazla bilgi için bkz.: [Anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Devralma
 

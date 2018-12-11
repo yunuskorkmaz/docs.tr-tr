@@ -1,18 +1,18 @@
 ---
-title: C# ve Visual Studio 2017'de .NET Core ile bir .NET Standard sınıf kitaplığı oluşturma
+title: Derleme bir C# Visual Studio 2017 ile .NET Standard sınıf kitaplığı
 description: Visual Studio 2017 kullanılarak C# dilinde yazılmış bir .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 101cb8b9134f7e64e5489f5bc7abb6a9570d2131
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638827"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168942"
 ---
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>C# ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma
+# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Bir .NET Standard sınıf kitaplığı ile derleme C# ve Visual Studio 2017'de .NET Core SDK'sı
 
 A *sınıf kitaplığı* türlerini ve bir uygulama tarafından çağrılan yöntemlere tanımlar. .NET Standard 2.0 hedefleyen bir sınıf kitaplığı, .NET Standard sürümünü destekleyen herhangi bir .NET uygulaması tarafından çağrılacak kitaplığınızı sağlar. Sınıf kitaplığınıza bitirdikten sonra bir üçüncü taraf bileşeni veya bir veya daha fazla uygulama ile birlikte gelen bir bileşeni olarak dahil etmek isteyip istemediğinizi olarak dağıtmak isteyip istemediğinize karar verebilirsiniz.
 
@@ -29,7 +29,7 @@ Sınıf kitaplığı projenizi ve ilgili projeleri çözüm oluşturmaya başlay
 
 1. İçinde **yeni proje** iletişim kutusunda genişletin **diğer proje türleri** düğüm ve select **Visual Studio çözümleri**. Seçin ve "ClassLibraryProjects" çözümünü arlandırın **Tamam** düğmesi.
 
-   ![Yeni Proje iletişim kutusu](./media/library-with-visual-studio/newproject.png)
+   ![Yeni Proje iletişim kutusu ile vurgulanmış yeni bir boş çözüm](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Sınıf kitaplığı projesi oluşturma
 
@@ -39,15 +39,15 @@ Sınıf kitaplığı projenizi oluşturun:
 
 1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual C#** düğümünü seçip **.NET Standard** düğümünü ve ardından **sınıf kitaplığı (.NET Standard)** proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibrary" girin. Seçin **Tamam** sınıf kitaplığı projesi oluşturmak için.
 
-   ![Yeni Proje iletişim kutusu Ekle](./media/library-with-visual-studio/libproject.png)
+   ![Yeni kitaplık projesi iletişim kutusu Ekle](./media/library-with-visual-studio/add-new-library-project.png)
 
    Kod penceresi, ardından Visual Studio geliştirme ortamında açar.
 
-   ![Visual Studio uygulama penceresinin varsayılan sınıf kitaplığı şablonu kodu gösterme](./media/library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio uygulama penceresinin varsayılan sınıf kitaplığı şablonu kodu gösterme](./media/library-with-visual-studio/string-library-project.png)
 
 1. Kitaplığımızı .NET Standard'ın doğru sürümü hedeflediğinden emin olun. Kitaplığı projesinde sağ **Çözüm Gezgini** windows, ardından **özellikleri**. **Hedef Framework'ü** metin kutusuna .NET Standard 2.0 hedeflediğiniz gösterir.
 
-   ![Sınıf kitaplığı için proje özellikleri](./media/library-with-visual-studio/properties.png)
+   ![Sınıf kitaplığı için proje özellikleri](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Kod penceresinde kodu aşağıdaki kodla değiştirin ve dosyayı kaydedin:
 
@@ -57,7 +57,7 @@ Sınıf kitaplığı projenizi oluşturun:
 
 1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Projenin hatasız derlemeniz gerekir.
 
-   ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Sonraki adım
 

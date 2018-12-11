@@ -1,18 +1,18 @@
 ---
 title: Diziler (F#)
-description: F# dizileri, veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz kullanmayı öğrenin.
+description: Nasıl kullanacağınızı öğrenin F# büyük, varsa, dizileri, veri koleksiyonu sıralı ancak mutlaka tüm öğeleri kullanılacak beklemiyoruz.
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129213"
 ---
 # <a name="sequences"></a>Diziler
 
 > [!NOTE]
-Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
 A *dizisi* öğeleri mantıksal bir dizisidir tümü tek. Veri koleksiyonu sıralı bir büyük, varsa ancak mutlaka tüm öğeleri kullanmayı düşünmüyorsanız dizileri özellikle yararlı olur. Tek tek dizisi öğeleri yalnızca olarak hesaplanan bir sıralı listesini tüm öğeleri kullanılan olmadığı durumlarda daha iyi performans sağlayabilir gerekli. Dizileri olarak temsil edilir `seq<'T>` bir diğer ad türü için `System.Collections.Generic.IEnumerable`. Bu nedenle, uygulayan bir .NET Framework tür `System.IEnumerable` dizisi olarak kullanılabilir. [Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) dizileri içeren işlemeleri için destek sağlar.
 
@@ -22,7 +22,7 @@ A *sıra ifade* bir dizisine değerlendiren bir ifade. Sequence ifadeleri, çok 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Sequence ifadeleri, değerler dizisi oluşturan F# ifadeleri yapılır. Kullanabilecekleri `yield` dizisinin bir parçası haline değerler üretmek için anahtar sözcüğü.
+Sequence ifadeleri yapılan F# değerler dizisi üretir ifadeler. Kullanabilecekleri `yield` dizisinin bir parçası haline değerler üretmek için anahtar sözcüğü.
 
 Aşağıda bir örnek verilmiştir.
 
@@ -62,7 +62,7 @@ Aşağıdaki örnek, kullanımını gösterir `yield!` tek bir son dizi bireysel
 
 Dizileri aynı işlevlerin birçoğunu destekleyen [listeler](lists.md). Dizileri gruplandırma ve anahtar oluşturuluyor işlevlerini kullanarak sayım gibi işlemleri de destekler. Dizileri sıraları ayıklanması için daha çok çeşitli işlevleri de destekler.
 
-Çünkü bunlar numaralandırılabilir koleksiyonları listeler, diziler, ayarlar ve haritalar gibi çok sayıda veri türlerini örtük olarak dizileri:. Bağımsız değişken tüm ortak F# veri türleri, ayrıca uygulayan bir .NET Framework veri türü için çalıştığı bir dizisini alan bir işlev `System.Collections.Generic.IEnumerable<'T>`. Bunu, bu listeleri yalnızca alabilir bağımsız değişken bir liste alan işlevi karşılaştırın. Türü `seq<'T>` bir tür kısaltmasıdır `IEnumerable<'T>`. Genel uygulayan herhangi bir tür buna `System.Collections.Generic.IEnumerable<'T>`içeren diziler, listeler, ayarlar ve F# ve ayrıca çoğu .NET Framework koleksiyon türü, maps ile uyumludur `seq` yazın ve bir dizi beklendiği her yerde kullanılabilir.
+Çünkü bunlar numaralandırılabilir koleksiyonları listeler, diziler, ayarlar ve haritalar gibi çok sayıda veri türlerini örtük olarak dizileri:. Bağımsız değişken tüm ortak çalıştığı bir dizisini alan bir işlev F# uygulayan herhangi bir .NET Framework veri türü yanı sıra veri türleri `System.Collections.Generic.IEnumerable<'T>`. Bunu, bu listeleri yalnızca alabilir bağımsız değişken bir liste alan işlevi karşılaştırın. Türü `seq<'T>` bir tür kısaltmasıdır `IEnumerable<'T>`. Genel uygulayan herhangi bir tür buna `System.Collections.Generic.IEnumerable<'T>`, diziler, listeler, içeren ayarlar ve içinde eşler F#ve ayrıca çoğu .NET Framework koleksiyon türleri ile uyumludur `seq` yazın ve bir dizi beklendiği her yerde kullanılabilir .
 
 ## <a name="module-functions"></a>Modül işlevleri
 
@@ -102,7 +102,7 @@ Sonsuz sıraları kullanarak tanımlayabilirsiniz [Seq.initInfinite](https://msd
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 The sequence seq1 contains numbers from 0 to 20.
@@ -120,7 +120,7 @@ Aşağıdaki kod oluşturma ve sınırsız dizilerinin değeri hesaplamak için 
 
 ## <a name="searching-and-finding-elements"></a>Arama ve öğeleri bulma
 
-Dizileri listeleri ile kullanılamayan işlevselliği destekler: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [ Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), ve [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Sıraları için kullanılabilir olan bu işlevlerin sürümleri için Aranmakta olan öğe kadar dizisi değerlendirin. Örnekler için bkz [listeler](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Dizileri listeleri ile kullanılabilen işlevler destekler: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind ](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), ve [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Sıraları için kullanılabilir olan bu işlevlerin sürümleri için Aranmakta olan öğe kadar dizisi değerlendirin. Örnekler için bkz [listeler](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Demetlerin edinme
 

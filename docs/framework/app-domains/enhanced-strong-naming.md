@@ -8,11 +8,11 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128641"
 ---
 # <a name="enhanced-strong-naming"></a>Güçlü Adlandırmayı İyileştirme
 Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework mekanizmasıdır. Buna genellikle bir oluşturucu (imzalayan) alıcıya (doğrulama) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzası var. Bu imza, bir derleme için benzersiz bir kimlik kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme oluşturma işleminin bir parçası imzalanır ve sonra yüklendiğinde doğrulanır.  

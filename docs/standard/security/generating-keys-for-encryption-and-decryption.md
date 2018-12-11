@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173128"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153533"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parçasıdır. Simetrik algoritmalar, bir anahtarın ve başlangıç vektörünün (IV) oluşturulmasını gerektirir. Anahtar, verinizin şifresini çözmemesi gereken herkesten gizli tutulmalıdır. IV'nin gizli olması gerekmez ancak her oturum için değiştirilmesi gerekir. Asimetrik algoritmalar bir ortak anahtarın, bir de özel anahtarın oluşturulmasını gerektirir. Ortak anahtar herhangi birine verilebilirken, özel anahtar yalnızca ortak anahtar ile şifrelenen verilerin şifresini çözecek tarafça bilinmelidir. Bu bölümde, hem simetrik, hem de asimetrik algoritmalar için anahtarların nasıl oluşturulacağı ve yönetileceği açıklanmaktadır.  
@@ -43,7 +43,7 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
   
  Önceki kod yürütüldüğünde, yeni bir anahtar ve IV oluşturulur ve bulundukları **anahtarı** ve **IV** özellikleri, sırasıyla.  
   
- Bazen birden çok anahtar oluşturmanız gerekebilir. Bu durumda, Simetrik algoritma uygulayan bir sınıf yeni bir örneğini oluşturabilir ve çağırarak yeni bir anahtar ve IV oluşturma **GenerateKey** ve **Generateıv** yöntemleri. Aşağıdaki kod örneği, asimetrik şifreleme sınıfının yeni bir örneği oluşturulduktan sonra yeni anahtar ve IV'lerin nasıl oluşturulduğunu gösterir.  
+ Bazen birden çok anahtar oluşturmanız gerekebilir. Bu durumda, Simetrik algoritma uygulayan bir sınıf yeni bir örneğini oluşturabilir ve çağırarak yeni bir anahtar ve IV oluşturma **GenerateKey** ve **Generateıv** yöntemleri. Aşağıdaki kod örneği, simetrik şifreleme sınıfının yeni bir örneğini yapıldıktan sonra yeni anahtar ve Iv'lerin oluşturma işlemini gösterir.  
   
 ```vb  
 Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -70,7 +70,7 @@ TDES.GenerateKey();
   
  İki yöntem de yalnızca ortak anahtar bilgisinin mi dönüleceğini yoksa hem ortak anahtar hem de özel anahtar bilgisinin mi dönüleceğini belirten bir Boolean değerini kabul eder. Bir **RSACryptoServiceProvider** sınıfı değeri olarak başlatılabilir bir **RSAParameters** kullanarak yapısı <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> yöntemi.  
   
- Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Özel bir anahtarı bir anahtar kapsayıcısı içinde saklamak hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Özel bir anahtarı bir anahtar kapsayıcısı içinde saklamak hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Aşağıdaki kod örneğinde yeni bir örneğini oluşturur **RSACryptoServiceProvider** sınıfı, bir ortak/özel anahtar çifti oluşturma ve ortak anahtar bilgisini kaydeder bir **RSAParameters** yapısı.  
   
@@ -93,4 +93,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 - [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
 - [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
 - [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)  
-- [Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Nasıl Yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

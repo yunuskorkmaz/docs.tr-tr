@@ -3,11 +3,11 @@ title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181663"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147430"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
@@ -106,7 +106,7 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
 4.  Tıklayın **Temizle** olayları temizleyin.  
   
 ## <a name="known-issue"></a>Bilinen sorun  
- Bilinen bir sorun var. **Olay Görüntüleyicisi'ni** burada da başarısız olabilir ETW olaylarının kodunu çözmek. Bildiren bir hata iletisini görebilirsiniz: "olay kimliği için açıklama \<kimliği > kaynağından Microsoft Windows uygulaması uygulamalarının nebyla nalezena. Bu olayı oluşturan bileşen, yerel bilgisayarınızda yüklü değil veya yüklemenin bozuk. Yükleyebilir veya yerel bilgisayarda bileşen onarın." Bu hatayla karşılaşırsanız, seçin **Yenile** gelen **eylemleri** menüsü. Olay sonra düzgün bir şekilde kod çözme.  
+ Bilinen bir sorun var. **Olay Görüntüleyicisi'ni** burada da başarısız olabilir ETW olaylarının kodunu çözmek. Bildiren bir hata iletisini görebilirsiniz: "Olay kimliği için açıklama \<kimliği > kaynağından Microsoft Windows uygulaması uygulamalarının bulunamıyor. Bu olayı oluşturan bileşen, yerel bilgisayarınızda yüklü değil veya yüklemenin bozuk. Yükleyebilir veya yerel bilgisayarda bileşen onarın." Bu hatayla karşılaşırsanız, seçin **Yenile** gelen **eylemleri** menüsü. Olay sonra düzgün bir şekilde kod çözme.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

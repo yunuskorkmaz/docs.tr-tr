@@ -2,30 +2,29 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197660"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170411"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
 .NET core, aşağıdaki özelliklere sahiptir:
 
 - **Platformlar arası:** Windows, macOS ve Linux'ta çalışan [işletim sistemleri](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
-- **Mimariler arasında tutarlı:** kodunuz ile aynı davranışı x64, x86 ve ARM gibi birden fazla mimari üzerinde çalışır.
-- **Komut satırı araçları:** , kullanımı kolay komut satırı araçlarını içerir yerel geliştirme için ve sürekli tümleştirme senaryolarında kullanılır.
-- **Esnek dağıtım:** uygulamanıza dahil edilebilir ya da yan yana kullanıcı - veya makineye yüklü. Kullanılabilir [Docker kapsayıcıları](docker/index.md).
+- **Consistent mimariler arasında:** Kodunuz ile aynı davranışı x64, x86 ve ARM gibi birden fazla mimari üzerinde çalışır.
+- **Komut satırı araçları:**  Yerel geliştirme için ve sürekli tümleştirme senaryolarında kullanılabilecek kolay kullanımlı komut satırı araçlarını içerir.
+- **Esnek dağıtım:** Uygulamanıza dahil edilebilir ya da yan yana kullanıcı - veya makineye yüklü. Kullanılabilir [Docker kapsayıcıları](docker/index.md).
 - **Uyumlu:** .NET Core, .NET Framework, Xamarin ve Mono, uyumlu aracılığıyla [.NET Standard](../standard/net-standard.md).
-- **Açık kaynak:** .NET Core platformu, açık kaynak, MIT ve Apache 2 lisanslarını kullanarak. .NET Core bir [.NET Foundation](https://dotnetfoundation.org/) proje.
+- **Açık kaynak:** MIT'den ve Apache 2 lisanslarını kullanarak, açık kaynak .NET Core platformudur. .NET Core bir [.NET Foundation](https://dotnetfoundation.org/) proje.
 - **Microsoft tarafından desteklenen:** .NET Core, her Microsoft tarafından desteklenir [.NET Core desteği](https://www.microsoft.com/net/core/support/).
 
 ## <a name="languages"></a>Diller
 
-C#, Visual Basic ve F # dilleri için .NET Core uygulamaları ve kitaplıkları yazmak için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](https://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
+C#, Visual Basic ve F# diller için .NET Core uygulamaları ve kitaplıkları yazma için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](https://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
 
 ## <a name="apis"></a>API'ler
 
@@ -53,7 +52,7 @@ Birden çok çerçeveyi .NET Core üzerine yerleştirilmiştir:
 
 - [.NET Core çalışma zamanı](https://github.com/dotnet/coreclr), bir tür sistemi, derleme yüklenirken, çöp toplayıcı, yerel birlikte çalışabilirliği ve diğer temel hizmetleri sağlar. [.NET core framework kitaplıkları](https://github.com/dotnet/corefx) ilkel veri türleri, uygulama oluşturma türleri ve temel yardımcı programları sağlar.
 - [ASP.NET çalışma zamanı](https://github.com/aspnet/home), bağlı uygulamalar, web uygulamaları, IOT uygulamaları ve mobil arka uçları gibi internet tabanlı modern bulut oluşturmak için bir çerçeve sağlar.
-- [.NET Core CLI Araçları](https://github.com/dotnet/cli) ve dil derleyicileri ([Roslyn](https://github.com/dotnet/roslyn) ve [F #](https://github.com/microsoft/visualfsharp)) .NET Core Geliştirici deneyimini etkinleştirin.
+- [.NET Core CLI Araçları](https://github.com/dotnet/cli) ve dil derleyicileri ([Roslyn](https://github.com/dotnet/roslyn) ve [ F# ](https://github.com/microsoft/visualfsharp)) .NET Core Geliştirici deneyimini etkinleştirin.
 - [Dotnet araç](https://github.com/dotnet/core-setup), .NET Core uygulamaları ve CLI Araçları'nı başlatmak için kullanılır. Çalışma zamanının seçtiği çalışma zamanını barındıran, derleme yüklenirken ilke sağlar ve uygulamaları ve Araçları'nı başlatır.
 
 Bu bileşenler, aşağıdaki yollarla dağıtılır:
@@ -76,7 +75,7 @@ Kişiler, genellikle birden çok işletim sistemini desteklemek için .NET Core 
 
 Büyük çoğunluğu grafik aşağıda görebilirsiniz [Corefx'te](https://github.com/dotnet/corefx) tüm platformlar arasında paylaşılan platformdan bağımsız kodudur. Platformdan bağımsız kod, tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
 
-![Corefx'te: Platform başına kod satırlarını](../images/corefx-platforms-loc.png)
+![Corefx'te: Platform başına kod satırları](../images/corefx-platforms-loc.png)
 
 Windows ve UNIX benzer boyutta uygulamalarıdır. Windows olan daha büyük bir uygulama Corefx'te bazı yalnızca Windows özellikleri gibi uyguladığından [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) ancak henüz pek çok kavramı yalnızca UNIX uygulamaz. Ayrıca, Linux ve macOS uygulamalarının çoğu paylaşılır, UNIX uygulama arasında Linux ve macOS özel uygulamaları boyutu kabaca benzer olsa da görürsünüz.
 

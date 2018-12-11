@@ -1,20 +1,20 @@
 ---
 title: Sonlandırıcılar (C# programlama Kılavuzu)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526041"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127270"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
-Sonlandırıcılar, sınıfların örneklerini yok etmek üzere kullanılır.  
+Sonlandırıcılar (de denir **yok ediciler**) çöp toplayıcısı tarafından toplanmış bir sınıf örneği, tüm gerekli son temizleme gerçekleştirmek için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -63,7 +63,7 @@ protected override void Finalize()
   
  Çağırarak atık toplamayı zorlamak mümkün mü <xref:System.GC.Collect%2A>, ancak performans sorunları oluşturabilir, çünkü çoğu zaman bu kaçınılmalıdır.  
   
-## <a name="using-finalizers-to-release-resources"></a>Yayın kaynaklara sonlandırıcılar kullanma  
+## <a name="using-finalizers-to-release-resources"></a>Kaynaklar serbest bırakılacaksa Sonlandırıcı kullanma  
  Genel olarak, C# bir çalışma zamanının atık toplama ile hedeflemiyor bir dil ile geliştirdiğinizde gerektiği kadar bellek yönetimi gerektirmez. .NET Framework atık toplayıcı, örtük olarak sağlanmasını ve ayrılmasını, nesneler için bellek yönetir olmasıdır. Ancak, uygulamanızı windows, dosyaları ve ağ bağlantıları gibi yönetilmeyen kaynakları yalıtan, bu kaynakları serbest bırakacak sonlandırıcılar kullanmanız gerekir. Nesne sonlandırma için uygun olduğunda, Atık toplayıcısının çalışacağı `Finalize` nesnesinin yöntemi.  
   
 ## <a name="explicit-release-of-resources"></a>Açık kaynak sürümü  
@@ -82,10 +82,11 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# dili belirtimi  
+
+Daha fazla bilgi için [yok ediciler](~/_csharplang/spec/classes.md#destructors) bölümünü [ C# dil belirtimi](../../language-reference/language-specification/index.md).
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IDisposable>  
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  

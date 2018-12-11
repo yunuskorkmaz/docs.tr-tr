@@ -1,15 +1,16 @@
 ---
-title: .NET core sürüm geçmişi
-description: .NET Core çalışma zamanı, .NET Core SDK'sı, C# derleyicisi ve VB.NET derleyici sürümleri için zaman çizelgesi bakın.
+title: Sürüm oluşturma .NET Core SDK'sını nasıl değiştirildi
+description: Bu makalede nasıl çalışma zamanı ve .NET Core SDK'sı sürüm v2.1 zaman çerçevesinde değiştirilmiş açıklanır.
 ms.date: 07/26/2018
-ms.openlocfilehash: 90fd4ba57620a3a005f2148c0335a76a6fa54a30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: e4b87d2ebd6dc5a0d5b874dc35dcaf746fdd4a0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519071"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131137"
 ---
-# <a name="net-core-version-history"></a>NET Core sürüm geçmişi
+# <a name="net-core-version-changes-between-10-and-21"></a>NET Core 1.0 ve 2.1 arasındaki sürüm değişiklikleri
 
 .NET Core SDK ve .NET Core çalışma zamanı üzerinde farklı temposu sürüm olduğundan, .NET Core için sürüm numaraları zor. Farklı temposu, yalnızca iki aşağıdaki üç şeyi yapmak için takım zorlandı anlamına gelir:
 

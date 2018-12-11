@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145812"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet sorguları
 Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. İçinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu, çalıştığınız her zaman programlama nesneleri.  
@@ -23,7 +23,7 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
   
  Değerler döndüren bir sorgu, sorgu değişkeninin kendisi asla sorgu sonuçlarını tutar ve yalnızca sorgu komutlarını depolar. Sorgu yürütme sorgu değişkeni yinelenir kadar ertelenmiş bir `foreach` veya `For Each` döngü. Bu adlandırılır *ertelenmiş yürütme*; diğer bir deyişle, sorgu yürütme, sorgu oluşturulmuş sonra biraz zaman oluşur. Başka bir deyişle, bir sorgu istediğiniz sıklıkta yürütebilirsiniz. Örneğin, diğer uygulamalar tarafından güncelleştirilmiş bir veritabanı varsa, bu yararlıdır. Uygulamanızda döndüren güncelleştirilmiş bilgileri her zaman en son bilgileri almak ve sorguyu tekrar tekrar yürütmenin bir sorgu oluşturabilirsiniz.  
   
- Değerleri bir dizisini döndürmek, ertelenmiş sorguları aksine, bir tek değer döndüren sorgular hemen çalıştırılır. Bazı örnekler tek sorgu <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, ve <xref:System.Linq.Enumerable.First%2A>. Sorgu sonuçları tekil sonucu hesaplamak için gerekli olduğundan bu hemen yürütün. Ortalama işlevi çalışmak üzere giriş verilerini, örneğin, sorgu sonuçlarının ortalamasını bulmak için sorgu yürütülmelidir. Ayrıca <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> tek bir değer üretmiyor bir sorgu hemen yürütülmesini zorlamak için bir sorgu yöntemleri. Hemen yürütme zorlamak için bu teknikler, bir sorgunun sonuçlarını önbelleğe almak istediğiniz durumlarda yararlı olabilir. Ertelenmiş ve anlık sorgu yürütme hakkında daha fazla bilgi için bkz. [lınq'e Başlarken](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
+ Değerleri bir dizisini döndürmek, ertelenmiş sorguları aksine, bir tek değer döndüren sorgular hemen çalıştırılır. Bazı örnekler tek sorgu <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, ve <xref:System.Linq.Enumerable.First%2A>. Sorgu sonuçları tekil sonucu hesaplamak için gerekli olduğundan bu hemen yürütün. Ortalama işlevi çalışmak üzere giriş verilerini, örneğin, sorgu sonuçlarının ortalamasını bulmak için sorgu yürütülmelidir. Ayrıca <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> tek bir değer üretmiyor bir sorgu hemen yürütülmesini zorlamak için bir sorgu yöntemleri. Hemen yürütme zorlamak için bu teknikler, bir sorgunun sonuçlarını önbelleğe almak istediğiniz durumlarda yararlı olabilir.
   
 ## <a name="queries"></a>Sorgular  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları içinde iki farklı sözdizimini ifade: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi.  

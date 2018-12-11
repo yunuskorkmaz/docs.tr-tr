@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170230"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127088"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Uygulama etki alanı bilgileri  
@@ -55,21 +55,21 @@ class AppDomainInfo
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Veri türü: Boole  
   
- Erişim türü: okuma/yazma  
+ Erişim türü: Okuma/yazma  
   
  Hatalı biçimlendirilmiş iletilerin kaydedilip kaydedilmeyeceğini belirten bir değeri.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Veri türü: Boole  
   
- Erişim türü: okuma/yazma  
+ Erişim türü: Okuma/yazma  
   
  İletilerin hizmet düzeyinde (önce şifreleme ve taşıma ilişkili dönüşümler) izlenilmeyeceğini belirleyen bir değer.  
   
 ### <a name="logmessagesattransportlevel"></a>Transfer  
  Veri türü: Boole  
   
- Erişim türü: okuma/yazma  
+ Erişim türü: Okuma/yazma  
   
  İletileri taşıma düzeyinde izlenip izlenilmeyeceğini belirleyen bir değer.  
   
@@ -111,7 +111,7 @@ class AppDomainInfo
 ### <a name="tracelevel"></a>TraceLevel  
  Veri türü: dize  
   
- Erişim türü: okuma/yazma  
+ Erişim türü: Okuma/yazma  
   
  System.Wmi izleme kaynağına izleme düzeyi.  
   

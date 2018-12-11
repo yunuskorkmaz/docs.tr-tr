@@ -2,12 +2,12 @@
 title: Güvenli veri erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129200"
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenlik mekanizmalarını anlamaları gerekir. Ayrıca, diğer özellikler veya uygulamanızı içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
@@ -66,11 +66,8 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Güvenlik hususlarının yanı sıra Access 2007 Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=98354)|Bu tür dosyalar şifreleniyor, parolaları yönetme, veritabanlarını yeni olmayan ACCDB ve ACCDE biçimlerine dönüştürme ve diğer güvenlik seçeneklerini kullanarak Access 2007 için güvenlik teknikleri açıklar.|  
-|[Bir Access veritabanı ile kullanıcı düzeyi güvenlik (MDB) korunmasına yardımcı olma](https://go.microsoft.com/fwlink/?LinkId=47697)|Erişim 2003 için geçerlidir. Erişim 2003 verileri korumak için kullanıcı düzeyi güvenlik uygulanması için yönergeler sağlar.|  
 |[Erişimi güvenliği, çalışma grubu bilgi dosyalarını rolünü anlamak](https://support.microsoft.com/kb/305542)|Erişim 2003 güvenlik rolü ve çalışma grubu bilgi dosyası arasındaki ilişkiyi açıklar.|  
 |[Sık sorulan sorular hakkında Microsoft erişim için güvenlik Microsoft Access sürümleri 2.0 ile 2000 yılları arasında](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access güvenlik ile ilgili SSS indirilebilir sürümü.|  
-|[Güvenlik ve koruma sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=47703)|Excel 2003'te güvenlik ile sık karşılaşılan sorunlara çözümler sunar.|  
-  
 ## <a name="enterprise-services"></a>Kurumsal Hizmetler  
  COM + Windows NT hesapları ve işlem/iş parçacığı kimliğe bürünme kullanır, kendi güvenlik modelini içerir. <xref:System.EnterpriseServices> Ad alanı güvenlik hizmetleriyle COM + yönetilen kodu tümleştirmek için .NET uygulamalarını izin sarmalayıcıları sağlar <xref:System.EnterpriseServices.ServicedComponent> sınıfı.  
   
@@ -87,9 +84,9 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te nasıl sunacağınızı öğrenin ve .NET Framework bileşenlerini vystavit kullanıma sunmak nasıl eklendiğini açıklayan konulara içerir|  
-|[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|  
-  
+|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te nasıl sunacağınızı öğrenin ve .NET Framework bileşenlerini vystavit kullanıma sunmak nasıl eklendiğini açıklayan konulara içerir|
+|[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|
+
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

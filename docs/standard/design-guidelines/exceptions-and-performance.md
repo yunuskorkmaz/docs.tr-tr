@@ -1,6 +1,6 @@
 ---
 title: Özel durumlar ve performans
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - tester-doer pattern
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083552"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153754"
 ---
 # <a name="exceptions-and-performance"></a>Özel durumlar ve performans
 Özel durumlar için ilgili bir sık karşılaşılan özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performans kat daha yavaş olabilir. Ancak, hata kodlarını kullanarak izin vermeyin. özel durum yönergeleri kesinlikle bağlılığı sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki deseni, bunu yapmak için yöntemler önerir.  
@@ -71,7 +70,7 @@ public struct DateTime {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

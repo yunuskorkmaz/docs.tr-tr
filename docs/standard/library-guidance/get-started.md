@@ -4,12 +4,12 @@ description: Başlarken .NET kitaplıkları oluşturmak.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201249"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145731"
 ---
 # <a name="get-started"></a>Kullanmaya başlayın
 
@@ -46,5 +46,5 @@ NuGet.org bilinen ve kullanılan depo en yaygın olsa da, NuGet paketlerini yay�
 Mevcut kullanıcılar için kararlılık ve gelecek yeniliğe arasında bir denge bulmak bir .NET kitaplığı için önemlidir. Son değişiklikler ve geriye dönük uyumluluğu koruyarak yeni özellikler eklemek için stratejiler, farklı türleri hakkında bilgi edinin.
 
 >[!div class="step-by-step"]
-[Önceki](./index.md)
-[İleri](./cross-platform-targeting.md)
+>[Önceki](index.md)
+>[İleri](cross-platform-targeting.md)

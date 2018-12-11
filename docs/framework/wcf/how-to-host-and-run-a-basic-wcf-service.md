@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma'
+title: 'Nasıl Yapılır: Barındırma ve çalıştırma temel Windows Communication Foundation servisi'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562300"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129382"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl Yapılır: Barındırma ve çalıştırma temel Windows Communication Foundation servisi
 
 Üçüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
 
@@ -149,7 +149,7 @@ End Module
 
 **4. adım** – meta veri değişimi etkinleştirin. İstemciler, meta veri değişimi, hizmet işlemlerini aramak için kullanılacak proxy üretmek için kullanır. Etkinleştirmek için meta veri değişimi oluşturma bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın, örnek 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`ve davranışların eklenmesi <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.
 
-**5. adım** – açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için. Uyarı kodunu kullanıcının isabet bekler girin. Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+**5. adım** – açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için. Uyarı kodunu kullanıcının isabet bekler girin. Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [kullanım Kapat ve iptal WCF istemci kaynakları serbest bırakmak için](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > App.config dosyasında GettingStartedLib kodunda yaptığınız değişiklikleri yansıtacak şekilde düzenleyin:
@@ -403,7 +403,7 @@ End Module
 Artık hizmeti çalışıyor. Sonraki görevde bir WCF istemcisi oluşturma.
 
 > [!div class="nextstepaction"]
-> [Nasıl yapılır: bir WCF istemcisi oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Nasıl Yapılır: Bir WCF istemcisi oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
 

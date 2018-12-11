@@ -2,12 +2,12 @@
 title: Denetim akışı zaman uyumsuz programlarda (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150608"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Denetim akışı zaman uyumsuz programlarda (C#)
 
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
 
         // SIX
         resultsTextBox.Text +=
-            String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+            $"\r\nLength of the downloaded string: {contentLength}.\r\n";
     }
 
     async Task<int> AccessTheWebAsync()
@@ -97,7 +97,7 @@ Bu konuda kullanan kodu MSDN sitesinden yükleyebilir veya size kendiniz oluştu
 
 ### <a name="download-the-program"></a>Programı indir
 
-Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Zamanuyumsuz programlarda akış denetimi](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.
+Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.
 
 1.  İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
 
@@ -111,7 +111,7 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi Bu konu için kod ör
 
 Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
-1.  Visual Studio'yu başlatın.
+1.  Visual Studio’yu çalıştırın.
 
 2.  Menü çubuğunda, **dosya** > **yeni** > **proje**.
 
@@ -199,7 +199,7 @@ Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
                     "           About to display contentLength and exit.\r\n";
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
             }
 
             async Task<int> AccessTheWebAsync()
@@ -389,5 +389,5 @@ int contentLength = await getLengthTask;
 
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz örneği: Zaman uyumsuz programlarda (C# ve Visual Basic) denetim akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

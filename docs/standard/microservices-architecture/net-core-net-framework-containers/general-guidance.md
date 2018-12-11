@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537832"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128485"
 ---
 # <a name="general-guidance"></a>Genel rehberlik
 
@@ -39,13 +39,12 @@ Docker üzerinde .NET Framework kullanarak dağıtım sorunlarını en aza indir
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **e-kitap: Azure ve Windows kapsayıcıları ile mevcut .NET Framework uygulamalarını Modernleştirin**  
+-   **e-kitap: Azure ve Windows kapsayıcıları ile mevcut .NET Framework uygulamalarını modernleştirin**  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **Örnek uygulamalar: Windows kapsayıcıları kullanarak eski ASP.NET web uygulama Modernizasyonu**  
+-   **Örnek uygulamalar: Windows kapsayıcıları kullanarak eski ASP.NET web uygulama modernizasyonu**  
     https://aka.ms/eshopmodernizing
 
-
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](net-core-container-scenarios.md)
+>[Önceki](index.md)
+>[İleri](net-core-container-scenarios.md)

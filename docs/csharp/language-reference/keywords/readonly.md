@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397549"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146176"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -44,7 +44,7 @@ public readonly int y = 5;
 Bu oluşturucu bağlamları de yalnızca bağlamları olduğu geçirmek için geçerli olan bir `readonly` olarak alan bir [kullanıma](out-parameter-modifier.md) veya [ref](ref.md) parametresi.
 
 > [!NOTE]
-> `readonly` Anahtar sözcüğü, farklı [const](const.md) anahtar sözcüğü. A `const` alanı alanın bildiriminde yalnızca başlatılabilir. A `readonly` alanı bildirimde veya oluşturucuda başlatılabilir. Bu nedenle, `readonly` alanları kullanılan oluşturucuya bağlı olarak farklı değerlere sahip olabilir. Ayrıca, while bir `const` alandır bir derleme zamanı sabiti `readonly` alan, aşağıdaki örnekte olduğu gibi çalışma zamanı sabitleri için kullanılabilir:
+> `readonly` Anahtar sözcüğü, farklı [const](const.md) anahtar sözcüğü. A `const` alanı alanın bildiriminde yalnızca başlatılabilir. A `readonly` alan alan bildirimi veya herhangi bir oluşturucuda birden çok kez atanabilir. Bu nedenle, `readonly` alanları kullanılan oluşturucuya bağlı olarak farklı değerlere sahip olabilir. Ayrıca, while bir `const` alandır bir derleme zamanı sabiti `readonly` alan, aşağıdaki örnekte olduğu gibi çalışma zamanı sabitleri için kullanılabilir:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -80,7 +80,7 @@ public readonly struct Point
 }
 ```
 
-İşaretlenmemiş bir alan ekleme `readonly` derleyici hatası oluşturur `CS8340`: "salt okunur yapı birimlerinin örnek alanları salt okunur olmalıdır."
+İşaretlenmemiş bir alan ekleme `readonly` derleyici hatası oluşturur `CS8340`: "Salt okunur yapı birimlerinin örnek alanları salt okunur olmalıdır."
 
 ## <a name="ref-readonly-return-example"></a>Ref salt okunur dönüş örneği
 

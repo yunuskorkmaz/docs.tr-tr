@@ -2,12 +2,12 @@
 title: Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 40f010c4e1d84e6378334c826c58514f83b84657
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 969309f50f59a413e731113b6daec0c32bd1b540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349049"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126920"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi ile birlikte bir <xref:System.Threading.CancellationToken>, bir görev tamamlandığında kalan tüm görevleri iptal edebilirsiniz. `WhenAny` Yöntemi bir görev koleksiyonu olan bir bağımsız değişken alır. Bu yöntem tüm görevleri başlatır ve tek bir görev döndürür. Koleksiyondaki herhangi bir görev tamamlandığında tek bir görev tamamlanmıştır.  
@@ -18,7 +18,7 @@ Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
 >  Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
 ## <a name="downloading-the-example"></a>Örneği indirme  
- Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.  
+ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.  
   
 1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
@@ -97,7 +97,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
     ```csharp  
     var length = await firstFinishedTask;  
-    resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+    resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
     ```  
   
  Programın farklı yüklemeleri ilk son doğrulamak için birkaç kez çalıştırın.  
@@ -107,7 +107,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http>.  
   
- Projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -197,7 +197,7 @@ namespace CancelAfterOneTask
             //    byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
   
             //    resultsTextBox.Text +=  
-            //        String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);  
+            //        $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             //}  
   
             // ***Create a query that, when executed, returns a collection of tasks.  
@@ -218,7 +218,7 @@ namespace CancelAfterOneTask
             // Run the program several times to demonstrate that different  
             // websites can finish first.  
             var length = await firstFinishedTask;  
-            resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+            resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
         }  
   
         // ***Bundle the processing steps for a website into one async method.  
@@ -262,4 +262,4 @@ namespace CancelAfterOneTask
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>  
 - [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
-- [Zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

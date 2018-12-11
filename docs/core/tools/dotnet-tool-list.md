@@ -1,15 +1,13 @@
 ---
-title: DotNet araç Listele komutu - .NET Core CLI
+title: DotNet araç Listele komutu
 description: Belirtilen .NET Core genel aracı makinenizden dotnet araç Listele komutu listelenmektedir.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0c17534beb80ed87a8f260342b0f82882a9e17b6
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841248"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169774"
 ---
 # <a name="dotnet-tool-list"></a>DotNet araç listesi
 

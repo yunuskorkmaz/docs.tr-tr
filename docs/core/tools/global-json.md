@@ -1,16 +1,14 @@
 ---
 title: Global.JSON genel bakış
 description: .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalıştırırken ayarlanacak global.json dosyasını kullanmayı öğrenin.
-author: mairaw
-ms.author: mairaw
-ms.date: 07/30/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838084"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170775"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 
@@ -26,13 +24,13 @@ Bunun yerine çalışma zamanı belirtme hakkında daha fazla bilgi için bkz. [
 
 ### <a name="sdk"></a>SDK'sı
 
-Tür: nesne
+Tür: Nesne
 
 Seçmek için .NET Core SDK'sı hakkında bilgileri belirtir.
 
 #### <a name="version"></a>sürüm
 
-Türü: dize
+Tür: Dize
 
 .NET Core SDK'sını kullanmaya sürümü.
 
@@ -46,14 +44,14 @@ Aşağıdaki örnek, içeriğini gösterir. bir *global.json* dosyası:
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>Global.JSON ve .NET Core CLI
 
-Hangi sürümlerinin bir ayarlamak için kullanılabilir olduğunu öğrenmek yararlıdır *global.json* dosya. Desteklenen kullanılabilir SDK'lar tam listesini bulabilirsiniz [.NET indirir](https://www.microsoft.com/net/download/all) site. .NET Core SDK 2.1 ile başlayarak, hangi SDK sürümlerinin makinenizde zaten yüklü olduğunu doğrulamak için aşağıdaki komutu çalıştırabilirsiniz:
+Hangi sürümlerinin bir ayarlamak için kullanılabilir olduğunu öğrenmek yararlıdır *global.json* dosya. Desteklenen kullanılabilir SDK'lar tam listesini bulabilirsiniz [.NET indirir](https://www.microsoft.com/net/download/all) site. .NET Core 2.1 SDK ile başlayarak, hangi SDK sürümlerinin makinenizde zaten yüklü olduğunu doğrulamak için aşağıdaki komutu çalıştırabilirsiniz:
 
 ```console
 dotnet --list-sdks
@@ -64,7 +62,7 @@ Makinenizde ek .NET Core SDK'sı sürümünü birden yüklemek için şurayı zi
 Yeni bir oluşturabilirsiniz *global.json* yürüterek geçerli dizin dosyası [yeni dotnet](dotnet-new.md) komutu, aşağıdaki örneğe benzer:
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Eşleştirme kuralları
@@ -103,8 +101,8 @@ Bu uyarı, projeniz .NET Core SDK'sı, bir önizleme sürümünü kullanarak aç
 > [!WARNING]
 > Başlangıç projesi '{startupProject}' hedef framework '. NETCoreApp' sürümü '{targetFrameworkVersion}'. Entity Framework Core ve .NET komut satırı araçları bu sürümü yalnızca sürüm 2.0 veya üstü destekler. Araçlar'ın eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?linkid=871254>
 
-Başlayarak .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core SDK 2.1 ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. .NET Core SDK 2.0 (v. projenizi derlemek için yükleme 2.1.201) ve makinenizde önceki ve istenen SDK sürümüyle tanımlamak *global.json* dosya. Hakkında daha fazla bilgi için `dotnet ef` komutu, bkz: [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
+.NET Core 2.1 SDK (sürüm 2.1.300) ile başlayan `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core 2.1 SDK ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. Projenizi derlemek için .NET Core 2.0 SDK'sını (sürüm 2.1.201) yükleyin ve makinenizde önceki ve istenen SDK sürümüyle tanımlamak *global.json* dosya. Hakkında daha fazla bilgi için `dotnet ef` komutu, bkz: [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Proje SDK'ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Proje SDK'ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
-- Equals method [C#] , overriding
+- Equals method [C#], overriding
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042627"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126789"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl Yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  
   
 1.  `x.Equals(x)` döndürür `true`. Bu yansıma özelliğin çağırılır.  
@@ -34,13 +34,13 @@ Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliğ
   
 1.  Geçersiz kılma [sanal](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemi. Çoğu durumda, uygulamanıza `bool Equals( object obj )` türe özgü yalnızca çağırmalıdır `Equals` uygulamasıdır yöntemi <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimi. (2. adıma bakın.)  
   
-2.  Uygulama <xref:System.IEquatable%601?displayProperty=nameWithType> türe özgü sağlayarak arabirimi `Equals` yöntemi. Gerçek denklik karşılaştırması gerçekleştirildiği budur. Örneğin, yalnızca bir veya iki alanları türünüz karşılaştırarak eşitliği tanımlama karar verebilirsiniz. Özel durumlar oluşturmayın `Equals`. Yalnızca sınıflar için: Bu yöntem yalnızca bir sınıfta bildirilen alanları incelemeniz gerekir. Çağırmalıdır `base.Equals` temel sınıfta olan alanlar incelemek için. (Tür doğrudan öğesinden devralıyorsa bunu <xref:System.Object>, çünkü <xref:System.Object> uygulaması <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> başvuru eşitliği denetimi gerçekleştirir.)  
+2.  Uygulama <xref:System.IEquatable%601?displayProperty=nameWithType> türe özgü sağlayarak arabirimi `Equals` yöntemi. Gerçek denklik karşılaştırması gerçekleştirildiği budur. Örneğin, yalnızca bir veya iki alanları türünüz karşılaştırarak eşitliği tanımlama karar verebilirsiniz. Özel durumlar oluşturmayın `Equals`. Yalnızca sınıflar için: Bu yöntem, sınıfta bildirilen alanları incelemeniz gerekir. Çağırmalıdır `base.Equals` temel sınıfta olan alanlar incelemek için. (Tür doğrudan öğesinden devralıyorsa bunu <xref:System.Object>, çünkü <xref:System.Object> uygulaması <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> başvuru eşitliği denetimi gerçekleştirir.)  
   
-3.  İsteğe bağlı ancak önerilir: aşırı [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) işleçleri.  
+3.  İsteğe bağlı ancak önerilir: Aşırı yükleme [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) işleçleri.  
   
 4.  Geçersiz kılma <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> böylece aynı üretmek değer eşitliğine sahip iki nesnenin karma kodu.  
   
-5.  İsteğe bağlı: "büyük" veya "az" tanımlarında desteklemek için uygulama <xref:System.IComparable%601> arabirim türünüz için ve ayrıca aşırı [ <= ](../../../csharp/language-reference/operators/less-than-equal-operator.md) ve [ >= ](../../../csharp/language-reference/operators/greater-than-equal-operator.md) işleçleri .  
+5.  İsteğe bağlı: "Büyük" veya "az" tanımlarında desteklemek için uygulama <xref:System.IComparable%601> arabirim türünüz için ve ayrıca aşırı [ <= ](../../../csharp/language-reference/operators/less-than-equal-operator.md) ve [ >= ](../../../csharp/language-reference/operators/greater-than-equal-operator.md) işleçleri.  
   
  İlk örnekte, bir sınıf uygulamasını gösterir. İkinci örnek, bir yapı uygulamasını gösterir.  
   

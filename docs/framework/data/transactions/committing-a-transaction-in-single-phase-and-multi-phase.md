@@ -1,42 +1,42 @@
 ---
-title: İşlemi tek aşamalı ve çok aşaması Tamamlanıyor
+title: Tek aşamalı ve çok aşamalı bir işlem Sistemi'ne
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 0647f5aa4dd5bac054ed424780aa9fbe1c4bfa69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142930"
 ---
-# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>İşlemi tek aşamalı ve çok aşaması Tamamlanıyor
-Bir işlem içinde kullanılan her bir kaynağın eylemlerini işlem yöneticisi (TM) tarafından düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Kaydetme kaynakları bir işlemde katılımcı olarak](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konuda ele alınmıştır bir kaynak (veya birden çok kaynak) bir işlem içinde nasıl kaydedilebilir. Bu konuda ele alınmıştır nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabilir.  
+# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Tek aşamalı ve çok aşamalı bir işlem Sistemi'ne
+Bir işlemde kullanılan her kaynak eylemlerini bir işlem yöneticisi (TM) düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Katılımcı bir işlemde kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konu açıklar bir kaynak (veya birden fazla kaynak) bir işlemde nasıl kaydedilebilir. Bu konu nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabileceğini açıklar.  
   
- İşlemin sonunda, uygulama işlemi ya da yürütülmeli veya geri ister. Başkalarının tamamlamaya oylama bazı kaynak yöneticileri while gibi işlem yöneticisi riskleri ortadan kaldırmanız gerekir işlemi geri oylama.  
+ İşlemin sonunda, uygulama ya da kaydedilmiş veya geri için işlem ister. Bazı kaynak yöneticileri tamamlamaya oylama başkalarının çalışırken gibi hareket yöneticisi riskleri ortadan işlem geri dönmek için işaretleme.  
   
- İşleminiz birden fazla kaynak içeriyorsa, iki aşamalı kayıt (2PC) gerçekleştirmeniz gerekir. İki aşamalı yürütme Protokolü (hazırlama aşamasında ve Tamamlama aşaması) işlem sona erdiğinde, tüm kaynakları yapılan tüm değişiklikler tamamen kaydedilen ya da tam olarak geri olduğunu sağlar. Tüm katılımcıları sonra sonucunu bildirilir. İki aşamalı yürütme protokolü hakkında ayrıntılı bilgi için lütfen rehberi başvurun "*hareket işleme: kavramlar ve teknikler (Morgan Kaufmann dizide veri yönetim sistemleri) ISBN:1558601902*" Jim gri tarafından.  
+ İşlem birden fazla kaynak içeriyorsa, iki aşamalı bir kayıt (2PC) gerçekleştirmeniz gerekir. İki aşamalı tamamlama Protokolü (Hazırlık aşaması ve Tamamlama aşaması) işlem sona erdiğinde, tüm değişiklikleri tüm kaynaklara ya da tamamen kaydedilmiş veya tam döndürülmesine sağlar. Tüm katılımcıları sonra sonucunu bildirilir. İki aşamalı tamamlama protokolü hakkında ayrıntılı bilgi için lütfen kitap başvurun "*işlem: Kavramları ve teknikleri (Morgan Kaufmann dizide veri yönetim sistemleri) ISBN: 1558601902*"Jim gri tarafından.  
   
- Ayrıca, tek aşaması yürütme protokolünde bölümü gerçekleştirerek, işlemdeki performans iyi duruma getirebilirsiniz. Daha fazla bilgi için bkz: [tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ Ayrıca, tek aşaması yürütme Protokolü bölümü gerçekleştirerek, hareketin performans iyileştirebilirsiniz. Daha fazla bilgi için [tek aşamalı işleme ve yükseltilebilir tek aşamalı bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
- Yalnızca bir işlemdeki sonucunu bilgilendirilmek istiyorsanız ve oylamasına katılmasına istemediğiniz, için kaydedeceğini <xref:System.Transactions.Transaction.TransactionCompleted> olay.  
+ Yalnızca bir hareketin sonucu haberdar olmak istiyor ve oylama katılmak istiyor musunuz, kaydedin <xref:System.Transactions.Transaction.TransactionCompleted> olay.  
   
 ## <a name="two-phase-commit-2pc"></a>İki aşamalı kayıt (2PC)  
- İlk işlem aşamasında, işlem yöneticisi bir işlem yürütülmeli veya geri olup olmadığını belirlemek için her bir kaynağın sorgular. İkinci işlem aşamasında, işlem yöneticisi, kendi sorgu sonucunun her bir kaynağın tüm gerekli temizlenmesini izin veren bildirir.  
+ İlk işlem aşamasında hareket yöneticisi bir hareketin kaydedilmiş veya geri olup olmadığını belirlemek için her kaynak sorgular. İkinci işlem aşamasında, gerekli tüm temizlemesi gerçekleştirin izin veren hareket yöneticisi her kaynak kendi sorgu sonucunun uyarır.  
   
- Bu tür bir işlem içinde katılmak için bir Kaynak Yöneticisi'ni uygulamalıdır <xref:System.Transactions.IEnlistmentNotification> tarafından TM 2PC sırasında bildirimleri olarak adlandırılır yöntemleri sağlayan arabirim.  Aşağıdaki örnek, bu tür uygulaması örneği gösterir.  
+ Bu tür bir işlem katılmak için bir kaynak yöneticisi uygulamalıdır <xref:System.Transactions.IEnlistmentNotification> arabirimi, tarafından TM sırasında bir 2PC bildirimleri olarak adlandırılır yöntemleri sağlar.  Aşağıdaki örnek, bu tür uygulaması örneği gösterir.  
   
  [!code-csharp[Tx_Enlist#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
  [!code-vb[Tx_Enlist#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
   
 ### <a name="prepare-phase-phase-1"></a>Aşama (Aşama 1) hazırla  
- Alma sırasında bir <xref:System.Transactions.CommittableTransaction.Commit%2A> isteği uygulamadan işlem yöneticisi çağırarak tüm kayıtlı katılımcılar hazırlık aşamasında başlar <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> yöntemi her kaynak kayıtlı, her bir kaynağın almak için 's oy işlem.  
+ Alma bağlı bir <xref:System.Transactions.CommittableTransaction.Commit%2A> istek uygulamadan hareket yöneticisi çağırarak kayıtlı tüm katılımcıları hazırla aşaması başlar <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> yöntemi her kayıtlı kaynak, her kaynak almak için kullanıcının oy kullanın işlem.  
   
  Uygular, Kaynak Yöneticisi <xref:System.Transactions.IEnlistmentNotification> arabirimi ilk uygulayan <xref:System.Transactions.IEnlistmentNotification.Prepare%28System.Transactions.PreparingEnlistment%29> yöntemi aşağıdaki basit örnekte gösterildiği gibi.  
   
-```  
+```csharp
 public void Prepare(PreparingEnlistment preparingEnlistment)  
 {  
      Console.WriteLine("Prepare notification received");  
@@ -62,20 +62,20 @@ public void Prepare(PreparingEnlistment preparingEnlistment)
 }  
 ```  
   
- Sağlam kaynak yöneticisi bu çağrı aldığında, işlemdeki kurtarma bilgileri günlüğe (alarak kullanılabilir <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> özelliği) ve ne olursa olsun üzerinde yürütme işlemi tamamlamak gerekli bir bilgidir. Bu içinde yapılması gerekmez <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> yöntemi olduğundan RM iş parçacığı üzerinde bunu yapabilirsiniz.  
+ Kalıcı kaynak yöneticisi bu çağrı aldığında, hareketin kurtarma bilgilerini kapatması gerekir (alarak kullanılabilir <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> özelliği) ve hangi bilgileri üzerindeki kaydetme işlemi tamamlamak gereklidir. Bu içinde yapılması gerekmez <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> yöntemi olduğundan RM iş parçacığı üzerinde bunu yapabilirsiniz.  
   
- RM bittiğinde kendi iş hazırlama, yürütme veya geri çağırarak için oy <xref:System.Transactions.PreparingEnlistment.Prepared%2A> veya <xref:System.Transactions.PreparingEnlistment.ForceRollback%2A> yöntemi. Dikkat <xref:System.Transactions.PreparingEnlistment> sınıfından devralan bir <xref:System.Transactions.Enlistment.Done%2A> yönteminden <xref:System.Transactions.Enlistment> sınıfı. Bu yöntem çağırırsanız <xref:System.Transactions.PreparingEnlistment> geri çağırma hazırlama aşamasında, sizi bilgilendirir TM salt okunur bir kaydı (okuyabilir, ancak işlem korunan verileri güncelleştirilemiyor diğer bir deyişle, kaynak yöneticileri) olduğunu ve başka hiçbir bildirim RM alır İşlem Yöneticisi'nden Aşama 2 işlemde sonucunu seçeceğine.  
+ RM bittiğinde kendi iş hazırlama, yürütme veya geri çağırarak için oy <xref:System.Transactions.PreparingEnlistment.Prepared%2A> veya <xref:System.Transactions.PreparingEnlistment.ForceRollback%2A> yöntemi. Dikkat <xref:System.Transactions.PreparingEnlistment> sınıfından devralan bir <xref:System.Transactions.Enlistment.Done%2A> yönteminden <xref:System.Transactions.Enlistment> sınıfı. Bu yöntem çağırırsanız <xref:System.Transactions.PreparingEnlistment> geri çağırma hazırla aşamasında, onu bildiren TM salt okunur bir liste (okuyabilirsiniz ancak işlem korunan verileri güncelleştiremiyor diğer bir deyişle, kaynak yöneticileri) olduğunu ve daha fazla bildirim RM alır İşlem Yöneticisi'nden işlem sırasında Aşama 2 sonucunu için farklı.  
   
- Tüm kaynak yöneticileri oy sonra uygulama işlem başarılı taahhüt işe <xref:System.Transactions.PreparingEnlistment.Prepared%2A>.  
+ Tüm kaynak yöneticileri oy sonra uygulama işlemin başarılı taahhüt bildirilir <xref:System.Transactions.PreparingEnlistment.Prepared%2A>.  
   
 ### <a name="commit-phase-phase-2"></a>Aşama (Aşama 2) Kaydet  
- İkinci aşama hareketin işlem yöneticisi başarılı alırsa, tüm kaynak yöneticileri hazırlar (tüm kaynak yöneticileri çağrılan <xref:System.Transactions.PreparingEnlistment.Prepared%2A> Aşama 1 sonunda), onu çağırır <xref:System.Transactions.IEnlistmentNotification.Commit%2A> her kaynak için yöntemi Yöneticisi. Kaynak yöneticileri ardından değişiklikleri kalıcı yapın ve yürütme tamamlayın.  
+ İkinci aşaması hareketin hareket yöneticisi başarılı alırsa, tüm kaynak yöneticileri hazırlar (tüm kaynak yöneticileri çağrılır <xref:System.Transactions.PreparingEnlistment.Prepared%2A> Aşama 1 sonunda), onu çağırır <xref:System.Transactions.IEnlistmentNotification.Commit%2A> her kaynağın yöntemi Yöneticisi. Kaynak yöneticileri ardından değişiklikleri kalıcı yapın ve yürütme tamamlayın.  
   
- Herhangi bir kaynak yöneticisi Aşama 1 hazırlamak için bir hata bildirdi, İşlem Yöneticisi'ni çağırır <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> her kaynak yöneticisi için yöntem ve uygulamaya yürütme başarısızlığını gösterir.  
+ Herhangi bir kaynak yöneticisi raporlanan 1 aşamasında hazırlamak için bir hata varsa hareket yöneticisi çağırır <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> her kaynak yöneticisi için yöntem ve uygulama için yürütme başarısız gösterir.  
   
  Bu nedenle, kaynak yöneticisi aşağıdaki yöntemleri uygulamanız gerekir.  
   
-```  
+```csharp
 public void Commit (Enlistment enlistment)  
 {  
      // Do any work necessary when commit notification is received  
@@ -93,12 +93,12 @@ public void Rollback (Enlistment enlistment)
 }  
 ```  
   
- RM bildirim türüne göre hareket tamamlamak gerekli herhangi bir iş gerçekleştirin ve çağırarak bitirdi TM bildirmek <xref:System.Transactions.Enlistment.Done%2A> yöntemi <xref:System.Transactions.Enlistment> parametresi. Bu iş iş parçacığı üzerinde yapılabilir. Satır içi çağrılır aynı iş parçacığı üzerinde Aşama 2 bildirimleri oluşabilir Not <xref:System.Transactions.PreparingEnlistment.Prepared%2A> yönteminde Aşama 1. Bu nedenle, sonra herhangi bir iş yapmanız gerektiğini değil <xref:System.Transactions.PreparingEnlistment.Prepared%2A> Aşama 2 bildirimleri almadan önce tamamladınız beklediğiniz araması (örneğin, serbest bırakma kilitler).  
+ RM bildirim türüne göre işlemi tamamlamak için gerekli olan herhangi bir çalışma gerçekleştirme ve çağırarak bitirdi TM bildirmek <xref:System.Transactions.Enlistment.Done%2A> metodunda <xref:System.Transactions.Enlistment> parametresi. Bu iş iş parçacığı üzerinde yapılabilir. Satır içi çağrılır aynı iş parçacığı üzerinde Aşama 2 bildirimleri oluşabilir Not <xref:System.Transactions.PreparingEnlistment.Prepared%2A> yönteminde Aşama 1. Bu nedenle, sonra herhangi bir iş yapmanız gerektiğini değil <xref:System.Transactions.PreparingEnlistment.Prepared%2A> Aşama 2 bildirimleri almadan önce tamamladınız beklediğiniz araması (örneğin, serbest bırakma kilitler).  
   
 ### <a name="implementing-indoubt"></a>Nin şüpheli işlemi olmadığından uygulama  
- Son olarak, uygulamalıdır <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> geçici kaynak yöneticisi için yöntem. Durumları bilinmiyor şekilde işlem yöneticisi bir veya daha fazla katılımcı ile ilgili kişi kaybederse, bu yöntem çağrılır. Bu gerçekleşirse, böylece herhangi bir işlem katılımcının sola mı tutarsız bir durumda daha sonra araştırabilir olgunun oturum açmanız gerekir.  
+ Son olarak, uygulamalıdır <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> geçici kaynak yöneticisi için yöntem. Durumları bilinmiyor şekilde hareket yöneticisi bir veya daha fazla katılımcılarıyla iletişim kaybolursa, bu yöntem çağrılır. Bu meydana gelirse, daha sonra herhangi bir işlem katılımcıları sola mı tutarsız bir durumda inceleyebilirsiniz bu olgu oturum açmanız gerekir.  
   
-```  
+```csharp
 public void InDoubt (Enlistment enlistment)  
 {  
      // log this  
@@ -107,7 +107,7 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>Tek aşaması yürütme en iyi hale getirme  
- Tüm güncelleştirmeleri herhangi bir açık işbirliği yapıldığından tek aşaması yürütme Protokolü çalışma zamanında daha etkilidir. Bu protokol, daha fazla bilgi için bkz [tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ Tüm güncelleştirmeleri herhangi bir açık işbirliği yapıldığından tek aşaması yürütme Protokolü çalışma zamanında daha etkilidir. Bu protokol hakkında daha fazla bilgi için bkz. [tek aşamalı işleme ve yükseltilebilir tek aşamalı bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  

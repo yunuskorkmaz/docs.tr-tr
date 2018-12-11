@@ -1,17 +1,18 @@
 ---
-title: .NET core sürüm seçimi
-description: .NET Core nasıl bulur ve programınızın çalışma zamanı sürümleri seçer öğrenin.
+title: Kullanılacak .NET Core sürüm seçin
+description: .NET Core otomatik olarak bulur ve nasıl programınızın çalışma zamanı sürümleri seçer öğrenin. Ayrıca, bu makalede belirli bir sürümü zorlama öğretir.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841546"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127244"
 ---
-# <a name="net-core-version-selection"></a>.NET core sürüm seçimi
+# <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ Belirli bir SDK'sı ile birlikte gelen çalışma zamanı hedef çerçeve tavan 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Framework bağımlı uygulamaları ileri sarma
 
-Bir uygulama ile kaynağından çalıştırma [ `dotnet run` ](../tools/dotnet-run.md). `dotnet run` hem oluşturur ve bir uygulama çalıştırır. `dotnet` Yürütülebilir olduğundan **konak** geliştirme ortamlarında uygulama için.
+Kaynaktan ile bir uygulama çalıştırıldığında [ `dotnet run` ](../tools/dotnet-run.md), gelen bir [ **framework bağımlı dağıtım** ](../deploying/index.md#framework-dependent-deployments-fdd) ile [ `dotnet myapp.dll` ](../tools/dotnet.md#description), veya bir [ **framework bağımlı yürütülebilir** ](../deploying/index.md#framework-dependent-executables-fde) ile `myapp.exe`, `dotnet` yürütülebilir olduğundan **konak** uygulama için.
 
 Ana makinede yüklü en son düzeltme eki sürümü seçer. Örneğin, belirttiğiniz `netcoreapp2.0` proje dosyanızda ve `2.0.4` yüklüyse, en son .NET çalışma zamanı `2.0.4` çalışma zamanı kullanılır.
 

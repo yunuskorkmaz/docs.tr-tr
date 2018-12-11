@@ -1,6 +1,6 @@
 ---
 title: Özel Durumlar için En İyi Yöntemler
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199636"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149594"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
 İyi tasarlanmış bir uygulama, özel durumları ve hataları işleyerek uygulama kilitlenmelerini önler. Bu bölümde, özel durumlar oluşturma ve işleme için en iyi uygulamalar açıklanmaktadır.
 
-## <a name="use-trycatchfinally-blocks"></a>Try/catch/finally bloklarını kullanma
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Hataları kurtarmak veya kaynakları serbest bırakmak için try/catch/finally blokları kullanın
 
-Kullanım `try` / `catch` / `finally` büyük olasılıkla bir özel durum oluşturabilir kod etrafında engeller. 
+Kullanım `try` / `catch` etrafında büyük olasılıkla bir özel durum oluşturabilir kod blokları ***ve*** kodunuzu bu özel durumdan kurtarabilirsiniz. İçinde `catch` engeller, her zaman en çok türetilen sipariş durumlardan az türetilmiş için. Tüm özel durumları türetilmesi <xref:System.Exception>. Daha fazla türetilmiş özel durumları temel özel durum sınıfı için bir catch yan tümcesi öncesinde bir catch yan tümcesi tarafından işlenmesini değil. Kodunuz bir özel durumdan kurtarılamazsa, o özel durumu hiçbir öğeyi yakalamayın. Daha fazla çağrı yığınına mümkünse kurtarmak için yöntemleri sağlar.
 
-İçinde `catch` engeller, her zaman sipariş özel durumlar en az belirli özel.
-
-Kullanım bir `finally` veya kurtarabilirsiniz olup olmadığını, kaynakları temizlemek için blok.
+Temiz ile ayrılan kaynakları `using` deyimleri veya `finally` engeller. Tercih ettiğiniz `using` özel durumlar oluşturulduğunda otomatik olarak kaynakları temizlemek için deyimleri. Kullanım `finally` uygulamayıp kaynakları temizlemek için blokları <xref:System.IDisposable>. Kod bir `finally` claus bile özel durumlar oluşturulduğunda neredeyse her zaman yürütülür.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Genel koşullar, özel durumları atma olmadan işleme
 
@@ -58,11 +54,11 @@ Bir sınıfı yöntemleri sağlayabilir veya bir özel durum çağrı yapmak ön
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-Özel durumlar önlemek için başka bir özel durum oluşturmaktansa çok yaygın hata durumları için null döndürmek için yoludur. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Bu durumda null değer döndürerek, uygulama performansı üzerindeki etkisini en aza indirirsiniz.
+Özel durumlar önlemek için başka bir yolu geri döndürmektir `null` bir özel durum oluşturmaktansa çok yaygın hata durumları için. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Döndürerek `null` bu gibi durumlarda, uygulama performansı üzerindeki etkisini en aza.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Bir hata kodunu döndürmek yerine özel durumlar
 
-Özel durumlar hataları çağırmak için kod dönüş kodu denetlemedi gözden kaçan geçmemektedir emin olun. 
+Özel durumlar hataları çağırmak için kod dönüş kodu denetlemedi gözden kaçan geçmemektedir emin olun.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Önceden tanımlanmış .NET özel durum türlerini kullanın
 
@@ -90,7 +86,7 @@ En az üç ortak oluşturucu kendi özel durum sınıflarınızı oluştururken 
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, kabul eden bir dize iletisi ve bir iç özel durum.  
   
-Bir örnek için bkz. [nasıl yapılır: Create User-Defined](how-to-create-user-defined-exceptions.md).
+Bir örnek için bkz [nasıl yapılır: Kullanıcı tanımlı özel durumlar oluşturma](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Uzaktan kod yürütüldüğünde, özel durum verileri kullanılabilir olduğundan emin olun
 
@@ -132,7 +128,7 @@ Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması 
   
 Bazı durumlarda, özel durum oluşturmak için özel durumun oluşturucusunu kullanmak daha uygun olacak. Örnek bir genel özel durum sınıfı olduğu gibi <xref:System.ArgumentException>.
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Bir özel durum oluştururken sonuçları Temizle
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Özel durum nedeniyle yöntemleri yoksa tamamladığınızda durumu geri yükle
 
 Bir yöntemi çağıranlar, bu yöntemde özel durum oluşturulduğunda bunun yan etkileri olmayacağını varsayabilmelidir. Örneğin, bir hesaptan geri alınmasının ve başka bir hesabı ürünü para aktarımı kodunuz ve havale yürütülürken bir özel durum mevzuatı etkin kalmasını istemezsiniz.
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+Yukarıdaki yöntemi doğrudan özel durumları oluşturmaz, ancak mevzuatı tersine havale işlem başarısız olursa, böylece biçimde geliştirmelisiniz yazılmalıdır.
 
 Bu durumu yönetmek için bir havale işlem tarafından oluşturulan özel durumlar yakalayın ve geri çekilen alma yoludur.
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

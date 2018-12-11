@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: b59fe7277a266a7e006f980ac31e6987dbb5b977
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 63766a6865497da18b07a5d6423e6d2b8e306684
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453419"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128979"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Bir Windows Communication Foundation (WCF) hizmeti yapılandırmak ve HTTPS üzerinden iletişim kurabilen bitiş noktaları ortaya çıkarmak için kullanabileceğiniz bir bağlama temsil eder. Çift yönlü sözleşme ile kullanıldığında, Web yuvaları kullanılır, aksi takdirde HTTPS kullanılır.  
@@ -68,7 +68,7 @@ Sonraki öğeye
 |`maxBufferPoolSize`|Kanaldan iletiler alan ileti arabelleklerinin Yöneticisi tarafından kullanılmak için ayrılan maksimum belleğin belirten bir tamsayı değeri. Varsayılan değer: 524288 (0x80000) bayt.<br /><br /> Arabellek Yöneticisi bir arabellek havuzu kullanarak arabellekler maliyetini en aza indirir. Bunlar dışında kanal geldiğinizde arabellekler iletilerini işlemek için hizmet tarafından gerekli değildir. İleti yükü işlemek için arabellek havuzunda yeterli bellek yoksa, arabellek Yöneticisi çöp toplama taşması artıran CLR yığından ek bellek tahsis etmelisiniz. CLR çöp yığınındaki gelen kapsamlı ayırma arabellek havuzu boyutu çok küçük olduğunu ve bu özniteliği tarafından belirtilen sınırı artırarak performans daha büyük bir ayırma ile geliştirilebilir göstergesidir.|  
 |`maxBufferSize`|Bu bağlama ile yapılandırılan bir uç nokta için işlenirken iletileri depolayan bir arabellek, bayt cinsinden en büyük boyutunu belirten bir tamsayı değeri. 65.536 bayt varsayılan değerdir.|  
 |`maxReceivedMessageSize`|Bu bağlama ile yapılandırılan bir kanalda alınan iletinin üst bilgiler dahil bayt cinsinden en büyük ileti boyutunu tanımlar. pozitif bir tamsayı. İleti alıcısı için çok büyük ise, gönderici bir SOAP hatasını alır. Alıcı, iletiyi bırakır ve izleme günlüğüne etkinliğin bir giriş oluşturur. Varsayılan 65.536 bayt'tır.|  
-|`messageEncoding`|SOAP iletisi kodlamak için kullanılan Kodlayıcısı tanımlar. Geçerli değerler şunlardır:<br /><br /> -Metin: metin ileti Kodlayıcı kullanın.<br />-Mtom: ileti aktarım kuruluş mekanizması 1.0 (MTOM) encoder'ı kullanın.<br /><br /> Metin varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.WSMessageEncoding>.|  
+|`messageEncoding`|SOAP iletisi kodlamak için kullanılan Kodlayıcısı tanımlar. Geçerli değerler şunlardır:<br /><br /> -Metni: Bir metin ileti Kodlayıcı kullanın.<br />-Mtom: İleti Aktarım kuruluş mekanizması 1.0 (MTOM) encoder'ı kullanın.<br /><br /> Metin varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.WSMessageEncoding>.|  
 |`name`|Bağlama yapılandırma adını içeren bir dize. Bağlama için bir tanımlayıcı olarak kullanıldığından, bu değer benzersiz olmalıdır. Her bağlama sahip bir `name` ve `namespace` birlikte benzersiz özniteliği hizmetinin meta verilerde tanımlayın. Ayrıca, bu ad aynı türdeki bağlamaları arasında benzersizdir. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Varsayılan yapılandırma ve adsız bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`namespace`|XML ad alanı bağlamanın belirtir. Varsayılan değer " http://tempuri.org/Bindings". Her bağlama sahip bir `name` ve `namespace` birlikte benzersiz özniteliği hizmetinin meta verilerde tanımlayın.|  
 |`openTimeout`|A <xref:System.TimeSpan> tamamlamak açık işlem için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
@@ -136,7 +136,7 @@ Sonraki öğeye
 ```  
   
 ## <a name="example"></a>Örnek  
- İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Önceki örnekten gelen işlevi, uç nokta adresini ve bağlama adı frm bindingConfiguration kaldırma tarafından gerçekleştirilebilir.  
+ İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Önceki örnekte işlevselliği, uç nokta adresini ve bağlama adından bindingConfiguration kaldırarak gerçekleştirilebilir.  
   
 ```xml  
 <system.serviceModel>   

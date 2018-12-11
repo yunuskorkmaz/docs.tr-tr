@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir dosyanın bir derleme (C#) olup olmadığını belirleme'
+title: 'Nasıl Yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861016"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125541"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Nasıl yapılır: bir dosyanın bir derleme (C#) olup olmadığını belirleme
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Nasıl Yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)
 Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosyanın derleme olup. Derlemeler ve meta veriler hakkında daha fazla bilgi için Ek Yardım konusuna [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>El ile bir dosyanın derleme olup olmadığını belirleme  
@@ -18,7 +18,7 @@ Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosy
   
 2.  Test etmek istediğiniz dosya yükleyin.  
   
-3.  Varsa **ILDASM** raporlar dosya taşınabilir çalıştırılabilir (PE) dosyası değil ve ardından bir derleme değil. Daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: derleme içeriği görüntüle](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Varsa **ILDASM** raporlar dosya taşınabilir çalıştırılabilir (PE) dosyası değil ve ardından bir derleme değil. Daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: Bütünleştirilmiş kod içeriklerini görüntüleme](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Program aracılığıyla bir dosyanın derleme olup olmadığını belirleme  
   
@@ -29,7 +29,7 @@ Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosy
 ## <a name="example"></a>Örnek  
  Bu örnek, bir DLL derleme olup olmadığını görmek için sınar.  
   
-```  
+```csharp
 class TestAssembly  
 {  
     static void Main()  

@@ -1,27 +1,27 @@
 ---
-title: Taşıma için .NET Core -, üçüncü taraf bağımlılıklarını çözümleme
-description: .NET Framework projenizden .NET Core için bağlantı noktası için üçüncü taraf bağımlılıkları analiz etmeyi öğrenin.
+title: .NET Core için bağlantı noktası kod için bağımlılıkları analiz edin
+description: .NET Framework projenizden .NET Core için bağlantı noktası için dış bağımlılıkları analiz etmeyi öğrenin.
 author: cartermp
-ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001009"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170333"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>Üçüncü taraf bağımlılıklarını çözümleme
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Bağımlılıklarınızı .NET Core için bağlantı noktası kod çözümleme
 
-Kodunuzu .NET Core veya .NET Standard arıyorsanız, taşıma sürecinde ilk adım, üçüncü taraf bağımlılıklarının öğrenmektir. Üçüncü taraf bağımlılıklarıdır ya da [NuGet paketlerini](#analyze-referenced-nuget-packages-on-your-project) veya [DLL'leri](#analyze-dependencies-that-arent-nuget-packages) projenizde başvuran. Her bir bağımlılığın değerlendirin ve .NET Core ile uyumlu olmayan bağımlılıklarına bir yedek planını geliştirin. Bu makalede bağımlılık .NET Core ile uyumlu olup olmadığını belirlemek nasıl gösterir.
+Kodunuzu .NET Core veya .NET Standard için bağımlılıklarınızı anlamanız gerekir. Dış bağımlılıklar [NuGet paketlerini](#analyze-referenced-nuget-packages-on-your-project) veya [DLL'leri](#analyze-dependencies-that-arent-nuget-packages) projeye başvuran ancak derleme yok. Her bir bağımlılığın değerlendirin ve .NET Core ile uyumlu değil ve olanlar için yedek bir plan geliştirin. .NET Core ile uyumlu bir bağımlılık olup olmadığını açıklanmıştır.
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>Başvurulan NuGet paketlerini projenize analiz edin
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Projelerinizde başvurulan NuGet paketleri analiz
 
-Projenizdeki NuGet paketlerini başvuran, .NET Core ile uyumlu olup olmadıklarını doğrulamak gerekir.
+NuGet paketlerini projenize başvuruda bulunursanız, .NET Core ile uyumlu olup olmadıklarını doğrulamak gerekir.
 Gerçekleştirmenin iki yolu vardır:
 
-* [NuGet paket Gezgini uygulamasını kullanarak](#analyze-nuget-packages-using-nuget-package-explorer) (en güvenilir yöntemi).
-* [Nuget.org sitesini kullanarak](#analyze-nuget-packages-using-nugetorg).
+* [NuGet kullanarak paket Gezgini uygulama](#analyze-nuget-packages-using-nuget-package-explorer)
+* [Nuget.org sitesini kullanma](#analyze-nuget-packages-using-nugetorg)
 
 .NET Core ve yalnızca hedef .NET Framework ile uyumlu değillerse paketlerini çözümledikten sonra olursa denetleyebilirsiniz [.NET Framework uyumluluk modu](#net-framework-compatibility-mode) taşıma sürecinizi yardımcı olabilir.
 
@@ -52,6 +52,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +64,6 @@ Bu değerler [hedef çerçeve bilinen adlar (Tfm'ler)](../../standard/frameworks
 > [!IMPORTANT]
 > Bir paket destekleyen Tfm'ler baktığımda unutmayın `netcoreapp*`, uyumlu açıkken, yalnızca .NET Core projeleri için ve .NET Standard projeleri için değil.
 > Yalnızca hedefleyen bir kitaplık `netcoreapp*` değil `netstandard*` yalnızca diğer .NET Core uygulamaları tarafından kullanılabilecek.
-
-.NET Core, uyumlu olabilir, yayın öncesi sürümlerinde kullanılan bazı eski Tfm'ler vardır:
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-Bu büyük olasılıkla Tfm'ler kodunuzu ile çalışırken, uyumluluğu garanti yoktur. Aşağıdaki Tfm'ler paketlerle yayın öncesi .NET Core paketlerle oluşturulmuştur. Sırada (veya) not alın. Bu Tfm'ler kullanarak paketleri .NET Standard tabanlı olarak güncelleştirilir.
-
-> [!NOTE]
-> Geleneksel PCL veya yayın öncesi .NET Core hedef hedefleyen bir paketini kullanacak şekilde kullanmalısınız `PackageTargetFallback` proje dosyanızda MSBuild öğesi.
-> Bu MSBuild öğesi hakkında daha fazla bilgi için bkz. [ `PackageTargetFallback` ](../tools/csproj.md#packagetargetfallback).
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>NuGet paketleri nuget.org kullanarak Analiz
 
@@ -109,6 +92,12 @@ Proje dosyasını düzenleyerek uyarıyı bastırmak için bulma `PackageReferen
 ```
 
 Visual Studio'da Derleyici uyarılarını gizleme hakkında daha fazla bilgi için bkz: [NuGet paketleri için uyarıları gizleme](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+
+### <a name="port-your-packages-to-packagereference"></a>Paketleriniz için bağlantı noktası `PackageReference`
+
+.NET core kullanan [PackageReference](/nuget/consume-packages/package-references-in-project-files) Paket bağımlılıklarını belirtmek için. Kullanıyorsanız [packages.config](/nuget/reference/packages-config) paketlerinizi belirtmek için üzerinde dönüştürmek ihtiyacınız olacak `PackageReference`.
+
+Daha fazla bilgi edinebilirsiniz [PackageReference packages.config'ten geçiş](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>.NET Core üzerinde NuGet paket bağımlılık çalıştırmaz ne yapılacağını
 

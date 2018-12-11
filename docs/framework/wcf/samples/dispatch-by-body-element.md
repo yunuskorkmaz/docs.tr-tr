@@ -2,12 +2,12 @@
 title: Gövde Öğesine göre Dağıt
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396384"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143167"
 ---
 # <a name="dispatch-by-body-element"></a>Gövde Öğesine göre Dağıt
 Bu örnek nasıl gelen iletiler için işlemler atamak için başka bir algoritma uygulanacağını gösterir.  
@@ -20,7 +20,7 @@ Bu örnek nasıl gelen iletiler için işlemler atamak için başka bir algoritm
   
  Sınıf oluşturucu çiftleri ile doldurulmuş bir sözlük bekliyor `XmlQualifiedName` ve dizeler yapabildiği nitelenmiş adlar SOAP gövdesi ilk alt adını belirtmek ve dizeleri eşleşen işlem adı belirtin. `defaultOperationName` Karşı bu sözlük eşleşen tüm iletiler alan işlem adıdır:  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> uygulamalarıdır arabirimde yalnızca bir yöntem olarak oluşturmak çok basittir: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Bu yöntemin işi, bir gelen iletiyi incelemek ve geçerli uç nokta hizmet sözleşmesindeki yöntemin adı eşittir bir dize döndürecek şekilde silinir.  
   
  Bu örnekte, işlem Seçici edinme bir <xref:System.Xml.XmlDictionaryReader> gelen ileti gövdesi kullanarak kullanıcının <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Geçerli öğenin adını ve ad alanı URI almak ve bunları birleştirmek yeterlidir, böylece bu yöntem okuyucu zaten ileti gövdesinin ilk alt yerleştirir. bir `XmlQualifiedName` ardından kullanılan karşılık gelen işlemi bakmak işlem Seçici tarafından tutulan sözlüğü.  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  İleti gövdesi ile erişme <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> veya iletinin gövdesi içeriğe erişim neden olan iletiyi bir daha ayrıntılı işleme için geçersiz olduğu anlamına gelir "okundu" olarak işaretlenecek iletinin sağlayan diğer yöntemlerden herhangi birini. Bu nedenle, işlem Seçici, aşağıdaki kodda gösterilen yöntemi ile gelen iletinin bir kopyasını oluşturur. Okuyucunun konumu denetim turu sırasında değiştirilmediğinden olduğundan, özgün iletinin tam bir kopyası sonuçları yeni oluşturulan ileti için ileti özelliklerinde ve ileti üst da kopyalanır, tarafından başvurulabilir:  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  Konuyu uzatmamak amacıyla, aşağıdaki kod alıntı yöntemin uygulanmasını yalnızca gösterir <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, hangi etkiler yapılandırma değişikliklerini bu dağıtıcı için. Bunlar herhangi bir iş yapmadan çağırana döndürmesi için diğer yöntemler gösterilmez.  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  Sözlük, yeni bir doldurulduktan sonra `DispatchByBodyElementOperationSelector` bu bilgilerle oluşturulur ve gönderme zamanının işlem Seçici ayarlayın:  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  İşlem Seçici ileti gövdesi öğesinde yalnızca temel gönderir ve "Action" yoksayar olduğundan, döndürülen yanıtı "Action" başlığındaki joker atayarak denetlemek için çalışma zamanı bildirmek için gereklidir "*" için `ReplyAction` özelliği <xref:System.ServiceModel.OperationContractAttribute>. Ayrıca, "Action" özelliği için joker karakter olarak ayarlanmış bir varsayılan işlemi için gerekli olan "\*". Varsayılan işlemi dağıtılamaz ve olmayan tüm iletiler alan bir `DispatchBodyElementAttribute`:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

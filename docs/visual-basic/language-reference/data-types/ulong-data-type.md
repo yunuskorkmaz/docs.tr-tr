@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 13dec9f298655a4bfe6672e2dbba7c7262379cc4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 60f39d7bd294a737b5e3c6d5877f5d7e46269dc1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202887"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125515"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerleri de dahil edebilirsiniz `UL` veya `ul` [türü karakteri](../../programming-guide\language-features\data-types/type-characters.md) belirtmek için `ULong` aşağıdaki örnekte gösterildiği gibi veri türü.
+Sayısal değişmez değerleri de dahil edebilirsiniz `UL` veya `ul` [türü karakteri](../../programming-guide/language-features/data-types/type-characters.md) belirtmek için `ULong` aşağıdaki örnekte gösterildiği gibi veri türü.
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -84,5 +84,5 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
  [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Nasıl Yapılır: İmzalanmamış türler isteyen bir Windows işlevi çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

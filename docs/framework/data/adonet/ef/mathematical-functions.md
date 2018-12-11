@@ -2,12 +2,12 @@
 title: Matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837316"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143681"
 ---
 # <a name="mathematical-functions"></a>Matematik işlevleri
 
@@ -35,7 +35,7 @@ Belirtilen ifade arkkosinüsünü değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: BİR `Double`.
+`expression`: A `Double`.
 
 **Dönüş değeri**
 
@@ -51,7 +51,7 @@ Belirtilen ifade arksinüsünü değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: BİR `Double`.
+`expression`: A `Double`.
 
 **Dönüş değeri**
 
@@ -67,7 +67,7 @@ Belirtilen sayısal ifade arktanjantını değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: BİR `Double`.
+`expression`: A `Double`.
 
 **Dönüş değeri**
 
@@ -83,7 +83,7 @@ Radyan cinsinden tanjantı iki belirli sayısal ifade olan açıyı döndürür.
 
 **Bağımsız Değişkenler**
 
-`expression`: BİR `Double`.
+`expression`: A `Double`.
 
 **Dönüş değeri**
 
@@ -116,7 +116,7 @@ Trigonometrik radyan cinsinden belirtilen bir açının kosinüsünü hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -132,7 +132,7 @@ Trigonometrik radyan cinsinden belirtilen bir açının kotanjantını hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -164,7 +164,7 @@ Belirtilen bir sayısal ifade üs değerini hesaplar.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -178,7 +178,7 @@ Belirtilen ifadedeki en büyük tamsayı daha az veya eşit ona dönüştürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -195,7 +195,7 @@ Belirtilen doğal logaritmasını hesaplar `float` ifade.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -211,7 +211,7 @@ Belirtilen 10 tabanında logaritmasını döndürür `Double` ifade.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -326,7 +326,7 @@ Trigonometrik radyan cinsinden belirtilen bir açının sinüsünü hesaplar ve 
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -340,7 +340,7 @@ Belirtilen ifadenin kare kökünü döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -354,7 +354,7 @@ Belirtilen ifade karesini döndürür.
 
 **Bağımsız Değişkenler** 
 
-`expression`: BİR `Double`. 
+`expression`: A `Double`. 
 
 **Dönüş değeri** 
 
@@ -384,8 +384,8 @@ Belirtilen bir ifade tanjantını hesaplar.
 
 SqlClient destekleyen matematiksel işlevler hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:  
   
-**SQL Server 2005:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 ve sonraki sürümler:** [matematik işlevleri (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005'te:** [Matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:** [Matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 ve sonraki sürümler:** [Matematik işlevleri (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [Entity Framework için SqlClient İşlevleri](sqlclient-for-ef-functions.md)

@@ -1,31 +1,33 @@
 ---
 title: Ad Alanları (F#)
-description: F# ad alanı, program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemek nasıl olanak tanıdığını öğrenin.
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Bilgi nasıl bir F# ad alanı, program öğeleri gruplandırması için bir ad eklemek sağlayarak ilgili işlevleri alanlarına kodunu düzenlemenize olanak sağlar.
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178266"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169041"
 ---
 # <a name="namespaces"></a>Ad Alanları
 
-Bir ad alanı program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemenize olanak tanır.
+Bir ad alanı gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemenize olanak tanır F# program öğeleri. Ad alanları, genellikle üst düzey öğe içinde F# dosyaları.
 
 ## <a name="syntax"></a>Sözdizimi
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir ad alanında kod koymak istiyorsanız, ilk bildirimi dosyasındaki ad alanı belirtmesi gerekir. Tüm dosya içeriğini, ardından ad alanı bir parçası haline gelir.
+Bir ad alanında kod koymak istiyorsanız, ilk bildirimi dosyasındaki ad alanı belirtmesi gerekir. Tüm dosya içeriğini, ad alanı bir parçası haline gelir, diğer ad bildirimi var sağlanan dosyasında daha fazla. Bu durumda, sonraki ad alanı bildirimi gönderinizi tüm kod ilk ad alanı içinde olacak şekilde değerlendirilir.
 
 Ad alanları, doğrudan değerleri ve işlevler içeremez. Bunun yerine, değerleri ve işlevleri modüllerde eklenmelidir, ve modülleri ad alanlarında yer alır. Ad alanlarını, türleri, modülleri içerebilir.
 
-Ad alanları açıkça ad alanı anahtar sözcüğüyle veya örtük olarak bir modül bildirirken bildirilebilir. Bir ad alanını açıkça bildirmek için ad alanı adından önce gelen ad alanı anahtar sözcüğünü kullanın. Aşağıdaki örnek, bir ad alanı pencere öğeleri ve o ad alanında bulunan bir modül türü ile bildirir. bir kod dosyası gösterir.
+XML belge açıklamaları bir ad alanı bildirilebilir, ancak bunlar yoksayılır. Derleyici yönergeleri bir ad alanı da bildirilebilir.
+
+Ad alanları açıkça ad alanı anahtar sözcüğüyle veya örtük olarak bir modül bildirirken bildirilebilir. Bir ad alanını açıkça bildirmek için ad alanı adından önce gelen ad alanı anahtar sözcüğünü kullanın. Aşağıdaki örnek, bir ad alanını tanımlayan bir kod dosyası gösterir. `Widgets` ile ve o ad alanında bulunan bir modül türü.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Ayrıca genel kullanabileceğiniz üst düzey .NET ad alanı, örneğin başvurm
 
 ## <a name="recursive-namespaces"></a>Özyinelemeli ad alanları
 
-F# 4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu sağlayan ad alanları kavramını sunar.  Bu aracılığıyla yapılır `namespace rec`.  Kullanım `namespace rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
+Ad alanları, aynı zamanda karşılıklı özyinelemeli olarak tüm kapsanan kodunu izin vermek için özyinelemeli olarak bildirilebilir.  Bu aracılığıyla yapılır `namespace rec`. Kullanım `namespace rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek. Bunun bir örneği verilmiştir:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu F#'ta kaldırdıysanız express mümkün olmazdı `rec` from anahtar sözcüğü `MutualReferences` ad alanı.
+Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın. Bu, express mümkün olmazdı F# kaldırdıysanız `rec` from anahtar sözcüğü `MutualReferences` ad alanı.
 
-Bu özellik için de kullanılabilir olan en üst düzey [modülleri](modules.md) F# 4.1 veya üzeri.
+Bu özellik için de kullanılabilir olan en üst düzey [modülleri](modules.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
 - [Modüller](modules.md)
-- [F# RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

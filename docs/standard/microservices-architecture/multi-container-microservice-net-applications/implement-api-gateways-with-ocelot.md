@@ -4,12 +4,12 @@ description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir o
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 69b4e36d085c9121cf6d70e50214a81bb649664b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e6ffef646f860a07920c37d239ee7f2e379aac92
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297406"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143863"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>API ağ geçitleri ile Ocelot uygular
 
@@ -412,7 +412,7 @@ Hizmetine olduğundan BFF üzerinde birden çok API ağ geçitleri ile sınırla
 
 Ancak, Ocelot ayrıca kimlik/Auth mikro hizmet, bu diğer diyagram olduğu gibi bir API ağ geçidi sınırında oturan destekler.
 
- ![API ağ geçidi (ağ) altındaki kimlik mikro hizmet ile kimlik doğrulaması: 1) AG bir kimlik doğrulama belirteci kimlik mikro hizmet istekleri, 2) kimlik mikro hizmet toke AG, kimlik doğrulaması belirtecini kullanarak mikro hizmetler gelen ağ istekleri 3 - 4) döndürür.](./media/image40.png)
+ ![API ağ geçidi (ağ) altındaki kimlik mikro hizmet ile kimlik doğrulaması: (1) AG kimlik mikro hizmet bir kimlik doğrulama belirteci isteklerini, 2) kimlik mikro hizmet toke AG, kimlik doğrulaması belirtecini kullanarak mikro hizmetler gelen ağ istekleri 3 - 4) döndürür.](./media/image40.png)
 
 **Şekil 6-40**. Ocelot kimlik doğrulaması
 
@@ -580,5 +580,5 @@ Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway k
   [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
-[Önceki](background-tasks-with-ihostedservice.md)
-[İleri](../microservice-ddd-cqrs-patterns/index.md)
+>[Önceki](background-tasks-with-ihostedservice.md)
+>[İleri](../microservice-ddd-cqrs-patterns/index.md)

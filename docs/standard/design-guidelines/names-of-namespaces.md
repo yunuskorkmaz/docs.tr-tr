@@ -1,6 +1,6 @@
 ---
 title: Ad alanlarının adları
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - names [.NET Framework], namespaces
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991278"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143447"
 ---
 # <a name="names-of-namespaces"></a>Ad alanlarının adları
 Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yeterli netlik ad alanı içeriğini olma olasılığı nedir hemen bilmek framework kullanarak programcısı için oluşturuyor. Aşağıdaki şablonu genel bir kural ad alanlarını adlandırma belirtir:  
@@ -83,7 +82,7 @@ Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yete
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

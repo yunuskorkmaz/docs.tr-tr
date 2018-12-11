@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152791"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -83,7 +83,7 @@ ASP.NET Core için yerleşik desteği vardır ve dahili olarak bilinen bir tekni
 
 Statik cling sınıflarınızı statik yöntemler çağrı yapmak veya yan etkileri veya bağımlılıkları altyapıya sahip statik özelliklerine erişim oluşur. Örneğin, sırasıyla bir veritabanına yazan, statik bir yöntemi çağıran bir yöntemi varsa, yöntemi sıkı şekilde veritabanına bağlı. Bu veritabanı çağrısı keser herhangi bir şey yönteminizi çalışmamasına neden olur. Bu tür testler statik çağrıları sahte ticari sahte kitaplıkları gerektiren ya da bir test veritabanı yerinde yalnızca test edilebilir olduğundan bu tür yöntemler test öğesinin kolay değildir. Altyapı, özellikle de tamamen durum bilgisi olmayan herhangi bir bağımlılığa sahip olmayan statik çağrıları çağrı ve bağ veya (ötesinde kodu statik çağrısı kendisini eşlenmesiyle) Test Edilebilirlik üzerinde hiçbir etkisi bir sakınca yoktur.
 
-Birçok geliştiricinin statik cling ve genel durum risklerini anlayın, ancak kendi kod aracılığıyla doğrudan belirli uygulamalar için yine de sıkı bir şekilde birleştirin. "Bağlantılı yeni bir" Bu eşleştirmeye bir anımsatıcı ve yeni anahtar sözcük kullanımını olmayan genel bir condemnation olacak şekilde tasarlanmıştır. Gibi statik yöntem çağrılarını türleri genellikle dış bağımlılıkları olmayan yeni örneklerini değil sıkı bir şekilde kod uygulama ayrıntılarını birleştirin veya test daha zor hale. Ancak, bir sınıf örneği, her zaman sabit kodlamak için o belirli örnekte ilgili belirli bir konumda mantıklıdır veya bağımlılık olarak bu örneğe istemek için daha iyi bir tasarım olacaksa, dikkate alınması gereken yalnızca bir kısa dakikanızı ayırın.
+Birçok geliştiricinin statik cling ve genel durum risklerini anlayın, ancak kendi kod aracılığıyla doğrudan belirli uygulamalar için yine de sıkı bir şekilde birleştirin. "Bağlantılı yeni bir" Bu eşleştirmeye bir anımsatıcı ve değil bir genel condemnation kullanımını olacak şekilde tasarlanmış `new` anahtar sözcüğü. Gibi statik yöntem çağrılarını türleri genellikle dış bağımlılıkları olmayan yeni örneklerini değil sıkı bir şekilde kod uygulama ayrıntılarını birleştirin veya test daha zor hale. Ancak, bir sınıf örneği, her zaman sabit kodlamak için o belirli örnekte ilgili belirli bir konumda mantıklıdır veya bağımlılık olarak bu örneğe istemek için daha iyi bir tasarım olacaksa, dikkate alınması gereken yalnızca bir kısa dakikanızı ayırın.
 
 ### <a name="declare-your-dependencies"></a>Bağımlılıklarınızı bildirme
 
@@ -138,7 +138,7 @@ Uygulama Ayrıntıları uygulamadan ayırma başka bir yaklaşım, uygulamanın 
 
 ### <a name="feature-organization"></a>Özellik kuruluş
 
-Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler veya özellik dilim adlandırılır (Ayrıca bkz: [dikey dilimleri](https://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler veya özellik dilim adlandırılır (Ayrıca bkz: [Dikey dilimleri](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC, bu amaçla alanlarını destekler. Alanlara kullanarak denetleyicileri ve görünümleri klasörleri (aynı zamanda ilişkili herhangi bir model) her alan klasördeki ayrı kümeleri oluşturabilirsiniz. Şekil 7-1 alanlara kullanarak bir örnek klasör yapısını gösterir.
 
@@ -403,7 +403,7 @@ ASP.NET Core uygulamaları, sayfalarını sunmadan ve web API'leri aracılığı
 
 ASP.NET Core SignalR ile ASP.NET Core 2.1 kullanılabilir.
 
-Gerçek zamanlı istemci iletişimi WebSockets doğrudan ya da diğer teknikleri kullanarak olup olmadığını uygulama senaryoları çeşitli yararlıdır. Bazı örnekler şunlardır:
+Gerçek zamanlı istemci iletişimi WebSockets doğrudan ya da diğer teknikleri kullanarak olup olmadığını uygulama senaryoları çeşitli yararlıdır. Bazı örnekler:
 
 - Canlı sohbet odası uygulamalar
 
@@ -559,5 +559,5 @@ _Azure dağıtım seçenekleri hakkında daha fazla bilgi [Bölüm 10](developme
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Önceki](common-client-side-web-technologies.md)
-[İleri](work-with-data-in-asp-net-core-apps.md)
+>[Önceki](common-client-side-web-technologies.md)
+>[İleri](work-with-data-in-asp-net-core-apps.md)

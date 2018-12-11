@@ -2,14 +2,14 @@
 title: Mac üzerinde .NET Core için Önkoşullar
 description: MacOS sürümleri ve geliştirme, dağıtma ve macOS makinelerinde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıklar desteklenmiyor.
 author: guardrex
-ms.author: mairaw
-ms.date: 10/03/2018
-ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.author: adegeo
+ms.date: 12/03/2018
+ms.openlocfilehash: b2ab86b7eb9faeab8d4a4cac92b361f64517f638
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584084"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145638"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>MacOS üzerinde .NET Core için Önkoşullar
 
@@ -23,7 +23,10 @@ Bu makalede desteklenen macOS sürümleri ve geliştirme, dağıtma ve macOS mak
 
 * macOS 10.12 "Sierra" ve sonraki sürümler
 
-Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) .NET Core tam listesi için 2.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+Bkz: [.NET Core 2.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) ve [.NET Core 2.2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) tam listesi, .NET Core 2.1 ve .NET Core 2.2 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
+
+Daha fazla bilgi ve indirme bağlantıları [.NET Core 2.2 indirir](https://www.microsoft.com/net/download/dotnet-core/2.2) veya [.NET Core 2.1 yükler](https://www.microsoft.com/net/download/dotnet-core/2.1).
+
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
@@ -32,7 +35,9 @@ Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
 
-Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+Bkz: [.NET Core 1.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) ve [.NET Core 1.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) tam listesi, .NET Core 1.1 ve .NET Core 1.0 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
+
+Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1.0 indirir](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
 ---
 
@@ -94,9 +99,9 @@ Aşağıdaki adımları izleyerek bu sınırı artırabilirsiniz:
 
 2. Bir terminal penceresinde aşağıdaki komutu çalıştırın:
 
-```console
-echo 'ulimit -n 2048' | sudo tee -a /etc/profile
-```
+   ```console
+   echo 'ulimit -n 2048' | sudo tee -a /etc/profile
+   ```
 
 3. Mac'iniz, bu ayarları uygulamak için yeniden başlatın.
 

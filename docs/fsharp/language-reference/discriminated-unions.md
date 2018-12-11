@@ -3,11 +3,11 @@ title: Ayrılmış Birleşimler (F#)
 description: Nasıl kullanacağınızı öğrenin F# ayrılmış birleşimler.
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672253"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154417"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Yukarıdaki kod ayrılmış bir birleşim herhangi birinin üç durum değerleri olan şekil bildirir: dikdörtgen, daire ve Prizma. Her durumda, farklı bir alan kümesi vardır. Dikdörtgenin çalışması sahip iki adlı alanları, iki tür `float`, genişlik ve uzunluk adlarına sahip. Circle durumu yalnızca bir adlandırılmış alana sahiptir RADIUS. Prism durumunun üç alanı vardır alanları adlı iki hangi (genişlik ve yükseklik). Adlandırılmamış anonim alan olarak adlandırılır.
+Yukarıdaki kod, ayrılmış bir birleşim herhangi birinin üç durum değerleri olan şekil bildirir: Dikdörtgen, daire ve Prizma. Her durumda, farklı bir alan kümesi vardır. Dikdörtgenin çalışması sahip iki adlı alanları, iki tür `float`, genişlik ve uzunluk adlarına sahip. Circle durumu yalnızca bir adlandırılmış alana sahiptir RADIUS. Prism durumunun üç alanı vardır alanları adlı iki hangi (genişlik ve yükseklik). Adlandırılmamış anonim alan olarak adlandırılır.
 
 Aşağıdaki örnekler göre adlandırılmış ve anonim alanlar için değerleri sağlayarak nesneleri oluşturmak.
 
@@ -140,7 +140,7 @@ Bunun yerine bir alan veya çevre hesaplamak için sanal bir yöntem, nesne yön
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 Area of circle that has radius 15.000000: 706.858347

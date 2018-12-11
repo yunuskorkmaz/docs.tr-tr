@@ -1,18 +1,18 @@
 ---
-title: Machine learning sözlüğü
-description: Makine öğrenimi terimleri sözlüğü.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: Machine learning sözlüğü - ML.NET
+description: Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri sözlüğü.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150582"
 ---
-# <a name="machine-learning-glossary"></a>Machine learning sözlüğü
+# <a name="machine-learning-glossary-of-important-terms"></a>Machine learning önemli terimler sözlüğü
 
-Özel Modellerinizi oluştururken, yararlı olan önemli makine öğrenimi terimleri derlenmesini listesidir.
+Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri derlenmesini listesidir.
 
 ## <a name="accuracy"></a>Doğruluğu
 
@@ -44,7 +44,7 @@ Bir kategori tahmin etmek için veri kullanıldığında [denetimli makine öğr
 
 Ölçülen, genellikle bir sayısal (çift) değer olguya, ölçülebilir bir özelliği. Birden çok özellik olarak ifade edilir bir **özellik vektör** ve tipik olarak depolanan `double[]`. Özellikler, ölçülen olguya önemli özelliklerini tanımlayın. Daha fazla bilgi için [özellik](https://en.wikipedia.org/wiki/Feature_(machine_learning)) wikipedia makalesi.
 
-## <a name="feature-engineering"></a>Özellik Mühendisliği
+## <a name="feature-engineering"></a>Özellik mühendisliği
 
 Özellik Mühendisliği olan bir dizi tanımlamayı gerektiriyorsa işlem [özellikleri](#feature) ve başka bir deyişle, kullanılabilir olguya veri özelliği vektörlerinden üreten özelliği ayıklama yazılım geliştirme. Daha fazla bilgi için [özellik Mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) wikipedia makalesi.
 
@@ -100,7 +100,7 @@ Tüm işlemlerin bir veri kümesi modeline uyacak şekilde gerekli. Bir işlem h
 
 İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
-## <a name="recall"></a>Geri çağırma
+## <a name="recall"></a>Geri çekme
 
 İçinde [sınıflandırma](#classification), bir sınıf için bir geri çağırma o sınıfa ait gerçekten sınıfına ait öğeleri toplam sayısına göre bölünmüş olarak doğru şekilde tahmin edilen öğeleri sayısıdır.
 

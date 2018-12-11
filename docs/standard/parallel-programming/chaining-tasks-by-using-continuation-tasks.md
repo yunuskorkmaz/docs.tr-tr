@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188351"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129681"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlama, ikinci bir işlem başlatmak ve ona veri aktarmak için tamamlandığında, bir zaman uyumsuz işlem için çok yaygın. Geleneksel olarak, bu geri arama yöntemleri kullanılarak yapılmıştır. Görev paralel Kitaplığı'nda aynı işlevler tarafından sağlanan *devamlılık görevleri*. Devamlılık görevi (sadece devamlılık olarak da bilinir) olarak da bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir *öncül*, öncül görev tamamlandıktan sonra.  
@@ -118,7 +118,7 @@ Zaman uyumsuz programlama, ikinci bir işlem başlatmak ve ona veri aktarmak iç
 ## <a name="associating-state-with-continuations"></a>Devamlılıklarla ilişkilendirme durumu  
  Görev devamlılığıyla rasgele durumu ilişkilendirebilirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Yöntem, aşırı yüklü sürümler sağlar her bir <xref:System.Object> birinin devamlılığın durumunu temsil eden değer. Kullanarak daha sonra bu durum nesnesine erişebilirsiniz <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği. Bu durum nesne `null` bir değer belirtmezseniz.  
   
- Devamlılık durumu, kullanan mevcut kodu dönüştürürken yararlıdır [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanmak için. APM, genellikle nesne durumunu sağladığınız **başlamak *** yöntemi* yöntemi ve durumunu kullanarak daha sonra erişmek <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, bu durumu koruyabilirsiniz TPL kullanmak için APM kullanan kodu dönüştüreceğiniz zaman.  
+ Devamlılık durumu, kullanan mevcut kodu dönüştürürken yararlıdır [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanmak için. APM, genellikle nesne durumunu sağladığınız **başlamak**_yöntemi_ yöntemi ve durumunu kullanarak daha sonra erişmek <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, bu durumu koruyabilirsiniz TPL kullanmak için APM kullanan kodu dönüştüreceğiniz zaman.  
   
  Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> Visual Studio hata ayıklayıcısı nesneleri. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görevin durum nesnesinin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde görmek [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window).  
   

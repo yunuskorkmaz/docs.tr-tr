@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama'
+title: 'Nasıl Yapılır: CLR etkinleştirme sorunlarında hata ayıklama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
@@ -7,14 +7,14 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296730"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149737"
 ---
-# <a name="how-to-debug-clr-activation-issues"></a>Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama
-Uygulamanızın doğru sürümü ortak dil çalışma zamanı (CLR) ile çalışmaya başlama sorunlarla karşılaşırsanız, görüntüleyebilir ve hata ayıklama CLR etkinleştirme günlüklerini. Bu günlükler bir etkinleştirme sorunun kök nedenini belirlerken uygulamanızın beklenenden farklı bir CLR sürümü yükler veya CLR hiç yüklenmiyor çok kullanışlı olabilir. [.NET Framework başlatma hataları: kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bir uygulama için hiçbir CLR bulunduğunda deneyimi açıklanır.  
+# <a name="how-to-debug-clr-activation-issues"></a>Nasıl Yapılır: CLR etkinleştirme sorunlarında hata ayıklama
+Uygulamanızın doğru sürümü ortak dil çalışma zamanı (CLR) ile çalışmaya başlama sorunlarla karşılaşırsanız, görüntüleyebilir ve hata ayıklama CLR etkinleştirme günlüklerini. Bu günlükler bir etkinleştirme sorunun kök nedenini belirlerken uygulamanızın beklenenden farklı bir CLR sürümü yükler veya CLR hiç yüklenmiyor çok kullanışlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bir uygulama için hiçbir CLR bulunduğunda deneyimi açıklanır.  
   
  CLR etkinleştirme günlük bir HKEY_LOCAL_MACHINE kayıt defteri anahtarı veya bir sistem ortam değişkeni kullanarak etkin sistem genelinde olabilir. Kayıt defteri girişini kadar günlük oluşturulur veya ortam değişkenini kaldırılır. Alternatif olarak, farklı kapsam ve süresi ile günlüğe kaydetmeyi etkinleştirmek için bir kullanıcı veya işlem yerel ortam değişkenini kullanabilirsiniz.  
   
@@ -110,7 +110,7 @@ Uygulamanızın doğru sürümü ortak dil çalışma zamanı (CLR) ile çalış
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727  
     ```  
   
--   **İsteğe bağlı özellik Kurulum** Windows 8'de .NET Framework 3.5 etkinleştirme için ifade eder. Bkz: [.NET Framework başlatma hataları: kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bu senaryo hakkında daha fazla bilgi için.  
+-   **İsteğe bağlı özellik Kurulum** Windows 8'de .NET Framework 3.5 etkinleştirme için ifade eder. Bkz: [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bu senaryo hakkında daha fazla bilgi için.  
   
     ```  
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
@@ -118,4 +118,4 @@ Uygulamanızın doğru sürümü ortak dil çalışma zamanı (CLR) ile çalış
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
 - [Dağıtım](../../../docs/framework/deployment/index.md)  
-- [Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Nasıl Yapılır: Bir uygulamayı .NET Framework 4 veya 4.5 destekleyecek şekilde yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

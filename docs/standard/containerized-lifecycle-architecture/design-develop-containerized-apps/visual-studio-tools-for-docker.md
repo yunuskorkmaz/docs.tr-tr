@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086394"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151219"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>(Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
 
@@ -41,7 +41,7 @@ Docker desteği seçerek mevcut bir .NET Core web uygulaması projesine ekleyebi
 
 ![Visual Studio'da yeni bir ASP.NET Core web uygulaması için Docker desteğini etkinleştir](./media/enable-docker-support-visual-studio.png)
 
-Visual Studio 2017'de proje oluşturma sırasında Şekil 4-27: Docker desteğini etkinleştir
+Şekil 4-27: Visual Studio 2017'de proje oluşturma sırasında Docker desteğini etkinleştir
 
 Visual Studio ekleyin ya da Docker desteğini etkinleştirmek ekler bir *Dockerfile* projeye dosya.
 
@@ -50,7 +50,7 @@ Visual Studio ekleyin ya da Docker desteğini etkinleştirmek ekler bir *Dockerf
 >
 > ![Docker'ı etkinleştirme desteği için bir .NET Framework web uygulaması projesi oluşturma](media/enable-docker-compose-support.png)
 
-> Şekil 4-28: Visual Studio 2017'de .NET Framework web uygulaması projesi üzerinde Docker Compose desteği etkinleştirme
+> Şekil 4-28: Visual Studio 2017'de .NET Framework web uygulaması projesi üzerinde Docker Compose desteğini etkinleştirme
 
 ### <a name="add-container-orchestration-support"></a>Kapsayıcı düzenleme desteği ekleme
 
@@ -62,7 +62,7 @@ Kapsayıcı düzenleme desteği projenize ekledikten sonra projeye eklenen bir D
 
 ![Visual Studio'daki Çözüm Gezgini'nde docker dosyaları](media/docker-support-solution-explorer.png)
 
-Şekil 4-29: Docker dosyaları Çözüm Gezgini'nde Visual Studio 2017
+Şekil 4-29: Çözüm Gezgini'nde Visual Studio 2017'de docker dosyaları
 
 Varsa *docker-compose.yml* zaten var, Visual Studio yalnızca ekler gerekli yapılandırma kod satırı için.
 
@@ -72,7 +72,7 @@ Ana menüden **Araçları** > **seçenekleri**, genişletin **kapsayıcı Araçl
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-Şekil 4-30: seçenekleri Docker araçları
+Şekil 4-30: Docker araçları seçenekleri
 
 Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımcı olabilir.
 
@@ -93,5 +93,5 @@ Derleme, hata ayıklama, güncelleştirme ve uygulamaları yerel bir Docker kaps
 Bir ASP.NET Core Docker kapsayıcısını bir kapsayıcı kayıt defterine dağıtın: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[Önceki](docker-apps-inner-loop-workflow.md)
-[İleri](set-up-windows-containers-with-powershell.md)
+>[Önceki](docker-apps-inner-loop-workflow.md)
+>[İleri](set-up-windows-containers-with-powershell.md)

@@ -1,19 +1,19 @@
 ---
 title: İstemci tarafı doğrulaması (sunum katmanlarında doğrulama)
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | İstemci tarafı doğrulaması (sunum katmanlarında doğrulama)
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | İstemci tarafı doğrulama temel kavramlarını keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582430"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130084"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>İstemci tarafı doğrulaması (sunum katmanlarında doğrulama)
 
-Etki alanı modeli gerçekte kaynağıdır ve sonuç olarak etki alanı model düzeyinde doğrulama olmalıdır bile hem etki alanı model düzeyi (sunucu tarafı) hem de istemci tarafında doğrulama hala işlenebilir.
+Etki alanı modeli gerçekte kaynağıdır ve sonuç olarak etki alanı model düzeyinde doğrulama olmalıdır bile hem etki alanı model düzeyi (sunucu tarafı) hem de kullanıcı Arabirimi (istemci tarafı) doğrulama hala işlenebilir.
 
 İstemci tarafı doğrulama, kullanıcılar için harika bir kolaylığıdır. Gidiş dönüş bekleniyor aksi açabiliyorduk zaman doğrulama hataları döndürebilir sunucuya kaydeder. İş dünyasında bile birkaç kez her gün yüzlerce çarpılan saniyelerin kesirlerini ekler miktarda zaman harcama ve sıkıntıya. Basit ve anında doğrulama kullanıcıların giriş ve çıkış daha iyi kalite üreten ve daha verimli çalışmanıza olanak tanır.
 
@@ -29,27 +29,27 @@ Bu nedenle, istemci tarafı kod, genellikle Viewmodel'lar doğrulayın. Ayrıca 
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin mobil uygulamalarında doğrulama
 
--   **Metin doğrulamak giriş ve hatalarını gösterme**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **Metin doğrulamak giriş ve hatalarını gösterme** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Doğrulama geri çağırma**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Doğrulama geri çağırma** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları doğrulama
 
--   **Rick Anderson. Doğrulama ekleme**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson. Doğrulama ekleme** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA doğrulama Web uygulamaları (Angular 2, TypeScript, JavaScript)
 
--   **ADO Kukic. Angular 2 Form doğrulama**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **ADO Kukic. Angular 2 Form doğrulama** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form doğrulaması**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Form doğrulaması** \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Doğrulama.** Meltem belgeleri.
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Doğrulama.** Meltem belgeleri. \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Özet olarak, doğrulama ilgili en önemli kavramları şunlardır:
 
@@ -59,10 +59,8 @@ Bu nedenle, istemci tarafı kod, genellikle Viewmodel'lar doğrulayın. Ayrıca 
 
 - Bir toplama gibi birçok ilgili nesneleri oluşturmanız gerekir ve bunların tümünü oluşturulduktan sonra yalnızca geçerli olduğu Fabrika deseni kullanmayı düşünün.
 
-- Bir altyapı Framework'te güçlü bir bağımlılık olması gerektiği için doğrulama çerçeveleri sunu katmanı veya uygulama/hizmet katmanı gibi belirli katmanlarında ancak genellikle etki alanı model katmanında en iyi şekilde kullanılır.
-
 - Uygulama proaktif olarak olabileceğinden çalışmalarının çoğu istemci tarafı yedekli doğrulama sahip, uygundur.
 
 >[!div class="step-by-step"]
-[Önceki](domain-model-layer-validations.md)
-[İleri](domain-events-design-implementation.md)
+>[Önceki](domain-model-layer-validations.md)
+>[İleri](domain-events-design-implementation.md)

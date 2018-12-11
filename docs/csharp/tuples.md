@@ -3,12 +3,12 @@ title: Tanımlama grubu türleri - C# Kılavuzu
 description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186037"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155138"
 ---
 # <a name="c-tuple-types"></a>C# demet türleri #
 
@@ -88,7 +88,7 @@ Bu durumlarda, bir dizi alan adı projeksiyonlar kullanılabilir değil, C# 7.0 
 
 ## <a name="equality-and-tuples"></a>Eşitlik ve diziler
 
-C# 7.3 ile başlayarak, tanımlama grubu türleri desteği `==` ve `!=` işleçleri. Bu işleçler sırayla sağ bağımsız değişkeni her üyesi sol bağımsız değişkeni her üyesi karşılaştırarak çalışır. Bu karşılaştırmalar kısa devre oluşturur. `==` İşleci durdurur üyeleri bir çifti eşit değil olarak değerlendiriliyor. `!=` İşleci durdurur üyeleri bir çifti eşit olarak değerlendiriliyor. Aşağıdaki kod örnekleri kullan `==`, ancak tüm uygulamak için karşılaştırma kurallarını `!=`. Aşağıdaki kod örneği, iki tamsayı çiftleri için bir eşitlik karşılaştırması gösterir:
+C# 7.3 ile başlayarak, tanımlama grubu türleri desteği `==` ve `!=` işleçleri. Bu işleçler sırayla sağ bağımsız değişkeni her üyesi sol bağımsız değişkeni her üyesi karşılaştırarak çalışır. Bu karşılaştırmalar kısa devre oluşturur. Bunlar üyeleri bir çifti eşit değil olarak değerlendiriliyor durdurur. Aşağıdaki kod örnekleri kullan `==`, ancak tüm uygulamak için karşılaştırma kurallarını `!=`. Aşağıdaki kod örneği, iki tamsayı çiftleri için bir eşitlik karşılaştırması gösterir:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
@@ -146,7 +146,7 @@ Demetler en yaygın kullanımlarından biri, yöntemi dönüş değeridir. Bir �
 > Bu örnekler düzeltilemeyen örnek standart sapma hesaplaması.
 > Düzeltilmiş örnek standart sapma formülü (N-1) tarafından N yerine mean squared fark toplamı olarak çizilmesini sağlıyordu `Average` uzantı yöntemi yapar. Standart sapma bu formülleri arasındaki farklar hakkında daha fazla ayrıntı için istatistikleri metin başvurun.
 
-Yukarıdaki kod Ders Kitabı standart sapma formülü aşağıdadır. Doğru yanıtı oluşturur, ancak bu verimsiz bir uygulaması. Bu yöntem dizisi iki kez numaralandırır: ortalama üretmek için bir kez ve ortalama farkı karesini ortalamasını üretmek için bir kez.
+Yukarıdaki kod Ders Kitabı standart sapma formülü aşağıdadır. Doğru yanıtı oluşturur, ancak bu verimsiz bir uygulaması. Bu yöntem dizisi iki kez listeler: Ortalama üretmek için bir kez ve ortalama farkı karesini ortalamasını üretmek için bir kez.
 (Ortalama fark hesaplama ve bu farklar ortalaması yalnızca bir sabit listesi yapsak LINQ sorguları gevşek, değerlendirildiğini unutmayın.)
 
 Standart sapma yalnızca bir sabit listesi sırası kullanarak hesaplar alternatif bir formül yoktur.  Sıralı listeler gibi bu hesaplama iki değer üretir: dizisindeki tüm öğelerin toplamının yanı sıra, her bir değerin toplamını kare:

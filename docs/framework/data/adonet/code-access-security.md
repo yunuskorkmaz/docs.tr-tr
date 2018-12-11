@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453183"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144877"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework, rol tabanlı güvenlik yanı sıra kod erişimi güvenliği (CAS), ikisi için de ortak dil çalışma (CLR) tarafından sağlanan bir ortak altyapısı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında, çoğu uygulama sorumlusu ve kullanıcı izinleriyle çalıştırın. Sonuç olarak, bilgisayar sistemlerini kötü amaçlı, gizliliği bozulmuş ve özel veri olabilir veya yazılım hatası doldurulmuş yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırılır.  
@@ -23,7 +23,7 @@ ms.locfileid: "49453183"
  CLR kod gerçekleştirmek için izni olan işlemleri gerçekleştirmek için kod sağlar. Kod izinler isteyebilir ve bu istekleri yönetici tarafından ayarladığınız güvenlik ilkesine göre dikkate alınır.  
   
 > [!NOTE]
->  CLR içinde yürütülen kodun kendisi verilemiyor. Örneğin, kod isteyebilir ve güvenlik ilkesinin izin verdiği ancak hiçbir zaman daha fazla izin verilen daha az izin verilmesi. İzin verirken hiçbir izinlerle hiç başlatın ve sonra gerçekleştirilen belirli görev için en düşük izinleri ekleyin. Tüm izinleri ile başlayan ve ardından tek olanları reddetme müşteri adayları gerekli daha fazla izin veren gelen istenmeyen güvenlik açıkları içerebilir güvenli uygulamalar için. Daha fazla bilgi için [NIB: güvenlik ilkesi yapılandırma](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) ve [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  CLR içinde yürütülen kodun kendisi verilemiyor. Örneğin, kod isteyebilir ve güvenlik ilkesinin izin verdiği ancak hiçbir zaman daha fazla izin verilen daha az izin verilmesi. İzin verirken hiçbir izinlerle hiç başlatın ve sonra gerçekleştirilen belirli görev için en düşük izinleri ekleyin. Tüm izinleri ile başlayan ve ardından tek olanları reddetme müşteri adayları gerekli daha fazla izin veren gelen istenmeyen güvenlik açıkları içerebilir güvenli uygulamalar için. Daha fazla bilgi için [NIB: Güvenlik İlkesi yapılandırma](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) ve [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Kod erişim izinleri üç tür vardır:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "49453183"
 ### <a name="requesting-permissions"></a>İzinler isteyen  
  İzinler isteyen amacı çalıştırmak için ve yalnızca gerçekten gerekli izinleri aldığından emin olmak için hangi izinlerin uygulamanızın gerektirdiği çalışma zamanı bilgilendirmektir. Örneğin, uygulamanızın yerel diske veri yazmak gerekiyorsa gerektiriyorsa <xref:System.Security.Permissions.FileIOPermission>. Bu izin verilen henüz, diske yazma girişiminde bulunduğunda uygulama başarısız olur. Ancak, uygulama isterse `FileIOPermission` ve izin verilmeyen, uygulama gizliliğe özel oluşturur ve yüklenmeyecek.  
   
- Uygulamayı yalnızca diskten verileri okumak için gereken yere bir senaryoda, hiçbir zaman herhangi bir yazma izni verilmesi isteyebilir. Bir hata veya kötü amaçlı saldırı durumunda kodunuzun üzerinde çalıştığı veri zarar veremez. Daha fazla bilgi için [NIB: izinleri isteyen](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ Uygulamayı yalnızca diskten verileri okumak için gereken yere bir senaryoda, hiçbir zaman herhangi bir yazma izni verilmesi isteyebilir. Bir hata veya kötü amaçlı saldırı durumunda kodunuzun üzerinde çalıştığı veri zarar veremez. Daha fazla bilgi için [NIB: İzinleri isteyen](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Rol tabanlı güvenlik ve CA'ları  
  Rol tabanlı güvenlik ve kod erişim güvenliği (CAS) hem uygulama, uygulamanız için genel güvenliği geliştirir. Rol tabanlı güvenlik bir Windows hesabı veya güvenlik sorumlusunun hakkında bilgi için geçerli iş parçacığı kullanılabilir hale getirme özel bir kimlik temel alabilir. Ayrıca, uygulamaları genellikle veri veya kullanıcı tarafından sağlanan kimlik bilgilerini temel kaynaklarına erişim sağlamak için gerekli değildir. Genellikle, bu tür uygulamalar, bir kullanıcının rolünü denetlemek ve bu rollere göre kaynaklarına erişim sağlama.  
@@ -71,8 +71,8 @@ ms.locfileid: "49453183"
 |-----------------------------------|-----------------|  
 |`Action`|Eylemi alır veya bir güvenlik ayarlar. Devralınan <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Etkinleştirir veya bir bağlantı dizesi boş parola kullanımı devre dışı bırakır. Geçerli değerler `true` (boş parola kullanımını etkinleştirmek için) ve `false` (boş parola kullanımı devre dışı bırakmak için). Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`ConnectionString`|İzin verilen bağlantı dizesini tanımlar. Birden çok bağlantı dizelerini tanımlanabilir. **Not:** bağlantı dizenizi bir kullanıcı kimliği veya parola dahil değildir. Bu sürümde, .NET Framework yapılandırma aracı kullanarak bağlantı dizesi kısıtlamaları değiştiremezsiniz. <br /><br /> Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|İzin verilen veya izin verilmeyen bir bağlantı dizesi parametreleri tanımlar. Bağlantı dizesi parametreleri biçiminde tanımlanan  *\<parametre adı > =*. Noktalı virgül (;) kullanarak ayrılmış birden çok parametre belirtilebilir. **Not:** belirtmezseniz, `KeyRestrictions`, ancak ayarladığınız `KeyRestrictionBehavior` özelliğini `AllowOnly` veya `PreventUsage`, hiçbir ek bağlantı dizesi parametreleri izin verilir. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`ConnectionString`|İzin verilen bağlantı dizesini tanımlar. Birden çok bağlantı dizelerini tanımlanabilir. **Not:**  Bir kullanıcı kimliği veya parola bağlantı dizenizi içermez. Bu sürümde, .NET Framework yapılandırma aracı kullanarak bağlantı dizesi kısıtlamaları değiştiremezsiniz. <br /><br /> Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|İzin verilen veya izin verilmeyen bir bağlantı dizesi parametreleri tanımlar. Bağlantı dizesi parametreleri biçiminde tanımlanan  *\<parametre adı > =*. Noktalı virgül (;) kullanarak ayrılmış birden çok parametre belirtilebilir. **Not:**  Siz belirtmezseniz `KeyRestrictions`, ancak ayarladığınız `KeyRestrictionBehavior` özelliğini `AllowOnly` veya `PreventUsage`, hiçbir ek bağlantı dizesi parametreleri izin verilir. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictionBehavior`|Yalnızca ek parametreleri izin verilen bağlantı dizesi parametreleri tanımlar (`AllowOnly`), veya izin verilmeyen ek parametreleri tanımlar (`PreventUsage`). `AllowOnly` varsayılandır. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Türetilen bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. Devralınan <xref:System.Attribute>.|  
 |`Unrestricted`|Kaynak Kısıtlanmamış izni bildirilmiş olup olmadığını gösterir. Devralınan <xref:System.Security.Permissions.SecurityAttribute>.|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>ADO.NET kod erişim güvenlik izinlerini kullanarak doğrulanıyor  
- Kısmi güven senaryoları için CA ayrıcalıkları belirli yöntemler için kodunuzdaki belirterek gerektirebilir bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Bu ayrıcalık yürürlükte kısıtlı güvenlik ilkesi tarafından izin verilmiyorsa, kodunuzu çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik İlkesi hakkında daha fazla bilgi için bkz. [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) ve [NIB: güvenlik ilkesi en iyi](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ Kısmi güven senaryoları için CA ayrıcalıkları belirli yöntemler için kodunuzdaki belirterek gerektirebilir bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Bu ayrıcalık yürürlükte kısıtlı güvenlik ilkesi tarafından izin verilmiyorsa, kodunuzu çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik İlkesi hakkında daha fazla bilgi için bkz. [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) ve [NIB: Güvenlik İlkesi en iyi](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, belirli bir bağlantı dizesi gerektirir kodunun nasıl yazılacağını gösterir. Sınırsız izinleri reddetme benzetim <xref:System.Data.SqlClient>, gerçek hayatta CAS ilkesini kullanarak bir Sistem Yöneticisi uygulayan.  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)  
  [Rol Tabanlı Güvenlik](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

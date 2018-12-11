@@ -4,12 +4,12 @@ description: Durum Yönetimi ve ölçeklendirmek için kalıcı depolama sunucus
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754689"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155070"
 ---
 # <a name="serverless-architecture-considerations"></a>Sunucusuz mimari konuları
 
@@ -71,7 +71,7 @@ Sunucusuz bir mimari diğer işlevleri kullanan işlevler içerebilir. Aslında,
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Hata Yönetimi ve dayanıklılık sağlama
 
-Dikkate almak önemlidir *devre kesici düzeni*: herhangi bir nedenle bir hizmet başarısız olmaya devam ederse, bu hizmeti tekrar tekrar çağırmak için önerilir değil. Bunun yerine alternatif bir hizmet olarak adlandırılır veya bağımlı hizmetinin sistem durumunu yeniden kurulur kadar bir ileti döndürdü. Sunucusuz mimari stratejisi çözme ve hizmet içi bağımlılıkları yönetmek için dikkate almanız gerekir.
+Dikkate almak önemlidir *devre kesici düzeni*: Herhangi bir nedenle bir hizmet başarısız olmaya devam ederse, bu hizmeti tekrar tekrar çağırmak için önerilir değil. Bunun yerine alternatif bir hizmet olarak adlandırılır veya bağımlı hizmetinin sistem durumunu yeniden kurulur kadar bir ileti döndürdü. Sunucusuz mimari stratejisi çözme ve hizmet içi bağımlılıkları yönetmek için dikkate almanız gerekir.
 
 Devre kesici düzeni devam etmek için Hizmetleri hataya dayanıklı ve dayanıklı olması gerekir. Hataya dayanıklılık özelliği bile beklenmeyen özel durum sonra çalışmaya devam etmesini uygulamanızın başvurduğu veya geçersiz durumları karşılaşıldı. Dayanıklılığı genellikle bir işlev kod ve özel durumları işlemek nasıl yazılmış oluşur. Dayanıklılık nasıl özellikli uygulamanın hatalardan Kurtarma sırasında olduğu için ifade eder. Dayanıklılığı genellikle sunucusuz platform tarafından yönetilir. Platform var olan bir başarısız olduğunda yeni bir sunucusuz işlev örneği oluşturan dönmeye başlatabilmeniz gerekir. Platform, ayrıca her yeni örneği başarısız olduğunda yeni örnekleri hızla çalıştırarak durdurmak akıllı olmalıdır.
 
@@ -82,5 +82,5 @@ Daha fazla bilgi için [devre kesici desenini uygulama](../microservices-archite
 Sunucusuz, önemli bir avantajı tüm uygulamayı yeniden dağıtmak zorunda kalmadan belirli bir işlev yükseltmek yeteneğidir. Başarılı olması yükseltmeler için bunların çağrılması Hizmetleri kodunun doğru sürüme yönlendirilebilmesi işlevleri tutulan olması gerekir. Yeni sürümlerini dağıtmak için bir strateji de önemlidir. Yaygın bir yaklaşım "Yeşil/dağıtımları mavi." kullanmaktır. Yeşil dağıtım geçerli bir işlevdir. Yeni "mavi" sürümü üretime dağıtılmadan ve test. Yeni sürümü Canlı gelecektir geçişleri test ederken, yeşil ve mavi sürümleri değiştirilir. Herhangi bir sorun karşılaşılırsa geri değiştirilebilir. Sürüm oluşturma ve yeşil/mavi dağıtımlarını destekleyen bir bileşimi sürüm değişikliklerini uyum sağlamak için İşlevler yazma ve dağıtımları işlemek için sunucusuz platformu ile çalışma gerektirir. Olası bir yaklaşım açıklanmıştır proxy'leri kullanmaktır [Azure sunucusuz platformu](azure-functions.md#proxies) bölüm.
 
 >[!div class="step-by-step"]
-[Önceki](serverless-architecture.md)
-[İleri](serverless-design-examples.md)
+>[Önceki](serverless-architecture.md)
+>[İleri](serverless-design-examples.md)

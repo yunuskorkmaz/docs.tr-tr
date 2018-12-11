@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: bc6b1796ed7b12a04affc521ac2efee515c48ae2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297523"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150556"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -101,7 +101,7 @@ Eklemek için bir *docker-compose.yml* bölümünde projeye sağ tıklayın, tü
 
 Aşağıdaki bölümlerde, biz bu dosyaların her giden bilgiler açıklanmaktadır. Visual Studio bu işi sizin yerinize bunları yapar, ancak bir Dockerfile içinde unsurları anlamak kullanışlıdır.
 
-### <a name="option-a-creating-a-project-using-an-existing-official-net-docker-image"></a>Seçenek A: var olan resmi .NET Docker görüntüsünü kullanarak bir proje oluşturma
+### <a name="option-a-creating-a-project-using-an-existing-official-net-docker-image"></a>Seçenek A: Var olan resmi .NET Docker görüntüsünü kullanarak bir proje oluşturma
 
 Genellikle resmi bir depodan alabilirsiniz bir temel görüntünün üstüne kapsayıcınızın özel bir görüntü oluşturun [Docker Hub](https://hub.docker.com/) kayıt defteri. Visual Studio'da Docker desteğini etkinleştirmek ne olacağını perde tam olarak olmasıdır. Dockerfile, var olan bir aspnetcore görüntüsü kullanır.
 
@@ -161,7 +161,7 @@ Ancak ve belirtirseniz bu yeni mid-2017 itibarıyla, hatta aynı etiketi ile ayn
 
 Windows konaktan görüntü çekme bu şekilde, Windows değişken çeker ve bir Linux ana bilgisayarından görüntü adının aynısını çekme Linux değişken çeker.
 
-### <a name="option-b-creating-your-base-image-from-scratch"></a>Seçenek B: temel görüntünüzü sıfırdan oluşturma
+### <a name="option-b-creating-your-base-image-from-scratch"></a>Seçenek B: Temel görüntünüzü sıfırdan oluşturma
 
 Kendi Docker temel görüntüsünde sıfırdan oluşturabilirsiniz. Bu senaryo için Docker ile başlayan bir kişinin önerilmez, ancak kendi temel görüntü belirli bitlerini ayarlamak istiyorsanız, bunu yapabilirsiniz.
 
@@ -300,7 +300,7 @@ Kullanarak bir docker-compose.yml dosyası ile çok kapsayıcılı bir uygulama 
 
 Uygulamanız yalnızca tek bir kapsayıcıya sahip değilse, Docker Konağı (VM veya fiziksel sunucu) dağıtarak çalıştırabilirsiniz. Uygulamanız birden fazla hizmet içeriyor, ancak bunu oluşan bir uygulama olarak ya da tek bir CLI komutu kullanarak dağıtabilirsiniz (docker-compose ayarlama), veya Visual Studio ile bu komut aslında altında kullanacak. Farklı seçenekleri göz atalım.
 
-### <a name="option-a-run-a-single-container-app"></a>Tek kapsayıcı uygulama seçenek A: çalıştırın
+### <a name="option-a-run-a-single-container-app"></a>Seçenek A: Tek kapsayıcı uygulamasını çalıştırma
 
 #### <a name="docker-cli"></a>Docker CLI
 
@@ -320,7 +320,7 @@ Bu durumda, komut kapsayıcının iç bağlantı noktası 5000 ana makinenin 80 
 
 Kapsayıcı Düzenleyicisi desteği eklemediyseniz, ayrıca bir çoklu kapsayıcı uygulaması Visual Studio'da tuşlarına basarak çalıştırabileceğiniz **F5**. Kapsayıcı, docker run kullanarak yerel olarak çalışır.
 
-### <a name="option-b-run-a-multi-container-app"></a>Seçenek B: Çalıştır bir çoklu kapsayıcı uygulaması
+### <a name="option-b-run-a-multi-container-app"></a>Seçenek B: Bir çoklu kapsayıcı uygulaması
 
 Çoğu Kurumsal senaryolarda, Docker uygulaması birden çok Hizmetleri, Şekil 5-10'da gösterildiği gibi çok kapsayıcılı bir uygulama çalıştırmak gereken yani oluşacaktır.
 
@@ -447,5 +447,5 @@ RUN powershell add-windowsfeature web-asp-net45
    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](../net-core-single-containers-linux-windows-server-hosts/index.md)
+>[Önceki](index.md)
+>[İleri](../multi-container-microservice-net-applications/index.md)

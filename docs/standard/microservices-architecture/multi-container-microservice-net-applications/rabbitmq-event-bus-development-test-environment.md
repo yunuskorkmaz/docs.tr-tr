@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672351"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152246"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
 

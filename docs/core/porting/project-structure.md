@@ -1,19 +1,19 @@
 ---
-title: .NET Framework ve .NET Core desteklemek için proje düzenleme
+title: .NET Framework ve .NET Core için proje düzenleme
 description: .NET Framework ve .NET Core yan yana karşı çözüm derlemek istediğiniz proje sahipleri için yardımcı olur.
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512272"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169137"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>.NET Framework ve .NET Core desteklemek için proje düzenleme
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Hem .NET Framework ve .NET Core desteklemek için proje düzenleme
 
-Bu makale, .NET Framework ve .NET Core yan yana karşı çözüm derlemek istediğiniz proje sahiplerine yardımcı olur. Bu, geliştiricilerin bu amaca ulaşmak amacıyla projelerini düzenlemek için çeşitli seçenekler sunar. Aşağıdaki listede, ne zaman .NET Core projesi düzeninizi nasıl karar dikkate alınması gereken bazı tipik senaryolar verilmiştir. Listeden istediğiniz her şeyi kapsamayabilir; projenizin ihtiyaçlarına göre öncelik verin.
+Hem .NET Framework ve .NET Core yan yana için derleyen bir çözüm oluşturmayı öğrenin. Bu amaca ulaşmak amacıyla projelerini düzenlemek için çeşitli seçenekler bakın. Ne zaman .NET Core projesi düzeninizi nasıl karar dikkate alınması gereken bazı tipik senaryolar aşağıda verilmiştir. Listeden istediğiniz her şeyi kapsamayabilir; projenizin ihtiyaçlarına göre öncelik verin.
 
 * [**Var olan projeleri ve .NET Core projeleri tek projelere birleştirin**][option-csproj]
 

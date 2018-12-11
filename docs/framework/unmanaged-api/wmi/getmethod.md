@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773965"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152324"
 ---
 # <a name="getmethod-function"></a>GetMethod işlevi
 Belirtilen yöntem hakkındaki bilgileri alır.
@@ -77,12 +77,12 @@ Bu işlev bir çağrı sarılır [IWbemClassObject::GetMethod](/windows/desktop/
 
 Windows Yönetim ayarlayabilirsiniz [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçisine `null` yöntemi hiçbir parametreleri varsa.
 
-İçinde `ppInSignature` ve `ppOutSignature` iç ve dış parametrelerin, sırasıyla özellikleri olarak açıklayan bir `IWbemClassObject` sistem sınıfının örneğini [_upravit](/windows/desktop/WmiSdk/--parameters). Özelliklerinde `ppInsignature` adlandırılır **Param *** n*burada *n* parametresi yöntem imzası konumudur (gibi `Param1`, `Param2`vb..). Özelliklerinde `ppOutSignature` olarak da adlandırılır **Param *** n*, ve dönüş değeri olarak adlandırılan **ReturnValue**. Daha fazla bilgi ve örnek için bkz. [IWbemClassObject::GetMethod yöntemi](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+İçinde `ppInSignature` ve `ppOutSignature` iç ve dış parametrelerin, sırasıyla özellikleri olarak açıklayan bir `IWbemClassObject` sistem sınıfının örneğini [_upravit](/windows/desktop/WmiSdk/--parameters). Özelliklerinde `ppInsignature` adlandırılır `Param` *n*burada *n* parametresi yöntem imzası konumudur (gibi `Param1`, `Param2`vb..). Özelliklerinde `ppOutSignature` olarak da adlandırılır `Param` *n*, ve dönüş değeri olarak adlandırılan `ReturnValue`. Daha fazla bilgi ve örnek için bkz. [IWbemClassObject::GetMethod yöntemi](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

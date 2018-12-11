@@ -1,16 +1,15 @@
 ---
 title: Serialization1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd66f8d8589baaa6fc5e22ce0b68beafac916fdf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155112"
 ---
 # <a name="serialization"></a>Serileştirme
 Serileştirme bir nesneyi kolayca kalıcı yapılabilecek veya taşınabilecek bir biçime dönüştürme işlemidir. Örneğin, bir nesneyi serileştirmek, HTTP kullanarak ve hedef makinenin serisi Internet üzerinden aktarım.  
@@ -85,14 +84,14 @@ Serileştirme bir nesneyi kolayca kalıcı yapılabilecek veya taşınabilecek b
   
  **✓ DO** korumalı serileştirme Oluşturucusu oluşturarak yazılan ve tam olarak burada aşağıdaki örnekte gösterildiği gibi adlı iki parametre sağlayabilirsiniz.  
   
-```  
+```csharp
 [Serializable]  
 public class Person : ISerializable {  
     protected Person(SerializationInfo info, StreamingContext context) {  
         ...  
     }  
 }  
-```  
+```
   
  **✓ DO** uygulamak `ISerializable` üyeleri açıkça.  
   
@@ -100,7 +99,7 @@ public class Person : ISerializable {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

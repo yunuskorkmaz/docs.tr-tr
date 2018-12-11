@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 993f1d18637f39b6df4d876db8a0fe86e34391e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192726"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126906"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Mikro Hizmetleri ve yüksek ölçeklenebilirlik ve kullanılabilirlik için çok kapsayıcılı uygulamaları yönetme
 
@@ -19,7 +19,7 @@ Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıda yal
 
 ![](./media/image6.png)
 
-Şekil 4-6: oluşan bir küme, kapsayıcıları
+Şekil 4-6: Kapsayıcıları kümesi
 
 Mantıksal bir yaklaşım gibi görünüyor. Ancak Yük Dengeleme, Yönlendirme ve oluşan bu uygulamaları işlemlerini nasıl işlediğinin?
 
@@ -35,7 +35,7 @@ Yapı büyük, Kurumsal, mikro hizmet tabanlı olması durumunda bir mimari ve g
 
 Genellikle farklı satıcılar tarafından sağlanan ürün iki yetenekleri sağlamak için bir küme ve bir zamanlayıcı yakından ilişkilidir. Tablo 4-1 en önemli platformu ve kümeler ve planlayıcılar için sahip olduğunuz yazılım seçenekleri listeler. Bu kümeler, genellikle Azure gibi genel bulutlarda sunulur.
 
-Tablo 4-1: yazılım platformlarının kümeleme kapsayıcı, düzenleme ve zamanlama için
+Tablo 4-1: Yazılım platformlarının kümeleme kapsayıcı, düzenleme ve zamanlama için
 
 | Platform | Açıklama |
 |---|---|
@@ -64,13 +64,13 @@ Azure Container Service ile Azure'un kuruluş düzeyindeki özelliklerinden fayd
 
 ![](./media/image11.png)
 
-Şekil 4-7: Azure Container Service'te seçenekleri kümeleme
+Şekil 4-7: Azure Container Service'te küme seçenekleri
 
 Şekil 4-8'de gösterildiği gibi Container Service DC/OS, Kubernetes ve Docker Swarm dağıtmak için Azure tarafından sağlanan altyapı yalnızca olduğu, ancak herhangi bir ek orchestrator uygulamaz. Bu nedenle, değil bir orchestrator, bu nedenle kapsayıcı hizmetidir; kapsayıcılar için açık kaynak düzenleyicileri mevcut yararlanan bir altyapısı var.
 
 ![](./media/image12.png)
 
-Şekil 4-8: düzenleyicileri Container Service'te
+Şekil 4-8: Container Service'te düzenleyicileri
 
 Kullanım açısından bakıldığında, kapsayıcı hizmeti popüler açık kaynak araçları ve teknolojileri kullanan bir kapsayıcı barındırma ortamı sağlamak için hedefidir. Şu an için kullandığınız düzenleyici için standart API uç noktalarını gösterir. Bu uç noktaları kullanarak, bu uç noktalar ile iletişim kurabilen herhangi bir yazılım kullanabilirsiniz. Örneğin, Docker Swarm uç noktasıyla Docker CLI'yı kullanmayı seçebilirsiniz. DC/OS için DC/OS CLI'yı kullanmayı seçebilirsiniz.
 
@@ -121,7 +121,7 @@ Service Fabric hizmetinizin nasıl oluşturulacağına göre belirsiz olduğunda
 
 ![](./media/image13.png)
 
-Şekil 4-9: mikro hizmetler, işlemler veya Azure Service Fabric'teki kapsayıcıları olarak dağıtma.
+Şekil 4-9: Mikro hizmetler, işlemler veya Azure Service Fabric'teki kapsayıcıları olarak dağıtma
 
 Linux ve Windows ana bilgisayarlarını temel alan Service Fabric kümelerinde Docker Linux kapsayıcıları ve Windows kapsayıcıları çalıştırabilirsiniz.
 
@@ -133,7 +133,7 @@ Service Fabric, bir farklı mantıksal mimarisine (iş mikro hizmetler veya sın
 
 ![](./media/image14.png)
 
-Şekil 4-10: iş birkaç durum bilgisi olan ve olmayan hizmetleri Service fabric'te mikro hizmet
+Şekil 4-10: Service fabric'te birkaç durum bilgisi olan ve olmayan Hizmetleri ile iş mikro hizmet
 
 Herhangi bir durumda, Service Fabric durum bilgisi olan Reliable Services kullandığınızda, ayrıca, genellikle birden çok fiziksel hizmetlerinden oluşur bir mantıksal veya iş mikro hizmet (içerik sınırlanmış) vardır. Bunları, ağ geçidi hizmet ve bölüm hizmeti her ASP.NET Web API Hizmetleri olarak Şekil 4-10'da gösterildiği gibi uygulanabilir.
 
@@ -145,7 +145,7 @@ Service Fabric'teki kapsayıcıları onaylamaz, Service Fabric kümesi dahilinde
 
 ![](./media/image15.png)
 
-Şekil 4-11: iş mikro hizmet Service fabric'te birden çok hizmetlerle (kapsayıcılar)
+Şekil 4-11: Çeşitli Hizmetleri (kapsayıcılar) Service Fabric ile mikro iş
 
 Bununla birlikte, sözde "sepet" (mantıksal bir hizmetin parçası olarak birlikte dağıtılmış olması gereken iki kapsayıcı) de Service Fabric'te olası kapsayıcılardır. Önemli olan iş mikro hizmet birkaç cohesive öğeleri mantıksal sınırlarından olmasıdır. Çoğu durumda, bir tek veri modeli ile tek bir hizmet olabilir, ancak diğer bazı durumlarda, fiziksel birçok hizmet de olabilir.
 
@@ -153,7 +153,7 @@ Bununla birlikte, sözde "sepet" (mantıksal bir hizmetin parçası olarak birli
 
 ![](./media/image16.png)
 
-Şekil 4-12: kapsayıcılar ve durum bilgisi olan hizmetler ile bir Service Fabric uygulaması için eşleştirilmiş iş mikro hizmet
+Şekil 4-12: Kapsayıcılar ve durum bilgisi olan hizmetler ile bir Service Fabric uygulaması için eşleştirilmiş iş mikro hizmet
 
 Destek, Docker kapsayıcıları Linux veya Windows kapsayıcıları kullanmanıza bağlı olarak farklıdır. Service Fabric'teki kapsayıcıları için destek, gelecek sürümlerde genişletme. Service fabric'te kapsayıcı desteği Azure Web sitesinde ilgili güncel haberler için okuma [Service Fabric ve kapsayıcılar](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
@@ -165,7 +165,7 @@ Ancak hizmetler ayrıca veri mikro hizmet içinde bulunduğu anlamına gelir dur
 
 ![](./media/image17.png)
 
-Şekil 4-13: durum bilgisiz ve durum bilgisi olan mikro hizmetler
+Şekil 4-13: Durum bilgisiz ve durum bilgisi olan mikro hizmetler
 
 Durum bilgisi olmayan bir yaklaşım mükemmel geçerli olduğundan ve durum bilgisi olan mikro hizmetler geleneksel ve iyi bilinen desenleri için benzer bir yaklaşımdır çünkü uygulamak daha kolaydır. Ancak, durum bilgisi olmayan mikro hizmetler, işlem ve veri kaynakları arasındaki gecikme süresini büyük oranda yansıtmaktadır. Bunlar ayrıca performansı ek önbellek ve Kuyruklar ile çalışılırken daha fazla hareketli parça içerir. Sonuç, çok fazla katman karmaşık mimarilerin kalabilirsiniz emin olur.
 
@@ -179,7 +179,6 @@ Gerçekleştiren deseni destekleyen ve hataya dayanıklılık ve iş mantığı 
 
 Docker kapsayıcıları durum bilgisiz kendilerini olduğunu unutmayın. Durum bilgisi olan hizmet uygulamak istiyorsanız, daha önce not ettiğiniz ek önerilerde bulunan ve daha üst düzey altyapılarından birini gerekir. Ancak, bu makalenin yazıldığı tarih itibarıyla, Service fabric'te durum bilgisi olan hizmetler düz mikro hizmetler olarak yalnızca bir kapsayıcı olarak desteklenmez. Reliable services desteği kapsayıcıları Service Fabric gelecek sürümlerinde kullanıma sunulacak.
 
-
 >[!div class="step-by-step"]
-[Önceki](soa-applications.md)
-[İleri](docker-apps-development-environment.md)
+>[Önceki](soa-applications.md)
+>[İleri](docker-apps-development-environment.md)

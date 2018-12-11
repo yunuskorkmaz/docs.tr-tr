@@ -4,12 +4,12 @@ description: Mobil arka uçlar ve ETL işlem hatları için gelen görüntü iş
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405028"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153793"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -55,7 +55,7 @@ Uygulama, eski şirket içi koddan bir uç nokta sunucusuz bir uç noktasına ye
 
 Proxy istekleri ayrı ayrı sunucusuz işlevler taşındı yönlendirecek şekilde güncelleştirilir tek bir API uç noktası sağlar.
 
-Tüm geçiş anlatan bir videoyu görüntüleyebilirsiniz: [Lift- and -shift ile sunucusuz Azure işlevleri](https://channel9.msdn.com/Events/Connect/2017/E102). Örnek kod erişimi: [kendi uygulamanızı taşıyın](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Tüm geçiş anlatan bir videoyu görüntüleyebilirsiniz: [Lift- and -shift ile sunucusuz Azure işlevleri](https://channel9.msdn.com/Events/Connect/2017/E102). Örnek kod erişimi: [Kendi uygulamanızı taşıyın](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Bir CSV dosyasını ayrıştırabilir ve bir veritabanına ekleme
 
@@ -77,7 +77,7 @@ Ardından, toplanan verileri hakkında bilgiler toplamak için bir Power BI pano
 
 ![Power BI örnek](./media/power-bi-example.png)
 
-Tam bağlantı kısaltıcı deposuyla yönergeler aşağıda verilmiştir: [sunucusuz URL kısaltıcı](https://github.com/jeremylikness/serverless-url-shortener). Bir Basitleştirilmiş sürümden burada okuyabilirsiniz: [dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Tam bağlantı kısaltıcı deposuyla yönergeleri burada kullanılabilir: [Sunucusuz URL kısaltıcı](https://github.com/jeremylikness/serverless-url-shortener). Bir Basitleştirilmiş sürümden burada okuyabilirsiniz: [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Bir ping işlemi kullanarak cihaz bağlantısını doğrulayın
 
@@ -98,5 +98,5 @@ Daha fazla bilgi için [Azure IOT hub'ı ping](https://azure.microsoft.com/resou
 * [Sunucusuz URL kısaltıcı](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Önceki](orchestration-patterns.md)
-[İleri](serverless-conclusion.md)
+>[Önceki](orchestration-patterns.md)
+>[İleri](serverless-conclusion.md)

@@ -4,25 +4,25 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185632"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152623"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
 > _"Bulut sayesinde, kişilerin ve küçük ölçekli işletmeler kendi parmağınızı Yasla ve anında kurumsal sınıf Hizmetleri'ni ayarlama."_  
 > _-Roy Stephan_
 
- ## <a name="vision"></a>Görüntü işleme
+ ## <a name="vision"></a>Görsel
 
 > *İyi tasarlanmış ASP .NET Core uygulamaları Visual Studio veya dotnet CLI ve Visual Studio Code veya tercih ettiğiniz düzenleyiciyi kullanarak dilediğiniz şekilde geliştirin.*
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>ASP.NET Core uygulamaları için geliştirme ortamı
 
-### <a name="development-tools-choices-ide-or-editor"></a>Geliştirme araçları, Seçenekler: IDE veya düzenleyici
+### <a name="development-tools-choices-ide-or-editor"></a>Geliştirme aracı seçenekleri: IDE veya düzenleyici
 
 Tam ve güçlü bir IDE ya da basit ve Çevik bir düzenleyici tercih olsun, Microsoft ASP.NET Core uygulamaları geliştirirken, işinize yarayacaktır.
 
@@ -46,7 +46,7 @@ Kendi tercih edilen dili ve yerel olarak test uygulama kodlama her geliştiricin
 
 CI/CD kullanarak bir ASP.NET Core uygulaması geliştirme ile çalışmaya başlamak için Azure DevOps Services veya kuruluşunuzun kullanabilirsiniz kendi Team Foundation Server (TFS).
 
-### <a name="initial-setup"></a>İlk kurulum
+### <a name="initial-setup"></a>Başlangıç kurulumu
 
 Uygulamanız için bir yayın işlem hattı oluşturmak için uygulama kodunuzun kaynak denetiminde olması gerekir. Yerel depo ayarlama ve bir takım projesindeki uzak deponuza bağlayın. Bu yönergeleri izleyin:
 
@@ -88,7 +88,7 @@ ASP.NET Core uygulamanızı azure'a geliştirme, aksi halde uygulamanızı geli�
 
 Kodunuzu takımınızla paylaşmak hazır olduğunda, takımınızın paylaşılan kaynak deposu için yerel kaynak deponuzdan değişikliklerinizi gönderme. Özel bir dalda aşinaysanız, bu adım genellikle kodunuzu paylaşılan bir dalla birleştirilmesini içerir (belki de, bir [çekme isteği](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Adım 3. Yapı sunucusu: Sürekli tümleştirme. derleme, test paketi
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Adım 3. Yapı sunucusu: Sürekli Tümleştirme. derleme, test paketi
 
 Yeni bir yapı, yapı sunucusunda paylaşılan uygulama kodu deposunun yeni bir işleme yapıldığında tetiklenir. CI işleminin bir parçası olarak, bu derleme tam olarak uygulamayı derleyin ve her şeyin beklendiği şekilde çalıştığını doğrulamak için otomatik testler çalıştırın. CI işlem son sonucunu dağıtıma hazır web uygulaması paketlenmiş bir sürümü olmalıdır.
 
@@ -110,5 +110,5 @@ Web uygulamasını çalışırken, uygulama durumunu izleyin ve tanılama ve kul
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
-[Önceki](test-asp-net-core-mvc-apps.md)
-[İleri](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Önceki](test-asp-net-core-mvc-apps.md)
+>[İleri](azure-hosting-recommendations-for-asp-net-web-apps.md)

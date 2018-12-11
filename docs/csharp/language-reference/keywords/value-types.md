@@ -1,6 +1,6 @@
 ---
-title: Değer Türleri (C# Başvurusu)
-ms.date: 07/20/2015
+title: Değer türleri (C# Başvurusu)
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,51 +8,55 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526469"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147729"
 ---
-# <a name="value-types-c-reference"></a>Değer Türleri (C# Başvurusu)
-Değer türleri iki ana kategoride oluşur:  
+# <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
+
+Değer türlerinin iki tür vardır:
+
+- [Yapılar](struct.md)
+
+- [Sabit Listeleri](enum.md)
+
+## <a name="main-features-of-value-types"></a>Değer türleri'larının temel özellikleri
+
+Bir değer türünde bir değişken türünde bir değer içerir. Örneğin, bir değişken `int` türü, değer içerebilir `42`. Bu, bir başvuru türü olarak da bilinen bir nesne örneği içeren bir başvuru türünün bir değişkeni farklıdır. Bu değer, bir değişkene bir değer türü yeni bir değer atadığınızda, kopyalanır. Başvuru türünde bir değişken için yeni bir değer atadığınızda, başvuru kopyalanır, nesnenin kendisini değil.
+
+Tüm değer türleri örtülü olarak türetilmiş <xref:System.ValueType?displayProperty=nameWithType>.  
   
--   [Yapılar](../../../csharp/language-reference/keywords/struct.md)  
+Farklı başvuru türleri ile yeni bir tür bir değer türünden türetilemez. Ancak, başvuru türleri, ister yapılar, arabirimler uygulayabilirsiniz.  
   
--   [Sabit Listeleri](../../../csharp/language-reference/keywords/enum.md)  
+Değer türü değişkenler olamaz `null` varsayılan olarak. Ancak, karşılık gelen değişkenleri [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md) olabilir `null`.
   
- Yapılar, bu kategoriye ayrılır:  
+Her değer türü varsayılan değer türü başlatan örtülü varsayılan bir oluşturucuya sahiptir. Değer türleri varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).  
   
--   Sayısal türler  
+## <a name="simple-types"></a>Basit türler
+
+*Basit türler* bir dizi önceden tanımlanmış bir yapı türü tarafından sağlanan C# ve aşağıdaki türleri oluşturan:
+
+- [Tam sayı türleri](integral-types-table.md): tamsayı sayısal türleri ve [char](char.md) türü
+- [Kayan nokta türleri](floating-point-types-table.md)
+- [bool](bool.md)
+
+Basit türler anahtar sözcükleri tanımlanır, ancak bu anahtar sözcükler yalnızca önceden tanımlanmış bir yapı türleri için diğer adlar <xref:System> ad alanı. Örneğin, [int](int.md) bir diğer adıdır <xref:System.Int32?displayProperty=nameWithType>. Diğer adlar tam bir listesi için bkz. [yerleşik türler tablosu](built-in-types-table.md).
+
+Basit türler, bazı ek işlemler izin vermek, diğer yapı türlerden farklılık gösterir:
+
+- Basit türler, değişmez değerleri kullanılarak başlatılabilir. Örneğin, `'A'` bir sabit değer türü olan `char` ve `2001` bir sabit değer türü olan `int`.
+
+- Sabitler ile basit türler bildirebilirsiniz [const](const.md) anahtar sözcüğü. Diğer yapı tür sabitleri mümkün değildir.
+
+- Sabit ifadeler, işlenenleri tüm basit tür sabit değerlerdir, derleme zamanında değerlendirilir.
+
+Daha fazla bilgi için [basit türler](~/_csharplang/spec/types.md#simple-types) bölümünü [ C# dil belirtimi](../language-specification/index.md).
   
-    -   [Tam sayı türleri](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [Kayan nokta türleri](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
-  
--   Kullanıcı tanımlı yapılar.  
-  
-## <a name="main-features-of-value-types"></a>Değer türleri'larının temel özellikleri  
- Değer türlerine doğrudan bağlı değişkenleri değerleri içerir. Bir değer türü değişken içindeki değeri için başka bir kopya atama. Bu nesne, ancak nesnenin kendisi için bir başvuru kopyalayan atama başvuru türü değişkenlerin farklıdır.  
-  
- Tüm değer türleri örtülü olarak türetilmiş <xref:System.ValueType?displayProperty=nameWithType>.  
-  
- Farklı başvuru türleri ile yeni bir tür bir değer türünden türetilemez. Ancak, başvuru türleri, ister yapılar, arabirimler uygulayabilirsiniz.  
-  
- Başvuru türlerinin aksine, bir değer türü içeremez `null` değeri. Ancak, [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md) özelliğinin izin atanacak değer türleri için `null`.  
-  
- Her değer türü varsayılan değer türü başlatan örtülü varsayılan bir oluşturucuya sahiptir. Değer türleri varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md).  
-  
-## <a name="main-features-of-simple-types"></a>Basit türler'larının temel özellikleri  
- --C# dilinin bu sayıya--basit türlerinin tümü, .NET Framework sistem türleri adlardır. Örneğin, [int](../../../csharp/language-reference/keywords/int.md) bir diğer adıdır <xref:System.Int32?displayProperty=nameWithType>. Diğer adlar tam bir listesi için bkz. [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md).  
-  
- Sabit ifadeler, işlenenleri tüm basit tür sabit değerlerdir, derleme zamanında değerlendirilir.  
-  
- Basit türler, değişmez değerleri kullanılarak başlatılabilir. Örneğin, '' bir sabit değer türü açık `char` ve 2001 bir sabit değer türü `int`.  
-  
-## <a name="initializing-value-types"></a>Değer türleri başlatma  
+## <a name="initializing-value-types"></a>Değer türleri başlatma
+
  C# dilinde yerel değişkenler, kullanılmadan önce başlatılmalıdır. Örneğin, aşağıdaki örnekte olduğu gibi başlatma olmadan yerel bir değişken bildirmeniz:  
   
 ```csharp  
@@ -83,9 +87,9 @@ int myInt = new int();
 int myInt = 0;  
 ```  
   
- Kullanarak [yeni](../../../csharp/language-reference/keywords/new.md) işleci belirli türdeki varsayılan oluşturucuyu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, varsayılan oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Kullanarak [yeni](new.md) işleci belirli türdeki varsayılan oluşturucuyu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, varsayılan oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](default-values-table.md).  
   
- Kullanıcı tanımlı türler ile kullanın [yeni](../../../csharp/language-reference/keywords/new.md) varsayılan oluşturucuyu çağırmak için. Örneğin, aşağıdaki deyim olan varsayılan oluşturucusunu çağırır `Point` yapısı:  
+ Kullanıcı tanımlı türler ile kullanın [yeni](new.md) varsayılan oluşturucuyu çağırmak için. Örneğin, aşağıdaki deyim olan varsayılan oluşturucusunu çağırır `Point` yapısı:  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
@@ -93,16 +97,16 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Bu çağrıdan sonra kesinlikle atanacak yapı olarak kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.  
   
- New işleci hakkında daha fazla bilgi için bkz: [yeni](../../../csharp/language-reference/keywords/new.md).  
+ Hakkında daha fazla bilgi için `new` işleci bkz [yeni](new.md).  
   
- Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [Türler](../../../csharp/language-reference/keywords/types.md)  
-- [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [C# başvurusu](../index.md)  
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](index.md)  
+- [Türler](types.md)  
+- [Türler için başvuru tabloları](reference-tables-for-types.md)  
+- [Başvuru Türleri](reference-types.md)  
 - [Boş değer atanabilir türler](../../programming-guide/nullable-types/index.md)  

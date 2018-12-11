@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma'
+title: 'Nasıl Yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 61ae9b56e983e5ca05c3dd99d4db4797b67b3452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035155"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153520"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl Yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)
 Bu örnek, iki dosya listelerini karşılaştırmak için üç yol gösterir:  
   
 -   İki liste dosyası olup olmadığını belirten bir Boole değeri sorgulayarak aynıdır.  
@@ -118,7 +118,7 @@ namespace QueryCompareTwoDirs
         // hash code.  
         public int GetHashCode(System.IO.FileInfo fi)  
         {  
-            string s = String.Format("{0}{1}", fi.Name, fi.Length);  
+            string s = $"{fi.Name}{fi.Length}";
             return s.GetHashCode();  
         }  
     }  

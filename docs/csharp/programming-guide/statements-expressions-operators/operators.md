@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514191"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150979"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla olan *işlenenler* bir deyim veya ifade. Artırım işleci gibi tek bir işlenen alan işleçler (`++`) veya `new`, denir *birli* işleçleri. Aritmetik işleçleri gibi iki işlene alan işleçler (`+`,`-`,`*`,`/`), denir *ikili* işleçleri. Bir işleç, koşullu işleç (`?:`) üç işlenen alır ve C# ' deki tek Üçlü işleç.  
@@ -112,7 +112,7 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |--------------|----------------|-----------------|  
 |Mantıksal VE|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Tamsayı bitwise VE, Boolean mantıksal VE|  
 |Mantıksal XOR|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Tamsayı bitwise XOR, Boolean mantıksal XOR|  
-|Mantıksal VEYA|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Tamsayı bitwise VEYA, boolean mantıksal VEYA|  
+|Mantıksal VEYA|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Tamsayı bitwise veya, Boolean mantıksal veya|  
 |Koşullu VE|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Yalnızca x doğruysa y değerlendirilir|  
 |Koşullu VEYA|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Yalnızca x yanlışsa y değerlendirilir|  
 |Null birleşim|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|  

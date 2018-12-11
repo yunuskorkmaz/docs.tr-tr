@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154209"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC test uygulamaları
 
@@ -66,7 +66,7 @@ Tümleştirme testleri sisteminin bazı bileşenleri düzgün birlikte çalışt
 
 > "Bir sistemin geliştirme birden çok kez bir ev oluşturulmasını likened. Bu benzerleme oldukça doğru değildir; ancak biz birim ve işlev testleri arasındaki farkı anlamak amacıyla genişletebilirsiniz. Birim testi house'nın yapı sitesinden bir yapı denetleyici benzerdir. He house, çerçeve, elektrik Sıhhi tesisat ve bu şekilde foundation çeşitli dahili sistemlerinde odaklanmıştır. He (evi bölümlerini düzgün ve güvenli bir şekilde, diğer bir deyişle, yapı kod karşılamak testleri) sağlar. Bu senaryoda işlevsel testleri bu aynı yapı siteyi ziyaret sakininin benzer. He iç sistemleri uygun şekilde davranır, yapı Inspector'ı kendi görevi çalıştığını varsayar. Sakininin ne gibi bu Merkezi'nde Canlı de artar üzerinde odaklanır. He evi nasıl göründüğünü ile ilgilidir, çeşitli rooms rahat boyutu, ev ailesinin gereksinimlerine uygun, sabah sun yakalamak için iyi bir kolayca Windows. Sakininin işlevsel testleri evi gerçekleştiriyor. Kullanıcı açısından sahip. Birim testleri, derleme denetçisi evi gerçekleştiriyor. Oluşturucunun perspektif sahip."
 
-Kaynak: [birim testi işlevsel testler](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Kaynak: [Birim testi işlevsel testler](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 Bildiren, Acıyı istiyorum "geliştiriciler, size iki yolla başarısız: yanlış bir şey ekliyoruz veya yanlış bir şey ekliyoruz." Birim testleri şey sağ oluşturmakta olduğunuz emin olun. işlevsel testler doğru şeyi oluşturmakta olduğunuz emin olun.
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 ASP.NET Core uygulamaları için işlevsel testleri yazmak oldukça kolay TestServer sınıfı sağlar. Bir WebHostBuilder doğrudan kullanarak bir TestServer yapılandırın (yalnızca uygulamanız için normalde yaptığınız gibi), veya WebApplicationFactory türüyle (2.1 içinde kullanılabilir). Testlerinizi uygulamayı üretim ortamında neler yapabileceği için benzer bir davranış alıştırma şekilde, test ana bilgisayarı, üretim barındırmak için mümkün olduğunca aynı denemelisiniz. WebApplicationFactory sınıfı ile ASP.NET Core görünümleri gibi statik kaynak bulmak için kullanılan TestServer'ın ContentRoot yapılandırmak için yararlıdır.
 
-IClassFixture uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz < WebApplicationFactory<TEntry>> TEntry, web uygulamanızın başlangıç sınıfı olduğu. Bu yerinde fabrikasının CreateClient yöntemini kullanarak bir istemci, test düzeni oluşturabilirsiniz:
+Basit işlevsel testler IClassFixture uygulayan bir test sınıfı oluşturarak oluşturabileceğiniz\<WebApplicationFactory\<TEntry >> TEntry, web uygulamanızın başlangıç sınıfı olduğu. Bu yerinde fabrikasının CreateClient yöntemini kullanarak bir istemci, test düzeni oluşturabilirsiniz:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 Bu işlevsel test tam ASP.NET Core MVC sınayan / Razor sayfaları, tüm ara yazılım, filtreler, bağlayıcıları, yerinde olabilir vb. dahil olmak üzere uygulama yığını. Belirli bir yol ("/") beklenen başarılı durum kodu ve HTML çıktı döndürür doğrular. Gerçek bir web sunucusu ayarını olmadan bunu yapar ve bu nedenle, gerçek bir Web sunucusu test etmek için (örneğin, güvenlik duvarı ayarları ile ilgili sorunlar) oluşabilir brittleness çoğunu ortadan kaldırır. TestServer karşı çalışan işlevsel testleri genellikle tümleştirme ve birim testleri yavaş ancak ağ üzerinden bir test web sunucusuna çalıştıracağınız testleri hızlıdır. İşlevsel testleri, uygulamanızın ön uç yığın beklendiği gibi çalıştığından emin olmak için kullanmanız gerekir. Bu testler, sayfalar ve filtreler ekleyerek çoğaltma adres ya da çoğaltma denetleyicilerinizi içinde bulmak özellikle yararlı olur. İdeal olarak, bu yeniden düzenleme uygulamanın davranışı değiştirilmez ve işlevsel testleri paketi bu durumda doğrulayın.
 
 >[!div class="step-by-step"]
-[Önceki](work-with-data-in-asp-net-core-apps.md)
-[İleri](development-process-for-azure.md)
+>[Önceki](work-with-data-in-asp-net-core-apps.md)
+>[İleri](development-process-for-azure.md)

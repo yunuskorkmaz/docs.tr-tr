@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153390"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
-Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
+# <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olaylarını işleme (Visual Basic)
+Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: Olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
   
  `Widget` Geleneksel olay işleme deyimleri sınıfı örneğini kullanır. Visual Basic, olayları ile çalışmaya yönelik diğer teknikleri sağlar. Bu örneği kullanmak için değiştirebileceğiniz bir alıştırma olarak `AddHandler` ve `Handles` deyimleri.  
   
@@ -117,5 +117,5 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
 >  Çok bildirebilirsiniz `WithEvents` yazarken değişkenleri gerekir, dizileri `WithEvents` değişkenleri desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

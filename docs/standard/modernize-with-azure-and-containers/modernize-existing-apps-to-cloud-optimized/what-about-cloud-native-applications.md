@@ -1,73 +1,72 @@
 ---
-title: Bulut yerel uygulamalar nasıldır?
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize | Bulut yerel uygulamalar nasıldır?
+title: Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e880689001ece2b770811cfbe3fea43aa425b32
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958238"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152578"
 ---
-# <a name="what-about-cloud-native-applications"></a>Bulut yerel uygulamalar nasıldır?
+# <a name="what-about-cloud-native-applications"></a>Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
 
-Rağmen [bulut yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulamaları ana odak değildir bu kılavuz, bu modernization olgunluk seviyesi anlayışınız için ve bulut iyileştirilmiş uygulamalardan ayırt etmek için yararlı olur.
+Ancak [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulamaları odaklandığı değildir bu kılavuz, bu modernizasyonu olgunluk seviyesi bir anlayışa sahip ve bu bulut için iyileştirilmiş uygulamalardan ayırt etmek için yararlı olur.
 
-Şekil 4-3 bulut yerel uygulamalar uygulama modernization olgunluk düzeylerinde yerleştirir:
+Şekil 4-3, bulutta çalışan uygulamalar uygulama modernizasyonu olgunluk düzeyinde yerleştirir:
 
-![Bulut yerel uygulamalar konumlandırma](./media/image3.png)
+![Bulutta çalışan uygulamalar konumlandırma](./media/image3.png)
 
-> **Şekil 4-3.** Bulut yerel uygulamalar konumlandırma
+> **Şekil 4-3.** Bulutta çalışan uygulamalar konumlandırma
 
-Bulut yerel modernization olgunluk seviyesi genellikle yeni geliştirme Yatırımlar gerektirir. Bulut yerel düzeye genellikle taşıma iş gereksinimlerini önemli ölçüde dağıtılabilir otonom alt sistemlerini (mikro) oluşturarak büyük uygulamalarında ölçek ve ölçeği artırmak mümkün olduğunca uygulamaları modernize tarafından bağımsız olarak yönetilir diğer bölgelerden uzun terim ve artış evrimi çeviklik sağlayan bu otonom uygulamanın bölümlerinin içinde maliyetleri düşürmek sırasında uygulamasının avantajları önemli rekabet. 
+Bulutta yerel modernizasyonu olgunluk seviyesi, genellikle yeni geliştirme yatırımlarından gerektirir. Genellikle bulut yerel düzeye taşıma önemli ölçüde dağıtılabilir otonom alt (mikro) oluşturarak büyük uygulamalar ölçek ve ölçeği artırmak mümkün olduğunca uygulamaları modernize etme işletme ihtiyaçlarına göre bağımsız olarak yönetilir uzun dönem ve artışı evrimi çevikliği sağlayan bu otonom uygulamanın bölümlerinin maliyetlerini düşürürken çalışırken uygulamanın diğer bölgelerden avantajları önemli rekabet. 
 
-Ana dayanaklarından biri [bulut yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) uygulamaları ile çeviklik gelişmesi ve ölçeklendirmek için ya da dağıtılmış tek yapılı bir mimari sağlamak zor olurdu sınırları mikro mimarisi yaklaşımlar esas alır Şirket içi veya Bulut ortamı.
+Ana yapı taşına [bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) uygulamaları ile çevikliği evrim geçiren ve ölçeklendirin ya da dağıtılmış bir tek parçalı mimari sağlamak zor olurdu sınırları için mikro hizmetler mimari yaklaşımları dayanır Şirket içi veya Bulut ortamı.
 
-Şekil 4-4 bulut yerel model temel özellikleri gösterir.  
+Şekil 4-4, yerel bulut modelinin temel özellikleri gösterilmektedir.  
 
-> ![Mikro, kapsayıcıları, bulut esnek, orchestrators ve serverles bulut yerel özellikleri olan](./media/image4.png)
+> ![Buluta özgü özellikleri mikro hizmetler, kapsayıcılar, bulut dayanıklı ve düzenleyicileri serverles sahiptir.](./media/image4.png)
 >
-> **Şekil 4-4.** Bulut yerel özellikleri
+> **Şekil 4-4.** Buluta özgü özellikleri
 
-Ayrıca, temel modern web uygulamaları ve bulut-yerel uygulamalar yapay Intelligence (AI), machine learning (ML) ve IOT gibi diğer hizmetler ekleyerek genişletebilirsiniz. Olası bulut iyileştirilmiş yaklaşımlardan birini genişletmek için bu hizmetlerin herhangi birini kullanabilirsiniz.
+Ayrıca, yapay zeka (AI), machine learning (ML) ve IOT gibi diğer hizmetler ekleyerek temel modern web uygulamaları ve bulutta çalışan uygulamaları genişletebilirsiniz. Olası bulut için iyileştirilmiş yaklaşımlardan birini genişletmek için bu hizmetlerin herhangi birini kullanabilirsiniz.
 
-Temel bulut yerel düzeyinde uygulamalarda uygulama mimarisinde farktır. [Bulut yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) tanımı, üzerinde mikro tabanlı uygulamalar tarafından uygulamaları geçerlidir. Bulut yerel uygulamalar özel mimariler, teknolojiler ve platformlar, bir tek yapılı web uygulaması veya Geleneksel N katmanlı uygulama karşılaştırıldığında gerektirir.
+Bulutta yerel düzeyinde uygulamalarda temel fark uygulama mimaridir. [Bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) olan uygulamalar üzerinde mikro hizmet tabanlı uygulamaları tanımına göre. Bulutta yerel uygulamaların özel mimariler, teknolojiler ve platformlar, tek parçalı bir web uygulaması ya da geleneksel N katmanlı uygulama karşılaştırma gerektirir.
 
-## <a name="cloud-native-applications-details"></a>Bulut yerel uygulamalar ayrıntıları
+## <a name="cloud-native-applications-details"></a>Bulutta çalışan uygulamalar ayrıntıları
 
-[Bulut yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) büyük ve görev açısından kritik uygulamalar için daha gelişmiş veya olgun bir durumu. Bulut yerel uygulamalar genellikle yerine sıfırdan uygulamalara modernizing tarafından oluşturulan tasarımı ve mimarisini gerektirir. En önemli fark bulut yerel bir uygulama ile daha basit bir bulut için iyileştirilmiş web uygulaması arasında bir bulut yerel yaklaşım mikro mimarilerinde kullanmak için önerilir. Bulut iyileştirilmiş uygulamaları tek yapılı web uygulamaları veya N katmanlı uygulamalar da olabilir.
+[Bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) büyük ve görev açısından kritik uygulamalar için daha gelişmiş veya olgun bir durumu. Bulutta yerel uygulamalar genellikle mimarisi ve mevcut uygulamaları modernize etme tarafından oluşturulan yerine sıfırdan tasarım gerektirir. Bulutta çalışan uygulama ve daha basit bir bulut için iyileştirilmiş web uygulaması arasındaki temel fark, mikro hizmet mimarilerinde bulutta yerel bir yaklaşım kullanmak için önerilir. Bulut için iyileştirilmiş uygulamalar ayrıca monolitik web uygulamaları veya N katmanlı uygulamalar olabilir.
 
-[On iki öğeli uygulama](https://12factor.net/) (mikro yaklaşımları yakından ilişkilidir desenleri koleksiyonu) da bir gereksinimi dikkate [bulut yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulama mimarilerindeki.
+[On iki Faktörlü uygulama](https://12factor.net/) (mikro hizmetler yaklaşımları yakından ilgili düzenleri koleksiyonu) bir gereksinim için ayrıca değerlendirilir [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulama mimarileri.
 
-[Bulut yerel bilgisayar Foundation (CNCF)](https://www.cncf.io/) birincil promoter bulut yerel ilkeler değil. Microsoft bir [CNCF üyesi](https://azure.microsoft.com/blog/announcing-cncf/).
+[Bulut yerel bilgisayar Foundation (CNCF)](https://www.cncf.io/) olan bir birincil promoter bulutta yerel ilkeler. Microsoft, bir [CNCF üyesi](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Bir örnek tanımı ve bulut-yerel uygulamalar özellikleri hakkında daha fazla bilgi için Gartner makalesine bakın [mimari ve bulut-yerel uygulamalar tasarlamak nasıl](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Bir bulut yerel uygulama gerçekleştirme hakkında Microsoft'tan belirli yönergeler için bkz [.NET mikro: mimarisi kapsayıcılı .NET uygulamaları için](https://aka.ms/microservicesebook).
+Örnek bir tanım ve bulutta çalışan uygulamalar özellikleri hakkında daha fazla bilgi için Gartner bkz [Mimar ve bulutta çalışan uygulamalar tasarlamak nasıl](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Bulutta çalışan bir uygulamanın nasıl uygulanacağını hakkında Microsoft'tan belirli yönergeler için bkz [.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi](https://aka.ms/microservicesebook).
 
-Tam bir uygulamaya geçirirseniz dikkate alınması gereken en önemli faktör [bulut yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) modeldir mikro tabanlı bir mimari rearchitect gerekir. Bu açıkça büyük yeniden düzenleme işlemi nedeniyle söz konusu geliştirme önemli yatırım gerektirir. Bu seçenek genellikle yeni düzeyde ölçeklenebilirlik ve uzun vadeli çeviklik gereken görev açısından kritik uygulamalar için seçilir. Ancak bulut-yerel doğru birkaç yeni senaryolar için mikro ekleyerek taşımadan ve sonuç olarak uygulamayı mikro tam olarak yeniden düzenlemeniz. Bu, bazı senaryolar için en iyi seçenektir artımlı bir yaklaşımdır.
+Tam bir uygulamaya geçirirseniz dikkate alınması gereken en önemli faktör [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) modelidir bir mikro hizmet tabanlı mimariye yeniden oluşturma gerekir. Bu açıkça büyük yeniden düzenleme işlemi nedeniyle ilgili geliştirme önemli bir yatırım gerektirir. Bu seçenek, genellikle yeni düzeyde ölçeklenebilirlik ve uzun vadeli çevikliği gereken görev açısından kritik uygulamalar için seçilir. Ancak, doğru buluta özgü birkaç yeni senaryolar için mikro hizmetler ekleyerek taşımadan ve sonunda uygulamayı mikro Hizmetleri tam olarak yeniden düzenleme. Bazı senaryolar için en iyi seçenektir artımlı bir yaklaşımdır.
 
-## <a name="what-about-microservices"></a>Mikro nasıldır? 
+## <a name="what-about-microservices"></a>Mikro hizmetler hakkında neler diyeceksiniz? 
 
-Kuruluşunuz için bulut yerel uygulamalar değerlendirirken mikro ve nasıl çalıştığını anlamak önemlidir.
+Kuruluşunuz için bulutta çalışan uygulamalar değerlendirirken, mikro hizmetler ve nasıl çalıştığını anlamak önemlidir.
 
-Mikro mimarisi, baştan veya mevcut uygulamaları bulut yerel uygulamalar doğru gelişmesi oluşturulan uygulamaları için kullanabileceğiniz Gelişmiş bir yaklaşımdır. Yeni mikro örneklerinde hakkında bilgi edinmek için var olan uygulamalar için birkaç mikro ekleyerek başlatabilirsiniz. Ancak Açıkçası, mimarı ve bu tür bir mimari yaklaşım özellikle için kod gerekir.
+Mikro hizmet mimarisi, sıfırdan veya mevcut uygulamaları bulutta yerel uygulamaların doğru evrim Geçiren oluşturulan uygulamalar için kullanabileceğiniz Gelişmiş bir yaklaşımdır. Yeni mikro hizmetler paradigmalarını hakkında bilgi edinmek için mevcut uygulamaları birkaç mikro hizmetler ekleyerek başlayabilirsiniz. Ancak NET bir şekilde, Mimar ve kod, bu tür bir mimari yaklaşım özellikle de gerekir.
 
-Ancak, mikro herhangi bir yeni ya da modern uygulama için zorunlu değildir. Mikro "Sihirli bullet" değildir ve her uygulama oluşturmak için tek, en iyi yolu değil. Nasıl ve ne zaman, kullandığınız mikro oluşturmak için gereken uygulama türüne bağlıdır.
+Ancak, mikro hizmetler, herhangi bir yeni ya da modern uygulama için zorunlu değildir. Mikro Hizmetler "Sihirli bullet" değildir ve bunlar her bir uygulama oluşturmak için tek ve en iyi yöntem değildir. Nasıl ve ne zaman, kullandığınız mikro hizmetler oluşturmak için ihtiyacınız olan uygulamanın türüne bağlıdır.
 
-Mikro mimarisi birden çok bağımsız alt sistemleri otonom Hizmetleri biçiminde dayalı dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen yaklaşım durumundadır. Mikro tabanlı bir mimari uygulamanın dağıtıldığı ve ölçeklendirilmiş bağımsız olarak geliştirilen, test edilmiş, sürümlü, olabilir hizmetler koleksiyonu yerleşik olarak bulunur. Bu, tüm ilgili, otonom veritabanı mikro hizmet başına içerebilir.
+Mikro hizmet mimarisi, birden çok bağımsız alt sistemlerin otonom bir hizmetler biçiminde temel alan dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen yaklaşım gelmektedir. Bir mikro hizmet tabanlı mimari, uygulamaya dağıtılan ve ölçeği birbirinden bağımsız olarak geliştirilen, test edilmiş, tutulan, olabilir hizmetler koleksiyonu oluşturulmuştur. Bu, herhangi bir ilgili, otonom veritabanı mikro hizmet başına içerebilir.
 
-İndirilebilir PDF e-kitap, .NET Core kullanarak uygulayabileceğiniz bir mikro mimarisi ayrıntılı bir bakış için bkz: [.NET mikro: mimarisi kapsayıcılı .NET uygulamaları için](https://aka.ms/microservicesebook). Kılavuzu da kullanılabilir [çevrimiçi](../../microservices-architecture/index.md).
+İndirilebilir PDF e-kitap, .NET Core kullanarak uygulayabileceğiniz bir mikro hizmet mimarisi ayrıntılı bilgi için bkz [.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi](https://aka.ms/microservicesebook). Kılavuzu da kullanılabilir [çevrimiçi](../../microservices-architecture/index.md).
 
-Ancak, mikro hizmetler sunan güçlü özellikler bağımsız dağıtım, güçlü alt sınırlarını ve teknoloji seviyelerine senaryolarda bile-bunlar da birçok yeni zorluklar Yükselt. Sorunları, parçalanmış ve bağımsız veri modelleri gibi dağıtılmış uygulama geliştirme için ilişkili; mikro dayanıklı iletişimine elde; Nihai tutarlılık gereksinimini; ve işletim karmaşıklığını. Mikro karmaşıklık geleneksel tek yapılı uygulamalara kıyasla daha yüksek düzeyde tanıtır.
+Ancak, mikro hizmetler sunan güçlü özellikleri bağımsız dağıtımı, sağlam alt sınırlarını ve teknoloji seviyelerine senaryolarda bile-bunlar birçok yeni zorluklar da Yükselt. Parçalanmış ve bağımsız veri modelleri gibi dağıtılmış uygulama geliştirme zorlukları ilgili; mikro hizmetler dayanıklı iletişimine elde; Son tutarlılık gereksinimini; ve işletimsel karmaşıklığın. Mikro hizmetler, geleneksel tek parçalı uygulamalarla karşılaştırıldığında karmaşıklığı yüksek seviyede tanıtır.
 
-Mikro mimarisi karmaşıklığı nedeniyle, yalnızca belirli senaryolar ve belirli uygulama türleri mikro hizmet tabanlı uygulamalar için uygundur. Birden çok büyük ve karmaşık uygulamaları bunlar alt sistemleri gelişen. Bu durumlarda, bu artan uzun vadeli çeviklik ve daha verimli uygulama bakım için daha karmaşık bir yazılım mimarisinde yatırım değer olur. Ancak daha az karmaşık senaryolar için tek yapılı uygulama yaklaşımda devam etmek daha iyi olabilir veya basit N katmanlı yaklaşıyor.
+Bir mikro hizmet mimarisi karmaşıklığı nedeniyle, yalnızca belirli senaryolar ve belirli uygulama türlerini mikro hizmet tabanlı uygulamalar için uygundur. Birden çok büyük ve karmaşık uygulamaları bunlar alt sistemlerin gelişen. Bu gibi durumlarda, artan uzun vadeli çevikliği ve daha verimli uygulama bakımı için daha karmaşık bir yazılım mimarisindeki harcanmalıdır. Ancak daha az karmaşık senaryolar için bir parçalı uygulama yaklaşım ile devam etmek daha iyi olabilir veya basit N katmanlı yaklaşıyor.
 
-Bu kavram hakkında yinelenen olma at the risk of bile son Not olarak "all-in veya hiçbir şey tüm." olarak uygulamalarınızda mikro kullanarak göz önünde bulundurmanız gerekir Genişletme ve yeni, üzerinde mikro göre küçük senaryoları ekleyerek varolan tek yapılı uygulamaları geliştirin. Sıfırdan bir mikro mimarisi yaklaşım ile çalışmaya başlamak için Başlat gerek yoktur. Aslında, yeni senaryolar ekleyerek varolan bir tek yapılı veya N katmanlı uygulama kullanarak gelişmesi öneririz. Sonuç olarak, otonom bileşenleri veya mikro uygulamasına aşağı bozulabilir. Tek yapılı uygulamalarınızı mikro yönde, adım adım gelişen başlatabilirsiniz.
+Yinelenen bu kavramı hakkında edilerek at the risk of bile son Not olarak mikro hizmetler kullanarak uygulamalarınızda "tamamen veya hiçbir şey tüm." olarak göz önünde bulundurmanız olmamalıdır Genişletme ve var olan tek parçalı uygulamalarla yeni, üzerinde mikro hizmet tabanlı küçük senaryoları evrim Geçiren. Bir mikro hizmetler mimari yaklaşım ile çalışmaya başlamak için sıfırdan başlayın gerek yoktur. Aslında, yeni senaryolar ekleyerek mevcut tek parça veya N-katmanlı uygulamaya kullanarak gelişmek öneririz. Sonuç olarak, otonom bileşenler veya mikro hizmetler halinde uygulamayı bozabilir. Tek parça bir mikro hizmetler yönü, adım adım uygulamalarınızda gelişen başlayabilirsiniz.
 
-Herhangi bir durumda, bu kılavuz çoğunlukla genellikle tek yapılı veya N-katmanlı mimarileri sahip olan mevcut uygulamalar modernization hedefleme çünkü mevcut bu kılavuzun geri kalanını tüm "mikro tabanlı uygulama yok" çoğunu odaklanır.
-
+Herhangi bir durumda, bu kılavuz temel olarak tek parça veya N katmanlı mimariler genellikle olan mevcut uygulamaları modernleştirme hedeflediği olduğundan mevcut bu kılavuzda kalan tüm "mikro hizmet tabanlı uygulama" çoğunu odaklanır.
 
 >[!div class="step-by-step"]
-[Önceki](microsoft-technologies-in-cloud-optimized-applications.md)
-[sonraki](deploy-existing-net-apps-as-windows-containers.md)
+>[Önceki](microsoft-technologies-in-cloud-optimized-applications.md)
+>[İleri](deploy-existing-net-apps-as-windows-containers.md)

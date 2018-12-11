@@ -1,5 +1,6 @@
 ---
-title: Normal İfadelerdeki Tutturucular
+title: .NET normal ifadelerdeki tutturucular
+description: Normal ifade desenlerinde bağlantıları kullanmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085192"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155044"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 <a name="top"></a> Yer işaretleri veya atomik Sıfır Genişlik onayları, eşleşme gerçekleşmesi gereken dizedeki bir konumu belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tablo, .NET içinde normal ifadeler tarafından desteklenen yer işaretlerini listeler.  
@@ -56,7 +58,7 @@ ms.locfileid: "44085192"
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başlayın (eğer yöntem <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneği ile çağrılırsa satırın başında).|  
-|`((\w+(\s?)){2,}`|Tam olarak iki kez ardından sıfır veya bir boşluk gelen bir veya daha fazla sözcük karakterini eşleştirin. Bu ilk yakalama grubudur. Bu ifade aynı zamanda ikinci ve üçüncü bir yakalama grubunu tanımlar: İkinci grup yakalanan sözcükten, üçüncü grup ise yakalanan boşluktan oluşur.|  
+|`((\w+(\s?)){2,}`|Tam olarak iki kez ardından sıfır veya bir boşluk gelen bir veya daha fazla sözcük karakterini eşleştirin. Bu ilk yakalama grubudur. Bu ifade aynı zamanda ikinci ve üçüncü bir yakalama grubunu tanımlar: İkinci yakalanan sözcükten ve üçüncüsü ise yakalanan boşluktan oluşur.|  
 |`,\s`|Ardından bir boşluk karakteri gelen bir virgülü eşleştirin.|  
 |`(\w+\s\w+)`|Ardından bir boşluk gelen ve ardından bir veya daha fazla sözcük karakteri gelen bir veya daha fazla sözcük karakterini eşleştirin. Bu dördüncü yakalama grubudur.|  
 |`,`|Bir virgülü eşleştirin.|  

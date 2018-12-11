@@ -1,28 +1,28 @@
 ---
-title: Bulut için optimize edilmiş uygulamalara varolan .NET uygulamaları modernize
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize.
+title: Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: ba4610e7f5276f6c033a53ea78fb30bce50bc304
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958217"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151505"
 ---
-# <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut için optimize edilmiş uygulamalara varolan .NET uygulamaları modernize
+# <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme
 
-> Görme: var olan .NET Framework uygulamalarınızı daha hızlı sevk ve uygulamanın teslim maliyetleri azaltmak için dağıtım çevikliğinin büyük ölçüde artırmak için uygulamalara bulut iyileştirilmiş Modernize.
+> İşleme: Mevcut .NET Framework uygulamalarınızı daha hızlı gönderin ve uygulama teslim maliyetlerini düşürmek, dağıtım çevikliğine önemli ölçüde artırmak için uygulamaları bulut için iyileştirilmiş modern hale getirin.
 
-Kapsayıcı gibi yeni teknolojileri ve bulut avantajlarından yararlanmak için en azından kısmen varolan .NET uygulamaları modernize. Sonuç olarak, Kurumsal uygulamalarınızın modernizing, toplam sahip olma maliyeti düşürülür.
+Kapsayıcılar gibi yeni teknolojiler ve bulut avantajlarından yararlanmak için en azından kısmen mevcut .NET uygulamalarınızı modernleştirin. Sonuç olarak, Kurumsal uygulamalarınızı modernleştirme toplam sahiplik maliyetinizi düşürecektir.
 
-Bir uygulama kısmen modernizing mutlaka bir tam geçiş ve rearchitecture anlamına gelmez. Mevcut uygulamalarınızı önemli ancak kolay modernization yapmak başlangıçta modernize. Var olan .NET Framework sürümleri, Windows ve IIS bağımlılıkları ile yazılmış geçerli kodunuzu temel, koruyabilirsiniz. Şekil 4-1 nasıl bulut iyileştirilmiş uygulamaları vurgular Azure uygulamanızı modernization olgunluk modellerinde konumlandırılır.
+Kısmen uygulama modernleştirme mutlaka bir tam geçiş ve rearchitecture gelmez. Başlangıçta, önemli, ancak kolay modernizasyonu yapmak, mevcut uygulamalarınızla modernleştirmelisiniz. Mevcut .NET Framework sürümlerinde, Windows ve IIS bağımlılıkları ile yazılmış geçerli kod temel olarak, koruyabilirsiniz. Şekil 4-1 nasıl bulut iyileştirilmiş uygulamaları vurgular Azure uygulama modernizasyonu olgunluk modellerinde konumlandırılır.
 
-![Bulut için iyileştirilmiş uygulamaları konumlandırma](./media/image1.png)
+![Bulut için iyileştirilmiş uygulamalar konumlandırma](./media/image1.png)
 
-> **Şekil 4-1.** Bulut için iyileştirilmiş uygulamaları konumlandırma
+> **Şekil 4-1.** Bulut için iyileştirilmiş uygulamalar konumlandırma
 
 >[!div class="step-by-step"]
-[Önceki](../migrate-your-relational-databases-to-azure.md)
-[sonraki](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
+>[Önceki](../migrate-your-relational-databases-to-azure.md)
+>[İleri](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)

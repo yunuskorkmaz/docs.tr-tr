@@ -4,12 +4,12 @@ description: Giriş mimarisi, N katmanlı mimariler için sunucusuz bulut tabanl
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084007"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126751"
 ---
 # <a name="architecture-approaches"></a>Mimari yaklaşımları
 
@@ -97,5 +97,5 @@ Mikro hizmetler de dahil olmak üzere kendi zorluklar getirir:
 Sonuç olarak tüm daha sonra açıklanan avantajları sunucusuz olarak dahil olmak üzere, bu sorunları ele almak için çözümleri vardır.
 
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](architecture-deployment-approaches.md)
+>[Önceki](index.md)
+>[İleri](architecture-deployment-approaches.md)

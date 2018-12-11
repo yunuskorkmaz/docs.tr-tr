@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672286"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126428"
 ---
 # <a name="azure-serverless-platform"></a>Azure sunucusuz platformu
 

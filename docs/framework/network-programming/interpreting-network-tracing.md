@@ -10,11 +10,11 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672299"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152271"
 ---
 # <a name="interpreting-network-tracing"></a>Ağ izlemeyi yorumlama
 Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapar yakalamak için kullanabileceğiniz <xref:System.Net> sınıf üyeleri. Bu çağrılarının çıktısı aşağıdaki örneklere benzer olabilir.  
@@ -26,7 +26,7 @@ Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapa
   
  [588] yukarıdaki örnekte geçerli iş parçacığının benzersiz tanımlayıcısıdır. (4357) ve (4387) olan zaman damgaları gösteren uygulama başlatıldığından beri geçen milisaniye sayısını. Zaman damgası aşağıdaki veri girme ve yönteminden çıkılıyor uygulama gösterir **Socket.Send**. Nesnesini yürütürken **Gönder** yöntemi kendi benzersiz tanımlayıcı olarak 33574638 sahiptir. Yöntemi çıkış izleme (önceki örnekte 61) dönüş değerini içerir.  
   
- Ağ izlerini gönderilen veya alınan Köprü Metni Aktarım Protokolü (HTTP) gibi uygulama düzeyi protokolleri kullanarak uygulamanız tarafından ağ trafiği yakalayabilirsiniz. Bu veriler metin olarak yakalanır ve isteğe bağlı olarak onaltılık veri. Onaltılık veriler, belirttiğiniz zaman kullanılabilir **includehex** değeri olarak **İzlemeModu** özniteliği. (Bu öznitelik hakkında ayrıntılı bilgi için bkz: [nasıl yapılır: ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Aşağıdaki örnek izleme kullanılarak oluşturulan **includehex**.  
+ Ağ izlerini gönderilen veya alınan Köprü Metni Aktarım Protokolü (HTTP) gibi uygulama düzeyi protokolleri kullanarak uygulamanız tarafından ağ trafiği yakalayabilirsiniz. Bu veriler metin olarak yakalanır ve isteğe bağlı olarak onaltılık veri. Onaltılık veriler, belirttiğiniz zaman kullanılabilir **includehex** değeri olarak **İzlemeModu** özniteliği. (Bu öznitelik hakkında ayrıntılı bilgi için bkz: [nasıl yapılır: Ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Aşağıdaki örnek izleme kullanılarak oluşturulan **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,5 +46,5 @@ Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapa
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Nasıl yapılır: Ağ İzlemeyi Yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+ [Nasıl Yapılır: Ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)

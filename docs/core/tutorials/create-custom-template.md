@@ -2,14 +2,14 @@
 title: Yeni dotnet için özel bir şablon oluşturma
 description: Bu eğlenceli dotnet yeni komutu için özel bir şablon oluşturmayı öğrenin öğretici.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516659"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169742"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Yeni dotnet için özel bir şablon oluşturma
 
@@ -64,7 +64,7 @@ Kullanımı, onayladıktan varolan bir projeyi derler ve çalıştırır veya sa
 1. İle birlikte proje klasörünüzün içeriğini kopyalayın, *.template.config/template.json* dosyası içine *içeriği* oluşturduğunuz klasör.
 1. Yanındaki *içeriği* klasör ekleme bir [ *nuspec* dosya](/nuget/create-packages/creating-a-package). Soubor nuspec bir paket içeriğini açıklayan ve NuGet paketi oluşturma işlemlerini yöneten bir XML bildirimi dosyasıdır.
 
-   ![NuGet paketinin düzenini gösteren dizin yapısı](./media/create-custom-template/nugetdirectorylayout.png)
+   ![NuGet paketinin düzenini gösteren dizin yapısı](./media/create-custom-template/nuget-directory-layout.png)
 
 1. İçinde bir  **\<packageTypes >** öğesinde *nuspec* dosya, içeren bir  **\<packageType >** öğesi ile bir `name` öznitelik değerini `Template`. Her iki *içeriği* klasörü ve *nuspec* dosya aynı dizinde bulunması. Tabloda, en düşük gösterilmiştir *nuspec* dosya şablon bir NuGet paketi olarak üretmek için gerekli öğeler.
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Liste zaman şablonlarıyla `dotnet new -l`, gördüğünüz *NUnit 3 Test projesi* kısa adı ile *nunit* şablon listesinde. Sonraki bölümde şablonu kullanmaya hazırsınız.
 
-![Konsol penceresi ile yüklü diğer şablonlar listelenen NUnit şablonu gösterme](./media/create-custom-template/nunit1.png)
+![Diğer şablonları NUnit şablonla gösteren konsol penceresi](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Bir şablondan bir proje oluşturma
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 Konsol projesi oluşturulur ve projenin paketleri geri olduğunu gösterir. Komutu çalıştırdıktan sonra projeyi kullanıma hazırdır.
 
-![NUnit projesi oluşturur ve proje bağımlılıkları yükler dotnet yeni komutunun çıktısını gösteren konsol penceresi](./media/create-custom-template/nunit2.png)
+![Konsol penceresinde proje bağımlılıklarını geri yükleme dahil olmak üzere yeni dotnet nunit çıktısını gösterir](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Nuget.org depolanan bir NuGet paketinden bir şablonu kaldırmak için
 

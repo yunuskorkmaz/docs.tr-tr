@@ -1,15 +1,13 @@
 ---
-title: DotNet araç command - .NET Core CLI yükleme
+title: DotNet aracı yükleme komutu
 description: Dotnet araç belirtilen .NET Core genel aracı komut yükler makinenize yükleyin.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 251e7b04be96ac2340727fa03dbaa2d548110fa9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512201"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168721"
 ---
 # <a name="dotnet-tool-install"></a>DotNet aracı yükleme
 
@@ -33,7 +31,7 @@ dotnet tool install <-h|--help>
 
 Genel araçları yüklü aşağıdaki dizinlerindeki varsayılan olarak belirttiğinizde `-g` (veya `--global`) seçeneği:
 
-| İŞLETİM SİSTEMİ          | Yol                          |
+| İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

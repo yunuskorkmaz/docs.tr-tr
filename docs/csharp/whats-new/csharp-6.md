@@ -3,12 +3,12 @@ title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194039"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146751"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
 
@@ -94,9 +94,9 @@ Bu söz dizimi ekleme erişilebilir bir yöntemi kaldırmazsa olduğu bir [ikili
 
 *Otomatik-özellik başlatıcıları* başlangıç değeri otomatik özellik için özellik bildiriminde bir parçası olarak bildirmenize.  Önceki sürümlerde, bu özellikleri ayarlayıcılar olması gerekir ve yedekleme alanı tarafından kullanılan veri depolama alanı başlatmak için ayarlayıcı'ı kullanmanız gerekir. Bu sınıf adı ve öğrencinin derece listesini içeren bir öğrenci için göz önünde bulundurun:
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-Bu sınıf büyüdükçe, diğer oluşturucular içerebilir. Her Oluşturucu, bu alanı başlatmak gereken veya hatalara neden.
+Bu sınıf büyüdükçe, diğer oluşturucular içerebilir. Her Oluşturucu eğitim verdiğiniz özelliği başlatması gerekiyor veya hatalara neden.
 
 C# 6 otomatik-özellik bildiriminde otomatik-özellik tarafından kullanılan depolama alanı için bir başlangıç değeri atamanızı sağlar:
 
@@ -104,7 +104,7 @@ C# 6 otomatik-özellik bildiriminde otomatik-özellik tarafından kullanılan de
 
 `Grades` Üyesi olduğu bildirilir başlatılır. Bu, tam bir kez başlatma gerçekleştirmek kolaylaştırır. Başlatma ile ortak arabirim için depolama ayırmayı excel'dir kolaylaştırarak özellik bildiriminde bir parçasıdır `Student` nesneleri.
 
-Özellik başlatıcıları gösterildiği salt okunur özellikler yanı sıra okuma/yazma özellikleri burada kullanılabilir.
+Özellik başlatıcıları gösterildiği yukarıda ve okuma/yazma özellikleri de, aşağıda gösterildiği gibi salt okunur özellikler ile kullanılabilir.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

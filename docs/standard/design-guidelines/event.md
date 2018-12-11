@@ -1,6 +1,6 @@
 ---
 title: Olay tasarımı
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129096"
 ---
 # <a name="event-design"></a>Olay tasarımı
 Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı için framework izin yapıları) biçimindedir. Başka bir geri çağırma mekanizmalar Temsilciler, sanal üyeleri ve arabirim tabanlı eklentileri alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiricilerin çoğu kullandıkları için bir geri çağırma mekanizmaları çok olayları kullanarak daha iyi olduğunu gösterir. Olayları Visual Studio ve birçok dili ile sorunsuz şekilde tümleşiktir.  
@@ -69,7 +68,7 @@ Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı i
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

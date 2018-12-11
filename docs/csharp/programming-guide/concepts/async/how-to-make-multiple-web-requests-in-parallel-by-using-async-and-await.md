@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)'
+title: 'Nasıl Yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: b366b43cf1c6114f02f026da25aeb5e30dc91c6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 527cca572e48cd4b6b895c828327a5770ac83d89
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453430"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125606"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Nasıl Yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)
 Yük oluşturulduğunda bir zaman uyumsuz yönteminde görevler oluşturulduklarında başlatılır. [Await](../../../../csharp/language-reference/keywords/await.md) işleci işlemenin devam edemediği görev tamamlanana kadar yöntem noktasındaki göreve uygulanır. Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklenir.  
   
 ```csharp  
@@ -37,13 +37,13 @@ var result = await myTask;
 > [!NOTE]
 >  Bu projeyi tamamlamak için Visual Studio 2012 veya üzeri ve .NET Framework 4.5 olmalıdır veya üzeri yüklü.  
   
- Aynı anda birden çok görevi başlatan başka bir örnek için bkz: [nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Aynı anda birden çok görevi başlatan başka bir örnek için bkz [nasıl yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Bu örnekte kodunu indirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Projeyi kurmak için  
   
-1.  Bir WPF uygulaması ayarlamak için aşağıdaki adımları tamamlayın. İçinde bu adımlara ilişkin ayrıntılı yönergeleri bulabilirsiniz [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Bir WPF uygulaması ayarlamak için aşağıdaki adımları tamamlayın. İçinde bu adımlara ilişkin ayrıntılı yönergeleri bulabilirsiniz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Bir metin kutusu ve bir düğmeyi içeren bir WPF uygulaması oluşturun. Düğmeyi adlandırın `startButton`ve metin kutusunu adlandırın `resultsTextBox`.  
   
@@ -89,7 +89,7 @@ var result = await myTask;
         var bytes = content.Length;  
         // Strip off the "https://".  
         var displayURL = url.Replace("https://", "");  
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }  
     ```  
   
@@ -130,8 +130,7 @@ var result = await myTask;
         int total = length1 + length2 + length3;  
   
         // Display the total count for the downloaded websites.  
-        resultsTextBox.Text +=  
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }  
     ```  
   
@@ -201,8 +200,7 @@ namespace AsyncExample_MultipleTasks
             int total = length1 + length2 + length3;  
   
             // Display the total count for the downloaded websites.  
-            resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+            resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         async Task<int> ProcessURLAsync(string url, HttpClient client)  
@@ -220,14 +218,14 @@ namespace AsyncExample_MultipleTasks
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
-        }  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
+        }
     }  
 }  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
-- [Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Nasıl Yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

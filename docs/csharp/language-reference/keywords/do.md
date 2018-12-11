@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994474"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129031"
 ---
 # <a name="do-c-reference"></a>do (C# Başvurusu)
 
@@ -32,13 +32,12 @@ Aşağıdaki örnek, kullanımını gösterir. `do` deyimi. Seçin **çalıştı
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için [do deyimi](~/_csharplang/spec/statements.md#the-do-statement) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)  
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](index.md)  
-- [do-while Deyimi (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [Yineleme Deyimleri](iteration-statements.md)  
-- [while deyimi](while.md)  
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Yineleme Deyimleri](iteration-statements.md)
+- [while deyimi](while.md)

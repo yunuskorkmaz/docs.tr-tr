@@ -2,20 +2,19 @@
 title: Infer.NET ve probalistic programlama ile bir oyun eşleme listesi uygulaması oluşturma
 description: Probalistic programlama ile Infer.NET TrueSkill basitleştirilmiş bir sürümünü temel alan bir oyun matchup listesi uygulaması oluşturmak için nasıl kullanılacağını keşfedin.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152480"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
 
 Bu nasıl yapılır kılavuzunda Infer.NET kullanarak olasılığa dayalı programlama hakkında size öğretir. Olasılığa dayalı programlama bir machine learning burada özel modelleri bilgisayar programları olarak ifade edilir yaklaşımdır. Bu etki alanı bilgisini modellerindeki birleştirmek için izin verir ve makine öğrenimi sistemi daha yorumlanabilirinde yapar. Ayrıca, çevrimiçi çıkarımı – yeni veriler ulaştıkça öğrenme işlemi destekler. Microsoft Azure, Xbox ve Bing çeşitli ürünlerin Infer.NET kullanılır.
 
-## <a name="what-is-probabilistic-programming"></a>Olasılığa dayalı programlama nedir? 
+## <a name="what-is-probabilistic-programming"></a>Olasılığa dayalı programlama nedir?
 
 Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modeller oluşturmak sağlıyor. 
 
@@ -135,7 +134,7 @@ Komut isteminde aşağıdaki komutu çalıştırın:
 dotnet run
 ```
 
-## <a name="results"></a>Sonuçları
+## <a name="results"></a>Sonuçlar
 
 Sonuçlar aşağıdakine benzer olmalıdır:
 

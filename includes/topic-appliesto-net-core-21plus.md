@@ -1,1 +1,1 @@
-**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 2.1.300 ve sonraki sürümler
+**Bu konu için geçerlidir: ✓** .NET Core 2.1 SDK ve sonraki sürümler

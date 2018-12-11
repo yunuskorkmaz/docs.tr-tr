@@ -1,6 +1,6 @@
 ---
 title: Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562378"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150621"
 ---
-# <a name="managed-threading-best-practices"></a>Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
+# <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı oluşturma en iyi yöntemleri
 Çoklu iş parçacığı kullanımı dikkatli programlama gerektirir. Çoğu görevler için istediğiniz karmaşıklık yürütme için sıraya alma istekleri tarafından iş parçacığı havuzu iş parçacıkları tarafından azaltabilirsiniz. Birden çok iş parçacığı çalışması koordine veya işleme iş parçacıkları bu blok gibi durumlarda daha zor, bu konuda ele alır.  
   
 > [!NOTE]
@@ -70,37 +70,18 @@ else {
   
  Birden çok iş parçacığı etkinliklerini eşitlediğinizde yarış durumları da meydana gelebilir. Bir satır kod yazdığınızda, ne olacağını dikkate almanız gereken bir iş parçacığı etkisiz satırı yürütülmeden önce (veya herhangi bir satır yukarı olun tek makine yönergelerine önce) ve başka bir iş parçacığı, taşıyorduysa.  
   
-## <a name="number-of-processors"></a>İşlemci sayısı  
- Çoğu bilgisayarları, tabletler ve telefonlar gibi küçük cihazları dahil birden çok işlemci (Ayrıca çekirdek olarak adlandırılır), artık var. Ayrıca tek işlemcili bilgisayarlarda, bilmeniz gerekir, çoklu iş parçacığı çalıştırılır yazılım geliştiriyor biliyorsanız tek işlemcili bilgisayarlar ve çok işlemcili bilgisayarlar için farklı sorunlarını çözer.  
-  
-### <a name="multiprocessor-computers"></a>Çok işlemcili bilgisayar  
- Çoklu iş parçacığı kullanımı, daha yüksek işleme düzeyi sağlar. On işlemci on kez on aynı anda çalışıyor, böylece yalnızca iş ayrılır, ancak bir iş yapabilirler. iş parçacıkları iş bölebilir ve ek işlem gücünden yararlanmak için kolay bir yol sağlar. Kullanırsanız, çok işlemcili bir bilgisayarda çoklu iş parçacığı kullanımı:  
-  
--   Eşzamanlı olarak çalışabilecek iş parçacığı sayısını işlemci sayısı sınırlıdır.  
-  
--   Yalnızca ön plan iş parçacığı yürütme sayısını işlemci sayısından küçük olduğunda bir arka plan iş parçacığı çalıştırır.  
-  
--   Çağırdığınızda <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi bir iş parçacığında iş parçacığı olabilir veya işlemci sayısını ve yürütmek için şu anda bekleyen iş parçacıklarının sayısını bağlı olarak hemen yürütme başlatılamayabilir.  
-  
--   Yarış durumları, yalnızca iş parçacıkları beklenmedik bir şekilde etkisiz, ancak iki farklı yürütme iş parçacıkları olduğundan işlemcileri aynı kod bloğu ulaşmak için yarış çünkü ortaya çıkabilir.  
-  
-### <a name="single-processor-computers"></a>Tek İşlemcili Bilgisayar  
- Çoklu iş parçacığı kullanımı, bilgisayarın kullanıcı için daha fazla duyarlılık sağlar ve arka plan görevleri için boşta kalma süresi kullanır. Kullanıyorsanız tek işlemcili bir bilgisayarda çoklu iş parçacığı kullanımı:  
-  
--   Herhangi anı yalnızca bir iş parçacığı çalıştırır.  
-  
--   Arka plan iş parçacığı, yalnızca kullanıcının ana iş parçacığı boşta olduğunda çalışır. Sürekli olarak yürütülen bir ön plan iş parçacığı arka plan iş parçacıkları, işlemci zamanının starves.  
-  
--   Çağırdığınızda <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi bir iş parçacığı üzerinde iş parçacığı kadar geçerli iş parçacığını yürütmeye başlamaz verir veya işletim sistemi tarafından etkisiz.  
-  
--   Programcı alışılmadık bir şu anda bir iş parçacığı etkisiz, olgu bazen bir kod bloğunun ilk ulaşmak başka bir iş parçacığına izin vererek beklemek yarış durumlarını genellikle oluşur.  
-  
 ## <a name="static-members-and-static-constructors"></a>Statik üyeleri ve statik oluşturucular  
  Bir sınıf kendi sınıf oluşturucusunda kadar başlatılmadı (`static` C# ' ta, Oluşturucuda `Shared Sub New` Visual Basic'te) çalışması sona erdi. Başlatılmamış bir tür üzerinde kodun yürütülmesini önlemek için ortak dil çalışma zamanı için diğer iş parçacıklarından tüm çağrıları engeller `static` sınıf üyeleri (`Shared` üyeleri Visual Basic'te) kadar sınıf oluşturucu çalışması sona erdi.  
   
  Örneğin yeni bir iş parçacığı sınıf oluşturucusunu başlatır ve iş parçacığı yordamı çağıran bir `static` üye sınıfının, sınıf oluşturucusu tamamlanıncaya kadar yeni bir iş parçacığını engeller.  
   
  Bu olabilir herhangi bir tür için geçerli bir `static` Oluşturucusu.  
+
+## <a name="number-of-processors"></a>İşlemci sayısı
+
+Kullanılabilir olup olmadığını birden çok işlemci veya tek bir işlemci bir sistemde çok iş parçacıklı mimarisi etkileyebilir. Daha fazla bilgi için [numarası, işlemci](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Kullanım <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> özelliği çalışma zamanında kullanılabilir işlemci sayısını belirlemek için.
   
 ## <a name="general-recommendations"></a>Genel öneriler  
  Birden çok iş parçacığı kullanırken aşağıdaki yönergeleri göz önünde bulundurun:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework sürüm 2.0 <xref:System.Threading.Interlocked.Add%2A> yöntemi 1'den daha büyük artışlarla atomik güncelleştirmeler sağlar.  
+    > .NET Framework 2.0 ve sonraki sürümlerinde, kullanın <xref:System.Threading.Interlocked.Add%2A> yöntemi için 1'den daha büyük atomik artırır.  
   
      Yalnızca bir null başvuru ise ikinci örnekte, bir başvuru türü değişkeni güncelleştirilir (`Nothing` Visual Basic'te).  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  .NET Framework sürüm 2.0 <xref:System.Threading.Interlocked.CompareExchange%2A> herhangi bir başvuru türü için tür açısından güvenli yerine kullanılabilecek genel bir aşırı yükleme yöntemi vardır.  
+    > .NET Framework 2.0 ile başlayarak <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> yöntemi aşırı yüklemesi, başvuru türleri için tür kullanımı uyumlu bir alternatif sağlar.
   
 ## <a name="recommendations-for-class-libraries"></a>Sınıf kitaplıkları için öneriler  
  Sınıf kitaplıkları için tasarlarken aşağıdaki yönergeleri göz önünde bulundurun çoklu iş parçacığı kullanımı:  

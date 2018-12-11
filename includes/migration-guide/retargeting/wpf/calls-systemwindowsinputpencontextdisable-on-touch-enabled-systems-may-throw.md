@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7 bu sorun giderilmiştir. Özel durum önlemek için .NET Framework 4.7 ile başlayan .NET Framework'ün bir sürüme yükseltin.|
 |Kapsam|Kenar|
 |Sürüm|4.6.1|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

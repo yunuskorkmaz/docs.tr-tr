@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152688"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
 
@@ -84,13 +84,13 @@ Kapsayıcılı uygulamaları ve .NET içinde mikro hizmetler mimarisi anlamanız
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>Krediler
+## <a name="credits"></a>Jenerik
 
 Ortak yazarlar:
 
 > **Cesar de la Torre**, üst düzey PM, .NET ürün ekibi, Microsoft Corp.
 >
-> **Fatura Wagner**, üst düzey İçerik geliştirici, C + E, Microsoft Corp.
+> **Fatura Wagner**, üst düzey içerik geliştirici, C + E, Microsoft Corp.
 >
 > **Mike Rousos**, baş yazılım mühendisi, Devdiv'e CAT ekibi, Microsoft
 
@@ -116,7 +116,7 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Diego Vega**, PM lideri, Entity Framework takım, Microsoft
 >
-> **Barry Dorrans**, üst düzey Güvenlik Program Yöneticisi
+> **Barry Dorrans**, üst düzey güvenlik Program Yöneticisi
 >
 > **Rowan Miller**, üst düzey Program Yöneticisi, Microsoft
 >
@@ -146,7 +146,7 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Charles Lowell**, yazılım mühendisi, VS CAT ekibi, Microsoft
 >
-> **Miguel Veloso**, üst düzey Danışman Turing sınaması sırasında
+> **Miguel Veloso**, Turing sınama en üst düzey Danışman
 
 
 ## <a name="copyright"></a>Telif Hakkı
@@ -179,6 +179,5 @@ Docker whale logosu, Docker, Inc.'in kayıtlı ticari markasıdır. İzni taraf�
 
 Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.
 
-
 >[!div class="step-by-step"]
-[Next](container-docker-introduction/index.md)
+>[Next](container-docker-introduction/index.md)

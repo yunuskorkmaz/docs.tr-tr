@@ -4,30 +4,30 @@ description: Azure işlevleri, sunucusuz özellikler birden çok dil arasında (
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405023"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145169"
 ---
-# <a name="azure-functions"></a>Azure işlevleri
+# <a name="azure-functions"></a>Azure İşlevleri
 
 Azure işlevleri, sunucusuz işlem deneyimi sağlar. Bir işlev tarafından çağrılan bir *tetikleyici* (örneğin, bir HTTP uç noktası veya bir zamanlayıcı erişim) ve kod veya iş mantığı bloğunu yürütür. Ayrıca destek özel işlevler *bağlamaları* depolama ve kuyruk gibi kaynaklara bağlanın.
 
 ![Azure işlevleri logosu](./media/azure-functions-logo.png)
 
-Azure işlevleri framework'ün iki sürümü vardır. Eski sürüm tam .NET Framework ve .NET Core uygulamaları platformlar arası yeni çalışma zamanı destekler. Ek diller yanı sıra C# JavaScript, F # ve Java gibi desteklenir. Portalda oluşturulan işlevleri, zengin bir betik söz dizimi sağlar. Tek başına projeleri oluşturulan işlevleri tam bir platform desteği ve özellikleri ile dağıtılabilir.
+Azure işlevleri framework'ün iki sürümü vardır. Eski sürüm tam .NET Framework ve .NET Core uygulamaları platformlar arası yeni çalışma zamanı destekler. İlave diller yanı sıra C# JavaScript gibi F#, ve Java desteklenir. Portalda oluşturulan işlevleri, zengin bir betik söz dizimi sağlar. Tek başına projeleri oluşturulan işlevleri tam bir platform desteği ve özellikleri ile dağıtılabilir.
 
 Daha fazla bilgi için [Azure işlevleri belgelerinde](https://docs.microsoft.com/azure/azure-functions).
 
 ## <a name="functions-v1-vs-v2"></a>İşlevler v1 ve v2 karşılaştırması
 
-Azure işlevleri çalışma zamanı iki sürümü vardır: 1.x ve 2.x'i. Sürüm 1.x olan genel kullanıma (GA). .NET geliştirme portalı veya Windows makineleri destekler ve .NET Framework'ü kullanır. 1.x C#, JavaScript ve F #, Python, PHP, TypeScript, Batch, Bash ve PowerShell için Deneysel desteği destekler.
+Azure işlevleri çalışma zamanı iki sürümü vardır: 1.x ve 2.x'i. Sürüm 1.x olan genel kullanıma (GA). .NET geliştirme portalı veya Windows makineleri destekler ve .NET Framework'ü kullanır. 1.x destekler C#, JavaScript ve F#, Python, PHP, TypeScript, Batch, Bash ve PowerShell için Deneysel desteği.
 
 Sürüm 2.x önizlemededir. .NET Core yararlanır ve Windows, macOS ve Linux makinelerini platformlar arası geliştirmeyi destekler. 2.x Java için birinci sınıf destek ekler, ancak henüz doğrudan Deneysel dillerden herhangi birini desteklemiyor. Sürüm 2.x üçüncü taraf uzantıları bağımsız sürüm oluşturma işlemlerini bağlamaları platforma sağlayan yeni bir bağlama genişletilebilirlik modeli kullanır ve daha rahat bir yürütme ortamı.
 
-> **1.x ile içinde bilinen bir sorun var. [bağlama yeniden yönlendirme desteği](https://github.com/Azure/azure-functions-host/issues/992).** Sorun için .NET geliştirme özeldir. Kitaplıkların çalışma zamanı'nda bulunan farklı bir sürüm kitaplıkları bağımlı olan projeler etkilenir. İşlevleri ekibi, sorunu somut ilerleme kaydediyor için kaydoldu. Genel kullanıma geçmeden önce takım 2.x bağlama yeniden yönlendirmelerini ele alınacaktır. Önerilen düzeltmeler ve geçici çözümler resmi takım deyimiyle şuradan ulaşabilirsiniz: [derleme çözümlemesine Azure işlevleri'nde](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **1.x ile içinde bilinen bir sorun var. [bağlama yeniden yönlendirme desteği](https://github.com/Azure/azure-functions-host/issues/992).** Sorun için .NET geliştirme özeldir. Kitaplıkların çalışma zamanı'nda bulunan farklı bir sürüm kitaplıkları bağımlı olan projeler etkilenir. İşlevleri ekibi, sorunu somut ilerleme kaydediyor için kaydoldu. Genel kullanıma geçmeden önce takım 2.x bağlama yeniden yönlendirmelerini ele alınacaktır. Önerilen düzeltmeler ve geçici çözümler resmi takım deyimiyle buradan kullanılabilir: [Azure işlevleri'nde derleme çözümlemesine](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Daha fazla bilgi için [1.x ve 2.x'i karşılaştırma](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -175,10 +175,10 @@ Proxy'leri JSON tanımları depolanır. Aşağıda bir örnek verilmiştir:
 
 `Root` Proxy kök URL'ye gönderilen her şeyi alır (`https://--shorturl--/`) ve belge sitesine yönlendirir.
 
-Proxy'leri kullanma örneği, videoda gösterilen [Azure: Bulut sunucusuz Azure işlevleri ile uygulamanızı taşıyın](https://channel9.msdn.com/events/Connect/2017/E102). Gerçek zamanlı olarak yerel SQL Server üzerinde çalışan bir ASP.NET Core uygulaması Azure buluta geçirilir. Proxy işlevleri kullanmak için geleneksel bir Web API projesi yeniden düzenleme yardımcı olmak için kullanılır.
+Proxy'leri kullanma örneği, videoda gösterilen [Azure: Sunucusuz Azure işlevleri ile bulut uygulamanızı taşıyın](https://channel9.msdn.com/events/Connect/2017/E102). Gerçek zamanlı olarak yerel SQL Server üzerinde çalışan bir ASP.NET Core uygulaması Azure buluta geçirilir. Proxy işlevleri kullanmak için geleneksel bir Web API projesi yeniden düzenleme yardımcı olmak için kullanılır.
 
 Proxy hakkında daha fazla bilgi için bkz: [iş ile Azure işlevleri proxy'leri](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
-[Önceki](azure-serverless-platform.md)
-[İleri](application-insights.md)
+>[Önceki](azure-serverless-platform.md)
+>[İleri](application-insights.md)

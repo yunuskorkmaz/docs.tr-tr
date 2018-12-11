@@ -2,14 +2,14 @@
 title: Project.json ile Paket bağımlılıklarını azaltma
 description: Project.json tabanlı kitaplıkları yazma Paket bağımlılıklarını azaltın.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.custom: seodec18
+ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50040887"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168289"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Project.json ile Paket bağımlılıklarını azaltma
 

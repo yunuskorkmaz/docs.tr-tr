@@ -4,27 +4,27 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580215"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152350"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
+# <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
 
 Şekil 3-1 temel yapı taşları birden çok takımı tarafından (uygulama geliştirme, DevOps altyapı işlemlerini ve BT yönetim ve işlemler) teslim iş türüne göre sınıflandırılmış Docker uygulama yaşam döngüsünü gösterir. Genellikle, kuruluştaki, "kişi" profiller farklı her alan için sorumlu. Bu nedenle becerilerini var.
 
 ![](./media/image1.png)
 
-Şekil 3-1: ana yapı taşları yaşam döngüsünde Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulamaları için
+Şekil 3-1: Yaşam döngüsünde Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulamaları için temel yapı taşları
 
 Bir yaşam döngüsü iş akışı başlangıçta öngörücü "varsayılan olarak ürün seçenekleri daha hızlı kullanmaya başlamak, geliştiriciler için kolaylaştıran," temel Docker kapsayıcıya alınmış ancak başlık altında olması gerektiğini bir açık çerçeve olacaktır, böylece temel bir Esnek iş akışı farklı Bağlamlar için her kuruluş ya da enterprise ayarlama yeteneği. (Bileşenlerin ve ürünlerin) iş akışı altyapısı, her şirket, gelecekte bile geliştirme veya diğer ürünleri DevOps değiştirme özelliğine sahip olması gerekir bu ortamda kapsayacak şekilde esnek olması gerekir. Bu esneklik, açıklık ve altyapı ve platform teknolojilerini geniş seçimi tam olarak Microsoft kapsayıcılı Docker uygulamaları için aşağıdaki bölümlerde açıklandığı gibi aralığındadır.
 
 Tablo 3-1 kapsayıcılı Docker uygulamaları için Microsoft DevOps amacınıza her aşamada (Microsoft veya üçüncü taraf) kullanmak için hangi ürünleri seçebilmeniz açık bir DevOps iş akışı sağlamak için basitleştirilmiş bir iş akışı sağlarken olduğunu gösterir. "tarafından varsayılan-ürün" zaten bağlı sağlayan; Bu nedenle, size hızlıca Docker uygulamaları için kurumsal düzeyde DevOps iş akışınızla başlayabilirsiniz.
 
-Tablo 3-1: herhangi bir teknoloji açık DevOps iş akışı
+Tablo 3-1: Herhangi bir teknoloji için DevOps iş akışı Aç
 
 | Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf: Azure eklenebilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
@@ -59,5 +59,5 @@ Azure DevOps hizmetleriyle kapsayıcı odaklı geliştiriciler oluşturabilir, k
 Bu nedenle, Microsoft, bir uçtan uca kapsayıcı Docker uygulaması yaşam döngüsü için tam bir temel sunar. Ancak, *koleksiyonu ürünleri ve isteğe bağlı olarak seçin ve var olan tümleştirme olanak tanıyan teknolojileri, araçları ve işler*. Özelliklerin ayrıntılı gücü ile birlikte geniş bir yaklaşım esneklik, kapsayıcılı Docker uygulama geliştirme için güçlü bir konumda Microsoft yerleştirin.
 
 >[!div class="step-by-step"]
-[Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[İleri](../design-develop-containerized-apps/index.md)
+>[Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[İleri](../design-develop-containerized-apps/index.md)

@@ -3,12 +3,12 @@ title: Visual Studio'da Roslyn söz dizimi görselleştiricisi ile kod keşfedin
 description: Söz dizimi görselleştiricisi .NET derleyici Platformu SDK'sı için kod oluşturur modelleri araştırmak için bir araç sağlar.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143574"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio'da Roslyn söz dizimi görselleştiricisi ile kod keşfedin
 
@@ -32,7 +32,7 @@ Kullanarak yeni bir proje oluşturma **dosya** > **yeni proje** komutu. Bir VB v
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Bir C# sözdizimi ağacı Görselleştirme](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Bir VB söz dizimi ağacı Görselleştirme](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -41,7 +41,7 @@ Görselleştiricisi araç penceresi söz dizimi ağacı önceki görüntüde gö
 
 Sözdizimi ağacı oluşturan öğeleri – üç tür *düğümleri*, *belirteçleri*, ve *Meraklısına Notlar*. Bunlar hakkında daha fazla türleri okuyabilirsiniz [sözdizimiyle çalışmak](work-with-syntax.md) makalesi. Her türde öğeler, farklı bir renkte kullanılarak temsil edilir. Kullanılan renkleri genel bir bakış için 'Gösterge' düğmesine tıklayın.
 
-Her öğe ağacında Ayrıca kendi görüntüler **span**. **Span** olduğundan bu düğümün metin dosyasında dizinleri (başlangıç ve bitiş konumu).  Önceki örnekte C#, seçili "UsingKeyword [0..5)" belirtecine sahip bir **yayılma** geniş, yani beş karakteri [0..5). "[.)" Başlangıç dizini aralığı bir parçasıdır, ancak bitiş dizini değil gösterimi anlamına gelir.
+Her öğe ağacında Ayrıca kendi görüntüler **span**. **Span** olduğundan bu düğümün metin dosyasında dizinleri (başlangıç ve bitiş konumu).  Önceki içinde C# örnek, seçili "UsingKeyword [0..5)" belirtecine sahip bir **yayılma** geniş, yani beş karakteri [0..5). "[.)" Başlangıç dizini aralığı bir parçasıdır, ancak bitiş dizini değil gösterimi anlamına gelir.
 
 Ağaç gitmek için iki yolu vardır:
 * Genişletin veya ağacındaki öğeleri tıklayın. Görselleştirici, bu öğenin aralık Kod düzenleyicisinde karşılık gelen metni otomatik olarak seçer.
@@ -62,7 +62,7 @@ Ağacın herhangi bir öğeye sağ tıklayın ve tıklayarak **yönlendirilmiş 
 Görselleştirici seçili öğenin köklü grafik gösterimi görüntülenir. İçin aşağıdaki adımları deneyin **MethodDeclaration** düğüm karşılık gelen `Main()` C# örneği yöntemi. Görselleştirici şu şekilde görünür bir söz dizimi grafik görüntüler:
 
 ![Bir C# sözdizimi grafik görüntüleme](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Aynı deneyin **SubBlock** düğüm karşılık gelen `Main()` önceki VB örnekte yöntemi. Görselleştirici şu şekilde görünür bir söz dizimi grafik görüntüler:
 
@@ -84,7 +84,7 @@ Başka bir seçenek, bir ikili izleme kurulumunda bir ikinci monitörde söz diz
 
 Söz dizimi görselleştiricisi ilkel incelemesini simgeleri ve anlamsal bilgi sağlar. Tür `double x = 1 + 1;` C# örneğinde Main() içindeki. İfade seçip `1 + 1` kod düzenleyici penceresinde. Görselleştirici vurgular **AddExpression** Görselleştirici düğümü. Sağ bu tıklayın **AddExpression** tıklayın **görünümü simgesi (varsa)**. Menü öğelerinin çoğu "varsa" niteleyicisi olan dikkat edin. Söz dizimi görselleştiricisi özellikleri tüm düğümler için mevcut olmayabilir özellikleri dahil olmak üzere, bir düğüm olup olmadığını denetler. 
 
-Görselleştirici özellik kılavuzunda aşağıdaki resimde gösterildiği gibi güncelleştirir: sembol ifade için bir **SynthesizedIntrinsicOperatorSymbol** ile **tür yöntemi =**.
+Aşağıdaki resimde gösterildiği gibi görselleştiricisi güncelleştirmeleri özellik kılavuzunda: İfade için Sembol bir **SynthesizedIntrinsicOperatorSymbol** ile **tür yöntemi =**.
 
 ![Sembol Özellikleri](media/syntax-visualizer/symbol-properties.png)
 
@@ -128,7 +128,7 @@ Karşılık gelen tüm bildirilen tür, yöntem, özellik sembol inceleyin. Gör
 
 Yukarıdaki VB örnekleri kolayca C# ' de çoğaltılabilir. Tür `using C = System.Console;` yerine `Imports C = System.Console` diğer. C# önceki adımlarda görselleştiricisi penceresinde özdeş sonuçlar.
 
-Anlam denetleme işlemleri yalnızca düğümlerinde kullanılabilir. Bunlar, belirteçleri veya Meraklısına Notlar mevcut değildir. Tüm düğümlerin incelemek için ilgi çekici anlamsal bilgilerin vardır. Anlamsal bilgilerin ilgi çekici bir düğüme sahip olmadığında tıklayarak **görünümü * (varsa) simge** boş özellik kılavuzunda gösterir.
+Anlam denetleme işlemleri yalnızca düğümlerinde kullanılabilir. Bunlar, belirteçleri veya Meraklısına Notlar mevcut değildir. Tüm düğümlerin incelemek için ilgi çekici anlamsal bilgilerin vardır. Anlamsal bilgilerin ilgi çekici bir düğüme sahip olmadığında tıklayarak **görünümü \* (varsa) simge** boş özellik kılavuzunda gösterir.
 
 Daha fazla anlam analizi gerçekleştirmek için API'ler ile ilgili [semantik ile çalışma](work-with-semantics.md) genel bakış belgesi.
 

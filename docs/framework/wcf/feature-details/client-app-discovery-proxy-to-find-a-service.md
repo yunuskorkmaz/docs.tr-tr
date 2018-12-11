@@ -1,16 +1,16 @@
 ---
-title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
+title: "Nasıl Yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 4b1a71f60d64e77d735a18afede7101b7a184859
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153416"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
-Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Önceki konu [nasıl yapılır: keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine bir WCF Hizmeti uygulanır. Bu konu başlığında keşif proxy'si WCF hizmeti bulmak için kullandığı bir WCF istemcisi oluşturma.  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl Yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama
+Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Önceki konu [nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine bir WCF Hizmeti uygulanır. Bu konu başlığında keşif proxy'si WCF hizmeti bulmak için kullandığı bir WCF istemcisi oluşturma.  
   
 ### <a name="implement-the-client"></a>İstemcisini uygulama  
   
@@ -101,7 +101,7 @@ Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Ö
     }  
     ```  
   
- İstemci uygulaması gerçekleştirilmesinin tamamladınız. Geçin [nasıl yapılır: keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ İstemci uygulaması gerçekleştirilmesinin tamamladınız. Geçin [nasıl yapılır: Keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Örnek  
  Bu konu için listeleme tam kod budur.  
@@ -283,5 +283,5 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+ [Nasıl Yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Nasıl Yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

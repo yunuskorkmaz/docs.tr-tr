@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147180"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -167,7 +167,7 @@ EF Core bağlantıları yeniden deneme etkinleştirildiğinde, EF Core kullanara
 
 Kodunuzu BeginTransaction'ı kullanarak bir işlem başlatır, ancak bir birim olarak kabul edilmesi için gereken işlemleri kendi grubu tanımladığınız — işlem içinde her şeyi sahip olması toplu geri bir arıza oluşması durumunda. EF yürütme stratejisi (yeniden deneme ilkesi) kullanılırken, işlem yürütme girişimi ve birden çok DbContexts gelen birkaç SaveChanges bunu aşağıdaki gibi bir özel durum görürsünüz.
 
-System.InvalidOperationException: 'SqlServerRetryingExecutionStrategy' yapılandırılmış yürütme stratejisi, kullanıcı tarafından başlatılan işlemleri desteklemez. İşlem yeniden denenebilir bir birim olarak tüm işlemleri yürütmek için 'DbContext.Database.CreateExecutionStrategy()' tarafından döndürülen yürütme stratejisi kullanın.
+System.InvalidOperationException: 'SqlServerRetryingExecutionStrategy' yapılandırılmış yürütme stratejisi, kullanıcı tarafından başlatılan işlemleri desteklemiyor. İşlem yeniden denenebilir bir birim olarak tüm işlemleri yürütmek için 'DbContext.Database.CreateExecutionStrategy()' tarafından döndürülen yürütme stratejisi kullanın.
 
 El ile yürütülmesi gereken her şeyi temsil eden bir temsilci ile EF yürütme stratejisi çağırmak için kullanılan çözümüdür. Geçici bir hata oluşursa yürütme stratejisi temsilciyi yeniden çağırır. Aşağıdaki kod, bu yaklaşımı uygulamak gösterilmektedir:
 
@@ -301,7 +301,7 @@ Ek olarak ilişkisel ve NoSQL depolama seçenekleri, ASP.NET Core uygulamaları,
 - Azure depolama giriş  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Önbelleğe alma
+## <a name="caching"></a>Önbelleğe Alma
 
 Web uygulamalarında, her web isteğini en kısa süre içinde tamamlanmalıdır. Bunu yapmanın bir yolu, sunucu, isteğini tamamlamak için yapmalısınız dış çağrı sayısı çalıştırmanız gerekir. Önbelleğe alma, sunucuda verilerin bir kopyasını depolayarak içerir (veya başka bir veri yani daha kolayca veri kaynağını sorguladı depolamak). Web uygulamaları ve özellikle SPA olmayan geleneksel web uygulamaları, tüm kullanıcı arabirimi her istek ile oluşturmanız gerekir. Bu, sık sorguların çoğu, aynı veritabanı sürekli bir kullanıcı isteğinden sonraki yapılmasını gerektirir. Çoğu durumda, sürekli, veritabanından istemek için çok az neden olduğundan bu veri nadiren de olsa değiştirir. ASP.NET Core tüm sayfaları ve verileri önbelleğe alma, önbelleğe alma işlemi için yanıt önbelleğe destekleyen daha ayrıntılı önbelleğe alma davranışını destekler.
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Önbelleğe alma işlemi sürekli olarak aynı değerleri veritabanından isteği gönderen web sayfaları performansını önemli ölçüde artırabilir. Geliştirme için ihtiyaç gördüğünüz önbelleğe alma uygulanmadan önce veri erişimi ve sayfa performansı ölçmek ve önbelleğe alma yalnızca geçerli emin olun. Önbelleğe alma, web sunucu bellek kaynaklarını tüketir ve bu tekniği kullanarak erken iyileştirme önemlidir uygulama karmaşıklığını artırır.
 
 >[!div class="step-by-step"]
-[Önceki](develop-asp-net-core-mvc-apps.md)
-[İleri](test-asp-net-core-mvc-apps.md)
+>[Önceki](develop-asp-net-core-mvc-apps.md)
+>[İleri](test-asp-net-core-mvc-apps.md)

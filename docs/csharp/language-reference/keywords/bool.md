@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a5a5fa37905df9fb9369e9c0c26a2e39d03353f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042406"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128329"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
-`bool` Anahtar sözcüğü, bir diğer adını <xref:System.Boolean?displayProperty=nameWithType>. Boole değerleri depolamak üzere değişkenler bildirmek için kullanılan [true](../../../csharp/language-reference/keywords/true.md) ve [false](../../../csharp/language-reference/keywords/false.md).
+`bool` Anahtar sözcüğü, bir diğer adını <xref:System.Boolean?displayProperty=nameWithType>. Boole değerleri depolamak üzere değişkenler bildirmek için kullanılır: [true](true-literal.md) ve [false](false-literal.md).
 
 > [!NOTE]
-> Bir değeri de olabilir bir Boolean değişkeni gerektirip gerektirmediğini `null`, kullanın `bool?`. Daha fazla bilgi için [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md).
+> Bir değeri de olabilir bir Boolean değişkeni gerektirip gerektirmediğini `null`, kullanın `bool?`. Daha fazla bilgi için [bool? türü](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) bölümünü [boş değer atanabilir türleri kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesi.
 
 ## <a name="literals"></a>Sabit değerler
 

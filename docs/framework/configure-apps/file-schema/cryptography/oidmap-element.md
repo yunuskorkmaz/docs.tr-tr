@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143174"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; öğesi
 ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.  
@@ -76,8 +76,8 @@ ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

@@ -1,6 +1,6 @@
 ---
 title: Statik sınıf tasarımı
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, static classes
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261582"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130787"
 ---
 # <a name="static-class-design"></a>Statik sınıf tasarımı
 Bir statik sınıf yalnızca statik üyeleri içeren bir sınıfı tanımlanır (kuşkusuz devralınan örnek üyeleri yanı sıra <xref:System.Object?displayProperty=nameWithType> ve büyük olasılıkla bir private Oluşturucu). Bazı diller, statik sınıflar için yerleşik destek sağlar. C# 2.0 ve sonraki sürümlerinde, bir sınıfın statik olarak bildirilmişse, korumalı, soyut olduğu ve hiç örnek üyeleri geçersiz kılınmış veya bildirildi.  
@@ -36,7 +35,7 @@ Bir statik sınıf yalnızca statik üyeleri içeren bir sınıfı tanımlanır 
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

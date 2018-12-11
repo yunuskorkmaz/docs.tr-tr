@@ -1,15 +1,13 @@
 ---
-title: DotNet Yardım komut - .NET Core CLI
-description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet Yardım komut gösterir.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: ed152717e32ffb294f5d5bd8e5eb74d55e33e506
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+title: DotNet Yardım komutu
+description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet help komutunu gösterir.
+ms.date: 12/04/2018
+ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168964"
 ---
 # <a name="dotnet-help-reference"></a>DotNet Yardım başvurusu
 
@@ -17,30 +15,32 @@ ms.locfileid: "34696604"
 
 ## <a name="name"></a>Ad
 
-`dotnet help` -Gösterir, belirtilen komutu için çevrimiçi belgeleri daha ayrıntılı.
+`dotnet help` -Gösterir, belirtilen komut için çevrimiçi belgeleri daha ayrıntılı.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 `dotnet help <COMMAND_NAME> [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet help` Komutu docs.microsoft.com belirtilen komut hakkında daha ayrıntılı bilgi için ayarlama başvuru sayfası açılır.
+`dotnet help` Docs.microsoft.com belirtilen komut hakkında daha ayrıntılı bilgi için komut başvuru page up açar.
 
 ## <a name="arguments"></a>Arguments
 
-`COMMAND_NAME`
+* **`COMMAND_NAME`**
 
-.NET Core CLI komut adı. Geçerli CLI komutlarının bir listesi için bkz: [CLI komutları](index.md#cli-commands).
+  .NET Core CLI komut adı. Geçerli CLI komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).
 
 ## <a name="options"></a>Seçenekler
 
-`-h|--help`
+* **`-h|--help`**
 
-Komutu için kısa bir Yardım yazdırır.
+  Komut için kısa bir Yardım yazdırır.
 
 ## <a name="examples"></a>Örnekler
 
-Belgeleri sayfasını açar [dotnet yeni](dotnet-new.md) komutu:
+* İçin belgeler sayfası açılır [yeni dotnet](dotnet-new.md) komutu:
 
-`dotnet help new`
+  ```console
+  dotnet help new
+  ```

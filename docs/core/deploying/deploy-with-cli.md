@@ -1,20 +1,21 @@
 ---
-title: .NET core CLI araçları ile uygulama dağıtımı
-description: .NET Core uygulama dağıtımı ile komut satırı arabirimi (CLI) araçlarını edinin
+title: Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
+description: Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtmayı öğrenin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454455"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151102"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtma
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
 
 Dağıtabileceğiniz bir .NET Core uygulaması ya da farklı bir *framework bağımlı dağıtım*, uygulama ikili dosyalarını içerir, ancak hedef sistem üzerinde veya olarak .NET Core varlığını bağımlı bir *müstakil Dağıtım*, hem uygulama hem de .NET Core ikili dosyalarını içerir. Genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md).
 

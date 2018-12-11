@@ -1,15 +1,15 @@
 ---
-title: 'Kaynak Yönetimi: use Anahtar Sözcüğü (F#)'
+title: 'Kaynak Yönetimi: Use anahtar sözcüğü (F#)'
 description: Hakkında bilgi edinin F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev.
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296886"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147638"
 ---
-# <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: use Anahtar Sözcüğü
+# <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: Use anahtar sözcüğü
 
 Bu konu, anahtar sözcüğünü açıklar `use` ve `using` işlevini başlatma ve kaynakları sürümünü kontrol edebilirsiniz.
 

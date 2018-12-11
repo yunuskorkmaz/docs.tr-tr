@@ -3,11 +3,11 @@ title: Eş Adı Çözümleme Protokolü
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185163"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129163"
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
 Eşler arası ortamlarında eşleri belirli ad çözümleme sistemleri birbirlerinin ağ konumlarını (adresleri, protokoller ve bağlantı noktaları) çözümlemek için adları veya türlerini kullanın. Geçmişte, diğer etki alanı adı sistemi (DNS) içinde eksiklikleri yanı sıra, doğası gereği geçici bir bağlantı tarafından eş adı çözümleme karmaşık.  
@@ -38,13 +38,13 @@ Eş Adı Çözümleme Protokolü'nü aşağıdaki özellikleri göstermektedir:
   
 -   <xref:System.Net.PeerToPeer.Cloud>: Kapsamı dahil olmak üzere bir kullanılabilir PNRP bulut açıklayan bilgileri tanımlar.  
   
--   <xref:System.Net.PeerToPeer.PeerName>: Kaydetmek ve sonradan Bulutu içinde bir eş çözümlemek için kullanılan bir eş adını tanımlar.  
+-   <xref:System.Net.PeerToPeer.PeerName>: Kaydolun ve sonradan Bulutu içinde bir eş çözümlemek için kullanılan bir eş adını tanımlar.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: PNRP bulutta eş kurulabileceğinden ağ uç noktaları içeren bir eş için kayıt bilgileri içeriyor kayıt tanımlar.  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>: Eş kurulabileceğinden ağ uç noktaları içeren bir eş için kayıt bilgileri içeren PNRP bulutta kayıt tanımlar.  
   
 -   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Kayıt işlemi için eş ad kaydı durdurmak ve başlatmak yöntemleri dahil olmak üzere bir eş adını tanımlar.  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözümleme için zaman uyumlu ve zaman uyumsuz yöntemleri dahil olmak üzere kendi ağ uç noktası için eş adı çözümleme sürecini tanımlar.  
+-   <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözüm için zaman uyumlu ve zaman uyumsuz yöntemleri dahil olmak üzere kendi ağ uç noktası için eş adı çözümleme sürecini tanımlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 - <xref:System.ServiceModel.PeerResolvers>  

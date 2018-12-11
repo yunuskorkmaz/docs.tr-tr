@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123234"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154183"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarında veri
 
@@ -39,7 +39,7 @@ A [veri birim kapsayıcısı](https://docs.docker.com/glossary/?term=volume) nor
 
 ![](./media/image5.png)
 
-Şekil 4-5: veri hacimleri ve kapsayıcı uygulamalar/kapsayıcılar için dış veri kaynakları
+Şekil 4-5: Veri birimleri ve kapsayıcı uygulamalar/kapsayıcılar için dış veri kaynakları
 
 Sabit konak/VM, Docker konağının olmadığı sürece, birimleri iş verilerini çünkü kullanmamasını önerilir doğrulanamadığından ayrı fiziksel ana bilgisayarda çalışan kapsayıcılar arasında paylaşılan verileri yönetmek için Docker kapsayıcıları bir orchestrator'da kullanırken kapsayıcılar, bir küme tarafından gerçekleştirilecek iyileştirmeleri bağlı olarak başka bir konağa taşınıp beklenir.
 
@@ -49,7 +49,6 @@ Bu nedenle, normal veri hacimleri izleme dosyaları, geçici dosyaları ya da i�
 
 Uzak Veri kaynaklarını ve SQL veritabanı, DocumentDB ve Redis gibi uzak bir önbellek gibi önbellekler kapsayıcı geliştirme ile aynı olacaktır. Bu, iş uygulama verilerini depolamak için tercih edilen ve kendini kanıtlamış, yollardan biridir.
 
-
 >[!div class="step-by-step"]
-[Önceki](monolithic-applications.md)
-[İleri](soa-applications.md)
+>[Önceki](monolithic-applications.md)
+>[İleri](soa-applications.md)

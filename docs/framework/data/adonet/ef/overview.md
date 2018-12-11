@@ -2,12 +2,12 @@
 title: Entity Framework'e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216948"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145799"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216948"
 
  Varlık veri modeli araçları ile çalışırken, kavramsal model ve depolama modeli iki arasındaki eşlemeleri XML tabanlı şemalarda ifade ve karşılık gelen adı uzantılarıyla biter dosyalarında tanımlanan:
 
--   Kavramsal şema tanım dili (CSDL) kavramsal model tanımlar. CSDL olduğu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]'s uygulaması [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md). Dosya uzantısı .csdl ' dir.
+- Kavramsal şema tanım dili (CSDL) kavramsal model tanımlar. CSDL olduğu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]'s uygulaması [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md). Dosya uzantısı .csdl ' dir.
 
--   Store şeması tanım dili (SSDL) mantıksal model olarak da adlandırılan depolama modelinin tanımlar. Dosya uzantısı .ssdl ' dir.
+- Store şeması tanım dili (SSDL) mantıksal model olarak da adlandırılan depolama modelinin tanımlar. Dosya uzantısı .ssdl ' dir.
 
--   Eşleme belirtimi dili (MSL) kavramsal modeller ve depolama arasındaki eşlemeleri tanımlar. Dosya uzantısı .msl ' dir.
+- Eşleme belirtimi dili (MSL) kavramsal modeller ve depolama arasındaki eşlemeleri tanımlar. Dosya uzantısı .msl ' dir.
 
 Eşlemeleri ve depolama modeli, kavramsal model, veri sınıflarını veya uygulama kodu değişikliğe gerek kalmadan gerektiği gibi değiştirebilirsiniz. Depolama modelleri, sağlayıcıya özgü olduğundan, çeşitli veri kaynakları arasında tutarlı bir kavramsal model ile çalışabilirsiniz.
 
@@ -45,9 +45,9 @@ Eşlemeleri ve depolama modeli, kavramsal model, veri sınıflarını veya uygul
 
 Birden fazla yalnızca başka bir nesne ilişkisel eşleme çözümü [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erişmek ve varlıklar ve ilişkiler kavramsal modeldeki olarak temsil edilen veri değiştirmek uygulamaları temelde yöneliktir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal modelde veri kaynağına özgü sorgulara temsil edilen varlık türleri nesne sorguları çevirmek için model ve eşleme dosyalarını bilgileri kullanır. Sorgu sonuçları nesnelerini gerçekleştirilmiş olan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] yönetir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal bir modeli sorgulama ve nesneleri döndürmek için aşağıdaki yöntemleri sağlar:
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Kavramsal modelde tanımlı varlık türleri sorgulama için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Kavramsal modelde tanımlı varlık türleri sorgulama için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Doğrudan kavramsal modeldeki varlıklar ile çalışır ve destekleyen SQL depolamadan bağımsız SQL diyalektiği [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] kavramları. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Doğrudan kavramsal modeldeki varlıklar ile çalışır ve destekleyen SQL depolamadan bağımsız SQL diyalektiği [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] kavramları. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] EntityClient veri sağlayıcısı içerir. Bu sağlayıcı bağlantıları yönetir, veri kaynağına özgü sorgulara varlık sorguları çevirir ve döndüren bir veri okuyucu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] varlık veri nesnelerini gerçekleştirmek için kullanır. Nesne gerçekleştirme gerekli olmadığı durumlarda, EntityClient sağlayıcısı de gibi standart kullanılabilir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] etkinleştirerek uygulamaları çalıştırmak veri sağlayıcısı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular ve döndürülen salt okunur veri okuyucu kullanma. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -71,7 +71,7 @@ Aşağıdaki diyagramda gösterilmektedir [!INCLUDE[adonet_ef](../../../../../in
 
 Hakkında daha fazla bilgi edinmek için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz:
 
-[Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md) - alma hakkında bilgi sağlar ve hızlı bir şekilde kullanarak çalışan [hızlı](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), nasıl basit bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.
+[Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md) - alma hakkında bilgi sağlar ve hızlı bir şekilde kullanarak çalışan [hızlı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), nasıl basit bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.
 
 [Entity Framework terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md) -birçok varlık veri modeli tarafından sunulan koşullarını tanımlar ve [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve içinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri.
 

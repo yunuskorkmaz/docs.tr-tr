@@ -3,11 +3,11 @@ title: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744554"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154352"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve genişletilebilirlik noktaları uygulayan takdirine bağlı olarak sol içerir. Bu konuda, Web Hizmetleri protokolleri WCF uygulayan bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
@@ -53,13 +53,13 @@ Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygu
   
 |Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|WSS: SOAP ileti güvenliği 1.0|[Web Hizmetleri güvenliği: SOAP ileti güvenliği 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: SOAP ileti güvenliği 1.0|[Web Hizmetleri güvenlik: SOAP ileti güvenliği 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
 |WSS: Kullanıcı adı belirteci profili 1.0|[Güvenlik UsernameToken profili 1.0 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> gerekli Password/@TypePasswordText (varsayılan) =|  
 |WSS: X.509 belirteci profili 1.0|[Web Hizmetleri Güvenlik X.509 Sertifika belirteci profili](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 belirteç profili 1.0|[Web Hizmetleri güvenliği: SAML belirteci profili](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS: SOAP ileti güvenliği 1.1|[Web Hizmetleri güvenliği: SOAP ileti güvenliği 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS: SAML 1.1 belirteç profili 1.0|[Web Hizmetleri güvenlik: SAML belirteci profili](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: SOAP ileti güvenliği 1.1|[Web Hizmetleri güvenlik: SOAP ileti güvenliği 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS kullanıcı adı belirteci Profil 1.1|[Güvenlik UsernameToken Profil 1.1 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> parola tabanlı anahtar türetme uygulamaz;<br /><br /> gerekli Password/@TypePasswordText (varsayılan) =|  
-|WSS: X509 Profil 1.1 belirteç.|[Web Hizmetleri Güvenlik X.509 sertifikası belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: Profil 1.1 X509 belirteç|[Web Hizmetleri Güvenlik X.509 sertifikası belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
 |WSS: Kerberos belirteci Profil 1.1|[Güvenlik Kerberos belirteci Profil 1.1 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95333)|  
 |WSS: SAML 1.1 belirteç Profil 1.1|[Web Hizmetleri Güvenlik SAML belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Web Hizmetleri güvenli konuşma dili](https://go.microsoft.com/fwlink/?LinkId=95317)|  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygu
   
 -   [XML Şeması Kısım 1: Yapıları ikinci sürüm](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML şema bölümü 2: Veri türleri ikinci sürüm](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML şema bölümü 2: İkinci Sürüm veri türleri](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

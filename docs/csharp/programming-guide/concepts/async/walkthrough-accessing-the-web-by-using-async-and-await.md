@@ -1,15 +1,15 @@
 ---
-title: "İzlenecek yol: async kullanarak Web'e erişme ve await (C#)"
+title: "İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)"
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 8a97521bae7f5f16841aa4c8e4a157384739ee61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f06bf93f1de4de2aa70c761e1bfb101d4dde48a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453287"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127153"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: async kullanarak Web'e erişme ve await (C#)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)
 
 Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay ve sezgisel bir şekilde yazabilirsiniz. Zaman uyumlu kod gibi görünen zaman uyumsuz kod yazabilir ve zor geri çağırma işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar derleyici olanak tanır.
 
@@ -17,14 +17,14 @@ Async özelliği hakkında daha fazla bilgi için bkz. [Asynchronous Programming
 
 Bu izlenecek yol, Web sitelerinin bir listesiyle bayt sayısını toplar. zaman uyumlu bir Windows Presentation Foundation (WPF) uygulaması ile başlar. İzlenecek yol, yeni özellikleri kullanarak zaman uyumsuz bir çözümü uygulamaya ardından dönüştürür.
 
-Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zaman uyumsuz örneği: izlenecek yol (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
+Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zaman uyumsuz örneği: İzlenecek yol erişme (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
 
 > [!NOTE]
 > Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.
 
 ## <a name="create-a-wpf-application"></a>WPF uygulaması oluşturma
 
-1.  Visual Studio'yu başlatın.
+1.  Visual Studio’yu çalıştırın.
 
 2.  Menü çubuğunda, **dosya** > **yeni** > **proje**.
 
@@ -137,8 +137,7 @@ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zama
         }
 
         // Display the total count for all of the web addresses.
-        resultsTextBox.Text +=
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }
 
     private List<string> SetUpURLList()
@@ -192,7 +191,7 @@ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebileceğiniz [zama
         var bytes = content.Length;
         // Strip off the "https://".
         var displayURL = url.Replace("https://", "");
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }
     ```
 
@@ -255,7 +254,7 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
 
      Çağrı `webReq.GetResponseAsync` döndürür bir `Task(Of WebResponse)` veya `Task<WebResponse>`. Alınacak göreve await işleci uygulanır `WebResponse` değeri.
 
-     Zaman uyumsuz yöntem görev öğesinin tamamlanmasına bağlı olmayan bağımsız yapılacak çalışmaya sahipse yöntem çağrısından önce zaman uyumsuz yöntem ve sonra bu iki deyimden arasında bu çalışmalar ile devam edebilir `await` işleci uygulanır. Örnekler için bkz [nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Zaman uyumsuz yöntem görev öğesinin tamamlanmasına bağlı olmayan bağımsız yapılacak çalışmaya sahipse yöntem çağrısından önce zaman uyumsuz yöntem ve sonra bu iki deyimden arasında bu çalışmalar ile devam edebilir `await` işleci uygulanır. Örnekler için bkz [nasıl yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3.  Eklediğiniz çünkü `await` işleci önceki adımda, bir derleyici hatası oluşur. İşleci ile işaretlenmiş yöntemler kullanılabilir [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi. Çağrısını için dönüştürme adımı yineleyin ancak hatasını görmezden Gel `CopyTo` çağrısıyla `CopyToAsync`.
 
@@ -500,7 +499,7 @@ namespace AsyncExampleWPF
             }
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -566,7 +565,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -654,7 +653,7 @@ namespace AsyncExampleWPF
 
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -683,7 +682,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -691,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman uyumsuz örneği: izlenecek yol (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Zaman uyumsuz örneği: İzlenecek yol erişme (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Görev tabanlı zaman uyumsuz desen (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
-- [Nasıl yapılır: zaman uyumsuz izlenecek yolu Task.WhenAll (C#) kullanarak genişletme](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Nasıl Yapılır: Zaman uyumsuz izlenecek yolu Task.WhenAll kullanarak genişletme (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Nasıl Yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

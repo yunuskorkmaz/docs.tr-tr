@@ -1,19 +1,18 @@
 ---
 title: Attributes1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51aa91b1acbae9f1a15ac12441090dd4c1c2dcb1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: 7ab499d5a9c8388e9081a07921d3e444c0cdd879
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259512"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131436"
 ---
 # <a name="attributes"></a>Öznitelikler
 <xref:System.Attribute?displayProperty=nameWithType> bir temel sınıf özel öznitelikler tanımlamak için kullanılır.  
@@ -48,7 +47,7 @@ ms.locfileid: "44259512"
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,11 +11,11 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199897"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146745"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -28,7 +28,7 @@ Bu makalede .NET Framework'ün tüm sürümler için .NET Framework 4.5 yükleme
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Sürümleri .NET Framework ve bir bilgisayarda hangi sürümlerinin yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz. [sürümler ve bağımlılıklar](~/docs/framework/migration-guide/versions-and-dependencies.md) ve [nasıl yapılır: belirlemek .NET Framework sürümleri olan Yüklü](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Sürümleri .NET Framework ve bir bilgisayarda hangi sürümlerinin yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz. [sürümler ve bağımlılıklar](~/docs/framework/migration-guide/versions-and-dependencies.md) ve [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > .NET Framework 3.5 hakkında daha fazla bilgi için bkz: [Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme](~/docs/framework/install/dotnet-35-windows-10.md).

@@ -1,15 +1,15 @@
 ---
-title: Açık kaynak kitaplık kılavuzu
+title: Açık kaynak .NET kitaplık Kılavuzu
 description: Geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturmak en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128076"
 ---
 # <a name="open-source-library-guidance"></a>Açık kaynak kitaplık kılavuzu
 
@@ -29,7 +29,7 @@ Yüksek kaliteli açık kaynak .NET kitaplıkları yönlerini:
 
 ## <a name="types-of-recommendations"></a>Öneri türü
 
-Her bir makaleyi dört tür önerileri sunar: **yapmak**, **düşünün**, **kaçının**, ve **olmayan**. Ne kadar güçlü gelmelidir önerinin türünü gösterir.
+Her bir makaleyi dört tür önerileri sunar: **Yapmak**, **göz önünde bulundurun**, **önlemek**, ve **olmayan**. Ne kadar güçlü gelmelidir önerinin türünü gösterir.
 
 Neredeyse her zaman izlemeniz gereken bir **yapmak** öneri. Örneğin:
 
@@ -48,4 +48,4 @@ Son olarak, **olmayan** önerileri neredeyse hiç yapmanız bir şey gösterir:
 **❌ SAĞLAMADIĞI** kitaplığınızın tanımlayıcı adlı ve olmayan-tanımlayıcı adlı sürümler yayımlayabilir. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Next](./get-started.md)
+>[Next](get-started.md)

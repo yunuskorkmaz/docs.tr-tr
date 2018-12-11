@@ -4,12 +4,13 @@ description: Dotnet vstest komutu ile yayımlanan çıktıyı testleri çalışt
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 8930ec5c19254423fcdc9f0790ccf6748c595d6b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508139"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170307"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Test yayımlanmış çıktısı dotnet vstest ile
 
@@ -31,7 +32,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Not: uygulamanızı dışındaki bir çerçeve hedefleme, `netcoreapp` çalıştırmaya devam `dotnet vstest` framework bayrakla hedeflenen çerçevenin geçirerek komutu. Örneğin, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. Visual Studio 2017 güncelleştirme 5'te istenen framework otomatik olarak algılanır.
+> Not: Uygulama dışındaki bir çerçeve hedefleme, `netcoreapp` çalıştırmaya devam `dotnet vstest` framework bayrakla hedeflenen çerçevenin geçirerek komutu. Örneğin: `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"` Visual Studio 2017 güncelleştirme 5'te istenen framework otomatik olarak algılanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Dotnet testi ve xUnit ile birim testi](unit-testing-with-dotnet-test.md)

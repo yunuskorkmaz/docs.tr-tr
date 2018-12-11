@@ -4,12 +4,13 @@ description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyi
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507836"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168994"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Birim testi C# .NET Core dotnet testi ve xUnit kullanma
 
@@ -104,7 +105,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin adlı yeni bir C# dosyası oluşturup *PrimeService_IsPrimeShould.cs*. Aşağıdaki kodu ekleyin:
+TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin ve yeni bir C# adlı dosya *PrimeService_IsPrimeShould.cs*. Aşağıdaki kodu ekleyin:
 
 ```csharp
 using Xunit;
@@ -151,7 +152,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Diğer basit bazı durumlar için asal sayıları: 0, -1. Bu gibi durumlarda, yeni testleriyle olarak ekleyebilirsiniz `[Fact]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer xUnit öznitelikleri vardır:
+Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Birkaç basit durumlardaysa asal sayıları için vardır: 0, -1. Bu gibi durumlarda, yeni testleriyle olarak ekleyebilirsiniz `[Fact]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer xUnit öznitelikleri vardır:
 
 - `[Theory]` aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi temsil eder.
 

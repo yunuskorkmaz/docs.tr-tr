@@ -7,5 +7,5 @@
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|
-|Etkilenen API'leri|<ul><li><xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
+|Etkilenen API’ler|<ul><li><xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
 

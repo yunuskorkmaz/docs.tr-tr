@@ -4,12 +4,12 @@ description: Mantıksal ve fiziksel mimarileri arasındaki farkları.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296132"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129928"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal mimari ile fiziksel mimari karşılaştırması
 
@@ -36,5 +36,5 @@ Web API'si hizmeti arama hizmetinin aynı verilere hedeflediğinden örnekte Hiz
 Kısacası, mantıksal mikro hizmetler mimarisi her zaman fiziksel dağıtım mimarisi ile çakıştığı yok. Her bir mikro hizmet bahsetmek Biz bu kılavuzda, bir işletmeyi ya da bir veya daha fazla (fiziksel) Hizmetleri eşleyebilirsiniz mantıksal mikro hizmet demek isteriz. Çoğu durumda, bu tek bir hizmet olacaktır, ancak daha fazla olabilir.
 
 >[!div class="step-by-step"]
-[Önceki](data-sovereignty-per-microservice.md)
-[İleri](distributed-data-management.md)
+>[Önceki](data-sovereignty-per-microservice.md)
+>[İleri](distributed-data-management.md)

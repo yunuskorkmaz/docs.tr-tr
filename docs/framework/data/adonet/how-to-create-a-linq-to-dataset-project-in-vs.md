@@ -3,13 +3,13 @@ title: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297022"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154040"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: bir LINQ to DataSet projesi Visual Studio'da oluşturma
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl Yapılır: Bir LINQ to DataSet projesi Visual Studio'da oluşturma
 
 Belirli bütünleştirilmiş kod başvuruları ve içeri aktarılan ad alanlarını (Visual Basic) LINQ projeleri farklı türde gerektirir veya [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri (C#). LINQ için en düşük gereksinimi başvurusudur *System.Core.dll* ve `using` yönergesi <xref:System.Linq>.
 
@@ -26,7 +26,7 @@ Varolan bir projede veri kümesi işlevine LINQ'i etkinleştirmek için aşağı
 
 1. Başvuruları Ekle **System.Core**, **System.Data**, ve **System.Data.DataSetExtensions**.
 
-   İçinde **Çözüm Gezgini**, sağ **başvuruları** düğümünü seçip alt **Başvuru Ekle**. İçinde **başvuru Yöneticisi** iletişim kutusunda **System.Core**, **System.Data**, ve **System.Data.DataSetExtensions**. Seçin **Tamam**.
+   İçinde **Çözüm Gezgini**, sağ **başvuruları** düğümünü seçip alt **Başvuru Ekle**. İçinde **başvuru Yöneticisi** iletişim kutusunda **System.Core**, **System.Data**, ve **System.Data.DataSetExtensions**. **Tamam**’ı seçin.
 
 1. Ekleme [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri (veya [aktarır deyimleri](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) Visual Basic'te) için **System.Data** ve **System.Linq**.
 

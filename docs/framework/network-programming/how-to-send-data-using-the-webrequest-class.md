@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme'
+title: 'Nasıl Yapılır: WebRequest sınıfını kullanarak veri gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129473"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme
+# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl Yapılır: WebRequest sınıfını kullanarak veri gönderme
 Aşağıdaki yordam bir sunucuya veri göndermek için kullanılan adımları açıklar. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.  
   
 ### <a name="to-send-data-to-a-host-server"></a>Bir konak sunucusuna veri göndermek için  
@@ -260,4 +260,4 @@ End Namespace
  [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)  
- [Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+ [Nasıl Yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

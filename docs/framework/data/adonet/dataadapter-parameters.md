@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: e633c7cdd105125fc5fb595566d15cf5f5fe4e6f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad0045f926b05b6a73dd64089290f4b8937004ca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150998"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter parametreleri
 <xref:System.Data.Common.DbDataAdapter> Verileri almak ve verileri için veri kaynağını güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği veri kaynağından; veri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikleri. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` , hangi değişiklikleri verilerde yapılan bağlı olarak adlandırılır <xref:System.Data.DataTable>. Satırlar eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncelleştirilen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler geçirildiğinde `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  
   
  Veri kaynağındaki satırı güncelleştirmek, güncelleştirme bildirimi arama tablosunda bir satırı tanımlamak için benzersiz bir tanımlayıcı kullanan güncelleştirilemiyor. Benzersiz tanımlayıcı genellikle bir birincil anahtar alanı değeridir. UPDATE deyimini aşağıdaki Transact-SQL deyiminde gösterildiği gibi benzersiz tanımlayıcısı ve sütunları hem güncelleştirilmesi için değerleri içeren parametrelerini kullanır.  
   
-```  
+```sql
 UPDATE Customers SET CompanyName = @CompanyName   
   WHERE CustomerID = @CustomerID  
 ```  
@@ -27,7 +27,7 @@ UPDATE Customers SET CompanyName = @CompanyName
   
  Bu Visual Basic örnekte `CompanyName` alanın değeriyle güncelleştirilir `@CompanyName` parametre satır için burada `CustomerID` değeri eşittir `@CustomerID` parametresi. Değiştirilen satır kullanımından parametreleri bilgileri almak <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> özelliği <xref:System.Data.SqlClient.SqlParameter> nesne. Önceki örnek UPDATE deyimi için Parametreler aşağıda verilmiştir. Kod olduğunu varsayar değişkeni `adapter` temsil eden geçerli bir <xref:System.Data.SqlClient.SqlDataAdapter> nesne.  
   
-```  
+```vb
 adapter.Parameters.Add( _  
   "@CompanyName", SqlDbType.NChar, 15, "CompanyName")  
 Dim parameter As SqlParameter = _  

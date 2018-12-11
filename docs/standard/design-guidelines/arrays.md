@@ -1,20 +1,19 @@
 ---
 title: Diziler
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], arrays
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+author: KrzysztofCwalina
+ms.openlocfilehash: d0332591be7659aafb5b3169f92c81d47d519dc2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024538"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127569"
 ---
 # <a name="arrays"></a>Diziler
 **✓ DO** ortak API'ler dizilerde üzerinden koleksiyonları kullanmayı tercih. [Koleksiyonları](../../../docs/standard/design-guidelines/guidelines-for-collections.md) bölüm koleksiyonları ve dizileri arasında seçim yapma hakkında ayrıntılı bilgi sağlar.  
@@ -27,7 +26,7 @@ ms.locfileid: "48024538"
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

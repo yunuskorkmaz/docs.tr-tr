@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149061"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Karar tablosu: Docker için kullanılacak .NET çerçeveleri
 
@@ -88,5 +88,5 @@ Aşağıdaki tabloda karar .NET Framework veya .NET Core kullanıp kullanmayaca�
 </table>
 
 >[!div class="step-by-step"]
-[Önceki](net-framework-container-scenarios.md)
-[İleri](net-container-os-targets.md)
+>[Önceki](net-framework-container-scenarios.md)
+>[İleri](net-container-os-targets.md)

@@ -15,11 +15,11 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296344"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152298"
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Genellikle ortak anahtarı mevcut ancak özel anahtarına erişime yalnızca birkaç kişilerle sınırlıdır. Derlemeleri tanımlayıcı adlarla geliştirirken, her derleme başvuruları tanımlayıcı adlı hedef derlemeye hedef derleme tanımlayıcı bir ad vermek için kullanılan ortak anahtar belirtecini içerir. Bu ortak anahtarı geliştirme sürecinde kullanılabilir olmasını gerektirir.  
@@ -74,6 +74,6 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
 - [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Nasıl Yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

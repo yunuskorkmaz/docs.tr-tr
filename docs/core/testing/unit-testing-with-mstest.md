@@ -4,12 +4,13 @@ description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyi
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183782"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170301"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Birim testi MSTest ve .NET Core ile C#
 
@@ -142,7 +143,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Diğer basit bazı durumlar için asal sayıları: 0, -1. Yeni testleriyle ekleyebilirsiniz `[TestMethod]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer MSTest öznitelikleri vardır.  A `[DataTestMethod]`öznitelik aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi temsil eder. Kullanabileceğiniz `[DataRow]` bu girişleri değerlerini belirtmek için özniteliği.
+Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Birkaç basit durumlardaysa asal sayıları için vardır: 0, -1. Yeni testleriyle ekleyebilirsiniz `[TestMethod]` özniteliği ancak hızla olur yorucu bir süreç. Benzer testleri paketi yazmanızı sağlayan diğer MSTest öznitelikleri vardır.  A `[DataTestMethod]`öznitelik aynı kod yürütün, ancak farklı giriş bağımsız değişkenleri olan testleri paketi temsil eder. Kullanabileceğiniz `[DataRow]` bu girişleri değerlerini belirtmek için özniteliği.
 
 Yeni testler oluşturmak yerine, bir tek veri tabanlı test oluşturmak için bu iki öznitelikler uygulanır. Test odaklı veri asal numarası en düşük olan değerlerden küçüktür iki test yöntemi verilmiştir:
 

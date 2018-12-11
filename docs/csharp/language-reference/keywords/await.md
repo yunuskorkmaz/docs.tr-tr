@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511951"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147391"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
 `await` İşleci awaited görevi tamamlanıncaya kadar yöntemin yürütülmesine askıya alma noktası eklemek için bir zaman uyumsuz yöntemdeki bir göreve uygulanır. Görev, devam eden çalışmayı temsil eder.  
@@ -30,7 +30,7 @@ Görev `await` işleci uygulanır genellikle uygulayan bir yönteme bir çağrı
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Tam bir örnek için bkz. [izlenecek yol: Web kullanarak Async ve Await tarafından erişim](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
+>  Tam bir örnek için bkz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
   
 Önceki örnekte gösterildiği gibi `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task<TResult>`, sonra türünü `await` ifade `TResult`. Varsa `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task`, sonra türünü `await` ifade `void`. Fark aşağıdaki örnekte gösterilmiştir.  
   
@@ -65,9 +65,9 @@ Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişkenleri ge
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Çünkü kullanımını `async` ve `await` bir uygulama girişinde noktası desteklenmiyor, uygulayamıyoruz `async` özniteliğini `Main` yöntemi ya da can biz await `GetPageLengthsAsync` yöntem çağrısı. Biz sağlayabilirsiniz `Main` yöntemi zaman uyumsuz işlemin değerini alarak bekler <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliği. Bir değeri döndürmeyen görev çağırabilirsiniz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi. 
+Önceki örnekte C# destekleyen 7.1 [ `async` `Main` yöntemi](../../programming-guide/main-and-command-args/index.md). Çünkü daha önceki C# sürümleri döndüren uygulama giriş noktaları desteklemez <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>, uygulayamazsınız `async` değiştiriciyi `Main` yöntemi ve await `GetPageLengthsAsync` yöntem çağrısı. Bu durumda, işaretlenmesini sağlayabilir `Main` yöntemi zaman uyumsuz işlemin değerini alarak bekler <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliği. Bir değeri döndürmeyen görev çağırabilirsiniz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi. Dil sürümü seçme hakkında daha fazla bilgi için bkz: [seçin C# dil sürümü](../configure-language-version.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.  
 - [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)   
-- [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [async](../../../csharp/language-reference/keywords/async.md)

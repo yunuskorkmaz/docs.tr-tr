@@ -1,31 +1,31 @@
 ---
 title: Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Seedwork kavramı, uygulama için bir etki alanı DDD odaklı modeli başlatmak için bir başlangıç noktası olarak kullanın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198410"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152240"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
 
-Çözüm klasörü içeren bir *SeedWork* klasör. *SeedWork* klasörü, etki alanı varlıklarının ve değer nesneleri için bir temel olarak kullanabileceğiniz özel taban sınıfları içerir. Her etki alanının nesne sınıfında gereksiz kod zorunda kalmazsınız temel sınıfların kullanın. Bu tür sınıflar için klasör adını *SeedWork* gibi bir şey *Framework*. Çağrıldığı *SeedWork* gerçekten bir çerçeve düşünülmez yeniden kullanılabilir sınıfları yalnızca küçük bir alt klasör içerdiği için. *Seedwork* bir terimi tarafından tanıtılan [Michael geçiş yumuşatma](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ve tarafından popüler [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) ancak bu klasörün ortak SharedKernel, ayrıca adlandırabilirsiniz veya benzer.
+Çözüm klasörü içeren bir *SeedWork* klasör. Bu klasör, etki alanı varlıklarının ve değer nesneleri için bir temel olarak kullanabileceğiniz özel taban sınıfları içerir. Her etki alanının nesne sınıfında gereksiz kod zorunda kalmazsınız temel sınıfların kullanın. Bu tür sınıflar için klasör adını *SeedWork* gibi bir şey *Framework*. Çağrıldığı *SeedWork* gerçekten bir çerçeve düşünülmez yeniden kullanılabilir sınıfları yalnızca küçük bir alt klasör içerdiği için. *Seedwork* bir terimi tarafından tanıtılan [Michael geçiş yumuşatma](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ve tarafından popüler [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) ancak bu klasörün ortak SharedKernel, ayrıca adlandırabilirsiniz veya benzer.
 
-Şekil 9-12 seedwork etki alanı modeli oluşturan sıralama mikro hizmetinde sınıflarını göstermektedir. Bu varlık, ValueObject ve numaralandırma gibi birkaç özel taban sınıflar yanı sıra, birkaç arabirimleri vardır. Bu arabirimler (IRepository ve IUnitOfWork) uygulanması için gerekenler hakkında altyapı katmanını bildirin. Bu arabirimleri, aynı zamanda bağımlılık ekleme uygulama katmanından kullanılır.
+Şekil 7-12 seedwork etki alanı modeli oluşturan sıralama mikro hizmetinde sınıflarını göstermektedir. Bu varlık, ValueObject ve numaralandırma gibi birkaç özel taban sınıflar yanı sıra, birkaç arabirimleri vardır. Bu arabirimler (IRepository ve IUnitOfWork) uygulanması için gerekenler hakkında altyapı katmanını bildirin. Bu arabirimleri, aynı zamanda bağımlılık ekleme uygulama katmanından kullanılır.
 
-![](./media/image13.PNG)
+![Sınıflar ve arabirimler içeren SeedWork klasörünün ayrıntılı içeriği: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs ve ValueObject.cs](./media/image13.PNG)
 
-**Şekil 9-12**. Örnek etki alanı modeli "seedwork" temel sınıflar ve arabirimler ayarlayın
+**Şekil 7-12**. Örnek etki alanı modeli "seedwork" temel sınıflar ve arabirimler ayarlayın
 
 Birçok geliştiricinin biçimsel bir çerçeve proje arasında paylaşmak Kopyala ve Yapıştır yeniden türüdür. Herhangi bir katmanı veya kitaplık seedworks olabilir. Ancak, sınıflar ve arabirimler kümesi büyüklükte alırsa, bir tek sınıf kitaplığı oluşturmak isteyebilirsiniz.
 
 ## <a name="the-custom-entity-base-class"></a>Özel varlık temel sınıfı
 
-Aşağıdaki kod, bir varlığı temel sınıf varlık kimliği gibi herhangi bir etki alanı varlığı ile aynı şekilde kullanılabilir kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), varlık, vb. başına bir etki alanı olay listesi.
+Aşağıdaki kod, bir varlığı temel sınıf varlık kimliği gibi herhangi bir etki alanı varlığı ile aynı şekilde kullanılabilir kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), varlık, vb. başına bir etki alanı olay listesi.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-Varlık başına bir etki alanı olay listesini kullanarak önceki kod, etki alanı olayları odaklandığınızda sonraki bölümde açıklanacaktır. 
+Varlık başına bir etki alanı olay listesini kullanarak önceki kod, etki alanı olayları odaklandığınızda sonraki bölümde açıklanacaktır.
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Etki alanı model katmanında depo sözleşmelerinin (arabirimler)
 
-Depo sözleşmeleri yalnızca her toplama için kullanılacak depoları sözleşme gereksinimlerini express .NET arabirimdir. 
+Depo sözleşmeleri yalnızca her toplama için kullanılacak depoları sözleşme gereksinimlerini express .NET arabirimdir.
 
-EF Core kod veya tüm diğer altyapı bağımlılıkları ve (LINQ, SQL, vb.), kod depoları kendilerini, etki alanı modeli içinde uygulanması gereken değil; depoları tanımladığınız arabirimler yalnızca uygulamalıdır. 
+EF Core kod veya tüm diğer altyapı bağımlılıkları ve (LINQ, SQL, vb.), kod depoları kendilerini, etki alanı modeli içinde uygulanması gereken değil; depoları, yalnızca etki alanı modeli içinde tanımladığınız arabirimi uygulamalıdır.
 
 (Etki alanı model katmanında deposu arabirimleri yerleştirerek) bu uygulama için ilgili bir desen ayrılmış arabirimi modelidir. Olarak [açıklanan](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler "bir arabirim tanımlamak için ayrılmış arabirimi kullanarak paket ancak başka bir uygulama. Bu şekilde arabirimine bağımlılık gerektiren bir istemci uygulamasını tamamen farkında olabilir."
 
@@ -124,7 +124,7 @@ Ayrılmış arabirimi düzenini izleyerek uygulama katmanında (Bu durumda, mikr
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Martin Fowler. Ayrılmış arabirimi.**
-    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martin Fowler. Ayrılmış arabirimi.** \
+  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[Önceki](net-core-microservice-domain-model.md)
-[İleri](implement-value-objects.md)
+>[Önceki](net-core-microservice-domain-model.md)
+>[İleri](implement-value-objects.md)

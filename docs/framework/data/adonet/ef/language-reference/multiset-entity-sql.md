@@ -2,15 +2,15 @@
 title: MULTISET (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: df194a26b36ba50d7b55c3dda6053c883ba9b228
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 64069e1bf2af61748a9e23a469dcdbc74fa9fac7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762929"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128992"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (varlık SQL)
-Değerler listesinden bir çoklu küme örneği oluşturur. Çok KÜMELİ Oluşturucusu tüm değerleri uyumlu bir türü olmalıdır `T`. Boş multiset oluşturucular izin verilmiyor.  
+Değerler listesinden bir çoklu küme örneği oluşturur. MULTISET Oluşturucu tüm değerleri uyumlu bir tür olmalıdır `T`. Boş çoklu küme oluşturuculara izin verilmez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,31 +22,31 @@ or
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Geçerli tüm değerlerin listesi.  
+ Tüm geçerli değerlerin listesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- MULTISET türünden bir koleksiyona\<T >.  
+ MULTISET türündeki bir koleksiyon\<T >.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür oluşturucular sağlar: satır Oluşturucular, nesne oluşturucuları ve multiset (veya koleksiyon) oluşturucular. Daha fazla bilgi için bkz: [oluşturma türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür oluşturucular sağlar: satır Oluşturucular, nesne oluşturucuları ve oluşturucular multiset (veya koleksiyonu). Daha fazla bilgi için [oluşturma türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
- Çok kümeli Oluşturucusu değerler listesinden bir çoklu küme örneği oluşturur. Oluşturucu tüm değerleri uyumlu bir türü olmalıdır.  
+ Multıset Oluşturucu değerler listesinden bir çoklu küme örneği oluşturur. Oluşturucu içinde tüm değerleri uyumlu bir tür olmalıdır.  
   
- Örneğin, aşağıdaki ifade tamsayıların çoklu küme oluşturur.  
+ Örneğin, aşağıdaki ifade, bir çoklu küme tamsayı oluşturur.  
   
  `MULTISET(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
 > [!NOTE]
->  İç içe geçmiş çok kümeli değişmez değerler, yalnızca tek bir çok kümeli öğe kaydırma mutiset sahip olduğunda desteklenir; Örneğin, `{{1, 2, 3}}`. Birden çok çok kümeli öğe kaydırma multiset sahip olduğunda (örneğin, `{{1, 2}, {3, 4}}`), iç içe geçmiş çok kümeli değişmez değerler desteklenmez.  
+>  İç içe geçmiş multiset değişmez değerleri, yalnızca bir kaydırma çoklu küme, tek bir çok kümeli öğe olduğunda desteklenir; Örneğin, `{{1, 2, 3}}`. Kaydırma çoklu küme, birden fazla çok kümeli öğe olduğunda (örneğin, `{{1, 2}, {3, 4}}`), iç içe geçmiş multiset değişmez değerleri desteklenmez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu MULTISET işleci değerler listesinden bir çoklu küme örneği oluşturmak için kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusu MULTISET işleci değerler listesinden bir çoklu küme örneği oluşturmak için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   

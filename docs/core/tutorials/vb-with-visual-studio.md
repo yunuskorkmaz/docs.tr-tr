@@ -1,20 +1,20 @@
 ---
-title: .NET Core ve Visual Studio 2017'de Visual Basic ile bir Hello World uygulaması oluşturma
+title: Visual Studio 2017'de Visual Basic ile .NET core Merhaba Dünya uygulaması
 description: Visual Studio 2017'yi kullanarak Visual Basic ile basit bir .NET Core konsol uygulaması oluşturmayı öğrenin.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: d6b58e491b2857f83fe9b2e55ed35630c42b79ed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969882"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170034"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme
+# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core Visual Basic Merhaba Dünya uygulaması derleme
 
 Bu konuda, derleme, hata ayıklama ve Visual Studio 2017'de Visual Basic kullanarak basit bir .NET Core konsol uygulaması yayımlama için adım adım bir giriş sağlar. Visual Studio 2017, .NET Core uygulamaları oluşturmaya yönelik tam özellikli bir geliştirme ortamı sağlar. Uygulama, platforma özel bağımlılıklar yok sürece, uygulama, .NET Core hedefleyen herhangi bir platformda çalışabilir ve .NET Core sahip herhangi bir sistemde yüklü.
 
@@ -28,13 +28,13 @@ Daha fazla bilgi için [Windows üzerinde .NET Core önkoşulları](../../core/w
 
 Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki adımları uygulayın:
 
-1. Visual Studio 2017'yi başlatın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde *yeni proje** iletişim kutusunda **Visual Basic** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "HelloWorld" yazın. Seçin **Tamam** düğmesi.
+1. Visual Studio 2017'yi başlatın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde *yeni proje** iletişim kutusunda **Visual Basic** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "HelloWorld" yazın. **Tamam** düğmesini seçin.
 
-   ![Seçilen konsol uygulaması ile yeni proje iletişim kutusu](./media/vb-with-visual-studio/new-project.png)
+   ![Seçilen konsol uygulaması ile yeni proje iletişim kutusu](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio, projenizi oluşturmak için şablon kullanır. .NET Core için Visual Basic konsol uygulaması şablonu otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntemi olan `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main` uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılır yöntemi uygulama giriş noktası niteliğindedir. Uygulama başlatıldığında sağlanan komut satırı bağımsız değişkenleri kullanılabilir *args* dizisi.
 
-   ![Visual Studio ve yeni HelloWorld proje](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio ve yeni HelloWorld proje](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    Şablon, basit bir "Hello World" uygulaması oluşturur. Çağrı <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> "Hello World!" sabit dizesini görüntülemek için yöntemi Konsol penceresinde. Seçerek **HelloWorld** düğme araç çubuğundaki yeşil ok ile programın hata ayıklama modunda çalıştırabilir. Bunu yaparsanız, kapatılmadan önce konsol penceresi yalnızca kısa bir zaman aralığı için görülebilir. Bu durum oluşur `Main` yöntemi sonlandırır ve uygulama aşağıdaki tek deyimde olan en kısa sürede sona `Main` yöntemini yürütür.
 
@@ -50,7 +50,7 @@ Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki
 
 1. Programı çalıştırmayı seçerek tarafından **HelloWorld** araç çubuğundaki yeşil bir ok düğmesi.
 
-   ![Devam etmek için herhangi bir tuşa Hello World tuşuna gösteren konsol penceresi](./media/with-visual-studio/helloworld1.png)
+   ![Devam etmek için herhangi bir tuşa Hello World tuşuna gösteren konsol penceresi](./media/with-visual-studio/hello-world-console.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
@@ -64,7 +64,7 @@ Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygu
 
    Bu kodu varolan değiştirir <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType>, ve <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> deyimleri.
 
-   ![Visual Studio Program dosyası ile güncelleştirilmiş Main yöntemi](./media/vb-with-visual-studio/codewindow.png)
+   ![Visual Studio Program dosyası ile güncelleştirilmiş Main yöntemi](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    Bu kod, "Adınız ne?" görüntüler. Kullanıcı kadar bekler ve konsol penceresinde Enter tuşuna basın, bir dize girer. Bu dize adlı bir değişkende depoladığı `name`. Ayrıca bir değeri alır <xref:System.DateTime.Now?displayProperty=nameWithType> geçerli yerel saat içerir ve adlı bir değişkene atar özelliği `currentDate`. Son olarak, bunu kullanan bir [ilişkilendirilmiş bir dizedir](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) bu değerleri konsol penceresinde görüntüler.
 
@@ -72,7 +72,7 @@ Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygu
 
 1. Araç çubuğundaki yeşil oku seçerek, F5 tuşuna basarak veya seçerek Visual Studio'da hata ayıklama modunda programı çalıştırın **hata ayıklama** > **hata ayıklamayı Başlat** menü öğesi. Bir ad girmeniz ve Enter tuşuna basarak istemine yanıt.
 
-   ![Konsol penceresi ile değiştirilmiş program çıktısı](./media/with-visual-studio/helloworld2.png)
+   ![Konsol penceresi ile değiştirilmiş program çıktısı](./media/with-visual-studio/hello-world-update.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 

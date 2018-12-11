@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038311"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127452"
 ---
 # <a name="methods"></a>Yöntemler #
 
@@ -158,7 +158,7 @@ Aşağıdaki örnek bir yöntemi tanımlar `ExampleMethod`, biri gerekli ve iste
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Birden fazla isteğe bağlı bağımsız değişkenlere sahip bir yöntemi, konumsal bağımsız değişkenler kullanarak çağrılır, çağrıyı birinci bağımsız değişken olarak sağlanan sonuncu için isteğe bağlı tüm parametreler için bağımsız değişken sağlamalısınız. Durumunda, `ExampleMethod` arayan için bağımsız değişken sağlar. Örneğin, bir yöntem `description` parametresi gerekir ayrıca sağlaması için bir tane `optionalInt` parametresi. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` Geçerli bir yöntem çağrısı sınıflandırabilirsiniz. `opt.ExampleMethod(2, , "Addition of 2 and 0);` bir "bağımsız değişkeni eksik" oluşturur derleyici hatası.
+Birden fazla isteğe bağlı bağımsız değişkenlere sahip bir yöntemi, konumsal bağımsız değişkenler kullanarak çağrılır, çağrıyı birinci bağımsız değişken olarak sağlanan sonuncu için isteğe bağlı tüm parametreler için bağımsız değişken sağlamalısınız. Durumunda, `ExampleMethod` arayan için bağımsız değişken sağlar. Örneğin, bir yöntem `description` parametresi gerekir ayrıca sağlaması için bir tane `optionalInt` parametresi. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` Geçerli bir yöntem çağrısı sınıflandırabilirsiniz. `opt.ExampleMethod(2, , "Addition of 2 and 0");` bir "bağımsız değişkeni eksik" oluşturur derleyici hatası.
 
 Adlandırılmış bağımsız değişkenler veya konumsal ve adlandırılmış bağımsız değişken bir birleşimini kullanarak bir yöntemi çağrılırsa, çağıran yöntem çağrısında son konumsal bağımsız değişken izleyen herhangi bir bağımsız değişken atlayabilirsiniz.
 

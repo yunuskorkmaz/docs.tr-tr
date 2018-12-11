@@ -1,28 +1,28 @@
 ---
-title: Azure kapsayıcı hizmeti (diğer bir deyişle, Kubernetes) Windows kapsayıcıları dağıtma zamanı
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize | Azure kapsayıcı hizmeti (diğer bir deyişle, Kubernetes) Windows kapsayıcıları dağıtma zamanı
+title: Azure Container Service (Kubernetes) için Windows kapsayıcıları dağıtma zamanı
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Azure Container Service (Kubernetes) için Windows kapsayıcıları dağıtma zamanı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: b7f106e2b79a2c6bb24733debf7f4828505d66a6
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0b803b104f905fddac7939d7b070c206aabffeda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958292"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144799"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure kapsayıcı hizmeti (diğer bir deyişle, Kubernetes) Windows kapsayıcıları dağıtma zamanı
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure Container Service (Kubernetes) için Windows kapsayıcıları dağıtma zamanı
 
-Azure kapsayıcı hizmeti popüler açık kaynak Araçlar ve teknolojiler yapılandırmasını özellikle Azure için en iyi duruma getirir. Taşınabilirlik kapsayıcılarınızı hem uygulama yapılandırmanızı sağlayan açık olan çözüm alın. Boyut, ana bilgisayar sayısı ve orchestrator araçları seçin. Azure kapsayıcı hizmeti altyapı işler.
+Azure kapsayıcı hizmeti popüler açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure'a yönelik en iyi duruma getirir. Hem kapsayıcılarınız için hem de uygulama yapılandırmanız için taşınabilirlik sunan bir açık çözümü sahip olursunuz. Boyutu, konak sayısını ve düzenleyici araçlarını seçmeniz. Azure Container Service, altyapı sizin yerinize çözer.
 
-Zaten açık kaynak orchestrators Kubernetes, Docker Swarm veya DC/OS gibi çalışıyorsanız kapsayıcı iş yüklerinin buluta taşımak için var olan Yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten aşina uygulama yönetim araçlarını kullanın ve tercih ettiğiniz orchestrator için standart API uç noktaları bağlanın.
+Zaten açık kaynak düzenleyicileri Kubernetes, Docker Swarm veya DC/OS gibi çalışıyorsanız kapsayıcı iş yüklerini buluta taşımak için mevcut yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten alışkın olduğunuz uygulama yönetimi araçlarını kullanın ve tercih ettiğiniz orchestrator için standart API uç noktaları aracılığıyla bağlanın.
 
-Linux Docker kapsayıcıları kullanma, ancak yalnızca Windows kapsayıcıları için Önizleme durumda olabilir, bu orchestrators olgun ortamları demektir.
+Linux Docker kapsayıcılarını kullanarak ancak yalnızca Windows kapsayıcıları için Önizleme durumunda olabilir, bu düzenleyicileri olgun ortamları vardır.
 
-Kapsayıcıları için Kubernetes Örneğin, destek yerel (birinci sınıf citizen), bu nedenle Kubernetes üzerinde Windows kapsayıcıları kullanma (önizlemede ACS içindeki erken 2018 itibariyle) etkili de.
+Kapsayıcılar için Kubernetes, örneğin, destek yerel (birinci sınıf Vatandaşlık), Windows kapsayıcıları azure'da Kubernetes kullanarak etkin (önizlemede ACS erken 2018'den itibaren) de.
 
-Önemli Not: sistem gereksinimleri ve "daha fazla PaaS" Kubernetes için ACS (Azure kapsayıcı hizmeti) sürümüdür AKS (Azure Kubernetes hizmeti), Windows kapsayıcıları hala desteklenmez S2 2018 itibariyle, ancak, yakında desteklenecek.
+Önemli Not: Sistem gereksinimleri ve "daha fazla PaaS" sürümüdür (Azure Container Service) bir ACS kubernetes AKS (Azure Kubernetes hizmeti), ancak Windows kapsayıcıları hala desteklenmez S2 2018'den itibaren ancak yakında desteklenecek.
 
 >[!div class="step-by-step"]
-[Önceki](when-to-deploy-windows-containers-to-service-fabric.md)
-[sonraki](choosing-azure-compute-options-for-container-based-applications.md)
+>[Önceki](when-to-deploy-windows-containers-to-service-fabric.md)
+>[İleri](choosing-azure-compute-options-for-container-based-applications.md)

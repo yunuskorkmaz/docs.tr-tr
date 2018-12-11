@@ -3,11 +3,11 @@ title: Listeler (F#)
 description: Hakkında bilgi edinin F# listeler, öğeleri aynı türde sıralı, sabit bir dizi.
 ms.date: 05/16/2016
 ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297510"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152753"
 ---
 # <a name="lists"></a>Listeler
 
@@ -96,7 +96,7 @@ Aşağıdaki kod örneği, bir liste işlemleri gerçekleştiren bir özyineleme
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 Primes Up To 100:
@@ -117,7 +117,7 @@ Aşağıdaki kod kullanımını gösterir `List.exists`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet1.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 For list [0; 1; 2; 3], contains zero is true
@@ -127,7 +127,7 @@ Aşağıdaki örnek, kullanımını gösterir `List.exists2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet2.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
@@ -137,7 +137,7 @@ Kullanabileceğiniz [List.forall](https://msdn.microsoft.com/library/e11a5233-d6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet3.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 true
@@ -148,7 +148,7 @@ Benzer şekilde, [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet4.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 true
@@ -165,7 +165,7 @@ Aşağıdaki örnek, kullanımını gösterir `List.sort`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet5.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [-2; 1; 4; 5; 8]
@@ -175,7 +175,7 @@ Aşağıdaki örnek, kullanımını gösterir `List.sortBy`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet6.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [1; -2; 4; 5; 8]
@@ -185,7 +185,7 @@ Sonraki örnek, kullanımını gösterir `List.sortWith`. Bu örnekte, özel bir
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet7.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [{ID = 92;
@@ -210,7 +210,7 @@ Sonuç 5'tir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet9.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 "b"
@@ -220,7 +220,7 @@ Arama işlemleri, başka bir grup [List.tryFind](https://msdn.microsoft.com/libr
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet10.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 The first even value is 22.
@@ -249,7 +249,7 @@ Diziler içeren listeleri zip tarafından yönetilebilir ve işlevleri sıkışt
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet13.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [(1, -1); (2, -2); (3; -3)]
@@ -259,7 +259,7 @@ Aşağıdaki kod örneği, kullanımını gösterir `List.zip3`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet14.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
@@ -271,7 +271,7 @@ Aşağıdaki kod örneği, kullanımını gösterir [List.unzip](https://msdn.mi
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet15.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 ([1; 3], [2; 4])
@@ -282,7 +282,7 @@ Aşağıdaki kod örneği, kullanımını gösterir [List.unzip3](https://msdn.m
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet16.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 ([1; 4], [2; 5], [3; 6])
@@ -294,7 +294,7 @@ F#liste öğeleri üzerinde işlemler çeşitli destekler. En basit olan [List.i
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 List.iter: element is 1
@@ -315,7 +315,7 @@ Liste öğeleri dönüştüren başka bir sık kullanılan işlev [List.map](htt
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet18.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [2; 3; 4]
@@ -325,7 +325,7 @@ Aşağıdaki örnek kullanımını gösterir `List.map2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet19.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [5; 7; 9]
@@ -335,7 +335,7 @@ Aşağıdaki örnek kullanımını gösterir `List.map3`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet20.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [7; 10; 13]
@@ -345,7 +345,7 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet21.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [1; 3; 5]
@@ -355,7 +355,7 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet22.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [0; 7; 18]
@@ -365,7 +365,7 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet23.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
@@ -383,7 +383,7 @@ Aşağıdaki kod kullanımını gösterir `List.choose` büyük harfli bir sözc
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet25.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 ["Rome's"; "Bob's"]

@@ -1,29 +1,59 @@
 ---
 title: = İşleci (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 9cd1af400a9afdb7942a49dee7e7f7bb78387f2d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 123674f37d17db6dcfe6ae9d45c7176bdff1eda7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507360"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149230"
 ---
 # <a name="-operator-c-reference"></a>= İşleci (C# Başvurusu)
-Atama işleci (`=`) depolama konumu, özelliği veya dizin oluşturucu, sol işlenen tarafından belirtilen sağ işlenenin değerini depolar ve sonuç olarak değeri döndürür. İşlenenler aynı türde olmalıdır (veya sağ işlenen, sol işlenen türüne örtük olarak dönüştürülebilir olmalıdır).  
-  
-## <a name="remarks"></a>Açıklamalar  
- Atama işleci aşırı yüklenemez. Ancak, atama işleci bu türleriyle kullanmanıza olanak sağlayan örtük dönüşüm işleçleri için bir tür tanımlayabilirsiniz. Daha fazla bilgi için [dönüştürme işleçleri kullanarak](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
-  
-## <a name="example"></a>Örnek  
- [!code-csharp[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+Atama işleci `=` , sağ işleneninin değeri bir değişkene atar bir [özelliği](../../programming-guide/classes-and-structs/properties.md), veya bir [dizin oluşturucu](../../../csharp/programming-guide/indexers/index.md) , sol işlenen tarafından belirtilen öğe. Atama ifadesi sol işlenen için atanan değer sonucudur. Sağ işleneninin türü, sol işlenen veya örtük olarak dönüştürülebilir ona türü ile aynı olmalıdır.
+
+Atama işleci sağla ilişkilendirilebilir, diğer bir deyişle, bir ifade formu
+
+```csharp
+a = b = c
+```
+
+olarak değerlendirilir
+
+```csharp
+a = (b = c)
+```
+
+Aşağıdaki örnek, yerel bir değişken, bir özellik ve dizin oluşturucu öğenin değer atamak için atama işlecinin kullanımını gösterir:
+
+[!code-csharp-interactive[assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+
+## <a name="ref-assignment-operator"></a>başvuru atama işleci
+
+İle başlayarak C# 7.3, başvuru atama işleci kullanabileceğiniz `= ref` yeniden atamak için bir [ref yerel](../keywords/ref.md#ref-locals) veya [salt okunur yerel başvuru](../keywords/ref.md#ref-readonly-locals) değişkeni. Aşağıdaki örnek, başvuru atama işlecinin kullanımını gösterir:
+
+[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+
+Başvuru atama işleci söz konusu olduğunda, sol işlenen ve sağ işlenen türü aynı olmalıdır.
+
+Daha fazla bilgi için [özellik teklif Not](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="operator-overloadability"></a>İşleç overloadability
+
+Kullanıcı tanımlı bir tür atama işleci aşırı yüklenemez. Ancak, kullanıcı tanımlı bir tür, başka bir türe örtük bir dönüştürme tanımlayabilirsiniz. Bu şekilde, bir değişken, bir özellik veya dizin oluşturucu öğenin başka bir tür için kullanıcı tanımlı bir tür değeri atanabilir. Daha fazla bilgi için [örtük](../keywords/implicit.md) anahtar sözcüğü makalesi.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [basit atama](~/_csharplang/spec/expressions.md#simple-assignment) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# İşleçleri](index.md)
+- [ref anahtar sözcüğü](../keywords/ref.md)

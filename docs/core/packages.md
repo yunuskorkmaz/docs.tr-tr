@@ -1,15 +1,15 @@
 ---
-title: Paketler, meta paketler ve çerçeveler
+title: Paketler, meta paketler ve çerçeveler - .NET Core
 description: Paketler, meta paketler ve çerçeveler için terimler öğrenin.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: e69e9707d3984f37ebc2c1103f9d89f3cbdf5cbd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195287"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168825"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paketler, meta paketler ve çerçeveler
 
@@ -108,7 +108,7 @@ Aşağıdaki görüntüde bu ilişkileri görebilirsiniz. *API* hedefler ve tan�
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET standard
+### <a name="net-standard"></a>.NET Standard
 
 .NET Standard ([hedef çerçeve adı](../standard/frameworks.md): `netstandard`) çerçevesini temsil eder, API tarafından tanımlanan ve üst kısmındaki yerleşik [.NET Standard](../standard/net-standard.md). Bu çerçeve, birden çok çalışma zamanları üzerinde çalışması amaçlanmıştır kitaplıkları hedeflemelidir. Tüm .NET Standard uyumlu çalışma zamanı üzerinde .NET Core, .NET Framework ve Mono/Xamarin gibi desteklenecektir. Bu çalışma zamanları her bir dizi uyguladıkları bağlı olarak hangi API'ler, .NET Standard sürümleri destekler.
 

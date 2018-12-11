@@ -5,12 +5,12 @@ description: Windows 8.1 üzerinde .NET Framework'ü yükleme hakkında bilgi ed
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: b5bf27f0a709e43968fa5f1fdf9b8a17c5dd4ec2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 302215f71e00ef7de03f6d7a27def71087822012
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452389"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125528"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>.NET Framework, Windows 8.1 ve Windows Server 2012 R2 üzerinde yükleme
 
@@ -23,10 +23,7 @@ Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımc�
 ## <a name="net-framework-472"></a>.NET framework 4.7.2
 
 > [!div class="button"]
-[.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
-
-
-<!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
+> [.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) .NET Framework 4.0 veya daha sonra oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 

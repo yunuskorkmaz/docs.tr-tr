@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulamas�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202184"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152883"
 ---
 # <a name="common-container-design-principles"></a>Ortak kapsayıcı tasarım ilkeleri
 
@@ -21,7 +21,6 @@ Kapsayıcı modelinde, tek bir işlem bir kapsayıcıyı temsil eder. Kapsayıc�
 
 Birden çok işlem tek bir kapsayıcıda çalıştırmak istediğiniz bir senaryo bulabilirsiniz. Herhangi bir mimari belgesinde yoktur hiçbir zaman bir "," ya da her zaman olduğu bir "her zaman." Birden çok işlem gerektiren senaryolar için yaygın bir düzen kullanmaktır [gözetmen](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Önceki](design-docker-applications.md)
-[İleri](monolithic-applications.md)
+>[Önceki](design-docker-applications.md)
+>[İleri](monolithic-applications.md)

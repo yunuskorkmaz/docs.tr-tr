@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200117"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143473"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
 WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmeti aşağıdaki çizimde gösterilmektedir. Güvenlik, verileri düşük önem derecesi olduğundan, ağ doğası gereği güvenli olması beklenir veya WCF altyapısı aşağıdaki katman tarafından sağlanan güvenlik gerekli değildir.  
@@ -19,12 +19,12 @@ WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için ge
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|Yok.|  
+|Güvenlik modu|Hiçbiri|  
 |Taşıma|TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması|Yok.|  
-|Bütünlüğü|Yok.|  
+|Bütünlüğü|Hiçbiri|  
 |Gizliliği|Yok.|  
   
 ## <a name="service"></a>Hizmet  

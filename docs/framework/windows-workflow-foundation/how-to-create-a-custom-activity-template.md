@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Özel Etkinlik şablonu oluşturma'
+title: 'Nasıl Yapılır: Özel Etkinlik şablonu oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
 ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131449"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Nasıl yapılır: Özel Etkinlik şablonu oluşturma
+# <a name="how-to-create-a-custom-activity-template"></a>Nasıl Yapılır: Özel Etkinlik şablonu oluşturma
 
 Etkinlikler, böylece kullanıcılar her etkinliği ayrı ayrı oluşturun ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz özel bileşik etkinlikler dahil olmak üzere yapılandırılmasını özelleştirmek için kullanılan özel etkinlik şablonları el ile. Bu özel şablonları kullanılabilir hale getirilebilir **araç kutusu** üzerinde [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] veya içinden kullanıcılar sürükleyerek bunları önceden yapılandırılmış bir tasarım yüzeyine sürükleyin, yeniden barındırılan bir tasarımcı. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] Böyle şablon iyi örneklerini ile birlikte gelir: [SendAndReceiveReply Şablon tasarımcısı](/visualstudio/workflow-designer/sendandreceivereply-template-designer) ve [ReceiveAndSendReply Şablon tasarımcısı](/visualstudio/workflow-designer/receiveandsendreply-template-designer) içinde [Mesajlaşmaetkinliktasarımcıları](/visualstudio/workflow-designer/messaging-activity-designers) kategorisi.
 

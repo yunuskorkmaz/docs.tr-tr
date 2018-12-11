@@ -1,17 +1,18 @@
 ---
-title: Microsoft WCF dotnet svcutil aracı
+title: WCF svcutil aracına genel bakış
 description: .NET Core ve ASP.NET Core projeleri için .NET Framework projeleri için WCF svcutil aracına benzer işlevsellik ekleyen Microsoft WCF svcutil dotnet araç genel bakış.
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: c8240f02e97d4c0cd63efb2c30611188b1451b07
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511892"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168296"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Microsoft WCF dotnet svcutil aracı
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF dotnet svcutil aracı
 
 Windows Communication Foundation (WCF) **dotnet svcutil** araçtır bir ağ konumu üzerinde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve istemci proxy yöntemleri içeren bir WCF sınıfı oluşturur bir .NET Core CLI aracı, web hizmet işlemleri erişim.
 
@@ -24,7 +25,7 @@ Benzer şekilde [ **Service Model meta verilerini - svcutil** ](../../framework/
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [.NET core SDK'sı](https://www.microsoft.com/net/download) v1.0.4 veya sonraki sürümler
+* [.NET core SDK'sı](https://dotnet.microsoft.com/download) v1.0.4 veya sonraki sürümler
 * Sık kullandığınız kod düzenleyici
 
 ## <a name="getting-started"></a>Başlarken
@@ -99,7 +100,7 @@ static void Main(string[] args)
 ```console
 dotnet run
 ```
-Aşağıdaki çıktıyı görmeniz gerekir: "Dotnet svcutil Merhaba!"
+Aşağıdaki çıktıyı görmeniz gerekir: "Hello dotnet-svcutil!"
 
 Ayrıntılı bir açıklaması için `dotnet-svcutil` aracı parametreleri, help parametresini aşağıdaki şekilde geçirme aracı Çağır:
 

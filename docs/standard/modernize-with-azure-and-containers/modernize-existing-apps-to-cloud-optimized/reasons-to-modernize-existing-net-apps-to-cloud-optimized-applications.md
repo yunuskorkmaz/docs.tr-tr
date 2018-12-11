@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151074"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme nedenleri
 
@@ -23,7 +23,7 @@ Gereken iş sürekli yenilik için geliştirme ve işlem ekipleri için sınır 
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Bulut için iyileştirilmiş uygulama ilkeleri ve İlkesi 
 
-Bulutta geliştirmeleri çoğunlukla odaklanmış iki hedeflerimize üzerinde: maliyetleri azaltmak ve çeviklik geliştirerek büyütmeye geliştirin. Bu hedefleri süreçlerini basitleştirir ve serbest bırakın ve uygulamalar gönderin, uyuşmazlığı azaltarak elde edilir.
+Bulutta geliştirmeleri çoğunlukla iki hedeflerimize üzerinde odaklanır: Maliyetleri azaltmak ve çeviklik geliştirerek büyütmeye geliştirin. Bu hedefleri süreçlerini basitleştirir ve serbest bırakın ve uygulamalar gönderin, uyuşmazlığı azaltarak elde edilir.
 
 Bulut iyileştirilmiş can, Çevik bir şekilde-diğer şirket içi uygulamalardan otonom olarak uygulamanızı geliştirin ve ardından serbest bırakın, otomatik ölçeklendirme, dağıtırsanız, uygulama izleme ve bulutta uygulama sorunlarını giderme.
 
@@ -68,5 +68,5 @@ Tüm avantajlar, uçtan uca uygulama yaşam döngünüz için önemli maliyet in
 Aşağıdaki bölümlerde, bu avantajlar daha ayrıntılı olarak açıklanmıştır ve belirli teknolojileri için bağlı olmaz.
 
 >[!div class="step-by-step"]
-[Önceki](index.md)
-[İleri](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Önceki](index.md)
+>[İleri](microsoft-technologies-in-cloud-optimized-applications.md)

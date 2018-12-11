@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
 ms.openlocfilehash: cdd90685985b4a48b8fb98451eba0d4ebbbbc6bf
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297211"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126522"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama (C# Programlama Kılavuzu)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Nasıl Yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
 Bu örnekte, yalnızca otomatik uygulanan özellikler kümesi yalıtılacak veren sabit hafif bir sınıf oluşturma işlemi gösterilmektedir. Başvuru türü anlamları kullandığınızda gerekir bu tür bir yapı yerine bir yapı kullanın.  
   
  Sabit bir özelliğin iki şekilde yapabilirsiniz.  Bildirebilirsiniz [ayarlamak](../../../csharp/language-reference/keywords/set.md) olmasını erişimci [özel](../../../csharp/language-reference/keywords/private.md).  Özelliği yalnızca bir tür içinde ayarlanabilir, ancak tüketicilere sabittir.  Bunun yerine yalnızca bildirebilirsiniz [alma](../../../csharp/language-reference/keywords/get.md) özellik türün oluşturucusundaki her yerde dışında sabit getiren erişimcisi.  

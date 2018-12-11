@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme'
+title: 'Nasıl Yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme'
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453248"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151050"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl Yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
 Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birden çok sürümünü çalıştırın. Geliştirme veya uygulamanızı dağıtma, hangi .NET Framework sürümlerinin kullanıcının bilgisayarında yüklü olduğunu bilmeniz gerekebilir. Not: .NET Framework, ayrı ayrı uyarlandı iki ana bileşenden, oluşur  
   
@@ -39,7 +39,7 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
  [Clrver Aracı'nı kullanma](#clr_a)  
  [System.Environment sınıfı sorgulamak için kod kullanma](#clr_b)  
   
- .NET Framework'ün her sürümü için yüklü güncelleştirmeleri algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: belirlemek, .NET Framework Updates Are Installed](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). .NET Framework'ü yükleme hakkında daha fazla bilgi için bkz: [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md).  
+ .NET Framework'ün her sürümü için yüklü güncelleştirmeleri algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). .NET Framework'ü yükleme hakkında daha fazla bilgi için bkz: [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Kayıt defteri (.NET Framework 1-4) görüntüleyerek .NET Framework sürümlerini bulmak için  
@@ -92,12 +92,12 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
     |378675|.NET framework 4.5.1 Windows 8.1 veya Windows Server 2012 R2 ile yüklenen|
     |378758|.NET framework 4.5.1 Windows 8, Windows 7 SP1 veya Windows Vista SP2 yüklü|
     |379893|.NET Framework 4.5.2|
-    |Yalnızca Windows 10 sistemlerinde: 393295<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Yalnızca Windows 10 Kasım güncelleştirmesi sistemlerinde: 394254<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 Yıldönümü güncelleştirmesi ve Windows Server 2016:394802<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Üzerinde Windows 10 Creators güncelleştirmesi yalnızca: 460798<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 460805 | .NET framework 4.7 |
-    |Windows 10 Fall Creators Update üzerinde yalnızca: 461308<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461310 | .NET framework 4.7.1 |
-    |Yalnızca Windows 10 Ekim 2018 güncelleştirmesi: 461814<br/><br/> Yalnızca Windows 10 Nisan 2018 güncelleştirmesi: 461808<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461814| .NET framework 4.7.2 |
+    |Yalnızca Windows 10 sistemleri hakkında: 393295<br /><br /> Diğer tüm işletim sistemi sürümleri üzerinde: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |Yalnızca Windows 10 Kasım güncelleştirmesi sistemleri hakkında: 394254<br /><br /> Diğer tüm işletim sistemi sürümleri üzerinde: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |Windows 10 Yıldönümü güncelleştirmesi ve Windows Server 2016 üzerinde: 394802<br /><br /> Diğer tüm işletim sistemi sürümleri üzerinde: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Üzerinde Windows 10 Creators güncelleştirmesi yalnızca: 460798<br/><br/> Diğer tüm işletim sistemi sürümleri üzerinde: 460805 | .NET framework 4.7 |
+    |Windows 10 Fall Creators Update üzerinde yalnızca: 461308<br/><br/> Diğer tüm işletim sistemi sürümleri üzerinde: 461310 | .NET framework 4.7.1 |
+    |Yalnızca Windows 10 Ekim 2018 güncelleştirmesinde: 461814<br/><br/> Yalnızca Windows 10 Nisan 2018 güncelleştirmesinde: 461808<br/><br/> Diğer tüm işletim sistemi sürümleri üzerinde: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>(.NET Framework 1-4) kod içinde kayıt defterini sorgulayarak .NET Framework sürümlerini bulmak için
@@ -169,7 +169,13 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
 - Aşağıdaki örnek değerini denetler `Release` belirlemek için anahtar sözcüğü olup olmadığını .NET Framework 4.6.2 veya üzeri yüklü, Windows işletim sistemi sürümü bakılmaksızın (döndüren `True` etkinleştirilmişse ve `False` yoksa).
 
     ```PowerShell
-    Get-ChildItem "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | ForEach-Object { $_ -ge 394802 } 
+    # PowerShell 5
+    Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' | Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 } 
+    ```
+
+    ```PowerShell
+    # PowerShell 4
+    (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
     ```
 
     Değiştirebilirsiniz `394802` için farklı bir gerekli en düşük .NET Framework sürüm denetlemek için aşağıdaki tabloda önceki örnekte başka bir değere sahip.
@@ -224,6 +230,6 @@ Kullanıcılar yükleyebilir ve kendi bilgisayarlarına .NET Framework'ün birde
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nasıl yapılır: Hangi .NET Framework Güncelleştirmelerinin Yüklü Olduğunu Belirleme](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Nasıl Yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
 [Sürümler ve Bağımlılıklar](~/docs/framework/migration-guide/versions-and-dependencies.md)  

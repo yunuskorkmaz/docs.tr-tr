@@ -2,12 +2,12 @@
 title: SqlClient akış desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191054"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152896"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient akış desteği
 Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) yapılandırılmamış veriler (belgeler, görüntüler ve medya dosyaları) sunucuda destekler. İkili büyük nesne (BLOB) bir SQL Server veritabanı depolayabilir ancak BLOB'ları alma, çok miktarda bellek kullanabilirsiniz.  
@@ -76,7 +76,7 @@ Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45]
 ## <a name="sample----streaming-from-sql-server"></a>Örnek--SQL Server akış  
  Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanını oluşturmak için:  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   Büyük dosyaları (BLOB) yetersiz bellek çalıştırılmadan başka bir SQL Server veritabanındaki verileri aktarın.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>Örnek--SQL Server akış  
  Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanını oluşturmak için:  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   Bir SQL Server kullanarak başka bir yeni özelliği zaman uyumsuz akış.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Örnek--Bir SQL Server başka bir SQL Server'a akış.  
  Bu örnek, SQL Server'dan büyük BLOB diğerine, iptal desteği ile zaman uyumsuz olarak akışını yapmak nasıl gösterir.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

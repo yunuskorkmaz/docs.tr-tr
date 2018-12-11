@@ -3,11 +3,11 @@ title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
 ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297419"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131358"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  

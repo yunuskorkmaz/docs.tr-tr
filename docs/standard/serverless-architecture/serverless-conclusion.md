@@ -4,12 +4,12 @@ description: Sunucusuz, birçok avantaj sunar ve kendine özgü zorlukları vard
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404986"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128849"
 ---
 # <a name="conclusion"></a>Sonuç
 
@@ -30,4 +30,4 @@ Aşağıdaki önemli dersler bu kılavuzunda en önemli sonuçları ' dir.
 **Sunucusuz olarak araç bir araç.** Değil özel uygulama mimarisi için sunucusuz bir çözümdür. Geleneksel katmanları, tek arka uçlar ve kapsayıcıları içerebilen bir karma uygulamanın bir parçası yararlanılabilir bir araçtır. Sunucusuz mevcut çözümleri geliştirmek için kullanılabilir ve uygulama geliştirme için ya bir yaklaşım değildir.
 
 >[!div class="step-by-step"]
-[Önceki](serverless-business-scenarios.md)
+>[Önceki](serverless-business-scenarios.md)

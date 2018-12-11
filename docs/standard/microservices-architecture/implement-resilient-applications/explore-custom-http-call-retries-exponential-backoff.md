@@ -4,12 +4,12 @@ description: Nasıl size, sıfırdan, olası HTTP hatası senaryolar işlemek i�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: c323b8c4e783ed18c601562cfb25e1ca4986d499
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145104"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Üstel geri alma ile özel HTTP çağrı yeniden keşfedin
 
@@ -116,7 +116,6 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 Bu kod yalnızca bir kavram kanıtı uygun olduğunu unutmayın. Sonraki bölümlerde HttpClientFactory kullanarak daha basit olsa da, daha karmaşık yaklaşımları açıklanmaktadır.
 HttpClientFactory .NET Core 2.1 beri Polly gibi kendini kanıtlamış dayanıklılık kitaplıkları ile kullanılabilir. 
 
-
 >[!div class="step-by-step"]
-[Önceki](implement-resilient-entity-framework-core-sql-connections.md)
-[İleri](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Önceki](implement-resilient-entity-framework-core-sql-connections.md)
+>[İleri](use-httpclientfactory-to-implement-resilient-http-requests.md)

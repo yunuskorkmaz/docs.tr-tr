@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek Yol: Genişletilebilir Uygulama Oluşturma'
+title: 'İzlenecek yol: Genişletilebilir uygulama oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155083"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
+# <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek yol: Genişletilebilir uygulama oluşturma
 Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti için bir işlem hattı oluşturmayı açıklar. Gerçek dünya senaryoları göstermemiz gerekmez; Bunun yerine, bir işlem hattı ve nasıl bir eklenti için bir ana bilgisayar hizmetleri sağlayabilir temel işlevlerini gösterir.  
   
  Bu izlenecek yol aşağıdaki görevleri açıklanmaktadır:  
@@ -43,11 +43,11 @@ Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti 
   
 -   Ana bilgisayar uygulaması çalışıyor.  
   
- Bu işlem hattı yalnızca serializable türler geçirir (<xref:System.Double> ve <xref:System.String>), konak ile eklenti arasındaki. Karmaşık veri türlerini koleksiyonlarının nasıl gösteren bir örnek için bkz: [izlenecek yol: koleksiyonları konaklar arasında geçirme ve eklentileri](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Bu işlem hattı yalnızca serializable türler geçirir (<xref:System.Double> ve <xref:System.String>), konak ile eklenti arasındaki. Karmaşık veri türlerini koleksiyonlarının nasıl gösteren bir örnek için bkz: [izlenecek yol: Koleksiyonları ana bilgisayarlar ve eklentiler arasında geçirme](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Bu işlem hattı için anlaşma dört aritmetik işlemler bir nesne modelini tanımlar: ekleme, çıkarma, çarpma ve bölme. Ana bilgisayar 2 + 2 gibi hesaplanacak Denklem eklenti sağlar ve eklenti konağa sonuç döndürür.  
   
- Sürüm 2 hesaplayıcı eklentisinin daha hesaplama olanaklar sağlar ve sürüm oluşturmayı gösterir. İçinde açıklanan [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Sürüm 2 hesaplayıcı eklentisinin daha hesaplama olanaklar sağlar ve sürüm oluşturmayı gösterir. İçinde açıklanan [izlenecek yol: Ana bilgisayarınız değiştiğinde geriye dönük uyumluluğu etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdakiler gerekir:  
@@ -86,7 +86,7 @@ Bu izlenecek yol basit hesap makinesi işlevlerini gerçekleştiren bir eklenti 
      İşlem hattı klasör yapısını uygulama klasörünüzde koymak gerekli değildir; Ayrıca, yalnızca kolaylık sağlamak için burada yapılır. Uygun adımda, işlem hattı klasör yapısının farklı bir konumda ise, kod değiştirme gözden geçirme açıklanmaktadır. İşlem hattı dizin gereksinimleri bkz [ardışık düzen geliştirme gereksinimleri](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  `CalcV2` Klasör, bu izlenecek yolda kullanılamıyor; bunun için bir yer tutucu [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  `CalcV2` Klasör, bu izlenecek yolda kullanılamıyor; bunun için bir yer tutucu [izlenecek yol: Ana bilgisayarınız değiştiğinde geriye dönük uyumluluğu etkinleştirme](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Sözleşme ve görünümler oluşturma  
  Bu işlem hattı sözleşme kesimin tanımlar `ICalc1Contract` dört yöntemi tanımlayan arabirim: `add`, `subtract`, `multiply`, ve `divide`.  

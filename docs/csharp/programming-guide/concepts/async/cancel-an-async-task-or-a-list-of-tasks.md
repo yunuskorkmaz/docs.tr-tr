@@ -2,12 +2,12 @@
 title: Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: b4dc6aaca100008f81b55f3d853b1ccf89d50bb2
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 27c14a4cc67d9f7e26f053b417d36c8de4bf594a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316499"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131527"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
 
@@ -24,7 +24,7 @@ Kullanıcı arabirimini örneklerde, [Fine-Tuning Async uygulamanızda (C#)](../
 
 ### <a name="download-the-example"></a>Örneği indirme
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
 
 1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
 
@@ -84,8 +84,7 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
         {
             // ***Send a token to carry the message if cancellation is requested.
             int contentLength = await AccessTheWebAsync(cts.Token);
-            resultsTextBox.Text +=
-                String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+            resultsTextBox.Text += $"\r\nLength of the downloaded string: {contentLength}.\r\n";
         }
         // *** If cancellation is requested, an OperationCanceledException results.
         catch (OperationCanceledException)
@@ -108,8 +107,7 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
     {
         HttpClient client = new HttpClient();
 
-        resultsTextBox.Text +=
-            String.Format("\r\nReady to download.\r\n");
+        resultsTextBox.Text += "\r\nReady to download.\r\n";
 
         // You might need to slow things down to have a chance to cancel.
         await Task.Delay(250);
@@ -146,7 +144,7 @@ Aynı ilişkilendirerek birçok görevi iptal etmek için önceki örneği geni�
 
 ### <a name="download-the-example"></a>Örneği indirme
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
 
 1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
 
@@ -208,7 +206,7 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
         byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
         resultsTextBox.Text +=
-            String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);
+            $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
     }
     ```
 
@@ -260,7 +258,7 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
 
 Aşağıdaki bölümlerde her önceki örnek kodunu içerir. İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http>.
 
-İçinden projeleri karşıdan yükleyebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+İçinden projeleri karşıdan yükleyebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="example---cancel-a-task"></a>Örnek - bir görev iptal
 
@@ -312,7 +310,7 @@ namespace CancelATask
                 // ***Send a token to carry the message if cancellation is requested.
                 int contentLength = await AccessTheWebAsync(cts.Token);
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
             }
             // *** If cancellation is requested, an OperationCanceledException results.
             catch (OperationCanceledException)
@@ -342,8 +340,7 @@ namespace CancelATask
         {
             HttpClient client = new HttpClient();
 
-            resultsTextBox.Text +=
-                String.Format("\r\nReady to download.\r\n");
+            resultsTextBox.Text += "\r\nReady to download.\r\n";
 
             // You might need to slow things down to have a chance to cancel.
             await Task.Delay(250);
@@ -469,7 +466,7 @@ namespace CancelAListOfTasks
                 byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);
+                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             }
         }
 
@@ -526,4 +523,4 @@ namespace CancelAListOfTasks
 - <xref:System.Threading.CancellationToken>
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514969"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147686"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Connection Pooling (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
@@ -31,7 +31,7 @@ Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya
   
  Aşağıdaki örnekte C#, üç yeni <xref:System.Data.SqlClient.SqlConnection> nesneleri oluşturulur, ancak yalnızca iki bağlantı havuzları yönetmek için gereklidir. Birinci ve ikinci bağlantı dizeleri için atanan değer tarafından farklı olduğunu unutmayın `Initial Catalog`.  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Bağlantı havuzlayıcı havuza yayınlandıkça bağlantıları tahsis bağlantı isteklerini karşılar. Maksimum havuz boyutuna ulaştı ve kullanılabilir bağlantı yok, isteği sıraya alınır. Havuzlayıcı sonra herhangi bir bağlantı zaman aşımı ulaşılana kadar geri kazanmak çalışır (varsayılan değer 15 saniyedir). Bağlantı zaman aşımına uğramadan önce havuzlayıcı isteği gerçekleştiremiyor ise bir özel durum oluşturulur.  
   
 > [!CAUTION]
->  Böylece bağlantı havuzuna döndürülür, işiniz bittiğinde, her zaman bağlantı kapatmanızı öneririz. Kullanarak bunu yapabilirsiniz `Close` veya `Dispose` yöntemlerinin `Connection` nesne veya tüm bağlantıları içinde açarak bir `using` C# ' ta, ifade veya `Using` Visual Basic'te deyimi. Açıkça kapanmamış bağlantıları eklenemez veya havuza geri döner. Daha fazla bilgi için [using deyimi](~/docs/csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: bir sistem kaynağını atma](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual Basic için.  
+>  Böylece bağlantı havuzuna döndürülür, işiniz bittiğinde, her zaman bağlantı kapatmanızı öneririz. Kullanarak bunu yapabilirsiniz `Close` veya `Dispose` yöntemlerinin `Connection` nesne veya tüm bağlantıları içinde açarak bir `using` C# ' ta, ifade veya `Using` Visual Basic'te deyimi. Açıkça kapanmamış bağlantıları eklenemez veya havuza geri döner. Daha fazla bilgi için [using deyimi](~/docs/csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: Bir sistem kaynağını atma](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual Basic için.  
   
 > [!NOTE]
 >  Çağırmayın `Close` veya `Dispose` üzerinde bir `Connection`, `DataReader`, ya da diğer yönetilen nesnelere `Finalize` sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir `Finalize` sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  

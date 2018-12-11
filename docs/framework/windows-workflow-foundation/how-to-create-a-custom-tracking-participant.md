@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: özel izleme Katılımcısı oluşturma'
+title: 'Nasıl Yapılır: Özel İzleme Katılımcısı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53156707"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: özel izleme Katılımcısı oluşturma
+# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl Yapılır: Özel İzleme Katılımcısı oluşturma
 İş akışı izleme, iş akışı yürütme durumunu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti harcanması ve hataları tanımlayan izleme kayıtları gösterir. Bu izleme kayıtları izleme katılımcıları tarafından tüketilir. Windows Workflow Foundation (WF) izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalamak izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri ve böylece kullanıcıya gösterilir.  
   
 > [!NOTE]
@@ -334,8 +334,9 @@ ms.locfileid: "43864488"
  **Lütfen 1 ile 10 arasında bir sayı girin**  
 **Çok yüksek tahmininizdir.**   
 **Lütfen 1 ile 10 arasında bir sayı girin**    
+
     > [!NOTE]
-    >  Bu bilgiler, rastgele sayı aralığı belirlemek için yararlıdır, ancak daha önce yapılmış hangi tahmin hakkında bilgi içermiyor. Bu bilgiler sonraki adımda olan [nasıl yapılır: bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  Bu bilgiler, rastgele sayı aralığı belirlemek için yararlıdır, ancak daha önce yapılmış hangi tahmin hakkında bilgi içermiyor. Bu bilgiler sonraki adımda olan [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
      İş akışı örnek kimliğini not edin ve kendi tamamlanana kadar oyun.  
   
@@ -345,4 +346,4 @@ ms.locfileid: "43864488"
 **Çok yüksek tahmininizdir.**   
 **Lütfen 1 ile 10 arasında bir sayı girin**   
 **Çok yüksek tahmininizdir.**   
-**Lütfen 1 ile 10 arasında bir sayı girin** kullanıcının tahmin olmaması ek olarak, bu izleme verileri, iş akışının son tahmin hakkında bilgi içermiyor. İzleme bilgileri yalnızca oluşan çünkü `WriteLine` iş akışından çıkış ve görüntülenen son iletide nden yapılır `Completed` iş akışı tamamlandıktan sonra işleyici. Öğreticinin sonraki adımda [nasıl yapılır: bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), varolan `WriteLine` etkinlikleri, kullanıcının tahminler ve ek görüntülenecek değiştirildiğinde `WriteLine` etkinlik, eklenir Son sonuçları görüntüler. Bu değişiklikler tümleştirildikten sonra [nasıl yapılır: bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) aynı anda birden çok iş akışı sürümünü barındırmak nasıl gösterir.
+**Lütfen 1 ile 10 arasında bir sayı girin** kullanıcının tahmin olmaması ek olarak, bu izleme verileri, iş akışının son tahmin hakkında bilgi içermiyor. İzleme bilgileri yalnızca oluşan çünkü `WriteLine` iş akışından çıkış ve görüntülenen son iletide nden yapılır `Completed` iş akışı tamamlandıktan sonra işleyici. Öğreticinin sonraki adımda [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), varolan `WriteLine` etkinlikleri, kullanıcının tahminler ve ek görüntülenecek değiştirildiğinde `WriteLine` etkinliği, son sonuçları görüntüler eklenir. Bu değişiklikler tümleştirildikten sonra [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) aynı anda birden çok iş akışı sürümünü barındırmak nasıl gösterir.

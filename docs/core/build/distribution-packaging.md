@@ -2,14 +2,14 @@
 title: .NET core dağıtımı paketleme
 description: Paketleme hakkında bilgi edinin adı ve sürümü .NET Core dağıtımı.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297224"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170424"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET core dağıtımı paketleme
 
@@ -75,7 +75,7 @@ Kalan sürümünün sürüm adı dahil edilmez. Bu işletim sistemi Paket Yönet
 
 Aşağıdaki tablolarda, önerilen paketler gösterilmektedir.
 
-| Ad                                    | Örnek                | Kullanım örneği: yükle...           | İçerir           | Bağımlılıkları                                   | Sürüm            |
+| Ad                                    | Örnek                | Kullanım örneği: Yükle...           | İçerir           | Bağımlılıkları                                   | Sürüm            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı ana için en son SDK'sı    |                    | DotNet - sdk-[major]. [latestminor]               | \<SDK sürümü >     |
 | DotNet - sdk-[major]. [minor]              | DotNet sdk 2.1         | Belirli bir çalışma zamanı için en son SDK'sı |                    | DotNet - sdk-[major]. [minor]. [en son SDK'sı feat] xx | \<SDK sürümü >     |

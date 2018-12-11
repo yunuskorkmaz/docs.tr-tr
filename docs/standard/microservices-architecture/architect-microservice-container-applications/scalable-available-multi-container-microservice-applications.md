@@ -1,23 +1,23 @@
 ---
 title: Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetler ve çok kapsayıcılı uygulamalar için yüksek ölçeklenebilirlik ve kullanılabilirlik ve Azure Dev alanları olasılıklarını düzenlemek için seçenekleri keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.date: 09/20/2018
+ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982782"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152738"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
-Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıda yalnızca bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan gerekir. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
+Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıda yalnızca bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan olursunuz. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
 
 Şekil 4-23 (kapsayıcılar) birden çok mikro hizmetlerden bir uygulama kümesi dağıtmayı gösterir.
 
-![](./media/image23.PNG)
+![Bir kümede oluşturulmuş Docker uygulamaları: Her bir hizmet örneği için bir kapsayıcı kullanırsınız. Docker kapsayıcıları "dağıtım" birimleridir ve çok sayıda kapsayıcı Docker.A ana bilgisayar örneği işleyen bir kapsayıcıdır](./media/image23.png)
 
 **Şekil 4-23**. Kapsayıcıları kümesi
 
@@ -29,111 +29,131 @@ Kapsayıcılara veya çok basit oluşturulmuş uygulamalar ve mikro Hizmetleri d
 
 Mikro hizmet tabanlı uygulamaları, oluşan büyük bir kurumsal oluşturuyorsanız bir mimari ve geliştirme açısından bakıldığında, aşağıdaki platformları ve Gelişmiş senaryolar destekleyen ürünleri anlamak önemlidir:
 
-**Kümeler ve düzenleyicileri**. Büyük bir mikro hizmet tabanlı uygulama, bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için kritik olduğu gibi birçok Docker konakları arasında uygulamalarının ölçeğini gerektiğinde. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Azure Service Fabric, Kubernetes, Docker Swarm ve Mesosphere DC/OS düzenleyicileri örnekleridir. Son üç açık kaynak düzenleyicileri, azure'da Azure Container Service aracılığıyla kullanılabilir.
+**Kümeler ve düzenleyiciler.** Büyük bir mikro hizmet tabanlı uygulama, bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için kritik olduğu gibi birçok Docker konakları arasında uygulamalarının ölçeğini gerektiğinde. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Azure Service Fabric ve Kubernetes düzenleyicileri örnekleridir. Kubernetes, azure'da Azure Kubernetes hizmeti aracılığıyla kullanılabilir.
 
-**Zamanlayıcılar**. *Zamanlama* özelliğine de bir kullanıcı Arabirimi sağlar, böylece bir kümedeki kapsayıcıları başlatmak bir yöneticinin anlamına gelir. Bir küme Zamanlayıcı çeşitli sorumlulukları vardır: küme kaynaklarını verimli bir şekilde kullanmak için verimli bir şekilde düğümleri veya konaklar arasında Yük Dengeleme kapsayıcıları için kullanıcı tarafından sağlanan kısıtlamaları ayarlamak ve yüksek sağlarken hatalarına karşı güçlü Kullanılabilirlik.
+**Zamanlayıcılar.** *Zamanlama* özelliğine de bir kullanıcı Arabirimi sağlar, böylece bir kümedeki kapsayıcıları başlatmak bir yöneticinin anlamına gelir. Bir küme Zamanlayıcı çeşitli sorumlulukları vardır: küme kaynaklarını verimli bir şekilde kullanmak için verimli bir şekilde düğümleri veya konaklar arasında Yük Dengeleme kapsayıcıları için kullanıcı tarafından sağlanan kısıtlamaları ayarlamak ve yüksek sağlarken hatalarına karşı güçlü Kullanılabilirlik.
 
 Genellikle farklı satıcılar tarafından sağlanan ürün iki yetenekleri sağlamak için bir küme ve bir zamanlayıcı yakından ilişkilidir. Aşağıdaki listede, yazılım seçenek kümeleri ve zamanlayıcılar olması ve en önemli platform gösterir. Bu düzenleyiciler, Azure gibi genel bulutlarda genel kullanıma sunulur.
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Yazılım platformlarının kümeleme kapsayıcı, düzenleme ve zamanlama için
 
-Kubernetes
+### <a name="kubernetes"></a>Kubernetes
 
 ![Kubernetes logosu](./media/image24.png)
 
-> Kubernetes kümesi altyapısı ve zamanlama işlemlerini özellikleri için kapsayıcı aralıkları işlevselliği sağlayan açık kaynaklı üründür. Bu ana bilgisayar kümeleri arasında dağıtım, ölçeklendirme ve uygulama kapsayıcıların işlemlerini otomatikleştirmenizi sağlar.
+> [*Kubernetes* ](https://kubernetes.io/) küme altyapısı ve kapsayıcı özelliklerini düzenlemek için zamanlama aralıkları işlevselliği sağlayan bir açık kaynaklı üründür. Bu ana bilgisayar kümeleri arasında dağıtım, ölçeklendirme ve uygulama kapsayıcıların işlemlerini otomatikleştirmenizi sağlar.
 >
-> Kubernetes uygulama kapsayıcıları kolay yönetim ve bulma için mantıksal birimler halinde gruplandırır kapsayıcı merkezli bir altyapı sağlar.
+> *Kubernetes* uygulama kapsayıcıları kolay yönetim ve bulma için mantıksal birimler halinde gruplandırır kapsayıcı merkezli bir altyapı sağlar.
 >
-> Kubernetes, Linux, Windows daha az olgun olgun.
+> *Kubernetes* Linux'ta, Windows daha az olgun olgun olduğu.
 
-Docker Swarm
+### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes Service'i (AKS)
 
-![Docker Swarm logosu](./media/image25.png)
+![Azure Kubernetes hizmeti logosu](./media/image41.png)
 
-> Docker Swarm, Docker kapsayıcıları zamanlayabilir ve küme olanak tanır. Swarm kullanarak Docker ana bilgisayarları havuzu tek, sanal bir Docker konağı kapatabilirsiniz. İstemciler, Swarm için birden çok konak ölçeklendirmek için uygulamaları kolaylaştırır anlamı Konaklara yaptıkları aynı şekilde Swarm için API isteklerinin yapabilirsiniz.
->
-> Docker Swarm, docker, şirket için kullanılan bir üründür.
->
-> Docker v1.12 veya yerel ve yerleşik Swarm modu daha sonra çalıştırabilir.
+> [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) olduğu yönetilen bir Kubernetes kapsayıcı düzenleme hizmeti azure'da Kubernetes küme yönetimi, dağıtımı ve işlemleri basitleştirir.
 
-Mesosphere DC/OS
-
-![Mesosphere DC/OS logosu](./media/image26.png)
-
-> Mesosphere Kurumsal DC/OS (üzerinde Apache Mesos tabanlı), kapsayıcılar ve dağıtılan uygulamaları çalıştırmak bir üretime hazır platformudur.
->
-> DC/OS kümesinde kullanılabilir kaynakları koleksiyonu özetleyen ve bu kaynaklar üzerinde oluşturulan bileşenler için kullanılabilir hale getirme çalışır. Marathon, genellikle DC/OS ile tümleşik bir zamanlayıcı olarak kullanılır.
->
-> DC/OS, Linux, Windows daha az olgun olgun.
-
-Azure Service Fabric
+### <a name="azure-service-fabric"></a>Azure Service Fabric
 
 ![Azure Service Fabric logosu](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmaya yönelik bir Microsoft mikro hizmet platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri düz işlemleri veya kapsayıcıları olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara hizmetleriyle alabilir.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmaya yönelik bir Microsoft mikro hizmet platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri düz işlemleri veya kapsayıcıları olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara hizmetleriyle alabilir.
 >
-> Service Fabric, ek ve isteğe bağlı sağlar öngörücü [Service Fabric programlama modellerini ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+> *Service Fabric* kümeleri, azure'da, şirket içi veya buluttaki dağıtılabilir. Ancak, dağıtım azure'da yönetilen bir yaklaşım ile basitleştirilmiştir.
 >
-> Service Fabric (yıl içinde Windows gelişen) Windows, daha az olgun Linux'ta olgun kullanılıyor. 
+> *Service Fabric* ek ve isteğe bağlı sağlar öngörücü [Service Fabric programlama modellerini](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) .
+>
+> *Service Fabric* (yıl içinde Windows gelişen) Windows, daha az olgun Linux'ta olgun bileşenidir.
+>
 > Hem Linux hem de Windows kapsayıcıları Service Fabric'te 2017 itibarıyla desteklenir.
+
+### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
+
+![Azure Service Fabric Mesh logosu](./media/image35.png)
+
+> [*Azure Service Fabric Mesh* ](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) aynı güvenilirlik, görev açısından kritik performans ve Service Fabric ölçeğinden sunar, ancak tam olarak yönetilen ve sunucusuz bir platform sunar. Bir küme sanal makineleri, depolama veya ağ yapılandırmasını yönetmenize gerek yoktur. Yalnızca uygulamanızın geliştirmeye odaklanın.
+>
+> *Service Fabric Mesh* tüm programlama dili ve framework tercih ettiğiniz geliştirme olanak tanıyan, hem Windows hem de Linux kapsayıcıları destekler.
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure'daki kapsayıcı tabanlı düzenleyicileri kullanarak
 
-Docker kapsayıcıları desteği yanı sıra Docker kümeler ve düzenleme desteği, Microsoft Azure, Amazon EC2 Container Service ve Google Container altyapısı dahil olmak üzere birden fazla bulut satıcılarına sunar. Microsoft Azure Docker sonraki bölümde açıklandığı gibi küme ve orchestrator desteği Azure Container Service (ACS) aracılığıyla sağlar.
+Docker kapsayıcıları desteği yanı sıra Docker kümeler ve düzenleme desteği, Microsoft Azure, Amazon EC2 Container Service ve Google Container altyapısı dahil olmak üzere birden fazla bulut satıcılarına sunar. Microsoft Azure Docker, Azure Kubernetes Service (AKS) ve Azure Service Fabric ve Azure Service Fabric Mesh aracılığıyla küme ve orchestrator desteği sağlar.
 
-Başka bir seçenek ise Microsoft Azure Service ayrıca Linux ve Windows kapsayıcıları göre Docker'ı destekleyen Fabric (bir mikro hizmet platformu) kullanmaktır. Service Fabric, Azure veya başka bir bulut üzerinde çalışır ve de çalışır [şirket içi](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
+## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes hizmetini kullanarak
 
-## <a name="using-azure-container-service"></a>Azure Container Service'i kullanma
+Bir Kubernetes kümesi havuzları birden çok Docker konakları ve küme ve herhangi bir sayıda container Instances ile ölçek genişletme birden çok kapsayıcı dağıtmak için bunları bir tek sanal Docker konağı olarak kullanıma sunar. Küme ölçeklenebilirliği, sistem durumu ve benzeri gibi tüm karmaşık yönetim ayarlamaları, işler.
 
-Bir Docker kümesi birden fazla Docker ana bilgisayarları havuzları ve birden çok kapsayıcı kümesine dağıtmak için bunları bir tek sanal Docker konağı olarak kullanıma sunar. Küme ölçeklenebilirliği, sistem durumu ve benzeri gibi tüm karmaşık yönetim ayarlamaları, işler. Şekil 4-24 bir Docker kümesi oluşturulan uygulamalar için Azure Container Service (ACS) nasıl eşlendiğini temsil eder.
+AKS, oluşturma, yapılandırma ve kapsayıcılı uygulamaları çalıştırmak için önceden yapılandırılmış sanal makinelerin azure'da bir küme yönetimi basitleştirmek için bir yol sağlar. Popüler açık kaynak planlama ve düzenleme araçlarının iyileştirilmiş yapılandırmalarını kullanarak AKS mevcut becerilerinizi kullanabilir veya Microsoft azure'daki kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlığından geniş ve büyüyen bir gövdesi üzerinde çizim yapmanızı sağlar .
 
-ACS oluşturma, yapılandırma ve kapsayıcılı uygulamaları çalıştırmak için önceden yapılandırılmış sanal makine kümesi yönetimini basitleştirmek için bir yol sağlar. Popüler açık kaynak planlama ve düzenleme araçlarının iyileştirilmiş yapılandırmalarını kullanarak ACS mevcut becerilerinizi kullanabilir veya Microsoft azure'daki kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlığından geniş ve büyüyen bir gövdesi üzerinde çizim yapmanızı sağlar .
+Azure Kubernetes hizmeti popüler Docker kümeleme açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure'a yönelik en iyi duruma getirir. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan bir açık çözümü sahip olursunuz. Boyutu, konak sayısını ve düzenleyici araçlarını seçmeniz ve diğer her şey AKS işler.
 
-Azure kapsayıcı hizmeti popüler Docker kümeleme açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure'a yönelik en iyi duruma getirir. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan bir açık çözümü sahip olursunuz. Boyutu, konak sayısını ve düzenleyici araçlarını seçin ve kapsayıcı hizmeti, diğer her şey yapar.
+![Kubernetes kümesi yapısı: DNS, Zamanlayıcı, proxy vb. işleyen bir ana düğümü ve kapsayıcıları barındıran birden çok çalışan düğümü yoktur.](media/image36.png)
 
-![](./media/image28.png)
+**Şekil 4-24**. Kubernetes küme Basitleştirilmiş yapısı ve topolojisi
 
-**Şekil 4-24**. Azure Container Service'te küme seçenekleri
+Şekil 4-24 görebilirsiniz burada küme eşgüdümüyle çoğunu bir ana düğüm (VM) denetler ve bir uygulama açısından tek bir havuz olarak yönetilir ve y sağlar düğümler geri kalanı için kapsayıcılar dağıtabilir, bir Kubernetes kümesi yapısı binlerce veya on binlerce kapsayıcının ölçeklendirmek için ou'ı tıklatın.
 
-ACS, uygulama kapsayıcılarınızın tamamen taşınabilir olmasını sağlamak için Docker görüntülerini yararlanır. Bu, bu uygulamaları binlerce veya on binlerce kapsayıcının ölçeklendirilebilir emin olmak için tercih ettiğiniz gibi DC/OS (Apache Mesos tarafından desteklenen), (ilk olarak Google tarafından oluşturulan) Kubernetes ve Docker Swarm, açık kaynaklı düzenleme platformları destekler.
+## <a name="development-environment-for-kubernetes"></a>Kubernetes için geliştirme ortamı
 
-Azure kapsayıcı hizmeti, Azure'un kuruluş düzeyindeki özelliklerinden faydalanırken düzenleme katmanına dahil olmak üzere uygulama taşınabilirliğini, yararlanmak sağlar.
+Geliştirme ortamındaki [Temmuz 2018'de duyurulan Docker](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Kubernetes ayrıca bir tek bir geliştirme makinesinde (Windows 10 veya macOS) yalnızca yükleyerek çalışabilen [Docker Masaüstü](https://docs.docker.com/install/). Daha sonra işlenmek üzere buluta (AKS) daha ayrıntılı tümleştirme testleri, 4-25 gösterildiği gibi dağıtabilirsiniz.
 
-![](./media/image29.png)
+![Docker üzerinde Temmuz ' 2018 ile Docker masaüstü geliştirme makine desteği Kubernetes kümeleri için duyurdu.](media/image37.png) 
 
-**Şekil 4-25**. Acs'de düzenleyicileri
+**Şekil 4-25**. Kubernetes geliştirme makinesi ve bulutta çalışan
 
-Şekil 4-25 gösterildiği gibi Azure Container Service DC/OS, Kubernetes veya Docker Swarm dağıtmak için Azure tarafından sağlanan yalnızca altyapısıdır ancak ACS herhangi bir ek orchestrator uygulamaz. Bu nedenle, ACS bir orchestrator bu nedenle, kapsayıcılar için mevcut açık kaynak düzenleyicileri yararlanan bir altyapı yoktur.
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) ile çalışmaya başlama 
 
-Kullanım açısından bakıldığında, Azure Container Service, popüler açık kaynak araçları ve teknolojileri kullanan bir kapsayıcı barındırma ortamı sağlamak için hedeftir. Şu an için kullandığınız düzenleyici için standart API uç noktalarını gösterir. Bu uç noktaları kullanarak, bu Uç noktalara konuşabilirsiniz tüm yazılımlardan faydalanabilirsiniz. Örneğin, Docker Swarm uç noktasıyla Docker komut satırı arabirimi (CLI) kullanmayı seçebilirsiniz. DC/OS için DC/OS CLI'yı kullanmayı seçebilirsiniz.
+AKS'ı kullanmaya başlamak için Azure portalından veya th CLI kullanarak bir AKS kümesi dağıtın. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-### <a name="getting-started-with-azure-container-service"></a>Azure Container Service ile çalışmaya başlama 
+Herhangi birini varsayılan olarak, AKS bir parçası olarak yüklenen yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır. AKS, azure'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücret ödersiniz. AKS kendisi için artımlı ücretlendirme yoktur.
 
-Azure Container Service'i kullanmaya başlamak için bir Azure Container Service kümesi Azure portalında bir Azure Resource Manager şablonu kullanarak dağıtmanız veya [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). Kullanılabilir şablonlar [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes), ve [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos). Hızlı Başlangıç şablonları, ek veya Gelişmiş Azure yapılandırmalarını dahil edecek şekilde değiştirilebilir. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [bir Azure Container Service kümesi dağıtma](https://docs.microsoft.com/azure/container-service/container-service-deployment) Azure Web sitesinde.
+Kubectl ve özgün .yaml dosyaları daha fazla bağlı Kubernetes dağıtımda uygulama bilgi için posta atın [hizmetine (Azure Kubernetes hizmeti) AKS'de ayarlama](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
-Herhangi bir ACS bir parçası olarak varsayılan olarak yüklü olan yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır.
+## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>Kubernetes küme halinde ile Helm grafikleri dağıtma
 
-ACS şu anda standart A, D, DS, G ve GS serisi azure'da Linux sanal makineleri için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücretlendirilirsiniz. ACS hizmetinin kendisi için artımlı ücretlendirme yoktur.
+Bir Kubernetes kümesine uygulama dağıtma, dağıtım dosyaları gibi zaten önceki bölümde belirtilen yerel biçimi (.yaml dosyaları), temel kullanarak özgün kubectl.exe CLI aracını kullanabilirsiniz. Ancak, daha karmaşık Kubernetes uygulamaları için gibi karmaşık mikro hizmet tabanlı uygulamaları dağıtırken kullanılacak önerilir [Helm](https://helm.sh/).
+
+Helm grafikleri sürümü, yükleme, paylaşım, yükseltme veya geri alma bile en karmaşık Kubernetes uygulamasını tanımlamanıza yardımcı olur.
+
+Daha fazla devam, Helm kullanımı da önerilir çünkü Azure, ek Kubernetes ortamlarda gibi [Azure geliştirme alanları](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) de Helm grafikleri üzerinde temel alır.
+
+Helm tarafından korunduğu [bulut yerel bilgisayar Foundation (CNCF)](https://www.cncf.io/) - Microsoft, Google, Bitnami ve Helm katkıda bulunan topluluğu ile yaptığı işbirliği.
+
+Daha fazla uygulama için Helm grafikleri ve Kubernetes hakkında bilgi denetimini post [hizmetine AKS'ye dağıtma için Helm grafikleri kullanarak](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts).
+
+## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Azure geliştirme alanları Kubernetes uygulama yaşam döngünüz için kullanın.
+
+[Azure geliştirme alanları](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) takımlar için hızlı, yinelemeli bir Kubernetes geliştirme deneyimi sağlar. En az bir geliştirme makinesi kuruluma yinelemeli olarak çalıştırın ve doğrudan Azure Kubernetes Service (AKS) kapsayıcıları hata ayıklama. Windows, Mac veya Linux Visual Studio, Visual Studio Code veya komut satırı gibi alışık olduğunuz araçları kullanarak geliştirin.
+
+Belirtildiği gibi Azure geliştirme alanları Helm grafikleri kapsayıcı tabanlı uygulamaları dağıtırken kullanır.
+
+Azure geliştirme alanları geliştirme ekipleri, hızla yineleyin ve yalnızca Visual Studio 2017 veya Visual Studio Code kullanarak azure'da genel bir Kubernetes kümesi doğrudan kodda hata ayıklama izin verdiğinden, Kubernetes üzerinde daha üretken olmanıza yardımcı olur. Azure'da Kubernetes kümesi paylaşılan olduğunu, takımınızın işbirliği içinde birlikte çalışabilmesi için Kubernetes kümesi yönetilen. Yalıtım, kodunuzda geliştirin sonra genel kümeye dağıtın ve uçtan uca çoğaltmak veya bağımlılıkları sahte işlem olmadan diğer bileşenlerle testi gerçekleştirin.
+
+4-26, şekilde gösterildiği gibi en fark Azure geliştirme alanları 'geri kalanı kümedeki genel dağıtımı için tümleşik çalıştırabilirsiniz alanları' oluşturma yeteneği özelliğidir.
+
+![Azure geliştirme alanları, saydam karıştırın ve yeni sürümlerini test etmeye kolaylaştırmak için geliştirme kapsayıcı örneği, üretim mikro hizmetler eşleştirin.](media/image38.png)
+
+**Şekil 4-26**. Azure geliştirme alanlarında birden çok alanları kullanma
+
+Temel bir paylaşılan geliştirme alanında Azure ayarlayabilirsiniz. Her geliştirici yalnızca uygulama kendi parçası üzerinde odaklanın yinelemeli olarak tüm diğer hizmetler içeren bir geliştirme alanında ön işleme kod geliştirme ve bulut kendi senaryoları bağımlı kaynakları. Bağımlılıkları her zaman güncel olduğundan ve geliştiricilerin üretim yansıtan bir şekilde çalışıyoruz.
+
+Azure geliştirme alanları, yalıtım ve ekip üyeleriniz bozucu ödemeden olmadan çalışmanıza olanak sağlayan bir alan kavramı sağlar. Bu özellik üzerinde URL ön düzeltmeleri bağlı olduğu için bu alan için herhangi bir geliştirme alanı önek her kapsayıcının istek için URL'de kullanıyorsanız, özel bir sürümünü çalışacak şekilde kapsayıcı dağıtılır mevcut. Aksi takdirde, genel/birleşik sürümü çalışacaktır.
+
+Gördüğünüz [hizmetine wiki sayfasında Azure geliştirme alanları](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS), somut örneği pratik bir görünüm elde edin.
+
+Daha fazla bilgi için makaleyi kontrol [Azure geliştirme alanları ile takım geliştirme](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Docker kapsayıcı barındırma çözümlerine Azure Container Service ile giriş**
-    [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
+- **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
+  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
--   **Docker Swarm'a genel bakış**
-    [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
+- **Azure geliştirme alanları** \
+  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
--   **Swarm modu genel bakış**
-    [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
-
--   **Mesosphere DC/OS genel bakış**
-    [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
-
--   **Kubernetes.** Resmi sitesi. \
-    [*https://kubernetes.io/*](https://kubernetes.io/)
-
+- **Kubernetes** resmi sitesi. \
+  [*https://kubernetes.io/*](https://kubernetes.io/)
 
 >[!div class="step-by-step"]
-[Önceki](resilient-high-availability-microservices.md)
-[İleri](using-azure-service-fabric.md)
+>[Önceki](resilient-high-availability-microservices.md)
+>[İleri](using-azure-service-fabric.md)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658437"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147957"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker'a giriş
 
@@ -29,7 +29,6 @@ Kapsayıcı başka bir faydası ölçeklenebilirlik özelliğidir. Hızlı bir �
 
 Kısacası, kapsayıcılar arasında tüm uygulama yaşam döngüsü iş akışı yalıtımı, taşınabilirliği, çevikliği, ölçeklenebilirlik ve denetim avantajlarını sunar. En önemli avantajı, geliştirme ve Ops sağlanan ortamın yalıtım olur.
 
-
 >[!div class="step-by-step"]
-[Önceki](../index.md)
-[İleri](docker-defined.md)
+>[Önceki](../index.md)
+>[İleri](docker-defined.md)

@@ -1,19 +1,19 @@
 ---
-title: .NET Core - kitaplıkları taşıma
+title: .NET Core için bağlantı kitaplıkları
 description: Kitaplık .NET Framework projelerinden .NET Core için bağlantı noktası hakkında bilgi edinin.
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169704"
 ---
-# <a name="porting-to-net-core---libraries"></a>.NET Core - kitaplıkları taşıma
+# <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework kitaplıkları .NET Core için bağlantı noktası
 
-Bu makalede, böylece platformlar arası çalışan .NET core'a taşıma kitaplık kodu açıklanmaktadır.
+Platformlar arası çalıştırmak ve daha geniş kitlelere ulaşın, onu kullanan uygulamaları için .NET Core, .NET Framework kitaplığı kod bağlantı noktası hakkında bilgi edinin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -73,34 +73,17 @@ Benzer şekilde CA'ları, güvenlik saydamlık korumalı kod güvenlik kritik ko
 
 En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanmanız ayrıcalık kümesi.
 
-## <a name="converting-a-pcl-project"></a>PCL projesine dönüştürme
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework kodunuzu .NET Framework 4.7.2 yeniden hedefleme
 
-PCL projesine hedefleri .NET Standard için Visual Studio 2017'de kitaplık yüklenirken ve aşağıdaki adımları gerçekleştirerek dönüştürebilirsiniz:
-
-1. Proje dosyası üzerinde sağ tıklayıp **özellikleri**.
-1. Altında **Kitaplığı**seçin **hedef .NET Platform standardını**.
-
-Paketlerinizi NuGet 3.0 destekliyorsa, proje .NET Standard için yeniden hedefler.
-
-Paketlerinizi NuGet 3.0 desteklemiyorsa, geçerli paketlerinizi kaldırma bildiren Visual Studio'dan bir iletişim kutusu alırsınız. Bu uyarıyı alırsanız, aşağıdaki adımları gerçekleştirin:
-
-1. Projeye sağ tıklayın, **NuGet paketlerini Yönet**.
-1. Projenin paket not edin.
-1. Tek tek paketleri kaldırın.
-1. Kaldırma işlemini tamamlamak için Visual Studio'yu yeniden başlatmanız gerekebilir. Bu durumda, bir **yeniden** düğmesi size sunulur **NuGet Paket Yöneticisi** penceresi.
-1. Projeyi yüklediğinde, .NET Standard hedefler. Kaldırmak için gerekli paketleri ekleyin.
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>.NET Framework 4.6.2, .NET Framework kodunuzu yeniden hedefleme
-
-Kodunuzu .NET Framework 4.6.2 targeting değil, .NET Framework 4.6.2 yeniden hedefle önerilir. Bu, burada bu .NET Standard mevcut API'lere desteklemiyor durumlar için en son API alternatifleri kullanılabilirliğini sağlar.
+Kodunuzu .NET Framework'ün 4.7.2 hedefleyen değil, .NET Framework 4.7.2 yeniden hedefle önerilir. Bu, burada bu .NET Standard mevcut API'lere desteklemiyor durumlar için en son API alternatifleri kullanılabilirliğini sağlar.
 
 Her Visual Studio'da projeniz için istediğiniz bağlantı noktası, aşağıdakileri yapın:
 
-1. Projeye sağ tıklayın ve Özellikler'i seçin.
-1. İçinde **hedef Framework'ü** açılır menüsünde, select **.NET Framework 4.6.2**.
+1. Sağ tıklatın ve proje **özellikleri**.
+1. İçinde **hedef Framework'ü** açılır menüsünde, select **.NET Framework 4.7.2**.
 1. Projelerinizi derleyin.
 
-Projelerinizi artık .NET Framework 4.6.2'yi hedefleyen olduğundan, kod taşımak için .NET Framework'ün bu sürümü, temel olarak kullanın.
+Projelerinizi artık .NET Framework'ü 4.7.2 hedefleyen olduğundan, kod taşımak için .NET Framework'ün bu sürümü, temel olarak kullanın.
 
 ## <a name="determining-the-portability-of-your-code"></a>Kodun taşınabilirliğini belirleme
 
@@ -151,7 +134,7 @@ Bu yaklaşım burada kodu yeniden yapılandırma ya da tamamen kodunun belirli a
  
 Analiz aşaması, kod temelinizde boyutuna bağlı olarak biraz zaman alabilir. Genellikle bir plan geliştirmek için gereken değişiklikleri ve kapsamı kaydeder kapsamlı olarak anlamak için bu onay aşamasında zaman harcadığı zaman uzun vadede, özellikle karmaşık bir kod temeli varsa.
 
-Planınızın önemli bir değişiklik yapmadan aşağıdakilerle ilgili olabilir, .NET Framework 4.6.2, bu önceki yaklaşımın daha fazla yapılandırılmış bir sürüm değişikliği yapma hedefleyen hala çalışırken kod tabanı. Nasıl, planınızın çalıştırma hakkında gidin, kod temeli üzerinde bağlıdır.
+Planınızın önemli bir değişiklik yapmadan aşağıdakilerle ilgili olabilir, .NET Framework 4.7.2, bu önceki yaklaşımın daha fazla yapılandırılmış bir sürüm değişikliği yapma hedefleyen hala çalışırken kod tabanı. Nasıl, planınızın çalıştırma hakkında gidin, kod temeli üzerinde bağlıdır.
 
 ### <a name="mixing-approaches"></a>Yaklaşım karıştırma
 

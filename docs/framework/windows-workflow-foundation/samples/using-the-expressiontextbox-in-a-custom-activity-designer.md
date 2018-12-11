@@ -3,11 +3,11 @@ title: Özel Etkinlik tasarımcısında ExpressionTextBox kullanma
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: ee9da26625d772eda6100fc4d0db0469941bdb0d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849821"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149945"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Özel Etkinlik tasarımcısında ExpressionTextBox kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Presentation.View.ExpressionTextBox> özel etkinlik Tasarımcısı'nda. Özel Etkinlik `MultiAssign`, iki dize değişkenlerine iki dize değerleri atar. Bazı <xref:System.Activities.Presentation.View.ExpressionTextBox> denetimlerini bağlamak için <xref:System.Activities.InArgument>s ve bazı bağlanma <xref:System.Activities.OutArgument>s.

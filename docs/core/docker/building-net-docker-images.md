@@ -1,21 +1,21 @@
 ---
-title: .NET Core, Docker görüntüleri oluşturma
-description: Docker görüntülerini ve .NET Core anlama
+title: Docker görüntülerini genel bakış
+description: Docker kayıt defterinden yayımlanan .NET Core Docker görüntüleri kullanmayı öğrenin. Ayrıca, görüntüleri çekmek ve kendi görüntülerinizi oluşturmayı öğreneceksiniz.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: dbe509269c1dc5868c44b12b025bbdd9faaa3508
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841170"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169345"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntüleri oluşturma
+# <a name="learn-about-docker-images-for-net-core"></a>.NET Core için Docker görüntüleri hakkında bilgi edinin
 
- Bu öğreticide, .NET Core üzerinde Docker nasıl odaklanıyoruz. İlk olarak sunulur ve Microsoft ve kullanım örnekleri tarafından tutulan farklı bir Docker görüntüleri keşfedin. Biz, daha sonra nasıl oluşturacağınızı ve ASP.NET Core uygulaması docker kapsayıcılarında çalıştırın öğrenin.
+Bu öğreticide, .NET Core üzerinde Docker nasıl odaklanıyoruz. İlk olarak sunulur ve Microsoft ve kullanım örnekleri tarafından tutulan farklı bir Docker görüntüleri keşfedin. Biz, daha sonra nasıl oluşturacağınızı ve ASP.NET Core uygulaması docker kapsayıcılarında çalıştırın öğrenin.
 
 Bu öğreticinin Kurs sırasında şunları öğrenirsiniz:
 > [!div class="checklist"]
@@ -36,11 +36,11 @@ Geliştiriciler için Docker görüntülerini oluştururken, biz üç ana senary
 Neden üç görüntüleri?
 Geliştirme, derleme ve kapsayıcılı uygulamalar çalıştırmak, farklı önceliklere sahibiz.
 
-* **Geliştirme:** öncelik odaklanır değişiklikleri ve değişiklikleri hata ayıklama özelliği hızla yineleyin. Resmin boyutu önemli değildir, bunun yerine, değişiklikler kodunuza yapabilir ve bunları hızlıca görmek?
+* **Geliştirme:**  Öncelik odaklanır, değişiklikler ve değişiklikleri hata ayıklama özelliği hızla yineleyin. Resmin boyutu önemli değildir, bunun yerine, değişiklikler kodunuza yapabilir ve bunları hızlıca görmek?
 
-* **Derleme:** bu görüntü derleyici ve ikili dosyaları iyileştirmek için diğer herhangi bir bağımlılığın içeren uygulamanızı derlemek için gereken her şeyi içerir.  Derleme görüntüyü bir üretim görüntüsüne yerleştirdiğiniz varlıkları oluşturmak için kullanın. Derleme görüntüsünü veya bir yapı ortamı sürekli tümleştirme için kullanılır. Bu yaklaşım, derlemek ve bir yapı görüntü örneği (tüm gerekli bağımlılıkları olan) uygulamasında oluşturmak bir yapı aracısını sağlar. Yapı aracınız, yalnızca bu Docker görüntüsünü çalıştırma bilmesi gerekir.
+* **Derleme:** Bu görüntü derleyici ve ikili dosyaları iyileştirmek için diğer herhangi bir bağımlılığın içeren uygulamanızı derlemek için gereken her şeyi içerir.  Derleme görüntüyü bir üretim görüntüsüne yerleştirdiğiniz varlıkları oluşturmak için kullanın. Derleme görüntüsünü veya bir yapı ortamı sürekli tümleştirme için kullanılır. Bu yaklaşım, derlemek ve bir yapı görüntü örneği (tüm gerekli bağımlılıkları olan) uygulamasında oluşturmak bir yapı aracısını sağlar. Yapı aracınız, yalnızca bu Docker görüntüsünü çalıştırma bilmesi gerekir.
 
-* **Üretim:** dağıtma ve görüntü Başlat ne kadar hızlı? Bu görüntü, Docker kayıt defterinizin Docker konaklarınız için ağ performansı en iyi duruma getirilmiş şekilde küçüktür. İçeriği, Docker run sonuçları işlemek için hızlı süreye etkinleştirme çalıştırmaya hazırsınız. Dinamik kod derlemesi, Docker modelde gerek yoktur. Bu görüntüde yerleştirdiğiniz içeriği ikili dosyaları ve uygulamayı çalıştırmak için gerekli içeriklere sınırlı olacaktır.
+* **Üretim:** Ne kadar hızlı dağıtma ve başlatma, resmi? Bu görüntü, Docker kayıt defterinizin Docker konaklarınız için ağ performansı en iyi duruma getirilmiş şekilde küçüktür. İçeriği, Docker run sonuçları işlemek için hızlı süreye etkinleştirme çalıştırmaya hazırsınız. Dinamik kod derlemesi, Docker modelde gerek yoktur. Bu görüntüde yerleştirdiğiniz içeriği ikili dosyaları ve uygulamayı çalıştırmak için gerekli içeriklere sınırlı olacaktır.
 
     Örneğin, `dotnet publish` çıktı içerir:
 
@@ -69,7 +69,7 @@ Görüntü çeşitleri altında sağladığımız yukarıdaki hedeflere ulaşmak
 
 Geliştirme, derleme ve üretim en iyi duruma getirilmiş senaryoların yanı sıra ek görüntüleri sağlıyoruz:
 
-* `microsoft/dotnet:<version>-runtime-deps`**Çalışma zamanı deps** görüntü, tüm yerel .NET Core tarafından gerekli bağımlılıkları ile işletim sistemi içerir. Bu görüntü içindir [kendi içindeki uygulamaları](../deploying/index.md).
+* `microsoft/dotnet:<version>-runtime-deps`: **Çalışma zamanı deps** görüntü, tüm yerel .NET Core tarafından gerekli bağımlılıkları ile işletim sistemi içerir. Bu görüntü içindir [kendi içindeki uygulamaları](../deploying/index.md).
 
 Her değişken en son sürümleri:
 
@@ -209,7 +209,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 
 * Başka bir komut istemi açın.
 * Çalıştırma `docker ps` , çalışan kapsayıcıları görmek için. "Aspnetcore_sample" kapsayıcı olması.
-* Çalıştırma `docker exec aspnetcore_sample ipconfig`.
+* `docker exec aspnetcore_sample ipconfig`'i çalıştırın.
 * Kapsayıcı IP adresini kopyalayıp tarayıcınıza (örneğin, 172.29.245.43).
 
 > [!NOTE]

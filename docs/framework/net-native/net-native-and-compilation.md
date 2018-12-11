@@ -5,16 +5,16 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199714"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152532"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 Windows 8.1 uygulamaları ve.NET Framework belirli bir programlama diliyle yazılmış ve Ara dile (IL) derlenir hedefleyen Windows Masaüstü uygulamaları. Çalışma zamanında, just-ın-time (JIT) derleyici ilk kez bir yöntem yalnızca yürütülmeden önce IL yerel makine için yerel koda derlemek için sorumludur. Buna karşılık, .NET Native araç zinciri, kaynak kodu için yerel kod derleme zamanında dönüştürür. Bu konu, .NET Framework uygulamaları için kullanılabilir diğer derleme teknolojileriyle .NET Native karşılaştırır ve ayrıca neden kodda oluşan özel durumlar, .NET ile derlenmiş anlamanıza yardımcı olabilecek yerel kod .NET Native'nasıl üretir genel ile ilgili pratik bir bakış sağlar Yerel, JIT olarak derlenmiş kodda gerçekleşmez.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET yerel: yerel ikili dosyaları oluşturma  
+## <a name="net-native-generating-native-binaries"></a>.NET yerel: Yerel ikili dosyaları oluşturma  
  .NET Framework hedefleyen ve değil derlendiğinde, .NET Native araç zinciri kullanarak bir uygulama aşağıdakileri içeren uygulama derlemenin oluşur:  
   
 -   [Meta veri](../../../docs/standard/metadata-and-self-describing-components.md) derleme, bağımlılıkları, içerdiği türlerini ve üyelerini açıklar. Meta veriler, yansıma ve geç bağlama erişimi ve bazı durumlarda da derleyicisi ve derleme araçları tarafından kullanılır.  

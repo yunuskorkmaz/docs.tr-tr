@@ -1,19 +1,19 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: projeksiyon'
+title: 'Metot tabanlı sorgu söz dizimi örnekleri: Projeksiyon'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
-ms.openlocfilehash: 81484f729b2282678b3fa1a92b5050cf7a502db5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c1cad442ba2e6d2567c2e4936d7d8b3cd49b0424
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152428"
 ---
-# <a name="method-based-query-syntax-examples-projection"></a>Metot tabanlı sorgu söz dizimi örnekleri: projeksiyon
-Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> methodsto sorgu [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
+# <a name="method-based-query-syntax-examples-projection"></a>Metot tabanlı sorgu söz dizimi örnekleri: Projeksiyon
+Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
   

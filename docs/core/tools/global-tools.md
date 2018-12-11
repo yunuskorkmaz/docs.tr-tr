@@ -1,67 +1,67 @@
 ---
-title: .NET core genel araçları
-description: .NET Core genel araçları nelerdir ve bunlar için kullanılabilen .NET Core CLI komutları genel bakış.
+title: .NET core Araçları Genel
+description: .NET Core genel araçları nedir ve bunlar için kullanılabilen .NET Core CLI komutları genel bakış.
 author: KathleenDollard
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 077ffd53f1ba2988c80a637aaa109a66139736b0
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 3bbf1e7953482dc07f05570443cf640a9fab6258
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697098"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170864"
 ---
-# <a name="net-core-global-tools-overview"></a>.NET core genel araçlarına genel bakış
+# <a name="net-core-global-tools-overview"></a>.NET core Araçları Genel genel bakış
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-Bir .NET Core genel bir konsol uygulaması içeren özel bir NuGet paketi aracıdır. Genel bir aracı makinenizde PATH ortam değişkeni bulunan bir varsayılan konum ya da özel bir konuma yüklenebilir.
+.NET Core genel aracı bir konsol uygulaması içeren özel bir NuGet paketidir. Genel bir aracı makinenizde yol ortam değişkeninde bulunan bir varsayılan konum ya da özel bir konuma yüklenebilir.
 
-.NET Core genel aracı kullanmak istiyorsanız:
+.NET Core genel bir aracı kullanmak istiyorsanız:
 
 * Aracı (genellikle bir Web sitesi veya GitHub sayfası) hakkında bilgiler bulun.
-* Yazar ve akış (genellikle NuGet.org) için Giriş İstatistikleri denetleyin.
-* Aracı yükleyin.
+* Giriş akış (genellikle NuGet.org) için istatistikleri ve yazar denetleyin.
+* Aracı'nı yükleyin.
 * Aracı'nı arayın.
-* Aracı güncelleştirin.
+* Aracı'nı güncelleştirin.
 * Aracı'nı kaldırın.
 
 > [!IMPORTANT]
-> .NET core genel araçları, yolunuza görünür ve tam güvende çalıştırma. Yazarın güvenmediğiniz sürece .NET Core genel araçları yüklemeyin.
+> .NET core Araçları Genel path değişkeninize görünür ve tam güvende çalıştırma. .NET Core Araçları Genel Yazar güvenmediğiniz sürece yüklemeyin.
 
-## <a name="find-a-net-core-global-tool"></a>.NET Core genel aracı Bul
+## <a name="find-a-net-core-global-tool"></a>.NET Core genel aracını bulun
 
-Şu anda, .NET Core komut satırı arabirimi (CLI) bir genel aracı arama özelliği yoktur.
+Şu anda .NET Core komut satırı arabirimi (CLI) bir genel aracı arama özelliği yoktur.
 
-.NET Core genel araçları bulabilirsiniz [NuGet](https://www.nuget.org). Ancak, NuGet henüz özellikle .NET Core genel araçları için arama yapmanıza izin vermez.
+.NET Core Araçları Genel bulabilirsiniz [NuGet](https://www.nuget.org). Ancak, NuGet henüz, özellikle .NET Core genel araçları için arama yapmanıza izin vermez.
 
-Aracı önerilerinde blog gönderileri ya da buna ayrıca bulabilirsiniz [dotnet/natemcmaster-tools](https://github.com/natemcmaster/dotnet-tools) GitHub depo.
+Ayrıca araç önerilerinden blog gönderilerini veya bulabilirsiniz [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposu.
 
-Genel ASP.NET ekibi tarafından oluşturulan araçları için kaynak kodunu da görebilirsiniz [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub depo.
+Genel ASP.NET ekibi tarafından oluşturulan araçlar için kaynak kodunu da görebilirsiniz [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub deposu.
 
-## <a name="check-the-author-and-statistics"></a>Yazar ve istatistikleri denetleyin
+## <a name="check-the-author-and-statistics"></a>Yazar ve istatistikleri denetimi
 
-.NET Core genel araçları tam güvende çalıştırma ve genelde yol üzerinde yüklü olduğundan, bunlar çok güçlü olabilir. Araçlar güvenmediğiniz kişilerden yüklemeyin.
+.NET Core Araçları Genel tam güvende çalıştırmak ve path değişkeninize genellikle yüklü olmadığından, çok güçlü olabilir. Araçlar güvenmediğiniz kişilerden yüklemeyin.
 
-Aracı NuGet üzerinde barındırılıyorsa, aracı için arama yaparak yazar ve istatistikleri kontrol edebilirsiniz.
+Araç, NuGet üzerinde barındırılıyorsa, aracı için arama yaparak yazar ve istatistikleri kontrol edebilirsiniz.
 
-## <a name="install-a-global-tool"></a>Genel bir aracı yükleyin
+## <a name="install-a-global-tool"></a>Genel bir aracı yükleme
 
-Genel bir aracı yüklemek için kullandığınız [dotnet aracı yükleme](dotnet-tool-install.md) .NET Core CLI komutu. Aşağıdaki örnek bir genel aracın varsayılan konumda nasıl yükleneceğini gösterir:
+Genel bir aracı yüklemek için kullandığınız [dotnet aracı yükleme](dotnet-tool-install.md) .NET Core CLI komutu. Aşağıdaki örnek, varsayılan konumu genel bir aracı yüklemek gösterilmektedir:
 
 ```console
 dotnet tool install -g dotnetsay
 ```
 
-Aracı yüklü değilse, hata iletileri görüntülenir. Beklediğiniz akışları teslim denetleyin.
+Aracı yüklü değilse, hata iletileri görüntülenir. Beklediğiniz akışları denetlendiği denetleyin.
 
-Bir yayın öncesi sürüm veya aracı belirli bir sürümünü yüklemek çalışıyorsanız, aşağıdaki biçimi kullanarak sürüm numarasını belirtebilirsiniz:
+Yayın öncesi bir sürümü ya da aracının belirli bir sürümü yüklemeye çalışıyorsanız, sürüm numarası şu biçimi kullanarak belirtebilirsiniz:
 
 ```console
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
-Yükleme başarılı olursa, aracı ve yüklü sürüm çağırmak için kullanılan komut aşağıdaki örneğe benzer gösteren bir ileti görüntülenir:
+Yükleme başarılı olursa, aracı ve yüklü sürümü çağırmak için kullanılan komut aşağıdaki örneğe benzer gösteren bir ileti görüntülenir:
 
 ```
 You can invoke the tool using the following command: dotnetsay
@@ -70,37 +70,37 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Varsayılan dizini veya belirli bir konuma genel araçları yüklenebilir. Varsayılan dizinler şunlardır:
 
-| İŞLETİM SİSTEMİ          | Yol                          |
+| İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-SDK'yı ilk kez çalıştırdığınızda, genel yüklü araçları doğrudan olarak adlandırılan şekilde bu konumları kullanıcının yoluna eklenir.
+SDK'yı ilk kez çalıştırdığınızda, genel araçları yüklü doğrudan çağrılabilir için bu konumları kullanıcının yoluna eklenir.
 
-Genel araçları kullanıcıya özgü olduğuna dikkat edin, genel makine değil. Makinenin tüm kullanıcıları için kullanılabilir olan bir genel aracı yükleyemezsiniz olan kullanıcıya özgü anlamına gelir. Aracı yalnızca, aracı yüklendiği her bir kullanıcı profili için kullanılabilir.
+Genel araçları kullanıcıya özgü olduğuna dikkat edin, genel makine yok. Kullanıcıya özel olan, makinenin tüm kullanıcıları için kullanılabilir olan bir genel aracı yükleyemezsiniz anlamına gelir. Aracı yalnızca, aracının yüklendiği her kullanıcı profili için kullanılabilir.
 
-Genel araçları Ayrıca belirli bir dizindeki yüklenebilir. Belirli bir dizindeki yüklendiğinde kullanıcı komutu kullanılabiliyorsa, belirtilen dizinle komutu çağırarak yolunda bu dizine dahil ederek emin olmalısınız ya da belirtilen dizin içinde aracından çağırma.
-Bu durumda, .NET Core CLI bu konuma otomatik olarak PATH ortam değişkenine eklemez.
+Genel araçları Ayrıca belirli bir dizindeki yüklenebilir. Belirli bir dizindeki yüklendiğinde, kullanıcı komutu kullanılabilir yolunda belirtilen dizinle komutunu çağırarak bu dizine ekleyerek emin olmanız gerekir veya belirtilen dizin içinde aracından çağırma.
+Bu durumda, .NET Core CLI bu konum otomatik olarak PATH ortam değişkenine eklemez.
 
 ## <a name="use-the-tool"></a>Aracını kullanma
 
-Aracı yüklendikten sonra kendi komutunu kullanarak çağırabilirsiniz. Komut paket adı ile aynı olabileceğini unutmayın.
+Aracı yüklendikten sonra komutu kullanarak çağırabilirsiniz. Komut paket adı ile aynı olabileceğini unutmayın.
 
-Komut ise `dotnetsay`, kendisiyle çağırın:
+Komut ise `dotnetsay`, beraber:
 
 ```console
 dotnetsay
 ```
 
-Aracı Yazar bağlamında görünmesi aracı istedik varsa `dotnet` istemi, bunlar yazdığınız bu şekilde olarak çağrı `dotnet <command>`, gibi:
+Aracı Yazar bağlamında görüntülenecek araç istiyordu, `dotnet` istemi yazıldığına bu şekilde olarak çağrı `dotnet <command>`, gibi:
 
 ```console
 dotnet doc
 ```
 
-Hangi araçların bir yüklü genel aracını kullanarak yüklü paketleri listeleyerek paketinde bulunan bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.
+Kullanarak yüklü paketleri listeleyerek, hangi Araçlar yüklü bir genel Aracı paketine dahil edilen bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.
 
-Kullanım yönergeleri aracın Web sitesindeki ya da aşağıdaki komutlardan birini yazarak da arayabilirsiniz:
+Kullanım yönergeleri Aracı'nın Web sitesinde veya aşağıdaki komutlardan birini yazarak da arayabilirsiniz:
 
 ```console
 <command> --help
@@ -109,55 +109,55 @@ dotnet <command> --help
 
 ### <a name="what-could-go-wrong"></a>Nerede sorun çıkabilir
 
-Genel araçlardır [framework bağımlı uygulamaları](../deploying/index.md#framework-dependent-deployments-fdd), bunlar Bel makinenize yüklü bir .NET çekirdeği çalışma zamanı anlamına gelir. Beklenen çalışma zamanı bulunmazsa, bunlar gibi normal .NET çekirdeği çalışma zamanı İleri alma kurallarını uygulayın:
+Genel Araçları [framework bağımlı uygulamaları](../deploying/index.md#framework-dependent-deployments-fdd), güvenin makinenizde yüklü bir .NET Core çalışma zamanı üzerinde anlamına gelir. Beklenen çalışma zamanı bulunamazsa bunlar gibi normal .NET Core çalışma zamanı sarma kuralları izleyin:
 
-* Bir uygulama belirtilen birincil ve ikincil sürüm en yüksek düzeltme sürümüne İleri yapar.
-* Bir ana eşleşen ve ikincil sürüm numarası ile eşleşen hiçbir çalışma zamanı sonraki daha yüksek alt sürüm kullanılır.
-* İleri çalışma zamanı Önizleme sürümleri veya Önizleme ve yayın sürümleri arasında oluşmaz. Bu nedenle, genel Önizleme sürümleri kullanılarak oluşturulan araçları yeniden ve yazar tarafından yeniden yayımlanması ve gerekir yeniden.
-* Genel .NET Core 2.1 Preview 1'de oluşturulan araçları ile ek sorunlar oluşabilir. Daha fazla bilgi için bkz: [.NET Core 2.1 Preview 2 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md).
+* Bir uygulama belirtilen birincil ve ikincil sürüm en yüksek düzeltme eki sürümü için İleri yapar.
+* Bir eşleştirme büyük ve küçük versiyon numarasını ile eşleşen hiçbir çalışma zamanı varsa, daha yüksek bir sonraki alt sürümü kullanılır.
+* İleri Sarma Önizleme ve yayın sürümleri arasında veya çalışma zamanı Önizleme sürümleri arasında oluşmaz. Bu nedenle, genel Önizleme sürümleri kullanılarak oluşturulan araçları yeniden ve yazarı tarafından yeniden yayımlanması ve gerekir yeniden.
+* Genel .NET Core 2.1 önizleme 1'de oluşturulan Araçlar ek sorunlar ortaya çıkabilir. Daha fazla bilgi için [.NET Core 2.1 önizleme 2 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md).
 
-Bir uygulama uygun bir çalışma zamanı bulamazsanız, çalıştırmak başarısız olur ve bir hata bildirir.
+Uygun bir çalışma zamanı bir uygulamayı bulamıyorsanız, çalıştırılacak başarısız olur ve bir hata bildirir.
 
-Bir önceki Önizleme sırasında oluşturulan bir genel aracı, şu anda yüklü .NET çekirdeği çalışma zamanları ile çalışmayabilir gerçekleşebilir başka bir sorun olmasıdır. Hangi çalışma zamanları makinenizde aşağıdaki komutu kullanarak yüklü olan görebilirsiniz:
+Başka bir sorun olabilir, daha önceki bir önizleme sırasında oluşturulan bir genel aracı, şu anda yüklü .NET Core çalışma zamanlarını çalışmayabilir ' dir. Hangi çalışma zamanları, makinenizde aşağıdaki komutu kullanarak yüklenen görebilirsiniz:
 
 ```console
 dotnet --list-runtimes
 ```
 
-Genel aracı yazarına başvurun ve bunlar derlenir ve güncelleştirilmiş sürüm numarası olan NuGet için kendi aracı paketi yeniden yayımlamanız varsa bkz. NuGet paketi güncelleştirdikten sonra kopyanızı güncelleştirebilirsiniz.
+Genel aracı yazarıyla iletişime geçin ve bunlar yeniden derleyin ve güncelleştirilmiş sürüm numarasına sahip NuGet için kendi araç paketi yeniden yayımlamanız durumunda bakın. NuGet paketi güncelleştirdiniz mi sonra kopyanızı güncelleştirebilirsiniz.
 
-İlk kullanım üzerinde PATH ortam değişkeni varsayılan konumları eklemek .NET Core CLI çalışır. Ancak, birkaç burada konumu değil eklenmesi YOLUNU otomatik olarak senaryo vardır gibi:
+.NET Core CLI yol ortam değişkenine ilk kullanım için varsayılan konumları eklemek çalışır. Ancak, birkaç senaryo burada konumu değil eklenecek yolu otomatik olarak vardır gibi:
 
-* Ayarlamış olmanız `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam değişkeni.
-* .NET Core SDK'sını kullanarak yüklediyseniz macOS üzerinde *. tar.gz* dosyaları ve *.pkg*.
+* Ayarladıysanız `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam değişkeni.
+* Macos'ta .NET Core SDK'sını kullanarak yüklediyseniz, *. tar.gz* dosyaları ve *.pkg*.
 * Linux üzerinde yolu yapılandırmak için kabuk ortam dosyasını düzenlemeniz gerekir.
 
-## <a name="other-cli-commands"></a>Diğer CLI komutları
+## <a name="other-cli-commands"></a>Başka CLI komutları
 
-.NET Core SDK destek .NET Core genel araçları diğer komutlarını içerir. Herhangi birini kullanan `dotnet tool` aşağıdaki seçeneklerden birini komutlarıyla:
+.NET Core SDK'sı, .NET Core Araçları Genel destekleyen diğer komutlar içerir. Dilediğinizi `dotnet tool` aşağıdaki seçeneklerden birini komutlarıyla:
 
-* `--global` veya `-g` komutu kullanıcı genelinde geçerli genel araçları olduğunu belirtir.
-* `--tool-path` özel bir konuma için genel araçları belirtir.
+* `--global` veya `-g` komutu geniş kullanıcı için geçerli genel araçları olduğunu belirtir.
+* `--tool-path` Genel araçları için özel bir konum belirtir.
 
-Öğrenmek için genel araçlar için hangi komutları kullanılabilir:
+Hangi komutları için genel Araçlar kullanılabilir olduğunu öğrenmek için:
 
 ```console
 dotnet tool --help
 ```
 
-Genel bir aracı güncelleştirme kaldırıp en son kararlı sürümü ile yeniden yüklemeyi içerir. Genel bir aracı güncelleştirmek için [dotnet aracı güncelleştirme](dotnet-tool-update.md) komutu:
+En son kararlı sürüm ile kaldırılmadan ve genel bir aracı güncelleştirme içerir. Genel bir aracı güncelleştirmek için [dotnet aracı güncelleştirme](dotnet-tool-update.md) komutu:
 
 ```console
 dotnet tool update -g <packagename>
 ```
 
-Genel aracını kullanarak kaldırma [dotnet Aracı kaldırma](dotnet-tool-uninstall.md):
+Kullanarak bir genel Aracı kaldırma [dotnet Aracı kaldırma](dotnet-tool-uninstall.md):
 
 ```console
 dotnet tool uninstall -g <packagename>
 ```
 
-Genel, sürüm ve komutları yanı sıra makine yüklü araçların tümünü görüntülemek için kullanın [dotnet araç listesi](dotnet-tool-list.md) komutu:
+Genel sürüm ve komutları birlikte makine üzerinde yüklü araçların tümünü görüntülemek için kullanın [dotnet araç listesi](dotnet-tool-list.md) komutu:
 
 ```console
 dotnet tool list -g

@@ -1,27 +1,30 @@
 ---
 title: .NET core uygulama dağıtımı
-description: Bir .NET Core uygulamasını dağıtma.
+description: Bir .NET Core uygulaması dağıtmak için yollar hakkında bilgi edinin.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836634"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144721"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
-İki .NET Core uygulamaları için dağıtım türleri oluşturabilirsiniz:
+.NET Core uygulamaları için dağıtım üç tür oluşturabilirsiniz:
 
 - Framework bağımlı dağıtım. Adından da anlaşılacağı gibi .NET Core hedef sistemdeki bir paylaşılan sistem genelinde sürüm varlığını framework bağımlı dağıtım (FDD) kullanır. .NET Core zaten mevcut olduğundan, uygulamanızı de .NET Core yüklemeleri arasında taşınabilir. Uygulamanızı, yalnızca kendi kodunu ve .NET Core kitaplıklar dışında herhangi bir üçüncü taraf bağımlılıkları içerir. FDDs içeren *.dll* kullanılarak başlatılabilen dosyaları [dotnet yardımcı programı](../tools/dotnet.md) komut satırından. Örneğin, `dotnet app.dll` adlı bir uygulamayı çalıştıran `app`.
 
 - Kendi başına dağıtım. FDD, hedef sistemde paylaşılan Bileşenler'in kendi içinde bir dağıtım (SCD) içermez. .NET Core kitaplıkları ve .NET Core çalışma zamanı hem de dahil olmak üzere tüm bileşenlerin uygulama ile birlikte ve diğer .NET Core uygulamalardan yalıtılır. SCDs içeren bir yürütülebilir dosya (gibi *app.exe* adlı bir uygulama için Windows platformlarında `app`), platforma özgü .NET Core konak adı bir sürümü olduğu ve bir *.dll* (örneğin, dosya *app.dll*), gerçek uygulama olduğu.
 
+- Framework bağımlı yürütülebilir. Bir hedef platformu üzerinde çalışan bir yürütülebilir dosya oluşturur. Benzer şekilde FDDs, framework bağımlı yürütülebilir dosyaları (FDE) platforma özgü ve kendi içinde değil. Bu dağıtımlar, paylaşılan bir sistem genelinde sürümünü çalıştırmak için .NET Core varlığını temel yine de kullanır. Bir SCD, uygulamanızı yalnızca kodunuzu ve .NET Core kitaplıklar dışında herhangi bir üçüncü taraf bağımlılıkları içerir. FDEs hedef platformunda çalışan bir yürütülebilir dosya oluşturur.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Framework bağımlı dağıtımlar (FDD)
 
-Bir FDD için yalnızca uygulama ve üçüncü taraf bağımlılıklarının dağıtın. .NET Core uygulamanızı hedef sistemde mevcut .NET Core sürümünü kullanır bu yana dağıtmanız gerekmez. .NET Core hedefleyen .NET Core ve ASP.NET Core uygulamaları için varsayılan dağıtım modeli budur.
+Bir FDD için yalnızca uygulama ve üçüncü taraf bağımlılıklarının dağıtın. Uygulamanızı, hedef sistemde mevcut .NET Core sürümünü kullanır. .NET Core hedefleyen .NET Core ve ASP.NET Core uygulamaları için varsayılan dağıtım modeli budur.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Framework bağımlı dağıtım neden oluşturulsun mu?
 
@@ -31,11 +34,13 @@ Bir FDD dağıtma, çok sayıda avantaj vardır:
 
 - Dağıtım paketinin boyutu küçüktür. Yalnızca uygulamanız ve onun bağımlılıklarını, .NET Core kendisini dağıtırsınız.
 
+- Geçersiz kılınmadığı sürece FDDs hedef sistemde yüklü en son hizmet verilen çalışma zamanı kullanır. Bu, .NET Core çalışma zamanı düzeltme en son sürümünü kullanmak için uygulamanızı sağlar. 
+
 - Birden fazla uygulama konak sistemlerinde iki disk alanı ve bellek kullanımını azaltır aynı .NET Core yüklemesini kullanın.
 
 Bazı dezavantajları vardır:
 
-- Yalnızca .NET Core, hedef sürümünü veya sonraki bir sürümü zaten konak sisteminde yüklü değilse, uygulamayı çalıştırabilirsiniz.
+- Yalnızca kullanarak uygulamanızın hedeflediği sürümü, .NET Core uygulamanızı çalıştırabilirsiniz [veya sonraki bir sürümü](../versions/selection.md#framework-dependent-apps-roll-forward), ana sistemde zaten yüklü.
 
 - .NET Core çalışma zamanı ve kitaplıklarda bilgi birikiminizi gelecek sürümleri olmadan değiştirmek mümkündür. Nadiren de olsa Bu, uygulamanın davranış şekli değişebilir.
 
@@ -65,9 +70,31 @@ Ayrıca, bir dizi dezavantajları vardır:
 
 - Bir sistem için çok sayıda bağımsız bir .NET Core uygulamaları dağıtma, önemli miktarda disk alanı, her uygulama çoğaltmaları bu yana .NET Core dosyaları kullanabilir.
 
+## <a name="framework-dependent-executables-fde"></a>Framework bağımlı yürütülebilir dosyalar (FDE)
+
+.NET Core 2.2 ile başlayarak, tüm gerekli üçüncü taraf bağımlılıkları ile birlikte bir FDE olarak uygulamanızın dağıtabilirsiniz. Uygulamanızı .NET Core, hedef sistemde yüklü sürümünü kullanır.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Neden framework bağımlı yürütülebilir bir uygulama dağıtma?
+
+Bir FDE dağıtma, çok sayıda avantaj vardır:
+
+- Dağıtım paketinin boyutu küçüktür. Yalnızca uygulamanız ve onun bağımlılıklarını, .NET Core kendisini dağıtırsınız.
+
+- Birden fazla uygulama konak sistemlerinde iki disk alanı ve bellek kullanımını azaltır aynı .NET Core yüklemesini kullanın.
+
+- Uygulamanızı çağırmadan yayımlanan yürütülebilir çağırarak çalıştırılabilir `dotnet` doğrudan yardımcı programı.
+
+Bazı dezavantajları vardır:
+
+- Yalnızca kullanarak uygulamanızın hedeflediği sürümü, .NET Core uygulamanızı çalıştırabilirsiniz [veya sonraki bir sürümü](../versions/selection.md#framework-dependent-apps-roll-forward), ana sistemde zaten yüklü.
+
+- .NET Core çalışma zamanı ve kitaplıklarda bilgi birikiminizi gelecek sürümleri olmadan değiştirmek mümkündür. Nadiren de olsa Bu, uygulamanın davranış şekli değişebilir.
+
+- Uygulamanızı her bir hedef platform için yayımlamanız gerekir.
+
 ## <a name="step-by-step-examples"></a>Adım adım örnek
 
-CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). Her konu, aşağıdaki dağıtımlar örnekleri içerir:
+CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). Her makalede, aşağıdaki dağıtımlar örnekleri içerir:
 
 - Framework bağımlı dağıtım
 - Framework bağımlı dağıtım üçüncü taraf bağımlılıkları

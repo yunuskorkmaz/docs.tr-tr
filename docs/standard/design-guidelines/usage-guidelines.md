@@ -1,18 +1,17 @@
 ---
 title: Kullanım yönergeleri
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+author: KrzysztofCwalina
+ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197944"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155411"
 ---
 # <a name="usage-guidelines"></a>Kullanım yönergeleri
 
@@ -34,7 +33,7 @@ Bu bölümde, genel olarak erişilebilir API'leri genel türleri kullanma yöner
 
 *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
-*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
+*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

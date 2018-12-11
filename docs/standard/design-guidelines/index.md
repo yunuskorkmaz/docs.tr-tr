@@ -1,27 +1,26 @@
 ---
 title: Çerçeve Tasarım Yönergeleri
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085646"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147612"
 ---
 # <a name="framework-design-guidelines"></a>Çerçeve Tasarım Yönergeleri
 Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama için yönergeler sağlar. Bağımsız geliştirme için kullanılan programlama dili olan birleşik bir programlama modeli sağlayarak API tutarlığı ve kullanım kolaylığı sağlamak kitaplığı tasarımcıları yardımcı olmaktır. Sınıfları ve genişleten .NET Framework bileşenleri geliştirirken bu tasarım ilkelerine uyun öneririz. Tutarsız kitaplığı tasarım olumsuz geliştirici üretkenliğinizi etkiler ve benimseme gerçekleştirilmesini önler.  
   
  Kılavuzları basit önerileri şartlarını önek olarak düzenlenir `Do`, `Consider`, `Avoid`, ve `Do not`. Bu yönergeleri, sınıf kitaplığı tasarımcıları farklı çözümler gereksinimlerimi karşılamama anlamanıza yardımcı olmak için tasarlanmıştır. Bu tasarım yönergeleri ihlal iyi kitaplığı tasarım burada gerektirir durumlar olabilir. Bu gibi durumlarda nadiren olmalıdır ve kararınız için NET ve ilgi çekici bir neden olması önemlidir.  
   
- Bu yönergeleri defterinden adlı çalışmasından *çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler*, Krzysztof Cwalina ve Brad Abrams.  
+ Bu yönergeleri defterinden adlı çalışmasından *çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler*, Krzysztof Cwalina ve Brad Abrams.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama 
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

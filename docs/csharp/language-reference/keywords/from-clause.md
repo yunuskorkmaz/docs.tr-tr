@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033408"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129044"
 ---
 # <a name="from-clause-c-reference"></a>from tümcesi (C# Başvurusu)
 
@@ -33,9 +33,9 @@ Aşağıdaki örnekte, `numbers` veri kaynağıdır ve `num` aralık değişkeni
 
 Veri kaynağı uygular, derleyici Aralık değişkeninin türünü çıkarsar <xref:System.Collections.Generic.IEnumerable%601>. Örneğin, kaynak türü varsa `IEnumerable<Customer>`, aralık değişkeni olması sorguluyorsanız `Customer`. Açıkça türüdür ne zaman belirtmelisiniz. yalnızca bir kez kaynağı olan genel olmayan `IEnumerable` gibi yazın <xref:System.Collections.ArrayList>. Daha fazla bilgi için [nasıl yapılır: LINQ ile ArrayList sorgulama](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-Önceki örnekte `num` türünde olmasını çıkarılan `int`. Aralık değişkeninin türü kesin olarak belirtilmiş olduğundan üzerinde yöntemleri çağırmak ya da diğer işlemleri kullanın. Örneğin, yazmak yerine `select num`, şunu yazabilirsiniz `select num.ToString()` dize yerine tamsayı bir dizisini döndürmek sorgu ifadesi neden olacak. Veya şunu yazabilirsiniz `select n + 10` 14 dizisini döndürmek için ifadeyi neden 11, 13, 12, 10. Daha fazla bilgi için [select yan tümcesi](select-clause.md).
+Önceki örnekte `num` türünde olmasını çıkarılan `int`. Aralık değişkeninin türü kesin olarak belirtilmiş olduğundan üzerinde yöntemleri çağırmak ya da diğer işlemleri kullanın. Örneğin, yazmak yerine `select num`, şunu yazabilirsiniz `select num.ToString()` dize yerine tamsayı bir dizisini döndürmek sorgu ifadesi neden olacak. Veya şunu yazabilirsiniz `select num + 10` 14 dizisini döndürmek için ifadeyi neden 11, 13, 12, 10. Daha fazla bilgi için [select yan tümcesi](select-clause.md).
 
-Bir yineleme değişkeni aralık değişkeni benzer bir [foreach](foreach-in.md) çok önemli bir fark dışında deyimi: bir aralık değişkenine asla gerçekten kaynaktan gelen verileri depolar. Bu sorgu yürütüldüğünde yalnızca sağlayan ne açıklamak sorgu söz dizimi kolaylık meydana gelir. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Bir yineleme değişkeni aralık değişkeni benzer bir [foreach](foreach-in.md) çok önemli bir fark dışında deyimi: bir aralık değişkenine asla gerçekten kaynaktan gelen verileri depolar. Yalnızca bir sorgu çalıştırıldığında ne olacağını açıklamak sorgu sağlar söz dizimsel kolaylık bir özelliktir. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="compound-from-clauses"></a>Bileşik yan tümcelerinden
 

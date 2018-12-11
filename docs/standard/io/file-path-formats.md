@@ -2,18 +2,21 @@
 title: Windows sistemlerde dosya yolu biçimleri
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296834"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144864"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerde dosya yolu biçimleri
 
@@ -96,7 +99,7 @@ DOS aygıtı yolu aşağıdaki bileşenlerden oluşur:
 
 DOS cihaz yolları tanımına göre tam. Göreli directory parçaları (`.` ve `..`) izin verilmez. Geçerli dizin, hiçbir zaman kendi kullanımlarına girin.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Örnek: aynı dosyaya başvurmak için yollar
+## <a name="example-ways-to-refer-to-the-same-file"></a>Örnek: Aynı dosyaya başvurmak için yollar
 
 Aşağıdaki örnek, başvurabilirsiniz bir dosyaya API'leri kullanırken yollardan bazılarını göstermektedir <xref:System.IO> ad alanı. Örnek bir <xref:System.IO.FileInfo> nesne ve kullanımları onun <xref:System.IO.FileInfo.Name> ve <xref:System.IO.FileInfo.Length> dosya adı ve dosya uzunluğunu görüntülemek için özellikler.
 
@@ -203,30 +206,14 @@ Windows olmayan kullanıcılara ve geliştiricilere, karmaşık bulma Windows do
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 TeStDiReCtOrY adlı bir dizin oluşturur. Bir dizin veya dosya kasasının değiştirmek için yeniden adlandırırsanız, dizin veya dosya adı, yeniden adlandırdığınızda kullanılan dize durumunu yansıtır. Örneğin, aşağıdaki kod, test.txt Test.txt için adlı bir dosyayı yeniden adlandırır:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Ancak, dizin ve dosya adı karşılaştırmalar büyük küçük harf duyarlıdır. "Test.txt" adlı bir dosya için arama yaparsanız, dosya sistemi API'yi .NET karşılaştırma durumda yoksayın. Test.txt, TEST. TXT, test. TXT ve büyük ve küçük harfler, herhangi bir birleşimini "test.txt" eşleşir.

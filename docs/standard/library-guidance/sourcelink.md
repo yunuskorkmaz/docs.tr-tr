@@ -4,12 +4,12 @@ description: .NET kitaplıkları için hata ayıklama geliştirmek için SourceL
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: fa4af47eaa5dd1510640c2bf0ebb2187b56efae0
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123879"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128939"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -27,10 +27,18 @@ Kullanabileceğiniz [NuGet paket Gezgini](https://github.com/NuGetPackageExplore
 
 ![NuGet paket Gezgini'nde SourceLink](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink, NuGet paket Gezgini")
 
-**✔️ DÜŞÜNÜN** SourceLink NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için kullanma.
+**✔️ DÜŞÜNÜN** SourceLink kaynak denetimi meta verilerini, derlemeleri ve NuGet paketleri eklemek için kullanma.
 
-**✔️ DÜŞÜNÜN** NuGet paketine PDB dosyaları.
+> [!TIP]
+> Türleriniz için hata ayıklayıcı öznitelikleri ekleyerek, geliştirici hata ayıklama deneyimi daha da geliştirebilirsiniz.
+> * <xref:System.Diagnostics.DebuggerDisplayAttribute> bir sınıf ya da alan hata ayıklayıcı değişken pencerelerinde nasıl görüntüleneceğini özelleştirebilirsiniz.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute> Hata ayıklayıcının kodun içine Adımlama yerine kod adım adım yönlendirir.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute> üye hata ayıklayıcı değişken pencerelerinde görüntülenip görüntülenmediğini denetler.
+
+**✔️ DÜŞÜNÜN** sembol dosyaları dahil olmak üzere (`*.pdb`) NuGet paketi olarak.
+
+> Normalde, sembol dosyalarında yayımlamak istediğiniz bir [sembol paketi](./nuget.md#symbol-packages). Sembol paketleri için genel ana taşınabilir sembol dosyaları şu anda desteklemiyor (`*.pdb`) SDK stili projeleri tarafından oluşturulan ve sembol paketleri kullanışlı değildir.
 
 >[!div class="step-by-step"]
-[Önceki](./dependencies.md)
-[İleri](./publish-nuget-package.md)
+>[Önceki](dependencies.md)
+>[İleri](publish-nuget-package.md)

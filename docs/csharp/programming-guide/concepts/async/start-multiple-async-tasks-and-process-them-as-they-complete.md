@@ -2,12 +2,12 @@
 title: Zaman uyumsuz görevleri tamamlandıkça işleme
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202048"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152376"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatma ve bunlar (C#) tamamlandıkça işleme
 
@@ -20,7 +20,7 @@ Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanı
 
 ## <a name="download-an-example-solution"></a>Bir örnek çözümü indirin
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
 
 > [!TIP]
 > Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonunda MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
@@ -75,7 +75,7 @@ Proje MainWindow.xaml.cs dosyasında aşağıdaki değişiklikleri `AccessTheWeb
 
         ```csharp
         int length = await firstFinishedTask;
-        resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
 İndirilen uzunlukların her zaman aynı sırada görüntülenmediğini doğrulamak için birkaç kez programı'nı çalıştırın.
@@ -87,7 +87,7 @@ Proje MainWindow.xaml.cs dosyasında aşağıdaki değişiklikleri `AccessTheWeb
 
 Aşağıdaki kod örneği için MainWindow.xaml.cs dosyasının tam metindir. Yıldız işaretleri, bu örnek için eklenen öğeleri işaretler. Ayrıca, bir başvuru için eklemeniz gereken Not <xref:System.Net.Http>.
 
-Projeden indirebileceğiniz [zaman uyumsuz örneği: ince uygulamanıza](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -181,7 +181,7 @@ namespace ProcessTasksAsTheyFinish
 
                     // Await the completed task.
                     int length = await firstFinishedTask;
-                    resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
             }
         }
 
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

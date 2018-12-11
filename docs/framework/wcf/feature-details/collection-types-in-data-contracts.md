@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850882"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155190"
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri diziler veya çeşitli diğer türleri kullanarak temsil edilebilen (genel liste, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyonlara adlı *liste koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -87,7 +87,7 @@ A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[
   
 -   Zaman <xref:System.Runtime.Serialization.CollectionDataContractAttribute> öznitelik uygulanmadı, adları ve ad alanları koleksiyon içinde yer alan türlerinin varsayılan adını ve koleksiyon türleri için ad alanı bağlıdır. Bunlar, koleksiyon türünün ad alanını ve ad etkilenmez. Örneğin, aşağıdaki türleri bakın.  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -249,7 +249,7 @@ A *koleksiyon* , belirli bir türdeki öğelerin listesidir. İçinde [!INCLUDE[
   
  Örneğin, genel içeri aktarılacak tüm listeleri neden <xref:System.Collections.Generic.List%601>.  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   

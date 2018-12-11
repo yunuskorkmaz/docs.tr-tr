@@ -1,15 +1,15 @@
 ---
 title: Seçmeli birim testleri çalıştırma
-description: Dotnet testi komutuyla seçmeli birim testlerini çalıştırmak için bir filtre ifadesi kullanma işlemi gösterilmektedir.
+description: Dotnet testi komutu .NET core'da seçmeli birim testlerini çalıştırmak için bir filtre ifadesi kullanma
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 1a90438e3b0b2eb095124208010bbe9558424d91
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517226"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170211"
 ---
 # <a name="running-selective-unit-tests"></a>Seçmeli birim testleri çalıştırma
 
@@ -45,7 +45,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | Çalıştırmaları testleri `FullyQualifiedName` içeren `Method`. Kullanılabilir `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Adında içeren çalıştırdığında `TestMethod1`. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Sınıfta olan testleri çalıştırır `MSTestNamespace.UnitTest1`.<br>**Not:** `ClassName` değer olmalıdır bir ad alanı, bu nedenle `ClassName=UnitTest1` çalışmaz. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Sınıfta olan testleri çalıştırır `MSTestNamespace.UnitTest1`.<br>**Not:** `ClassName` Değer olmalıdır bir ad alanı, bu nedenle `ClassName=UnitTest1` çalışmaz. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Dışındaki tüm testleri çalıştırır `MSTestNamespace.UnitTest1.TestMethod1`. |
 | `dotnet test --filter TestCategory=CategoryA` | Hangi ile açıklamalı olan testleri çalıştırır `[TestCategory("CategoryA")]`. |
 | `dotnet test --filter Priority=2` | Hangi ile açıklamalı olan testleri çalıştırır `[Priority(2)]`.<br>

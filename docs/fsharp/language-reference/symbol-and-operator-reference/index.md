@@ -2,12 +2,12 @@
 title: Simge ve İşleç Başvurusu (F#)
 description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297348"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169878"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -50,8 +50,8 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`-`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, sol taraftaki sağından çıkarır.<br /></li></ul>|
 |`->`|[İşlevler](../functions/index.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>İşlev türleri, bağımsız değişkenleri sınırlandırır ve dönüş değerleri.<br /></li><li>Bir ifade (sequence ifadeleri); verir eşdeğer `yield` anahtar sözcüğü.<br /></li><li>Eşleştirme ifadelerinde kullanılır<br /></li></ul>|
 |`.`|[Üyeler](../members/index.md)<br /><br />[İlkel Türler](../primitive-types.md)|<ul><li>Üye erişir ve bir tam ad bireysel adlarını ayırır.<br /></li><li>Bir ondalık kayan nokta numaralarını belirtir.<br /></li></ul>|
-|`..`|[Döngüler: `for...in` ifadesi](../loops-for-in-expression.md)|<ul><li>Bir aralığını belirtir.<br /></li></ul>|
-|`.. ..`|[Döngüler: `for...in` ifadesi](../loops-for-in-expression.md)|<ul><li>Bir artış ile birlikte bir aralığını belirtir.<br /></li></ul>|
+|`..`|[Döngüler: `for...in` İfade](../loops-for-in-expression.md)|<ul><li>Bir aralığını belirtir.<br /></li></ul>|
+|`.. ..`|[Döngüler: `for...in` İfade](../loops-for-in-expression.md)|<ul><li>Bir artış ile birlikte bir aralığını belirtir.<br /></li></ul>|
 |`.[...]`|[Diziler](../arrays.md)|<ul><li>Bir dizi öğesine erişir.<br /></li></ul>|
 |`/`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Ölçü Birimleri](../units-of-measure.md)|<ul><li>Sol tarafındaki (pay) sağ tarafındaki (paydası) böler.<br /></li><li>Ölçü türlerine birimlerinde kullanılır.<br /></li></ul>|
 |`/?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda sol tarafındaki sağ tarafını tarafından böler.<br /></li></ul>|
@@ -61,7 +61,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`::`|[Listeler](../lists.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Bir liste oluşturur. Öğe sol tarafındaki işlecin sağ tarafındaki listesine eklenir.<br /></li><li>Desen eşleştirme listenin bölümlerini ayırmak için kullanılır.<br /></li></ul>|
 |`:=`|[Başvuru Hücreleri](../reference-cells.md)|<ul><li>Bir başvuru hücresine bir değer atar.<br /></li></ul>|
 |`:>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>İçin türü, hiyerarşinin üst düzeylerindeki dönüştürür.<br /></li></ul>|
-|`:?`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Döndürür `true` değeri belirtilen türe; eşleşiyorsa döndürür, aksi takdirde, `false` (tür test işleci).<br /></li></ul>|
+|`:?`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Döndürür `true` değeri belirtilen türe (alt ise dahil); eşleşiyorsa, aksi halde döndürür `false` (tür test işleci).<br /></li></ul>|
 |`:?>`|[Tür Değiştirme ve Dönüştürmeler](../casting-and-conversions.md)|<ul><li>Bir tür hiyerarşide daha düşük bir türe dönüştürür.<br /></li></ul>|
 |`;`|[Ayrıntılı Söz Dizimi](../verbose-syntax.md)<br /><br />[Listeler](../lists.md)<br /><br />[Kayıtlar](../records.md)|<ul><li>İfadeler (çoğunlukla ayrıntılı sözdiziminde kullanılır) ayırır.<br /></li><li>Bir liste öğelerini ayırır.<br /></li><li>Bir kaydın alanlarını ayırır.<br /></li></ul>|
 |`<`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Daha az hesaplar-işlemi daha.<br /></li></ul>|
@@ -81,7 +81,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Kod yazılmamış tırnak sınırlandırır.<br /></li></ul>|
 |`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sağ tarafı; sol tarafındaki eşitse, aksi takdirde döndürür `false`.<br /></li></ul>|
 |`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Equal" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|`==`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
+|`==`|Uygulanamaz.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
 |`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafında, aksi takdirde sağ tarafındaki büyük döndürür `false`.<br /></li></ul>|
 |`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür" işlemi hesaplar.<br /></li></ul>|
 |`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlev (İleri birleşim işleci) oluşturur.<br /></li></ul>|
@@ -146,6 +146,7 @@ Aşağıdaki tabloda öncelik işleçleri ve diğer deyim anahtar sözcükleri s
 |`.`|Sol|
 |`f(x)`|Sol|
 |`f<`*Türleri*`>`|Sol|
+
 F#Özel İşleç aşırı yüklemesi destekler. Başka bir deyişle, kendi işleçleri tanımlayabilirsiniz. Önceki tabloda *op* (büyük olasılıkla boş) geçerli dizi işleci karakter, yerleşik veya kullanıcı tanımlı olabilir. Bu nedenle, hangi istediğiniz öncelik düzeyini elde etmek için özel bir işleç için kullanılacak karakter sırasını belirlemek için bu tabloyu kullanın. Önde gelen `.` derleyici öncelik belirlediğinde karakterler yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.

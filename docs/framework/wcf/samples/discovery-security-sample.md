@@ -3,11 +3,11 @@ title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129356"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenlik geliştirme azaltır çeşitli türdeki saldırıları (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtiminin bölüm 8.2 içinde açıklanmıştır) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanallar uygular. Örnek her ikisini de destekler [2005 bulma belirtimi](https://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümü](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güv
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Örnek, bir kitaplık ve 4 konsol uygulamaları içerir:  
   
--   **DiscoverySecurityChannels**: Güvenli bağlama kullanıma sunan bir kitaplık. Kitaplığı, hesaplar ve giden/gelen iletiler için compact imzayı doğrular.  
+-   **DiscoverySecurityChannels**: Güvenli bağlama sunan bir kitaplık. Kitaplığı, hesaplar ve giden/gelen iletiler için compact imzayı doğrular.  
   
--   **Hizmet**: ICalculatorService sözleşmeyi doğrulamasıyla açığa çıkaran hizmet, kendi kendine barındırılan. Hizmet bulunabilir işaretlenir. Kullanıcı depolama konumu ve adı ve konu adı veya diğer sertifika için benzersiz bir tanımlayıcı belirterek iletileri imzalamak için kullanılan sertifika ayrıntılarını belirtir ve istemci sertifikalarını nerede deposu (için kullanılan sertifikaları yer gelen iletiler için imza denetleyin). Bu ayrıntılara bağlı olarak, bir UdpDiscoveryEndpoint eklenen güvenlik ile yerleşik olarak kullanılan ve.  
+-   **Hizmet**: Kendi kendine barındırılan ICalculatorService sözleşmeyi doğrulamasıyla açığa çıkaran hizmet. Hizmet bulunabilir işaretlenir. Kullanıcı depolama konumu ve adı ve konu adı veya diğer sertifika için benzersiz bir tanımlayıcı belirterek iletileri imzalamak için kullanılan sertifika ayrıntılarını belirtir ve istemci sertifikalarını nerede deposu (için kullanılan sertifikaları yer gelen iletiler için imza denetleyin). Bu ayrıntılara bağlı olarak, bir UdpDiscoveryEndpoint eklenen güvenlik ile yerleşik olarak kullanılan ve.  
   
--   **İstemci**: Bu sınıf bir ICalculatorService bulmak ve hizmet üzerinde yöntemleri çağırmak için çalışır. Tekrar bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ile güvenlik oluşturulur ve oturum açın ve iletileri doğrulamak için kullanılan eklendi.  
+-   **İstemci**: Bu sınıf, bir ICalculatorService bulmak ve hizmet üzerinde yöntemleri çağırmak için çalışır. Tekrar bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ile güvenlik oluşturulur ve oturum açın ve iletileri doğrulamak için kullanılan eklendi.  
   
--   **AnnouncementListener**: şirket içinde barındırılan hizmet için çevrimiçi ve çevrimdışı duyuruları dinleyen ve güvenli bir duyuru uç nokta kullanır.  
+-   **AnnouncementListener**: İçin çevrimiçi ve çevrimdışı duyuruları dinler ve güvenli bir duyuru uç noktası kullanan şirket içinde barındırılan bir hizmet.  
   
 > [!NOTE]
 >  Setup.bat birden çok kez çalıştırılırsa, yinelenen sertifikalar bulunduğundan eklemek için bir sertifika seçmek için Sertifika Yöneticisi ister. Bu durumda, Setup.bat durduruldu ve yinelenen bir önceden oluşturulmuş olduğundan Cleanup.bat çağrılmalıdır. CleanUp.bat silmek için bir sertifika seçmenizi ister. Listeden bir sertifika seçin ve sertifika kalan kadar Cleanup.bat yürütme devam edin.  

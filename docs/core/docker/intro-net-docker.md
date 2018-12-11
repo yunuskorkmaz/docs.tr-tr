@@ -1,22 +1,22 @@
 ---
-title: .NET ve Docker'a giriş
-description: Docker anlama ve .NET Core
+title: Docker giriş
+description: Bu makale Docker için bir .NET Core uygulaması bağlamında bir giriş ve genel bakış sağlar.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
-ms.custom: mvc
-ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 46f7dcd9d13606bc388edee0563163479e2c9987
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970649"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170684"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker'a giriş
 
 Bu makalede, bir giriş ve Docker üzerinde .NET ile çalışmak için kavramsal arka plan sağlar.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: paketleme uygulamalarınızı dağıtma ve her yerde çalıştırın
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: Uygulamalarınızı dağıtma ve her yerde çalışan paketleme
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) geliştiriciler ve yöneticiler yapı olanak tanıyan açık bir platformdur [görüntüleri](https://docs.docker.com/glossary/?term=image)gönderin ve dağıtılmış uygulamaları adlı gevşek yalıtılmış bir ortamda çalıştırmak bir [kapsayıcı](https://www.docker.com/what-container). Bu yaklaşım, geliştirme, QA ve üretim ortamları arasında verimli uygulama yaşam döngüsü yönetimi sağlar.
  
@@ -28,7 +28,7 @@ Ya da kendi oluşturabileceğiniz [görüntüleri katmanlı](https://docs.docker
 
 ### <a name="further-reading-and-watching"></a>Daha fazla bilgi (ve izleme)
 
-* [Windows tabanlı kapsayıcılar: Kurumsal düzeyde denetimiyle Modern uygulama geliştirme.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
+* [Windows tabanlı kapsayıcılar: Kurumsal düzeyde denetimiyle modern uygulama geliştirme.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Docker'a genel bakış](https://docs.docker.com/engine/docker-overview/)
 * [Dockerfile Windows kapsayıcıları hakkında](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Dockerfile'ları yazmak için en iyi uygulamalar](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)

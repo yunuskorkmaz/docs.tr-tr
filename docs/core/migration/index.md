@@ -1,23 +1,25 @@
 ---
-title: .NET core csproj biçimine geçiş
-description: .NET core Project.json'yi csproj'a geçiş
+title: Project.json .NET core geçişi
+description: Project.JSON kullanarak eski bir .NET Core projesi geçirmeyi öğrenin
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584344"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170697"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>.Csproj biçimine geçirme .NET Core projeleri
+# <a name="migrating-net-core-projects-from-projectjson"></a>Project.json .NET Core projeleri geçirme
 
 Bu belgede, .NET Core projeleri için geçiş senaryolarını kapsamakta ve aşağıdaki üç geçiş senaryoları geçer:
 
 1. [Geçerli bir en son şema geçişini *project.json* için *csproj*](#migration-from-projectjson-to-csproj)
 2. [DNX csproj'a geçiş](#migration-from-dnx-to-csproj)
 3. [En son biçime RC3 ve önceki .NET Core csproj'a geçiş projeleri](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+Bu belgede yalnızca project.json kullanan eski .NET Core projeleri için geçerlidir. .NET Core için .NET Framework'den geçiş için geçerli değildir.
 
 ## <a name="migration-from-projectjson-to-csproj"></a>Project.json csproj'a geçiş
 
@@ -58,7 +60,7 @@ Bkz: [özellikleri project.json ile csproj arasında eşleme](../tools/project-j
 
 ### <a name="common-issues"></a>Sık karşılaşılan sorunları
 
-- Bir hata alırsanız: "hiçbir yürütülebilir bulunan eşleşen komut dotnet-geçirme":
+- Bir hata alırsanız: "Hiçbir yürütülebilir bulunan eşleşen komut dotnet-geçirme":
 
 Çalıştırma `dotnet --version` kullanmakta olduğunuz hangi sürümü görmek için. [`dotnet migrate`](../tools/dotnet-migrate.md) .NET Core CLI RC3 gerektirir veya üzeri.
 Varsa bu hatayı alırsınız bir *global.json* geçerli dosya ya da üst dizini ve `sdk` sürümünü daha eski bir sürüme ayarlayın.

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584305"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150842"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilders ile komut oluşturma
 Zaman `SelectCommand` gibi bir metinsel komutu kullanıcıdan alan bir sorgu aracı, uygun belirlemek mümkün olmayabilir özelliği çalışma zamanında dinamik olarak belirtilen `InsertCommand`, `UpdateCommand`, veya `DeleteCommand` tasarım zamanında. Varsa, <xref:System.Data.DataTable> eşler veya oluşturulan bir tek veritabanı tablosundan avantajlarından yararlanabilirsiniz <xref:System.Data.Common.DbCommandBuilder> otomatik olarak oluşturmak için nesne `DeleteCommand`, `InsertCommand`, ve `UpdateCommand` , <xref:System.Data.Common.DbDataAdapter>.  
@@ -82,9 +82,13 @@ builder.QuoteSuffix = "]";
   
  Aşağıdaki kod örneği, otomatik olarak oluşturulmuş güncelleştirme komut konsola yazar.  
   
-```  
+```vb
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
-```  
+```
+
+```csharp
+Console.WriteLine(builder.GetUpdateCommand().CommandText);
+```
   
  Aşağıdaki örnek yeniden oluşturur `Customers` tablosundaki `custDS` veri kümesi. **RefreshSchema** yöntemi otomatik olarak oluşturulan bu yeni bir sütun bilgileri komutlarla yenilemek için çağrılır.  
   

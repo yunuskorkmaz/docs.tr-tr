@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837270"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155216"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -29,13 +29,13 @@ Aşağıdaki tabloda, bu araç ve nasıl kullanıldığı açıklanır ilgili ko
 |Görev|Konu|
 |----------|-----------|
 |Hizmetleri veya statik meta veri belgelerinden çalışmasını kod oluşturur.|[Hizmet Meta Verilerinden WCF İstemcisi Oluşturma](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|
-|Meta veri belgelerini derlenmiş koddan dışa aktarır.|[Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
-|Derlenmiş hizmet kodunu doğrular.|[Nasıl yapılır: Derlenmiş Hizmet Kodunu Doğrulamak için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
-|Meta veri belgelerini Hizmetleri çalışmasını indirir.|[Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|Serileştirme kod oluşturur.|[Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|Meta veri belgelerini derlenmiş koddan dışa aktarır.|[Nasıl Yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
+|Derlenmiş hizmet kodunu doğrular.|[Nasıl Yapılır: Derlenmiş hizmet kodunu doğrulamak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
+|Meta veri belgelerini Hizmetleri çalışmasını indirir.|[Nasıl Yapılır: Meta veri belgelerini indirmek için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
+|Serileştirme kod oluşturur.|[Nasıl Yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
-> Parametre olarak sağlanan adları aynıysa Svcutil bir diskte mevcut dosyaların üzerine yazar. Bu, kod dosyaları, yapılandırma ve meta veri dosyaları içerebilir. Bu kod ve yapılandırma uçarak oluştururken önlemek için `/mergeConfig` geçin.
+> Parametre olarak sağlanan adları aynıysa Svcutil bir diskte mevcut dosyaların üzerine yazar. Bu, kod dosyaları, yapılandırma ve meta veri dosyaları içerebilir. Bu kod ve yapılandırma dosyalarını oluştururken önlemek için `/mergeConfig` geçin.
 >
 > Ayrıca, `/r` ve `/ct` başvuru türleri için anahtarlar şunlardır veri sözleşmeleri oluşturmak için. XmlSerializer'ı kullanırken, bu anahtarlar çalışmaz.
 
@@ -69,7 +69,7 @@ Aşağıdaki tabloda, bazı yaygın olarak bu araç için kullanılan seçenekle
 
 Svcutil.exe meta veri belgelerinden Hizmet sözleşmeleri, istemciler ve veri türleri için kod oluşturur. Bu meta veri belgelerini, dayanıklı bir depolama alanında olabilir veya çevrimiçi olarak alınabilir. (Ayrıntıları meta verilerini yükleme bölümüne bakın için) WS-Metadata Exchange veya DISCO Protokolü ya da çevrimiçi alma izler.
 
-Kullanabileceğiniz *SvcUtil.exe* aracını üzerinde önceden tanımlanmış bir WSDL belgesi tabanlı hizmet ve veri sözleşmeleri oluşturmak için. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde bulunamadı veya İndirilebilecek URL veya dosya konumu belirtin. Bu, ardından uyumlu hizmet uygulamak için kullanılan WSDL belgesinde tanımlanan hizmet ve veri sözleşmeleri oluşturur. Daha fazla bilgi için [nasıl yapılır: meta verileri alma ve uyumlu bir hizmet uygulama](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
+Kullanabileceğiniz *SvcUtil.exe* aracını üzerinde önceden tanımlanmış bir WSDL belgesi tabanlı hizmet ve veri sözleşmeleri oluşturmak için. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde bulunamadı veya İndirilebilecek URL veya dosya konumu belirtin. Bu, ardından uyumlu hizmet uygulamak için kullanılan WSDL belgesinde tanımlanan hizmet ve veri sözleşmeleri oluşturur. Daha fazla bilgi için [nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
 Bir hizmetin BasicHttpContextbinding uç noktası ile *Svcutil.exe* ile bir BasicHttpBinding oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgilerini kullandığında istemcide bağlam yönetmek istiyorsanız, bağlam bağlama kullanmak için yapılandırmayı el ile değiştirebilirsiniz.
 
@@ -97,17 +97,17 @@ Bir hizmetin BasicHttpContextbinding uç noktası ile *Svcutil.exe* ile bir Basi
 |/Language:\<dil >|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasında kayıtlı bir dil adı veya devralınan bir sınıf tam nitelikli adı sağlamanız gerekir <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, visualbasic, c ++, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçim: `/l`|
 |/mergeConfig|Varolan dosyanın üzerine yazmak yerine var olan bir dosya, oluşturulan yapılandırma birleştirir.|
 |/messageContract|İleti sözleşmesi türleri oluşturur.<br /><br /> Kısa biçim: `/mc`|
-|/ Namespace:\<string, string >|Bir eşleme bir WSDL veya XML Schema Targetnamespace'ten CLR ad alanını belirtir. Kullanarak '\*' targetNamespace söz konusu CLR ad alanına açık bir eşleme olmaksızın tüm Targetnamespace'ler eşlenir.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için ya da tür başvurusu ile nitelemeniz `::`, veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: veri anlaşmaları için şema belgesinin hedef ad alanından türetilir. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n` **Not:** XmlSerializer ile kullanılacak türlerini oluştururken, yalnızca tek bir ad alanı eşleme desteklenir. Oluşturulan tüm türleri ya da varsayılan ad alanı ya da tarafından belirtilen ad alanı olacaktır ' *'.|
+|/ Namespace:\<string, string >|Bir eşleme bir WSDL veya XML Schema Targetnamespace'ten CLR ad alanını belirtir. Kullanarak '\*' targetNamespace söz konusu CLR ad alanına açık bir eşleme olmaksızın tüm Targetnamespace'ler eşlenir.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için ya da tür başvurusu ile nitelemeniz `::`, veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: Veri anlaşmaları için şema belgesinin hedef ad alanından türetilir. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n` **Not:**  XmlSerializer ile kullanılacak türlerini oluştururken, yalnızca tek bir ad alanı eşleme desteklenir. Oluşturulan tüm türleri ya da varsayılan ad alanı ya da tarafından belirtilen ad alanı olacaktır ' *'.|
 |/ noconfig|Yapılandırma dosyaları oluşturmaz.|
 |/noStdLib|Standart kitaplıkları başvuruda bulunmayın.<br /><br /> Varsayılan: Mscorlib.dll ve System.servicemodel.dll başvurulur.|
-|/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir.<br /><br /> Varsayılan: WSDL tanım adından türetilir, WSDL hizmet adı veya hedef bir şema ad alanı.<br /><br /> Kısa biçim: `/o`|
+|/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir.<br /><br /> Varsayılan: WSDL tanımı adından türetilir, WSDL hizmet adı veya hedef bir şema ad alanı.<br /><br /> Kısa biçim: `/o`|
 |/ reference:\<dosya yolu >|Belirtilen bütünleştirilmiş kod başvuruları türleri. Oluşturma istemciler kullandığınızda bu seçeneği alınan meta verileri temsil eden türleri içerebilecek bütünleştirilmiş kodlar belirtmek için.<br /><br /> İleti sözleşmeleri belirtilemez ve <xref:System.Xml.Serialization.XmlSerializer> bu anahtarı kullanarak türleri.<br /><br /> Varsa <xref:System.DateTimeOffset> başvurulan, bu türü yeni bir tür üretmek yerine kullanılır. Uygulamayı kullanarak yazılmışsa [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe başvuruları <xref:System.DateTimeOffset> otomatik olarak.<br /><br /> Kısa biçim: `/r`|
 |/ seri hale getirilebilir|Seri hale getirilebilir özniteliği ile işaretlenmiş sınıflar oluşturur.<br /><br /> Kısa biçim: `/s`|
 |/serviceContract|Hizmet sözleşmeleri ile yalnızca kod oluşturur. İstemci sınıfı ve yapılandırma oluşturulmaz<br /><br /> Kısa biçim: `/sc`|
 |/serializer:Auto|Otomatik olarak seri hale getirici'ı seçin. Bu işlem, veri sözleşme seri hale getirici kullanmayı dener ve bu başarısız olursa XmlSerializer kullanır.<br /><br /> Kısa biçim: `/ser`|
 |/serializer:DataContractSerializer|Serileştirme ve seri durumundan çıkarma için veri sözleşmesi serileştiricisi kullanan veri türlerini oluşturur.<br /><br /> Kısa biçim: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Kullanan türleri oluşturur <xref:System.Xml.Serialization.XmlSerializer> serileştirme ve seri durumundan çıkarma için.<br /><br /> Kısa biçim: `/ser:XmlSerializer`|
-|/targetClientVersion|Hangi sürümünü belirtin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamasını hedefleme. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçim: `/tcv`<br /><br /> `Version30`: Kullanın `/tcv:Version30` kullanan istemciler için kod üretiyorsanız [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanın `/tcv:Version35` kullanan istemciler için kod üretiyorsanız [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemler oluşturulur. Ayrıca, veri kümeleri için LINQ özellikli destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|
+|/targetClientVersion|Hangi sürümünü belirtin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamasını hedefleme. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçim: `/tcv`<br /><br /> `Version30`: Kullanma `/tcv:Version30` kullanan istemciler için kod üretiyorsanız [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanma `/tcv:Version35` kullanan istemciler için kod üretiyorsanız [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemler oluşturulur. Ayrıca, veri kümeleri için LINQ özellikli destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|
 |/ Sarmalanan|Sarmalanan parametrelerle Belge stilinde belgesi-değişmez değeri için özel büyük/küçük harf kullanılıp kullanılmadığını denetler. Kullanım **/ sarmalanmış** anahtarı ile [Service Model meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) normal büyük/küçük harf belirlemek için aracı.|
 
 > [!NOTE]
@@ -176,7 +176,7 @@ Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci
 > [!NOTE]
 > Önceden oluşturulan serileştirme kod, yalnızca istemci uygulamaları ve Hizmetleri kullanılabilir.
 
-Svcutil.exe gerekli C# serileştirme kodu, bu nedenle bu uygulamaları için başlatma performansını iyileştirme derlenmiş bütünleştirilmiş uygulama oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+Svcutil.exe gerekli C# serileştirme kodu, bu nedenle bu uygulamaları için başlatma performansını iyileştirme derlenmiş bütünleştirilmiş uygulama oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 > [!NOTE]
 > Svcutil.exe, yalnızca hizmet sözleşmeleri giriş derlemelerde bulunan tarafından kullanılan türleri için kod oluşturur.
@@ -280,4 +280,4 @@ Son olarak, engelleme hizmet geçerli işlem için neden olabileceğinden aracı
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl Yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

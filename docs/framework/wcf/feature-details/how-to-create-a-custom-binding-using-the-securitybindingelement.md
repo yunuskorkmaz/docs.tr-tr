@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma'
+title: 'Nasıl Yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181140"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155255"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl Yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma
 Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik sağlamaz, WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken birçok sistem tarafından sağlanan bağlamalar içerir. Bu konu, tek tek bağlama öğelerini doğrudan özel bağlama oluşturma işlemini gösterir ve böyle bir bağlamanın oluştururken belirttiğiniz güvenlik ayarlarından bazıları vurgular. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
   
  Buna karşılık, özel bir bağlama oluşturmak için bağlama öğeleri oluşturulup yapılandırıldıktan ve <xref:System.ServiceModel.Channels.CustomBinding> bağlama öğelerini oluşturulur.  
   
- Bunu yapmak için tek tek bağlama öğelerinin bir örneği tarafından temsil edilen bir koleksiyon eklediğiniz <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve ardından `Elements` özelliği `CustomBinding` bu nesneye eşit. Bağlama öğeleri şu sırayla eklemeniz gerekir: işlem akışı, güvenilir oturum, güvenlik, çift yönlü bileşik, tek yönlü, Stream güvenlik, ileti kodlama ve taşıma. Listelenen tüm bağlama öğelerini her bağlamanın gerekli olduğunu unutmayın.  
+ Bunu yapmak için tek tek bağlama öğelerinin bir örneği tarafından temsil edilen bir koleksiyon eklediğiniz <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve ardından `Elements` özelliği `CustomBinding` bu nesneye eşit. Bağlama öğeleri şu sırayla eklemeniz gerekir: İşlem akışını, güvenilir oturum, güvenlik, bileşik bir çift yönlü, tek yönlü, Stream güvenlik, ileti kodlama ve taşıma. Listelenen tüm bağlama öğelerini her bağlamanın gerekli olduğunu unutmayın.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Üç bağlama öğeleri ile ilgili tüm türetilen ileti düzeyi güvenliği için <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. Üç olan <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, ve <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Karma mod güvenliği sağlamak için kullanılır. Güvenlik iletisi katmanı sağlar, diğer iki öğe kullanılır.  

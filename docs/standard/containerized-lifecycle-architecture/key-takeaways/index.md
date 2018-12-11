@@ -4,12 +4,12 @@ description: Microsoft Platformu ve Araçları (e-kitap) _v1.1 kapsayıcı Docke
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646252"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148643"
 ---
 # <a name="key-takeaways"></a>Önemli dersler
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646252"
 Azure DevOps hizmetleriyle DevOps ortamınızı Docker ortamlarını öğesinden basit Docker ortamlarını veya Azure tabanlı daha gelişmiş mikro hizmet ve kapsayıcı düzenleyicileri dahil olmak üzere sürekli dağıtım işlem hatlarınızı, belirlenen büyük ölçüde kolaylaştırır.
 
 >[!div class="step-by-step"]
-[Önceki](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Önceki](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

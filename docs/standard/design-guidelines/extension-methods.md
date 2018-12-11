@@ -1,16 +1,15 @@
 ---
 title: Uzantı Metotları
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148304"
 ---
 # <a name="extension-methods"></a>Uzantı Metotları
 Genişletme yöntemleri örnek yöntem çağrısı sözdizimi kullanılarak çağrılabilir için statik yöntemler sağlayan bir dil özelliğidir. Bu yöntemler üzerinde çalışılacak yöntemidir örneği temsil eden en az bir parametre almalıdır.  
@@ -45,7 +44,7 @@ Genişletme yöntemleri örnek yöntem çağrısı sözdizimi kullanılarak ça�
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

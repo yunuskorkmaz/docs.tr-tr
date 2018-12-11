@@ -1,36 +1,35 @@
 ---
-title: Kapsayıcılar ve Docker giriş
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+title: Kapsayıcılar ve Docker'a giriş
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106638"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148827"
 ---
-# <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker giriş
+# <a name="introduction-to-containers-and-docker"></a>Kapsayıcılar ve Docker'a giriş
 
-Kapsayıcıyla taşıma, bir uygulama veya hizmet, bağımlılıklarını ve (dağıtım bildirim dosyaları olarak soyutlanır) yapılandırmasıyla birlikte bir kapsayıcı görüntüsü olarak paketlenmiş yazılım geliştirme için bir yaklaşımdır. Ardından bir birim olarak kapsayıcılı uygulamayı test etme ve ana bilgisayar işletim sistemi için bir kapsayıcı görüntü örneği olarak dağıtabilirsiniz.
+Kapsayıcı içinde bir uygulama veya hizmeti ve bağımlılıklarını yapılandırmasıyla (dağıtım bildirim dosyaları soyutlanır) bir arada bir kapsayıcı görüntüsü paketlenmiş yazılım geliştirme için bir yaklaşımdır. Daha sonra bir birim olarak kapsayıcılı uygulamayı test etme ve bir kapsayıcı görüntü örneğinin konak işletim sistemi olarak dağıtabilirsiniz.
 
-Yalnızca sevk, tren veya bunları içinde Kargo bakılmaksızın kamyon mal taşımak için standartlaştırılmış kapsayıcıları sevkiyat endüstri kullanır gibi yazılım kapsayıcıları farklı kodu ve bağımlılıklarını içeren bir yazılım standart birimi davranır. Yazılım kapsayıcılarına yerleştirme, geliştiriciler ve BT Uzmanları bu kapsayıcıların çok az kayıpla veya hiç değişiklik ortamlarıyla üzerinden dağıtmak mümkün kılar.
+Yalnızca ürün sevk, train veya kargo içindeki ne olursa olsun, kamyon taşımak için standartlaştırılmış kapsayıcıları sevkiyat sektör kullandığı yazılım kapsayıcıları farklı kodu ve bağımlılıkları içeren bir yazılım standart birimi davranır. Yazılım kapsayıcılarına yerleştirme ortamlarında çok az kayıpla veya hiç değişiklik ile Bu kapsayıcıları dağıtmak, geliştiriciler ve BT uzmanları için mümkün kılar.
 
-Kapsayıcılar ayrıca paylaşılan bir işletim sistemine (OS) uygulamaları birbirinden yalıtmak. Kapsayıcılı uygulamaları sırayla (Linux veya Windows) işletim sisteminde çalışan bir kapsayıcı konak üzerinde çalışır. Bu nedenle, sanal makine (VM) görüntüleri daha önemli ölçüde daha küçük bir yer kapsayıcıları sahip.
+Kapsayıcılar Ayrıca, paylaşılan bir işletim sistemi (OS) uygulamaları birbirinden yalıtın. Kapsayıcılı uygulamaların, işletim sisteminde (Linux veya Windows) sırayla çalışır bir kapsayıcı konağı üzerinde çalıştırın. Bu nedenle, kapsayıcılar, sanal makine (VM) görüntülerini daha önemli ölçüde daha küçük bir ayak izini içerir.
 
-Her bir kapsayıcıdaki tüm web uygulaması veya hizmeti, Şekil 1-1'de gösterildiği gibi çalıştırabilirsiniz.
+Her kapsayıcı, tüm web uygulaması veya hizmeti, Şekil 1-1'de gösterildiği gibi çalıştırabilirsiniz.
 
 ![](./media/image1.png)
 
-Şekil 1-1: bir kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
+Şekil 1-1: Bir kapsayıcı konağı üzerinde çalışan birden çok kapsayıcı
 
-Bu örnekte, Docker ana kapsayıcı ana bilgisayar ve uygulama, uygulama 2, Svc 1, Svc 2 kapsayıcılı uygulamalar veya hizmetler şunlardır: 1 ve.
+Bu örnekte, Docker ana bir kapsayıcı konağı ve kapsayıcılı uygulamalar veya hizmetler uygulama 1, uygulama 2, Svc'de 1 ve Svc 2'dir.
 
-Kapsayıcıyla taşıma türetilen başka bir avantaj ölçeklenebilirlik olmalıdır. Hızlı bir şekilde kısa vadeli görevler için yeni kapsayıcılar oluşturarak genişletme. Açısından bir uygulama, *görüntü başlatmasını* (bir kapsayıcı oluşturma) benzer bir hizmeti veya web uygulaması gibi bir işlem örneği için. Birden çok ana bilgisayar sunucuları arasında aynı görüntü birden çok örneğini çalıştırdığınızda güvenilirliği, ancak genellikle her kapsayıcı (bir farklı ana bilgisayar sunucusu çalıştırmak için görüntü örneği) veya VM farklı hata etki alanlarında istediğiniz.
+Kapsayıcı türetilip bir diğer avantajı ölçeklenebilirlik özelliğidir. Hızla yeni kapsayıcılar için kısa vadeli görevleri oluşturarak ölçeklendirme. Bir uygulama açısından, *görüntü örnekleme* (bir kapsayıcı oluşturma), bir hizmeti veya web uygulaması gibi bir işlem örnekleme için benzerdir. Birden çok ana bilgisayar sunucuları arasında aynı görüntüsünün birden çok örneği çalıştırdığınızda güvenilirliği, ancak genellikle her bir kapsayıcı (farklı bir ana sunucu çalıştırmak için görüntü örnek) veya VM farklı hata etki alanlarında istersiniz.
 
-Kısacası, kapsayıcıları tüm uygulama yaşam döngüsü iş akışı yalıtımı, taşınabilirlik, çeviklik, ölçeklenebilirlik ve denetim avantajları sunar. En önemli avantajı geliştirme ve Ops arasında sağlanan yalıtım ' dir.
-
+Kısacası, kapsayıcılar arasında tüm uygulama yaşam döngüsü iş akışı yalıtımı, taşınabilirliği, çevikliği, ölçeklenebilirlik ve denetim avantajlarını sunar. En önemli avantajı, geliştirme ve Ops sağlanan yalıtım içindir.
 
 >[!div class="step-by-step"]
-[Next](what-is-docker.md)
+>[Next](what-is-docker.md)

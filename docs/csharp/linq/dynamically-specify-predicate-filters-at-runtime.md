@@ -4,11 +4,11 @@ description: C# içinde LINQ kullanarak çalışma zamanında koşul filtrelerin
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296080"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125801"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Çalışma zamanında koşul filtrelerini dinamik olarak belirtme
 
