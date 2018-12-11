@@ -1,5 +1,6 @@
 ---
-title: Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
+title: Deyimler, ifadeler ve işleçler - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971279"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237213"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
 Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler oluşan deyimlerden oluşur. Bu bölümde, C# programının temel bu öğeleri ile ilgili bilgiler içerir.  
@@ -37,7 +38,7 @@ Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler o
   
     -   [Dönüştürme İşleçleri Kullanma](using-conversion-operators.md)  
   
-    -   [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](how-to-implement-user-defined-conversions-between-structs.md)  
   
 -   [Eşitlik Karşılaştırmaları](equality-comparisons.md)  
   

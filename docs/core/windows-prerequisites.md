@@ -1,13 +1,13 @@
 ---
 title: Windows üzerinde .NET Core önkoşulları
 description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
-ms.date: 12/05/2018
-ms.openlocfilehash: 8f9a823ab3eea15d7e33da6ff00992057c8c4e38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 764d36300c5d3a4ae3a64e816dbc956d1a9411d4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130937"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240651"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -37,7 +37,6 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 
 * [.NET core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1-supported-os.md)
 * [.NET core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 İndirme bağlantıları ve daha fazla bilgi için bkz: [.NET indirir](https://www.microsoft.com/net/download) en son sürümü indirmek için veya [.NET arşiv indirir](https://dotnet.microsoft.com/download/archives#dotnet-core) eski sürümler için.

@@ -1,16 +1,17 @@
 ---
-title: Arabirimler (C# Programlama Kılavuzu)
+title: Arabirimleri - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245447"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -61,17 +62,17 @@ Bir arabirim, aşağıdaki özelliklere sahiptir:
 [Belirtik Arabirim Kullanma](explicit-interface-implementation.md)  
  Arabirime belirli bir sınıf üyesinin oluşturma açıklanır.  
   
- [Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama](how-to-explicitly-implement-interface-members.md)  
+ [Nasıl yapılır: Arabirim üyelerini açıkça uygulama](how-to-explicitly-implement-interface-members.md)  
  Arabirimin üyelerini açıkça uygulama ilişkin bir örnek sağlar.  
   
- [Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Nasıl yapılır: İki arabirimin üyelerini açıkça uygulama](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Devralma ile arabirimin üyelerini açıkça uygulama ilişkin bir örnek sağlar.  
   
 ##  <a name="BKMK_RelatedSections"></a> İlgili bölümler
 
 - [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  
-- [Nasıl yapılır: arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)  
+- [Nasıl yapılır:  Arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)  
 - [Sınıflar ve Yapılar](../classes-and-structs/index.md)  
 - [Devralma](../classes-and-structs/inheritance.md)  
 - [Yöntemler](../classes-and-structs/methods.md)  
@@ -83,7 +84,7 @@ Bir arabirim, aşağıdaki özelliklere sahiptir:
   
 ## <a name="featured-book-chapter"></a>Özel Kitap bölümü
 
-[Arabirimleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) içinde [öğrenme: C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Arabirimleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) içinde [öğrenme C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

@@ -1,19 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir özel durum kullanarak try-catch (C# programlama Kılavuzu) işleme'
+title: 'Nasıl Yapılır: Bir özel durum kullanarak try-catch - işleme C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856589"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244946"
 ---
-# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Nasıl yapılır: try/catch Kullanarak Özel Durum İşleme (C# Programlama Kılavuzu)
+# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Nasıl Yapılır: Bir özel durum try/catch kullanarak işleme (C# Programlama Kılavuzu)
 Amacı, bir [try-catch](../../../csharp/language-reference/keywords/try-catch.md) bloğudur yakalayın ve çalışan kod tarafından oluşturulan bir özel durumu işle. Bazı özel durumlar olarak işlenebilen bir `catch` bloğu ve sorun çözüldüğünde yeniden oluşturulmuş olan özel durum; ancak, daha sık yapmak için gereken tek şey uygun özel durum emin emin olun.  
   
 ## <a name="example"></a>Örnek  

@@ -1,5 +1,6 @@
 ---
-title: XML Belgeleri Yorumları (C# Programlama Kılavuzu)
+title: XML belge açıklamaları - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: ab4f8fae748455f96ca5ea0255658cc76dd14f97
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a2957150ace7dbf342047e88451e1e76e097f941
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235572"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML Belgeleri Yorumları (C# Programlama Kılavuzu)
 Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun hemen öncesindeki özel açıklama alanlarına (üç eğik çizgiyle gösterilir) XML öğeleri ekleyerek, kodunuz için belge oluşturabilirsiniz, örneğin:  
@@ -43,7 +44,7 @@ public class MyClass {}
   
 -   [Belge Etiketleri için Sınırlayıcılar](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [Nasıl yapılır: XML Belgesi Özelliklerini Kullanma](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+-   [Nasıl yapılır: XML belgeleri özelliklerini kullanma](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  

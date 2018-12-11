@@ -1,5 +1,6 @@
 ---
-title: '&amp;&amp; İşleci (C# Başvurusu)'
+title: '&amp;&amp; Operator - C# başvurusu'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '&&_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: d0e6d9a5aedc7dc87393e3dea070bf442b3268dc
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 82442f50275f21e0a0748951dc50628a8d7e11bb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43529241"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243607"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; İşleci (C# Başvurusu)
 
@@ -24,7 +25,7 @@ Koşullu mantıksal AND işlecinin `&&`, "kısa devre" mantıksal AND işleci, h
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı bir tür koşullu mantıksal AND işleci aşırı yüklenemez. Ancak, kullanıcı tanımlı bir tür aşırı [mantıksal AND](and-operator.md), [true](../keywords/true-operator.md), ve [false](../keywords/false-operator.md) işleçleri belirli bir şekilde `&&` işlemi değerlendirmesi yapılamıyor için işlenen türü. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+Kullanıcı tanımlı bir tür koşullu mantıksal AND işleci aşırı yüklenemez. Ancak, kullanıcı tanımlı bir tür aşırı [mantıksal AND](and-operator.md) ve [true ve false işleçleri](../keywords/true-false-operators.md) belirli bir şekilde `&&` işlemi, bu türündeki işlenenler için değerlendirmesi yapılamıyor. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

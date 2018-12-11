@@ -1,15 +1,16 @@
 ---
-title: İşaretçilerde aritmetik işlemler (C# Programlama Kılavuzu)
+title: -İşaretçilerde aritmetik işlemler C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242106"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>İşaretçilerde aritmetik işlemler (C# Programlama Kılavuzu)
 Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve `-` işaretçileri işlemek için.  

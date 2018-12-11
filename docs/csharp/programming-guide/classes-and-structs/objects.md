@@ -1,16 +1,17 @@
 ---
-title: Nesneler (C# Programlama Kılavuzu)
+title: Nesneleri - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 439f001450d51885f943cb28752de1689dd4a748
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683100"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235104"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
@@ -45,7 +46,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
  <xref:System.ValueType?displayProperty=nameWithType> Uygulaması `Equals` yansıma kullanır, çünkü bir yapıda alanlar nelerdir belirlemek mümkün olması gerekir. Kendi yapılar oluştururken, geçersiz kılma `Equals` türünüz için belirli bir verimli eşitlik algoritma sağlamak için yöntemi.  
   
--   İki sınıf örnekleri, alanların değerlerini eşit olup olmadığını belirlemek için kullanmanız mümkün olabilir <xref:System.Object.Equals%2A> yöntemi veya [== işleci](../../../csharp/language-reference/operators/equality-comparison-operator.md). Sınıfı geçersiz veya bunların hangi "eşitlik" anlamına gelir türü nesneler için bir özel tanım sağlamak için aşırı yüklenmiş, ancak yalnızca bunları kullanın. Sınıfı ayrıca uygulayabilir <xref:System.IEquatable%601> arabirimi veya <xref:System.Collections.Generic.IEqualityComparer%601> arabirimi. İki arabirim, değer eşitliği test etmek için kullanılan yöntemler sağlar. Ne zaman kendi tasarlama izin ver sınıfları bu geçersiz kılma `Equals`, belirtilen yönergeleri takip edin [nasıl yapılır: bir tür için değer eşitliği tanımlama](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+-   İki sınıf örnekleri, alanların değerlerini eşit olup olmadığını belirlemek için kullanmanız mümkün olabilir <xref:System.Object.Equals%2A> yöntemi veya [== işleci](../../../csharp/language-reference/operators/equality-comparison-operator.md). Sınıfı geçersiz veya bunların hangi "eşitlik" anlamına gelir türü nesneler için bir özel tanım sağlamak için aşırı yüklenmiş, ancak yalnızca bunları kullanın. Sınıfı ayrıca uygulayabilir <xref:System.IEquatable%601> arabirimi veya <xref:System.Collections.Generic.IEqualityComparer%601> arabirimi. İki arabirim, değer eşitliği test etmek için kullanılan yöntemler sağlar. Ne zaman kendi tasarlama izin ver sınıfları bu geçersiz kılma `Equals`, belirtilen yönergeleri takip edin [nasıl yapılır: Tür için değer eşitliği tanımlama](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  

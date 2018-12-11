@@ -1,16 +1,17 @@
 ---
-title: Özel Oluşturucular (C# Programlama Kılavuzu)
+title: Özel oluşturucular - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 5b387447046e4755287fc9f6a8813a19752799c2
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a0ff8f69f7725b40eaac01acef74857c2a99247c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980722"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240508"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
 Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca statik üyeleri içeren sınıflar genel olarak kullanılır. Bir sınıf, bir veya daha fazla özel oluşturucular ve genel Oluşturucusu varsa, diğer sınıflar (iç içe geçmiş sınıflar dışında) bu sınıfın örnekleri oluşturulamaz. Örneğin:  

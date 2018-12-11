@@ -2,12 +2,12 @@
 title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ddfb3340c010b57b78fa913601451b6a2af3674
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089743"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235143"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
 TCP/IP protokolünün bir bağlantı noktası olarak adlandırılan 16 bit bir sayı, aynı makinede çalışan birden çok ağ uygulamalarına bağlantıları ayırt etmek için kullanır. Uygulamaya bir bağlantı noktasında dinliyorsa, bu bağlantı için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasına aynı anda dinleyemiyor.  
@@ -25,7 +25,7 @@ TCP/IP protokolünün bir bağlantı noktası olarak adlandırılan 16 bit bir s
   
  NetTcp bağlantı noktası paylaşımı benzer şekilde birden çok ağ uygulamaları tek bir bağlantı noktasını paylaşmasına izin veren bir Windows Communication Foundation (WCF) özelliğidir. NetTcp bağlantı noktası paylaşma hizmeti net.tcp protokolünü kullanarak bağlantıları kabul eder ve kendi hedef adresini temel alarak iletileri iletir.  
   
- NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkin değildir. Bu örneği çalıştırmadan önce hizmetini el ile etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası paylaşım hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Hizmet devre dışı bırakılırsa, sunucu uygulaması başlatılırken bir özel durum oluşturulur.  
+ NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkin değildir. Bu örneği çalıştırmadan önce hizmetini el ile etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Hizmet devre dışı bırakılırsa, sunucu uygulaması başlatılırken bir özel durum oluşturulur.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -44,8 +44,7 @@ binding.PortSharingEnabled = true;
 // Start a service on a fixed TCP port  
 ServiceHost host = new ServiceHost(typeof(CalculatorService));  
 ushort salt = (ushort)new Random().Next();  
-string address =  
-   String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+string address = $"net.tcp://localhost:9000/calculator/{salt}";
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
 ```
@@ -66,7 +65,7 @@ class client
    {  
       Console.Write("Enter the service number to test: ");  
       ushort salt = ushort.Parse(Console.ReadLine());  
-      string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+      string address = $"net.tcp://localhost:9000/calculator/{salt}";
       ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());  
       ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));  
   

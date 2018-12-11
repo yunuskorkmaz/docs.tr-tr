@@ -1,5 +1,6 @@
 ---
-title: / İşleci (C# Başvurusu)
+title: / İşleci - C# başvurusu
+ms.custom: seodec18
 ms.date: 04/04/2018
 f1_keywords:
 - /_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c77d9264baac05f2212db37fe50490516359e96e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242327"
 ---
 # <a name="-operator-c-reference"></a>/ İşleci (C# Başvurusu)
 Bölme işleci (`/`) ilk işlenenin ikinci işleneni olarak böler. Tüm sayısal türlerin bölme işleçlerini önceden tanımlanmış.

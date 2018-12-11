@@ -1,5 +1,6 @@
 ---
-title: Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
+title: Adlandırılmış ve isteğe bağlı bağımsız değişkenler - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244914"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Adlandırılmış bağımsız değişkenler* bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirli bir parametre için bir bağımsız değişken belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenlere* bazı parametrelerin bağımsız değişkenleri atlamak sağlar. Her iki tekniği, yöntemleri, Dizinleyicileri, Oluşturucular ve temsilciler ile kullanılabilir.  
@@ -114,7 +115,7 @@ AutoFormat parametreleri
   
  [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Daha fazla bilgi ve örnekler için bkz [nasıl yapılır: Office programlama isteğe bağlı bağımsız değişkenler adlandırılmış kullanma ve](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: erişim Office birlikte çalışma nesnelerine kullanarak olan Visual C# özellikleri tarafından](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Daha fazla bilgi ve örnekler için bkz. [nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Aşırı Yükleme Çözümü  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanımını aşırı yükleme çözünürlüğü aşağıdaki şekillerde etkiler:  
@@ -130,7 +131,7 @@ AutoFormat parametreleri
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
 - [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
 - [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)

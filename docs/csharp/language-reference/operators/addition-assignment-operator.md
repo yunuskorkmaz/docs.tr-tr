@@ -1,5 +1,6 @@
 ---
-title: += İşleci (C# Başvurusu)
+title: += İşleci - C# başvurusu
+ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
 - +=_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 - event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: ac9330e283cb58ae4e0ee7b644aa2c22bdf64c46
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 5d48f2fe53a9bb6f781f8d35f1e0983bcaa30f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192037"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240937"
 ---
 # <a name="-operator-c-reference"></a>+= İşleci (C# Başvurusu)
 
@@ -35,7 +36,7 @@ dışında `x` yalnızca bir kez değerlendirilir.
   
 Sayısal türlerin [Toplama işleci](addition-operator.md) `+` işlenenleri toplamını hesaplar. Bir veya iki işlenenin türü ise [dize](../keywords/string.md), işlenenleri dize temsillerini art arda ekler. Temsilci türleri için `+` işleci işlenenleri birleşimi olan yeni bir temsilci örneği döndürür.
 
-Ayrıca `+=` a abone olduğunuzda bir olay işleyicisi yöntemi belirtmek için işleci bir [olay](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği, olaylarından](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Ayrıca `+=` a abone olduğunuzda bir olay işleyicisi yöntemi belirtmek için işleci bir [olay](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: Abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 Aşağıdaki örnek, kullanımını gösterir. `+=` işleci:
 

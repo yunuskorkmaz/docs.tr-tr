@@ -1,5 +1,6 @@
 ---
-title: join tümcesi (C# Başvurusu)
+title: Join tümcesi - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236290"
 ---
 # <a name="join-clause-c-reference"></a>join tümcesi (C# Başvurusu)
 
@@ -73,7 +74,7 @@ A `join` yan tümcesi equijoin gerçekleştirir. Diğer bir deyişle, iki anahta
 
 İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesinde, birleştirme işlemleri, nesne koleksiyonları üzerinde gerçekleştirilir. Nesne koleksiyonları "iki ilişkisel tabloları tam olarak aynı şekilde katılamaz". İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], açık `join` yan tümceleri, yalnızca iki kaynak dizileri tarafından herhangi bir ilişki bağlanmayan gereklidir. İle çalışırken [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], yabancı anahtar tabloları nesne modelinde birincil tablo özellikleri olarak temsil edilir. Örneğin, Northwind veritabanında yabancı anahtar ilişkisi Siparişler tablosu ile müşteri tablosu vardır. Tablolar için nesne modeli eşlediğinizde, müşteri sınıfı bu müşteriyle ilgili Siparişler topluluğu içeren bir sipariş özelliğine sahiptir. Aslında, birleştirme zaten sizin için yapılmıştır.
 
-Bağlamında ilgili tablolar üzerinden sorgulama hakkında daha fazla bilgi için [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], bkz: [nasıl yapılır: veritabanı ilişkilerini eşleme](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Bağlamında ilgili tablolar üzerinden sorgulama hakkında daha fazla bilgi için [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], bkz: [nasıl yapılır: Veritabanı ilişkileri eşleme](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Bileşik anahtarlar
 

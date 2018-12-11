@@ -1,5 +1,5 @@
 ---
-title: Dotnet testi ve MSTest kullanarak .NET Core Visual Basic test birimi
+title: Dotnet testi ve MSTest ile .NET Core Visual Basic test birimi
 description: Adım adım örnek Visual Basic çözüm oluşturma etkileşimli bir deneyim .NET Core birim testi kavramları öğrenin mstest'i kullanarak.
 author: billwagner
 ms.author: wiwagn
@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 105046da426d1aa6cd7dece0e37fe890cd7487e1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170329"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242470"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Birim testi dotnet testi ve MStest kullanarak Visual Basic .NET Core kitaplıkları
 

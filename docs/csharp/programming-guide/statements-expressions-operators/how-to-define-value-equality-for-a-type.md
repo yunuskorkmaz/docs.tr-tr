@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl Yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Tür için değer eşitliği tanımlama C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244433"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl Yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  

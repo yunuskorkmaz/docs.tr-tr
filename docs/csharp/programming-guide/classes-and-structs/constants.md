@@ -1,16 +1,17 @@
 ---
-title: Sabitler (C# Programlama Kılavuzu)
+title: Sabitler - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 0ae8ca8b1bc9259ab259ed8fdfea450e4471891e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b723bb23559f88e7498c22295a6b2f70312461fc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513861"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241937"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Program süresince değiştirmeyin ve derleme zamanında bilinen değişmez değerler sabittir. Sabitler ile bildirilmiş [const](../../../csharp/language-reference/keywords/const.md) değiştiricisi. Yalnızca C# yerleşik türleri (hariç <xref:System.Object?displayProperty=nameWithType>) olarak bildirilebilir `const`. Yerleşik türler bir listesi için bkz. [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md). Kullanıcı tanımlı türler, sınıflar, yapılar ve diziler de dahil olmak üzere olamaz `const`. Kullanım [salt okunur](../../../csharp/language-reference/keywords/readonly.md) değiştiricisi bir sınıf, yapı veya çalışma zamanı (örneğin, bir oluşturucu) ve bundan sonra bir kez başlatılan bir dizi oluşturmak için değiştirilemez.  
@@ -52,4 +53,4 @@ Program süresince değiştirmeyin ve derleme zamanında bilinen değişmez değ
 - [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
 - [Türler](../../../csharp/programming-guide/types/index.md)  
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)  
-- [C# değiştirilemezlik birinci bölüm: Değiştirilemezlik tür](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)
+- [İçinde değiştirilemezlik C# birinci bölüm: Değiştirilemezlik türleri](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

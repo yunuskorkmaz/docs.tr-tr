@@ -1,16 +1,16 @@
 ---
 title: .NET Core ve .NET standart birim testi
-description: Birim testi .NET Core ve .NET Standard projeleri.
+description: Bu makalede, birim testi .NET Core ve .NET Standard projeleri için kısa bir genel bakış sağlar.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243991"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET standart birim testi
 
@@ -30,6 +30,8 @@ Ayrıca unutmayın, testleri yazmak için en iyi yöntemler. Örneğin, [Test od
 > ASP.NET takım aşağıdaki [bu kuralları](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) geliştiricilerin test sınıflar ve yöntemler için iyi adlarla bulabilmesine yardımcı olmak için.
 
 Altyapı bağımlı birim testleri yazılırken İstemediğimiz deneyin. Bunlar yavaş ve kırılgan testleri yapın ve tümleştirme testleri için ayrılmış olması gerekir. İzleyerek uygulamanızda Bu bağımlılıklar kaçınabilirsiniz [açık bağımlılıkları İlkesi](https://deviq.com/explicit-dependencies-principle/) ve kullanarak [bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection). Ayrıca, tümleştirme testleri ayrı bir projede Birim testlerinizin tutabilirsiniz. Bu, birim testi projesi başvuruları veya bağımlılıkları altyapı paketleri yok sağlar.
+
+## <a name="next-steps"></a>Sonraki adımlar
 
 Birim testi .NET Core projelerinde hakkında daha fazla bilgi:
 

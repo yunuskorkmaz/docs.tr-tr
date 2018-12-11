@@ -1,17 +1,18 @@
 ---
-title: 'Nasıl yapılır: Sorguda Lambda İfadeleri Kullanma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Sorguda lambda ifadeleri kullanma C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506490"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238812"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl yapılır: Sorguda Lambda İfadeleri Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl Yapılır: Bir sorguda lambda ifadeleri kullanma (C# Programlama Kılavuzu)
 Lambda ifadeleri doğrudan sorgu sözdizimini kullanmayın, ancak yöntem çağrılarında kullanın ve sorgu ifadeleri yöntem çağrılarını içerebilir. Aslında, bazı sorgu işlemlerinin yalnızca yöntem sözdizimi ifade edilebilir. Sorgu sözdizimi ve yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Örnek  
@@ -27,7 +28,7 @@ Lambda ifadeleri doğrudan sorgu sözdizimini kullanmayın, ancak yöntem çağr
  [!code-csharp[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kodu çalıştırmak için kopyalayıp yönteme `StudentClass` içinde sağlanan [nasıl yapılır: nesnelerin koleksiyonu sorgulama](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) ve ondan çağrı `Main` yöntemi.  
+ Bu kodu çalıştırmak için kopyalayıp yönteme `StudentClass` içinde sağlanan [nasıl yapılır: Nesnelerin koleksiyonu sorgulama](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) ve ondan çağrı `Main` yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

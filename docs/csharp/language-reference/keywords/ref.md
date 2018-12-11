@@ -1,5 +1,6 @@
 ---
-title: ref anahtar sözcüğü (C# Başvurusu)
+title: ref anahtar sözcüğü - C# başvurusu
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195976"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236329"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -62,7 +63,7 @@ Bir yöntem olduğunda ancak yöntemler aşırı yüklenebilir bir `ref`, `in`, 
 - Kullanarak tanımladığınız zaman uyumsuz yöntemlerde [zaman uyumsuz](async.md) değiştiricisi.  
 - Yineleyici yöntemleri dahil bir [yield return](yield.md) veya `yield break` deyimi.  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>Başvuruya göre bağımsız değişken geçirme: örneği
+## <a name="passing-an-argument-by-reference-an-example"></a>Başvuruya göre bağımsız değişken geçirme: Bir örnek
 
 Önceki örneklerde, değer türleri başvuruya göre geçirin. Ayrıca `ref` başvuru geçirilecek anahtar sözcüğü türleri başvuruya göre. Bir başvuru türü başvuruya göre geçirme başvuru parametresi arayanda başvurduğu nesneyi değiştirmek çağrılan yöntem sağlar. Nesne depolama konumu yönteme başvuru parametresi değeri olarak geçirilir. Depolama konumu (yeni bir nesneye işaret edecek şekilde) parametresinin değeri değiştirirseniz, ayrıca çağıran başvurduğu depolama konumunu değiştirin. Aşağıdaki örnek bir başvuru türünün örneğini geçirir bir `ref` parametresi.
   

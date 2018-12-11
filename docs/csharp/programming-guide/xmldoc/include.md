@@ -1,5 +1,6 @@
 ---
-title: '&lt;dahil&gt; (C# programlama Kılavuzu)'
+title: '&lt;dahil&gt; - C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05c671f029e9597db05fe2104424545d0ee2b98f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239431"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;dahil&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -66,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Program çıktısı  
- Test ve Test2 sınıfları aşağıdaki komut satırı ile derleme yaparken aşağıdaki çıktı oluşturulur: `/doc:DocFileName.xml.` Visual Studio'da, belirttiğiniz XML belge açıklamaları seçeneği Proje Tasarımcısı'nın derleme bölmesinde. C# derleyicisi gördüğünde \<dahil > etiketi, arama yapacağı xml_include_tag.doc geçerli kaynak dosyanın yerine, belge açıklamaları için. Derleyici, ardından DocFileName.xml oluşturur ve bu belgeleri araçları tarafından gibi kullanılan dosya [Sandcastle](https://github.com/EWSoftware/SHFB) son belgeleri oluşturmak için.  
+ Test ve Test2 sınıfları aşağıdaki komut satırı ile derleme yaparken aşağıdaki çıkış üretilir: `/doc:DocFileName.xml.` Visual Studio'da derleme bölmesindeki seçeneği XML belge açıklamaları Proje Tasarımcısı belirtin. Zaman C# derleyici görür \<dahil > etiketi, arama yapacağı xml_include_tag.doc geçerli kaynak dosyanın yerine, belge açıklamaları için. Derleyici, ardından DocFileName.xml oluşturur ve bu belgeleri araçları tarafından gibi kullanılan dosya [Sandcastle](https://github.com/EWSoftware/SHFB) son belgeleri oluşturmak için.  
   
 ```xml  
 <?xml version="1.0"?>   

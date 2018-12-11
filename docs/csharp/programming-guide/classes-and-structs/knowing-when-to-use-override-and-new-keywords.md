@@ -1,17 +1,18 @@
 ---
-title: Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
+title: Geçersiz kılma ve yeni anahtar sözcüklerle - ne zaman kullanılacağını bilme C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 5b13ee695ef2a63332b01b504458453885160039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513825"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244745"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 C# ' ta türetilen bir sınıfta bir yöntem temel sınıfta bir yöntem adıyla aynı olabilir. Yöntemleri kullanarak etkileşimini belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükleri. `override` Değiştiricisi *genişletir* temel sınıf yöntemini ve `new` değiştiricisi *gizler* bu. Fark, bu konudaki örneklerde gösterilmiştir.  

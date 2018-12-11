@@ -1,16 +1,17 @@
 ---
-title: Yapılar (C# Programlama Kılavuzu)
+title: Yapılar - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 27d4b0d7edf1b5e89e84ac1df5783d68ebb4efe0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259503"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240391"
 ---
 # <a name="structs-c-programming-guide"></a>Yapılar (C# Programlama Kılavuzu)
 
@@ -37,8 +38,8 @@ Daha fazla bilgi için:
 - [Yapıları Kullanma](using-structs.md)
 - [Oluşturucular](constructors.md)
 - [Boş Değer Atanabilir Tipler](../nullable-types/index.md)
-- [Nasıl yapılır: Yapı Geçirme ile Yönteme Sınıf Başvurusu Geçirme Arasındaki Farkı Bilme](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
-- [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Nasıl yapılır: Yapı geçirme ile Metoda sınıf başvurusu geçirme arasındaki farkı bilme](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

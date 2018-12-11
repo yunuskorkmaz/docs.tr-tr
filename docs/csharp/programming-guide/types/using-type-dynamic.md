@@ -1,16 +1,17 @@
 ---
-title: Tür dinamiği (C# programlama Kılavuzu) kullanma
+title: Kullanarak dinamik - yazın C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: b1ea9240da66b77723c002c6527135339af9e352
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c4e2aac613397fbd44f4594f96ddebfb75d0c3f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "43502539"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243766"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Tür dinamiği (C# programlama Kılavuzu) kullanma
 
@@ -77,5 +78,5 @@ Birçok COM yöntemi için bağımsız değişken türleri varyasyonu izin ve d�
 |-----------|-----------------|
 |[dynamic](../../language-reference/keywords/dynamic.md)|Kullanımını açıklar `dynamic` anahtar sözcüğü.|
 |[Dinamik Dil Çalışma Zamanına Genel Bakış](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Dinamik Dil Hizmetleri bir dizi ortak dil çalışma zamanı (CLR) ekleyen bir çalışma zamanı ortamıdır DLR genel bir bakış sağlar.|
-|[İzlenecek yol: Nesneler oluşturma ve dinamik kullanma](walkthrough-creating-and-using-dynamic-objects.md)|Özel bir dinamik Nesne oluşturma ve erişen bir proje oluşturmak için adım adım yönergeler sağlar. bir `IronPython` kitaplığı.|
-|[Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim](../interop/how-to-access-office-onterop-objects.md)|Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan bir proje oluşturma işlemini gösterir `dynamic` türü ve Office API'nin nesnelere erişimi kolaylaştıran diğer geliştirmeler.|
+|[İzlenecek yol: Dinamik nesneler oluşturma ve kullanma](walkthrough-creating-and-using-dynamic-objects.md)|Özel bir dinamik Nesne oluşturma ve erişen bir proje oluşturmak için adım adım yönergeler sağlar. bir `IronPython` kitaplığı.|
+|[Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri](../interop/how-to-access-office-onterop-objects.md)|Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan bir proje oluşturma işlemini gösterir `dynamic` türü ve Office API'nin nesnelere erişimi kolaylaştıran diğer geliştirmeler.|

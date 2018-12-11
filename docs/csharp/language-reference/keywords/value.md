@@ -1,17 +1,18 @@
 ---
-title: value (C# Başvurusu)
+title: değer - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - value_CSharpKeyword
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: 1e120d68fc4a42f24feb225f652c14525fde3d71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f0b9e2927eb288a27f926a740a967742b8cdaa9e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236472"
 ---
 # <a name="value-c-reference"></a>value (C# Başvurusu)
 Bağlamsal anahtar sözcüğü `value` sıradan özellik bildiriminde kümesi erişimcisi kullanılır. Yöntemi giriş parametresi benzerdir. Word `value` istemci kodu özelliğe atanacak çalışıyor değeri başvuruyor. Aşağıdaki örnekte, `MyDerivedClass` adlı bir özelliğe sahiptir `Name` kullanan `value` yedekleme alanına yeni bir dize atamak için parametre `name`. Bakış açısıyla, istemci kodu, işlem bir basit atama yazılır.  

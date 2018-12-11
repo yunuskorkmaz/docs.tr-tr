@@ -2,12 +2,12 @@
 title: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241859"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 Çok noktaya yayın uygulamaları, noktadan noktaya bağlantılar kurmak zorunda kalmadan aynı anda çok sayıda alıcı küçük iletileri gönderir. Bu tür uygulamaların Vurgu güvenilirlik hızıdır. Diğer bir deyişle, belirli bir ileti gerçekten alındığında olmak üzere daha güncel veri göndermek daha önemlidir. WCF destekler kullanarak çok noktaya yayın uygulamaları yazma <xref:System.ServiceModel.UdpBinding>. Bu aktarım nerede küçük iletilerini istemci sayısı için aynı anda göndermek için bir hizmet gerektiği senaryolarda yararlıdır. Bir bandı uygulama, böyle bir hizmet örneğidir.  
@@ -15,7 +15,7 @@ ms.locfileid: "46324759"
 ## <a name="implementing-a-multicast-application"></a>Bir çok noktaya yayın uygulaması gerçekleştirilmesinin  
  Çok noktaya yayın bir uygulama için bir hizmet sözleşmesini tanımlama ve çok noktaya yayın iletileri cevaplayin gereken her yazılım bileşeni için hizmet sözleşmesini uygulama. Örneğin, bir bandı uygulama hizmet sözleşmesini tanımlayabilir:  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  Çok noktaya yayın iletileri almak istediği her bir uygulama bu arabirimi kullanıma sunan bir hizmet ana bilgisayar gerekir.  Örneğin, çok noktaya yayın ileti alma gösteren kod örneği aşağıdadır:  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  Bu tür bir senaryo bu gerçekte çok noktaya yayın iletileri gönderen istemcisidir. Doğru UDP adreste dinleme yaptığı her bir hizmet çok noktaya yayın iletileri alır. Çok noktaya yayın iletileri gönderen bir istemci bir örnek aşağıda verilmiştir:  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>İki yönlü çok noktaya yayın iletileri  
  Çok noktaya yayın iletileri genellikle tek yönlü olsa da, istek/yanıt iletisi exchange UdpBinding desteklemiyor. UDP taşıma kullanarak gönderilen iletileri içeren iki From adresine. Kötü amaçlı olarak olabileceğinden Kimden adresi kullanarak tr-route değiştirildiğinde dikkatli olunması gerekir.  Aşağıdaki kodu kullanarak adresi denetlenebilir:  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

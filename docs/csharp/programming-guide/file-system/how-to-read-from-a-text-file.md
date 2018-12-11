@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Metin Dosyasından Okuma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Bir metin dosyasından - okuma C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084123"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240313"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Metin Dosyasından Okuma (C# Programlama Kılavuzu)
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl Yapılır: Bir metin dosyasından okuma (C# Programlama Kılavuzu)
 Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> gelen <xref:System.IO.File?displayProperty=nameWithType> sınıfı.  
   
- Kullanan bir örnek için <xref:System.IO.StreamReader>, bkz: [nasıl yapılır: bir metin dosyası bir satırı okumak](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Kullanan bir örnek için <xref:System.IO.StreamReader>, bkz: [nasıl yapılır: Bir metin dosyası bir satırı okumak](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Bu örnekte kullanılan dosyaları konusunda oluşturulan [nasıl yapılır: bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
+>  Bu örnekte kullanılan dosyaları konusunda oluşturulan [nasıl yapılır: Bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
@@ -30,7 +31,7 @@ Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur 
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Kodu kopyalayın ve C# konsol uygulamasına yapıştırın.  
   
- Metin dosyalarından kullanmıyorsanız [nasıl yapılır: bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), bağımsız değişkeni Değiştir `ReadAllText` ve `ReadAllLines` bilgisayarınızda uygun yolu ve dosya adı ile.  
+ Metin dosyalarından kullanmıyorsanız [nasıl yapılır: Bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), bağımsız değişkeni Değiştir `ReadAllText` ve `ReadAllLines` bilgisayarınızda uygun yolu ve dosya adı ile.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  

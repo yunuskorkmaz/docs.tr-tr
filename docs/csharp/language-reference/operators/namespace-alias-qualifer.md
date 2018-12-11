@@ -1,5 +1,6 @@
 ---
-title: ':: İşleci (C# Başvurusu)'
+title: ':: Operator - C# başvurusu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ::_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e456be075f3487676228244e0119ff46ed9a538
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525662"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243484"
 ---
 # <a name="-operator-c-reference"></a>:: İşleci (C# Başvurusu)
 Ad alanı diğer ad niteleyicisi (`::`) tanımlayıcıları aramak için kullanılır. Her zaman, bu örnekte olduğu gibi iki tanımlayıcı arasında konumlandırılmış:  
@@ -33,7 +34,7 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 ## <a name="for-more-information"></a>Daha Fazla Bilgi İçin  
  Nasıl kullanılacağına ilişkin bir örnek `::` işleci, aşağıdaki bölüme bakın:  
   
--   [Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
+-   [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -3,16 +3,28 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145338"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245606"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
-Hangi dil, erken incarnations içinde aşağıdaki gibi görünür? Ve bu yıllar içinde nasıl geliştirildiğini?
+Bu makalede, her ana sürümüne geçmişini sağlar C# dili. C# Takım etmeden yenilik yapın ve yeni özellikler eklemek. Dil özelliği durum, gelecek sürümlerinde bulunabilir kabul özellikleri dahil olmak üzere ayrıntılı [dotnet/roslyn deposundaki](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) GitHub üzerinde.
+
+> [!IMPORTANT]
+> C# Türleri ve yöntemleri hangi dil kullanır C# belirtimi tanımlar olarak bir *standart Kitaplığı* bazı özellikler için. .NET platformu paketleri bir süre içinde bu türleri ve yöntemleri sunar. Özel durum işleme bir örnektir. Her `throw` deyiminin veya ifadesinin işaretli oluşturulan nesne emin olmak için türetilen <xref:System.Exception>. Benzer şekilde, her `catch` yakalandı tür türetilir emin olmak için denetlenir <xref:System.Exception>. Her sürüm, yeni gereksinimler ekleyebilirsiniz. En son dil özelliklerini daha eski ortamlarında kullanmak için belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli bir sürüm sayfasında belgelenmiştir. Daha fazla bilgi edinebilirsiniz [dil ve kitaplığa arasındaki ilişkileri](relationships-between-language-and-library.md) bu bağımlılık hakkında arka plan bilgileri için.
+
+C# Derleme araçları, varsayılan dil sürümü en son ana dil sürümü düşünün. Bu bölümdeki diğer makalelerinde ayrıntılı ana sürümler arasında nokta sürümleri olabilir. Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin. Üç nokta sürümleri beri olmuştur C# 7.0:
+
+* [C#7.3](csharp-7-3.md):
+  - C#7.3 şu anda içinde [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+* [C#7.2](csharp-7-2.md):
+  - C#şu anda, 7.2 [Visual Studio 2017 sürüm 15.5](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
+* [C#7.1](csharp-7-1.md):
+  - Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# sürüm 1.0
 

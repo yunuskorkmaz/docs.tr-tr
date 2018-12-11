@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri - C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260223"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236576"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl Yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  
   
  Bu konuda yeni özellikler oluşturur ve bir Microsoft Office Excel çalışma sayfası görüntüleyen kod yazmak için kullanın. Ardından Excel çalışma sayfasına bağlantılı bir simge içeren bir Office Word belgesi eklemek için kod yazacaksınız.  
@@ -29,9 +30,9 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 ## <a name="to-create-a-new-console-application"></a>Yeni bir konsol uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
-2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
+2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür.  
   
 3.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#** ve ardından **Windows**.  
   
@@ -49,7 +50,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 1.  İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**. **Başvuru Ekle** iletişim kutusu görüntülenir.  
   
-2.  Üzerinde **derlemeleri** sayfasında **Microsoft.Office.Interop.Word** içinde **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun  **Microsoft.Office.Interop.Excel**.  Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: yükleme Office birincil birlikte çalışma derlemeleri](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
+2.  Üzerinde **derlemeleri** sayfasında **Microsoft.Office.Interop.Word** içinde **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun  **Microsoft.Office.Interop.Excel**.  Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
   
 3.  **Tamam**'ı tıklatın.  
   
@@ -137,7 +138,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 ## <a name="to-set-the-embed-interop-types-property"></a>Birlikte çalışma türlerini katıştır özelliğini ayarlamak için  
   
-1.  Ek geliştirmeler, çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM tür çağırdığınızda mümkündür. PIA'ların sonuçları bağımlılığı sürüm bağımsızlığı ve daha kolay dağıtım kaldırılıyor. PIA'ların programlamadan avantajları hakkında daha fazla bilgi için bkz. [izlenecek yol: yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+1.  Ek geliştirmeler, çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM tür çağırdığınızda mümkündür. PIA'ların sonuçları bağımlılığı sürüm bağımsızlığı ve daha kolay dağıtım kaldırılıyor. PIA'ların programlamadan avantajları hakkında daha fazla bilgi için bkz. [izlenecek yol: Yönetilen derlemeler türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
      Ayrıca, gerekli ve COM yöntemleri tarafından döndürülen türleri türü kullanarak temsil edilebildiğinden programlama daha kolay `dynamic` yerine `Object`. Türü değişkenler `dynamic` açık atama ihtiyacını ortadan kaldırır çalışma zamanı kadar değerlendirilmez. Daha fazla bilgi için [türünü kullanarak dinamik](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -178,4 +179,4 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
 - [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
 - [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
-- [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

@@ -1,5 +1,6 @@
 ---
-title: virtual (C# Başvurusu)
+title: Sanal - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0a6eb7bfcd598eb54b4b0cc5661d219367da2238
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201107"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237395"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 `virtual` Anahtar sözcüğü, bir yöntemi, özelliği, dizin oluşturucu veya olay bildirimini değiştirmek ve türetilen bir sınıfta geçersiz kılınması için izin vermek için kullanılır. Örneğin, bu yöntem devraldığı herhangi bir sınıf tarafından geçersiz kılınabilir:  

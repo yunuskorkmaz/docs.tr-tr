@@ -1,16 +1,17 @@
 ---
-title: Ad Alanları (C# Programlama Kılavuzu)
+title: Ad alanları - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151122"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236758"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
 
@@ -48,8 +49,8 @@ Ad alanları, aşağıdaki özelliklere sahiptir:
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Ad Alanlarını Kullanma](using-namespaces.md)
-- [Nasıl Yapılır: Genel Namespace diğer adlarını kullanma](how-to-use-the-global-namespace-alias.md)
-- [Nasıl Yapılır: Kullanım My Namespace](how-to-use-the-my-namespace.md)
+- [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](how-to-use-the-global-namespace-alias.md)
+- [Nasıl yapılır: Kullanım My Namespace](how-to-use-the-my-namespace.md)
 - [C# Programlama Kılavuzu](../index.md)  
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [Ad Alanı Anahtar Sözcükleri](../../language-reference/keywords/namespace-keywords.md)  

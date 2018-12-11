@@ -1,16 +1,17 @@
 ---
-title: Deyimler (C# Programlama Kılavuzu)
+title: Deyimleri - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 515ae6bb6030e80c80289ff888f07ade2f341792
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a7659cd22dc3f13809663bf3c69b9752e905e8b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664754"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242879"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  

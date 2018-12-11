@@ -1,5 +1,6 @@
 ---
-title: '|| İşleci (C# Başvurusu)'
+title: '|| Operator - C# başvurusu'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925546"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244576"
 ---
 # <a name="-operator-c-reference"></a>|| İşleci (C# Başvurusu)
 
@@ -25,7 +26,7 @@ Koşullu mantıksal OR işlecinin `||`, "kısa devre" mantıksal OR işleci, hes
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı bir tür koşullu mantıksal OR işlecinin aşırı yüklenemez. Ancak, kullanıcı tanımlı bir tür aşırı [mantıksal OR](or-operator.md), [true](../keywords/true-operator.md), ve [false](../keywords/false-operator.md) işleçleri belirli bir şekilde `||` işlemi değerlendirmesi yapılamıyor için işlenen türü. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+Kullanıcı tanımlı bir tür koşullu mantıksal OR işlecinin aşırı yüklenemez. Ancak, kullanıcı tanımlı bir tür aşırı [mantıksal OR](or-operator.md) ve [true ve false işleçleri](../keywords/true-false-operators.md) belirli bir şekilde `||` işlemi, bu türündeki işlenenler için değerlendirmesi yapılamıyor. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -37,5 +38,5 @@ Daha fazla bilgi için [koşullu mantıksal işleçler](~/_csharplang/spec/expre
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [& & işleci](conditional-and-operator.md)
-- [! işleci](logical-negation-operator.md)
+- [\! işleci](logical-negation-operator.md)
 - [| işleci](or-operator.md)

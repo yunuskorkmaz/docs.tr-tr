@@ -1,17 +1,18 @@
 ---
-title: using static yönergesi (C# Başvurusu)
+title: using static yönergesi - C# başvurusu
+ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237785"
 ---
 # <a name="using-static-directive-c-reference"></a>using static yönergesi (C# Başvurusu)
 
@@ -21,7 +22,7 @@ ms.locfileid: "43506678"
 using static <fully-qualified-type-name>;
 ```
 
-Burada *tam olarak nitelenmiş-tür adı* türün statik üyeleri adıdır ve iç içe geçmiş türler, tür adı belirtmeden başvurulabilir. Tam olarak nitelenmiş tür adını (tam ad alanı adı tür adıyla birlikte) sağlamazsanız, C# derleyici hatası oluşturur [CS0246](../compiler-messages/cs0246.md): "' türü/ad alanı' tür veya ad alanı adı bulunamadı (bir using eksik yönergesi veya derleme başvurunuz?) ".
+Burada *tam olarak nitelenmiş-tür adı* türün statik üyeleri adıdır ve iç içe geçmiş türler, tür adı belirtmeden başvurulabilir. Tam nitelikli tür adı (tür adıyla birlikte tam ad alanı adı), sağlamaz, C# derleyici hatası oluşturur [CS0246](../compiler-messages/cs0246.md): "' Türü/ad alanı' tür veya ad alanı adı bulunamadı (bir using eksik yönergeniz veya derleme başvurunuz?)".
 
 `using static` Yönergesi Ayrıca örnek üyeleri sahip olsa bile statik üyeler (veya iç içe geçmiş türler) olan herhangi bir türü için geçerlidir. Ancak, örnek üyeleri yalnızca tür örneği çağrılabilir.
 
@@ -37,7 +38,7 @@ Açıkça başvuru gereksinimini ortadan kaldıran tarafından <xref:System.Math
 
 [!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static` yalnızca erişilebilir statik üyeleri ve belirtilen türde bildirilen iç içe geçmiş türleri içeri aktarır.  Devralınan üyeleri içeri aktarılmaz.  Kullanarak herhangi bir adlandırılmış tür içeri aktarabileceğiniz static yönergesi, Visual Basic modülleri dahil.  F # en üst düzey işlev meta verilerinde geçerli bir C# tanımlayıcı adı olan adlandırılmış bir türün statik üyeleri görünüyorsa, F # işlevleri içeri aktarılabilir.  
+`using static` yalnızca erişilebilir statik üyeleri ve belirtilen türde bildirilen iç içe geçmiş türleri içeri aktarır.  Devralınan üyeleri içeri aktarılmaz.  Kullanarak herhangi bir adlandırılmış tür içeri aktarabileceğiniz static yönergesi, Visual Basic modülleri dahil.  Varsa F# adı, geçerli bir adlandırılmış bir türün statik üyeleri en üst düzey işlevler görünür meta verilerde C# tanımlayıcısı, ardından F# işlevleri alınabilir.  
   
  `using static` Uzantı yöntemi araması için kullanılabilen belirtilen türde bildirilen genişletme yöntemleri sağlar.  Ancak, genişletme yöntemleri adlarını nitelenmemiş bir başvuru kod kapsama içeri aktarılmaz.  
   

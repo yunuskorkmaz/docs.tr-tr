@@ -1,17 +1,18 @@
 ---
-title: '#pragma sağlama toplamı (C# Başvurusu)'
+title: '#pragma sağlama - C# başvurusu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024551"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235633"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
 Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.  
@@ -27,7 +28,7 @@ Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları olu
  İzleme gerektiren değişiklikleri veya güncelleştirmeleri için dosyanın adı.  
   
  `"{guid}"`  
- Genel benzersiz tanıtıcısı (GUID) karma algoritması için.  
+ Genel benzersiz tanıtıcısı (GUID) karma algoritması için.  
   
  `"checksum_bytes"`  
  Sağlama toplamı baytını temsil eden bir onaltılık basamak dizisi. Onaltı basamaklı bir çift sayı olmalıdır. Bir derleme zamanı uyarı ve yönerge basamak sonuçları tek sayıda göz ardı edilir.  

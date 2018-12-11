@@ -1,19 +1,20 @@
 ---
-title: 'Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: f86509b7257f25e8faaadfc107ad70ca794aeee0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 20228886cabd47b976506509a29f6cfd50137e5f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190981"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243809"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl Yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
 Adlandırılmış bağımsız değişkenler ve sunulan isteğe bağlı bağımsız değişkenlere [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], kolaylık, esneklik ve C# programlama okunabilirliği geliştirmek. Ayrıca, bu özellikler, Microsoft Office Otomasyon API'leri gibi COM arabirimlerine erişim büyük ölçüde kolaylaştırır.  
   
  Aşağıdaki örnekte, yöntem [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) on altı gibi sütun ve biçimlendirme, satır sayısını sınırlayan bir tablonun özellikleri temsil eden parametreleri, yazı tiplerini ve renkleri vardır. Çoğu zaman hepsi için belirli değerler belirtmek istemiyorsanız çünkü tüm on altı, isteğe bağlı parametrelerdir. Ancak, adlandırılmış ve isteğe bağlı bağımsız değişkenler bir değer veya bir yer tutucu değerini her parametre için sağlanan gerekir. Adlandırılmış ve isteğe bağlı bağımsız değişkenleri ile projeniz için gerekli olan parametreleri için değerler belirtin.  
@@ -24,7 +25,7 @@ Adlandırılmış bağımsız değişkenler ve sunulan isteğe bağlı bağıms�
   
 ### <a name="to-create-a-new-console-application"></a>Yeni bir konsol uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   

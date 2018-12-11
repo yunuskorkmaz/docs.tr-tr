@@ -4,12 +4,12 @@ description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core p
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 960d6e98f39b1d1d07c980c021b1029201f1f631
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242734"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
 
@@ -103,19 +103,19 @@ Meow!
 
 `NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz. Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi. Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinizi davranışını denetlemesine olanak tanır.
 
-Oluşturma bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu, iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
+Geri gidin *src* klasör oluşturup bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu, iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
 
 Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje. Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-El ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:
+Veya el ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

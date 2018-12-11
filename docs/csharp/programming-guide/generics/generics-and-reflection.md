@@ -1,21 +1,22 @@
 ---
-title: Genel Türler ve Yansıma (C# Programlama Kılavuzu)
+title: Genel türler ve yansıma - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244948"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri olduğu gibi genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- İçinde [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] birkaç yeni üyeler için eklenen <xref:System.Type> genel türler için çalışma zamanı bilgilerini etkinleştirmek için sınıf. Bu sınıflarda bu yöntemlerini ve özelliklerini kullanma hakkında daha fazla bilgi için belgelere bakın. <xref:System.Reflection.Emit> Ad alanı, genel türler destekleyen yeni üyeleri de içerir. Bkz: [nasıl yapılır: yansıma ile genel tür tanımlama yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ İçinde [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] birkaç yeni üyeler için eklenen <xref:System.Type> genel türler için çalışma zamanı bilgilerini etkinleştirmek için sınıf. Bu sınıflarda bu yöntemlerini ve özelliklerini kullanma hakkında daha fazla bilgi için belgelere bakın. <xref:System.Reflection.Emit> Ad alanı, genel türler destekleyen yeni üyeleri de içerir. Bkz: [nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Genel yansımada kullanılan terimlere ilişkin sabit koşulların listesi için bkz. <xref:System.Type.IsGenericType%2A> özelliği açıklamalar.  
   

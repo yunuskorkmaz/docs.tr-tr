@@ -1,19 +1,20 @@
 ---
-title: 'Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Abone olma ve aboneliği olayları - C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999146"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241093"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma (C# Programlama Kılavuzu)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Nasıl Yapılır: Abone olaylara ve aboneliği kaldırma (C# Programlama Kılavuzu)
 Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, başka bir sınıf tarafından yayımlanan bir olaya abone olun. Örneğin, bir düğmenin abone `click` uygulamanızın kullanıcı düğmeye tıkladığında faydalı bir şey yapmak için olay.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE kullanarak olaylarına abone olma  
@@ -69,7 +70,7 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
     }  
     ```  
   
-     Daha fazla bilgi için [nasıl yapılır: kullanım Lambda ifadeleri dış LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Daha fazla bilgi için [nasıl yapılır: LINQ dışında lambda ifadeleri kullanma](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Anonim bir yöntem kullanarak olaylarına abone olma  
   
@@ -102,6 +103,6 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
 
 - [Olaylar](../../../csharp/programming-guide/events/index.md)  
 - [event](../../../csharp/language-reference/keywords/event.md)  
-- [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
 - [-= İşleci (C# Başvurusu)](../../language-reference/operators/subtraction-assignment-operator.md)  
 - [+= İşleci](../../../csharp/language-reference/operators/addition-assignment-operator.md)

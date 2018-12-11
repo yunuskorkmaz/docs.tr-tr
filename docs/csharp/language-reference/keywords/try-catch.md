@@ -1,5 +1,6 @@
 ---
-title: try-catch (C# Başvurusu)
+title: try-catch - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - try
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 727c57c95d29f7133c492a1593f35d3b8d7bb74a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131566"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240029"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
 
@@ -187,4 +188,4 @@ Her biri üç görev, bir özel durum neden olur. `catch` Blok yinelenir bulunan
 - [Özel Durum İşleme Deyimleri](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
-- [Nasıl Yapılır: Açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [Nasıl yapılır: Açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

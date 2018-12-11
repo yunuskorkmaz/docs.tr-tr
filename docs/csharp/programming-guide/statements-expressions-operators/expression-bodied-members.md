@@ -1,17 +1,18 @@
 ---
-title: İfade gövdeli üyeler (C# programlama Kılavuzu)
+title: İfade gövdeli üyeler - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 36f71352dca584c107af4f45850ce21bb016ba01
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238123"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>İfade gövdeli üyeler (C# programlama Kılavuzu)
 İfade gövdesi tanımları çok kısa, okunabilir bir form uygulamasında bir üyenin sağlamanıza izin veren. Mantığı herhangi bir yöntemi veya özelliği gibi desteklenen bir üyesi için tek bir ifadeye oluşur. her bir deyim gövdesi tanımına kullanabilirsiniz. Bir ifade gövdesi tanımına genel sözdizimi aşağıdaki gibidir:

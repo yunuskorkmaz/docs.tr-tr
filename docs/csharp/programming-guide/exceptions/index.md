@@ -1,17 +1,18 @@
 ---
-title: Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
+title: Özel durumlar ve özel durum işleme - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744229"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236849"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 C# dil özel durum özelliklerin help işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir eylemleri denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verdiğinizde, hataları işlemek için anahtar sözcükler. Özel durumlar, .NET Framework veya herhangi bir üçüncü taraf kitaplıklar tarafından veya uygulama kodu tarafından ortak dil çalışma zamanı tarafından (CLR) oluşturulabilir. Özel durumlar kullanılarak oluşturulan `throw` anahtar sözcüğü.  
@@ -56,9 +57,9 @@ C# dil özel durum özelliklerin help işleme ile bir program çalışırken olu
   
 -   [Derleyicinin Ürettiği Özel Durumlar](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Nasıl yapılır: bir özel durum try/catch kullanarak (C# programlama Kılavuzu) işleme](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [Nasıl yapılır: Bir özel durum try/catch kullanarak işleme (C# Programlama Kılavuzu)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Nasıl yapılır: Finally Kullanarak Temizleme Kodu Yürütme](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+-   [Nasıl yapılır: Finally anahtar sözcüğünü kullanarak temizleme kodu yürütme](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

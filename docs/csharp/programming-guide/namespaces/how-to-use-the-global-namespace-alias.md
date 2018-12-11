@@ -1,19 +1,20 @@
 ---
-title: 'Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Genel - Namespace diğer kullanın C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236615"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl Yapılır: Genel Namespace diğer adlarını kullanma (C# Programlama Kılavuzu)
 Genel bir üyeye erişme olanağı [ad alanı](../../../csharp/language-reference/keywords/namespace.md) üye aynı ada sahip başka bir varlık tarafından gizlenmiş olabilir durumlarda faydalıdır.  
   
  Örneğin, aşağıdaki kodda, `Console` çözümler `TestApp.Console` çok yerine `Console` yazın <xref:System> ad alanı.  
@@ -50,5 +51,5 @@ Genel bir üyeye erişme olanağı [ad alanı](../../../csharp/language-referenc
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
 - [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
 - [. İşleç](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: İşleci](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

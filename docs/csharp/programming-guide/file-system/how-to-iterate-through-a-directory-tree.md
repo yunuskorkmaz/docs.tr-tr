@@ -1,18 +1,19 @@
 ---
-title: 'Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Dizin ağacı ile yineleme C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123637"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237083"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl Yapılır: Bir dizin ağacı ile yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
   
 > [!NOTE]

@@ -1,5 +1,6 @@
 ---
-title: implicit (C# Başvurusu)
+title: örtük - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - implicit
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: 70379136fd4b14403eac919ac15590250b17b416
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ee40db31aeb39a37c6ab15b26b48f1f7d02d6780
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702703"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240586"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# Başvurusu)
 
@@ -35,4 +36,4 @@ ms.locfileid: "46702703"
 - [C# Anahtar Sözcükleri](index.md)  
 - [explicit](explicit.md)  
 - [İşleci (C# Başvurusu)](operator.md)  
-- [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

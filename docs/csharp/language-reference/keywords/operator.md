@@ -1,5 +1,6 @@
 ---
-title: işleç anahtar sözcüğü (C# Başvurusu)
+title: işleç anahtar sözcüğü - C# başvurusu
+ms.custom: seodec18
 description: Yerleşik bir C# İşleç aşırı yüklemesi hakkında bilgi edinin
 ms.date: 08/27/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209378"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235610"
 ---
 # <a name="operator-c-reference"></a>operator (C# Başvurusu)
 
@@ -47,4 +48,4 @@ Aşağıdaki örnekte tanımlayan bir `Fraction` kesirli sayılar temsil eden t�
 - [implicit](implicit.md)
 - [explicit](explicit.md)
 - [Fazla yüklenebilir işleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

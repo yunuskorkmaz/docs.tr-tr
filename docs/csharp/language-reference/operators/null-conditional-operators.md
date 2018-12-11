@@ -1,17 +1,18 @@
 ---
-title: Null koşullu işleçleri (C# Başvurusu)
+title: Null koşullu işleçleri - C# başvurusu
+ms.custom: seodec18
 ms.date: 04/03/2015
 helpviewer_keywords:
 - null-conditional operators [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4189b07fd280192a4cb39400e4e77cef702c9d08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194858"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239559"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. ve? [] null koşullu işleçleri (C# ve Visual Basic)
 Üye erişimi gerçekleştirmeden önce sol işleneni null değerini test eder (`?.`) ya da dizin (`?[]`) döndürür; işlem `null` sol işlenen değerlendirilirse `null`. 
@@ -49,7 +50,8 @@ PropertyChanged?.Invoke(…)
  Derleyici değerlendirmek için kod oluşturur çünkü iş parçacığı açısından güvenli yeni yoludur `PropertyChanged` sonucu geçici bir değişkende tutma yalnızca bir kez. Açıkça çağırmak ihtiyacınız `Invoke` yöntemi hiçbir null koşullu temsilci çağırma söz dizimi olduğundan `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Dil özellikleri  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Daha fazla bilgi için [Null koşullu işleci](~/_csharplang/spec/expressions.md#null-conditional-operator) içinde [ C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

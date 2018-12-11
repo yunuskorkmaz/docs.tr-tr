@@ -2,12 +2,12 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 03a1f8bd6a5f2ec57e7af865d2aadde77b40326d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261530"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243055"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -28,7 +28,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir be
 ## <a name="client-authentication-using-a-custom-security-token"></a>Özel güvenlik belirteci kullanılarak istemci kimlik doğrulaması
  Hizmeti kullanarak program aracılığıyla oluşturulan tek bir uç noktasını kullanıma sunar `BindingHelper` ve `EchoServiceHost` sınıfları. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Özel bağlama kullanma yapılandırılmış bağlama `SymmetricSecurityBindingElement` ve `HttpTransportBindingElement`. Bu örnek ayarlar `SymmetricSecurityBindingElement` simetrik anahtar aktarım sırasında korumak ve özel bir geçirmek için bir hizmetin X.509 sertifikası kullanılacak `CreditCardToken` WS-güvenlik ileti üstbilgisinde bir imzalanmış ve şifrelenmiş güvenlik belirteci olarak. Davranış, istemci kimlik doğrulaması ve ayrıca hizmet X.509 sertifikası hakkında daha fazla bilgi için kullanılacak hizmet kimlik bilgilerini belirtir.
 
-```
+```csharp
 public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
@@ -49,7 +49,7 @@ public static class BindingHelper
 
  Kredi kartı kullanmak için iletide, belirteç örnek özel hizmet kimlik bilgilerini bu işlevselliği sağlayacak şekilde kullanır. Hizmet kimlik bilgilerini sınıfı bulunan `CreditCardServiceCredentials` sınıfı ve davranışları koleksiyonlarına hizmet ana bilgisayar eklenir `EchoServiceHost.InitializeRuntime` yöntemi.
 
-```
+```csharp
 class EchoServiceHost : ServiceHost
 {
     string creditCardFile;
@@ -64,7 +64,6 @@ class EchoServiceHost : ServiceHost
         }
 
         creditCardFile = String.Format("{0}\\{1}", System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath, creditCardFile);
-
     }
 
     override protected void InitializeRuntime()
@@ -86,13 +85,12 @@ class EchoServiceHost : ServiceHost
 
  İstemci uç noktası benzer şekilde, hizmet uç noktası olarak yapılandırılır. Aynı istemcinin kullandığı `BindingHelper` bağlama oluşturmak için sınıf. Kurulumu geri kalanını bulunan `Client` sınıfı. İstemci ayrıca içindeki bilgilere ayarlar `CreditCardToken` ve hizmet X.509 sertifikasını ekleyerek Kurulum kodu hakkında bilgi bir `CreditCardClientCredentials` istemci uç nokta davranışları koleksiyona uygun veri örneği. Örnek X.509 sertifikası konu adı ayarlamak kullanır. `CN=localhost` hizmet sertifikası olarak.
 
-```
+```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
 EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
 // Create a client with given client endpoint configuration
-channelFactory =
-new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
+channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
 // configure the credit card credentials on the channel factory
 CreditCardClientCredentials credentials =
@@ -119,7 +117,7 @@ channelFactory.Close();
 
  Sonraki bölümde, ne olmalı kablo üzerinden iletilmesi için özel bir belirteç etkinleştirmek için yapılır ve bir WCF uç noktası tarafından kullanılan açıklar.
 
-```
+```csharp
 class CreditCardToken : SecurityToken
 {
     CreditCardInfo cardInfo;
@@ -161,7 +159,7 @@ class CreditCardToken : SecurityToken
 
  İstemci üzerindeki `CreditCardSecurityTokenSerializer` sınıfı XML yazıcısı güvenlik belirteci nesne gösterimine içinde yer alan bilgileri yazar.
 
-```
+```csharp
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 {
     public CreditCardSecurityTokenSerializer(SecurityTokenVersion version) : base() { }
@@ -257,7 +255,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  İşlevi hizmette yer `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` ve `CreditCardTokenAuthorizationPolicy` sınıfları.
 
-```
+```csharp
     public class CreditCardClientCredentials : ClientCredentials
     {
         CreditCardInfo creditCardInfo;
@@ -287,7 +285,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         }
     }
 
-public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
+    public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         CreditCardClientCredentials creditCardClientCredentials;
 
@@ -342,7 +340,7 @@ public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentials
         }
     }
 
-public class CreditCardServiceCredentials : ServiceCredentials
+    public class CreditCardServiceCredentials : ServiceCredentials
     {
         string creditCardFile;
 
@@ -371,8 +369,8 @@ public class CreditCardServiceCredentials : ServiceCredentials
         }
     }
 
-public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
-{
+    public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
+    {
         CreditCardServiceCredentials creditCardServiceCredentials;
 
         public CreditCardServiceCredentialsSecurityTokenManager(CreditCardServiceCredentials creditCardServiceCredentials)
@@ -502,12 +500,11 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
 ## <a name="displaying-the-callers-information"></a>Çağıranlar bilgileri görüntüleme
  Arayanın bilgileri görüntülemek için kullanın `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki örnek kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Talepleri tarafından sağlanan `CreditCardToken` sınıfını kendi `AuthorizationPolicies` koleksiyonu.
 
-```
+```csharp
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)
 {
     claimValue = null;
-    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType,
-        Rights.PossessProperty);
+    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType, Rights.PossessProperty);
     if (matchingClaims == null)
         return false;
     IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
@@ -532,9 +529,7 @@ string GetCallerCreditCardNumber()
                  {
                      issuer = "Unknown";
                  }
-                 return String.Format(
-                   "Credit card '{0}' issued by '{1}'",
-                   creditCardNumber, issuer);
+                 return $"Credit card '{creditCardNumber}' issued by '{issuer}'";
         }
     }
     return "Credit card is not known";

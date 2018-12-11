@@ -1,16 +1,17 @@
 ---
-title: İfadeler (C# Programlama Kılavuzu)
+title: İfadeleri - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615267"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239296"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri oluşan bir dizidir. İfadeler, değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri, oluşabilir veya *basit adı*. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir.  

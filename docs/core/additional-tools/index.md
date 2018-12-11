@@ -2,15 +2,14 @@
 title: .NET core ek CLI araçları
 description: Genel Bakış destekleyen ve .NET Core işlevselliğini genişleten ek araçlar yükleyebilirsiniz.
 author: mlacouture
-ms.author: johalex
-ms.date: 01/19/2018
-ms.custom: seodec18
-ms.openlocfilehash: 0fb04b65efa26de3f0db9b7f7c28cce01ad9df97
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 11/27/2018
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243605"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET core ek araçlar genel bakış
 
@@ -22,11 +21,12 @@ Kendi etkinliğinde içinde yapılan bir Visual Studio bağlı hizmet sağlayıc
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet svcutil aracı](dotnet-svcutil-guide.md)
 
-WCF (Windows Communication Foundation) dotnet svcutil aracı, bir ağ konumu üzerinde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve bir WCF proxy sınıf yöntemleriyle tanımlama, .NET Core ile uyumlu bir kaynak dosyası oluşturur bir .NET Core CLI araçtır web hizmeti işlemleri erişmek için kullanabileceğiniz. **Dotnet svcutil** araçtır için alternatif bir seçenek [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md) Visual Studio bağlı hizmet sağlayıcısı hangi ilk sevk edilen Visual Studio ile 2017 v15.5. **Dotnet svcutil** aracı bir .NET Core CLI aracı, Linux, macOS ve Windows üzerinde kullanılabilir çapraz platform.
+WCF (Windows Communication Foundation) dotnet svcutil aracı, bir ağ konumu üzerinde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve bir WCF proxy sınıf yöntemleriyle tanımlama, .NET Core ile uyumlu bir kaynak dosyası oluşturur bir .NET Core CLI araçtır web hizmeti işlemleri erişmek için kullanabileceğiniz.
+**Dotnet svcutil** araçtır için alternatif bir seçenek [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md) Visual Studio bağlı hizmet sağlayıcısı hangi ilk sevk edilen Visual Studio ile 2017 v15.5. **Dotnet svcutil** aracı bir .NET Core CLI aracı, Linux, macOS ve Windows üzerinde kullanılabilir çapraz platform.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet svcutil.xmlserializer aracı](dotnet-svcutil.xmlserializer-guide.md)
 
-.NET Framework üzerinde svcutil Aracı'nı kullanarak bir serileştirme bütünleştirilmiş kodu önceden de oluşturabilirsiniz. Dotnet svcutil.xmlserializer NuGet paketi üzerinde .NET Core benzer bir işlevsellik sağlar. Başına-ürettiği C# WCF sözleşmesi tarafından kullanılır ve bu seri hale getirilemiyor tarafından türleri istemci uygulamasındaki için serileştirme kodu <xref:System.Xml.Serialization.XmlSerializer>. Bu seri hale getirme veya bu türden nesneler seri durumdan çıkarılırken zaman XML serileştirme başlangıç performansını artırır.
+.NET Framework üzerinde svcutil Aracı'nı kullanarak bir serileştirme bütünleştirilmiş kodu önceden de oluşturabilirsiniz. Dotnet svcutil.xmlserializer NuGet paketi üzerinde .NET Core benzer bir işlevsellik sağlar. Önceden oluşturur C# WCF sözleşmesi tarafından kullanılır ve bu seri hale getirilemiyor tarafından türleri istemci uygulamasındaki için serileştirme kodu <xref:System.Xml.Serialization.XmlSerializer>. Bu seri hale getirme veya bu türden nesneler seri durumdan çıkarılırken zaman XML serileştirme başlangıç performansını artırır.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML Serileştirici Oluşturucusu](xml-serializer-generator.md)
 

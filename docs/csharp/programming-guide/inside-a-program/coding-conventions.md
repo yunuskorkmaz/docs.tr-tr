@@ -1,17 +1,18 @@
 ---
-title: C# Kodlama Kuralları (C# Programlama Kılavuzu)
+title: C#Kodlama kuralları - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209465"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241437"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
  Kodlama kuralları aşağıdaki amaçlara hizmet eder:  
@@ -162,7 +163,7 @@ ms.locfileid: "44209465"
   
 ### <a name="static-members"></a>Statik Üyeler  
   
--   Çağrı [statik](../../../csharp/language-reference/keywords/static.md) üyeleri sınıf adı kullanılarak: *ClassName.StaticMember*. Bu yöntem kod daha okunabilir Temizle statik erişim sağlayarak yapar.  Bir temel sınıfta türetilmiş bir sınıfın adıyla tanımlanan statik bir üye için uygun değildir.  Bu kod derlenir, kodun okunabilirliğini yanıltıcı ve türetilmiş sınıf için aynı ada sahip bir statik üye ekleme kodu gelecekte bozabilir.  
+-   Çağrı [statik](../../../csharp/language-reference/keywords/static.md) üyeleri sınıf adını kullanarak: *ClassName.StaticMember*. Bu yöntem kod daha okunabilir Temizle statik erişim sağlayarak yapar.  Bir temel sınıfta türetilmiş bir sınıfın adıyla tanımlanan statik bir üye için uygun değildir.  Bu kod derlenir, kodun okunabilirliğini yanıltıcı ve türetilmiş sınıf için aynı ada sahip bir statik üye ekleme kodu gelecekte bozabilir.  
   
 ### <a name="linq-queries"></a>LINQ Sorguları  
   

@@ -1,15 +1,16 @@
 ---
-title: parametre değiştiricisi (C# Başvurusu)
+title: parametre değiştiricisi içinde- C# başvurusu
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199415"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236303"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametre değiştiricisi (C# Başvurusu)
 
@@ -54,7 +55,7 @@ Belirtme `in` çağrıda bağımsız değişkenler için site genellikle isteğe
 
 İlk olarak belirterek `in` çağrısı site eşleşen ile tanımlanan bir yöntem seçmek için derleyicinin zorlar `in` parametresi. Aksi takdirde iki yöntem yalnızca içinde varken, farklı olduğunda `in`, değere göre aşırı daha iyi bir eşleşmedir.
 
-İkinci olarak, belirtme `in` başvuruya göre bağımsız değişken geçmek için amacınız bildirir. İle kullanılan bağımsız değişkenine `in` doğrudan başvurulabilen bir konumu temsil etmelidir. Aynı genel kurallar için `out` ve `ref` bağımsız değişkenleri: sabitler, sıradan özellikleri veya değerler üreten diğer ifadeler kullanamazsınız. Aksi takdirde, atlama `in` çağrısı salt okunur başvuru yöntemi olarak geçirmek için geçici bir değişken oluşturmak için sağlayacak site derleyici bildirir. Derleyici ile birkaç kısıtlamaları, geçici bir değişken oluşturur `in` bağımsız değişkenleri:
+İkinci olarak, belirtme `in` başvuruya göre bağımsız değişken geçmek için amacınız bildirir. İle kullanılan bağımsız değişkenine `in` doğrudan başvurulabilen bir konumu temsil etmelidir. Aynı genel kurallar için `out` ve `ref` bağımsız değişkenleri: Sabitler, sıradan özellikleri veya değerler üreten diğer ifadeler kullanamazsınız. Aksi takdirde, atlama `in` çağrısı salt okunur başvuru yöntemi olarak geçirmek için geçici bir değişken oluşturmak için sağlayacak site derleyici bildirir. Derleyici ile birkaç kısıtlamaları, geçici bir değişken oluşturur `in` bağımsız değişkenleri:
 
 - Derleme zamanı sabiti olarak geçici bir değişkene izin verir `in` parametreleri.
 - Özellikleri veya diğer ifadeler için geçici değişken sağlayan `in` parametreleri.

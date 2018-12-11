@@ -1,5 +1,6 @@
 ---
-title: '!= İşleci (C# Başvurusu)'
+title: '! = İşleci - C# başvurusu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '!=_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 15f1b5930117e608644a58343fb855562f36b21c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237824"
 ---
 # <a name="-operator-c-reference"></a>!= İşleci (C# Başvurusu)
 Eşitsizlik işleci (`!=`), işlenenlerinin true, eşitse false değerini döndürür. Eşitsizlik işleçleri, string ve object dahil olmak üzere tüm türleri için önceden tanımlanmıştır. Kullanıcı tanımlı türler aşırı yükleme `!=` işleci.  

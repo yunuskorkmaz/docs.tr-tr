@@ -1,5 +1,5 @@
 ---
-title: Birim testi Visual Basic'te .NET Core dotnet testi ve xUnit ile
+title: Dotnet testi ve xUnit ile .NET Core Visual Basic test birimi
 description: Adım adım örnek Visual Basic çözüm oluşturma etkileşimli bir deneyim .NET Core birim testi kavramları öğrenin dotnet testi ve xUnit kullanma.
 author: billwagner
 ms.author: wiwagn
@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: eae5f0727d2d75044c072e8cc1d9a1c6faf53a9a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 47964fa27ca3b8cbc509467a9b21f942bfc7cc75
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170541"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239962"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Birim testi dotnet testi ve xUnit kullanarak Visual Basic .NET Core kitaplıkları
 

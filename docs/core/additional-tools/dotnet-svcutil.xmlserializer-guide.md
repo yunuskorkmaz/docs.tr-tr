@@ -1,18 +1,33 @@
+---
+title: DotNet svcutil.xmlserializer üzerinde .NET Core kullanma
+description: Nasıl kullanabileceğinizi öğrenin `dotnet-svcutil.xmlserializer` önceden .NET Core projeleri için bir serileştirme derlemesi oluşturmak için NuGet paketi.
+author: huanwu
+ms.date: 11/27/2018
+ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235546"
+---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>DotNet svcutil.xmlserializer üzerinde .NET Core kullanma
+
+`dotnet-svcutil.xmlserializer` NuGet paketi önceden .NET Core projeleri için bir seri hale getirme derlemesi oluşturun. Önceden oluşturur C# WCF sözleşmesi tarafından kullanılır ve bu seri hale getirilemiyor XmlSerializer tarafından türleri istemci uygulamasındaki için serileştirme kodu. Bu seri hale getirme veya bu türden nesneler seri durumdan çıkarılırken zaman XML serileştirme başlangıç performansını artırır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Dotnet-çalışmaya svcutil.xmlserializer için aşağıdakiler gereklidir. 
-
-* [.NET core 2.1 SDK veya üzeri](https://www.microsoft.com/net/download/dotnet-core/sdk-2.1.300)
-* [.NET core çalışma zamanı 2.1 veya üzeri](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.0)
+* [.NET core 2.1 SDK](https://www.microsoft.com/net/download) veya üzeri
+* Sık kullandığınız kod düzenleyici
 
 Komutunu kullanabilirsiniz `dotnet --info` .NET Core SDK ve çalışma zamanının hangi sürümlerinin zaten yüklemiş olduğunuz denetlemek için.
 
-Bir .NET Core konsol uygulaması dotnet svcutil.xmlserializer kullanmak için:
+## <a name="getting-started"></a>Başlarken
 
-1. .NET Framework'teki varsayılan şablon 'WCF hizmet uygulaması' kullanılarak'MyWCFService ' adlı bir WCF hizmeti oluşturma.  Ekleme ```[XmlSerializerFormat]``` özniteliği aşağıdaki gibi hizmet yöntemi
-    ```c#
+Kullanılacak `dotnet-svcutil.xmlserializer` ' de .NET Core konsol uygulaması:
+
+1. .NET Framework'teki varsayılan şablon 'WCF hizmet uygulaması' kullanılarak'MyWCFService ' adlı bir WCF hizmeti oluşturma. Ekleme `[XmlSerializerFormat]` özniteliği aşağıdaki gibi hizmet yöntemi:
+
+   ```csharp
     [ServiceContract]
     public interface IService1
     {
@@ -21,34 +36,42 @@ Bir .NET Core konsol uygulaması dotnet svcutil.xmlserializer kullanmak için:
         string GetData(int value);
     }
     ```
-2. WCF istemci uygulaması hedefleri netcoreapp 2.1, örneğin oluşturduğunuz komutuyla 'MyWCFClient' adlı bir uygulama olarak bir .NET Core konsol uygulaması oluşturun
-    ```
+
+2. Bir .NET Core konsol uygulaması WCF istemci uygulaması olarak, .NET Core 2.1 veya üzeri sürümleri hedefleyen oluşturun. Örneğin, aşağıdaki komutla 'MyWCFClient' adlı bir uygulama oluşturun:
+
+    ```console
     dotnet new console --name MyWCFClient
     ```
-    Bir netcoreapp 2.1, csproj hedeflediğinden emin olun. Bu yapılır .csproj dosyanızda aşağıdaki XML öğesi kullanma
+
+    Projeniz tarafından hedeflenen .NET Core 2.1 sağlayın ya da daha sonra incelemek üzere `TargetFramework` proje dosyanızda XML öğesi:
+
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
-3. Aşağıdaki komutu çalıştırarak System.ServiceModel.Http paket başvurusu ekleme:
-   
-   ```dotnet add package System.ServiceModel.Http -v 4.5.0```
+
+3. Paket başvurusu ekleme `System.ServiceModel.Http` aşağıdaki komutu çalıştırarak:
+
+    ```console
+    dotnet add package System.ServiceModel.Http
+    ```
 
 4. WCF istemci kodu ekleyin:
+
     ```csharp
     using System.ServiceModel;
-    
-    class Program
-    {
-        static void Main(string[] args)
+
+        class Program
         {
-            var myBinding = new BasicHttpBinding();
-            var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
-            var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
-            IService1 client = myChannelFactory.CreateChannel();
-            string s = client.GetData(1);
-            ((ICommunicationObject)client).Close();
+            static void Main(string[] args)
+            {
+                var myBinding = new BasicHttpBinding();
+                var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
+                var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
+                IService1 client = myChannelFactory.CreateChannel();
+                string s = client.GetData(1);
+                ((ICommunicationObject)client).Close();
+            }
         }
-    }
 
     [ServiceContract]
     public interface IService1
@@ -58,17 +81,21 @@ Bir .NET Core konsol uygulaması dotnet svcutil.xmlserializer kullanmak için:
         string GetData(int value);
     }
     ```
-5. .Csproj dosyasını düzenleyin ve dotnet svcutil.xmlserializer paketine bir başvuru ekleyin. Örneğin:
 
-    i. Komutu çalıştırın: `dotnet add package dotnet-svcutil.xmlserializer -v 1.0.0`
+5. Bir başvuru ekleyin `dotnet-svcutil.xmlserializer` aşağıdaki komutu çalıştırarak paketi:
+  
+    ```console
+    dotnet add package dotnet-svcutil.xmlserializer
+    ```
 
-    ii. İçinde MyWCFClient.csproj aşağıdaki satırları ekleyin,
+    Komutu çalıştırmadan proje dosyanız aşağıdakine benzer bir giriş ekleyin:
+  
     ```xml
     <ItemGroup>
       <DotNetCliToolReference Include="dotnet-svcutil.xmlserializer" Version="1.0.0" />
     </ItemGroup>
     ```
 
-6. Uygulamayı çalıştırarak oluşturmak `dotnet build`. Her şeyi başarılı olursa MyWCFClient.XmlSerializers.dll adlı bir derleme çıktı klasöründe oluşturulur. Araç derlemesi oluşturulamadı. derleme çıkışını uyarılar görürsünüz.
+6. Uygulamayı çalıştırarak oluşturmak `dotnet build`. Her şeyi başarılı olursa, adında bir derleme *MyWCFClient.XmlSerializers.dll* çıktı klasöründe oluşturulur. Araç derlemesi oluşturulamadı. derleme çıkışını uyarılar görürsünüz.
 
-7. WCF hizmeti, örneğin çalıştırarak başlatın http://localhost:2561/Service1.svc tarayıcıda. Ardından istemci uygulamasını başlatın ve bunu otomatik olarak yüklemek ve çalışma zamanında önceden oluşturulmuş seri hale getiricileri genişletme kullanın.
+7. WCF hizmet tarafından Örneğin, çalıştırmaya başlayın `http://localhost:2561/Service1.svc` tarayıcıda. Ardından istemci uygulamasını başlatın ve bunu otomatik olarak yüklemek ve çalışma zamanında önceden oluşturulmuş seri hale getiricileri genişletme kullanın.

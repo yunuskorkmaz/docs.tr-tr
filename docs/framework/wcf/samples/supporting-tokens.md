@@ -2,12 +2,12 @@
 title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237707"
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 WS-güvenlik kullanan bir iletiye ek belirteçler ekleme belirteçleri destekleyen örnek gösterir. Örneğin, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirteci bir WS-güvenlik uyarısı istemciden hizmete geçirilir ve iletisinin parçası X.509 sertifikası elinde alıcısına kanıtlamak için X.509 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Birden fazla talep kimlik doğrulaması veya yetkilendirme gönderen bir ileti ile ilişkili olan bir gereksinimi olduğunda bu durumda kullanışlıdır. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -27,7 +27,7 @@ WS-güvenlik kullanan bir iletiye ek belirteçler ekleme belirteçleri destekley
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Kullanıcı adı belirteci ve X.509 güvenlik belirteci destekleyen istemci kimlik doğrulaması
  Program aracılığıyla kullanarak oluşturduğunuz iletişim kurmak için tek bir uç nokta hizmetini sunar `BindingHelper` ve `EchoServiceHost` sınıfları. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Özel bağlama kullanma yapılandırılmış bağlama `SymmetricSecurityBindingElement` ve `HttpTransportBindingElement`. Bu örnek ayarlar `SymmetricSecurityBindingElement` simetrik anahtar aktarım sırasında korumak ve geçirilecek hizmet X.509 sertifikası kullanmak için bir `UserNameToken` destekleyici birlikte `X509SecurityToken` WS-güvenlik ileti üstbilgisinde. Simetrik anahtar, ileti gövdesi ve kullanıcı adı güvenlik belirteci şifrelemek için kullanılır. Destekleme belirteci, WS-güvenlik ileti üstbilgisinde bir ek ikili güvenlik belirteci olarak geçirilir. Destekleyici X.509 güvenlik ile ilişkili özel anahtara sahip ileti parçası açarak destekleme belirteci kimlik doğrulaması belirteci sağlanır.
 
-```
+```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
 {
     HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
@@ -55,7 +55,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 
  Davranış, istemci kimlik doğrulaması ve ayrıca hizmet X.509 sertifikası hakkında daha fazla bilgi için kullanılacak hizmet kimlik bilgilerini belirtir. Örnek kullanır `CN=localhost` hizmet X.509 sertifikasındaki konu adı.
 
-```
+```csharp
 override protected void InitializeRuntime()
 {
     // Extract the ServiceCredentials behavior or create one.
@@ -88,7 +88,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 
  Hizmet kodu:
 
-```
+```csharp
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class EchoService : IEchoService
 {
@@ -100,8 +100,7 @@ public class EchoService : IEchoService
             OperationContext.Current.ServiceSecurityContext,
             out userName,
             out certificateSubjectName);
-            return String.Format("Hello {0}, {1}",
-                    userName, certificateSubjectName);
+            return $"Hello {userName}, {certificateSubjectName}";
     }
 
     public void Dispose()
@@ -174,7 +173,7 @@ public class EchoService : IEchoService
 
  İstemci uç noktası, hizmet uç noktası için benzer bir şekilde yapılandırılır. Aynı istemcinin kullandığı `BindingHelper` bağlama oluşturmak için sınıf. Kurulumu geri kalanını bulunan `Client` sınıfı. İstemci, istemci uç nokta davranışları koleksiyon Kurulum kodu kullanıcı adı güvenlik belirteci, destekleyici X.509 güvenlik belirteci ve hizmet X.509 sertifikası hakkında bilgi hakkında bilgi ayarlar.
 
-```
+```csharp
  static void Main()
  {
      // Create the custom binding and an endpoint address for
@@ -285,7 +284,7 @@ public class EchoService : IEchoService
 ## <a name="displaying-callers-information"></a>Çağıranlar bilgileri görüntüleme
  Arayanın bilgileri görüntülemek için kullanabileceğiniz `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Bu talep, otomatik olarak yer alan her bir belirteç için Windows Communication Foundation (WCF) tarafından sağlanır.
 
-```
+```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
                          claimType, out TClaimResource resourceValue)
     where TClaimResource : class
@@ -465,6 +464,6 @@ iisreset
 -   Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 > [!NOTE]
->  Bu betik, bu örnek makinelerde çalışan hizmet sertifikaları bir istemci üzerinde kaldırmaz. Makineler arasında sertifikaları kullanan WCF örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+>  Bu betik, bu örnek makinelerde çalışan hizmet sertifikaları bir istemci üzerinde kaldırmaz. Makineler arasında sertifikaları kullanan WCF örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Ayrıca Bkz.

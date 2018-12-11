@@ -3,12 +3,12 @@ title: C# sürüm oluşturma - C# Kılavuzu
 description: Sürüm oluşturma, C# ve .NET dillerinde nasıl çalıştığını anlamak
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183236"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243497"
 ---
 # <a name="versioning-in-c"></a>C# sürümü oluşturma #
 
@@ -38,12 +38,12 @@ Yeni bir sürüm kitaplığınızın yeni sürümle yeniden derlenen, önceki s�
 
 Geriye dönük kitaplığınızın önceki sürümlerle uyumluluk sağlamak çalışırken dikkat etmeniz gerekenler şunlardır:
 
-* Sanal yöntemler: yaptığınızda sanal bir yöntem, yeni sürümde bu yöntemi yok sayın projeleri güncelleştirilmesi gerektiği anlamına gelir sanal olmayan. Bu büyük bir değişiklik olup kesinlikle önerilmez.
-* Yöntem imzaları: yöntemi davranışı güncelleştirme imzası de değiştirmenizi gerektirir, böylece bu yönteme çağırma kod çalışmaya devam eder, bunun yerine bir aşırı oluşturmanız gerekir.
+* Sanal yöntemler: Sanal bir yöntem, yeni sürümde sanal olmayan yaptığınızda bu yöntemi yok sayın projeleri güncelleştirilmesi gerektiği anlamına gelir. Bu büyük bir değişiklik olup kesinlikle önerilmez.
+* Yöntem imzaları: Yöntemi davranışı güncelleştirme imzası de değiştirmenizi gerektirir, böylece bu yönteme çağırma kod çalışmaya devam eder, bunun yerine bir aşırı oluşturmanız gerekir.
 Her zaman uygulama tutarlı kalması yeni yöntem imzasının çağırmak için eski yöntem imzası clı'yle de işleyebilirsiniz.
-* [Geçersiz öznitelik](programming-guide/concepts/attributes/common-attributes.md#Obsolete): sınıflar veya kullanım dışı bırakılmıştır sınıf üyeleri belirlemek için kodunuzda bu özniteliği kullanabilirsiniz ve olması olası gelecek sürümleri kaldırıldı.
+* [Geçersiz öznitelik](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Kodunuzda bu öznitelik, sınıfları veya kullanım dışı ve büyük olasılıkla olmasını sınıf üyeleri gelecek sürümleri kaldırıldı belirtmek için kullanabilirsiniz.
 Bu, kitaplığı kullanan geliştiriciler önemli değişiklikler için daha iyi hazırlıklı olmalarını sağlar.
-* Yöntem bağımsız değişkenleri isteğe bağlı: Ne zaman daha önce isteğe bağlı bir yöntem bağımsız değişkenleri zorunlu yapmak veya varsayılan değerlerine sonra bu bağımsız değişken sağlamıyor tüm kod değiştirme güncelleştirilmesi gerekir.
+* İsteğe bağlı yöntem bağımsız değişkenleri: Ne zaman daha önce isteğe bağlı bir yöntem bağımsız değişkenleri zorunlu yapmak veya bu bağımsız değişken sağlamıyor tüm kod güncelleştirilmesi gereken sonra varsayılan değeri değiştirin.
 > [!NOTE]
 > Özellikle yöntemin davranışı değişmez gerekiyorsa zorunlu bağımsız değişkenler isteğe bağlı yapmak çok az etkisi olması gerekir.
 
@@ -62,7 +62,7 @@ Diğer geliştiriciler tarafından oluşturulan .NET kitaplıklarını tüketen 
 
 ### <a name="assembly-binding-redirection"></a>Derleme bağlama yeniden yönlendirmesi
 
-Kullanabileceğiniz `app.config` dosya bir kitaplığı sürümünü güncelleştirmek için uygulama kullanır. Ne çağrılır ekleyerek bir [ *bağlama yeniden yönlendirmesi* ](../framework/configure-apps/redirect-assembly-versions.md) , uygulamanızı yeniden derlemenize gerek kalmadan yeni kitaplığı sürümünü kullanabilirsiniz. Aşağıdaki örnek, uygulamanızın nasıl güncelleştiririz gösterir `app.config` kullanılacak dosyasını `1.0.1` düzeltme eki sürümü `ReferencedLibrary` yerine `1.0.0` , başlangıçta derlendiği sürümü.
+Kullanabileceğiniz `app.config` dosya bir kitaplığı sürümünü güncelleştirmek için uygulama kullanır. Ne çağrılır ekleyerek bir [ *bağlama yeniden yönlendirmesi* ](../framework/configure-apps/redirect-assembly-versions.md) uygulamanızı yeniden derlemenize gerek kalmadan yeni kitaplığı sürümünü kullanabilirsiniz. Aşağıdaki örnek, uygulamanızın nasıl güncelleştiririz gösterir `app.config` kullanılacak dosyasını `1.0.1` düzeltme eki sürümü `ReferencedLibrary` yerine `1.0.0` , başlangıçta derlendiği sürümü.
 
 ```xml
 <dependentAssembly>

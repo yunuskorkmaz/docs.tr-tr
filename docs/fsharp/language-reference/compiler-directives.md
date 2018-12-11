@@ -1,13 +1,13 @@
 ---
 title: Derleyici Yönergeleri (F#)
 description: Hakkında bilgi edinin F# dil önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri.
-ms.date: 05/16/2016
-ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126958"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239702"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -21,7 +21,7 @@ Aşağıdaki tablo, kullanılabilen önişlemci yönergeleri listeler F#.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#if` *Sembol*|Koşullu derlemeyi destekler. Kod bölümünde sonra `#if` dahil ise *sembol* tanımlanır.|
+|`#if` *Sembol*|Koşullu derlemeyi destekler. Kod bölümünde sonra `#if` dahil ise *sembol* tanımlanır. Simgenin ayrıca ile negatif `!`.|
 |`#else`|Koşullu derlemeyi destekler. Sembol önceki kullandıysanız içerecek şekilde kodun bir bölümünü işaretler `#if` tanımlı değil.|
 |`#endif`|Koşullu derlemeyi destekler. Koşullu bir kod bölümünün sonuna işaret eder.|
 |`#`[satır] *int*,<br/>`#`[satır] *int* *dize*,<br/>`#`[satır] *int* *verbatim dizesi*|Hata ayıklama için orijinal kaynak kodu satır ve dosya adı belirtir. Bu özellik Oluştur araçlar için sağlanan F# kaynak kodu.|
@@ -46,6 +46,16 @@ Var olan hiçbir `#define` önişlemci yönergesi F#. Tarafından kullanılan se
 
 Koşullu derleme yönergeleri yuvalanabilir. Girinti önişlemci yönergeleri için önemli değildir.
 
+Ayrıca bir simgeyle negate `!`. Bir şey yalnızca bu örnekte, bir dizenin değerdir _değil_ hata ayıklama:
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
+
 ## <a name="line-directives"></a>Satır yönergeleri
 
 Oluşturma sırasında derleyici hataları bildirir F# satır başvuru ile kod numaraları her bir hata oluştuğu. Bu satır numaraları için bir dosyanın ilk satırı 1 konumunda başlatın. Ancak, oluşturuyorsanız, F# kaynak kodunuzdan oluşturulan kodun satır numaralarını başka bir aracı olmayan genellikle ilgi, çünkü oluşturulan hataları F# kod büyük olasılıkla başka bir kaynaktan ortaya çıkar. `#line` Yönergesi oluşturma araçları yazarları için bir yol sağlar F# kaynak kodu, sayılar ve kaynak dosyalarını orijinal satıra hakkında bilgi için oluşturulan geçirmek için F# kod.
@@ -65,6 +75,7 @@ Aşağıdaki tabloda kullanılabilir derleyici yönergesi F#.
 |Yönergesi|Açıklama|
 |---------|-----------|
 |`#light` ["on"&#124;"kapalı"]|Etkinleştirir veya diğer ML sürümleriyle uyumluluk için basit söz dizimi devre dışı bırakır. Varsayılan olarak, basit söz dizimi etkinleştirilir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı söz dizimini kullanabilirsiniz. Yönergenin `#light` kendisi tarafından değerine eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimini kullanmanız gerekir. Söz dizimi için belgelerinde F# basit söz dizimi kullandığınız varsayılarak da sunulur. Daha fazla bilgi için [ayrıntılı sözdizimi](verbose-syntax.md).|
+
 (Fsi.exe) yorumlayıcısını yeniden oluşturulmak yönergeleri için bkz. [etkileşimli programlama F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.

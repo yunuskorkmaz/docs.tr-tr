@@ -1,5 +1,6 @@
 ---
-title: Hello World -- İlk Programınız (C# Programlama Kılavuzu)
+title: Hello World--İlk programınız - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236394"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- İlk Programınız (C# Programlama Kılavuzu)
 Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur. Program. Program dizesini görüntüler. `Hello World!`  
@@ -24,7 +25,7 @@ Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur
   
 ### <a name="to-create-and-run-a-console-application"></a>Bir konsol uygulaması oluşturmak ve çalıştırmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -78,7 +79,7 @@ Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur
   
  Parametresi `Main` yöntemi `args`, olan bir `string` program başlatmak için kullanılan komut satırı bağımsız değişkenleri içeren bir dizi. Farklı C++'da dizi yürütülebilir (exe) dosyanın adını içermez.  
   
- Örneklerde komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md) ve [nasıl yapılır: oluşturun ve komut satırı kullanan derlemeler kullanma](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz: örneklerde [ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md) ve [nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  Çağrı <xref:System.Console.ReadKey%2A> sonunda `Main` yöntemi kapatılmasını programınızı F5 tuşuna basarak hata ayıklama modunda çalıştırdığınızda, çıktıyı okuma şansı bulamadan konsol penceresinde engeller.  
   
@@ -96,7 +97,7 @@ Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur
   
 #### <a name="to-compile-and-run-from-a-command-prompt"></a>Derlemek ve bir komut satırından çalıştırmak için  
   
-1.  Önceki yordamdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı bir metin dosyası olarak kaydedin. Dosya adı `Hello.cs`. C# kaynak kodu dosyaları uzantısını kullanır `.cs`.  
+1.  Önceki yordamdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı bir metin dosyası olarak kaydedin. Dosyayı `Hello.cs` olarak adlandırın. C# kaynak kodu dosyaları uzantısını kullanır `.cs`.  
   
 2.  Bir komut istemi penceresi açmak için aşağıdaki adımlardan birini gerçekleştirin:  
   

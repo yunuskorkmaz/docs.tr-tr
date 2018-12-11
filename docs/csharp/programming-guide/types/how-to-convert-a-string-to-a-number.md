@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: Bir dizeyi sayıya - dönüştürme C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#]
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243224"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl Yapılır: Bir dizeyi sayıya dönüştürme (C# Programlama Kılavuzu)
 Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string.md) yöntemleri kullanarak sayıya <xref:System.Convert> kullanarak veya sınıf `TryParse` yöntemi (int, long, float, vb.) çeşitli sayısal türler üzerinde bulunamadı.  
   
  Bir dize varsa, biraz daha verimli ve doğrudan çağırmak onu bir `TryParse` yöntemi (örneğin, [ `int.TryParse("11", out number)` ](xref:System.Int32.TryParse%2A)).  Kullanarak bir <xref:System.Convert> yöntemi uygulamak, genel nesneler için daha faydalı <xref:System.IConvertible>.  
@@ -56,5 +57,5 @@ Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Türler](../../../csharp/programming-guide/types/index.md)  
-- [Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
 - [.NET framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

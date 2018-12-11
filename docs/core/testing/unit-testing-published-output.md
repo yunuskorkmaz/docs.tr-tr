@@ -1,16 +1,16 @@
 ---
 title: Test yayımlanmış çıktısı dotnet vstest ile
-description: Dotnet vstest komutu ile yayımlanan çıktıyı testleri çalıştırmayı öğrenin.
+description: Testleri yayımlanan kitaplıklarındaki yerine dotnet vstest komutuyla bir kaynak kod üzerinde çalıştırmayı öğrenin.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8930ec5c19254423fcdc9f0790ccf6748c595d6b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170307"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239533"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Test yayımlanmış çıktısı dotnet vstest ile
 
@@ -22,7 +22,9 @@ dotnet vstest <MyPublishedTests>.dll
 
 Burada `<MyPublishedTests>` yayımlanan test projenizin adıdır.
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>Yayımlanan bir DLL testleri çalıştırma örneği
+## <a name="example"></a>Örnek
+
+Aşağıdaki komutları yayımlanan bir DLL çalışan testler gösterilmiştir.
 
 ```
 dotnet new mstest -o MyProject.Tests

@@ -1,16 +1,17 @@
 ---
-title: Çok Biçimlilik (C# Programlama Kılavuzu)
+title: Çok biçimlilik - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3e260d7101d0532b179fa80fcae63afdd4d66039
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242548"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -92,7 +93,7 @@ ms.locfileid: "43523399"
   
 -   [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Nasıl yapılır: ToString Yöntemini Geçersiz Kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Nasıl yapılır: ToString yöntemini geçersiz kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 

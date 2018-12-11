@@ -1,16 +1,17 @@
 ---
-title: Özel Durum İşleme (C# Programlama Kılavuzu)
+title: Özel durum işleme - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 99a61dc4125d2fe86d70d5051741a1f1f33e58d4
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2ee0e449da89baaa35f3a8a430df6c16fb1e44e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43514048"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237941"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# programcıları için bir özel durum tarafından etkilenebilecek bölümü kod tarafından kullanılır. İlişkili [catch](../../../csharp/language-reference/keywords/try-catch.md) blokları, oluşturulan özel durumları işlemek için kullanılır. A [son](../../../csharp/language-reference/keywords/try-finally.md) blok olup olmadığı bir özel durum bağımsız olarak çalışan kodu içeren `try` ayrılmış kaynakları serbest bırakmak gibi bloğu `try` blok. A `try` blok gerektiren bir veya daha fazla ilişkili `catch` blokları veya `finally` blok veya her ikisini de.  

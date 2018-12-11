@@ -1,18 +1,19 @@
 ---
-title: 'Nasıl yapılır: Kopya Oluşturucu Yazma (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Kopya Oluşturucu yazma C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: daf0683060d7df5dc5e644b4b84aac3dcdea939f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240690"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Nasıl yapılır: Kopya Oluşturucu Yazma (C# Programlama Kılavuzu)
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Nasıl Yapılır: Kopya Oluşturucu yazma (C# Programlama Kılavuzu)
 C# nesneler için bir kopya Oluşturucusu sağlamaz, ancak kendiniz bir tane yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  

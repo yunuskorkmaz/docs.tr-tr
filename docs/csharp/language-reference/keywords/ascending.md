@@ -1,5 +1,6 @@
 ---
-title: ascending (C# Başvurusu)
+title: Artan - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ascending
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 77801fcf443556515e6f1414490a1deeb4fa7bc4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66e5bf2f0ce912fc64124de6983ffba8874dff05
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513301"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242990"
 ---
 # <a name="ascending-c-reference"></a>ascending (C# Başvurusu)
 `ascending` Bağlamsal anahtar sözcüğü kullanılır [orderby yan tümcesinin](../../../csharp/language-reference/keywords/orderby-clause.md) sorgu ifadelerinde sıralama düzenini küçükten büyüğe olduğunu belirtmek için. Çünkü `ascending` varsayılan sıralama olduğundan sipariş, bunu belirtmeniz gerekmez.  

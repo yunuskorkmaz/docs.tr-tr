@@ -1,18 +1,19 @@
 ---
-title: 'Nasıl yapılır: Arabirim Olaylarını Uygulama (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Arabirim olaylarını uygulama C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236446"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl yapılır: Arabirim Olaylarını Uygulama (C# Programlama Kılavuzu)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl Yapılır: Arabirim olaylarını uygulama (C# Programlama Kılavuzu)
 Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilirsiniz bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmiştir. Herhangi bir arabirim yöntemi veya özelliği uygularken temelde aynı kurallardır.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Bir sınıf içinde arabirim olaylarını uygulama  
@@ -63,4 +64,4 @@ Kendi erişimcileri sağlayarak, iki olay sınıfınızın aynı olay tarafında
 - [Olaylar](../../../csharp/programming-guide/events/index.md)  
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
 - [Belirtik Arabirim Kullanma](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Nasıl yapılır: Türetilmiş sınıflarda temel sınıf olayları Yükselt](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

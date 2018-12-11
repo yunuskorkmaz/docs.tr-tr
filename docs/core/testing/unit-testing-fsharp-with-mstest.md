@@ -1,5 +1,5 @@
 ---
-title: Birim testi F# dotnet testi ve MSTest kullanarak .NET core'da kitaplıkları
+title: Birim testi F# .NET core'da dotnet testi ve MSTest ile
 description: Birim test kavramlarını öğrenin F# dotnet testi ve MSTest, adım adım örnek çözüm oluşturma etkileşimli deneyim aracılığıyla .NET Core kullanarak.
 author: billwagner
 ms.author: wiwagn
@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9b83146afc24baa582f198200bc931dc8adaf90a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170346"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240092"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Birim testi F# dotnet testi ve MSTest kullanarak .NET core'da kitaplıkları
 

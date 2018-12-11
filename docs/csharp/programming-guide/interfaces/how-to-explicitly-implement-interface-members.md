@@ -1,17 +1,18 @@
 ---
-title: 'Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama (C# Programlama Kılavuzu)'
+title: 'Nasıl Yapılır: -Arabirim üyelerini açıkça uygulama C# Programlama Kılavuzu'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861029"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236940"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama (C# Programlama Kılavuzu)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Nasıl Yapılır: Arabirim üyelerini açıkça uygulama (C# Programlama Kılavuzu)
 Bu örnek bildirir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md), `IDimensions`ve bir sınıf, `Box`, arabirim üyelerini açıkça uygulayan `getLength` ve `getWidth`. Üye arabirim örneğinin erişilen `dimensions`.  
   
 ## <a name="example"></a>Örnek  
@@ -32,4 +33,4 @@ Bu örnek bildirir bir [arabirimi](../../../csharp/language-reference/keywords/i
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
 - [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
-- [Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)
+- [Nasıl yapılır: İki arabirimin üyelerini açıkça uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)

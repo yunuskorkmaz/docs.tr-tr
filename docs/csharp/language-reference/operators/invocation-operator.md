@@ -1,5 +1,6 @@
 ---
-title: () İşleci (C# Başvurusu)
+title: () İşleci - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ()_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179677"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236464"
 ---
 # <a name="-operator-c-reference"></a>() İşleci (C# Başvurusu)
 Bir ifadede işlemlerin sırasını belirlemek için kullanılan ek olarak, parantezler, aşağıdaki görevleri gerçekleştirmek için kullanılır:  

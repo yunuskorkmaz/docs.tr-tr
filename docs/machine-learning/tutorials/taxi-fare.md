@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236355"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak New York taksi fares tahmin edin
 
@@ -112,7 +112,7 @@ Aşağıdaki kod üzerinde doğru `Main` yöntemi bu yollarını belirtmek için
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-ML .NET modeliyle oluştururken ML bağlam oluşturarak başlayın. Bu kavramsal olarak kullanarak karşılaştırılabilir `DbContext` Entity Framework. Ortam, özel durum izleme ve günlüğe kaydetme için kullanılabilmesi için machine learning işiniz için bir bağlam sağlar.
+ML.NET modeliyle oluştururken ML bağlam oluşturarak başlayın. Bu kavramsal olarak kullanarak karşılaştırılabilir `DbContext` Entity Framework. Ortam, özel durum izleme ve günlüğe kaydetme için kullanılabilmesi için machine learning işiniz için bir bağlam sağlar.
 
 ### <a name="initialize-variables-in-main"></a>Ana değişkenleri başlatma
 
@@ -177,7 +177,7 @@ Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçiyoruz (**learner**). Learner modeli eğitir. Seçtik bir **regresyon** görev kullanacağız Bu sorun için bir `FastTreeRegressionTrainer` ML .NET tarafından sağlanan regresyon öğrencileriyle biri olan learner.
+Veri ardışık düzenine eklemek ve giriş doğru biçime dönüştürme sonra bir öğrenme algoritması seçiyoruz (**learner**). Learner modeli eğitir. Seçtik bir **regresyon** görev kullanacağız Bu sorun için bir `FastTreeRegressionTrainer` ML.NET tarafından sağlanan regresyon öğrencileriyle biri olan learner.
 
 `FastTreeRegressionTrainer` Learner gradyan artırma kullanır. Gradyan artırma bir machine learning teknik regresyon sorunları var. Bu, her regresyon ağaç tarafınızdaki bir biçimde oluşturur. Her adımda hata oluştu ölçmenizi ve sonraki düzeltmek için önceden tanımlanmış kaybı işlevi kullanır. Aslında bir topluluğu, tahmin modellerini daha zayıf bir tahmin modeli sonucudur. Gradyan artırma hakkında daha fazla bilgi için bkz. [artırılmış karar ağacı regresyonu](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 

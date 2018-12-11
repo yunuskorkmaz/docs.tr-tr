@@ -1,5 +1,6 @@
 ---
-title: Base anahtar sözcüğü (C# Başvurusu)
+title: Base anahtar sözcüğü - C# başvurusu
+ms.custom: seodec18
 description: C# türetilmiş bir sınıf içinden temel sınıfın üyelerine erişmek için kullanılan temel anahtar sözcüğü hakkında bilgi edinin.
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 8719ab79273701173530760ad1bec837c4f4302d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 513e28debe5fdccc4cc7e4e41d212b976c4a4595
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837873"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237889"
 ---
 # <a name="base-c-reference"></a>base (C# Başvurusu)
 

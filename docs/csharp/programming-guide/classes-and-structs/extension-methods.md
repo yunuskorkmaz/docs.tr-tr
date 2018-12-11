@@ -1,20 +1,21 @@
 ---
-title: Uzantı Metotları (C# Programlama Kılavuzu)
+title: Genişletme yöntemleri - C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241320"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
-Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. C#, F # ve Visual Basic'te yazılmış istemci kodu için bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
+Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. Yazılmış istemci kodu için C#, F# ve Visual Basic bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
   
  En yaygın genişletme yöntemleri [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] varolan sorgu işlevselliği ekleyen standart sorgu işleçleri <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ve <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> türleri. Standart sorgu işleçleri kullanmak için önce bunları kapsama taşıyın bir `using System.Linq` yönergesi. Ardından uygulayan her tür <xref:System.Collections.Generic.IEnumerable%601> örnek yöntemlerine sahip görünür <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>ve benzeri. "Nokta" yazdığınızda IntelliSense deyim tamamlamada bu ek yöntemleri örneğinden sonra gördüğünüz bir <xref:System.Collections.Generic.IEnumerable%601> gibi yazın <xref:System.Collections.Generic.List%601> veya <xref:System.Array>.  
   
@@ -43,7 +44,7 @@ int i = s.WordCount();
   
  Kodunuzda örnek yöntemi sözdizimini ile genişletme yöntemi çağırırsınız. Ancak derleyici tarafından üretilen ara dil (IL), kodunuzu statik yöntemdeki bir çağrıya dönüştürür. Bu nedenle, kapsülleme ilkesi gerçekten ihlal edilmez. Aslında genişletme yöntemleri, genişletildikleri türde özel değişkenlere erişemez.  
   
- Daha fazla bilgi için [nasıl yapılır: özel bir genişletme yöntemi uygulama ve arama](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
+ Daha fazla bilgi için [nasıl yapılır: Özel bir genişletme yöntemi uygulama ve arama](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
   
  Genel olarak, büyük olasılıkla kendinizinkileri uygulamayla kıyaslandığında genişletme yöntemlerini çok daha arayacaksınız. Genişletme yöntemleri örnek yöntem sözdizimi tarafından çağrıldığından istemci kodundan kullanmak için herhangi bir özel bilgi gerekli değildir. Belirli bir türe ilişkin olarak genişletme yöntemlerini etkinleştirmek için eklemeniz yeterlidir bir `using` yönergesi yöntemlerin tanımlandığı ad alanı. Örneğin, standart sorgu işleçlerini kullanmak için bu ekleme `using` yönergesini kodunuza:  
   

@@ -1,16 +1,17 @@
 ---
-title: Özel Durumlar Kullanma (C# Programlama Kılavuzu)
+title: Özel durum - kullanarak C# Programlama Kılavuzu
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514692"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240196"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 C# ' ta program çalışma zamanında hatalarını program aracılığıyla özel durumlar adlı bir mekanizmayı kullanarak yayılır. Özel durumlar hatayla karşılaştığında kod tarafından oluşturulur ve hatayı düzeltmek kodu tarafından yakalanan. Özel durumlar, .NET Framework ortak dil çalışma zamanı (CLR) veya bir program kodunda atılabilir. Bir özel durum sonra kadar çağrı yığınına yayan bir `catch` özel durum bildirimi bulundu. Yakalanmayan Özel durumların bir iletişim kutusu görüntüler sistem tarafından sağlanan bir genel özel durum işleyicisi tarafından işlenir.  

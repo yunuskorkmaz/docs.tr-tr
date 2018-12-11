@@ -1,15 +1,16 @@
 ---
-title: false değişmez değeri (C# Başvurusu)
+title: false değişmez değeri - C# başvurusu
+ms.custom: seodec18
 ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: 62329e40abb709b047d60fc2be27ef0d2c92d8ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f47c9cab7b0b3813f59faa8be0110e0c6318f36e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147904"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241213"
 ---
 # <a name="false-literal-c-reference"></a>false değişmez değeri (C# Başvurusu)
 
@@ -22,6 +23,6 @@ Temsil eden [bool](bool.md) değer `false`:
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [false işleci](false-operator.md)
 - [true](true.md)
+- [TRUE ve false işleçleri](true-false-operators.md)
 - [?: İşleç](../operators/conditional-operator.md)

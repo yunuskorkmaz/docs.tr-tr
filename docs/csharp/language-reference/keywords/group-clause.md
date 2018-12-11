@@ -1,5 +1,6 @@
 ---
-title: group tümcesi (C# Başvurusu)
+title: Group tümcesi - C# başvurusu
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238175"
 ---
 # <a name="group-clause-c-reference"></a>group tümcesi (C# Başvurusu)
 
@@ -65,7 +66,7 @@ Birden fazla anahtar göre grup öğeleri için istediğiniz zaman bir bileşik 
 group person by new {name = person.surname, city = person.city};
 ```
 
-Sorgu değişkeni başka yönteme geçirin, adlandırılmış bir tür kullanın. Otomatik uygulanan özellikler anahtarlarını kullanarak özel bir sınıf oluşturun ve daha sonra geçersiz <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemleri. Bu durumda, kesin olarak bu yöntemleri geçersiz kılmanız gerekmez, bir yapı de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: bir basit sınıf Implemented Properties ile uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [nasıl yapılır: bir dizin ağacındaki yinelenen dosyalar için sorgu](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Sonraki makalede, türü adlandırılmış bir bileşik anahtarı kullanmayı gösteren bir kod örneği bulunur.
+Sorgu değişkeni başka yönteme geçirin, adlandırılmış bir tür kullanın. Otomatik uygulanan özellikler anahtarlarını kullanarak özel bir sınıf oluşturun ve daha sonra geçersiz <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemleri. Bu durumda, kesin olarak bu yöntemleri geçersiz kılmanız gerekmez, bir yapı de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [nasıl yapılır: Bir dizin ağacında yineleyen dosyalar için sorgu](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Sonraki makalede, türü adlandırılmış bir bileşik anahtarı kullanmayı gösteren bir kod örneği bulunur.
 
 ## <a name="example"></a>Örnek
 
