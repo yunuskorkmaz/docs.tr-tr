@@ -1,5 +1,6 @@
 ---
 title: .NET içinde normal ifadeler için en iyi uygulamalar
+description: . NET'te verimli ve etkili normal ifadeler oluşturmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925730"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152818"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET içinde normal ifadeler için en iyi uygulamalar
 <a name="top"></a> .NET içinde normal ifade altyapısı yerine desen karşılaştırma ve metin eşleşen metni işleyen güçlü, tam özellikli bir araçtır. Çoğu durumda desen eşleme işlemini hızlı ve verimli şekilde yapar. Ancak bazı durumlarda normal ifade motoru çok yavaş görünebilir. Aşırı durumlarda saatler ve hatta günler boyunca görece küçük bir girişi işlerken yanıt vermeyi durdurmuş gibi bile görünebilir.  
@@ -52,7 +54,7 @@ ms.locfileid: "42925730"
  Son metin türü, sınırlandırılmış girdi işlemek üzere yazılmış bir normal ifade için özellikle sorunludur. Bu normal ifade ayrıca kapsamlı dayanıyorsa [geri izlemenin](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), normal ifade motoru normal dışı miktarda zamanı ayırabilirsiniz (bazı durumlarda saatler ya da günler) görünüşte zararsız bir metni işlemeye.  
   
 > [!WARNING]
->  Aşağıdaki örnek, aşırı miktarda geri dönüş kullanma eğiliminde olan ve geçerli e-posta adreslerini reddetmesi olası bir normal ifadeyi kullanmaktadır. Bir e-posta doğrulama yordamında kullanmamalısınız. E-posta adreslerini onaylayan bir normal ifade isterseniz bkz [nasıl yapılır: dizelerin geçerli e-posta biçiminde olduğunu doğrulama](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+>  Aşağıdaki örnek, aşırı miktarda geri dönüş kullanma eğiliminde olan ve geçerli e-posta adreslerini reddetmesi olası bir normal ifadeyi kullanmaktadır. Bir e-posta doğrulama yordamında kullanmamalısınız. E-posta adreslerini onaylayan bir normal ifade isterseniz bkz [nasıl yapılır: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Örneğin bir e-posta adresinin takma adını onaylamak için çok yaygın kullanılan ama son derece sorunlu normal ifade düşünün. Normal ifade `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` ne ve ardından sıfır veya daha fazla alfasayısal karakter, nokta veya kısa çizgi, alfasayısal bir karakterle oluşan bir geçerli e-posta adresi olarak kabul edilir için yazılmıştır. Normal ifade, alfasayısal bir karakterle bitmelidir. Ancak aşağıdaki örnekte gösterildiği gibi, bu normal ifade geçerli girişi kolayca yönetmesine rağmen performansı neredeyse geçerli girişi işlerken çok yetersizdir.  
   
@@ -76,7 +78,7 @@ ms.locfileid: "42925730"
  Yaklaşımının temelindeki. NET normal ifade nesnesi modeli <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı, normal ifade motorunu temsil eder. Genellikle, normal ifade performansını etkileyen tekil en büyük faktör şeklidir <xref:System.Text.RegularExpressions.Regex> altyapısı kullanılır. Normal bir ifadeyi tanımlama, normal ifade motorunu bir normal ifade deseni ile sıkı şekilde eşlemeyi içerir. İşlem eşlenmesiyle, mi, örnekleme içerdiğini bir <xref:System.Text.RegularExpressions.Regex> nesnesine, yapıcısına bir normal ifade deseni geçerek veya statik bir yöntemi, normal ifade desenini çözümlenecek dizeyle birlikte geçirerek çağırmak, tarafından zorunluluktur bir pahalı bir.  
   
 > [!NOTE]
->  Yorumlanmış ve derlenmiş normal ifadelerin kullanımının performans etkilerinin daha ayrıntılı bir açıklaması için bkz: [normal ifade performansını en iyi duruma getirme, Kısım II: İdaresini](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) bkz.BCL Ekibi blogunda.  
+>  Yorumlanmış ve derlenmiş normal ifadelerin kullanımının performans etkilerinin daha ayrıntılı bir açıklaması için bkz: [normal ifade performansını en iyi duruma getirme, Kısım II: Ücret, geri alma](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) bkz.BCL Ekibi blogunda.  
   
  Normal ifade altyapısını belirli bir normal ifade deseniyle birleştirebilir, sonra altyapıyı birkaç şekilde metin eşlemesi yapmak üzere kullanabilirsiniz:  
   
@@ -145,8 +147,8 @@ ms.locfileid: "42925730"
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`[.?:;!]`|Bir nokta, soru işareti, iki nokta üst üste, noktalı virgül ya da ünlem işareti eşleyin.|  
   
-### <a name="regular-expressions-compiled-to-an-assembly"></a>Normal İfadeler: Derleme  
- .NET, derlenmiş normal ifadeler içeren bir bütünleştirilmiş kod oluşturmanızı sağlar. Bu, normal ifade derlemesinin uğradığı performans düşüşünü çalışma zamanından tasarım zamanına taşır. Ancak ayrıca bazı ek işleri de içerir: Normal ifadeleri önceden tanımlamanız ve bunları bir derleme içinde derlemeniz gerekir. Derleyici daha sonra, derlemenin normal ifadelerini kullanan kaynak kodunu derlerken bu derlemeye başvurabilir. Derleme içinde derlenen her normal ifade, türetilen bir sınıf tarafından temsil edilen <xref:System.Text.RegularExpressions.Regex>.  
+### <a name="regular-expressions-compiled-to-an-assembly"></a>Normal ifadeler: Bir derlemeye derlenen  
+ .NET, derlenmiş normal ifadeler içeren bir bütünleştirilmiş kod oluşturmanızı sağlar. Bu, normal ifade derlemesinin uğradığı performans düşüşünü çalışma zamanından tasarım zamanına taşır. Ancak, bazı ek işleri de içerir: Normal ifadeleri önceden tanımlamanız ve bunları bir derlemeye derlemek gerekir. Derleyici daha sonra, derlemenin normal ifadelerini kullanan kaynak kodunu derlerken bu derlemeye başvurabilir. Derleme içinde derlenen her normal ifade, türetilen bir sınıf tarafından temsil edilen <xref:System.Text.RegularExpressions.Regex>.  
   
  Normal ifadeleri bir derleme olarak derlemek için çağrı <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> yöntemi ve bir dizi geçirin <xref:System.Text.RegularExpressions.RegexCompilationInfo> derlenecek normal ifadeleri temsil eden nesneleri ve bir <xref:System.Reflection.AssemblyName> olmasını derleme hakkında bilgi içeren nesne oluşturuldu.  
   
@@ -175,7 +177,7 @@ ms.locfileid: "42925730"
  Sıradan şekilde, normal ifade motoru bir giriş dizsi içinde ilerlemek ve bunu bir normal ifade deseni ile karşılaştırmak için doğrusal ilerlemeyi kullanır. Ancak, gibi belirsiz miktar belirleyiciler `*`, `+`, ve `?` kullanılan normal ifade deseninde, normal ifade altyapısı başarılı kısmi eşleşmelerin bir kısmını verin ve önceden kaydedilmiş bir duruma geri dönebilir ve tüm desen için başarılı bir eşleşme aramak amacıyla. Bu işlem geri dönüş olarak bilinir.  
   
 > [!NOTE]
->  Geri izleme hakkında daha fazla bilgi için bkz: [normal ifade davranışının ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Geri izlemenin ayrıntılı bir açıklaması için bkz: [normal ifade performansını en iyi duruma getirme, Kısım II: İdaresini](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) bkz.BCL Ekibi blogunda.  
+>  Geri izleme hakkında daha fazla bilgi için bkz: [normal ifade davranışının ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Geri izlemenin ayrıntılı bir açıklaması için bkz: [normal ifade performansını en iyi duruma getirme, Kısım II: Ücret, geri alma](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) bkz.BCL Ekibi blogunda.  
   
  Geri dönüş için destek, normal ifadelere güç ve esneklik kazandırır. Ayrıca normal ifade motorunun çalışmasının denetlenmesini sorumluluğunu normal ifade geliştiricisine teslim eder. Geliştiriciler genelde bu sorumluluğun farkında olmadığından, geri dönüşü yanlış kullanmaları ya da aşırı geri dönüşe bağımlılıkları genelde normal ifade performansının düşmesinde önemli bir rol oynar. En kötü senaryoda yürütme süresi girdi dizesinde her ek karakter ile iki katına çıkar. Aslında geri izlemeyi aşırı şekilde kullanarak, girişin normal ifade desenini yakın eşlemesi halinde sonsuz bir döngünün program eşdeğerini oluşturmak kolaydır; normal ifade motorunun görece kısa bir giriş dizesini işlemesi saatler ve hatta günler alabilir.  
   

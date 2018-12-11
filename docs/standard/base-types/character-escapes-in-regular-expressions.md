@@ -1,5 +1,6 @@
 ---
-title: Normal İfadelerdeki Karakter Çıkışları
+title: .NET normal ifadelerindeki karakter çıkışları
+description: Özel karakterler ve kaçış karakterlerini .NET normal ifadelerde hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837173"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152375"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:  
@@ -50,7 +52,7 @@ Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:
 |`\` *nnn*|ASCII karakterleriyle eşleşir burada *nnn* sekizli karakter kodunu temsil eden iki veya üç basamak içerir. Örneğin, `\040` bir boşluk karakteri temsil eder. Yalnızca bir basamak varsa, bu yapı bir yeniden başvuru yorumlanır (örneğin, `\2`) veya bir yakalama grubu sayısı karşılık gelirse. (Bkz [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|ASCII karakterleriyle eşleşir burada *nn* iki basamaklı onaltılık karakter kodu.|  
 |`\c` *X*|X'harfinin denetim karakteri olduğu bir ASCII denetim karakteriyle eşleşir. Örneğin, `\cC` CTRL-c|  
-|`\u` *nnnn*|Eşleşen değeri olan bir UTF-16 kod birimini *nnnn* onaltılık. **Not:** Unicode belirtmek için kullanılan Perl 5 karakter kaçış .NET tarafından desteklenmez. Perl 5 karakter kaçış formundadır `\x{` *####* `…}`burada *####* `…` bir dizi onaltılık basamak. Bunun yerine, `\u` *nnnn*.|  
+|`\u` *nnnn*|Eşleşen değeri olan bir UTF-16 kod birimini *nnnn* onaltılık. **Not:**  Unicode belirtmek için kullanılan Perl 5 karakter kaçış .NET tarafından desteklenmez. Perl 5 karakter kaçış formundadır `\x{` *####* `…}`burada *####* `…` bir dizi onaltılık basamak. Bunun yerine, `\u` *nnnn*.|  
 |`\`|Kaçış karakteri tanınmayan bir karakterle önce geldiğinde karakterle eşleşir. Örneğin, `\*` yıldız işareti (*) ile eşleşir ve aynı `\x2A`.|  
   
 ## <a name="an-example"></a>Bir Örnek  

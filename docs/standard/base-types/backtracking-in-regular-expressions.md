@@ -1,5 +1,6 @@
 ---
-title: Normal İfadelerde Geri Dönüş
+title: .NET normal ifadelerde geri dönüş
+description: Geri izlemenin normal ifade deseni eşleştirme içinde denetlemeyi öğrenin.
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297367"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130097"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a> Geri izlemenin normal ifade deseni isteğe bağlı içerdiğinde gerçekleşir [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), normal ifade altyapısı devam etmek için önceki kaydedilen bir duruma döndürür, bir eşleşme arayın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -133,7 +135,7 @@ ms.locfileid: "52297367"
 > [!IMPORTANT]
 >  Normal ifadeniz geri izlemeye dayalıysa, her zaman bir zaman aşımı aralığı ayarlamanızı öneririz.  
   
- A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum gösterir ve normal ifade altyapısının belirtilen zaman aşımı aralığı içinde bir eşleştirme bulamadığını ancak özel durumun neden anlamına gelmez. Bunun nedeni aşırı geri izleme olabilir, fakat özel durumun oluştuğu zamandaki sistem yükü nedeniyle zaman aşımı aralığı çok düşük ayarlanmış da olabilir. Özel durumu işlediğinizde, giriş dizesiyle diğer eşleştirmeleri bırakmayı veya zaman aşımı aralığını artırarak eşleştirme işlemini yeniden denemeyi seçebilirsiniz.  
+ A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum gösterir ve normal ifade altyapısının belirtilen zaman aşımı aralığı içinde bir eşleşme bulamadı ancak özel durumun neden anlamına gelmez. Bunun nedeni aşırı geri izleme olabilir, fakat özel durumun oluştuğu zamandaki sistem yükü nedeniyle zaman aşımı aralığı çok düşük ayarlanmış da olabilir. Özel durumu işlediğinizde, giriş dizesiyle diğer eşleştirmeleri bırakmayı veya zaman aşımı aralığını artırarak eşleştirme işlemini yeniden denemeyi seçebilirsiniz.  
   
  Örneğin, aşağıdaki çağrıları kod <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> örneği oluşturmak için oluşturucu bir <xref:System.Text.RegularExpressions.Regex> bir saniyelik zaman aşımı değerini içeren nesne. Normal ifade deseni `(a+)+$`, bir veya daha fazla "a" karakteri bir satırın sonunda bir veya daha fazla dizileri eşleşen olduğu aşırı geri izlemeye maruz kalır. Varsa bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> olduğu durum, örnek en fazla üç saniye cinsinden zaman aşımı değerini artırır. Bundan sonra, deseni eşleştirme girişiminden vazgeçer.  
   

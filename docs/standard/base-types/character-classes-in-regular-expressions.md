@@ -1,5 +1,6 @@
 ---
-title: Normal İfadelerdeki Karakter Sınıfları
+title: .NET normal ifadelerdeki karakter sınıfları
+description: Karakter sınıfları .NET normal ifadelerdeki karakter kümesini temsil etmek için kullanmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131475"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Bir karakter sınıfı içeren bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri kümesini tanımlar. .NET içinde normal ifade dili aşağıdaki karakter sınıflarını destekler:  
@@ -460,7 +462,7 @@ ms.locfileid: "44180156"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> veya<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -veya-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
