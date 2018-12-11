@@ -9,38 +9,38 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ee575cacbc51fc910770cca145a4280f97b66db
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393087"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144448"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-`loadFromContext` Yönetilen hata ayıklama Yardımcısı (MDA), bir derleme halinde yüklenmiş ise etkinleştirilirse `LoadFrom` bağlamı. Çağırma sonucunda bu durum ortaya çıkabilir <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya benzer diğer yöntemleri.  
+`loadFromContext` Yönetilen hata ayıklama Yardımcısı (MDA) etkin olduğu bir derleme halinde yüklenmiş ise `LoadFrom` bağlamı. Çağırma sonucunda bu durum ortaya çıkabilir <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya diğer benzer yöntemler.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bazı yükleyici yöntemlerinin kullanımını, yüklenmekte olan derlemelerde sonuçlanabilir `LoadFrom` bağlamı. Bu bağlamda kullanımını seri hale getirme, atama ve bağımlılık çözünürlüğü için beklenmeyen davranışlara neden olabilir. Genel olarak, derlemeler halinde yüklenen önerilir `Load` bu sorunları önlemek için bağlam. Hangi bağlamı bir derleme halinde bu MDA yüklendi belirlemek zordur.  
+ Bazı yükleyici yöntemlerin kullanımını içinde yüklenen derlemeler sonuçlanabilir `LoadFrom` bağlamı. Bu bağlam kullanımını serileştirme, atama ve bağımlılık çözümlemesi için beklenmeyen davranışlara neden olabilir. Genel olarak, derlemeleri içine yüklenen önerilir `Load` bu sorunları önlemek için bağlam. Hangi bağlamda bir derleme içine bu mda'nın yüklendiğini belirlemek zordur.  
   
 ## <a name="cause"></a>Sebep  
- Genellikle, bir derleme halinde yüklendi `LoadFrom` dışında bir yoldan yüklerse bağlam `Load` bağlamı, Genel Derleme Önbelleği gibi veya <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> özelliği.  
+ Genellikle, bir derleme içine yüklendi `LoadFrom` dışında bir yoldan yüklendiyse bağlam `Load` bağlamı, Genel Derleme Önbelleği gibi veya <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> özelliği.  
   
 ## <a name="resolution"></a>Çözüm  
  Uygulamaları yapılandır şekilde <xref:System.Reflection.Assembly.LoadFrom%2A> çağrıları artık gerekli. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
   
--   Derlemeleri genel derleme önbelleğinde yükleyin.  
+-   Derlemeleri genel derleme önbelleğine yükleyin.  
   
--   Yerleştirin derlemelerde <xref:System.AppDomainSetup.ApplicationBase%2A> için dizin <xref:System.AppDomain>. Varsayılan etki alanı olması durumunda <xref:System.AppDomainSetup.ApplicationBase%2A> işlemi başlatıldı çalıştırılabilir dosyayı içeren bir dizindir. Bu yeni oluşturma gerektirebilir <xref:System.AppDomain> derleme taşımak uygun değilse.  
+-   Derlemelerde yerleştirin <xref:System.AppDomainSetup.ApplicationBase%2A> dizinini <xref:System.AppDomain>. Varsayılan etki alanı, söz konusu olduğunda <xref:System.AppDomainSetup.ApplicationBase%2A> işlemi başlatıldı yürütülebilir dosyayı içeren bir dizindir. Bu yeni oluşturma gerektirebilir <xref:System.AppDomain> derleme taşımak uygun değilse.  
   
--   Bağımlı derlemeleri yürütülebilir göre alt dizinlerde varsa bir yoklama yolu uygulama yapılandırması (.config) dosyası ya da ikincil uygulama etki alanları ekleyin.  
+-   Bağımlı derlemelerin yürütülebilir dosyanın göreli alt dizinlerde varsa araştırma yolu, uygulama (.config) yapılandırma dosyası veya ikincil bir uygulama etki alanları ekleyin.  
   
- Her durumda kullanmak için kodu değiştirilebilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi.  
+ Her durumda, kodu kullanmak için değiştirilebilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- MDA CLR herhangi bir etkisi yok. Bir yük istek kullanılan bağlam bildirir.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ MDA CLR üzerinde hiçbir etkisi yok. Bu, yük isteğin sonucu olarak kullanılan bağlam bildirir.  
   
 ## <a name="output"></a>Çıkış  
- MDA derleme içine yüklenmiş olduğunu bildirdiği `LoadFrom` bağlamı. Derleme ve yolun basit adını belirtir. Ayrıca kullanmaktan kaçınmak için Azaltıcı Etkenler öneren `LoadFrom` bağlamı.  
+ MDA bütünleştirilmiş kod içine yüklenmiş olduğunu bildirdiği `LoadFrom` bağlamı. Bu, derleme ve yolun basit adını belirtir. Ayrıca kullanmaktan kaçınmak için risk azaltma işlemleri önerir `LoadFrom` bağlamı.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -53,9 +53,9 @@ ms.locfileid: "33393087"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bu MDA etkinleştirebilirsiniz bir durumu gösterir:  
+ Aşağıdaki kod örneği, bu mda'nın etkinleştirebilmek için bir durum gösterilmektedir:  
   
-```  
+```csharp
 using System.Reflection;  
 namespace ConsoleApplication1  
 {  

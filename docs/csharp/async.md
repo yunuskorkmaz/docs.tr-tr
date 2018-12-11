@@ -4,12 +4,12 @@ description: .NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz progra
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349101"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126503"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -29,7 +29,7 @@ CPU bağımlı kod için `await` ile arka plan iş parçacığında başlatılan
 
 Yaklaşım daha zaman uyumsuz kod için başka bir yöntemle `async` ve `await` DOKUNUN makaleyi, yukarıda bağlantı bölümünde açıklanan, ancak bu belgede, bu noktadan itibaren dil düzeyinde yapılar üzerinde odaklanır.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Ben/O-bağlı örnek: bir web hizmetinden veri indirme
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Ben/O-bağlı örnek: Bir web hizmetinden veri indirme
 
 Bir düğmeye basıldığında, bazı veriler bir web hizmetinden indirmeniz gerekebilir ancak UI iş parçacığını engellemesini istemiyorsanız. Yalnızca şu şekilde gerçekleştirilebilir:
 
@@ -49,7 +49,7 @@ downloadButton.Clicked += async (o, e) =>
 
 Ve İşte bu kadar! Kod (bazı veriler zaman uyumsuz olarak yükleme) amacı, görev nesnelerle etkileşim içinde çıkmaza olmadan ifade eder.
 
-### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU bağımlı örnek: bir hesaplama için oyun gerçekleştirme
+### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU bağımlı örnek: Bir hesaplama gerçekleştirmek için bir oyun
 
 Burada bir düğmeye basarak zarar ekranında birçok düşman üzerinde başını ağrıtabilir mobil oyun yazdığınız varsayalım.  Zarar hesaplama gerçekleştirmek pahalı olabilir ve kullanıcı Arabirimi iş parçacığında yapılması oyun hesaplama gerçekleştirildiği duraklatmak için görünür hale getirir!
 
@@ -108,7 +108,7 @@ Herhangi bir kod yazmadan önce istemelisiniz iki sorular şunlardır:
     
 Sahip olduğunuz iş ise **miyim/O-bağlı**, kullanın `async` ve `await` *olmadan* `Task.Run`.  *Barındırmamalıdır* görev paralel Kitaplığı'nı kullanın.  Bunun nedeni açıklandığı [zaman uyumsuz derinliği makaledeki](../standard/async-in-depth.md).
 
-Sahip olduğunuz iş ise **CPU bağımlı** ve yanıtlama hakkında kullanım verdiğiniz `async` ve `await` ancak başka bir iş parçacığında iş devre dışı üretme *ile* `Task.Run`.  İş eşzamanlılığı ve paralelliği için uygun değilse, görev paralel kitaplığı kullanarak da düşünmelisiniz.
+Sahip olduğunuz iş ise **CPU bağımlı** ve yanıtlama hakkında kullanım verdiğiniz `async` ve `await` ancak başka bir iş parçacığında iş devre dışı üretme *ile* `Task.Run`.  İş eşzamanlılığı ve paralelliği için uygun değilse, ayrıca kullanmayı düşünmeniz gerekir [görev paralel Kitaplığı](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Ayrıca, her zaman kodunuzun yürütülmesini ölçü.  Örneğin, kendinizi CPU bağımlı iş olduğu pahalı bir durumda bulabilirsiniz yeterli bağlam anahtarları çoklu iş parçacığı zaman ek yükü ile karşılaştırılır.  Kendi tradeoff her seçeneği vardır ve kendi durumunuza doğru artırabilen seçmeniz gerekir.
 

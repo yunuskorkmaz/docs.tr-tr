@@ -3,11 +3,11 @@ title: 'İzlenecek yol: SQL oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672023"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149048"
 ---
 # <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL oluşturma
 Bu konu başlığı altında SQL oluşturma nasıl meydana gösterir [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Aşağıdaki varlık SQL sorgusunu örnek sağlayıcısında modeli kullanır:  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>SQL üretimi ilk aşaması: ifade ağacı ziyaret edin  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Birinci aşama SQL oluşturma: İfade ağacı ziyaret edin  
  Aşağıdaki şekil, ziyaretçi ilk boş durumunu gösterir.  Bu konu başlığı altında yaptığımız, yalnızca ilgili izlenecek yol açıklama özellikleri gösterilmektedir.  
   
  ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL üretimi ikinci aşaması: dize komutu oluşturma  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>İkinci aşama SQL oluşturma: STRING komutu oluşturma  
  İkinci aşama simgelerinin gerçek adlarını oluşturur ve yalnızca bir çakışma çözülmesi gerekir, bu durumda olduğu gibi "OrderID" adlı sütunlar temsil eden simgeler odaklanıyoruz. Bunlar SqlSelectStatement vurgulanır. Yalnızca yeni adlara bu şekilde temsil eden değil farklı örnekleri, bunlar vurgulamak için şekilde kullanılan sonekleri olduğunu unutmayın. Aşama son adlarıyla (büyük olasılıkla farklı özgün adlarını form) henüz atanmadı.  
   
  Yeniden adlandırılacak gereken ilk simge bulunamadı < symbol_OrderID > olduğu. Yeni adıyla "OrderID1" atanmış, 1, sembol yeniden adlandırma gerek değil olarak işaretlenir ve son soneki "OrderID" için kullanılan olarak işaretlenmiş. Ardından, < symbol_OrderID_2 > ilk kullanımını bulunur. Sonraki kullanılabilir soneki ("OrderID2") kullanan olarak yeniden adlandırıldı ve böylece kullanıldığı bir sonraki açışınızda, yeniden adlandırılmaz yeniden yeniden adlandırma, kalmamanız olarak işaretlenmiş. Bu çok < symbol_OrderID_3 > için gerçekleştirilir.  

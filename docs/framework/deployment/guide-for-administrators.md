@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129824"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -26,7 +26,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
  [Dağıtım işlemi](#the_deployment_process)  
  [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)  
- [Bir koleksiyon oluşturun](#creating_a_collection)  
+ [Koleksiyon oluşturma](#creating_a_collection)  
  [Bir paket ve program oluşturma](#creating_a_package)  
  [Bir dağıtım noktası seçin](#select_dist_point)  
  [Paketi dağıtma](#deploying_package)  
@@ -114,9 +114,9 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
     2.  **Komut satırı:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (komut satırı seçenekleri açıklanmıştır tabloda Bu adımlardan sonra)  
   
-    3.  **Çalıştır:** seçin **gizli**.  
+    3.  **Çalıştırın:** Seçin **gizli**.  
   
-    4.  **Program çalışabilir:** program, kullanıcının oturum açmış bağımsız olarak çalışabileceğini belirten seçeneği seçin.  
+    4.  **Program çalışabilir:** Program, kullanıcının oturum açmış bağımsız olarak çalışabileceğini belirten seçeneği seçin.  
   
 8.  Üzerinde **gereksinimleri** sayfasında **sonraki** varsayılan değerleri kabul edin ve ardından Sihirbazı tamamlayın.  
   
@@ -177,7 +177,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 9. Üzerinde **kullanıcı deneyimi** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   
 > [!WARNING]
-> Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: zamanlama sekmesi](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+> Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: Zamanla sekmesinde](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Üzerinde **dağıtım noktaları** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   

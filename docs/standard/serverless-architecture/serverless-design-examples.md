@@ -4,12 +4,12 @@ description: Sunucusuz mimarileri, zamanlama ve olay-tabanlı işleme dosya Teti
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146718"
 ---
 # <a name="serverless-design-examples"></a>Sunucusuz tasarım örnekleri
 
@@ -63,7 +63,7 @@ Sunucusuz İşlevler, veri işlem hattı kolaylaştırmak için kullanılabilir.
 
 ![Sunucusuz bir veri işlem hattı](./media/serverless-data-pipeline.png)
 
-## <a name="stream-processing"></a>Stream işleme
+## <a name="stream-processing"></a>Akış işleme
 
 Genellikle cihazlardan ve sensörlerden işlenmesi gereken veri akışlarını gerçek zamanlı olarak oluşturur. Birçok iletileri ve akışlardan yakalayabilirsiniz teknolojilerinin [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) ve [IOT hub'ı](https://docs.microsoft.com/azure/iot-hub) için [Service Bus](/service-bus). Aktarım bağımsız olarak, gelen veri akışları ve iletileri işlemeyi bir ideal sunucusuz mekanizmadır. Sunucusuz, büyük hacimli verileri talebi karşılamak için hızla ölçeklendirebilirsiniz. Sunucusuz kod, eylem ve analiz için yapılandırılmış bir biçimde çıkış ve verileri ayrıştırmak için iş mantığını uygulayabilirsiniz.
 
@@ -77,17 +77,17 @@ Bir API ağ geçidi, istemciler için tek bir giriş noktası sağlar ve istekle
 
 ## <a name="recommended-resources"></a>Önerilen kaynaklar
 
-* [Azure olay ızgarası](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IOT hub'ı](https://docs.microsoft.com/azure/iot-hub)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 * [Dağıtılmış veri yönetimi için sorunlar ve çözümler](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)
 * [Mikro hizmetler tasarlama: mikro hizmet sınırlarını tanımlama](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Olay hub'ları](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
 * [Olay kaynağını belirleme düzeni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 * [Devre Kesici desenini uygulama](../microservices-architecture/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IOT hub'ı](https://docs.microsoft.com/azure/iot-hub)
-* [Hizmet veri yolu](https://docs.microsoft.com/azure/service-bus)
+* [IoT Hub’ı](https://docs.microsoft.com/azure/iot-hub)
+* [Service Bus](https://docs.microsoft.com/azure/service-bus)
 * [Azure Cosmos DB'de destek akış değişiklik ile çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[Önceki](serverless-architecture-considerations.md)
-[İleri](azure-serverless-platform.md)
+>[Önceki](serverless-architecture-considerations.md)
+>[İleri](azure-serverless-platform.md)

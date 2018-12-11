@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 03e08d757917b5ff658e9d4dd282a096c8dd23d5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296785"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147502"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
 
@@ -37,7 +37,7 @@ Bunu başka bir kılavuz DÜZ ayrıntılı olarak ele alır. Bu nedenle, bu kıl
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **KATI: Temel OOP ilkeleri** \
+- **DÜZ: Temel OOP ilkeleri** \
   [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 - **Tersine çevirme denetimi kapsayıcıları ve bağımlılık ekleme deseni** \
@@ -47,5 +47,5 @@ Bunu başka bir kılavuz DÜZ ayrıntılı olarak ele alır. Bu nedenle, bu kıl
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 >[!div class="step-by-step"]
-[Önceki](nosql-database-persistence-infrastructure.md)
-[İleri](microservice-application-layer-implementation-web-api.md)
+>[Önceki](nosql-database-persistence-infrastructure.md)
+>[İleri](microservice-application-layer-implementation-web-api.md)

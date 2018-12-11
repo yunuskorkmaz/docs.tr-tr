@@ -1,15 +1,16 @@
 ---
-title: Veri Dönüşümleri
+title: ML.NET içinde veri dönüşümleri
 description: ML.NET içinde desteklenen farklı veri dönüşümleri keşfedin.
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143954"
 ---
-# <a name="data-transforms"></a>Veri Dönüşümleri
+# <a name="data-transforms-in-mlnet"></a>ML.NET içinde veri dönüşümleri
 
 Aşağıdaki tablolarda tüm ML.NET (seçim verileri karşılık gelen tabloya gitmek için tür dönüştürme) desteklenen veri dönüşümleri hakkında bilgiler içerir:
 
@@ -88,7 +89,7 @@ Aşağıdaki tablolarda tüm ML.NET (seçim verileri karşılık gelen tabloya g
 | <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | Sütunları, yalnızca gerektiğinde Normalleştir. |
 | <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | Giriş değerleri üzerinde bir genel Karşıtlık normalleştirme gerçekleştirir: Y = (s * X - M) / D, s, Ölçek olduğu M ortalama ve D L2 norm ya da standart sapma. | 
 | <xref:Microsoft.ML.Legacy.Transforms.LogMeanVarianceNormalizer> | Hesaplanan ortalama ve veri logaritmasını varyansını göre veri normalleştirir. |
-| <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | Vektör (satırlar) (L2, L1 veya LInf) birim norm ölçeklendirme tarafından ayrı ayrı Normalleştir. Bir vektör X: Y aşağıdaki işlemi gerçekleştirir (X - M) = / D, M Burada, ortalama ve D L2 norm, L1 norm veya LInf norm. |
+| <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | Vektör (satırlar) (L2, L1 veya LInf) birim norm ölçeklendirme tarafından ayrı ayrı Normalleştir. Bir vektör X: aşağıdaki işlemi gerçekleştirir Y (X - M) = / D, M Burada, ortalama ve D L2 norm, L1 norm veya LInf norm. |
 | <xref:Microsoft.ML.Legacy.Transforms.MeanVarianceNormalizer> | Hesaplanan ortalama ve varyans verilerin göre veri normalleştirir. |
 | <xref:Microsoft.ML.Legacy.Transforms.MinMaxNormalizer> | Gözlemlenen minimum ve maksimum değerleri veri verileri normalleştirir. |
 

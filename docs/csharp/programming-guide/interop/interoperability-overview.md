@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208802"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150043"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -21,7 +21,7 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
 ## <a name="platform-invoke"></a>Platform çağırma  
  *Platform Çağırma* sağlar dinamik bağlantı kitaplıklarını (DLL'ler) olarak uygulanır, yönetilmeyen işlevleri çağırmak için kod bu Microsoft Win32 API gibi yönetilen bir hizmettir. Dışarı aktarılan bir işlevi çağırır bulur ve bağımsız değişkenlerinden (tamsayı, dizeler, diziler, yapılar ve benzeri) gerektiği gibi birlikte çalışabilirlik sınırında sürekliliğe devreder.  
   
- Daha fazla bilgi için [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md) ve [nasıl yapılır: kullanım Wave dosyasını oynatmak için Platform Çağırma](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ Daha fazla bilgi için [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md) ve [nasıl yapılır: Wave dosyasını oynatmak için Platform çağırma kullanma](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
 >  [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. Dışında CLR yönetilmeyen kod çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle güvenlik riski oluşturur. Örneğin, yönetilmeyen kod yönetilmeyen kodda doğrudan CLR güvenlik mekanizmaları atlayarak kaynakları çağırabilirsiniz. Daha fazla bilgi için [.NET içinde güvenlik](../../../standard/security/index.md).  
@@ -59,8 +59,8 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
   
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Birlikte çalışma performansı iyileştirme](https://msdn.microsoft.com/library/ms998551.aspx)  
-- [COM ve .NET arasında birlikte çalışabilirlik giriş](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Birlikte çalışma performansı iyileştirme](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
+- [COM ve .NET arasında birlikte çalışabilirlik giriş](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
 - [Visual Basic'teki COM birlikte çalışma'ya giriş](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
 - [Yönetilen ve yönetilmeyen kod sıralama](../../../../docs/framework/interop/interop-marshaling.md)  
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)  

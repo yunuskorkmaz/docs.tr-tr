@@ -5,12 +5,12 @@ description: Windows 8'de .NET Framework'ü yüklemek hakkında bilgi edinin
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ffb05ea480775a2e284e76b5ff72cc70c5a4f977
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196550"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155057"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 ve Windows Server 2012'de .NET Framework yükleme
 
@@ -23,7 +23,7 @@ Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımc�
 ## <a name="net-framework-472"></a>.NET framework 4.7.2
 
 > [!div class="button"]
-[.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 .NET Framework 4.7.2 Windows Server 2012'de desteklenir. Windows 8'de desteklenmiyor.
 

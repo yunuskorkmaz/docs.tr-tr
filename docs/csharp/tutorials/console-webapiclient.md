@@ -4,11 +4,11 @@ description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126648"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -158,7 +158,7 @@ namespace WebAPIClient
 }
 ``` 
 
-Yukarıdaki kod, 'repo.cs' adlı yeni bir dosya içinde yerleştirin. Bu sürüm sınıfının, JSON verilerini işlemek için en basit yolu temsil eder. Sınıf adı ve üye adı yerine aşağıdaki C# kuralları JSON Pakette kullanılan adları aynı. Bazı configuration öznitelikleri daha sonra sağlayarak çözeceksiniz. Bu sınıf, JSON seri hale getirme ve seri durumundan çıkarma başka bir önemli özelliği gösterir: JSON paketteki tüm alanlar bu sınıf bir parçasıdır.
+Yukarıdaki kod, 'repo.cs' adlı yeni bir dosya içinde yerleştirin. Bu sürüm sınıfının, JSON verilerini işlemek için en basit yolu temsil eder. Sınıf adı ve üye adı yerine aşağıdaki C# kuralları JSON Pakette kullanılan adları aynı. Bazı configuration öznitelikleri daha sonra sağlayarak çözeceksiniz. Bu sınıf, JSON seri hale getirme ve seri durumundan çıkarma başka bir önemli özelliği gösterilmektedir: JSON paketteki tüm alanlar, bu sınıfın bir parçasıdır.
 JSON serileştirici kullanılan sınıf türü içinde yer almayan bilgi yoksayar.
 Bu özellik, yalnızca bir alt kümesi ile JSON paket alanlarda çalışan türleri oluşturmak kolaylaştırır.
 

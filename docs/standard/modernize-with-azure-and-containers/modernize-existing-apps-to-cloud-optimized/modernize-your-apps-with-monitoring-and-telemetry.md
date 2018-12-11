@@ -1,39 +1,39 @@
 ---
-title: Uygulamalarınızı izleme ve telemetri ile modernize
-description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize | Uygulamalarınızı izleme ve telemetri ile modernize
+title: İzleme ve telemetri ile uygulamalarınızı modernleştirin
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İzleme ve telemetri ile uygulamalarınızı modernleştirin
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8f5f9bfebf46db7b98bedc4b5b8204d23357c72e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958232"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147482"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Uygulamalarınızı izleme ve telemetri ile modernize
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirin
 
-Üretimde bir uygulamayı çalıştırdığınızda, uygulamanızın nasıl gerçekleştirme hakkında Öngörüler olması önemlidir. Yüksek bir düzeyde çalışıyor? Kullanıcıların hatalarla karşılaşıyor ya da uygulama kararlı ve güvenilir? Zengin performans izleme, güçlü uyarı ve uygulamanızı kullanılabilir ve beklendiği gibi gerçekleştirme olmasına yardımcı olmak için panolar gerekir. Ayrıca, hızlı bir şekilde bir sorun olup olmadığını, kaç tane müşteriler etkilenir ve bulmak ve sorunu düzeltmek için kök neden analizi yapmak belirlemek mümkün olması gerekir.
+Üretim ortamında bir uygulamayı çalıştırdığınızda, uygulamanızın performansıyla ilgili içgörüler olması önemlidir. Bu, yüksek bir düzeyde çalışıyor mu? Kullanıcılar hataları alıyorsanız veya düzenli ve güvenilir uygulamasıdır? Zengin performans izleme, güçlü uyarı ve uygulamanızın kullanılabilir ve beklendiği gibi olduğunu sağlamak için panolar ihtiyacınız var. Ayrıca, hızlı bir şekilde bir sorun olup olmadığını görmek için kaç müşterinin etkilendiğini ve bulmak ve sorunu düzeltmek için bir kök neden analizi gerçekleştirmek belirlemek mümkün olması gerekir.
 
 ## <a name="monitor-your-application-with-application-insights"></a>Uygulamanızı Application Insights ile izleme
 
-Application Insights kuran genişletilebilir bir uygulama performansı Yönetimi (APM) hizmetini birden çok platformda çalışan web geliştiricileri için olur. Canlı web uygulamanızı izlemek için kullanın. Application Insights, performans anormalliklerini otomatik olarak algılar. Sorunları tanılamanıza yardımcı ve kullanıcıların gerçekte uygulamanızla ne anlamanıza yardımcı olması için güçlü analytics araçlar içerir. Application Insights sürekli performansını ve kullanımını geliştirmemize yardımcı olmak için tasarlanmıştır. Uygulamalar için çok çeşitli platformlar, .NET, Node.js ve J2EE, olup olmadığı gibi üzerinde çalışır şirket içi barındırılan veya bulutta. Application Insights DevOps işlemlerinizi ile tümleşir ve geliştirme araçları, çeşitli bağlantı noktalarına sahiptir.
+Application Insights, birden çok platformda çalışan web geliştiricilerine yönelik kapsamlı bir uygulama performans yönetimi (APM) hizmetidir. Bunu, canlı web uygulamanızı izlemek için kullanabilirsiniz. Application Insights performans anormalliklerini otomatik olarak algılar. Bu sorunları tanılamanıza yardımcı olmak ve ne kullanıcıların uygulamanızla aslında yaptığını anlamanıza yardımcı olacak güçlü analiz araçları içerir. Application Insights, performansı ve kullanılabilirliği sürekli geliştirmenize yardımcı olmak için tasarlanmıştır. Uygulamalar için çok çeşitli platformlarda, .NET, Node.js ve J2EE, dahil, üzerinde çalıştığı şirket içinde barındırılan veya bulutta. Application Insights, DevOps süreçlerinizin ile tümleşir ve geliştirme araçları çeşitli bağlantı noktaları vardır.
 
-Şekil 4-10 Application Insights uygulamanızı nasıl izler ve nasıl bir Pano bu Öngörüler kontrollerinden örneği gösterir.
+Şekil 4-10 nasıl Application Insights uygulamanızı izler ve nasıl bir panoya içgörüleri yüzeyler örneği gösterilmektedir.
 
 ![Application Insights izleme Panosu](./media/image10.png)
 
 > **Şekil 4-10.** Application Insights izleme Panosu
 
-## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Günlük analizi ve kapsayıcı izleme çözümünün ile Docker altyapısını izleme
+## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Log Analytics ve kapsayıcı izleme çözümü ile Docker altyapısını izleme
 
-[Azure günlük analizi](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) parçası olan [izleme çözümüne genel Microsoft Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Bu bir ayrıca bir hizmet olduğundan [Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Günlük analizi bulut izler ve ortamları (OMS şirket içi için) kullanılabilirlik ve performans sağlanmasına yardımcı olmak için şirket içi. Bulut ve şirket içi ortamları ve analiz arasında birden çok kaynak sağlamak için diğer İzleme Araçları'ndan kaynaklar tarafından oluşturulan veri toplar.
+[Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) parçasıdır [izleme çözümü genel Microsoft Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Ayrıca bir hizmetin içinde bulunduğu [Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics bulut izler ve ortamları (OMS şirket içi) kullanılabilirliğini ve performansını sağlamak için şirket içinde. Birden fazla kaynak arasında analiz sağlamak üzere bulut ve şirket içi ortamlarınızdaki kaynaklar ile diğer izleme araçları tarafından oluşturulan verileri toplar.
 
-Azure altyapı günlükleri ile ilgili olarak, günlük analizi, bir Azure hizmeti diğer Azure hizmetleriyle günlük ve ölçüm verilerini alır (aracılığıyla [Azure İzleyici](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), Azure Vm'leri, Docker kapsayıcıları ve şirket içi veya diğer bulut altyapıları. Günlük analizi esnek günlük arama ve çıkış-yepyeni analytics bu veriler üzerinde sunar. Bu veri kaynakları genelinde çözümlemek için kullanabileceğiniz, karmaşık sorgular tüm günlükleri sağlar ve önceden uyarabilir zengin araçları belirtilen koşullara göre sağlar. Özel veri deposunda burada sorgulamak ve bu görselleştirme Merkezi günlük analizi, hatta toplayabilirsiniz. Ayrıca, hemen güvenlik Öngörüler elde etmek için günlük analizi yerleşik çözümleri avantajlarından ve altyapınızı işlevselliğini alabilir.
+Azure altyapı günlükleri ile ilgili olarak, bir Azure hizmeti olduğundan Log Analytics, diğer Azure Hizmetleri'den günlük ve ölçüm verilerini alır. (aracılığıyla [Azure İzleyici](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), Azure Vm'leri, Docker kapsayıcıları ve şirket içinde veya diğer bulut altyapıları. Log Analytics, esnek bir günlük araması ve bu veriler üzerinde analiz out-hazır sunar. Bu, veri kaynaklarında analiz etmek için kullanabileceğiniz, tüm günlükleri arasında karmaşık sorgular sağlar ve proaktif olarak uyarabilir zengin Araçlar belirli koşullara göre sağlar. Hatta, sorgu ve bunları görselleştirmek merkezi Log Analytics deposunda, özel veri toplayabilir. Hemen güvenliği hakkında Öngörüler elde etmek için Log Analytics yerleşik çözümleri avantajlarından ve altyapınızı işlevselliğini da yararlanabilirsiniz.
 
-Günlük analizi OMS portalı veya herhangi bir tarayıcısında çalıştırmak, Azure portalı erişmek ve, yapılandırma ayarlarını erişimi olan ve birden çok araç çözümlemek ve toplanan verilerde işlem yapmak için sağlayın.
+OMS portalı veya tüm tarayıcılarda çalıştırmak, Azure portalı Log Analytics'e erişimi ve yapılandırma ayarlarını erişmenizi ve çok sayıda araç çözümlemek ve toplanan verilerde işlem yapmak için sağlayın.
 
-[Kapsayıcı izlemesi çözümü](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) günlük analizi yardımcı olur görüntüleyin ve Docker ve Windows kapsayıcı konaklarınızın tek bir konumda yönetin. Bir çözüm gösterilmektedir hangi kapsayıcılar olan çalışan, hangi kapsayıcı görüntü çalıştırdıkları ve kapsayıcıları çalıştırdığı. Kapsayıcılar ile kullanılan komutları dahil olmak üzere ayrıntılı denetim bilgileri görüntüleyebilirsiniz. Ayrıca, görüntüleme ve Uzaktan Docker ya da Windows ana bilgisayarları görüntülemek gerek kalmadan merkezi günlükleri, arama yaparak kapsayıcıları giderebilirsiniz. Bir ana bilgisayar üzerindeki gürültülü ve alan üst limiti aşan kaynakları olabilir kapsayıcıları bulabilirsiniz. Ayrıca, merkezi CPU, bellek, depolama ve ağ kullanımını ve kapsayıcıları için performans bilgileri görüntüleyebilirsiniz. Windows çalıştıran bilgisayarlarda, merkezileştirme ve Windows Server günlüklerinden karşılaştırmak Hyper-V ve Docker kapsayıcıları. Aşağıdaki kapsayıcı orchestrators çözümünü destekler:
+[Kapsayıcı izleme çözümü](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) Log Analytics yardımcı olarak görüntüleyin ve Docker ve Windows kapsayıcı konaklarınız tek bir konumda yönetin. Çözüm gösterir hangi kapsayıcıları çalıştırmak, hangi kapsayıcı görüntüsü ister çalışıyor ve kapsayıcıları çalıştığı. Kapsayıcılar ile kullanılan komutları dahil olmak üzere ayrıntılı denetim bilgileri görüntüleyebilirsiniz. Kapsayıcılar, Docker veya Windows konak uzaktan görüntülemeye gerek kalmadan merkezi günlükleri, arama ve görüntüleme de giderebilirsiniz. Bir konakta gürültülü ve alıcı aşırı kaynakları olabilecek kapsayıcıları bulabilirsiniz. Ayrıca, merkezileştirilmiş CPU, bellek, depolama ve ağ kullanımını ve kapsayıcılar için performans bilgilerini görüntüleyebilirsiniz. Windows çalıştıran bilgisayarlarda, merkezileştirme ve Windows Server günlüklerinden karşılaştırın Hyper-V ve Docker kapsayıcıları. Çözüm, aşağıdaki kapsayıcı düzenleyicileri destekler:
 
 -   Docker Swarm
 
@@ -45,29 +45,29 @@ Günlük analizi OMS portalı veya herhangi bir tarayıcısında çalıştırmak
 
 -   Red Hat OpenShift
 
-Şekil 4-11 çeşitli kapsayıcı konakları ve aracıları ve OMS arasındaki ilişkileri gösterir.
+Şekil 4-11 çeşitli kapsayıcı konakları ve aracıları ve OMS arasındaki ilişkiler gösterilmektedir.
 
-![Günlük analizi kapsayıcı izlemesi çözümü](./media/image11.png)
+![Log Analytics kapsayıcı izleme çözümü](./media/image11.png)
 
-> **Şekil 4-11.** Günlük analizi kapsayıcı izlemesi çözümü
+> **Şekil 4-11.** Log Analytics kapsayıcı izleme çözümü
 
-Günlük analizi kapsayıcı izleme çözümü kullanabilirsiniz:
+Log Analytics kapsayıcı izleme çözümü kullanabilirsiniz:
 
--   Konaklarda kapsayıcı tek bir konum hakkında bilgi bakın.
+-   Tek bir konumda tüm kapsayıcı konakları hakkında bilgi.
 
--   Hangi kapsayıcıları olduğunu biliyorsanız, hangi görüntü çalıştırdıkları çalıştırıp nerede çalışıyor.
+-   Kapsayıcıları olduğunuzu çalıştırmak, hangi görüntüyü çalıştırdıkları ve bunların nereye çalıştırdığınızdan.
 
--   Eylemler için bir denetim izi kapsayıcılarında bakın.
+-   Eylemler için bir denetim kaydı kapsayıcılarında bakın.
 
--   Görüntüleme ve Docker ana bilgisayarları için uzaktan oturum açma olmadan merkezi günlükleri arama yaparak sorunlarını giderin.
+-   Docker ana bilgisayarları için uzaktan oturum açma olmadan Merkezi günlük arama ve görüntüleme sorunlarını giderin.
 
--   "Gürültülü komşu" olabilir ve bir ana bilgisayar üzerindeki fazla kaynak tüketmeye kapsayıcıları bulun.
+-   "Gürültülü komşu" olabilir ve bir konak üzerinde aşırı kaynakları kullanan kapsayıcıları bulun.
 
--   Merkezi CPU, bellek, depolama ve ağ kullanımını ve kapsayıcıları için performans bilgilerini görüntüleyin.
+-   Merkezileştirilmiş CPU, bellek, depolama ve ağ kullanımını ve kapsayıcılar için performans bilgilerini görüntüleyin.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Microsoft Azure'da izleme genel bakış**
+-   **Microsoft Azure'da izlemeye genel bakış**
 
 [https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
 
@@ -75,11 +75,11 @@ Günlük analizi kapsayıcı izleme çözümü kullanabilirsiniz:
 
 [https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
--   **Günlük analizi nedir?**
+-   **Log Analytics nedir?**
 
 [https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
--   **Kapsayıcı izleme çözümüne günlük analizi**
+-   **Log analytics'te kapsayıcı izleme çözümü**
 
 [https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
@@ -91,10 +91,10 @@ Günlük analizi kapsayıcı izleme çözümü kullanabilirsiniz:
 
 [https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
 
--   **Service Fabric OMS ile Windows Server kapsayıcıları izleme**
+-   **Windows Server kapsayıcıları Service fabric'te OMS ile izleme**
 
 [https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
-[Önceki](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
-[sonraki](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Önceki](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+>[İleri](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

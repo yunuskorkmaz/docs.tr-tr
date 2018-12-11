@@ -1,5 +1,6 @@
 ---
 title: .NET içinde karakter kodlaması
+description: Karakter kodlama ve. NET'te kod çözme hakkında bilgi edinin.
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.custom: seodec18
+ms.openlocfilehash: 55eb1d713c25314877fffd8a683ce5a8d9516d92
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711763"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149932"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
@@ -60,11 +62,11 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 > [!NOTE]
 >  Unicode Standardı, desteklenen tüm betiklerde her karaktere bir kod noktası (bir sayı) ve bir ad atar. Örneğin "A" karakteri, U+0041 kod noktası ile ve "LATIN BÜYÜK HARF A" adıyla temsil edilir. Unicode Dönüştürme Biçimi (UTF) kodlamaları, bu kod noktasını bir veya daha fazla bayt dizisi olarak kodlamanın yollarını tanımlar. Bir Unicode kodlama düzeni, herhangi bir karakter kümesindeki karakterlerin tek bir kodlama içinde temsil edilmesini sağladığından, dünya çapında kullanılmaya hazır uygulama geliştirmeyi basitleştirir. Uygulama geliştiricilerin artık belirli bir dil veya yazı sistemi için karakter oluşturmakta kullanılan kodlama düzenini takip etmesine gerek yoktur ve veriler bozulmadan sistemler arasında uluslararası olarak paylaşılabilir.  
 >   
->  .NET Unicode standardı tarafından tanımlanan üç kodlamayı destekler: UTF-8, UTF-16 ve UTF-32. Daha fazla bilgi için bkz. konumundaki Unicode standardı [Unicode ana sayfa](https://www.unicode.org/).  
+>  .NET, Unicode standardı tarafından tanımlanan üç kodlamayı destekler: UTF-8, UTF-16 ve UTF-32. Daha fazla bilgi için bkz. konumundaki Unicode standardı [Unicode ana sayfa](https://www.unicode.org/).  
   
  Çağırarak .NET içinde kullanılabilir olan tüm Kodlamalar hakkında bilgi alabilirsiniz <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> yöntemi. .NET karakter kodlama sistemlerini aşağıdaki tabloda listelenen destekler.  
   
-|Kodlama|örneği|Açıklama|Avantajlar/dezavantajlar|  
+|Encoding|örneği|Açıklama|Avantajlar/dezavantajlar|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar.|Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta gibi protokoller ve haber grubu protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|  

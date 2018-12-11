@@ -3,12 +3,12 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: C# dilinin gelecek sürümünde 7 gelecek yeni özelliklere genel bakış edinin.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237390"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155294"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
@@ -22,7 +22,7 @@ C# 7.0 C# dili için yeni özellikler ekler:
 * [Desen Eşleştirme](#pattern-matching)
     - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
 * [`ref` yerel değerleri ve dönüşleri](#ref-locals-and-returns)
-    - Yöntem bağımsız değişkenleri ve yerel değişkenleri başvurular için başka bir depolama olabilir.
+    - Diğer depolama başvuruları yöntemi yerel değişkenleri ve dönüş değerleri olabilir.
 * [Yerel İşlevler](#local-functions)
     - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
 * [Daha fazla ifade gövdeli üyeler](#more-expression-bodied-members)
@@ -105,7 +105,7 @@ Her iki sol ve sağ tarafında atama alanların adlarını belirtebilirsiniz:
 
 Yukarıdaki satırı bir uyarı üretir `CS8123`, şeklinde ataması sağ tarafında adları `Alpha` ve `Beta` sol tarafındaki adlarıyla çakıştığından göz ardı edilir `First` ve `Second`.
 
-Yukarıdaki örnekler diziler bildirmek için temel söz dizimini gösterir. Diziler için dönüş türleri olarak faydalı `private` ve `internal` yöntemleri. Diziler sağlamak için birden çok ayrık değerler döndürülecek olan yöntemlerini basit bir söz dizimi: yazma iş kaydettiğiniz bir `class` veya `struct` döndürülen tür tanımlar. Yeni tür oluşturma için gerek yoktur.
+Yukarıdaki örnekler diziler bildirmek için temel söz dizimini gösterir. Diziler için dönüş türleri olarak faydalı `private` ve `internal` yöntemleri. Diziler, birden çok ayrı değer döndürmek bu yöntemleri için basit bir söz dizimi sağlar: Yazma iş kaydettiğiniz bir `class` veya `struct` döndürülen tür tanımlar. Yeni tür oluşturma için gerek yoktur.
 
 Daha verimli ve daha üretken bir tanımlama grubu oluşturuluyor.
 Bu, birden fazla değer taşıyan bir veri yapısını tanımlamak için daha basit ve basit bir söz dizimi olur. Aşağıdaki örnek yöntemi, bir tamsayı dizisinde bulunan minimum ve maksimum değerleri döndürür:
@@ -281,6 +281,8 @@ Ref yerel ayarlar ve ref değerleri kopyalama ya da birden çok kez başvurusunu
 
 Ekleme `ref` için dönüş değeri bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes). Var olan kod derlenir, ancak başvuru dönüş değeri atandığında kopyalanır. Çağıranlar, depolama alanı için dönüş değeri için güncelleştirilmesi gerekir bir `ref` dönüş başvuru olarak saklamak için yerel değişken.
 
+Daha fazla bilgi için [ref anahtar sözcüğü](../language-reference/keywords/ref.md) makalesi.
+
 ## <a name="local-functions"></a>Yerel İşlevler
 
 Sınıflar için birçok tasarım tek bir konumdan Aranan yöntemleri kapsar. Bu ek özel yöntemleri her yöntem, küçük ve odaklı tutun. Ancak, bunlar, bir sınıf ilk kez okurken anlamak zorlaştırabilir. Tek arama konumu bağlamı dışında bu yöntemlerin anlaşılması gerekir.
@@ -327,7 +329,7 @@ C# 6 sunulan [ifade gövdeli üyeler](csharp-6.md#expression-bodied-function-mem
 > [!NOTE]
 > Bu örnek bir sonlandırıcıya gerek yoktur, ancak sözdizimini göstermek için gösterilir. Yönetilmeyen kaynakları serbest bırakmak gerekli olmadıkça, sınıfta bir sonlandırıcı uygulamamalıdır. Kullanmayı da düşünmelisiniz <xref:System.Runtime.InteropServices.SafeHandle> yönetilmeyen kaynakları doğrudan yönetmek yerine sınıfı.
 
-İfade gövdeli üyeler için bu yeni konumlar, C# dili için önemli bir kilometre temsil eder: Bu özellikler, açık kaynaklı çalışma topluluk üyeleri tarafından uygulanan [Roslyn](https://github.com/dotnet/Roslyn) proje.
+İfade gövdeli üyeler için bu yeni konumlar için önemli bir kilometre temsil C# dil: Bu özellikler, açık kaynaklı çalışma topluluk üyeleri tarafından uygulanan [Roslyn](https://github.com/dotnet/Roslyn) proje.
 
 Bir ifade bodied üyesine bir yöntemi değiştirme bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
 

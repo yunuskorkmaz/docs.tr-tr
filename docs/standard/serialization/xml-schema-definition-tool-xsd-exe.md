@@ -2,12 +2,12 @@
 title: XML şema tanımı Aracı (XSD.exe'nin)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850869"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143941"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/o**[**utputdir**] **: *** dizini*|Çıktı dosyaları dizinini belirtir. Bu bağımsız değişken yalnızca bir kez görünebilir. Geçerli dizin varsayılandır.|  
+|**/o**[**utputdir**]**:**_dizini_|Çıktı dosyaları dizinini belirtir. Bu bağımsız değişken yalnızca bir kez görünebilir. Geçerli dizin varsayılandır.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/P [parametreleri]:** *file.xml*|Çeşitli işlem modları için seçenekler belirtilen .xml dosyasından okuyun. Kısa form ' / p:'. Daha fazla bilgi için aşağıdaki Açıklamalar bölümüne bakın.|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/e**[**uygu**] **: *** öğesi*|Öğe için kod oluşturmak için şema belirtir. Varsayılan olarak tüm öğeler yazılmalıdır. Bu bağımsız değişken birden çok kez belirtebilirsiniz.|  
+|**/e**[**uygu**]**:**_öğesi_|Öğe için kod oluşturmak için şema belirtir. Varsayılan olarak tüm öğeler yazılmalıdır. Bu bağımsız değişken birden çok kez belirtebilirsiniz.|  
 |**/enableDataBinding**|Uygular <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama etkinleştirmek için oluşturulan tüm türleri arabirimi. Kısa form `/edb`.|  
 |**/enableLinqDataSet**|(Kısa form: `/eld`.) Oluşturulan veri kümesi LINQ to DataSet kullanarak karşı sorgulanabilir belirtir. Bu seçenek /dataset seçeneği de belirtildiğinde kullanılır. Daha fazla bilgi için [LINQ to DataSet genel bakış](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) ve [yazılan veri kümelerini sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md). LINQ kullanma hakkında genel bilgi için bkz. [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**lanları**]|Alanları özellikleri yerine oluşturur. Varsayılan olarak, özellikleri üretilir.|  
-|**/l**[**dil**] **: *** dil*|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**] **: *** ad alanı*|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
+|**/l**[**dil**]**:**_dil_|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**]**:**_ad alanı_|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
 |**/nologo**|Başlık göstermez.|  
 |**/ ORDER**|Tüm parçacık üyeleri açık sipariş tanımlayıcılarını oluşturur.|  
 |**/o [ut]:** *directoryName*|Dosyalarında yerleştirmek için çıktı dizini belirtir. Geçerli dizin varsayılandır.|  
-|**/u**[**RI**] **: *** URI'si*|Öğeler için URI için kod oluşturmak için şema belirtir. Bu URI varsa, ile belirtilen tüm öğelere uygulanır `/element` seçeneği.|  
+|**/u**[**RI**]**:**_URI'si_|Öğeler için URI için kod oluşturmak için şema belirtir. Bu URI varsa, ile belirtilen tüm öğelere uygulanır `/element` seçeneği.|  
   
 ## <a name="dll-and-exe-file-options"></a>DLL ve EXE dosya seçenekleri  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/t**[**türü**] **: *** typename*|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. Varsa *typename* bir ad alanı belirtilen türle tüm türleri derlemesinde XSD.exe'nin eşleşme belirtmiyor. Varsa *typename* türü eşleşen bir ad alanı, yalnızca belirtir. Varsa *typename* bir yıldız işareti karakter ile sona erer (\*), aracı eşleştirir önceki dizesi ile başlayan tüm türleri \*. Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|  
+|**/t**[**türü**]**:**_typename_|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. Varsa *typename* bir ad alanı belirtilen türle tüm türleri derlemesinde XSD.exe'nin eşleşme belirtmiyor. Varsa *typename* türü eşleşen bir ad alanı, yalnızca belirtir. Varsa *typename* bir yıldız işareti karakter ile sona erer (\*), aracı eşleştirir önceki dizesi ile başlayan tüm türleri \*. Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tablo operasyonları XSD.exe'nin gerçekleştireceğini gösterir.  

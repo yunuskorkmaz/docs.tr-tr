@@ -2,27 +2,27 @@
 title: MacOS üzerinde .NET Core kullanmaya başlama
 description: Bu belge, Visual Studio Code'u kullanarak bir .NET Core çözümü oluşturmak için iş akışı ve adımları sağlar.
 author: bleroy
-ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.custom: seodec18
+ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170297"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core kullanmaya başlama
 
 Bu belge, macOS için .NET Core çözüm oluşturmak için iş akışı ve adımları sağlar. Projeleri, birim testleri oluşturma, hata ayıklama araçlarını kullanın ve aracılığıyla üçüncü taraf kitaplıklarını birleştirebilir öğrenin [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
-> Bu makalede [Visual Studio Code](http://code.visualstudio.com) macOS üzerinde.
+> Bu makalede [Visual Studio Code](https://code.visualstudio.com) macOS üzerinde.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/core). .NET Core SDK'sı, çalışma zamanı ve .NET Core framework en son sürümünü içerir.
 
-Yükleme [Visual Studio Code'u](http://code.visualstudio.com). Bu makalede Kurs sırasında Visual Studio Code, .NET Core geliştirme artıran uzantıları deneyimi de yükleyin.
+Yükleme [Visual Studio Code'u](https://code.visualstudio.com). Bu makalede Kurs sırasında Visual Studio Code, .NET Core geliştirme artıran uzantıları deneyimi de yükleyin.
 
 Visual Studio kodu açma ve basarak Visual Studio kodu C# uzantısı yükleme <kbd>F1</kbd> Visual Studio Code paletini açın. Tür **ext yükleme** uzantılarının listesini görmek için. C# uzantısı'nı seçin. Uzantıyı etkinleştirmek için Visual Studio Code'u yeniden başlatın. Daha fazla bilgi için [Visual Studio Code C# uzantısı belgeleri](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

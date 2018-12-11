@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404534"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125938"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
@@ -48,7 +48,7 @@ App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma get
 
 Azure App Service, çoğu web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile kolayca Azure App Service için var olan siteler, Web uygulamaları Galerisi'nden açık kaynaklı uygulama kullanma veya çerçevesi ve tercih ettiğiniz araçları kullanarak yeni bir site oluşturmak taşıyabilirsiniz. WebJobs özelliği, App Service web uygulamanıza işleme arka plan işinin eklemenizi kolaylaştırır.
 
-### <a name="azure-kubernetes-service"></a>Azure Kubernetes hizmeti
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
 Azure Kubernetes Service (AKS), barındırılan Kubernetes ortamınızı hızla ve kolayca kapsayıcı düzenleme uzmanlığı gerektirmeden kapsayıcıya alınmış uygulamaları dağıtmayı ve yönetmeyi yönetir. Sağlama, yükseltme ve uygulamalarınızı çevrimdışı duruma getirmeden kaynakları isteğe bağlı olarak ölçeklendirme Süren işlemlerin ve bakımın yükünü de kaldırır.
 
@@ -128,4 +128,4 @@ Uygulamanızın gereksinimlerini mimarisinin belirleyen unsurlar olmalıdır. Bi
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[Önceki](development-process-for-azure.md)
+>[Önceki](development-process-for-azure.md)
