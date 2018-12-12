@@ -1,24 +1,24 @@
 ---
 title: Birim testleri yazmak için en iyi uygulamalar
-description: Kod kalitesini ve esnekliği artırmaya birim testleri yazmak için en iyi uygulamaları öğrenin
+description: Bu sürücü kod kalite ve esneklik için .NET Core ve .NET Standard projelerine birim testleri yazmak için en iyi uygulamaları öğrenin.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 60baa533a8f4dc2fb715b813018f8f84000777d7
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169631"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240729"
 ---
-# <a name="unit-testing-best-practices"></a>Birim testi en iyi uygulamalar
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Birim testi .NET Core ve .NET Standard ile en iyi uygulamalar
 
-Tarafından [John Reese](http://reesespieces.io) performanstan özel ile [Roy Osherove](http://osherove.com/)
-
-Birim testleri yazma için çok sayıda avantaj vardır; belgeler, regresyonla sağlar ve iyi bir tasarım kolaylaştırmak yardımcı olurlar. Ancak, okuma ve kırılgan sabit bir birim testlerini kod tabanınız üzerinde düzensizliğe benzer zararlar verecektir.
+Birim testleri yazma için çok sayıda avantaj vardır; belgeler, regresyonla sağlar ve iyi bir tasarım kolaylaştırmak yardımcı olurlar. Ancak, okuma ve kırılgan sabit bir birim testlerini kod tabanınız üzerinde düzensizliğe benzer zararlar verecektir. Bu makalede, .NET Core ve .NET Standard projeleri için birim test tasarımı ile ilgili bazı en iyi uygulamaları açıklar.
 
 Bu kılavuzda, esnek ve kolay anlaşılır testlerinizi tutmak için birim testleri yazılırken bazı en iyi uygulamaları öğreneceksiniz.
+
+Tarafından [John Reese](http://reesespieces.io) performanstan özel ile [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Neden birim testi?
 

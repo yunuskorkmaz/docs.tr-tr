@@ -3,12 +3,12 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 2f0bd616a7af6e23a93e18240e30749ed7d1e32c
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 35d9cf89d8ba2ddb673554a76eb33ae59b178b42
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50201591"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245687"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
@@ -97,7 +97,7 @@ public struct Point3D
 {
     private static Point3D origin = new Point3D(0,0,0);
 
-    public ref readonly Point3D Origin => ref origin;
+    public static ref readonly Point3D Origin => ref origin;
 
     // other members removed for space
 }
@@ -124,7 +124,7 @@ Bu ayrıca, tasarım hedefi ifade etmek için tam bir kelime sağlar.
 Değer türleri Yöntem imzasında aşağıdaki değiştiriciler hiçbirini belirtmezseniz, çağrılan bir yönteme geçildiğinde kopyalanır. Bu değiştiriciler, her bir değişken kopyalama önleme başvuruyla geçirilir belirtir. Her değiştiricisi, farklı bir hedefi ifade eder:
 
 - `out`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkenin değerini ayarlar.
-- `ref`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkeninin değerini ayarlayabilirsiniz.
+- `ref`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkeninin değerini ayarlayabilir.
 - `in`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkeninin değerini değiştirmez.
 
 Ekleme `in` başvuruya göre bağımsız değişken geçirin ve gereksiz şekilde kopyalamama olanağı, başvuruya göre bağımsız değişkenleri geçirmek için tasarım amacınızla bildirmek üzere değiştiricisi. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmek istemediğiniz.
@@ -179,7 +179,7 @@ Bunun yerine, uzaklık hesaplama sabit yapısı kullanıyorsa `ReadonlyPoint3D`,
 
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
-Üyeleri çağırdığınızda derleyici, daha verimli kod oluşturur. bir `readonly struct`: `this` başvuru, alıcı bir kopyasını yerine, her zaman bir `in` parametresine geçirilen başvuruyla üye yöntemi. Bu iyileştirme kaydeder kullandığınızda kopyalama bir `readonly struct` olarak bir `in` bağımsız değişken.
+Üyeleri çağırdığınızda derleyici daha verimli kod oluşturur bir `readonly struct`: `this` Başvuru, alıcı bir kopyasını yerine, her zaman bir `in` parametresine geçirilen başvuruyla üye yöntemi. Bu iyileştirme kaydeder kullandığınızda kopyalama bir `readonly struct` olarak bir `in` bağımsız değişken.
 
 Kullanarak performans farklarını gösteren bir örnek program gördüğünüz [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) de bizim [örnekleri depomuzdan](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) GitHub üzerinde. Değere ve başvuruya göre değişmez bir yapı geçirme ile değere ve başvuruya göre değişebilir yapı geçirme ile karşılaştırır. Hızlı Başvuru ile geçişi ve sabit yapı kullanılır.
 
