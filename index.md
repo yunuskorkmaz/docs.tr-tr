@@ -6,12 +6,12 @@ title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127348"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240261"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127348"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>C# kullanmaya başlayın</h3>
+                                    <h3>C# öğrenme</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127348"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">C# öğrenme</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Başlarken</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# Turu</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">C# Yenilikleri</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# Dili Başvurusu</a></p>
                                             </div>
                                         </div>

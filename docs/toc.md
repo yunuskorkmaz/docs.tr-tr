@@ -256,7 +256,7 @@
 ## [C# Turu](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# Yenilikleri](csharp/whats-new/index.md)
+## C# yenilikleri
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -398,7 +398,7 @@
 #### [Yöntemler](fsharp/language-reference/members/methods.md)
 #### [Oluşturucular](fsharp/language-reference/members/constructors.md)
 #### [Olaylar](fsharp/language-reference/members/events.md)
-#### [Belirtik Alanlar: `val` Anahtar Sözcüğü](fsharp/language-reference/members/explicit-fields-the-val-keyword.md)
+#### [Açık Alanlar: `val` Anahtar Sözcüğü](fsharp/language-reference/members/explicit-fields-the-val-keyword.md)
 ### [Tür Uzantıları](fsharp/language-reference/type-extensions.md)
 ### [Parametreler ve Bağımsız Değişkenler](fsharp/language-reference/parameters-and-arguments.md)
 ### [İşleç Aşırı Yüklemesi](fsharp/language-reference/operator-overloading.md)
@@ -427,7 +427,7 @@
 ### [Kaynak Yönetimi: use Anahtar Sözcüğü](fsharp/language-reference/resource-management-the-use-keyword.md)
 ### [Ad Alanları](fsharp/language-reference/namespaces.md)
 ### [Modüller](fsharp/language-reference/modules.md)
-### [İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü](fsharp/language-reference/import-declarations-the-open-keyword.md)
+### [Önemli Bildirimler: open Anahtar Sözcüğü](fsharp/language-reference/import-declarations-the-open-keyword.md)
 ### [İmza Dosyaları](fsharp/language-reference/signature-files.md)
 ### [Ölçü Birimleri](fsharp/language-reference/units-of-measure.md)
 ### [XML Belgeleri](fsharp/language-reference/xml-documentation.md)
@@ -474,7 +474,7 @@
 #### [Kullanıcı Verilerine Erişme](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [Uygulama Formlarına Erişme](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [Uygulama Web Hizmetlerine Erişme](visual-basic/developing-apps/programming/accessing-application-web-services.md)
-##### [Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
+##### [Nasıl yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
 #### [Uygulama Ayarlarına Erişme](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [Sürücüleri, Dizinleri ve Dosyaları İşleme](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
@@ -490,10 +490,10 @@
 
 ### [Yazdırma ve Raporlama](visual-basic/developing-apps/printing/index.md)
 #### [PrintForm Bileşeni](visual-basic/developing-apps/printing/printform-component.md)
-#### [Nasıl Yapılır: Kaydırılabilir Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [Nasıl Yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [Nasıl Yapılır: Formun İstemci Alanını Yazdırma](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [Nasıl Yapılır: PrintForm Bileşenini Kullanarak Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
+#### [Nasıl yapılır: Kaydırılabilir Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+#### [Nasıl yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+#### [Nasıl yapılır: Formun İstemci Alanını Yazdırma](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+#### [Nasıl yapılır: PrintForm Bileşenini Kullanarak Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
 #### [PrintForm Denetimlerine Başvuruda Bulunan Uygulamaları Dağıtma](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [Visual Studio Uygulamalarına Yazdırılabilir Raporlar Ekleme](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
@@ -556,10 +556,10 @@
 ##### [Genişletme ve Daraltma Dönüştürmeleri](visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 ##### [Örtük ve Açık Dönüştürmeler](visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 ##### [Dizeler ve Diğer Türler Arasında Dönüştürmeler](visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-##### [Nasıl yapılır: Bir Nesneyi Başka Bir Türe Dönüştürme](visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+##### [Nasıl yapılır: Nesneyi Başka Bir Türe Dönüştürme](visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 ##### [Dizi Dönüştürmeler](visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 #### [Yapılar](visual-basic/programming-guide/language-features/data-types/structures.md)
-##### [Nasıl yapılır: Bir Yapıyı Bildirme](visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+##### [Nasıl yapılır: Yapıyı Bildirme](visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 ##### [Yapı Değişkenleri](visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 ##### [Yapılar ve Diğer Programlama Öğeleri](visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 ##### [Yapılar ve Sınıflar](visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
