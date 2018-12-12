@@ -2,12 +2,12 @@
 title: F#kod biçimlendirme yönergeleri
 description: Biçimlendirme kuralları bilgi F# kod.
 ms.date: 11/26/2018
-ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "43858011"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286552"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#kod biçimlendirme yönergeleri
 
@@ -343,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Aynı satırda ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek de ince olmakla birlikte kullanmanız gerektiğini unutmayın [ayrıntılı sözdizimi](../language-reference/verbose-syntax.md) üyelerini tanımlamak için ( `with` anahtar sözcüğü):
+Yeni bir satır ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek arabirim uygulamaları veya üyeleri kaydında bildiriyorsanız preferrable:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Kayıtları biçimlendirme
@@ -371,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Aynı satırda ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek da uygundur:
+Açılış yerleştirme belirteci yeni bir satıra içerikleri üzerinde bir kapsam sekmeli ve yeni bir satıra kapatma belirteci kullanıyorsanız preferrable:
+
+* Kod girintileme farklı kapsamlarla kayıtları dolaşma
+* Bir işleve öğesine ekleyerek sorgularınızı
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Bu kuralların listesi ve dizi öğeleri için geçerlidir.
 
 ## <a name="formatting-lists-and-arrays"></a>Biçimlendirme listeler ve diziler
 
-Yazma `x :: l` etrafındaki boşlukları ile `::` işleci (`::` dolayısıyla boşluklarla çevrili bir içtakı işleci) ve `[1; 2; 3]` (`;` dolayısıyla ardından bir boşluk, bir sınırlayıcıdır).
+Yazma `x :: l` etrafındaki boşlukları ile `::` işleci (`::` dolayısıyla boşluklarla çevrili bir içtakı işleci).
+
+Liste ve tek bir satıra bildirilen diziler boşlukla ayraç sonra ve kapatma köşeli ayraç önce sahip olmalıdır:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Her zaman en az bir alanı arasında iki farklı küme ayracı gibi işleçler kullanın. Örneğin, arasına boşluk bırakın bir `[` ve `{`.
 
@@ -414,18 +445,21 @@ Her zaman en az bir alanı arasında iki farklı küme ayracı gibi işleçler k
 Kayıtlar gibi listeler ve birden çok satırda bölme diziler benzer bir kural uygulayın:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+Ve kayıtlarla olduğu gibi açılış ve kapanış köşeli ayraçlar kendi satırında bildirme taşıma kodda gezinmeye ve İşlevler halinde yöneltme kolaylaştıracaktır.
 
 ## <a name="formatting-if-expressions"></a>Biçimlendirme IF ifadeleri
 

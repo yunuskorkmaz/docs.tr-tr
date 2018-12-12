@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183912"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286591"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -137,6 +137,9 @@ Ancak, önemli bir istisna vardır. Varsayılan (örneklenmemiş) değeri bir <x
 
 Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globalization.Calendar> .NET sınıflarda, bir takvim ve çoğu tarafından tanımlanan her dönemi desteklemez <xref:System.Globalization.Calendar> sınıfları yalnızca bir dönemi destekler. Yalnızca <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları birden çok dönemi destekler.
 
+> [!IMPORTANT]
+>  Yeni bir dönemde bir <xref:System.Globlalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Bkz: [.NET Japonca takviminde yeni bir dönemi işleme](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) daha fazla bilgi ve uygulamalarınızı etkilenip etkilenmediğini belirlemek için. Bkz: [uygulamanızı Japonca era değiştirmek için hazırlama](~/windows/uwp/design/globalizing/japanese-era-change) era değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi.
+
 ### <a name="eras-and-era-names"></a>Dönemler ve dönem adları
 
 . NET'te, belirli bir takvim uygulamasıyla desteklenen dönemleri gösteren tamsayılar ters sırada depolanır <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizisi. Geçerli dönem dizin ve içindir <xref:System.Globalization.Calendar> destekleyen birden çok dönemi, art arda gelen her dizin sınıfları önceki dönemi yansıtır. Statik <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> özelliği geçerli dönemin dizinini tanımlar <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizi; bir sabit değeri olan her zaman sıfır olan. Tek tek <xref:System.Globalization.Calendar> sınıfları da geçerli dönemin değerini döndüren statik alanlar içerir. Bunlar aşağıdaki tabloda listelenmiştir.
@@ -194,4 +197,4 @@ Bir tarih dize gösterimini geçerli takvimi olmayan bir takvimde açıklanır o
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Nasıl yapılır: Miladi olmayan takvimlerde tarihleri görüntüleme](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [Örnek: Takvim haftası yardımcı programı aralığı.](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Örnek: Takvim haftası aralığının yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

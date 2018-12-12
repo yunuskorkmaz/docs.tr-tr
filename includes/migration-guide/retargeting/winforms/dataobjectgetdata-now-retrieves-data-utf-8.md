@@ -6,6 +6,6 @@
 |Öneri|HTML biçimli dizeler kodlama sorun için geçici bir çözüm uygulanan varsa (örneğin, bir HTML dizesi açıkça kodlayarak alınan panodan aktararak <xref:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)?displayProperty=name>) ve uygulamanız için 4 4.5 sürümünden yeniden hedefleme, geçici çözüm kaldırılması gerekir. Eski davranışı herhangi bir nedenden dolayı gerekirse, uygulama bu davranışı sağlamak için .NET Framework 4.0 hedefleyebilirsiniz.|
 |Kapsam|Kenar|
 |Sürüm|4.5.2|
-|Tür|Yeniden hedefleme|
-|Etkilenen API'leri|<ul><li><xref:System.Windows.DataObject.GetData(System.String)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.Type)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
+|Tür|Yeniden Hedefleme|
+|Etkilenen API’ler|<ul><li><xref:System.Windows.DataObject.GetData(System.String)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.Type)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
 
