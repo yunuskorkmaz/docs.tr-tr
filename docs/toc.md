@@ -128,7 +128,6 @@
 ### [Birim testi yayımlanmış çıktısı](core/testing/unit-testing-published-output.md)
 ### [Visual Studio ile .NET Core projelerinde canlı birim testi](/visualstudio/test/live-unit-testing-start)
 ## [Sürüm Oluşturma](core/versions/index.md)
-### [.NET Core sürüm geçmişi](core/versions/version-history.md)
 ### [.NET Core sürüm seçimi](core/versions/selection.md)
 ### [Eski çalışma zamanlarını ve SDK’ları kaldırma](core/versions/remove-runtime-sdk-versions.md)
 ## [Çalışma Zamanı Tanımlayıcı kataloğu](core/rid-catalog.md)
