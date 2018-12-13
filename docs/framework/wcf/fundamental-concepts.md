@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503620"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286565"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir görünümünü sağlar. Temel kavramları ve bunların birbirine nasıl uyduğunu açıklamak için tasarlanmıştır. Basit bir WCF hizmeti ve istemci sürümü oluşturmaya ilişkin öğretici için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). WCF programlama bilgi edinmek için [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -48,14 +48,14 @@ Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir gö
 ## <a name="wcf-terms"></a>WCF koşulları  
  Diğer kavramlar ve terimler için WCF belgelerinde kullanılan aşağıda verilmiştir.  
   
- iletisi  
+  iletisi  
  Gövde ve üst bilgiler dahil olmak üzere birkaç bölümden oluşabilir veri müstakil birimi.  
   
  hizmet  
  Bir veya daha fazla uç noktaları, bir veya daha fazla hizmet işlemleri ifşa eden her bir uç noktasıyla sunan bir yapısı.  
   
  uç noktası  
- Bir yapı hangi iletileri gönderilen veya alınan (ya da her ikisi de). Bu nerede iletileri, ileti gönderilmesi gerektiğini nasıl, açıklanan iletişim mekanizması (bağlama) belirtimi gönderilebilir tanımlayan bir konum (adres) ve bir dizi gönderilen veya alınan ileti için bir tanım (veya her ikisi) oluşur hangi ileti gönderilebilir açıklar (bir hizmet sözleşmesini) konumu.  
+ Bir yapı hangi iletileri gönderilen veya alınan (ya da her ikisi de). Bu nerede iletileri, ileti gönderilmesi gerektiğini nasıl, açıklar iletişim mekanizması (bağlama) belirtimi gönderilebilir tanımlayan bir konum (adres) ve bir dizi gönderilen veya alınan ileti için bir tanım (veya her ikisi) oluşur hangi ileti gönderilebilir açıklar (bir hizmet sözleşmesini) konumu.  
   
  Bir WCF Hizmeti uç noktaları koleksiyonu olarak tüm dünyada kullanıma sunulur.  
   
