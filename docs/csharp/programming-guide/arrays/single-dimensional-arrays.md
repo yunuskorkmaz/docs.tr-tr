@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334762"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -27,7 +27,7 @@ Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bil
   
 ## <a name="array-initialization"></a>Dizi başlatma
 
- Bildirimi, bağlı bir diziyi başlatmaya mümkündür, bu durumda sıra belirticisi gerekli değil çünkü zaten başlatma listedeki öğelerin sayısı tarafından sağlanır. Örneğin:  
+ Bildirimi, bağlı bir diziyi başlatmaya mümkündür, bu durumda uzunluğu tanımlayıcısı gerekli değildir çünkü zaten başlatma listedeki öğelerin sayısı tarafından sağlanır. Örneğin:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   

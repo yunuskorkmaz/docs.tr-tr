@@ -4,18 +4,18 @@ description: Bu makalede çalışma zamanı ve .NET Core SDK'sı sürümü (benz
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334814"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core nasıl tutulan genel bakış
 
 .NET core, .NET Core çalışma zamanı ve .NET Core uygulamaları geliştirmek için ihtiyacınız olan araçları içeren SDK, ifade eder. .NET core SDK'ları, .NET Core çalışma zamanı'nın önceki bir sürümüyle çalışacak şekilde tasarlanmıştır. Bu makalede, çalışma zamanını ve SDK sürüm stratejisi açıklanmaktadır. .NET Standard için sürüm numaraları açıklaması ile tanışın makalede bulunabilir [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
-.NET Core çalışma zamanı ve .NET Core SDK'sı, farklı bir fiyat karşılığında yeni özellikler eklemek - genel araçları daha fazla .NET Core çalışma zamanı, üretimde kullandığınız çalışma zamanı değişiklikleri daha hızlı bir şekilde güncelleştirilmiş .NET Core SDK'sı sağlar. Ne yazık ki bu sorun son birkaç yılda birkaç sürüm stratejilerine sonuçlandı. Üzerinde makaledeki geçmişi hakkında bilgi edinebilirsiniz [.NET Core sürüm](version-history.md).
+.NET Core çalışma zamanı ve .NET Core SDK'sı, farklı bir fiyat karşılığında yeni özellikler eklemek - genel araçları daha fazla .NET Core çalışma zamanı, üretimde kullandığınız çalışma zamanı değişiklikleri daha hızlı bir şekilde güncelleştirilmiş .NET Core SDK'sı sağlar.
 
 ## <a name="versioning-details"></a>Sürüm oluşturma ayrıntıları
 
@@ -32,7 +32,7 @@ SDK sürüm numarasının üçüncü konumu hem küçük iletişim kurar ve düz
 | Çalışma zamanını ve SDK'sı düzeltme eki | 2.2.1             | 2.2.102           |
 | SDK'sı özelliği değiştirme    | 2.2.1             | 2.2.200           |
 
-(\*) Bu grafik gelecekteki 2.2 kullanan .NET Core çalışma zamanı örnek olarak bir geçmiş yapıt ilk SDK'sı için .NET Core 2.1 anlamına geldiğinden 2.1.300 olduğu. Daha fazla bilgi için [.NET Core sürümü oluşturma geçmişine](version-history.md).
+(\*) Bu grafik gelecekteki 2.2 kullanan .NET Core çalışma zamanı örnek olarak bir geçmiş yapıt ilk SDK'sı için .NET Core 2.1 anlamına geldiğinden 2.1.300 olduğu. Daha fazla bilgi için [.NET Core sürüm seçimi](selection.md).
 
 NOTLAR:
 

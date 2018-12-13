@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da21b1419f9d662c71ffd469cec67e01154ffc60
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334879"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Devralma, yalnızca sınıflar ve arabirimler için geçerlidir. Diğer tür kategorileri (yapılar, temsilciler ve numaralandırmaları) devralımı desteklemez. Derleyici Hatası CS0527 çalışırken aşağıdaki örnekte olduğu gibi Kodu derlemek bu kuralları nedeniyle üretir: "Türü arabirim listesindeki ' ValueType' değil bir arabirim." Bir yapının uyguladığı arabirimlerin tanımlayabilirsiniz, devralma desteklenmiyor, hata iletisi gösterir.
+Devralma, yalnızca sınıflar ve arabirimler için geçerlidir. Diğer tür kategorileri (yapılar, temsilciler ve numaralandırmaları) devralımı desteklemez. Aşağıdaki örnek, derleyici hatası CS0527 üretir gibi Kodu derlemek bu kural nedeniyle çalışılıyor: "Arabirim listesindeki 'ValueType' türü bir arabirim değil." Bir yapının uyguladığı arabirimlerin tanımlayabilirsiniz, devralma desteklenmiyor, hata iletisi gösterir.
 
 ```csharp
 using System;
@@ -249,7 +249,7 @@ Aşağıdaki şekilde tabanınızı arasındaki ilişki gösterilmektedir `Publi
 
 - İki Oluşturucu
 
-  İki `Book` oluşturucular üç ortak parametreleri paylaşın. İki *başlık* ve *yayımcı*, parametreleri için karşılık gelen `Publication` Oluşturucusu. Üçüncü olan *Yazar*, özel depolanmış `authorName` alan. Bir oluşturucu içeren bir *ISBN* depolanan parametre `ISBN` otomatik-özellik.
+  İki `Book` oluşturucular üç ortak parametreleri paylaşın. İki *başlık* ve *yayımcı*, parametreleri için karşılık gelen `Publication` Oluşturucusu. Üçüncü olan *Yazar*, değişmez bir genel depolanan `Author` özelliği. Bir oluşturucu içeren bir *ISBN* depolanan parametre `ISBN` otomatik-özellik.
 
   İlk Oluşturucu kullanan [bu](../language-reference/keywords/this.md) diğer oluşturucuyu çağırmak için anahtar sözcüğü. Oluşturucu zincirleme oluşturucuları tanımlama ortak bir desendir. En fazla sayıda parametre ile Oluşturucusu çağrılırken, daha az parametre oluşturucularla varsayılan değerleri sağlar.
 
@@ -257,11 +257,11 @@ Aşağıdaki şekilde tabanınızı arasındaki ilişki gösterilmektedir `Publi
 
 - Salt okunur `ISBN` döndüren özellik `Book` nesnenin uluslararası standart kitap numarası, benzersiz 10 veya 13 basamaklı bir sayı. ISBN birine bağımsız değişken olarak sağlanan `Book` oluşturucular. Derleyici tarafından otomatik olarak oluşturulan bir özel yedekleme alanını ISBN depolanır.
 
-- Salt okunur `Author` özelliği. Yazar adı her iki bağımsız değişken olarak sağlanan `Book` oluşturucular ve özel depolanmış `authorName` alan.
+- Salt okunur `Author` özelliği. Yazar adı her iki bağımsız değişken olarak sağlanan `Book` oluşturucular ve özelliğinde depolanır.
 
-- İki salt okunur fiyat güvenlikle ilgili Özellikler `Price` ve `Currency`. Değerleri, bağımsız değişken olarak sağlanan bir `SetPrice` yöntem çağrısı. Özel bir alanda depolanan fiyatı `bookPrice`. `Currency` Özelliği üç basamaklı ISO para birimi simgesi (örneğin, try ABD Doları) ve özel depolanmış `ISOCurrencySymbol` alan. ISO para birimi simgeleri alınabileceği <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> özelliği.
+- İki salt okunur fiyat güvenlikle ilgili Özellikler `Price` ve `Currency`. Değerleri, bağımsız değişken olarak sağlanan bir `SetPrice` yöntem çağrısı. `Currency` Üç basamaklı ISO para birimi simgesi (örneğin, try ABD Doları) bir özelliktir. ISO para birimi simgeleri alınabileceği <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> özelliği. Bu özelliklerin her ikisi de dışarıdan salt okunurdur, ancak her ikisi de, kod tarafından ayarlanabilir `Book` sınıfı.
 
-- A `SetPrice` değerlerini ayarlar yönteminin `bookPrice` ve `ISOCurrencySymbol` alanları. Bu değerler tarafından döndürülen `Price` ve `Currency` özellikleri.
+- A `SetPrice` değerlerini ayarlar yönteminin `Price` ve `Currency` özellikleri. Bu değerler aynı özelliklere göre döndürülür.
 
 - Geçersiz kılmaları `ToString` yöntemi (devralınan `Publication`) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> ve <xref:System.Object.GetHashCode%2A> yöntemleri (devralınan <xref:System.Object>).
 
