@@ -28,16 +28,16 @@ ms.locfileid: "44041622"
   
  Bu hızlı başvurudaki her bölüm normal ifadeleri tanımlamak üzere kullanabileceğiniz belirli bir karakter, işleç ve yapı kategorisini listeler:  
   
- [Karakter çıkışları](#character_escapes)  
- [Karakter sınıfları](#character_classes)  
- [Yer İşaretleri](#atomic_zerowidth_assertions)  
- [Gruplandırma yapıları](#grouping_constructs)  
- [Belirleyiciler](#quantifiers)  
- [Yeniden başvuru yapıları](#backreference_constructs)  
- [Değişim yapıları](#alternation_constructs)  
+ [Karakter Çıkışları](#character_escapes)  
+ [Karakter Sınıfları](#character_classes)  
+ [Tutturucular](#atomic_zerowidth_assertions)  
+ [Gruplandırma Yapıları](#grouping_constructs)  
+ [Miktar Belirleyiciler](#quantifiers)  
+ [Yeniden Başvuru Yapıları](#backreference_constructs)  
+ [Değişim Yapıları](#alternation_constructs)  
  [Değişimler](#substitutions)  
- [Normal ifade seçenekleri](#options)  
- [Çeşitli yapılar](#miscellaneous_constructs)  
+ [Normal İfade Seçenekleri](#options)  
+ [Çeşitli Yapılar](#miscellaneous_constructs)  
   
  Bu bilgileri indirip yazdırma iki biçim de kolayca başvurmak için sunulmuştur:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "44041622"
   
 |Kaçan karakter|Açıklama|Desen|Eşleşmeler|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Bir bell karakterle eşleşir, \u0007.|`\a`|"Error!" içinde "\u0007" + '\u0007'|  
+|`\a`|Bir bell karakterle eşleşir, \u0007.|`\a`|"Error!" + '\u0007' içinde "\u0007"|  
 |`\b`|Bir karakter sınıfında, geri al tuşuyla eşleşir, \u0008.|`[\b]{3,}`|"\b\b\b\b" içinde "\b\b\b\b"|  
 |`\t`|Bir sekmeyle eşleşir, \u0009.|`(\w+)\t`|"item1\titem2\t" içinde "item1\t", "item2\t"|  
 |`\r`|Bir satır başıyla eşleşir, \u000D. (`\r` yeni satır karakteri eşdeğer değildir `\n`.)|`\r\n(\w+)`|"\r\nThese are\ntwo lines" içinde "\r\nThese"|  
@@ -68,7 +68,7 @@ ms.locfileid: "44041622"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Karakter Sınıfları  
- Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karakter sınıfları aşağıdaki tabloda listelenen dil öğelerini içerir: Daha fazla bilgi için [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karakter sınıfları aşağıdaki tabloda listelenen dil öğelerini içerir: Daha fazla bilgi için [Karakter Sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Karakter sınıfı|Açıklama|Desen|Eşleşmeler|  
 |---------------------|-----------------|-------------|-------------|  
@@ -89,16 +89,16 @@ ms.locfileid: "44041622"
   
 <a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Tutturucular  
- Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için [bağlayıcılarını](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
+ Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için [Tutturucular](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
 |Onaylama işlemi|Açıklama|Desen|Eşleşmeler|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlamalıdır; çok satırlı modu satırın başlangıcında başlamalıdır.|`^\d{3}`|"901" içinde<br /><br /> "901-333-"|  
-|`$`|Varsayılan olarak, eşleşme önce ya da dizenin sonunda gerçekleşmelidir `\n` sonunda dize; çok satırlı modu, çizgi veya önce bitmeden önce gerçekleşmelidir `\n` satırın sonunda.|`-\d{3}$`|"-333"<br /><br /> "-901-333"|  
-|`\A`|Eşleşme dizenin başlangıcında gerçekleşmelidir.|`\A\d{3}`|"901" içinde<br /><br /> "901-333-"|  
-|`\Z`|Eşleşme dizenin sonunda veya önce sonunda gerçekleşmelidir `\n` dizenin sonunda.|`-\d{3}\Z`|"-333"<br /><br /> "-901-333"|  
-|`\z`|Eşleşme dizenin sonunda gerçekleşmelidir.|`-\d{3}\z`|"-333"<br /><br /> "-901-333"|  
-|`\G`|Eşleşme önceki eşleşmenin sona erdiği noktada gerçekleşmelidir.|`\G\(\d\)`|"(1)", "(3)", "(5)", "(1) (3) (5) [7] (9\)"|  
+|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlamalıdır; çok satırlı modu satırın başlangıcında başlamalıdır.|`^\d{3}`|"901-333-" içinde "901"|  
+|`$`|Varsayılan olarak, eşleşme önce ya da dizenin sonunda gerçekleşmelidir `\n` sonunda dize; çok satırlı modu, çizgi veya önce bitmeden önce gerçekleşmelidir `\n` satırın sonunda.|`-\d{3}$`|"-901-333" içinde "-333"|  
+|`\A`|Eşleşme dizenin başlangıcında gerçekleşmelidir.|`\A\d{3}`|"901-333-" içinde "901"|  
+|`\Z`|Eşleşme dizenin sonunda veya önce sonunda gerçekleşmelidir `\n` dizenin sonunda.|`-\d{3}\Z`|"-901-333" içinde "-333"|  
+|`\z`|Eşleşme dizenin sonunda gerçekleşmelidir.|`-\d{3}\z`|"-901-333" içinde "-333"|  
+|`\G`|Eşleşme önceki eşleşmenin sona erdiği noktada gerçekleşmelidir.|`\G\(\d\)`|"(1) (3) (5) [7] (9\)" içinde "(1)", "(3)", "(5)"|  
 |`\b`|Eşleşme arasındaki sınırda gerçekleşmemelidir bir `\w` (alfasayısal) ve bir `\W` (alfasayısal olmayan) karakter.|`\b\w+\s\w+\b`|"them theme them them" içinde "them theme", "them them"|  
 |`\B`|Eşleşme gerçekleşmemelidir bir `\b` sınır.|`\Bend\w*\b`|"end sends endure lender" içinde "ends", "ender"|  
   
@@ -106,15 +106,15 @@ ms.locfileid: "44041622"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Gruplandırma Yapıları  
- Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik olarak bir giriş dizesinin alt dizelerini yakalar. Yapıları gruplandırma aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik olarak bir giriş dizesinin alt dizelerini yakalar. Yapıları gruplandırma aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [Gruplandırma Yapıları](grouping-constructs-in-regular-expressions.md).  
   
 |Yapıyı gruplandırma|Açıklama|Desen|Eşleşmeler|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Alt ifade* `)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|"deep" içinde "ee"|  
 |`(?<` *adı* `>` *alt ifade* `)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|"deep" içinde "ee"|  
-|`(?<` *name1* `-` *name2* `>` *alt ifade* `)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için "Grup tanımlarını Dengeleme" bölümüne bakın. [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" içinde "3+2^((1-3)\*(3-1))"|  
-|`(?:` *Alt ifade* `)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Yaz"|  
-|`(?imnsx-imnsx:` *Alt ifade* `)`|Dahilinde belirlenen seçenekleri devre dışı bırakır veya uygular *subexpression*. Daha fazla bilgi için [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" içinde "A12xl", "A12XL"|  
+|`(?<` *name1* `-` *name2* `>` *alt ifade* `)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için "Grup tanımlarını Dengeleme" bölümüne bakın. [Gruplandırma Yapıları](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" içinde "3+2^((1-3)\*(3-1))"|  
+|`(?:` *Alt ifade* `)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Write"|  
+|`(?imnsx-imnsx:` *Alt ifade* `)`|Dahilinde belirlenen seçenekleri devre dışı bırakır veya uygular *subexpression*. Daha fazla bilgi için [Normal İfade Seçenekleri](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" içinde "A12xl", "A12XL"|  
 |`(?=` *Alt ifade* `)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|"He is. içinde "is", "ran" ve "out" Köpek çalıştı. Güneş çıktı."|  
 |`(?!` *Alt ifade* `)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b(?!un)\w+\b`|"unsure sure unity used" içinde "sure", "used"|  
 |`(?<=` *Alt ifade* `)`|Sıfır genişlik pozitif geriye yönelik onaylar.|`(?<=19)\d{2}\b`|"1851 1999 1950 1905 2003" içinde "99", "50", "05"|  
@@ -125,7 +125,7 @@ ms.locfileid: "44041622"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Miktar Belirleyiciler  
- Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [miktar belirleyiciler](quantifiers-in-regular-expressions.md).  
+ Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
   
 |Miktar Belirleyici|Açıklama|Desen|Eşleşmeler|  
 |----------------|-----------------|-------------|-------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "44041622"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Yeniden Başvuru Yapıları  
- Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle daha önce eşleşmesine olanak sağlar. Aşağıdaki tablo, .NET düzenli ifadelerle desteklenen yeniden başvuru yapılarını listeler. Daha fazla bilgi için [yeniden başvuru yapıları](backreference-constructs-in-regular-expressions.md).  
+ Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle daha önce eşleşmesine olanak sağlar. Aşağıdaki tablo, .NET düzenli ifadelerle desteklenen yeniden başvuru yapılarını listeler. Daha fazla bilgi için [Yeniden Başvuru Yapıları](backreference-constructs-in-regular-expressions.md).  
   
 |Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -157,7 +157,7 @@ ms.locfileid: "44041622"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Değişim Yapıları  
- Değişim yapıları, ve/veya eşleştirmeyi etkinleştirmek üzere bir normal ifadeyi değiştirir. Bu yapılar aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [değişim yapıları](alternation-constructs-in-regular-expressions.md).  
+ Değişim yapıları, ve/veya eşleştirmeyi etkinleştirmek üzere bir normal ifadeyi değiştirir. Bu yapılar aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [Değişim Yapıları](alternation-constructs-in-regular-expressions.md).  
   
 |Değişim yapısı|Açıklama|Desen|Eşleşmeler|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -169,7 +169,7 @@ ms.locfileid: "44041622"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Değişimler  
- Değişimler değiştirme desenlerinde desteklenen normal ifade dil öğeleridir. Daha fazla bilgi için [değişimler](substitutions-in-regular-expressions.md). Aşağıdaki tabloda listelenen meta karakterler atomik sıfır genişlik onaylarıdır.  
+ Değişimler değiştirme desenlerinde desteklenen normal ifade dil öğeleridir. Daha fazla bilgi için [Değişimler](substitutions-in-regular-expressions.md). Aşağıdaki tabloda listelenen meta karakterler atomik sıfır genişlik onaylarıdır.  
   
 |Karakter|Açıklama|Desen|Değiştirme deseni|Giriş dizesi|Sonuç Dizesi|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -179,14 +179,14 @@ ms.locfileid: "44041622"
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Eşleşmeden önce giriş dizesi metninin tamamının yerini alır.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Eşleşmeden sonra giriş dizesi metninin tamamının yerini alır.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Yakalanan son grubun yerini alır.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Yakalanan son grubun yerini alır.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Giriş dizesinin tamamının yerini alır.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Başa dön](#top)  
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Normal İfade Seçenekleri  
- Normal ifade sisteminin normal ifade modellerini nasıl denetleyeceğiyle ilgili seçenekler belirtebilirsiniz. Bu seçeneklerin çoğu olabilir ya da satır içi olarak (normal ifade deseninde) belirtilen ya da bir veya daha fazla olarak <xref:System.Text.RegularExpressions.RegexOptions> sabitler. Bu hızlı başvuru yalnızca satır içi seçeneklerini listeler. Satır içi hakkında daha fazla bilgi ve <xref:System.Text.RegularExpressions.RegexOptions> seçenekleri başlıklı makaleye bakın [Regular Expression Options](regular-expression-options.md).  
+ Normal ifade sisteminin normal ifade modellerini nasıl denetleyeceğiyle ilgili seçenekler belirtebilirsiniz. Bu seçeneklerin çoğu olabilir ya da satır içi olarak (normal ifade deseninde) belirtilen ya da bir veya daha fazla olarak <xref:System.Text.RegularExpressions.RegexOptions> sabitler. Bu hızlı başvuru yalnızca satır içi seçeneklerini listeler. Satır içi hakkında daha fazla bilgi ve <xref:System.Text.RegularExpressions.RegexOptions> seçenekleri başlıklı makaleye bakın [Normal İfade Seçenekleri](regular-expression-options.md).  
   
  Satır içi seçeneği iki şekilde belirtebilirsiniz:  
   
@@ -199,20 +199,20 @@ ms.locfileid: "44041622"
 |Seçenek|Açıklama|Desen|Eşleşmeler|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Büyük küçük harf duyarlı eşleme kullanın.|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" içinde "aardvark", "aaaAuto"|  
-|`m`|Çok satırlı modunu kullanın. `^` ve `$` başlangıcını ve bitişini bir dizenin değil satırın sonuna eşleşir.|Örneğin, "Çok satırlı modu" bölümüne bakın. [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Adsız grupları yakalamayın.|Örneğin, "Yalnızca belirtik yakalama" bölümüne bakın [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Tek satır modunu kullanın.|Örneğin, "tek satır modu" bölümüne bakın. [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Çok satırlı modunu kullanın. `^` ve `$` başlangıcını ve bitişini bir dizenin değil satırın sonuna eşleşir.|Örneğin, "Çok satırlı modu" bölümüne bakın. [Normal İfade Seçenekleri](regular-expression-options.md).||  
+|`n`|Adsız grupları yakalamayın.|Örneğin, "Yalnızca belirtik yakalama" bölümüne bakın [Normal İfade Seçenekleri](regular-expression-options.md).||  
+|`s`|Tek satır modunu kullanın.|Örneğin, "tek satır modu" bölümüne bakın. [Normal İfade Seçenekleri](regular-expression-options.md).||  
 |`x`|Normal ifade deseninde kaçışsız boşluğu yoksay.|`\b(?x) \d+ \s \w+`|"1 aardvark 2 cats IV centurions" içinde "1 aardvark", "2 cats"|  
   
  [Başa dön](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Çeşitli Yapılar  
- Çeşitli yapılar, bir normal ifade desenini değiştirir veya bununla ilgili bilgi sağlar. Aşağıdaki tablo, .NET tarafından desteklenen çeşitli yapıları listeler. Daha fazla bilgi için [çeşitli yapıları](miscellaneous-constructs-in-regular-expressions.md).  
+ Çeşitli yapılar, bir normal ifade desenini değiştirir veya bununla ilgili bilgi sağlar. Aşağıdaki tablo, .NET tarafından desteklenen çeşitli yapıları listeler. Daha fazla bilgi için [Çeşitli Yapılar](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Oluştur|Tanım|Örnek|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Ayarlar veya bir desenin ortasındaki büyük/küçük harf duyarsızlığı gibi seçenekleri devre dışı bırakır. Daha fazla bilgi için [Regular Expression Options](regular-expression-options.md).|`\bA(?i)b\w+\b` "ABA", "ABA Able Act" içinde "Able" ile eşleşir|  
+|`(?imnsx-imnsx)`|Ayarlar veya bir desenin ortasındaki büyük/küçük harf duyarsızlığı gibi seçenekleri devre dışı bırakır. Daha fazla bilgi için [Normal İfade Seçenekleri](regular-expression-options.md).|`\bA(?i)b\w+\b` "ABA", "ABA Able Act" içinde "Able" ile eşleşir|  
 |`(?#` *Açıklama* `)`|Satır içi açıklama. Açıklama ilk kapanış parantezinde sona erer.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [satır sonuna için]|X-mode yorumu. Yorum kaçışsız başlar `#` ve satırın sonuna dek devam eder.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
