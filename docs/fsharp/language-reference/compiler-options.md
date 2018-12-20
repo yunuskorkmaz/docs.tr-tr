@@ -4,7 +4,7 @@ description: Kullanım F# derlemesini denetlemek için derleyici komut satırı 
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170879"
@@ -25,7 +25,7 @@ Alfabetik listelenmiş derleyici seçenekleri aşağıdaki tabloda gösterilmekt
 |`--baseaddress:address`|Bir DLL yüklemek için tercih edilen temel adresini belirtir.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;baseaddress &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Gerekli sayfa sistemi için geçerli varsayılan kod sayfası yoksa, derleme sırasında kullanılacak kod sayfasını belirtir.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;kod sayfaları &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Hataları ve Uyarıları konsolda renk kodlu metni kullandığını belirtir.|
-|'--crossoptimize [+|-]`|Etkinleştirir veya zakazuje optimalizaci mezi devre dışı bırakır.|
+|`--crossoptimize[+|-]`|Etkinleştirir veya zakazuje optimalizaci mezi devre dışı bırakır.|
 |<code>--delaysign[+&#124;-]</code>|Gecikmeli imzalar tanımlayıcı ad anahtarının yalnızca ortak kısmını kullanarak derleme.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;delaysign &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Etkinleştirir veya taşma denetimleri oluşturma devre dışı bırakır.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;kullanıma &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Etkinleştirir veya hata ayıklama bilgisi oluşturmayı devre dışı bırakır veya oluşturulacak hata ayıklama bilgisinin türünü belirtir. Varsayılan, çalışan bir programa eklemeye izin veren tam türdür. Seçin **pdbonly** pdb (program veritabanı) dosyasında depolanan sınırlı hata ayıklama bilgileri alınamıyor.<br /><br />Eşdeğer C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için bkz.<br /><br />[&#47;hata ayıklama &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|
