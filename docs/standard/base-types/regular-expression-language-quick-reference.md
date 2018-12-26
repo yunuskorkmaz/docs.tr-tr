@@ -18,7 +18,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
 ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "44041622"
@@ -28,16 +28,16 @@ ms.locfileid: "44041622"
   
  Bu hızlı başvurudaki her bölüm normal ifadeleri tanımlamak üzere kullanabileceğiniz belirli bir karakter, işleç ve yapı kategorisini listeler:  
   
- [Karakter çıkışları](#character_escapes)  
- [Karakter sınıfları](#character_classes)  
+ [Karakter Çıkışları](#character_escapes)  
+ [Karakter Sınıfları](#character_classes)  
  [Yer İşaretleri](#atomic_zerowidth_assertions)  
- [Gruplandırma yapıları](#grouping_constructs)  
+ [Gruplandırma Yapıları](#grouping_constructs)  
  [Belirleyiciler](#quantifiers)  
- [Yeniden başvuru yapıları](#backreference_constructs)  
- [Değişim yapıları](#alternation_constructs)  
+ [Yeniden Başvuru Yapıları](#backreference_constructs)  
+ [Değişim Yapıları](#alternation_constructs)  
  [Değişimler](#substitutions)  
- [Normal ifade seçenekleri](#options)  
- [Çeşitli yapılar](#miscellaneous_constructs)  
+ [Normal İfade Seçenekleri](#options)  
+ [Çeşitli Yapılar](#miscellaneous_constructs)  
   
  Bu bilgileri indirip yazdırma iki biçim de kolayca başvurmak için sunulmuştur:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "44041622"
 |`(` *Alt ifade* `)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|"deep" içinde "ee"|  
 |`(?<` *adı* `>` *alt ifade* `)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|"deep" içinde "ee"|  
 |`(?<` *name1* `-` *name2* `>` *alt ifade* `)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için "Grup tanımlarını Dengeleme" bölümüne bakın. [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" içinde "3+2^((1-3)\*(3-1))"|  
-|`(?:` *Alt ifade* `)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Yaz"|  
+|`(?:` *Alt ifade* `)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Write"|  
 |`(?imnsx-imnsx:` *Alt ifade* `)`|Dahilinde belirlenen seçenekleri devre dışı bırakır veya uygular *subexpression*. Daha fazla bilgi için [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" içinde "A12xl", "A12XL"|  
 |`(?=` *Alt ifade* `)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|"He is. içinde "is", "ran" ve "out" Köpek çalıştı. Güneş çıktı."|  
 |`(?!` *Alt ifade* `)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b(?!un)\w+\b`|"unsure sure unity used" içinde "sure", "used"|  
@@ -125,7 +125,7 @@ ms.locfileid: "44041622"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Miktar Belirleyiciler  
- Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için [miktar belirleyiciler](quantifiers-in-regular-expressions.md).  
+ Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
   
 |Miktar Belirleyici|Açıklama|Desen|Eşleşmeler|  
 |----------------|-----------------|-------------|-------------|  
@@ -179,14 +179,14 @@ ms.locfileid: "44041622"
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Eşleşmeden önce giriş dizesi metninin tamamının yerini alır.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Eşleşmeden sonra giriş dizesi metninin tamamının yerini alır.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Yakalanan son grubun yerini alır.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Yakalanan son grubun yerini alır.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Giriş dizesinin tamamının yerini alır.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Başa dön](#top)  
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Normal İfade Seçenekleri  
- Normal ifade sisteminin normal ifade modellerini nasıl denetleyeceğiyle ilgili seçenekler belirtebilirsiniz. Bu seçeneklerin çoğu olabilir ya da satır içi olarak (normal ifade deseninde) belirtilen ya da bir veya daha fazla olarak <xref:System.Text.RegularExpressions.RegexOptions> sabitler. Bu hızlı başvuru yalnızca satır içi seçeneklerini listeler. Satır içi hakkında daha fazla bilgi ve <xref:System.Text.RegularExpressions.RegexOptions> seçenekleri başlıklı makaleye bakın [Regular Expression Options](regular-expression-options.md).  
+ Normal ifade sisteminin, normal ifade desenlerini nasıl denetleyeceğiyle ilgili seçenekler belirtebilirsiniz. Bu seçeneklerin çoğu, satır içi olarak (normal ifade deseninde) ya da bir veya daha fazla <xref:System.Text.RegularExpressions.RegexOptions> sabiti olarak belirtilebilir. Bu hızlı başvuru yalnızca satır içi seçenekleri listeler. Satır içi ve <xref:System.Text.RegularExpressions.RegexOptions> seçenekleri hakkında daha fazla bilgi için [Normal İfade Seçenekleri](regular-expression-options.md) başlıklı makaleye bakın.  
   
  Satır içi seçeneği iki şekilde belirtebilirsiniz:  
   
@@ -200,7 +200,7 @@ ms.locfileid: "44041622"
 |------------|-----------------|-------------|-------------|  
 |`i`|Büyük küçük harf duyarlı eşleme kullanın.|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" içinde "aardvark", "aaaAuto"|  
 |`m`|Çok satırlı modunu kullanın. `^` ve `$` başlangıcını ve bitişini bir dizenin değil satırın sonuna eşleşir.|Örneğin, "Çok satırlı modu" bölümüne bakın. [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Adsız grupları yakalamayın.|Örneğin, "Yalnızca belirtik yakalama" bölümüne bakın [Regular Expression Options](regular-expression-options.md).||  
+|`n`|Adsız grupları yakalamayın.|Bir örnek için [Normal İfade Seçenekleri](regular-expression-options.md) altındaki "Yalnızca Açık Yakalama" bölümüne bakın.||  
 |`s`|Tek satır modunu kullanın.|Örneğin, "tek satır modu" bölümüne bakın. [Regular Expression Options](regular-expression-options.md).||  
 |`x`|Normal ifade deseninde kaçışsız boşluğu yoksay.|`\b(?x) \d+ \s \w+`|"1 aardvark 2 cats IV centurions" içinde "1 aardvark", "2 cats"|  
   
