@@ -1,15 +1,16 @@
 ---
-title: Zaman uyumsuz programlama
+title: Zaman uyumsuz programlama-C#
 description: .NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz programlama modeli hakkında bilgi edinin.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126503"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612133"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -264,5 +265,5 @@ Genel nesnelerin veya belirli yöntemleri yürütme durumunu bağlı değilsiniz
 ## <a name="other-resources"></a>Diğer Kaynaklar
 
 * [Zaman uyumsuz ayrıntılı](../standard/async-in-depth.md) görevleri nasıl çalıştığı hakkında daha fazla bilgi sağlar.
-* [Zaman uyumsuz programlama ile async ve await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Zaman uyumsuz programlama ile async ve await (C#)](./programming-guide/concepts/async/index.md)
 * Lucian Wischik'ın [zaman uyumsuz altı önemli ipuçları](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) zaman uyumsuz programlama için harika bir kaynaktır

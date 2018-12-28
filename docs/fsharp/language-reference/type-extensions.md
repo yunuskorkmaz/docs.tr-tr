@@ -1,13 +1,13 @@
 ---
-title: Tür Uzantıları (F#)
-description: Bir önceden tanımlanmış nesne türü için yeni üyeler eklemek, F# tür uzantıları nasıl izin öğrenin.
+title: Tür Uzantıları
+description: Bilgi nasıl F# türü uzantılara izin ver bir önceden tanımlanmış nesne türü için yeni üye ekleyin.
 ms.date: 07/20/2018
-ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43874985"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614070"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
@@ -127,7 +127,7 @@ Bir isteğe bağlı tür uzantısı ile çalışmak için bu kodu erişmenin bir
 
 ## <a name="extension-methods"></a>Genişletme yöntemleri
 
-Son olarak, genişletme yöntemleri ("C# stili uzantı üyeleri" olarak da adlandırılır) F#'ta bir statik üye yöntemi olarak sınıfta bildirilebilir.
+Son olarak, genişletme yöntemleri (olarak da adlandırılır "C# stili uzantı üyeleri") içinde bildirilebilir F# olarak bir sınıf üzerinde bir statik üye yöntemi.
 
 Genişletme yöntemleri, ne zaman uzantılar tür değişkeni sınırlamak bir genel tür tanımlamak istediğiniz için kullanışlıdır. Örneğin:
 
@@ -163,7 +163,7 @@ Aşağıdaki sınırlamalar türü uzantıları için de mevcuttur:
 * Tür uzantıları tanımlanamaz [yazın kısaltmalar](type-abbreviations.md).
 * Tür uzantıları için geçerli olmayan `byref<'T>` (bunlar bildirilebilir rağmen).
 * Tür Uzantıları (bunlar bildirilebilir rağmen) öznitelikler için geçerli değildir.
-* Aynı ada sahip diğer yöntemleri aşırı uzantıları tanımlayabilirsiniz, ancak belirsiz bir çağrı ise F# derleyici tercihi uzantısı olmayan yöntemlere verir.
+* Aynı ada sahip diğer yöntemleri aşırı uzantıları tanımlayabilirsiniz ancak F# derleyici tercihi uzantısı olmayan yöntemlere belirsiz bir çağrı ise sağlar.
 
 Son olarak, bir tür için birden çok gerçek tür uzantısı varsa, tüm üyelerin benzersiz olması gerekir. İsteğe bağlı türü uzantıları için farklı tür Uzantılardaki aynı türe üyeleri aynı adları olabilir. Belirsizlik hataları yalnızca istemci kodu aynı üye adını tanımlayan iki farklı kapsamı açarsa oluşur.
 
