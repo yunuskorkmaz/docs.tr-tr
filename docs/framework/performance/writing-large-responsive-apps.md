@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195898"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613524"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir. 
@@ -28,15 +28,15 @@ Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktar
 ## <a name="just-the-facts"></a>Bulguları  
  Performans ayarlama, bu bilgileri göz önünde bulundurun ve hızlı yanıt veren .NET Framework uygulamaları oluşturma. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Olgu 1: beklenenden önce iyileştirme  
+### <a name="fact-1-dont-prematurely-optimize"></a>1. gerçek: Erken iyileştirme  
  Olmasını ihtiyaç duyduğundan daha karmaşık kod yazma, hata ayıklama ve maliyetleri polishing bakım doğurur. Sezgisel bir kavrayın kodlama sorunlarını çözmek ve daha verimli kod yazma, programcılar vardır. Ancak, bunlar bazen erken kodlarını iyileştirin. Örneğin, bir Basit dizi yeterli veya değerleri yalnızca yeniden hesaplanıyor yerine bellekte sızıntı karmaşık önbelleğe kullandığınızda bir karma tablo kullanın. Bir deneyim Programcı olmasanız bile için performans testi ve sorunları bulmak, kodunuzu analiz gerekir. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Olgu 2:, ölçüm yaptığınız değil ise, tahmin  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Olgu 2: Ölçüm yaptığınız değil ise, tahmin  
  Profilleri ve ölçümler yer yok. Profilleri, CPU tam yüklü olmadığı ya da disk g/ç üzerinde engellendi gösterir. Profilleri bahsedin, ne tür ve ne kadar bellek ayırma ve mi CPU harcama çok zaman içinde [çöp toplama](../../../docs/standard/garbage-collection/index.md) (GC). 
   
  Uygulamanızda performans hedeflerini önemli müşteri deneyimleri veya senaryoları ayarlayın ve performansını ölçmek için testleri yazmak gerekir. Başarısız olan testler bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size rehberlik, ne sorun olabilir, hipotezler varsayımınızın deneme ile test ve kod değişikliği. Performans gerilemeleri neden değişiklikleri yalıtabilirsiniz için normal test ile zaman içinde temel performans ölçümleri kurun. Sıkı bir şekilde performans iş yaklaşan tarafından zaman ihtiyacınız olmayan kod güncelleştirmeleriyle önlenir. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi Araçlar fark olun.  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi araçları, tüm fark kolaylaştırır.  
  Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar. Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone analiz aracı](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView disk g/ç gibi ayrıntılı sorunlara odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve şaşırtıcı derecede güçlü bir araçtır. Performansla ilgili yakalayabilirsiniz [olay izleme için Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünümü, uygulama başına bir kolayca, her işlem, yığın başına ve başına iş parçacığı bilgileri. PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınlarını ne kadar bellek ayırmaları için katkıda bulunan ne kadar ve ne tür gösterir. Zengin Yardım konuları, tanıtımlar ve videolar aracıyla dahil Ayrıntılar için bkz. (gibi [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9). 
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ ve lambda ifadeleri  
 Dil ile tümleşik sorgu (LINQ), lambda ifadeleri ile birlikte bir üretkenlik özellik örneğidir. Ancak, kullanımı zaman içerisinde performansı üzerinde önemli bir etkisi olabilir ve kodunuzu yeniden yazmak zorunda bulabilirsiniz.
   
- **5. örnek: Lambda ifadeleri, liste\<T > ve IEnumerable\<T >**  
+ **Örnek 5: Lambda ifadeleri, liste\<T > ve IEnumerable\<T >**  
   
  Bu örnekte [LINQ ve işlev stili kod](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) adı dizesi verilmiş bir sembol derleyicinin modelinde bulmak için:  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Bu kod, LINQ genişletme yöntemleri, lambdalar veya numaralandırıcılar kullanmaz ve edilmedi doğurur. Derleyici, görebilirsiniz çünkü edilmedi olan `symbols` koleksiyonu bir <xref:System.Collections.Generic.List%601> ve sonuçta elde edilen Numaralandırıcı (yapı) yerel bir değişkene kutulama önlemek için doğru tür ile bağlayabilirsiniz. Bu işlevin özgün sürümle etkileyici gücüyle C# ve .NET Framework'ün üretkenlik harika bir örneği oluştu. Bu yeni ve daha verimli sürümü bu kalitelerini korumak için karmaşık kodlar eklemeden korur. 
   
 ### <a name="async-method-caching"></a>Zaman uyumsuz yöntem önbelleğe alma  
- Sonraki örnek, ortak bir sorunu gösterir, önbelleğe alınan sonuçları kullanmaya çalıştığınızda bir [zaman uyumsuz](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) yöntemi. 
+
+Sonraki örnek, ortak bir sorunu gösterir, önbelleğe alınan sonuçları kullanmaya çalıştığınızda bir [zaman uyumsuz](../../csharp/programming-guide/concepts/async/index.md) yöntemi.
   
  **Örnek 6: zaman uyumsuz yöntemlerde önbelleğe alma**  
   

@@ -1,13 +1,13 @@
 ---
-title: Başvuru Hücreleri (F#)
-description: F# başvuru hücreleri başvuru semantiğiyle değişebilir değerler oluşturmanıza olanak tanıyan depolama konumları nasıl olduğunu öğrenin.
+title: Başvuru Hücreleri
+description: Bilgi nasıl F# başvuru hücreleri olan depolama konumları, başvuru semantiğiyle değişebilir değerler oluşturmanıza olanak sağlar.
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192284"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612770"
 ---
 # <a name="reference-cells"></a>Başvuru Hücreleri
 
@@ -57,6 +57,7 @@ Aşağıdaki tablo başvuru hücresindeki mevcut özellikleri göstermektedir.
 |`ref` (işleç)|Yeni bir başvuru hücresine bir değer kapsüller.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (özelliği)|Temeldeki değeri alır veya ayarlar.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (kayıt alanı)|Temeldeki değeri alır veya ayarlar.|`'a`|`let ref x = { contents = x }`|
+
 Temeldeki değere erişmek için çeşitli yollar vardır. Başvuru işleci tarafından döndürülen değer (`!`) atanabilir bir değer değil. Bu nedenle, temeldeki değeri değiştiriyorsanız, atama işlecini kullanmanız gerekir (`:=`) bunun yerine.
 
 Her iki `Value` özelliği ve `contents` alanı atanabilir değerlerdir. Bu nedenle, bunları temeldeki değere ulaşmak ya da onu değiştirmek için aşağıdaki kodda gösterildiği gibi kullanabilirsiniz.
@@ -74,7 +75,7 @@ Her iki `Value` özelliği ve `contents` alanı atanabilir değerlerdir. Bu nede
 
 Alan `contents` diğer ML sürümleriyle uyumluluk için sağlanır ve derleme sırasında bir uyarı üretecektir. Uyarı devre dışı bırakmak için `--mlcompatibility` derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).
 
-C# programcıları, bilmeniz `ref` C# ile aynı şeydir değil `ref` F#. F#'de eşdeğer bir yapıdır [zkratka](byrefs.md), başvuru hücrelerinin'dan farklı bir kavram olan.
+C#programcıların, bilmeniz `ref` içinde C# aynı şeyi değil `ref` içinde F#. İçinde eşdeğerini oluşturur F# olan [zkratka](byrefs.md), başvuru hücrelerinin'dan farklı bir kavram olan.
 
 Değerleri olarak işaretlenmiş `mutable`için otomatik olarak yükseltilebilir `'a ref` kapanım; tarafından yakalanan olup [değerleri](values/index.md).
 

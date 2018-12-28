@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d8bcdb9bbb7ec6f5a5386a5ac5951ad8891c28
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a3984d594d0739d4b8f2b7b165aab434e10ab80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745597"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611015"
 ---
 # <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; öğesi
-Çalışma zamanı, tüm CPU gruplarında yönetilen iş parçacığı dağıtır olup olmadığını belirtir.  
+Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -32,14 +32,14 @@ ms.locfileid: "32745597"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanı, tüm CPU gruplarında yönetilen iş parçacığı dağıtır olup olmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Çalışma zamanı yönetilen iş parçacığı birden çok CPU gruplarında dağıtmaz. Bu varsayılandır.|  
-|`true`|Bilgisayarda birden çok CPU grupları varsa çalışma zamanı yönetilen iş parçacığı birden çok CPU grubu içinde dağıtır ve [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi etkindir.|  
+|`false`|Çalışma zamanının yönetilen iş parçacıkları arasında birden fazla CPU grubu dağıtmaz. Bu varsayılandır.|  
+|`true`|Bilgisayarda birden fazla CPU grubu varsa çalışma zamanı yönetilen iş parçacıklarını birden çok CPU grupları arasında dağıtır ve [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğe etkin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,10 +52,10 @@ ms.locfileid: "32745597"
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir bilgisayarda birden çok CPU grubu olduğunda, bu öğe etkinleştirme yönetilen iş parçacığı tüm CPU gruplarında dağıtmak çalışma zamanı neden olur. Bu özelliği kullanmak için da etkinleştirmeniz gerekir [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi, tüm CPU gruplarına çöp toplama genişleten ve tüm çekirdek oluştururken ve yığın Dengeleme dikkate alır. Etkinleştirme [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi gerektiriyor etkinleştirme [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğesi. Bu öğeleri etkinleştirilmezse, etkinleştirme `<Thread_UseAllCpuGroups>` öğesi etkisi yoktur.  
+ Bir bilgisayara birden fazla CPU grubu varsa, bu öğenin etkinleştirilmesi, çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmak neden olur. Bu özelliği kullanmak için ayrıca etkinleştirmelisiniz [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi, çöp toplama için tüm CPU grupları genişletir ve tüm çekirdek oluştururken ve Yığınlar Dengeleme dikkate alır. Etkinleştirme [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi gerektiriyor etkinleştirme [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğesi. Bu öğeler etkinleştirilmezse, etkinleştirme `<Thread_UseAllCpuGroups>` öğesi hiçbir etkiye sahiptir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, birden çok CPU grupları desteğini etkinleştirmek gösterilmiştir.  
+ Aşağıdaki örnek, birden çok CPU için desteğini nasıl etkinleştireceğinizi gösterir.  
   
 ```xml  
 <configuration>  
@@ -68,6 +68,6 @@ ms.locfileid: "32745597"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<GCCpuGroup > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<GCCpuGroup > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

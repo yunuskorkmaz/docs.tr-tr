@@ -1,13 +1,13 @@
 ---
-title: Olaylar (F#)
+title: Olaylar
 description: Bilgi nasıl F# olayları GUI programlamada önemlidir kullanıcı eylemlerini, işlev çağrıları ilişkilendirmek etkinleştirin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745348"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612172"
 ---
 # <a name="events"></a>Olaylar
 
@@ -179,7 +179,7 @@ Application.Run(appForm)
 
 - [Üyeler](index.md)
 - [Olaylar oluşturma ve işleme](../../../../docs/standard/events/index.md)
-- [Lambda ifadeleri: `fun` anahtar sözcüğü](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda ifadeleri: `fun` Anahtar Sözcüğü](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event Modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;'T&#62; sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Temsilci' Args&#62; sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

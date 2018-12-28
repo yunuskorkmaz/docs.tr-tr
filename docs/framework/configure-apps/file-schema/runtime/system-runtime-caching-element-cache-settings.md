@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c9932d1328f010158535b096e4ead599c7b3f47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: daa08bb8a92a13941093a77f580318558dc14e9c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202139"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610378"
 ---
 # <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching&gt; öğesi (önbellek ayarları)
 Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching.ObjectCache> uygulaması aracılığıyla `memoryCache` yapılandırma dosyasında giriş.  
@@ -74,4 +74,4 @@ Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<memoryCache > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+- [\<memoryCache > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

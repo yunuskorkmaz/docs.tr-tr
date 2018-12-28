@@ -1,13 +1,13 @@
 ---
-title: Aritmetik İşleçler (F#)
+title: Aritmetik İşleçler
 description: Kullanılabilen aritmetik işleçler hakkında bilgi edinin F# programlama dilidir.
 ms.date: 04/04/2018
-ms.openlocfilehash: 2c0e2e25a4f79d00455d978e235e4bef16b52586
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "45597447"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614590"
 ---
 # <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
