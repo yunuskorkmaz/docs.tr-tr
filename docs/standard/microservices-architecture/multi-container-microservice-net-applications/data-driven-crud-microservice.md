@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c6316717f78dffb672afdf79e919fd1bd7874b52
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32a0e55b17c51a9aa5b7c1fd70a42456c03c186d
+ms.sourcegitcommit: 5b831a3200f835cb9a69f8aae99129bdda8b2ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149581"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786224"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
@@ -257,7 +257,7 @@ Docker-compose.yml dosyaları çözüm düzeyinde yalnızca yapılandırma dosya
 
 Kodunuz aracılığıyla yapılandırmayı kullanarak bu değeri son olarak, alabilirsiniz\["ConnectionString"\]Createservicereplicalisteners() yöntemi bir önceki kod örneğinde gösterildiği gibi.
 
-Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri depolamak nasıl ek yollarını keşfetmek isteyebilirsiniz. Uygulama gizli dizilerini yönetmek için mükemmel bir şekilde kullanma [Azure anahtar kasası} (https://azure.microsoft.com/services/key-vault/).
+Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri depolamak nasıl ek yollarını keşfetmek isteyebilirsiniz. Uygulama gizli dizilerini yönetmek için mükemmel bir yoldur kullanarak [Azure anahtar kasası](https://azure.microsoft.com/services/key-vault/).
 
 Azure Key Vault depolamak ve şifreleme anahtarlarını ve gizli dizileri, bulut uygulamaları ve Hizmetleri tarafından kullanılan korunmasına yardımcı olur. API anahtarları, bağlantı dizeleri, parolalar vb. gibi katı denetimi, korumak istediğiniz her şeyi bir gizli dizidir ve sıkı denetim günlüğü, sona erme ayarı, erişimi yönetme kullanım içerir <span class="underline">diğerlerinin yanı sıra</span>.
 

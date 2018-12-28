@@ -6,6 +6,6 @@
 |Öneri|.NET Framework 4.7.1 üzerinde çalışan uygulamalar ile başlayarak, varsayılan olarak .NET Framework 4.6.1 kullanılan CryptoServiceProvider uygulaması kullanabilirsiniz ve önceki sürümleri, aşağıdaki yapılandırma ekleyerek geçin [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md), uygulama yapılandırma dosyası bölümünü:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4.6.2|
-|Tür|Yeniden hedefleme|
-|Etkilenen API'leri|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
+|Tür|Yeniden Hedefleme|
+|Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
 

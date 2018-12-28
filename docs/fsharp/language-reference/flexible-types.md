@@ -1,13 +1,13 @@
 ---
-title: Esnek Türler (F#)
-description: Bir parametre, değişken veya değer belirtilen bir tür ile uyumlu bir türe sahip olduğunu gösterir F# esnek türü açıklama kullanmayı öğrenin.
+title: Esnek Türler
+description: Nasıl kullanacağınızı öğrenin F# bir parametre, değişken veya değer belirtilen bir tür ile uyumlu bir türe sahip olduğunu gösteren, esnek türü ek açıklaması.
 ms.date: 05/16/2016
-ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47210051"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613680"
 ---
 # <a name="flexible-types"></a>Esnek Türler
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-F# nesne yönelimli diğer dillerde olduğu gibi var. türetilmiş türler veya arabirimlerini uygulayan türler otomatik olarak bir taban türü veya arabirim türü dönüştürüldüğü bağlamları Otomatik dönüştürmeler doğrudan bağımsız, ancak türü bir işlev türünün bir dönüş türü gibi daha karmaşık bir türün bir parçası olarak ya da bir tür bağımsız değişkeni olarak bir alt konumda olmadığında oluşur. Bu nedenle, kendisine uyguladığınızı türü daha karmaşık bir türün bir parçası olduğunda esnek türü gösterimi özellikle yararlıdır.
+İçinde F#, nesne yönelimli diğer dillerde olduğu gibi vardır, bağlamlarda türetilmiş tür veya arabirimlerini uygulayan türler için bir taban türü veya arabirim türü otomatik olarak dönüştürülür. Otomatik dönüştürmeler doğrudan bağımsız, ancak türü bir işlev türünün bir dönüş türü gibi daha karmaşık bir türün bir parçası olarak ya da bir tür bağımsız değişkeni olarak bir alt konumda olmadığında oluşur. Bu nedenle, kendisine uyguladığınızı türü daha karmaşık bir türün bir parçası olduğunda esnek türü gösterimi özellikle yararlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

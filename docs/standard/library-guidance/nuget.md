@@ -4,12 +4,12 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129616"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614551"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet Paket bağımlılıklarını ayrıntılı olarak ele alınmıştır [bağ�
 
 ## <a name="important-nuget-package-metadata"></a>Önemli NuGet paketi meta verileri
 
-Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/nuspec). Aşağıdaki tabloda her bir açık kaynak proje sağlamalıdır çekirdek meta veriler içerir:
+Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/nuspec). Aşağıdaki tabloda, her paket nuget.org sağlamalıdır çekirdek meta veriler içerir:
 
 | MSBuild özellik adı              | Nuspec adı              | Açıklama  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/n
 | `PackageTags`                      | `tags`                     | Etiketleri ve paket tanımlayan anahtar sözcükleri boşlukla ayrılmış listesi. Etiketleri paketler için arama yaparken de kullanılır.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Paket için simge olarak kullanılacak bir URL için bir görüntü. HTTPS URL'si olmalıdır ve görüntü 64 x 64 olmalıdır ve saydam bir arka plana sahip.             |
 | `PackageProjectUrl`                | `projectUrl`               | Proje giriş sayfası veya kaynak havuzu için bir URL.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | Proje lisans URL'si. URL için `LICENSE` dosyası kaynak denetiminde.             |
-
-**✔️ DÜŞÜNÜN** NuGet'ın ön eki ayırma karşılayan bir önek ile NuGet paket adı seçerek [ölçütleri](/nuget/reference/id-prefix-reservation).
-
-**✔️ DÜŞÜNÜN** kullanarak `LICENSE` dosya kaynak denetimine eklememelisiniz `LicenseUrl`. Örneğin, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+| `PackageLicenseExpression`         | `license`                  | Proje Lisans'ın [SPDX tanımlayıcı](https://spdx.org/licenses/). OSI ve FSF lisansları onaylanan yalnızca bir tanımlayıcıyı kullanabilirsiniz. Diğer lisans kullanması gereken `PackageLicenseFile`. Daha fazla bilgi edinin [ `license` meta verileri](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
-> Bir proje için varsayılan olarak bir lisans olmadan [özel telif hakkı](https://choosealicense.com/no-permission/), diğer kişilerin kullanmasına imkansızdır.
+> Bir proje için varsayılan olarak bir lisans olmadan [özel telif hakkı](https://choosealicense.com/no-permission/), diğer kullanıcıların yasal imkansız hale getirme.
+
+**✔️ DÜŞÜNÜN** NuGet'ın ön eki ayırma karşılayan bir önek ile NuGet paket adı seçerek [ölçütleri](/nuget/reference/id-prefix-reservation).
 
 **✔️ YAPMAK** paket simge için bir HTTPS href kullanın.
 
@@ -73,9 +71,7 @@ Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/n
 
 **✔️ DÜŞÜNÜN** ayarlama [SourceLink](./sourcelink.md) NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için.
 
-> SourceLink otomatik olarak ekler `RepositoryUrl` ve `RepositoryType` NuGet paketi meta verileri.
-> SourceLink Ayrıca paket tam kaynak kodu hakkında bilgi oluşturulmuş ekler.
-> Örneğin, bir Git deposundan oluşturulan bir paket olarak meta veriler eklenen işleme karması sahip olur.
+> SourceLink otomatik olarak ekler `RepositoryUrl` ve `RepositoryType` NuGet paketi meta verileri. SourceLink Ayrıca paket tam kaynak kodu hakkında bilgi oluşturulmuş ekler. Örneğin, bir Git deposundan oluşturulan bir paket olarak meta veriler eklenen işleme karması sahip olur.
 
 ## <a name="pre-release-packages"></a>Yayın öncesi paketleri
 

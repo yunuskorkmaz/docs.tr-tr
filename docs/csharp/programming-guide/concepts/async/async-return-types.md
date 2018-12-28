@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036246"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774595"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleri (C#)
 Zaman uyumsuz yöntemler, aşağıdaki dönüş türlerine sahip olabilir:
@@ -33,7 +33,7 @@ Aşağıdaki örnekte, `GetLeisureHours` zaman uyumsuz yönteminde bir `return` 
 
 Zaman `GetLeisureHours` bir await ifadesine içinde çağrılır `ShowTodaysInfo` yöntemi, await ifadesi tamsayı değerini alır (değerini `leisureHours`) tarafından döndürülen görev depolanan `GetLeisureHours` yöntemi. Hakkında daha fazla bilgi için await ifadeleri, bkz: [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Çağrı ayırarak nasıl böyle daha iyi anlamak `GetLeisureHours` uygulamasından `await`aşağıdaki kodda gösterildiği gibi. Yöntemine yapılan bir çağrı `GetLeisureHours` hemen beklenmeyen döndürür, değilse bir `Task<int>`, yöntem bildiriminden beklediğiniz gibi. Görevin atandığı `infoTask` örnekte değişken. Çünkü `infoTask` olduğu bir <xref:System.Threading.Tasks.Task%601>, içerdiği bir <xref:System.Threading.Tasks.Task%601.Result> türünün özelliği `TResult`. Bu durumda, `TResult` bir tamsayı türünü temsil eder. Zaman `await` uygulanan `infoTask`, bekleme ifadesi içeriğine göre değerlendirilir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği `infoTask`. Değeri atanır `ret` değişkeni.  
+Çağrı ayırarak nasıl böyle daha iyi anlamak `GetLeisureHours` uygulamasından `await`aşağıdaki kodda gösterildiği gibi. Yöntemine yapılan bir çağrı `GetLeisureHours` hemen beklenmeyen döndürür, değilse bir `Task<int>`, yöntem bildiriminden beklediğiniz gibi. Görevin atandığı `integerTask` örnekte değişken. Çünkü `integerTask` olduğu bir <xref:System.Threading.Tasks.Task%601>, içerdiği bir <xref:System.Threading.Tasks.Task%601.Result> türünün özelliği `TResult`. Bu durumda, `TResult` bir tamsayı türünü temsil eder. Zaman `await` uygulanan `integerTask`, bekleme ifadesi içeriğine göre değerlendirilir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği `integerTask`. Değeri atanır `ret` değişkeni.  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Kendi görevi bitmeden önce buna erişmeyi denerseniz, şu anda etkin olan iş parçacığı değeri kullanılabilir ve görev tamamlanıncaya kadar engellenir. Çoğu durumda, değeri kullanarak erişmeli `await` özelliği doğrudan erişmek yerine. <br/> Değerini önceki örnekte alınan <xref:System.Threading.Tasks.Task%601.Result%2A> ana iş parçacığı engellemek için özellik böylece `ShowTodaysInfo` yöntemi uygulama sona ermeden önce yürütme son.  
@@ -80,7 +80,7 @@ C# 7.0 ile başlayarak, bir zaman uyumsuz yöntem bir erişilebilir olan herhang
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [Denetim akışı zaman uyumsuz programlarda (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 - [async](../../../../csharp/language-reference/keywords/async.md)   
 - [await](../../../../csharp/language-reference/keywords/await.md)

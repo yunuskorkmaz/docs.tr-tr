@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041622"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779392"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 <a name="top"></a> Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi dener bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041622"
   
  [Karakter Çıkışları](#character_escapes)  
  [Karakter Sınıfları](#character_classes)  
- [Yer İşaretleri](#atomic_zerowidth_assertions)  
+ [Yer İşaretleri](#anchors)  
  [Gruplandırma Yapıları](#grouping_constructs)  
  [Belirleyiciler](#quantifiers)  
  [Yeniden Başvuru Yapıları](#backreference_constructs)  
@@ -73,9 +73,9 @@ ms.locfileid: "44041622"
 |Karakter sınıfı|Açıklama|Desen|Eşleşmeler|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Herhangi bir tek karakterle eşleşir *character_group*. Varsayılan olarak, eşleşme büyük/küçük harf duyarlıdır.|`[ae]`|"gray" içinde "a"<br /><br /> "lane" içinde "a", "e"|  
-|`[^` *character_group* `]`|Olumsuzlama: kullanımda olmayan herhangi bir tek karakterle eşleşir *character_group*. Varsayılan olarak, içindeki karakterler *character_group* büyük küçük harfe duyarlıdır.|`[^aei]`|"reign" içinde "r", "g", "n"|  
-|`[` *İlk* `-` *son* `]`|Karakter aralığı: aralığındaki herhangi tek karakterle eşleşir *ilk* için *son*.|`[A-Z]`|"AB123" içinde "A", "B"|  
-|`.`|Joker karakter: \n dışında herhangi bir tek karakterle eşleşir.<br /><br /> Bir değişmez nokta değeriyle eşleştirmek için (. veya `\u002E`), kaçış karakteriyle gelmelidir (`\.`).|`a.e`|"nave" içinde "ave"<br /><br /> "water" içinde "ate"|  
+|`[^` *character_group* `]`|Olumsuzlama: Kullanımda olmayan herhangi bir tek karakterle eşleşir *character_group*. Varsayılan olarak, içindeki karakterler *character_group* büyük küçük harfe duyarlıdır.|`[^aei]`|"reign" içinde "r", "g", "n"|  
+|`[` *İlk* `-` *son* `]`|Karakter aralığı: Aralığındaki herhangi tek karakterle eşleşir *ilk* için *son*.|`[A-Z]`|"AB123" içinde "A", "B"|  
+|`.`|Joker karakter: \N dışında herhangi bir tek karakterle eşleşir.<br /><br /> Bir değişmez nokta değeriyle eşleştirmek için (. veya `\u002E`), kaçış karakteriyle gelmelidir (`\.`).|`a.e`|"nave" içinde "ave"<br /><br /> "water" içinde "ate"|  
 |`\p{` *Adı* `}`|Unicode Genel kategorisinde veya tarafından belirtilen adlandırılmış bloktaki herhangi bir tek karakterle eşleşir *adı*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" içinde "C", "L"<br /><br /> "ДЖem" içinde "Д", "Ж"|  
 |`\P{` *Adı* `}`|Unicode Genel kategorisinde veya tarafından belirtilen adlandırılmış blokta olmayan herhangi bir tek karakterle eşleşir *adı*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" içinde "i", "t", "y"<br /><br /> "ДЖem" içinde "e", "m"|  
 |`\w`|Sözcük olan herhangi bir karakterle eşleşir.|`\w`|"ID A1.3" içinde "I", "D", "A", "1", "3"|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041622"
   
  [Başa dön](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Tutturucular  
  Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için [bağlayıcılarını](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ListView için Özel Görünüm Modu Oluşturma'
+title: 'Nasıl Yapılır: ListView için Özel Görünüm Modu Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081814"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613030"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Nasıl yapılır: ListView için Özel Görünüm Modu Oluşturma
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Nasıl Yapılır: ListView için Özel Görünüm Modu Oluşturma
 Bu örnekte, özel bir oluşturma işlemi gösterilmektedir <xref:System.Windows.Controls.ListView.View%2A> modu için bir <xref:System.Windows.Controls.ListView> denetimi.  
   
 ## <a name="example"></a>Örnek  
@@ -40,7 +40,7 @@ Bu örnekte, özel bir oluşturma işlemi gösterilmektedir <xref:System.Windows
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Tam bir örnek için bkz. [birden çok örneği ile ListView](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Tam bir örnek için bkz. [ListView birden çok görünüm ile (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) veya [ListView ile birden çok Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.ListView>  
