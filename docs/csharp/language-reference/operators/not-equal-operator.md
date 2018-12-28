@@ -1,7 +1,7 @@
 ---
 title: '! = İşleci - C# başvurusu'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/14/2018
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -9,26 +9,32 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: 15f1b5930117e608644a58343fb855562f36b21c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 939b5664dba4345e62a43fb2f8d4d5379659d6aa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237824"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610183"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="047b4-102">!= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="047b4-102">!= Operator (C# Reference)</span></span>
-<span data-ttu-id="047b4-103">Eşitsizlik işleci (`!=`), işlenenlerinin true, eşitse false değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="047b4-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="047b4-104">Eşitsizlik işleçleri, string ve object dahil olmak üzere tüm türleri için önceden tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="047b4-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="047b4-105">Kullanıcı tanımlı türler aşırı yükleme `!=` işleci.</span><span class="sxs-lookup"><span data-stu-id="047b4-105">User-defined types can overload the `!=` operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="047b4-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="047b4-106">Remarks</span></span>  
- <span data-ttu-id="047b4-107">Önceden değer türleri, eşitsizlik işleci (`!=`) işlenenleri değerlerini, aksi takdirde farklı, false ise true değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="047b4-107">For predefined value types, the inequality operator (`!=`) returns true if the values of its operands are different, false otherwise.</span></span> <span data-ttu-id="047b4-108">İçin başvuru türleri dışındaki `string`, `!=` iki işlenenleri farklı nesnelere başvuruda bulunuyorsa true değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="047b4-108">For reference types other than `string`, `!=` returns true if its two operands refer to different objects.</span></span> <span data-ttu-id="047b4-109">İçin `string` türü `!=` dizelerin değerlerini karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="047b4-109">For the `string` type, `!=` compares the values of the strings.</span></span>  
-  
- <span data-ttu-id="047b4-110">Kullanıcı tanımlı değer türleri aşırı yükleme `!=` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="047b4-110">User-defined value types can overload the `!=` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="047b4-111">Bu nedenle ancak varsayılan olarak kullanıcı tarafından tanımlanan başvuru türleri için `!=` hem önceden tanımlanmış ve kullanıcı tarafından tanımlanan başvuru türleri için yukarıda açıklandığı gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="047b4-111">So can user-defined reference types, although by default `!=` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="047b4-112">Varsa `!=` aşırı yüklendi [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) da aşırı yüklenmiş gerekir.</span><span class="sxs-lookup"><span data-stu-id="047b4-112">If `!=` is overloaded, [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) must also be overloaded.</span></span> <span data-ttu-id="047b4-113">Tamsayı türlerinde işlemler genellikle numaralandırma üzerinde izin verilir.</span><span class="sxs-lookup"><span data-stu-id="047b4-113">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="047b4-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="047b4-114">Example</span></span>  
- [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="047b4-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="047b4-115">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="235c3-102">!= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="235c3-102">!= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="047b4-116">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="047b4-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="047b4-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="047b4-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="047b4-118">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="047b4-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="235c3-103">Eşitsizlik işleci `!=` döndürür `true` işlenenleri eşit değilse `false` Aksi takdirde.</span><span class="sxs-lookup"><span data-stu-id="235c3-103">The inequality operator `!=` returns `true` if its operands are not equal, `false` otherwise.</span></span> <span data-ttu-id="235c3-104">İşlenen için [yerleşik türler](../keywords/built-in-types-table.md), ifade `x != y` ifade aynı sonucu üretir `!(x == y)`.</span><span class="sxs-lookup"><span data-stu-id="235c3-104">For the operands of the [built-in types](../keywords/built-in-types-table.md), the expression `x != y` produces the same result as the expression `!(x == y)`.</span></span> <span data-ttu-id="235c3-105">Daha fazla bilgi için [== işleci](equality-comparison-operator.md) makalesi.</span><span class="sxs-lookup"><span data-stu-id="235c3-105">For more information, see the [== Operator](equality-comparison-operator.md) article.</span></span>
+
+<span data-ttu-id="235c3-106">Aşağıdaki örnek, kullanımını gösterir. `!=` işleci:</span><span class="sxs-lookup"><span data-stu-id="235c3-106">The following example demonstrates the usage of the `!=` operator:</span></span>
+
+[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#NonEquality)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="235c3-107">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="235c3-107">Operator overloadability</span></span>
+
+<span data-ttu-id="235c3-108">Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `!=` işleci.</span><span class="sxs-lookup"><span data-stu-id="235c3-108">User-defined types can [overload](../keywords/operator.md) the `!=` operator.</span></span> <span data-ttu-id="235c3-109">Bir tür eşitsizlik işleci aşırı `!=`, ayrıca aşırı gerekir [eşitlik işleci](equality-comparison-operator.md) `==`.</span><span class="sxs-lookup"><span data-stu-id="235c3-109">If a type overloads the inequality operator `!=`, it must also overload the [equality operator](equality-comparison-operator.md) `==`.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="235c3-110">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="235c3-110">C# language specification</span></span>
+
+<span data-ttu-id="235c3-111">Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="235c3-111">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="235c3-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="235c3-112">See also</span></span>
+
+- [<span data-ttu-id="235c3-113">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="235c3-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="235c3-114">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="235c3-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="235c3-115">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="235c3-115">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="235c3-116">Eşitlik karşılaştırmaları</span><span class="sxs-lookup"><span data-stu-id="235c3-116">Equality comparisons</span></span>](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
