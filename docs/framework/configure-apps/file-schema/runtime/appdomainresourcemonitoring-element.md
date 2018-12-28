@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e892d8ab9001d3670c801b43ba444aa24b2e41
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743582"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611340"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt; öğesi
-İşlem ömrü için işlemdeki tüm uygulama etki alanları istatistikleri toplamak için çalışma zamanı bildirir.  
+Ömür işlemin işlemdeki tüm uygulama etki alanlarında istatistikleri toplamak için çalışma zamanı bildirir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -35,13 +35,13 @@ ms.locfileid: "32743582"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanı uygulama etki alanı kaynak izleme istatistiklerini toplayıp toplamayacağını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanı istatistikleri uygulama etki alanı kaynak izleme toplayıp toplamayacağını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`true`|Uygulama etki alanı kaynak izleme istatistiklerini toplanır.|  
+|`true`|Uygulama etki alanı kaynak izleme için İstatistikler toplanır.|  
 |`false`|Uygulama etki alanı kaynak izleme istatistiklerini toplanmadı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -55,14 +55,14 @@ ms.locfileid: "32743582"
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulama etki alanı kaynak izleme kullanılabilir barındırma yönetilen uygulama etki alanı sınıfı [Iclrappdomainresourcemonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) arabirimi ve olay izleme için Windows (ETW). İzleme etkinleştirildiğinde, istatistikleri işlem ömrü için işlemdeki tüm uygulama etki alanları için toplanır.  
+ Uygulama etki alanı kaynak izleme, barındırma yönetilen uygulama etki alanı sınıfı kullanılabilir [Iclrappdomainresourcemonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) arabirimi ve olay izleme için Windows (ETW). İzleme etkin olduğunda istatistikleri ömrü işlemin işlemdeki tüm uygulama etki alanları için toplanır.  
   
- Yönetilen koddan izlemeyi etkinleştirmek için kullanın <xref:System.AppDomain.MonitoringIsEnabled%2A> özelliği.  
+ Yönetilen koddan izlemeyi etkinleştirmek için <xref:System.AppDomain.MonitoringIsEnabled%2A> özelliği.  
   
- Bu yapılandırma öğesi yalnızca kullanılabilir [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ve daha sonra.  
+ Bu yapılandırma öğesi yalnızca [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ve daha sonra.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, uygulama etki alanı kaynak izleme etkinleştirmek gösterilmiştir.  
+ Aşağıdaki örnek, uygulama etki alanı kaynak izleme etkinleştirmek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "32743582"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

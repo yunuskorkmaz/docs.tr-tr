@@ -1,21 +1,21 @@
 ---
-title: Boole İşleçleri (F#)
-description: F# programlama dilinde kullanılabilen Boole işleçleri hakkında bilgi edinin.
+title: Boole İşleçleri
+description: Kullanılabilen Boole işleçleri hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45638486"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612744"
 ---
 # <a name="boolean-operators"></a>Boole İşleçleri
 
-Bu konu, F# dilinde Boole işleçleri desteğini açıklar.
+Bu konuda Boole işleçleri için destek açıklanır F# dili.
 
 ## <a name="summary-of-boolean-operators"></a>Boole işleçleri özeti
 
-F# dilinde kullanılabilir Boole işleçleri aşağıdaki tabloda özetlenmiştir. Bu işleçler tarafından desteklenen tek türüdür `bool` türü.
+Kullanılabilen Boole işleçleri aşağıdaki tabloda özetlenmiştir F# dili. Bu işleçler tarafından desteklenen tek türüdür `bool` türü.
 
 |İşleç|Açıklama|
 |--------|-----------|

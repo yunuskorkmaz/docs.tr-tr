@@ -1,13 +1,13 @@
 ---
-title: Yöntemler (F#)
-description: Bir F# yöntemi kullanıma sunar ve davranışı nesnelerin ve türleri ve işlevleri uygulamak için kullanılan bir türü ile ilişkili bir işlevin nasıl olduğunu öğrenin.
+title: Yöntemler
+description: 'Bilgi nasıl bir F# yöntemdir: kullanıma sunmak ve davranışı nesnelerin ve türleri ve işlevleri uygulamak için kullanılan bir türü ile ilişkili bir işlev.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44253214"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614032"
 ---
 # <a name="methods"></a>Yöntemler
 
@@ -59,7 +59,7 @@ Satır içi yöntemler türü içinde kullanılan yinelemeli olarak olabilir. a�
 
 ## <a name="instance-methods"></a>Örnek yöntemleri
 
-Örnek yöntemleri ile bildirilmiş `member` anahtar sözcüğü ve *kendi kendine tanımlayıcısı*ve ardından bir nokta (.) ve yöntem adı ve parametreleri. İçin olduğu gibi `let` bağlamaları *parametre-listesi* desen olabilir. Diğer .NET Framework dillerinde oluştururken genellikle, yöntem parametreleri yöntemlerin bir kayıt düzeni formunda parantez içinde görünmesi F# alın. Ancak, curried (parametrelerini boşluklarla ayırarak) Ayrıca yaygın biçimidir ve diğer desenleri de desteklenir.
+Örnek yöntemleri ile bildirilmiş `member` anahtar sözcüğü ve *kendi kendine tanımlayıcısı*ve ardından bir nokta (.) ve yöntem adı ve parametreleri. İçin olduğu gibi `let` bağlamaları *parametre-listesi* desen olabilir. Genellikle, yöntemlerin bir kayıt düzeni formunda parantez içinde parametreleri görünür yöntemi içine alın F# ne zaman oluşturulduğu diğer .NET Framework dillerinde. Ancak, curried (parametrelerini boşluklarla ayırarak) Ayrıca yaygın biçimidir ve diğer desenleri de desteklenir.
 
 Aşağıdaki örnekte, soyut olmayan örnek yöntemi kullanımını ve tanımı gösterilmektedir.
 
@@ -97,11 +97,11 @@ Aşağıdaki örnek, bir temel sınıf yöntemini geçersiz kılan türetilmiş 
 
 ## <a name="overloaded-methods"></a>Aşırı yüklenmiş yöntemler
 
-Belirli bir türde aynı ada sahip olan ancak farklı bağımsız değişkenleri olan yöntemleri aşırı yüklenmiş yöntemlerdir. F# programında, isteğe bağlı bağımsız değişkenler genellikle aşırı yüklenmiş yöntemler yerine kullanılır. Bununla birlikte, bağımsız değişken değil curried form, tanımlama grubu form olması koşuluyla aşırı yüklenmiş yöntemler dilde izin verilir.
+Belirli bir türde aynı ada sahip olan ancak farklı bağımsız değişkenleri olan yöntemleri aşırı yüklenmiş yöntemlerdir. İçinde F#, isteğe bağlı bağımsız değişkenler genellikle aşırı yüklenmiş yöntemler yerine kullanılır. Bununla birlikte, bağımsız değişken değil curried form, tanımlama grubu form olması koşuluyla aşırı yüklenmiş yöntemler dilde izin verilir.
 
 ## <a name="optional-arguments"></a>İsteğe bağlı bağımsız değişkenler
 
-F# 4.1 ile başlayarak, varsayılan parametre değeri ile isteğe bağlı bağımsız değişkenlere yöntemleri de olabilir.  C# kod ile birlikte çalışma kolaylaştırmaya yardımcı olması için budur.  Aşağıdaki örnek, sözdizimini gösterir:
+İle başlayarak F# 4.1, varsayılan parametre değeri ile isteğe bağlı bağımsız değişkenlere yöntemleri de vardır.  C# kod ile birlikte çalışma kolaylaştırmaya yardımcı olması için budur.  Aşağıdaki örnek, sözdizimini gösterir:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -111,7 +111,7 @@ type C() =
 
 İçinde geçirilen değer için Not `DefaultParameterValue` giriş türüyle eşleşmelidir.  Yukarıdaki örnekte olduğu bir `int`.  Bir tamsayı olmayan değerde geçirmeye çalışırken `DefaultParameterValue` bir derleme hatasına neden olur.
 
-## <a name="example-properties-and-methods"></a>Örnek: Özellikler ve yöntemler
+## <a name="example-properties-and-methods"></a>Örnek: Özellikleri ve yöntemleri
 
 Aşağıdaki örnek, alanları, özel işlevler, özellikler ve bir statik yöntem örnekleri olan bir türü içerir.
 

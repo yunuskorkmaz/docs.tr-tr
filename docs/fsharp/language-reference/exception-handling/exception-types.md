@@ -1,17 +1,17 @@
 ---
-title: Özel Durum Türleri (F#)
-description: Tanımlama ve F# özel durum türlerini kullanma hakkında bilgi edinin.
+title: Özel Durum Türleri
+description: Tanımlama ve kullanma hakkında bilgi edinin F# özel durum türleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: b8d648a3649153a3604856deb61ce41db8c40bf2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ed721dd0dc46a486fafeac2fa4c096800995ccb7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43858827"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612835"
 ---
 # <a name="exception-types"></a>Özel Durum Türleri
 
-F# dilinde özel durumlar iki kategorisi vardır: .NET özel durum türlerini ve F# özel durum türleri. Bu konuda, tanımlamak ve F# özel durum türlerini kullanın açıklar.
+Özel durumları iki kategorisi vardır F#: .NET özel durum türlerini ve F# özel durum türleri. Bu konu nasıl tanımlanacağını ve kullanılacağını açıklar F# özel durum türleri.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,9 +21,9 @@ exception exception-type of argument-type
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *özel durum türü* yeni F# özel durum türü adıdır ve *bağımsız değişken türü* bu türde bir özel durum yükselttiğinizde sağlanabilir bir bağımsız değişken türünü temsil eder. Bir demet türü için'ı kullanarak birden çok bağımsız değişkeni belirtebilirsiniz *bağımsız değişken türü*.
+Önceki sözdiziminde, *özel durum türü* yeni adı F# özel durum türü ve *bağımsız değişken türü* bu türde bir özel durum yükselttiğinizde sağlanabilir bir bağımsız değişken türünü temsil eder. Bir demet türü için'ı kullanarak birden çok bağımsız değişkeni belirtebilirsiniz *bağımsız değişken türü*.
 
-Bir F# özel durum için tipik bir tanım aşağıdakine benzer.
+Tipik bir tanımı için bir F# özel durum aşağıdakine benzer.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
 
@@ -31,11 +31,11 @@ Bu tür bir özel durum kullanarak oluşturabileceğiniz `raise` gibi işlev.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
 
-Bir F# özel durum türü, doğrudan, filtreleri kullanabilirsiniz bir `try...with` aşağıdaki örnekte gösterildiği gibi ifade.
+Kullanabileceğiniz bir F# özel durum türünü doğrudan filtreleri bir `try...with` aşağıdaki örnekte gösterildiği gibi ifade.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 
-İle tanımladığınız özel durum türü `exception` sözcüktür F#'de devraldığı yeni bir tür `System.Exception`.
+İle tanımladığınız özel durum türü `exception` anahtar sözcüğünü F# devralan yeni bir türdür `System.Exception`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

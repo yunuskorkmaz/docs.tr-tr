@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744918"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613303"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; öğesi
-Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `dependentAssembly` her derleme için öğesi.  
+Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Bir `dependentAssembly` her derleme için öğesi.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -44,9 +44,9 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `d
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`assemblyIdentity`|Derleme hakkında tanımlayıcı bilgileri içerir. Bu öğe her eklenmelidir `dependentAssembly` öğesi.|  
-|`codeBase`|Çalışma zamanı bilgisayarda yüklü değilse paylaşılan bir derlemede bulabileceğiniz belirtir.|  
+|`codeBase`|Çalışma zamanı bu bilgisayarda yüklü değilse paylaşılan bir derleme bulabileceğiniz belirtir.|  
 |`bindingRedirect`|Bir derleme sürümünü diğerine yeniden yönlendirir.|  
-|`publisherPolicy`|Çalışma zamanı bu derleme için yayımcı ilkesi geçerli olup olmadığını belirtir.|  
+|`publisherPolicy`|Çalışma zamanı bu derleme için yayımcı ilkesi uygulanıp uygulanmayacağını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -57,7 +57,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `d
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki derlemeler için derleme bilgileri yalıtan gösterilmektedir.  
+ Aşağıdaki örnek, iki derlemeler için derleme bilgileri kapsüllemek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `d
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -4,12 +4,12 @@ description: HttpClientFactory oluşturmak için .NET Core 2.1 itibaren kullanı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145117"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611041"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Kullanım HttpClientFactory dayanıklı HTTP isteklerini uygulamak için
 
@@ -71,7 +71,7 @@ Türü belirlenmiş istemci sınıflarınızı AddHttpClient() ile yalnızca ekl
 
 ### <a name="httpclient-lifetimes"></a>HttpClient yaşam süresi yok
 
-Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacak bir HttpMessageHandler ** başına türü belirlenmiş istemci adlı. `IHttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
+Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacaktır bir **HttpMessageHandler** başına türü belirlenmiş istemci adlı. `IHttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
 
 Her işleyicisi genellikle kendi temel alınan HTTP bağlantıları yöneten işleyicileri havuzu tercih edilir; gerekenden daha fazla işleyicileri oluşturma bağlantı gecikmelerine neden olabilir. Bazı işleyiciler da bağlantıları açık süresiz olarak, DNS değişiklikleri tepki gelen, işleyici engelleyebilir tutun.
 

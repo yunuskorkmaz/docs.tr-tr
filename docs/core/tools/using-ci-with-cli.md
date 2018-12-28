@@ -4,12 +4,12 @@ description: .NET Core SDK'sı ve araçları yapı sunucusunda'nın kullanımı 
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 064766555ff178879b91e4395b52b097dcd7c5c5
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170164"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611561"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Sürekli Tümleştirme (CI içinde) kullanarak, .NET Core SDK'sı ve araçları
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 Yapılandırabileceğiniz [Travis CI](https://travis-ci.org/) .NET Core SDK'sını kullanarak yüklemek için `csharp` dil ve `dotnet` anahtarı. Daha fazla bilgi için resmi Travis CI belgeleri görmek [yapı bir C#, F#, veya Visual Basic projesi](https://docs.travis-ci.com/user/languages/csharp/). Travis CI bilgileri erişim unutmayın, topluluk tarafından tutulan `language: csharp` dahil olmak üzere tüm .NET dilleri için bir dil tanımlayıcısı çalışır F#ve Mono.
 
-Travis CI, macOS ve Linux işlerinde hem çalışan bir *matris derleme*, çalışma zamanı ortamı ve uygulamanız için derleme birleşimleri karşılamak için özel durumlar/eklemeleri bir birleşimini belirttiğiniz yerdir. Daha fazla bilgi için [. travis.yml örnek](https://github.com/dotnet/docs/blob/master/.travis.yml) dosya ve [yapı özelleştirme](https://docs.travis-ci.com/user/customizing-the-build) Travis CI belgelerinde. MSBuild tabanlı araçlar LTS (1.0.x kullanılır) ve geçerli (1.1.x) çalışma zamanları paket içerisine dâhil; SDK'sını yükleyerek oluşturmak için ihtiyacınız olan her şey aldığınız şekilde.
+Travis CI, macOS ve Linux işlerinde hem çalışan bir *matris derleme*, çalışma zamanı ortamı ve uygulamanız için derleme birleşimleri karşılamak için özel durumlar/eklemeleri bir birleşimini belirttiğiniz yerdir. Daha fazla bilgi için [yapı özelleştirme](https://docs.travis-ci.com/user/customizing-the-build) makalede Travis CI belgeleri. MSBuild tabanlı araçlar LTS (1.0.x kullanılır) ve geçerli (1.1.x) çalışma zamanları paket içerisine dâhil; SDK'sını yükleyerek oluşturmak için ihtiyacınız olan her şey aldığınız şekilde.
 
 ### <a name="appveyor"></a>AppVeyor
 

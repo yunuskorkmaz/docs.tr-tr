@@ -1,13 +1,13 @@
 ---
-title: 'Döngüler: for...in İfadesi (F#)'
+title: 'Döngüler: for...in İfadesi'
 description: Bkz. nasıl F# for... ifadesinde döngü yapısı bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yinelemek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027240"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614418"
 ---
 # <a name="loops-forin-expression"></a>Döngüler: for...in İfadesi
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Döngüler: `for...to` ifadesi](loops-for-to-expression.md)
-- [Döngüler: `while...do` ifadesi](loops-while-do-expression.md)
+- [Döngüler: `for...to` İfade](loops-for-to-expression.md)
+- [Döngüler: `while...do` İfade](loops-while-do-expression.md)

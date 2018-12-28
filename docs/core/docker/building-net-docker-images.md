@@ -1,17 +1,15 @@
 ---
 title: Docker görüntülerini genel bakış
 description: Docker kayıt defterinden yayımlanan .NET Core Docker görüntüleri kullanmayı öğrenin. Ayrıca, görüntüleri çekmek ve kendi görüntülerinizi oluşturmayı öğreneceksiniz.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: dbe509269c1dc5868c44b12b025bbdd9faaa3508
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169345"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656043"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>.NET Core için Docker görüntüleri hakkında bilgi edinin
 

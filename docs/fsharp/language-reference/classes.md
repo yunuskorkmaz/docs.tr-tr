@@ -1,13 +1,13 @@
 ---
-title: Sınıflar (F#)
-description: F# sınıfları, özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türler nasıl olduğunu öğrenin.
+title: Sınıflar
+description: Bilgi nasıl F# sınıfları, özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türleridir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845742"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611184"
 ---
 # <a name="classes"></a>Sınıflar
 
@@ -33,7 +33,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sınıflar, .NET nesne türlerini temel açıklamasını temsil; F# nesne yönelimli programlama destekleyen birincil türü kavramı sınıftır.
+Sınıflar, .NET nesne türlerini temel açıklamasını temsil; sınıfı, nesne odaklı programlamayı destekleyen birincil türü kavramdır F#.
 
 Yukarıdaki söz diziminde `type-name` herhangi geçerli bir tanımlayıcıdır. `type-params` İsteğe bağlı bir genel tür parametreleri açıklar. Tür parametresi adlarına ve köşeli ayraçlar içine alınan kısıtlamalar oluşur (`<` ve `>`). Daha fazla bilgi için [genel türler](generics/index.md) ve [kısıtlamaları](generics/constraints.md). `parameter-list` Oluşturucu parametreler açıklanmıştır. İlk erişim değiştiricisi türünü içerir; ikinci birincil oluşturucuya ilgilidir. Her iki durumda da varsayılandır `public`.
 
@@ -51,7 +51,7 @@ Anahtar sözcükler `class` ve `end` başlangıç işaretlemek ve tanımının s
 
 ## <a name="constructors"></a>Oluşturucular
 
-Sınıf türünün bir örneği oluşturan kodu oluşturucudur. Diğer .NET dillerinde arkadaşlarınıza kıyasla sınıfları için oluşturucular biraz farklı F#'de çalışır. Bir F# sınıfında var. her zaman birincil oluşturucu bağımsız değişkenleri açıklanır `parameter-list` tür adı ve gövde oluşan aşağıdaki `let` (ve `let rec`) bağlamaları sınıf bildiriminin ve başlangıcında`do`izleyin bağlar. Birincil oluşturucu bağımsız değişkenleri sınıf bildirimi içinde kapsamına dahildir.
+Sınıf türünün bir örneği oluşturan kodu oluşturucudur. Sınıflar için oluşturucular biraz farklı iş F# diğer .NET dillerinde arkadaşlarınıza kıyasla. İçinde bir F# sınıfı, her zaman birincil oluşturucu bağımsız değişkenleri açıklanmıştır: `parameter-list` tür adı ve gövde oluşan aşağıdaki `let` (ve `let rec`) sınıf bildiriminin başındaki bağlamaları ve `do` izleyin bağlar. Birincil oluşturucu bağımsız değişkenleri sınıf bildirimi içinde kapsamına dahildir.
 
 Ek oluşturucuları kullanarak ekleyebilirsiniz `new` anahtar sözcüğü gibi bir üye eklemek için:
 
@@ -104,7 +104,7 @@ Tür bağımsız değişkeni türü kullanıldığında algılanır. Aşağıdak
 
 ## <a name="specifying-inheritance"></a>Devralma belirtme
 
-`inherit` Yan tümcesi varsa doğrudan temel sınıf tanımlar. F#'ta yalnızca bir doğrudan temel sınıf izin verilir. Bir sınıfın uyguladığı arabirimleri temel sınıflar olarak kabul edilmez. Arabirimler açıklanmıştır [arabirimleri](Interfaces.md) konu.
+`inherit` Yan tümcesi varsa doğrudan temel sınıf tanımlar. İçinde F#, yalnızca bir doğrudan temel sınıf izin verilir. Bir sınıfın uyguladığı arabirimleri temel sınıflar olarak kabul edilmez. Arabirimler açıklanmıştır [arabirimleri](Interfaces.md) konu.
 
 Dil anahtar sözcüğü kullanarak türetilen sınıfın temel sınıf özellikler ve yöntemler erişebilirsiniz `base` tanımlayıcı olarak ve ardından bir nokta (.) ile üyesinin adı.
 
@@ -112,7 +112,7 @@ Daha fazla bilgi için [devralma](inheritance.md).
 
 ## <a name="members-section"></a>Üyeler bölümü
 
-Bu bölümde, statik veya örnek yöntemler, özellikler, arabirim uygulamaları, soyut üyeler, olay bildirimleri ve ek oluşturucular tanımlayabilirsiniz. Let ve bağlamaları Bu bölümde yer alamaz yapın. F# türleri sınıflar yanı sıra çeşitli üyeleri eklenebilir olduğundan, ayrı bir konuda ele alınmıştır [üyeleri](members/index.md).
+Bu bölümde, statik veya örnek yöntemler, özellikler, arabirim uygulamaları, soyut üyeler, olay bildirimleri ve ek oluşturucular tanımlayabilirsiniz. Let ve bağlamaları Bu bölümde yer alamaz yapın. Üyeleri için çeşitli eklenebildiği F# türleri sınıflarının yanı sıra, ayrı bir konuda ele alınmıştır [üyeleri](members/index.md).
 
 ## <a name="mutually-recursive-types"></a>Karşılıklı özyinelemeli türleri
 
@@ -124,7 +124,7 @@ Döngüsel bir şekilde birbirine başvuru türleri tanımladığınızda, birli
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>Sınıflar, birleşimler, kayıtlar ve yapıları ne zaman kullanılacağı
 
-Aralarından seçim yapabileceğiniz türleri çeşitli göz önünde bulundurulduğunda, hangi her türü için uygun bir özel durum türünü seçmek için tasarlanmıştır, iyi anlamış olmanız gerekir. Sınıflar, nesne yönelimli programlama bağlamlarda kullanmak için tasarlanmıştır. Nesne yönelimli programlama, .NET Framework için yazılan uygulamaları kullanılan baskın örnektir. F# kodunuzu .NET Framework'ü veya başka bir nesne yönelimli kitaplığı ile yakından çalışmaya sahipse ve özellikle kullanıcı Arabirimi kitaplığı gibi bir nesne yönelimli tür sisteminden genişletmek varsa, büyük olasılıkla uygun sınıflardır.
+Aralarından seçim yapabileceğiniz türleri çeşitli göz önünde bulundurulduğunda, hangi her türü için uygun bir özel durum türünü seçmek için tasarlanmıştır, iyi anlamış olmanız gerekir. Sınıflar, nesne yönelimli programlama bağlamlarda kullanmak için tasarlanmıştır. Nesne yönelimli programlama, .NET Framework için yazılan uygulamaları kullanılan baskın örnektir. Varsa, F# koduna sahip .NET Framework'ü veya başka bir nesne yönelimli kitaplığı ile yakından çalışmaya ve özellikle, bir kullanıcı Arabirimi kitaplığı gibi bir nesne yönelimli tür sisteminden genişletmek sınıflar büyük olasılıkla uygun vardır.
 
 Size yakın bir tümleştirmede nesne yönelimli kod ile birlikte çalışma değil veya müstakil ve bu nedenle korunan nesne yönelimli kod sık etkileşim uygulamadan kod yazıyorsanız, kayıtları kullanmayı düşünmeniz gerekir ve ayrılmış birleşimler. Tek bir iyi düşünce – çıkış kodu, uygun desen ile birlikte birleşimdir genellikle bir nesne hiyerarşisine daha basit bir alternatif olarak kullanılabilir. Ayrılmış birleşimler hakkında daha fazla bilgi için bkz: [ayırt edici birleşimler](discriminated-unions.md).
 

@@ -1,13 +1,13 @@
 ---
-title: Simge ve İşleç Başvurusu (F#)
+title: Simge ve İşleç Başvurusu
 description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
 ms.date: 04/04/2018
-ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169878"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613810"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -23,7 +23,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |Sembol or işleci|Bağlantılar|Açıklama|
 |------------------|-----|-----------|
 |`!`|[Başvuru Hücreleri](../reference-cells.md)<br /><br />[Hesaplama İfadeleri](../computation-expressions.md)|<ul><li>Bir başvuru hücresi başvurusunu kaldırır.<br /></li><li>Sonra anahtar sözcüğü, bir iş akışı tarafından denetlenen anahtar sözcüğü'nın davranışı değiştirilmiş bir sürümünü gösterir.<br /></li></ul>|
-|`!=`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `<>` eşitsizlik işlemleri için.<br /></li></ul>|
+|`!=`|Uygulanamaz.|<ul><li>İçinde kullanılmadı F#. Kullanım `<>` eşitsizlik işlemleri için.<br /></li></ul>|
 |`"`|[Değişmez Değerler](../literals.md)<br /><br />[Dizeler](../strings.md)|<ul><li>Bir metin dizesi sınırlandırır.<br /></li></ul>|
 |`"""`|[Dizeler](../strings.md)|Verbatim metin dizesi sınırlandırır. Farklıdır `@"..."` içeren bir tırnak işareti karakteri tek tırnak içinde dize kullanarak belirtebilirsiniz.|
 |`#`|[Derleyici Yönergeleri](../compiler-directives.md)<br /><br />[Esnek Türler](../flexible-types.md)|<ul><li>Önişlemci veya derleyici yönergesi gibi ön ekleri `#light`.<br /></li><li>Bir türü ile kullanıldığında, gösterir bir *esnek türü*, bir tür veya türetilmiş türlerini birini gösterir.<br /></li></ul>|
@@ -81,7 +81,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Kod yazılmamış tırnak sınırlandırır.<br /></li></ul>|
 |`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sağ tarafı; sol tarafındaki eşitse, aksi takdirde döndürür `false`.<br /></li></ul>|
 |`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Equal" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|`==`|Uygulanamaz.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
+|`==`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
 |`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafında, aksi takdirde sağ tarafındaki büyük döndürür `false`.<br /></li></ul>|
 |`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür" işlemi hesaplar.<br /></li></ul>|
 |`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlev (İleri birleşim işleci) oluşturur.<br /></li></ul>|

@@ -1,13 +1,13 @@
 ---
-title: Derleyici Seçenekleri (F#)
+title: Derleyici Seçenekleri
 description: Kullanım F# derlemesini denetlemek için derleyici komut satırı seçenekleri, F# uygulamalar ve kitaplıklar.
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170879"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614499"
 ---
 # <a name="compiler-options"></a>Derleyici Seçenekleri
 
@@ -67,10 +67,9 @@ Alfabetik listelenmiş derleyici seçenekleri aşağıdaki tabloda gösterilmekt
 |`--warnon:warning-number-list`|Varsayılan olarak kapalı olabilir veya başka bir komut satırı seçeneği tarafından devre dışı belirli uyarıları etkinleştirin. İçinde F# 3.0, yalnızca 1182 (kullanılmayan değişkenler) uyarısı varsayılan olarak kapalıdır.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Etkinleştirir veya rapor uyarıları hata olarak seçeneği devre dışı bırakır. Etkin veya devre dışı bırakılacak uyarılara belirli sayılar sağlayabilir. Daha sonra komut satırı seçenekleri komut satırında daha önceki seçenekleri geçersiz kılar. Örneğin uyarıları hatalar bildirmek istemediğinizi belirtmek için belirtin `--warnaserror+` `--warnaserror-:warning-number-list`.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;warnaserror &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx).|
 |`--win32manifest:manifest-filename`|Derlemeye Win32 bildirim dosyası ekler. Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;win32manifest &#40;C&#35; derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/bb545961.aspx).|
-|`--win32res:resource-filename`|Derlemeye bir Win32 kaynak dosyası ekler.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;win32res (&#40;C & #35); Derleyici Seçenekleri&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
+|`--win32res:resource-filename`|Derlemeye bir Win32 kaynak dosyası ekler.<br /><br />Bu derleyici seçeneğini eşdeğerdir C# derleyici seçeneği aynı ada sahip. Daha fazla bilgi için [ &#47;win32res (&#40;C&#35;) derleyici seçenekleri&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
 ## <a name="related-articles"></a>İlgili makaleler
-
 
 |Başlık|Açıklama|
 |-----|-----------|

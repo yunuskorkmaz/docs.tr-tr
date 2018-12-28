@@ -1,13 +1,13 @@
 ---
-title: Birim Türü (F#)
-description: Nasıl F# 'unit' türü genellikle burada herhangi bir değer gerekli ya da istenen dili sözdizimi tarafından bir değer gereklidir yerde tutmak için kullanılan bilgi edinin.
+title: Birim Türü
+description: Bilgi nasıl F# 'unit' türü genellikle burada bir değer gereklidir dili sözdizimi tarafından hiçbir değer gereken veya istediğiniz yerde tutmak için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44204662"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611990"
 ---
 # <a name="unit-type"></a>Birim Türü
 
@@ -22,17 +22,17 @@ ms.locfileid: "44204662"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her F# ifadesi bir değer olarak değerlendirilmesi gerekir. İlgi, değer türünde bir değer oluşturmaz ifadeler `unit` kullanılır. `unit` Türü benzer `void` C# ve C++ gibi dillerde türü.
+Her F# ifadeyi değerlendirmek için bir değer gerekir. İlgi, değer türünde bir değer oluşturmaz ifadeler `unit` kullanılır. `unit` Türü benzer `void` C# ve C++ gibi dillerde türü.
 
 `unit` Tek bir değer türüne sahip ve bu değer belirteci tarafından belirtilen `()`.
 
-Değerini `unit` türü genellikle kullanılan bir değer, dili sözdizimi tarafından gerekli olduğu durumlarda, ancak hiçbir değer gerekli ya da istenen bir yerde tutmak için programlama içinde F#. Dönüş değeri bir örnek olabilir bir `printf` işlevi. Çünkü önemli eylemleri `printf` işlemi meydana işlevde harcanan, gerçek bir değer döndürmek işlev yok. Bu nedenle, dönüş değeri türünde `unit`.
+Değerini `unit` türü kullanılan genellikle F# programlama dili sözdizimi tarafından bir değer gerektiğinde, ancak hiçbir değer gerekli ya da istenen bir yerde tutmak için. Dönüş değeri bir örnek olabilir bir `printf` işlevi. Çünkü önemli eylemleri `printf` işlemi meydana işlevde harcanan, gerçek bir değer döndürmek işlev yok. Bu nedenle, dönüş değeri türünde `unit`.
 
 Bazı yapıları beklediğiniz bir `unit` değeri. Örneğin, bir `do` bağlama veya en üst düzeyde bir modülün herhangi bir kod için değerlendirilecek beklenmektedir bir `unit` değeri. Derleyici bir uyarı bildirir, bir `do` bağlamanız veya kodunuz en üst düzeyde bir modülün bir sonuç üretir dışında `unit` , aşağıdaki örnekte gösterildiği gibi kullanılmayan değer.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
-Bu uyarı, işlevsel programlama özelliğidir; Diğer .NET programlama dillerinin görünmüyor. İşlevler tüm yan etkileri de yoktur tamamen işlevsel bir programda son dönüş değeri bir işlev çağrısı yalnızca sonucudur. Bu nedenle sonuç göz ardı edilir olduğunda, olası bir programlama hatası gereklidir. F# tamamen işlevsel bir programlama dili olmamasına karşın, işlevsel programlama stil mümkün olduğunca izlemek için iyi bir uygulamadır.
+Bu uyarı, işlevsel programlama özelliğidir; Diğer .NET programlama dillerinin görünmüyor. İşlevler tüm yan etkileri de yoktur tamamen işlevsel bir programda son dönüş değeri bir işlev çağrısı yalnızca sonucudur. Bu nedenle sonuç göz ardı edilir olduğunda, olası bir programlama hatası gereklidir. Ancak F# tamamen işlevsel değil programlama dili, işlevsel programlama stil mümkün olduğunca izlemek için yararlı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

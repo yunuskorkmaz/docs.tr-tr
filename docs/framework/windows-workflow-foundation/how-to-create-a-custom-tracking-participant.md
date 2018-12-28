@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156707"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611861"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl Yapılır: Özel İzleme Katılımcısı oluşturma
 İş akışı izleme, iş akışı yürütme durumunu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti harcanması ve hataları tanımlayan izleme kayıtları gösterir. Bu izleme kayıtları izleme katılımcıları tarafından tüketilir. Windows Workflow Foundation (WF) izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalamak izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri ve böylece kullanıcıya gösterilir.  
@@ -18,17 +18,7 @@ ms.locfileid: "53156707"
 > [!NOTE]
 >  Önceki konularıyla ilgili her konuda Başlarken Öğreticisi bağlıdır. Bu konuyu tamamlamak için önceki konu tamamlamanız gerekir. Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-## <a name="in-this-topic"></a>Bu konuda  
-  
--   [Özel İzleme Katılımcısı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
-  
--   [İzleme profili oluşturma ve izleme Katılımcısı kaydetmek için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
-  
--   [İzleme bilgilerini görüntülemek için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
-  
--   [Derleme ve uygulamayı çalıştırmak için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
-  
-###  <a name="BKMK_CustomTrackingParticipant"></a> Özel İzleme Katılımcısı oluşturma  
+## <a name="to-create-the-custom-tracking-participant"></a>Özel İzleme Katılımcısı oluşturma  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `StatusTrackingParticipant` içine **adı** ve'ı tıklatın **Ekle**.  
   
@@ -104,7 +94,7 @@ ms.locfileid: "53156707"
   
      Varsayılan profil izleme, izleme profil belirtildiğinde kullanılır. Varsayılan profil izleme kullanıldığında, izleme kayıtları tüm yayılan `ActivityStates`. Biz yalnızca bir kez yaşam döngüsü sırasında metin yakalamak gerektiğinden `WriteLine` etkinlik, biz yalnızca Ayıkla metinden `ActivityStates.Executing` durumu. İçinde [izleme profili oluşturma ve izleme Katılımcısı kaydetmek için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), yalnızca belirten bir izleme profili oluşturulan `WriteLine` `ActivityStates.Executing` izleme kayıtları yayılan.  
   
-###  <a name="BKMK_TrackingProfile"></a> İzleme profili oluşturma ve izleme Katılımcısı kaydetmek için  
+## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>İzleme profili oluşturma ve izleme Katılımcısı kaydetmek için  
   
 1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
   
@@ -225,7 +215,7 @@ ms.locfileid: "53156707"
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> İzleme bilgilerini görüntülemek için  
+## <a name="to-display-the-tracking-information"></a>İzleme bilgilerini görüntülemek için  
   
 1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
   
@@ -320,7 +310,7 @@ ms.locfileid: "53156707"
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için  
+## <a name="to-build-and-run-the-application"></a>Derleme ve uygulamayı çalıştırmak için  
   
 1.  Uygulamayı oluşturmak için Ctrl + Shift + B tuşlarına basın.  
   
@@ -329,21 +319,27 @@ ms.locfileid: "53156707"
 3.  Tahmin eden oyun ve başlangıç ve iş akışı türü için bir aralık seçmek **yeni oyun**. İçinde bir tahmin girin **tahmin** kutusuna ve tıklatın **Git** , tahmin göndermek için. İş akışı durumu durum penceresinde görüntülendiğine dikkat edin. Bu çıkış yakalanmıştır `WriteLine` etkinlikler. Geçiş için farklı bir iş akışı birini seçerek **iş akışı örnek kimliğini** birleşik giriş kutusu ve geçerli iş akışı durumunu kaldırıldığını unutmayın. Önceki iş akışını ve durum, aşağıdaki örneğe benzer şekilde geri yüklendiğini Not dönün.  
   
     > [!NOTE]
-    >  İzleme etkinleştirilmeden önce başlatıldığından bir iş akışına geçiş yaparsanız yok durumu görüntülenir. Ancak ek tahmin yaparsanız, izleme artık etkin olmadığından durumlarını kaydedilir.  
+    > İzleme etkinleştirilmeden önce başlatıldığından bir iş akışına geçiş yaparsanız yok durumu görüntülenir. Ancak ek tahmin yaparsanız, izleme artık etkin olmadığından durumlarını kaydedilir.  
   
- **Lütfen 1 ile 10 arasında bir sayı girin**  
-**Çok yüksek tahmininizdir.**   
-**Lütfen 1 ile 10 arasında bir sayı girin**    
-
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+    
     > [!NOTE]
-    >  Bu bilgiler, rastgele sayı aralığı belirlemek için yararlıdır, ancak daha önce yapılmış hangi tahmin hakkında bilgi içermiyor. Bu bilgiler sonraki adımda olan [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
-  
-     İş akışı örnek kimliğini not edin ve kendi tamamlanana kadar oyun.  
+    > Bu bilgiler, rastgele sayı aralığı belirlemek için yararlıdır, ancak daha önce yapılmış hangi tahmin hakkında bilgi içermiyor. Bu bilgiler sonraki adımda olan [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+
+    İş akışı örnek kimliğini not edin ve kendi tamamlanana kadar oyun.
   
 4.  Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak). Ek olarak proje dosyaları GUID adlarıyla yürütülebilir dosyalar olduğunu unutmayın. Önceki adımda tamamlanan iş akışı'ndan iş akışı örneği kimliğine karşılık gelen bir belirleyin ve Not Defteri'nde açın. İzleme bilgileri aşağıdaki gibi bilgileri içerir.  
   
- **Lütfen 1 ile 10 arasında bir sayı girin**  
-**Çok yüksek tahmininizdir.**   
-**Lütfen 1 ile 10 arasında bir sayı girin**   
-**Çok yüksek tahmininizdir.**   
-**Lütfen 1 ile 10 arasında bir sayı girin** kullanıcının tahmin olmaması ek olarak, bu izleme verileri, iş akışının son tahmin hakkında bilgi içermiyor. İzleme bilgileri yalnızca oluşan çünkü `WriteLine` iş akışından çıkış ve görüntülenen son iletide nden yapılır `Completed` iş akışı tamamlandıktan sonra işleyici. Öğreticinin sonraki adımda [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), varolan `WriteLine` etkinlikleri, kullanıcının tahminler ve ek görüntülenecek değiştirildiğinde `WriteLine` etkinliği, son sonuçları görüntüler eklenir. Bu değişiklikler tümleştirildikten sonra [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) aynı anda birden çok iş akışı sürümünü barındırmak nasıl gösterir.
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+
+    Kullanıcının tahmin olmaması ek olarak, bu izleme verileri, iş akışının son tahmin hakkında bilgi içermiyor. İzleme bilgileri yalnızca oluşan çünkü `WriteLine` iş akışından çıkış ve görüntülenen son iletide nden yapılır `Completed` iş akışı tamamlandıktan sonra işleyici. Öğreticinin sonraki adımda [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), varolan `WriteLine` etkinlikleri, kullanıcının tahminler ve ek görüntülenecek değiştirildiğinde `WriteLine` etkinliği, son sonuçları görüntüler eklenir. Bu değişiklikler tümleştirildikten sonra [nasıl yapılır: Ana bilgisayar, bir iş akışı yan yana birden çok sürümünü](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) aynı anda birden çok iş akışı sürümünü barındırmak nasıl gösterir.

@@ -1,17 +1,17 @@
 ---
-title: Zkratka (F#)
-description: Byref ve düşük düzeydeki programlama için kullanılan byref-like türleri F# hakkında bilgi edinin.
+title: Zkratka
+description: Byref ve byref-like türleri hakkında F#, alt düzey programlama için kullanılır.
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48836887"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611587"
 ---
 # <a name="byrefs"></a>Zkratka
 
-F# düşük düzeydeki programlama alanında baş iki önemli özellik alanlarını sahiptir:
+F#düşük düzeydeki programlama alanında baş iki önemli özellik alanlarını sahiptir:
 
 * `byref` / `inref` / `outref` Yönetilen işaretçiler türlerinden. Böylece, çalışma zamanında geçersiz bir program derlenemez kullanım kısıtlamaları sahiptirler.
 * A `byref`-olan yapı gibi bir [yapısı](structures.md) benzer semantiğe ve aynı derleme zamanı kısıtlamalara sahip `byref<'T>`. Bir örnek <xref:System.Span%601>.
@@ -97,7 +97,7 @@ Aşağıdakileri de geçerlidir:
 * Diğer adlar yazma erişimine sahip değil veya diğer iş parçacıkları çekilmeye yoktur `x`.
 * Çekilmeye yoktur, `SomeStruct` tarafından virtue, sabittir `x` olan bir `inref`.
 
-Ancak, F# için değer türlerinden **olan** değişmezse, `this` işaretçi olarak çıkarılan bir `inref`.
+Ancak, F# değer türleri **olan** değişmezse, `this` işaretçi olarak çıkarılan bir `inref`.
 
 Tüm bu kuralların birlikte sahibi anlamına bir `inref` işaretçi işaret edilen bellek hemen içeriğini değiştiremez.
 
@@ -107,18 +107,18 @@ Amacı `outref<'T>` işaretçi gelen yalnızca okunmalıdır belirtmektir. Bekle
 
 ### <a name="interop-with-c"></a>C# ile birlikte çalışma #
 
-C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür. Aşağıdaki tabloda, F# ne C# yayan yorumlaması gösterilmektedir:
+C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür. Aşağıdaki tabloda nasıl F# ne yorumlar C# gösterir:
 
-|C# yapısı|F# algılar.|
+|C# yapısı|F#algılar|
 |------------|---------|
 |`ref` Dönüş değeri|`outref<'T>`|
 |`ref readonly` Dönüş değeri|`inref<'T>`|
 |`in ref` Parametre|`inref<'T>`|
 |`out ref` Parametre|`outref<'T>`|
 
-Aşağıdaki tabloda, hangi F# yayan gösterilmektedir:
+Aşağıdaki tabloda neler gösterilmektedir F# gösterir:
 
-|F# yapısı|Yayılan yapısı|
+|F#yapısı|Yayılan yapısı|
 |------------|-----------------|
 |`inref<'T>` Bağımsız değişken|`[In]` bağımsız değişken özniteliği|
 |`inref<'T>` döndürülecek|`modreq` öznitelik değeri|
@@ -127,7 +127,7 @@ Aşağıdaki tabloda, hangi F# yayan gösterilmektedir:
 
 ### <a name="type-inference-and-overloading-rules"></a>Tür çıkarımı ve kuralları aşırı yükleme
 
-Bir `inref<'T>` aşağıdaki durumlarda F# derleyicisi tarafından çıkarılan türü:
+Bir `inref<'T>` türü tarafından çıkarılan F# derleyici aşağıdaki durumlarda:
 
 1. Olan bir .NET parametre veya dönüş türü bir `IsReadOnly` özniteliği.
 2. `this` Değişebilir hiçbir alan bir yapı türü işaretçisi.
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` değil gelmez `Struct`. Her ikisi de türünde bulunmalıdır.
 
-Bir "`byref`-gibi" yapı F# içinde bir yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
+Bir "`byref`-gibi" yapıda F# yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
 
 * İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.
 * Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.
 * Herhangi bir kapanış yapısı tarafından yakalanamıyor (`async` yöntemlerde veya lambda ifadelerinde).
 * Genel parametre olarak kullanılamaz.
 
-Bu son noktası F# için ardışık düzen stili programlamada, önemli olarak `|>` giriş türlerinden parametreleştiren genel bir işlevdir. Bu kısıtlama için rahat olmalıdır `|>` gelecekte satır içidir ve satır içi olmayan genel işlev çağrıları, gövdesinde yapmaz.
+Bu son noktası için çok önemlidir F# ardışık düzen stili programlamada, olarak `|>` giriş türlerinden parametreleştiren genel bir işlevdir. Bu kısıtlama için rahat olmalıdır `|>` gelecekte satır içidir ve satır içi olmayan genel işlev çağrıları, gövdesinde yapmaz.
 
 Bu kurallar çok kesin kullanımını kısıtlıyor olsa da, bunlar promise yüksek performanslı bilgi işlem güvenli bir şekilde karşılamak için bunu yapın.
 
 ## <a name="byref-returns"></a>ByRef dönüşleri
 
-F# işlevleri ByRef döndürür veya üyeleri oluşturulur ve tüketilen. Tüketildiğinde bir `byref`-yöntemi döndürmek, örtük olarak başvurusu kaldırılmış bir değerdir. Örneğin:
+ByRef döndüğü F# işlevleri veya üyeleri kullanılabilir üretilen ve tüketilen. Tüketildiğinde bir `byref`-yöntemi döndürmek, örtük olarak başvurusu kaldırılmış bir değerdir. Örneğin:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

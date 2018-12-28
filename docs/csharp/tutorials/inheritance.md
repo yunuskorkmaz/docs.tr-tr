@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: da21b1419f9d662c71ffd469cec67e01154ffc60
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334879"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656199"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
@@ -152,7 +152,7 @@ Aşağıdaki tablo, C# ' de oluşturabileceğiniz türleri ve bunların örtük 
 Normalde, devralma ifade etmek için kullanılan bir "olan bir" türetilmiş sınıflar temel sınıf; özelleşmiş sürümleri olduğu bir veya daha fazla türetilmiş sınıflar temel sınıf arasındaki ilişki türetilen sınıfın temel sınıf türüdür. Örneğin, `Publication` sınıfı temsil eder, herhangi bir türdeki bir yayın ve `Book` ve `Magazine` sınıfları temsil eden belirli tür yayınlar.
 
 > [!NOTE]
-> Bir sınıf veya yapı bir daha fazla arabirim uygulayabilir. Arabirim uygulaması genellikle geçici bir çözüm tek devralma için veya yapılar ile devralma kullanmanın bir yolu olarak sunulur, ancak express arasında bir arabirim ve uygulama türünden farklı bir ilişki ("yapılabilir" ilişkisi) için tasarlanmıştır Devralma. Arabirim uygulama türlerinden arabirimi kullanıma sunduğu (örneğin, karşılaştırma ya da sıralama nesnelere, eşitlik için sınama veya kültüre duyarlı ayrıştırma ve biçimlendirme desteği özelliği) işlevlerinin bir alt kümesini tanımlar.
+> Bir sınıfın veya yapının bir veya daha fazla arabirim uygulayabilir. Arabirim uygulaması genellikle geçici bir çözüm tek devralma için veya yapılar ile devralma kullanmanın bir yolu olarak sunulur, ancak express arasında bir arabirim ve uygulama türünden farklı bir ilişki ("yapılabilir" ilişkisi) için tasarlanmıştır Devralma. Arabirim uygulama türlerinden arabirimi kullanıma sunduğu (örneğin, karşılaştırma ya da sıralama nesnelere, eşitlik için sınama veya kültüre duyarlı ayrıştırma ve biçimlendirme desteği özelliği) işlevlerinin bir alt kümesini tanımlar.
 
 Dikkat "olan bir" da bir tür ve belirli bir örneğini türü arasındaki ilişkiyi ifade eder. Aşağıdaki örnekte, `Automobile` üç benzersiz salt okunur özelliklere sahip bir sınıfı: `Make`, otomobil; üreticisi `Model`, otomobil; türünü ve `Year`, üretim, yıl. `Automobile` Sınıfı ayrıca bir oluşturucu bağımsız değişkenleri için özellik değerlerini atanan sahiptir ve onu geçersiz kılar <xref:System.Object.ToString%2A?displayProperty=nameWithType> benzersiz olarak tanımlayan bir dize oluşturmak için yöntemi `Automobile` örneği yerine `Automobile` sınıfı.
 

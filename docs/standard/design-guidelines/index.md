@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147612"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396935"
 ---
 # <a name="framework-design-guidelines"></a>Çerçeve Tasarım Yönergeleri
 Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama için yönergeler sağlar. Bağımsız geliştirme için kullanılan programlama dili olan birleşik bir programlama modeli sağlayarak API tutarlığı ve kullanım kolaylığı sağlamak kitaplığı tasarımcıları yardımcı olmaktır. Sınıfları ve genişleten .NET Framework bileşenleri geliştirirken bu tasarım ilkelerine uyun öneririz. Tutarsız kitaplığı tasarım olumsuz geliştirici üretkenliğinizi etkiler ve benimseme gerçekleştirilmesini önler.  
@@ -42,7 +42,7 @@ Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama 
  Ortak bir türleri dizilerini, öznitelikleri ve koleksiyonları gibi kullanarak, serileştirme destekleme ve eşitlik işleçleri aşırı yükleme yönergeleri açıklar.  
   
  [Ortak Tasarım Desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Seçme ve bağımlılık özellikleri ve dispose deseni uygulamak için yönergeler sağlar.  
+ Seçme ve bağımlılık özellikleri uygulamak için yönergeler sağlar.  
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

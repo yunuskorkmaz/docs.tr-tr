@@ -1,13 +1,13 @@
 ---
-title: let Bağlamaları (F#)
-description: F# 'let bir değer ya da işlevin tanımlayıcı ilişkilendiren bir bağlama' kullanmayı öğrenin.
+title: let Bağlamaları
+description: Nasıl kullanacağınızı öğrenin bir F# 'bağlama, bir tanımlayıcı bir değer ya da işlev ile ilişkilendirir let'.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43777476"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612679"
 ---
 # <a name="let-bindings"></a>let Bağlamaları
 
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modül adı ile nitelenmelidir. Örneğin, F# List Modülü, bu öznitelik vardır.
+Bazı modüller özniteliğine sahip [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), yani ortaya işlevleri modül adı ile nitelenmelidir. Örneğin, F# List Modülü bu özniteliğine sahip.
 
 Modüller ve erişim denetimi hakkında daha fazla bilgi için bkz. [modülleri](../modules.md) ve [erişim denetimi](../access-control.md).
 

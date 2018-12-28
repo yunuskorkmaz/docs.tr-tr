@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745009"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612315"
 ---
 # <a name="ltprobinggt-element"></a>&lt;yoklama&gt; öğesi
-Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için temel alt dizinleri belirtir.  
+Derlemeler yüklenirken aramak ortak dil çalışma zamanı için uygulama temel alt dizinleri belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -39,7 +39,7 @@ Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için teme
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`privatePath`|Gerekli öznitelik.<br /><br /> Derlemeler içerebilir uygulamanın ana dizin alt dizinleri belirtir. Her alt noktalı virgül ile sınırlar.|  
+|`privatePath`|Gerekli öznitelik.<br /><br /> Derlemeleri içerebilir uygulama temel dizininin alt dizinleri belirtir. Her alt noktalı virgül ile sınırlandırın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,7 +53,7 @@ Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için teme
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çalışma zamanı derlemeleri için arayacağı uygulama temel alt dizinleri belirtin gösterilmektedir.  
+ Aşağıdaki örnek, çalışma zamanı derlemeleri araması gereken uygulama temel alt dizinleri belirtmek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -66,7 +66,7 @@ Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için teme
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

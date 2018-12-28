@@ -1,13 +1,13 @@
 ---
-title: Demetler (F#)
-description: F# demet hakkında farklı türlerdeki adlandırılmamış ancak sıralı değerleri gruplandırması öğrenin.
+title: Demetler
+description: Hakkında bilgi edinin F# tanımlama grubu, farklı türlerde adlandırılmamış ancak sıralı değerleri gruplandırmasıdır.
 ms.date: 05/16/2016
-ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43749229"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611054"
 ---
 # <a name="tuples"></a>Demetler
 
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her *öğesi* önceki sözdiziminde, geçerli tüm F# ifadesi olabilir.
+Her *öğesi* önceki sözdiziminde herhangi bir geçerli olabilir F# ifade.
 
 ## <a name="examples"></a>Örnekler
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>C# demetleri ile birlikte çalışma
 
-C# 7.0 diziler dili kullanıma sunuldu.  C# ' de tanımlama gruplarına birimleridir ve F# yapı demetleri eşdeğerdir.  C# ile çalışmak ihtiyacınız varsa, yapı demetleri kullanmanız gerekir.
+C# 7.0 diziler dili kullanıma sunuldu.  ' De tanımlama gruplarına C# birimleridir ve yapı demetleri içinde eşdeğer F#.  C# ile çalışmak ihtiyacınız varsa, yapı demetleri kullanmanız gerekir.
 
 Bunu yapmak kolay bir işlemdir.  Örneğin, C# sınıfı için bir demet geçirin ve ardından bir tanımlama grubu olan sonucunu kullanmak sahip olduğunuz düşünün:
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-Ardından, F# kodunuzda yapı demet parametre olarak geçiriyoruz ve sonucu bir yapı tanımlama grubu olarak kullanma.
+İçinde F# kod, bir yapı demet parametre olarak geçiriyoruz ve sonucu bir yapı tanımlama grubu olarak kullanma.
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ Desen gerekir üzerinde bir dizi eşleşmesi ve diğer bağlı bileşenlerini ol
 
 Bu bölümde, bunlar derlendikleri zaman formun başlık açıklanmaktadır.  Burada yer alan bilgiler .NET Framework 3.5 hedefleniyorsa sürece okumak gerekli ya da düşük değildir.
 
-Diziler, birkaç genel türler, tüm adlandırılmış birinin nesnelerini derlenen `System.Tuple`, parametre sayısı veya türü parametre sayısı aşırı yüklenmiştir. Tanımlama grubu türleri, C# veya Visual Basic gibi başka bir dilden bunları görüntülemek veya F# yapılarını uyumlu olmayan bir aracı kullanırken bu formda görüntülenir. `Tuple` Türleri, .NET Framework 4'te sunulmuştur. .NET Framework'ün önceki bir sürümü hedefliyorsanız, derleyici sürümleri kullanan [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) F# çekirdek kitaplığı 2.0 sürümüne ait. Bu kitaplıktaki türleri, 2.0, 3.0 ve .NET Framework 3.5 sürümlerini hedefleyen uygulamalar için kullanılır. Tür iletme, .NET Framework 2.0 ve .NET Framework 4 F# bileşenleri arasında ikili uyumluluğu sağlamak için kullanılır.
+Diziler, birkaç genel türler, tüm adlandırılmış birinin nesnelerini derlenen `System.Tuple`, parametre sayısı veya türü parametre sayısı aşırı yüklenmiştir. Tanımlama grubu türleri, bunları başka bir dilden gibi görüntülediğinizde bu formda görünen C# veya Visual Basic veya farkında değil bir aracı kullanırken F# oluşturur. `Tuple` Türleri, .NET Framework 4'te sunulmuştur. .NET Framework'ün önceki bir sürümü hedefliyorsanız, derleyici sürümleri kullanan [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) 2.0 sürümünden F# çekirdek kitaplığı. Bu kitaplıktaki türleri, 2.0, 3.0 ve .NET Framework 3.5 sürümlerini hedefleyen uygulamalar için kullanılır. .NET Framework 2.0 ve .NET Framework 4 ikili uyumluluğu sağlamak için kullanılan tür iletme F# bileşenleri.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Yapı demetleri derlenmiş biçimi
 

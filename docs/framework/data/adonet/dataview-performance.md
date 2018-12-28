@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: df7c5525738d23a1489bfeec75d2c6b1dbd29e94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41b9e51e804d88227b8812124d25eae21838fc6d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762786"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610456"
 ---
 # <a name="dataview-performance"></a>DataView performansı
-Bu konu kullanarak performans yararlarını açıklar <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView> sınıfı ve önbelleğe alma bir <xref:System.Data.DataView> bir Web uygulaması.  
+Bu konuda performans kullanmanın avantajları anlatılmaktadır <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView> sınıfı ve önbelleğe alma bir <xref:System.Data.DataView> bir Web uygulaması.  
   
 ## <a name="find-and-findrows"></a>Bul ve FindRows  
- <xref:System.Data.DataView> bir dizin oluşturur. Bir dizin, bir veya daha fazla sütun tablo veya Görünüm oluşturulmuş anahtarları içerir. Bu anahtarları sağlayan bir yapısında depolanmış <xref:System.Data.DataView> hızlı ve verimli bir şekilde anahtar değerleriyle ilişkili satırları ve satır bulunamadı. Filtreleme ve sıralama, gibi dizin kullanan işlemler signifcant performans artışı bakın. Dizini bir <xref:System.Data.DataView> hem olduğunda yerleşik <xref:System.Data.DataView> oluşturulur ve sıralama veya filtreleme herhangi birinde bilgi değiştirilir. Oluşturma bir <xref:System.Data.DataView> ve en az iki kez oluşturulacak dizin sıralama ayarlama veya bilgileri daha sonra filtreleme neden olur: sonra zaman <xref:System.Data.DataView> oluşturulduğu ve yeniden sıralama veya filtre özelliklerden herhangi biri değiştirildiği. Sıralama ve filtreleme hakkında daha fazla bilgi için <xref:System.Data.DataView>, bkz: [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+ <xref:System.Data.DataView> bir dizin oluşturur. Bir dizin tablosu veya görünümündeki bir veya daha fazla sütun oluşturulmuş anahtarları içerir. Bu anahtarları sağlayan bir yapı içinde depolanan <xref:System.Data.DataView> hızla ve verimli bir şekilde anahtar değerleriyle ilişkili satırları ve satır bulunamadı. Filtreleme ve sıralama, gibi ve dizin kullanan işlemleri önemli performans artışları bakın. Dizin için bir <xref:System.Data.DataView> hem zaman yerleşik <xref:System.Data.DataView> oluşturulur ve herhangi bir sıralama veya filtreleme bilgileri değiştirilir. Oluşturma bir <xref:System.Data.DataView> ve en az iki kere derlenmesi için dizini sıralama ayarlama veya daha sonra bilgiler filtreleme neden olur: bir kez zaman <xref:System.Data.DataView> oluşturulur, ve yeniden sıralama veya filtreleme özelliklerinden herhangi birini değiştirildiği. İle sıralama ve filtreleme hakkında daha fazla bilgi için <xref:System.Data.DataView>, bkz: [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
- Bir veri alt kümesini, dinamik bir görünümü, kullandığınız sağlanması karşılıklı için olarak veriler üzerinde belirli bir sorgu sonuçlarını döndürmek istiyorsanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>, ayar yerine <xref:System.Data.DataView.RowFilter%2A> özelliği. <xref:System.Data.DataView.RowFilter%2A> Özelliği en iyi kullanılır verilere bağlı uygulamada burada bağlantılı denetim filtrelenen sonuçları görüntüler. Ayar <xref:System.Data.DataView.RowFilter%2A> özelliği veri yükü uygulamanıza ekleme ve performans azaltmak için dizini yeniden oluşturur. <xref:System.Data.DataView.Find%2A> Ve <xref:System.Data.DataView.FindRows%2A> yöntemleri yeniden oluşturulması için dizin gerek kalmadan geçerli dizini kullanın. Çağrı kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yalnızca bir kez daha sonra varolan kullanmanız gereken <xref:System.Data.DataView>. Çağrı kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez, yeni bir oluşturmalısınız <xref:System.Data.DataView> arayın ve ardından arama yapmak istediğiniz sütunu dizini yeniden oluşturmak için <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemleri. Hakkında daha fazla bilgi için <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemleri bkz [bulma satırları](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+ Şirket veriler için karşılıklı verilerin bir alt kümesini, dinamik bir görünüm, kullandığınız sağlayan belirli bir sorgunun sonuçlarını döndürmek isterseniz <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>, ayar yerine <xref:System.Data.DataView.RowFilter%2A> özelliği. <xref:System.Data.DataView.RowFilter%2A> Özelliği en iyi şekilde kullanılır verilere bağlı uygulamada nereye bağlantılı denetim filtrelenmiş sonuçları görüntüler. Ayarı <xref:System.Data.DataView.RowFilter%2A> özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. <xref:System.Data.DataView.Find%2A> Ve <xref:System.Data.DataView.FindRows%2A> yöntemlerini yeniden oluşturulması için dizini gerek kalmadan geçerli dizini kullanın. Çağırmak için kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yalnızca bir kez daha sonra mevcut kullanmalısınız <xref:System.Data.DataView>. Çağırmak için kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez, yeni bir oluşturmanız gerekir <xref:System.Data.DataView> üzerinde arama yapın ve ardından çağırmak için istediğiniz sütunu dizini yeniden <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemleri. Hakkında daha fazla bilgi için <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemleri bkz [satırları bulma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
- Aşağıdaki örnek kullanır <xref:System.Data.DataView.Find%2A> Soyadı "Zhu" kişiyle bulmak için yöntem.  
+ Aşağıdaki örnekte <xref:System.Data.DataView.Find%2A> Soyadı "Zhu" ile bir kişiyi bulmak için yöntemi.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryorderbyfind)]
  [!code-vb[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryorderbyfind)]  
   
- Aşağıdaki örnek kullanır <xref:System.Data.DataView.FindRows%2A> tüm kırmızı bulmak için yöntem renkli ürünler.  
+ Aşağıdaki örnekte <xref:System.Data.DataView.FindRows%2A> renkli ürünleri kırmızı bulmak için yöntemi.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryfindrows)]
  [!code-vb[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryfindrows)]  
   
 ## <a name="aspnet"></a>ASP.NET  
- ASP.NET bellekte oluşturmak için kapsamlı sunucu kaynaklarını gerektiren nesnelerini depolamak izin veren bir önbelleğe alma mekanizması vardır. Bu türdeki kaynağı önbelleğe alma, uygulamanızın performansını önemli ölçüde artırabilir. Önbelleğe alma tarafından gerçekleştirilir <xref:System.Web.Caching.Cache> sınıfıyla her uygulama için özel önbelleği örnekleri. Yeni bir oluşturma çünkü <xref:System.Data.DataView> nesne yoğun kaynak olabilir, bunu kullanmak önbelleğe alma işlevinin Web uygulamalarında isteyebilirsiniz böylece <xref:System.Data.DataView> Web sayfası her yenilendiğinde yeniden gerekmez.  
+ ASP.NET bellekte oluşturmaya yönelik kapsamlı sunucu kaynakları gerektiren nesneleri depolamak izin veren bir önbelleğe alma mekanizması vardır. Bu kaynak türlerinin önbelleğe alma, uygulamanızın performansını önemli ölçüde artırabilir. Önbelleğe alma tarafından gerçekleştirilir <xref:System.Web.Caching.Cache> sınıfıyla her uygulamaya özel önbellek örnekleri. Yeni bir oluşturma çünkü <xref:System.Data.DataView> nesne kaynak yoğunluğu olabilir, bunu kullanmak önbelleğe alma işlevinin Web uygulamalarında isteyebilirsiniz böylece <xref:System.Data.DataView> Web sayfa her yenilendiğinde yeniden oluşturulması gerekmez.  
   
- Aşağıdaki örnekte, <xref:System.Data.DataView> verileri, Sayfa yenilendiğinde yeniden sıralanması gerekmez. böylece önbelleğe alınır.  
+ Aşağıdaki örnekte, <xref:System.Data.DataView> böylece veriler, Sayfa yenilendiğinde yeniden sırılanacığını yok önbelleğe alınır.  
   
 ```vb  
 If (Cache("ordersView") = Nothing) Then  

@@ -1,21 +1,21 @@
 ---
-title: Desen Eşleştirme (F#)
-description: Desenler F#'de mantıksal yapıları ile verileri karşılaştırmak, verileri bileşenlerine ayırmak veya verilerden bilgi ayıklamak için nasıl kullanılacağını öğrenin.
+title: Desen Eşleştirme
+description: Desenleri nasıl kullanıldığı hakkında bilgi edinin F# mantıksal yapıları verilerle karşılaştırmak, verileri bileşenlerine ayırmak veya verilerden bilgi ayıklamak.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991430"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613589"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
-Desenler, dönüştürme giriş verileri kurallardır. Bunlar, verileri mantıksal bir yapıyla veya yapılarla karşılaştırmak, verileri bileşenlerine ayırmak veya çeşitli şekillerde verilerden bilgi ayıklamak için F# dilinde kullanılır.
+Desenler, dönüştürme giriş verileri kurallardır. Genelinde kullanılan F# mantıksal bir yapıyla veya yapılarla, verileri karşılaştırmak için dil, verileri bileşenlerine ayırmak veya çeşitli şekillerde verilerden bilgi ayıklamak.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Desenler kullanılan birçok dil yapılarında gibi `match` ifade. İşlevler için bağımsız değişkenler işlenirken kullanılır `let` bağlarında, lambda ifadeleri ve ilişkili özel durum işleyicileri `try...with` ifade. Daha fazla bilgi için [eşleşme ifadeleri](match-expressions.md), [let bağlamaları](functions/let-bindings.md), [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md), ve [özel durumlar: `try...with` İfade](exception-handling/the-try-with-expression.md).
+Desenler kullanılan birçok dil yapılarında gibi `match` ifade. İşlevler için bağımsız değişkenler işlenirken kullanılır `let` bağlarında, lambda ifadeleri ve ilişkili özel durum işleyicileri `try...with` ifade. Daha fazla bilgi için [eşleşme ifadeleri](match-expressions.md), [let bağlamaları](functions/let-bindings.md), [Lambda ifadeleri: `fun` Anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md), ve [özel durumlar: `try...with` İfade](exception-handling/the-try-with-expression.md).
 
 Örneğin, `match` ifade *deseni* ne kanal simgesini izleyen şeydir.
 
@@ -43,7 +43,7 @@ Desteklenen desenler aşağıdaki tabloda gösterilmektedir. Çalışma zamanın
 |Parantezlenmiş desen|( *deseni* )|`( a )`|
 |Tanımlama grubu düzeni|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
 |Kayıt düzeni|{ *ıdentifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
-|Joker karakter deseni|_|`_`|
+|Joker karakter deseni|\_|`_`|
 |Tür ek açıklaması ile birlikte desenleyin|*Desen* : *türü*|`a : int`|
 |Test desenini yazın|:? *tür* [olarak *tanımlayıcı* ]|`:? System.DateTime as dt`|
 |Null desen|null|`null`|
@@ -103,7 +103,7 @@ match shape with
 
 Etkin desenler daha karmaşık özel desen eşleştirmeleri tanımlamanıza olanak sağlar. Etkin desenler hakkında daha fazla bilgi için bkz: [Etkin desenler](active-patterns.md).
 
-Tanımlayıcı bir özel durum olduğu durumda, özel durum işleyicilerinin bağlamında eşleşen desende kullanılır. Özel Durum İşlemede desen hakkında daha fazla bilgi için bkz. [özel durumlar: `try...with` ifade](exception-handling/the-try-with-expression.md).
+Tanımlayıcı bir özel durum olduğu durumda, özel durum işleyicilerinin bağlamında eşleşen desende kullanılır. Özel Durum İşlemede desen hakkında daha fazla bilgi için bkz. [özel durumlar: `try...with` İfade](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Değişken desenleri
 

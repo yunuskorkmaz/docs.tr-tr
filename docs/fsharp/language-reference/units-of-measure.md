@@ -1,17 +1,17 @@
 ---
-title: Ölçü Birimleri (F#)
-description: Nasıl kayan nokta öğrenin ve F# imzalı tamsayı değerleri, genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü birimlerini ilişkili.
+title: Ölçü Birimleri
+description: Nasıl kayan nokta edinin ve oturum açtığınızı tamsayı değerleri F# genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü birimlerini ilişkili.
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972523"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610989"
 ---
 # <a name="units-of-measure"></a>Ölçü Birimleri
 
-Kayan nokta ve imzalı tamsayı değerleri F# genellikle toplu vb. uzunluğu, birim belirtmek için kullanılan ölçü birimlerini ilişkili. Birimleri ile miktarlar kullanarak önlemeye yardımcı olur aritmetik ilişkileri doğru birimleri, yüklü olduğunu doğrulamak derleyiciyi etkinleştir programlama hatalarını.
+Kayan nokta ve tamsayı değerleri oturum açtığınızı F# genellikle uzunluğu, toplu, yığın ve benzeri belirtmek için kullanılan ölçü birimlerini ilişkili. Birimleri ile miktarlar kullanarak önlemeye yardımcı olur aritmetik ilişkileri doğru birimleri, yüklü olduğunu doğrulamak derleyiciyi etkinleştir programlama hatalarını.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -113,7 +113,7 @@ Unitless değeri birimleri olan bir değere dönüştürülecek uygun birimleri 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>F# çekirdek Kitaplığı'nda ölçü birimleri
+## <a name="units-of-measure-in-the-f-core-library"></a>Ölçü birimlerini F# çekirdek kitaplığı
 
 Bir birim kitaplığı kullanılabilir `FSharp.Data.UnitSystems.SI` ad alanı. Bunların her iki simge biçiminde sı birimleri içerir (gibi `m` ölçüm için) içinde `UnitSymbols` alt ad alanı ve bunların tam adı (gibi `meter` ölçüm için) içinde `UnitNames` alt ad.
 

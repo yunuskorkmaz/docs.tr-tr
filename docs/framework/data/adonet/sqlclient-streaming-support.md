@@ -2,12 +2,12 @@
 title: SqlClient akış desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152896"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613004"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient akış desteği
 Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) yapılandırılmamış veriler (belgeler, görüntüler ve medya dosyaları) sunucuda destekler. İkili büyük nesne (BLOB) bir SQL Server veritabanı depolayabilir ancak BLOB'ları alma, çok miktarda bellek kullanabilirsiniz.  
@@ -326,7 +326,7 @@ GO
   
 -   Yeni zaman uyumsuz özelliği ve await anahtar sözcüğü büyük BLOB aktarmak için kullanma.  
   
--   Büyük BLOB aktarımı iptal ediliyor...  
+-   Büyük BLOB aktarımı iptal ediliyor.  
   
 -   Bir SQL Server kullanarak başka bir yeni özelliği zaman uyumsuz akış.  
   

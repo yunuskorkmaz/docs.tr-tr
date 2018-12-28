@@ -2,13 +2,13 @@
 title: Machine learning sözlüğü - ML.NET
 description: Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri sözlüğü.
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150582"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760399"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning önemli terimler sözlüğü
 
@@ -24,8 +24,6 @@ ms.locfileid: "53150582"
 
 İçinde [ikili sınıflandırma](#binary-classification), hatalı pozitif sonuç oranına (x ekseni) karşı gerçek pozitif sonuç oranına (y) çizer eğri altındaki alan değer olan bir değerlendirme ölçümü. 0,5 (kötü) 1 (iyi) aralıkları. Olarak da bilinen alanında ROC eğrisi, yani, alıcı özellik eğrisi çizer. Daha fazla bilgi için [karakteristik işletim alıcı](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) wikipedia makalesi.
 
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
-
 ## <a name="binary-classification"></a>İkili sınıflandırma
 
 A [sınıflandırma](#classification) case nerede [etiket](#label) yalnızca bir tanesi iki sınıfları. Daha fazla bilgi için [ikili sınıflandırma](tasks.md#binary-classification) bölümünü [makine öğrenimi görevlerini](tasks.md) konu.
@@ -37,8 +35,6 @@ Bir kategori tahmin etmek için veri kullanıldığında [denetimli makine öğr
 ## <a name="coefficient-of-determination"></a>Katsayısı
 
 İçinde [regresyon](#regression), veri modeli ne kadar iyi uyduğunu gösteren bir değerlendirme ölçümü. 1 Aralık 0. Değeri 0 anlamına gelir veri rastgele veya başka türlü modele sığamıyorsa. Değeri model verileri tam olarak eşleşen 1 anlamına gelir. Bu genellikle r adlandırılır<sup>2</sup>, R<sup>2</sup>, veya r karesi alınmış.
-
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Özellik
 
@@ -52,8 +48,6 @@ Bir kategori tahmin etmek için veri kullanıldığında [denetimli makine öğr
 
 İçinde [sınıflandırma](#classification), dengeleyen bir değerlendirme ölçümü [duyarlık](#precision) ve [geri çağırma](#recall).
 
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
-
 ## <a name="hyperparameter"></a>Hiper parametre
 
 Bir makine öğrenimi algoritmasının parametresi. Bir karar ormanı ya da bir gradyan düşüşü algoritması adım boyutunu almak için ağaçları sayısı verilebilir. Değerleri *Hiperparametreleri* modeli eğitmek önce ayarlanır ve bir karar ağacı veya bir doğrusal regresyon modeli ağırlıkları karşılaştırma işaret işlevinin parametreleri tahmin, örneğin, bulma işlemini yönetir . Daha fazla bilgi için [hiper parametre](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) wikipedia makalesi.
@@ -66,13 +60,9 @@ Machine learning modeli tahmin öğesi. Örneğin, köpek ve gelecekteki bir his
 
 İçinde [sınıflandırma](#classification), bir sınıflandırıcı doğruluğunu belirtir bir değerlendirme ölçümü. Daha küçük günlük kaybı olduğunu daha doğru bir sınıflandırıcıdır.
 
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
-
 ## <a name="mean-absolute-error-mae"></a>Mean Absolute error (MAE)
 
 İçinde [regresyon](#regression), model hatası tahmin edilen arasındaki uzaklığı olduğu tüm model hataları ortalamadır bir değerlendirme ölçümü [etiket](#label) değeri ve doğru etiket değeri.
-
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Model
 
@@ -104,8 +94,6 @@ Tüm işlemlerin bir veri kümesi modeline uyacak şekilde gerekli. Bir işlem h
 
 İçinde [sınıflandırma](#classification), bir sınıf için bir geri çağırma o sınıfa ait gerçekten sınıfına ait öğeleri toplam sayısına göre bölünmüş olarak doğru şekilde tahmin edilen öğeleri sayısıdır.
 
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
-
 ## <a name="regression"></a>Regresyon
 
 A [denetimli makine öğrenimi](#supervised-machine-learning) çıkış olduğu gerçek bir değer, örneğin, iki görev. Hisse senedi fiyatlarını tahmin etme örneklerindendir. Daha fazla bilgi için [regresyon](tasks.md#regression) bölümünü [makine öğrenimi görevlerini](tasks.md) konu.
@@ -121,8 +109,6 @@ A [denetimli makine öğrenimi](#supervised-machine-learning) çıkış olduğu 
 ## <a name="root-of-mean-squared-error-rmse"></a>Kök ortalama karesi alınmış hata (RMSE)
 
 İçinde [regresyon](#regression), kareler hataların ortalama kare kökünün bir değerlendirme ölçümü.
-
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Denetimli makine öğrenimi
 

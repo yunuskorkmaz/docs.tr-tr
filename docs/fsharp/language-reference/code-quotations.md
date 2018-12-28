@@ -1,13 +1,13 @@
 ---
-title: Kod Tırnak İşaretleri (F#)
+title: Kod Tırnak İşaretleri
 description: Hakkında bilgi edinin F# kod tırnak işaretleri, oluşturmak ve bunlarla çalışmak sağlayan bir dil özelliği F# ifadeleri programlı bir şekilde kod.
 ms.date: 05/16/2016
-ms.openlocfilehash: 565fd2a07c617d156f1d43f94a7cb98fc22f1401
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150790"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614304"
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 

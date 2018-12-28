@@ -1,15 +1,15 @@
 ---
-title: 'Lambda İfadeleri: fun Anahtar Sözcüğü (F#)'
-description: Anonim bir işlevdir bir lambda ifadesi tanımlamak için F# 'eğlenceli' anahtar sözcüğünü kullanmayı öğrenin.
+title: 'Lambda ifadeleri: Fun anahtar sözcüğü'
+description: Nasıl kullanacağınızı öğrenin F# 'eğlenceli' anahtar sözcüğü, anonim bir işlevdir bir lambda ifadesi tanımlayacaksınız.
 ms.date: 05/16/2016
-ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231027"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614473"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda İfadeleri: fun Anahtar Sözcüğü (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda ifadeleri: Fun anahtar sözcüğü (F#)
 
 `fun` Anahtar sözcüğü, bir lambda ifadesi, başka bir deyişle, anonim bir işlev tanımlamak için kullanılır.
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Açıklamalar
 
-*Parametre-listesi* genellikle adları ve parametre türleri, isteğe bağlı olarak oluşur. Daha genel *parametre-listesi* tüm F# desenlerini oluşabilir. Olası desenleri tam bir listesi için bkz. [desen eşleştirme](../pattern-matching.md). Geçerli parametrelerin bir listesi aşağıdaki örnekleri içerir.
+*Parametre-listesi* genellikle adları ve parametre türleri, isteğe bağlı olarak oluşur. Daha genel *parametre-listesi* herhangi birini oluşturulması F# desenleri. Olası desenleri tam bir listesi için bkz. [desen eşleştirme](../pattern-matching.md). Geçerli parametrelerin bir listesi aşağıdaki örnekleri içerir.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -42,7 +42,7 @@ fun head :: tail -> …
 
 ## <a name="using-lambda-expressions"></a>Lambda İfadeleri kullanma
 
-Lambda ifadeleri, özellikle bir liste veya diğer toplama işlemleri ve bir işlevi tanımlayan kaynaklanan ek yükten kaçınmak istiyorsanız istediğinizde kullanışlıdır. İşlev değerleri olarak bağımsız değişkenler çoğu F# kitaplığı işlevleri yararlanın ve bir lambda ifadesi bu gibi durumlarda kullanılacak özellikle kullanışlı olabilir. Aşağıdaki kod bir lambda ifadesi bir liste öğelerine uygulanır. Bu durumda, anonim işlev listesini her öğeye 1 ekler.
+Lambda ifadeleri, özellikle bir liste veya diğer toplama işlemleri ve bir işlevi tanımlayan kaynaklanan ek yükten kaçınmak istiyorsanız istediğinizde kullanışlıdır. Birçok F# kitaplığı işlevler bağımsız değişkenler olarak işlev değerleri alır ve bir lambda ifadesi bu gibi durumlarda kullanılacak özellikle kullanışlı olabilir. Aşağıdaki kod bir lambda ifadesi bir liste öğelerine uygulanır. Bu durumda, anonim işlev listesini her öğeye 1 ekler.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

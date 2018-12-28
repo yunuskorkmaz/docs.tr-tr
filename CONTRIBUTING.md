@@ -27,7 +27,7 @@ Temel bir anlayış ihtiyacınız [Git ve GitHub.com](https://guides.github.com/
 **1. adım:** Küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
 İçindeki içeriği **docs** klasörü, tablo, içeriği (İçindekiler tablosunda) yansıtılır bölümlere düzenlenir. Konunun TOC'de nerede yer alır tanımlayın. Teklifiniz hakkında geri bildirim alın.
 
-veya
+-veya-
 
 Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih edebilirsiniz. [Projeler .NET topluluğa katkıda bulunanlar için](https://github.com/dotnet/docs/projects/35) birçok topluluğa katkıda bulunanlar için kullanılabilir olan iş öğelerini listeler. İlgi alanlarına ve taahhüt düzeyine bağlı olarak, aşağıdaki kategorilerde sorunlar arasından seçim yapabilirsiniz:
 
@@ -67,6 +67,8 @@ Uygun Markdown söz dizimini takip ettiğinizden emin olun. Daha fazla bilgi iç
                 portability_report.png
 
 **4. adım:** Bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
+
+Çekme isteğiniz gereken *her zaman* ana dala hedefleyin. Yapmanız gerekenler *hiçbir zaman* Canlı dala hedefleyen bir PR açın.
 
 Her çekme isteği, genellikle aynı anda bir sorun gidermelidir. Çekme isteği, bir veya birden çok dosyalarda değişiklik yapabilir. Farklı dosya çubuğunda birden çok düzeltmesi ele alan ise ayrı bir PR tercih edilir.
 
