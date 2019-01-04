@@ -3,12 +3,12 @@ title: WIF ve Web grupları
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: f65e10fa44c9d245bc7d275ac0e1d8fe914bae0b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d1d3d67dd578957b5d7f4dc70cd2710143b699d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199469"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029469"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web grupları
 Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynakların güvenliğini sağlamak için Windows Identity Foundation (WIF) kullandığınızda, WIF üzerinde çalışan farklı RP uygulaması örneğini belirteçleri işleyebildiğinden emin olmak için bazı adımları uygulamanız gerekir gruptaki bilgisayarların. Oturum belirteci imzalar, şifreleme doğrulama Bu işleme içerir ve oturumu simgelerin şifresini, oturumu belirteçlerini önbelleğe alma ve algılama güvenlik belirteçleri yeniden yürütülmesi.  
@@ -45,7 +45,7 @@ Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynak
     ```xml  
     <caches>  
       <sessionSecurityTokenCache type="MyCacheLibrary.MySharedSessionSecurityTokenCache, MyCacheLibrary">  
-        <!—optional child configuration elements, if implemented by the derived class -->  
+        <!--optional child configuration elements, if implemented by the derived class -->  
       </sessionSecurityTokenCache>  
     </caches>  
     ```  

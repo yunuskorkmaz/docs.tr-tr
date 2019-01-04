@@ -2,12 +2,12 @@
 title: F#Stil Kılavuzu
 description: İyi beş sürecin prensiplerini öğrenin F# kod.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168968"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030275"
 ---
 # <a name="f-style-guide"></a>F#Stil Kılavuzu
 
@@ -21,7 +21,7 @@ Aşağıdaki ilkeler yazmanıza dilediğiniz zaman göz önünde bulundurun F# �
 
 1. **İyi F# kodu birleştiren, ifadesel ve birleştirilebilir.**
 
-    F#daha az kod satırı eylemleri express ve genel işlevler yeniden olanak tanıyan birçok özelliğe sahiptir. F# Çekirdek kitaplığı de içeren pek çok yararlı türleri ve işlevleri için ortak veri koleksiyonlar ile çalışma. Kendi işlevleri ve bu, oluşumunu F# çekirdek kitaplığı (veya diğer kitaplıkları) yordamı deyimsel bir parçası olan F# programlama. Bir çözüme daha az kod satırı olası bir sorunu ifade edebilirsiniz, genel bir kural, diğer geliştiriciler (veya gelecekte, kendi kendine) appreciative olacaktır. FSharp.core'da gibi bir kitaplık kullanmak da önemle tavsiye edilir [geniş .NET kitaplıkları](https://docs.microsoft.com/dotnet/api/) , F# üzerinde çalıştığı veya bir üçüncü taraf paketi [NuGet](https://www.nuget.org/) ölçeklenebilmesi kolay bir görev gerektiğinde.
+    F#daha az kod satırı eylemleri express ve genel işlevler yeniden olanak tanıyan birçok özelliğe sahiptir. F# Çekirdek kitaplığı de içeren pek çok yararlı türleri ve işlevleri için ortak veri koleksiyonlar ile çalışma. Kendi işlevleri ve bu, oluşumunu F# çekirdek kitaplığı (veya diğer kitaplıkları) yordamı deyimsel bir parçası olan F# programlama. Bir çözüme daha az kod satırı olası bir sorunu ifade edebilirsiniz, genel bir kural, diğer geliştiriciler (veya gelecekte, kendi kendine) appreciative olacaktır. FSharp.core'da gibi bir kitaplık kullanmak da önemle tavsiye edilir [geniş .NET kitaplıkları](../../../api/index.md) , F# üzerinde çalıştığı veya bir üçüncü taraf paketi [NuGet](https://www.nuget.org/) ölçeklenebilmesi kolay bir görev gerektiğinde.
 
 2. **İyi F# kodu birlikte çalışabilir.**
 

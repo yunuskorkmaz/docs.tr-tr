@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123624"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030133"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 
@@ -67,7 +67,7 @@ Uygulamanız başka bir projede aynı derlemenin 1.0.0.0 sürümüne başvuruyor
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağlama yeniden yönlendirmesini etkinleştirebilirsiniz. Herhangi bir derleme için app.config dosyasında bağlama yeniden yönlendirme bilgileri sağlayarak ya da bağlama yeniden yönlendirme özelliğini kapatarak bu varsayılan davranışı geçersiz kılabilirsiniz. Bu özellik açma veya kapatma hakkında daha fazla bilgi için bkz: [nasıl yapılır: etkinleştirme ve devre dışı otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağlama yeniden yönlendirmesini etkinleştirebilirsiniz. Herhangi bir derleme için app.config dosyasında bağlama yeniden yönlendirme bilgileri sağlayarak ya da bağlama yeniden yönlendirme özelliğini kapatarak bu varsayılan davranışı geçersiz kılabilirsiniz. Bu özellik açma veya kapatma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Enable ve Disable otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Yayımcı ilkesini atlama
@@ -142,11 +142,11 @@ Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağ
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -156,7 +156,7 @@ Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağ
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Bütünleştirilmiş Kod Bağlama Yönlendirmesi Güvenlik İzni](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
@@ -166,4 +166,4 @@ Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağ
 - [.NET Framework uygulamalarını yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Nasıl yapılır: Yayımcı İlkesi Oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+- [Nasıl yapılır: Yayımcı ilkesi oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

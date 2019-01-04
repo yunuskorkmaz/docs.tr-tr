@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198088"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030574"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, başarısızlık veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilirsiniz. Olayları Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
  Her ikisi de başarılı veya başarısız olarak da bilinen düzeylerini denetim denetleyebilirsiniz *davranışını denetleme*.  
   
 ## <a name="audit-log-location"></a>Denetim günlüğü konumu  
- Bir denetim düzeyi ve davranış belirledikten sonra (veya yönetici) denetim günlüğü için bir konum belirtebilirsiniz. Üç Seçenekler şunlardır: varsayılan, uygulama ve güvenlik. Varsayılan belirttiğinizde, hangi sistemde kullandığınız gerçek günlük bağlıdır ve sistem güvenlik günlüğüne yazma destekleyip desteklemediğini. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "İşletim sistemi" bölümüne bakın.  
+ Bir denetim düzeyi ve davranış belirledikten sonra (veya yönetici) denetim günlüğü için bir konum belirtebilirsiniz. Üç seçenek içerir: Varsayılan, uygulama ve güvenlik. Varsayılan belirttiğinizde, hangi sistemde kullandığınız gerçek günlük bağlıdır ve sistem güvenlik günlüğüne yazma destekleyip desteklemediğini. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "İşletim sistemi" bölümüne bakın.  
   
  Güvenlik günlüğüne yazmak için gerekli `SeAuditPrivilege`. Varsayılan olarak, yalnızca yerel sistem ve ağ hizmeti hesapları, bu ayrıcalığına sahip. Güvenlik günlüğü işlevlerini yönetmek için `read` ve `delete` gerektirir `SeSecurityPrivilege`. Varsayılan olarak, yalnızca Yöneticiler bu ayrıcalığına sahip.  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Hizmet yetkilendirme olay türlerini hizmet düzeyinde denetlenir belirtir. Seçimler `None`, `Failure`, `Success`, ve `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|İstemci isteği denetim başarısız olacağını belirtir. Örneğin, zaman hizmeti güvenlik günlüğüne yazmayı dener, ancak sahip değil `SeAuditPrivilege`. Varsayılan değer olan `true` hataları dikkate alınmaz ve istemci isteğinin normal olarak işlenen gösterir.|  
   
- Bir uygulama denetim olaylarını günlüğe kaydedecek şekilde ayarlama örneği için bkz. [nasıl yapılır: güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Bir uygulama denetim olaylarını günlüğe kaydedecek şekilde ayarlama örneği için bkz. [nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Yapılandırma  
  Yapılandırma ekleyerek Denetim davranışını belirtmek için de kullanabilirsiniz bir [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) altında [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Öğesi altında eklemelisiniz bir [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) aşağıdaki kodda gösterildiği gibi.  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
@@ -95,7 +95,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
   
 |faktörü|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
-|Denetim İlkesi Yönetimi|Yok.|Yapılandırması ile birlikte, güvenlik günlüğü ayrıca yerel güvenlik yetkilisi (LSA) ilkesi tarafından kontrol edilir. "Nesne erişimini denetle" kategorisi de etkinleştirilmesi gerekir.|  
+|Denetim İlkesi Yönetimi|Uygulanamaz.|Yapılandırması ile birlikte, güvenlik günlüğü ayrıca yerel güvenlik yetkilisi (LSA) ilkesi tarafından kontrol edilir. "Nesne erişimini denetle" kategorisi de etkinleştirilmesi gerekir.|  
 |Varsayılan kullanıcı deneyimi|Uygulama işlemleri için hiçbir ek adım gerekmez, tüm kimliği doğrulanmış kullanıcılara uygulama günlüğüne yazabilirsiniz.|(Bağlam) uygulama işlemi olmalıdır `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
  <xref:System.ServiceModel.AuditLogLocation>  
  [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

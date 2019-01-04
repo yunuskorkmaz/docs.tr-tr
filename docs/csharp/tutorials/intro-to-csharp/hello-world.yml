@@ -11,22 +11,119 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53126542"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030522"
 items:
 - durationInMinutes: 1
   content: >
     Bu öğretici size öğretir C# etkileşimli olarak yazmak için tarayıcınızı kullanarak C# ve derleyerek ve çalıştırarak kodunuzun sonuçlarını göreceksiniz. Bu, bir dizi bir "Merhaba Dünya" programıyla başlayan ders içerir. Bu dersler size C# dilinin temellerini öğretin.
 - title: İlk C# programınızı çalıştırma
   durationInMinutes: 2
-  content: "Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın ve **çalıştırma** düğmesi:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nTebrikler! İlk C# programınızı çalıştırdınız. \"Hello World!\" iletisini yazdıran basit bir programdır. Harcadığımız <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> söz konusu iletiyi yazdırmak için yöntemi. `Console` Konsol penceresini ifade eden bir türdür. `WriteLine` bir yöntemidir `Console` bu metin konsoluna metin satırı yazdıran türü.\n\nŞimdi ilerleyelim ve daha fazlasını keşfedin. Bu dersin geri kalan çalışma konusu incelenir `string` C# içinde metin temsil eden tür. Gibi `Console` türü `string` türünün de yöntemleri vardır. `string` Yöntemleri metinle çalışır. \n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın ve **çalıştırma** düğmesi:
+
+
+    ```csharp
+
+    Console.WriteLine("Hello World!");
+
+    ```
+
+
+    Tebrikler! İlk C# programınızı çalıştırdınız. "Hello World!" iletisini yazdıran basit bir programdır. Harcadığımız <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> söz konusu iletiyi yazdırmak için yöntemi. `Console` Konsol penceresini ifade eden bir türdür. `WriteLine` bir yöntemidir `Console` bu metin konsoluna metin satırı yazdıran türü.
+
+
+    Şimdi ilerleyelim ve daha fazlasını keşfedin. Bu dersin geri kalan çalışma konusu incelenir `string` C# içinde metin temsil eden tür. Gibi `Console` türü `string` türünün de yöntemleri vardır. `string` Yöntemleri metinle çalışır.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Değişken bildirme ve kullanma
   durationInMinutes: 3
-  content: "İlk programınız ekrana `string` \"Hello World!\" iletisini yazdırdı. \n\n> [!TIP]\n> C# (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı, hata iletileri içerdiğinde, örnek kod ve neyin düzeltilmesi gerektiğini görmek için etkileşimli pencerede kodu yakından bakın.\n> Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur. \n\nİlk programınız bir ileti yazdırmayla sınırlıdır. Kullanarak daha kullanışlı programlar yazabilirsiniz **değişkenleri**. A **değişkeni** aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir semboldür. Şimdi deneyin! Aşağıdaki kod ile etkileşimli pencerede yazdığınız kodu değiştirin:\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\nİlk satır bir değişken bildirir `aFriend` ve buna \"Bill\" değerini atar. İkinci satır adı yazdırır.\n\nBildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz. Adı arkadaşlarınızdan birinin değiştirebilirsiniz. Şu iki satırı, eklemiş koddan sonra etkileşimli pencereye ekleyin:\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\nAynı kod satırının depolanan değere göre iki farklı ileti yazdırdığına dikkat edin `aFriend` değişkeni.\n\nAyrıca \"Hello\" sözcüğünü son iki iletide eksik olduğunu fark etmiş. Şimdi bunu düzeltelim.  Şu ileti yazdıran satırları değiştirin:\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nTıklayın **çalıştırma** yeniden sonuçları görmek için.\n\nKullanmakta olduğunuz `+` dizeleri oluşturmak için **değişkenleri** ve **sabit** dizeleri. Daha iyi bir yolu yoktur.\nBir değişken arasında yerleştirebilirsiniz `{` ve `}` metni ile değişkeninin değerini değiştirmek için C# bildirmek için karakter.\n\nBu adlandırılır [dize ilişkilendirme](../../language-reference/tokens/interpolated.md).\n\nEklerseniz bir `$` dizenin açma tırnağından önce ardından değişkenlerinin, gibi ekleyebilirsiniz `aFriend`, kaşlı ayraçlar arasında bir dize içinde. Deneyin:\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nTıklayın **çalıştırma** yeniden sonuçları görmek için. \"Merhaba {aFriend}\" yerine \"Hello Maira\" iletisi olması gerekir.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    İlk programınız ekrana `string` "Hello World!" iletisini yazdırdı.
+
+
+    > [!TIP]
+
+    > C# (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı, hata iletileri içerdiğinde, örnek kod ve neyin düzeltilmesi gerektiğini görmek için etkileşimli pencerede kodu yakından bakın.
+
+    > Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
+
+
+    İlk programınız bir ileti yazdırmayla sınırlıdır. Kullanarak daha kullanışlı programlar yazabilirsiniz **değişkenleri**. A **değişkeni** aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir semboldür. Şimdi deneyin! Aşağıdaki kod ile etkileşimli pencerede yazdığınız kodu değiştirin:
+
+
+    ```csharp
+
+    string aFriend = "Bill";
+
+    Console.WriteLine(aFriend);
+
+    ```
+
+
+    İlk satır bir değişken bildirir `aFriend` ve buna "Bill" değerini atar. İkinci satır adı yazdırır.
+
+
+    Bildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz. Adı arkadaşlarınızdan birinin değiştirebilirsiniz. Şu iki satırı, eklemiş koddan sonra etkileşimli pencereye ekleyin:
+
+
+    ```csharp
+
+    aFriend = "Maira";
+
+    Console.WriteLine(aFriend);
+
+    ```
+
+
+    Aynı kod satırının depolanan değere göre iki farklı ileti yazdırdığına dikkat edin `aFriend` değişkeni.
+
+
+    Ayrıca "Hello" sözcüğünü son iki iletide eksik olduğunu fark etmiş. Şimdi bunu düzeltelim.  Şu ileti yazdıran satırları değiştirin:
+
+
+    ```csharp
+
+    Console.WriteLine("Hello " + aFriend);
+
+    ```
+
+
+    Tıklayın **çalıştırma** yeniden sonuçları görmek için.
+
+
+    Kullanmakta olduğunuz `+` dizeleri oluşturmak için **değişkenleri** ve **sabit** dizeleri. Daha iyi bir yolu yoktur.
+
+    Bir değişken arasında yerleştirebilirsiniz `{` ve `}` metni ile değişkeninin değerini değiştirmek için C# bildirmek için karakter.
+
+
+    Bu adlandırılır [dize ilişkilendirme](../../language-reference/tokens/interpolated.md).
+
+
+    Eklerseniz bir `$` dizenin açma tırnağından önce ardından değişkenlerinin, gibi ekleyebilirsiniz `aFriend`, kaşlı ayraçlar arasında bir dize içinde. Deneyin:
+
+
+
+    ```csharp
+
+    Console.WriteLine($"Hello {aFriend}");
+
+    ```
+
+
+    Tıklayın **çalıştırma** yeniden sonuçları görmek için. "Merhaba {aFriend}" yerine "Hello Maira" iletisi olması gerekir.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Dizelerle çalışma
   durationInMinutes: 5
   content: >
@@ -69,10 +166,110 @@ items:
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Dizelerle daha fazlasını
   durationInMinutes: 5
-  content: "Kullanmakta olduğunuz bir **yöntemi**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>iletileri yazdırmak için. A **yöntemi** bazı eylemleri uygulayan bir kod bloğudur. Erişebilmesi için bu bir adı vardır. \n\nGörüntülemek istemediğiniz başında veya sonunda boşluk dizelerinizi olduğunu varsayalım. İstediğiniz **trim** boşlukları dizeleri.\n<xref:System.String.Trim%2A> Yöntemi ve ilişkili yöntemleri <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> , çalışma yapın. Bu yöntem yalnızca başındaki ve sonundaki boşlukları kaldırmak için de kullanabilirsiniz. Aşağıdaki kodu deneyin:\n\n```csharp\nstring greeting = \"      Hello World!       \";\nConsole.WriteLine($\"[{greeting}]\");\n\nstring trimmedGreeting = greeting.TrimStart();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.TrimEnd();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.Trim();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n```\n\nBu örnek, birkaç önemli kavramı dizelerle çalışacak şekilde güçlendirir. Dizeleri işleyen yöntemler, değişiklik yapmak yerine yeni dize nesneleri döndürür. Gördüğünüz gibi herhangi bir yapılan her çağrı `Trim` yöntemleri yeni bir dize döndürür ancak orijinal iletiyi değiştirmez.\n\nBir dizeyle çalışmak için kullanılabilen diğer yöntemler vardır. Örneğin, büyük olasılıkla bir arama kullandınız ve bir düzenleyicide veya sözcük işlemcisinde önce komutta değiştirin. <xref:System.String.Replace%2A> Yöntemi bir dizedeki benzer bir şey yapar. Bir alt dizeyi arar ve farklı bir metinle değiştirir. <xref:System.String.Replace%2A> Yöntemi iki alan **parametreleri**. Bu, parantez dizelerdir. İlk dize, aranacak metindir. İkinci dizenin yerine geçecek dizedir. Kendiniz deneyin. Bu kodu ekleyin. Yazmaya başladığınızda ipuçları görmek için yazın `.Re` sonra `sayHello` değişkeni:\n\n```csharp\nstring sayHello = \"Hello World!\";\nConsole.WriteLine(sayHello);\nsayHello = sayHello.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(sayHello);\n```\n\nİki diğer kullanışlı yöntem bir dizenin tüm harflerini büyük veya küçük harflerle olun. Aşağıdaki kodu deneyin. Görmek için yazın nasıl **IntelliSense** yazmak başlangıç olarak ipuçları sağlar `To`:\n\n```csharp\nConsole.WriteLine(sayHello.ToUpper());\nConsole.WriteLine(sayHello.ToLower());\n```\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Kullanmakta olduğunuz bir **yöntemi**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>iletileri yazdırmak için. A **yöntemi** bazı eylemleri uygulayan bir kod bloğudur. Erişebilmesi için bu bir adı vardır.
+
+
+    Görüntülemek istemediğiniz başında veya sonunda boşluk dizelerinizi olduğunu varsayalım. İstediğiniz **trim** boşlukları dizeleri.
+
+    <xref:System.String.Trim%2A> Yöntemi ve ilişkili yöntemleri <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A> , çalışma yapın. Bu yöntem yalnızca başındaki ve sonundaki boşlukları kaldırmak için de kullanabilirsiniz. Aşağıdaki kodu deneyin:
+
+
+    ```csharp
+
+    string greeting = "      Hello World!       ";
+
+    Console.WriteLine($"[{greeting}]");
+
+
+    string trimmedGreeting = greeting.TrimStart();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+
+    trimmedGreeting = greeting.TrimEnd();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+
+    trimmedGreeting = greeting.Trim();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+    ```
+
+
+    Bu örnek, birkaç önemli kavramı dizelerle çalışacak şekilde güçlendirir. Dizeleri işleyen yöntemler, değişiklik yapmak yerine yeni dize nesneleri döndürür. Gördüğünüz gibi herhangi bir yapılan her çağrı `Trim` yöntemleri yeni bir dize döndürür ancak orijinal iletiyi değiştirmez.
+
+
+    Bir dizeyle çalışmak için kullanılabilen diğer yöntemler vardır. Örneğin, büyük olasılıkla bir arama kullandınız ve bir düzenleyicide veya sözcük işlemcisinde önce komutta değiştirin. <xref:System.String.Replace%2A> Yöntemi bir dizedeki benzer bir şey yapar. Bir alt dizeyi arar ve farklı bir metinle değiştirir. <xref:System.String.Replace%2A> Yöntemi iki alan **parametreleri**. Bu, parantez dizelerdir. İlk dize, aranacak metindir. İkinci dizenin yerine geçecek dizedir. Kendiniz deneyin. Bu kodu ekleyin. Yazmaya başladığınızda ipuçları görmek için yazın `.Re` sonra `sayHello` değişkeni:
+
+
+    ```csharp
+
+    string sayHello = "Hello World!";
+
+    Console.WriteLine(sayHello);
+
+    sayHello = sayHello.Replace("Hello", "Greetings");
+
+    Console.WriteLine(sayHello);
+
+    ```
+
+
+    İki diğer kullanışlı yöntem bir dizenin tüm harflerini büyük veya küçük harflerle olun. Aşağıdaki kodu deneyin. Görmek için yazın nasıl **IntelliSense** yazmak başlangıç olarak ipuçları sağlar `To`:
+
+
+    ```csharp
+
+    Console.WriteLine(sayHello.ToUpper());
+
+    Console.WriteLine(sayHello.ToLower());
+
+    ```
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Dizeleri arama
   durationInMinutes: 10
-  content: "Diğer kısmı bir *arama ve değiştirme* metin bir dizeyi bulmak için işlemdir. Kullanabileceğiniz <xref:System.String.Contains%2A> aramak için yöntemi. Bir dize içindeki bir alt dizeyi içerip içermediğini belirtir. Keşfetmek için aşağıdaki kodu deneyin <xref:System.String.Contains%2A>:\n\n```csharp\nstring songLyrics = \"You say goodbye, and I say hello\";\nConsole.WriteLine(songLyrics.Contains(\"goodbye\"));\nConsole.WriteLine(songLyrics.Contains(\"greetings\"));\n```\n\n<xref:System.String.Contains%2A> Yöntemi döndürür bir **Boole** aradığınız dizenin bulunup bulunmadığını belirten bir değer. A **Boole** depolar bir `true` veya `false` değeri. Daha fazla hakkında bilgi edineceksiniz **Boole** sonraki bir derste değerleri.\n\n***Sınama***\n\nİki benzer yöntem mevcuttur <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> de arayan bir dizedeki alt dizeleri. Bu, bir alt dizenin başında veya dizenin sonuna kadar bulun. Kullanmak için önceki örneği değiştirmeyi deneyin <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> yerine <xref:System.String.Contains%2A>. \"Siz\" veya \"goodbye\" ifadesini başında bir dizenin arayın. \"Hello\" veya \"goodbye\" ifadesini sonunda bir dizenin arayın.\n\n> [!Note]\n> Dizenin sonundaki metin için test ettiğinizde, noktalama işaretlerine dikkat edin. Dize nokta ile bitiyorsa, nokta ile biten bir dizeyi işaretlemeniz gerekir.\n\nAlması gereken `true` \"You\" ile başlayan ve \"hello\" ile başlayarak veya \"goodbye\" ile biten için false ile biten. \n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Diğer kısmı bir *arama ve değiştirme* metin bir dizeyi bulmak için işlemdir. Kullanabileceğiniz <xref:System.String.Contains%2A> aramak için yöntemi. Bir dize içindeki bir alt dizeyi içerip içermediğini belirtir. Keşfetmek için aşağıdaki kodu deneyin <xref:System.String.Contains%2A>:
+
+
+    ```csharp
+
+    string songLyrics = "You say goodbye, and I say hello";
+
+    Console.WriteLine(songLyrics.Contains("goodbye"));
+
+    Console.WriteLine(songLyrics.Contains("greetings"));
+
+    ```
+
+
+    <xref:System.String.Contains%2A> Yöntemi döndürür bir **Boole** aradığınız dizenin bulunup bulunmadığını belirten bir değer. A **Boole** depolar bir `true` veya `false` değeri. Daha fazla hakkında bilgi edineceksiniz **Boole** sonraki bir derste değerleri.
+
+
+    ***Sınama***
+
+
+    İki benzer yöntem mevcuttur <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> de arayan bir dizedeki alt dizeleri. Bu, bir alt dizenin başında veya dizenin sonuna kadar bulun. Kullanmak için önceki örneği değiştirmeyi deneyin <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> yerine <xref:System.String.Contains%2A>. "Siz" veya "goodbye" ifadesini başında bir dizenin arayın. "Hello" veya "goodbye" ifadesini sonunda bir dizenin arayın.
+
+
+    > [!Note]
+
+    > Dizenin sonundaki metin için test ettiğinizde, noktalama işaretlerine dikkat edin. Dize nokta ile bitiyorsa, nokta ile biten bir dizeyi işaretlemeniz gerekir.
+
+
+    Alması gereken `true` "You" ile başlayan ve "hello" ile başlayarak veya "goodbye" ile biten için false ile biten.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Görevi tamamlama
   durationInMinutes: 3
   content: >
@@ -98,4 +295,12 @@ items:
     > [!NOTE]
 
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- content: "Tamamladınız \"Hello C#\" Giriş C# öğretici. Tıklayabilirsiniz **içindeki numaralandırır C# ** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nHakkında daha fazla bilgi için `string` türü:\n- [C#Programlama Kılavuzu](../../programming-guide/index.md) konuda [dizeleri](../../programming-guide/strings/index.md). \n- [Nasıl yapılır dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings)."
+- content: >-
+    Tamamladınız "Hello C#" Giriş C# öğretici. Tıklayabilirsiniz **içindeki numaralandırır C# ** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. "Öğrenme tut" adımı bu öğreticilere geri getirir.
+
+
+    Hakkında daha fazla bilgi için `string` türü:
+
+    - [C#Programlama Kılavuzu](../../programming-guide/index.md) konuda [dizeleri](../../programming-guide/strings/index.md).
+
+    - [Nasıl yapılır dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings).

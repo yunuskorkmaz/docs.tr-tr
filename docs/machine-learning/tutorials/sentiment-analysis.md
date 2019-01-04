@@ -4,12 +4,12 @@ description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eyl
 ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779147"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030171"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: ML.NET kullanımda bir yaklaşım analizi ikili sınıflandırma senaryosu
 
@@ -364,7 +364,9 @@ Eğitilen modelin Öngörüler, test etmek için bazı açıklamalar ekleme `Pre
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#26 "Create test data for predictions")]
 
-Model yüklenemiyor [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
+Model yüklenemiyor
+
+[!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
 Bir modeliniz olduğuna göre yorum kullanarak veri Toxic veya olmayan Toxic yaklaşım tahmin etmek için kullanabileceğiniz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)> yöntemi. Bir öngörü almak için kullanın `Predict` yeni veriler. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir. Aşağıdaki kodu ekleyin `PredictWithModelLoadedFromFile` yöntemi tahminler elde etmek için:
 

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149503"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029716"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 
@@ -17,7 +17,7 @@ ms.locfileid: "53149503"
 
 Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştir sabit listesi sınıfları oluşturabilirsiniz.
 
-Ancak, bu önemli bir konu değildir ve çoğu durumda, kolaylık olması için normal kullanmaya devam edebilirsiniz [Numaralandırma türleri](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) , tercihinize ise. Yine de sabit listesi sınıfları kullanımı için işle ilgili kavramları daha ilişkilidir.
+Ancak, bu önemli bir konu değildir ve çoğu durumda, kolaylık olması için normal kullanmaya devam edebilirsiniz [Numaralandırma türleri](../../../csharp/language-reference/keywords/enum.md) , tercihinize ise. Yine de sabit listesi sınıfları kullanımı için işle ilgili kavramları daha ilişkilidir.
 
 ## <a name="implement-an-enumeration-base-class"></a>Bir numaralandırma taban sınıfı uygulama
 

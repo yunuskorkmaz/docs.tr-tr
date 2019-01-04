@@ -39,7 +39,7 @@ Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih
 
 Ayrıca bakabilirsiniz bizim [açık sorun](https://github.com/dotnet/docs/issues) listelemek ve ilgilendiğiniz olanları üzerinde çalışılacak volunteer. Kullandığımız [yukarı-için-Dallarınızla](https://github.com/dotnet/docs/labels/up-for-grabs) etiketi sorunları katkısı için açık etiketi. 
 
-**2. adım:** Çatal `/dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
+**2. adım:** Çatal `dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
 
 Küçük değişiklikler için GitHub'ın web arabirimi kullanabilirsiniz. Tıklamanız yeterlidir **çatalınızı bu projenin dosyayı düzenleyin** değiştirmek için istediğiniz dosya çubuğunda. Değişiklikleri gönderdiğinizde GitHub yeni bir dal oluşturur.
 
@@ -101,7 +101,7 @@ Ayrıca, tüm örnekleri altında *çekirdek* ve *standart* klasörleri oluştur
 Yeni içerik belge deposu ekler gibi Biz bu dizinler genişleyebilir. Örneğin, Xamarin dizinleri gibi ekleyeceğiz `xamarin-ios` ve `xamarin-android` dizinleri.
 
 Oluşturduğunuz her tam bir örnek içermesi gereken bir *readme.md* dosya. Bu dosya, örnek (bir veya iki paragraf) kısa bir açıklamasını içermelidir. *Readme.md* okuyucuların ne bunlar Bu örneği araştırarak öğreneceksiniz söyleyecektir. *Readme.md* dosya da içermelidir belgenin canlı bağlantı üzerinde [.NET belgeler sitesinde](https://docs.microsoft.com/dotnet/welcome).
-Burada belirli bir dosya deposu olarak o siteye eşler belirlemek için değiştirme `/docs` ile depo yolu içinde `http://docs.microsoft.com/dotnet/articles`.
+Burada belirli bir dosya deposu olarak o siteye eşler belirlemek için değiştirme `/docs` ile depo yolu içinde `https://docs.microsoft.com/dotnet`.
 
 Konu başlığınız örnek bağlantılarını da içerir. GitHub üzerinde örnek kullanıcının klasörüne doğrudan bağlayın.
 

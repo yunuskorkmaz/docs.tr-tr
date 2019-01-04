@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225665"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030353"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
 Özel seri hale getirme serileştirme ve seri durumundan çıkarma bir türün denetleme işlemidir. Serileştirme denetleyerek, türü çekirdek işlevselliğini bozucu olmayan bir tür sürümleri arasında seri hale getrime ve yeteneği olan serileştirme uyumluluğu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümler serileştirme denetlemek nasıl açıklar.
@@ -54,62 +54,59 @@ ms.locfileid: "44225665"
   
  Uygulama <xref:System.Runtime.Serialization.ISerializable> uygulayan içerir `GetObjectData` yöntemi ve nesnenin seri durumda olduğunda kullanılan özel bir oluşturucu. Aşağıdaki örnek kodu nasıl uygulanacağını gösterir <xref:System.Runtime.Serialization.ISerializable> üzerinde `MyObject` önceki bölümünden sınıfı.  
   
-```csharp  
-[Serializable]  
-public class MyObject : ISerializable   
-{  
-  public int n1;  
-  public int n2;  
-  public String str;  
-  
-  public MyObject()  
-  {  
-  }  
-  
-  protected MyObject(SerializationInfo info, StreamingContext context)  
-  {  
-    n1 = info.GetInt32("i");  
-    n2 = info.GetInt32("j");  
-    str = info.GetString("k");  
-  }  
-[SecurityPermissionAttribute(SecurityAction.Demand,   
-SerializationFormatter =true)]  
-  
-public virtual void GetObjectData(SerializationInfo info, StreamingContext context)  
-  {  
-    info.AddValue("i", n1);  
-    info.AddValue("j", n2);  
-    info.AddValue("k", str);  
-  }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class MyObject  
-    Implements ISerializable  
-    Public n1 As Integer  
-    Public n2 As Integer  
-    Public str As String  
-  
-    Public Sub New()   
-    End Sub   
-  
-    Protected Sub New(ByVal info As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        n1 = info.GetInt32("i")  
-        n2 = info.GetInt32("j")  
-        str = info.GetString("k")  
-    End Sub 'New  
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
-    Public Overridable Sub GetObjectData(ByVal info As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        info.AddValue("i", n1)  
-        info.AddValue("j", n2)  
-        info.AddValue("k", str)  
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class MyObject : ISerializable
+{
+    public int n1;
+    public int n2;
+    public String str;
+
+    public MyObject()
+    {
+    }
+
+    protected MyObject(SerializationInfo info, StreamingContext context)
+    {
+      n1 = info.GetInt32("i");
+      n2 = info.GetInt32("j");
+      str = info.GetString("k");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        info.AddValue("i", n1);
+        info.AddValue("j", n2);
+        info.AddValue("k", str);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class MyObject
+    Implements ISerializable
+    Public n1 As Integer
+    Public n2 As Integer
+    Public str As String
+
+    Public Sub New()
+    End Sub
+
+    Protected Sub New(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        n1 = info.GetInt32("i")
+        n2 = info.GetInt32("j")
+        str = info.GetString("k")
+    End Sub 'New
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overridable Sub GetObjectData(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        info.AddValue("i", n1)
+        info.AddValue("j", n2)
+        info.AddValue("k", str)
+    End Sub
+End Class
 ```  
   
  Zaman **GetObjectData** çağrılır serileştirme sırasında hesaplarla için sorumlu olduğunuz <xref:System.Runtime.Serialization.SerializationInfo> yöntem çağrısının ile sağlanan. Ad ve değer çiftleri olarak seri hale için değişkenlerini ekleyin. Herhangi bir metin adı olarak kullanılabilir. Hangi üye değişkenleri eklenir karar özgürlüğü sahip <xref:System.Runtime.Serialization.SerializationInfo>, nesne seri durumundan çıkarma sırasında geri yüklemek için yeterli veri serileştirilmiş koşuluyla. Türetilen sınıfların çağrısı **GetObjectData** temel nesnesi üzerinde yöntemi, ikinci uygular <xref:System.Runtime.Serialization.ISerializable>.  
@@ -128,56 +125,54 @@ End Class
   
  Olduğunda, türetilen yeni bir sınıf uygulayan birinden <xref:System.Runtime.Serialization.ISerializable>, türetilmiş sınıf oluşturucu her iki uygulamalıdır yanı sıra **GetObjectData** seri hale gerek değişkenleri varsa yöntemi. Aşağıdaki kod örneğinde nasıl yapıldığını gösterir kullanarak `MyObject` daha önce gösterilen sınıfı.  
   
-```csharp  
-[Serializable]  
-public class ObjectTwo : MyObject  
-{  
-    public int num;  
-  
-    public ObjectTwo() : base()  
-    {  
-    }  
-  
-    protected ObjectTwo(SerializationInfo si,   
-    StreamingContext context) : base(si,context)  
-    {  
-        num = si.GetInt32("num");  
-    }  
-[SecurityPermissionAttribute(SecurityAction.Demand,  
-SerializationFormatter = true)]  
-    public override void GetObjectData(SerializationInfo si,   
-    StreamingContext context)  
-    {  
-        base.GetObjectData(si,context);  
-        si.AddValue("num", num);  
-    }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class ObjectTwo  
-    Inherits MyObject  
-    Public num As Integer  
-  
-    Public Sub New()   
-  
-    End Sub       
-  
-    Protected Sub New(ByVal si As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        MyBase.New(si, context)  
-        num = si.GetInt32("num")      
-    End Sub   
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, _  
-    SerializationFormatter := True)>  _  
-    Public Overrides Sub GetObjectData(ByVal si As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        MyBase.GetObjectData(si, context)  
-        si.AddValue("num", num)      
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class ObjectTwo : MyObject
+{
+    public int num;
+
+    public ObjectTwo()
+      : base()
+    {
+    }
+
+    protected ObjectTwo(SerializationInfo si, StreamingContext context)
+      : base(si, context)
+    {
+        num = si.GetInt32("num");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public override void GetObjectData(SerializationInfo si, StreamingContext context)
+    {
+        base.GetObjectData(si,context);
+        si.AddValue("num", num);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class ObjectTwo
+    Inherits MyObject
+    Public num As Integer
+
+    Public Sub New()
+
+    End Sub
+
+    Protected Sub New(ByVal si As SerializationInfo, _
+    ByVal context As StreamingContext)
+        MyBase.New(si, context)
+        num = si.GetInt32("num")
+    End Sub
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overrides Sub GetObjectData(ByVal si As SerializationInfo, ByVal context As StreamingContext)
+        MyBase.GetObjectData(si, context)
+        si.AddValue("num", num)
+    End Sub
+End Class
 ```  
   
  Temel sınıfı seri durumundan çıkarma oluşturucuda çağrılacak unutmayın. Bu işlem değil, temel sınıfı Oluşturucu hiçbir zaman çağrılır ve nesne tam olarak seri durumundan çıkarma sonra oluşturulur değil.  

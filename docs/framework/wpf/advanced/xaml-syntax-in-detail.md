@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485735"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030301"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>İsteğe bağlı ve Nonrecommended XAML kullanımları  
- Teknik olarak XAML işlemcileri tarafından desteklenen, ancak ayrıntı veya ne zaman okunabilir kalan XAML dosyalarıyla uğratabilecek diğer estetik sorunlar üretmek XAML kullanımları aşağıdaki bölümlerde, XAML kaynakları içeren uygulamalar geliştirin .  
+ Aşağıdaki bölümlerde, teknik olarak XAML işlemcileri tarafından desteklenir, ancak ayrıntı veya XAML kaynakları içeren uygulamalar geliştirirken okunabilir kalan XAML dosyalarıyla uğratabilecek diğer estetik sorunlar üretmek XAML kullanımları açıklanmaktadır.  
   
 ### <a name="optional-property-element-usages"></a>İsteğe bağlı özellik öğesi kullanımı  
  İsteğe bağlı özellik öğesi kullanımı açıkça XAML işlemci örtük olarak değerlendirir, öğe içerik özellikleri yazma içerir. Örneğin, içeriği bildirdiğinizde bir <xref:System.Windows.Controls.Menu>, açıkça bildirmek seçebilirsiniz <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonunu <xref:System.Windows.Controls.Menu> olarak bir `<Menu.Items>` özellik öğesi etiketi ve yerde her <xref:System.Windows.Controls.MenuItem> içinde `<Menu.Items>`yerine örtük XAML işlemci davranışı kullanmaktan, tüm alt öğelerini bir <xref:System.Windows.Controls.Menu> olmalıdır bir <xref:System.Windows.Controls.MenuItem> ve yerleştirilir <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonu. Bazen isteğe bağlı kullanımı, görsel biçimlendirme içinde temsil edilen nesne yapısını açıklamak için yardımcı olabilir. Veya bir açık özellik öğesi kullanımı görsel olarak, bir öznitelik değeri içinde iç içe geçmiş biçimlendirme uzantıları gibi kafa karıştırıcı ancak teknik işlevsel biçimlendirme bazen önleyebilirsiniz.  
@@ -317,7 +317,7 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Ad Alanı (x:) Dil Özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML Uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters ve XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

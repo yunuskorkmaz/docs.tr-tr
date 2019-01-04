@@ -11,22 +11,102 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: C# dilinde koleksiyonlar
-  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: c5d9ba80df952a58740ac2557bfc0011ef2ea539
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53149217"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030418"
 items:
 - durationInMinutes: 2
   content: >
     Bu öğreticide nasıl kullanacağınızı öğretir [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) değerleri tek bir dize olarak eklenecek. Ayrıca metin Sonuç dizesini formatlamayı kontrol öğrenin. Yazmak ve çalıştırmak için tarayıcınızı kullanırsınız C# kod ve sonuçları hemen görebilirsiniz.
 - title: İlişkilendirilmiş dize oluşturma
   durationInMinutes: 2
-  content: "Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için kod etkileşimli pencereye yazın (Değiştir `<name>` adınızla) seçip **çalıştırmak**:\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\nKod çalıştırdığınızda **çıkış** karşılamada adınızı içeren bir dize görüntüler. Dize bağımsız değişkeni <xref:System.Console.WriteLine%2A> yöntem çağrısında bir *ilişkilendirilmiş bir dizedir*. Tek bir dize olanak sağlayan bir şablon türüdür (adlı *sonuç dizesi*), gömülü kod içeren bir dizeden. İlişkilendirilmiş dizeler özellikle bir dizeye değer eklerken veya birkaç dizeleri birleştirme (bir araya getirme) için yararlıdır. \n\nYukarıdaki örnek her ilişkilendirilmiş dizenin sahip olması gereken iki öğeleri içerir: \n\n- İle başlayan bir dize sabit değeri `$` açma tırnak işareti karakterinden önce karakter karakter. Arasında boşluk olamaz `$` sembol ve tırnak işareti karakteri. (Görmek istiyorsanız, ne olacağını yaptığınızda, sonra boşluk Ekle `$` karakter etkileşimli pencerede ve güncelleştirilmiş kod çalıştırın. C# derleyicisi şeklinde hata verir \"Beklenmeyen karakter '$'\".) \n\n- Bir veya daha fazla *ilişkilendirilmiş ifade*. İlişkilendirilmiş ifade bir açma ve kapatma ayracı gösterilir (`{` ve `}`). Bir değer döndüren bir C# ifadesini ekleyebilirsiniz (dahil olmak üzere `null`) küme ayraçları içinde. \n\nDiğer veri türlerinden bazılarıyla birkaç daha fazla dize ilişkilendirme örneği deneyelim.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için kod etkileşimli pencereye yazın (Değiştir `<name>` adınızla) seçip **çalıştırmak**:
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    Kod çalıştırdığınızda **çıkış** karşılamada adınızı içeren bir dize görüntüler. Dize bağımsız değişkeni <xref:System.Console.WriteLine%2A> yöntem çağrısında bir *ilişkilendirilmiş bir dizedir*. Tek bir dize olanak sağlayan bir şablon türüdür (adlı *sonuç dizesi*), gömülü kod içeren bir dizeden. İlişkilendirilmiş dizeler özellikle bir dizeye değer eklerken veya birkaç dizeleri birleştirme (bir araya getirme) için yararlıdır.
+
+
+    Yukarıdaki örnek her ilişkilendirilmiş dizenin sahip olması gereken iki öğeleri içerir:
+
+
+    - İle başlayan bir dize sabit değeri `$` açma tırnak işareti karakterinden önce karakter karakter. Arasında boşluk olamaz `$` sembol ve tırnak işareti karakteri. (Görmek istiyorsanız, ne olacağını yaptığınızda, sonra boşluk Ekle `$` karakter etkileşimli pencerede ve güncelleştirilmiş kod çalıştırın. C# derleyicisi şeklinde hata verir "Beklenmeyen karakter '$'".)
+
+
+    - Bir veya daha fazla *ilişkilendirilmiş ifade*. İlişkilendirilmiş ifade bir açma ve kapatma ayracı gösterilir (`{` ve `}`). Bir değer döndüren bir C# ifadesini ekleyebilirsiniz (dahil olmak üzere `null`) küme ayraçları içinde.
+
+
+    Diğer veri türlerinden bazılarıyla birkaç daha fazla dize ilişkilendirme örneği deneyelim.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Farklı veri türleri ekleme
   durationInMinutes: 5
-  content: "Önceki adımda, bir dizenin içine eklemek için dize ilişkilendirme kullanılır. İlişkilendirilmiş ifade sonucu herhangi bir veri türünde ancak olabilir. Şimdi bir aradeğerlendirme dizesinde değerleri çeşitli veri türlerini içerir. \n\nAşağıdaki örnekte, ilk tanımlarız bir [sınıfı](../../programming-guide/classes-and-structs/classes.md) veri türü `Vegetable` olan bir `Name` [özelliği](../../properties.md) ve `ToString` [yöntemi](../../methods.md), hangi [geçersiz kılmalar](../../language-reference/keywords/override.md) davranışını <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. [ `public` Erişim değiştiricisi](../../language-reference/keywords/public.md) bu yöntem herhangi bir istemci kod, dize gösterimini almaya kullanılabilmesini bir `Vegetable` örneği. Örnekte `Vegetable.ToString` yöntemi değerini döndürür `Name` sırasında başlatılır özelliği `Vegetable` [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md): `Vegetable(string name) => Name = name;`. Biz bir örneğini oluşturup `Vegetable` adlı sınıfı `item` kullanarak [ `new` anahtar sözcüğü](../../language-reference/keywords/new-operator.md) oluşturucusu için bir ad sağlayarak `Vegetable`. Son olarak, bu da içeren ilişkilendirilmiş dize örneğine ekliyoruz bir <xref:System.DateTime> değeri bir <xref:System.Decimal> değeri ve `Unit` [numaralandırma](../../programming-guide/enumeration-types.md) değeri. Etkileşimli pencerede aşağıdaki kodu çalıştırın:\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\nUnutmayın ilişkilendirilmiş ifade `item` aradeğerlendirme dizesinde çözümleniyor sonuç dizesindeki \"eggplant\" metni. Deyim sonucu türü dize olmadığı durumlarda, sonuç şu şekilde bir dizeye çözümlenir çünkü:\n\n- İlişkilendirilmiş ifade değerlendirilirse `null`, boş bir dize (\"\", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.\n\n- İlişkilendirilmiş ifade değerlendirme değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulamasını güncelleştirerek test `Vegetable.ToString` yöntemi. Bile uygulanması gerekmeyebilir `ToString` her türü bu yöntemin bazı uygulama olduğundan yöntemi. Bunu test etmek için tanımı için açıklama `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini yerleştirmek `//`, önündeki). Çıkışta \"eggplant\" dizesi, varsayılan davranış, tam nitelikli tür adı (tür adıyla birlikte C# REPL tarafından tanımlanan ad alanı) değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` yöntemi için bir sabit listesi değeri, değerin dize gösterimi döndürmektir.    \n\nBu örnek çıktıda, (eggplant fiyatı, her saniye değişmez) kesin tarih ve Fiyat değerini para birimi göstermez. Sonraki adımda, ifade sonuçları dize temsillerini biçimini denetleyerek bu sorunları gidermek nasıl öğreneceksiniz.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Önceki adımda, bir dizenin içine eklemek için dize ilişkilendirme kullanılır. İlişkilendirilmiş ifade sonucu herhangi bir veri türünde ancak olabilir. Şimdi bir aradeğerlendirme dizesinde değerleri çeşitli veri türlerini içerir.
+
+
+    Aşağıdaki örnekte, ilk tanımlarız bir [sınıfı](../../programming-guide/classes-and-structs/classes.md) veri türü `Vegetable` olan bir `Name` [özelliği](../../properties.md) ve `ToString` [yöntemi](../../methods.md), hangi [geçersiz kılmalar](../../language-reference/keywords/override.md) davranışını <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. [ `public` Erişim değiştiricisi](../../language-reference/keywords/public.md) bu yöntem herhangi bir istemci kod, dize gösterimini almaya kullanılabilmesini bir `Vegetable` örneği. Örnekte `Vegetable.ToString` yöntemi değerini döndürür `Name` sırasında başlatılır özelliği `Vegetable` [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md): `Vegetable(string name) => Name = name;`. Biz bir örneğini oluşturup `Vegetable` adlı sınıfı `item` kullanarak [ `new` anahtar sözcüğü](../../language-reference/keywords/new-operator.md) oluşturucusu için bir ad sağlayarak `Vegetable`. Son olarak, bu da içeren ilişkilendirilmiş dize örneğine ekliyoruz bir <xref:System.DateTime> değeri bir <xref:System.Decimal> değeri ve `Unit` [numaralandırma](../../programming-guide/enumeration-types.md) değeri. Etkileşimli pencerede aşağıdaki kodu çalıştırın:
+
+
+    ```csharp
+
+    public class Vegetable
+
+    {
+       public Vegetable(string name) => Name = name;
+
+       public string Name { get; }
+
+       public override string ToString() => Name;
+    }
+
+
+    public enum Unit { item, kilogram, gram, dozen };
+
+
+    var item = new Vegetable("eggplant");
+
+    var date = DateTime.Now;
+
+    var price = 1.99m;
+
+    var unit = Unit.item;
+
+    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
+
+    ```
+
+
+    Unutmayın ilişkilendirilmiş ifade `item` aradeğerlendirme dizesinde çözümleniyor sonuç dizesindeki "eggplant" metni. Deyim sonucu türü dize olmadığı durumlarda, sonuç şu şekilde bir dizeye çözümlenir çünkü:
+
+
+    - İlişkilendirilmiş ifade değerlendirilirse `null`, boş bir dize ("", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
+
+
+    - İlişkilendirilmiş ifade değerlendirme değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulamasını güncelleştirerek test `Vegetable.ToString` yöntemi. Bile uygulanması gerekmeyebilir `ToString` her türü bu yöntemin bazı uygulama olduğundan yöntemi. Bunu test etmek için tanımı için açıklama `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini yerleştirmek `//`, önündeki). Çıkışta "eggplant" dizesi, varsayılan davranış, tam nitelikli tür adı (tür adıyla birlikte C# REPL tarafından tanımlanan ad alanı) değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` yöntemi için bir sabit listesi değeri, değerin dize gösterimi döndürmektir.
+
+
+    Bu örnek çıktıda, (eggplant fiyatı, her saniye değişmez) kesin tarih ve Fiyat değerini para birimi göstermez. Sonraki adımda, ifade sonuçları dize temsillerini biçimini denetleyerek bu sorunları gidermek nasıl öğreneceksiniz.
+
+
+    > [!NOTE]
+
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: İlişkilendirilmiş ifadelerin biçimlendirmesini denetleme
   durationInMinutes: 5
   content: >

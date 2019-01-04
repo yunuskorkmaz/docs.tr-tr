@@ -4,12 +4,12 @@ description: C# dilinde öznitelikleri nasıl çalıştığını öğrenin.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390525"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029833"
 ---
 # <a name="using-attributes-in-c"></a>Öznitelikleri kullanarak C# #
 
@@ -110,7 +110,7 @@ Yukarıdaki özniteliği bir sınıf veya yapı değil şeye koymak çalışırs
 
 Bul ve öznitelikleri üzerinde işlem yapma [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide ayrıntılı yansıma kapsayan olmaz, ancak temel yansıma diğer kodu inceleyen #c dilinde kod yazmanızı sağlayan uygulamadır.
 
-Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz: 
+Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz (ekleme `using System.Reflection;` kodunuzu başındaki): 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

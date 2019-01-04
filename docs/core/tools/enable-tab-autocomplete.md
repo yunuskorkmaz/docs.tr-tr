@@ -4,14 +4,14 @@ description: Bu makalede, PowerShell, Bash ve zsh için .NET Core CLI için sekm
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784408"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029612"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
 
 .NET Core 2.0 SDK'sı ile başlayarak, .NET Core CLI sekme tamamlamayı destekler. Bu makalede, üç Kabukları, PowerShell, Bash ve zsh için sekmesinde tamamlama yapılandırma açıklanır. Diğer Kabuk otomatik tamamlama desteği olabilir. Otomatik Tamamlama yapılandırma kendi belgelerine başvurun, adımlar bu makalede açıklanan adımları aşağıdakine benzer olmalıdır.
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-Bu komut işe yaramazsa, bu .NET Core 2.0 SDK'sını emin olun veya yukarıda yüklenir. Yüklü olduğu, ancak bu komut işe yaramazsa, emin `dotnet` komutu, .NET Core 2.0 ve üzeri bir sürüm olarak çözer. Kullanım `dotnet --version` hangi sürümünü görmek için komutu `dotnet` için geçerli yolunuzu çözüyor. Daha fazla bilgi için [kullanmak için .NET Core sürümü](../versions/selection.md).
+Bu komut işe yaramazsa, bu .NET Core 2.0 SDK'sını emin olun veya yukarıda yüklenir. Yüklü olduğu, ancak bu komut işe yaramazsa, emin `dotnet` komutu, .NET Core 2.0 SDK'sını ve üzeri bir sürüm olarak çözer. Kullanım `dotnet --version` hangi sürümünü görmek için komutu `dotnet` için geçerli yolunuzu çözüyor. Daha fazla bilgi için [kullanmak için .NET Core sürümü](../versions/selection.md).
 
 ### <a name="examples"></a>Örnekler
 

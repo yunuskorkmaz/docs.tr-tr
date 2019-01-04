@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845683"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030340"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;taşıma&gt;
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
@@ -56,7 +56,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|İleti aktarımı sırasında sağlanmaz.|  
+|Hiçbiri|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
@@ -66,15 +66,15 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
-|Temel|RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlandığı gibi temel kimlik doğrulaması belirtir: temel ve Özet kimlik doğrulaması.|  
-|Özet|Özet kimlik doğrulaması RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: temel ve Özet kimlik doğrulaması.|  
+|Hiçbiri|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
+|Temel|Temel kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
+|Özet|Özet kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
 |Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
 |Sertifika|Bir sertifika kullanarak bir istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öğenin özniteliğini `security` öğe taşıma imkanı kullanılarak ayarlanır ve TransportCredentialOnly için ayarlanmışsa çalışmaz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -99,8 +99,8 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  
