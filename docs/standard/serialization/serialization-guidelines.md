@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742509"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058600"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -99,7 +99,7 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 1.  Üretilen XML şeklini denetlemek için çok güçlü bir neden olmadıkça, türlerinizi XML serileştirme için özel olarak tasarlama özen gösterin. Bu seri hale getirme teknoloji önceki bölümde açıklanan veri sözleşme serileştirme yerini almıştır.  
   
-     Diğer bir deyişle, öznitelikleri uygulama <xref:System.Runtime.Serialization> yeni türleri için ad alanı türü ile XML serileştirme kullanılacak bilmiyorsanız. Aşağıdaki örnekte gösterildiği nasıl **System.Xml.Serialization** XML şeklini denetlemek için kullanılan-üretilen.  
+     Diğer bir deyişle, öznitelikleri uygulama <xref:System.Xml.Serialization> yeni türleri için ad alanı türü ile XML serileştirme kullanılacak bilmiyorsanız. Aşağıdaki örnekte gösterildiği nasıl **System.Xml.Serialization** XML şeklini denetlemek için kullanılan-üretilen.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  

@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152791"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058509"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -69,13 +69,13 @@ ASP.NET Core MVC Web API'lerini destekleyen [ _içerik anlaşması_](/aspnet/cor
 > ### <a name="references--mapping-requests-to-responses"></a>Başvuruları – isteklerini yanıtlar eşleme
 >
 > - **Denetleyici eylemlerine yönlendirme**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Model bağlama**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Model doğrulama**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtreleri**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
@@ -213,7 +213,7 @@ Uygulamaları büyüdükçe, çoğaltma ortadan kaldırabilir ve tutarlılık sa
 
 Şekil 7-2 İstek Yürütme filtreleri ve istek ardışık düzeni üzerinden.
 
-Bunları denetleyicileri veya Eylemler uygulayabilirsiniz böylece filtreleri genellikle öznitelik olarak uygulanır. Bu şekilde düzeyinde geçersiz kılma eylem veya denetleyici düzeyinde belirtilen filtreleri temel yapı belirtilen filtreler eklendiğinde kendileri genel filtreleri geçersiz kılar. Örneğin, \[rota\] özniteliği derleme denetleyicileri ve eylemleri arasındaki yolları'kurmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnekte gösterildiği gibi bireysel eylemleri tarafından geçersiz kılınmış:
+Bunları denetleyicileri veya Eylemler uygulayabilirsiniz böylece filtreleri öznitelik olarak genellikle uygulanır (veya hatta genel olarak). Bu şekilde düzeyinde geçersiz kılma eylem veya denetleyici düzeyinde belirtilen filtreleri temel yapı belirtilen filtreler eklendiğinde kendileri genel filtreleri geçersiz kılar. Örneğin, \[rota\] özniteliği derleme denetleyicileri ve eylemleri arasındaki yolları'kurmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnekte gösterildiği gibi bireysel eylemleri tarafından geçersiz kılınmış:
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin
 > - **Alanlar**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – ASP.NET Core MVC özellik dilimleri**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtreler**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – gerçek ASP.NET Core MVC filtreleri**  

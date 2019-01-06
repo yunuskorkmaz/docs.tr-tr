@@ -2,12 +2,12 @@
 title: XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 1e11a4d762950b4227b0a9accef10500fd89886d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148125"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058314"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 XML seri hale getirici oluşturucunun bir XML serileştirme derleme türleri için başlangıç performansını artırmak için belirtilen derlemesinde oluşturur bir <xref:System.Xml.Serialization.XmlSerializer> zaman serileştiren veya belirtilen türden nesneler seri durumdan çıkarır.  
@@ -22,19 +22,19 @@ sgen [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/a**[**erleme**]**:**_dosya adı_|Tüm derlemesinde bulunan türleri veya yürütülebilir dosya tarafından belirtilen için serileştirme kod oluşturur *filename*. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
-|**/c [ompiler]:** *seçenekleri*|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
-|**/d**[**ebug**]|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
-|**/f [orce]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**.|  
+|**/a\[erleme\]:**_dosya adı_|Tüm derlemesinde bulunan türleri veya yürütülebilir dosya tarafından belirtilen için serileştirme kod oluşturur *filename*. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
+|**/c\[ompiler\]:**_seçenekleri_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
+|**/d\[ebug\]**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
+|**/f\[orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**.|  
 |**/ help veya /?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/k**[**ut**]|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
-|**/n**[**ologo**]|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
-|**/o**[**ut**]**:**_yolu_|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:**  Oluşturulan derleme adı giriş derleme artı "xmlSerializers.dll" adını oluşur.|  
-|**/p**[**roxytypes**]|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
-|**/r**[**vuru**]**:**_assemblyfiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
-|**/s**[**ilent**]|Başarı iletilerinin görüntülenmesini bastırır.|  
-|**/t**[**türü**]**:**_türü_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
-|**/v**[**erbose**]|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k\[ut\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
+|**/n\[ologo\]**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
+|**/o\[ut\]:**_yolu_|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:**  Oluşturulan derleme adı giriş derleme artı "xmlSerializers.dll" adını oluşur.|  
+|**/p\[roxytypes\]**|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
+|**/r\[vuru\]:**_assemblyfiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
+|**/s\[ilent\]**|Başarı iletilerinin görüntülenmesini bastırır.|  
+|**/t\[türü\]:**_türü_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
+|**/v\[erbose\]**|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
