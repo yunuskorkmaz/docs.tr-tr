@@ -4,12 +4,12 @@ description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152649"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030548"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -41,7 +41,7 @@ Tek bir kullanıcı Arabirimi ekranı oluşturmak için birden fazla mikro Hizme
 
 Güvenlik ve her bir mikro hizmet yetkilendirme önemli geliştirme çalışma gerektirebilir gibi güvenlik ve geniş kapsamlı kritik konular uygulama. Docker konağı veya iç küme dışarıdan kendisine doğrudan erişimi kısıtlamak için ve bir API ağ geçidi gibi merkezi bir yerde bu geniş kapsamlı kritik konular uygulamak için bu hizmetleri olası bir yaklaşımdır.
 
-- Nasıl istemci uygulamaları iletişim kurabilir Internet kolay protokolleri kullanan hizmetler ile? *
+- *İstemci uygulamalarını Internet kolay protokolleri kullanan hizmetler ile nasıl iletişim kurabilir?*
 
 Sunucu tarafında (örneğin, AMQP veya ikili protokolleri) kullanılan protokoller, genellikle istemci uygulamalarında desteklenmez. Bu nedenle, istekleri gibi HTTP/HTTPS protokolleri üzerinden gerçekleştirilen ve gerekir için diğer protokolleri sonradan çevrilir. A *adam-de-ADAM* yaklaşımı, bu durumda yardımcı olabilir.
 
