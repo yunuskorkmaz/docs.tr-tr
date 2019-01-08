@@ -2,12 +2,12 @@
 title: C# Eğitmenleri
 description: Bunlar keşfedin C# oluşturmayı öğrenmek için öğreticileri C# programları ve bilgi C# dil özellikleri.
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195131"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084673"
 ---
 # <a name="c-tutorials"></a>C# Eğitmenleri
 
@@ -47,20 +47,18 @@ Bu öğreticide, yukarıda listelenen dersleri tamamlandı varsayılır.
 
 Hello World Ders aşağıdaki tanıtım öğreticilerine kendi yerel geliştirme ortamında kullanılabilir. Her öğretici sonunda, çevrimiçi ya da kendi makinenizde sonraki Ders ile devam etmek isteyip istemediğinize karar verin. Ortamınızı ayarlayın ve makinenizde sonraki öğreticiye devam yardımcı olacak bağlantılar bulunur.
 
+## <a name="explore-new-features-in-c"></a>Yeni özellikleri keşfedinC# #
+
+Yeni özellikleri deneyin [ C# 6](../whats-new/csharp-6.md) bu [etkileşimli incelenmesi](exploration/csharp-6.yml).
+
 ## <a name="general-tutorials"></a>Genel öğreticiler
 
 Aşağıdaki öğreticilerde oluşturmanıza olanak tanıyan C# kullanarak programları [.NET Core](../../core/index.md):
 
 * [Konsol uygulaması](console-teleprompter.md): konsol g/ç, bir konsol uygulaması yapısını ve görev tabanlı zaman uyumsuz programlama modeli ile ilgili temel bilgileri gösterir.
-
 * [REST istemcisi](console-webapiclient.md): web iletişimi, JSON seri hale getirme ve nesne yönelimli özellikleri gösterir C# dili.
-
 * [Devralmada C# ve .NET](inheritance.md): devralma gösterir C#temel sınıflarını tanımlamak için soyut temel sınıflar, devralma kullanımı dahil olmak üzere ve türetilmiş sınıflar.
-
 * [LINQ ile çalışma](working-with-linq.md): LINQ ve Dil öğelerini destekleyen özelliklerin çoğunu gösterir.
-
-* [Mikro hizmetler barındırılan Docker](microservices.md): bir ASP.NET Core mikro hizmet oluşturmak ve Docker'da barındırma gösterir.
-
 * [Dize ilişkilendirme](string-interpolation.md): dize ilişkilendirme, biçimlendirilmiş dizeler oluşturulacağı gösterilmektedir C#.
-
 * [Öznitelikleri kullanarak](attributes.md): oluşturma ve öznitelikleri kullanma işlemi gösterilmektedir C#.
+* [Null başvuru türleri](nullable-reference-types.md): null başvuru için amacınız ifade etmek için boş değer atanabilir başvuru türleri nasıl yapılacağı açıklanır.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836965"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084959"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen sınıflarda, alışık olduğunuz olay ile zaman uyumsuz davranış ve semantiği temsilci etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip etmeniz gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay-tabanlı zaman uyumsuz deseni izleyen bir sınıf uygularken dikkate almanız gereken yönergeler açıklanmaktadır.  
@@ -28,7 +28,7 @@ Olay tabanlı zaman uyumsuz desen sınıflarda, alışık olduğunuz olay ile za
  Olay tabanlı zaman uyumsuz desen uygulamak, garantileri sınıfınıza düzgün şekilde davranır ve sınıfınızın istemciler üzerinde benzer bir davranış güvenebilirsiniz emin olmak için birkaç sağlamanız gerekir.  
   
 ### <a name="completion"></a>Tamamlama  
- Her zaman çağırır <em>MethodName</em>**tamamlandı** başarıyla tamamlandığında, bir hata veya İptal'e sahip olduğunuzda bir olay işleyicisi. Uygulamalar hiçbir zaman nerede bunlar boşta kalır ve hiçbir zaman tamamlama gerçekleşir bir durumla karşılaşmamanız gerekir. Bu kuralın tek istisnası, böylece hiçbir zaman tamamlanmadan zaman uyumsuz işlem üzere tasarlanmış, ' dir.  
+ Her zaman çağırır <em>MethodName</em>**tamamlandı** başarıyla tamamlandığında, bir hata veya İptal'e sahip olduğunuzda bir olay işleyicisi. Uygulamalar hiçbir zaman nerede bunlar boşta kalır ve hiçbir zaman tamamlama gerçekleşir bir durumla karşılaşmamanız gerekir. Bu kuralın tek istisnası, böylece hiçbir zaman tamamlanmadan zaman uyumsuz işlem tasarlanmıştır, ' dir.  
   
 ### <a name="completed-event-and-eventargs"></a>Tamamlanan Olay ve EventArgs  
  Her ayrı için <em>MethodName</em>**zaman uyumsuz** yöntemi, aşağıdaki tasarım gereksinimleri geçerlidir:  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Sınıfınız birden çok eş zamanlı çağrılarını destekliyorsa, her çağrıldığında, ayrı olarak tanımlayarak izlemek Geliştirici etkinleştirme <em>MethodName</em>**zaman uyumsuz** nesne değerli bir duruma alan aşırı yükleme parametresi veya görev kimliği adlı `userSuppliedState`. Bu parametre, her zaman son parametre olmalıdır <em>MethodName</em>**zaman uyumsuz** yöntemin imzası.  
   
--   Sınıfınıza tanımlıyorsa <em>MethodName</em>**zaman uyumsuz** bir nesne değerli state parametresi ya da görev kimliği alan aşırı yükleme işlemi, görev kimliği ile ömrünü izlemek ve geri sağladığınızdan emin emin olun Tamamlama işleyicisine. Oluşturmada yardımcı olması için yardımcı sınıfı vardır. Eşzamanlılık yönetimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Sınıfınıza tanımlıyorsa <em>MethodName</em>**zaman uyumsuz** bir nesne değerli state parametresi ya da görev kimliği alan aşırı yükleme işlemi, görev kimliği ile ömrünü izlemek ve geri sağladığınızdan emin emin olun Tamamlama işleyicisine. Oluşturmada yardımcı olması için yardımcı sınıfı vardır. Eşzamanlılık yönetimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Sınıfınıza tanımlıyorsa <em>MethodName</em>**zaman uyumsuz** yöntemi ve durum parametresi olmadan, birden çok eş zamanlı çağrılarını desteklemiyor, tüm çağrılacak çalışacağından emin <em>MethodName</em>  **Zaman uyumsuz** önceden önce <em>MethodName</em>**zaman uyumsuz** çağırma harekete geçirirse tamamlandı bir <xref:System.InvalidOperationException>.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  Açıkça uygulama modeli ilkesini karşı geçmek istiyorsanız, ancak olay tabanlı zaman uyumsuz desen kullanma diğer avantajlarından faydalanmaya devam edebilirsiniz, bu kurallar atlayabilir. Örneğin, bir sınıf ücretsiz olarak Windows Forms'ta işletim iş parçacıklı isteyebilirsiniz. Geliştiriciler örtük kısıtlamaları anlama olduğu sürece ücretsiz iş parçacıklı bir sınıf oluşturabilirsiniz. Konsol uygulamaları yürütülmesini eşitleme <xref:System.ComponentModel.AsyncOperation.Post%2A> çağırır. Bu neden `ProgressChanged` olayları sipariş dışında oluşturulur. Yürütülmesini serileştirilmiş istiyorsanız <xref:System.ComponentModel.AsyncOperation.Post%2A> çağrıları, uygulamak ve yükleme bir <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> sınıfı.  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager> , zaman uyumsuz işlemleri etkinleştirmek için bkz: [nasıl yapılır: olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Kullanma hakkında daha fazla bilgi için <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager> , zaman uyumsuz işlemleri etkinleştirmek için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Kuralları  
   
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
 - [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
 - [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- [Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
