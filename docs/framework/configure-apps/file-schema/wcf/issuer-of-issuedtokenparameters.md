@@ -2,15 +2,15 @@
 title: '&lt;issuedTokenParameters&gt; &lt;yayınlayan&gt;'
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 459f2f43d3ef9426fbce7e0a0dd067250eb2cc4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa647f448bad74e25ffce4a5622c7489274996c7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151143"
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt; &lt;yayınlayan&gt;
-Güvenlik belirteci hizmeti (güvenlik belirteçleri veren STS) belirtir.  
+Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -23,24 +23,24 @@ Güvenlik belirteci hizmeti (güvenlik belirteçleri veren STS) belirtir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<issuer address="Uri" />  
+<issuer address="Uri" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|adres|Gerekli dize. STS URL'si.|  
+|adres|Zorunlu dize. STS URL'si.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Adres üstbilgileri Oluşturucu oluşturabilirsiniz uç noktaları koleksiyonu.|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Verilen bir belirteç kullanırken, sunucu kimlik doğrulaması istemci etkinleştirme ayarlarını belirtir.|  
+|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Adres üstbilgileri Oluşturucu oluşturabilirsiniz uç noktaları koleksiyonudur.|  
+|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Verilen bir belirteç kullanırken, sunucu kimlik doğrulaması istemci etkinleştiren ayarları belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -60,5 +60,5 @@ Güvenlik belirteci hizmeti (güvenlik belirteçleri veren STS) belirtir.
  [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

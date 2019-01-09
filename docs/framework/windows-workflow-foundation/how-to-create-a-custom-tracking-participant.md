@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Özel İzleme Katılımcısı oluşturma'
+title: 'Nasıl yapılır: Özel İzleme Katılımcısı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611861"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150641"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl Yapılır: Özel İzleme Katılımcısı oluşturma
+# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: Özel İzleme Katılımcısı oluşturma
 İş akışı izleme, iş akışı yürütme durumunu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti harcanması ve hataları tanımlayan izleme kayıtları gösterir. Bu izleme kayıtları izleme katılımcıları tarafından tüketilir. Windows Workflow Foundation (WF) izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalamak izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri ve böylece kullanıcıya gösterilir.  
   
 > [!NOTE]
@@ -92,7 +92,7 @@ ms.locfileid: "53611861"
     }  
     ```  
   
-     Varsayılan profil izleme, izleme profil belirtildiğinde kullanılır. Varsayılan profil izleme kullanıldığında, izleme kayıtları tüm yayılan `ActivityStates`. Biz yalnızca bir kez yaşam döngüsü sırasında metin yakalamak gerektiğinden `WriteLine` etkinlik, biz yalnızca Ayıkla metinden `ActivityStates.Executing` durumu. İçinde [izleme profili oluşturma ve izleme Katılımcısı kaydetmek için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), yalnızca belirten bir izleme profili oluşturulan `WriteLine` `ActivityStates.Executing` izleme kayıtları yayılan.  
+     Varsayılan profil izleme, izleme profil belirtildiğinde kullanılır. Varsayılan profil izleme kullanıldığında, izleme kayıtları tüm yayılan `ActivityStates`. Biz yalnızca bir kez yaşam döngüsü sırasında metin yakalamak gerektiğinden `WriteLine` etkinlik, biz yalnızca Ayıkla metinden `ActivityStates.Executing` durumu. İçinde [izleme profili oluşturma ve izleme Katılımcısı kaydetmek için](#to-create-the-tracking-profile-and-register-the-tracking-participant), yalnızca belirten bir izleme profili oluşturulan `WriteLine` `ActivityStates.Executing` izleme kayıtları yayılan.  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>İzleme profili oluşturma ve izleme Katılımcısı kaydetmek için  
   

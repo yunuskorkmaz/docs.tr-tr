@@ -2,17 +2,17 @@
 title: '&lt;userPrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff38a6975d1ec73c1a3014b94198ba630c3fec31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358683"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149986"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
-Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin belirtir.  
+Kullanıcı asıl adı (istemci tarafından doğrulanacak UPN) bir hizmetin belirtir.  
   
- UPN ayarlama hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ UPN ayarlama hakkında daha fazla bilgi için bkz. [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<Kimliği >  
 \<userPrincipalName >  
@@ -20,17 +20,17 @@ Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<userPrincipalName value="String" />  
+<userPrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|(Bazen kullanıcı oturum açma adı olarak adlandırılır) bir kullanıcı hesabı adı ve kullanıcı hesabının bulunduğu etki alanını tanımlayan bir etki alanı adı. Bu bir Windows etki alanında oturum açmak için standart kullanımdır. Biçim: someone@example.com (olduğu gibi bir e-posta adresi).|  
+|value|Bir kullanıcı hesabı adı (bazen kullanıcı oturum açma adı olarak adlandırılır) ve kullanıcı hesabının bulunduğu etki alanını tanıtan bir etki alanı adı. Bu, bir Windows etki alanında oturum açma için standart kullanımdır. Biçim: someone@example.com (olduğu gibi bir e-posta adresi).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -39,18 +39,18 @@ Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanmasını hizmetin kimliğini belirtir.|  
+|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanacak bir hizmetin kimliğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu kimliğe sahip bir uç nokta bağlandığı güvenli bir Windows Communication Foundation (WCF) istemci SSPI kimlik doğrulama uç noktası ile gerçekleştirirken kullanır.  
+ Bu kimlik ile bir uç noktayı bağlayan güvenli bir Windows Communication Foundation (WCF) istemci, SSPI kimlik doğrulama uç noktası ile gerçekleştirirken UPN kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma kodunu istemci tarafından doğrulanmasını UPN hizmetinin belirtir.  
+ İstemci tarafından doğrulanacak UPN hizmeti aşağıdaki yapılandırma kodunu belirtir.  
   
 ```xml  
-<identity>  
-  <userPrincipalName value="someone@cohowinery.com" />  
-</identity>  
+<identity>
+  <userPrincipalName value="someone@cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

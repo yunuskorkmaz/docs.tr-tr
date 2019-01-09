@@ -2,12 +2,12 @@
 title: WCF &lt;iş akışı&gt;
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 7f6e648b98f436074c7fc5c563b4b5879158bcc3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2990cb474e0c874841b69bdef166c2be3f1c857d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308324"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148922"
 ---
 # <a name="ltworkflowgt-of-wcf"></a>WCF &lt;iş akışı&gt;
 Çalışma zamanını şuradan doğrudan yayılan izleme kayıtları için bekleyen bir izleme katılımcı yapılandırın ve bunları yapılandırılan hangi yolla işlem. Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.  
@@ -21,14 +21,14 @@ ms.locfileid: "49308324"
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
-  <tracking>
-    <participants>
-      <add name="String"
-            profileName="String"
-            type="String" />
-    </participants>
-  </tracking>   
+```xml  
+<tracking>
+  <participants>
+    <add name="String"
+         profileName="String"
+         type="String" />
+  </participants>
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -64,28 +64,28 @@ ms.locfileid: "49308324"
  ETW İzleme katılımcı için ETW İzleme kayıtları yazmak için kullandığı sağlayıcı kimliği tanımlanan `<diagnostics>` bölümü. İzleme katılımcı abone izleme kayıtları belirtmek için ile ilişkili bir profil var. Bu tarafından tanımlanan `profileName` özniteliği `<add>` öğesi. Bunlar tanımlandıktan izleme katılımcı eklenir `<etwTracking>` hizmet davranışı. Böylece bunlar izleme kayıtları almak başlayabilirsiniz bu iş akışı örneğinin uzantıları için seçilen izleme katılımcıları ekleyecektir.  
   
 ```xml  
-<configuration>   
-  <system.web>   
-    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
-  </system.web>   
-  <system.serviceModel>   
-    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />                
-    <tracking>   
-      <participants>   
-        <add name="EtwTrackingParticipant"   
-             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"   
-             profileName="HealthMonitoring_Tracking_Profile"/>   
-      </participants>   
-    </tracking>   
-    <behaviors>   
-      <serviceBehaviors>   
-        <behavior>   
-          <etwTracking profileName="Sample Tracking Profile"/>  
-        </behavior>   
-      </serviceBehaviors>   
-    </behaviors>   
-  </system.serviceModel>   
-</configuration>  
+<configuration>
+  <system.web>
+    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0" />
+  </system.web>
+  <system.serviceModel>
+    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />
+    <tracking>
+      <participants>
+        <add name="EtwTrackingParticipant"
+             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+             profileName="HealthMonitoring_Tracking_Profile" />
+      </participants>
+    </tracking>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <etwTracking profileName="Sample Tracking Profile" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

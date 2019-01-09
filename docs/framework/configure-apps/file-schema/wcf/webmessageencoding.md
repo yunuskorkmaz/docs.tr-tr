@@ -2,12 +2,12 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e8b45075c7c07efc49f84526382352a5b1a556b1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773637"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148675"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabilir ve bir Windows Communication Foundation (WCF) bağlaması içinde kullanıldığında yazılan için "ham" ikili içeriğin sağlar.  
@@ -21,11 +21,9 @@ Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabi
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<webMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-  
-writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<webMessageEncoding maxReadPoolSize="Integer"
+                    maxWritePoolSize="Integer"
+                    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -37,7 +35,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 |---------------|-----------------|  
 |`maxReadPoolSize`|Yeni okuyucu ayırmadan aynı anda okunabilecek ileti miktarı. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Her iç kodlayıcılarda (yalnızca metin, JSON ve "ham") için 64 okuyucular varsayılandır.<br /><br /> Bu sayı arttıkça bellek tüketimi artırılması, ancak yenilerini oluşturmak yerine, önceden oluşturulan okuyucular havuzundan kullanmanız mümkün olduğundan, gelen iletilerin ani artışları ile dağıtılacak Kodlayıcı hazırlar.|  
 |`maxWritePoolSize`|Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti miktarı. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Her iç kodlayıcılarda (yalnızca metin, JSON ve "ham") için 16 yazıcılar varsayılandır.<br /><br /> Bu sayı arttıkça bellek tüketimi artırılması, ancak yenilerini oluşturmak yerine, önceden oluşturulan yazıcılar havuzundan kullanmanız mümkün olduğundan, giden iletilerin ani artışları ile uğraşmak için Kodlayıcı hazırlar.|  
-|`writeEncoding`|Bağlamadaki yayma iletileri için kullanılacak kodlama karakter kümesini belirtir. Geçerli değerler şunlardır:<br /><br /> -UnicodeFffeTextEncoding: Unicode büyük Endian'ya kodlaması.<br />-Utf16TextEncoding: Unicode kodlaması.<br />-Utf8TextEncoding: 8 bit kodlama.<br /><br /> Utf8TextEncoding varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Bağlamadaki yayma iletileri için kullanılacak kodlama karakter kümesini belirtir. Geçerli değerler şunlardır:<br /><br /> -UnicodeFffeTextEncoding: Unicode büyük Endian kodlaması.<br />-Utf16TextEncoding: Unicode kodlaması.<br />-Utf8TextEncoding: 8-bit kodlaması.<br /><br /> Utf8TextEncoding varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -67,12 +65,10 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<webMessageEncoding   
-    maxReadPoolSize="256"  
-    maxWritePoolSize="128"  
-    messageVersion="None"  
-    textEncoding="utf-8"   
-/>  
+<webMessageEncoding maxReadPoolSize="256"
+                    maxWritePoolSize="128"
+                    messageVersion="None"
+                    textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

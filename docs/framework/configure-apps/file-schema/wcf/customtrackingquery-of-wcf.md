@@ -2,12 +2,12 @@
 title: WCF &lt;customTrackingQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: e13064afbd9f5dbc8d7216eb384001e1e005785c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316239"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146387"
 ---
 # <a name="ltcustomtrackingquerygt-of-wcf"></a>WCF &lt;customTrackingQuery&gt;
 
@@ -25,7 +25,7 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -38,8 +38,8 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler  
 
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  

@@ -2,24 +2,24 @@
 title: '&lt;allowAccounts&gt; &lt;ekleme&gt;'
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 2230b8d22a14c3df5eb3aa10872246febce015e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 443e401e568f4de0432e66c4e03b033f6bfc42f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349697"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146179"
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;allowAccounts&gt; &lt;ekleme&gt;
-WCF hizmetlerini barındırmak ve Paylaşım Hizmeti bağlantı erişim izni işlemleri için bir kullanıcı hesabı belirtir.  
+WCF hizmetleri barındırır ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için bir kullanıcı hesabı belirtir.  
   
  \<system.serviceModel.activation>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<allowAccounts>  
-   <add securityIdentifier="String"/>  
-</allowAccounts>  
+<allowAccounts>
+  <add securityIdentifier="String" />
+</allowAccounts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -38,24 +38,24 @@ WCF hizmetlerini barındırmak ve Paylaşım Hizmeti bağlantı erişim izni iş
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` özniteliği barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemler için kullanıcı hesaplarını belirtin.|  
+|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için kullanıcı hesabı belirtmek için özniteliği.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örneğinde kullanıcı hesapları için beş varsayılan tanımlayıcıları bu koleksiyona ekler.  
+ Aşağıdaki yapılandırma örnek kullanıcı hesapları için beş varsayılan tanımlayıcıları, bu koleksiyona ekler.  
   
 ```xml  
-<allowAccounts>  
-   // LocalSystem account  
-   <add securityIdentifier="S-1-5-18"/>  
-   // LocalService account  
-   <add securityIdentifier="S-1-5-19"/>  
-   // Administrators account  
-   <add securityIdentifier="S-1-5-20"/>  
-   // Network Service account  
-   <add securityIdentifier="S-1-5-32-544" />  
-   // IIS_IUSRS account (Vista only)  
-   <add securityIdentifier="S-1-5-32-568"/>  
-</allowAccounts>  
+<allowAccounts>
+  <!-- LocalSystem account -->
+  <add securityIdentifier="S-1-5-18" />
+  <!-- LocalService account -->
+  <add securityIdentifier="S-1-5-19" />
+  <!-- Administrators account -->
+  <add securityIdentifier="S-1-5-20" />
+  <!-- Network Service account -->
+  <add securityIdentifier="S-1-5-32-544" />
+  <!-- IIS_IUSRS account (Vista only) -->
+  <add securityIdentifier="S-1-5-32-568" />
+</allowAccounts>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

@@ -2,15 +2,15 @@
 title: '&lt;WsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 33c2b0e4286ce746f745e4aebe10fd4bbd96810f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754908"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144996"
 ---
 # <a name="ltwsdlimportergt"></a>&lt;WsdlImporter&gt;
-WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran WSDL ımporters belirtir.  
+WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran tüm WSDL ımporters belirtir.  
   
 \<system.ServiceModel>  
 \<İstemci >  
@@ -21,11 +21,11 @@ WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<metadata>  
-  <wsdlImporters>  
-    <wsdlImporter type="string" />  
-  </wsdlImporters>  
-</metadata>  
+<metadata>
+  <wsdlImporters>
+    <wsdlImporter type="string" />
+  </wsdlImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -35,7 +35,7 @@ WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`type`|Bu öğe türü.|  
+|`type`|Bu öğenin türü.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,10 +44,10 @@ WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran WSDL ımporters belirtir.|  
+|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran tüm WSDL ımporters belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- WSDL alma yanı sıra meta veri içe bu sözleşmeyi temsil eden çeşitli sınıflar bilgilerini ve uç nokta bilgileri dönüştürmek için kullanılır. Sözleşme ve uç nokta bilgileri ve kullanıma alma hataları ve tür bilgilerini içeri aktarma ve dönüştürme işlemi için ilgili kabul özellikleri seçerek aktarabilirsiniz. İçeri aktarma bağlama bilgileri ve ilke belgeleri, WSDL belgeleri, WSDL uzantıları ve XML Şeması belgelerinde erişim sağlayan özellikleri de destekler.  
+ Bir WSDL içeri Aktarıcı yanı sıra meta veri alma, bu sözleşmeyi temsil eden çeşitli sınıf bilgilerini ve uç nokta bilgileri dönüştürmek için kullanılır. Sözleşmeyi ve uç nokta bilgilerini ve kullanıma alma hataları ve içeri aktarma ve dönüştürme işlemi için uygun tür bilgilerini kabul özellikleri seçerek alabilirsiniz. İçeri aktarma bağlama bilgileri ve ilke belgeleri, WSDL belgeleri, WSDL uzantıları ve XML Şeması belgeleri için erişim sağlayan özellikleri de destekler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.WsdlImporterElement>  

@@ -2,28 +2,39 @@
 title: '&lt;Girdileri&gt;'
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: b9cc7f7736ffefaca68a0f197bd064a99c4dca9a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c442990ee736c17b71b625e06d961230a8ceed2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746715"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146439"
 ---
 # <a name="ltentriesgt"></a>&lt;Girdileri&gt;
-Yönlendirme filtreleri ve ne zaman bir filtre ile eşleşen için iletileri göndermek için hedef uç noktaları arasındaki eşlemeleri içeren bir yönlendirme girişi.  
+Bir yönlendirme girişi, ne zaman eşleşen filtre ileti göndermek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içerir.  
   
  \<system.serviceModel>  
 \<Yönlendirme >  
 \<routingTables >  
 \<Tablo >  
-\<girişleri >  
+\<Giriş >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
-   <routing>      <filterTables>        <filterTable name="String">          <entries>            <add backupList="String"                 endpointName="String"                  filterName="String"                  priority="Integer" />          </entries>        </table>      </routingTables></routing>  
-```
-
+```xml  
+<routing>
+  <filterTables>
+    <filterTable name="String">
+      <entries>
+        <add backupList="String"
+             endpointName="String"
+             filterName="String"
+             priority="Integer" />
+      </entries>
+    </filterTable>
+  </filterTables>
+</routing>
+```  
+  
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
@@ -34,7 +45,7 @@ Yönlendirme filtreleri ve ne zaman bir filtre ile eşleşen için iletileri gö
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<filtreleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Bir filtre önceden tanımlanmış bir istemci uç noktası eşler. Bu filtre ile eşleşen iletileri bu hedefe gönderilir.|  
+|[\<filtreleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Bu önceden tanımlanmış bir istemci uç noktası için bir filtre eşler. Bu filtreyle eşleşen iletileri bu hedefe gönderilir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

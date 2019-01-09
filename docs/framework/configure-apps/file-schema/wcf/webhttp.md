@@ -2,18 +2,18 @@
 title: '&lt;webHttp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 1dce767d1cb6705084f0776b8ba8a168031fcb04
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767498"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145685"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
-Bu öğe belirtir <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma yoluyla bir uç noktada. İle birlikte kullanıldığında bu davranış, [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standart bağlama, bir Windows Communication Foundation (WCF) hizmetine Web programlama modeli sağlar.  
+Bu öğeyi belirten <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma yoluyla bir uç noktada. İle birlikte kullanıldığında bu davranışı [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standart bağlama için bir Windows Communication Foundation (WCF) hizmeti Web programlama modeli sağlar.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<endpointBehaviors >  
 \<davranışı >  
 \<webHttp >  
@@ -21,7 +21,7 @@ Bu öğe belirtir <xref:System.ServiceModel.Description.WebHttpBehavior> yapıla
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<webHttp />  
+<webHttp />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -31,11 +31,11 @@ Bu öğe belirtir <xref:System.ServiceModel.Description.WebHttpBehavior> yapıla
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|automaticFormatSelectionEnabled|Bu özellik ayarlandığında `true`, WCF altyapı kullanmak için en iyi biçimini belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir.|  
-|defaultBodyStyle|Döndürülen iletilerini varsayılan gövde stilini belirtir. Daha fazla bilgi için bkz: <xref:System.ServiceModel.Web.WebMessageBodyStyle> ve [WCF Web HTTP biçimlendirme](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
-|defaultOutgoingResponseFormat|İletileri için varsayılan giden yanıt biçimi belirtir. Daha fazla bilgi için bkz: [WCF Web HTTP biçimlendirme](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
-|faultExceptionEnabled|Bir iç sunucu hatası olduğunda bir FaultException oluşturulup oluşturulmayacağını belirten bir bayrak alır veya ayarlar (HTTP durum kodu: 500) oluşur.|  
-|helpEnabled|Alır veya yardım sayfasına etkin olup olmadığını belirleyen bir değer ayarlar.|  
+|automaticFormatSelectionEnabled|Bu özelliği ayarlandığında `true`, WCF altyapısı kullanılacak en iyi biçimi belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir.|  
+|defaultBodyStyle|Döndürülen iletilerin varsayılan gövde stilini belirtir. Daha fazla bilgi için <xref:System.ServiceModel.Web.WebMessageBodyStyle> ve [WCF Web HTTP biçimlendirme](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
+|defaultOutgoingResponseFormat|İletiler için varsayılan giden yanıt biçimini belirtir. Daha fazla bilgi için [WCF Web HTTP biçimlendirme](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
+|faultExceptionEnabled|Bir iç sunucu hatası bir FaultException oluşturulup oluşturulmayacağını belirten bayrağı alır veya ayarlar (HTTP durum kodu: 500) oluşur.|  
+|helpEnabled|Alır veya Yardım sayfasının etkinleştirilip etkinleştirilmediğini belirleyen bir değer ayarlar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

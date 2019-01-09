@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e684c21c0b1360a9b270214ebe7b3ad00b42657f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0ee50a4b5adeede2dd531ba734ac9fb420f3b713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861966"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150246"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletileri için kullanılan belirtir.  
@@ -21,10 +21,10 @@ Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletile
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-   messageVersion="Soap11Addressing10/Soap12Addressing10"  
-      writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<textMessageEncoding maxReadPoolSize="Integer"
+                     maxWritePoolSize="Integer"
+                     messageVersion="Soap11Addressing10/Soap12Addressing10"
+                     writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -52,17 +52,17 @@ Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletile
 |[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kodlama bir ileti bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç tür içerir: metin ve ikili ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
+ Kodlama bir ileti bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç türlerini içerir: Metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
   
  Metin kodlaması ile temsil edilen `textMessageEncoding` öğedir en birlikte çalışabilir, ancak XML iletileri için en az verimli Kodlayıcı.  Metin Kodlayıcı kablo metin tabanlı iletileri oluşturur. Bu Kodlayıcı tarafından üretilen iletileri, WS - için uygun * Interop bağlı. Web hizmeti veya Web hizmeti istemcisi, metinsel XML genellikle anlayabilirsiniz. Ancak, büyük metin olarak ikili veri blokları iletme XML iletileri kodlama az verimli yöntemdir.  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="211"  
-    maxWritePoolSize="2132"  
-    messageVersion="Soap12Addressing10"  
-    textEncoding="utf-8" />  
+<textMessageEncoding maxReadPoolSize="211"
+                     maxWritePoolSize="2132"
+                     messageVersion="Soap12Addressing10"
+                     textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

@@ -12,16 +12,16 @@ api_type:
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e42cf5747362f2257a2d777de918721181a8280
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753631"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148363"
 ---
 # <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest. \_AutoRedirects alan
 
-`HttpWebRequest._AutoRedirects` olan bir <xref:System.Int32> bu için yapılan yeniden yönlendirmeleri sayısını yansıtır <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects` olan bir <xref:System.Int32> bunun için yapılan yeniden yönlendirmeleri sayısını yansıtır <xref:System.Net.HttpWebRequest>.
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects` Alandır iç ve kodunuzda doğrudan kullanılmak üzere yüksetlmesi.
+> `HttpWebRequest._AutoRedirects` Alan dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
 > 
-> Microsoft hiçbir koşulda bir üretim uygulamasında bu alan kullanımını desteklemez.
+> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Namespace:** <xref:System.Net>
 
-**Derleme:** sisteminde (System.dll)
+**Derleme:** Sistemde (System.dll)
 
 **.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.

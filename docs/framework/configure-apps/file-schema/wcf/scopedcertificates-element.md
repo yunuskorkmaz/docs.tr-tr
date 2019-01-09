@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; Öğesi'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838286"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150727"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; Öğesi
 Belirli hizmetler (kapsamlı kimlik doğrulaması için) tarafından sağlanan X.509 Sertifika koleksiyonunu temsil eder. Bu koleksiyon, genellikle hizmet sertifikaları için güvenlik belirteci hizmetlerine federe bir senaryoda belirtmek için kullanılır.  
@@ -24,13 +24,13 @@ endpointBehaviors bölümü
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<scopedCertificates>  
-      <add findValue="String"  
-                storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                targetUri="string"  
-            x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />   
-</scopedCertificates>   
+<scopedCertificates>
+  <add findValue="String"
+       storeLocation="CurrentUser/LocalMachine"
+       storeName=" CurrentUser/LocalMachine"
+       targetUri="string"
+       x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+</scopedCertificates>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -56,19 +56,21 @@ endpointBehaviors bölümü
   
  Bağlama, hizmet ve URL ScopedCertificates içinde bulunan hizmet için belirli bir sertifika için bir sertifika gerektiriyorsa, varsayılan sertifika kullanılır.  
   
- Daha fazla bilgi için "Sertifikalar kapsamlı" bölümüne bakın. [nasıl yapılır: federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Daha fazla bilgi için "Sertifikalar kapsamlı" bölümüne bakın. [nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir hizmet uç noktaları ile iletişim kurulurken etki alanı adını kullanmak istemci sertifikası belirtir `http://www.contoso.com` HTTP protokolü üzerinden.  
   
 ```xml  
-<serviceCertificate>  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-</serviceCertificate>  
+<serviceCertificate>
+  <scopedCertificates>
+    <add targetUri="http://www.contoso.com"
+         findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="Root"
+         x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
@@ -78,7 +80,7 @@ endpointBehaviors bölümü
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
  [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
  [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)  
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

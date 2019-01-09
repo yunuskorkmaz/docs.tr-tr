@@ -2,12 +2,12 @@
 title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: f178ac3132e3c5880daef1d59480edae88f1d27e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ed7402ac7ec50a98b7d685813448edb173266d9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180984"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152001"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Özel bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.  
@@ -22,12 +22,11 @@ ms.locfileid: "50180984"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<msmqTransportSecurity>  
-   msmqAuthenticationMode="None/Windows/Certificate"  
-   msmqEncryptionAlgorithm="RC4Stream/AES"  
-   msmqProtectionLevel="None/Sign/EncryptAndSign"  
-   msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-</msmqTransportSecurity>  
+<msmqTransportSecurity msmqAuthenticationMode="None/Windows/Certificate"
+                       msmqEncryptionAlgorithm="RC4Stream/AES"
+                       msmqProtectionLevel="None/Sign/EncryptAndSign"
+                       msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+</msmqTransportSecurity>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -37,9 +36,9 @@ ms.locfileid: "50180984"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Bu ayarlanırsa `None`, değerini `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Kimlik doğrulaması yok.<br />-Windows: SID iletiyle ilişkili için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, daha sonra kullanıcı emin olmak için ACL kuyruğun kuyruğa yazmak için yeterli izne sahip olmadığını denetlemek için kullanılır.<br />-Sertifika: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Windows varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqAuthenticationMode`|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Bu ayarlanırsa `None`, değerini `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması yok.<br />-Windows: Kimlik doğrulama mekanizması, SID iletiyle ilişkili için X.509 sertifikası almak için Active Directory kullanır. Bu, daha sonra kullanıcı emin olmak için ACL kuyruğun kuyruğa yazmak için yeterli izne sahip olmadığını denetlemek için kullanılır.<br />-Sertifikası: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Windows varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Etkin ileti şifreleme için iletileri ileti sıra yöneticileri arasında transfer ederken kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br /><br /> RC4Stream varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|İletinin MSMQ taşıma düzeyinde güvenliği nasıl belirtir. İleti bütünlüğü hem takası EncryptAndSign sağlar ancak şifreleme ileti bütünlüğü sağlar; diğer bir deyişle, ileti gönderen gerçekten gelir ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> Oturum varsayılan değerdir. Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqProtectionLevel`|İletinin MSMQ taşıma düzeyinde güvenliği nasıl belirtir. İleti bütünlüğü hem takası EncryptAndSign sağlar ancak şifreleme ileti bütünlüğü sağlar; diğer bir deyişle, ileti gönderen gerçekten gelir ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> Oturum varsayılan değerdir. Bu öznitelik türünde <xref:System.Net.Security.ProtectionLevel>.|  
 |`msmqSecureHashAlgorithm`|İmzanın bir parçası Özet işlem alanında kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, SHA1 değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

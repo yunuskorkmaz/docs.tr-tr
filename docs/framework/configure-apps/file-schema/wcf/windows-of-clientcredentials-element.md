@@ -2,18 +2,18 @@
 title: '&lt;clientCredentials&gt; Öğesi &lt;pencereleri&gt;'
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 9badcfafff4bc09a16b0b9a565a9ea5c01e26bb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 780d73b747feae5495ad08cb2324e7d8f8de0d7d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767069"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147479"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; Öğesi &lt;pencereleri&gt;
-İstemci temsil etmek için kullanılacak bir Windows kimlik bilgileri ayarlarını belirtir.  
+İstemciyi temsil etmek için kullanılacak Windows kimlik bilgisi ayarlarını belirtir.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<endpointBehaviors >  
 \<davranışı >  
 \<clientCredentials >  
@@ -22,10 +22,8 @@ ms.locfileid: "32767069"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<windows   
-    allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
-        allowNtlm="Boolean"  
-/>  
+<windows allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"
+         allowNtlm="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -35,8 +33,8 @@ ms.locfileid: "32767069"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|İstemci iletişim kuruyorsa kimliğe bürünme tercih sunucuya ayarlar. İstemcinin kimliğe bürünme modu sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimliği: Sunucunun kimliğini ve istemci ayrıcalıkların alabilir, ancak istemci alınamıyor.<br />-Kimliğe bürünme: Sunucu istemcinin güvenlik bağlamı yerel sistemde kimliğine bürünebilir.<br />-Temsilci: Sunucu istemcinin güvenlik bağlamı uzak sistemlere kimliğine bürünebilir.<br />-Anonim: Sunucusu taklit veya istemci kimliği.<br />-Hiçbiri: Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Bu özelliği ayarlamak `true` Kerberos kullanılabilir değilse, NTLM olarak düşürmek için kimlik doğrulaması sağlar.<br /><br /> Bu özelliği ayarlamak `false` NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapmak için Windows Communication Foundation (WCF) neden olur. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
+|`allowedImpersonationLevel`|Sunucuya istemcinin iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimliği: Sunucunun kimliğini ve istemci ayrıcalıkları elde edebilirsiniz, ancak istemci kimliğine bürünülemedi.<br />-Kimliğe bürünme: Sunucu, istemci güvenlik bağlamı yerel sistemde bürünebilir.<br />-Temsilci: Sunucu, uzak sistemlere istemcinin güvenlik bağlamında bürünebilir.<br />-Anonim: Sunucu bürünerek veya istemci kimliği.<br />-Yok: Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Bu özelliği ayarlamak `true` Kerberos kullanılamıyorsa için NTLM kimlik doğrulamasının sağlar.<br /><br /> Bu özelliği ayarlamak `false` bir NTLM kullanılırsa, bir özel durum için mümkün olan en iyi hale getirmek için Windows Communication Foundation (WCF) neden olur. Unutmayın, bu özelliği ayarlamak `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyemeyebilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -45,7 +43,7 @@ ms.locfileid: "32767069"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Hizmeti için istemci kimlik doğrulaması için kullanılan kimlik bilgilerini belirtir.|  
+|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.WindowsClientElement>  

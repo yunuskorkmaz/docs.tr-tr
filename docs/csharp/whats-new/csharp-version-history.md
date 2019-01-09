@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 00294287c978cf3ede5bdbd951587f5addab1994
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: c24ac6c87762c4808c0794bf7c724eee942ad0fc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084842"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152066"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -28,7 +28,7 @@ C# Derleme araçları, varsayılan dil sürümü en son ana dil sürümü düş�
 
 ## <a name="c-version-10"></a>C# sürüm 1.0
 
-Geri dönün ve konum, C# sürüm 1.0 çok Java gibi görünüyordu. Olarak [belirtilen Tasarım hedeflerini ECMA parçası](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), bir "basit, modern, genel amaçlı nesne yönelimli dil." olmasını Aranan  Zaman erken bu tasarım hedefleri, Java desktop'takiler gibi mi arıyorsunuz elde edebilirsiniz.
+Geri dönün ve konum, C# sürüm 1.0 çok Java gibi görünüyordu. Olarak [belirtilen Tasarım hedeflerini ECMA parçası](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), bir "basit, modern, genel amaçlı nesne yönelimli dil." olmasını Aranan  Zaman erken bu tasarım hedefleri, Java desktop'takiler gibi mi arıyorsunuz elde edebilirsiniz.
 
 Ancak geri C# 1.0 artık bakarsanız, kendiniz biraz dizzy bulur. Bu, yerleşik zaman uyumsuz özellikler ve verilen almak için genel türler etrafında bahsettiniz işlevlerinden bazıları koduk. Gibi bir matter, aslında, genel türler tamamen koduk.  Ve [LINQ](../linq/index.md)? Kullanılabilir değil henüz. Bu eklemeler gelecek bazı yıllarda sürecektir.
 

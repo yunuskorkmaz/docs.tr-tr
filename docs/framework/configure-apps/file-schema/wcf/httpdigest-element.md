@@ -2,12 +2,12 @@
 title: '&lt;httpDigest&gt; Öğesi'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521993"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150147"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; Öğesi
 Bir Özet belirtir bir hizmeti istemcisi kimlik doğrulaması yapılırken kullanılan kimlik bilgilerini yazın.  
@@ -22,7 +22,7 @@ Bir Özet belirtir bir hizmeti istemcisi kimlik doğrulaması yapılırken kulla
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />  
+<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -32,10 +32,10 @@ Bir Özet belirtir bir hizmeti istemcisi kimlik doğrulaması yapılırken kulla
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`impersonationLevel`|Sunucuya istemcinin iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimlik: Sunucu kimliğini ve istemci ayrıcalıkları elde edebilirsiniz, ancak istemci kimliğine bürünülemedi.<br />-Kimliğe bürünme: Sunucu istemcinin güvenlik bağlamı yerel sistemde kimliğine bürünebilir.<br />-Temsilci: Sunucu uzak sistemlerdeki güvenlik bağlamı istemcinin kimliğine bürünebilir.<br />-Anonim: Sunucusu özelliklerini veya istemci kimliği.<br />-Yok: Bir kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Sunucuya istemcinin iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimliği: Sunucunun kimliğini ve istemci ayrıcalıkları elde edebilirsiniz, ancak istemci kimliğine bürünülemedi.<br />-Kimliğe bürünme: Sunucu, istemci güvenlik bağlamı yerel sistemde bürünebilir.<br />-Temsilci: Sunucu, uzak sistemlere istemcinin güvenlik bağlamında bürünebilir.<br />-Anonim: Sunucu bürünerek veya istemci kimliği.<br />-Yok: Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

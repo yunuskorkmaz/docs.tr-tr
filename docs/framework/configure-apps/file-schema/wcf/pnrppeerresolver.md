@@ -2,15 +2,15 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747986"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150155"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
-PNRP (Eş Adı Çözümleme Protokolü) çözümleyici çözümleyici kullanılması gerektiğini belirtir. PNRP varsayılan çözümleyici olduğundan bu öğe isteğe bağlıdır.  
+PNRP (Eş Adı Çözümleme Protokolü) çözümleyici olrak kullanılacak olduğunu belirtir. PNRP varsayılan Çözümleyici, çünkü bu öğe isteğe bağlıdır.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -21,7 +21,7 @@ PNRP (Eş Adı Çözümleme Protokolü) çözümleyici çözümleyici kullanılm
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -31,21 +31,21 @@ PNRP (Eş Adı Çözümleme Protokolü) çözümleyici çözümleyici kullanılm
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|resolverType|Kullanılacak çözümleyici belirten bir dize. Bu öznitelik isteğe bağlıdır. Ayarlı değil ya da boş bir dize olarak ayarlarsanız, PNRP kullanılır.|  
+|resolverType|Kullanılacak çözümleyici belirten bir dize. Bu öznitelik isteğe bağlıdır. Ayarlı değil veya boş dize olarak ayarlarsanız, PNRP kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

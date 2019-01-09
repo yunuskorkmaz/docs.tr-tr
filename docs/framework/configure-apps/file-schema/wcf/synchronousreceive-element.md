@@ -2,18 +2,18 @@
 title: '&lt;synchronousReceive&gt; öğesi'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753267"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147388"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; öğesi
-Bu yapılandırma öğesi, bir hizmet veya istemci uygulamasında iletileri almak için çalışma zamanı davranışını belirtmek için kullanılır. Herhangi bir öznitelik veya alt öğe yok.  
+Bu yapılandırma öğesi, bir hizmet veya istemci uygulamasında ileti alma için çalışma zamanı davranışını belirtmek için kullanılır. Herhangi bir öznitelik veya alt öğe yok.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<endpointBehaviors >  
 \<davranışı >  
 \<synchronousReceive >  
@@ -21,7 +21,7 @@ Bu yapılandırma öğesi, bir hizmet veya istemci uygulamasında iletileri alma
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<synchronousReceive />  
+<synchronousReceive />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -37,10 +37,10 @@ Bu yapılandırma öğesi, bir hizmet veya istemci uygulamasında iletileri alma
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışını belirtir.|  
+|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu davranış varsayılan olarak zaman uyumsuz yerine bir zaman uyumlu alma kullanım kanal dinleyicisi istemek için kullanın. Windows Communication Foundation (WCF) pompa kabul edilen her kanal için yeni bir iş parçacığı verir. Çok sayıda kanalları varsa, çalışan iş parçacığı dışında olasılığını yoktur.  
+ Eş zamanlı alma kullanmak yerine varsayılan olarak zaman uyumsuz kanal dinleyicisi istemek için bu davranışı kullanın. Windows Communication Foundation (WCF) pompa kabul edilen her kanal için yeni bir iş parçacığı verir. Çok sayıda kanalları varsa, çalışan iş parçacığı dışında olasılığı yoktur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  

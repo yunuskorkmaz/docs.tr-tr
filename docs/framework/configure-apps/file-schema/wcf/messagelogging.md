@@ -2,15 +2,15 @@
 title: '&lt;messageLogging&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: e137070b71cf8a481eef3ea16260c135e29b4932
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750693"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150454"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
-Bu öğe, Windows Communication Foundation (WCF) ileti günlüğe kaydetme özellikleri ayarlarını tanımlar.  
+Bu öğe Windows Communication Foundation (WCF) ileti günlüğüne yazma yetenekleri için ayarları tanımlar.  
   
  \<system.ServiceModel>  
 \<Tanılama >  
@@ -19,20 +19,20 @@ Bu öğe, Windows Communication Foundation (WCF) ileti günlüğe kaydetme özel
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-                    maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-                            <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -42,78 +42,83 @@ Bu öğe, Windows Communication Foundation (WCF) ileti günlüğe kaydetme özel
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`logEntireMessage`|Bir Boole değeri (ileti başlığı ve gövde) tüm ileti günlüğe kaydedilip kaydedilmediğini belirtir. Varsayılan değer `false`, yalnızca ileti üstbilgisi başka bir deyişle, günlüğe kaydedilir. Bu ayar, tüm ileti günlüğe kaydetme düzeylerini etkiler (hizmeti, taşıma ve hatalı biçimlendirilmiş).|  
-|`logMalformedMessages`|Hatalı biçimlendirilmiş iletileri günlüğe kaydedilip kaydedilmeyeceğini belirler bir Boole değeri. Hatalı biçimlendirilmiş iletilerini değil doğru Say `maxMessagesToLog`. Varsayılan, `false` değeridir.|  
-|`logMessagesAtServiceLevel`|İletiler (önce şifreleme ve taşımayla ilgili Dönüşümlerde) hizmeti düzeyinde izlenip izlenmediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|`logMessagesAtTransportLevel`|İletileri aktarım düzeyinde izlenip izlenmediğini belirten bir Boole değeri. Yapılandırma dosyasında belirtilen herhangi bir filtre uygulanır ve yalnızca filtrelerle eşleşen iletileri izlenen. Varsayılan, `false` değeridir.|  
-|`maxMessagesToLog`|Günlüğe kaydedilecek ileti sayısı üst sınırını belirtir pozitif bir tamsayı. Varsayılan değer 1000'dir.|  
-|`maxSizeOfMessageToLog`|Bir ileti günlüğe kaydetmek için bayt cinsinden en büyük boyutunu belirtir pozitif bir tamsayı. Sınırından daha büyük ileti günlüğe kaydedilmez. Bu ayar, tüm izleme düzeylerini etkiler. 262144(0x4000) varsayılandır.|  
+|`logEntireMessage`|Tüm iletinin (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirten bir Boole değeri. Varsayılan `false`, yani yalnızca ileti üst bilgisi kaydedilir. Bu ayar tüm ileti günlüğe kaydetme düzeylerini etkiler (hizmeti, taşıma ve hatalı).|  
+|`logMalformedMessages`|Hatalı biçimlendirilmiş iletilerin kaydedilip kaydedilmeyeceğini belirleyen bir Boole değeri. Hatalı biçimlendirilmiş iletilerin değil doğru sayısı `maxMessagesToLog`. Varsayılan, `false` değeridir.|  
+|`logMessagesAtServiceLevel`|İletilerin hizmet düzeyinde (önce şifreleme ve taşıma ilişkili dönüşümler) izlenilmeyeceğini belirleyen bir Boole değeri. Varsayılan, `false` değeridir.|  
+|`logMessagesAtTransportLevel`|İletileri taşıma düzeyinde izlenilmeyeceğini belirleyen bir Boole değeri. Yapılandırma dosyasında belirtilen herhangi bir filtre uygulanır ve yalnızca filtrelerle eşleşen iletileri izlendiğini. Varsayılan, `false` değeridir.|  
+|`maxMessagesToLog`|Günlüğe kaydedilecek ileti sayısı belirten bir pozitif tamsayı. Varsayılan değer 1000'dir.|  
+|`maxSizeOfMessageToLog`|Günlüğe kaydedilecek iletinin bayt cinsinden en büyük boyutunu belirten pozitif bir tamsayı. Sınırından daha büyük iletiler günlüğe kaydedilmez. Bu ayar, tüm izleme düzeylerini etkiler. 262144(0x4000) varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|filtreler|`filters` Öğesi XPath filtreleri koleksiyonunu içerir. Aktarım ileti günlüğe kaydetme etkinleştirildiğinde (`logMessagesAtTransportLevel` olan `true`), yalnızca filtreleri ile eşleşen iletileri kaydedilir.<br /><br /> Filtreler yalnızca Aktarım katmanında uygulanır. Hizmet düzeyi ve hatalı biçimlendirilmiş bir ileti günlüğe kaydetme, filtreler tarafından etkilenmez.<br /><br /> Bu öğe için yalnızca öznitelik `filter`, bir XPathFilterElement değil.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filtreler|`filters` Öğesi için XPath filtrelerinde koleksiyonunu tutar. Aktarım ileti günlüğe kaydetme etkinleştirildiğinde (`logMessagesAtTransportLevel` olan `true`), yalnızca filtrelerle eşleşen iletileri kaydedilir.<br /><br /> Filtreler yalnızca Aktarım katmanında uygulanır. Hizmet düzeyi ve hatalı biçimlendirilmiş bir ileti günlüğü filtreler tarafından etkilenmez.<br /><br /> Bu öğe için yalnızca öznitelik `filter`, bir XPathFilterElement olduğu.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|tanılama|Çalışma zamanı İnceleme için WCF ayarlarını ve yönetici için Denetim tanımlar.|  
+|tanılama|WCF ayarları için çalışma zamanı incelemesi ve denetimi yöneticisi için tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İletileri yığınında üç farklı düzeylerde kaydediliyor: Hizmet, taşıma ve hatalı biçimlendirilmiş. Her düzey ayrı olarak etkinleştirilebilir.  
+ İletileri günlüğe yığınında üç farklı düzeylerde: hizmeti, taşıma ve hatalı biçimlendirilmiş. Her düzey ayrı olarak etkinleştirilebilir.  
   
- XPath filtreleri, taşıma ve hizmet düzeyleri belirli iletilerini günlüğe kaydetmek için eklenebilir. Hiçbir filtre tanımlanmışsa, tüm iletileri günlüğe kaydedilir. Filtreler yalnızca ileti üstbilgilerini uygulanır. Gövde göz ardı edilir. WCF performansını artırmak için ileti gövdesi yok sayar. Filtrelemek istiyorsanız gövdesi içeriğine göre bunu yapan bir filtre ile özel bir dinleyici oluşturabilirsiniz.  
+ Taşıma ve hizmet düzeyinde özel iletilerini günlüğe kaydetmek için XPath filtrelerinde eklenebilir. Filtre tanımlanmışsa, tüm iletileri günlüğe kaydedilir. Filtreler iletisinin üstbilgilerini uygulanır. Gövde göz ardı edilir. WCF performansını artırmak için ileti gövdesi yok sayar. Filtrelemek istiyorsanız gövdesi içeriğine bağlı olarak, bunu yapan bir filtre ile özel bir dinleyici oluşturabilirsiniz.  
   
- İleti izlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmanız gerekir. Dinleyici çalışır dinleyicisi olabilir <xref:System.Diagnostics> izleme mimarisi. Aşağıdaki örnek, bu tür bir dinleyici oluşturun gösterilmiştir.  
+ İleti izlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmak için ihtiyacınız. Dinleyici çalışan herhangi bir dinleyici olabilir <xref:System.Diagnostics> izleme mimarisi. Aşağıdaki örnek, bu tür bir dinleyici oluşturma işlemini gösterir.  
   
 ```xml  
-<system.diagnostics>  
-    <sources>  
-          <source name="System.ServiceModel" switchValue="Verbose">  
-              <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="ServiceModel Listener" traceOutputOptions="None" />  
-               </listeners>  
-        </source>  
-            <source name="System.ServiceModel.MessageLogging">  
-                <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="MessageLogging Listener" traceOutputOptions="None"/>  
-               </listeners>  
-        </source>  
-    </sources>  
-     <sharedListeners>  
-            <add initializeData="C:\ItProTools\TraceLog.xml"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                    name="ServiceModel Listener"  
-                    traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-            <add initializeData="C:\ItProTools\MessageLog.log"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                   name="MessageLogging Listener"  
-                   traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-    </sharedListeners>  
-</system.diagnostics>  
+<system.diagnostics>
+  <sources>
+    <source name="System.ServiceModel"
+            switchValue="Verbose">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="ServiceModel Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+    <source name="System.ServiceModel.MessageLogging">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="MessageLogging Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+  </sources>
+  <sharedListeners>
+    <add initializeData="C:\ItProTools\TraceLog.xml"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="ServiceModel Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+    <add initializeData="C:\ItProTools\MessageLog.log"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="MessageLogging Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+  </sharedListeners>
+</system.diagnostics>
 ```  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-    logMalformedMessages="true"  
-    logMessagesAtServiceLevel="true"  
-    logMessagesAtTransportLevel="true"  
-    maxMessagesToLog="42"  
-    maxSizeOfMessageToLog="42">  
-     <filters>  
-         <clear />  
-     </filters>  
- </messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="42"
+                maxSizeOfMessageToLog="42">
+  <filters>
+    <clear />
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

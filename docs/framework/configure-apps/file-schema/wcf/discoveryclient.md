@@ -2,15 +2,15 @@
 title: '&lt;DiscoveryClient&gt;'
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 8c69104b9eb1097ef5dc94c9aae7352d4949668f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9aef599ebf8068a383fd093b126a6bde1670b291
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753173"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151405"
 ---
 # <a name="ltdiscoveryclientgt"></a>&lt;DiscoveryClient&gt;
-Bir özel, bağlama oluşturmak için bir yapılandırma öğesi otomatik olarak bir bulunabilir hizmet için arama ve çalışma zamanında adresini bulmak bir istemci uygulaması sağlar.  
+Özel bağlamayı oluşturmak için bir yapılandırma öğesi, otomatik olarak aramak için kayıtlı bir bulunabilir hizmet ve çalışma zamanında adresini bulmak için bir istemci uygulaması sağlar.  
   
 \<system.serviceModel>  
 \<bağlamaları >  
@@ -21,17 +21,20 @@ Bir özel, bağlama oluşturmak için bir yapılandırma öğesi otomatik olarak
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<discoveryClient discoveryEndpoint="String" >
-  <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+<discoveryClient discoveryEndpoint="String">
+  <findCriteria duration="TimeSpan"
+                maxResults="Integer"
+                scopeMatchBy="Uri">
     <contractTypeNames>
-      <add name="String" namespace="String" />
-    <contractTypeNames>
+      <add name="String"
+           namespace="String" />
+    </contractTypeNames>
     <extensions />
     <scopes>
       <add scope="URI"/>
     </scopes>
   </findCriteria>
-</discoveryClient>  
+</discoveryClient>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -41,19 +44,19 @@ Bir özel, bağlama oluşturmak için bir yapılandırma öğesi otomatik olarak
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|discoveryEndpoint|Otomatik olarak bir bulunabilir hizmet için arama ve çalışma zamanında adresini bulmak bir istemci uygulaması sağlayan bulma uç noktanın adını içeren bir dize.|  
+|discoveryEndpoint|Bir keşfedilebilir hizmeti otomatik olarak arayıp çalışma zamanında adresini bulmak bir istemci uygulamasını etkinleştiren bulma uç noktası adını içeren bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Bir bulma hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütleri (ne kadar süreyle arama son) bulun.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt, arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütünü (ne kadar süreyle arama son) bulun.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  

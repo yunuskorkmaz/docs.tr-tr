@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 0138eab4db42a64a74212d5c68f693916d7b702a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6299100a5dd29bed8d4a30bcb4fbc9631d7bf967
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582547"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145910"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (WCF) Web Hizmetleri için uç noktası yapılandırmak için kullanılan bir bağlama öğesi tanımlar.  
@@ -19,35 +19,34 @@ SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<webHttpBinding>  
-  <binding   
-    allowCookies="Boolean"  
-    bypassProxyOnLocal="Boolean"  
-    closeTimeout="TimeSpan"  
-    hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-    maxBufferPoolSize="integer"  
-    maxBufferSize="integer"  
-    maxReceivedMessageSize="Integer"  
-    name="string"  
-    openTimeout="TimeSpan"   
-    proxyAddress="URI"  
-    receiveTimeout="TimeSpan"  
-    sendTimeout="TimeSpan"  
-    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-    useDefaultWebProxy="Boolean" 
-    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding">  
-  <security mode="None/Transport/TransportCredentialOnly">  
-    <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-               proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-               realm="string" />  
-  </security>  
-  <readerQuotas maxArrayLength="Integer" 
-                maxBytesPerRead="Integer" 
-                maxDepth="Integer" 
-                maxNameTableCharCount="Integer" 
-                maxStringContentLength="Integer" />  
-  </binding>  
-</webHttpBinding>  
+<webHttpBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="integer"
+           maxBufferSize="integer"
+           maxReceivedMessageSize="Integer"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+           useDefaultWebProxy="Boolean"
+           writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding">
+    <security mode="None/Transport/TransportCredentialOnly">
+      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 realm="string" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</webHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -63,7 +62,7 @@ SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (
 |hostnameComparisonMode|URI ayrıştırmak için kullanılan HTTP ana bilgisayar adını karşılaştırma modunu belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HostNameComparisonMode>, ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, ana bilgisayar adı eşleşme yok sayar.|  
 |maxBufferPoolSize|Bu bağlama için en fazla arabellek havuzunun boyutunu belirten bir tamsayı. 524.288 bayt (512 * 1024) varsayılandır. Windows Communication Foundation (WCF) birçok bölümü arabellekler kullanın. Oluşturma ve arabellek kullanıldıkları her zaman yok etme pahalıdır ve çöp toplama arabellekler için da pahalıdır. Arabellek havuzu ile havuzdan bir arabelleğe almak, kullanmak ve tamamladıktan sonra havuza döndürün. Bu nedenle oluşturmak ve yok etme arabellekler yükü önlenmiş olur.|  
 |maxBufferSize|Kanaldan iletiler alan ileti arabelleklerinin Yöneticisi tarafından kullanılmak için ayrılan maksimum belleğin belirten bir tamsayı. Varsayılan değer: 524,288 (0x80000) bayt.|  
-|maxReceivedMessageSize|Bu bağlama ile yapılandırılan bir kanalda alınabilecek üst bilgiler dahil bayt cinsinden en büyük ileti boyutunu belirten pozitif bir tamsayı. Bu sınırı aşan bir ileti gönderen bir hata alırsınız. Alıcı, iletiyi bırakır ve izleme günlüğüne etkinliğin bir giriş oluşturur. 65536 varsayılandır. **Not:** tek başına değeri artırmak ASP.NET uyumlu mod yeterli değildir. Ayrıca değerini artırmanız gerekir `httpRuntime` (bkz [httpRuntime öğesi (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
+|maxReceivedMessageSize|Bu bağlama ile yapılandırılan bir kanalda alınabilecek üst bilgiler dahil bayt cinsinden en büyük ileti boyutunu belirten pozitif bir tamsayı. Bu sınırı aşan bir ileti gönderen bir hata alırsınız. Alıcı, iletiyi bırakır ve izleme günlüğüne etkinliğin bir giriş oluşturur. 65536 varsayılandır. **Not:**  Tek başına değeri artırmak ASP.NET uyumlu mod yeterli değildir. Ayrıca değerini artırmanız gerekir `httpRuntime` (bkz [httpRuntime öğesi (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
 |name|Bağlama yapılandırma adını içeren bir dize. Bağlama için bir tanımlayıcı olarak kullanıldığından, bu değer benzersiz olmalıdır. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Varsayılan yapılandırma ve adsız bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |opentimeout =|A <xref:System.TimeSpan> tamamlamak açık işlem için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |proxyAddress|HTTP proxy adresini belirten bir URI. Varsa `useSystemWebProxy` olduğu `true`, bu ayar olmalıdır `null`. Varsayılan, `null` değeridir.|  
@@ -71,7 +70,7 @@ SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (
 |SendTimeout|A <xref:System.TimeSpan> tamamlamak bir gönderme işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |transferMode.|A <xref:System.ServiceModel.TransferMode> hizmet bağlama kullanımları akış yoluyla veya arabelleğe alınan yapılandırılmış olup olmadığını gösteren değeri (veya her ikisi) ileti aktarma modlarını. Varsayılan, `Buffered` değeridir.|  
 |useDefaultWebProxy|Sistemin otomatik yapılandırılan HTTP Ara sunucusu kullanılıp kullanılmayacağını belirten bir Boole değeri. Varsayılan, `true` değeridir.|  
-|writeEncoding|İleti metni için kullanılan kodlama karakter belirtir. Geçerli değerler şunlardır:<br /><br /> UnicodeFffeTextEncoding: Unicode kodlama BigEndian.<br /><br /> Utf16TextEncoding: 16-bit kodlama.<br /><br /> Utf8TextEncoding: 8-bit kodlama.<br /><br /> Utf8TextEncoding varsayılandır.|  
+|writeEncoding|İleti metni için kullanılan kodlama karakter belirtir. Geçerli değerler şunlardır:<br /><br /> UnicodeFffeTextEncoding: Unicode kodlama BigEndian.<br /><br /> Utf16TextEncoding: 16-bit kodlaması.<br /><br /> Utf8TextEncoding: 8-bit kodlaması.<br /><br /> Utf8TextEncoding varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

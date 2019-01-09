@@ -2,12 +2,12 @@
 title: '&lt;netTcpBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 373978857427e16c432cf36d5389e81073e88caf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7a457bdcdee797195ed6bdae8cd377296f914b52
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193181"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145178"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; &lt;güvenliği&gt;
 Bir bağlama için güvenlik ayarlarını tanımlar.  
@@ -21,14 +21,12 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<security mode="Message/None/Transport/TransportWithCredential">  
-   <transport  
-      clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-           protectionLevel="None/Sign/EncryptAndSign" />  
-   <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="Certificate/IssuedToken/None/UserName/Windows" />  
-</security>  
+<security mode="Message/None/Transport/TransportWithCredential">
+  <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+             protectionLevel="None/Sign/EncryptAndSign" />
+  <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+           clientCredentialType="Certificate/IssuedToken/None/UserName/Windows" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -44,7 +42,7 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|Güvenlik devre dışı bırakıldı.|  
+|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
 |Taşıma|Aktarım güvenliği TLS TCP veya SPNego kullanılarak sağlanır. Hizmet, SSL sertifikalarıyla yapılandırılması gerekebilir. Bu mod koruma düzeyiyle denetlemek mümkündür.|  
 |İleti|SOAP ileti güveliği kullanarak güvenliği sağlanır. Varsayılan olarak, SOAP gövdesi imzalı ve şifrelenir. Çeşitli hizmet kimlik bilgilerini kullanmak için algoritma paketini olan bant dışı istemci kullanılabilir olup gibi özellikler, bu mod sunar ve ileti gövdesi uygulamak için koruma düzeyini. İstemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  
 |TransportWithMessageCredential|Aktarım güvenliği ile ileti güvenliği amacıyla birlikte çalışır. Aktarım güvenliği TCP veya SPNego üzerinden TLS tarafından sağlanır ve sunucu kimlik doğrulaması bütünlüğü ve gizliliği sağlar. SOAP ileti güvenliği, istemci kimlik doğrulaması sağlar. Varsayılan olarak, istemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  

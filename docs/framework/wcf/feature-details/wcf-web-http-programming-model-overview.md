@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517081"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152092"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları dahil olmak üzere, olası istemcileri tarafından erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimleri vardır:  
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB H
 >  WCF WEB HTTP programlama modeli ile yazılmış hizmetler SOAP iletilerini kullanmayın. SOAP kullanılmadığından WCF tarafından sağlanan güvenlik özellikleri kullanılamaz. Ancak taşıma tabanlı güvenlik hizmetiniz HTTPS ile barındırarak kullanabilirsiniz. WCF güvenlik hakkında daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  WebDAV uzantısının yüklenmesi için IIS Web HTTP Hizmetleri tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata döndürmek neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısının web siteniz için devre dışı bırakabilirsiniz. Daha fazla bilgi için [IIS ve WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  WebDAV uzantısının yüklenmesi için IIS Web HTTP Hizmetleri tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata döndürmek neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısının web siteniz için devre dışı bırakabilirsiniz. Daha fazla bilgi için [IIS ve WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable ile işleme URI'si  
  URI şablonları, yapısal olarak benzer bir URI'leri büyük kümesini ifade etmek için verimli bir söz dizimi sağlar. Örneğin, aşağıdaki şablon "a" ile başlayan ve "c" Ara kesiminin ile değer bakılmaksızın son üç segment URI'lerin kümesini ifade eder: bir / {/c segmentlere}  
@@ -96,7 +96,7 @@ interface ICustomer
 }  
 ```  
   
- WCF WEB HTTP programlama modeli kullanan bir WCF hizmeti için tam bir örnek görmek için bkz: [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ WCF WEB HTTP programlama modeli kullanan bir WCF hizmeti için tam bir örnek görmek için bkz: [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL'leri  
  Bir hizmet işlemi ile ilişkili olan bir URL yazarak Web stili hizmetler bir Web tarayıcısından çağrılabilir. Bu hizmet işlemleri URL'de bir dize biçiminde belirtilmelidir sorgu dizesi parametreleri alabilir. Aşağıdaki tabloda, bir URL ve kullanılan biçimi içinde geçirilebilir türleri gösterilmektedir.  

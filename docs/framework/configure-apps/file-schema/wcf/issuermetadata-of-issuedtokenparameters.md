@@ -2,12 +2,12 @@
 title: '&lt;issuedTokenParameters&gt; için &lt;issuerMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 82c04fe71ec67b2c539dae9c41eb35350c72d923
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76956c54739219bbde78f378a12d59563ab785c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746520"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148753"
 ---
 # <a name="ltissuermetadatagt-of-ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt; için &lt;issuerMetadata&gt;
 \<system.serviceModel>  
@@ -21,7 +21,7 @@ ms.locfileid: "32746520"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<issuerMetaData address=String"/>  
+<issuerMetaData address="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -31,20 +31,20 @@ ms.locfileid: "32746520"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|adres|Gerekli. Uç nokta adresi belirten bir dize. Adres bir mutlak URI olmalıdır. Varsayılan değer boş bir dizedir.|  
+|adres|Gerekli. Uç nokta adresini belirten bir dize. Adres mutlak URI olmalıdır. Varsayılan değer boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Adres üstbilgileri koleksiyonu.|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Bir uç nokta onunla ileti değiş tokuşu diğer uç noktaları tarafından kimlik doğrulamasına olanak tanıyan bir kimlik.|  
+|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Adres üst bilgileri koleksiyonu.|  
+|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması sağlayan bir kimlik.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Bir federe güvenlik senaryosunda verilen bir güvenlik belirteci için parametreleri belirtir.|  
+|[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Bir federe güvenlik senaryosundaki bir güvenlik belirteci için parametreleri belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>  
@@ -58,5 +58,5 @@ ms.locfileid: "32746520"
  [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

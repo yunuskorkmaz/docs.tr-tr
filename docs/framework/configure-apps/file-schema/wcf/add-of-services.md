@@ -2,12 +2,12 @@
 title: '&lt;hizmetlerin&gt; &lt;eklenmesi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 6aa903d4188d108940c76ac50eb0a706fbea8f8b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9a86b7549e0efef10cbeb16dcc427d04065e43d3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530256"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145542"
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;hizmetlerin&gt; &lt;eklenmesi&gt;
 Örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için. Bu öğe türünde <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
@@ -22,11 +22,11 @@ ms.locfileid: "43530256"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<workflowRuntime>  
-   <services>  
-      <add type="String"/>  
-   </services>  
-</workflowRuntime>  
+<workflowRuntime>
+  <services>
+    <add type="String" />
+  </services>
+</workflowRuntime>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -53,17 +53,17 @@ ms.locfileid: "43530256"
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<serviceBehaviors>  
-   <behavior name="ServiceBehavior">  
-      <workflowRuntime name="WorkflowServiceHostRuntime"  
-                       validateOnCreate="true"  
-                       enablePerformanceCounters="true">  
-         <services>  
-             <add type="NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common.TestPersistenceService.FilePersistenceService, NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common"/>  
-         </services>  
-      </workflowRuntime>  
-   </behavior>  
-</serviceBehaviors>  
+<serviceBehaviors>
+  <behavior name="ServiceBehavior">
+    <workflowRuntime name="WorkflowServiceHostRuntime"
+                     validateOnCreate="true"
+                     enablePerformanceCounters="true">
+      <services>
+        <add type="NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common.TestPersistenceService.FilePersistenceService, NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common" />
+      </services>
+    </workflowRuntime>
+  </behavior>
+</serviceBehaviors>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

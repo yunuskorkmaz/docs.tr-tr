@@ -140,7 +140,7 @@ Aşağıdaki liste .NET belgelerine katkıda bulunan, dikkat etmeniz gereken baz
 
 ## <a name="contributor-license-agreement"></a>Katkıda bulunan lisans sözleşmesi
 
-Oturum açmanız gerekir [.NET Foundation katılım Lisans Sözleşmesi (CLA)](https://cla.dotnetfoundation.org) Çekme isteğiniz birleştirilmeden önce. Bu, .NET Foundation projeleri için tek seferlik bir gereksinimdir. Daha fazla bilgi edinebilirsiniz [katkı lisans sözleşmeleri'ni (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) wikipedia.
+Oturum açmanız gerekir [.NET Foundation katılım Lisans Sözleşmesi (CLA)](https://cla.dotnetfoundation.org) Çekme isteğiniz birleştirilmeden önce. Bu, .NET Foundation projeleri için tek seferlik bir gereksinimdir. Daha fazla bilgi edinebilirsiniz [katkı lisans sözleşmeleri'ni (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) wikipedia.
 
 Sözleşme: [net-foundation-katkı-lisans-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

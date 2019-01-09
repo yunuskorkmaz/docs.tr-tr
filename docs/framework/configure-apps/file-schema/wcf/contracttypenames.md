@@ -2,15 +2,15 @@
 title: '&lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 99547967b65e5d7663ec11be98247e2018aaa34c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 60647e6ec31e7228f09d084ff669a1829770ca14
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144737"
 ---
 # <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
-Aranan hizmetleri sözleşmesi adlardır, sözleşme tür adları ve genellikle ararken bir hizmet için kullanılan ölçüt listesini belirtir yapılandırma bölümü. Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmeleri eşleşen yanıt gönderir. Windows Communication Foundation (WCF) bir uç nokta yalnızca bir sözleşme destekleyebileceği unutmayın.  
+Aranan hizmetleri sözleşmesi adlarıdır, sözleşme türü adları ve genellikle bir hizmet için ararken kullanılan ölçütü listesi belirten bir yapılandırma bölümü. Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen gönderecektir. Windows Communication Foundation (WCF), bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,16 +18,17 @@ Aranan hizmetleri sözleşmesi adlardır, sözleşme tür adları ve genellikle 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
         <discoveryClientSettings discoveryEndpoint="String">
-          <findCriteria duration="TimeSpan" 
-                        maxResults="Integer" 
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
                         scopeMatchBy="Uri">
             <contractTypeNames>
-              <add name="String" namespace="String" />
+              <add name="String"
+                   namespace="String" />
             <contractTypeNames>
             <extensions />
             <scopes>
@@ -37,8 +38,8 @@ Aranan hizmetleri sözleşmesi adlardır, sözleşme tür adları ve genellikle 
         </discoveryClientSettings>
       <standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -51,13 +52,13 @@ Aranan hizmetleri sözleşmesi adlardır, sözleşme tür adları ve genellikle 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Bir sözleşme türü adı genellikle ararken bir hizmet için kullanılan ölçüt kümesine başvuruda bulunan bir özelliktir.|  
+|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Sözleşme türü adı genellikle bir hizmet için ararken kullanılan ölçüt kümesine başvuran bir özelliktir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<findCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Bir bulma hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütleri (ne kadar süreyle arama son) bulun.|  
+|[\<findCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt, arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütünü (ne kadar süreyle arama son) bulun.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Discovery.FindCriteria>  
