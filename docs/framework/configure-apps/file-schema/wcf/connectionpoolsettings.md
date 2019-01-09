@@ -2,61 +2,60 @@
 title: '&lt;Tcptransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 87fcbf08d897cf8d9e1924a8a5ed2b5b20945638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748158"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149533"
 ---
-# <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="89492-102">&lt;Tcptransport&gt;</span><span class="sxs-lookup"><span data-stu-id="89492-102">&lt;connectionPoolSettings&gt;</span></span>
-<span data-ttu-id="89492-103">Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="89492-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  
+# <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="a92a6-102">&lt;Tcptransport&gt;</span><span class="sxs-lookup"><span data-stu-id="a92a6-102">&lt;connectionPoolSettings&gt;</span></span>
+<span data-ttu-id="a92a6-103">Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a92a6-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  
   
- <span data-ttu-id="89492-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="89492-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="89492-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="89492-105">\<bindings></span></span>  
-<span data-ttu-id="89492-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="89492-106">\<customBinding></span></span>  
-<span data-ttu-id="89492-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="89492-107">\<binding></span></span>  
-<span data-ttu-id="89492-108">\<namePipeTransport ></span><span class="sxs-lookup"><span data-stu-id="89492-108">\<namePipeTransport></span></span>  
-<span data-ttu-id="89492-109">\<Namedpipetransport ></span><span class="sxs-lookup"><span data-stu-id="89492-109">\<connectionPoolSettings></span></span>  
+ <span data-ttu-id="a92a6-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a92a6-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="a92a6-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="a92a6-105">\<bindings></span></span>  
+<span data-ttu-id="a92a6-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="a92a6-106">\<customBinding></span></span>  
+<span data-ttu-id="a92a6-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="a92a6-107">\<binding></span></span>  
+<span data-ttu-id="a92a6-108">\<namePipeTransport ></span><span class="sxs-lookup"><span data-stu-id="a92a6-108">\<namePipeTransport></span></span>  
+<span data-ttu-id="a92a6-109">\<Namedpipetransport ></span><span class="sxs-lookup"><span data-stu-id="a92a6-109">\<connectionPoolSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89492-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="89492-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a92a6-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a92a6-110">Syntax</span></span>  
   
 ```xml  
-<connectionPoolSettings  
-        groupName="String"  
-    idleTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="89492-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="89492-111">Attributes and Elements</span></span>  
- <span data-ttu-id="89492-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="89492-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a92a6-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a92a6-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="a92a6-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a92a6-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="89492-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="89492-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a92a6-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a92a6-113">Attributes</span></span>  
   
-|<span data-ttu-id="89492-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="89492-114">Attribute</span></span>|<span data-ttu-id="89492-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="89492-115">Description</span></span>|  
+|<span data-ttu-id="a92a6-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a92a6-114">Attribute</span></span>|<span data-ttu-id="a92a6-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a92a6-115">Description</span></span>|  
 |---------------|-----------------|  
-|`groupName`|<span data-ttu-id="89492-116">Giden kanallar için kullanılan bağlantı havuzu adını tanımlayan bir dize.</span><span class="sxs-lookup"><span data-stu-id="89492-116">A string that defines the name of the connection pool used for outgoing channels.</span></span> <span data-ttu-id="89492-117">Akış modunda bağlantıları, bağlantı havuzu devre dışı anlamına gelir paylaşılmaz.</span><span class="sxs-lookup"><span data-stu-id="89492-117">In streamed mode, connections are not shared, meaning that connection pooling is disabled.</span></span> <span data-ttu-id="89492-118">Varsayılan bir "varsayılan" dizesidir.</span><span class="sxs-lookup"><span data-stu-id="89492-118">The default is a "default" string.</span></span> <span data-ttu-id="89492-119">Belirli bir istemci bağlantılarında ayrı gruplara ayırmak için bu değeri değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="89492-119">You can modify this value to isolate the connections for a particular client into separate groups.</span></span>|  
-|`idleTimeout`|<span data-ttu-id="89492-120">Bir pozitif <xref:System.TimeSpan> bağlantı boşta kalabileceği kesilmeden önce en uzun süreyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="89492-120">A positive <xref:System.TimeSpan> that specifies the maximum time the connection can be idle before being disconnected.</span></span> <span data-ttu-id="89492-121">Varsayılan değer 00:02:00 ' dir.</span><span class="sxs-lookup"><span data-stu-id="89492-121">The default is 00:02:00.</span></span>|  
-|`maxOutboundConnectionsPerEndpoint`|<span data-ttu-id="89492-122">Bağlantılar hizmeti tarafından başlatılan uzak bir uç nokta için en fazla sayısını belirtir pozitif bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="89492-122">A positive integer that specifies the maximum number of connections to a remote endpoint initiated by the service.</span></span> <span data-ttu-id="89492-123">Sınırı aşan bağlantılar, sınırın altındaki bir alan kullanılabilir duruma gelinceye kadar kuyruğa alınır.</span><span class="sxs-lookup"><span data-stu-id="89492-123">Connections in excess of the limit are queued until a space below the limit becomes available.</span></span> <span data-ttu-id="89492-124">`idleTimeout` İçinde bağlantıları kalır sıraya alınmış bir özel durum önce süresini sınırlar.</span><span class="sxs-lookup"><span data-stu-id="89492-124">The `idleTimeout` limits the duration in which connections remain queued before an exception is thrown.</span></span> <span data-ttu-id="89492-125">Varsayılan değer 10'dur.</span><span class="sxs-lookup"><span data-stu-id="89492-125">The default is 10.</span></span><br /><br /> <span data-ttu-id="89492-126">Bu öznitelik, belirli bir hizmet uç noktası istemciden eşzamanlı etkin bağlantı sayısını sınırlar.</span><span class="sxs-lookup"><span data-stu-id="89492-126">This attribute limits the number of simultaneous active connections from the client to a particular service endpoint.</span></span> <span data-ttu-id="89492-127">Bu değer daha etkin istemci bağlantıları sağlayarak aşılırsa hizmeti istemciye yanıt vermeyen görünebilir.</span><span class="sxs-lookup"><span data-stu-id="89492-127">If this value is exceeded by having more active client connections, the service may appear unresponsive to the client.</span></span> <span data-ttu-id="89492-128">Bu durumda, bu değer belirli bir uç beklenen eşzamanlı istemci bağlantılarının üst sınırını aşan ayarlanması.</span><span class="sxs-lookup"><span data-stu-id="89492-128">In this case, this value should be adjusted to exceed the maximum number of expected simultaneous client connections to a specific endpoint.</span></span>|  
+|`groupName`|<span data-ttu-id="a92a6-116">Giden kanallar için kullanılan bağlantı havuzu adını tanımlayan bir dize.</span><span class="sxs-lookup"><span data-stu-id="a92a6-116">A string that defines the name of the connection pool used for outgoing channels.</span></span> <span data-ttu-id="a92a6-117">Akış modunda bağlantıları, bağlantı havuzu devre dışı anlamına gelir paylaşılmaz.</span><span class="sxs-lookup"><span data-stu-id="a92a6-117">In streamed mode, connections are not shared, meaning that connection pooling is disabled.</span></span> <span data-ttu-id="a92a6-118">Varsayılan bir "varsayılan" dizesidir.</span><span class="sxs-lookup"><span data-stu-id="a92a6-118">The default is a "default" string.</span></span> <span data-ttu-id="a92a6-119">Belirli bir istemci bağlantılarını ayrı gruplar halinde ayırmak için bu değeri değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a92a6-119">You can modify this value to isolate the connections for a particular client into separate groups.</span></span>|  
+|`idleTimeout`|<span data-ttu-id="a92a6-120">Bir pozitif <xref:System.TimeSpan> bağlantı boşta kalabileceği kesilmeden önce en uzun süreyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="a92a6-120">A positive <xref:System.TimeSpan> that specifies the maximum time the connection can be idle before being disconnected.</span></span> <span data-ttu-id="a92a6-121">Varsayılan değer 00:02:00 ' dir.</span><span class="sxs-lookup"><span data-stu-id="a92a6-121">The default is 00:02:00.</span></span>|  
+|`maxOutboundConnectionsPerEndpoint`|<span data-ttu-id="a92a6-122">En fazla hizmet tarafından başlatılan bir uzak uç noktasına bağlantı sayısını belirten pozitif bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="a92a6-122">A positive integer that specifies the maximum number of connections to a remote endpoint initiated by the service.</span></span> <span data-ttu-id="a92a6-123">Sınırı aşan bağlantılar, sınırın altına bir alan kullanılabilir duruma gelene kadar kuyruğa alınır.</span><span class="sxs-lookup"><span data-stu-id="a92a6-123">Connections in excess of the limit are queued until a space below the limit becomes available.</span></span> <span data-ttu-id="a92a6-124">`idleTimeout` Hangi bağlantıları kalır sıraya alınan bir özel durum önce süresini sınırlar.</span><span class="sxs-lookup"><span data-stu-id="a92a6-124">The `idleTimeout` limits the duration in which connections remain queued before an exception is thrown.</span></span> <span data-ttu-id="a92a6-125">Varsayılan değer 10'dur.</span><span class="sxs-lookup"><span data-stu-id="a92a6-125">The default is 10.</span></span><br /><br /> <span data-ttu-id="a92a6-126">Bu öznitelik istemcisi eşzamanlı etkin bağlantılar için belirli hizmet uç noktası sayısını sınırlar.</span><span class="sxs-lookup"><span data-stu-id="a92a6-126">This attribute limits the number of simultaneous active connections from the client to a particular service endpoint.</span></span> <span data-ttu-id="a92a6-127">Bu değer daha etkin istemci bağlantıları sağlayarak aşılıyorsa, hizmetin istemciye yanıt vermeyen görünebilir.</span><span class="sxs-lookup"><span data-stu-id="a92a6-127">If this value is exceeded by having more active client connections, the service may appear unresponsive to the client.</span></span> <span data-ttu-id="a92a6-128">Bu durumda, bu değeri belirli bir uç nokta için beklenen eşzamanlı istemci bağlantısına maksimum sayısını aşmaya ayarlanması.</span><span class="sxs-lookup"><span data-stu-id="a92a6-128">In this case, this value should be adjusted to exceed the maximum number of expected simultaneous client connections to a specific endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="89492-129">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="89492-129">Child Elements</span></span>  
- <span data-ttu-id="89492-130">Yok.</span><span class="sxs-lookup"><span data-stu-id="89492-130">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a92a6-129">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a92a6-129">Child Elements</span></span>  
+ <span data-ttu-id="a92a6-130">Yok.</span><span class="sxs-lookup"><span data-stu-id="a92a6-130">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="89492-131">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="89492-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a92a6-131">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a92a6-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="89492-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="89492-132">Element</span></span>|<span data-ttu-id="89492-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="89492-133">Description</span></span>|  
+|<span data-ttu-id="a92a6-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="a92a6-132">Element</span></span>|<span data-ttu-id="a92a6-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a92a6-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="89492-134">\<Connectionpoolsettings ></span><span class="sxs-lookup"><span data-stu-id="89492-134">\<namedPipeTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|<span data-ttu-id="89492-135">Adlandırılmış kanallar kullanarak ileti aktarılması için bir kanal neden olan bir taşıma tanımlar.</span><span class="sxs-lookup"><span data-stu-id="89492-135">Defines a transport that causes a channel to transfer messages using named pipes.</span></span>|  
+|[<span data-ttu-id="a92a6-134">\<Connectionpoolsettings ></span><span class="sxs-lookup"><span data-stu-id="a92a6-134">\<namedPipeTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|<span data-ttu-id="a92a6-135">Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a92a6-135">Defines a transport that causes a channel to transfer messages using named pipes.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="89492-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="89492-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a92a6-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a92a6-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="89492-137">Taşımalar</span><span class="sxs-lookup"><span data-stu-id="89492-137">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [<span data-ttu-id="89492-138">Taşıma Seçme</span><span class="sxs-lookup"><span data-stu-id="89492-138">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [<span data-ttu-id="89492-139">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="89492-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="89492-140">Bağlamaları Genişletme</span><span class="sxs-lookup"><span data-stu-id="89492-140">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="89492-141">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="89492-141">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="89492-142">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="89492-142">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [<span data-ttu-id="a92a6-137">Taşımalar</span><span class="sxs-lookup"><span data-stu-id="a92a6-137">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="a92a6-138">Taşıma Seçme</span><span class="sxs-lookup"><span data-stu-id="a92a6-138">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="a92a6-139">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="a92a6-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a92a6-140">Bağlamaları Genişletme</span><span class="sxs-lookup"><span data-stu-id="a92a6-140">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="a92a6-141">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="a92a6-141">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="a92a6-142">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="a92a6-142">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
