@@ -2,69 +2,68 @@
 title: '&lt;wsDualHttpBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 77e7191b345e59116874e70aaa28241223938eea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5759e8a3618cd959605b139577bae24c35490ea8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193740"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150220"
 ---
-# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="6e94f-102">&lt;wsDualHttpBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="6e94f-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
-<span data-ttu-id="6e94f-103">Güvenlik yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="6e94f-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
+# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="604d0-102">&lt;wsDualHttpBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="604d0-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="604d0-103">Güvenlik yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="604d0-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- <span data-ttu-id="6e94f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="6e94f-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6e94f-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="6e94f-105">\<bindings></span></span>  
-<span data-ttu-id="6e94f-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="6e94f-106">\<wsDualHttpBinding></span></span>  
-<span data-ttu-id="6e94f-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="6e94f-107">\<binding></span></span>  
-<span data-ttu-id="6e94f-108">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="6e94f-108">\<security></span></span>  
+ <span data-ttu-id="604d0-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="604d0-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="604d0-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="604d0-105">\<bindings></span></span>  
+<span data-ttu-id="604d0-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="604d0-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="604d0-107">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="604d0-107">\<binding></span></span>  
+<span data-ttu-id="604d0-108">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="604d0-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e94f-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6e94f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="604d0-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="604d0-109">Syntax</span></span>  
   
 ```xml  
-<security mode="Message/None">  
-   <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-      negotiateServiceCredential="Boolean"/>  
-</security>  
+<security mode="Message/None">
+  <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+           clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+           negotiateServiceCredential="Boolean"/>
+</security>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6e94f-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="6e94f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="6e94f-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6e94f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="604d0-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="604d0-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="604d0-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="604d0-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6e94f-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6e94f-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="604d0-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="604d0-112">Attributes</span></span>  
   
-|<span data-ttu-id="6e94f-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="6e94f-113">Attribute</span></span>|<span data-ttu-id="6e94f-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6e94f-114">Description</span></span>|  
+|<span data-ttu-id="604d0-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="604d0-113">Attribute</span></span>|<span data-ttu-id="604d0-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="604d0-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6e94f-115">mod</span><span class="sxs-lookup"><span data-stu-id="6e94f-115">mode</span></span>|<span data-ttu-id="6e94f-116">-İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="6e94f-116">-   Optional.</span></span> <span data-ttu-id="6e94f-117">Uygulanan güvenlik türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="6e94f-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="6e94f-118">Varsayılan değer `Message` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="6e94f-118">The default value is `Message`.</span></span> <span data-ttu-id="6e94f-119">Bu öznitelik türünde <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="6e94f-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
+|<span data-ttu-id="604d0-115">mod</span><span class="sxs-lookup"><span data-stu-id="604d0-115">mode</span></span>|<span data-ttu-id="604d0-116">-İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="604d0-116">-   Optional.</span></span> <span data-ttu-id="604d0-117">Uygulanan güvenlik türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="604d0-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="604d0-118">Varsayılan değer `Message` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="604d0-118">The default value is `Message`.</span></span> <span data-ttu-id="604d0-119">Bu öznitelik türünde <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="604d0-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="6e94f-120">mod özniteliği</span><span class="sxs-lookup"><span data-stu-id="6e94f-120">Mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="604d0-120">mod özniteliği</span><span class="sxs-lookup"><span data-stu-id="604d0-120">Mode Attribute</span></span>  
   
-|<span data-ttu-id="6e94f-121">Değer</span><span class="sxs-lookup"><span data-stu-id="6e94f-121">Value</span></span>|<span data-ttu-id="6e94f-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6e94f-122">Description</span></span>|  
+|<span data-ttu-id="604d0-121">Değer</span><span class="sxs-lookup"><span data-stu-id="604d0-121">Value</span></span>|<span data-ttu-id="604d0-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="604d0-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="6e94f-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="6e94f-123">None</span></span>|<span data-ttu-id="6e94f-124">Güvenlik devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="6e94f-124">Security is disabled.</span></span>|  
-|<span data-ttu-id="6e94f-125">İleti</span><span class="sxs-lookup"><span data-stu-id="6e94f-125">Message</span></span>|<span data-ttu-id="6e94f-126">SOAP ileti güveliği kullanarak güvenliği sağlanır.</span><span class="sxs-lookup"><span data-stu-id="6e94f-126">Security is provided using SOAP message security.</span></span>|  
+|<span data-ttu-id="604d0-123">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="604d0-123">None</span></span>|<span data-ttu-id="604d0-124">Güvenlik devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="604d0-124">Security is disabled.</span></span>|  
+|<span data-ttu-id="604d0-125">İleti</span><span class="sxs-lookup"><span data-stu-id="604d0-125">Message</span></span>|<span data-ttu-id="604d0-126">SOAP ileti güveliği kullanarak güvenliği sağlanır.</span><span class="sxs-lookup"><span data-stu-id="604d0-126">Security is provided using SOAP message security.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6e94f-127">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="6e94f-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="604d0-127">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="604d0-127">Child Elements</span></span>  
   
-|<span data-ttu-id="6e94f-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="6e94f-128">Element</span></span>|<span data-ttu-id="6e94f-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6e94f-129">Description</span></span>|  
+|<span data-ttu-id="604d0-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="604d0-128">Element</span></span>|<span data-ttu-id="604d0-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="604d0-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6e94f-130">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="6e94f-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="6e94f-131">İleti düzeyi güvenlik ayarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6e94f-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="6e94f-132">Bu öğe türünde <xref:System.ServiceModel.MessageSecurityOverHttp>.</span><span class="sxs-lookup"><span data-stu-id="6e94f-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
+|[<span data-ttu-id="604d0-130">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="604d0-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="604d0-131">İleti düzeyi güvenlik ayarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="604d0-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="604d0-132">Bu öğe türünde <xref:System.ServiceModel.MessageSecurityOverHttp>.</span><span class="sxs-lookup"><span data-stu-id="604d0-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6e94f-133">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="6e94f-133">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="604d0-133">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="604d0-133">Parent Elements</span></span>  
   
-|<span data-ttu-id="6e94f-134">Öğe</span><span class="sxs-lookup"><span data-stu-id="6e94f-134">Element</span></span>|<span data-ttu-id="6e94f-135">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6e94f-135">Description</span></span>|  
+|<span data-ttu-id="604d0-134">Öğe</span><span class="sxs-lookup"><span data-stu-id="604d0-134">Element</span></span>|<span data-ttu-id="604d0-135">Açıklama</span><span class="sxs-lookup"><span data-stu-id="604d0-135">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6e94f-136">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="6e94f-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="6e94f-137">Tüm bağlama yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="6e94f-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
+|[<span data-ttu-id="604d0-136">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="604d0-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="604d0-137">Tüm bağlama yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="604d0-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e94f-138">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6e94f-138">Remarks</span></span>  
- <span data-ttu-id="6e94f-139">İkili bir bağlama hizmeti için istemci IP adresi sunar.</span><span class="sxs-lookup"><span data-stu-id="6e94f-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="6e94f-140">İstemci, yalnızca Hizmetleri güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="6e94f-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="604d0-138">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="604d0-138">Remarks</span></span>  
+ <span data-ttu-id="604d0-139">İkili bir bağlama hizmeti için istemci IP adresi sunar.</span><span class="sxs-lookup"><span data-stu-id="604d0-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="604d0-140">İstemci, yalnızca Hizmetleri güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="604d0-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e94f-141">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6e94f-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="604d0-141">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="604d0-141">See Also</span></span>  
  <xref:System.ServiceModel.WSDualHttpSecurity>  
  <xref:System.ServiceModel.BasicHttpSecurity>  
- [<span data-ttu-id="6e94f-142">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="6e94f-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="6e94f-143">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="6e94f-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="6e94f-144">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="6e94f-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="6e94f-145">Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma</span><span class="sxs-lookup"><span data-stu-id="6e94f-145">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [<span data-ttu-id="6e94f-146">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="6e94f-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="604d0-142">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="604d0-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="604d0-143">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="604d0-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="604d0-144">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="604d0-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="604d0-145">Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma</span><span class="sxs-lookup"><span data-stu-id="604d0-145">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="604d0-146">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="604d0-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

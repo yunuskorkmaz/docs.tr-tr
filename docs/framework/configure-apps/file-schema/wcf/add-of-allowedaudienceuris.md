@@ -2,63 +2,63 @@
 title: '&lt;allowedAudienceUris&gt; &lt;eklemesi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5428b41cadebbb38716789fa0e275c244fe74311
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746634"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146249"
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="a608b-102">&lt;allowedAudienceUris&gt; &lt;eklemesi&gt;</span><span class="sxs-lookup"><span data-stu-id="a608b-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
-<span data-ttu-id="a608b-103">Hedef URI ekler, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için geçerli olarak kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="a608b-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
+# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="3ee60-102">&lt;allowedAudienceUris&gt; &lt;eklemesi&gt;</span><span class="sxs-lookup"><span data-stu-id="3ee60-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
+<span data-ttu-id="3ee60-103">Bir hedef URI ekler, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için tarafından geçerli kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="3ee60-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
   
- <span data-ttu-id="a608b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="a608b-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="a608b-105">\<davranışları ></span><span class="sxs-lookup"><span data-stu-id="a608b-105">\<behaviors></span></span>  
-<span data-ttu-id="a608b-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="a608b-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="a608b-107">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="a608b-107">\<behavior></span></span>  
-<span data-ttu-id="a608b-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="a608b-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="a608b-109">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="a608b-109">\<issuedTokenAuthentication></span></span>  
-<span data-ttu-id="a608b-110">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="a608b-110">\<allowedAudienceUris></span></span>  
-<span data-ttu-id="a608b-111">\<Ekle > öğesi için \<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="a608b-111">\<add> element for \<allowedAudienceUris></span></span>  
+ <span data-ttu-id="3ee60-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="3ee60-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3ee60-105">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="3ee60-105">\<behaviors></span></span>  
+<span data-ttu-id="3ee60-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="3ee60-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="3ee60-107">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="3ee60-107">\<behavior></span></span>  
+<span data-ttu-id="3ee60-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="3ee60-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="3ee60-109">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="3ee60-109">\<issuedTokenAuthentication></span></span>  
+<span data-ttu-id="3ee60-110">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="3ee60-110">\<allowedAudienceUris></span></span>  
+<span data-ttu-id="3ee60-111">\<Ekle > öğesi için \<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="3ee60-111">\<add> element for \<allowedAudienceUris></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a608b-112">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a608b-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ee60-112">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3ee60-112">Syntax</span></span>  
   
 ```xml  
-<allowedAudienceUris>   
-   <add allowedAudienceUri="String"/>  
-</allowedAudienceUris>  
+<allowedAudienceUris>
+  <add allowedAudienceUri="String" />
+</allowedAudienceUris>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a608b-113">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a608b-113">Attributes and Elements</span></span>  
- <span data-ttu-id="a608b-114">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a608b-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3ee60-113">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ee60-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="3ee60-114">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3ee60-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a608b-115">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a608b-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3ee60-115">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3ee60-115">Attributes</span></span>  
   
-|<span data-ttu-id="a608b-116">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a608b-116">Attribute</span></span>|<span data-ttu-id="a608b-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a608b-117">Description</span></span>|  
+|<span data-ttu-id="3ee60-116">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="3ee60-116">Attribute</span></span>|<span data-ttu-id="3ee60-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3ee60-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="a608b-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="a608b-118">allowedAudienceUri</span></span>|<span data-ttu-id="a608b-119">Hedef URI içeren bir dize olan <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için geçerli olarak kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="a608b-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|<span data-ttu-id="3ee60-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="3ee60-118">allowedAudienceUri</span></span>|<span data-ttu-id="3ee60-119">Bir hedef URI içeren bir dize olan <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için tarafından geçerli kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="3ee60-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a608b-120">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a608b-120">Child Elements</span></span>  
- <span data-ttu-id="a608b-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="a608b-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3ee60-120">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ee60-120">Child Elements</span></span>  
+ <span data-ttu-id="3ee60-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="3ee60-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a608b-122">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a608b-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3ee60-122">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ee60-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="a608b-123">Öğe</span><span class="sxs-lookup"><span data-stu-id="a608b-123">Element</span></span>|<span data-ttu-id="a608b-124">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a608b-124">Description</span></span>|  
+|<span data-ttu-id="3ee60-123">Öğe</span><span class="sxs-lookup"><span data-stu-id="3ee60-123">Element</span></span>|<span data-ttu-id="3ee60-124">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3ee60-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a608b-125">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="a608b-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="a608b-126">Koleksiyonunu temsil eder hedef URI, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için geçerli olarak kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="a608b-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|[<span data-ttu-id="3ee60-125">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="3ee60-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="3ee60-126">Koleksiyonunu temsil eder hedef URI, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için tarafından geçerli kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="3ee60-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a608b-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a608b-127">Remarks</span></span>  
- <span data-ttu-id="a608b-128">Bu koleksiyon veren bir güvenlik belirteci hizmeti (STS) kullanan bir federasyon uygulaması kullanması gereken <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteçleri.</span><span class="sxs-lookup"><span data-stu-id="a608b-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="a608b-129">Güvenlik belirteci STS gönderdiğinde, kendisi için güvenlik belirteci amaçlanmıştır ekleyerek Web Hizmetleri URI'sini belirtebilirsiniz bir <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> için güvenlik belirteci.</span><span class="sxs-lookup"><span data-stu-id="a608b-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="a608b-130">İzin veren <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> verilen güvenlik belirteci bu Web hizmeti için bu onay aşağıdakileri yaparak olacağını belirterek hedeflenen doğrulamak alıcı Web hizmeti için:</span><span class="sxs-lookup"><span data-stu-id="a608b-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ee60-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3ee60-127">Remarks</span></span>  
+ <span data-ttu-id="3ee60-128">Bu koleksiyon veren bir güvenlik belirteci hizmeti (STS) kullanan bir Federasyon uygulamasında kullanması gereken <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteçleri.</span><span class="sxs-lookup"><span data-stu-id="3ee60-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="3ee60-129">Güvenlik belirteci STS verdiğinde, kendisi için güvenlik belirteci amaçlanmıştır ekleyerek Web Hizmetleri URI'sini belirtebilirsiniz bir <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> için güvenlik belirteci.</span><span class="sxs-lookup"><span data-stu-id="3ee60-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="3ee60-130">Veren <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> alıcı Web hizmetinin aşağıdakileri yaparak bu denetimi olacağını belirleyerek verilen güvenlik belirteci için bu Web hizmetini kullandığınızdan emin olun:</span><span class="sxs-lookup"><span data-stu-id="3ee60-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
   
--   <span data-ttu-id="a608b-131">Ayarlama `audienceUriMode` özniteliği `<issuedTokenAuthentication>` için <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> veya <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span><span class="sxs-lookup"><span data-stu-id="a608b-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
+-   <span data-ttu-id="3ee60-131">Ayarlama `audienceUriMode` özniteliği `<issuedTokenAuthentication>` için <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> veya <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span><span class="sxs-lookup"><span data-stu-id="3ee60-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
   
--   <span data-ttu-id="a608b-132">Bu koleksiyona URI'ler ekleyerek geçerli URI'ler kümesini belirtin.</span><span class="sxs-lookup"><span data-stu-id="a608b-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
+-   <span data-ttu-id="3ee60-132">Bu koleksiyona bir URI'leri ekleyerek geçerli URI'lerin kümesini belirtin.</span><span class="sxs-lookup"><span data-stu-id="3ee60-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
   
- <span data-ttu-id="a608b-133">Daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="a608b-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
+ <span data-ttu-id="3ee60-133">Daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="3ee60-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
   
- <span data-ttu-id="a608b-134">Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Federasyon Hizmeti kimlik bilgileri yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span><span class="sxs-lookup"><span data-stu-id="a608b-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
+ <span data-ttu-id="3ee60-134">Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span><span class="sxs-lookup"><span data-stu-id="3ee60-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a608b-135">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a608b-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3ee60-135">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3ee60-135">See Also</span></span>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
@@ -66,8 +66,8 @@ ms.locfileid: "32746634"
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElementCollection>  
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElement>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowedAudienceUris%2A>  
- [<span data-ttu-id="a608b-136">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="a608b-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
- [<span data-ttu-id="a608b-137">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="a608b-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
- [<span data-ttu-id="a608b-138">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="a608b-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="a608b-139">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="a608b-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="a608b-140">Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="a608b-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [<span data-ttu-id="3ee60-136">\<allowedAudienceUris ></span><span class="sxs-lookup"><span data-stu-id="3ee60-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
+ [<span data-ttu-id="3ee60-137">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="3ee60-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
+ [<span data-ttu-id="3ee60-138">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="3ee60-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="3ee60-139">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="3ee60-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="3ee60-140">Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma</span><span class="sxs-lookup"><span data-stu-id="3ee60-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

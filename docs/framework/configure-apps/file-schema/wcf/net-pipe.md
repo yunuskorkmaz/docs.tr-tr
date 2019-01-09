@@ -2,68 +2,69 @@
 title: '&lt;NET.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: c054cf0e4110051bb4a9ce49003fd0099b111c21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 8a525f0684902841a2be75823932935e7533ba8b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151156"
 ---
-# <a name="ltnetpipegt"></a><span data-ttu-id="a3874-102">&lt;NET.pipe&gt;</span><span class="sxs-lookup"><span data-stu-id="a3874-102">&lt;net.pipe&gt;</span></span>
-<span data-ttu-id="a3874-103">Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısı ömrü yöneten ve Adlandırılmış Kanallar üzerinden gelmesini etkinleştirme isteklerini yürüten hizmeti, yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3874-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
+# <a name="ltnetpipegt"></a><span data-ttu-id="799ea-102">&lt;NET.pipe&gt;</span><span class="sxs-lookup"><span data-stu-id="799ea-102">&lt;net.pipe&gt;</span></span>
+<span data-ttu-id="799ea-103">Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısının yaşam yönetir ve Adlandırılmış Kanallar üzerinden erişen aktivasyon isteklerini işleyen hizmeti için yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="799ea-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
   
- <span data-ttu-id="a3874-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="a3874-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="a3874-105">\<NET.pipe ></span><span class="sxs-lookup"><span data-stu-id="a3874-105">\<net.pipe></span></span>  
+ <span data-ttu-id="799ea-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="799ea-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="799ea-105">\<NET.pipe ></span><span class="sxs-lookup"><span data-stu-id="799ea-105">\<net.pipe></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3874-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a3874-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="799ea-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="799ea-106">Syntax</span></span>  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <net.pipe maxPendingAccepts="Integer"  
-                    maxPendingConnections="Integer"  
-          receiveTimeout="TimeSpan">  
-          <allowAccounts>  
-             // LocalSystem account  
-             <add securityIdentifier="S-1-5-18"/>  
-             // LocalService account  
-             <add securityIdentifier="S-1-5-19"/>  
-             // Administrators account  
-             <add securityIdentifier="S-1-5-20"/>  
-             // Network Service account  
-             <add securityIdentifier="S-1-5-32-544" />  
-             // IIS_IUSRS account (Vista only)  
-             <add securityIdentifier="S-1-5-32-568"/>  
-           </allowAccounts>  
-       </net.pipe>  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <net.pipe maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              receiveTimeout="TimeSpan">
+      <allowAccounts>
+        <!-- LocalSystem account -->
+        <add securityIdentifier="S-1-5-18" />
+        <!-- LocalService account -->
+        <add securityIdentifier="S-1-5-19" />
+        <!-- Administrators account -->
+        <add securityIdentifier="S-1-5-20" />
+        <!-- Network Service account -->
+        <add securityIdentifier="S-1-5-32-544" />
+        <!-- IIS_IUSRS account (Vista only) -->
+        <add securityIdentifier="S-1-5-32-568" />
+      </allowAccounts>
+    </net.pipe>
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
-## <a name="type"></a><span data-ttu-id="a3874-107">Tür</span><span class="sxs-lookup"><span data-stu-id="a3874-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="799ea-107">Tür</span><span class="sxs-lookup"><span data-stu-id="799ea-107">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a3874-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3874-108">Attributes and Elements</span></span>  
- <span data-ttu-id="a3874-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a3874-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="799ea-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="799ea-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="799ea-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="799ea-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a3874-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a3874-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="799ea-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="799ea-110">Attributes</span></span>  
   
-|<span data-ttu-id="a3874-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a3874-111">Attribute</span></span>|<span data-ttu-id="a3874-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3874-112">Description</span></span>|  
+|<span data-ttu-id="799ea-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="799ea-111">Attribute</span></span>|<span data-ttu-id="799ea-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="799ea-112">Description</span></span>|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|<span data-ttu-id="a3874-113">Dinleme bitiş Paylaşım Hizmeti için en çok bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="a3874-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="a3874-114">Varsayılan değer 2'dir.</span><span class="sxs-lookup"><span data-stu-id="a3874-114">The default is 2.</span></span>|  
-|`maxPendingConnections`|<span data-ttu-id="a3874-115">En fazla gönderim için bekleyebilirsiniz bağlantı sayısını belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="a3874-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="a3874-116">Varsayılan değer 100'dür.</span><span class="sxs-lookup"><span data-stu-id="a3874-116">The default is 100.</span></span>|  
-|`receiveTimeout`|<span data-ttu-id="a3874-117">A `TimeSpan` çerçeveleme veri okumak ve altı çizili bağlantılarından bağlantı gönderme gerçekleştirmek için zaman aşımını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3874-117">A `TimeSpan` that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="a3874-118">Varsayılan değer "00: 00:10"</span><span class="sxs-lookup"><span data-stu-id="a3874-118">The default is "00:00:10"</span></span>|  
+|`maxPendingAccepts`|<span data-ttu-id="799ea-113">Hizmetler için olan uç noktaları en fazla bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="799ea-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="799ea-114">Varsayılan değer 2'dir.</span><span class="sxs-lookup"><span data-stu-id="799ea-114">The default is 2.</span></span>|  
+|`maxPendingConnections`|<span data-ttu-id="799ea-115">Gönderme için bekleyebileceği bağlantı maksimum sayısını belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="799ea-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="799ea-116">Varsayılan değer 100'dür.</span><span class="sxs-lookup"><span data-stu-id="799ea-116">The default is 100.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="799ea-117">A `TimeSpan` ve çerçeveleme verilerini okumak ve altı çizili bağlantılardan bağlantı dağıtımını gerçekleştirmek için zaman aşımını belirtir.</span><span class="sxs-lookup"><span data-stu-id="799ea-117">A `TimeSpan` that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="799ea-118">Varsayılan değer "00: 00:10"</span><span class="sxs-lookup"><span data-stu-id="799ea-118">The default is "00:00:10"</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a3874-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3874-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="799ea-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="799ea-119">Child Elements</span></span>  
   
-|<span data-ttu-id="a3874-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="a3874-120">Element</span></span>|<span data-ttu-id="a3874-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3874-121">Description</span></span>|  
+|<span data-ttu-id="799ea-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="799ea-120">Element</span></span>|<span data-ttu-id="799ea-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="799ea-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a3874-122">\<allowAccounts ></span><span class="sxs-lookup"><span data-stu-id="a3874-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="a3874-123">İçeren yapılandırma öğelerinin koleksiyonu bir `securityIdentifier` kullanıcı hesapları için işlemleri barındıran belirtmek için özniteliği [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri ve Paylaşım Hizmeti bağlantı erişim verilir.</span><span class="sxs-lookup"><span data-stu-id="a3874-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="799ea-122">\<allowAccounts ></span><span class="sxs-lookup"><span data-stu-id="799ea-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="799ea-123">Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için kullanıcı hesabı belirtmek için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="799ea-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="a3874-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3874-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="799ea-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="799ea-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="a3874-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="a3874-125">Element</span></span>|<span data-ttu-id="a3874-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3874-126">Description</span></span>|  
+|<span data-ttu-id="799ea-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="799ea-125">Element</span></span>|<span data-ttu-id="799ea-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="799ea-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a3874-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="a3874-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="a3874-128">Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="a3874-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="799ea-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="799ea-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="799ea-128">Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="799ea-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a3874-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a3874-129">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="799ea-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="799ea-129">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>
