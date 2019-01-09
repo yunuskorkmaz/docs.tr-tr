@@ -2,15 +2,15 @@
 title: '&lt;peerTransport&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756429"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148949"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; &lt;taşıma&gt;
-Bu bağlama ile yapılandırılan eş tarafından gönderilen güvenli iletiler aktarım türünü belirtir.  
+Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli iletiler için aktarım türünü belirtir.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -23,38 +23,38 @@ Bu bağlama ile yapılandırılan eş tarafından gönderilen güvenli iletiler 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|CredentialType|İsteğe bağlı. Eş taşıması ile gönderilen iletileri doğrulamak için kullanılan kimlik bilgileri türünü belirtir. Bu öznitelik türünde <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|İsteğe bağlı. Eş ile gönderilen iletileri doğrulamak için kullanılan kimlik bilgileri türünü belirtir. Bu öznitelik türünde <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sertifika|Eş kanal taşıma kimlik doğrulaması gerektiren bir X509 sertifika.|  
-|Parola|Eş kanal taşıma kimlik doğrulaması doğru bir parola gerektirir.|  
+|Sertifika|Eş kanal kimlik doğrulaması gerektiren x X509 sertifika.|  
+|Parola|Eş kanal kimlik doğrulaması için doğru parola gereklidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Bir eş taşıma için güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Bir eş için güvenlik ayarlarını tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe yalnızca ayarlanır modu öznitelik [ \<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ayarlanır `Transport` veya `TransportWithMessageCredential`.  
+ Bu öğe yalnızca ayarlama modu öznitelik [ \<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ayarlanır `Transport` veya `TransportWithMessageCredential`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  

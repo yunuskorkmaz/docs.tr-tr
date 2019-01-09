@@ -2,15 +2,15 @@
 title: '&lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: df192c6a602aa073f48fab4229b4be3fbeb2349d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76c100c0ec793d6dc4e7e5385f9dcf4521d0039e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748626"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151949"
 ---
 # <a name="ltpeertransportgt"></a>&lt;peerTransport&gt;
-Özel bağlama için bir eş taşıma tanımlar.  
+Özel bağlama için bir eş tanımlar.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -21,14 +21,13 @@ ms.locfileid: "32748626"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<peerTransport   
-    listenIpAddress="String"  
-    maxBufferPoolSize="Integer"  
-    maxReceivedMessageSize="Integer"  
-    port="Integer"  
-        <security>  
-    </security>  
-/>  
+<peerTransport listenIpAddress="String"
+               maxBufferPoolSize="Integer"
+               maxReceivedMessageSize="Integer"
+               port="Integer">
+  <security>
+  </security>
+</peerTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -38,10 +37,10 @@ ms.locfileid: "32748626"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ListenIpAddress|Eş düğüm için TCP iletileri dinleyeceği bir IP adresi belirten bir dize. Varsayılan, `null` değeridir.|  
-|maxBufferPoolSize|Arabellek havuzu boyutunun üst sınırını belirtir pozitif bir tamsayı. 524288 varsayılandır.<br /><br /> WCF pek çok bölümü arabellekleri kullanın. Oluşturma ve her defa arabellek yok etme pahalıdır ve atık toplama arabellekleri için de pahalıdır. Arabellek havuzu ile havuzdan bir arabellek ayırın, kullanmak ve tamamladıktan sonra havuza geri dönemez. Bu nedenle oluşturma ve yok etme arabellekleri ek yük önlenmiş olur.|  
-|maxReceivedMessageSize|Üst bilgileri de dahil olmak üzere bayt cinsinden maksimum ileti boyutu tanımlar pozitif bir tamsayı. İleti alıcı için çok büyük olduğunda bir ileti gönderen bir SOAP hatasını alır. Alıcı iletiyi bırakır ve izleme günlüğüne olay bir giriş oluşturur. 65536 varsayılandır.|  
-|bağlantı noktası|Bu bağlama eş kanal TCP iletilerini işleyecek ağ arabirim bağlantı noktası belirten bir tamsayı. Bu değer arasında olmalıdır <xref:System.Net.IPEndPoint.MinPort> ve <xref:System.Net.IPEndPoint.MaxPort>. Varsayılan değer 0'dır.|  
+|ListenIpAddress|Eş düğüm TCP iletileri için dinleyeceği bir IP adresi belirten bir dize. Varsayılan, `null` değeridir.|  
+|maxBufferPoolSize|Arabellek havuzu en büyük boyutunu belirten pozitif bir tamsayı. 524288 varsayılandır.<br /><br /> WCF pek çok bölümünün arabellekler kullanın. Oluşturma ve arabellek kullanıldıkları her zaman yok etme pahalıdır ve çöp toplama arabellekler için da pahalıdır. Arabellek havuzu ile havuzdan bir arabelleğe almak, kullanmak ve tamamladıktan sonra havuza döndürün. Bu nedenle oluşturmak ve yok etme arabellekler yükü önlenmiş olur.|  
+|maxReceivedMessageSize|En büyük ileti boyutu üst bilgiler dahil bayt cinsinden tanımlayan pozitif bir tamsayı. İleti alıcısı için çok büyük olduğunda bir ileti gönderen bir SOAP hatasını alır. Alıcı, iletiyi bırakır ve izleme günlüğüne etkinliğin bir giriş oluşturur. 65536 varsayılandır.|  
+|bağlantı noktası|Eş kanl TCP iletilerini işleyecek Bu bağlama üzerinde ağ arabirim katmanı bağlantı noktasını belirten bir tamsayı. Bu değer arasında olmalıdır <xref:System.Net.IPEndPoint.MinPort> ve <xref:System.Net.IPEndPoint.MaxPort>. Varsayılan değer 0'dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -53,10 +52,10 @@ ms.locfileid: "32748626"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu aktarım istek/yanıt işlemleri sahip sözleşmeleri ile kullanılamaz.  
+ Bu aktarım işlemleri istek/yanıt sözleşmeleriyle kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.PeerTransportElement>  

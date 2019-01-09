@@ -2,15 +2,15 @@
 title: '&lt;mexEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
-ms.openlocfilehash: aceff3e373d9a5f7e57c28d85870af19ae8ef3e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e2fb4946ee68b3cbd5bd6bfbafe6bb5e9c9106f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149156"
 ---
 # <a name="ltmexendpointgt"></a>&lt;mexEndpoint&gt;
-Bu yapılandırma öğesi, standart bir uç nokta sabit bir IMetadataExchange sözleşme ile tanımlar. Tüm meta veri exchange uç noktalar kendi sözleşme IMetadataExchange belirtin olduğundan, kendiniz için bir tane tanımlama yerine bu standart noktasını kullanabilir.  
+Bu yapılandırma öğesi, bir sabit IMetadataExchange sözleşmesiyle standart uç nokta tanımlar. Tüm meta veri değişimi uç noktalarını IMetadataExchange sözleşmelerine belirtin. bu yana kendiniz bir tane tanımlayacaksınız yerine bu standart noktası kullanabilirsiniz.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,13 +18,13 @@ Bu yapılandırma öğesi, standart bir uç nokta sabit bir IMetadataExchange s�
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <mexEndpoint>
       <standardEndpoint name="String" />
     </mexEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -34,7 +34,7 @@ Bu yapılandırma öğesi, standart bir uç nokta sabit bir IMetadataExchange s�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Standart uç noktasının yapılandırma adını belirten dize. Adı kullanılıyor `endpointConfiguration` yapılandırmasına standart bir uç noktasını bağlamak için hizmet uç noktası özniteliği.|  
+|name|Standart uç nokta yapılandırmasını adını belirten dize. Adı kullanılıyor `endpointConfiguration` özniteliği bir standart uç noktası yapılandırmasına bağlamak için hizmet uç noktası.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,4 +43,4 @@ Bu yapılandırma öğesi, standart bir uç nokta sabit bir IMetadataExchange s�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Standart uç noktalar koleksiyonu uç noktaları biriyle önceden tanımlanmış veya bunların özelliklerinin (adresi, bağlama, sözleşme) daha fazla sabit.|
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.|

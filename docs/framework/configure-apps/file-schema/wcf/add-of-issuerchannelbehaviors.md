@@ -2,44 +2,44 @@
 title: '&lt;issuerChannelBehaviors&gt; &lt;ekleme&gt;'
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 072e3f4e961f6bf45e7c8b48c64cda36d385cf2b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752461"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149546"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;issuerChannelBehaviors&gt; &lt;ekleme&gt;
-Bir STS ile iletişim kurarken kullanılacak bir uç noktası davranışı ekler.  
+Bir STS ile iletişim kurarken kullanılacak uç nokta davranışı ekler.  
   
 > [!NOTE]
->  Uç noktası davranışı içeriyorsa bir [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi, bir özel durum.  
+>  Herhangi bir uç nokta davranışı içeriyorsa bir [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi, bir özel durum oluşturulur.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 endpointBehaviors bölümü  
 \<davranışı >  
 \<clientCredentials >  
 \<IssuedToken >  
 \<issuerChannelBehaviors > öğesi  
-\<ekleme >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<add issuerAddress="string"  
-     behaviorConfiguraton="string" />  
+<add issuerAddress="string"
+     behaviorConfiguraton="string" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|issuerAddress|İle iletişim kurmak için güvenlik belirteci verenin URI'si.|  
-|behaviorConfiguration|Aynı yapılandırma dosyasında tanımlanan bir uç noktası davranışı adı.|  
+|issuerAddress|İle iletişim kurmak için güvenlik belirteci vericisinin URI.|  
+|behaviorConfiguration|Aynı yapılandırma dosyasında tanımlanan bir uç nokta davranışı adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,10 +48,10 @@ endpointBehaviors bölümü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak Windows Communication Foundation (WCF) istemci uç nokta davranışları koleksiyonunu içerir.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Windows Communication Foundation (WCF) hizmeti belirtilen belirteci Hizmetleri ile iletişim kurarken kullanılacak uç nokta davranışları istemci koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `issuerAddress` istemci ile iletişim kurmak istediği güvenlik belirteci hizmeti URI içeriyor. `behaviorConfiguration` verilen belirteçler güvenlik belirteci hizmetlerinden almak için Windows Communication Foundation (WCF) tarafından oluşturulan kanaldaki uygulama kullanan bir uç noktası davranışı noktalarına.  
+ `issuerAddress` istemci ile iletişim kurmak istediği güvenlik belirteci hizmeti URI'sini içerir. `behaviorConfiguration` Güvenlik belirteci hizmetlerine verilen belirteçleri almak için Windows Communication Foundation (WCF) tarafından oluşturulan kanallar uygulamanın kullandığı bir uç nokta davranışı işaret eder.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
@@ -63,7 +63,7 @@ endpointBehaviors bölümü
  [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)  
- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)

@@ -2,15 +2,15 @@
 title: '&lt;privacyNoticeAt&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 2914a3716b9e2adb6ebc47fd73ccee027a3b65da
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 104b2b6399ea31273045e43be716947db110715d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749250"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147323"
 ---
 # <a name="ltprivacynoticeatgt"></a>&lt;privacyNoticeAt&gt;
-Kullanılan bir gizlilik bildirimi belirten bir yapılandırma öğesi temsil eden `wsFederationHttp` bağlama.  
+Kullanılan bir gizlilik bildirimini belirten bir yapılandırma öğesini temsil eder `wsFederationHttp` bağlama.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -21,8 +21,8 @@ Kullanılan bir gizlilik bildirimi belirten bir yapılandırma öğesi temsil ed
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<privacyNotice url="String"  
-        version="Integer" />  
+<privacyNotice url="String"
+               version="Integer" />
 ```  
   
 ## <a name="type"></a>Tür  
@@ -35,8 +35,8 @@ Kullanılan bir gizlilik bildirimi belirten bir yapılandırma öğesi temsil ed
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`url`|Gizlilik bildirimi bulunduğu olduğu URI belirten bir dize.|  
-|`version`|Bu gizlilik bildirimi sürümünü belirten bir tamsayı.|  
+|`url`|Gizlilik bildirimini bulunduğu URI belirten bir dize.|  
+|`version`|Bu gizlilik bildiriminin sürümü belirten bir tamsayı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -45,7 +45,7 @@ Kullanılan bir gizlilik bildirimi belirten bir yapılandırma öğesi temsil ed
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>  

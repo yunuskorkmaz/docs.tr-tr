@@ -2,18 +2,18 @@
 title: '&lt;serviceTimeouts&gt;'
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: a0f0725bffe0c3c83e412348dea97b16736ef3a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4cb4b4ae6fe01430989d9ee5f3d94b16778595aa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743478"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148480"
 ---
 # <a name="ltservicetimeoutsgt"></a>&lt;serviceTimeouts&gt;
 Bir hizmet için zaman aşımını belirtir.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
 \<serviceTimeouts >  
@@ -21,7 +21,7 @@ Bir hizmet için zaman aşımını belirtir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<serviceTimeouts transactionTimeout="TimeSpan" />  
+<serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>Tür  
@@ -34,7 +34,7 @@ Bir hizmet için zaman aşımını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`transactionTimeout`|A <xref:System.TimeSpan> bir işlem istemciden sunucuya akış gerekir zaman aralığını belirten değer. Varsayılan değer "00: 00:00".|  
+|`transactionTimeout`|A <xref:System.TimeSpan> bir işlem istemciden sunucuya akış gereken zaman aralığını belirten bir değer. Varsayılan değer "00: 00:00".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

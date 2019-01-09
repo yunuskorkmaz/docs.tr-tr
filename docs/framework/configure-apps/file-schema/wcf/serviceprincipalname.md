@@ -1,18 +1,18 @@
 ---
-title: '&lt;ServicePrincipalName&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750732"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150649"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
-Bir hizmet tarafından kendi hizmet asıl adı (SPN) kimliğini belirtir.  
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
+Bir hizmet tarafından hizmet asıl adı (SPN) kimliğini belirtir.  
   
- SPN ayarlama hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ SPN hakkında daha fazla bilgi için bkz. [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<Kimliği >  
 \<servicePrincipalName >  
@@ -20,17 +20,17 @@ Bir hizmet tarafından kendi hizmet asıl adı (SPN) kimliğini belirtir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|Bir istemci bir hizmet örneğini benzersiz olarak tanımlayan adı. Bir orman genelinde bilgisayarlarda bir hizmet birden çok örneğini yükleyin, her örneğin kendi SPN olması gerekir. İstemciler için kimlik doğrulaması kullanabilirler birden fazla adı varsa verili hizmet örneği birden çok SPN'ler olabilir.|  
+|value|Adı, bir istemci bir hizmet örneğini benzersiz şekilde tanımlar. Bir ormandaki bilgisayarlarda bir hizmet birden çok örneğini yükleyin, her örnek kendi SPN olması gerekir. İstemci kimlik doğrulaması için kullanıyor olabileceğiniz birden fazla adı varsa, verili hizmet örneğine birden çok SPN'ler olabilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -39,10 +39,10 @@ Bir hizmet tarafından kendi hizmet asıl adı (SPN) kimliğini belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanmasını hizmetin kimliğini belirtir.|  
+|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanacak bir hizmetin kimliğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu kimliğe sahip bir uç nokta bağlandığı güvenli bir Windows Communication Foundation (WCF) istemci, SSPI kimlik doğrulama uç noktası ile gerçekleştirirken SPN kullanır.  
+ Bu kimlik ile bir uç noktayı bağlayan güvenli bir Windows Communication Foundation (WCF) istemci, SSPI kimlik doğrulama uç noktası ile gerçekleştirirken SPN kullanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

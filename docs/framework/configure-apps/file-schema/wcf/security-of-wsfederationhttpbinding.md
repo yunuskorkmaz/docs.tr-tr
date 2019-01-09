@@ -2,12 +2,12 @@
 title: '&lt;wsFederationHttpBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 9473fa062867383f84ba5931c394f1ac665a74fb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25839617fae780e48a9763715242d3256a42b4a8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199298"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145464"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; &lt;güvenliği&gt;
 Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -21,62 +21,61 @@ Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../d
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<wsFederationBinding>  
-    <binding >  
-       <security mode="None/Message/TransportWithMessageCredential">  
-         <message   
-            algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            issuedTokenType="string"   
-            issuedKeyType="SymmetricKey/PublicKey"  
-            negotiateServiceCredential="Boolean" >  
-            <claimTypeRequirements>  
-               <add claimType="URI"  
-                    isOptional="Boolean" />  
-            </claimTypeRequirements>  
-                        <issuer address="Uri" >  
-               <headers>  
-                  <add name="String"  
-                       namespace="String" />  
-                          </headers>  
-                              <identity>  
-                                 <certificate encodedValue="String"/>  
-                                <certificateReference findValue="String"   
-                                 isChainIncluded="Boolean"  
-                            storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-                                  storeLocation="LocalMachine/CurrentUser"  
-                                   X509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-                                   <dns value="String"/>  
-                                <rsa value="String"/>  
-                                <servicePrincipalName value="String"/>  
-                                <usePrincipalName value="String"/>  
-                              </identity>  
-                        </issuer>  
-                        <issuerMetadata address=String" >  
-               <headers>  
-                  <add name="String"  
-                       namespace="String" />  
-               </headers>  
-               <identity>  
-                  <certificate encodedValue="String"/>  
-                  <certificateReference findValue="String"   
-                     isChainIncluded="Boolean"  
-                     storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-                     storeLocation="LocalMachine/CurrentUser"  
-                                   X509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-                  <dns value="String"/>  
-                  <rsa value="String"/>  
-                  <servicePrincipalName value="String"/>  
-                  <usePrincipalName value="String"/>  
-               </identity>  
-                        </issuerMetadata>  
-            <tokenRequestParameters>  
-               <xmlElement>  
-               </xmlElement>  
-            </tokenRequestParameters>  
-         </message>  
-       </security>  
-    </binding>  
-</wsFederationBinding>  
+<wsFederationBinding>
+  <binding>
+    <security mode="None/Message/TransportWithMessageCredential">
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               issuedTokenType="string"
+               issuedKeyType="SymmetricKey/PublicKey"
+               negotiateServiceCredential="Boolean">
+        <claimTypeRequirements>
+          <add claimType="URI"
+               isOptional="Boolean" />
+        </claimTypeRequirements>
+        <issuer address="Uri" >
+          <headers>
+            <add name="String"
+                 namespace="String" />
+          </headers>
+          <identity>
+            <certificate encodedValue="String" />
+            <certificateReference findValue="String"
+                                  isChainIncluded="Boolean"
+                                  storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                                  storeLocation="LocalMachine/CurrentUser"
+                                  X509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+            <dns value="String" />
+            <rsa value="String" />
+            <servicePrincipalName value="String" />
+            <usePrincipalName value="String" />
+          </identity>
+        </issuer>
+        <issuerMetadata address="String">
+          <headers>
+            <add name="String"
+                 namespace="String" />
+          </headers>
+          <identity>
+            <certificate encodedValue="String" />
+            <certificateReference findValue="String"
+                                  isChainIncluded="Boolean"
+                                  storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                                  storeLocation="LocalMachine/CurrentUser"
+                                  X509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+            <dns value="String" />
+            <rsa value="String" />
+            <servicePrincipalName value="String" />
+            <usePrincipalName value="String" />
+          </identity>
+        </issuerMetadata>
+        <tokenRequestParameters>
+          <xmlElement>
+          </xmlElement>
+        </tokenRequestParameters>
+      </message>
+    </security>
+  </binding>
+</wsFederationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -92,7 +91,7 @@ Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../d
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|SOAP ileti aktarım sırasında güvenli değildir.|  
+|Hiçbiri|SOAP ileti aktarım sırasında güvenli değildir.|  
 |İleti|SOAP ileti güveliği kullanarak bütünlüğü, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması güvenlik belirteci hizmeti tarafından istemciye verilen belirtecin dayanır|  
 |TransportWithMessageCredential|Bütünlüğü, gizliliği ve sunucu kimlik doğrulaması HTTPS tarafından sağlanır. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması yoluyla SOAP ileti güvenliği sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirtecin dayanır.|  
   
@@ -113,7 +112,7 @@ Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../d
  <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  

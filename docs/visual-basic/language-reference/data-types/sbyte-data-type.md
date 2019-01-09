@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145692"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148090"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -64,7 +64,7 @@ Tamsayı sabit değeri aralığının dışında ise `SByte` (diğer bir deyişl
 
 ## <a name="programming-tips"></a>Programlama ipuçları
   
--   **CLS uyumluluğu.** `SByte` Veri türü değil parçası [ortak dil belirtimi](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
+-   **CLS uyumluluğu.** `SByte` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
 
 -   **Genişletme.** `SByte` Widens veri türü için `Short`, `Integer`, `Long`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `SByte` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
   
