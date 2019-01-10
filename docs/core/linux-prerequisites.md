@@ -3,13 +3,13 @@ title: Linux üzerinde .NET Core önkoşulları
 description: Desteklenen Linux sürümleri ve .NET Core bağımlılıklarının geliştirmek, dağıtmak ve .NET Core uygulamaları Linux makinelerinde çalışır.
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: e250158d10c6a03535f4e693e74954747f860a3c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148345"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656056"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -60,6 +60,34 @@ Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.
 * openSUSE 42.3 veya sonraki sürümleri (.NET Core 1.1)
 
 Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 Önizleme 1](#tab/netcore30)
+
+.NET core 3.0 Önizleme 1, tek bir işletim sistemi Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
+
+Daha fazla bilgi ve indirme bağlantıları [.NET Core 3.0 indirir](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+
+.NET core 3.0 Önizleme 1, aşağıdaki Linux dağıtımları/sürümleri desteklenir. 
+
+İşletim Sistemi                            | Sürüm               | Mimarileri  
+------------------------------|-----------------------|----------------
+Red Hat Enterprise Linux      | 6                     | X64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
+Fedora                        | 28                    | X64
+Debian                        | 9                     | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
+Linux Naneli                    | 18                    | X64
+openSUSE                      | 42.3 +                 | X64
+SUSE Enterprise Linux (SLES)  | 12 SP2 +               | X64
+Alpine Linux                  | 3.8 +                  | x64, ARM64
+
+\* ARM32 ve ARM64 desteği 9 Debian ve Ubuntu 16.04 başlatır. Bu dağıtım paketlerini önceki sürümlerinde, ARM yongalarında desteklenmez.
+
+Bkz: [.NET Core 3.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) tam listesi .NET Core 3.0, desteklenen işletim sistemleri, dağıtımlar ve sürümler, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+
+ARM64'te .NET Core 3.0 yükleme hakkında daha fazla bilgi için bkz. [Linux ARM64 üzerinde .NET Core 3.0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+
 
 ---
 

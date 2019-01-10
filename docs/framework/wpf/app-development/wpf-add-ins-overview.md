@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402107"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397039"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
-<a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Geliştiriciler eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar da görüntülemeniz [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentiler tarafından sağlanır. Bu konu başlığı altında gösterilir nasıl [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] artırmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bu senaryolar, arkasındaki mimarisi, aboneliğin avantajları ve kısıtlamalarını etkinleştirmek için eklenti modeli.  
+<a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  
   
 
   
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Konusunda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelidir gerekli eklenti. Daha fazla bilgi için [eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md).  
+ .NET Framework eklenti modeli konusunda gereklidir. Daha fazla bilgi için [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>Eklentilere genel bakış  
@@ -48,48 +48,48 @@ ms.locfileid: "43402107"
   
  Kullanılacak eklentiler için konak uygulamalar bulup bunları çalışma zamanında yük gerekir. Sonuç olarak, eklentiler destekleyen uygulamalar, aşağıdaki ek sorumluluklara sahiptir:  
   
--   **Bulma**: konak uygulamalar tarafından desteklenen sözleşmeleri izliyor eklentiler bulma.  
+-   **Bulma**: Konak uygulamalar tarafından desteklenen sözleşmeleri izliyor eklentiler bulma.  
   
--   **Etkinleştirme**: çalıştıran ve eklentiler ile iletişim kurma yükleniyor.  
+-   **Etkinleştirme**: Yükleniyor, çalıştırma ve eklentiler ile iletişim kurma.  
   
--   **Yalıtım**: eklentiler olası güvenlik ve yürütme sorunları uygulamaları korumak, yalıtım sınırlarını kurmak için uygulama etki alanları veya işlemleri kullanarak.  
+-   **Yalıtım**: Uygulama olası güvenlik ve eklentileri yürütme sorunlarını korumak, yalıtım sınırlarını kurmak için uygulama etki alanları veya işlemleri kullanarak.  
   
--   **İletişim**: birbirleriyle yöntemlerini çağırmaya ve veri geçirme yalıtım sınırlarının arasında iletişim için uygulamaları barındırmak ve eklentiler sağlar.  
+-   **İletişim**: Eklentileri izin vererek ve birbirleriyle yöntemlerini çağırmaya ve veri geçirme yalıtım sınırlarının arasında iletişim için uygulamaları barındırın.  
   
--   **Ömür Yönetimi**: yükleme ve kaldırma uygulama etki alanları ve temiz, öngörülebilir bir şekilde işlemde (bkz [uygulama etki alanları](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Ömür Yönetimi**: Yükleme ve temiz, tahmin edilebilir bir biçimde uygulama etki alanları ve işlemleri kaldırma (bkz [uygulama etki alanları](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Sürüm oluşturma**: ya da yeni sürümlerini oluşturulduğunda konak uygulamalar ve eklentiler hala iletişim kurabildiklerinden emin olma.  
+-   **Sürüm oluşturma**: Ya da yeni sürümlerini oluşturulduğunda konak uygulamalar ve eklentiler hala iletişim kurabildiğinden emin olma.  
   
- Sonuç olarak, sağlam bir eklenti modeli geliştirme Önemsiz olmayan bir iş değil. Bu nedenle, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli oluşturmak için bir altyapı sağlar.  
+ Sonuç olarak, sağlam bir eklenti modeli geliştirme Önemsiz olmayan bir iş değil. Bu nedenle, .NET Framework eklenti modeli oluşturmaya yönelik bir altyapı sağlar.  
   
 > [!NOTE]
->  Eklentiler hakkında daha ayrıntılı bilgi için bkz: [eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md).  
+>  Eklentiler hakkında daha ayrıntılı bilgi için bkz: [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>.NET framework eklenti modeli genel bakış  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Bulunan eklenti modeli, <xref:System.AddIn> ad alanı, eklenti genişletilebilirliği geliştirilmesini basitleştirmek için tasarlanmış türleri kümesi içerir. Temel birimini [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli *sözleşme*eklenti birbiriyle ve ana bilgisayar uygulamasına nasıl tanımlar. Bir anlaşma kullanarak bir konak uygulamaya özgü bir ana bilgisayar uygulamasına sunulur *görünümü* sözleşme. Benzer şekilde, bir ekleme-özel *görünümü* sözleşme eklenti için sunulur. Bir *bağdaştırıcısı* bir konak uygulama ve bir eklenti ilgili kendi ilgili görünümler arasında iletişim kurmasına izin vermek için kullanılır. Sözleşmeler, görünümler ve bağdaştırıcılar adlandırılır segmentler ve ilgili kesimleri kümesi oluşturan bir *işlem hattı*. İşlem hatları temelini bağlı olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelini destekleyen bulma, etkinleştirme, güvenlik yalıtımı, yürütme yalıtım (uygulama etki alanları ve işlemleri kullanarak), iletişim, ömür yönetimi ve sürüm oluşturma eklentisi.  
+ .NET Framework eklenti modeli bulunan <xref:System.AddIn> ad alanı, eklenti genişletilebilirliği geliştirilmesini basitleştirmek için tasarlanmış türleri kümesi içerir. .NET Framework eklenti modeli temel birimidir *sözleşme*eklenti birbiriyle ve ana bilgisayar uygulamasına nasıl tanımlar. Bir anlaşma kullanarak bir konak uygulamaya özgü bir ana bilgisayar uygulamasına sunulur *görünümü* sözleşme. Benzer şekilde, bir ekleme-özel *görünümü* sözleşme eklenti için sunulur. Bir *bağdaştırıcısı* bir konak uygulama ve bir eklenti ilgili kendi ilgili görünümler arasında iletişim kurmasına izin vermek için kullanılır. Sözleşmeler, görünümler ve bağdaştırıcılar adlandırılır segmentler ve ilgili kesimleri kümesi oluşturan bir *işlem hattı*. İşlem hatları, bulma, etkinleştirme, güvenlik yalıtımı, yürütme yalıtım (uygulama etki alanları ve işlemleri kullanarak), iletişim, ömür yönetimi ve sürüm oluşturma .NET Framework eklenti modeli destekler temelidir.  
   
- Bu destek toplamını konak uygulamanın işlevselliğini tümleştirmek eklentileri geliştiricilerin sağlar. Ancak bazı senaryolar ana bilgisayar uygulamaları görüntülemek için gerekli [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentiler tarafından sağlanan. Çünkü her sunu teknolojisinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamak için kendi modeline sahiptir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modeli, herhangi belirli sunu teknolojisi desteklemiyor eklentisi. Bunun yerine, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eklentileri için destek.  
+ Bu destek toplamını konak uygulamanın işlevselliğini tümleştirmek eklentileri geliştiricilerin sağlar. Ancak, bazı senaryolar eklentiler tarafından sağlanan kullanıcı arabirimlerini görüntülemek için konak uygulamalar gerektirir. .NET Framework içindeki her bir sunu teknolojiyi kullanıcı arabirimlerini uygulamak için kendi modeli olduğundan, .NET Framework eklenti modeli herhangi belirli sunu teknolojisi desteklemez. Bunun yerine, WPF, .NET Framework eklenti modeli eklentiler için kullanıcı Arabirimi desteği genişletir.  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>WPF eklentileri  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birlikte [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli, çok çeşitli uygulamaları görüntülemek için barındırmak gerektiren senaryolar adresi olanak tanır [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] gelen eklentileri. Özellikle, bu senaryolar tarafından gönderilen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki iki programlama modeli:  
+ WPF, .NET Framework eklenti modeli ile birlikte, çok çeşitli eklentiler kullanıcı arabirimlerini görüntülemek için uygulamaları barındırmak gerektiren senaryolar adresi sağlar. Özellikle, bu senaryolar aşağıdaki iki programlama modeli ile WPF tarafından ele alınır:  
   
-1.  **Eklenti UI döndüren**. Bir eklenti döndürür bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] anlaşmada tanımlanan bir yöntem çağrısının üzerinden konak uygulama. Bu senaryo, aşağıdaki durumlarda kullanılır:  
+1.  **Eklenti UI döndüren**. Bir eklentiyi bir kullanıcı Arabirimi ana bilgisayar uygulamasına bir yöntem çağrısının anlaşma tarafından tanımlandığı şekilde döndürür. Bu senaryo, aşağıdaki durumlarda kullanılır:  
   
-    -   Görünümünü bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tarafından döndürülen bir eklenti ya da verilere bağımlı veya yalnızca çalışma zamanında dinamik olarak gibi mevcut koşulları oluşturulan raporlar.  
+    -   Bir kullanıcı Arabirimi eklentisi tarafından döndürülen görünümünün ya da verilere bağımlı olduğundan veya yalnızca çalışma zamanında dinamik olarak gibi mevcut koşulları oluşturulan raporlar.  
   
-    -   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Eklentisi tarafından sağlanan hizmetleri için farklıdır [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ana bilgisayar uygulamalarının eklentiyi kullanabilirsiniz.  
+    -   Kullanıcı Arabirimi eklentisi tarafından sağlanan hizmetleri için eklentiyi kullanan konak uygulamalar Arabiriminden farklıdır.  
   
-    -   Eklenti öncelikle bir hizmet için ana bilgisayar uygulaması gerçekleştirir ve durumu raporları ile ana bilgisayar uygulaması için bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+    -   Eklentiyi öncelikle ana uygulama için bir hizmet gerçekleştirir ve bir kullanıcı Arabirimi ile ana bilgisayar uygulaması durumu bildirir.  
   
-2.  **Eklenti UI olan**. Bir eklentinin bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], sözleşmesi tarafından tanımlandığı şekilde. Bu senaryo, aşağıdaki durumlarda kullanılır:  
+2.  **Eklenti UI olan**. Bir eklenti, sözleşmesi tarafından tanımlandığı şekilde UI'dir. Bu senaryo, aşağıdaki durumlarda kullanılır:  
   
     -   Bir eklenti gibi bir reklam görüntülenen dışındaki hizmetleri sağlamaz.  
   
-    -   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Eklentisi tarafından sağlanan hizmetleri hesaplayıcıya veya Renk Seçici gibi eklenti kullanabileceğiniz tüm uygulamalarını barındırmak için yaygındır.  
+    -   Hesaplayıcı veya Renk Seçici gibi eklenti kullanan tüm konak uygulamalar için kullanıcı Arabirimi eklentisi tarafından sağlanan hizmetleri için yaygındır.  
   
- Bu senaryolar gerektiren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulama ve eklenti uygulama etki alanları arasında nesnelerin geçirilebilir. Bu yana [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model iletişim kurmak için uygulama etki alanları arasında aralarında aktarılan nesneleri, Uzaktan erişilebilir olmalıdır uzaktan iletişim kullanır eklentisi.  
+ Bu senaryolar, eklenti uygulama etki alanları ve ana bilgisayar uygulaması arasında UI nesneleri geçirilebilir gerektirir. Eklenti modeli uygulama etki alanları arasında iletişim kurmak için uzaktan iletişim kullanır olan .NET Framework beri bunlar arasında geçirilen nesneleri, Uzaktan erişilebilir olması gerekir.  
   
  Uzaktan erişilebilir bir veya daha fazlasını yapan bir sınıf örneği nesnedir:  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402107"
 -   Sahip <xref:System.SerializableAttribute> özniteliği uygulandı.  
   
 > [!NOTE]
->  Uzaktan erişilebilir oluşturma hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri bkz [nesneleri Uzaktan erişilebilir hale getirme](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Uzaktan erişilebilir .NET Framework nesneleri oluşturma hakkında daha fazla bilgi için bkz. [nesneleri Uzaktan erişilebilir hale getirme](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Türleri Uzaktan erişilebilir değil. Sorunu çözmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] etkinleştirmek için eklenti modeli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ana uygulamalardan görüntülenmesi eklentiler tarafından oluşturulmuş. Bu destek tarafından sağlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki tür tarafından: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve iki statik yöntemler tarafından uygulanan <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türleri ve yöntemleri şu şekilde kullanılır:  
+ WPF UI türleri Uzaktan erişilebilir değildir. Sorunu çözmek için ana uygulamalardan görüntülenecek WPF UI eklentileri tarafından oluşturulan etkinleştirmek için .NET Framework eklenti modeli WPF genişletir. Bu destek, iki tür tarafından WPF sağladığı: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve iki statik yöntemler tarafından uygulanan <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türleri ve yöntemleri şu şekilde kullanılır:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gerektiren [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] tarafından sağlanan eklentileri doğrudan veya dolaylı olarak türetilen sınıflardır <xref:System.Windows.FrameworkElement>şekiller, denetimleri, kullanıcı denetimleri, Düzen bölmeleri ve sayfaları gibi.  
+1.  WPF gerektiren eklentiler tarafından sağlanan kullanıcı arabirimleri doğrudan veya dolaylı olarak türetilen sınıflar olduklarını <xref:System.Windows.FrameworkElement>şekiller, denetimleri, kullanıcı denetimleri, Düzen bölmeleri ve sayfaları gibi.  
   
-2.  Sözleşme, eklenti ve barındırma uygulaması UI'dir geçirilecek bildirir her yerde, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (değil bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> eklenti, Uzaktan erişilebilir temsilidir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yalıtım sınırlarında geçirilebilir.  
+2.  Sözleşme, eklenti ve barındırma uygulaması UI'dir geçirilecek bildirir her yerde, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (değil bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırlarında geçirilebilir eklenti UI Uzaktan erişilebilir gösterimidir.  
   
 3.  Eklentinin uygulama etki alanından geçirilmeden önce bir <xref:System.Windows.FrameworkElement> olarak paketlenmiş bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402107"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>Eklenti kullanıcı arayüzü döndürür.  
- Döndürülecek eklenti için bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir ana bilgisayar uygulaması için aşağıdakiler gereklidir:  
+ Bir kullanıcı Arabirimi bir ana bilgisayar uygulamasına döndürülecek eklenti için aşağıdakiler gereklidir:  
   
-1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, açıklandığı oluşturulmalıdır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md) belgeleri.  
+1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
   
-2.  Sözleşme uygulamalıdır <xref:System.AddIn.Contract.IContract> ve döndürmek için bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], sözleşme türü dönüş değerine sahip bir yöntemi bildirmelidir <xref:System.AddIn.Contract.INativeHandleContract>.  
+2.  Sözleşme uygulamalıdır <xref:System.AddIn.Contract.IContract> ve bir kullanıcı Arabirimi döndürülecek sözleşme türü dönüş değerine sahip bir yöntemi bildirmeniz gerekir <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Yapan eklenti ile konak uygulama doğrudan veya dolaylı olarak öğesinden türetilmelidir <xref:System.Windows.FrameworkElement>.  
+3.  Eklenti ile ana bilgisayar uygulaması arasında geçirilen kullanıcı Arabirimi öğesinden türetilmelidir doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>.  
   
-4.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Tarafından döndürülen eklenti gelen dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
+4.  Kullanıcı Arabirimi eklentisi tarafından döndürülen dönüştürülmüş olmalıdır bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
   
-5.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Dönüştürülmesi gerekir öğesinden döndürülen bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
+5.  Öğesinden döndürülen UI dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
   
 6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
- Döndürür bir eklenti uygulama gösteren bir örnek için bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ UI döndüren eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Bir kullanıcı arabirimi eklentisi olan  
- Bir eklenti olduğunda bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], aşağıdakiler gereklidir:  
+ Bir eklenti UI olduğunda, aşağıdakiler gereklidir:  
   
-1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, açıklandığı oluşturulmalıdır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md) belgeleri.  
+1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
   
 2.  Eklenti anlaşma arabirimi uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402107"
   
 6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
- Nasıl bir eklentisi uygulayacağınızı gösteren bir örnek için bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ UI olan eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Eklenti birden çok UI döndüren  
- Eklentiler, genellikle birden çok sağlar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] görüntülenecek uygulamalarını barındırmak için. Örneğin, bir eklenti göz önünde bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ayrıca sağlayan konak uygulama durum bilgilerini de olarak bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Böyle bir eklenti hem tekniklerinin bir bileşimini kullanarak uygulanabilir [bir kullanıcı arayüzü döndürür eklenti](#ReturnUIFromAddInContract) ve [eklenti kullanıcı arayüzü](#AddInIsAUI) modelleri.  
+ Eklentiler, genellikle görüntülemek uygulamaları barındırmak için birden çok kullanıcı arabirimi sağlar. Ayrıca konak uygulama durum bilgilerini de bir kullanıcı Arabirimi olarak sağlayan UI olan eklenti gibi göz önünde bulundurun. Böyle bir eklenti hem tekniklerinin bir bileşimini kullanarak uygulanabilir [bir kullanıcı arayüzü döndürür eklenti](#ReturnUIFromAddInContract) ve [eklenti kullanıcı arayüzü](#AddInIsAUI) modelleri.  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>Eklentiler ve XAML tarayıcı uygulamaları  
@@ -171,7 +171,7 @@ ms.locfileid: "43402107"
   
  Sonuç olarak, Eklenti derlemesine ve işlem hattı oluşturmak için ilk adım olan [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] yapı çıkışını her işlem hattı ayarlayarak derleme projeleri derleme ve Eklenti projesinin kök. Aşağıdaki tabloda çözüm ve kök klasörde konağı olarak işlem hattı derleme projeleri ve derleme eklenti projesi yapı çıkış yolları gösterilmektedir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] proje.  
   
- Tablo 1: Bir XBAP tarafından barındırılan işlem hattı derlemeler için çıktı yollarında oluşturun.  
+ Tablo 1: Çıkış yolu bir XBAP tarafından barındırılan işlem hattı derlemeler için derleme  
   
 |İşlem hattı derleme projesi|Yapı çıkış yolu|  
 |-------------------------------|-----------------------|  
@@ -194,7 +194,7 @@ ms.locfileid: "43402107"
 2.  İçinde **uygulama dosyaları** iletişim kutusunda, kümesi **yayımlama durumu** her işlem hattı ve DLL eklentisini **Ekle (otomatik)** ve **indirmegrubu** her işlem hattı ve DLL eklentisini **(gerekli)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>İşlem hattı ve kullanarak uygulama tabanından  
- Ne zaman işlem hattı ve için yapılandırıldığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım, aynı yüklenen [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Önbellek klasörü olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. İşlem hattını kullanma ve gelen eklentisi için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu gerekir alma bunları uygulamadan temel. Çeşitli türleri ve üyeleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işlem hatları ve eklentileri kullanma eklenti modeli, bu senaryo için özel destek sağlar. İlk olarak, yol ile tanımlanan <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri. Aşağıdakileri içeren işlem hattı kullanmak için uygun eklenti üyeleri aşırı yüklemeleri ile bu değeri kullanın:  
+ Ne zaman işlem hattı ve için yapılandırıldığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım, aynı yüklenen [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Önbellek klasörü olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. İşlem hattını kullanma ve gelen eklentisi için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu gerekir alma bunları uygulamadan temel. Çeşitli türleri ve üyeleri için işlem hatları ve eklentiler kullanarak .NET Framework eklenti modeli, bu senaryo için özel desteği sağlar. İlk olarak, yol ile tanımlanan <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri. Aşağıdakileri içeren işlem hattı kullanmak için uygun eklenti üyeleri aşırı yüklemeleri ile bu değeri kullanın:  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402107"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>WPF eklentisi mimarisi  
- En üst düzeyde anlatıldığı gibi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlayan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamak için eklentiler [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (, türetilen doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>) kullanarak <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Ana bilgisayar uygulaması döndürülür sonucu olan bir <xref:System.Windows.FrameworkElement> den görüntülenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulama.  
+ Anlatıldığı gibi en üst düzeyde, WPF .NET Framework kullanıcı arabirimlerini eklentiler sağlar. (Bu türetilen doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>) kullanarak <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Ana bilgisayar uygulaması döndürülür sonucu olan bir <xref:System.Windows.FrameworkElement> görüntülenen kullanıcı Arabiriminden ana uygulamada.  
   
- Basit için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eklenti senaryoları için bu, bir geliştiricinin ihtiyaç duyduğu kadar ayrıntı. Daha karmaşık senaryolarda, özellikle de, denemek için ek yazılımınız [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] düzen, kaynakları ve veri bağlama, bilgi ilişkin daha ayrıntılı gibi hizmetleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Destek, avantajları ve sınırlamaları anlamak için gereklidir.  
+ Basit kullanıcı Arabirimi eklentisi senaryolar için bir geliştiricinin ihtiyaç duyduğu kadar ayrıntı budur. Daha karmaşık senaryolarda, düzen, kaynakları ve veri bağlama gibi ek WPF hizmetlerini kullanan denemek için WPF UI desteği ile .NET Framework eklenti modeli nasıl genişlettiğini, daha ayrıntılı bilgiye faydalarını anlamak için gereklidir ve sınırlamaları.  
   
- Temelde, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] geçmiyor bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ndan bir eklenti için bir ana bilgisayar uygulaması; bunun yerine, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Win32 pencere tanıtıcısı geçirir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] birlikte çalışabilirlik. Bu nedenle, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir eklentiyi bir ana bilgisayar uygulamasına aşağıdakiler gerçekleşir geçirilir:  
+ Temelde, WPF bir ana bilgisayar uygulaması için bir eklentiyi bir UI geçirmez; Bunun yerine, WPF WPF birlikte çalışabilirliği kullanılarak Win32 pencere tanıtıcısı kullanıcı Arabiriminde geçirir. Bir kullanıcı Arabiriminden bir eklenti için bir ana bilgisayar uygulaması geçirildiğinde, bu nedenle, aşağıdakiler gerçekleşir:  
   
--   Eklenti tarafında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] alması için bir pencere tutucu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulama tarafından görüntülenir. Pencere tanıtıcısı bir iç kapsüllenir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] türetilen sınıf <xref:System.Windows.Interop.HwndSource> ve uygulayan <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve eklentinin uygulama etki alanından konak uygulamanın uygulama etki alanına taşınır.  
+-   Eklenti tarafında WPF konak uygulama tarafından görüntülenen kullanıcı Arabirimi için bir pencere tutucu devralır. Türetilen bir iç WPF sınıf pencere tanıtıcısı yalıtılan <xref:System.Windows.Interop.HwndSource> ve uygulayan <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve eklentinin uygulama etki alanından konak uygulamanın uygulama etki alanına taşınır.  
   
--   Konak uygulama tarafında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tüketen <xref:System.Windows.Interop.HwndSource> bir iç [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] türetilen sınıf <xref:System.Windows.Interop.HwndHost> ve <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> konak uygulama.  
+-   Konak uygulama tarafında WPF tüketen <xref:System.Windows.Interop.HwndSource> türetildiği bir iç WPF sınıf olarak <xref:System.Windows.Interop.HwndHost> ve <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> konak uygulama.  
   
- <xref:System.Windows.Interop.HwndHost> Görüntülenecek var. [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], gelen pencere işleyicisi ile tanımlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Daha fazla bilgi için [WPF ve Win32 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> pencere tanıtıcısı, WPF kullanıcı arabirimleri ile tanımlanan kullanıcı arabirimlerini görüntülemek için var. Daha fazla bilgi için [WPF ve Win32 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
- Özet olarak, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> için Pencere işleyicisi izin vermek için mevcut bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir eklentiyi Burada, saklanmış olduğu tarafından bir ana bilgisayar uygulaması geçirilecek bir <xref:System.Windows.Interop.HwndHost> ve konak görüntülenir uygulamanın [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Özet olarak, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> bir eklentiyi bir ana bilgisayar uygulamasına Burada, saklanmış olduğu tarafından geçirilecek bir WPF UI için Pencere işleyicisi izin vermek için mevcut bir <xref:System.Windows.Interop.HwndHost> ve konak uygulamanın kullanıcı Arabiriminde görüntülenir.  
   
 > [!NOTE]
 >  Ana bilgisayar uygulaması aldığından bir <xref:System.Windows.Interop.HwndHost>, ana bilgisayar uygulaması tarafından döndürülen nesne dönüştürülemiyor <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> eklenti tarafından uygulanan türüne (örneğin, bir <xref:System.Windows.Controls.UserControl>).  
   
- Doğası, <xref:System.Windows.Interop.HwndHost> uygulamalarını barındırmak bunları nasıl kullanabileceğiniz etkileyen belirli sınırlamaları vardır. Ancak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir <xref:System.Windows.Interop.HwndHost> eklenti senaryoları için çeşitli özelliklere sahip. Bu avantajlar ve sınırlamalar aşağıda açıklanmıştır.  
+ Doğası, <xref:System.Windows.Interop.HwndHost> uygulamalarını barındırmak bunları nasıl kullanabileceğiniz etkileyen belirli sınırlamaları vardır. Ancak WPF genişletir <xref:System.Windows.Interop.HwndHost> eklenti senaryoları için çeşitli özelliklere sahip. Bu avantajlar ve sınırlamalar aşağıda açıklanmıştır.  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>WPF eklentisi avantajları  
- Çünkü [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentisi [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] türetildiği bir iç sınıf kullanarak ana uygulamadan görüntülenen <xref:System.Windows.Interop.HwndHost>, bu [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] yeteneklerini tarafından kısıtlanmış <xref:System.Windows.Interop.HwndHost> ilişkilendirilebilmesi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] düzen, işleme, veri bağlama, stiller, şablonlar ve kaynakları gibi hizmetler. Ancak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iç artırmaktadır <xref:System.Windows.Interop.HwndHost> aşağıdakiler dahil ek özellikler olan alt sınıf:  
+ WPF eklentisi kullanıcı arabirimleri, türetilen bir iç sınıf kullanarak ana uygulamadan görüntülendiğinden <xref:System.Windows.Interop.HwndHost>, bu kullanıcı arabirimleri yeteneklerini tarafından kısıtlanmıştır <xref:System.Windows.Interop.HwndHost> düzeni gibi bir WPF UI Hizmetleri göre işleme, veri bağlama, stiller, şablonlar ve kaynaklar. Ancak WPF iç artırmaktadır <xref:System.Windows.Interop.HwndHost> aşağıdakiler dahil ek özellikler olan alt sınıf:  
   
--   Konak uygulamanın arasında sekmeyle gitmeyi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve bir eklentinin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Dikkat "eklenti bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" programlama modeli, geçersiz kılmak Ekle tarafı bağdaştırıcısı gerektirir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> sekmeyi, eklentinin tam güvenilir veya kısmen güvenilen etkinleştirmek için.  
+-   Konak uygulamanın kullanıcı Arabirimi ile bir eklentinin kullanıcı Arabirimi arasında sekmeyle gitmeyi. "Eklenti UI'dir." bir programlama modeli için geçersiz kılmak Ekle tarafı bağdaştırıcısı gerektiğini unutmayın <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> sekmeyi, eklentinin tam güvenilir veya kısmen güvenilen etkinleştirmek için.  
   
--   Eklenti için erişilebilirlik gereksinimleri uygularken [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konak uygulama görüntülenen [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+-   Konak uygulama kullanıcı arabirimlerinden görüntülenen bir eklenti kullanıcı arabirimleri için erişilebilirlik gereksinimleri uygularken.  
   
--   Etkinleştirme [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları birden çok uygulama etki alanı senaryolarında güvenli bir şekilde çalıştırmak için.  
+-   WPF uygulamaları birden çok uygulama etki alanı senaryolarında güvenli bir şekilde çalıştırmak etkinleştiriliyor.  
   
--   Eklenti için geçersiz erişimi önleme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] penceresi eklentileri (diğer bir deyişle, kısmi güven güvenliği sandbox) güvenlik yalıtımı ile çalıştırdığınızda işler. Çağırma <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> bu güvenlik sağlar:  
+-   Eklentileri (diğer bir deyişle, kısmi güven güvenliği sandbox) güvenlik yalıtımı ile çalıştırdığınızda kullanıcı Arabirimi eklentisi için geçersiz erişimi önleme penceresi işler. Çağırma <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> bu güvenlik sağlar:  
   
-    -   İçin "eklenti döndürür bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" programlama modeli, eklenti için Pencere işleyicisi geçirilecek tek yolu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] arasında yalıtım sınırı çağırmaktır <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    -   "Eklenti UI döndüren" programlama modeli için Pencere işleyicisi eklenti UI için yalıtım sınırı arasında geçirmek için tek yolu çağırmaktır <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   İçin "eklenti bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" programlama modeli, geçersiz kılma <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> arama ve ekleme tarafı bağdaştırıcısı <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (önceki örneklerde gösterildiği gibi), ekleme tarafı bağdaştırıcının çağırma gibi gereklidir `QueryContract` uygulama konak tarafı bağdaştırıcısından.  
+    -   "Eklenti UI olan" programlama modeli için geçersiz kılma <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> arama ve ekleme tarafı bağdaştırıcısı <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (önceki örneklerde gösterildiği gibi), ekleme tarafı bağdaştırıcının çağırma gibi gereklidir `QueryContract` uygulamasından konak tarafı bağdaştırıcısı.  
   
--   Birden çok uygulama etki alanı yürütme korumasını sağlama. Yalıtım sınırı yer alsa bile uygulama etki alanlarıyla sınırlamaları nedeniyle, eklenti uygulama etki alanında oluşturulan işlenmeyen özel durumları uygulamanın tamamı çökmesine neden. Ancak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eklenti modeli Bu sorunu gidermek ve uygulama kararlılığını artırmak için basit bir yol sağlar. A [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] görüntüler eklenti bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] oluşturur bir <xref:System.Windows.Threading.Dispatcher> ana bilgisayar uygulaması ise, uygulama etki alanı üzerinde çalıştığı iş parçacığı için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama. Uygulama etki alanında işleyerek meydana gelen tüm işlenmemiş özel durumları algılayabilirsiniz <xref:System.Windows.Threading.Dispatcher.UnhandledException> olayı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eklentinin <xref:System.Windows.Threading.Dispatcher>. Alabileceğiniz <xref:System.Windows.Threading.Dispatcher> gelen <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> özelliği.  
+-   Birden çok uygulama etki alanı yürütme korumasını sağlama. Yalıtım sınırı yer alsa bile uygulama etki alanlarıyla sınırlamaları nedeniyle, eklenti uygulama etki alanında oluşturulan işlenmeyen özel durumları uygulamanın tamamı çökmesine neden. Ancak, WPF ve .NET Framework eklenti modeli, bu sorunu gidermek ve uygulama kararlılığını artırmak için basit bir yol sağlar. Bir kullanıcı Arabirimi görüntüler WPF eklentisi oluşturur bir <xref:System.Windows.Threading.Dispatcher> konak uygulama WPF uygulaması ise, uygulama etki alanı üzerinde çalıştığı iş parçacığı için. Uygulama etki alanında işleyerek meydana gelen tüm işlenmemiş özel durumları algılayabilirsiniz <xref:System.Windows.Threading.Dispatcher.UnhandledException> WPF eklentisi olayı <xref:System.Windows.Threading.Dispatcher>. Alabileceğiniz <xref:System.Windows.Threading.Dispatcher> gelen <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> özelliği.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>WPF eklentisi sınırlamaları  
- Avantajları ötesinde, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından sağlanan varsayılan davranışlar ekler <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>ve pencere işleyicileri da eklenti için sınırlamalar vardır [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] ana uygulamalardan görüntülenir:  
+ WPF tarafından sağlanan varsayılan davranışlar ekler avantajları ötesinde <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>ve pencere işleyicilerini, aynı zamanda ana uygulamalardan görüntülenen bir eklenti kullanıcı arabirimleri için sınırlamalar vardır:  
   
--   Eklenti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] görüntülenen bir konaktan uygulama konak uygulamanın kırpma davranışını almaz.  
+-   Bir konak uygulamasından görüntülenen eklenti kullanıcı arabirimleri konak uygulamanın kırpma davranışını dikkate almaz.  
   
 -   Kavramını *hava sahası* birlikte çalışabilirlik senaryolarında de eklentiler için geçerlidir (bkz [teknoloji bölgelerine genel bakış](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Konak uygulamanın [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynağı devralma, veri bağlama ve kumanda gibi hizmetler eklenti otomatik olarak kullanılabilir olmayan [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Eklenti, bu hizmetleri sağlamak üzere işlem hattı güncelleştirmeniz gerekiyor.  
+-   Kaynağın devralmayı, veri bağlama ve komut vermeye genel, eklenti otomatik olarak kullanılabilir değil gibi bir konak uygulamanın UI Hizmetleri kullanıcı arabirimleri. Eklenti, bu hizmetleri sağlamak üzere işlem hattı güncelleştirmeniz gerekiyor.  
   
--   Bir eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] döndürülemez, ölçeği, dengesiz veya aksi halde bir dönüştürme tarafından etkilenen (bkz [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Eklentinin kullanıcı Arabirimi döndürülemez, ölçeği, dengesiz veya aksi halde bir dönüştürme tarafından etkilenen (bkz [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
--   İçerik Eklentisi içinde [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] işlemlerinden çizerek işlenen <xref:System.Drawing> ad alanı, alfa karıştırma içerebilir. Ancak, her iki eklentiyi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve ana bilgisayar uygulaması [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] içerdiği % 100 katı olmalıdır; diğer bir deyişle, `Opacity` hem de özelliği 1 olarak ayarlanması gerekir.  
+-   İçerik işlemlerinden çizerek işlenen eklenti kullanıcı arabirimi içinde <xref:System.Drawing> ad alanı, alfa karıştırma içerebilir. Ancak, hem eklenti kullanıcı Arabirimi hem de ana bilgisayar uygulaması içerdiği UI % 100 donuk olmalıdır; diğer bir deyişle, `Opacity` hem de özelliği 1 olarak ayarlanması gerekir.  
   
--   Varsa <xref:System.Windows.Window.AllowsTransparency%2A> eklenti içeren konak uygulama penceresinde özelliği [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ayarlanır `true`, eklentiyi görünmezdir. Bu durum geçerlidir bile eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] % 100 donuktur (diğer bir deyişle, `Opacity` özelliği 1 değerine sahip).  
+-   Varsa <xref:System.Windows.Window.AllowsTransparency%2A> özelliği eklenti kullanıcı Arabirimi içeren konak uygulama pencerenin `true`, eklentiyi görünmezdir. Eklentinin kullanıcı Arabirimi % 100 donuk olsa bile bu geçerlidir (yani `Opacity` özelliği 1 değerine sahip).  
   
--   Bir eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] diğer üzerine görünmelidir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aynı üst düzey pencere öğeleri.  
+-   Eklentinin kullanıcı Arabirimi, aynı üst düzey penceresinde diğer WPF öğeleri üzerinde yer almalıdır.  
   
--   Bir eklentinin hiçbir kısmı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kullanarak işlenebilecek bir <xref:System.Windows.Media.VisualBrush>. Bunun yerine, eklenti oluşturulan anlık [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] anlaşmada tanımlanan yöntemleri kullanarak konak uygulamaya geçirilen bir bit eşlem oluşturmak için.  
+-   Hiçbir kısmı bir eklentinin kullanıcı Arabirimi kullanarak işlenebilecek bir <xref:System.Windows.Media.VisualBrush>. Bunun yerine, eklenti anlaşmada tanımlanan yöntemleri kullanarak konak uygulamaya geçirilen bir bit eşlem oluşturmak için oluşturulan kullanıcı arabirimini anlık görüntüsünü alabilir.  
   
--   Medya dosyaları, gelen yürütülemez bir <xref:System.Windows.Controls.MediaElement> içinde bir eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   Medya dosyaları, gelen yürütülemez bir <xref:System.Windows.Controls.MediaElement> eklenti kullanıcı arabiriminde.  
   
--   Fare olayları için oluşturulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] almaz veya konak uygulama tarafından oluşturulan ve `IsMouseOver` özelliği için ana bilgisayar uygulaması [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] değeri `false`.  
+-   Fare olayları için eklenti kullanıcı Arabirimi tarafından üretilen almaz veya konak uygulama tarafından oluşturulan ve `IsMouseOver` konak uygulama kullanıcı Arabirimi için özellik değerine sahip `false`.  
   
--   Zaman içinde bir eklenti denetimler arasındaki kaydırır [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], `GotFocus` ve `LostFocus` olayları almaz veya konak uygulama tarafından oluşturulur.  
+-   Odak bir eklenti UI denetimleri arasındaki geçtiğinde `GotFocus` ve `LostFocus` olayları almaz veya konak uygulama tarafından oluşturulur.  
   
--   Bir eklenti içeren bir ana bilgisayar uygulaması bölümünü [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yazdırıldığında beyaz görünür.  
+-   Eklentinin kullanıcı Arabirimi içeren bir ana bilgisayar uygulaması bölümünü yazdırıldığında beyaz görünür.  
   
--   Tüm dağıtıcıları (bkz <xref:System.Windows.Threading.Dispatcher>) tarafından oluşturulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulama yürütme devam ederse sahibi Eklenti kaldırılmadan önce el ile kapatılmalıdır. Sözleşme, eklenti eklenti, böylece Eklenti kaldırılmadan önce göstermek konak uygulama izin yöntemleri uygulayabilirsiniz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kendi Dispatcher için.  
+-   Tüm dağıtıcıları (bkz <xref:System.Windows.Threading.Dispatcher>) tarafından oluşturulan kullanıcı Arabirimi kapatılması gerekiyor el ile ana bilgisayar uygulaması yürütme devam ederse sahibi Eklenti kaldırılmadan önce. Sözleşme, eklenti, böylece kendi Dispatcher eklenti UI kaldırılmadan önce eklentiyi göstermek konak uygulama izin yöntemleri uygulayabilirsiniz.  
   
--   Eğer bir eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olduğu bir <xref:System.Windows.Controls.InkCanvas> ya da içeren bir <xref:System.Windows.Controls.InkCanvas>, eklenti kaldıramıyor.  
+-   Eklentinin kullanıcı Arabirimi ise bir <xref:System.Windows.Controls.InkCanvas> ya da içeren bir <xref:System.Windows.Controls.InkCanvas>, eklentiyi kaldıramıyor.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Performansı iyileştirme  
- Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak çeşitli [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] her uygulama için gereken derlemeler bu uygulama etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için uygulamaları yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak, her uygulama için gereken çeşitli .NET Framework derlemeleri tüm uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, .NET Framework uygulamaları zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.LoaderOptimizationAttribute>  
- [Eklentiler ve Genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
+ [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [Uygulama Etki Alanları](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework uzaktan iletişimi genel bakış](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Nesneleri Uzaktan erişilebilir hale getirme](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

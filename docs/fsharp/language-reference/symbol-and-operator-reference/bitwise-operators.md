@@ -1,21 +1,21 @@
 ---
-title: Bitwise İşleçleri (F#)
-description: F# programlama dilinde kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.
+title: Bitwise İşleçleri
+description: Kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin F# programlama dilidir.
 ms.date: 07/20/2018
-ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48581514"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611977"
 ---
 # <a name="bitwise-operators"></a>Bitwise İşleçleri
 
-Bu konu F# dilinde kullanılabilen bit düzeyinde işleçler açıklar.
+Bu konu, mevcut olan bit düzeyinde işleçler açıklar F# dili.
 
 ## <a name="summary-of-bitwise-operators"></a>Bit düzeyinde işleçler özeti
 
-Aşağıdaki tabloda, F# dilinde kutulanmamış tam sayı türleri için desteklenen bir bit düzeyinde işleçler açıklanmaktadır.
+Aşağıdaki tabloda kutulanmamış integral türleri için desteklenen bir bit düzeyinde işleçler anlatılmaktadır F# dili.
 
 |İşleç|Notlar|
 |--------|-----|

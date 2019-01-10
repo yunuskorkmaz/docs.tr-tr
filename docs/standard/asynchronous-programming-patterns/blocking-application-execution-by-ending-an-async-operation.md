@@ -13,21 +13,21 @@ ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: db8255e28818cc4def69e6dcd9da06eb7f9251a0
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 782cb614d74b331cef8ab9f28924104ed15a8a38
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087147"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611548"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
 İşlem tamamlanana kadar zaman uyumsuz bir işlemin sonuçları için beklerken, diğer iş yapmak için devam edemiyor uygulamaları engellemeniz gerekir. Uygulamanızın ana iş parçacığı bir zaman uyumsuz bir işlemin tamamlanması beklenirken engellemek için aşağıdaki seçeneklerden birini kullanın:  
   
--   Zaman uyumsuz işlemleri çağrı **son ** * OperationName* yöntemi. Bu yaklaşım, bu konuda gösterilmiştir.  
+-   Zaman uyumsuz işlemleri çağırmak **son**_OperationName_ yöntemi. Bu yaklaşım, bu konuda gösterilmiştir.  
   
 -   Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliği <xref:System.IAsyncResult> zaman uyumsuz işlem tarafından döndürülen **başlamak ** * OperationName* yöntemi. Bu yaklaşım gösteren bir örnek için bkz: [engelleme uygulama yürütme kullanarak bir AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
- Kullanan uygulamalar **son ** * OperationName* yöntemi zaman uyumsuz bir işlem tamamlanana kadar engellemek için genellikle çağıracaktır **başlamak ** * OperationName* yöntemi yapılabilir herhangi bir iş gerçekleştirin işlem ve ardından arama sonuçlarını olmadan **son ** * OperationName*.  
+ Kullanan uygulamalar **son**_OperationName_ bir zaman uyumsuz işlem tamamlanana kadar engelleyin yöntemi genellikle çağıracaktır **başlamak *** OperationName* yöntemi işlemin sonuçlarını gerek kalmadan yapılabilir ve sonra bir iş gerçekleştirmek **son**_OperationName_.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, zaman uyumsuz metotlar kullanma gösterilmektedir <xref:System.Net.Dns> sınıfı, kullanıcı tarafından belirtilen bir bilgisayar için etki alanı adı sistemi bilgileri alınamıyor. Unutmayın `null` (`Nothing` Visual Basic'te) geçirilen <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` ve `stateObject` parametreleri bu bağımsız değişkenler bu yaklaşım kullanırken gerekli olmadığından.  

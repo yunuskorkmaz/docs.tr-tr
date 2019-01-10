@@ -1,17 +1,17 @@
 ---
-title: 'Özel Durumlar: failwith İşlevi (F#)'
-description: Nasıl 'failwith' işlevi bir F# özel durum oluşturur öğrenin.
+title: 'Özel durumlar: Failwith işlevi'
+description: Nasıl 'failwith' işlevi oluşturur öğrenin bir F# özel durum.
 ms.date: 05/16/2016
-ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863435"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610118"
 ---
-# <a name="exceptions-the-failwith-function"></a>Özel Durumlar: failwith İşlevi
+# <a name="exceptions-the-failwith-function"></a>Özel durumlar: Failwith işlevi
 
-`failwith` İşlevi bir F# özel durum oluşturur.
+`failwith` İşlevi oluşturur bir F# özel durum.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -23,7 +23,7 @@ failwith error-message-string
 
 *Hata iletisi dizesi* önceki sözdiziminde bir değişmez değer dize türünde bir değer mi `string`. Bu duruma `Message` özel durumun özelliği.
 
-Tarafından oluşturulan özel durum `failwith` olduğu bir `System.Exception` adına sahip bir başvurudur özel durum `Failure` F# kodu. Aşağıdaki kod kullanışını `failwith` özel durum oluşturabilir.
+Tarafından oluşturulan özel durum `failwith` olduğu bir `System.Exception` adına sahip bir başvurudur özel durum `Failure` içinde F# kod. Aşağıdaki kod kullanışını `failwith` özel durum oluşturabilir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
@@ -31,6 +31,6 @@ Tarafından oluşturulan özel durum `failwith` olduğu bir `System.Exception` a
 
 - [Özel Durum İşleme](index.md)
 - [Özel Durum Türleri](exception-types.md)
-- [Özel durumlar: `try...with` ifadesi](the-try-with-expression.md)
-- [Özel durumlar: `try...finally` ifadesi](the-try-finally-expression.md)
+- [Özel durumlar: `try...with` İfadesi](the-try-with-expression.md)
+- [Özel durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
 - [Özel durumlar: `raise` işlevi](the-raise-function.md)

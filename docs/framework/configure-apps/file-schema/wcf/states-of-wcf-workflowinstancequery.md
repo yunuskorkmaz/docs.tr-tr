@@ -2,12 +2,12 @@
 title: WCF &lt;durumları&gt;, &lt;workflowInstanceQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: a6c54f0903f30b5a7c3147cf4b874516a766c2b8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d67f4143619b72826f8fef4adbf66ff8782e4a34
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151447"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>WCF &lt;durumları&gt;, &lt;workflowInstanceQuery&gt;
 
@@ -25,7 +25,7 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -33,7 +33,7 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -41,7 +41,7 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
 
@@ -90,13 +90,13 @@ Olası durum değerleri aşağıdaki tabloda açıklanan.
 İş akışı örnek düzeyi kayıtları için izleme için aşağıdaki yapılandırma abone `Started` bu sorguyu kullanarak örnek durumu.  
   
 ```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+<workflowInstanceQueries>
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
+</workflowInstanceQueries>
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.  

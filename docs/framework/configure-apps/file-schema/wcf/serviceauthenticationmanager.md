@@ -2,12 +2,12 @@
 title: '&lt;serviceAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 34c50e0e8c259190d3f66aa7ad1369befc629d44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3456ffa952372b014d579b5c420f7c44222fdad5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154091"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145360"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a>&lt;serviceAuthenticationManager&gt;
 Hizmet düzeyinde bir iletim, ileti veya gönderen geçerliliğini kurar ve bir iş akışı yapılandırma öğesi sağlar.  
@@ -27,7 +27,7 @@ Hizmet düzeyinde bir iletim, ileti veya gönderen geçerliliğini kurar ve bir 
       <serviceAuthenticationManager serviceAuthenticationManagerType="String" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  

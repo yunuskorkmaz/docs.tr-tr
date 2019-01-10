@@ -3,13 +3,13 @@ title: Mac üzerinde .NET Core için Önkoşullar
 description: MacOS sürümleri ve geliştirme, dağıtma ve macOS makinelerinde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıklar desteklenmiyor.
 author: guardrex
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: b2ab86b7eb9faeab8d4a4cac92b361f64517f638
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: bc6e0b20c61c474c7069b757528dbc1ea38354e3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145638"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656316"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>MacOS üzerinde .NET Core için Önkoşullar
 
@@ -39,6 +39,16 @@ Bkz: [.NET Core 1.1 desteklenen işletim sistemi sürümleri](https://github.com
 
 Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1.0 indirir](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 Önizleme 1](#tab/netcore30)
+
+.NET core 3.0 Önizleme 1 macOS üzerinde aşağıdaki sürümleri desteklenir:
+
+* macOS 10.12 "Sierra" ve sonraki sürümler
+
+Bkz: [.NET Core 3.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) tam listesi .NET Core 3.0, desteklenen işletim sistemleri, dağıtımlar ve sürümler, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+
+Daha fazla bilgi ve indirme bağlantıları [.NET Core 3.0 indirir](https://www.microsoft.com/net/download/dotnet-core/3.0).
+
 ---
 
 ## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
@@ -48,8 +58,6 @@ Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.
 .NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1) yüklü olan sürüm için konu.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
-**.NET core 1.x**
 
 .NET core 1.x macOS üzerinde çalışırken OpenSSL gerektirir. OpenSSL almak için kolay bir yol kullanmaktır [Homebrew ("brew")](https://brew.sh/) macOS için Paket Yöneticisi. Yükledikten sonra *brew*, OpenSSL Terminal (komut) isteminde aşağıdaki komutları çalıştırarak yükleyin:
 
@@ -62,6 +70,10 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
 .NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [1.0.0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) ve [1.0.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) konuları.
+
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 Önizleme 1](#tab/netcore30)
+
+.NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [sürüm notları](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) yüklü olan sürüm için konu.
 
 ---
 

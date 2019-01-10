@@ -27,7 +27,7 @@ Temel bir anlayış ihtiyacınız [Git ve GitHub.com](https://guides.github.com/
 **1. adım:** Küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
 İçindeki içeriği **docs** klasörü, tablo, içeriği (İçindekiler tablosunda) yansıtılır bölümlere düzenlenir. Konunun TOC'de nerede yer alır tanımlayın. Teklifiniz hakkında geri bildirim alın.
 
-veya
+-veya-
 
 Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih edebilirsiniz. [Projeler .NET topluluğa katkıda bulunanlar için](https://github.com/dotnet/docs/projects/35) birçok topluluğa katkıda bulunanlar için kullanılabilir olan iş öğelerini listeler. İlgi alanlarına ve taahhüt düzeyine bağlı olarak, aşağıdaki kategorilerde sorunlar arasından seçim yapabilirsiniz:
 
@@ -39,7 +39,7 @@ Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih
 
 Ayrıca bakabilirsiniz bizim [açık sorun](https://github.com/dotnet/docs/issues) listelemek ve ilgilendiğiniz olanları üzerinde çalışılacak volunteer. Kullandığımız [yukarı-için-Dallarınızla](https://github.com/dotnet/docs/labels/up-for-grabs) etiketi sorunları katkısı için açık etiketi. 
 
-**2. adım:** Çatal `/dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
+**2. adım:** Çatal `dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
 
 Küçük değişiklikler için GitHub'ın web arabirimi kullanabilirsiniz. Tıklamanız yeterlidir **çatalınızı bu projenin dosyayı düzenleyin** değiştirmek için istediğiniz dosya çubuğunda. Değişiklikleri gönderdiğinizde GitHub yeni bir dal oluşturur.
 
@@ -67,6 +67,8 @@ Uygun Markdown söz dizimini takip ettiğinizden emin olun. Daha fazla bilgi iç
                 portability_report.png
 
 **4. adım:** Bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
+
+Çekme isteğiniz gereken *her zaman* ana dala hedefleyin. Yapmanız gerekenler *hiçbir zaman* Canlı dala hedefleyen bir PR açın.
 
 Her çekme isteği, genellikle aynı anda bir sorun gidermelidir. Çekme isteği, bir veya birden çok dosyalarda değişiklik yapabilir. Farklı dosya çubuğunda birden çok düzeltmesi ele alan ise ayrı bir PR tercih edilir.
 
@@ -99,7 +101,7 @@ Ayrıca, tüm örnekleri altında *çekirdek* ve *standart* klasörleri oluştur
 Yeni içerik belge deposu ekler gibi Biz bu dizinler genişleyebilir. Örneğin, Xamarin dizinleri gibi ekleyeceğiz `xamarin-ios` ve `xamarin-android` dizinleri.
 
 Oluşturduğunuz her tam bir örnek içermesi gereken bir *readme.md* dosya. Bu dosya, örnek (bir veya iki paragraf) kısa bir açıklamasını içermelidir. *Readme.md* okuyucuların ne bunlar Bu örneği araştırarak öğreneceksiniz söyleyecektir. *Readme.md* dosya da içermelidir belgenin canlı bağlantı üzerinde [.NET belgeler sitesinde](https://docs.microsoft.com/dotnet/welcome).
-Burada belirli bir dosya deposu olarak o siteye eşler belirlemek için değiştirme `/docs` ile depo yolu içinde `http://docs.microsoft.com/dotnet/articles`.
+Burada belirli bir dosya deposu olarak o siteye eşler belirlemek için değiştirme `/docs` ile depo yolu içinde `https://docs.microsoft.com/dotnet`.
 
 Konu başlığınız örnek bağlantılarını da içerir. GitHub üzerinde örnek kullanıcının klasörüne doğrudan bağlayın.
 
@@ -138,7 +140,7 @@ Aşağıdaki liste .NET belgelerine katkıda bulunan, dikkat etmeniz gereken baz
 
 ## <a name="contributor-license-agreement"></a>Katkıda bulunan lisans sözleşmesi
 
-Oturum açmanız gerekir [.NET Foundation katılım Lisans Sözleşmesi (CLA)](https://cla.dotnetfoundation.org) Çekme isteğiniz birleştirilmeden önce. Bu, .NET Foundation projeleri için tek seferlik bir gereksinimdir. Daha fazla bilgi edinebilirsiniz [katkı lisans sözleşmeleri'ni (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) wikipedia.
+Oturum açmanız gerekir [.NET Foundation katılım Lisans Sözleşmesi (CLA)](https://cla.dotnetfoundation.org) Çekme isteğiniz birleştirilmeden önce. Bu, .NET Foundation projeleri için tek seferlik bir gereksinimdir. Daha fazla bilgi edinebilirsiniz [katkı lisans sözleşmeleri'ni (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) wikipedia.
 
 Sözleşme: [net-foundation-katkı-lisans-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

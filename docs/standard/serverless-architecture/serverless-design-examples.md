@@ -4,12 +4,12 @@ description: Sunucusuz mimarileri, zamanlama ve olay-tabanlı işleme dosya Teti
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146718"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149683"
 ---
 # <a name="serverless-design-examples"></a>Sunucusuz tasarım örnekleri
 
@@ -65,7 +65,7 @@ Sunucusuz İşlevler, veri işlem hattı kolaylaştırmak için kullanılabilir.
 
 ## <a name="stream-processing"></a>Akış işleme
 
-Genellikle cihazlardan ve sensörlerden işlenmesi gereken veri akışlarını gerçek zamanlı olarak oluşturur. Birçok iletileri ve akışlardan yakalayabilirsiniz teknolojilerinin [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) ve [IOT hub'ı](https://docs.microsoft.com/azure/iot-hub) için [Service Bus](/service-bus). Aktarım bağımsız olarak, gelen veri akışları ve iletileri işlemeyi bir ideal sunucusuz mekanizmadır. Sunucusuz, büyük hacimli verileri talebi karşılamak için hızla ölçeklendirebilirsiniz. Sunucusuz kod, eylem ve analiz için yapılandırılmış bir biçimde çıkış ve verileri ayrıştırmak için iş mantığını uygulayabilirsiniz.
+Genellikle cihazlardan ve sensörlerden işlenmesi gereken veri akışlarını gerçek zamanlı olarak oluşturur. Birçok iletileri ve akışlardan yakalayabilirsiniz teknolojilerinin [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) ve [IOT hub'ı](https://docs.microsoft.com/azure/iot-hub) için [Service Bus](https://docs.microsoft.com/azure/service-bus). Aktarım bağımsız olarak, gelen veri akışları ve iletileri işlemeyi bir ideal sunucusuz mekanizmadır. Sunucusuz, büyük hacimli verileri talebi karşılamak için hızla ölçeklendirebilirsiniz. Sunucusuz kod, eylem ve analiz için yapılandırılmış bir biçimde çıkış ve verileri ayrıştırmak için iş mantığını uygulayabilirsiniz.
 
 ![Sunucusuz bir akış işleme](./media/serverless-stream-processing.png)
 

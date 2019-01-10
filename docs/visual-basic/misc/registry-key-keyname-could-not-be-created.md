@@ -1,17 +1,17 @@
 ---
-title: Kayıt defteri anahtarı &#39; &lt;keyname&gt; &#39; oluşturulamadı
+title: Kayıt defteri anahtarı '&lt;keyname&gt;' oluşturulamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
-ms.openlocfilehash: 691257f76e18fc1fe24584d589e71f99db8d7463
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b6695ed19e161ccfc8da20e33b52f21f824058c1
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207388"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781836"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>Kayıt defteri anahtarı &#39; &lt;keyname&gt; &#39; oluşturulamadı
+# <a name="registry-key-ltkeynamegt-could-not-be-created"></a>Kayıt defteri anahtarı '&lt;keyname&gt;' oluşturulamadı
 Belirtilen kayıt defteri anahtarı, büyük olasılıkla yetersiz güvenlik izinlerinden nedeniyle oluşturulamadı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

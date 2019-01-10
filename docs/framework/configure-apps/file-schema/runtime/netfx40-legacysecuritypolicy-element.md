@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9312d25842ccfcdf84e678d34b9bfde3fe7dd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7045623872364160d76f4bc0c1522b0450a81bd2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753989"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611600"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; öğesi
-Çalışma zamanı eski kod erişim güvenliği (CAS) ilkesi kullanıp kullanmadığını belirtir.  
+Çalışma zamanının eski kod erişimi güvenliği (CAS) ilkesi kullanıp kullanmayacağını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -35,14 +35,14 @@ ms.locfileid: "32753989"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanı eski CAS ilkesini kullanıp kullanmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının eski CAS İlkesi kullanıp kullanmayacağını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Çalışma zamanı eski CAS ilkesini kullanmaz. Bu varsayılandır.|  
-|`true`|Çalışma zamanı eski CAS ilkesini kullanır.|  
+|`false`|Çalışma zamanı, eski CAS ilkesini kullanmaz. Bu varsayılandır.|  
+|`true`|Çalışma zamanı, eski CAS İlkesi kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,26 +55,26 @@ ms.locfileid: "32753989"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 3.5 ve önceki sürümleri, CA ilke her zaman etkilidir. İçinde [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS ilkesini etkinleştirilmesi gerekir.  
+ .NET Framework sürüm 3.5 ve önceki sürümlerinde, CAS ilkesini her zaman etkilidir. İçinde [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS ilkesini etkinleştirilmelidir.  
   
- CA ilke sürümü özeldir. .NET Framework'ün önceki sürümlerde mevcut özel CAS ilkelerini respecified, içinde [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ CAS ilkesini sürümüne özeldir. .NET Framework'ün önceki sürümlerinde bulunmayan özel CA ilkeleri respecified, içinde [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
  Uygulama `<NetFx40_LegacySecurityPolicy>` öğesine bir [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] derleme etkilemez [güvenliği saydam kod](../../../../../docs/framework/misc/security-transparent-code.md); saydamlık kuralları hala geçerlidir.  
   
 > [!IMPORTANT]
->  Uygulama `<NetFx40_LegacySecurityPolicy>` öğesi tarafından oluşturulan yerel görüntü derlemeler için önemli performans yaptırımlarla sonuçlanabilir [yerel Görüntü Oluşturucu (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yüklenmeyen içinde [Genel Derleme Önbelleği ](../../../../../docs/framework/app-domains/gac.md). Öznitelik uygulandığında derlemeleri yerel görüntü olarak yüklemeye bağlanamaması çalışma zamanı tarafından performans düşüşüne neden olur, kendi olan kaynaklanan yüklenen olarak tam zamanında derlemeleri.  
+>  Uygulama `<NetFx40_LegacySecurityPolicy>` öğesi tarafından oluşturulan yerel görüntü derlemeleri için önemli performans yaptırımlarla sonuçlanabilir [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yüklenmeyen içinde [Genel Derleme Önbelleği ](../../../../../docs/framework/app-domains/gac.md). Öznitelik uygulandığında yerel görüntü derlemeleri yüklemek için yükleyememesine çalışma zamanı tarafından performans düşüşüne neden olur, kendi olan kaynaklanan yüklenen olarak tam zamanında derlemeleri.  
   
 > [!NOTE]
->  Daha önceki bir hedef .NET Framework sürümünü belirtirseniz [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Visual Studio projenizi proje ayarları CA ilke, bu sürüm için belirttiğiniz özel tüm CA'lar ilkeleri de dahil olmak üzere etkin olacaktır. Ancak, yeni kullanmanız mümkün olmayacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] türleri ve üyeleri. Kullanarak .NET Framework'ün önceki bir sürümünü belirtebilirsiniz [ \<supportedRuntime > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) başlangıç ayarları şemasında, [uygulama yapılandırma dosyası](../../../../../docs/framework/configure-apps/index.md).  
+>  Daha önceki hedef .NET Framework sürümü belirtirseniz [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Visual Studio projeniz için proje ayarlarında CAS ilkesini, bu sürüm için belirttiğiniz tüm özel CA ilkeler de dahil olmak üzere etkinleştirilir. Ancak, yeni kullanmanız mümkün olmayacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] türler ve üyeler. .NET Framework'ün önceki bir sürümünü kullanarak da belirtebilirsiniz [ \<supportedRuntime > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) başlangıç ayarlarını şemasında, [uygulama yapılandırma dosyası](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
->  Yapılandırma dosyası sözdizimi büyük/küçük harf duyarlıdır. Sözdizimi sözdizimi ve örnek bölümlerde koşuluyla kullanmanız gerekir.  
+>  Yapılandırma dosyası sözdizimi, büyük/küçük harf duyarlıdır. Söz dizimi ve örnek bölümlerinde sağlanan sözdizimini kullanmanız gerekir.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
  Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulama için eski CAS ilkesini etkinleştirmek gösterilmiştir.  
+ Aşağıdaki örnek, bir uygulama için eski CAS ilkesini etkinleştirmek üzere gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -85,5 +85,5 @@ ms.locfileid: "32753989"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,21 +1,21 @@
 ---
-title: Otomatik Genelleştirme (F#)
-description: Birden çok tür mümkün olduğunda çalışmaları için nasıl F# otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir öğrenin.
+title: Otomatik Genelleştirme
+description: Bilgi nasıl F# bağımsız değişkenleri ve işlevleri bir türde birden çok tür mümkün olduğunda çalışmaları için otomatik olarak genelleştirir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855783"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611717"
 ---
 # <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-F# işlevleri ve ifadeleri türlerini değerlendirilecek tür çıkarımı kullanır. Bu konuda, böylece birden çok tür mümkün olduğunda çalıştıkları nasıl F# otomatik olarak bağımsız değişkenleri ve işlevleri türlerini genelleştirir açıklanmaktadır.
+F#tür işlevleri ve ifadeleri türlerini değerlendirilecek çıkarımı kullanır. Bu konu açıklar nasıl F# işlevleri türünü ve bağımsız değişkenler mümkün olduğunda bunlar birden çok türleriyle çalışmak üzere otomatik olarak genelleştirir.
 
 ## <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-Bir işlev üzerinde tür çıkarımı gerçekleştirdiğinde, F# derleyicisi, verilen bir parametre genel olup olmadığını belirler. Derleyici, her parametreyi inceler ve işlev bu parametrenin türünü üzerinde bir bağımlılık olup olmadığını belirler. Kullanmıyorsa, türü genel olarak algılanır.
+F# Derleyici bir işlevi üzerinde tür çıkarımı gerçekleştirdiğinde, verilen bir parametre genel olup olmadığını belirler. Derleyici, her parametreyi inceler ve işlev bu parametrenin türünü üzerinde bir bağımlılık olup olmadığını belirler. Kullanmıyorsa, türü genel olarak algılanır.
 
 Aşağıdaki kod örneği, genel olarak derleyici çıkarsar bir işlev gösterir.
 
@@ -58,7 +58,7 @@ Genellikle, bir yapı genel olmasını istiyoruz, ancak derleyici bunu genelleş
 
 - Aşağıdaki kod örnekleri, bu senaryoların her birini göstermektedir.
 
-1. durum: Bir ifade çok karmaşık. Bu örnekte, listenin `counter` olması amaçlanmıştır `int option ref`, ancak basit bir değişmez değer tanımlı değil.
+1. durum: Çok karmaşık bir ifade. Bu örnekte, listenin `counter` olması amaçlanmıştır `int option ref`, ancak basit bir değişmez değer tanımlı değil.
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-Durum 2: genel bir işlev tanımlamak için bir nongeneralizable yapısı kullanma. İşlev bağımsız değişkenlerinin kısmi uygulaması içerdiğinden bu örnekte, nongeneralizable yapıdır.
+2. durum: Genel bir işlev tanımlamak için bir nongeneralizable yapısı kullanma. İşlev bağımsız değişkenlerinin kısmi uygulaması içerdiğinden bu örnekte, nongeneralizable yapıdır.
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-3. durum: bir ek, kullanılmayan parametre ekleniyor. Bu ifade için genelleştirme kadar basit olmadığı için derleyici değeri kısıtlama hatası verir.
+3. durum: Ek, kullanılmayan bir parametre ekleniyor. Bu ifade için genelleştirme kadar basit olmadığı için derleyici değeri kısıtlama hatası verir.
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-Durum 4: Tür parametreleri ekleme.
+4. durum: Tür parametreleri ekleniyor.
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

@@ -10,7 +10,7 @@ Sorunlar ve bu depolar üçü için görevleri buraya izlenir. Büyük bir toplu
 
 Biz, geliştirmek ve .NET belgeleri tamamlamak yardımcı olmak için katkılar Hoş Geldiniz. Katkıda bulunmak için bkz: [projeleri .NET topluluğa katkıda bulunanlar için](https://github.com/dotnet/docs/projects/35) fikirleri. [Katkıda bulunan Kılavuzu](CONTRIBUTING.md) yordamlarını kullanırız yönergeler içerir. Kontrol [sorunlar listesinde](https://github.com/dotnet/docs/issues) ilginizi çeken bir görev.
 
-Biz, tahmin [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) ve [Unity](http://docs.unity3d.com/Manual/index.html) kullanın Bu belgeleri kazandırır.
+Biz, tahmin [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) ve [Unity](https://docs.unity3d.com/Manual/index.html) kullanın Bu belgeleri kazandırır.
 
 Bu proje topluluğumuza beklenen davranışını açıklamak için katkıda bulunan Covenant tarafından tanımlanan şartları BENİMSEDİ.
 Daha fazla bilgi için [.NET Foundation Kullanım Şartları](https://dotnetfoundation.org/code-of-conduct).

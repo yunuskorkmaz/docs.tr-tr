@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542021"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029846"
 ---
 # <a name="annotations-schema"></a>Ek Açıklamalar Şeması
-Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamalar çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.  
+Bu konuda, kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamaları Framework tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML biçimine iç gösterimden ek verileri serileştirir.  Bu dönüştürme için kullanılan XML biçimi tarafından açıklanan [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD şema.  Şema, uygulamalar arasında ek açıklama veri değişimi için kullanılan uygulama bağımsız XML biçimini tanımlar.  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML biçimine iç gösterimden ek verileri serileştirir.  Bu dönüştürme için kullanılan XML biçimi tarafından açıklanan [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD şeması.  Şema, uygulamalar arasında veri ek açıklama değişimi için kullanılan uygulamadan bağımsız XML biçiminde tanımlar.  
   
  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML şema tanımı iki alt şemadan oluşur  
   
--   Ek Açıklamalar XML Çekirdek Şeması (çekirdek şema).  
+-   Ek Açıklamalar XML Çekirdek Şeması (Core şema).  
   
--   Ek Açıklamalar XML Şeması (temel şema) tabanı.  
+-   Ek Açıklamalar XML Şeması (taban şema) temel.  
   
- Çekirdek Şema, birincil XML yapısını tanımlar. bir <xref:System.Windows.Annotations.Annotation>.  Çekirdek Şeması'nda tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.  Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.  Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".  (İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)  
+ Çekirdek Şeması birincil XML yapısını tanımlayan bir <xref:System.Windows.Annotations.Annotation>.  Çekirdek şemasında tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.  Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.  Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".  (İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)  
   
- Bu konuda açıklanan Taban Şeması uzantıları tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türlerine ilk Windows Presentation Foundation (WPF) sürümüyle dahil.  
+ Bu konuda açıklanan temel şema uzantılarını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türleri ile ilk Windows Presentation Foundation (WPF) sürümü dahildir.  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Ek Açıklamalar XML Çekirdek Şeması  
- Ek Açıklamalar XML Çekirdek Şeması depolamak için kullanılan XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation> nesneleri.  
+ Ek açıklamaları XML Çekirdek şemasını depolamak için kullanılan XML yapısını tanımlayan <xref:System.Windows.Annotations.Annotation> nesneleri.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -181,8 +181,8 @@ Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft
 ```  
   
 <a name="BaseSchema"></a>   
-## <a name="annotations-xml-base-schema"></a>Ek Açıklamalar XML Taban Şeması  
- Taban Şeması Çekirdek şemada – tanımlanan üç soyut öğeler için XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+## <a name="annotations-xml-base-schema"></a>Ek açıklamalar temel XML Şeması  
+ Taban Şeması – Çekirdek şemada tanımlanan üç soyut öğeler için XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -492,8 +492,8 @@ Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft
 ```  
   
 <a name="SampleXML"></a>   
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Örnek ek açıklamalar XmlStreamStore tarafından üretilen XML  
- Aşağıdaki XML ek açıklamalar çıktısını gösterir <xref:System.Windows.Annotations.Storage.XmlStreamStore> ve üç ek açıklama - Vurgu, bir metin yapışkan not ve bir mürekkep çubuğu Not içeren bir örnek dosyası kuruluş.  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Örnek XML ek açıklamaları XmlStreamStore tarafından oluşturulan  
+ Aşağıdaki XML ek açıklamalar çıktısını gösterir <xref:System.Windows.Annotations.Storage.XmlStreamStore> ve üç ek açıklamaları - bir Vurgu, metin yapışkan-not ve bir mürekkep Sopası Not içeren bir örnek dosya organizasyonu.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

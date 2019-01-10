@@ -4,12 +4,12 @@ description: HttpClientFactory oluşturmak için .NET Core 2.1 itibaren kullanı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145117"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030366"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Kullanım HttpClientFactory dayanıklı HTTP isteklerini uygulamak için
 
@@ -21,7 +21,7 @@ ms.locfileid: "53145117"
 
 Bu sınıf atılabilir olsa da, ilk bir sorun kullanmak `using` deyimi değil en iyi seçenek çünkü çıkardığınızda bile `HttpClient` nesne, temel alınan yuva hemen serbest bırakılmaz ve adlı ciddi bir soruna neden olabilecek ' yuvaları Tükenmesi '. Bu sorun hakkında daha fazla bilgi için bkz. [HttpClient yanlış kullanıyorsanız ve bu yazılım destabilizing](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) blog gönderisi.
 
-Bu nedenle, `HttpClient` kez oluşturulacak hedeflenen ve bir uygulamanın ömrü yeniden. Örnekleme bir `HttpClient` her istek ağır yük altında kullanılabilir yuva sayısını harcadıklarını anlamış için sınıf. Sorun sonuçlanır `SocketException` hataları. Bu sorunu çözmek için olası bir yaklaşım oluşturma işlemini dayalı `HttpClient` nesne tekil veya statik bu konuda açıklandığı gibi [HttpClient kullanımı Microsoft makalesi](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
+Bu nedenle, `HttpClient` kez oluşturulacak hedeflenen ve bir uygulamanın ömrü yeniden. Örnekleme bir `HttpClient` her istek ağır yük altında kullanılabilir yuva sayısını harcadıklarını anlamış için sınıf. Sorun sonuçlanır `SocketException` hataları. Bu sorunu çözmek için olası bir yaklaşım oluşturma işlemini dayalı `HttpClient` nesne tekil veya statik bu konuda açıklandığı gibi [HttpClient kullanımı Microsoft makalesi](../../../csharp/tutorials/console-webapiclient.md). 
 
 İkinci bir sorundur ancak `HttpClient` tekil veya statik nesne olarak kullandığınızda, olabilir. Bu durumda, tekli veya statik `HttpClient` DNS değişikliklerinin, bu konuda açıklandığı gibi uymuyor [.NET Core GitHub deposunu, sorunu](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ Türü belirlenmiş istemci sınıflarınızı AddHttpClient() ile yalnızca ekl
 
 ### <a name="httpclient-lifetimes"></a>HttpClient yaşam süresi yok
 
-Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacak bir HttpMessageHandler ** başına türü belirlenmiş istemci adlı. `IHttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
+Aldığınız her seferinde bir `HttpClient` IHttpClientFactory, yeni bir örneğini nesneden bir `HttpClient` döndürülür. Olacaktır bir **HttpMessageHandler** başına türü belirlenmiş istemci adlı. `IHttpClientFactory` kaynak tüketimini azaltmak için fabrika tarafından oluşturulan HttpMessageHandler örnekleri havuzu. HttpMessageHandler örneği havuzundan yeni bir oluştururken yeniden kullanılabilme `HttpClient` yaşam süresi dolmadıysa örneği.
 
 Her işleyicisi genellikle kendi temel alınan HTTP bağlantıları yöneten işleyicileri havuzu tercih edilir; gerekenden daha fazla işleyicileri oluşturma bağlantı gecikmelerine neden olabilir. Bazı işleyiciler da bağlantıları açık süresiz olarak, DNS değişiklikleri tepki gelen, işleyici engelleyebilir tutun.
 

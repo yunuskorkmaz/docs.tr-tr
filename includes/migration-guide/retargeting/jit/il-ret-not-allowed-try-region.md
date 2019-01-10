@@ -6,5 +6,5 @@
 |Öneri|Bir uygulama bir try bölgede ret opcode içeren IL oluşturuyorsa, uygulama .NET Framework 4. 5'i eski JIT kullanın ve bu kesmesinden kaçınılmasını sağlar hedefleyebilir. Alternatif olarak, oluşturulan IL sonra deneyin bölge döndürmek için güncelleştirilebilir.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

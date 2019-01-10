@@ -2,15 +2,15 @@
 title: '&lt;Connectionpoolsettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746803"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149606"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;Connectionpoolsettings&gt;
-İçinde özel bağlama eklendiğinde adlandırılmış kanallar kullanarak ileti aktarılması için bir kanal neden olan bir taşıma tanımlar.  
+Özel bir bağlamaya dahil olduğunda Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.  
   
 \<system.serviceModel>  
 \<bağlamaları >  
@@ -20,22 +20,22 @@ ms.locfileid: "32746803"
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
-<namedPipeTransport channelInitializationTimeout="TimeSpan"   
-                    connectionBufferSize="Integer"   
-                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-                    manualAddressing="Boolean"   
-                    maxBufferPoolSize="Integer"  
-                    maxBufferSize="Integer"  
-                    maxOutputDelay="TimeSpan"  
-                    maxPendingAccepts="Integer"   
-                    maxPendingConnections="Integer"  
-                    maxReceivedMessageSize="Integer"   
-                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">  
-  <connectionPoolSettings groupName="String" 
-                          idleTimeout"TimeSpan"  
-                          maxOutboundConnectionsPerEndpopint="Integer" />  
-</namedPipeTransport>  
+```xml  
+<namedPipeTransport channelInitializationTimeout="TimeSpan"
+                    connectionBufferSize="Integer"
+                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                    manualAddressing="Boolean"
+                    maxBufferPoolSize="Integer"
+                    maxBufferSize="Integer"
+                    maxOutputDelay="TimeSpan"
+                    maxPendingAccepts="Integer"
+                    maxPendingConnections="Integer"
+                    maxReceivedMessageSize="Integer"
+                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</namedPipeTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -49,28 +49,28 @@ Yok.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |ChannelInitializationTimeout|Alır veya ayarlar bir <xref:System.TimeSpan> kesilmeden önce bir kanal başlatma durumu olabilir en uzun süreyi belirler.|  
-|ConnectionBufferSize|Alır veya ayarlar istemci veya hizmet hattan serileştirilmiş iletide öbeğini iletmek için kullanılan arabellek boyutu.|  
-|hostNameComparisonMode|Alır veya ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirten bir değer ayarlar.|  
-|manualAddressing|Alır veya el ile ileti adresleme gerekip gerekmediğini belirten bir değer ayarlar.|  
-|maxBufferPoolSize|Alır veya taşıma tarafından kullanılan tüm arabellek havuzu bayt cinsinden en büyük boyutu ayarlar.|  
-|maxBufferSize|Alır veya ayarlar kullanılacak arabelleğin en büyük boyutu. Akış iletileri için bu değer arabelleğe alınan modunda okuma ileti üstbilgilerini olası en büyük boyutunu en az olmalıdır.|  
-|maxOutputDelay|Alır veya üst aralığı gönderilmeden önce bir ileti veya tam bir ileti öbeğini bellekte arabelleğe alınan kalabileceği süreyi ayarlar.|  
-|maxPendingAccepts|Alır veya bir hizmetin hizmetine gelen bağlantıları işlemek için bir dinleyici bekliyor olabilir kanalları sayısının üst sınırını ayarlar.|  
-|maxPendingConnections|Alır veya gönderme hizmeti üzerinde bekleyen bağlantı sayısının üst sınırını ayarlar.|  
-|maxReceivedMessageSize|Alır ve izin verilen maksimum ileti boyutu alınabileceğini bayt cinsinden ayarlar.|  
-|transferMode|Alır veya iletilerin ara belleğe veya ile bağlantı yönelimli aktarma akışı olup olmadığını belirten bir değer ayarlar.|  
-|[\<Tcptransport >, \<Connectionpoolsettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
+|ConnectionBufferSize|Alır veya ayarlar istemci veya hizmet serileştirilmiş ileti öbeğini iletmek için kullanılan arabellek boyutu.|  
+|hostNameComparisonMode|Alır veya ayarlar üzerinde URI'yi eşleştirirken hizmete erişmek için ana bilgisayar adının kullanılıp kullanılmadığını gösteren bir değer.|  
+|manualAddressing|Alır veya iletinin el ile adresleme gerekli olup olmadığını gösteren bir değer ayarlar.|  
+|maxBufferPoolSize|Alır veya taşıma tarafından kullanılan herhangi bir arabellek havuzu bayt cinsinden en büyük boyutunu ayarlar.|  
+|maxBufferSize|Alır veya kullanılacak arabelleğin en büyük boyutunu ayarlar. Akış iletileri için bu değer, arabelleğe alınmış modda okuma ait ileti üstbilgilerini olası en büyük boyutunu en az olmalıdır.|  
+|MaxOutputDelay|Alır veya gönderilmeden önce ileti veya tam bir ileti bir öbek bellekte arabelleğe alınan kalabileceği süreyi en uzun aralığı ayarlar.|  
+|maxPendingAccepts|Alır veya ayarlar hizmetine gelen bağlantıları işlemek için bir Dinleyicide bekleyen bir hizmetin olabilir kanal sayısı üst sınırı.|  
+|maxPendingConnections|Alır veya ayarlar gönderme hizmetinde bekleyen bağlantıları sayısı.|  
+|maxReceivedMessageSize|Alır ve izin verilen maksimum ileti boyutu, alınan bayt cinsinden ayarlar.|  
+|transferMode|Alır veya iletileri ara belleğe veya akışa ile bağlantı sağlamaya yönelik aktarım gösteren bir değer ayarlar.|  
+|[\<Tcptransport >, \<Connectionpoolsettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
-Bu aktarım "net.pipe://hostname/path" biçiminde URI'ler kullanır. URI bileşenlerle isteğe bağlıdır.  
+Bu aktarım "net.pipe://hostname/path" biçiminin bir URI'leri kullanır. Diğer URI bileşenlerini isteğe bağlıdır.  
   
-`namedPipeTransport` Öğesidir başlangıç noktası için bir özel, bağlama oluşturma adlandırılmış kanallar aktarım protokolünü uygular. Bu aktarım için makine üzerindeki Windows Communication Foundation (WCF) - to - WCF iletişim kullanılır.  
+`namedPipeTransport` Öğesi, başlangıç noktası adlandırılmış Aktarım Protokolü uygulayan özel bağlamayı oluşturmak için. Bu aktarım için makinede Windows Communication Foundation (WCF) - to - WCF iletişim kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
 <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   

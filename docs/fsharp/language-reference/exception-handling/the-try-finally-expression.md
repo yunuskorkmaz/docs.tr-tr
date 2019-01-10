@@ -1,15 +1,15 @@
 ---
-title: 'Özel Durumlar: try...finally İfadesi (F#)'
+title: 'Özel durumlar: Try... finally ifadesi'
 description: Bilgi nasıl F# ' try... finally' ifadesi, bir kod bloğu bir özel durum oluşturursa bile temizleme kodu yürütme olanak tanır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970324"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611626"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>Özel Durumlar: try...finally İfadesi
+# <a name="exceptions-the-tryfinally-expression"></a>Özel durumlar: Try... finally ifadesi
 
 `try...finally` İfade bir kod bloğu bir özel durum oluşturursa bile temizleme kodu yürütme olanak sağlar.
 
@@ -50,4 +50,4 @@ Hesaplama ifadeleri bağlamında, dizi ifadeleri ve zaman uyumsuz iş akışlar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel Durum İşleme](index.md)
-- [Özel durumlar: `try...with` ifadesi](the-try-with-expression.md)
+- [Özel durumlar: `try...with` İfadesi](the-try-with-expression.md)

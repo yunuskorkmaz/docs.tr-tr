@@ -2,18 +2,18 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 0528ae823db500da3c3a1efc6934951c4e41cea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a024ca89bd766681f25b992f1d2c66a92e3b31b7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748024"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150207"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
-Yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
+İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<endpointBehaviors >  
 \<davranışı >  
 \<dataContractSerializer >  
@@ -21,8 +21,8 @@ Yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContrac
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-      maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -32,8 +32,8 @@ Yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContrac
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|ignoreExtensionDataObject|Yüklenmekte olan zaman bitiş noktası tarafından sağlanan verileri yoksayacak şekilde belirten bir Boole değeri serileştirilecek veya serisi.|  
-|MaxItemsInObjectGraph|Tamsayı serileştirmek veya seri durumdan öğe sayısını belirtir.|  
+|IgnoreExtensionDataObject|Bunu edilirken uç noktası tarafından sağlanan veri yoksay belirten bir Boole değeri serileştirilecek veya serisi.|  
+|MaxItemsInObjectGraph|Serileştirmek veya seri durumdan çıkarılacak öğeleri maksimum sayısını belirten bir tamsayı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,13 +42,13 @@ Yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContrac
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışını belirtir.|  
+|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bkz: <xref:System.Runtime.Serialization.DataContractSerializer> bilinen türleri hakkında daha fazla bilgi için.  
   
 > [!CAUTION]
->  `<dataContractSerializer>` Davranışı öğesi (varsa) önce her zaman görünmelidir `<enableWebScript>` davranışı öğesi yapılandırma dosyasında. Aksi takdirde, bunun sonucunda oluşan davranışı tanımlanmamıştır.  
+>  `<dataContractSerializer>` Davranış öğesi (varsa) önce her zaman görünmelidir `<enableWebScript>` yapılandırma dosyasındaki davranış öğesi. Aksi takdirde, sonuçta ortaya çıkan davranış tanımsızdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

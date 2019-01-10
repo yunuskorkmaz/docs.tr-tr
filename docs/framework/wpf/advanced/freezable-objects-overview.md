@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999448"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030379"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:System.Windows.Freezable> uygulama performansını iyileştirmeye yardımcı olabilecek özel özellikleri sağlayan nesne. Freezable nesneleri Fırçalar, kalemler, dönüştürmeleri, geometri ve animasyonları örneklerindendir.  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   İş parçacığı güvenliği: dondurulmuş <xref:System.Windows.Freezable> iş parçacıkları arasında paylaşılabilir.  
   
--   Ayrıntılı değişiklik bildirimi: diğer aksine <xref:System.Windows.DependencyObject>s, Freezable nesneleri sağlar değişiklik bildirimleri alt özellik değerleri değiştiğinde.  
+-   Ayrıntılı değişiklik bildirimi: Diğer aksine <xref:System.Windows.DependencyObject>s, Freezable nesneleri sağlar değişiklik bildirimleri alt özellik değerleri değiştiğinde.  
   
 -   Kolay kopyalama: Freezable sınıfı ayrıntılı kopyaları oluşturan çeşitli yöntemler zaten uygulamıştır.  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Çağrı <xref:System.Windows.Freezable.WritePostscript%2A> bağımlılık özelliği olmayan veri üyelerine yazma yöntemleri çıkmadan önce yöntemi.  
   
- Sınıfınıza olan bağımlılık özelliği veri üyeleri içerip içermediğini <xref:System.Windows.DependencyObject> nesnelerini ayrıca çağırmalısınız <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> yöntemi, değişiklik değerlerine üye ayarlamak bile her zaman `null`.  
+ Sınıfınıza olan bağımlılık özelliği veri üyeleri içerip içermediğini <xref:System.Windows.DependencyObject> nesnelerini ayrıca çağırmalısınız <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> yöntemi, kendi değerlerden birine üye ayarlamak bile her değiştirdiğinizde `null`.  
   
 > [!NOTE]
 >  Her başlamak çok önemli olduğu <xref:System.Windows.Freezable> geçersiz kılmanız taban uygulamasını çağrısıyla yöntemi.  

@@ -4,12 +4,12 @@ description: Mikro hizmet başına veri hakimiyeti mikro kay noktası biridir. H
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144908"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
@@ -37,7 +37,7 @@ Veri depolama için bölümlenmiş, polyglot kalıcı bir mimari, pek çok fayda
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Mikro hizmet ve içerik sınırlanmış deseni arasındaki ilişki
 
-Mikro hizmet kavramını türetildiği [sınırlanmış bağlam (BC) deseni](http://martinfowler.com/bliki/BoundedContext.html) içinde [etki alanı Odaklı Tasarım (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD, bunları birden çok BCs bölme ve sınırlarının hakkında açık büyük modelleri ile ilgilidir. Her BC kendi model ve veritabanı olmalıdır; benzer şekilde, her bir mikro hizmet kendi ilgili verilere sahip. Ayrıca, her BC genellikle kendi bölümüne sahiptir [bulunabilen dil](http://martinfowler.com/bliki/UbiquitousLanguage.html) yazılım geliştiricileri ve etki alanı uzmanları arasındaki iletişimi yardımcı olmak için.
+Mikro hizmet kavramını türetildiği [sınırlanmış bağlam (BC) deseni](https://martinfowler.com/bliki/BoundedContext.html) içinde [etki alanı Odaklı Tasarım (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD, bunları birden çok BCs bölme ve sınırlarının hakkında açık büyük modelleri ile ilgilidir. Her BC kendi model ve veritabanı olmalıdır; benzer şekilde, her bir mikro hizmet kendi ilgili verilere sahip. Ayrıca, her BC genellikle kendi bölümüne sahiptir [bulunabilen dil](https://martinfowler.com/bliki/UbiquitousLanguage.html) yazılım geliştiricileri ve etki alanı uzmanları arasındaki iletişimi yardımcı olmak için.
 
 Bulunabilen dilde Bu terimleri (ağırlıklı olarak etki alanı varlıklarının) farklı sınırlanmış bağlamda farklı adlara sahip olabilir, aynı kimliğe (varlık depodan okumak için kullanılan diğer bir deyişle, benzersiz Tanımlayıcı) bile farklı etki alanı varlıklarının paylaşın. Örneğin, sipariş sınırlanmış bağlam içinde alıcı etki alanı varlığı ile kullanıcı profili sınırlanmış bir bağlamda kullanıcı etki alanı varlığı kimlik paylaşabilir.
 

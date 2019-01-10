@@ -1,17 +1,17 @@
 ---
-title: Sonuçlar (F#)
-description: Hataya dayanıklı kod yazmanıza yardımcı olmak üzere F# 'Sonuç' türünü kullanmayı öğrenin.
+title: Sonuçlar
+description: Nasıl kullanacağınızı öğrenin F# hataya dayanıklı kod yazmanıza yardımcı olmak için 'Result' yazın.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213046"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612718"
 ---
-# <a name="results"></a>Sonuçları
+# <a name="results"></a>Sonuçlar
 
-F# 4.1 ile başlayarak, bir `Result<'T,'TFailure>` kullanılıp kullanılamayacağı hataya dayanıklı kod yazmak için kullanabileceğiniz türü.
+İle başlayarak F# 4.1, var olan bir `Result<'T,'TFailure>` kullanılıp kullanılamayacağı hataya dayanıklı kod yazmak için kullanabileceğiniz türü.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,7 +27,7 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sonuç türü olduğuna dikkat edin bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions), F# 4.1 içinde sunulan başka bir özellik olan.  Yapısal eşitlik semantiği burada geçerli olur.
+Sonuç türü olduğuna dikkat edin bir [ayırt edici birleşim](discriminated-unions.md#struct-discriminated-unions), hangi içinde başka bir özellik sunulmuştur F# 4.1.  Yapısal eşitlik semantiği burada geçerli olur.
 
 `Result` Türü genellikle birli hata genellikle olarak adlandırılan işleme, kullanılan [demiryolu yönelimli programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) içinde F# topluluğu.  Aşağıdaki basit örnekte, bu yaklaşım gösterilmektedir.
 

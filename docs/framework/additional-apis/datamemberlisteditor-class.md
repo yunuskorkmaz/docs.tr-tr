@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 734af2951572d01d78edd44deee7fc5803169c83
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129369"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147700"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor sınıfı
 
@@ -32,7 +32,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor` Sınıfı iç ve kodunuzda doğrudan kullanılacak yüksetlmesi.
+> `DataMemberListEditor` Sınıfı dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
 > 
 > Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
   

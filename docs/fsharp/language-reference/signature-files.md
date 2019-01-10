@@ -1,27 +1,27 @@
 ---
-title: İmza dosyaları (F#)
-description: F# program öğelerine, türleri, ad alanları ve modüller gibi bir dizi ortak imzalarını hakkındaki bilgileri tutmak için F# imza dosyalarını kullanmayı öğrenin.
+title: İmza dosyaları
+description: Nasıl kullanacağınızı öğrenin F# bir dizi ortak imzalarını hakkındaki bilgileri tutmak için imza dosyalarını F# türleri, ad alanları ve modüller gibi öğelerin program.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991239"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613420"
 ---
 # <a name="signatures"></a>İmzalar
 
-Bir imza dosyası türleri, ad alanları ve modüller gibi F# program öğelerini, bir dizi ortak imzalarını hakkında bilgiler içerir. Bu program öğelerini erişilebilirliğini belirtmek için kullanılabilir.
+Bir imza dosyası bir dizi ortak imzalarını hakkında bilgi içeren F# türleri, ad alanları ve modüller gibi öğelerin program. Bu program öğelerini erişilebilirliğini belirtmek için kullanılabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her F# kod dosyası için elinizde bir *imza dosyası*, kod dosyası ancak uzantı .fsi .fs yerine ile aynı ada sahip bir dosya olduğu. İmza dosyaları komut satırından doğrudan kullanıyorsanız, komut satırı derleme da eklenebilir. İmza dosyaları kod dosyaları arasında ayrım yapmak için kod dosyaları olarak da adlandırılır *uygulama dosyaları*. Bir projede, ilişkili kod dosyasına imza dosyası gelmelidir.
+Her F# kod dosyası olabilir bir *imza dosyası*, kod dosyası ancak uzantı .fsi .fs yerine ile aynı ada sahip bir dosya olduğu. İmza dosyaları komut satırından doğrudan kullanıyorsanız, komut satırı derleme da eklenebilir. İmza dosyaları kod dosyaları arasında ayrım yapmak için kod dosyaları olarak da adlandırılır *uygulama dosyaları*. Bir projede, ilişkili kod dosyasına imza dosyası gelmelidir.
 
 Ad alanları, modüller, türler ve üyeler uygulama dosyasında karşılık gelen bir imza dosyası açıklar. Hangi bölümlerinin belirtmek için bir imza dosyası bilgileri kullanın karşılık gelen uygulamasında kod dosyasına uygulama dosya dışındaki kod erişebilir ve hangi bölümlerinin uygulama dosyasına iç. Ad alanları, modülleri ve imza dosyasında bulunan türleri ad alanları, modülleri ve uygulama dosyasında bulunan türleri bir alt kümesi olmalıdır. Bu konunun ilerleyen kısımlarında belirtildiği bazı istisnalar v souboru signatury listede yer almayan bu dil öğeleri uygulama dosyanın özel olarak kabul edilir. Varsayılan erişilebilirlik, herhangi bir imza dosyası proje ya da komut satırı bulunursa kullanılır.
 
 Varsayılan erişilebilirlik hakkında daha fazla bilgi için bkz. [erişim denetimi](access-control.md).
 
-Bir imza dosyası içinde türlerinin tanımını ve her yöntem veya işlev uygulamalarını tekrarlamayın. Bunun yerine, her bir yöntemi ve bir modülde veya ad alanı parça tarafından uygulanan işlevleri tam belirtimini görevi gören işlevi için imza kullanın. Tür imzası için söz dizimi, arabirimleri ve soyut sınıflar, soyut yöntem bildirimleri içinde kullanılan aynıdır ve doğru derlenmiş giriş görüntülediğinde, IntelliSense ve F# yorumlayıcısı fsi.exe tarafından da gösterilmektedir.
+Bir imza dosyası içinde türlerinin tanımını ve her yöntem veya işlev uygulamalarını tekrarlamayın. Bunun yerine, her bir yöntemi ve bir modülde veya ad alanı parça tarafından uygulanan işlevleri tam belirtimini görevi gören işlevi için imza kullanın. Tür imzası için söz dizimi, arabirimleri ve soyut sınıflar, soyut yöntem bildirimleri içinde kullanılan aynıdır ve IntelliSense ve bunun da gösterilir F# doğru görüntülediğinde yorumlayıcı fsi.exe derlenmiş giriş.
 
 Tür imzası bir tür korumalı olup olmadığını belirtmek için yeterli bilgi yok ya da bir arabirim türü olmasına bakılmaksızın, bir öznitelik eklemelisiniz derleyiciye tür yapısını gösterir. Bu amaçla kullandığınız öznitelikler aşağıdaki tabloda açıklanmıştır.
 
@@ -29,6 +29,7 @@ Tür imzası bir tür korumalı olup olmadığını belirtmek için yeterli bilg
 |---------|-----------|
 |`[<Sealed>]`|Soyut üye bir tür için olan veya olmayan genişletilmesi.|
 |`[<Interface>]`|Bir arabirim için bir tür.|
+
 Öznitelikleri imza ve bildirimi uygulama dosyasında arasında tutarlı değilse, derleyici bir hata oluşturur.
 
 Anahtar sözcüğünü kullanın `val` imza için bir değer ya da işlev değer oluşturmak için. Anahtar sözcüğü `type` tür imzası tanıtır.

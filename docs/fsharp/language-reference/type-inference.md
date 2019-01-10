@@ -1,25 +1,25 @@
 ---
-title: Tür Çıkarma (F#)
-description: F# derleyicisi değerleri, değişkenleri, parametreler ve dönüş değerlerinin türleri nasıl çıkarsar öğrenin.
+title: Tür Çıkarma
+description: Bilgi nasıl F# derleyici değerleri, değişkenleri, parametreler ve dönüş değerleri türlerini algılar.
 ms.date: 05/16/2016
-ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865702"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612796"
 ---
 # <a name="type-inference"></a>Tür Çıkarma
 
-Bu konu, F# derleyicisi değerleri, değişkenleri, parametreler ve dönüş değerlerinin türleri nasıl çıkarsar açıklar.
+Bu konu açıklar nasıl F# derleyici değerleri, değişkenleri, parametreler ve dönüş değerleri türlerini algılar.
 
 ## <a name="type-inference-in-general"></a>Genel tür çıkarımı
 
-Tür çıkarımı, ne zaman derleyici türü yaratacağı çıkarılamıyor dışında F# yapılarını türlerini belirtmek gerekmez olur. Açık tür bilgileri atlama F# bir dinamik olarak belirlenmiş dildir veya F# değerleri zayıf olduğu anlamına gelmez. F# derleyici, derleme sırasında her yapı için tam bir tür çıkarır anlamına gelen bir statik olarak belirlenmiş, dilidir. Her yapı türlerini kullanarak derleyicinin için yeterli bilgi değilse açık tür ek açıklamaları yere kod ekleyerek ek tür bilgileri, genellikle sağlamalısınız.
+Türlerini belirtmek gerekmez tür çıkarımı fikirdir F# yapıları hariç, derleyicinin türü yaratacağı çıkarılamıyor. Açık tür bilgileri atlama gelmez, F# dinamik olarak yazılmış bir dildir veya bu değerleri F# zayıf sahipli olan türü belirtilmiş. F#Derleyici, derleme sırasında her yapı için tam bir tür çıkarır anlamına gelen bir statik olarak belirlenmiş, dilidir. Her yapı türlerini kullanarak derleyicinin için yeterli bilgi değilse açık tür ek açıklamaları yere kod ekleyerek ek tür bilgileri, genellikle sağlamalısınız.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Çıkarım parametre ve dönüş türleri
 
-Bir parametre listesinde her parametresinin türünü belirtmeniz gerekmez. Henüz, F# bir statik olarak yazılmış bir dildir ve bu nedenle her değer ve ifade derleme zamanında kesin bir türe sahip. Türlerine her zaman açık belirtmeyin bağlamına dayalı türü derleyicinin çıkarır. Belirtilen tür Aksi durumda değilse, genel olarak algılanır. Kod bir değer tutarsız kullanıyorsa, şekilde olduğunu Hayır tek bir değerin tüm kullanımları derleyici bir hata bildiriyor karşılayan türün gösterilmesi.
+Bir parametre listesinde her parametresinin türünü belirtmeniz gerekmez. Ve henüz F# statik olarak yazılmış bir dildir ve bu nedenle her değer ve ifade derleme zamanında kesin bir türe sahip. Türlerine her zaman açık belirtmeyin bağlamına dayalı türü derleyicinin çıkarır. Belirtilen tür Aksi durumda değilse, genel olarak algılanır. Kod bir değer tutarsız kullanıyorsa, şekilde olduğunu Hayır tek bir değerin tüm kullanımları derleyici bir hata bildiriyor karşılayan türün gösterilmesi.
 
 Bir işlevin dönüş türü işlevdeki son ifadenin türü tarafından belirlenir.
 
@@ -59,7 +59,7 @@ Türün olacak şekilde gösterilmesi
 
 ## <a name="additional-information"></a>Ek Bilgiler
 
-Tür çıkarımı, F# dil belirtiminde daha ayrıntılı açıklanmıştır.
+Tür çıkarımı daha ayrıntılı olarak açıklanan F# dil belirtimi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

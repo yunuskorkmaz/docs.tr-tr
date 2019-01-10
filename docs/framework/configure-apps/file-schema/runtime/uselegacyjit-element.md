@@ -4,16 +4,16 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0ae1a44b41ddcae2149bcf685871a37dd01b06
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746780"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612198"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; öğesi
 
-Ortak dil çalışma zamanı için tam zamanında derleme eski 64-bit JIT Derleyici kullanıp kullanmadığını belirler.  
+Ortak dil çalışma zamanı için tam zamanında derleme eski 64 bit JIT Derleyici kullanıp kullanmadığını belirler.  
   
 \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -25,7 +25,7 @@ Ortak dil çalışma zamanı için tam zamanında derleme eski 64-bit JIT Derley
 <useLegacyJit enabled=0|1 />
 ```
 
-Öğe adı `useLegacyJit` küçük harfe duyarlıdır.
+Öğe adı `useLegacyJit` büyük küçük harfe duyarlıdır.
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
 
@@ -35,14 +35,14 @@ Ortak dil çalışma zamanı için tam zamanında derleme eski 64-bit JIT Derley
   
 | Öznitelik | Açıklama                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
-| `enabled` | Gerekli öznitelik.<br><br>Çalışma zamanı eski 64-bit JIT Derleyici kullanıp kullanmadığını belirtir. |  
+| `enabled` | Gerekli öznitelik.<br><br>Çalışma zamanının eski 64 bit JIT Derleyici kullanıp kullanmayacağını belirtir. |  
   
-### <a name="enabled-attribute"></a>Etkin özniteliği  
+### <a name="enabled-attribute"></a>Etkin öznitelik  
   
 | Değer | Açıklama                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | Ortak dil çalışma zamanı .NET Framework 4.6 ve sonraki sürümlerinde bulunan yeni 64-bit JIT Derleyici kullanır. |  
-| 1.     | Ortak dil çalışma zamanı eski 64-bit JIT Derleyici kullanır.                                                     |  
+| 0     | Ortak dil çalışma zamanı, .NET Framework 4.6 ve sonraki sürümlerinde eklenen yeni 64 bit JIT Derleyici kullanır. |  
+| 1.     | Ortak dil çalışma zamanı, eski 64 bit JIT Derleyici kullanır.                                                     |  
   
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -57,32 +57,32 @@ Yok.
   
 ## <a name="remarks"></a>Açıklamalar  
 
-.NET Framework 4.6 ile başlayarak, ortak dil çalışma zamanı yeni bir 64 bit derleyici Just-In-Time (JIT) derleme için varsayılan olarak kullanır. Bazı durumlarda, bu davranışı fark JIT derlenmiş önceki sürümü 64-bit JIT Derleyici tarafından uygulama kodu neden olabilir. Ayarlayarak `enabled` özniteliği `<useLegacyJit>` öğesine `1`, yeni 64-bit JIT Derleyici devre dışı bırakabilir ve bunun yerine eski 64-bit JIT Derleyici kullanarak uygulamanızı derleyin.  
+.NET Framework 4. 6 ile başlayarak, ortak dil çalışma zamanı yeni bir 64 bit Derleyici tam zamanında (JIT) derleme için varsayılan olarak kullanır. Bazı durumlarda, bu bir davranışı fark JIT olarak derlenmiş önceki sürümü 64 bit JIT Derleyici tarafından uygulama kodu neden olabilir. Ayarlayarak `enabled` özniteliği `<useLegacyJit>` öğesine `1`, yeni 64 bit JIT Derleyici devre dışı bırakabilir ve bunun yerine eski 64 bit JIT Derleyici kullanarak uygulamanızı derleyin.  
   
 > [!NOTE]
-> `<useLegacyJit>` Öğesi yalnızca 64-bit JIT derleme etkiler. 32-bit JIT derleyicisi ile derleme etkilenmez.  
+> `<useLegacyJit>` Öğesi, yalnızca 64 bit JIT derlemesi etkiler. 32-bit JIT Derleyici ile derleme etkilenmez.  
   
-Bir yapılandırma dosyası ayarı kullanmak yerine, diğer iki yolla eski 64-bit JIT Derleyici etkinleştirebilirsiniz:  
+Yapılandırma dosyası ayarı kullanmak yerine, eski 64 bit JIT Derleyici iki yolla etkinleştirebilirsiniz:  
   
-- Bir ortam değişkeni ayarlama
+- Bir ortam değişkenini ayarlayarak
 
-  Ayarlama `COMPLUS_useLegacyJit` ya da ortam değişkeni `0` (yeni 64-bit JIT Derleyici kullanın) veya `1` (eski 64-bit JIT Derleyici kullanın):
+  Ayarlama `COMPLUS_useLegacyJit` ortam değişkenine ya da `0` (yeni 64 bit JIT Derleyici kullanın) veya `1` (eski 64 bit JIT Derleyici kullanın):
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  Ortam değişkeni sahip *genel kapsam*, etkilediği anlamına tüm uygulamaları makinede çalıştırın. Ayarlama, bu uygulama yapılandırma dosyası ayarı tarafından geçersiz kılınabilir durumunda. Ortam değişkeni adı büyük küçük harfe duyarlı değil.
+  Ortam değişkenini sahip *genel kapsam*, etkilediği anlamına tüm uygulamalar makine üzerinde çalıştırın. Ayarlanırsa, bu uygulama yapılandırma dosyası ayarı tarafından geçersiz kılınabilip kılınamadığını. Ortam değişkeni adı büyük küçük harfe duyarlı değil.
   
 - Bir kayıt defteri anahtarı ekleme
 
-  Eski 64-bit JIT Derleyici ekleyerek etkinleştirebilirsiniz bir `REG_DWORD` değeri ya da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` veya `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` kayıt defterinde anahtar. Adlı değer `useLegacyJit`. Değer 0 ise, yeni derleyici kullanılır. Değer 1 ise, eski 64-bit JIT Derleyici etkinleştirilir. Kayıt defteri değerinin adını büyük küçük harfe duyarlı değil.
+  Eski 64 bit JIT Derleyici ekleyerek etkinleştirebilirsiniz bir `REG_DWORD` ya da değer `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` veya `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` kayıt defteri anahtarı. Değer adlı `useLegacyJit`. Değer 0 ise, yeni derleyici kullanılır. Değer 1 ise, eski 64 bit JIT Derleyici etkinleştirilir. Kayıt defteri değeri adı büyük küçük harfe duyarlı değil.
   
-  Değer ekleme `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` anahtar makine üzerinde çalışan tüm uygulamaları etkiler. Değer ekleme `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` anahtar geçerli kullanıcı tarafından çalıştırılan tüm uygulamaları etkiler. Bir makine birden çok kullanıcı hesabı ile yapılandırılmışsa, değer de diğer kullanıcılar için kayıt defteri anahtarları için eklenene kadar yalnızca geçerli kullanıcı tarafından çalıştırılan uygulamalar etkilenmez. Ekleme `<useLegacyJit>` öğesi bir yapılandırma dosyasına mevcut değilse kayıt defteri ayarları geçersiz kılar.  
+  Değerine eklemek `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` anahtarı makine üzerinde çalışan tüm uygulamaları etkiler. Değerine eklemek `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` anahtar geçerli kullanıcı tarafından çalıştırılan tüm uygulamaları etkiler. Bir makine ile birden çok kullanıcı hesabı yapılandırdıysanız, değeri de diğer kullanıcılar için kayıt defteri anahtarları için eklenene kadar yalnızca geçerli kullanıcı tarafından çalıştırılan uygulamaların etkilenir. Ekleme `<useLegacyJit>` öğesini bir yapılandırma dosyası için mevcut iseler kayıt defteri ayarları geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki yapılandırma dosyası derleme yeni 64-bit JIT derleyicisi ile devre dışı bırakır ve bunun yerine eski 64-bit JIT Derleyici kullanır.  
+Aşağıdaki yapılandırma dosyası, yeni 64 bit JIT Derleyici ile derleme devre dışı bırakır ve bunun yerine, eski 64 bit JIT Derleyici kullanır.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,6 +95,6 @@ Aşağıdaki yapılandırma dosyası derleme yeni 64-bit JIT derleyicisi ile dev
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[\<çalışma zamanı > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-[\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
-[Azaltma: Yeni 64-bit JIT derleme](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<çalışma zamanı > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
+- [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [Azaltma: Yeni 64 bit JIT Derleyici](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

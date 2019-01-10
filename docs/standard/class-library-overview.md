@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185855"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029885"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -84,17 +84,17 @@ ms.locfileid: "50185855"
 
  <xref:System> Kök ad alanı .NET içinde temel türler için ad alanıdır. Bu ad alanı, tüm uygulamalar tarafından kullanılan temel veri türlerini temsil eden sınıfları içerir: <xref:System.Object> (devralma hiyerarşisinin kökü) <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>ve benzeri. Bu tür pek çok programlama dilini kullanan ilkel veri türleri karşılık gelir. .NET Framework türleri kullanarak kod yazdığınızda, dilinizle ilgili anahtar sözcüğü bir .NET Framework temel veri türü beklenen zaman kullanabilirsiniz.  
   
- Aşağıdaki tablo .NET sağlar, kısaca her türünü tanımlar ve Visual Basic, C#, C++ ve F # içinde karşılık gelen tür gösterir, temel türleri listeler.  
+ Temel türler .NET sağlar, kısaca her türünü tanımlar ve karşılık gelen türü Visual Basic'te gösterir, aşağıdaki tabloda C#, C++ ve F#.  
   
-|Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F # veri türü|  
+|Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F#veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Tamsayı|<xref:System.Byte>|8 bitlik işaretsiz tamsayı.|**Bayt**|**byte**|**İmzasız char**|**byte**|  
-||<xref:System.SByte>|Bir 8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değil.|**SByte**|**sbyte**|**char**<br /> veya<br /> **İmzalı** **char**|**sbyte**|  
+||<xref:System.SByte>|Bir 8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değil.|**SByte**|**sbyte**|**char**<br /> -veya-<br /> **İmzalı** **char**|**sbyte**|  
 ||<xref:System.Int16>|Bir 16 bitlik işaretli tamsayı.|**kısa**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32-bit işaretli tamsayı.|**tamsayı**|**int**|**int**<br /><br /> veya<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32-bit işaretli tamsayı.|**tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-bit imzalı bir tamsayı.|**uzun**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Bir 16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değil.|**UShort**|**ushort**|**İmzasız short**|**uint16**|  
-||<xref:System.UInt32>|32-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**uint**|**işaretsiz int**<br /> veya<br /> **İmzasız long**|**uint32**|  
+||<xref:System.UInt32>|32-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**uint**|**işaretsiz int**<br /> -veya-<br /> **İmzasız long**|**uint32**|  
 ||<xref:System.UInt64>|64-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**ULong**|**ulong**|**imzalanmamış __int64**|**uint64**|  
 |Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**</br> veya</br>**single**|  
 ||<xref:System.Double>|Bir çift duyarlıklı (64-bit) kayan noktalı sayı.|**çift**|**double**|**double**|**float**</br> veya </br> **double**|  
@@ -113,5 +113,5 @@ ms.locfileid: "50185855"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortak Tür Sistemi](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API tarayıcısı](https://docs.microsoft.com/dotnet/api)  
+- [.NET API tarayıcısı](../../api/index.md)  
 - [Genel bakış](../../docs/framework/get-started/overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453404"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656368"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Öznitelikli Programlama Modeline Genel Bakış (MEF)
 İçinde Yönetilen Genişletilebilirlik Çerçevesi (MEF), bir *programlama modeli* MEF çalıştığı kavramsal nesne kümesini tanımlayan belirli bir yöntemdir. Kavramsal bu nesneler, bölümleri, içeri aktarmalar ve dışarı aktarmaları içerir. MEF bu nesneleri kullanan, ancak nasıl temsil belirtmiyor. Bu nedenle, çok çeşitli programlama modellerini programlama modelleri de dahil olmak üzere özelleştirilmiş mümkün.  
@@ -548,7 +548,7 @@ Public Class User
         logger = Nothing  
   
         For Each Plugin As Lazy(Of IPlugin, IPluginMetadata) In plugins  
-            If (Plugin.Metadata.Name = "Logger") Then  
+            If Plugin.Metadata.Name = "Logger" Then  
                 logger = Plugin.Value  
             End If  
         Next  
@@ -564,13 +564,14 @@ public class User
     [ImportMany]  
     public IEnumerable<Lazy<IPlugin, IPluginMetadata>> plugins;  
   
-    public IPlugin InstantiateLogger ()  
+    public IPlugin InstantiateLogger()  
     {  
         IPlugin logger = null;  
   
         foreach (Lazy<IPlugin, IPluginMetadata> plugin in plugins)  
         {  
-            if (plugin.Metadata.Name = "Logger") logger = plugin.Value;  
+            if (plugin.Metadata.Name == "Logger")
+                logger = plugin.Value;  
         }  
         return logger;  
     }  
@@ -957,5 +958,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` adlı bir yöntem içerir `OnImportsSatisfied`. Bu yöntem, kapsayıcının oluşturma tamamlandı ve parça içeri aktarmalar kullanım için hazır olduğunuzda arabirimi uygulayan herhangi bir bölümü şirket tarafından çağrılır. Bölümleri aktarımlarının diğer bölümlerini doldurmak için bileşim motoru tarafından oluşturulur. Imports bölümünün ayarlamadan önce kullanır veya bu değerleri kullanarak önkoşul olarak belirtilmedi sürece bölümü oluşturucuda içeri aktarılan değerlerini işleyen başlatma gerçekleştirilemiyor `ImportingConstructor` özniteliği. Bu genellikle tercih edilen yöntemdir, ancak bazı durumlarda, oluşturucu ekleme kullanılamayabilir. Bu gibi durumlarda, başlatma gerçekleştirilebilir `OnImportsSatisfied`, ve bölümü uygulamalıdır `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kanal 9 Video: Managed Extensibility Framework, uygulamalarınızla açın](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Kanal 9 Video: Yönetilen Genişletilebilirlik Çerçevesi ile uygulamalarınızı açın](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
  [Kanal 9 Video: Yönetilen Genişletilebilirlik Çerçevesi (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

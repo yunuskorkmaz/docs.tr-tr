@@ -1,13 +1,13 @@
 ---
-title: Oluşturucular (F#)
-description: Tanımlamak ve oluşturucular F# oluşturup sınıfı ve yapı nesneleri için kullanma hakkında bilgi edinin.
+title: Oluşturucular
+description: Oluşturucularda tanımlanacağını ve kullanılacağını öğrenmek F# oluşturup sınıfı ve yapı nesneleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45743923"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612081"
 ---
 # <a name="constructors"></a>Oluşturucular
 
@@ -42,7 +42,7 @@ Ayrıca, yapıları kullanılarak oluşturulan alanlar genellikle sahip `val` an
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-Daha fazla bilgi için [açık alanlar: `val` anahtar sözcüğü](explicit-fields-the-val-keyword.md).
+Daha fazla bilgi için [açık alanlar: `val` Anahtar sözcüğü](explicit-fields-the-val-keyword.md).
 
 ## <a name="executing-side-effects-in-constructors"></a>Oluşturucularda yan etkileri yürütülüyor
 

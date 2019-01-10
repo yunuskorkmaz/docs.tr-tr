@@ -6,22 +6,22 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 825d7d950726c4f416624653704a51fb405325e3
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "33572001"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53765222"
 ---
 # <a name="get-started"></a>Başlarken
 
-. NET'i kullanmaya başlamak için çeşitli yollarla vardır.  .NET büyük ölçekli bir platform olduğundan, bu belgede nasıl farklı açısından her .NET ile başlangıç yapabileceğinizi gösteren birden çok makaleler vardır.
+. NET'i kullanmaya başlamak için çeşitli yollarla vardır. .NET büyük ölçekli bir platform olduğundan, bu belgede nasıl farklı açısından her .NET ile başlangıç yapabileceğinizi gösteren birden çok makaleler vardır.
 
 ## <a name="get-started-using-net-languages"></a>.NET dilleri kullanmaya başlama
 
 * [C# kullanmaya başlama](../csharp/getting-started/index.md) makaleleri ve [C# Eğitmenleri](../csharp/tutorials/index.md) bir C# dilinde kullanmaya başlamak için çeşitli yollarla sağlamak-merkezli yolu.
 
-* [F # Getting Started](../fsharp/tutorials/getting-started/index.md) öğreticiler sağlamak üzere kullanabileceğiniz F # başlıca üç yolu: Visual Studio, Visual Studio Code veya komut satırı araçları.
+* [ F# Başlarken](../fsharp/tutorials/getting-started/index.md) öğreticiler sağlamak üzere kullanabileceğiniz üç birincil yolu F#: Visual Studio, Visual Studio Code veya komut satırı araçları.
 
 * [Visual Basic Başlarken](../visual-basic/getting-started/index.md) makaleler, Visual Basic, Visual Studio'da kullanmak için Kılavuzlar sağlar.
 

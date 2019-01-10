@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509489"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611405"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; öğesi
 Uzak kaynaklardan yüklenen derlemeler .NET Framework 4 ve daha sonra tam güven izni olup olmadığını belirtir.
   
 > [!NOTE]
->  Bir hata iletisi Visual Studio projesi hata listesi veya bir yapı hatası nedeniyle bu konuya yönlendirildiniz olup [nasıl yapılır: bir bütünleştirilmiş kod Web'den Visual Studio'da kullanmak](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Bir hata iletisi Visual Studio projesi hata listesi veya bir yapı hatası nedeniyle bu konuya yönlendirildiniz olup [nasıl yapılır: Visual Studio'da bir bütünleştirilmiş kod Web'den kullanmak](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Derlemeyi yüklemek ve kendi kod yürütmek için aşağıdakilerden birini yapmanız gerekir:
 
-- Açıkça bir korumalı alan için derleme oluşturma (bkz [nasıl yapılır: çalıştırma kısmen güvenilen kodda bir korumalı alan](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Açıkça bir korumalı alan için derleme oluşturma (bkz [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Derlemenin kod tam güvende çalıştırma. Yapılandırarak bunu `<loadFromRemoteSources>` öğesi. .NET Framework'ün önceki sürümlerindeki kısmi güvende çalışan derlemeler artık .NET Framework 4 ve sonraki sürümlerde tam güven içinde çalıştığını belirtmenize olanak tanır.
 
@@ -117,8 +117,8 @@ Aşağıdaki örnek, uzak kaynaklardan yüklenen derlemeleri tam güven vermek g
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[CAS ilkesini daha örtük kullanır: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[Nasıl yapılır: korumalı alanda kısmen güvenilen kodu çalıştırma](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [CAS ilkesini daha örtük kullanır: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

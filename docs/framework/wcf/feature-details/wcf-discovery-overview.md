@@ -2,18 +2,18 @@
 title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494258"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084946"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve Web Hizmetleri için WS bulma protokolünü kullanarak bulma için birleşik bir programlama modeli sağlar. Bu API'leri, kendileri ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetleri sağlar. Bir hizmet bulunabilirlik yapıldıktan sonra hizmet Duyurunun ileti gönderme yanı sıra dinler ve keşif istekleri'özelliğine sahiptir. Bulunabilirlik Hizmetleri, ağ üzerinde kendi varış duyurmaktan Karışılama iletileri ve kendi kalkış ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşme türü, anahtar sözcükleri ve ağ üzerinde kapsamı gibi belirli ölçütleri içeren istek. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleşen olup olmadığını belirler. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` istemcisine hizmetiyle bağlantı kurmak gereken bilgileri ile ileti. İstemciler ayrıca gönderebilir `Resolve` kendi uç nokta adresi değişmiş olan hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek istekleri bir `ResolveMatch` istemcisine ileti.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Geçici ve yönetilen modları  
- Bulma API iki farklı modunu destekler: yönetilen ve geçici. Yönetilen modda kullanılabilir hizmetleri hakkında bilgileri tutan keşif proxy'si olarak adlandırılan bir merkezi sunucu yok. Keşif proxy'si çeşitli şekillerde hizmetlerimizle ilgili bilgi doldurulabilir. Örneğin, hizmetleri keşif proxy'si kadar başlangıç sırasında duyuru iletileri gönderebilir veya bir veritabanını veya yapılandırma dosyasını hangi hizmetlerin kullanılabildiğini belirlemenize proxy veri okuyabilirsiniz. Keşif proxy'si nasıl doldurulur tamamen geliştiricisi kadar kadar. İstemcilerin kullanılabilir hizmetleri hakkında bilgi almak için keşif proxy'si kullanın. Bir istemci arandığında bir hizmet için gönderen bir `Probe` bulma proxy ve proxy ileti bilir hakkında hizmetlerinden herhangi birinin istemci arıyor hizmet eşleşip eşleşmediğini belirler. Keşif proxy gönderir eşleşme varsa bir `ProbeMatch` istemcisine geri yanıt. İstemci sonra proxy sunucudan döndürülen hizmet bilgilerini kullanarak doğrudan hizmet başvurabilirsiniz. Anahtar yönetilen modu arkasındaki bir yetkilisi, Keşif proxy'si tek noktaya yayın şekilde bulma isteği gönderilir ilkesidir. .NET Framework kendi proxy oluşturmanıza olanak tanıyan anahtar bileşenleri içerir. Proxy, istemciler ve hizmetler tarafından birden çok yöntem bulabilirsiniz:  
+ Bulma APİ'si, iki farklı modunu destekler: Yönetilen ve geçici. Yönetilen modda kullanılabilir hizmetleri hakkında bilgileri tutan keşif proxy'si olarak adlandırılan bir merkezi sunucu yok. Keşif proxy'si çeşitli şekillerde hizmetlerimizle ilgili bilgi doldurulabilir. Örneğin, hizmetleri keşif proxy'si kadar başlangıç sırasında duyuru iletileri gönderebilir veya bir veritabanını veya yapılandırma dosyasını hangi hizmetlerin kullanılabildiğini belirlemenize proxy veri okuyabilirsiniz. Keşif proxy'si nasıl doldurulur tamamen geliştiricisi kadar kadar. İstemcilerin kullanılabilir hizmetleri hakkında bilgi almak için keşif proxy'si kullanın. Bir istemci arandığında bir hizmet için gönderen bir `Probe` bulma proxy ve proxy ileti bilir hakkında hizmetlerinden herhangi birinin istemci arıyor hizmet eşleşip eşleşmediğini belirler. Keşif proxy gönderir eşleşme varsa bir `ProbeMatch` istemcisine geri yanıt. İstemci sonra proxy sunucudan döndürülen hizmet bilgilerini kullanarak doğrudan hizmet başvurabilirsiniz. Anahtar yönetilen modu arkasındaki bir yetkilisi, Keşif proxy'si tek noktaya yayın şekilde bulma isteği gönderilir ilkesidir. .NET Framework kendi proxy oluşturmanıza olanak tanıyan anahtar bileşenleri içerir. Proxy, istemciler ve hizmetler tarafından birden çok yöntem bulabilirsiniz:  
   
 -   Proxy geçici iletilere yanıt verebilir.  
   
@@ -74,7 +74,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
     // ** DISCOVERY ** //
     // Make the service discoverable by adding the discovery behavior
     ServiceDiscoveryBehavior discoveryBehavior = new ServiceDiscoveryBehavior();
-    serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
+    serviceHost.Description.Behaviors.Add(discoveryBehavior);
 
     // Send announcements on UDP multicast transport
     discoveryBehavior.AnnouncementEndpoints.Add(
@@ -155,7 +155,7 @@ class Client
   
 2.  Hizmet adına iletişim kurmak için keşif proxy'si kullanın  
   
- Windows Server AppFabric iletileri almadan önce başlatılması için bir hizmet sağlayacak bir otomatik başlatma özelliği vardır. Bu otomatik başlatma ile ayarlayın, bir IIS / WAS barındırılan hizmeti bulunabilir olması için yapılandırılabilir. Otomatik başlatma özelliği bakın hakkında daha fazla bilgi için [Windows Server AppFabric otomatik başlatma özelliği](https://go.microsoft.com/fwlink/?LinkId=205545). Otomatik başlatma özelliği etkinleştirme yanı sıra, hizmet bulma için yapılandırmanız gerekir. Daha fazla bilgi için [nasıl yapılır: program aracılığıyla ekleme bulunabilirliği bir WCF hizmeti ve istemci](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma dosyasındaki yapılandırma bulma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric iletileri almadan önce başlatılması için bir hizmet sağlayacak bir otomatik başlatma özelliği vardır. Bu otomatik başlatma ile ayarlayın, bir IIS / WAS barındırılan hizmeti bulunabilir olması için yapılandırılabilir. Otomatik başlatma özelliği bakın hakkında daha fazla bilgi için [Windows Server AppFabric otomatik başlatma özelliği](https://go.microsoft.com/fwlink/?LinkId=205545). Otomatik başlatma özelliği etkinleştirme yanı sıra, hizmet bulma için yapılandırmanız gerekir. Daha fazla bilgi için [nasıl yapılır: Bir WCF hizmeti ve istemci programlı bir şekilde Keşfedilebilirlik ekleme](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma dosyasındaki bir keşfi yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Keşif proxy'si hizmeti çalışmadığı zaman WCF hizmeti adına iletişim için kullanılabilir. Proxy için yoklama dinleme veya iletileri çözmek ve istemci taleplerine yanıt. İstemci, sonra iletileri doğrudan hizmetine gönderebilir. İstemci hizmete bir ileti gönderdiğinde iletiye yanıt vermek için örneği oluşturulur. Keşif proxy bkz uygulama hakkında daha fazla bilgi için [keşif proxy'si ekleme](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

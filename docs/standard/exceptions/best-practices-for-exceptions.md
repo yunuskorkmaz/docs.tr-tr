@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149594"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030431"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
@@ -24,7 +24,7 @@ ms.locfileid: "53149594"
 
 Kullanım `try` / `catch` etrafında büyük olasılıkla bir özel durum oluşturabilir kod blokları ***ve*** kodunuzu bu özel durumdan kurtarabilirsiniz. İçinde `catch` engeller, her zaman en çok türetilen sipariş durumlardan az türetilmiş için. Tüm özel durumları türetilmesi <xref:System.Exception>. Daha fazla türetilmiş özel durumları temel özel durum sınıfı için bir catch yan tümcesi öncesinde bir catch yan tümcesi tarafından işlenmesini değil. Kodunuz bir özel durumdan kurtarılamazsa, o özel durumu hiçbir öğeyi yakalamayın. Daha fazla çağrı yığınına mümkünse kurtarmak için yöntemleri sağlar.
 
-Temiz ile ayrılan kaynakları `using` deyimleri veya `finally` engeller. Tercih ettiğiniz `using` özel durumlar oluşturulduğunda otomatik olarak kaynakları temizlemek için deyimleri. Kullanım `finally` uygulamayıp kaynakları temizlemek için blokları <xref:System.IDisposable>. Kod bir `finally` claus bile özel durumlar oluşturulduğunda neredeyse her zaman yürütülür.
+Temiz ile ayrılan kaynakları `using` deyimleri veya `finally` engeller. Tercih ettiğiniz `using` özel durumlar oluşturulduğunda otomatik olarak kaynakları temizlemek için deyimleri. Kullanım `finally` uygulamayıp kaynakları temizlemek için blokları <xref:System.IDisposable>. Kod bir `finally` yan tümcesi bile özel durumlar oluşturulduğunda neredeyse her zaman yürütülür.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Genel koşullar, özel durumları atma olmadan işleme
 

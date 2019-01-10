@@ -1,13 +1,13 @@
 ---
-title: Etkin Desenler (F#)
-description: Etkin desenler, F# programlama dilinin girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin.
+title: Etkin Desenler
+description: Etkin desenler girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838318"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612848"
 ---
 # <a name="active-patterns"></a>Etkin Desenler
 
@@ -90,7 +90,7 @@ Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 1

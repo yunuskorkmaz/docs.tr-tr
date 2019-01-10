@@ -1,5 +1,5 @@
 ---
-title: Ne yazık ki ki&#39;bu Visual Basic hatasıyla ilgili ayrıntı yok
+title: Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,14 +3044,14 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192791"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781745"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki ki&#39;bu Visual Basic hatasıyla ilgili ayrıntı yok
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
   
  [Visual Basic dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  

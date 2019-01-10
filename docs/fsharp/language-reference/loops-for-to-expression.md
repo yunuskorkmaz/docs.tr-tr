@@ -1,13 +1,13 @@
 ---
-title: 'Döngüler: for...to İfadesi (F#)'
+title: 'Döngüler: for...to İfadesi'
 description: Bkz. nasıl F# for... ifade bir döngüde bir dizi bir döngü değişkeninin değerleri üzerinden yinelemek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800475"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612328"
 ---
 # <a name="loops-forto-expression"></a>Döngüler: for...to İfadesi
 
@@ -39,5 +39,5 @@ Teknik olarak bir ifade rağmen `for...to` daha geleneksel bir kesinlik temelli 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Döngüler: `for...in` ifadesi](loops-for-in-expression.md)
-- [Döngüler: `while...do` ifadesi](loops-while-do-expression.md)
+- [Döngüler: `for...in` İfade](loops-for-in-expression.md)
+- [Döngüler: `while...do` İfade](loops-while-do-expression.md)

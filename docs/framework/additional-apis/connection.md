@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349639"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146543"
 ---
 # <a name="connection-class"></a>Bağlantı sınıfı
 
-`Connection` Sınıfı ayrıştırıyor sunucu yanıtlarının, sıra isteklerini ve ardışık düzen isteği.
+`Connection` Sınıfı ayrıştırıyor sunucu yanıtları, sıra isteklerini ve işlem hattı istekleri.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection` Sınıfı, iç ve kodunuzda doğrudan kullanılmak üzere yüksetlmesi.
+> `Connection` Sınıfı dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
 > 
-> Microsoft hiçbir koşulda bir üretim uygulamasında bu sınıf kullanımını desteklemez.
+> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Namespace:** <xref:System.Net>
 
-**Derleme:** sisteminde (System.dll)
+**Derleme:** Sistemde (System.dll)
 
 **.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.

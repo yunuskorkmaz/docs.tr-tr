@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863632"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610684"
 ---
 # <a name="ltruntimegt-element"></a>&lt;çalışma zamanı&gt; öğesi
 Uygulamaları yapılandırmak için ortak dil çalışma zamanı tarafından kullanılan bilgileri sağlar.  
@@ -92,5 +92,5 @@ Uygulamaları yapılandırmak için ortak dil çalışma zamanı tarafından kul
  Öğeleri [ \<çalışma zamanı >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümü salt okunur otomatik olarak uygulama başlangıcında ortak dil çalışma zamanı tarafından. Varsayılan olmayan uygulama etki alanı için yapılandırma dosyası adının sağlanarak de tanımlayabilirsiniz <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> özelliği; uygulama etki alanı zaman yüklenir ayarlarına otomatik olarak okunur. Şimdiye kadar doğrudan ayarları okumak için bir gereksinim nadiren de olsa olmalıdır [ \<çalışma zamanı >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne uygulamanızın yapılandırma dosyasında.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

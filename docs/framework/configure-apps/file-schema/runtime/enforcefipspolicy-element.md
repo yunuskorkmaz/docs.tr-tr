@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9040bf2548964cf6df5f4fd87ee9f6d979c7df1e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746221"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612016"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;Enforcefıpspolicy&gt; öğesi
-Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uymalıdır bir bilgisayar yapılandırmasını gereksinim zorlanıp zorlanmayacağını belirtir.  
+Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uyması gereken bir bilgisayar yapılandırma gereksinimini zorlanıp zorlanmayacağını belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -36,14 +36,14 @@ ms.locfileid: "32746221"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> Şifreleme algoritmaları FIPS ile uyumlu bir bilgisayar yapılandırma gereksinim zorlama etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|Etkin|Gerekli öznitelik.<br /><br /> Şifreleme algoritması FIPS ile uyumlu bir bilgisayar yapılandırma gereksinimini uygulanması etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`true`|Bu gereksinim, bilgisayarınızı FIPS uyumlu olacak şekilde şifreleme algoritmaları gerektirecek şekilde yapılandırılmışsa, zorlanır. Sınıf oluşturucuları FIPS ile uyumlu olmayan bir algoritma uyguluyorsa veya `Create` o bilgisayarda çalıştırdığınızda bu sınıf için yöntemleri throw özel durumları. Bu varsayılandır.|  
-|`false`|Uygulama tarafından kullanılan şifreleme algoritmalarını bağımsız olarak bilgisayar yapılandırması FIPS ile uyumlu olmasını gerekli değildir.|  
+|`true`|Bilgisayarınız, şifreleme algoritmaları FIPS uyumlu olmasını gerektirecek şekilde yapılandırılmışsa, bu gereksinimi zorunlu tutulur. Bir sınıf oluşturucuları FIPS ile uyumlu değil bir algoritma uyguluyorsa veya `Create` yöntemleri o sınıf için o bilgisayarda çalıştırdığınızda özel durum throw. Bu varsayılandır.|  
+|`false`|Uygulama tarafından kullanılan şifreleme algoritmaları, bilgisayar yapılandırması ne olursa olsun, FIPS uyumlu olmasını gerekli değildir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,12 +56,12 @@ ms.locfileid: "32746221"
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 2.0 ile başlayarak, şifreleme algoritmaları uygulayan sınıflar oluşturulmasını bilgisayarı yapılandırma tarafından denetlenir. Bilgisayar algoritmaları FIPS ile uyumlu olmasını gerektirecek şekilde yapılandırılmış ve bir sınıf FIPS ile uyumlu olmayan bir algoritma uygular, bu sınıfın örneğini oluşturma girişimi herhangi bir özel durum oluşturur. Oluşturucular throw bir <xref:System.InvalidOperationException> özel durumu ve `Create` yöntemleri throw bir <xref:System.Reflection.TargetInvocationException> özel durum ile bir iç <xref:System.InvalidOperationException> özel durum.  
+ Şifreleme algoritmalarını uygulayan sınıflar oluşturma, .NET Framework 2.0 ile başlayarak, bilgisayar yapılandırması tarafından denetlenir. Bilgisayar algoritmaları FIPS ile uyumlu olmasını gerektirecek şekilde yapılandırılmış ve bir sınıf FIPS ile uyumlu değil bir algoritma uygular, bu sınıfın bir örneğini oluşturmak için her türlü girişim, özel durum oluşturur. Throw oluşturucular bir <xref:System.InvalidOperationException> özel durumu ve `Create` yöntemleri throw bir <xref:System.Reflection.TargetInvocationException> özel durumla bir iç <xref:System.InvalidOperationException> özel durum.  
   
- Uygulamanız, yapılandırmaları FIPS ile uyumlu olmasını gerektir bilgisayarlarda çalışan ve uygulamanızın FIPS ile uyumlu olmayan bir algoritma kullanıyorsa, bu öğe, yapılandırma dosyanızda gelen ortak dil çalışma zamanı (CLR) önlemek için kullanabilirsiniz FIPS uyumluluk zorlama. Bu öğe sunulmuştur [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].  
+ FIPS uyumluluğu olan yapılandırmalar gerektirir bilgisayarlarda uygulamanızın çalıştığı ve uygulamanızı FIPS ile uyumlu değil bir algoritma kullanır, bu öğe yapılandırma dosyanızda gelen ortak dil çalışma zamanı (CLR) önlemek için kullanabilirsiniz FIPS uyumluluğunu zorlama. Bu öğe de sunulan [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, FIPS uyumluluğu zorlamayı CLR önlemek gösterilmiştir.  
+ Aşağıdaki örnek, FIPS uyumluluğu zorlama gelen CLR önlemek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "32746221"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Şifreleme Modeli](../../../../../docs/standard/security/cryptography-model.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Şifreleme Modeli](../../../../../docs/standard/security/cryptography-model.md)

@@ -1,13 +1,13 @@
 ---
-title: Genel Türler (F#)
+title: Genel Türler
 description: Nasıl kullanacağınızı öğrenin F# genel işlevler ve çeşitli türleri ile kod yinelenen olmadan çalışan kod yazmanızı sağlayan tür.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147011"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614382"
 ---
 # <a name="generics"></a>Genel Türler
 

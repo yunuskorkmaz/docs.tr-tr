@@ -2,15 +2,15 @@
 title: '&lt;policyImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 22d90ff9d0cd5325300cf42437836f075cbf8c31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753033"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148493"
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
-Özel ilke onaylamalarını bağlamaları hakkında alma denetimleri bir ilke alma belirtir.  
+Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen bir ilke içeri Aktarıcı belirtir.  
   
  \<system.ServiceModel>  
 \<İstemci >  
@@ -21,11 +21,11 @@ ms.locfileid: "32753033"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<metadata>  
-   <policyImporters>  
-      <policyImporter type="string" />  
-   </policyImporters>  
-</metadata>  
+<metadata>
+  <policyImporters>
+    <policyImporter type="String" />
+  </policyImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -35,19 +35,19 @@ ms.locfileid: "32753033"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`type`|Bu öğe türü.|  
+|`type`|Bu öğenin türü.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Özel ilke onaylamalarını bağlamaları hakkında alma Denetim İlkesi ımporters belirtir.|  
+|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen tüm ilke ımporters belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İlke içeri Aktarıcı yanı sıra özellikleri bağlama hakkında özel ilke onaylamalarını arama onay gerektiren özellikleri uygulayan bir özel bağlama öğesi eklemek için kullanılır.  
+ İlke içeri Aktarıcı yanı sıra arama özellikleri bağlama hakkında özel ilke onaylamalarını onay gerektiren özellikleri uygulayan bir özel bağlama öğesi eklemek için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  

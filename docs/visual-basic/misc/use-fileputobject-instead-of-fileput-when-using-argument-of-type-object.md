@@ -1,26 +1,26 @@
 ---
-title: Kullanım &#39;FilePutObject&#39; yerine &#39;FilePut&#39; türünde bağımsız değişken kullanırken &#39;nesnesi&#39;
+title: Bağımsız değişken türü 'Object' kullanılırken 'FilePut' yerine 'FilePutObject' kullanın
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: 529352d98c175981c20861205ce04c8a2ebcdca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df7d7c54992984bcb1684e41f60ae8361a3aed03
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641134"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774231"
 ---
-# <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Kullanım &#39;FilePutObject&#39; yerine &#39;FilePut&#39; türünde bağımsız değişken kullanırken &#39;nesnesi&#39;
-`FilePut` Yöntemi içerir türünde bir bağımsız değişken `Object`. `FilePutObject` yerine kullanılmalıdır `FilePut` belirsizlikleri önlemek için.  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>Bağımsız değişken türü 'Object' kullanılırken 'FilePut' yerine 'FilePutObject' kullanın
+`FilePut` Yöntemi türünde bir bağımsız değişken içeren `Object`. `FilePutObject` yerine kullanılması gereken `FilePut` belirsizlikleri önlemek için.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Değiştir `FilePut` ile `FilePutObject`.  
+-   `FilePut` yerine `FilePutObject` yazın.  
   
 -   Cast `Object` daha belirli bir tür bağımsız değişkeni.  
   
--   Kullanılabilir işlevselliği kullanmak `My.Computer.FileSystem` nesnesi.  
+-   Kullanılabilir işlevselliği kullanmak `My.Computer.FileSystem` nesne.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
    

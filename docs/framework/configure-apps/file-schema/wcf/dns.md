@@ -2,12 +2,12 @@
 title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 10fe4c63b08459914a16b2c736c1a454c6914a0b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862484"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145308"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Sunucunun beklenen kimliğini belirtir. Bu kimlik için X509 geçerli sunucu sertifikasının aynı değere sahip bir DNS içeriyorsa, sertifika kimlik doğrulama modu. SPN aynı değere sahipse, ayrıca Windows kimlik doğrulama modu için geçerlidir.  
@@ -20,7 +20,7 @@ Sunucunun beklenen kimliğini belirtir. Bu kimlik için X509 geçerli sunucu ser
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<dns value = "String" />  
+<dns value = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -45,9 +45,9 @@ Sunucunun beklenen kimliğini belirtir. Bu kimlik için X509 geçerli sunucu ser
  Aşağıdaki yapılandırma kodunu DNS bir sunucu kimliğini doğrulaması için kullanılan bir X.509 sertifikası belirtir.  
   
 ```xml  
-<identity>  
-  <dns value = "www.cohowinery.com" />  
-</identity>  
+<identity>
+  <dns value = "www.cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

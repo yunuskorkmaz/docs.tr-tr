@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453482"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397000"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Algılama](#detecting-the-language-packs) olup dil paketlerinin kullanıcının bilgisayarında zaten yüklenir.
 
-- Dağıtımı denetlemek istiyorsanız, sessizce başlatmak ve .NET Framework Kurulum sürecini izleyin (bkz [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme alın](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Dağıtımı denetlemek istiyorsanız, sessizce başlatmak ve .NET Framework Kurulum sürecini izleyin (bkz [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu elde](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Çevrimdışı yükleyici dağıtıyorsanız [dil paketlerini ayrı olarak zincir](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Sürüm|Yayın DWORD değeri|
 |-------------|--------------------------------|
-|.NET framework Windows yüklü 4.7.2 10 Ekim 2018 güncelleştirmesi|461814|
 |.NET framework Windows yüklü 4.7.2 10 Nisan 2018 güncelleştirmesi ve Windows Server'da 1803 sürümü|461808|
-|.NET framework 4.7.2 10 Ekim 2018'den Windows dışındaki tüm işletim sistemi sürümleri yüklü güncelleştirme, Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server sürümü 1803|461814|
+|.NET framework 4.7.2 Windows dışındaki tüm işletim sistemi sürümleri yüklü 10 Nisan 2018 güncelleştirmesi ve Windows Server sürümü 1803. Bu içeren Windows 10 Ekim 2018 güncelleştirmesi. |461814|
 |.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü yüklü|461308|
 |.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü dışındaki tüm işletim sistemi sürümleri yüklü|461310|
 |Windows 10 Creators Update üzerinde yüklü olan .NET framework 4.7|460798|
@@ -360,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/ CEIPConsent**|Varsayılan davranışını tekrardan yazar ve gelecekteki dağıtım deneyimleri geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca Kurulum programın rıza istemesine sebep olursa ve kullanıcı anonim görüşlerinizi Microsoft'a göndermek için izin verirse kullanılabilir.|
 |**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"**. Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
-|**/ LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yükler `LCID` ve sessiz mod ayarlanmadığı sürece görüntülenen kullanıcı Arabirimi o dilde gösterilmesini zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-web dil paketini yükler. **Not:** bu seçeneği yalnızca web Yükleyicisi ile kullanın.|
+|**/ LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yükler `LCID` ve sessiz mod ayarlanmadığı sürece görüntülenen kullanıcı Arabirimi o dilde gösterilmesini zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-web dil paketini yükler. **Not:**  Bu seçeneği yalnızca web Yükleyicisi ile kullanın.|
 |**/ log** `file`&#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan işlem için geçici bir klasördür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı belirtirseniz veya bir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir. Örneğin: `/msioptions "PROPERTY1='Value'"`.|
 |**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulama döndürülen kodu yakalamak ve yeniden başlatmayı işlemek vardır (bkz [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=179606) MSDN Kitaplığı'nda).|
@@ -409,4 +408,4 @@ Aşağıdaki tabloda kullanılabilir .NET Framework dil paketlerini listeler [!I
 - [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
 - [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
-- [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

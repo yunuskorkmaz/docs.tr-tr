@@ -1,13 +1,13 @@
 ---
 title: Tür Sağlayıcıları Sorunlarını Giderme
-description: Tür sağlayıcıları F# kullanırken karşılaşabileceğiniz en olası sorunlar için olası çözümleri keşfedin.
+description: Kullanırken karşılaşabileceğiniz en olası sorunları sağlayıcı türü için olası çözümleri keşfedebilir F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48873222"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610339"
 ---
 # <a name="troubleshooting-type-providers"></a>Tür Sağlayıcıları Sorunlarını Giderme
 

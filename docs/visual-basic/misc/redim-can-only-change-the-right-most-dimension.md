@@ -1,17 +1,17 @@
 ---
-title: '&#39;ReDim&#39; yalnızca en sağdaki boyut değiştirebilirsiniz'
+title: "'ReDim' yalnızca en sağdaki boyut değiştirebilirsiniz"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
-ms.openlocfilehash: 94e0fe81f7e750a67943b68f2db700e3a7831da1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5b4f054c5d1dfad52ce19e1a9f9d246945866703
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502592"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767406"
 ---
-# <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39;ReDim&#39; yalnızca en sağdaki boyut değiştirebilirsiniz
+# <a name="redim-can-only-change-the-right-most-dimension"></a>'ReDim' yalnızca en sağdaki boyut değiştirebilirsiniz
 A `ReDim` deyimi çalıştı kullanılacak `Preserve` son boyutu değil bir dizinin boyutunu değiştirmek için anahtar sözcüğü. Kullanırken `Preserve`, sadece son boyutu bir dizinin yeniden boyutlandırabilirsiniz. Diğer tüm boyutlar için aynı boyutta varolan bir diziye sunamıyoruz belirtmeniz gerekir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

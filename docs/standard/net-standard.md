@@ -1,19 +1,19 @@
 ---
-title: .NET standard
+title: .NET Standard
 description: .NET standart, kendi sürümleri ve bunu destekleyen .NET uygulamaları hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186076"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613602"
 ---
-# <a name="net-standard"></a>.NET standard
+# <a name="net-standard"></a>.NET Standard
 
 [.NET Standard](https://github.com/dotnet/standard) bir resmi belirtimi .NET API'leri, tüm .NET uygulamalarında kullanılabilir olacak şekilde tasarlanmıştır. .NET Standard arkasında motivasyon büyük gerekmemesi .NET ekosisteminde oluşturabilirsiniz. [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) gerekmemesi için .NET uygulaması davranışı kurmaya devam eder ancak hiçbir benzer belirtimi .NET kitaplığı uygulamaları için .NET taban sınıfı kitaplıkları (BCL) için.
 
@@ -35,7 +35,7 @@ Aşağıdaki tabloda her .NET Standard sürümünü destekleyen en düşük plat
 
 1. Çalıştırmak istediğiniz .NET uygulaması gösteren satırı bulur.
 2. Sağdan sola başlangıç sürümünüzü gösteren söz konusu satırdaki sütun bulunamıyor.
-3. Sütun üst bilgisine hedef destekleyen .NET Standard sürümünü gösterir (ve alt .NET Standard sürümlerinden da bunu destekleyecek).
+3. Sütun üst bilgisine hedef destekleyen .NET Standard sürümünü gösterir. Ayrıca, herhangi bir alt .NET Standard sürümünü hedefleyebilir. Uygulamanıza daha yüksek bir .NET Standard sürümleri de destekler.
 4. Hedeflemek istediğiniz her platform için bu işlemi yineleyin. Birden fazla hedef platformu varsa, aralarında daha küçük sürüm seçmeniz gerekir. Örneğin, .NET Framework 4.5 ve .NET Core 1.0 üzerinde çalıştırmak istiyorsanız, en yüksek .NET Standard sürümünü kullanabilirsiniz .NET standart 1.1 olur.
 
 ### <a name="which-net-standard-version-to-target"></a>Hangi .NET Standard sürümünü hedef
@@ -57,7 +57,7 @@ Ancak, daha düşük bir .NET Standard sürümlerini hedefleme desteği bağıml
 İki birincil sürüm kuralları vardır:
 
 - Eklenebilir: Mantıksal olarak eşmerkezli daireler .NET Standard sürümleri şunlardır: daha sonraki sürümler önceki sürümlerdeki tüm API'leri dahil edilip derecelendirilir. Sürümler arasında bozucu bir değişiklik bulunmamaktadır.
-- Sabit: Bir kez aktarmalı, .NET Standard sürümleri dondurulmuş. Yeni API'leri, ilk .NET Core gibi belirli .NET uygulamalarında kullanılabilir. .NET Standard gözden geçirme panonun yeni API'leri tüm .NET uygulamaları için kullanılabilir olması gerektiğini inanırsa, bunlar yeni bir .NET Standard sürümde eklenir.
+- Sabit: .NET Standard sürümleri sevk sonra dondurulmuş. Yeni API'leri, ilk .NET Core gibi belirli .NET uygulamalarında kullanılabilir. .NET Standard gözden geçirme panonun yeni API'leri tüm .NET uygulamaları için kullanılabilir olması gerektiğini inanırsa, bunlar yeni bir .NET Standard sürümde eklenir.
 
 ## <a name="specification"></a>Belirtimi
 
@@ -146,7 +146,7 @@ Profil tabanlı PCLs olarak paketlenmiş `netstandard` genellikle paketlenmiş p
 
 .NET Standard ile uyumlu olan PCL profilleri kümesine görebilirsiniz:
 
-| PCL profilinin | .NET standard | PCL platformları
+| PCL profilinin | .NET Standard | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1

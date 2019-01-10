@@ -1,15 +1,15 @@
 ---
-title: 'Açık Alanlar: val Anahtar Sözcüğü (F#)'
-description: F# hakkında 'val' öğrenin anahtar sözcüğü bir değer türü başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır.
+title: 'Açık alanlar: Val anahtar sözcüğü'
+description: Hakkında bilgi edinin F# türü başlatma olmadan bir sınıf veya yapı türünde bir değeri depolamak için bir konum bildirmek için kullanılan 'val' anahtar sözcüğü.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746405"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773633"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Açık Alanlar: val Anahtar Sözcüğü
+# <a name="explicit-fields-the-val-keyword"></a>Açık alanlar: Val anahtar sözcüğü
 
 `val` Anahtar sözcüğü, bir değer başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır. Bu şekilde bildirilen depolama konumları çağrılır *açık alanlar*. Başka bir kullanımını `val` anahtar sözcüğü, birlikte `member` otomatik uygulanan bir özellik bildirmek için anahtar sözcüğü. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [özellikleri](properties.md).
 
@@ -46,7 +46,7 @@ Açık alanlar ve karşılaştırma, kullanımı aşağıdaki kodda gösterildi�
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
-Çıktı aşağıdaki gibidir:
+Çıktı aşağıdaki şekilde olacaktır:
 
 ```
 11 12 abc
@@ -65,7 +65,11 @@ Aşağıdaki kod, bir yapıda açık alanlar kullanımını gösterir. Bir yapı
 
 Çıktı `11 xyz`.
 
-Açık alanlar rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda kullanmalısınız bir `let` açık bir alanı yerine bir sınıftaki bağlama. Açık alanlar bazı birlikte çalışabilirlik senaryolarında yararlıdır, kullanılacak bir yapı tanımla gerektiğinde gibi bir platform çağırma çağrısı bir yerel API veya COM birlikte çalışma senaryolarda. Daha fazla bilgi için [dış işlevler](../functions/external-functions.md). Hangi birincil Oluşturucu olmadan sınıfları yayan bir F# kodu Oluşturucu ile çalışırken açık bir alan gerekli olabilir başka bir durumdur. Açık alanlar da iş parçacığı statik değişkenler veya benzer yapıları için kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
+**Dikkat**, yapınızın ile başlatmak için kullanacaksanız `mutable` olmadan alanları `mutable` anahtar sözcüğü, atamalarınızı atamasından hemen sonra atılacak yapısının bir kopyası üzerinde çalışır. Bu nedenle, yapısı değişmez.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+
+Açık alanlar rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda kullanmalısınız bir `let` açık bir alanı yerine bir sınıftaki bağlama. Açık alanlar bazı birlikte çalışabilirlik senaryolarında yararlıdır, kullanılacak bir yapı tanımla gerektiğinde gibi bir platform çağırma çağrısı bir yerel API veya COM birlikte çalışma senaryolarda. Daha fazla bilgi için [dış işlevler](../functions/external-functions.md). Başka bir durum, açık bir alan olabilir gerekli ile çalışırken, bir F# Kod Oluşturucu, bir birincil Oluşturucu olmadan sınıfları yayar. Açık alanlar da iş parçacığı statik değişkenler veya benzer yapıları için kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
 
 Zaman anahtar sözcükleri `member val` bir arada göründüğünü tür tanımında, otomatik olarak uygulanan bir özellik tanımı öyledir. Daha fazla bilgi için [özellikleri](properties.md).
 

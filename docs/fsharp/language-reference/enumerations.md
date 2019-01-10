@@ -1,13 +1,13 @@
 ---
-title: Numaralandırmalar (F#)
-description: F# değişmez değerler yerine numaralandırmalar kodunuzu daha okunabilir ve sürdürülebilir hale getirmek için kullanmayı öğrenin.
+title: Numaralandırmalar
+description: Nasıl kullanacağınızı öğrenin F# kodunuzu daha okunabilir ve sürdürülebilir hale getirmek için değişmez değerler yerine numaralandırmalar.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003171"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611743"
 ---
 # <a name="enumerations"></a>Numaralandırmalar
 
@@ -40,7 +40,7 @@ Kolayca numaralandırma için temeldeki tür uygun işleci kullanılarak aşağ�
 
 Numaralandırılmış türler aşağıdaki temel türlerden biri olabilir: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, ve `char`. Numaralandırma türleri öğesinden devralınan türler olarak .NET Framework'teki gösterilir `System.Enum`, sırayla devralınır `System.ValueType`. Bu nedenle, yığın veya satır içeren bir nesne içinde bulunan değer türleri olduklarını ve temel türün herhangi bir değer geçerli bir numaralandırma değeridir. Sabit desen değerleri değiştiğinde, isimsiz değerler yakalayan bir desen sağlamak sahip olduğunuz için bu önemlidir.
 
-`enum` F# kitaplığı işlevinde kullanılabilir bir sabit listesi değeri, hatta önceden tanımlanmış, biri dışında bir değer oluşturmak için değerleri. Kullandığınız `enum` gibi işlev.
+`enum` İşlevi F# kitaplığı bir sabit listesi değeri, hatta önceden tanımlanmış, biri dışında bir değer oluşturmak için kullanılabilir değerleri adlı. Kullandığınız `enum` gibi işlev.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

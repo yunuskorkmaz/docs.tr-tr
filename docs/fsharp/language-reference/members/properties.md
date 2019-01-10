@@ -1,13 +1,13 @@
 ---
-title: Özellikler (F#)
-description: Bir nesneyle ilişkili değerlerini temsil eden üyeleri olan F# özellikleri hakkında bilgi edinin.
+title: Özellikler
+description: Hakkında bilgi edinin F# bir nesneyle ilişkili değerlerini temsil eden üyeleri olan özellikleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50197931"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614512"
 ---
 # <a name="properties"></a>Özellikler
 

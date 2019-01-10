@@ -1,5 +1,5 @@
 ---
-title: s_isDebuggerCheckDisabledForTestPurposes alan
+title: s_isDebuggerCheckDisabledForTestPurposes alanı
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-wpf
@@ -10,17 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-robots: noindex,nofollow
-ms.openlocfilehash: fbbd8d33ea163efaad1417ab4a1435df729e4897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f490ccb4675a434e3f3336723e321f256b10093d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149182"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes alan
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes alanı
 
-Bu özel alanı `System.Windows.Diagnostics.VisualDiagnostics` sınıfı, bir iç onay etkin hata ayıklayıcı için gerçekleştirilen olup olmadığını belirlemek için Visual Studio tarafından kullanılır.
+Bu özel bir alanda `System.Windows.Diagnostics.VisualDiagnostics` sınıfı için bir etkin hata ayıklayıcı iç bir onay gerçekleştirip gerçekleştirmediğini belirlemek için Visual Studio tarafından kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -29,9 +28,9 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
   
 > [!WARNING]
->  API ın `System.Windows.Diagnostics.VisualDiagnostics` sınıfı yalnızca bir uygulama bir hata ayıklayıcı altında çalıştığı durumlarda kullanılabilir. Ayarlama `s_isDebuggerCheckDisabledForTestPurposes` için `true` bir hata ayıklayıcı dışında API'leri erişmek için.  
+>  API'LERİNİZİ `System.Windows.Diagnostics.VisualDiagnostics` sınıfı bulunan ve yalnızca bir uygulama hata ayıklayıcı altında çalışırken. Ayarlama `s_isDebuggerCheckDisabledForTestPurposes` için `true` API'lere bir hata ayıklayıcı dışında.  
 >   
->  Microsoft hiçbir koşulda bir üretim uygulamasında bu alan kullanımını desteklemez.  
+>  Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.  
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -39,4 +38,4 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 
 **Derleme:** PresentationCore (içinde PresentationCore.dll)
 
-**.NET framework sürümleri:** 4.6 sürümünden itibaren kullanılabilir.
+**.NET framework sürümleri:** 4.6 sonrasında kullanılabilir.

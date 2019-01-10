@@ -1,17 +1,17 @@
 ---
 title: Tür Sağlayıcısı Güvenliği
-description: F#'de bir tür sağlayıcısı güven ayarlarını değiştirme dahil olmak üzere, tür sağlayıcısı güvenliği hakkında bilgi edinin.
+description: Tür sağlayıcısı güvenliği hakkında bilgi edinin F#, bir tür sağlayıcısı güven ayarlarını değiştirme dahil olmak üzere.
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861913"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611197"
 ---
 # <a name="type-provider-security"></a>Tür Sağlayıcısı Güvenliği
 
-Türü, dış veri kaynaklarına bağlanmak ve bu tür bilgiler, F# tür ortama yüzey için kod içeren F# proje ya da komut dosyası tarafından başvurulan derlemeler (DLL'ler) sağlayıcılarıdır. Genellikle, başvurulan bütünleştirilmiş kod, derleme ve ardından kodu yürütme (veya bir betik söz konusu olduğunda, kod F# Interactive'e Gönder olduğunda) yalnızca çalıştırılır. Bununla birlikte, Kod Düzenleyicisi'nde yalnızca gözatarken bir tür sağlayıcısı derleme Visual Studio içinde çalışır. Tür sağlayıcıları Düzenleyicisi, hızlı bilgi araç ipuçları, IntelliSense tamamlamaları, gibi ek bilgileri ekleme ve benzeri çalıştırmak gerekeceğinden, bu gerçekleşir. Sonuç olarak, ek güvenlik konuları mevcuttur türü için sağlayıcı derlemeleri otomatik olarak Visual Studio işlemi içinde çalıştıkları bu yana.
+Tür sağlayıcıları tarafından başvurulan derlemeleri (DLL'ler) olan, F# dış veri kaynaklarına bağlanmak ve bu tür bilgileri yüzey için kod içeren proje veya betik F# ortam türü. Derleme ve ardından kod yürütmesine genellikle, başvurulan bütünleştirilmiş kod yalnızca çalıştırılır (veya bir betik söz konusu olduğunda, koda gönderme F# etkileşimli). Bununla birlikte, Kod Düzenleyicisi'nde yalnızca gözatarken bir tür sağlayıcısı derleme Visual Studio içinde çalışır. Tür sağlayıcıları Düzenleyicisi, hızlı bilgi araç ipuçları, IntelliSense tamamlamaları, gibi ek bilgileri ekleme ve benzeri çalıştırmak gerekeceğinden, bu gerçekleşir. Sonuç olarak, ek güvenlik konuları mevcuttur türü için sağlayıcı derlemeleri otomatik olarak Visual Studio işlemi içinde çalıştıkları bu yana.
 
 ## <a name="security-warning-dialog"></a>Güvenlik Uyarısı iletişim kutusu
 

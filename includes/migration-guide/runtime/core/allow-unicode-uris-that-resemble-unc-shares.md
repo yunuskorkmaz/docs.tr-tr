@@ -7,5 +7,5 @@
 |Kapsam|Kenar|
 |Sürüm|4.7.2|
 |Tür|Çalışma zamanı|
-|Etkilenen API'leri|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+|Etkilenen API’ler|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
 

@@ -2,15 +2,15 @@
 title: '&lt;endToEndTracing&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 855f579241dfd495e7f8603ce3bd57aa2556ca2d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78a69256a391e97ff1962eea923f09115c4ebadd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753475"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150116"
 ---
 # <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
-Etkinleştirme ve devre dışı uçtan uca izleme bir hizmet uygulaması çalışması sırasında farklı yönlerini olanak sağlayan bir yapılandırma öğesi.  
+Enable ve disable uçtan uca izleme hizmet uygulamasının çalışması sırasında farklı yönlerini olanak tanıyan bir yapılandırma öğesi.  
   
  \<system.ServiceModel>  
 \<Tanılama >  
@@ -19,13 +19,13 @@ Etkinleştirme ve devre dışı uçtan uca izleme bir hizmet uygulaması çalı�
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -35,9 +35,9 @@ Etkinleştirme ve devre dışı uçtan uca izleme bir hizmet uygulaması çalı�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`activityTracing`|Etkinlik izlemenin etkinleştirilip etkinleştirilmediğini belirten bir Boole değeri.|  
-|`messageFlowTracing`|İleti akışı içinde izleme etkin olup olmadığını belirten bir Boole değeri.|  
-|`propagateActivity`|Propagate özniteliği ayarlanmış olup olmadığını belirten bir Boole değeri true.|  
+|`activityTracing`|Aktivite izlemenin etkin olup olmadığını belirten bir Boole değeri.|  
+|`messageFlowTracing`|İleti akışı izlemenin etkin olup olmadığını belirten bir Boole değeri.|  
+|`propagateActivity`|Yayma özniteliğinin ayarlanmış olup olmadığını belirten bir Boole değeri true.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -46,7 +46,7 @@ Etkinleştirme ve devre dışı uçtan uca izleme bir hizmet uygulaması çalı�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Çalışma zamanı İnceleme için WCF ayarlarını ve yönetici için Denetim tanımlar.|  
+|[\<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|WCF ayarları için çalışma zamanı incelemesi ve denetimi yöneticisi için tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.DiagnosticSection>  

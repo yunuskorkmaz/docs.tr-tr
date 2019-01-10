@@ -1,13 +1,13 @@
 ---
 title: Kullanmaya başlama F# Visual Studio Code
 description: Nasıl kullanacağınızı öğrenin F# Visual Studio Code ve Ionide eklenti paketi ile.
-ms.date: 05/28/2018
-ms.openlocfilehash: 2db587b5614c5a7ca9285cad9b719970d53afd55
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/23/2018
+ms.openlocfilehash: 34802551bf4e34abb5aa0130643f32dbce68f1b2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129798"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029560"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Kullanmaya başlama F# Visual Studio Code
 
@@ -150,8 +150,7 @@ Ardından, açık `Script.fsx` dosya yeniden ve tüm silme `toPigLatin` çalış
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
-
-İlk satırı yüklemek için betik FSI için gereken `ClassLibraryDemo.fs`. Kolaylık olması açısından ikinci çizgidir: belirlemesini sağlayabilirsiniz isteğe bağlıdır, ancak yazmanız gerekecektir `open ClassLibraryDemo` getirmek istiyorsanız FSI penceresinde `ToPigLatin` kapsama modülü.
+Her iki satırlık metin seçin ve bu satırlar FSI yürütmek için Alt + Enter tuşlarına basın. Bunlar FSI işlemine Pig Latin kitaplığı içeriğini yükler ve `open` `ClassLibraryDemo` ad alanı böylece işlevselliği erişebilirsiniz.
 
 Ardından, FSI penceresinde işlevi çağrısı `PigLatin` daha önce tanımladığınız Modülü:
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: 5121b5076d867c57c97e637045aced8a00e24c84
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5bb27980f38237f69f77721578f30df3830ade2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185553"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029651"
 ---
 # <a name="message-security-windows"></a>İleti Güvenliği Windows
 Bu örnek nasıl yapılandırılacağını gösteren bir <xref:System.ServiceModel.WSHttpBinding> ileti düzeyi güvenliği Windows kimlik doğrulaması ile kullanılacak bağlama. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte, Internet Information Services (IIS) barındırılan hizmetin ve bir konsol uygulaması (.exe) istemcidir.  
@@ -45,12 +45,11 @@ Bu örnek nasıl yapılandırılacağını gösteren bir <xref:System.ServiceMod
   
   <bindings>  
     <wsHttpBinding>  
-      <!--   
-      <!--The default security for the WSHttpBinding is-->  
-      <!--Message security using Windows authentication. -->  
-      <!--This configuration explicitly defines the security mode -->  
-      <!--as Message and the clientCredentialType as Windows  -->  
-      <!--for demonstration purposes. -->  
+      <!-- The default security for the WSHttpBinding is -->  
+      <!-- Message security using Windows authentication. -->  
+      <!-- This configuration explicitly defines the security mode -->  
+      <!-- as Message and the clientCredentialType as Windows -->  
+      <!-- for demonstration purposes. -->  
       <binding name="Binding1">  
         <security mode="Message">  
           <message clientCredentialType="Windows"/>  

@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149169"
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList alan
 
-`ConnectionGroup.m_ConnectionList` olan bir <xref:System.Collections.ArrayList> aynı URI ve Paylaşımı hizmet veren bağlantı nesneleri gibi diğer bazı özellikler için aynı değerlere sona erme ve kimlik doğrulaması.
+`ConnectionGroup.m_ConnectionList` olan bir <xref:System.Collections.ArrayList> aynı URI ve Paylaşım veren bağlantı nesneleri gibi diğer bazı özellikler için aynı değerlere sona erme ve kimlik doğrulaması.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList` Alandır özel ve kodunuzda doğrudan kullanılmak üzere yüksetlmesi.
+> `ConnectionGroup.m_ConnectionList` Alan özeldir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
 > 
-> Microsoft hiçbir koşulda bir üretim uygulamasında bu alan kullanımını desteklemez.
+> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Namespace:** <xref:System.Net>
 
-**Derleme:** sisteminde (System.dll)
+**Derleme:** Sistemde (System.dll)
 
 **.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.

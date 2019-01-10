@@ -1,13 +1,13 @@
 ---
-title: Nesne İfadeleri (F#)
-description: Türü adlı ek bir kod ve yeni, oluşturmak için gereken ek yükü önlemek istediğinizde F# nesne ifadeleri kullanmayı öğrenin.
+title: Nesne İfadeleri
+description: Nasıl kullanacağınızı öğrenin F# yeni, oluşturmak için gerekli tür adlı ek bir kod ve ek yükü önlemek istediğinizde nesne ifadeleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865468"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613927"
 ---
 # <a name="object-expressions"></a>Nesne İfadeleri
 

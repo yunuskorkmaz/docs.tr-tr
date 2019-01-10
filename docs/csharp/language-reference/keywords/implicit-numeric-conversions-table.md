@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235260"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058470"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Örtük sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -23,14 +23,14 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double`, veya `decimal`|  
 |[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
 |[short](short.md)|`int`, `long`, `float`, `double`, veya `decimal`|  
 |[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
 |[int](int.md)|`long`, `float`, `double`, veya `decimal`|  
 |[uint](uint.md)|`long`, `ulong`, `float`, `double`, veya `decimal`|  
 |[long](long.md)|`float`, `double`, veya `decimal`|  
-|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`, `double`, veya `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
@@ -38,9 +38,11 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 
 - Duyarlık ancak değil büyüklük kayıp dönüşümlerse içinde `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
   
-- Herhangi bir örtük dönüştürme vardır `char` türü.  
+- Herhangi bir örtük dönüştürme vardır `char`, `byte` ve `sbyte` türleri.  
+
+- Öğesinden örtük dönüştürme işlemi yok `char`, `double` ve `decimal` türleri.
   
-- Arasında örtük dönüştürme işlemi yok `float` ve `double` türleri ve `decimal` türü.  
+- Arasında örtük dönüştürme işlemi yok `decimal` türü ve `float` veya `double` türleri.  
   
 - Bir değer türünde sabit bir ifadenin `int` (örneğin, bir tamsayı sabit değeri tarafından temsil edilen bir değer) dönüştürülebilir `sbyte`, `byte`, `short`, `ushort`, `uint`, veya `ulong`, onu sağlanan Hedef türün aralığı içinde:
 

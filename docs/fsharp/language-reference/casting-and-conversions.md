@@ -1,27 +1,27 @@
 ---
-title: Atama ve Dönüştürmeler (F#)
-description: Nasıl F# programlama dilinin dönüştürme işleçleri çeşitli ilkel türler arasında aritmetik dönüştürmeler için sağladığını öğrenin.
+title: Atama ve Dönüştürmeler
+description: Bilgi nasıl F# programlama dili sağlayan dönüştürme işleçleri aritmetik dönüştürmeler çeşitli ilkel türler arasında.
 ms.date: 05/16/2016
-ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45677937"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655991"
 ---
 # <a name="casting-and-conversions-f"></a>Atama ve Dönüştürmeler (F#)
 
-Bu konu, F# tür dönüştürmeleri desteğini açıklar.
+Bu konuda, tür dönüştürmelerinde desteği açıklanmaktadır F#.
 
 ## <a name="arithmetic-types"></a>Aritmetik tür
 
-F# dönüştürme işleçleri için çeşitli ilkel türler arasında aritmetik dönüştürmeler gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri iade etmiş ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüştürme işleci yapın. Denetlenmeyen forms tanımlanan `Microsoft.FSharp.Core.Operators` ve işaretli forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. İşaretli formları için taşmayı denetle ve sonuç değerini hedef türünün limitlerini aşarsam bir çalışma zamanı özel durumu oluşturur.
+F#Dönüştürme işleçleri aritmetik dönüştürmeler çeşitli ilkel türler arasında gibi tamsayı ve kayan nokta türleri arasında sağlar. İntegral ve karakter dönüştürme işleçleri iade etmiş ve Denetlenmeyen forms; kayan nokta işleçler ve `enum` dönüştürme işleci yapın. Denetlenmeyen forms tanımlanan `Microsoft.FSharp.Core.Operators` ve işaretli forms tanımlanan `Microsoft.FSharp.Core.Operators.Checked`. İşaretli formları için taşmayı denetle ve sonuç değerini hedef türünün limitlerini aşarsam bir çalışma zamanı özel durumu oluşturur.
 
 Bu işleçlerden her biri, hedef türünün adı ile aynı ada sahiptir. Hangi türleri açıkça ek açıklama, örneğin, aşağıdaki kodda, `byte` ile iki farklı anlamları görünür. İlk yinelenme türüdür ve ikincisi dönüştürme işleci.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-Aşağıdaki tabloda, F#'de tanımlanan dönüştürme işleçlerini gösterir.
+Aşağıdaki tabloda tanımlanan dönüşüm işleçleri gösterilmektedir F#.
 
 |İşleç|Açıklama|
 |--------|-----------|
@@ -40,6 +40,7 @@ Aşağıdaki tabloda, F#'de tanımlanan dönüştürme işleçlerini gösterir.
 |`decimal`|Dönüştürme `System.Decimal`.|
 |`char`|Dönüştürme `System.Char`, bir Unicode karakter.|
 |`enum`|Numaralandırılmış bir türe dönüştürün.|
+
 Ek olarak yerleşik temel türler, bu işleçler uygulayan türler ile kullanabilirsiniz `op_Explicit` veya `op_Implicit` uygun imzalara sahip yöntemleri. Örneğin, `int` çalışır bir statik yöntem sağlar herhangi bir tür dönüştürme işleci `op_Explicit` türü bir parametre olarak alır ve döndürür `int`. Yöntem dönüş türüne göre aşırı yüklenemez genel kural için bir özel durum bunu yapabilmeniz `op_Explicit` ve `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Numaralandırılmış türler
@@ -67,11 +68,11 @@ Daha fazla bilgi için [numaralandırmalar](enumerations.md).
 
 Bir nesne sıradüzeni türleri arasında dönüştürme, nesne yönelimli programlama için temeldir. İki temel tür dönüştürmeleri vardır: (yukarı çevrim) atama ve atama (Alta). Bir hiyerarşi atama temel nesne başvurusu için türetilmiş nesneden başvurudan atama anlamına gelir. Böyle bir dönüştürme, temel sınıfın türetilmiş sınıf devralma hiyerarşisinde olduğu sürece çalışmak için sağlanır. Yalnızca nesne (türetilmiş) doğru hedef türüne veya hedef türünden türetilmiş bir tür örneği gerçekten ise bir hiyerarşiden bir türetilmiş nesne başvurusu bir temel nesne başvurusu aşağı atama başarılı olur.
 
-F# bu türde dönüştürme işleçleri sağlar. `:>` İşleci hiyerarşisinde yukarı çevirir ve `:?>` işleci hiyerarşinin çevirir.
+F#Bu türde dönüştürme işleçleri sağlar. `:>` İşleci hiyerarşisinde yukarı çevirir ve `:?>` işleci hiyerarşinin çevirir.
 
 ### <a name="upcasting"></a>Yukarı çevrim
 
-Birçok nesne odaklı dildeki içinde yukarı çevrim örtük olarak; F#'ta kuralları biraz farklıdır. Bir nesne türü yöntemi için değişken geçtiğinizde yukarı çevrim otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, Modül içindeki let bağlı işlevler için yukarı çevrim otomatik, değildir. Daha fazla bilgi için [esnek türler](flexible-Types.md).
+Birçok nesne odaklı dildeki içinde yukarı çevrim örtük olarak; içinde F#, kuralları biraz farklıdır. Bir nesne türü yöntemi için değişken geçtiğinizde yukarı çevrim otomatik olarak uygulanır. Parametre türü esnek bir türü olarak bildirilmiş sürece ancak, Modül içindeki let bağlı işlevler için yukarı çevrim otomatik, değildir. Daha fazla bilgi için [esnek türler](flexible-Types.md).
 
 `:>` İşleç gerçekleştirir statik atama, atama başarılı derleme zamanında belirlenir anlamına gelir. Kullanan bir tür dönüştürme, `:>` başarıyla derlenir, geçerli bir yayın olduğunu ve hiçbir şansı çalışma zamanında hata.
 

@@ -1,16 +1,16 @@
 ---
-title: F# kullanarak Azure tablo depolama ile çalışmaya başlama
+title: Azure tablo depolama kullanmaya başlamaF#
 description: Azure tablo depolama veya Azure Cosmos DB kullanarak bulutta yapılandırılmış veri Store.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519541"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152079"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve F# kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlama # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlamaF# # 
 
 Azure tablo depolama bulutta yapılandırılmış NoSQL verileri depolayan bir hizmettir. Tablo depolama, şemasız tasarım ile anahtar/öznitelik deposudur. Table storage şemasız olduğu için ihtiyaçları, uygulama geliştikçe verilerinizi uyarlamak da kolaylaşır. Verilere erişim hızlı ve uygun maliyetli her türden uygulamalar için. Tablo depolama genellikle maliyetini önemli ölçüde benzer veri hacimleri için geleneksel SQL'e daha düşüktür.
 
@@ -20,26 +20,26 @@ Azure Cosmos DB, Azure tablo depolaması için yazılmış ve premium özellikle
 
 - Anahtar teslim küresel dağıtım.
 - Adanmış aktarım hızı dünya çapında.
-- 99. yüzdebirlik dilimde Tek haneli milisaniyelik gecikme süreleri.
-- Yüksek kullanılabilirliği garanti ediyoruz.
+- 99 yüzdebirlikte tek basamaklı milisaniyelik gecikme süresi.
+- Garantili yüksek kullanılabilirlik.
 - Otomatik ikincil dizin oluşturma.
 
-Azure tablo depolaması için yazılmış uygulamalar, kod değişikliği olmadan tablo API'sini kullanarak Azure Cosmos DB'ye geçirilebilir ve premium özelliklerinden yararlanın. Tablo API'si, .NET, Java, Python ve Node.js için İstemci SDK'ları kullanılabilir sahiptir.
+Azure Tablo depolama için yazılmış uygulamalar herhangi bir kod değişikliği olmadan Tablo API'sini kullanarak Azure Cosmos DB'ye geçirilebilir ve üst düzey özelliklerden yararlanabilir. Tablo API’si, .NET, Java, Python ve Node.js ile kullanılabilecek istemci SDK’larına sahiptir.
 
 Daha fazla bilgi için [Azure Cosmos DB tablo API'sine giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
 
-## <a name="about-this-tutorial"></a>Bu eğitim hakkında
+## <a name="about-this-tutorial"></a>Bu öğretici hakkında
 
-Bu öğreticide, Azure tablo depolama veya Azure Cosmos DB tablo oluşturma ve tablo silme ve ekleme, güncelleştirme, silme ve tablo verilerini sorgulama dahil olmak üzere API'sini kullanarak bazı genel görevleri yapmak için F# kodunun nasıl yazılacağını gösterir.
+Bu öğreticide nasıl yazılacağını göstermektedir F# Azure tablo depolama veya Azure Cosmos DB tablo oluşturma ve tablo silme ve ekleme, güncelleştirme, silme ve tablo verilerini sorgulama dahil olmak üzere API'sini kullanarak bazı genel görevleri yapmak için kod.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account) veya [Azure Cosmos DB hesabı](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `tables.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri ya da kullanılabilir bir F# uygulama veya bir F# betiği. Oluşturmak için bir F# betik, bir dosya oluşturun `.fsx` uzantısı, örneğin `tables.fsx`içinde F# geliştirme ortamı.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi. Bunu yeniden `Microsoft.WindowsAzure.ConfigurationManager` Microsoft.Azure ad alanını alma için.
 
@@ -61,7 +61,7 @@ Azure Cosmos DB'ye bağlanıyorsanız, Bu öğretici için bağlantı dizesi ger
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Her zaman depolama hesabı anahtarınızı korumak dikkatli olun. Sabit kodlama veya başkalarının erişebileceği bir düz metin dosyasına kaydederek diğer kullanıcılara dağıtmaktan kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
+Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
 
 Gerçek uygulamalar, depolama bağlantı dizenizi korumak için en iyi yolu, içinde bir yapılandırma dosyasıdır. Bir yapılandırma dosyasından bağlantı dizesini getirmek için bunu yapabilirsiniz:
 
@@ -83,11 +83,11 @@ Bu döndürür bir `CloudStorageAccount`.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-Artık, verileri okur ve tablo depolamaya veri yazan kodu yazmaya hazırsınız.
+Artık Table Storage’dan veri okuyan ve bu depolamaya veri yazan kodu yazmaya hazırsınız.
 
-### <a name="create-a-table"></a>Tablo oluşturma
+### <a name="create-a-table"></a>Bir tablo oluşturma
 
-Bu örnek, zaten yoksa, bir tablo oluşturma işlemi gösterilmektedir:
+Bu örnek, zaten yoksa, nasıl bir tablo oluşturulacağını gösterir:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
@@ -105,7 +105,7 @@ Bir varlığın bölüm ve sıra anahtarı varlığı tabloda benzersiz şekilde
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-### <a name="insert-a-batch-of-entities"></a>Bir toplu işlem varlık yerleştirme
+### <a name="insert-a-batch-of-entities"></a>Toplu işlem varlık yerleştirme
 
 Varlık, bir tek bir yazma işlemi kullanarak bir tabloya ekleyebilirsiniz. Toplu işlemleri, tek bir yürütme işlemi birleştirmek izin ver, ancak bazı kısıtlamalar sahiptirler:
 
@@ -118,7 +118,7 @@ Varlık, bir tek bir yazma işlemi kullanarak bir tabloya ekleyebilirsiniz. Topl
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-### <a name="retrieve-all-entities-in-a-partition"></a>Bir bölümdeki tüm varlıkları alma
+### <a name="retrieve-all-entities-in-a-partition"></a>Tüm varlıkları bir bölüme alma
 
 Bir bölümdeki tüm varlıklar için bir tabloyu sorgulamak üzere kullanmak bir `TableQuery` nesne. Burada, "Smith" Bölüm anahtarı olduğu varlıklar için filtreleyin.
 
@@ -129,9 +129,9 @@ Artık sonuçlar yazdırma:
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
 
-### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Varlıkları bir bölüme aralığı alınamıyor
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Bir bölüme bir grup varlık alma
 
-Bir bölümdeki tüm varlıkları sorgulamak istemiyorsanız bölüm anahtarı Filtresi ile bir satır anahtarı filtresini birleştirerek bir aralık belirtebilirsiniz. Burada, iki filtre "Smith" bölümünde tüm varlıkları almak için nereye satır anahtarı (ad) alfabede "M"'den önceki bir harfle başlayan kullanırsınız.
+Bir bölümdeki tüm varlıkları sorgulamak istemiyorsanız bölüm anahtarı filtresi ile bir satır anahtarı filtresini birleştirerek bir aralık belirleyebilirsiniz. Burada, iki filtre "Smith" bölümünde tüm varlıkları almak için nereye satır anahtarı (ad) alfabede "M"'den önceki bir harfle başlayan kullanırsınız.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
@@ -141,7 +141,7 @@ Artık sonuçlar yazdırma:
 
 ### <a name="retrieve-a-single-entity"></a>Tek bir varlık alma
 
-Tek, belirli bir varlığı almak için bir sorgu yazabilirsiniz. Burada kullandığınız bir `TableOperation` "Ben Smith" Müşteri belirtmek için. Bir koleksiyon yerine ulaşırsınız bir `Customer`. Bir sorguda hem Bölüm anahtarı hem de satır anahtarını belirtmek tablo hizmetinden tek bir varlığı almak için en hızlı yoludur.
+Tek, belirli bir varlığı almak üzere bir sorgu yazabilirsiniz. Burada kullandığınız bir `TableOperation` "Ben Smith" Müşteri belirtmek için. Bir koleksiyon yerine ulaşırsınız bir `Customer`. Bir sorguda hem Bölüm anahtarı hem de satır anahtarını belirtmek tablo hizmetinden tek bir varlığı almak için en hızlı yoludur.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -156,19 +156,19 @@ Bir varlığı güncelleştirmek için tablo hizmetinden alın, varlık nesnesin
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
-### <a name="insert-or-replace-an-entity"></a>Ekleme veya değiştirme varlık
+### <a name="insert-or-replace-an-entity"></a>Bir varlığı yerleştirme veya değiştirme
 
 Bazı durumlarda, bir varlığı tabloda mevcut olup olmadığını bilmiyorsanız. Ve içinde saklı geçerli değerlerin artık aşması durumunda gereklidir. Kullanabileceğiniz `InsertOrReplace` varlığı oluşturma veya, durumuna bakılmaksızın varsa bunu değiştirin.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-### <a name="query-a-subset-of-entity-properties"></a>Varlık özelliklerinin bir alt kümesi sorgulama
+### <a name="query-a-subset-of-entity-properties"></a>Giriş özellikleri alt kümesi sorgulama
 
 Tablo sorgusu, bunların tümünü yerine bir varlıktaki birkaç özelliği alabilir. Projeksiyon olarak adlandırılan, bu teknik, özellikle büyük varlıklar için sorgu performansını iyileştirebilir. Burada, yalnızca e-posta adreslerini kullanarak dönüş `DynamicTableEntity` ve `EntityResolver`. Bu nedenle bu kod yalnızca tablo hizmetinde bir hesap kullanırken çalıştırılır projeksiyon yerel depolama öykünücüsünde desteklenmediğini unutmayın.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-### <a name="retrieve-entities-in-pages-asynchronously"></a>Sayfaları varlıkları zaman uyumsuz olarak alma
+### <a name="retrieve-entities-in-pages-asynchronously"></a>Sayfalarda zaman uyumsuz olarak varlıkları alma
 
 Çok sayıda varlık okuyorsanız ve alındıkları gibi bunları yerine tümünü döndürülecek bekleniyor işlemek istiyorsanız, bölümlendirilmiş bir sorgu kullanabilirsiniz. Burada, böylece çok sayıda döndürülecek sonuç için beklerken yürütme engellenip engellenmediğini bir zaman uyumsuz iş akışı kullanarak sayfalarında sonuçları döndürür.
 
@@ -184,9 +184,9 @@ Bu aldıktan sonra bir varlığı silebilirsiniz. Denge, alınan varlık değiş
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
-### <a name="delete-a-table"></a>Tablo silme
+### <a name="delete-a-table"></a>Bir tablo silme
 
-Bir depolama hesabından bir tablo silebilirsiniz. Silinmiş olan bir tablo silme, bir dönem için yeniden oluşturulması kullanılamaz.
+Bir depolama hesabından bir tablo silebilirsiniz. Silinen bir tablo, silme işleminin ardından yeniden oluşturma için belirli bir süre kullanılamayacaktır.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
@@ -194,9 +194,9 @@ Bir depolama hesabından bir tablo silebilirsiniz. Silinmiş olan bir tablo silm
 
 Table storage'nın temellerini öğrendiğinize göre daha karmaşık depolama görevleri ve Azure Cosmos DB tablo API'si hakkında bilgi edinmek için bu bağlantıları izleyin.
 
-- [Azure Cosmos DB tablo API'sine giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET başvurusu için depolama istemcisi kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure depolama tür sağlayıcısı](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure Cosmos DB Tablo API’sine Giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [.NET başvurusu için Depolama İstemci Kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Azure depolama tür sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure depolama ekibi blogu](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Bağlantı dizeleri yapılandırma](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [. NET'te Azure tablo depolama kullanmaya başlama](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838227"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613745"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;kaldırma&gt; öğesi için &lt;namedCaches&gt;
 Bir adlandırılmış önbellek girişi kaldırır `namedCaches` koleksiyonu için bir önbellek.  
@@ -53,4 +53,4 @@ Bir adlandırılmış önbellek girişi kaldırır `namedCaches` koleksiyonu iç
  `remove` Öğeyi kaldırır bir `namedCache` adlandırılmış önbelleği koleksiyon için bir önbellek girişi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

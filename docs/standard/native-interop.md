@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143194"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396818"
 ---
 # <a name="native-interoperability"></a>Yerel birlikte çalışabilirliği
 
@@ -260,7 +260,7 @@ Yukarıdaki örneklerde hem de parametrelere bağlı ve her iki durumda da, yön
 
 **Taşıma** yönetilen bir sınır içine yerel ve çapraz ihtiyaç duyduğunda, tür dönüştürme işlemidir.
 
-Taşıma neden gerekli yönetilen ve yönetilmeyen kod türleri farklı olduğundan. Yönetilen kodda, örneğin, elinizde bir `String`, dizeleri Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII, yönetilmeyen dünyada olabileceği vs. Varsayılan olarak, P/Invoke alt göre doğru şeyleri yapacakları konusunda deneyin [varsayılan davranışı](../../docs/framework/interop/default-marshaling-behavior.md). Ancak, bu durumlar için ek denetlemeniz dağıtabileceklerinizle [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) yönetilmeyen tarafında beklenen tür belirtmek için özniteliği. ANSI null ile sonlandırılmış dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
+Taşıma neden gerekli yönetilen ve yönetilmeyen kod türleri farklı olduğundan. Yönetilen kodda, örneğin, elinizde bir `String`, dizeleri Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII, yönetilmeyen dünyada olabileceği vs. Varsayılan olarak, P/Invoke alt göre doğru şeyleri yapacakları konusunda deneyin [varsayılan davranışı](../../docs/framework/interop/default-marshaling-behavior.md). Ancak, bu durumlar için ek denetlemeniz dağıtabileceklerinizle [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) yönetilmeyen tarafında beklenen tür belirtmek için özniteliği. ANSI null ile sonlandırılmış dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

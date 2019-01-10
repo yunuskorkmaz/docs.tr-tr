@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 898da3136bef51d0f8541da3829e55598b16781c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452959"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145716"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor sınıfı
 
@@ -32,7 +32,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor` Sınıfı iç ve kodunuzda doğrudan kullanılacak yüksetlmesi.
+> `DataMemberFieldEditor` Sınıfı dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
 > 
 > Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
 
@@ -40,7 +40,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Bütünleştirilmiş kod:** System.Design (içinde System.Design.dll)  
+**Derleme:** System.Design (içinde System.Design.dll)  
   
 **.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.  
   

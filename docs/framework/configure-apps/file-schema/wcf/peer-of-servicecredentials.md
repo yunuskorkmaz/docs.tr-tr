@@ -2,12 +2,12 @@
 title: '&lt;serviceCredentials&gt; &lt;eşi&gt;'
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 94f93a7955af3bff1c17e59a11af3fad85c9134d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df2570a94e7d0c11228d0a72c938d871503d17ac
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152053"
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; &lt;eşi&gt;
 Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.  
@@ -22,11 +22,11 @@ Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<peer>  
-  <certificate/>  
-  <peerAuthentication/>  
-  <messageSenderAuthentication/>  
-</peer>  
+<peer>
+  <certificate />
+  <peerAuthentication />
+  <messageSenderAuthentication />
+</peer>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  

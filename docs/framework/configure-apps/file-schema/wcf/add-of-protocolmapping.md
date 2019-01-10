@@ -2,26 +2,30 @@
 title: '&lt;protocolMapping&gt; &lt;ekleme&gt;'
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 4552cc030a88841d4fb80c097ba089d1c6a0066c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e21c3ca665d6a75394d70da43ec2044e00f16429
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349021"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145490"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; &lt;ekleme&gt;
-Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) ve bir Windows Communication Foundation (WCF) bağlama arasındaki varsayılan protokolü eşlemeyi temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, WCF yapılandırılmış eşlemelerin arar ve adresine göre hangi belirli bir için kullanılacak bağlama karar verir.  
+Taşıma protokol şeması (örneğin, http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlaması arasında varsayılan protokol eşleşmelerinin temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, WCF yapılandırılmış eşlemelerin arar ve hangi belirli bir için kullanılacak bağlama adresine göre karar verir.  
   
  \<system.serviceModel>  
 \<protocolMapping >  
-\<ekleme >  
+\<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>
-```
-
+```xml  
+<protocolMapping>
+  <add binding="String"
+       bindingConfiguration="String"
+       scheme="http/net.msmq/net.pipe/net.tcp" />
+</protocolMapping>
+```  
+  
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
@@ -29,9 +33,9 @@ Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) ve bir Win
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|bağlama|Varsayılan uç nokta oluşturma sırasında bir uç noktası için kullanılacak bağlama türünü belirten bir dize.|  
+|bağlama|Varsayılan uç nokta oluşturma sırasında bir uç nokta için kullanılacak bağlama türünü belirten bir dize.|  
 |bindingConfiguration|Başvurulacak bağlama yapılandırma bölümünün adını belirten dize.|  
-|düzen|Varsayılan uç noktası için kullanılacak Aktarım Protokolü düzeni.|  
+|düzen|Varsayılan uç nokta için kullanılacak taşıma protokol şeması.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -40,18 +44,22 @@ Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) ve bir Win
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Aktarım Protokolü düzenleri (örn., http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlamaları arasındaki varsayılan protokolü eşlemeleri tanımlamak için yapılandırma bölümünü temsil eder.|  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Taşıma protokol şemaları (örn., http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlamaları arasında varsayılan protokol eşlemeleri tanımlayan bir yapılandırma bölümünü temsil eder.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örnek machine.config dosyasındaki varsayılan protokolü eşlemeyi gösterir. Machine.config dosyasının değiştirerek bu varsayılan eşleme makine düzeyinde geçersiz kılabilirsiniz. Veya yalnızca bir uygulama kapsamında geçersiz kılmak isterseniz, bu bölümde, uygulama yapılandırma dosyasında geçersiz kılmak ve tek protokol düzenleri için eşleme değiştirin.  
+ Aşağıdaki yapılandırma örnek machine.config dosyasında varsayılan protokol eşleşmelerinin gösterir. Machine.config dosyasının değiştirerek bu varsayılan eşleme makine düzeyinde geçersiz kılabilirsiniz. Veya yalnızca bir uygulama kapsamında geçersiz kılmak istiyorsanız, bu bölümde, uygulama yapılandırma dosyasında geçersiz kılmak ve eşlemeyi tek protokol şemaları için değiştirin.  
   
 ```xml  
-<protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
-</protocolMapping>  
+<protocolMapping>
+  <add scheme="http"
+       binding="basicHttpBinding" />
+  <add scheme="net.tcp"
+       binding="netTcpBinding" />
+  <add scheme="net.pipe"
+       binding="netNamedPipeBinding" />
+  <add scheme="net.msmq"
+       binding="netMsmqBinding" />
+</protocolMapping>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

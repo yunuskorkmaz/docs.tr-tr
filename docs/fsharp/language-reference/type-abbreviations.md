@@ -1,13 +1,13 @@
 ---
-title: Tür Kısaltmaları (F#)
-description: Bir tür, kodun okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F# tür kısaltmaları hakkında bilgi edinin.
+title: Tür Kısaltmaları
+description: Hakkında bilgi edinin F# bir tür, kodun okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için kısaltmalar yazın.
 ms.date: 05/16/2016
-ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842431"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613355"
 ---
 # <a name="type-abbreviations"></a>Tür Kısaltmaları
 
@@ -33,7 +33,7 @@ Tür kısaltmaları, aşağıdaki kodda gösterildiği gibi genel parametreler e
 
 Önceki kodda, `Transform` herhangi bir türde tek bir bağımsız değişken alan bir işlev temsil eden bir tür kısaltması olduğundan ve aynı türde tek bir değer döndürür.
 
-Tür kısaltmaları .NET Framework MSIL kodu korunmaz. Bu nedenle, bir F# derleme başka bir .NET Framework dilden kullandığınızda, temel alınan tür adı için bir tür kısaltması kullanmanız gerekir.
+Tür kısaltmaları .NET Framework MSIL kodu korunmaz. Bu nedenle, kullandığınızda bir F# derleme başka bir .NET Framework dilinden türü kısaltması için temel alınan tür adı kullanmanız gerekir.
 
 Tür kısaltmaları ölçü birimi üzerinde de kullanılabilir. Daha fazla bilgi için [ölçü](units-of-measure.md).
 

@@ -1,13 +1,13 @@
 ---
-title: Devralma (F#)
-description: F# kalıtım ilişkileri Devral' anahtar sözcüğü kullanılarak belirleme konusunda bilgi edinin.
+title: Devralma
+description: Nasıl belirleyeceğinizi öğrenin F# kalıtım ilişkileri Devral' anahtar sözcüğü kullanılarak.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864475"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610144"
 ---
 # <a name="inheritance"></a>Devralma
 
@@ -34,7 +34,7 @@ Anahtar sözcüğü `base` türetilmiş sınıflarda kullanılabilir ve temel s�
 
 ## <a name="virtual-methods-and-overrides"></a>Sanal yöntemleri ve geçersiz kılmaları
 
-Sanal yöntemler (ve Özellikler) biraz farklı F# diğer .NET dilleri göre çalışır. Yeni bir sanal üye bildirmek için kullandığınız `abstract` anahtar sözcüğü. Bunun için bu yöntem için varsayılan bir uygulama sağlamak ne olursa olsun. Bu nedenle tam bir temel sınıf sanal yöntemin tanımı bu düzen aşağıdaki gibidir:
+Sanal yöntemler (ve Özellikler) iş içinde biraz farklı F# diğer .NET dilleri ile karşılaştırıldığında. Yeni bir sanal üye bildirmek için kullandığınız `abstract` anahtar sözcüğü. Bunun için bu yöntem için varsayılan bir uygulama sağlamak ne olursa olsun. Bu nedenle tam bir temel sınıf sanal yöntemin tanımı bu düzen aşağıdaki gibidir:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ Aşağıdaki kod, burada türetilmiş sınıf devralma yan tümcesinde temel sı
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-Birden çok Oluşturucu söz konusu olduğunda, aşağıdaki kod kullanılabilir. Türetilmiş sınıf oluşturucular ilk satırının `inherit` yan tümcesi ve alanları ile bildirilen açık alanlar olarak görünür `val` anahtar sözcüğü. Daha fazla bilgi için [açık alanlar: `val` anahtar sözcüğü](members/explicit-fields-the-val-keyword.md).
+Birden çok Oluşturucu söz konusu olduğunda, aşağıdaki kod kullanılabilir. Türetilmiş sınıf oluşturucular ilk satırının `inherit` yan tümcesi ve alanları ile bildirilen açık alanlar olarak görünür `val` anahtar sözcüğü. Daha fazla bilgi için [açık alanlar: `val` Anahtar sözcüğü](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

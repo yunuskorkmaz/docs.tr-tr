@@ -2,12 +2,12 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210155"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152014"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -18,26 +18,26 @@ Farklı bir bağlama türleri ve ileti sürümleri arasında iletileri hazırlam
 &nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<davranışı >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
-
-## <a name="syntax"></a>Sözdizimi
-
-```xml
+  
+## <a name="syntax"></a>Sözdizimi  
+  
+```xml  
 <soapProcessing processMessages="true|false" />
-```
-
-## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
-
-Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
-
-### <a name="attributes"></a>Öznitelikler
-
+```  
+  
+## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler  
+  
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+  
+### <a name="attributes"></a>Öznitelikler  
+  
 |                   | Açıklama |
 | ----------------- | ----------- |
 | `processMessages` | İletilerin SOAP ileti sürümleri arasında sıralanmış olup olmadığını belirten bir Boole değeri. |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ### <a name="parent-elements"></a>Üst öğeler
 

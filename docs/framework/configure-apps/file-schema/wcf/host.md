@@ -1,31 +1,32 @@
 ---
-title: '&lt;ana bilgisayar&gt;'
+title: '&lt;Ana bilgisayar&gt;'
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: ec53568e9d1df9ebb04bc299f491e80674950c63
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: afa9d65223ab3a7730a55bc41ed98458707b32db
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233736"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145235"
 ---
-# <a name="lthostgt"></a>&lt;ana bilgisayar&gt;
-Hizmet ana bilgisayarı ayarlarını belirtir.  
+# <a name="lthostgt"></a>&lt;Ana bilgisayar&gt;
+Hizmet konak makinesi ayarlarını belirler.  
   
  \<system.ServiceModel>  
 \<Hizmetleri >  
 \<Hizmet >  
-\<ana bilgisayar >  
+\<konak >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <host>
-    <baseAddresses>  
-        <add baseAddress="string" />  
-    </baseAddresses>  
-    <timeOuts closeTimeout="TimeSpan" openTimeout="TimeSpan">  
-</host>  
+  <baseAddresses>
+    <add baseAddress="string" />
+  </baseAddresses>
+  <timeOuts closeTimeout="TimeSpan"
+            openTimeout="TimeSpan" />
+</host>
 ```  
   
 ## <a name="type"></a>Tür  
@@ -41,14 +42,14 @@ Hizmet ana bilgisayarı ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Bir koleksiyonu `baseAddress` hizmeti ana bilgisayar tarafından kullanılan temel adres belirtir öğeleri.|  
-|[\<zaman aşımı >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirtir bir yapılandırma öğesi.|  
+|[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Bir koleksiyonu `baseAddress` hizmet ana bilgisayarı tarafından kullanılan tabanı belirten öğeleri.|  
+|[\<zaman aşımı >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirten bir yapılandırma öğesi.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Hizmet >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Windows Communication Foundation (WCF) hizmeti ayarlarını belirtir.|  
+|[\<Hizmet >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Bir Windows Communication Foundation (WCF) hizmetinin ayarlarını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.HostElement>  

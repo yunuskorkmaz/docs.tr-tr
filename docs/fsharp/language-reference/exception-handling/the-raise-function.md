@@ -1,13 +1,13 @@
 ---
-title: 'Özel Durumlar: raise İşlevi (F#)'
-description: F# 'raise' işlevi bir hata veya olağanüstü bir koşul oluştu belirtmek için nasıl kullanıldığını öğrenin.
+title: 'Özel Durumlar: raise İşlevi'
+description: Bilgi nasıl F# 'raise' işlevi, bir hata veya olağanüstü bir koşul oluştu belirtmek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778265"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610157"
 ---
 # <a name="exceptions-the-raise-function"></a>Özel Durumlar: raise İşlevi
 
@@ -37,7 +37,7 @@ Aşağıdaki kod örnekleri kullanımını gösteren `raise` işlev bir özel du
 
 - [Özel Durum İşleme](index.md)
 - [Özel Durum Türleri](exception-types.md)
-- [Özel durumlar: `try...with` ifadesi](the-try-with-expression.md)
-- [Özel durumlar: `try...finally` ifadesi](the-try-finally-expression.md)
-- [Özel durumlar: `failwith` işlevi](the-failwith-function.md)
-- [Özel durumlar: `invalidArg` işlevi](the-invalidArg-function.md)
+- [Özel durumlar: `try...with` İfadesi](the-try-with-expression.md)
+- [Özel durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
+- [Özel durumlar: `failwith` İşlevi](the-failwith-function.md)
+- [Özel durumlar: `invalidArg` İşlevi](the-invalidArg-function.md)

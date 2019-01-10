@@ -1,13 +1,13 @@
 ---
-title: Boş Değer Atanabilir İşleçler (F#)
-description: F# programlama dilinde kullanılabilen boş değer atanabilir işleçler hakkında bilgi edinin.
+title: Boş Değer Atanabilir İşleçler
+description: Kullanılabilen boş değer atanabilir işleçler hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086289"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610599"
 ---
 # <a name="nullable-operators"></a>Boş Değer Atanabilir İşleçler
 
@@ -15,7 +15,7 @@ Boş değer atanabilir işleçler şunlardır: aritmetik boş değer atanabilir 
 
 ## <a name="table-of-nullable-operators"></a>Boş değer atanabilir işleçler tablosu
 
-Aşağıdaki tabloda F# dilinde desteklenen boş değer atanabilir işleçler listeler.
+Aşağıdaki tabloda desteklenen boş değer atanabilir işleçler F# dili.
 
 |Sol taraftaki boş değer atanabilir|Sağdaki boş değer atanabilir|Her iki tarafında boş değer atanabilir|
 |---|---|---|
@@ -55,7 +55,7 @@ printfn "%f" (float nullableFloat)
 
 Boş değer atanabilir veri alanlarını, işleçlerini gibi sorgu `sumByNullable`, sorgu ifadelerinde kullanmak için de mevcuttur. Sorgu işleçleri için alamayan bir tür boş değer atanabilir veri değerleri ile çalışırken uygun sorgu işleci boş değer atanabilir sürümünü kullanmalısınız türü ile boş değer atanabilir türler ile uyumlu değildir. Daha fazla bilgi için [sorgu ifadeleri](../query-expressions.md).
 
-Aşağıdaki örnek, bir F# sorgu ifadesinde boş değer atanabilir işleçler kullanımını gösterir. İlk sorgu, sorgu boş değer atanabilir bir işleci olmadan nasıl yazacağınızı gösterir; İkinci sorgu, boş değer atanabilir bir operatör kullanan bir eşdeğer bir sorguyu gösterir. Bu örnek kodu kullanmak için veritabanı ayarlama dahil tam bağlamının bkz [izlenecek yol: tür sağlayıcılarını kullanarak SQL veritabanlarını erişme](../../tutorials/type-providers/accessing-a-sql-database.md).
+Aşağıdaki örnek boş değer atanabilir işleçler kullanımını gösterir. bir F# sorgu ifadesi. İlk sorgu, sorgu boş değer atanabilir bir işleci olmadan nasıl yazacağınızı gösterir; İkinci sorgu, boş değer atanabilir bir operatör kullanan bir eşdeğer bir sorguyu gösterir. Bu örnek kodu kullanmak için veritabanı ayarlama dahil tam bağlamının bkz [izlenecek yol: Tür sağlayıcılarını kullanarak SQL veritabanına erişim](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

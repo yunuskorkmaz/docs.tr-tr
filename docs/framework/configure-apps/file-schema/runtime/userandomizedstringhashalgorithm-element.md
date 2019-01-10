@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 15a86c1df3e7d6a9d8ddd102bd34aede46c08ba8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746091"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612094"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; öğesi
-Ortak dil çalışma zamanı üzerinde karma kodlarını dizeleri hesaplar olup olmadığını belirleyen bir uygulama etki alanı temelinde.  
+Ortak dil çalışma zamanı için dizelerin karma kodlarını hesaplayıp belirleyen bir her uygulama etki alanı.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -38,14 +38,14 @@ Ortak dil çalışma zamanı üzerinde karma kodlarını dizeleri hesaplar olup 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Dizeler için karma kodlarını çubuğunda hesaplanıp hesaplanmayacağını belirler bir uygulama etki alanı temelinde.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Dizeler için karma kodları hesaplanıp hesaplanmadığını belirtir bir her uygulama etki alanı.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`0`|Ortak dil çalışma zamanı dizeleri için karma kodları üzerinde işlem olmayan bir uygulama etki alanı temelinde; tek bir algoritma dize karma kodlarını hesaplamak için kullanılır. Bu varsayılandır.|  
-|`1`|Ortak dil çalışma zamanı üzerinde karma kodlarını dizeleri hesaplar bir uygulama etki alanı temelinde. Farklı uygulama etki alanları ve farklı işlemler aynı dizeleri farklı karma kodlarını olacaktır.|  
+|`0`|Ortak dil çalışma zamanı dizeler için karma kodları hesaplama olmayan bir uygulama etki alanı temelinde; tek bir algoritma dize karma kodlarını hesaplamak için kullanılır. Bu varsayılandır.|  
+|`1`|Ortak dil çalışma zamanı dizeler için karma kodlar hesaplayan bir her uygulama etki alanı. Farklı uygulama etki alanlarındaki ve farklı işlemlerdeki aynı dizeler, farklı karma kodlarına sahip olacaktır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,26 +58,26 @@ Ortak dil çalışma zamanı üzerinde karma kodlarını dizeleri hesaplar olup 
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.StringComparer> sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi uygulama etki alanları arasında tutarlı karma kodu oluşturan tek bir karma algoritmasını kullanın. Bu ayar için eşdeğerdir `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `0`. Kullanılan karma algoritma budur [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Varsayılan olarak, <xref:System.StringComparer> sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi, uygulama etki alanları arasında tutarlı bir karma kod üreten tek bir karma algoritma kullanın. Bu ayarlamakla eşdeğerdir `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `0`. İçinde kullanılan karma algoritması budur [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- <xref:System.StringComparer> Sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi de karma kodlarını çubuğunda hesaplar farklı bir karma algoritma kullanın bir uygulama etki alanı temelinde. Sonuç olarak, karma kodlarını eşdeğer dizeleri için uygulama etki alanları arasında farklılık gösterir. Bu bir katılımı özelliğidir; Bunu yararlanmak için ayarlamalısınız `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `1`.  
+ <xref:System.StringComparer> Sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi ayrıca karma kodlar hesaplayan farklı bir karma algoritması kullanan bir her uygulama etki alanı. Sonuç olarak, eşdeğer dizeler için karma kodlarını uygulama etki alanları arasında farklılık gösterir. Bu bir katılım özelliğidir; yararlanmak için ayarlamalısınız `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `1`.  
   
- Bir karma tablosu dize aramada genellikle bir O(1) işlemdir. Ancak, çok sayıda çakışma oluştuğunda, arama O olabilir (n<sup>2</sup>) işlemi. Kullanabileceğiniz `<UseRandomizedStringHashAlgorithm>` rastgele bir karma algoritma başına içinden karma kodlarını hesaplanır anahtarlar veri giriş, özellikle dayanır bağlandığınızda sırayla olası çakışmaları sayısını sınırlar, uygulama etki alanı oluşturmak için yapılandırma öğesi kullanıcılar tarafından.  
+ Karma tabloda dize arama genellikle bir o(1) işlemidir. Ancak, çok sayıda çakışma oluştuğunda arama bir O olabilir (n<sup>2</sup>) işlemi. Kullanabileceğiniz `<UseRandomizedStringHashAlgorithm>` yapılandırma öğesi, karma kodlarının hesaplandığı anahtarlar girilen verilere dayalı özellikle hangi sırayla olası çakışmaların sayısını sınırlayan, uygulama etki alanı başına rasgele bir karma algoritma oluşturmak için kullanıcılar tarafından.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tanımlayan bir `DisplayString` özel dize sabiti içeren sınıf `s`, değeri olan "Dize budur." Ayrıca içeren bir `ShowStringHashCode` dize değeri ve karma kodunu içinde yöntemi Yürütülüyor uygulama etki alanı adı ile birlikte görüntüler yöntemi.  
+ Aşağıdaki örnekte tanımlayan bir `DisplayString` bir özel dize sabiti içeren sınıf `s`, değeri olan "Dize budur." Ayrıca bir `ShowStringHashCode` dize değeri ve Yöntem yürütme, uygulama etki alanı adı karma kodunu görüntüler yöntemi.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- Örnek bir yapılandırma dosyası girmeden çalıştırdığınızda, aşağıdakine benzer bir çıktı görüntüler. Karma kodlarını dize için iki uygulama etki alanları aynı olduğunu unutmayın.  
+ Örnek bir yapılandırma dosyası sağlamadan çalıştırdığınızda, aşağıdakine benzer bir çıktı görüntüler. Dize için karma kodları iki uygulama etki alanında aynı olduğuna dikkat edin.  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- Ancak, örneğin dizinine aşağıdaki yapılandırma dosyası ekleyin ve ardından örnek çalıştırırsanız, karma kodlarını aynı dize için uygulama etki alanına göre farklılık gösterir.  
+ Ancak örneğin dizinine şu yapılandırma dosyasını ekleyin ve sonra örneği çalıştırırsanız, aynı dize için karma kodlarını uygulama etki alanına göre farklılık gösterir.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- Yapılandırma dosyası mevcut olduğunda, aşağıdaki çıktı örneği görüntüler:  
+ Yapılandırma dosyası varolduğunda, örnek aşağıdaki çıkışı görüntüler:  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
@@ -96,6 +96,6 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

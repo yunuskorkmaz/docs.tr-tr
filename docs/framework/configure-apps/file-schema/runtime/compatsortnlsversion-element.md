@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9d505dd7433978e3a5908757a1d9569fe31f49b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745714"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614421"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt; öğesi
 Çalışma zamanının, dize karşılaştırmaları yaparken eski sıralama düzenlerini kullanması gerektiğini belirtir.  
@@ -57,32 +57,32 @@ ms.locfileid: "32745714"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dize karşılaştırması, sıralama ve büyük/küçük harf işlemleri tarafından gerçekleştirilen çünkü <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıfını [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Unicode 5.1 için standart, dize karşılaştırma yöntemlerini sonuçlarını gibi uygun <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> farklı olabilir .NET Framework'ün önceki'yi tıklatın. Eski davranışı, uygulamanızın bağımlı olması durumunda, dize karşılaştırma geri yükleyebilir ve kuralları sıralama kullanılır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] ve önceki sürümleri de dahil olmak üzere tarafından `<CompatSortNLSVersion>` uygulamanızın yapılandırma dosyasına öğe.  
+ Dize karşılaştırması, sıralama ve büyük/küçük harf işlemleri tarafından gerçekleştirilen çünkü <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıfını [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Unicode 5.1 standardına dize karşılaştırma yöntemlerinin sonuçları gibi uygun <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> farklı olabilir .NET Framework'ün önceki'yi tıklatın. Uygulamanız eski davranışa bağlıysa, dize karşılaştırması geri yükleyebilirsiniz ve sıralama kurallarını kullanılan [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] ve önceki sürümleri ekleyerek `<CompatSortNLSVersion>` uygulamanızın yapılandırma dosyasında öğesi.  
   
 > [!IMPORTANT]
 >  Eski dize karşılaştırma ve sıralama kurallarını geri yüklemek, sort00001000.dll dinamik bağlantı kitaplığının yerel sistemde kullanılabilir olmasını da gerektirir.  
   
- Aynı zamanda eski dize sıralama ve karşılaştırma kurallarında belirli uygulama etki alanı "NetFx40_Legacy20SortingBehavior" dizesi geçirerek için kullanabileceğiniz <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> uygulama etki alanı oluşturduğunuzda yöntemi.  
+ Ayrıca eski dize sıralama ve karşılaştırma kurallarını belirli uygulama etki alanındaki "NetFx40_Legacy20SortingBehavior" dizesini geçirerek için kullanabileceğiniz <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> uygulama etki alanı oluşturduğunuzda yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte iki başlatır <xref:System.String> nesneleri ve çağrıları <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> geçerli kültürü kurallarını kullanarak karşılaştırmak için yöntem.  
+ Aşağıdaki örnek iki başlatır <xref:System.String> nesneleri ve çağrıları <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> geçerli kültürün kurallarını kullanarak karşılaştırmak için yöntemi.  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Örnek çalıştırdığınızda [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], aşağıdaki çıkış görüntüler.  
+ Örnek çalıştırıldığında [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], aşağıdaki çıkışı görüntüler.  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- Bu örnek çalıştırdığınızda, görüntülenen çıktısından tamamen farklı [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Bu örneği çalıştırdığınızda, görüntülenen çıktısından tamamen farklıdır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Ancak, örneği aşağıdaki yapılandırma dosyası eklerseniz, dizin adı ve örnek sonra çalıştıracağınız [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], çıktı çalışırken örnek tarafından üretilen özdeş [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Ancak, örneği aşağıdaki yapılandırma dosyası eklerseniz dizinine ve sonra örneği çalıştırırsanız [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], çıkış, çalıştırıldığında örnek tarafından oluşturulanla aynıdır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -94,5 +94,5 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -4,12 +4,12 @@ description: Talepler ve mikro hizmetler dünyasında Dağıtılmış veri yöne
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151037"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145997"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
@@ -53,7 +53,7 @@ Ancak, bir mikro hizmet tabanlı uygulama ürün ve sepet tabloları ilgili kend
 
 **Şekil 4-9**. Bir mikro hizmet, bir tablodaki başka bir mikro hizmet doğrudan erişemez
 
-Sepet tablo sepet mikro hizmet tarafından sahiplenildiğinden Kataloğu mikro hizmet sepet tablo doğrudan güncelleştirme olmamalıdır. Katalog mikro hizmet sepet mikro hizmet için bir güncelleştirme yapmak için büyük olasılıkla zaman uyumsuz iletişim tümleştirme olayları (ileti ve olay tabanlı iletişim) gibi temel nihai tutarlılık kullanmanız gerekir. Bu, nasıl [hizmetine](http://aka.ms/eshoponcontainers) başvuru uygulaması, mikro hizmetler arasında tutarlılık bu tür gerçekleştirir.
+Sepet tablo sepet mikro hizmet tarafından sahiplenildiğinden Kataloğu mikro hizmet sepet tablo doğrudan güncelleştirme olmamalıdır. Katalog mikro hizmet sepet mikro hizmet için bir güncelleştirme yapmak için büyük olasılıkla zaman uyumsuz iletişim tümleştirme olayları (ileti ve olay tabanlı iletişim) gibi temel nihai tutarlılık kullanmanız gerekir. Bu, nasıl [hizmetine](https://aka.ms/eshoponcontainers) başvuru uygulaması, mikro hizmetler arasında tutarlılık bu tür gerçekleştirir.
 
 Tarafından belirtildiği gibi [CAP Teoremi](https://en.wikipedia.org/wiki/CAP_theorem), ACID güçlü tutarlılık ve kullanılabilirlik arasında seçim yapmanız gerekir. Mikro hizmet tabanlı çoğu senaryoda, kullanılabilirlik ve güçlü tutarlılık aksine yüksek ölçeklenebilirlik talep. Görev açısından kritik uygulamalar kalması gereken ve çalışan ve geliştiricilerin güçlü tutarlılık zayıf veya nihai tutarlılık ile çalışmaya yönelik teknikleri kullanarak çalışabilir. Çoğu mikro hizmet tabanlı mimari tarafından uygulanan yaklaşıma budur.
 
@@ -101,7 +101,7 @@ Zaman uyumsuz iletişim kullanımı ile ek ayrıntılar sonraki bölümlerde bu 
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - **Charles satır. ACID vs. TEMEL: Veritabanı işlem işleme Shifting pH** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Telafi işlemi** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

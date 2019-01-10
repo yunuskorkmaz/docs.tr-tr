@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 8be7582ce5db88d9a79698193c44d9c50bdea4cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184761"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147804"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;güvenliği&gt;
 MSMQ bağlama için güvenlik ayarlarını tanımlar. Bu aktarım veya SOAP Güvenliği etkinleştirilmiş ve bu durumda, hangi kimlik doğrulama modu ve koruma düzeyleri kullanımda olup olmadığını belirtir.  
@@ -21,15 +21,14 @@ MSMQ bağlama için güvenlik ayarlarını tanımlar. Bu aktarım veya SOAP Güv
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<security mode="None/Transport/Message/Both">  
-   <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-      msmqEncryptionAlgorithm="RC4Stream/AES"  
-      msmqProtectionLevel="None/Sign/EncryptAndSign"  
-      msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-      <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="None/Windows/UserName/Certificate/CardSpace"/>  
-</security>  
+<security mode="None/Transport/Message/Both">
+  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+             msmqEncryptionAlgorithm="RC4Stream/AES"
+             msmqProtectionLevel="None/Sign/EncryptAndSign"
+             msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+             clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -39,7 +38,7 @@ MSMQ bağlama için güvenlik ayarlarını tanımlar. Bu aktarım veya SOAP Güv
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Bütünlüğü, gizlilik ve kimlik doğrulama denetimleri güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Bu güvenlik devre dışı bırakır.<br />-Taşıma: Koruma ve kimlik doğrulaması taşıma tarafından sunulur. Bu ileti güvenliği iki sıra yöneticileri arasında geçerlidir. Kuyruk Yöneticisi ve uygulama arasında sunulan güvenlik yoktur. Msmq uygulamalara güvenlik modu bu tür işlevsel olarak eşdeğerdir.<br />-İleti: uçtan uca uygulama güvenliği belirtir. Aktarım katmanında sunulan güvenlik yoktur. Bu, standart diğer bağlamalar tarafından sunulan güvenlik benzer.<br />-Hem: hem aktarım hem de Katman Mesajlaşma SOAP güvenlik sunar. Aynı kimlik bilgisini iki düzeyde gereklidir.<br /><br /> Aktarım varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|mod|Bütünlüğü, gizlilik ve kimlik doğrulama denetimleri güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Bu güvenlik devre dışı bırakır.<br />-Taşıma: Koruma ve kimlik doğrulaması taşıma tarafından sunulmaktadır. Bu ileti güvenliği iki sıra yöneticileri arasında geçerlidir. Kuyruk Yöneticisi ve uygulama arasında sunulan güvenlik yoktur. Msmq uygulamalara güvenlik modu bu tür işlevsel olarak eşdeğerdir.<br />-İleti: Uçtan uca uygulama güvenliği belirtir. Aktarım katmanında sunulan güvenlik yoktur. Bu, standart diğer bağlamalar tarafından sunulan güvenlik benzer.<br />-Hem: Hem aktarım hem de SOAP ileti katmanı güvenlik sunar. Aynı kimlik bilgisini iki düzeyde gereklidir.<br /><br /> Aktarım varsayılan değerdir. Bu öznitelik türünde <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

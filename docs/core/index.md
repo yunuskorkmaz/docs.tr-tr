@@ -4,12 +4,12 @@ description: .NET core Windows, Linux ve Mac uygulamaları oluşturmak için .NE
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170284"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030288"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -19,15 +19,15 @@ Bkz: [.NET Core hakkında](about.md) özellikleri, desteklenen diller ve çerçe
 
 Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core uygulaması oluşturmayı öğrenin. Yalnızca ilk uygulamanızı çalıştırmaya başlayın birkaç dakika sürer. .NET Core tarayıcınızda denemek istiyorsanız, bakmak [içindeki numaralandırır C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) çevrimiçi öğretici.
 
-## <a name="download-net-core-21"></a>.NET Core 2.1 indirme
+## <a name="download-net-core-22"></a>.NET Core 2.2 indirin
 
-İndirme [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) .NET Core Windows, macOS veya Linux makinenizde denemek için. Ziyaret [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Docker kapsayıcılarını kullanmayı tercih ederseniz.
+İndirme [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) .NET Core Windows, macOS veya Linux makinenizde denemek için. Ziyaret [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Docker kapsayıcılarını kullanmayı tercih ederseniz.
 
 Tüm .NET Core sürümleri kullanılabilir [.NET Core indirir](https://www.microsoft.com/net/download/archives) için başka bir .NET Core sürümünün düşürmek istiyorsanız.
 
-## <a name="net-core-21"></a>.NET core 2.1
+## <a name="net-core-22"></a>.NET core 2.2
 
-En son sürüm [.NET Core 2.1](whats-new/dotnet-core-2-1.md). Yeni özellikler içerir: Genel araçları, yüksek performanslı API'leri (gibi <xref:System.Span%601?displayProperty=nameWithType>), katmanlı JIT derlemesi [derleme](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) ve [çalışma zamanı performans iyileştirmeleri](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/), için ve Destek Alpine ve ARM32.
+En son sürüm [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Yeni özellikler içerir: framework bağımlı dağıtımları, başlangıç kancaları, AAD kimlik doğrulaması ile Azure SQL ve Windows ARM32 desteği.
 
 ## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturma
 

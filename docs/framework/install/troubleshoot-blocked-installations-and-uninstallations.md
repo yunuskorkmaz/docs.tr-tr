@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cb33ffbbd735a015b58fe4fd6b9f7f70282cba1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625328"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781082"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme
 
@@ -24,14 +24,14 @@ Windows 8 ve üzeri, .NET Framework, işletim sisteminin bir bileşeni olan ve b
 > [!IMPORTANT]
 > .NET Framework 4.x sürümlerinin yerinde güncelleştirmeyi olduğundan, .NET Framework 4.x bir sistemde zaten daha sonraki bir sürümün yüklü olduğu bir önceki sürümünü yükleyemezsiniz. Örneğin, Windows 10 Fall Creators Update ile bir sistemde, .NET Framework 4.7.1 işletim sistemiyle birlikte önceden yüklenmiş olarak bu yana .NET Framework 4.6.2, yükleyemezsiniz.
 
-Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu belirleyebilirsiniz. Bkz: [nasıl yapılır: Determine Which .NET Framework sürümleri Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) daha fazla bilgi için.
+Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu belirleyebilirsiniz. Bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklendiğini belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) daha fazla bilgi için.
 
 Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve 4.5.2, 4.6. *x* .NET Framework 4.6 ve onun nokta sürümleri başvuruyor 4.6.1 ve 4.6.2 ve 4.7. *x* .NET Framework 4.7 ve onun nokta sürümleri 4.7.1 ve 4.7.2 ifade eder.
 
 |İletiyi engelleme|Daha fazla bilgi veya bu sorunu gidermek için|  
 |----------------------|--------------------------------------------------|  
 |Microsoft .NET Framework ürününün kaldırılması bazı uygulamaların işlevini durdurmasına neden olabilir.|Genel olarak, kullandığınız bir uygulama .NET Framework'ün belirli bir sürümüne bağlı olabileceği için, bilgisayarınıza yüklü olan .NET Framework sürümlerinden hiçbirini kaldırmamalısınız. Daha fazla bilgi için [kullanıcılar için .NET Framework](../../../docs/framework/get-started/index.md#ForUsers) içinde *Başlarken* Kılavuzu.|  
-|.NET framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (trk) veya sonraki bir sürümü bu bilgisayarda zaten yüklü.|Herhangi bir işlem gerekli değil.<br /><br /> Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu saptamak için bkz: [nasıl yapılır: Determine Which .NET Framework sürümleri Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).|  
+|.NET framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (trk) veya sonraki bir sürümü bu bilgisayarda zaten yüklü.|Herhangi bir işlem gerekli değil.<br /><br /> Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu saptamak için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (*dil*) .NET Framework 4.5 gerektirir *.x*/4.6 *.x*/4.7 *.x*. Lütfen .NET Framework 4.5 yükleme *.x*/4.6 *.x*/4.7 *.x* İndirme Merkezi'nden ve kurulumu yeniden çalıştırın.|Dil paketini yüklemeden önce belirtilen .NET Framework sürüm İngilizce sürümünü yüklemeniz gerekir. Daha fazla bilgi için üzerinde bölümüne bakın. [dil paketlerini yüklemek için](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs) Yükleme Kılavuzu.|  
 |.NET Framework 4.5 yüklenemiyor *.x*/4.6 *.x*/4.7 *.x*. Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.<br /><br /> veya<br /><br /> Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.|Bu ileti büyük olasılıkla .NET Framework'ün önizleme veya RC sürümünün yüklenmiş olmasından kaynaklanmıştır. Önizlemeyi veya RC sürümünü kaldırın ve kurulumu yeniden çalıştırın.|  
 |.NET framework 4.5 *.x*/4.6 *.x*/4.7 *.x* bu paket kullanılarak kaldırılamaz. .NET Framework 4.5 kaldırmak için *.x*/4.6 *.x*/4.7 *.x* bilgisayarınızdan Git **Denetim Masası**, seçin  **Programlar ve Özellikler**, seçin **yüklü güncelleştirmeleri görüntüle**, (KB2828152) Microsoft Windows Güncelleştirmesi'ni seçin ve ardından **kaldırma**.|Önizleme veya RC sürümlerini .NET Framework'ün kaldırın, yüklemekte olduğunuz paket değil.<br /><br /> Önizlemeyi veya RC kaldırın. Denetim Masası'ndan yayın.|  
@@ -47,7 +47,7 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 |Windows Update Hizmeti bu bilgisayarda kullanılamadığından kurulum düzgün çalışmayabilir.|Bilgisayar, Microsoft Windows Update yerine Windows Server Update Services (WSUS) kullanacak şekilde yapılandırılabilir. Daha fazla bilgi için hata kodu 0x800F0906 bölümüne bakın [Windows 8 veya Windows Server 2012 ' .NET Framework 3.5 yüklemeye çalıştığınızda hata kodları](https://support.microsoft.com/kb/2734782).<br /><br /> Ayrıca bkz: [bir bilgisayardaki güncelleştirmeleri yönetmenize yardımcı olmak için Windows Update Aracısı'nın en son sürümünü elde etme](https://go.microsoft.com/fwlink/p/?LinkId=248437) Microsoft Support Web sitesi.|  
 |Arka Plan Akıllı Aktarım Hizmeti (BITS) bu bilgisayarda kullanılamadığından kurulum düzgün çalışmayabilir.|Bkz: [bir Windows Vista tabanlı bilgisayarlarda bir arka plan Akıllı Aktarım Hizmeti (BITS) kilitlenmesini engellemek için bir güncelleştirme](https://go.microsoft.com/fwlink/p/?LinkId=248680) Microsoft Support Web sitesi.|  
 |Windows update bir hatayla karşılaştı ve hata kodu 0x80070643 veya 0x643 görüntülenen olduğundan kurulum düzgün çalışmayabilir.|Bkz: [.NET Framework güncelleştirme yükleme hatası: "0x80070643" veya "0x643"](https://support.microsoft.com/kb/976982) Microsoft Support Web sitesi.|  
-|.NET Framework 4.5. *.x*/4.6 *.x*/4.7 *.x* zaten bu işletim sisteminin bir parçasıdır. .NET Framework 4.5 yüklemek gerekmez *.x*/4.6 *.x*/4.7 *.x* yeniden dağıtılabilir.|Eylem yok.<br /><br /> Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu saptamak için bkz: [nasıl yapılır: Determine Which .NET Framework sürümleri Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) desteklenen işletim sistemleri için.|  
+|.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* zaten bu işletim sisteminin bir parçasıdır. .NET Framework 4.5 yüklemek gerekmez *.x*/4.6 *.x*/4.7 *.x* yeniden dağıtılabilir.|Eylem yok.<br /><br /> Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu saptamak için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) desteklenen işletim sistemleri için.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* bu işletim sisteminde desteklenmiyor.|Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) desteklenen işletim sistemleri için.<br /><br /> Windows 7 .NET Framework'ün başarısız yüklemeler için bu ileti genellikle Windows 7 SP1 yüklü olmadığını gösterir. Windows 7 sistemlerde, Windows 7 SP1 .NET Framework gerektirir. Windows 7'de olan ve henüz Service Pack 1 yüklü değilse .NET Framework'ü yüklemeden önce yapmanız gerekir. Windows 7 SP1 yükleme hakkında daha fazla bilgi için bkz. [Windows 7 Service Pack 1 (SP1) yüklemeyi öğrenin](https://windows.microsoft.com/en-us/windows7/install-windows-7-service-pack-1).|  
 |Bilgisayarınızda şu anda Windows Server 2008 işletim sisteminin Sunucu Çekirdeği yüklemesi çalışıyor. .NET Framework 4.5. *x* işletim sistemi ya da Server Core 2008 R2 SP1 tam bir sürümünü gerektirir. Lütfen Windows Server 2008 SP2 veya Windows Server 2008 R2 SP1 ya da Server Core 2008 R2 SP1'ın tam sürümünü yükleyin ve .NET Framework 4.5 yeniden çalıştırın. *x* kurulumu.|The .NET Framework , Windows Server 2008 R2 SP1 veya sonrası ile birlikte Sunucu Çekirdeği Rolünde desteklenir. Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).|  
 |.NET Framework 4.5. *x* zaten bu işletim sisteminin bir parçasıdır ancak şu anda kapalı durumdadır ([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] yalnızca).|Bkz: [kapatma Windows özelliklerini aç veya Kapat](https://go.microsoft.com/fwlink/p/?LinkId=248438) Windows Web sitesinde.|  
@@ -78,5 +78,5 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)   
-[Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Sürümler ve Bağımlılıklar](../../../docs/framework/migration-guide/versions-and-dependencies.md)

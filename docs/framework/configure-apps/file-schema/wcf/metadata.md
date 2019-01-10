@@ -1,16 +1,16 @@
 ---
-title: '&lt;Meta veriler&gt;'
+title: '&lt;Meta verileri&gt;'
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 7e314ae56ed7a1b532bb8946fbb28802e72d3e20
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 119cd4d5b63f8d957bc6db9dd6aabdf9e2beeb64
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747859"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147375"
 ---
-# <a name="ltmetadatagt"></a>&lt;Meta veriler&gt;
-Hizmet meta verilerini nasıl işlenebilir belirtir.  
+# <a name="ltmetadatagt"></a>&lt;Meta verileri&gt;
+Hizmet meta verileri nasıl işleyebileceğiniz belirtir.  
   
  \<system.ServiceModel>  
 \<İstemci >  
@@ -18,18 +18,18 @@ Hizmet meta verilerini nasıl işlenebilir belirtir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<system.serviceModel>  
-    <client>  
-        <metadata>  
-                   <policyImporters>  
-                          <policyImporter type="string" />  
-                   </policyImporters  
-                 <wsdlImporters>  
-                      <wsdlImporter type="string" />  
-                 </wsdlImporters>  
-        </metadata>  
-    </client>  
-</system.serviceModel>  
+<system.serviceModel>
+  <client>
+    <metadata>
+      <policyImporters>
+        <policyImporter type="string" />
+      </policyImporters>
+      <wsdlImporters>
+        <wsdlImporter type="string" />
+      </wsdlImporters>
+    </metadata>
+  </client>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -42,14 +42,14 @@ Hizmet meta verilerini nasıl işlenebilir belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Özel ilke onaylamalarını bağlamaları hakkında alma Denetim İlkesi ımporters belirtir. İlke içeri Aktarıcı yanı sıra özellikleri bağlama hakkında özel ilke onaylamalarını arama onay gerektiren özellikleri uygulayan bir özel bağlama öğesi eklemek için kullanılır.|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta veri içe tüm WSDL ımporters belirtir. WSDL alma yanı sıra meta veri içe bu sözleşmeyi temsil eden çeşitli sınıflar bilgilerini ve uç nokta bilgileri dönüştürmek için kullanılır. Sözleşme ve uç nokta bilgileri ve kullanıma alma hataları ve tür bilgilerini içeri aktarma ve dönüştürme işlemi için ilgili kabul özellikleri seçerek aktarabilirsiniz. İçeri aktarma bağlama bilgileri ve ilke belgeleri, WSDL belgeleri, WSDL uzantıları ve XML Şeması belgelerinde erişim sağlayan özellikleri de destekler.|  
+|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen tüm ilke ımporters belirtir. İlke içeri Aktarıcı yanı sıra arama özellikleri bağlama hakkında özel ilke onaylamalarını onay gerektiren özellikleri uygulayan bir özel bağlama öğesi eklemek için kullanılır.|  
+|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran tüm WSDL ımporters belirtir. Bir WSDL içeri Aktarıcı yanı sıra meta veri alma, bu sözleşmeyi temsil eden çeşitli sınıf bilgilerini ve uç nokta bilgileri dönüştürmek için kullanılır. Sözleşmeyi ve uç nokta bilgilerini ve kullanıma alma hataları ve içeri aktarma ve dönüştürme işlemi için uygun tür bilgilerini kabul özellikleri seçerek alabilirsiniz. İçeri aktarma bağlama bilgileri ve ilke belgeleri, WSDL belgeleri, WSDL uzantıları ve XML Şeması belgeleri için erişim sağlayan özellikleri de destekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|İstemci, bir istemcinin bağlanabileceği bitiş noktaları listesini tanımlar.|  
+|[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|İstemci bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.MetadataElement>  

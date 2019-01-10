@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17f521be31fa4082d9418c7dad734e37994bbb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752825"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611080"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; öğesi
-Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi gün, ay, saat ve AM/PM Belirleyicisi içeren tarih dizeleri ayrıştırmak için kullanıp kullanmayacağınızı belirler.  
+Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi bir gün, ay, saat ve AM/PM göstergesi içeren tarih dizeleri ayrıştırılacak kullanıp kullanmadığını belirler.  
   
  \<Yapılandırma >  
  \<çalışma zamanı >  
@@ -31,14 +31,14 @@ Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi gün, ay,
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi yalnızca bir gün, ay, saat ve AM/PM Belirleyicisi içeren tarih dizeleri ayrıştırma için olup olmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi yalnızca bir gün, ay, saat ve AM/PM göstergesi içeren tarih dizeleri ayrıştırılacak kullanıp kullanmadığını belirtir.|  
   
 ### <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|0|Tarih ve saat yöntemleri ayrıştırma ayarlanmış kuralları yalnızca bir gün, ay, saat ve AM/PM Belirleyicisi içeren tarih dizeleri ayrıştırma için kullanmayın.|  
-|1.|Tarih ve saat yöntemleri ayrıştırma yalnızca bir gün, ay, saat ve AM/PM Belirleyicisi içeren tarih dizeleri ayrıştırma için ayarlanan kurallarını kullanın.|  
+|0|Tarih ve saat yöntemleri ayrıştırma düzeltilen kurallar yalnızca bir gün, ay, saat ve AM/PM göstergesi içeren tarih dizeleri ayrıştırma için kullanmayın.|  
+|1.|Tarih ve saat yöntemleri ayrıştırma yalnızca bir gün, ay, saat ve AM/PM göstergesi içeren tarih dizeleri ayrıştırma için ayarlanmış kuralları kullanın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,7 +51,7 @@ Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi gün, ay,
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<EnableAmPmParseAdjustment>` Öğesi denetimleri nasıl aşağıdaki yöntemlerden bir sayısal gün ve saatte bir ve AM/PM Belirleyicisi (örneğin, "4/10 6 AM") ve ardından ay içeren bir tarih dizesi ayrıştırılamıyor:  
+ `<EnableAmPmParseAdjustment>` Öğe denetimleri nasıl aşağıdaki yöntemlerden bir sayısal günlük ve aylık bir saat ve bir AM/PM göstergesi (örneğin, "4/10 6 AM") içeren bir tarih dizesi ayrıştırılamıyor:  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,22 +65,22 @@ Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi gün, ay,
   
  Herhangi bir desen etkilenir.  
   
- `<EnableAmPmParseAdjustment>` Öğesi hiçbir etkisi vardır <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, ve <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri.  
+ `<EnableAmPmParseAdjustment>` Öğesi hiçbir etkiye sahiptir <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, ve <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri.  
   
 > [!IMPORTANT]
->  .NET Core ve .NET yerel, ayarlanan AM/PM ayrıştırma kurallar varsayılan olarak etkinleştirilir.  
+>  .NET Core ve .NET Native, ayarlanan AM/PM ayrıştırma kurallarını varsayılan olarak etkindir.  
   
- Ayrıştırma ayarlama kuralı etkin değilse, dizenin ilk rakam 12 saat saat yorumlanır ve AM/PM Belirleyicisi dışında dizesindeki kalanı göz ardı edilir. Ayrıştırma yöntemi tarafından döndürülen saat ve tarihi geçerli tarih ve saat tarih dizesi ayıklanan oluşur.  
+ Ayrıştırma ayarlama kuralı etkin değilse, dizenin ilk basamak 12 saatlik düzende saatlik yorumlanır ve AM/PM göstergesi dışında dizenin geri kalanı göz ardı edilir. Ayrıştırma yöntem tarafından döndürülen saat ve tarihi geçerli tarih ve saat ve tarih dizesindeki ayıklanan oluşur.  
   
- Yöntemi ayrıştırılırken ayrıştırma ayarlama kuralı etkinleştirilirse, geçerli yıl ait olarak ay ve gün yorumlanacağı ve 12 saatlik saatlik sürede yorumlayamadı.  
+ Yöntemi ayrıştırma ayrıştırma ayarlama kuralı etkinleştirilirse, ait geçerli yıl, ay ve günü yorumlar ve saati 12 saatlik düzende saatlik olarak yorumlayın.  
   
- Aşağıdaki tabloda fark gösterilmektedir <xref:System.DateTime> değeri <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> yöntemi dizesini ayrıştırmak için kullanılan "" 4/10 6 AM"ile `<EnableAmPmParseAdjustment>` öğenin `enabled` özelliği"0"veya"1"olarak ayarlanmış. Bugünün tarihi 5 Ocak 2017 olduğunu ve belirtilen kültürün "G" biçim dizesi kullanılarak biçimlendirilmiş olması gibi tarihi görüntüler olduğunu varsayar.  
+ Aşağıdaki tabloda, fark gösterilmektedir <xref:System.DateTime> değeri <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> dizeyi ayrıştırmak için kullanılan yöntemi "" 4/10 6 AM"ile `<EnableAmPmParseAdjustment>` öğenin `enabled` özelliği"0"veya"1"olarak ayarlayın. Bu, bugünün tarihi 5 Ocak 2017 ve gibi belirtilen kültürün "G" biçim dizesi kullanılarak biçimlendirilir tarihi görüntüler varsayar.  
   
 |Kültür adı|Etkin = "0"|Etkin = "1"|  
 |------------------|------------------|------------------|  
-|en-US|5/1/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
-|tr GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
+|en-US|1/5/2017 4:00: 00'DA|4/10/2017 6:00:00 AM|  
+|en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<çalışma zamanı > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
- [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<çalışma zamanı > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+- [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

@@ -1,13 +1,13 @@
 ---
 title: Windows üzerinde .NET Core önkoşulları
 description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
-ms.date: 12/10/2018
-ms.openlocfilehash: 764d36300c5d3a4ae3a64e816dbc956d1a9411d4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.date: 12/14/2018
+ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240651"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656121"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -35,11 +35,12 @@ Ayrıca, Visual Studio 2017 kullanarak Windows üzerinde geliştirme yapıyorsan
 
 Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemlerinin tam bir listesi vardır:
 
+* [.NET core 3.0 (Önizleme)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
 * [.NET core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
-İndirme bağlantıları ve daha fazla bilgi için bkz: [.NET indirir](https://www.microsoft.com/net/download) en son sürümü indirmek için veya [.NET arşiv indirir](https://dotnet.microsoft.com/download/archives#dotnet-core) eski sürümler için.
+İndirme bağlantıları ve daha fazla bilgi için bkz: [.NET indirir](https://dotnet.microsoft.com/download) en son sürümü indirmek için veya [.NET arşiv indirir](https://dotnet.microsoft.com/download/archives#dotnet-core) eski sürümler için.
 
 ## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
 
@@ -61,8 +62,12 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 >
 > KB2999226 yanı sıra, ayrıca olduğundan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 ile önkoşulları
+## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 Önizleme 1 için Önkoşullar
 
+.NET core 3.0 Önizleme 1 olarak .NET Core diğer sürümleri aynı önkoşulları vardır. Ancak, Visual Studio kullanmak istiyorsanız projesi .NET Core 3.0 oluşturmak üzere, kullanmalısınız [Visual Studio 2019 Önizleme](https://visualstudio.microsoft.com/vs/preview/). Visual Studio 2019 Preview yüklü yan yana çakışma olmadan Visual Studio'nun diğer sürümleriyle birlikte olabilir.
+
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 ile önkoşulları
+    
 .NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. Visual Studio 2017, Windows üzerinde .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
 
 Daha fazla Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).

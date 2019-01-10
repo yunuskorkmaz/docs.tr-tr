@@ -4,16 +4,16 @@ description: Azure Event Grid, güvenilir olay teslimi ve çok büyük ölçekte
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143668"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145909"
 ---
 # <a name="event-grid"></a>Event Grid
 
-[Azure Event Grid](/azure-event-grid/overview) olay tabanlı uygulamalar için sunucusuz bir altyapı sağlar. Event Grid için herhangi bir kaynaktan yayımlayabilir ve herhangi bir platform gelen iletileri kullanır. Event Grid, ayrıca uygulamalarınız ile tümleştirmeyi kolaylaştırmak için Azure kaynaklardan gelen olaylar için yerleşik destek sunmaktadır. Örneğin, bir dosya yüklendiğinde uygulamanızı bildirmek için blob depolama olaylarına abone olabilirsiniz. Uygulamanızı daha sonra diğer bulut tarafından tüketilen ya da şirket içi uygulamaların bir özel olay Kılavuzu ileti yayımlayabilirsiniz. Event Grid, çok büyük ölçekte güvenilir bir şekilde yönetmek amacıyla oluşturulmuştur. Yayımlama ve gerekli altyapı Kurulumu ek yükü olmadan iletilerine abone avantajları sahip olursunuz.
+[Azure Event Grid](/azure/event-grid/overview) olay tabanlı uygulamalar için sunucusuz bir altyapı sağlar. Event Grid için herhangi bir kaynaktan yayımlayabilir ve herhangi bir platform gelen iletileri kullanır. Event Grid, ayrıca uygulamalarınız ile tümleştirmeyi kolaylaştırmak için Azure kaynaklardan gelen olaylar için yerleşik destek sunmaktadır. Örneğin, bir dosya yüklendiğinde uygulamanızı bildirmek için blob depolama olaylarına abone olabilirsiniz. Uygulamanızı daha sonra diğer bulut tarafından tüketilen ya da şirket içi uygulamaların bir özel olay Kılavuzu ileti yayımlayabilirsiniz. Event Grid, çok büyük ölçekte güvenilir bir şekilde yönetmek amacıyla oluşturulmuştur. Yayımlama ve gerekli altyapı Kurulumu ek yükü olmadan iletilerine abone avantajları sahip olursunuz.
 
 ![Event Grid logosu](./media/event-grid-logo.png)
 

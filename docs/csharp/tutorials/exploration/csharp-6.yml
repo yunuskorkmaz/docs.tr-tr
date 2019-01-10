@@ -1,0 +1,73 @@
+### YamlMime:Tutorial
+title: Keşfedin C# 6 - C# etkileşimli C# Öğreticisi
+metadata:
+  title: Keşfedin C# 6 - yeni özellikleri deneyin C# 6 etkileşimli olarak tarayıcınızı kullanarak
+  description: Bu öğreticide keşfetmek için tarayıcınızı kullanacaksınız C# 6 etkileşimli olarak. İle birlikte kullanabileceğiniz yeni deyimleri hakkında bilgi edineceksiniz C# daha kısa süren ve okunabilir bir kod sağlayan 6.
+  audience: Developer
+  level: intermediate
+  ms.date: 12/11/2018
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 0e76e18536bbf19d3c29e6bd78634956e5ec95c3
+  ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/08/2019
+  ms.locfileid: "54097822"
+items:
+- durationInMinutes: 1
+  content: >
+    Bu öğretici sayesinde keşfedin C# 6 etkileşimli olarak yazmak için tarayıcınızı kullanarak C# ve derleyerek ve çalıştırarak kodunuzun sonuçlarını göreceksiniz. Bir dizi Ders daha önce değiştiren içerdiği C# yeni, daha kısa kullanmak için uygulamaları C# 6 özellikleri. Bu makalenin geri kalanında her bir özellik keşfetmek için bir bağlantı ile bu özelliklerin her biri bir bakış sağlar.
+- title: Salt okunur otomatik özellikleri salt okunur türleri etkinleştirme
+  durationInMinutes: 2
+  content: "Otomatik özelliği söz dizimi iki iyileştirme otomatik özelliklerde daha fazla yerde kullanmak kolaylaştırır: salt okunur otomatik özelliklerde ve otomatik-özellik başlatıcıları. Bu küçük bir program göz önünde bulundurun:\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n Odak moduna gir, önceki kodu kopyalayın C# etkileşimli penceresi. ' A tıklayarak *çalıştırma* ne yaptığını görmek için. `AllCaps` büyük harf dizesi döndüren yanı sıra özellik değerlerini değiştirerek istenmeyen yan etkisi vardır. Yazarı `Person` sınıfı, dizeleri için hedeflenen `FirstName` ve `LastName` salt okunur. İle C# 6, bu amaç Temizle yapabilirsiniz. Kaldırma `private set` bir salt okunur otomatik özelliği oluşturmak için her iki özelliklerinden. Tıklayın *çalıştırma* derleyici iki konum noktaların görmek için burada `FirstName` ve `LastName` özellikleri değil olmalıydı olduğunda değiştirilir. Değiştirebileceğiniz `AllCaps` derleyici hatayı düzeltmek için aşağıdaki koda yöntemi:\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\nBu yeni söz dizimini kullanarak, derleyici özelliklerini sabit olmasını sağlar.\n"
+- title: Otomatik özelliklerde için destekleyen alanlar
+  durationInMinutes: 1
+  content: "Yeni sözdiziminde C# 6 için otomatik özelliklerde başlatıcılar kullanmanıza olanak sağlar. Bu yeni özellikler sınıfları büyüdükçe daha önemli hale gelir. İkinci ad özelliği ve üç dizeleri alan yeni bir oluşturucu ekleyin, `Person` sınıfı:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\nAtama `MiddleName` bir başlatıcı bir özelliktir. İkinci Ad için derleyici tarafından oluşturulan yedekleme alanını başlatır.\n"
+- title: İfade gövdeli üyeler
+  durationInMinutes: 2
+  content: >
+    İfade gövdeli üyeler, basit yöntemler için basit bir söz dizimi sağlar. `Person` Sınıfı iki önemli adaylar sahiptir. Bildirimi Ara `ToString`:
+
+
+    ```csharp
+
+    public override string ToString()
+
+    {
+        return FirstName + " " + LastName;
+    }
+
+    ```
+
+
+    Bu bildirimi değiştirin `ToString` aşağıdaki kod ile:
+
+
+    ```csharp
+
+    public override string ToString() => FirstName + " " + LastName;
+
+    ```
+
+
+    Aynı deneyin `Caps` yöntemi. Küçük geliştirme budur ancak akıllıca kullanıldığında daha okunabilir bir kod özellikle veri aktarımı nesneleri (Dto) ve diğer türler en az bir davranış için oluşturur.
+- title: Tek bir sınıfı içeri aktarılıyor
+  durationInMinutes: 2
+  content: "Kodunuzu sürekli olarak bir sınıfın statik yöntemleri kullanırsanız, her zaman sınıf adı dahil olmak üzere, kodunuzun anlamı gizler. `Person` Sınıfı şu anda içeri aktarmalar `System` ad alanı, yalnızca olsa bile <xref:System.Console?displayProperty=nameWithType> kullanılır. Değiştirme `using` deyimi aşağıdaki gibi:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n`static using` Bildirimi gibi çok sayıda statik yöntemleriyle kapsamlı kullanımını tek bir sınıf yapmak daha büyük programlarda daha kullanışlı olur [ `string` ](xref:System.String) sınıfı veya <xref:System.Math?displayProperty=nameWithType> sınıfı.\n"
+- title: Daha iyi bir dize biçimi
+  durationInMinutes: 2
+  content: "C# 6 dizeler dize ve diğer string değerleri oluşturmak için değerlendirilen katıştırılmış ifadeler oluşturmak için yeni sözdizimi içeriyor. Değiştirebileceğiniz `ToString` ve `AllCaps` yöntemleri bu sözdizimini kullanın:\n\n[!code-csharp[StringInterpolation](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\nKonumsal bağımsız değişkenler yerine `{` ve `}`, yazdığınız C# doğrudan ifadeler. Aynı yapabilirsiniz `Main` yöntemi. Varolan kodu aşağıdakiyle değiştirin:\n\n[!code-csharp[InterpolationMain](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\nTek bir değişkende bu ifadelerdeki sınırlı değilsiniz. Şimdi yeni bir örnek ile başlayın ve dize ilişkilendirme ile kullanabileceğiniz diğer ifadeler göstermek için değiştirin. Etkileşimli pencerede aşağıdaki kodu yapıştırın `Main` yöntemi:\n\n[!code-csharp[Phrases](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \n\nYerel değişken kaldırabilirsiniz `average` ve ilişkilendirilmiş dize ifadesi bir parçası olarak bu hesaplamayı yapmak. Son iki satırı aşağıdaki satırla değiştirin:\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\nÖnceki örnekte çalışan, size, çıktısı bulur `Average` istediğiniz çok daha fazla ondalık basamağı vardır. Dize ilişkilendirme sözdizimi tüm biçim dizeleri kullanılabilir daha önce biçimlendirme yöntemleri kullanmayı destekler. Küme ayraçları içinde biçim dizesi belirtin. Ekleme bir `:` biçimlendirmek için ifadeyi aşağıdaki:\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
+- title: Hızlı ve kolay null denetimleri
+  durationInMinutes: 2
+  content: "`?.` (Null koşullu) işleci alan mantığı yazmak için kolaylaştırır `null` dikkate sorunsuz bir şekilde, ek değerleri `if` denetler. Özellik keşfetmek için etkileşimli pencereye denemek için aşağıdaki kodu kopyalayarak başlatın:\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\nAtar bir <xref:System.NullReferenceException> örneği çalıştırdığınızda. Değişiklik `.` üye erişimi işleci için **null koşullu işleci**:\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\nBu değişiklikten sonra hiçbir çıktı yok. Çünkü sonucunu `s?.Length` olduğu bir `int?` olduğunda sonucu `s.Length` olduğu bir `int`. Bu örnekte, `s?.Length` olduğu `null`. `?.` Döndürür `null` sol işleneni ise `null`. Sağ işlenen türünde bir değer türü ise `?.` işleç türü için boş değer atanabilir bir tür döndürür. Ek olarak `?.` kullanabileceğiniz `?[]` dizi ya da dizin oluşturucu erişim için. Etkileşimli pencerede aşağıdaki kodu deneyin:\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n Birden çok koşullu işleç, tek bir ifadeye birleştirilebilir. A `null` sol işlenen üretir bir `null` sonucu'nın önlemek kolaylaştıran iç içe varsa üyeleri üyelerine erişmek için yan tümcesi. Örneğin, etkileşimli pencerede aşağıdaki kodu deneyin:\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue);\n ```\n\n Yukarıdaki örnekte kullanılarak basitleştirilebilir **null birleşim işleci** varsayılan bir değer sağlamak için:\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n **Null koşullu işleci** yardımcı olur, çekirdek mantığını yapan kod yazma temizlemek için sorunsuz bir şekilde test ederken `null` değerleri.\n"
+- title: Özel durum filtreleri
+  durationInMinutes: 2
+  content: "Özel durum filtreleri bazı koşulunu temel alan bir özel durum yakalamak etkinleştirin. Tipik bir kullanım, özel durumları günlüğe kaydeder, ancak hiçbir zaman bu özel durumları işler bir filtresi yöntemi oluşturmaktır. Özel Durum Filtresi, Boole ifadesidir `true` olduğunda `catch` yan tümcesi yürütülmelidir, ve `false` ne zaman bir özel durum yakalanmadı tarafından `catch` yan tümcesi. Etkileşimli pencerede aşağıdaki kodu deneyin: Özel durum türünü ve ileti konsola kaydeder. Özel durumun işlenip gösteren takdirde false döndürür. Programın etkileşimli pencerede deneyin.\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try \n        {\n            string s = null;\n            Console.WriteLine(s.Length);\n\n        } catch (Exception e) when (LogException(e))\n        {\n        }\n        Console.WriteLine(\"Exception must have been handled\");\n    }\n\n    private static bool LogException(Exception e)\n    {\n        Console.WriteLine($\"\\tIn the log routine. Caught {e.GetType()}\");\n        Console.WriteLine($\"\\tMessage: {e.Message}\");\n        return false;\n    }\n}\n```\n\nİleti Gönder gereken `LogException` yöntemi, varsayılan özel durum iletisi tarafından izlenen. Yalnızca denemek için değiştirme `return false` ifadesine `return true` ve bu yeniden çalıştırın. Şimdi, özel durum yakalandı ve program tamamlanana kadar çalışır.\n\nÖzel durumun bir özelliğin hangi eylemin yapılacağını belirlediğinde, günlük kaydı senaryoları dışında özel durum filtreleri en yararlı olabilir. Örneğin, içinde bakabilirsiniz bir <xref:System.AggregateException> ne içerdiği özel durumları olan ve bazı özel duruma bağlı olarak uygun eylemde görmek için.\n"
+- title: Nameof kullanma
+  durationInMinutes: 2
+  content: "`nameof` İşleci herhangi bir değişken veya tür adını döndürür. Nasıl çalıştığını görmek için etkileşimli pencerede aşağıdaki kodu deneyin:\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\nÇıkış değişkeni veya tür adıyla aynıdır. Tam olarak nitelenmiş tür adını sağlanan zaman bile (gibi `System.String`) `nameof` işleci nitelenmemiş adı döndürür. Bir parametre veya özellik adını bir dizeye dönüştürmek, ihtiyacınız olduğunda bu özellik kullanışlıdır. Örnekler oluşturma için bağımsız değişken adını yakalama bir <xref:System.ArgumentNullException> veya <xref:System.ArgumentException>, veya değiştirilen özelliğin adını uygularken yakalama <xref:System.ComponentModel.INotifyPropertyChanged>. \n"
+- title: Yeni nesne başlatma söz dizimi
+  durationInMinutes: 2
+  content: "Yeni nesne başlatmayı sözlükleri ve diğer türleri başlatmak kolaylaştıran yöntemleri oluşturmanıza olanak sağlar. İle bir sözlük başlatın. Etkileşimli pencerede aşağıdaki kodu çalıştırın:\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\nBu söz dizimi uygulayan sınıf için genişletebileceğiniz <xref:System.Collections.IEnumerable> ve genel olarak erişilebilir olan `Add` yöntemi.  Aşağıdaki örnek etkileşimli pencerede deneyin. Oluşturur bir `Path` uygulayan sınıf `IEnumerable<Point3D>` ve üç bağımsız değişken alan noktaları eklemek için bir yöntemi vardır. Ayrıca, bu öğreticide, gibi ifade gövdeli üyeler ve dize ilişkilendirme zaten gösterilen diğer teknikleri birleştirir. \n\nİçinde `Main` , size Initialize yöntemi bir yol noktalarını koordinatları sağlayarak. Bu noktaları toplulukta eklenen `Add` yöntemi.\n\nAdd yöntemi, bir genişletme yöntemi de olabilir. Önceki örnekte şu şekilde güncelleştirebilirsiniz. Bu örnek, korumalı alan sınırlamaları nedeniyle etkileşimli deneyim derlenemeyecektir. Kendi makinede deneyebilirsiniz.\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
+- content: "' Daki yeni özelliklerin İnceleme tamamladınız C# 6. Şimdi kendiniz uygulamalarınızda deneyebilir."

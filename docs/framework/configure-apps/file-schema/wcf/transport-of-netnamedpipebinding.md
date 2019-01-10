@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837056"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148987"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; &lt;taşıma&gt;
 Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.  
@@ -22,13 +22,13 @@ Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -38,10 +38,10 @@ Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|protectionLevel|Adlandırılmış kanal koruma düzeyini tanımlar. İleti imzalama, bir üçüncü taraf aktarılırken iletinin oynama riskini azaltır. Şifreleme, aktarım sırasında verileri düzeyinde gizlilik sağlar. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> EncryptAndSign varsayılan değerdir.|  
+|protectionLevel|Adlandırılmış kanal koruma düzeyini tanımlar. İleti imzalama, bir üçüncü taraf aktarılırken iletinin oynama riskini azaltır. Şifreleme, aktarım sırasında verileri düzeyinde gizlilik sağlar. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> EncryptAndSign varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

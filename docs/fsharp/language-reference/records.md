@@ -1,17 +1,17 @@
 ---
-title: Kayıtlar (F#)
-description: F# kayıt üyeleri ile isteğe bağlı olarak adlandırılmış değerler basit toplamalarla nasıl temsil öğrenin.
+title: Kayıtlar
+description: Bilgi nasıl F# kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261296"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656147"
 ---
 # <a name="records"></a>Kayıtlar
 
-Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.  F# 4.1 ile başlayarak, bunlar yapılar veya başvuru türleri ya da olabilir.  Bunlar, başvuru türleri varsayılan olarak.
+Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.  İle başlayarak F# 4.1, yapılar veya başvuru türleri ya da olabilir.  Bunlar, başvuru türleri varsayılan olarak.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Karşılıklı özyinelemeli kayıtlar oluşturma
+
+Süre bir kayıt oluştururken, daha sonra tanımlamak için istediğiniz başka bir türüne bağlıdır isteyebilirsiniz. Karşılıklı özyinelemeli olarak kayıt türlerinin tanımlamadığınız sürece bir derleme hatası budur.
+
+Karşılıklı özyinelemeli kayıtları tanımlama ile yapılır `and` anahtar sözcüğü. Bu, 2 veya daha fazla kayıt türü birlikte bağlantı sağlar.
+
+Örneğin, aşağıdaki kodu tanımlayan bir `Person` ve `Address` karşılıklı özyinelemeli olarak türü:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Önceki örnekte olmadan tanımlamak için olsaydı `and` anahtar sözcüğü ve ardından derleme. `and` Karşılıklı özyinelemeli tanımları için anahtar sözcüğü gereklidir.
 
 ## <a name="pattern-matching-with-records"></a>Desen eşleştirme ile kayıtları
 

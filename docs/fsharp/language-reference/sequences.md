@@ -1,13 +1,13 @@
 ---
-title: Diziler (F#)
+title: Diziler
 description: Nasıl kullanacağınızı öğrenin F# büyük, varsa, dizileri, veri koleksiyonu sıralı ancak mutlaka tüm öğeleri kullanılacak beklemiyoruz.
 ms.date: 05/16/2016
-ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129213"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612003"
 ---
 # <a name="sequences"></a>Diziler
 

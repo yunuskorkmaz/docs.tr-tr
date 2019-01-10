@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: b3cb060d46703e41c4751c92d8a35e0ff7f72976
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286591"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396961"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -138,7 +138,7 @@ Ancak, önemli bir istisna vardır. Varsayılan (örneklenmemiş) değeri bir <x
 Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globalization.Calendar> .NET sınıflarda, bir takvim ve çoğu tarafından tanımlanan her dönemi desteklemez <xref:System.Globalization.Calendar> sınıfları yalnızca bir dönemi destekler. Yalnızca <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları birden çok dönemi destekler.
 
 > [!IMPORTANT]
->  Yeni bir dönemde bir <xref:System.Globlalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Bkz: [.NET Japonca takviminde yeni bir dönemi işleme](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) daha fazla bilgi ve uygulamalarınızı etkilenip etkilenmediğini belirlemek için. Bkz: [uygulamanızı Japonca era değiştirmek için hazırlama](~/windows/uwp/design/globalizing/japanese-era-change) era değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi.
+>  Yeni bir dönemde bir <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Bkz: [.NET Japonca takviminde yeni bir dönemi işleme](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) daha fazla bilgi ve uygulamalarınızı etkilenip etkilenmediğini belirlemek için. Bkz: [uygulamanızı Japonca era değiştirmek için hazırlama](/windows/uwp/design/globalizing/japanese-era-change) era değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi.
 
 ### <a name="eras-and-era-names"></a>Dönemler ve dönem adları
 

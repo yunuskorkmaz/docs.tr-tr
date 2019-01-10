@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e5e33cd3d250b26f0a83a87c4f7ce438af22e96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745896"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612549"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; öğesi
-Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalışma zamanı konak izin vermek için varsayılan davranışı devre dışı olup olmadığını belirtir.  
+Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalışma zamanı ana bilgisayarı izin vermek için varsayılan davranışı devre dışı bırakılıp bırakılmadığını belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -34,14 +34,14 @@ Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalı�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> Fusion ayarlarını geçersiz kılmak için varsayılan özelliği devre dışı olup olmadığını belirtir.|  
+|Etkin|Gerekli öznitelik.<br /><br /> Fusion ayarlarını geçersiz kılmak için varsayılan özelliği devre dışı bırakılıp bırakılmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|0|Fusion ayarlarını geçersiz kılma yeteneği devre dışı bırakmayın. Sürümünden itibaren varsayılan davranış budur [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
-|1.|Fusion ayarlarını geçersiz kılma yeteneği devre dışı bırakın. Bu, .NET Framework'ün önceki sürümlerinde davranışını geri döner.|  
+|0|Fusion ayarları geçersiz kılma yeteneği devre dışı bırakmayın. İle başlayarak varsayılan, davranıştır [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|1.|Fusion ayarları geçersiz kılma yeteneği devre dışı bırakın. Bu, .NET Framework'ün önceki sürümlerinde, davranıştır döner.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,18 +54,18 @@ Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalı�
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İle başlayan [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], varsayılan davranış izin vermektir <xref:System.AppDomainManager> kullanarak yapılandırma ayarlarını geçersiz kılmak için nesne <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği veya <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi <xref:System.AppDomainSetup> uygulamanız için geçirilen nesnesi <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yönteminde, alt <xref:System.AppDomainManager>. Varsayılan uygulama etki alanı için ayarları değiştirmeniz uygulama yapılandırma dosyasında belirtilen ayarları geçersiz kılar. Diğer uygulama etki alanları için bunlar için geçirilmiş yapılandırma ayarları geçersiz kılar <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
+ İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], izin vermek için varsayılan davranıştır <xref:System.AppDomainManager> kullanarak yapılandırma ayarlarını geçersiz kılmak için nesne <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği veya <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi <xref:System.AppDomainSetup> uygulamanız için geçirilen nesne ' ın <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yönteminde, öğesinin <xref:System.AppDomainManager>. Varsayılan uygulama etki alanı için ayarları değiştirmeniz, uygulama yapılandırma dosyasında belirtilen ayarları geçersiz kılar. Diğer uygulama etki alanları için bunlar için geçirilmiş yapılandırma ayarları geçersiz kılar <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
   
- Yeni yapılandırma bilgilerini geçirin veya null geçirin (`Nothing` Visual Basic'te) geçirildi yapılandırma bilgilerini ortadan kaldırmak için.  
+ Yeni yapılandırma bilgilerini geçirmek veya null değeri geçirmeye (`Nothing` Visual Basic'te) geçirilen yapılandırma bilgilerini ortadan kaldırmak için.  
   
- Yapılandırma bilgilerini hem de geçmeyin <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği ve <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi. Yapılandırma bilgilerini hem de geçerse, bilgileri için geçirdiğiniz <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği göz ardı edilir, çünkü <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi uygulama yapılandırma dosyasındaki yapılandırma bilgilerini geçersiz kılar. Kullanırsanız <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği, iletebilir null (`Nothing` Visual Basic'te) için <xref:System.AppDomainSetup.SetConfigurationBytes%2A> çağrısında belirtilen bir yapılandırma bayt ortadan kaldırmak için yöntemi <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
+ Yapılandırma bilgilerini hem de geçmeyin <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği ve <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi. Yapılandırma bilgilerini hem de geçirirseniz, bilgileri için geçirdiğiniz <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği göz ardı edilir, çünkü <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi uygulama yapılandırma dosyasına yapılandırma bilgilerini geçersiz kılar. Kullanırsanız <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği, geçirebilirsiniz null (`Nothing` Visual Basic'te) için <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi çağrısında belirtilen herhangi bir yapılandırma bayt ortadan kaldırmak için <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
   
  Yapılandırma bilgilerine ek olarak, aşağıdaki ayarları değiştirebilirsiniz <xref:System.AppDomainSetup> uygulamanıza geçirilen nesne <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yöntemi: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, ve <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
   
- Kullanmaya alternatif olarak `<disableFusionUpdatesFromADManager>` öğesini devre dışı bırakabilirsiniz varsayılan davranışı bir kayıt defteri ayarı oluşturarak veya bir ortam değişkeni ayarlayarak. Kayıt defterinde adlı bir DWORD değeri oluşturun `COMPLUS_disableFusionUpdatesFromADManager` altında `HKCU\Software\Microsoft\.NETFramework` veya `HKLM\Software\Microsoft\.NETFramework`ve değerini 1 olarak ayarlayın. Komut satırında, ortam değişkenini `COMPLUS_disableFusionUpdatesFromADManager` 1.  
+ Kullanmaya alternatif olarak `<disableFusionUpdatesFromADManager>` öğesini devre dışı bırakabilirsiniz varsayılan davranışı bir kayıt defteri ayarı oluşturarak veya bir ortam değişkenini ayarlayarak. Kayıt defterindeki adlı bir DWORD değeri oluşturun `COMPLUS_disableFusionUpdatesFromADManager` altında `HKCU\Software\Microsoft\.NETFramework` veya `HKLM\Software\Microsoft\.NETFramework`ve değeri 1 olarak ayarlayın. Komut satırında, ortam değişkenini ayarlamak `COMPLUS_disableFusionUpdatesFromADManager` 1.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanarak Fusion ayarlarını geçersiz kılma yeteneği devre dışı bırakma gösterir `<disableFusionUpdatesFromADManager>` öğesi.  
+ Aşağıdaki örnek Fusion ayarları kullanarak geçersiz kılma yeteneği devre dışı bırakma gösterir `<disableFusionUpdatesFromADManager>` öğesi.  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalı�
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

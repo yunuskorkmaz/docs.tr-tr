@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188618"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084725"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
@@ -59,7 +59,7 @@ A `switch` deyimi anahtar bölümlerinin sayısını içerir ve her bölüm aşa
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "denetimi olamaz atlayabilir bir case etiketinden (<case label>) diğerine."
+Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (<case label>) diğerine."
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ Hakkında bilgi için `switch` deyimi ve desen eşleştirme, [ile desen eşleşt
 
 C# 6 yalnızca sabit desen destekler ve sabit değerleri tekrarını izin vermez çünkü durum etiketi birbirini dışlayan değerleri tanımlayın ve yalnızca bir desen eşleştirme ifadesi eşleşebilir. Sonuç olarak, bir sırayı `case` deyimlerinizin önemli olduğu.
 
-C# 7.0, ancak diğer desenleri desteklendiğinden, case etiketleri birbirini dışlayan değerleri tanımlamanız gerekir değil ve eşleştirme ifadesi birden çok desen eşleştiğinde. Yalnızca ilk eşleşen desen içeren anahtar bölümü deyimlerinde yürütülür çünkü sırayı `case` deyimlerinizin'ın, artık önemlidir. C#, case deyimi veya deyimler eşdeğerdir veya önceki deyimlerin kümeleridir switch bölümüne algılarsa, "anahtar durumu önceki bir case tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur.
+C# 7.0, ancak diğer desenleri desteklendiğinden, case etiketleri birbirini dışlayan değerleri tanımlamanız gerekir değil ve eşleştirme ifadesi birden çok desen eşleştiğinde. Yalnızca eşleşen desen içeren ilk geçiş bölümündeki deyimlerin yürütülme nedeni sırayı `case` deyimlerinizin'ın, artık önemlidir. C#, case deyimi veya deyimler eşdeğerdir veya önceki deyimlerin kümeleridir switch bölümüne algılarsa, "anahtar durumu önceki bir case tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur.
 
 Aşağıdaki örnekte bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` artık Birinci bölümde olması bölüm geçiş `switch` deyimi, C#, tanımlanan desenle olan bir alt tüm tamsayıların değeri sıfır olan bir tamsayı olduğu için bir derleyici hatası oluşturur tarafından `case int val` deyimi.
 

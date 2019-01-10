@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242782"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451215"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
@@ -34,7 +34,7 @@ Bir özelliği okuma, yazma veya özel bir alanın değerini hesaplamak için es
 
 Uygulayan bir özellik için bir temel düzeni, özel destek alanı ayarlama ve özellik değerini almak için kullanmayı içerir. `get` Erişimcisi özel alanın değerini döndürür ve `set` erişimcisi özel alanın bir değer atamadan önce birkaç veri doğrulaması gerçekleştirebilir. Döndürülen depolanmış veya yüklenmeden önce her iki erişimcisi ayrıca veriler üzerinde bazı dönüştürme veya hesaplama gerçekleştirebilir.
 
-Aşağıdaki örnek, bu düzen gösterilmiştir. Bu örnekte, `TimePeriod` sınıfı, bir zaman aralığını temsil eder. Sınıfı zaman aralığını saniye cinsinden adlı özel bir alanda dahili olarak depolayan `seconds`. Adlı bir okuma-yazma özelliği `Hours` saat cinsinden zaman aralığı belirtmesine olanak tanır. Hem `get` ve `set` erişimcileri saat ve saniye arasında gerekli dönüşüm gerçekleştirin. Ayrıca, `set` erişimci verileri doğrular ve oluşturur bir <xref:System.ArgumentOutOfRangeException> varsa saat sayısı geçersiz. 
+Aşağıdaki örnek, bu düzen gösterilmiştir. Bu örnekte, `TimePeriod` sınıfı, bir zaman aralığını temsil eder. Sınıfı zaman aralığını saniye cinsinden adlı özel bir alanda dahili olarak depolayan `_seconds`. Adlı bir okuma-yazma özelliği `Hours` saat cinsinden zaman aralığı belirtmesine olanak tanır. Hem `get` ve `set` erişimcileri saat ve saniye arasında gerekli dönüşüm gerçekleştirin. Ayrıca, `set` erişimci verileri doğrular ve oluşturur bir <xref:System.ArgumentOutOfRangeException> varsa saat sayısı geçersiz. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

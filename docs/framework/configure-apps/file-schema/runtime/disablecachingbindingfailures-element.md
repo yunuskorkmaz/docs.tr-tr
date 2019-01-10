@@ -12,14 +12,15 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422888a595e8fdea01f9cb9d256830467d6822ac
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610521"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; öğesi
-Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.  
+Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -38,14 +39,14 @@ Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbe
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.|  
+|Etkin|Gerekli öznitelik.<br /><br /> Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|0|Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbelleğe alma devre dışı bırakmayın. .NET Framework sürüm 2.0 ile başlayarak varsayılan bağlama davranışı budur.|  
-|1.|Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbelleğe alma devre dışı bırakın. Bu ayar, .NET Framework sürüm 1.1 bağlama davranışı döner.|  
+|0|Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakmayın. .NET Framework sürüm 2.0 ile başlayarak varsayılan bağlama davranışı budur.|  
+|1.|Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakın. Bu ayar, .NET Framework sürüm 1.1 bağlama davranışını geri döner.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,18 +59,18 @@ Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbe
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 2.0 ile başlayarak, tüm bağlama ve yükleme hatalarını önbelleğe almak için derlemeleri yükleme için varsayılan davranış şeklindedir. Diğer bir deyişle, bir derlemeyi yükleme denemesi başarısız olursa, aynı bütünleştirilmiş kodda yüklemek için sonraki istekleri hemen derleme bulmak için her türlü girişim başarısız. Bu öğe derleme algılama yolu bulunamadı çünkü oluşan hataları bağlama için bu varsayılan davranışı devre dışı bırakır. Bu hatalar throw <xref:System.IO.FileNotFoundException>.  
+ .NET Framework sürüm 2.0 ile başlayarak, tüm bağlama ve yükleme hatalarını önbelleğe almak için derlemeleri yüklemek için varsayılan davranış şeklindedir. Diğer bir deyişle, bir derlemeyi yüklemek için bir deneme başarısız olursa, aynı derlemenin yüklemek için sonraki istekleri hemen derlemeyi bulmak için her türlü girişim başarısız. Bu öğe Derleme yoklama yolu bulunamadı nedeniyle oluşabilecek hataları bağlama için bu varsayılan davranışı devre dışı bırakır. Bu hatalar throw <xref:System.IO.FileNotFoundException>.  
   
- Bazı bağlama ve hataları yüklenirken bu öğe etkilenmez ve her zaman önbelleğe alınır. Derleme bulundu ancak yüklenemedi çünkü bu hataları oluşuyor. Bunlar throw <xref:System.BadImageFormatException> veya <xref:System.IO.FileLoadException>. Aşağıdaki listede, bu tür hataları bazı örnekleri içerir.  
+ Bazı bağlama ve yükleme hatalarını bu öğe tarafından etkilenmez ve her zaman önbelleğe alınır. Derleme bulundu, ancak yüklenemedi çünkü bu hatalar oluşur. Oluştururlar <xref:System.BadImageFormatException> veya <xref:System.IO.FileLoadException>. Aşağıdaki listede, bu tür hataları bazı örnekleri içerir.  
   
--   Yüklemeye çalışırsanız, bir dosya geçerli bir derleme değil, bozuk dosya doğru derleme ile değiştirilir olsa bile derlemeyi yüklemek için sonraki denemeler başarısız olur.  
+-   Yüklemeye çalışırsanız, bir dosya geçerli bir derleme değil, hatalı dosya doğru derleme ile değiştirilir bile derlemesini yüklemek için sonraki denemeler başarısız olur.  
   
--   Dosya sistemi tarafından kilitlenmiş bir derlemeyi yüklemeye çalışırsanız, derleme dosya sistemi tarafından bile yayımlandıktan sonra derlemeyi yüklemek için sonraki denemeleri başarısız olur.  
+-   Dosya sistemi tarafından kilitlenmiş bir derlemeyi yüklemeye çalışırsanız, derleme bile dosya sistemi tarafından serbest bırakıldıktan sonra derlemeyi yüklemek için sonraki denemeler başarısız olur.  
   
--   Yüklemeye çalıştığınız derlemenin bir veya daha fazla sürümleri algılama yolu ancak isteğinde bulunduğunuzu belirli sürümü bunlar arasında değil doğru sürümü yoklama yola taşınsa bile bu sürümü yüklemek için sonraki denemeler başarısız olur.  
+-   Araştırma yolu doğru sürümü taşınsa dahi yüklemeye çalıştığınız derlemenin bir veya daha fazla sürümleri olan algılama yolu, ancak istediğiniz belirli bir sürüm bunlar arasında değil, bu sürümü yüklemek için sonraki denemeler başarısız olur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derleme yoklama tarafından bulunamadığından oluşan derleme bağlama hataları önbelleğe almayı devre dışı bırakmak gösterilmiştir.  
+ Aşağıdaki örnek, derleme yoklama işlemi tarafından bulunamadığı için oluşan bir derleme bağlama hataları önbelleğe almayı devre dışı bırakmak gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -80,6 +81,6 @@ Derleme yoklama tarafından bulunamadığından oluşan hataları bağlama önbe
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

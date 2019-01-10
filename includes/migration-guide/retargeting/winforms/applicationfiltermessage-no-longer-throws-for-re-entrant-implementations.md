@@ -6,6 +6,6 @@
 |Öneri|Unutmayın, <xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)> artık a oluşturmaz <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage(System.Windows.Forms.Message@)> yukarıda açıklanan davranışı. Bunu kullanarak yalnızca .NET Framework 4.6.1 dışında bu değişikliği özelliğini 4.6.1.Apps .NET Framework hedefleme (veya hedefleme eski çerçeveleri kabul etme uygulamaları) hedefleyen uygulamaları etkiler [DontSupportReentrantFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md#mitigation) Uyumluluk anahtarı.|
 |Kapsam|Kenar|
 |Sürüm|4.6.1|
-|Tür|Yeniden hedefleme|
-|Etkilenen API'leri|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
+|Tür|Yeniden Hedefleme|
+|Etkilenen API’ler|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
 

@@ -1,23 +1,23 @@
 ---
-title: F# ile komut satırı araçları ile çalışmaya başlama
-description: F# .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.
+title: Kullanmaya başlama F# komut satırı araçları ile
+description: Basit bir çoklu proje çözümü oluşturmayı öğrenin F# .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673915"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152105"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>F# ile .NET Core CLI kullanmaya başlama
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Kullanmaya başlama F# .NET Core CLI ile
 
-Bu makale, nasıl F# ile .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux) oluşturabileceğinize dair kapsar. Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.
+Bu makalede ele alınmaktadır nasıl ile başlayabilirsiniz F# .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux). Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Başlamak için en son yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/).
 
-Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır. Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) F# için bir metin düzenleyicisi olarak mükemmel bir seçenektir.
+Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır. Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) için bir metin düzenleyicisi olarak mükemmel bir seçenektir F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Basit bir çoklu proje çözümü oluşturma
 
@@ -131,7 +131,7 @@ Ekleme `App` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` k
 dotnet sln add src/App/App.fsproj
 ```
 
-NuGet bağımlılıklarını geri `dotnet restore` ([bkz. Not](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.
+NuGet bağımlılıklarını geri `dotnet restore` çalıştırıp `dotnet build` Projeyi derlemek için.
 
 Dizini `src/App` geçirme projeyi çalıştırın ve konsol projesi `Hello World` bağımsız değişkenler olarak:
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Ardından, kullanıma [turu, F#](../tour.md) farklı F# özellikleri hakkında daha fazla bilgi edinmek için.
+Ardından, kullanıma [Turu F# ](../tour.md) farklı hakkında daha fazla bilgi edinmek için F# özellikleri.

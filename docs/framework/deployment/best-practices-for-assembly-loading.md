@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201588"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397052"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Aşağıdaki öneriler anlatılmaktadır:  
@@ -44,7 +44,7 @@ Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmak
   
 -   Load-from bağlamı yükleyicisi tarafından aranmaz konumlardan yüklenen derlemeleri içerir. Örneğin, uygulama yolu altında olmayan bir dizin eklentileri yüklenebilir. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, ve <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> yoluyla yükleme yöntemleri örnekleridir.  
   
--   Yalnızca yansıma bağlamı ile yüklenen derlemeler içeren <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri. Bunu burada ele alınmayan şekilde kodu bu bağlamda yürütülemez. Daha fazla bilgi için [nasıl yapılır: derlemeleri Reflection-Only bağlamına](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   Yalnızca yansıma bağlamı ile yüklenen derlemeler içeren <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri. Bunu burada ele alınmayan şekilde kodu bu bağlamda yürütülemez. Daha fazla bilgi için [nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   Geçici dinamik derleme yansıma kullanarak oluşturulan yayma, derleme herhangi bir bağlam içinde değil. Ayrıca, çoğu kullanılarak yüklenen derlemeler <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi bağlamı olmadan yüklenir ve kimliklerini (İlkesi uygulandıktan sonra), içinde bulundukları kurar sürece bayt dizileri ' yüklenen derlemeler bağlamı olmadan yüklendi Genel Derleme Önbelleği.  
   
@@ -154,7 +154,7 @@ Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmak
  Yoklama yolu, tüm derlemelerin yerleştirileceği mümkün değilse, .NET Framework eklenti modeli kullanarak, derlemeleri genel bütünleştirilmiş kod önbelleğine yerleştirilmesi veya uygulama etki alanları oluşturma gibi alternatifleri düşünün.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>.NET Framework eklenti modeli kullanmayı düşünün  
- Genellikle Uygulama tabanı yüklü değil, eklentiler uygulamak için load-from bağlamı kullanıyorsanız, .NET Framework eklenti modeli kullanın. Bu model, uygulama etki alanları kendiniz yönetmeye gerek kalmadan uygulama düzeyinde etki alanı ya da işlem yalıtım sağlar. Eklenti modeli hakkında daha fazla bilgi için bkz. [eklentiler ve genişletilebilirlik](../../../docs/framework/add-ins/index.md).  
+ Genellikle Uygulama tabanı yüklü değil, eklentiler uygulamak için load-from bağlamı kullanıyorsanız, .NET Framework eklenti modeli kullanın. Bu model, uygulama etki alanları kendiniz yönetmeye gerek kalmadan uygulama düzeyinde etki alanı ya da işlem yalıtım sağlar. Eklenti modeli hakkında daha fazla bilgi için bkz. [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Genel Derleme Önbelleği'ni kullanmayı düşünün  
  Paylaşılan derleme yolu eklentisinden yerde derlemeleri genel derleme önbelleğinde temel, uygulama dışında kaybetme varsayılan yükleme bağlamı avantajları veya dezavantajları diğer içerikler üzerinde alma olmadan olmasıdır.  
@@ -170,4 +170,3 @@ Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmak
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Eklentiler ve Genişletilebilirlik](../../../docs/framework/add-ins/index.md)
