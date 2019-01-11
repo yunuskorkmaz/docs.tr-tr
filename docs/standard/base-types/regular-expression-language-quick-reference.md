@@ -88,7 +88,7 @@ ms.locfileid: "54030405"
  [Başa dön](#top)  
   
 ## <a name="anchors"></a>Tutturucular  
- Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için [bağlayıcılarını](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
+ Bağlayıcılar veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler bağlayıcılardır. Daha fazla bilgi için bkz. [bağlayıcılar](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
 |Onaylama işlemi|Açıklama|Desen|Eşleşmeler|  
 |---------------|-----------------|-------------|-------------|  
