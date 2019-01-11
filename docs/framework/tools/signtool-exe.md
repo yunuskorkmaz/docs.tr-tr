@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196473"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221602"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Katalogdaki bir dosya ararken kullanmak için bir isteğe bağlı karma algoritmasını belirtir.|  
 |`/kp`|Çekirdek modu sürücü imzalama ilkesi ile doğrulama gerçekleştirilmesi gerektiğini belirtir.|  
 |`/ms`|Birden çok doğrulama mantığı kullanır. Varsayılan davranışı budur bir [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) çağırmak [!INCLUDE[win8](../../../includes/win8-md.md)] ve üstü.|  
-|`/o` *Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* aşağıdaki biçime sahiptir: *PlatformId*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformId* temel değerini temsil eder bir <xref:System.PlatformID> numaralandırma üyesi. **Önemli:** kullanımını `/o` anahtar önerilir. Varsa `/o` belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin dahil etmezseniz, `/o` anahtarı, sistem katalogları, eski işletim sisteminde düzgün şekilde doğrulama yapmayabilir doğru bir şekilde yeni bir işletim sisteminde.|  
+|`/o` *Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* aşağıdaki biçime sahiptir: *PlatformId*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformId* temel değerini temsil eder bir <xref:System.PlatformID> numaralandırma üyesi. **Önemli:**  Kullanımını `/o` anahtar önerilir. Varsa `/o` belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin dahil etmezseniz, `/o` anahtarı, sistem katalogları, eski işletim sisteminde düzgün şekilde doğrulama yapmayabilir doğru bir şekilde yeni bir işletim sisteminde.|  
 |`/p7`|PKCS #7 dosyalarını doğrular. Varolan ilkeler PKCS #7 doğrulaması için kullanılmaz. İmza denetlenir ve imzalama sertifikası zincir oluşturulur.|  
 |`/pa`|Varsayılan Authenticode Doğrulama İlkesi kullanılması gerektiğini belirtir. Varsa `/pa` seçeneği belirtilmezse, imza aracı, Windows sürücüsü doğrulama İlkesi kullanır. Bu seçenek kullanılamaz `catdb` seçenekleri.|  
 |`/pg` *Policyguıd*|GUID'ye göre doğrulama ilkesi belirtir. *Policyguıd* doğrulama ilkesinin Actionıd'sine karşılık gelir. Bu seçenek kullanılamaz `catdb` seçenekleri.|  

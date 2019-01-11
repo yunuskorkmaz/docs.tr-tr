@@ -2,12 +2,12 @@
 title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 369f9a98b5d12e3fd06ccf519516184e98272d9d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030314"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222317"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 Bu örnek bir özel X.509 Sertifika Doğrulayıcı uygulama gösterir. Bu, yerleşik X.509 Sertifika doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Bu örnek, şirket içinde verilen sertifikaları kabul eden özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir sertifika kullanır.
@@ -329,21 +329,21 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucu üzerinde çalışan `setup.bat service` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `service` bağımsız değişken Service.cer adlı bir dosya için hizmet sertifikası computerand dışarı aktarmaları tam etki alanı adı ile bir hizmet sertifikası oluşturur.  
+5.  Sunucu üzerinde çalışan `setup.bat service` Geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açılmış. Çalışan `setup.bat` ile `service` bağımsız değişken Service.cer adlı bir dosya için hizmet sertifikası computerand dışarı aktarmaları tam etki alanı adı ile bir hizmet sertifikası oluşturur.  
   
 6.  Yeni sertifika adını yansıtacak şekilde Service.exe.config Düzenle (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) bilgisayarın tam etki alanı adıyla aynı olduğu. Ayrıca bilgisayar adını değiştirmek \<hizmet > /\<baseAddresses > localhost öğesine hizmet bilgisayarınızın tam adı.  
   
 7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-8.  Bir istemcide çalışmasına `setup.bat client` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `client` bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
+8.  Bir istemcide çalışmasına `setup.bat client` Geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açılmış. Çalışan `setup.bat` ile `client` bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
 9. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu.  
   
 10. Client.cer dosyayı istemci dizin sunucusundaki hizmet dizinine kopyalayın.  
   
-11. İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
+11. İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut isteminden çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-12. Sunucusunda, yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
+12. Sunucusunda, yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici Komut İstemi'nde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
   
 13. Sunucu bilgisayarında, komut istemi penceresinden Service.exe başlatın.  
   

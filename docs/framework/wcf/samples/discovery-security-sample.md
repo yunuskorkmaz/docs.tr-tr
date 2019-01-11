@@ -2,12 +2,12 @@
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129356"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223110"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenlik geliştirme azaltır çeşitli türdeki saldırıları (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtiminin bölüm 8.2 içinde açıklanmıştır) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanallar uygular. Örnek her ikisini de destekler [2005 bulma belirtimi](https://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümü](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,7 +60,7 @@ Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güv
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Bir Visual Studio Komut İstemi'nden Setup.bat betiği yürütün. Örnek, oturum ve iletileri doğrulamak için sertifikaları kullanır. Betik Makecert.exe ile bir sertifika oluşturur ve bunları yükler Certmgr.exe kullanarak. Betik, yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
+1.  Setup.bat betiği Visual Studio için geliştirici komut isteminden çalıştırın. Örnek, oturum ve iletileri doğrulamak için sertifikaları kullanır. Betik Makecert.exe ile bir sertifika oluşturur ve bunları yükler Certmgr.exe kullanarak. Betik, yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
   
 2.  Derleme ve çalıştırma örneği için Security.sln dosyasını Visual Studio'da açın ve seçin **Rebuild All**. Birden çok proje başlatmak için çözüm özellikleri güncelleştirin: seçin **Başlat** DiscoverySecureChannels dışındaki tüm projeler için. Normalde çözümü çalıştırın.  
   

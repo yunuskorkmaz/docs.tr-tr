@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149178"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221238"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
 
@@ -34,7 +34,7 @@ Visual Studio ve ek Sdk'lara yüklediğiniz sürümüne bağlı olarak birden ç
 
 1. Görev çubuğundaki arama kutusuna gibi aracının adını yazarak Başlat `dev` veya `developer command prompt`. Bu, arama deseniyle eşleşen yüklü uygulamalar listesini getirir. Gibi farklı bir arama terimi girmek için farklı bir komut istemi arıyorsanız deneyin `prompt`.
 
-2. Seçin **Geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi).
+2. Seçin **Visual Studio için geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi).
 
 ### <a name="in-windows-81"></a>Windows 8.1 içinde
 

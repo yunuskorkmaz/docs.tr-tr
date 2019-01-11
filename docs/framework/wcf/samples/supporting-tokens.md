@@ -2,12 +2,12 @@
 title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e71fd48cbed4201e5946ff0aea991b7602131f94
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237707"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223071"
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 WS-güvenlik kullanan bir iletiye ek belirteçler ekleme belirteçleri destekleyen örnek gösterir. Örneğin, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirteci bir WS-güvenlik uyarısı istemciden hizmete geçirilir ve iletisinin parçası X.509 sertifikası elinde alıcısına kanıtlamak için X.509 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Birden fazla talep kimlik doğrulaması veya yetkilendirme gönderen bir ileti ile ilişkili olan bir gereksinimi olduğunda bu durumda kullanışlıdır. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -441,13 +441,13 @@ iisreset
   
 4.  İstemci makinesinde istemci dizinine istemci program dosyaları kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucu üzerinde çalışan `setup.bat service` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `service` bağımsız değişkeni makinenin tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+5.  Sunucu üzerinde çalışan `setup.bat service` Geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açılmış. Çalışan `setup.bat` ile `service` bağımsız değişkeni makinenin tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
 6.  Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) makinesinin tam etki alanı adıyla aynı olduğu.  
   
 7.  Service.cer dosya hizmeti dizininden istemci makine üzerinde istemci dizinine kopyalayın.  
   
-8.  Bir istemcide çalışmasına `setup.bat client` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `client` bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
+8.  Bir istemcide çalışmasına `setup.bat client` Geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açılmış. Çalışan `setup.bat` ile `client` bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
 9. İstemci makinesinde Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu.  
   

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: d360db7b9b740bef997327dda9b628c1edab0f35
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e485bc80a213be6a5d0da8a00c8ca718f867efb
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242574"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222942"
 ---
 # <a name="while-c-reference"></a>while (C# Başvurusu)
 
@@ -37,8 +37,8 @@ Daha fazla bilgi için [while ifadesi](~/_csharplang/spec/statements.md#the-whil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)  
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](index.md)  
-- [Yineleme Deyimleri](iteration-statements.md)  
-- [do deyimi](do.md)  
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Yineleme Deyimleri](iteration-statements.md)
+- [do deyimi](do.md)

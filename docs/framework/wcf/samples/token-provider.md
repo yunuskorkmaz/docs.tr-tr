@@ -2,12 +2,12 @@
 title: Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 780521fb05c9b5545fa586473c531670806db52f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a5fc8708e94bd2aa820c2d558d33dad968b88ebd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185449"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222772"
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
 Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2.  Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Service.exe.config dosyayı bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Setup.bat toplu iş dosyasını değiştirerek, sunucu sertifikası oluşturabilirsiniz. Setup.bat dosyasının yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminden çalıştırmanız gerektiğini unutmayın. Ayarlamalısınız `%SERVER_NAME%` hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adı için değişken.  
+3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Service.exe.config dosyayı bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Setup.bat toplu iş dosyasını değiştirerek, sunucu sertifikası oluşturabilirsiniz. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan. Ayarlamalısınız `%SERVER_NAME%` hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adı için değişken.  
   
 4.  Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası güvenilir istemci veren tarafından verildiğinde Bunu yapmak gerekmez.  
   

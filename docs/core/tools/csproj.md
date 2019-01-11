@@ -3,12 +3,12 @@ title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286578"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222070"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -49,7 +49,7 @@ Aşağıdaki tablo, hangi öğe ve hangi gösterir [eğik çizgi genelleştirmel
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | Yok                        |
-| Yok.              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
 
 Projenizde eğik çizgi genelleştirmeler sahip ve en son SDK'sını kullanarak oluşturmaya çalışırsanız, aşağıdaki hatayı alırsınız:
 
@@ -62,7 +62,7 @@ Bu hataya almak için ya da açık kaldırabilirsiniz `Compile` olanlarla eşle�
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-Bu özelliği ayarlamak `false` örtük ekleme geçersiz kılar ve davranışı burada b varsayılan eğik çizgi genelleştirmeler projenizde belirlemek için önceki SDK'lar geri döner. 
+Bu özelliği ayarlamak `false` burada b varsayılan eğik çizgi genelleştirmeler projenizde belirlemek için önceki SDK'ları davranışını geri dönülüyor örtük ekleme, devre dışı bırakır.
 
 Bu değişiklik, ana değiştirmez, diğer mekanizması içerir. Örneğin, uygulamanız ile yayımlanan için bazı dosyaları belirtmek istiyorsanız ancak içinde bilinen mekanizmaları kullanmaya devam edebilirsiniz *csproj* söz konusu (örneğin, `<Content>` öğesi).
 
@@ -88,7 +88,7 @@ Birden çok hedef çerçeve proje varsa komutun sonuçlarını yalnızca bunlard
 ## <a name="additions"></a>Eklemeleri
 
 ### <a name="sdk-attribute"></a>SDK'sı özniteliği 
-`<Project>` Öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk` SDK'sı olacağı belirtir proje tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kod oluşturabilirsiniz. Biz, .NET Core araçları ile üç ana SDK'ları gönderin:
+Kök `<Project>` öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk` SDK'sı olacağı belirtir proje tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kod oluşturabilirsiniz. Biz, .NET Core araçları ile üç ana SDK'ları gönderin:
 
 1. .NET Core SDK kimliği `Microsoft.NET.Sdk`
 2. .NET Core web SDK kimliği `Microsoft.NET.Sdk.Web`
@@ -97,7 +97,7 @@ Birden çok hedef çerçeve proje varsa komutun sonuçlarını yalnızca bunlard
 İhtiyacınız `Sdk` öznitelik kümesi bu kimlikler birine üzerinde `<Project>` .NET Core araçları kullanın ve kodu derleyebilmeniz için öğesi. 
 
 ### <a name="packagereference"></a>PackageReference
-Öğesi projedeki NuGet bağımlılık belirtir. `Include` Özniteliği paket kimliğini belirtir 
+A `<PackageReference>` öğe projeye NuGet bağımlılık belirtir. `Include` Özniteliği paket kimliğini belirtir 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -131,7 +131,7 @@ Alternatif olarak, öznitelik içerebilir:
 * `All` – tüm varlıkları kullanılır.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
-`<DotNetCliToolReference>` öğe unsuru kullanıcının proje bağlamında geri yüklemek için istediği CLI aracı belirtir. Bir ardılı olan `tools` düğümünde *project.json*. 
+A `<DotNetCliToolReference>` öğesi öğesi, kullanıcının proje bağlamında geri yüklemek için istediği CLI aracı belirtir. Bir ardılı olan `tools` düğümünde *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
@@ -141,21 +141,23 @@ Alternatif olarak, öznitelik içerebilir:
 `Version` geri yüklemek için paket sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterimine eşdeğerdir `[1.2.3]` tam 1.2.3-Beta için Paket sürümü.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-`<RuntimeIdentifiers>` Öğesi noktalı virgülle ayrılmış bir listesini belirtmenize olanak tanır [çalışma zamanı tanımlayıcılarının (RID'ler)](../rid-catalog.md) projesi için. Bağımsız dağıtımlar yayımlama RID'ler etkinleştirin. 
+`<RuntimeIdentifiers>` Özellik öğesi noktalı virgülle ayrılmış bir listesini belirtmenize olanak tanır [çalışma zamanı tanımlayıcılarının (RID'ler)](../rid-catalog.md) projesi için. RID yayımlama müstakil dağıtımları etkinleştirin. 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
-`<RuntimeIdentifier>` Öğesi yalnızca bir belirtmenize olanak verir [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) projesi için. RID kendi içinde bir dağıtım yayımlamayı etkinleştirin. 
+`<RuntimeIdentifier>` Özellik öğesi yalnızca bir belirtmenize olanak verir [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) projesi için. RID kendi içinde bir dağıtım yayımlama sağlar.
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+Kullanım `<RuntimeIdentifiers>` (çoğul) bunun yerine birden çok çalışma zamanlarını yayımlamak gerekiyorsa. `<RuntimeIdentifier>` tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlar.
+
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` Öğesi, bir dizi paketler geri yüklenirken kullanılacak uyumlu hedefleri belirtmenize olanak sağlar. Dotnet kullanan paketleri izin vermek için tasarlanmış [TxM (x hedef ad)](/nuget/schema/target-frameworks) bir dotnet TxM bildirmeyin paketlerle çalışılacak. Projenizin kullandığı dotnet TxM sonra eklediğiniz sürece bir dotnet TxM, duruma göre değişir üzerinde gerekir ayrıca tüm paketlere sahip `<PackageTargetFallback>` dotnet ile uyumlu olacak şekilde dotnet olmayan platformlar için projenize. 
+`<PackageTargetFallback>` Özellik öğesi, bir dizi paketler geri yüklenirken kullanılacak uyumlu hedefleri belirtmenize olanak sağlar. Dotnet kullanan paketleri izin vermek için tasarlanmış [TxM (x hedef ad)](/nuget/schema/target-frameworks) bir dotnet TxM bildirmeyin paketlerle çalışılacak. Projenizin kullandığı dotnet TxM sonra eklediğiniz sürece bir dotnet TxM, duruma göre değişir üzerinde gerekir ayrıca tüm paketlere sahip `<PackageTargetFallback>` dotnet ile uyumlu olacak şekilde dotnet olmayan platformlar için projenize. 
 
 Aşağıdaki örnek, projenizdeki tüm hedefleri için geri dönüşler sağlar: 
 

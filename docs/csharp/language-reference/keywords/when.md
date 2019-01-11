@@ -1,5 +1,5 @@
 ---
-title: '- C# başvurusu'
+title: zaman bağlamsal anahtar sözcük - C# başvurusu
 ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 103309b5e5a121647576ce120f4353b4ceef08c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235533"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221862"
 ---
- # <a name="when-c-reference"></a>zaman (C# Başvurusu)
+# <a name="when-c-reference"></a>zaman (C# Başvurusu)
 
 Kullanabileceğiniz `when` iki bağlamlarda bir filtre koşulu belirtmek için bağlamsal anahtar sözcük:
 
@@ -29,12 +29,13 @@ C# 6 ile başlayarak `when` kullanılabilir bir `catch` deyimini yürütmek beli
 ```csharp
 catch (ExceptionType [e]) when (expr)
 ```
-Burada *expr* bir Boole değerini döndüren bir ifadedir. Döndürürse `true`, özel durum işleyicisi; ise yürütülür `false`, yok. 
+
+Burada *expr* bir Boole değerini döndüren bir ifadedir. Döndürürse `true`, özel durum işleyicisi; ise yürütülür `false`, yok.
 
 Aşağıdaki örnekte `when` işleyicileri için koşullu olarak yürütülecek anahtar sözcüğü bir <xref:System.Net.Http.HttpRequestException> bağlı özel durum iletisi metni görüntülenir.
 
- [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
-  
+[!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
+
 ## <a name="when-in-a-switch-statement"></a>`when` içinde bir `switch` deyimi
 
 C# 7.0 ile başlayan `case` etiketleri artık olması birbirini özel ve sırayı `case` etiketler görünür bir `switch` deyimi, hangi anahtar bloğu belirleyebilir yürütür. `when` Anahtar sözcüğü, yalnızca filtre koşulu da true ise true olması, ilişkili case etiketi neden olan bir filtre koşulu belirtmek için kullanılabilir. Kendi sözdizimi aşağıdaki gibidir:
@@ -42,14 +43,15 @@ C# 7.0 ile başlayan `case` etiketleri artık olması birbirini özel ve sıray�
 ```csharp
 case (expr) when (when-condition):
 ```
-Burada *expr* bir sabit desen veya eşleşme ifadesi için karşılaştırma türü desendir ve *olduğunda koşul* herhangi bir Boolean ifadesi. 
 
-Aşağıdaki örnekte `when` sınamak için anahtar sözcüğü `Shape` çeşitli için test etmek için sıfır de bir alan olan nesneleri `Shape` sıfırdan büyük bir alan olan nesne. 
+Burada *expr* bir sabit desen veya eşleşme ifadesi için karşılaştırma türü desendir ve *olduğunda koşul* herhangi bir Boolean ifadesi.
 
- [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+Aşağıdaki örnekte `when` sınamak için anahtar sözcüğü `Shape` çeşitli için test etmek için sıfır de bir alan olan nesneleri `Shape` sıfırdan büyük bir alan olan nesne.
+
+[!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [switch deyimi](switch.md)  
-- [try/catch deyimi](try-catch.md)  
-- [try/catch/finally deyimi](try-catch-finally.md) 
+- [switch deyimi](switch.md)
+- [try/catch deyimi](try-catch.md)
+- [try/catch/finally deyimi](try-catch-finally.md)

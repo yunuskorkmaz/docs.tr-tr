@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4a5b6d490387f2da441ad95bdf369f700cf2e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400035"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222733"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags Dönüştürme Aracı)
 CorFlags Dönüştürme aracı, taşınabilir çalıştırılabilir bir görüntünün üstbilgisinin CorFlags bölümünü yapılandırmanıza olanak verir.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -36,18 +36,18 @@ CorFlags.exe assembly [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ 32 BIT [REQ] +**|32BITREQUIRED bayrağını ayarlar.|  
-|**/ 32 BIT [REQ]-**|32BITREQUIRED bayrağını kaldırır.|  
-|**/32BITPREF+**|32BITPREFERRED bayrağını ayarlar. Uygulama 64-bit platformlarda dahi 32-bit işlem olarak çalışır. Bu bayrağı yalnızca EXE dosyalarında ayarlayın. DLL üzerinde bayrağı ayarlarsanız, DLL 64-bit işlemde yüklenemiyordur ve <xref:System.BadImageFormatException> özel durumu oluşur. Bu bayrağı içeren bir EXE dosyası bir 64-bit işleme yüklenebilir.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
+|**/ 32 BIT [İSTEK] +**|32BITREQUIRED bayrağını ayarlar.|  
+|**/ 32 BIT [İSTEK]-**|32BITREQUIRED bayrağını kaldırır.|  
+|**/32BITPREF+**|32BITPREFERRED bayrağını ayarlar. Uygulama 64-bit platformlarda dahi 32-bit işlem olarak çalışır. Bu bayrağı yalnızca EXE dosyalarında ayarlayın. Bayrak bir DLL olarak ayarlanırsa, DLL 64-bit işlemde yüklenemiyordur ve <xref:System.BadImageFormatException> özel durumu oluşturulur. Bu bayrağı içeren bir EXE dosyası bir 64-bit işleme yüklenebilir.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/32BITPREF-**|32BITPREFERRED bayrağını kaldırır.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/ Force**|Derleme bir tanımlayıcı adla adlandırılmış olsa da bir güncelleştirmenin yapılmasını sağlar. **Önemli:** tanımlayıcı adlı bir derleme güncelleştirirseniz, kodu yeniden çalıştırmadan önce imzalamanız gerekir.|  
+|**/ Force**|Derleme bir tanımlayıcı adla adlandırılmış olsa da bir güncelleştirmenin yapılmasını sağlar. **Önemli:**  Tanımlayıcı bir adla adlandırılmış bir derlemeyi güncelleştirirseniz, kodunu yürütülmeden önce onu tekrar imzalamanız gerekir.|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ILONLY+**|ILONLY bayrağını ayarlar.|  
 |**/ILONLY-**|ILONLY bayrağını kaldırır.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/ RevertCLRHeader**|CLR üstbilgisini 2.0 sürümüne döndürür.|  
-|**/ UpgradeCLRHeader**|CLR üstbilgisini 2.5 sürümüne yükseltir. **Not:** derlemeler CLR üstbilgi sürüm 2.5 veya yerel olarak çalıştırmak daha büyük olmalıdır.|  
+|**/ UpgradeCLRHeader**|CLR üstbilgisini 2.5 sürümüne yükseltir. **Not:**  Yerel olarak çalışması için derlemelerde CLR üstbilgi sürümü 2.5 veya daha üstü olmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Hiçbir seçenek belirtilmezse, CorFlags Dönüştürme aracı belirtilen derleme için bayrakları görüntüler.  

@@ -2,12 +2,12 @@
 title: Özel Bağlama Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192895"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221706"
 ---
 # <a name="custom-binding-security"></a>Özel Bağlama Güvenliği
 Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi gösterilmektedir. Bu, özel bağlama güvenli aktarım birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu hizmet ve istemci arasında ileti aktarmaya güvenli aktarım gereklidir ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır yararlı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi penceresi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1.  Yönetici ayrıcalıklarına sahip bir Visual Studio penceresi için geliştirici komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
 
     > [!NOTE]
     >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-    4.  Yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde aşağıdaki komutu çalıştırın: `Setup.bat service`. Bu, toplu iş dosyasını çalıştırmak bilgisayarın adı ile eşleşen bir konu adına sahip hizmet sertifikası oluşturur.  
+    4.  Visual Studio'yu yönetici ayrıcalıklarıyla açılmış için geliştirici komut isteminde aşağıdaki komutu çalıştırın: `Setup.bat service`. Bu, toplu iş dosyasını çalıştırmak bilgisayarın adı ile eşleşen bir konu adına sahip hizmet sertifikası oluşturur.  
   
         > [!NOTE]
         >  Setup.bat toplu iş dosyası, bir Visual Studio 2010 komut isteminden çalıştırılması için tasarlanmıştır. Bu, path ortam değişkenine'nın SDK'ın yüklendiği dizini gösterecek gerektirir. Bu ortam değişkeni, bir Visual Studio 2010 Komut İstemi içinde otomatik olarak ayarlanır.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Önceki örneklerinden herhangi bir eski sertifika kaldırmak için Cleanup.bat çalıştırın.
 
-    3.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açıp hizmet bilgisayarda aşağıdaki komutu çalıştırarak hizmetin sertifikayı dışarı aktarma (yerine `%SERVER_NAME%` hizmeti, bilgisayarın tam olarak nitelenmiş ada sahip çalışan):
+    3.  Bir geliştirici komut istemi için Visual Studio'yu yönetici ayrıcalıklarıyla açıp hizmet bilgisayarda aşağıdaki komutu çalıştırarak hizmetin sertifikayı dışarı aktarma (yerine `%SERVER_NAME%` bilgisayarın tam olarak nitelenmiş adda burada Hizmet çalışıyor):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  %SERVER_NAME%.cer (yerine % sunucu_adı % tam olarak nitelenmiş adda hizmetinin çalıştığı bilgisayarın) istemci bilgisayara kopyalayın.
 
-    5.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açıp aşağıdaki komutu (yedek sunucu_adı % tam olarak nitelenmiş adda hizmeti, bilgisayarın istemci bilgisayarda çalışan hizmetin sertifika alma çalışan):
+    5.  Bir geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açıp aşağıdaki komutu istemci bilgisayarda çalışan hizmetin sertifika içeri aktarma (bilgisayarın tam olarak nitelenmiş ada sahip % sunucu_adı % yerine burada Hizmet çalışıyor):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

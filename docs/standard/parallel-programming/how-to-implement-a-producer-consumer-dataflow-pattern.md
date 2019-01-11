@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama'
+title: 'Nasıl yapılır: Üretici-tüketici veri akışı düzeni uygulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b6237e41826d2bc95672ee2f6b19598eea19ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252915"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221771"
 ---
-# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Nasıl yapılır: Üretici-tüketici veri akışı düzeni uygulama
 Bu belge, TPL veri akışı kitaplığı bir üretici-tüketici modeli uygulamak için kullanmayı açıklar. Bu modelde *üretici* iletiler gönderen bir ileti bloğu ve *tüketici* bu iletileri okuduğu.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,7 +33,7 @@ Bu belge, TPL veri akışı kitaplığı bir üretici-tüketici modeli uygulamak
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma"
+title: "İzlenecek yol: Verimliliği artırmak için BatchBlock ve Batchedjoinblock'u kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042380"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222114"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği artırmak için BatchBlock ve Batchedjoinblock'u kullanma
 TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> ve böylece, bu bildirimleri alabilen ve bir veya daha fazla kaynaktan veri arabellek ve ardından o arabelleğe alınan verileri bir koleksiyon olarak yayınlar sınıfları. Bu toplu işleme mekanizması bir veya daha fazla kaynaktan veri toplayın ve ardından birden fazla veri öğesi toplu olarak işleme yararlı olur. Örneğin, kayıtları bir veritabanına eklemek için veri akışı kullanan bir uygulamayı düşünün. Bu işlem, birden çok öğe aynı zamanda bir kerede yerine sıralı olarak eklenirse daha verimli olabilir. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> sınıfı gibi veritabanı verimliliğini artırmak için işlemler Ekle. Ayrıca nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> hem sonuçları hem de program veritabanından okuduğunda oluşan özel durumları yakalamak için sınıf.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,7 +30,7 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
 2.  Northwind veritabanının, Northwind.sdf, bilgisayarınızda mevcut bir kopyasına sahip olduğunuzdan emin olun. Bu dosya, klasör % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples genellikle bulunur\\.  
   
     > [!IMPORTANT]
-    >  Bazı Windows sürümlerinde, Visual Studio'yu bir yönetici olmayan modda çalışıyorsa Northwind.sdf dosyasına bağlanamazsınız. Northwind.sdf'ye bağlamak için Visual Studio veya Visual Studio komut isteminde başlatmak **yönetici olarak çalıştır** modu.  
+    >  Bazı Windows sürümlerinde, Visual Studio'yu bir yönetici olmayan modda çalışıyorsa Northwind.sdf dosyasına bağlanamazsınız. Northwind.sdf'ye bağlamak için Visual Studio ya da bir geliştirici komut istemi için Visual Studio'da başlatma **yönetici olarak çalıştır** modu.  
   
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   

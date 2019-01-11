@@ -3,17 +3,17 @@ title: .NET derleyici Platformu SDK'sı (Roslyn API'leri)
 description: .NET derleyici Platformu (Roslyn API'leri olarak da bilinir) SDK .NET kod, hataların, anlamak ve bu hataları düzeltmek için kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 62f2cf0eb8a7c7cf3606bb55efd3525059a6a267
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925037"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221277"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleyici Platformu SDK'sı
 
 Söz dizimi ve kodun semantik doğrulama gibi derleyicileri uygulama kodu daha ayrıntılı bir modelini oluşturun. Bunlar yürütülebilir çıkışı kaynak kodu oluşturmak için bu modeli kullanır. .NET derleyici Platformu SDK'sı, bu model erişim sağlar. Gittikçe, biz tümleşik geliştirme ortamı (IDE) özelliklerini kullanan yeniden düzenleme, IntelliSense, akıllı yeniden adlandırma, "tüm başvuruları Bul" ve "Tanıma Git" gibi bizim üretkenliği artırmak için. Biz, bizim kod kalitesini ve uygulama oluşturma, yardımcı olmak için kod oluşturucuları geliştirmek için kod çözümleme araçları dayanır. Bu araçlar daha akıllıca kararlar alın gibi daha fazla ve daha fazla uygulama kodu işlemek gibi yalnızca derleyiciler oluşturduğunuz modelin erişim. Roslyn API'leri çekirdek görev budur: siyah kutularını açan açarak ve araçları ve zengin bilgi derleyiciler içinde paylaşmak için son kullanıcılara izin vererek kodumuz hakkında sahip.
-Roslyn, aracılığıyla donuk kaynak kod içinde ve nesne kodu çıkış çevirmenler olan yerine derleyiciler platformları olur: araç ve uygulamalar kodla ilgili görevler için kullanabileceğiniz API'ler.
+Roslyn, aracılığıyla donuk kaynak kod içinde ve nesne kodu çıkış çevirmenler olan yerine derleyiciler platformları olur: Kodla ilgili görevler araç ve uygulamalar için kullanabileceğiniz API'ler.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET derleyici Platformu SDK'sı kavramları
 
@@ -60,7 +60,7 @@ Bu çözümleyici yüklenebilir [Visual Studio Market](https://marketplace.visua
 
 .NET derleyici Platformu SDK'sı, kod oluşturma, analiz ve yeniden düzenleme için en son dil nesne modellerini içerir. Bu bölüm .NET derleyici Platformu SDK'sı kavramsal bir genel bakış sağlar. Hızlı başlangıçlar, örnekler ve öğreticiler bölümlerde daha ayrıntılı bilgi bulunabilir.
 
-Bu dört konulardaki .NET derleyici Platformu SDK'sı kavramları hakkında daha fazla bilgi edinebilirsiniz:
+Bu beş konulardaki .NET derleyici Platformu SDK'sı kavramları hakkında daha fazla bilgi edinebilirsiniz:
 
  - [Söz dizimi görselleştiricisi ile kod bulma](syntax-visualizer.md)
  - [Derleyici API modelini anlama](compiler-api-model.md)

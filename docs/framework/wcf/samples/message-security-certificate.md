@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 376106ff6c5c19c517c9e116112319b6e9d08c51
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181572"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222304"
 ---
 # <a name="message-security-certificate"></a>İleti Güvenliği Sertifikası
 Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS-güvenlik kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Bu örnek, tüm uygulama iletileri istemci ve sunucu arasındaki imzalanacak ve şifrelenecek şekilde varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- İle ileti güvenliği örnekleri dahil Setup.bat toplu iş dosyası istemci ve sunucu sertifika tabanlı güvenlik gerektiren barındırılan bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmanızı sağlar. Toplu iş dosyası üç modda çalıştırabilirsiniz. Tek bilgisayarlı modu türü çalıştırılacak **setup.bat** içinde bir Visual Studio komut istemi; hizmet modu türünün **setup.bat hizmet**; istemci modu türü **setup.bat istemci** . Örnek bilgisayarlarınızda çalışan istemci ve sunucu modu kullanın. Ayrıntılar için bu konunun sonunda Kurulum yordamına bakın. Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:  
+ İle ileti güvenliği örnekleri dahil Setup.bat toplu iş dosyası istemci ve sunucu sertifika tabanlı güvenlik gerektiren barındırılan bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmanızı sağlar. Toplu iş dosyası üç modda çalıştırabilirsiniz. Tek bilgisayarlı modu türü çalıştırılacak **setup.bat** içinde bir geliştirici komut istemi için hizmet modunu türü; Visual Studio için **setup.bat hizmet**; istemci modu türü **setup.bat istemci**. Örnek bilgisayarlarınızda çalışan istemci ve sunucu modu kullanın. Ayrıntılar için bu konunun sonunda Kurulum yordamına bakın. Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:  
   
 -   İstemci sertifikası oluşturuluyor.  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  ABD dışı kullanıyorsanız Windows İngilizce sürümünü, Setup.bat düzenlemeniz gerekir dosya ve "NT AUTHORITY\NETWORK SERVICE" hesap adı, bölgesel eşdeğerleriyle değiştirin.  
   
 > [!NOTE]
->  Bu toplu iş dosyasında kullanılan araçlar, C:\Program Files\Microsoft Visual Studio 8\Common7\tools veya C:\Program Files\Microsoft SDKs\Windows\v6.0\bin yer alır. Bu dizinlerin uygulamasının sistem yolunuzda olmalıdır. Visual Studio yüklü değilse Visual Studio komut istemi açmak için bu dizin yolunuzda almak için en kolay yolu olan. Tıklayın **Başlat**ve ardından **tüm programlar**, **Visual Studio 2012**, **Araçları**. Bu komut istemi zaten yapılandırılmış uygun yolları vardır. Aksi takdirde, uygun dizin yolunuza el ile eklemeniz gerekir.  
+>  Bu toplu iş dosyasında kullanılan araçlar, C:\Program Files\Microsoft Visual Studio 8\Common7\tools veya C:\Program Files\Microsoft SDKs\Windows\v6.0\bin yer alır. Bu dizinlerin uygulamasının sistem yolunuzda olmalıdır. Visual Studio yüklü değilse Visual Studio için geliştirici komut istemi açmak için bu dizin yolunuzda almak için en kolay yolu olan. Tıklayın **Başlat**ve ardından **tüm programlar**, **Visual Studio 2012**, **Araçları**. Bu komut istemi zaten yapılandırılmış uygun yolları vardır. Aksi takdirde, uygun dizin yolunuza el ile eklemeniz gerekir.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin için denetleyin:  
@@ -288,10 +288,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
+1.  Yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, bir Visual Studio komut isteminden çalıştırılması için tasarlanmıştır. Bu, path ortam değişkenine'nın SDK'ın yüklendiği dizini gösterecek gerektirir. Bu ortam değişkeni, bir Visual Studio komut istemi içinde (2010) otomatik olarak ayarlanır.  
+    >  Setup.bat toplu iş dosyası, Visual Studio için geliştirici komut isteminden çalıştırılması için tasarlanmıştır. Bu, path ortam değişkenine'nın SDK'ın yüklendiği dizini gösterecek gerektirir. Bu ortam değişkeni, içinde bir geliştirici komut istemi (2010) Visual Studio için otomatik olarak ayarlanır.  
   
 2.  Adresini girerek bir tarayıcı kullanarak hizmetine erişiminizi doğrulayın `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -309,21 +309,21 @@ Press <ENTER> to terminate client.
   
 4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucu üzerinde çalışan **setup.bat hizmet** yönetici ayrıcalıklarına sahip bir Visual Studio komut isteminde. Çalışan **setup.bat** ile **hizmet** bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+5.  Sunucu üzerinde çalışan **setup.bat hizmet** Geliştirici komut istemini yönetici ayrıcalıklarıyla Visual Studio için. Çalışan **setup.bat** ile **hizmet** bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
 6.  Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) bilgisayarın tam etki alanı adıyla aynı olduğu.  
   
 7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-8.  Bir istemcide çalışmasına **setup.bat istemci** yönetici ayrıcalıklarına sahip bir Visual Studio komut isteminde. Çalışan **setup.bat** ile **istemci** bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
+8.  Bir istemcide çalışmasına **setup.bat istemci** Geliştirici komut istemini yönetici ayrıcalıklarıyla Visual Studio için. Çalışan **setup.bat** ile **istemci** bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
 9. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu.  
   
 10. Client.cer dosyayı istemci dizin sunucusundaki hizmet dizinine kopyalayın.  
   
-11. İstemcide ImportServiceCert.bat bir Visual Studio komut istemini yönetici ayrıcalıklarıyla çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
+11. İstemcide, yönetici ayrıcalıklarıyla Visual Studio için geliştirici Komut İstemi'nde ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-12. Sunucu üzerinde yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
+12. Sunucuda, yönetici ayrıcalıklarıyla Visual Studio için geliştirici Komut İstemi'nde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
   
 13. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -332,6 +332,6 @@ Press <ENTER> to terminate client.
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
     > [!NOTE]
-    >  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

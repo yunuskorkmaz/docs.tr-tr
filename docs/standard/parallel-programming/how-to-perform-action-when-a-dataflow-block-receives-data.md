@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme'
+title: 'Nasıl yapılır: Bir veri akışı bloğu veri aldığında işlem gerçekleştirme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217197"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221069"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Bir veri akışı bloğu veri aldığında işlem gerçekleştirme
 *Yürütme veri akışı bloğu* veri aldıklarında çağrı bir kullanıcı tarafından sağlanan temsilci türleri. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> yürütme veri akışı bloğu türleri sınıflardır. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, ya da bir iş işlevi bir yürütme veri akışı bloğuna sağladığınızda bir lambda ifadesi. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Func%602> ve lambda ifadeleri, yürütme blokları eylemi gerçekleştirmek için.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "44217197"
  Temsilci türlerinin özeti bölümü içinde [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belge sağlayabileceğiniz temsilci türleri özetlenmektedir <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesneleri. Tablo de temsilci türünün zaman uyumlu veya zaman uyumsuz olarak çalışıp çalışmayacağını belirtir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

@@ -2,18 +2,18 @@
 title: Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a89d907b9be25c83a74f0c5d60d184637552f297
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838254"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221108"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri
 Internet Information Services (IIS) güvenli şekilde iletişim kurması örnekleri çalıştırmak için oluşturma ve bir sunucu sertifikası yükleyin.  
   
 ## <a name="step-1-creating-certificates"></a>Adım 1. Sertifikaları oluşturma  
- Bilgisayarınız için bir sertifika oluşturmak için yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve her IIS ile güvenli iletişim kullanan örnekler dahil Setup.bat çalıştırın. Bu toplu iş dosyasını çalıştırmadan önce Makecert.exe içeren klasörün yolunu içerdiğinden emin olun. Aşağıdaki komut, Setup.bat sertifikayı oluşturmak için kullanılır.  
+ Bilgisayarınız için bir sertifika oluşturmak için yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve her IIS ile güvenli iletişim kullanan örnekler dahil Setup.bat çalıştırın. Bu toplu iş dosyasını çalıştırmadan önce Makecert.exe içeren klasörün yolunu içerdiğinden emin olun. Aşağıdaki komut, Setup.bat sertifikayı oluşturmak için kullanılır.  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama'
+title: 'Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191070"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221264"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
   
 -   Kullanarak **imzalama** projenin sekmede **özellikleri** Visual Studio'da iletişim kutusu. Bu, bir derlemeyi katı bir adla imzalamanın en kolay ve en kullanışlı yoludur.  
@@ -31,7 +31,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 -   Derleyici seçeneklerini kullanarak.  
   
- Bir derlemeye katı bir ad atamak için bir şifreleme anahtarı çiftiniz olması gerekir. Bir anahtar çifti oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Bir derlemeye katı bir ad atamak için bir şifreleme anahtarı çiftiniz olması gerekir. Bir anahtar çifti oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio'yu kullanarak bir derleme oluşturmak ve katı bir adla imzalamak için  
   
@@ -45,7 +45,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Derleme Bağlayıcısı'nı kullanarak bir derleme oluşturmak ve derlemeyi güçlü bir adla imzalamak için  
   
--   Konumunda [Visual Studio komut istemi](../../../docs/framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu yazın:  
+-   Konumunda [Visual Studio için geliştirici komut istemi](../../../docs/framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu yazın:  
   
      **Al** **/out:**\<*assemblyName*> *\<moduleName >* **/keyfile:** \<  *keyfileName*>  
   
@@ -99,7 +99,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
 - [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
 - [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)  
 - [Derleme ve Bildirim İmzalamayı Yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002898"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221836"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşeninin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
@@ -30,7 +30,7 @@ SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq
 > [!NOTE]
 >  Visual Studio kullanan geliştiriciler de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] varlık sınıfları üretmek için. Komut satırı yaklaşımı, büyük veritabanları için uygun düşmektedir. SqlMetal bir komut satırı aracı olduğundan, bir oluşturma işleminde kullanabilirsiniz.  
   
- Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Komut isteminde aşağıdaki komutu yazın:  
+ Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Komut isteminde aşağıdaki komutu yazın:  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,10 +47,10 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**/ Server:**  *\<adı >*|Veritabanı sunucusu adını belirtir.|  
 |**/ Veritabanı:**  *\<adı >*|Sunucuda veritabanı kataloğu belirtir.|  
-|**/ User:**  *\<adı >*|Oturum açma kullanıcı kimliği belirtir. Varsayılan değer: Windows kimlik doğrulaması kullan.|  
-|**/ Password:**  *\<parolası >*|Oturum açma parolasını belirtir. Varsayılan değer: Windows kimlik doğrulaması kullan.|  
+|**/ User:**  *\<adı >*|Oturum açma kullanıcı kimliği belirtir. Varsayılan değer: Windows kimlik doğrulaması kullanın.|  
+|**/ Password:**  *\<parolası >*|Oturum açma parolasını belirtir. Varsayılan değer: Windows kimlik doğrulaması kullanın.|  
 |**/ conn:**  *\<bağlantı dizesi >*|Veritabanı bağlantısı dizesi belirtir. İle birlikte kullanılamaz **/Server**, **/veritabanı**, **/user**, veya **/Password** seçenekleri.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\northwnd.mdf"yi"belirtir: **sqlmetal /code:"c:\northwind.cs "/language:csharp"c:\northwnd.mdf"yi"**.|  
-|**/ timeout:**  *\<saniye >*|SqlMetal veritabanına eriştiğinde, zaman aşımı değerini belirtir. Varsayılan değer: 0 (yani, zaman sınırı yok).|  
+|**/ timeout:**  *\<saniye >*|SqlMetal veritabanına eriştiğinde, zaman aşımı değerini belirtir. Varsayılan değer: 0 (diğer bir deyişle, zaman sınırı).|  
   
  **Ayıklama seçenekleri**  
   
@@ -75,9 +75,9 @@ sqlmetal [options] [<input file>]
 |**/Language:**  *\<dil >*|Kaynak kod dilini belirtir.<br /><br /> Geçerli  *\<dil >*: vb, csharp.<br /><br /> Varsayılan değer: Kod dosyası adındaki uzantıdan türetilir.|  
 |**/ Namespace:**  *\<adı >*|Üretilen kodun ad alanını belirtir. Varsayılan değer: ad alanı yok.|  
 |**/ Context:**  *\<türü >*|Veri bağlamı sınıfının adını belirtir. Varsayılan değer: Veritabanı adından türetilir.|  
-|**/entitybase:**  *\<türü >*|Üretilen kodda varlık sınıflarının temel sınıfını belirtir. Varsayılan değer: Varlıkların temel sınıfı yoktur.|  
+|**/entitybase:**  *\<türü >*|Üretilen kodda varlık sınıflarının temel sınıfını belirtir. Varsayılan değer: Varlıkları temel sınıfa sahip.|  
 |**/ pluralize**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD bölgesinde kullanılabilir İngilizce sürümü.|  
-|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: hiçbiri, tek yönlü. Varsayılan değer: Hiçbiri.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Giriş dosyası**  
   
@@ -133,6 +133,6 @@ sqlmetal [options] [<input file>]
 >  Kullanırken **/ pluralize** seçeneğini Northwind örnek veritabanıyla birlikte, aşağıdaki davranışa dikkat edin. SqlMetal tablolar için satır türünde adlar oluşturduğunda, tablo adları tekildir. Ne zaman kolaylaştırır <xref:System.Data.Linq.DataContext> özellikleri tablolar için tablo adları çoğuldur. Tesadüfen, Northwind örnek veritabanındaki tablolar zaten çoğuldur. Bu nedenle, bu bölümün çalıştığını görmezsiniz. Veritabanı tablolarını tekil olarak adlandırmak ortak uygulama olsa da, toplulukları çoğul olarak adlandırmak da .NET'te ortak bir uygulamadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  [LINQ to SQL’de Kod Oluşturma](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [Dış Eşleme](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

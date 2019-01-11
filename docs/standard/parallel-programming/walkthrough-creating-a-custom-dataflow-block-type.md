@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma'
+title: 'İzlenecek yol: Özel veri akışı blok türü oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868623"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221095"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek yol: Özel veri akışı blok türü oluşturma
 TPL veri akışı kitaplığı işlevleri çeşitli sağlayan birkaç veri akışı bloğu türleri sağlasa da, özel blok türleri oluşturabilirsiniz. Bu belge, özel davranış uygulayan bir veri akışı bloğu türünü oluşturmanın açıklar.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -53,7 +53,7 @@ TPL veri akışı kitaplığı işlevleri çeşitli sağlayan birkaç veri akı�
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` Visual Basic için) ve Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` Visual Basic için) ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

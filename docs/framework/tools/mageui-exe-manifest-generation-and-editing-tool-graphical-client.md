@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 9037e03398aa29d496f1a689e0e57bdb60fea5b9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a4dfd1bab04f32eefe82a6777ce6864d5a162e23
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584401"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221875"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedef ile oluşturulan yeni bildirimler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim ya da varolan bildirimleri yeniden imzalarken derlemeleri kaldırma MageUI.exe bildirim hedefleyecek şekilde güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).
 
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
  Mage.exe ve MageUI.exe iki sürümü Visual Studio'nun bir bileşen olarak dahil edilir. Sürüm bilgileri, MageUI.exe çalıştırın, görmek için seçin **yardımcı**seçip **hakkında**. Bu belge Mage.exe ve MageUI.exe'nin 4.0.x.x sürümünü açıklar.
 
@@ -120,7 +120,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Doldur**|Uygulama bildirimine uygulama dizini ve alt dizinleri tüm dosyaları ekler. MageUI.exe dizinde tek bir yürütülebilir dosya bulursa, onu otomatik olarak bu istemcide ClickOnce uygulaması başlatıldığında ilk yürütülen dosya giriş noktası olarak işaretler.|  
 |**Uygulama dosyaları**|Tüm uygulama dosyaları listeler. Her dosyanın, aşağıda açıklanan üç düzenlenebilir özniteliği vardır.|  
 |**Dosya türü**|Dosya türü, dört değerlerden biri olabilir:<br /><br /> -Yok.<br />-Giriş noktası. Uygulama birincil yürütülebilir. Yalnızca bir yürütülebilir dosya giriş noktası olarak işaretlenebilir.<br />-Veri dosyası. Uygulama veri sağlayan bir XML dosyası gibi bir dosya.<br />-Simge dosyası. Bir uygulama simgesi, masaüstünde veya bir uygulama penceresinin üst köşesindeki gibi görünür.|  
-|**Optional**|İsteğe bağlı olarak işaretlenmiş dosyaların ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment üzerine API'sini kullanarak çalışma zamanında yüklenebilir. Daha fazla bilgi için [izlenecek yol: ClickOnce dağıtım API'sini kullanarak tasarımcı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Optional**|İsteğe bağlı olarak işaretlenmiş dosyaların ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment üzerine API'sini kullanarak çalışma zamanında yüklenebilir. Daha fazla bilgi için [izlenecek yol: API tasarımcıyı kullanarak ClickOnce dağıtımı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grup**|İsteğe bağlı dosya kümesi için bir etiket. Birtakım dosyalarda Grup etiketi uygulamak ve bir dizi tek bir API çağrısı ile dosya indirme için isteğe bağlı API'yi kullanın.|  
   
 ### <a name="permissions-required-tab"></a>Gerekli izinler sekmesi  
@@ -128,8 +128,8 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**İzin türünü ayarlama**|İstemci üzerinde çalıştırmak için bu uygulama için gerekli minimum izin kümesi. Bu izin kümeleri açıklamasını ve yapabilir veya talep değil, hangi izinlerin [NIB: adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
-|**Ayrıntıları**|Bir izni temsil etmek için uygulama bildirimi için oluşturulan XML ayarlayın. Uygulama bildirimi XML biçimi iyi bir anlayışa sahip değilseniz bu XML el ile düzenlemeniz değil. Daha fazla bilgi için [ClickOnce Uygulama bildirimi](/visualstudio/deployment/clickonce-application-manifest).|  
+|**İzin türünü ayarlama**|İstemci üzerinde çalıştırmak için bu uygulama için gerekli minimum izin kümesi. Bu izin kümeleri açıklamasını ve yapabilir veya talep değil, hangi izinlerin [NIB: Adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Ayrıntılar**|Bir izni temsil etmek için uygulama bildirimi için oluşturulan XML ayarlayın. Uygulama bildirimi XML biçimi iyi bir anlayışa sahip değilseniz bu XML el ile düzenlemeniz değil. Daha fazla bilgi için [ClickOnce Uygulama bildirimi](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Dağıtım bildirim sekmesi  
  **Dağıtım bildirimi** sekmesinde aşağıdaki sekmeleri içerir.  
@@ -179,7 +179,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |----------------|-----------------|  
 |**Bu uygulama güncelleştirmeleri denetlemeli**|Belirtir olup olmadığını [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama güncelleştirmeleri denetlesin. Bu onay kutusu seçili değilse, bu program aracılığıyla API'leri kullanarak güncelleştirme sürece uygulama güncelleştirmeleri denetlemeyecek <xref:System.Deployment.Application> ad alanı.|  
 |**Uygulamanın güncelleştirmeleri denetleyeceği zamanı seçin**|Güncelleme kontrolleri için iki seçenek sağlar:<br /><br /> -   **Uygulama başlatılmadan önce**. Güncelleştirme denetimi uygulamanın yürütülmesini önce gerçekleştirilir.<br />-   **Uygulama başlatıldıktan sonra**. Güncelleştirme denetimi uygulamanın ana formu başlatıldı ve uygulamayı bir sonraki başlatılışında çalışır sonra başlar.|  
-|**Güncelleştirme denetim sıklığı**|Ne sıklıkta belirler [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] güncelleştirmeleri denetlemeniz gerekir:<br /><br /> -   **Uygulama her çalıştırıldığında denetle**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Kullanıcı uygulamayı her açtığında bir güncelleştirme kontrolü gerçekleştirir.<br />-   **Denetleme her**: bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saatlik, günlük veya haftalık) seçin.|  
+|**Güncelleştirme denetim sıklığı**|Ne sıklıkta belirler [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] güncelleştirmeleri denetlemeniz gerekir:<br /><br /> -   **Uygulama her çalıştırıldığında denetle**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Kullanıcı uygulamayı her açtığında bir güncelleştirme kontrolü gerçekleştirir.<br />-   **Denetleme her**: Bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saatlik, günlük veya haftalık) seçin.|  
 |**Bu uygulama için gerekli en düşük sürüm belirtin**|İsteğe bağlı. Uygulamanızın belirli bir sürümü eski bir sürümüyle çalışamıyor kullanıcılarınız, zorunlu bir yükleme olduğunu belirtir.|  
 |**Sürüm**|Gerekli if **bu uygulama için gerekli en düşük sürüm belirtin** onay kutusu seçilidir. Sağlanan sürüm numarası biçiminde olmalıdır *N.N.N.N*. Yalnızca ilk ana derleme numarası gereklidir. Örneğin, bir uygulama 1.0 sürümü, geçerli değerler verilebilir `1`, `1.0`, `1.0.0`, ve `1.0.0.0`.|  
   

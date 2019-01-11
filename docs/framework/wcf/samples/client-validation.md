@@ -2,12 +2,12 @@
 title: İstemci Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae322dbaebb07846fec3379b897114dac328817f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003964"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221342"
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapılandırılmasını etkinleştirmek için meta verileri sık sık yayımlayın. Hizmetin güvenilir olmadığı durumlarda, istemci uygulamalarının meta veriler ile ilgili güvenlik, işlemler, hizmet sözleşme türü istemci uygulamanın İlkesi vb. uygun olduğunu doğrulamalıdır. Aşağıdaki örnek, bir istemci, hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı yazma gösterilmiştir.  
@@ -22,7 +22,7 @@ Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapıland�
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
+1.  Yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
 2.  Hizmet uygulaması \service\bin\Debug çalıştırın.  
   
@@ -34,21 +34,21 @@ Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapıland�
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Sunucuda, yönetici ayrıcalıklarıyla çalışan bir Visual Studio komut istemi türü `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+1.  Geliştirici komut istemi Visual Studio'yu yönetici ayrıcalıklarıyla çalıştırmak için sunucu üzerinde yazın `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
 2.  Sunucu üzerinde App.config yeni sertifika adını yansıtacak şekilde düzenleyin. Diğer bir deyişle, değişiklik `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) öğesi bilgisayarın tam etki alanı adı.  
   
 3.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-4.  İstemcide, yönetici ayrıcalıklarına ve türü ile bir Visual Studio komut istemi açın `setup.bat client`. Çalışan `setup.bat` ile `client` bağımsız değişkeni Client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
+4.  İstemcide, yönetici ayrıcalıklarına ve türü ile Visual Studio için geliştirici komut istemi açın `setup.bat client`. Çalışan `setup.bat` ile `client` bağımsız değişkeni Client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
 5.  Client.cs dosyasında MEX uç nokta adresi değerini değiştirmeniz ve `findValue` varsayılan sunucu sertifikası hizmetinizin yeni adresiyle eşleşecek şekilde ayarlamak için. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu yapabilirsiniz. Yeniden oluşturun.  
   
 6.  Client.cer dosyayı istemci dizin sunucusundaki hizmet dizinine kopyalayın.  
   
-7.  İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
+7.  İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut isteminden çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-8.  Sunucusunda, yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
+8.  Sunucusunda, yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici Komut İstemi'nde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
   
 9. Hizmet bilgisayarda Visual Studio'da hizmet projesi oluşturup seçin, sonra da service.exe çalıştırın.  
   

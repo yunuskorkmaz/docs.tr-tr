@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma'
+title: 'Nasıl yapılır: Önceden hesaplanan görevler oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211664"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222112"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma
+# <a name="how-to-create-pre-computed-tasks"></a>Nasıl yapılır: Önceden hesaplanan görevler oluşturma
 Bu belgenin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> zaman uyumsuz indirme işlemlerinin bir ön bellekte tutulan sonuçlarını almak için yöntemi. <xref:System.Threading.Tasks.Task.FromResult%2A> Yöntemi döndürür bir tamamlanmış <xref:System.Threading.Tasks.Task%601> olarak sağlanan değeri tutan bir nesne kendi <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği. Döndüren zaman uyumsuz bir işlem gerçekleştirdiğinizde bu yöntem kullanışlıdır bir <xref:System.Threading.Tasks.Task%601> nesne ve bu sonucu <xref:System.Threading.Tasks.Task%601> nesne zaten hesaplanmışsa.  
   
 ## <a name="example"></a>Örnek  
@@ -29,7 +29,7 @@ Bu belgenin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Ta
  Bu örnek, birden çok dizeyi iki kez indirmek için gereken süreyi hesaplar. Sonuçları önbellekte tutulan olduğundan ikinci indirme işlemlerinin kümesini ilk süreden daha kısa zamanda almanız gerekir. <xref:System.Threading.Tasks.Task.FromResult%2A> Yöntemi etkinleştirir `DownloadStringAsync` yöntemini <xref:System.Threading.Tasks.Task%601> bu tutun nesneleri önceden hesaplanan sonuçlar.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `CachedDownloads.cs` (`CachedDownloads.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `CachedDownloads.cs` (`CachedDownloads.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

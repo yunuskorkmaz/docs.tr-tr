@@ -2,12 +2,12 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864035"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221251"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
@@ -114,7 +114,7 @@ ms.locfileid: "43864035"
 </system.serviceModel>  
 ```  
   
- İstemci örneği çalıştırdığınızda, altında üç farklı kullanıcı hesapları çeşitli hizmet işlemleri çağırır: Alice, Bob ve Cahit. İşlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Başarısız olması "Gamze adlı" kullanıcı olarak yapılan tüm dört çağrıları. Kullanıcı "Bob", bir erişim reddedildi hatası bölme yöntem çağrılmaya çalışılırken almanız gerekir. Kullanıcı "Cahit" erişim reddedildi hatası çağrılmaya çalışılırken almanız gerekir yöntemi ile çarpın. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığında istemci altında üç farklı kullanıcı hesapları çeşitli hizmet işlemleri çağırır: Alice, Bob ve Cahit. İşlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Başarısız olması "Gamze adlı" kullanıcı olarak yapılan tüm dört çağrıları. Kullanıcı "Bob", bir erişim reddedildi hatası bölme yöntem çağrılmaya çalışılırken almanız gerekir. Kullanıcı "Cahit" erişim reddedildi hatası çağrılmaya çalışılırken almanız gerekir yöntemi ile çarpın. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
@@ -134,7 +134,7 @@ ms.locfileid: "43864035"
   
 1.  Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
   
-2.  Visual Studio komut istemini yönetici ayrıcalıklarıyla çalıştırın örnek yükleme klasöründe Setup.bat çalıştırın. Bu örneği çalıştırmak için gereken hizmet sertifikaları yükler.  
+2.  Setup.bat Visual Studio'yu yönetici ayrıcalıklarıyla çalıştırmak için bir geliştirici Komut İstemi'nde örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gereken hizmet sertifikaları yükler.  
   
 3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "43864035"
   
 4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucusunda, yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve çalıştırın `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+5.  Sunucusunda, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve çalıştırın `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
 6.  Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), bilgisayarın tam etki alanı adıyla aynı olduğu.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "43864035"
   
 8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
-9. İstemci, yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
+9. İstemci, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
 10. İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "43864035"
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 > [!NOTE]
->  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Kurulum toplu iş dosyası  
  Bu örnekle dahil Setup.bat toplu iş dosyası ile ilgili sertifika sunucusu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası bilgisayarlarda çalışmaya veya barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  

@@ -2,12 +2,12 @@
 title: WS 2007 Federasyon HTTP Bağlama
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513068"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221290"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federasyon HTTP Bağlama
 Bu örnek, kullanımını gösterir. <xref:System.ServiceModel.WS2007FederationHttpBinding>, WS-Güven belirtimini destek sürümünün 1.3 Federasyon senaryolarında oluşturmak için kullanabileceğiniz bağlama standart.  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve gerekli sertifikaları oluşturmak için Setup.bat dosyasını çalıştırın.  
+2.  Yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve gerekli sertifikaları oluşturmak için Setup.bat dosyasını çalıştırın.  
   
  Windows SDK'sı ile dağıtılmış Certmgr.exe ve Makecert.exe, bu toplu iş dosyası kullanır. Ancak, bu araçları bulmak betik etkinleştirmek için Visual Studio komut istemi içinde gelen Setup.bat çalıştırmanız gerekir.  
   

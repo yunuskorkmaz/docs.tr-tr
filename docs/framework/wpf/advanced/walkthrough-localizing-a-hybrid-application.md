@@ -1,18 +1,18 @@
 ---
-title: 'İzlenecek yol: Karma Uygulamayı Yerelleştirme'
+title: 'İzlenecek yol: Karma uygulamayı yerelleştirme'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402704"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223016"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>İzlenecek yol: Karma Uygulamayı Yerelleştirme
+# <a name="walkthrough-localizing-a-hybrid-application"></a>İzlenecek yol: Karma uygulamayı yerelleştirme
 
 Bu izlenecek yol size nasıl yerelleştirileceği konusunda gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğelerinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-karma tabanlı.
 
@@ -48,7 +48,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 2.  Ekleme bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> adlı öğesi `SimpleControl` projeye.
 
-3.  Kullanım <xref:System.Windows.Forms.Integration.ElementHost> yerleştirmek için denetimi bir `SimpleControl` formdaki öğesi. Daha fazla bilgi için [izlenecek yol: 3B WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Kullanım <xref:System.Windows.Forms.Integration.ElementHost> yerleştirmek için denetimi bir `SimpleControl` formdaki öğesi. Daha fazla bilgi için [izlenecek yol: Bir 3B WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Yerelleştirilebilir İçerik ekleme
 
@@ -118,7 +118,7 @@ Yerelleştirilebilir İçerik kaynak tanımlayıcılarını kullanarak, kaynak d
 
 ### <a name="to-assign-resource-identifiers"></a>Kaynak Tanımlayıcıları atamak için
 
-1.  Başlat menüsünde Visual Studio komut istemi açın.
+1.  Başlat menüsünde Visual Studio için geliştirici komut istemi açın.
 
 2.  Yerelleştirilebilir İçerik için kaynak tanımlayıcılarını atamak için aşağıdaki komutu kullanın.
 
@@ -177,5 +177,5 @@ Bir kaynak yalnızca içinde yerelleştirilmiş içeriği depolanan *uydu derlem
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Bir Uygulamayı Yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [İzlenecek yol: Windows formlarının konumunu bulma](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [İzlenecek yol: Windows formlarını yerelleştirme](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
 - [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)

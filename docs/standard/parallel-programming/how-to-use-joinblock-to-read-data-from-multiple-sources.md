@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma"
+title: "Nasıl yapılır: Birden çok kaynaktan veri okumak için Joinblock'u kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227629"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222291"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden çok kaynaktan veri okumak için Joinblock'u kullanma
 Bu belgenin nasıl kullanıldığını açıklar <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> birden fazla kaynaktan veri kullanılabilir olduğunda bir işlemi gerçekleştirmek için sınıf. Ayrıca, birden çok birleştirme bloğunun bir veri kaynağını daha verimli bir şekilde paylaşmak etkinleştirmek için doyumsuz olmayan modda kullanmayı gösterir.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,7 +33,7 @@ Bu belgenin nasıl kullanıldığını açıklar <xref:System.Threading.Tasks.Da
  Paylaşılan havuzu etkili kullanımını etkinleştirmek için `MemoryResource` nesneleri, bu örnek belirtir bir <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> nesnesi <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> özelliğini `False` oluşturmak için <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> doyumsuz olmayan modda davranan nesneleri. Doyumsuz olmayan birleştirme bloğu, her bir kaynaktan bir kullanılabilir hale gelene kadar gelen tüm iletileri ertelemesi. Birleştirme bloğu Ertelenen iletilerden birini başka bir bloğu tarafından kabul edilmedi, işlemi yeniden başlatır. Doyumsuz olmayan mod diğer bloklardan tamamlanmasını bekleyen veri için ilerleme gerçekleştirmek için bir veya daha fazla kaynak bloklar paylaşan birleştirme bloğunun sağlar. Bu örnekte, varsa bir `MemoryResource` eklenir `memoryResources` havuz, birinci, ikinci bir veri kaynağı almak için blok ilerleme yapabilirsiniz. Bir birleştirme bloğu varsayılan olan doyumsuz modda kullanmak için bu örnek olsaydı, sürebilir `MemoryResource` nesne ve ikinci bir kaynak kullanılabilir olana kadar bekleyin. Bir birleştirme bloğu kendi ikinci veri kaynağı varsa, ancak bunu ilerleme çünkü yapamazsınız `MemoryResource` nesne bir birleştirme bloğu tarafından alınmış.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

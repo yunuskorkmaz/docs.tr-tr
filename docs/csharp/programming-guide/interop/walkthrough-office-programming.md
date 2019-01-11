@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Office Programlama (C# ve Visual Basic)'
+title: 'İzlenecek yol: Office programlama (C# ve Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084806"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223162"
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
 
-Birincil birlikte çalışma derlemeleri (PIA) kullanıcının bilgisayarına dağıtmadan COM bileşenleri ile etkileşim derlemelerin dağıtımı verir tür bilgilerin ekleme her iki dil etkinleştirin. Daha fazla bilgi için [izlenecek yol: yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+Birincil birlikte çalışma derlemeleri (PIA) kullanıcının bilgisayarına dağıtmadan COM bileşenleri ile etkileşim derlemelerin dağıtımı verir tür bilgilerin ekleme her iki dil etkinleştirin. Daha fazla bilgi için [izlenecek yol: Yönetilen derlemeler türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 Bu izlenecek yol bu özellikleri Office programlama bağlamında gösterir, ancak bu özelliklerin birçoğu ayrıca genel programlama yararlı olur. Bu izlenecek yolda, bir Excel çalışma kitabı oluşturmak için Excel eklentisi uygulama kullanın. Ardından, çalışma kitabının bağlantısını içeren bir Word belgesi oluşturun. Son olarak, etkinleştirme ve devre dışı PIA bağımlılık bakın.  
   
@@ -33,7 +33,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Excel eklentisi uygulama ayarlamak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   
@@ -53,7 +53,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 1.  İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**. **Başvuru Ekle** iletişim kutusu görüntülenir.  
   
-2.  Üzerinde **derlemeleri** sekmesinde **Microsoft.Office.Interop.Excel**, sürüm `<version>.0.0.0` (Office Ürün sürüm numaraları için bir anahtar için [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: yükleme Office birincil birlikte çalışma derlemeleri](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Üzerinde **derlemeleri** sekmesinde **Microsoft.Office.Interop.Excel**, sürüm `<version>.0.0.0` (Office Ürün sürüm numaraları için bir anahtar için [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  **Tamam**'ı tıklatın.  
   
@@ -107,7 +107,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
          Dizinli Özellikler kendi oluşturulamıyor. Özelliği, yalnızca mevcut Dizinlenmiş özelliklerin tüketimini destekler.  
   
-         Daha fazla bilgi için [nasıl yapılır: COM birlikte çalışma programlama kullanım dizini oluşturulmamış Özellikler](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
+         Daha fazla bilgi için [nasıl yapılır: Özellikleri COM birlikte çalışma programlamada dizin oluşturulmuş kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
   
 2.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel` İçeriği sığdırmak için sütun genişliklerini ayarlamak için.  
   
@@ -145,7 +145,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 ### <a name="to-run-the-application"></a>Uygulamayı çalıştırmak için  
   
-1.  Uygulamayı çalıştırmak için F5 tuşuna basın. Excel başlar ve iki hesap bilgileri içeren bir tablo görüntüler `bankAccounts`. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.  
+1.  Uygulamayı çalıştırmak için F5'e basın. Excel başlar ve iki hesap bilgileri içeren bir tablo görüntüler `bankAccounts`. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.  
   
 ### <a name="to-clean-up-the-completed-project"></a>Tamamlanmış projeyi temizlemek için  
   
@@ -157,11 +157,11 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2.  Seçin **Başlat**. Bulun **Microsoft Visual Studio \<sürüm >** ve bir geliştirici komut istemi açın.  
   
-3.  Tür `ildasm` Visual Studio komut istemi penceresinde ve ENTER tuşuna basın. IL DASM penceresi görüntülenir.  
+3.  Tür `ildasm` içinde için geliştirici komut istemi penceresi Visual Studio ve ENTER tuşuna basın. IL DASM penceresi görüntülenir.  
   
 4.  Üzerinde **dosya** IL DASM penceresinde, seçim menüsünde **dosya** > **açık**. Çift **Visual Studio \<sürüm >** ve çift tıklatarak **projeleri**. Projeniz için klasörü açın ve bin/Debug klasöründe arayın *projenizin adına*.dll. Çift *projenizin adına*.dll. Yeni bir pencere diğer modül ve derlemelerdeki başvuruları ek olarak, projenizin öznitelikleri görüntüler. Bu ad alanları Not `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` derlemeye dahil edilir. Visual Studio'da varsayılan olarak, derleyici, derlemeye başvurulan bir PIA ihtiyacınız türlerini alır.  
   
-     Daha fazla bilgi için [nasıl yapılır: derleme içeriği görüntüle](../../../framework/app-domains/how-to-view-assembly-contents.md).  
+     Daha fazla bilgi için [nasıl yapılır: Bütünleştirilmiş kod içeriklerini görüntüleme](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 5.  Çift **bildirim** simgesi. Proje tarafından başvurulan öğeleri içeren bir derleme listesi içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` listede yer almaz. PIA başvuruları projenize derlemenizi alınan türleri olmadığı için gereklidir. Bu dağıtımı kolaylaştırır. PIA'ların kullanıcının bilgisayarında mevcut olması gerekmez ve uygulamanın bir PIA'yı belirli bir sürümünü dağıtımı gerektirmediğinden şartıyla tüm sürümlerinde gerekli API'leri mevcut uygulamaları birden çok sürümü Office ile çalışmak için tasarlanabilir .  
   
@@ -204,9 +204,9 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
 - [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
 - [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
-- [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
+- [Nasıl yapılır: COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [İzlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [İzlenecek yol: Yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [İzlenecek yol: Excel için ilk VSTO eklentinizi oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
 - [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)

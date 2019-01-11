@@ -2,12 +2,12 @@
 title: İşe alma işlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520644"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223227"
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizmetlerinde barındırılan iki iş akışlarını kullanarak bir iş sürecini gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirkette BT altyapısını bir parçasıdır  
@@ -114,7 +114,7 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
 |İş akışı Hizmetleri|Akış işlem tanımıyla birlikte bir hizmette barındırılıyorsa (Bu örnekte, hizmeti bir konsol uygulamasında barındırılan).|HiringRequestService|  
 |Mesajlaşma etkinlikleri|Akış iki yolla Mesajlaşma etkinlikleri kullanır:<br /><br /> -(Her onay adımda kararlarını ve ilgili bilgi almak için) kullanıcıdan bilgi almak için.<br />-Var olan diğer hizmetler (InboxService ve hizmet başvuruları kullanılan OrgDataService,) ile etkileşim kurmak için.|HiringRequestService|  
 |İçerik dayalı bağıntı|Onay iletilerini işe alma isteği kimliği özelliği ilişkilendirin:<br /><br /> -İşlem başlatıldığında, bağıntı tanıtıcı istek kimliği ile başlatıldı.<br />-Gelen onay iletiler (her onay iletisi ilk parametresi istek kimliğidir) Kimliklerine ilişkilendirin.|HiringRequestService / ResumeRequestService|  
-|Özel etkinlikler (bildirim ve kod tabanlı)|Bu örnekte, birkaç özel etkinlikler vardır:<br /><br /> -   `SaveActionTracking`: Bu etkinlik bir özel yayan <xref:System.Activities.Tracking.TrackingRecord> (kullanarak <xref:System.Activities.NativeActivityContext.Track%2A>). Kesinlik temelli Kodun genişletme kullanılarak yazılan bu etkinlik <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Bu etkinlik, konum türü kimlikleri listesini alır ve söz konusu pozisyondaki Contoso sahip kişilerin listesini döndürür. Bu etkinlik bildirimli olarak yazılmış (etkinlik Tasarımcısı'nı kullanarak).<br />-   `SaveHiringRequestInfo`: Bu etkinliğin bilgilerini kaydeder. bir `HiringRequest` (kullanarak `HiringRequestRepository.Save`). Kesinlik temelli Kodun genişletme kullanılarak yazılan bu etkinlik <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Özel etkinlikler (bildirim ve kod tabanlı)|Bu örnekte, birkaç özel etkinlikler vardır:<br /><br /> -   `SaveActionTracking`: Bu etkinlik bir özel yayan <xref:System.Activities.Tracking.TrackingRecord> (kullanarak <xref:System.Activities.NativeActivityContext.Track%2A>). Kesinlik temelli Kodun genişletme kullanılarak yazılan bu etkinlik <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Bu etkinlik, konum türü kimlikleri listesini alır ve söz konusu pozisyondaki Contoso sahip kişilerin listesini döndürür. Bu etkinlik bildirimli olarak yazılmış (etkinlik Tasarımcısı'nı kullanarak).<br />-   `SaveHiringRequestInfo`: Bu etkinlik bilgilerini kaydeder. bir `HiringRequest` (kullanarak `HiringRequestRepository.Save`). Kesinlik temelli Kodun genişletme kullanılarak yazılan bu etkinlik <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Sistem tarafından sağlanan SQL Server Kalıcılık|<xref:System.ServiceModel.Activities.WorkflowServiceHost> Akış işlem tanımını barındıran örneği sistem tarafından sağlanan SQL Server Kalıcılık kullanacak şekilde yapılandırıldı.|HiringRequestService / ResumeRequestService|  
 |Özel İzleme|Örnek geçmişini kaydeden özel izleme katılımcı içeren bir `HiringRequestProcess` (Bu ne, kim tarafından gerçekleştirilmedi kaydeder ve ne zaman). Kaynak kodu HiringRequestService İzleme klasöründe bulunur.|HiringRequestService|  
 |ETW İzleme|Sistem tarafından sağlanan ETW İzleme HiringRequestService hizmet App.config dosyasında yapılandırılır.|HiringRequestService|  
@@ -131,13 +131,13 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
 ## <a name="data-storage"></a>Veri depolama  
  Verileri, adlı bir SQL Server veritabanında depolandığı `ContosoHR` (Bu veritabanını oluşturmak için betik bulunan `DbSetup` klasörü). İş akışı örnekleri olarak adlandırılan bir SQL Server veritabanında depolanan `InstanceStore` (örnek deposu oluşturma komut dosyaları parçası olan [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dağıtım).  
   
- Her iki veritabanı, bir Visual Studio Komut İstemi'nden Setup.cmd betiği çalıştırılarak oluşturulur.  
+ Her iki veritabanı, Visual Studio için geliştirici Komut İstemi'nden Setup.cmd betiği çalıştırarak oluşturulur.  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
   
 #### <a name="to-create-the-databases"></a>Veritabanı oluşturma  
   
-1.  Visual Studio komut istemi açın.  
+1.  Visual Studio için geliştirici komut istemi açın.  
   
 2.  Örnek klasörüne gidin.  
   

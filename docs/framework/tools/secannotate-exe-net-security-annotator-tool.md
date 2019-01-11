@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: be9100f49fcf6ed2926489e8346123eb7c3cfc70
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195393"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221355"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)
 .NET güvenlik Not ekleyici Aracı (SecAnnotate.exe) tanımlayan bir komut satırı uygulamasıdır `SecurityCritical` ve `SecuritySafeCritical` bir veya daha fazla bölümleri.  
   
  Bir Visual Studio Uzantısı [güvenlik açıklaması ekleyici](https://go.microsoft.com/fwlink/?LinkId=198007), Secannotate.exe'ye bir grafik kullanıcı arabirimi sağlar ve aracı Visual Studio'dan çalıştırmanıza olanak sağlar.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut isteminde aşağıdaki komutu yazın. burada *parametreleri* aşağıdaki bölümde açıklanan ve *derlemeleri* boşlukla ayrılmış bir veya daha fazla derleme adları oluşur:  
   

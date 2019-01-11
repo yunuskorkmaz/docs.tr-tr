@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409834"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221732"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)
-Tür Kitaplığı İçeri Aktarma programı, COM tür kitaplığı içinde bulunan tür tanımlarını bir ortak dil çalışma zamanı derlemesi içindeki eşdeğer tanımlara dönüştürür. Tlbimp.exe'nin çıktısı, özgün tür kitaplığı içinde tanımlanan türler için çalışma zamanı meta verileri içeren bir ikili dosyadır (derleme). Bu dosya araçları ile aşağıdaki gibi inceleyebilirsiniz [Ildasm.exe](ildasm-exe-il-disassembler.md).  
+Tür Kitaplığı İçeri Aktarma programı, COM tür kitaplığı içinde bulunan tür tanımlarını bir ortak dil çalışma zamanı derlemesi içindeki eşdeğer tanımlara dönüştürür. Tlbimp.exe'nin çıktısı, özgün tür kitaplığı içinde tanımlanan türler için çalışma zamanı meta verileri içeren bir ikili dosyadır (derleme). Gibi araçlarla bu dosyayı inceleyebilirsiniz [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -40,34 +40,34 @@ tlbimp tlbFile [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/asmversion:** *adı*|Üretilecek derlemenin sürüm numarasını belirtir. Belirtin *versionnumber* biçimde *major.minor.build.revision*.|  
-|**/ Company:** `companyinformation`|Şirket bilgilerini çıktı derlemesine ekler.|  
-|**Company Copyright:** `copyrightinformation`|Çıktı derlemesine telif hakkı bilgileri ekler. Bu bilgileri görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
-|**/delaysign**|Elde edilen ve tanımlayıcı bir ada sahip olan derlemeyi gecikmeli imzalama yöntemiyle imzalamak için kullanılacak Tlbimp.exe'yi belirtir. Bu seçenek ile ya da belirtmelisiniz **/keycontainer:**, **/keyfile:**, veya **/publickey:** seçeneği. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz: [Gecikmeli bir derleme imzalama](../app-domains/delay-sign-assembly.md).|  
+|**/asmversion:** *versionnumber*|Üretilecek derlemenin sürüm numarasını belirtir. Belirtin *versionnumber* biçimde *major.minor.build.revision*.|  
+|**/Company:** `companyinformation`|Şirket bilgilerini çıktı derlemesine ekler.|  
+|**/Copyright:** `copyrightinformation`|Çıktı derlemesine telif hakkı bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
+|**/delaysign**|Elde edilen ve tanımlayıcı bir ada sahip olan derlemeyi gecikmeli imzalama yöntemiyle imzalamak için kullanılacak Tlbimp.exe'yi belirtir. Bu seçeneği ile birlikte belirtmelisiniz **/keycontainer:**, **/keyfile:**, veya **/publickey:** seçeneği. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [derlemeyi imzalamayı geciktirme](../app-domains/delay-sign-assembly.md).|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/ keycontainer:** *kapsayıcı adı*|Belirtilen anahtar kapsayıcısı bulunan ortak/özel anahtar çifti kullanarak tanımlayıcı bir ad ile elde edilen derlemeyi imzalar *containername*.|  
-|**/ keyfile:** *dosya adı*|Bulunan publisher'ın resmi ortak/özel anahtar çifti kullanarak tanımlayıcı bir ad ile elde edilen derlemeyi imzalar *filename*.|  
-|**/Machine:** `machinetype`|Belirtilen makine türünü (mikro işlemci) hedefleyen bir derleme oluşturur. Desteklenen makine türleri: x86, x64, Itanium ve Belirsiz.|  
+|**/ keycontainer:** *containername*|Oluşturulan derleme tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *containername*.|  
+|**/ keyfile:** *dosya adı*|Elde edilen derlemeyi bulunan yayımcının resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *filename*.|  
+|**/ Machine:** `machinetype`|Belirtilen makine türünü (mikro işlemci) hedefleyen bir derleme oluşturur. Desteklenen makine türleri: x86, x64, Itanium ve Belirsiz.|  
 |**/ Namespace:** *ad alanı*|Derlemenin oluşturulacağı ad alanını belirtir.|  
 |**/noclassmembers**|Tlbimp.exe'nin sınıflara üye eklemesini önler. Bu olası önler <xref:System.TypeLoadException>.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
-|**/ out:** *dosya adı*|İçine meta veri tanımlarının yazılacağı çıktı dosyasının, derlemenin ve ad alanının adını belirtir. **/Out** seçeneği varsa derlemenin ad alanı üzerinde hiçbir etkisi tür kitaplığını derleme ad alanını açıkça denetler arabirimi tanım dili (IDL) özel özniteliği belirtir. Bu seçeneği belirtmezseniz, Tlbimp.exe, girdi dosyasında tanımlanan asıl tür kitaplığıyla aynı ada sahip bir dosyaya meta verileri yazar ve ona bir .dll uzantısı atar. Çıktı dosyasının adı girdi dosyasının adıyla aynı ise, araç tür kitaplığı üzerine yazılmasını engellemek için bir hata üretir.|  
-|**/ birincil**|Belirtilen tür kitaplığı için bir birincil birlikte çalışma derlemesi oluşturur. Derlemeyi tür kitaplığı yayıncısının oluşturduğunu belirten bilgiler derlemeye eklenir. Birincil birlikte çalışma derlemesi belirterek, bir yayıncının derlemesini, Tlbimp.exe kullanarak tür kitaplığından oluşturulan diğer derlemelerden ayırt edersiniz. Yalnızca kullanmalısınız **/birincil** Tlbimp.exe ile aldığınız tür kitaplığı yayımcısı olup olmadığını seçeneği. Birincil birlikte çalışma derlemesi ile oturum açmanız gerekir Not bir [güçlü ad](../app-domains/strong-named-assemblies.md). Daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
-|**/Product:** `productinformation`|Çıktı derlemesine ürün bilgileri ekler. Bu bilgileri görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
-|**/ProductVersion:** `productversioninformation`|Çıktı derlemesine ürün sürümü ile ilgili bilgiler ekler. Biçim kısıtlamaları yoktur. Bu bilgileri görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
-|**/PublicKey:** *dosya adı*|Elde edilen derlemeyi imzalamak için kullanılacak ortak anahtarı içeren dosyayı belirtir. Belirtirseniz **/keyfile:** veya **/keycontainer:** yerine seçeneği **/publickey:**, Tlbimp.exe ortak/özel anahtar çifti ile birlikte gelen ortak anahtarı oluşturur **/keyfile:** veya **/keycontainer:**. **/Publickey:** seçeneği destekler test anahtar ve gecikme imzalama. Dosya, Sn.exe tarafından üretilen biçimdedir. Daha fazla bilgi için bkz: **-p** içinde Sn.exe seçeneği [tanımlayıcı ad Aracı (Sn.exe)](sn-exe-strong-name-tool.md).|  
-|**/ reference:** *dosya adı*|Geçerli tür kitaplığı dışında tanımlanmış tür başvurularını çözümlemek için kullanılacak derleme dosyasını belirtir. Belirtmezseniz, **/reference** seçeneğini Tlbimp.exe otomatik olarak yinelemeli tür kitaplığı başvuruları alınmakta olduğundan herhangi bir dış tür kitaplığı içeri aktarır. Belirtirseniz **/reference** seçeneği, aracı diğer tür kitaplıklarının alır önce başvurulan derlemeleri dış türlerinde çözmek çalışır.|  
-|**/silence:** `warningnumber`|Belirtilen uyarının görüntülenmesini bastırır. Bu seçenek kullanılamaz **/sessiz**.|  
+|**/ out:** *dosya adı*|İçine meta veri tanımlarının yazılacağı çıktı dosyasının, derlemenin ve ad alanının adını belirtir. **/Out** seçeneği varsa derlemenin ad alanı üzerinde hiçbir etkisi açıkça derlemenin ad alanını denetleyen arabirim tanımlama dili (IDL) özel özniteliği tür kitaplığını belirtir. Bu seçeneği belirtmezseniz, Tlbimp.exe, girdi dosyasında tanımlanan asıl tür kitaplığıyla aynı ada sahip bir dosyaya meta verileri yazar ve ona bir .dll uzantısı atar. Çıktı dosyasının adı girdi dosyasının adıyla aynı ise, araç tür kitaplığı üzerine yazılmasını engellemek için bir hata üretir.|  
+|**/ birincil**|Belirtilen tür kitaplığı için bir birincil birlikte çalışma derlemesi oluşturur. Derlemeyi tür kitaplığı yayıncısının oluşturduğunu belirten bilgiler derlemeye eklenir. Birincil birlikte çalışma derlemesi belirterek, bir yayıncının derlemesini, Tlbimp.exe kullanarak tür kitaplığından oluşturulan diğer derlemelerden ayırt edersiniz. Yalnızca kullanmalısınız **/birincil** Tlbimp.exe ile içeri aktardığınız tür kitaplığının yayıncısı iseniz. Bir birincil birlikte çalışma derlemesi ile imzalamanız gerektiğini unutmayın bir [tanımlayıcı ad](../app-domains/strong-named-assemblies.md). Daha fazla bilgi için [birincil birlikte çalışma derlemelerini](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
+|**/Product:** `productinformation`|Çıktı derlemesine ürün bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
+|**/ProductVersion:** `productversioninformation`|Çıktı derlemesine ürün sürümü ile ilgili bilgiler ekler. Biçim kısıtlamaları yoktur. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
+|**/PublicKey:** *dosya adı*|Elde edilen derlemeyi imzalamak için kullanılacak ortak anahtarı içeren dosyayı belirtir. Belirtirseniz **/keyfile:** veya **/keycontainer:** yerine seçeneği **/publickey:**, Tlbimp.exe ile sağlanan ortak/özel anahtar çifti öğesinden ortak anahtarı oluşturur **/keyfile:** veya **/keycontainer:**. **/Publickey:** test anahtarını ve Gecikmeli imzalama senaryolarını seçeneği destekler. Dosya, Sn.exe tarafından üretilen biçimdedir. Daha fazla bilgi için **-p** seçeneği sn.exe [tanımlayıcı ad Aracı (Sn.exe)](sn-exe-strong-name-tool.md).|  
+|**/ reference:** *dosya adı*|Geçerli tür kitaplığı dışında tanımlanmış tür başvurularını çözümlemek için kullanılacak derleme dosyasını belirtir. Siz belirtmezseniz **/reference** seçeneği, Tlbimp.exe otomatik olarak yinelemeli tür kitaplığı içeri aktarılan başvurular herhangi bir dış tür kitaplığı içeri aktarır. Belirtirseniz **/reference** seçeneği, aracı, diğer tür kitaplıklarını içeri aktarmadan önce başvurulan derlemelerdeki dış türleri çözümlemeye çalışır.|  
+|**/silence:** `warningnumber`|Belirtilen uyarının görüntülenmesini bastırır. Bu seçenek kullanılamaz **/silent**.|  
 |**/silent**|Başarı iletilerinin görüntülenmesini bastırır. Bu seçenek kullanılamaz **/sessiz**.|  
-|**/strictref**|Aracı ile belirtilen derlemeler geçerli derlemedeki tüm başvuruları çözemezseniz bir tür kitaplığı içeri aktarmaz **/reference** seçeneği veya kayıtlı birincil birlikte çalışma derlemeleri (PIA).|  
-|**/strictref:nopia**|Aynı **/strictref**, ancak PIA yok sayar.|  
-|**/sysarray**|COM Stili SafeArray yönetilen olarak almak için aracı belirtir <xref:System.Array> türü.|  
+|**/strictref**|Araç geçerli derlemedeki, belirtilen derlemelerdeki tüm başvuruları çözümleyemezse bir tür kitaplığını içeri aktarmaz **/reference** seçeneği veya kayıtlı birincil birlikte çalışma derlemeleri (PIA).|  
+|**/strictref:nopia**|Aynı **/strictref**, ancak PIA'ların yoksayar.|  
+|**/sysarray**|Bir COM Stili SAFEARRAY'i yönetilen olarak içeri aktaracağını belirtir <xref:System.Array> türü.|  
 |**/tlbreference:** *dosya adı*|Kayıt defterine danışmadan tür kitaplığı başvurularını çözümlemek için kullanılacak tür kitaplığı dosyasını belirtir.<br /><br /> Bu seçeneğin bazı eski tür kitaplığı biçimlerini yüklenmediğini unutmayın.  Ancak, kayıt defteri veya geçerli dizin aracılığıyla, eski tür kitaplığı biçimlerini dolaylı olarak yine yükleyebilirsiniz.|  
-|**/trademark:** `trademarkinformation`|Çıktı derlemesine ticari marka bilgileri ekler. Bu bilgileri görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
-|**/ dönüştürme:** *transformname*|Belirtildiği gibi meta veri dönüşümleri *transformname* parametresi.<br /><br /> Belirtin **dispret** için *transformname* dönüştürme [Çıkış, retval] parametreleri arabirimlerindeki yalnızca gönderme (dispinterfaces) dönüş değerleri içine yöntemlerin parametresi.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerindeki örneklere bakın.|  
+|**/trademark:** `trademarkinformation`|Çıktı derlemesine ticari marka bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
+|**/ dönüştürme:** *transformname*|Tarafından belirtilen meta veri dönüşümleri *transformname* parametresi.<br /><br /> Belirtin **dispret** için *transformname* yöntemlerin yalnızca gönderme (görüntüleme arabirimleri) dönüş değerlerine dönüştürme [out, retval] parametrelerini parametre.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerindeki örneklere bakın.|  
 |**/ unsafe**|Arabirimleri, .NET Framework güvenlik denetimleri olmadan üretir. Bu şekilde sunulan bir yöntemi çağırmak güvenlik riski oluşturabilir. Bu tür kodları ortaya çıkarmanın getireceği riskleri bilmiyorsanız bu seçeneği kullanmamalısınız.|  
 |**/verbose**|Ayrıntılı modu belirtir; içeri aktarılan tür kitaplığı hakkında daha fazla bilgi görüntüler.|  
-|**/VariantBoolFieldToBool**|Dönüştürür `VARIANT_BOOL` yapılara alanlarında <xref:System.Boolean>.|  
+|**/VariantBoolFieldToBool**|Dönüştürür `VARIANT_BOOL` yapılarını alanlarında <xref:System.Boolean>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 > [!NOTE]
@@ -76,50 +76,50 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>Açıklamalar  
  Tlbimp.exe dönüştürmeleri tüm tür Kitaplığında bir defada gerçekleştirir. Tek bir tür kitaplığı içinde tanımlanmış bir tür alt kümesi için tür bilgileri oluştururken bu aracı kullanamazsınız.  
   
- Kullanışlı veya atamak gerekli görülür [tanımlayıcı adlar](../app-domains/strong-named-assemblies.md) derlemeler için. Bu nedenle, Tlbimp.exe tanımlayıcı adlarla adlandırılmış derlemeler oluşturmak için gereken bilgileri sağlayan seçenekler içerir. Her iki **/keyfile:** ve **/keycontainer:** seçenekleri derlemeleri tanımlayıcı adlar ile oturum açın. Bu nedenle, aynı anda bu seçeneklerden yalnızca birini sağlamak mantıklı olur.  
+ Yararlı veya gereklidir atayabilmek genellikle [güçlü adlar](../app-domains/strong-named-assemblies.md) derlemelere. Bu nedenle, Tlbimp.exe tanımlayıcı adlarla adlandırılmış derlemeler oluşturmak için gereken bilgileri sağlayan seçenekler içerir. Her iki **/keyfile:** ve **/keycontainer:** seçenekleri derlemeleri tanımlayıcı adlarla oturum açın. Bu nedenle, aynı anda bu seçeneklerden yalnızca birini sağlamak mantıklı olur.  
   
- Kullanarak birden çok başvuru derlemeleri belirtebilirsiniz **/reference** seçeneğini birden çok kez.  
+ Kullanarak, pek çok başvuru derlemesi belirtebilirsiniz **/reference** seçeneğini birden çok kez.  
   
  Birden fazla tür kitaplığı içeren bir modülden bir tür kitaplığını içeri aktarırken, isteğe bağlı olarak tür kitaplık dosyasına bir kaynak kimliği eklenebilir. Tlbimp.exe bu dosyayı yalnızca geçerli dizinde ise ya da tam yolunu belirtirseniz bulabilir. Bu konunun ilerleyen kısımlarındaki örneğe bakın.  
   
 ## <a name="examples"></a>Örnekler  
- Tür kitaplığı bulunan aşağıdaki komutu aynı ada sahip bir derleme oluşturur `myTest.tlb` ve .dll uzantısına sahip.  
+ Aşağıdaki komut içinde bulunan tür kitaplığıyla aynı ada sahip bir derleme oluşturur `myTest.tlb` .dll uzantısıyla ve.  
   
 ```  
 tlbimp myTest.tlb   
 ```  
   
- Aşağıdaki komutu adlı bir derleme oluşturur `myTest.dll`.  
+ Aşağıdaki komutu ada sahip bir derleme oluşturur `myTest.dll`.  
   
 ```  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
- Aşağıdaki komutu tarafından belirtilen tür kitaplığı aynı ada sahip bir derleme oluşturur `MyModule.dll\1` ve .dll uzantısına sahip. `MyModule.dll\1` Geçerli dizinde bulunması gerekir.  
+ Aşağıdaki komutu tarafından belirtilen tür kitaplığıyla aynı ada sahip bir derleme oluşturur `MyModule.dll\1` .dll uzantısıyla ve. `MyModule.dll\1` Geçerli dizinde bulunmalıdır.  
   
 ```  
 tlbimp MyModule.dll\1  
 ```  
   
- Aşağıdaki komutu adlı bir derleme oluşturur `myTestLib.dll` için tür kitaplığı `TestLib.dll`. **/Transform:dispret** seçeneği dönüştüren herhangi [out retval] yönetilen kitaplık dönüş değerleri türü kitaplığa dispinterfaces yöntemlere parametreleri.  
+ Aşağıdaki komutu ada sahip bir derleme oluşturur `myTestLib.dll` tür kitaplığı için `TestLib.dll`. **/Transform:dispret** seçeneği dönüştüren bir [out, retval] parametrelerini yönetilen kitaplıkta dönüş değerlerine tür kitaplığındaki görüntü arabirimlerinde bulunan yöntemlerin.  
   
 ```  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
- Tür Kitaplığı `TestLib.dll`, önceki örnekte adlı bir görüntüleme arabirimi yöntemini içerir `SomeMethod` void döndürür ve [out retval] sahip parametre. Aşağıdaki kodu için girdi türü kitaplığı yöntemi imzası: `SomeMethod` içinde `TestLib.dll`.  
+ Tür kitaplığını `TestLib.dll`, önceki örnekte adlı bir görüntü arabirimi yöntemi içerir `SomeMethod` , void döndüren ve sahip bir [out, retval] parametresi. Aşağıdaki kodu için giriş türü kitaplığı yöntem imzasıdır olan `SomeMethod` içinde `TestLib.dll`.  
   
 ```  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   
- Belirtme **/transform:dispret** seçeneği neden dönüştürmek Tlbimp.exe `[out, retval]` parametresinin `SomeMethod` içine bir `bool` dönüş değeri. İçin Tlbimp.exe üreten yöntem imzası aşağıdadır `SomeMethod` yönetilen Kitaplığı'nda `myTestLib.dll` zaman **/transform:dispret** seçeneği belirtildi.  
+ Belirtme **/transform:dispret** seçeneği neden olur, Tlbimp.exe'nin `[out, retval]` parametresinin `SomeMethod` içine bir `bool` değeri döndürür. Tlbimp.exe için ürettiği yöntem imzası verilmiştir `SomeMethod` yönetilen kitaplıkta `myTestLib.dll` olduğunda **/transform:dispret** seçeneği belirtildi.  
   
 ```csharp  
 bool SomeMethod();  
 ```  
   
- Yönetilen bir kitaplık için üretmek için Tlbimp.exe kullanıyorsanız `TestLib.dll` belirtmeden **/transform:dispret**, aracı için aşağıdaki yöntemi imzası üreten `SomeMethod` yönetilen Kitaplığı'nda `myTestLib.dll`.  
+ Tlbimp.exe'nin yönetilen kitaplık oluşturmak için kullanırsanız `TestLib.dll` belirtmeden **/transform:dispret**, aracı için aşağıdaki yöntem imzasını üretir `SomeMethod` yönetilen kitaplıkta `myTestLib.dll`.  
   
 ```csharp  
 void SomeMethod(out bool x);  
@@ -129,9 +129,9 @@ void SomeMethod(out bool x);
  [Araçlar](index.md)  
  [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](tlbexp-exe-type-library-exporter.md)  
  [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../interop/importing-a-type-library-as-an-assembly.md)  
- [Derleme dönüştürme özeti için tür kitaplığı](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Tür kitaplığını derlemeye dönüştürme özeti](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Ildasm.exe (IL Ayrıştırıcı)](ildasm-exe-il-disassembler.md)  
  [Sn.exe (Tanımlayıcı Ad Aracı)](sn-exe-strong-name-tool.md)  
  [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../app-domains/strong-named-assemblies.md)  
- [Tür kitaplıkları birlikte çalışma derlemeleri içe aktarmak için öznitelikler](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
+ [Tür kitaplıklarını birlikte çalışma derlemelerine içeri aktarma için öznitelikler](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
  [Komut İstemleri](developer-command-prompt-for-vs.md)

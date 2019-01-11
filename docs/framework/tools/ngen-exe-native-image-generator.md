@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400482"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222174"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -55,7 +55,7 @@ Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performans�
 > [!NOTE]
 >  1.0 ve 1.1 .NET Framework sürümleri için Ngen.exe sözdizimi bulunabilir [Native Image Generator (Ngen.exe) Legacy Syntax](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -75,10 +75,10 @@ ngen /? | /help
 |Eylem|Açıklama|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> Varsa `/queue` belirtilirse, eylem yerel görüntü hizmetinde sıraya alınır. Varsayılan öncelik 3'tür. Bkz: [öncelik düzeyleri](#PriorityTable) tablo.|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:** başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], eylem `uninstall` * artık desteklenmiyor.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:**  İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], eylem `uninstall` * artık desteklenmiyor.|  
 |`update` [`/queue`]|Geçersiz olan yerel görüntüleri güncelleştir.<br /><br /> Varsa `/queue` belirtilirse, güncelleştirmeler yerel görüntü hizmetinde sıraya alınır. Güncelleştirmeler her zaman 3 önceliğindedir ve bilgisayar boşta olduğunda çalışır.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Bir derleme ve bağımlılıkları için yerel görüntülerin durumunu görüntüle.<br /><br /> Eğer bağımsız değişken sağlanmazsa, yerel görüntü önbelleğindeki her şey görüntülenir.|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> veya<br /><br /> `eqi` [1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -veya-<br /><br /> `eqi` [1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Yerel görüntü hizmetini duraklat, duraklatılan hizmetin devam etmesine izin ver veya hizmetin durumunu sorgula.|  
   
 <a name="ArgumentTable"></a>   
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` **Not:** gibi bir kısmi derleme adı sağlayabilirsiniz `myAssembly`, için `display` ve `uninstall` eylemler. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
+|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` **Not:**  Gibi bir kısmi derleme adı sağlayabilirsiniz `myAssembly`, için `display` ve `uninstall` eylemler. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Microsoft başlangıç başlığını bastır.|  
 |`/silent`|Başarı iletilerinin görüntülenmesini bastır.|  
-|`/verbose`|Hata ayıklama için ayrıntılı bilgi görüntüle. **Not:** işletim sistemi sınırlamaları nedeniyle, kadar ek bilgi bu seçenek Windows 98 ve Windows Millennium Edition üzerinde görüntülemez.|  
+|`/verbose`|Hata ayıklama için ayrıntılı bilgi görüntüle. **Not:**  İşletim sistemi sınırlamaları nedeniyle, bu seçenek Windows 98 ve Windows Millennium Edition üzerinde çok fazla ek bilgi görüntülemez.|  
 |`/help`, `/?`|Geçerli yayın için komut sözdizimi ve seçenekleri görüntüle.|  
   
 ## <a name="remarks"></a>Açıklamalar  

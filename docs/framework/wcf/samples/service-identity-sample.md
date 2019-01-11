@@ -2,12 +2,12 @@
 title: Hizmet Kimliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64adee14c3c0a0ba8071bbaca35b8712280e10b4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152740"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221966"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği bir hizmet için kimlik gösterilmektedir. Tasarım zamanında istemci hizmet meta verileri kullanarak kimliğini alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci kimliği doğrulanmamış çağrılarından koruma işlemlerinden birini çağırmadan önce bir hizmet kimlik doğrulaması bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet de istemci kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1.  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya [!INCLUDE[wv](../../../../includes/wv-md.md)], kimlik Çözüm klasörü'ndeki Identity.pfx sertifika dosyası MMC ek bileşenini aracını kullanarak LocalMachine/My (Kişisel) sertifika deposuna aktarın. Parola korumalı dosyasıdır. İçeri aktarma sırasında parola istenir. Tür `xyz` parola kutusu içine. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konu. Bunu yaptıktan sonra Setup.bat bir Visual Studio komut, istemcide kullanılmak CurrentUser/güvenilir Kişiler deposuna kopyalar. Bu sertifika istemini yönetici ayrıcalıklarıyla çalıştırın.
+1.  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya [!INCLUDE[wv](../../../../includes/wv-md.md)], kimlik Çözüm klasörü'ndeki Identity.pfx sertifika dosyası MMC ek bileşenini aracını kullanarak LocalMachine/My (Kişisel) sertifika deposuna aktarın. Parola korumalı dosyasıdır. İçeri aktarma sırasında parola istenir. Tür `xyz` parola kutusu içine. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konu. Bunu yaptıktan sonra Setup.bat bir geliştirici Komut İstemi'nde Visual Studio için yönetici ayrıcalıklarına sahip, bu sertifika, istemcide kullanılmak CurrentUser/güvenilir Kişiler deposuna kopyalar çalıştırın.
 
 2.  Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Setup.bat örnek yükleme klasörü içinde bir Visual Studio 2012 komut istemini yönetici ayrıcalıklarıyla çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
 
@@ -140,13 +140,13 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-6.  Hizmette çalıştıracak `setup.bat service` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+6.  Hizmette çalıştıracak `setup.bat service` Geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açılmış. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
 7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
 8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Değiştirilmesi gereken birden çok örneği vardır.  
   
-9. İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
+9. İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut isteminden çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
 10. Hizmet bilgisayarda Service.exe komut istemini başlatın.  
   

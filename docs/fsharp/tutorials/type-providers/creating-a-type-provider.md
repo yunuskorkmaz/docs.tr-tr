@@ -2,12 +2,12 @@
 title: 'Öğretici: Bir tür sağlayıcısı oluşturma'
 description: Kendi oluşturmayı öğrenin F# tür sağlayıcıları F# İnceleme temel kavramları göstermek üzere birkaç basit tür sağlayıcıları tarafından 3.0.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614538"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223214"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: Bir tür sağlayıcısı oluşturma
 
@@ -156,7 +156,7 @@ Bu sağlayıcı yazdırma ifadeleri kullanarak hata ayıklamak için sağlayıc�
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Bu sağlayıcı Visual Studio kullanarak hata ayıklama için yönetici kimlik bilgileriyle Visual Studio komut istemi açın ve aşağıdaki komutu çalıştırın:
+Visual Studio kullanarak bu sağlayıcı hata ayıklamak için yönetici kimlik bilgileriyle Visual Studio için geliştirici komut istemi açın ve aşağıdaki komutu çalıştırın:
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

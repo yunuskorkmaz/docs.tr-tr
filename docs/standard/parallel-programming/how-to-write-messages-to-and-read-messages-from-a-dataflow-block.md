@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma'
+title: 'Nasıl yapılır: Veri akışı bloğundan iletiler ve iletilerini okuma yazma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087815"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221160"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri akışı bloğundan iletiler ve iletilerini okuma yazma
 Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akışı bloğundan iletiler okuma için kullanmayı açıklar. TPL veri akışı kitaplığı, ileti ve veri akışı bloğu okuma iletileri yazmak için zaman uyumlu ve zaman uyumsuz yöntemler sağlar. Bu belgeyi kullanan <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfı. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletileri arabelleğe alır ve her iki ileti kaynağı olarak ve bir ileti hedefi olarak davranır.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -52,7 +52,7 @@ Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akış�
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowReadWrite.cs` (`DataflowReadWrite.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowReadWrite.cs` (`DataflowReadWrite.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   
@@ -63,7 +63,7 @@ Bu belge, TPL veri akışı kitaplığı nasıl yazılacağını ve veri akış�
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu örnek, bir ileti bloğu doğrudan yazma ve okuma gösterilmektedir. Veri akışı bloklarının forma bağlanabilir *işlem hatları*, veri akışı bloklarının doğrusal dizeleri veya *ağları*, veri akışı bloklarının grafikleri. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. Temel veri akışı işlem hattı oluşturur bir örnek için bkz: [izlenecek yol: veri akışı işlem hattı oluşturmaya](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Daha karmaşık bir veri akışı ağı oluşturan bir örnek için bkz [izlenecek yol: veri akışı kullanarak bir Windows Forms uygulamasındaki](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Bu örnek, bir ileti bloğu doğrudan yazma ve okuma gösterilmektedir. Veri akışı bloklarının forma bağlanabilir *işlem hatları*, veri akışı bloklarının doğrusal dizeleri veya *ağları*, veri akışı bloklarının grafikleri. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. Temel veri akışı işlem hattı oluşturur bir örnek için bkz: [izlenecek yol: Veri akışı işlem hattı oluşturmaya](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Daha karmaşık bir veri akışı ağı oluşturan bir örnek için bkz [izlenecek yol: Veri akışı kullanarak bir Windows Forms uygulamalarındaki](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

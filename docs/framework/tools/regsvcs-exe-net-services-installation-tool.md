@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df81293a00ad79892618c71a901cea30efe766ec
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529114"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221316"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
@@ -27,7 +27,7 @@ ms.locfileid: "43529114"
   
 -   Sınıfınıza program aracılığıyla eklediğiniz hizmetleri yapılandırır.  
   
- Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -88,5 +88,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Araçlar](../../../docs/framework/tools/index.md)  
- [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

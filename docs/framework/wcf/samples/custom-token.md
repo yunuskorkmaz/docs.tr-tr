@@ -2,12 +2,12 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e743be961de2c6d7b09805e6f91d7710efe227e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243055"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223097"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  Hizmet dizini hizmeti bilgisayarında hizmet program dosyaları kopyalayın. CreditCardFile.txt kopyalamak unutmayın; Aksi takdirde kredi kartı authenticator istemciden gönderilen kredi kartı bilgileri doğrulanamıyor. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Setup.bat değiştirirseniz kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişkenini hizmetin barındırıldığı bilgisayarın tam adı. Yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde Setup.bat dosyasının çalıştırılması gerektiğini unutmayın.  
+3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Setup.bat değiştirirseniz kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişkenini hizmetin barındırıldığı bilgisayarın tam adı. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan.  
   
 4.  Sunucu sertifikası istemci CurrentUser TrustedPeople deponuzu kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa bunu yapmanız gerekir.  
   

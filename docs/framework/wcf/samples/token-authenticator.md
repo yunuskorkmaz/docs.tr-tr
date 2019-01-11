@@ -2,12 +2,12 @@
 title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582651"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222902"
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek nasıl özel bir belirteç kimlik doğrulayıcısı uygulanacağını gösterir. Belirteç kimlik doğrulayıcısı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için tutarlı ve kimlik doğrulama belirteciyle ilişkili doğrulama kullanılır.
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Hizmet App.config dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Ayarlarsanız Setup.bat kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` hizmet çalışacağı bilgisayarda tam ana bilgisayar adı için değişken. Setup.bat dosyasının yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminden çalıştırmanız gerektiğini unutmayın.  
+3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Hizmet App.config dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Ayarlarsanız Setup.bat kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` hizmet çalışacağı bilgisayarda tam ana bilgisayar adı için değişken. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan.  
   
 4.  Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası olduğunda istemci güvenilen veren tarafından verilen dışında bunu gerekmez.  
   

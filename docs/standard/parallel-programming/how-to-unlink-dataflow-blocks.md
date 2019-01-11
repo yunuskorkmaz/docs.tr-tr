@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma'
+title: 'Nasıl yapılır: Veri akışı bloklarının bağlantısını kaldırma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540612"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223123"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma
+# <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri akışı bloklarının bağlantısını kaldırma
 Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl kaldırılacağını açıklar.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,7 +35,7 @@ Bu belge, bir hedef veri akışı bloğu kaynağından bağlantısının nasıl 
  Kalan çağrılar için etkinleştirmek için `TrySolution` bunlardan biri bir değeri hesaplar sonra `TrySolution` yöntemi bir <xref:System.Threading.CancellationToken> çağrısından sonra iptal edilen bir nesne `ReceiveFromAny(T)` döndürür. <xref:System.Threading.SpinWait.SpinUntil%2A> Yöntemi döndürür bu <xref:System.Threading.CancellationToken> nesnesi iptal edildi.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` Visual Basic için), ve ardından bir Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesine yapıştırın veya adlı bir dosyaya yapıştırın `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` Visual Basic için), ve ardından Geliştirici komut istemi penceresi Visual Studio için aşağıdaki komutu çalıştırın.  
   
  Visual C#  
   

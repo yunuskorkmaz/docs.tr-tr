@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 6e5bb35d0d1d9128ddbc5f7ab4dd81c3bc0f8fbf
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348789"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221641"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  
@@ -188,7 +188,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Bir Visual Studio Komut İstemi'nden dile özgü klasörü altında \client\bin klasörü açın.  
+3.  Visual Studio için geliştirici komut isteminden, dile özgü klasörü altında \client\bin klasörü açın.  
   
     > [!NOTE]
     >  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2'de, yönetici ayrıcalıklarına sahip komut isteminden çalıştırdığınızdan emin olun.  

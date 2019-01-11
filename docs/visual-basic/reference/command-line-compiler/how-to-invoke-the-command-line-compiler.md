@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) komut satırı derleyicisini çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932160"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221849"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
-Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının adını yazarak komut satırı derleyicisini çağırabilirsiniz. Windows komut istemi varsayılan derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio Komut İstemi'ni kullanabilir veya PATH ortam değişkenini Değiştir. Her ikisi de, derleme adını yazarak herhangi bir dizinden derleme olanak tanır.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırı derleyicisini çağırma
+Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının adını yazarak komut satırı derleyicisini çağırabilirsiniz. Windows komut istemi varsayılan derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio için geliştirici komut istemi kullanın veya yol ortam değişkenine değiştirin. Her ikisi de, derleme adını yazarak herhangi bir dizinden derleme olanak tanır.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Visual Studio komut istemi kullanarak derleyici çağırmak için  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi kullanarak derleyici çağırmak için  
   
 1.  Microsoft Visual Studio program grubu içinde Visual Studio Araçları program klasörü açın.  
   
-2.  Visual Studio yüklüyse derleyici makinenizde, herhangi bir dizinden erişmek için Visual Studio Komut İstemi'ni kullanabilirsiniz.  
+2.  Visual Studio yüklüyse derleyici makinenizde, herhangi bir dizinden erişmek için Visual Studio için geliştirici Komut İstemi'ni kullanabilirsiniz.  
   
-3.  Visual Studio Komut İstemi'ni çağırır.  
+3.  Visual Studio için geliştirici komut istemi çağırın.  
   
 4.  Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
   
