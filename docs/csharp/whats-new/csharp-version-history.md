@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c24ac6c87762c4808c0794bf7c724eee942ad0fc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152066"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186234"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -168,7 +168,6 @@ Diğer özellikler dahil:
 
 - [Atılanlar](./csharp-7.md#discards)
 - [İkili sabit değerler ve basamak ayırıcılar](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Ref dönüşler ve yerel öğeler](./csharp-7.md#ref-locals-and-returns)
 - [Throw ifadeleri](./csharp-7.md#throw-expressions)
 
 Tüm bu özellikler, geliştiricilerin ve hiç olmadığı kadar bile daha temiz bir kod yazma olanağı için harika yeni özellikleri sağlar. Bir Vurgu, bildirimi ile kullanılacak değişkenleri condensing `out` anahtar sözcüğü ve birden çok değer tanımlama grubu aracılığıyla sağlayarak.

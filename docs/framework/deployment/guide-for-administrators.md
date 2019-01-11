@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53776740"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186221"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -254,10 +254,11 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
  Diğer hata kodları:  
   
--   [Windows Installer hata kodları](/windows/desktop/msi/error-codes)  
-  
--   [Windows Update Aracısı sonuç kodları](/security-updates/WindowsUpdateServices/18127055)  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+-   [Windows Installer hata kodları](/windows/desktop/msi/error-codes)
+
+-   [Windows Update Aracısı sonuç kodları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)
