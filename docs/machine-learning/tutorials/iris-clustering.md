@@ -3,15 +3,15 @@ title: Iris çiçek bir kümeleme learner - ML.NET kullanarak küme
 description: ML.NET kümeleme senaryosunda kullanmayı öğrenin
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cf743864f566c58fad2146fbabdf24f860330b2f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146205"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249079"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Öğretici: Küme Iris çiçek kümeleme learner ML.NET ile kullanma
 
@@ -84,9 +84,9 @@ Varolan sınıf tanımına kaldırın ve sınıfları tanımlar aşağıdaki kod
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` giriş verisi sınıfıdır ve veri kümesindeki her bir özellik tanımı yok. Kullanım [sütun](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) veri kümesi dosyasında kaynak sütun dizinlerini belirtmek için özniteliği.
+`IrisData` giriş verisi sınıfıdır ve veri kümesindeki her bir özellik tanımı yok. Kullanım [sütun](xref:Microsoft.ML.Data.ColumnAttribute) veri kümesi dosyasında kaynak sütun dizinlerini belirtmek için özniteliği.
 
-`ClusterPrediction` Sınıfı temsil eder, uygulanan kümeleme modeli çıktısını bir `IrisData` örneği. Kullanım [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) bağlanacak öznitelik `PredictedClusterId` ve `Distances` alanlarını **PredictedLabel** ve **puanı** sütunları sırasıyla. Kümeleme görev olması durumunda bu sütun şu anlama gelir:
+`ClusterPrediction` Sınıfı temsil eder, uygulanan kümeleme modeli çıktısını bir `IrisData` örneği. Kullanım [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) bağlanacak öznitelik `PredictedClusterId` ve `Distances` alanlarını **PredictedLabel** ve **puanı** sütunları sırasıyla. Kümeleme görev olması durumunda bu sütun şu anlama gelir:
 
 - **PredictedLabel** sütun tahmin edilen kümenin Kimliğini içerir.
 - **Puan** küme centroids için kare Euclidean uzaklığa sahip bir dizi sütun içerir. Dizi uzunluğu küme sayısı eşittir.
@@ -127,9 +127,9 @@ Aşağıdaki kodu ekleyin `Main` yöntemi veri yükleme şekilde ayarlamak için
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Sütun adları ve dizinlerini tarafından tanımlanan şema eşleştiğini Not `IrisData` sınıfı. <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> Değeri belirtir `float` türü.
+Sütun adları ve dizinlerini tarafından tanımlanan şema eşleştiğini Not `IrisData` sınıfı. <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> Değeri belirtir `float` türü.
 
-Kullanım örneği <xref:Microsoft.ML.Runtime.Data.TextLoader> oluşturmak için örnek bir <xref:Microsoft.ML.Runtime.Data.IDataView> temsil eden bir eğitim veri kümesi için veri kaynağı örneği:
+Kullanım örneği <xref:Microsoft.ML.Data.TextLoader> oluşturmak için örnek bir <xref:Microsoft.ML.Data.IDataView> temsil eden bir eğitim veri kümesi için veri kaynağı örneği:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ Bu noktada, tüm mevcut veya yeni .NET uygulamalarınızı tümleşik bir model 
 
 ## <a name="use-the-model-for-predictions"></a>Kullanım modeli tahminler elde etmek için
 
-Öngörüler yapma <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> giriş türü dönüştürücü ardışık düzeninden örneklerini alır ve çıktı türü örneklerini üretir sınıfı. Aşağıdaki satırı ekleyin `Main` yöntemi bu sınıfın bir örneğini oluşturmak için:
+Öngörüler yapma <xref:Microsoft.ML.PredictionEngine%602> giriş türü dönüştürücü ardışık düzeninden örneklerini alır ve çıktı türü örneklerini üretir sınıfı. Aşağıdaki satırı ekleyin `Main` yöntemi bu sınıfın bir örneğini oluşturmak için:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

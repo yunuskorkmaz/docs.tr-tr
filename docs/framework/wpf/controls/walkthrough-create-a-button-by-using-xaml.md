@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525357"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249157"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında kullanmak için bir animasyonlu düğme oluşturma öğrenmektir. Bu izlenecek yol, stil ve şablon kod yeniden kullanımını ve düğme mantığının ayrımı düğme bildiriminden imkan tanıyan özelleştirilmiş bir düğme kaynak oluşturmak için kullanır. Bu izlenecek yolda tamamen yazılır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -26,11 +26,11 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Yeni bir WPF projesi oluşturun ve pencereyi düğme ekleme  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
-2.  **Yeni bir WPF projesi oluşturun:** üzerinde **dosya** menüsünde **yeni**ve ardından **proje**. Bulma **Windows uygulaması (WPF)** şablonu ve "AnimatedButton olarak" proje adı. Bu uygulama için bir çatı oluşturur.  
+2.  **Yeni bir WPF projesi oluşturun:** Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**. Bulma **Windows uygulaması (WPF)** şablonu ve "AnimatedButton olarak" proje adı. Bu uygulama için bir çatı oluşturur.  
   
-3.  **Temel varsayılan düğme ekleme:** bu kılavuz için gereken tüm dosyaları şablon tarafından sağlanır. Çözüm Gezgini'nde tıklayarak çift Window1.xaml dosyasını açın. Varsayılan olarak, var olan bir <xref:System.Windows.Controls.Grid> gt;Window1.XAML öğesinde. Kaldırma <xref:System.Windows.Controls.Grid> öğesi ve birkaç düğme ekleme [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yazarak veya kopyalama ve yapıştırma gt;Window1.XAML aşağıdaki vurgulanmış kodu sayfası:  
+3.  **Temel varsayılan düğme ekleyin:** Bu kılavuz için gereksinim duyduğunuz tüm dosyaları, şablon tarafından sağlanır. Çözüm Gezgini'nde tıklayarak çift Window1.xaml dosyasını açın. Varsayılan olarak, var olan bir <xref:System.Windows.Controls.Grid> gt;Window1.XAML öğesinde. Kaldırma <xref:System.Windows.Controls.Grid> öğesi ve birkaç düğme ekleme [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yazarak veya kopyalama ve yapıştırma gt;Window1.XAML aşağıdaki vurgulanmış kodu sayfası:  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Düğmelerin temel özellikleri ayarlamak için stilleri kullanmak için  
   
-1.  **Application.Resources bloğu tanımlayın:** app.xaml'ni açın ve aşağıdaki vurgulanmış biçimlendirmeyi zaten yoksa ekleyin:  
+1.  **Application.Resources bloğu tanımlayın:** App.xaml açın ve aşağıdaki vurgulanmış biçimlendirmeyi zaten yoksa ekleyin:  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Kaynak kapsam, kaynak tanımladığınız tarafından belirlenir. Kaynakları tanımlama `Application.Resources` içinde app.xaml dosyası gelen herhangi bir uygulamada kullanılmak için kaynak sağlar. Kaynaklarınızı kapsamını tanımlama hakkında daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-2.  **Stil oluşturma ve bunu temel özellik değerleri tanımlayın:** eklemek için aşağıdaki biçimlendirme `Application.Resources` blok. Bu biçimlendirme oluşturur bir <xref:System.Windows.Style> ayarlama, uygulamadaki tüm düğmelerin uygulanan <xref:System.Windows.FrameworkElement.Width%2A> 90 düğmelerin ve <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
+2.  **Stil oluşturma ve bunu temel özellik değerleri tanımlayın:** İçin aşağıdaki işaretlemeyi ekleyin `Application.Resources` blok. Bu biçimlendirme oluşturur bir <xref:System.Windows.Style> ayarlama, uygulamadaki tüm düğmelerin uygulanan <xref:System.Windows.FrameworkElement.Width%2A> 90 düğmelerin ve <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Karmaşık özellik değerleri belirtme ve hatta stilleri giriş olarak diğer stilleri kullanarak hangi nesnelerin ince ayar yapmak için yol çeşitli dahil stilleri ile yapabileceğiniz çok daha fazla yoktur. Daha fazla bilgi için [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-3.  **Stil özelliği değeri bir kaynak olarak ayarlayın:** kaynakların yaygın olarak tanımlanan nesneleri ve değerleri yeniden kullanmak için basit bir yol sağlar. Kodunuzu daha modüler hale getirmek için kaynakları kullanarak karmaşık değerleri tanımlamak özellikle yararlıdır. App.xaml için vurgulanan aşağıdaki işaretlemeyi ekleyin.  
+3.  **Stil özelliği değeri bir kaynak olarak ayarlayın:** Kaynakların yaygın olarak tanımlanan nesneleri ve değerleri yeniden kullanmak için basit bir yol sağlar. Kodunuzu daha modüler hale getirmek için kaynakları kullanarak karmaşık değerleri tanımlamak özellikle yararlıdır. App.xaml için vurgulanan aşağıdaki işaretlemeyi ekleyin.  
   
     ```xaml  
     <Application.Resources>  
@@ -110,7 +110,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Doğrudan altında `Application.Resources` bloğu "GrayBlueGradientBrush" adlı bir kaynak oluşturulur. Bu kaynak Yatay Gradyan tanımlar. Bu kaynak her yerden bir özellik değeri olarak kullanılabilir için düğme stili ayarlayıcısının dahil olmak üzere uygulamada <xref:System.Windows.Controls.Control.Background%2A> özelliği. Şimdi tüm düğmeler sahip bir <xref:System.Windows.Controls.Control.Background%2A> Bu geçişin özellik değeri.  
   
-     Uygulamayı çalıştırmak için F5 tuşuna basın. Aşağıdaki gibi görünmelidir.  
+     Uygulamayı çalıştırmak için F5'e basın. Aşağıdaki gibi görünmelidir.  
   
      ![Arka plan gradyan düğmeleriyle](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
@@ -121,7 +121,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Düğmenin görünümünü tanımlamak için şablonu kullanmak için  
   
-1.  **Şablonu ayarlama:** gibi denetimlerin çünkü <xref:System.Windows.Controls.Button> sahip bir <xref:System.Windows.Controls.Control.Template%2A> özelliği içindeki ayarlamadınız biz yalnızca diğer özellik değerleri gibi şablon özellik değeri tanımlayabilirsiniz bir <xref:System.Windows.Style> kullanarak bir <xref:System.Windows.Setter>. Aşağıdaki vurgulanmış biçimlendirmeyi düğmenizin stiline ekleyin.  
+1.  **Şablonu ayarlayın:** Gibi denetimlerin çünkü <xref:System.Windows.Controls.Button> sahip bir <xref:System.Windows.Controls.Control.Template%2A> özelliği içindeki ayarlamadınız biz yalnızca diğer özellik değerleri gibi şablon özellik değeri tanımlayabilirsiniz bir <xref:System.Windows.Style> kullanarak bir <xref:System.Windows.Setter>. Aşağıdaki vurgulanmış biçimlendirmeyi düğmenizin stiline ekleyin.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
     </Application.Resources>  
     ```  
   
-2.  **Düğme sunu alter:** bu noktada, şablonu tanımlamanız gerekir. Vurgulanan aşağıdaki işaretlemeyi ekleyin. Bu işaretleme iki belirtir <xref:System.Windows.Shapes.Rectangle> yuvarlatılmış kenarlar, öğelerle arkasından bir <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> Kullanılan ana <xref:System.Windows.Controls.ContentPresenter> düğmesi. A <xref:System.Windows.Controls.ContentPresenter> düğme içeriğini görüntüler. Bu kılavuzda, metin ("Düğmesini 1", "2 Button", "Button 3") içeriktir. Şablon bileşenlerinin tümünü (dikdörtgenler ve <xref:System.Windows.Controls.DockPanel>) içine yerleştirilir bir <xref:System.Windows.Controls.Grid>.  
+2.  **Değiştir düğmesi sunumu:** Bu noktada, şablonu tanımlamanız gerekir. Vurgulanan aşağıdaki işaretlemeyi ekleyin. Bu işaretleme iki belirtir <xref:System.Windows.Shapes.Rectangle> yuvarlatılmış kenarlar, öğelerle arkasından bir <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> Kullanılan ana <xref:System.Windows.Controls.ContentPresenter> düğmesi. A <xref:System.Windows.Controls.ContentPresenter> düğme içeriğini görüntüler. Bu kılavuzda, metin ("Düğmesini 1", "2 Button", "Button 3") içeriktir. Şablon bileşenlerinin tümünü (dikdörtgenler ve <xref:System.Windows.Controls.DockPanel>) içine yerleştirilir bir <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -163,11 +163,11 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
     </Setter.Value>  
     ```  
   
-     Uygulamayı çalıştırmak için F5 tuşuna basın. Aşağıdaki gibi görünmelidir.  
+     Uygulamayı çalıştırmak için F5'e basın. Aşağıdaki gibi görünmelidir.  
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Şablona bir glasseffect şablona ekleyin:** cam sonraki ekleyeceksiniz. İlk olarak, bir cam gradyan efekti oluşturma bazı kaynaklar oluşturun. Bu gradyan dahilindeki herhangi bir yere ekleyin `Application.Resources` engelle:  
+3.  **Şablona bir glasseffect şablona ekleyin:** Bundan sonra cam ekleyeceksiniz. İlk olarak, bir cam gradyan efekti oluşturma bazı kaynaklar oluşturun. Bu gradyan dahilindeki herhangi bir yere ekleyin `Application.Resources` engelle:  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Bu kaynaklar olarak kullanılan <xref:System.Windows.Shapes.Shape.Fill%2A> için biz takın bir dikdörtgen <xref:System.Windows.Controls.Grid> düğme şablonunun. Aşağıdaki vurgulanmış biçimlendirmeyi şablonuna ekleyin.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
 ## <a name="create-button-interactivity"></a>Etkileşimli düğme oluşturma  
  Bu bölümde, özellik Tetikleyicileri ve özellik değerlerini değiştirmek ve animasyon yanıt fare işaretçisi düğmenin üzerine hareket ve tıklamak gibi kullanıcı eylemlerini olarak çalıştırmak için olay tetikleyicilerini oluşturacaksınız.  
   
- (Fare bekletme, fareyi bırakın,'a tıklayın ve benzeri) etkileşim eklemek için kolay bir yol, şablon veya stil içindeki Tetikleyiciler tanımlamaktır. Oluşturmak için bir <xref:System.Windows.Trigger>, bir özelliği "koşul" gibi tanımlayın: düğme <xref:System.Windows.UIElement.IsMouseOver%2A> özellik değeri eşittir `true`. Ayarlayıcılar (Eylemler) tetikleyici koşul true olduğunda, gerçekleşmesi tanımlarsınız.  
+ (Fare bekletme, fareyi bırakın,'a tıklayın ve benzeri) etkileşim eklemek için kolay bir yol, şablon veya stil içindeki Tetikleyiciler tanımlamaktır. Oluşturmak için bir <xref:System.Windows.Trigger>, bir özelliği "koşul" gibi tanımlayın: Düğme <xref:System.Windows.UIElement.IsMouseOver%2A> özellik değeri eşittir `true`. Ayarlayıcılar (Eylemler) tetikleyici koşul true olduğunda, gerçekleşmesi tanımlarsınız.  
   
 #### <a name="to-create-button-interactivity"></a>Etkileşimli düğme oluşturmak için  
   
-1.  **Şablon tetikleyicileri ekleyin:** biçimlendirmeyi şablonunuza ekleyin.  
+1.  **Şablon tetikleyicileri ekleyin:** Vurgulanan biçimlendirme şablonunuza ekleyin.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -318,9 +318,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
     </Setter.Value>  
     ```  
   
-2.  **Özellik tetikleyicileri ekleyin:** biçimlendirmeyi eklemek `ControlTemplate.Triggers` engelle:  
+2.  **Özellik tetikleyicileri ekleyin:** Biçimlendirmeyi eklemek `ControlTemplate.Triggers` engelle:  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Uygulamayı çalıştırmak ve düğmelerin üzerine fare işaretçisini çalıştırılmakta olan etkisini görmek için F5 tuşuna basın.  
   
-3.  **Odak tetikleyicisi ekleyin:** düğmesine (örneğin, kullanıcı buna tıkladığında sonra) odağı varken durumu işlemek için bazı benzer ayarlayıcılar sonra ekleyeceğiz.  
+3.  **Odak tetikleyicisi ekleyin:** Ardından, düğmeyi (örneğin, kullanıcı buna tıkladığında sonra) odağı varken durumu işlemek için bazı benzer ayarlayıcılar ekleyeceğiz.  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Düğmelerden birine tıklayın ve uygulamayı çalıştırmak için F5 tuşuna basın. Odak hala olduğundan tıkladıktan sonra düğme vurgulanmış kaldığına dikkat edin. Başka bir düğme tıklarsanız, sonuncu kaybeder sırada yeni düğme odak kazanır.  
   
-4.  **Animasyonlar ekleyin** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** bazı animasyonlar Tetikleyiciler için sonraki ekleriz. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` blok.  
+4.  **Animasyonlar ekleyin** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:**  Sonraki bazı animasyonlar tetikleyicilere ekleriz. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` blok.  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      İkinci olay tetikleyicisi (<xref:System.Windows.UIElement.MouseLeave>) yalnızca ilk durdurur. Ne zaman durdurmanız bir <xref:System.Windows.Media.Animation.Storyboard>, tüm animasyonlu özellikleri varsayılan değerlerine döndürür. Kullanıcı imleci düğmeden hareket ettiğinde, bu nedenle, düğmenin fare işaretçisi düğmenin üzerine taşınmış önceki şekilde döner. Animasyonlar hakkında daha fazla bilgi için bkz. [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
-5.  **Düğmeye tıklandığında animasyon ekleyin:** son adım kullanıcı düğmeye tıkladığında bir tetikleyici eklemektir. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` engelle:  
+5.  **Düğmeye tıklandığında animasyon ekleyin:** Son adım kullanıcı düğmeye tıkladığında bir tetikleyici için eklemektir. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` engelle:  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  

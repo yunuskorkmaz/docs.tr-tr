@@ -3,12 +3,12 @@ title: .NET derleyici Platformu SDK'sı (Roslyn API'leri)
 description: .NET derleyici Platformu (Roslyn API'leri olarak da bilinir) SDK .NET kod, hataların, anlamak ve bu hataları düzeltmek için kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 62f2cf0eb8a7c7cf3606bb55efd3525059a6a267
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221277"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249144"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleyici Platformu SDK'sı
 
@@ -31,7 +31,7 @@ Daha küçük bir avantajı, Çözümleyicileri ve kod düzeltmeleri daha küç�
 
 1. [*Takım kod standartlarımız, koda zorla*](#enforce-team-coding-standards)
 1. [*Kitaplık paketleriyle rehberlik*](#provide-guidance-with-library-packages)
-1. [*Kodlama genel rehberlik sağlayın*](#provide-general-coding-guidance)
+1. [*Genel rehberlik*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>Takım kod standartlarımız, koda zorla
 
