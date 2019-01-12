@@ -32,7 +32,7 @@ ms.locfileid: "54030405"
  [Karakter Sınıfları](#character_classes)  
  [Bağlayıcılar](#anchors)  
  [Gruplandırma Yapıları](#grouping_constructs)  
- [Belirleyiciler](#quantifiers)  
+ [Niceleyiciler](#quantifiers)  
  [Yeniden Başvuru Yapıları](#backreference_constructs)  
  [Değişim Yapıları](#alternation_constructs)  
  [Değişimler](#substitutions)  
