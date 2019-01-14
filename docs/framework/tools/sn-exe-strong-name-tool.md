@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151143"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221654"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -30,7 +30,7 @@ Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü ad
  Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı'nı başlatmak için geliştirici komut istemi (veya Windows 7'de Visual Studio komut istemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
->  64-bit bilgisayarlarda, Visual Studio komut istemi ve 64-bit sürümü Visual Studio x64 Win64 komut istemi kullanarak Sn.exe 32-bit sürümünü çalıştırın. 
+>  64-bit bilgisayarlarda, geliştirici komut istemi Visual Studio ve 64-bit sürümü için Visual Studio x64 Win64 komut istemi kullanarak Sn.exe 32-bit sürümünü çalıştırın. 
   
  Komut satırına şunu yazın:  
   
@@ -48,8 +48,8 @@ sn [-quiet][option [parameter(s)]]
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Oluşturur <xref:System.Reflection.AssemblySignatureKeyAttribute> kimlik anahtarını bir anahtar kapsayıcısından imza anahtarına geçirmek için veri.|  
 |**-c** [*csp*]|Tanımlayıcı ad imzası için kullanılacak varsayılan şifreleme hizmeti sağlayıcısı (CSP) ayarlar. Bu ayar tüm bilgisayara uygulanır. Bir CSP adı belirtmezseniz, Sn.exe geçerli ayarı temizler.|  
 |**-d** *kapsayıcı*|Belirtilen anahtar kapsayıcısını tanımlayıcı ad CSP'sinden siler.|  
-|**-D***assembly1 assembly2*|İki derlemenin yalnızca imza farkı olduğunu doğrular. Bu çoğunlukla, bir derleme farklı bir anahtar çifti ile yeniden imzalandıktan sonra denetim olarak kullanılır.|  
-|**-e***derleme outfile*|Öğesinden ortak anahtarı ayıklar *derleme* ve depolar *outfile.*|  
+|**-D** *assembly1 assembly2*|İki derlemenin yalnızca imza farkı olduğunu doğrular. Bu çoğunlukla, bir derleme farklı bir anahtar çifti ile yeniden imzalandıktan sonra denetim olarak kullanılır.|  
+|**-e** *derleme outfile*|Öğesinden ortak anahtarı ayıklar *derleme* ve depolar *outfile.*|  
 |**-h**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**-i** *infile container*|Dan anahtar çifti yükler *infile* belirtilen anahtar kapsayıcısında. Anahtar kapsayıcısı, tanımlayıcı ad CSP'sinde bulunur.|  
 |**-k** [*keysize*] *outfile*|Yeni bir dizi oluşturur <xref:System.Security.Cryptography.RSACryptoServiceProvider> belirtilen boyutta anahtar ve onu belirtilen dosyaya yazar.  Hem ortak hem de özel anahtar dosyaya yazılır.<br /><br /> Bir anahtar boyutu belirtmezseniz, makinenizde Microsoft gelişmiş şifreleme sağlayıcısı yüklü ise varsayılan olarak 1,024-bit bir anahtar oluşturulur, yüklü değilse 512-bit anahtar oluşturulur.<br /><br /> *Keysize* parametresi yüklü Microsoft Gelişmiş şifreleme sağlayıcısı yüklüyse bu 384 bitten 16.384 bit'e kadar olan anahtar uzunluklarını 8 bitlik artışlarla destekler.  Makinenizde Microsoft temel şifreleme sağlayıcısı yüklüyse, 8 bitlik artışlarla 384 bit'ten 512 bit'e kadar olan anahtar uzunluklarını destekler.|  

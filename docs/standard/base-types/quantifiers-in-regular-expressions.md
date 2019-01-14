@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580471"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221394"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
 Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunması mevcut olmalıdır, miktar belirleyiciler belirtin.  .NET tarafından desteklenen miktar belirleyiciler aşağıdaki tabloda listelenmektedir.  
@@ -49,7 +49,7 @@ Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunma
 ### <a name="match-zero-or-more-times-"></a>Eşleşen sıfır veya daha fazla kez: *  
  `*` Niceleyici, önceki öğeyle sıfır veya daha fazla kez eşleşir. Eşdeğerdir `{0,}` nicelik belirteci. `*` doyumsuz bir miktar belirleyiciyi, yavaş bir eşdeğeri olan `*?`.  
   
- Bu normal ifade aşağıdaki örnekte gösterilmektedir. Düzenin ve dört giriş dizesinde dokuz basamak beş eşleşen (`95`, `929`, `9129`, ve `9919`) yapın.  
+ Bu normal ifade aşağıdaki örnekte gösterilmektedir. Düzenin ve dört giriş dizesinde dokuz basamak beş eşleşen (`95`, `929`, `9219`, ve `9919`) yapın.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
