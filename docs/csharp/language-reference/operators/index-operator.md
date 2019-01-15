@@ -1,7 +1,7 @@
 ---
 title: '[] İşleci - C# başvurusu'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c464dab1ebf62d33b74c83b8d5c3c563fef4e77c
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244010"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307129"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="fd6b8-102">[] İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="fd6b8-102">[] Operator (C# Reference)</span></span>
-<span data-ttu-id="fd6b8-103">Köşeli ayraçlar (`[]`) diziler, dizin oluşturucular ve öznitelikleri için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="fd6b8-104">İşaretçiler ile de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-104">They can also be used with pointers.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="fd6b8-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fd6b8-105">Remarks</span></span>  
- <span data-ttu-id="fd6b8-106">Bir dizi türü arkasından bir türdür `[]`:</span><span class="sxs-lookup"><span data-stu-id="fd6b8-106">An array type is a type followed by `[]`:</span></span>  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- <span data-ttu-id="fd6b8-107">Bir dizinin bir öğesine erişmek için istenen öğenin dizini ayraç içine alınır:</span><span class="sxs-lookup"><span data-stu-id="fd6b8-107">To access an element of an array, the index of the desired element is enclosed in brackets:</span></span>  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- <span data-ttu-id="fd6b8-108">Bir dizi dizini aralık dışında ise bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-108">An exception is thrown if an array index is out of range.</span></span>  
-  
- <span data-ttu-id="fd6b8-109">Dizin oluşturma işleci dizi aşırı yüklenemez; Ancak, türleri, bir veya daha fazla parametre dizin oluşturucular tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-109">The array indexing operator cannot be overloaded; however, types can define indexers that take one or more parameters.</span></span> <span data-ttu-id="fd6b8-110">Dizin Oluşturucu parametresi dizi dizinleri gibi köşeli ayraçlar içine alınan ancak dizin oluşturucu parametresi tamsayı dizisi dizinler, aksine herhangi bir türde olması için bildirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-110">Indexer parameters are enclosed in square brackets, just like array indexes, but indexer parameters can be declared to be of any type, unlike array indexes, which must be integral.</span></span>  
-  
- <span data-ttu-id="fd6b8-111">Örneğin, .NET Framework tanımlayan bir `Hashtable` anahtarları ve değerleri rastgele tür ilişkilendirir türü:</span><span class="sxs-lookup"><span data-stu-id="fd6b8-111">For example, the .NET Framework defines a `Hashtable` type that associates keys and values of arbitrary type:</span></span>  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- <span data-ttu-id="fd6b8-112">Köşeli ayraçlar belirtmek için de kullanılır [öznitelikleri](../../../csharp/programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="fd6b8-112">Square brackets are also used to specify [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md):</span></span>  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- <span data-ttu-id="fd6b8-113">Bir işaretçi dizinlemek için köşeli ayraçlar kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="fd6b8-113">You can use square brackets to index off a pointer:</span></span>  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- <span data-ttu-id="fd6b8-114">Sınır denetimi gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-114">No bounds checking is performed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="fd6b8-115">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="fd6b8-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="fd6b8-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fd6b8-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="2277e-102">[] İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="2277e-102">[] Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="fd6b8-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="fd6b8-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="fd6b8-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="fd6b8-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="fd6b8-119">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="fd6b8-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="fd6b8-120">Diziler</span><span class="sxs-lookup"><span data-stu-id="fd6b8-120">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="fd6b8-121">Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="fd6b8-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="fd6b8-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="fd6b8-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="fd6b8-123">fixed Deyimi</span><span class="sxs-lookup"><span data-stu-id="fd6b8-123">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+<span data-ttu-id="2277e-103">Köşeli ayraçlar `[]`, genellikle dizi, dizin oluşturucu veya işaretçiyi öğe erişimi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2277e-103">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+
+<span data-ttu-id="2277e-104">İşaretçi öğe erişimi hakkında daha fazla bilgi için bkz: [nasıl yapılır: işaretçiyle bir dizi öğesine erişme](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="2277e-104">For more information about pointer element access, see [How to: access an array element with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span></span>
+
+<span data-ttu-id="2277e-105">Köşeli ayraçlar belirtmek için de [öznitelikleri](../../programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="2277e-105">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a><span data-ttu-id="2277e-106">Dizi erişimi</span><span class="sxs-lookup"><span data-stu-id="2277e-106">Array access</span></span>
+
+<span data-ttu-id="2277e-107">Aşağıdaki örnekte, dizi öğelerinin nasıl erişileceğini gösteren:</span><span class="sxs-lookup"><span data-stu-id="2277e-107">The following example demonstrates how to access array elements:</span></span>
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+<span data-ttu-id="2277e-108">Bir dizi dizini karşılık gelen boyutuna bir dizinin sınırları dışında ise bir <xref:System.IndexOutOfRangeException> oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="2277e-108">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+
+<span data-ttu-id="2277e-109">Yukarıdaki örnekte gösterildiği gibi de köşeli ayraç örnekleme dizi örnekleri bir dizi türü bildirimi de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2277e-109">As the preceding example shows, you also use square brackets in declaration of an array type and instantiation of array instances.</span></span>
+
+<span data-ttu-id="2277e-110">Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="2277e-110">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+
+## <a name="indexer-access"></a><span data-ttu-id="2277e-111">Dizinleyici erişimi</span><span class="sxs-lookup"><span data-stu-id="2277e-111">Indexer access</span></span>
+
+<span data-ttu-id="2277e-112">Aşağıdaki örnek, .NET kullanır <xref:System.Collections.Generic.Dictionary%602> dizinleyici erişimi göstermek için türü:</span><span class="sxs-lookup"><span data-stu-id="2277e-112">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+<span data-ttu-id="2277e-113">Dizin oluşturucular dizi dizini oluşturma olarak benzer şekilde, kullanıcı tanımlı bir tür dizin örneğini olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="2277e-113">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="2277e-114">Dizin oluşturucu bağımsız değişken tamsayı olması gerekir, dizi dizinleri, herhangi bir türde olması bildirilir.</span><span class="sxs-lookup"><span data-stu-id="2277e-114">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+
+<span data-ttu-id="2277e-115">Dizin oluşturucular hakkında daha fazla bilgi için bkz: [dizin oluşturucular](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="2277e-115">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="2277e-116">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="2277e-116">Operator overloadability</span></span>
+
+<span data-ttu-id="2277e-117">Öğe erişimi `[]` bir aşırı yüklenebilir işleç olarak kabul edilmez.</span><span class="sxs-lookup"><span data-stu-id="2277e-117">Element access `[]` is not considered an overloadable operator.</span></span> <span data-ttu-id="2277e-118">Kullanım [dizin oluşturucular](../../programming-guide/indexers/index.md) için kullanıcı tanımlı türler ile dizin oluşturmayı destekler.</span><span class="sxs-lookup"><span data-stu-id="2277e-118">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="2277e-119">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="2277e-119">C# language specification</span></span>
+
+<span data-ttu-id="2277e-120">Daha fazla bilgi için [öğe erişimi](~/_csharplang/spec/expressions.md#element-access) ve [işaretçi öğe erişimi](~/_csharplang/spec/unsafe-code.md#pointer-element-access) bölümlerini [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="2277e-120">For more information, see the [Element access](~/_csharplang/spec/expressions.md#element-access) and [Pointer element access](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2277e-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2277e-121">See also</span></span>
+
+- [<span data-ttu-id="2277e-122">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="2277e-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="2277e-123">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="2277e-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="2277e-124">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="2277e-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="2277e-125">Diziler</span><span class="sxs-lookup"><span data-stu-id="2277e-125">Arrays</span></span>](../../programming-guide/arrays/index.md)
+- [<span data-ttu-id="2277e-126">Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="2277e-126">Indexers</span></span>](../../programming-guide/indexers/index.md)
+- [<span data-ttu-id="2277e-127">İşaretçi türleri</span><span class="sxs-lookup"><span data-stu-id="2277e-127">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="2277e-128">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="2277e-128">Attributes</span></span>](../../programming-guide/concepts/attributes/index.md)
