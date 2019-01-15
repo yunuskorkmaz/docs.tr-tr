@@ -205,7 +205,6 @@
 ### [Erişilebilirlik](framework/ui-automation/)
 ### [Veri ve Modelleme](framework/data/)
 ### [İstemci Uygulamaları](framework/develop-client-apps.md)
-#### [Ortak İstemci Teknolojileri](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows Forms](framework/winforms/)
 ### [WCF ile Hizmet Odaklı Uygulamalar](framework/wcf/)
