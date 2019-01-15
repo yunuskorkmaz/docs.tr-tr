@@ -1,7 +1,7 @@
 ---
 title: '[] İşleci - C# başvurusu'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c464dab1ebf62d33b74c83b8d5c3c563fef4e77c
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244010"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307129"
 ---
 # <a name="-operator-c-reference"></a>[] İşleci (C# Başvurusu)
-Köşeli ayraçlar (`[]`) diziler, dizin oluşturucular ve öznitelikleri için kullanılır. İşaretçiler ile de kullanılabilir.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bir dizi türü arkasından bir türdür `[]`:  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- Bir dizinin bir öğesine erişmek için istenen öğenin dizini ayraç içine alınır:  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- Bir dizi dizini aralık dışında ise bir özel durum oluşturulur.  
-  
- Dizin oluşturma işleci dizi aşırı yüklenemez; Ancak, türleri, bir veya daha fazla parametre dizin oluşturucular tanımlayabilirsiniz. Dizin Oluşturucu parametresi dizi dizinleri gibi köşeli ayraçlar içine alınan ancak dizin oluşturucu parametresi tamsayı dizisi dizinler, aksine herhangi bir türde olması için bildirilebilir.  
-  
- Örneğin, .NET Framework tanımlayan bir `Hashtable` anahtarları ve değerleri rastgele tür ilişkilendirir türü:  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- Köşeli ayraçlar belirtmek için de kullanılır [öznitelikleri](../../../csharp/programming-guide/concepts/attributes/index.md):  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- Bir işaretçi dizinlemek için köşeli ayraçlar kullanabilirsiniz:  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- Sınır denetimi gerçekleştirilir.  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
-- [Diziler](../../../csharp/programming-guide/arrays/index.md)  
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)
+Köşeli ayraçlar `[]`, genellikle dizi, dizin oluşturucu veya işaretçiyi öğe erişimi için kullanılır.
+
+İşaretçi öğe erişimi hakkında daha fazla bilgi için bkz: [nasıl yapılır: işaretçiyle bir dizi öğesine erişme](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+
+Köşeli ayraçlar belirtmek için de [öznitelikleri](../../programming-guide/concepts/attributes/index.md):
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>Dizi erişimi
+
+Aşağıdaki örnekte, dizi öğelerinin nasıl erişileceğini gösteren:
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+Bir dizi dizini karşılık gelen boyutuna bir dizinin sınırları dışında ise bir <xref:System.IndexOutOfRangeException> oluşturulur.
+
+Yukarıdaki örnekte gösterildiği gibi de köşeli ayraç örnekleme dizi örnekleri bir dizi türü bildirimi de kullanabilirsiniz.
+
+Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/arrays/index.md).
+
+## <a name="indexer-access"></a>Dizinleyici erişimi
+
+Aşağıdaki örnek, .NET kullanır <xref:System.Collections.Generic.Dictionary%602> dizinleyici erişimi göstermek için türü:
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+Dizin oluşturucular dizi dizini oluşturma olarak benzer şekilde, kullanıcı tanımlı bir tür dizin örneğini olanak tanır. Dizin oluşturucu bağımsız değişken tamsayı olması gerekir, dizi dizinleri, herhangi bir türde olması bildirilir.
+
+Dizin oluşturucular hakkında daha fazla bilgi için bkz: [dizin oluşturucular](../../programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>İşleç overloadability
+
+Öğe erişimi `[]` bir aşırı yüklenebilir işleç olarak kabul edilmez. Kullanım [dizin oluşturucular](../../programming-guide/indexers/index.md) için kullanıcı tanımlı türler ile dizin oluşturmayı destekler.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [öğe erişimi](~/_csharplang/spec/expressions.md#element-access) ve [işaretçi öğe erişimi](~/_csharplang/spec/unsafe-code.md#pointer-element-access) bölümlerini [ C# dil belirtimi](../language-specification/index.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# İşleçleri](index.md)
+- [Diziler](../../programming-guide/arrays/index.md)
+- [Dizin Oluşturucular](../../programming-guide/indexers/index.md)
+- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Öznitelikler](../../programming-guide/concepts/attributes/index.md)

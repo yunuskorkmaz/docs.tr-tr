@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244810"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307181"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
@@ -95,6 +95,7 @@ Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ]
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Bileşik biçimlendirme](../../../standard/base-types/composite-formatting.md)
+- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Dizeler](../../programming-guide/strings/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Özel Karakterleri](index.md)

@@ -2,12 +2,12 @@
 title: (Visual Basic) WordprocessingML belgelerinin şekli
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 30ec7a0c6b03d0c6f00561ce08cb836aab3c167b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8f100078a5e764c8903512aca8bf5d46b9c9b056
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777648"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307103"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>(Visual Basic) WordprocessingML belgelerinin şekli
 Bu konu, WordprocessingML belgesinin XML şeklini tanıtır.  
@@ -90,7 +90,7 @@ End Module
 ## <a name="external-resources"></a>Dış Kaynaklar  
  [Office (2007) açık XML dosya biçimleri](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [WordprocessingML genel bakış](https://msdn.microsoft.com/en-us/library/aa212812(office.11).aspx)  
+ [WordprocessingML genel bakış](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
   
  [Office 2003: XML şemaları başvuru indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
