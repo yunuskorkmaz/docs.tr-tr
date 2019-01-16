@@ -3,13 +3,13 @@ title: NuGet ve .NET kitaplıkları
 description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkları.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614551"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333427"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ NuGet.org barındıran kendi [sembolleri sunucu deposu](/nuget/create-packages/s
 
 > [!IMPORTANT]
 > NuGet.org sembol sunucusu yalnızca yeni destekler [taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) SDK stili projeleri tarafından oluşturuldu.
+>
+> Bir .NET kitaplığı hata ayıklama sırasında NuGet.org sembol sunucusu kullanmak için geliştiricilerin Visual Studio 2017 15.9 olmalıdır veya üzeri.
 
 Alternatif bir sembol paketi oluşturma seçeneği, ana NuGet paketinin sembol dosyaları ekleme. Ana NuGet paketini daha büyük olacaktır, ancak katıştırılmış sembol dosyaları geliştiriciler NuGet.org sembol sunucusu yapılandırmanız gerekmez anlamına gelir. NuGet paketi kullanarak bir SDK stilinde projesi oluştururken ardından sembol dosyalarını ayarlayarak katıştırabilirsiniz `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliği:
 

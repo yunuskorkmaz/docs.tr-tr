@@ -1,15 +1,15 @@
 ---
 title: ML.NET kullanımda bir yaklaşım analizi ikili sınıflandırma senaryosu
 description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eylemde için nasıl kullanılacağını anlamak için nasıl kullanılacağını keşfedin.
-ms.date: 12/20/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 429304bbbef94457800673f1b087752eb3d5dba9
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030171"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333804"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: ML.NET kullanımda bir yaklaşım analizi ikili sınıflandırma senaryosu
 
@@ -122,7 +122,7 @@ Kısa bir süre önce indirilen dosyaları ve bir genel değişken için yollar 
 * `_trainDataPath` Yolun modeli eğitmek için kullanılan veri kümesine sahiptir.
 * `_testDataPath` Yolun model değerlendirmek için kullanılan veri kümesine sahiptir.
 * `_modelPath` eğitilen modelin kaydedildiği yolu vardır.
-* `_textLoader` olan <xref:Microsoft.ML.Runtime.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
+* `_textLoader` olan <xref:Microsoft.ML.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
 
 Satır sağ aşağıdaki kodu ekleyin `Main` bu yollarını belirtmek için yöntemi ve `_textLoader` değişkeni:
 
@@ -152,10 +152,10 @@ Adlı bir değişken oluşturma `mlContext` ve yeni bir örneğini ile başlatma
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Sonra Kurulum başlatma veri yükleme için `_textLoader` yeniden kullanmak için genel değişkeni.  Kullanmakta olduğunuz bildirimi bir `TextReader`. Oluşturduğunuzda, bir `TextLoader` kullanarak bir `TextReader`, gerekli bağlamı geçirdiğiniz ve <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> özelleştirme sağlayan sınıf.
+Sonra Kurulum başlatma veri yükleme için `_textLoader` yeniden kullanmak için genel değişkeni.  Kullanmakta olduğunuz bildirimi bir `TextReader`. Oluşturduğunuzda, bir `TextLoader` kullanarak bir `TextReader`, gerekli bağlamı geçirdiğiniz ve <xref:Microsoft.ML.Data.TextLoader.Arguments> özelleştirme sağlayan sınıf.
 
- Bir dizi geçirerek veri şemasını belirtin <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> tüm sütun adlarını ve türlerini içeren yükleyicisi nesneleri. Oluşturduğunuz zaman veri şemasını önceden tanımlanmış bizim `SentimentData` sınıfı. İlk sütun (etiketi) bizim şema için olan bir <xref:System.Boolean> (tahmin) ve ikinci sütun (SentimentText) türü metin/dizesi yaklaşımını tahminde için kullanılan bir özelliktir.
-`TextReader` Sınıf tam olarak başlatılmış döndürür <xref:Microsoft.ML.Runtime.Data.TextLoader>  
+ Bir dizi geçirerek veri şemasını belirtin <xref:Microsoft.ML.Data.TextLoader.Column> tüm sütun adlarını ve türlerini içeren yükleyicisi nesneleri. Oluşturduğunuz zaman veri şemasını önceden tanımlanmış bizim `SentimentData` sınıfı. İlk sütun (etiketi) bizim şema için olan bir <xref:System.Boolean> (tahmin) ve ikinci sütun (SentimentText) türü metin/dizesi yaklaşımını tahminde için kullanılan bir özelliktir.
+`TextReader` Sınıf tam olarak başlatılmış döndürür <xref:Microsoft.ML.Data.TextLoader>  
 
 Başlatmak için `_textLoader` gerekli veri kümeleri için yeniden kullanmak için genel değişkeni sonra aşağıdaki kodu ekleyin `mlContext` başlatma:
 
@@ -186,7 +186,7 @@ Oluşturma `Train` yöntemi hemen sonrasına `Main` yöntemi, aşağıdaki kodu 
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Kullanarak verileri yüklemek `_textLoader` genel değişkenin `dataPath` parametresi. Döndürür bir <xref:Microsoft.ML.Runtime.Data.IDataView>. Giriş ve çıkış olarak `Transforms`, `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
+Kullanarak verileri yüklemek `_textLoader` genel değişkenin `dataPath` parametresi. Döndürür bir <xref:Microsoft.ML.Data.IDataView>. Giriş ve çıkış olarak `Transforms`, `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
 
 ML.NET veriler SQL görünümüne benzer. Bu, gevşek değerlendirilen, şema ve heterojen olur. Nesne, işlem hattını ilk kısmı ve verileri yükler. Bu öğreticide, açıklama ve karşılık gelen toxic veya olmayan toxic yaklaşım bir veri kümesine yükler. Bu model oluşturmayı ve bunu eğitmek için kullanılır.
 
@@ -200,7 +200,7 @@ ML.NET veriler SQL görünümüne benzer. Bu, gevşek değerlendirilen, şema ve
 
 ML. NET dönüştürme işlem hatları, verilerinizi, eğitim veya test etmeden önce uygulanan dönüştürmeler özel bir dizi oluşturun. Veri Dönüşümleri birincil amacı olan [özellik kazandırma sayesinde](../resources/glossary.md#feature-engineering). Makine öğrenimi algoritmaları anlamak [özellikleri tespit](../resources/glossary.md#feature) metinsel verilerimizi ML algoritmalarınızı tanıyacak bir biçime dönüştürmek için sonraki adım, bu nedenle veri. Bu biçim bir [sayısal vektör](../resources/glossary.md#numerical-feature-vector).
 
-Ardından, arama `mlContext.Transforms.Text.FeaturizeText` hangi featurizes metin sütununu (`SentimentText`) adı verilen sayısal bir vektör sütununa `Features` makine öğrenimi algoritması tarafından kullanılan. Bu döndüren bir sarmalayıcı çağrısı, bir <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601> bir işlem hattı etkin olacak. Bu ad `pipeline` eğitmen için ardından ekleyeceği şekilde `EstimatorChain`. Bu, sonraki kod satırı ekleyin:
+Ardından, arama `mlContext.Transforms.Text.FeaturizeText` hangi featurizes metin sütununu (`SentimentText`) adı verilen sayısal bir vektör sütununa `Features` makine öğrenimi algoritması tarafından kullanılan. Bu döndüren bir sarmalayıcı çağrısı, bir <xref:Microsoft.ML.Data.EstimatorChain%601> bir işlem hattı etkin olacak. Bu ad `pipeline` eğitmen için ardından ekleyeceği şekilde `EstimatorChain`. Bu, sonraki kod satırı ekleyin:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
 
@@ -216,7 +216,7 @@ Aşağıdaki kodu ekleyin `Train` yöntemi:
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Modeli eğitme <xref:Microsoft.ML.Data.TransformerChain%601>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modelinize eğitme <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> zaten yüklenmiş eğitim verilerini sağlayarak. Bu tahminler elde etmek için kullanılacak bir modelini döndürür. `pipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi böyle kadar yürütülmez.
+Modeli eğitme <xref:Microsoft.ML.Data.TransformerChain%601>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modelinize eğitme <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> zaten yüklenmiş eğitim verilerini sağlayarak. Bu tahminler elde etmek için kullanılacak bir modelini döndürür. `pipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi böyle kadar yürütülmez.
 
 Aşağıdaki kodu ekleyin `Train` yöntemi:
 
@@ -287,7 +287,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 * Model bir .zip dosyası olarak kaydeder.
 
-Ardından, yeniden kullanılabilir ve diğer uygulamalarda kullanılan model kaydetmek için bir yöntem oluşturun. `ITransformer` Sahip bir <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> alır yöntemi `_modelPath` genel alan ve <xref:System.IO.Stream>. Bu zip dosyası olarak kaydetmek için oluşturacağınız `FileStream` çağırmadan önce hemen `SaveTo` yöntemi. Aşağıdaki kodu ekleyin `SaveModelAsFile` yöntemi sonraki satır olarak:
+Ardından, yeniden kullanılabilir ve diğer uygulamalarda kullanılan model kaydetmek için bir yöntem oluşturun. `ITransformer` Sahip bir <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> alır yöntemi `_modelPath` genel alan ve <xref:System.IO.Stream>. Bu zip dosyası olarak kaydetmek için oluşturacağınız `FileStream` çağırmadan önce hemen `SaveTo` yöntemi. Aşağıdaki kodu ekleyin `SaveModelAsFile` yöntemi sonraki satır olarak:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
 
@@ -319,16 +319,16 @@ Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Evaluate` y
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> Öğesinden döndürülen bir sarmalayıcı olan `MakePredictionFunction` yöntemi. İlk satırı olarak PredictionFunction oluşturmak için aşağıdaki kodu ekleyelim `Predict` yöntemi:
+Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.PredictionEngine%602> Öğesinden döndürülen bir sarmalayıcı olan `CreatePredictionEngine` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionFunction` ilk satırı olarak `Predict` yöntemi:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Eğitilen modelin tahmine test etmek için bir açıklama ekleyin `Predict` bir örneğini oluşturarak yöntemi `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
 
- Bu açıklama verilerini tek bir örneğini Toxic veya olmayan Toxic duyarlılığını tahmin etmek için kullanabilirsiniz. Bir öngörü almak için kullanın <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> verileri. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
+ Bu açıklama verilerini tek bir örneğini Toxic veya olmayan Toxic duyarlılığını tahmin etmek için kullanabilirsiniz. Bir öngörü almak için kullanın <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> verileri. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
@@ -368,7 +368,7 @@ Model yüklenemiyor
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Bir modeliniz olduğuna göre yorum kullanarak veri Toxic veya olmayan Toxic yaklaşım tahmin etmek için kullanabileceğiniz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)> yöntemi. Bir öngörü almak için kullanın `Predict` yeni veriler. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir. Aşağıdaki kodu ekleyin `PredictWithModelLoadedFromFile` yöntemi tahminler elde etmek için:
+Bir modeliniz olduğuna göre yorum kullanarak veri Toxic veya olmayan Toxic yaklaşım tahmin etmek için kullanabileceğiniz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> yöntemi. Bir öngörü almak için kullanın `Predict` yeni veriler. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir. Aşağıdaki kodu ekleyin `PredictWithModelLoadedFromFile` yöntemi tahminler elde etmek için:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
@@ -413,7 +413,7 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 
 The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
 
-=============== Prediction Test of loaded model with a multiple samples ===============
+=============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
 Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279

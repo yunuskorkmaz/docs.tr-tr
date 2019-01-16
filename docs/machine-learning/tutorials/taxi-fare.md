@@ -3,15 +3,15 @@ title: ML.NET ile bir regresyon learner kullanarak New York taksi fares tahmin e
 description: ML.NET ile bir regresyon learner kullanarak fares tahmin edin.
 author: aditidugar
 ms.author: johalex
-ms.date: 11/06/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030262"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333791"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak New York taksi fares tahmin edin
 
@@ -90,9 +90,9 @@ Varolan sınıf tanımına kaldırın ve iki sınıf olan aşağıdaki kodu ekle
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` giriş verisi sınıfıdır ve her bir veri kümesi sütunları tanımlarına sahip. Kullanım <xref:Microsoft.ML.Runtime.Api.ColumnAttribute> veri kümesinde kaynak sütunları dizin belirtmek için özniteliği.
+`TaxiTrip` giriş verisi sınıfıdır ve her bir veri kümesi sütunları tanımlarına sahip. Kullanım <xref:Microsoft.ML.Data.ColumnAttribute> veri kümesinde kaynak sütunları dizin belirtmek için özniteliği.
 
-`TaxiTripFarePrediction` Sınıfı, tahmini sonuçlar'ı temsil eder. Tek bir kayan noktalı sayı alana sahip `FareAmount`, ile bir `Score` <xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute> özniteliği uygulandı. Regresyon görev durumunda **puanı** sütun tahmin edilen etiket değerlerini içerir.
+`TaxiTripFarePrediction` Sınıfı, tahmini sonuçlar'ı temsil eder. Tek bir kayan noktalı sayı alana sahip `FareAmount`, ile bir `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> özniteliği uygulandı. Regresyon görev durumunda **puanı** sütun tahmin edilen etiket değerlerini içerir.
 
 > [!NOTE]
 > Kullanım `float` giriş ve tahmin verilerini sınıflardaki kayan nokta değerlerini temsil eden tür.
@@ -108,7 +108,7 @@ Veri kümeleri ile dosya ve model ve için genel bir değişkendir kaydedileceğ
 * `_trainDataPath` modeli eğitmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
 * `_testDataPath` model değerlendirmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
 * `_modelPath` eğitilen modelin depolandığı dosya yolu içerir.
-* `_textLoader` olan <xref:Microsoft.ML.Runtime.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
+* `_textLoader` olan <xref:Microsoft.ML.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
 
 Aşağıdaki kod üzerinde doğru `Main` yöntemi bu yollarını belirtmek için ve `_textLoader` değişkeni:
 
@@ -122,9 +122,9 @@ Adlı bir değişken oluşturma `mlContext` ve yeni bir örneğini ile başlatma
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Sonra Kurulum başlatma veri yükleme için `_textLoader` yeniden kullanmak için genel değişkeni.  Kullanıyoruz bildirimi bir `TextReader`. Oluşturduğunuzda, bir `TextLoader` kullanarak bir `TextReader`, gerekli bağlamı geçirdiğiniz ve <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> özelleştirme sağlayan sınıf. Bir dizi geçirerek veri şemasını belirtin <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> nesneleri için `TextReader` tüm sütun adlarını ve türlerini içeren. Oluşturduğumuz zaman veri şemasını daha önce tanımladığımız bizim `TaxiTrip` sınıfı.
+Sonra Kurulum başlatma veri yükleme için `_textLoader` yeniden kullanmak için genel değişkeni.  Kullanıyoruz bildirimi bir `TextReader`. Oluşturduğunuzda, bir `TextLoader` kullanarak bir `TextReader`, gerekli bağlamı geçirdiğiniz ve <xref:Microsoft.ML.Data.TextLoader.Arguments> özelleştirme sağlayan sınıf. Bir dizi geçirerek veri şemasını belirtin <xref:Microsoft.ML.Data.TextLoader.Column> nesneleri için `TextReader` tüm sütun adlarını ve türlerini içeren. Oluşturduğumuz zaman veri şemasını daha önce tanımladığımız bizim `TaxiTrip` sınıfı.
 
-`TextReader` Sınıf tam olarak başlatılmış döndürür <xref:Microsoft.ML.Runtime.Data.TextLoader>  
+`TextReader` Sınıf tam olarak başlatılmış döndürür <xref:Microsoft.ML.Data.TextLoader>  
 
 Başlatmak için `_textLoader` gerekli veri kümeleri için yeniden kullanmak için genel değişkeni sonra aşağıdaki kodu ekleyin `mlContext` başlatma:
 
@@ -155,7 +155,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Veri yükleme ve dönüştürme
 
-Biz kullanarak verileri yüklemek `_textLoader` genel değişkenin `dataPath` parametresi. Döndürür bir <xref:Microsoft.ML.Runtime.Data.IDataView>. Giriş ve çıkış, Dönüşümlerin bir `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
+Biz kullanarak verileri yüklemek `_textLoader` genel değişkenin `dataPath` parametresi. Döndürür bir <xref:Microsoft.ML.Data.IDataView>. Giriş ve çıkış, Dönüşümlerin bir `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
 
 ML.NET veriler SQL görünümüne benzer. Bu, gevşek değerlendirilen, şema ve heterojen olur. Nesne, işlem hattını ilk kısmı ve verileri yükler. Bu öğreticide, taksi seyahat bilgileri fares tahmin etmek kullanışlı bir veri kümesini yükler. Bu model oluşturmayı ve bunu eğitmek için kullanılır.
 
@@ -189,7 +189,7 @@ Aşağıdaki kodu ekleyin `Train` ekleme yöntemi `FastTreeRegressionTrainer` ö
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Modeli eğitmek için son adımdır bakın. Biz modeli eğitmek <xref:Microsoft.ML.Data.TransformerChain>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modeli eğitme <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> zaten yüklenmiş eğitim verilerini sağlayarak. Bu tahminler elde etmek için kullanılacak bir modelini döndürür. `pipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi böyle kadar yürütülmez.
+Modeli eğitmek için son adımdır bakın. Biz modeli eğitmek <xref:Microsoft.ML.Data.TransformerChain>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modeli eğitme <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> zaten yüklenmiş eğitim verilerini sağlayarak. Bu tahminler elde etmek için kullanılacak bir modelini döndürür. `pipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi böyle kadar yürütülmez.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
@@ -216,7 +216,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 * Model bir .zip dosyası olarak kaydeder.
 
-Modeli yeniden ve diğer uygulamalarda kullanılan üzere kaydetmek için bir yöntem için oluşturmamız gerekir. `ITransformer` Sahip bir <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> alır yöntemi `_modelPath` genel alan ve <xref:System.IO.Stream>. Bu zip dosyası olarak kaydetmek istediğimiz beri oluşturacağız `FileStream` çağırmadan önce hemen `SaveTo` yöntemi. Aşağıdaki kodu ekleyin `SaveModelAsFile` yöntemi sonraki satır olarak:
+Modeli yeniden ve diğer uygulamalarda kullanılan üzere kaydetmek için bir yöntem için oluşturmamız gerekir. `ITransformer` Sahip bir <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> alır yöntemi `_modelPath` genel alan ve <xref:System.IO.Stream>. Bu zip dosyası olarak kaydetmek istediğimiz beri oluşturacağız `FileStream` çağırmadan önce hemen `SaveTo` yöntemi. Aşağıdaki kodu ekleyin `SaveModelAsFile` yöntemi sonraki satır olarak:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Add the SaveTo Method")]
 
@@ -257,7 +257,7 @@ Ardından, makine öğrenimi kullanacağız `model` özellikleri giriş ve tahmi
 
 [!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
-`RegressionContext.Evaluate` Yöntemi hesaplar için Kalite Ölçümleri `PredictionModel` belirtilen veri kümesi kullanma. Döndürür bir <xref:Microsoft.ML.Runtime.Data.RegressionEvaluator.Result> nesne regresyon değerlendiricisi tarafından hesaplanan toplam ölçümleri içerir. Model kalitesini belirlemek için bunları görüntülemek için ölçümleri ilk almanız gerekir. Sonraki satırda olarak aşağıdaki kodu ekleyin `Evaluate` yöntemi:
+`RegressionContext.Evaluate` Yöntemi hesaplar için Kalite Ölçümleri `PredictionModel` belirtilen veri kümesi kullanma. Döndürür bir <xref:Microsoft.ML.Data.RegressionMetrics> regresyon değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne. Model kalitesini belirlemek için bunları görüntülemek için ölçümleri ilk almanız gerekir. Sonraki satırda olarak aşağıdaki kodu ekleyin `Evaluate` yöntemi:
 
 [!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
 
@@ -307,15 +307,15 @@ Modeli zip dosyasından yükleme istiyoruz beri kaydettik, oluşturacağız `Fil
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> Öğesinden döndürülen bir sarmalayıcı olan `MakePredictionFunction` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionFunction` ilk satırı olarak `Predict` yöntemi:
+Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.PredictionEngine%602> Öğesinden döndürülen bir sarmalayıcı olan `CreatePredictionEngine` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionEngine` ilk satırı olarak `Predict` yöntemi:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
 Bu öğretici, bu sınıf içinde bir test seyahat kullanır. Daha sonra modeli denemek için diğer senaryolar ekleyebilirsiniz. Eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleme `Predict` bir örneğini oluşturarak yöntemi `TaxiTrip`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- Biz taksi seyahat verilerini tek bir örneği temel taksi tahmin etmek için kullanabilirsiniz. Bir öngörü almak için kullanın <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> verileri. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
+ Biz taksi seyahat verilerini tek bir örneği temel taksi tahmin etmek için kullanabilirsiniz. Bir öngörü almak için kullanın <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> verileri. Giriş verilerini bir dizedir ve modeli içeren özellik kazandırma sayesinde unutmayın. İşlem hattınızı, eğitim ve tahmin sırasında eşitlenmiş. Özellikle tahminler elde etmek için ön işleme/özellik kazandırma sayesinde kod yazmak zorunda olmadığı ve aynı API batch ve tek seferlik Öngörüler üstlenir.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

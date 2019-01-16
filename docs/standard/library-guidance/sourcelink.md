@@ -3,13 +3,13 @@ title: SourceLink ve .NET kitaplıkları
 description: .NET kitaplıkları için hata ayıklama geliştirmek için SourceLink kullanmaya yönelik en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128939"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333544"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ Kullanabileceğiniz [NuGet paket Gezgini](https://github.com/NuGetPackageExplore
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> Hata ayıklayıcının kodun içine Adımlama yerine kod adım adım yönlendirir.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> üye hata ayıklayıcı değişken pencerelerinde görüntülenip görüntülenmediğini denetler.
 
-**✔️ DÜŞÜNÜN** sembol dosyaları dahil olmak üzere (`*.pdb`) NuGet paketi olarak.
+**✔️ DÜŞÜNÜN** sembol dosyaları yayımlama (`*.pdb`).
 
-> Normalde, sembol dosyalarında yayımlamak istediğiniz bir [sembol paketi](./nuget.md#symbol-packages). Sembol paketleri için genel ana taşınabilir sembol dosyaları şu anda desteklemiyor (`*.pdb`) SDK stili projeleri tarafından oluşturulan ve sembol paketleri kullanışlı değildir.
+> Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Önceki](dependencies.md)

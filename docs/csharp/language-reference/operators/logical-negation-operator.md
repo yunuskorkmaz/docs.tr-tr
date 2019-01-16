@@ -9,24 +9,27 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 41bd568e300598e50c5ae6493cc0503c72543870
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245174"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333232"
 ---
-# <a name="-operator-c-reference"></a>! İşleci (C# Başvurusu)
-Mantıksal değilleme işleci (`!`) işleneniyle verilerek bir birli işleç. İçin tanımlı `bool` ve döndürür `true` işleneniyle adıdır ve yalnızca, `false`.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Kullanıcı tanımlı türler aşırı yükleme `!` işleci (bkz [işleci](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Örnek  
- [!code-csharp[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/CSharp/logical-negation-operator_1.cs)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+# <a name="-operator-c-reference"></a>! operator (C# Başvurusu)
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+Mantıksal değilleme işleci (`!`) işleneniyle verilerek bir birli işleç. İçin tanımlı `bool` ve döndürür `true` işleneniyle adıdır ve yalnızca, `false`.
+
+## <a name="remarks"></a>Açıklamalar
+
+Kullanıcı tanımlı türler aşırı yükleme `!` işleci (bkz [işleci](../keywords/operator.md)).
+
+## <a name="example"></a>Örnek
+
+[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# İşleçleri](index.md)
