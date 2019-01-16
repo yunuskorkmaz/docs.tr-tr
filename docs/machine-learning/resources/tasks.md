@@ -2,14 +2,14 @@
 title: Makine öğrenimi görevlerini - ML.NET
 description: Farklı makine öğrenimi görevlerini ve ML.NET içinde desteklenen ilişkili öğrencileriyle keşfedin.
 ms.custom: seodec18
-ms.date: 11/29/2018
+ms.date: 01/14/2019
 author: jralexander
-ms.openlocfilehash: 4b333fb8c954c94ed84033d9858a496f591f2169
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32a785a28a02b936ab92f6b3a3c4c5abbbf73315
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126594"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307415"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET Machine learning görevleri
 
@@ -45,8 +45,8 @@ Aşağıdaki öğrencileriyle ikili sınıflandırma görevleri için kullanıla
 * [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
 * [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
 * [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Runtime.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmBinaryTrainer)
+* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
+* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
 * [LinearSvm](xref:Microsoft.ML.Trainers.Online.LinearSvm)
 * [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
 * [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
@@ -77,11 +77,11 @@ Daha fazla bilgi için [sınıflı sınıflandırma](https://en.wikipedia.org/wi
 
 Aşağıdaki öğrencileriyle sınıflı sınıflandırma görevleri için kullanılabilir:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer < TTransformer, TModel >](xref:Microsoft.ML.Runtime.Learners.MetaMulticlassTrainer%602)
+* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
+* [MetaMulticlassTrainer < TTransformer, TModel >](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
 * [MultiClassClassificationTrainers](xref:Microsoft.ML.Trainers.MultiClassClassificationTrainers)
 * [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [OVA](xref:Microsoft.ML.Trainers.Ova)
+* [Ova](xref:Microsoft.ML.Trainers.Ova)
 * [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
 * [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
 
@@ -106,17 +106,16 @@ Aşağıdaki öğrencileriyle regresyon görevleri için kullanılabilir:
 
 * [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
 * [FastTreeRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRegressionFastTreeTrainer)
-* [FastTreeTweedieRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeTweedieRegressionFastTreeTrainer)
 * [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRegressorTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Runtime.Learners.LogisticRegression)
+* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
+* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
 * [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
 * [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
 * [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
 * [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
 * [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
 * [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.Runtime.LightGBM.SingleTrainer)
+* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
 
 ## <a name="clustering"></a>Kümeleme
 
@@ -161,9 +160,8 @@ Derecelendirme görev derecelendiricisini etiketli örnekleri bir dizi oluşturu
 
 Aşağıdaki öğrencileriyle görevleri sıralaması için kullanılabilir:
 
-* [FastTreeRankingFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRankingFastTreeTrainer)
 * [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer)
+* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
 
 ## <a name="recommendation"></a>Öneri
 

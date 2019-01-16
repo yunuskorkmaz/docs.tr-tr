@@ -4,12 +4,12 @@ description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152738"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307441"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
@@ -91,7 +91,7 @@ Azure Kubernetes hizmeti popüler Docker kümeleme açık kaynaklı araçların 
 
 **Şekil 4-24**. Kubernetes küme Basitleştirilmiş yapısı ve topolojisi
 
-Şekil 4-24 görebilirsiniz burada küme eşgüdümüyle çoğunu bir ana düğüm (VM) denetler ve bir uygulama açısından tek bir havuz olarak yönetilir ve y sağlar düğümler geri kalanı için kapsayıcılar dağıtabilir, bir Kubernetes kümesi yapısı binlerce veya on binlerce kapsayıcının ölçeklendirmek için ou'ı tıklatın.
+Şekil 4-24 burada küme eşgüdümüyle çoğunu bir ana düğüm (VM) denetler ve bir uygulama açısından tek bir havuz olarak yönetilir ve y sağlar düğümler geri kalanı için kapsayıcılar dağıtabilir, bir Kubernetes kümesi yapısını görebilirsiniz binlerce veya on binlerce kapsayıcının ölçeklendirmek için ou'ı tıklatın.
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes için geliştirme ortamı
 

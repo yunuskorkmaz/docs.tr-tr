@@ -3,12 +3,12 @@ title: Visual Studio'da Roslyn söz dizimi görselleştiricisi ile kod keşfedin
 description: Söz dizimi görselleştiricisi .NET derleyici Platformu SDK'sı için kod oluşturur modelleri araştırmak için bir araç sağlar.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143574"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307207"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio'da Roslyn söz dizimi görselleştiricisi ile kod keşfedin
 
@@ -80,7 +80,7 @@ Yerleştirme düzeni görselleştiricisi araç penceresi ve söz dizimi grafik p
 
 Başka bir seçenek, bir ikili izleme kurulumunda bir ikinci monitörde söz dizimi grafiği pencere eklemektir.
 
-# <a name="inspecting-semantics"></a>İnceleme semantiği
+## <a name="inspecting-semantics"></a>İnceleme semantiği
 
 Söz dizimi görselleştiricisi ilkel incelemesini simgeleri ve anlamsal bilgi sağlar. Tür `double x = 1 + 1;` C# örneğinde Main() içindeki. İfade seçip `1 + 1` kod düzenleyici penceresinde. Görselleştirici vurgular **AddExpression** Görselleştirici düğümü. Sağ bu tıklayın **AddExpression** tıklayın **görünümü simgesi (varsa)**. Menü öğelerinin çoğu "varsa" niteleyicisi olan dikkat edin. Söz dizimi görselleştiricisi özellikleri tüm düğümler için mevcut olmayabilir özellikleri dahil olmak üzere, bir düğüm olup olmadığını denetler. 
 

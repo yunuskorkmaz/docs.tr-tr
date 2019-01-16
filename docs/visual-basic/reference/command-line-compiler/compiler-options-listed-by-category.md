@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55127a1a4afd8a677ef72d79ebf00debc15404e7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200972"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307558"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamında (IDE) programları derleme alternatif olarak sağlanır. İşlevsel kategoriye göre sıralanmış Visual Basic komut satırı derleyicisini seçeneklerin bir listesi verilmiştir.  
@@ -26,7 +26,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |`-modulename:<string>`|Kaynak modülünün adını belirtin|  
 |[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Derleyici çıkışı için bir dil belirtin.|
   
-## <a name="optimization"></a>En iyi duruma getirme  
+## <a name="optimization"></a>İyileştirme  
   
 |Seçenek|Amaç|  
 |---|---|  
@@ -128,6 +128,6 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Alfabetik listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Proje Tasarımcısı giriş](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
+ [Proje Tasarımcısı giriş](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -3,13 +3,13 @@ title: Machine learning veri dönüşümleri - ML.NET
 description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri keşfedin.
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.date: 01/14/2019
+ms.openlocfilehash: ebcbcc56eeb7c3caf7350e6c4bfd53997582652e
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249131"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307506"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Machine learning veri dönüşümleri - ML.NET
 
@@ -23,11 +23,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | Dönüştürme | Tanım |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Grupları bir skaler sütuna bitişik grubu kimliğini temel alan bir vektör değerleri |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Tüm özellikleri bir özellik sütun halinde birleştirir. |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Tek bir PredictorModel TransformModels ve bir PredictorModel dizisine birleştirir. |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Tek bir model TransformModels dizisine birleştirir. |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Vektör sütunların satır dizileri; grubunu çözer. Kikare dağılımının grubu Dönüştür. |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Bir TransformModel ve bir PredictorModel tek bir PredictorModel birleştirir. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Vektör sütunlara satır, ters grubu dönüşümünün dizileri grupları kaldırın. |
 
 ## <a name="conversions"></a>Dönüşümler 
@@ -35,7 +30,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | Dönüştürme | Tanım |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Karmaları tek değerli sütunlar veya sütun vektör. Vektör sütunları için her yuva ayrı olarak karma hale getirir. Metin değerleri veya anahtar değerlerini karma. |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Sütun değerleri karmaları dönüştürür. Bu dönüşüm, hem sayısal ve metin girişleri, hem tek hem de vektör değerli sütunlar kabul eder. |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Birden çok sütun değerleri karmaları dönüştürür. Bu dönüşüm, hem sayısal ve metin girişleri, hem tek hem de vektör değerli sütunlar kabul eder. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Bir anahtarı bir ikili vektör sütununa dönüştürür. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Karşılık gelen değerlere KeyValues meta verilerindeki anahtar dizinlerini eşlemek için KeyValues meta verileri kullanır. |
@@ -56,10 +50,10 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | Dönüştürme | Tanım |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Kaldırır, tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) stopword karşılaştırarak durdurma sözcükleri listesini belirttiniz.| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları aynı görüntüyü gri tona gösterimi için dönüştürür.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | Bir veya daha fazla ReadOnlyMemory sütunları alır ve bunları bir ImageType yükler. |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları bir vektör temsiline dönüştürür.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları sağlanan yükseklik ve genişlik için yeniden boyutlandırır.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları aynı görüntüyü gri tona gösterimi için dönüştürür.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Bir veya daha fazla ReadOnlyMemory sütunları alır ve bunları bir ImageType yükler. |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları bir vektör temsiline dönüştürür.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları sağlanan yükseklik ve genişlik için yeniden boyutlandırır.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA, görünmeyen Dirichlet ayırma durumu resim uyarlamasını uygular.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Belirtilen model dosyasından özel dönüşümler yükler. Seri hale getirilmiş bir zinciri veya farklı (ancak yine de uyumlu) veri görünümüne önceden eğitilmiş bir dönüştürme uygulamak için 'tek tek seçme' dönüştürmeler sağlar. |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Bir paketi sayısı, anahtarların belirli bir vektör içindeki ngrams (uzunluğu 1-n ardışık değerleri dizisi) üretir. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. | 
@@ -89,12 +83,8 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Dönüştürür (sözcükler, sayılar, vb.) bir sözlükte dizini oluşturmak için değerleri girin. |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Etiket anahtarı ya da bool, sınıflandırma için uygun hale getirmek için (gerekirse) dönüştürür. |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Etiketleri dönüştürür. |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Çok sınıflı etiketleri ikili true, False OVA ile kullanmak için öncelikle etiketleri yeniden eşlemesi.|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | Regresyon için uygun hale getirmek için kayan nokta etiketi dönüştürür. |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | Türü bool olmadığı sürece bir tahmin edilen etiket sütunu, özgün değerlerine dönüştürür. |
 
 ## <a name="missing-values"></a>Eksik değerleri
 
@@ -147,7 +137,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Veri kümesindeki sütunları çoğaltır.|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Bırakın ya da belirli bir girdiden koruma sütun kümesini seçer. |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Yuva sütunları bırakır.|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform karşılık gelen değerlere KeyValues meta verilerindeki anahtar dizinlerini eşlemek için KeyValues meta verileri kullanır. |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Belirtilen tür ve varsayılan değerlerle yeni bir sütun oluşturur. |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | Dataview tek, Double veya anahtarı (bitişik) türünde bir sütun üzerinde filtreler. Belirtilen en düşük/en yüksek aralıktaki değerleri tutar. NaN'ler her zaman filtrelenir. Giriş anahtar türü varsa, yüzde değerlerini sayısı min/maks kabul edilir. |
 
@@ -168,15 +157,15 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Değerleri ağırlıklı ortalamasını alır: ExpAvg(y_t) = bir * y_t + (1-a) * ExpAvg(y_(t-1)). |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Bir i.i.d. değişiklik noktası algılayıcısı dönüşümün uygular Uyarlamalı çekirdek yoğunluğu tahmini ve martingales göre sırası (rastgele örnek). |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | Implements depo algılayıcısı dönüştürmek için bir i.i.d. dizisi üzerinde Uyarlamalı çekirdek yoğunluğu Tahmine dayalı (rastgele örnek). |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | Kayan pencere değerleri ağırlıklı ortalamasını sağlar. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | Zaman serisi geçerli değeri kayan pencere en yüksek değerleri yüzdebirlik ait olup olmadığını belirler. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | Geçerli değer görgül p-değer kayan pencere diğer değerlere göre hesaplar. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Bir kayan pencere üzerinde türünde tek bir zaman serisi çıkarır. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | Zaman serisi tekil Spektrumun model oluşturma göre değişiklik noktası algılayıcısı dönüşüm uygular. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | Uygular, zaman serisi tekil Spektrumun model oluşturma depo algılayıcısı dönüştürme temel. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Değerleri ağırlıklı ortalamasını alır: ExpAvg(y_t) = bir * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Bir i.i.d. değişiklik noktası algılayıcısı dönüşümün uygular Uyarlamalı çekirdek yoğunluğu tahmini ve martingales göre sırası (rastgele örnek). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implements depo algılayıcısı dönüştürmek için bir i.i.d. dizisi üzerinde Uyarlamalı çekirdek yoğunluğu Tahmine dayalı (rastgele örnek). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Kayan pencere değerleri ağırlıklı ortalamasını sağlar. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | Zaman serisi geçerli değeri kayan pencere en yüksek değerleri yüzdebirlik ait olup olmadığını belirler. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | Geçerli değer görgül p-değer kayan pencere diğer değerlere göre hesaplar. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Bir kayan pencere üzerinde türünde tek bir zaman serisi çıkarır. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | Zaman serisi tekil Spektrumun model oluşturma göre değişiklik noktası algılayıcısı dönüşüm uygular. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | Uygular, zaman serisi tekil Spektrumun model oluşturma depo algılayıcısı dönüştürme temel. |
 
 ## <a name="miscellaneous"></a>Çeşitli
 

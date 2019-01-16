@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752422"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307233"
 ---
 # <a name="remove-element-for-configsections"></a>\<kaldırma > öğesi için \<configSections >
 
-Önceden tanımlanmış bölüm veya bölüm grubu kaldırır.
+Önceden tanımlanmış bir bölüm veya bölüm grubu kaldırır.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
@@ -36,25 +36,25 @@ ms.locfileid: "32752422"
 | --------- | ----------- |
 | **Adı**  | Gerekli öznitelik.<br><br>Bölüm veya kaldırmak için bölüm grubu adını belirtir. |
 
-## <a name="parent-element"></a>Üst öğesi
+## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<configSections >** öğesi](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimlerini içerir. |
+| [**\<configSections >** öğesi](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimi içerir. |
 
-# <a name="child-elements"></a>Alt öğeleri
+## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kullanabileceğiniz  **\<kaldırma >** öğesi yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanan uygulamanızı bölümler ve bölüm grupları kaldırın.
+Kullanabileceğiniz  **\<kaldırma >** uygulamanızdan yapılandırma dosyası hiyerarşisindeki daha yüksek düzeyde tanımlanan bölümler ve bölüm grupları'nı kaldırmak için öğesi.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<kaldırma >** makine yapılandırma dosyasında önceden tanımlanmış bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında öğesi.
+Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<kaldırma >** makine yapılandırma dosyasında önceden tanımlanmış bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında öğesi.
 
-Bölümü aşağıdaki makine yapılandırma dosyası kodu bildirir  **\<sampleSection >**:
+Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Bölümü aşağıdaki makine yapılandırma dosyası kodu bildirir  **\<sampleS
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır  **\<sampleSection >** bölümü. Kaldırıldıktan sonra uygulama ayarlarında alınamıyor  **\<sampleSection >**.
+Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır  **\<sampleSection >** bölümü. Kaldırma işleminden sonra uygulama ayarlarında alınamıyor  **\<sampleSection >**.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır  **\<sampleSection
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework için yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+[.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

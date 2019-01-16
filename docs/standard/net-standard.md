@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf8b73d5785ad39180b47963130105b905f955c1
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613602"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307545"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -65,7 +65,7 @@ Ancak, daha düşük bir .NET Standard sürümlerini hedefleme desteği bağıml
 
 ### <a name="official-artifacts"></a>Resmi yapıtları
 
-Resmi belirtimi, standart bir parçası olan API'leri tanımlayan .cs dosyalar kümesidir. [Ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref) içinde [dotnet/standart havuz](https://github.com/dotnet/standard) .NET standart API'lerini tanımlar.
+Resmi belirtimi, standart bir parçası olan API'leri tanımlayan .cs dosyalar kümesidir. [Ref directory](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) içinde [dotnet/standart havuz](https://github.com/dotnet/standard) .NET standart API'lerini tanımlar.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([kaynak](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) (kısmen) bir veya daha fazla .NET Standard sürümleri tanımlayan kitaplıkları açıklar.
 
@@ -148,7 +148,7 @@ Profil tabanlı PCLs olarak paketlenmiş `netstandard` genellikle paketlenmiş p
 
 | PCL profilinin | .NET Standard | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET framework 4.5, Windows 8
+| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
 | Profile44   | 1.2           | .NET framework 4.5.1, Windows 8.1
