@@ -1,9 +1,10 @@
-# [Başlarken](index.md)
-## [C# Diline ve.NET Framework'e giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
-## [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
-### [Visual Studio 2017’de C# Merhaba Dünya uygulamanızın hatalarını ayıklama](../../core/tutorials/debugging-with-visual-studio.md)
-### [Visual Studio 2017’de Merhaba Dünya uygulamanızı yayımlama](../../core/tutorials/publishing-with-visual-studio.md)
-## [Visual Studio 2017’de C# ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/library-with-visual-studio.md)
-### [Visual Studio 2017’de .NET Core ile bir sınıf kitaplığını test etme](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Visual Studio 2017 .NET standart kitaplığında kullanma](../../core/tutorials/consuming-library-with-visual-studio.md)
-## [C# ve Visual Studio Code kullanmaya başlama](../../core/tutorials/with-visual-studio-code.md)
+---
+ms.openlocfilehash: 899f6c8a4b6ee8bfb09ce7f380cfa08c2f93b2e1
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362848"
+---
+# [Getting Started](index.md)
+## [Introduction to the C# language and the .NET framework](introduction-to-the-csharp-language-and-the-net-framework.md)
