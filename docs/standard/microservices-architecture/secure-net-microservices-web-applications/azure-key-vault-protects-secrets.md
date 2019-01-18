@@ -1,84 +1,58 @@
 ---
 title: Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
+description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güvenlik tamamen yöneticiler tarafından denetlenen bir uygulama gizli dizilerini işlemek için mükemmel bir yoldur. Yöneticiler, bile atayın ve geliştirme değerleri geliştiricileri kendilerini işlemek zorunda iptal edebilir.
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cbe893dcdd71f0ce8bf8a26a8502d6c0b3a0dedb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151154"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362425"
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="2418e-103">Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma</span><span class="sxs-lookup"><span data-stu-id="2418e-103">Using Azure Key Vault to protect secrets at production time</span></span>
+# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="7f5b0-104">Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma</span><span class="sxs-lookup"><span data-stu-id="7f5b0-104">Use Azure Key Vault to protect secrets at production time</span></span>
 
-<span data-ttu-id="2418e-104">Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafından depolanan gizli dizileri hala yerel olarak depolanır ve makinede şifrelenmemiş.</span><span class="sxs-lookup"><span data-stu-id="2418e-104">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="2418e-105">Gizli dizileri depolamak için daha güvenli bir seçenektir [Azure anahtar kasası](https://azure.microsoft.com/services/key-vault/), anahtarları ve gizli dizileri depolamak için güvenli, merkezi bir konum sağlar.</span><span class="sxs-lookup"><span data-stu-id="2418e-105">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
+<span data-ttu-id="7f5b0-105">Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafından depolanan gizli dizileri hala yerel olarak depolanır ve makinede şifrelenmemiş.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-105">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="7f5b0-106">Gizli dizileri depolamak için daha güvenli bir seçenektir [Azure anahtar kasası](https://azure.microsoft.com/services/key-vault/), anahtarları ve gizli dizileri depolamak için güvenli, merkezi bir konum sağlar.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-106">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
 
-<span data-ttu-id="2418e-106">Azure Key Vault'tan yapılandırma bilgilerini okumak için bir ASP.NET Core uygulaması Microsoft.Extensions.Configuration.AzureKeyVault paketi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2418e-106">The Microsoft.Extensions.Configuration.AzureKeyVault package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="2418e-107">Bir Azure Key Vault gizli diziler'ı kullanmaya başlamak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="2418e-107">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
+<span data-ttu-id="7f5b0-107">**Microsoft.Extensions.Configuration.AzureKeyVault** paket, Azure Key Vault'tan yapılandırma bilgilerini okumak için bir ASP.NET Core uygulaması sağlar.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-107">The **Microsoft.Extensions.Configuration.AzureKeyVault** package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="7f5b0-108">Bir Azure Key Vault gizli diziler'ı kullanmaya başlamak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="7f5b0-108">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
 
-<span data-ttu-id="2418e-108">İlk olarak, bir Azure AD uygulaması kaydedin.</span><span class="sxs-lookup"><span data-stu-id="2418e-108">First, register your application as an Azure AD application.</span></span> <span data-ttu-id="2418e-109">(Anahtar kasalarına erişimi, Azure AD tarafından yönetilir.) Bu Azure Yönetim Portalı aracılığıyla yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="2418e-109">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.</span></span>
+1. <span data-ttu-id="7f5b0-109">Uygulamanızı bir Azure AD uygulaması kaydedin.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-109">Register your application as an Azure AD application.</span></span> <span data-ttu-id="7f5b0-110">(Anahtar kasalarına erişimi, Azure AD tarafından yönetilir.) Bu Azure Yönetim Portalı aracılığıyla yapılabilir. \\</span><span class="sxs-lookup"><span data-stu-id="7f5b0-110">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.\\</span></span>
 
-<span data-ttu-id="2418e-110">Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet'i.</span><span class="sxs-lookup"><span data-stu-id="2418e-110">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="2418e-111">Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir.</span><span class="sxs-lookup"><span data-stu-id="2418e-111">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="2418e-112">(Uygulamanızın özel anahtarı kullanır.)</span><span class="sxs-lookup"><span data-stu-id="2418e-112">(Your application will use the private key.)</span></span>
+   <span data-ttu-id="7f5b0-111">Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet'i.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-111">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="7f5b0-112">Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-112">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="7f5b0-113">(Uygulamanızın özel anahtarı kullanır.)</span><span class="sxs-lookup"><span data-stu-id="7f5b0-113">(Your application will use the private key.)</span></span>
 
-<span data-ttu-id="2418e-113">İkinci olarak, yeni bir hizmet sorumlusu oluşturarak bir anahtar kasasına kayıtlı uygulama erişimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2418e-113">Second, give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="2418e-114">Aşağıdaki PowerShell komutlarını kullanarak bunu yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2418e-114">You can do this using the following PowerShell commands:</span></span>
+2. <span data-ttu-id="7f5b0-114">Kayıtlı uygulama erişimi, anahtar Kasası'na yeni hizmet sorumlusu oluşturma tarafından sağlar.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-114">Give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="7f5b0-115">Aşağıdaki PowerShell komutlarını kullanarak bunu yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7f5b0-115">You can do this using the following PowerShell commands:</span></span>
 
-```powershell
-$sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
-```
+   ```powershell
+   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   ```
 
-<span data-ttu-id="2418e-115">Üçüncü olarak, anahtar kasası, uygulamanızın yapılandırma kaynağı olarak IConfigurationRoot örneği oluşturduğunuzda IConfigurationBuilder.AddAzureKeyVault genişletme yöntemi çağrılarak içerir.</span><span class="sxs-lookup"><span data-stu-id="2418e-115">Third, include the key vault as a configuration source in your application by calling the IConfigurationBuilder.AddAzureKeyVault extension method when you create an IConfigurationRoot instance.</span></span> <span data-ttu-id="2418e-116">AddAzureKeyVault çağırma kayıtlı olan ve önceki adımlarda anahtar kasasına erişim verilen uygulama kimliği gerektirecek unutmayın.</span><span class="sxs-lookup"><span data-stu-id="2418e-116">Note that calling AddAzureKeyVault will require the application ID that was registered and given access to the key vault in the previous steps.</span></span>
+3. <span data-ttu-id="7f5b0-116">Anahtar kasası, uygulamanızın yapılandırma kaynağı olarak çağırarak dahil <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> oluşturduğunuzda genişletme yöntemi bir <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> örneği.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-116">Include the key vault as a configuration source in your application by calling the <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> extension method when you create an <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> instance.</span></span> <span data-ttu-id="7f5b0-117">Çağırmanın Not `AddAzureKeyVault` kayıtlı olan ve önceki adımlarda anahtar kasasına erişim verilen uygulama Kimliğini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-117">Note that calling `AddAzureKeyVault` requires the application ID that was registered and given access to the key vault in the previous steps.</span></span>
 
-  <span data-ttu-id="2418e-117">Şu anda .NET Standard ve .NET Core yapılandırma bilgileri alınırken bir Azure Key vault'tan bir istemci kimliği ve istemci gizli anahtarını kullanarak destekler.</span><span class="sxs-lookup"><span data-stu-id="2418e-117">Currently, .NET Standard and .NET Core support getting configuration information from an Azure Key Vault using a client ID and client secret.</span></span> <span data-ttu-id="2418e-118">.NET framework uygulamaları bir aşırı yüklemesini bir sertifika yerine istemci gizli anahtarını alır IConfigurationBuilder.AddAzureKeyVault kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2418e-118">.NET Framework applications can use an overload of IConfigurationBuilder.AddAzureKeyVault that takes a certificate in place of the client secret.</span></span> <span data-ttu-id="2418e-119">Bu makalenin yazıldığı tarih itibarıyla eserleridir [sürüyor](https://github.com/aspnet/Configuration/issues/605) .NET Standard ve .NET Core aşırı yükleyen kullanılabilir olması için.</span><span class="sxs-lookup"><span data-stu-id="2418e-119">As of this writing, work is [in progress](https://github.com/aspnet/Configuration/issues/605) to make that overload available in .NET Standard and .NET Core.</span></span> <span data-ttu-id="2418e-120">Bir sertifika kullanılabilir kabul eden AddAzureKeyVault aşırı kadar ASP.NET Core uygulamaları sertifika tabanlı kimlik doğrulaması ile bir Azure Key Vault açıkça bir KeyVaultClient nesne oluşturarak aşağıdaki örnekte gösterildiği gibi erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2418e-120">Until the AddAzureKeyVault overload that accepts a certificate is available, ASP.NET Core applications can access an Azure Key Vault with certificate-based authentication by explicitly creating a KeyVaultClient object, as shown in the following example:</span></span>
+   <span data-ttu-id="7f5b0-118">Bir aşırı yüklemesini kullanabilirsiniz `AddAzureKeyVault` başvuru dahil ederek bir sertifika yerine gizli alan [Microsoft.IdentityModel.Clients.activedirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) paket.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-118">You can also use an overload of `AddAzureKeyVault` that takes a certificate in place of the client secret by just including a reference to the [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) package.</span></span>
 
-```csharp
-// Configure Key Vault client
-var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(async
-    (authority, resource, scope) =>
-    {
-        var cert = // Get certificate from local store/file/key vault etc. as needed
-        // From the Microsoft.IdentityModel.Clients.ActiveDirectory pacakge
-        var authContext = new AuthenticationContext(authority,
-            TokenCache.DefaultShared);
-        var result = await authContext.AcquireTokenAsync(resource,
-            // From the Microsoft.Rest.ClientRuntime.Azure.Authentication pacakge
-            new ClientAssertionCertificate("{Application ID}", cert));
-        return result.AccessToken;
-    }));
+> [!IMPORTANT]
+> <span data-ttu-id="7f5b0-119">Önceki sağlayıcılarından yapılandırma değerleri geçersiz kılmak için son yapılandırma sağlayıcısı Azure anahtar kasası kaydetmenizi öneririz.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-119">We recommend you to register Azure Key Vault as the last configuration provider, so it can override configuration values from previous providers.</span></span>
 
-    // Get configuration values from Key Vault
-    var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        // Other configuration providers go here.
-        .AddAzureKeyVault("{KeyValueUri}", kvClient,
-        new DefaultKeyVaultSecretManager());
-```
+## <a name="additional-resources"></a><span data-ttu-id="7f5b0-120">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="7f5b0-120">Additional resources</span></span>
 
-<span data-ttu-id="2418e-121">Bu örnekte, yapılandırma sağlayıcısı kaydını sonunda AddAzureKeyVault çağrısı gelir.</span><span class="sxs-lookup"><span data-stu-id="2418e-121">In this example, the call to AddAzureKeyVault comes at the end of configuration provider registration.</span></span> <span data-ttu-id="2418e-122">Önceki sağlayıcılarından yapılandırma değerleri geçersiz kılmak için fırsatına sahip olmasını ve böylece anahtar kasasından diğer kaynaklardan hiçbir yapılandırma değerleri geçersiz kılar son yapılandırma sağlayıcısı olarak Azure anahtar kasası kaydetmek için en iyi bir uygulamadır.</span><span class="sxs-lookup"><span data-stu-id="2418e-122">It is a best practice to register Azure Key Vault as the last configuration provider so that it has an opportunity to override configuration values from previous providers, and so that no configuration values from other sources override those from the key vault.</span></span>
+- <span data-ttu-id="7f5b0-121">**Uygulama parolalarını korumak için Azure anahtar Kasası'nı kullanma** \\</span><span class="sxs-lookup"><span data-stu-id="7f5b0-121">**Using Azure Key Vault to protect application secrets** \\</span></span>
+  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-## <a name="additional-resources"></a><span data-ttu-id="2418e-123">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="2418e-123">Additional resources</span></span>
+- <span data-ttu-id="7f5b0-122">**Geliştirme sırasında uygulama gizli anahtarlarının güvenli bir şekilde depolanması** \\</span><span class="sxs-lookup"><span data-stu-id="7f5b0-122">**Safe storage of app secrets during development** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
 
--   <span data-ttu-id="2418e-124">**Uygulama parolalarını korumak için Azure anahtar Kasası'nı kullanma**
-    [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)</span><span class="sxs-lookup"><span data-stu-id="2418e-124">**Using Azure Key Vault to protect application secrets**
-[*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)</span></span>
+- <span data-ttu-id="7f5b0-123">**Veri korumayı yapılandırma** \\</span><span class="sxs-lookup"><span data-stu-id="7f5b0-123">**Configuring data protection** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
--   <span data-ttu-id="2418e-125">**Geliştirme sırasında uygulama gizli anahtarlarının güvenli bir şekilde depolanması**
-    [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)</span><span class="sxs-lookup"><span data-stu-id="2418e-125">**Safe storage of app secrets during development**
-[*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)</span></span>
+- <span data-ttu-id="7f5b0-124">**Anahtar Yönetimi ve yaşam süresi** \\</span><span class="sxs-lookup"><span data-stu-id="7f5b0-124">**Key management and lifetime** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   <span data-ttu-id="2418e-126">**Veri korumayı yapılandırma**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)</span><span class="sxs-lookup"><span data-stu-id="2418e-126">**Configuring data protection**
-[*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)</span></span>
-
--   <span data-ttu-id="2418e-127">**Anahtar Yönetimi ve yaşam süresi**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)</span><span class="sxs-lookup"><span data-stu-id="2418e-127">**Key management and lifetime**
-[*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)</span></span>
-
--   <span data-ttu-id="2418e-128">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu.</span><span class="sxs-lookup"><span data-stu-id="2418e-128">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repo.</span></span>
-    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+- <span data-ttu-id="7f5b0-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu.</span><span class="sxs-lookup"><span data-stu-id="7f5b0-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repo.</span></span> \
+  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="2418e-129">[Önceki](developer-app-secrets-storage.md)
->[İleri](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="2418e-129">[Previous](developer-app-secrets-storage.md)
+><span data-ttu-id="7f5b0-126">[Önceki](developer-app-secrets-storage.md)
+>[İleri](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="7f5b0-126">[Previous](developer-app-secrets-storage.md)
 [Next](../key-takeaways.md)</span></span>

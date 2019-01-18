@@ -1,7 +1,7 @@
 ---
 title: () işleci - C# başvurusu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,41 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 656a1ca7a992df43ff857d2c4ecb62b044f7e06f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333284"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362788"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="432fd-102">() işleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="432fd-102">() operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="20035-102">() işleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="20035-102">() operator (C# Reference)</span></span>
 
-<span data-ttu-id="432fd-103">Bir ifadede işlemlerin sırasını belirlemek için kullanılan ek olarak, parantezler, aşağıdaki görevleri gerçekleştirmek için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="432fd-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>
+<span data-ttu-id="20035-103">Parantez `()`, yöntem veya temsilci çağırma veya cast ifadeleri kullanılır.</span><span class="sxs-lookup"><span data-stu-id="20035-103">Parentheses, `()`, are typically used for method or delegate invocation or in cast expressions.</span></span>
 
-1. <span data-ttu-id="432fd-104">Atamaları belirtin veya türü dönüşümleri.</span><span class="sxs-lookup"><span data-stu-id="432fd-104">Specify casts, or type conversions.</span></span>
+<span data-ttu-id="20035-104">Ayrıca bir ifade işlemlerinde değerlendirilecek sırayı belirtmek için parantez kullanın.</span><span class="sxs-lookup"><span data-stu-id="20035-104">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="20035-105">Daha fazla bilgi için [ayraç ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümünü [işleçleri](../../programming-guide/statements-expressions-operators/operators.md) makalesi.</span><span class="sxs-lookup"><span data-stu-id="20035-105">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="20035-106">İşleçler, öncelik düzeyine göre sıralı listesi için bkz. [ C# işleçleri](index.md).</span><span class="sxs-lookup"><span data-stu-id="20035-106">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
 
-    [!code-csharp[csRefOperators#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#1)]
+## <a name="method-invocation"></a><span data-ttu-id="20035-107">Yöntem çağırma</span><span class="sxs-lookup"><span data-stu-id="20035-107">Method invocation</span></span>
 
-2. <span data-ttu-id="432fd-105">Yöntem veya temsilci çağırır.</span><span class="sxs-lookup"><span data-stu-id="432fd-105">Invoke methods or delegates.</span></span>
+<span data-ttu-id="20035-108">Aşağıdaki örnek, dolgulu veya bağımsız değişkenleri, bir temsilci yöntemi çağırma gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="20035-108">The following example demonstrates how to invoke a method, with or without arguments, and a delegate:</span></span>
 
-    [!code-csharp[csRefOperators#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#2)]
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
-## <a name="remarks"></a><span data-ttu-id="432fd-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="432fd-106">Remarks</span></span>
+<span data-ttu-id="20035-109">Çağırdığınızda parantez de kullanmak bir [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md) ile bir [ `new` ](../keywords/new-operator.md) işleci.</span><span class="sxs-lookup"><span data-stu-id="20035-109">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
 
-<span data-ttu-id="432fd-107">Bir yayın, bir türden diğerine dönüştürme işleci açıkça çağırır; Böyle bir dönüştürme işleci tanımlanırsa, dönüştürme başarısız.</span><span class="sxs-lookup"><span data-stu-id="432fd-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="432fd-108">Bir dönüşüm işleci tanımlama için bkz: [açık](../keywords/explicit.md) ve [örtük](../keywords/implicit.md).</span><span class="sxs-lookup"><span data-stu-id="432fd-108">To define a conversion operator, see [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md).</span></span>
+<span data-ttu-id="20035-110">Yöntemleri hakkında daha fazla bilgi için bkz. [yöntemleri](../../programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="20035-110">For more information about methods, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span> <span data-ttu-id="20035-111">Temsilciler hakkında daha fazla bilgi için bkz. [Temsilciler](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="20035-111">For more information about delegates, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
 
- <span data-ttu-id="432fd-109">`()` İşleci aşırı yüklenemez.</span><span class="sxs-lookup"><span data-stu-id="432fd-109">The `()` operator cannot be overloaded.</span></span>
+## <a name="cast-expression"></a><span data-ttu-id="20035-112">Cast ifadesi</span><span class="sxs-lookup"><span data-stu-id="20035-112">Cast expression</span></span>
 
- <span data-ttu-id="432fd-110">Daha fazla bilgi için [atama ve tür dönüşümleri](../../programming-guide/types/casting-and-type-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="432fd-110">For more information, see [Casting and Type Conversions](../../programming-guide/types/casting-and-type-conversions.md).</span></span>
+<span data-ttu-id="20035-113">Atama ifadesi formun `(T)E` ifadenin değerine dönüştürmek için bir dönüştürme operatörünün çağırır `E` türüne `T`.</span><span class="sxs-lookup"><span data-stu-id="20035-113">A cast expression of the form `(T)E` invokes a conversion operator to convert the value of expression `E` to type `T`.</span></span> <span data-ttu-id="20035-114">Açık bir dönüştürme türünden varsa `E` türüne `T`, bir derleme zamanı hatası oluşur.</span><span class="sxs-lookup"><span data-stu-id="20035-114">If no explicit conversion exists from the type of `E` to type `T`, a compile-time error occurs.</span></span> <span data-ttu-id="20035-115">Bir dönüşüm işleci tanımlama hakkında daha fazla bilgi için bkz: [açık](../keywords/explicit.md) ve [örtük](../keywords/implicit.md) anahtar sözcüğü makaleler.</span><span class="sxs-lookup"><span data-stu-id="20035-115">For information about how to define a conversion operator, see the [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md) keyword articles.</span></span>
 
- <span data-ttu-id="432fd-111">Yöntem çağırma hakkında daha fazla bilgi için bkz: [yöntemleri](../../programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="432fd-111">For more information about method invocation, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span>
+<span data-ttu-id="20035-116">Aşağıdaki örnek, sayısal türler arasında tür dönüştürme gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="20035-116">The following example demonstrates type conversion between numeric types:</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="432fd-112">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="432fd-112">C# language specification</span></span>
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+<span data-ttu-id="20035-117">Sayısal türler arasında önceden tanımlanmış açık dönüştürmeler hakkında daha fazla bilgi için bkz: [açık sayısal dönüşümler tablosu](../keywords/explicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="20035-117">For more information about predefined explicit conversions between numeric types, see [Explicit numeric conversions table](../keywords/explicit-numeric-conversions-table.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="432fd-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="432fd-113">See also</span></span>
+<span data-ttu-id="20035-118">Daha fazla bilgi için [atama ve tür dönüştürmeleri](../../programming-guide/types/casting-and-type-conversions.md) ve [dönüştürme işleçleri](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="20035-118">For more information, see [Casting and type conversions](../../programming-guide/types/casting-and-type-conversions.md) and [Conversion operators](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span></span>
 
-- [<span data-ttu-id="432fd-114">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="432fd-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="432fd-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="432fd-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="432fd-116">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="432fd-116">C# Operators</span></span>](index.md)
+## <a name="operator-overloadability"></a><span data-ttu-id="20035-119">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="20035-119">Operator overloadability</span></span>
+
+<span data-ttu-id="20035-120">İşleç `()` aşırı yüklenemez.</span><span class="sxs-lookup"><span data-stu-id="20035-120">The operator `()` cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="20035-121">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="20035-121">C# language specification</span></span>
+
+<span data-ttu-id="20035-122">Daha fazla bilgi için [çağrı ifadeleri](~/_csharplang/spec/expressions.md#invocation-expressions) ve [Cast ifadeleri](~/_csharplang/spec/expressions.md#cast-expressions) bölümlerini [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="20035-122">For more information, see the [Invocation expressions](~/_csharplang/spec/expressions.md#invocation-expressions) and [Cast expressions](~/_csharplang/spec/expressions.md#cast-expressions) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="20035-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20035-123">See also</span></span>
+
+- [<span data-ttu-id="20035-124">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="20035-124">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="20035-125">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="20035-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="20035-126">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="20035-126">C# Operators</span></span>](index.md)
