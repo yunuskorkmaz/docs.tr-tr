@@ -4,12 +4,12 @@ description: Mikro hizmetler, geçici ağ ve yüksek kullanılabilirlik elde etm
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745335"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362242"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
 
@@ -29,12 +29,12 @@ Belirgin, görünebilir ve genellikle kaçan, ancak bir mikro hizmet durumu ve t
 
 Sistem durumu, Tanılama'ya farklıdır. Geçerli durumuna uygun eylemleri raporlama mikro hizmet hakkında durumudur. İyi bir örnek, kullanılabilirliği sürdürmek için yükseltme ve dağıtım mekanizması ile çalışmaktadır. Bir hizmet şu anda bir işlem kilitlenmesi nedeniyle sağlıksız veya yeniden başlatma makine rağmen hizmet işletimsel olabilir. İhtiyacınız olan son bir şey bu yükseltme gerçekleştirerek yarışacağından olmasını sağlamaktır. İlk araştırma yapmak için en iyi yaklaşımdır veya kurtarmak mikro hizmet için zaman tanıyın. Bir mikro hizmet durumu olayları, bilgiye dayalı kararlar ve kendi kendini onaran hizmetleri oluşturma aslında yardımcı yardımcı olur.
 
-İçinde [uygulama sistem durumu denetimleri ASP.NET Core Hizmetleri](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) bölümü bu kılavuz, biz durumlarına uygun olması için bir izleme hizmeti için rapor etmek için yeni bir ASP.NET HealthChecks kitaplıkta mikro hizmetlerin nasıl kullanıldığını açıklar Eylemler.
+İçinde [uygulama sistem durumu denetimleri ASP.NET Core Hizmetleri](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) bölümü bu kılavuz, biz durumlarına uygun olması için bir izleme hizmeti için rapor etmek için yeni bir ASP.NET HealthChecks kitaplıkta mikro hizmetlerin nasıl kullanıldığını açıklar Eylemler.
 
 Beat Pulse, kullanılabilir adlı mükemmel bir açık kaynak kitaplığı kullanma seçeneğiniz de [GitHub](https://github.com/Xabaril/BeatPulse) ve bir [NuGet paketi](https://www.nuget.org/packages/BeatPulse/). Bu kitaplık bir sürpriz ile sistem durumu denetimleri de yapar, iki tür denetimi gerçekleştirir:
 
-- **Canlılık**: isteklerini kabul etmek ve yanıtlamak mümkün ise mikro hizmet başka bir deyişle, etkin olup olmadığını denetler. 
-- **Hazırlık**: mikro hizmet ne yapılacağını bakması yapabilmesi mikro hizmet'ın bağımlılıkları (veritabanı, kuyruk Hizmetleri, vb.) kendilerini hazır olup olmadığını denetler. 
+- **Canlılık**: İsteklerini kabul etmek ve yanıtlamak mümkün ise mikro hizmet başka bir deyişle, etkin olup olmadığını denetler. 
+- **Hazırlık**: Mikro hizmet ne yapılacağını bakması yapabilmesi mikro hizmet'ın bağımlılıkları (veritabanı, kuyruk Hizmetleri, vb.) kendilerini hazır olup olmadığını kontrol. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Tanılama ve günlükler, olay akışları kullanma
 
@@ -58,7 +58,7 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğ
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **On iki Faktörlü uygulama. XI. Günlükleri: günlüklerini, olay akışları olarak değerlendir** \
+- **On iki Faktörlü uygulama. XI. Günlükleri: Günlükleri, olay akışları olarak değerlendir** \
   [*https://12factor.net/logs*](https://12factor.net/logs)
 
 - **Microsoft tanılama EventFlow Kitaplığı** GitHub deposu. \
@@ -70,7 +70,7 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğ
 - **Windows bilgisayarları Azure Log Analytics hizmetine bağlayın** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Ne anlama gelir günlüğü: semantik günlük uygulama bloğu kullanarak** \
+- **Ne anlama gelir günlüğü: Semantik günlük uygulama bloğu kullanma** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - **Splunk** resmi sitesi. \

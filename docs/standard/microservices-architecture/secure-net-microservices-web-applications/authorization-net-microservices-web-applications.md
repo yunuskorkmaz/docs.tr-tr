@@ -1,19 +1,19 @@
 ---
 title: .NET mikro Hizmetleri ve web uygulamalarında yetkilendirme hakkında
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET mikro Hizmetleri ve web uygulamalarında yetkilendirme hakkında
+description: .NET mikro Hizmetleri ve Web uygulamaları - güvenlik, ASP.NET Core uygulamaları - rol tabanlı ve ilke tabanlı ana yetkilendirme seçeneklerine genel bakış edinin.
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 53202d0f890df040480b9f54c54aaefdd025dffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 0c8f827d8e4d80a0bcd69af5ab39ea2b6269f2b6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149572"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362463"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET mikro Hizmetleri ve web uygulamalarında yetkilendirme hakkında
 
-Kimlik doğrulamasından sonra ASP.NET Core Web API'lerine erişim yetkisi vermek gerekir. Bu işlem, bazı kimliği doğrulanmış kullanıcılar tarafından kullanılabilir, ancak çok tüm API'leri yapmak bir hizmet sağlar. [Yetkilendirme](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) kullanıcıların rollere göre Bitti veya talep veya diğer buluşsal yöntemler inceleyerek içerebilir özel ilkesini temel alarak.
+Kimlik doğrulamasından sonra ASP.NET Core Web API'lerine erişim yetkisi vermek gerekir. Bu işlem, bazı kimliği doğrulanmış kullanıcılar tarafından kullanılabilir, ancak çok tüm API'leri yapmak bir hizmet sağlar. [Yetkilendirme](/aspnet/core/security/authorization/introduction) kullanıcıların rollere göre Bitti veya talep veya diğer buluşsal yöntemler inceleyerek içerebilir özel ilkesini temel alarak.
 
 Bir Authorize özniteliği eylem yöntemine (veya denetleyicinin sınıf denetleyicinin tüm eylemleri yetkilendirme gerektiriyorsa), aşağıdaki gösterildiği örnek olarak uygulama olarak, bir ASP.NET Core MVC yönlendirme için erişimi kısıtlamak oldukça kolaydır:
 
@@ -33,11 +33,11 @@ public class AccountController : Controller
 
 Varsayılan olarak, parametresiz bir Authorize öznitelik ekleyerek bu denetleyici veya eylem için kimliği doğrulanmış kullanıcılara erişimi sınırlar. Yalnızca belirli kullanıcılar için kullanılabilir olması için bir API daha da kısıtlamak için özniteliği gerekli rolleri veya kullanıcıları karşılamalıdır ilkeleri belirtmek için genişletilebilir.
 
-## <a name="implementing-role-based-authorization"></a>Rol tabanlı yetkilendirme uygulama
+## <a name="implement-role-based-authorization"></a>Uygulama rol tabanlı yetkilendirme
 
-ASP.NET Core kimliği yerleşik bir rol kavramları vardır. Kullanıcıların, yanı sıra ASP.NET Core kimliği uygulama tarafından kullanılan farklı roller hakkındaki bilgileri saklar ve hangi kullanıcıların hangi rollerine atandığı izler. Bu atamaları (Bu rollerdeki kalıcı depolama güncelleştirmeleri) RoleManager tür ve (hangi atayabilir veya kullanıcıların rol atamasını) UserManager türü ile programlı olarak değiştirilebilir.
+ASP.NET Core kimliği yerleşik bir rol kavramları vardır. Kullanıcıların, yanı sıra ASP.NET Core kimliği uygulama tarafından kullanılan farklı roller hakkındaki bilgileri saklar ve hangi kullanıcıların hangi rollerine atandığı izler. Bu atamaları ile program aracılığıyla değiştirilebilir `RoleManager` güncelleştiren rollerdeki kalıcı depolama türü ve `UserManager` verebilir veya kullanıcıların rollerini iptal türü.
 
-ASP.NET Core JWT taşıyıcı kimlik doğrulaması ara yazılımı, JWT taşıyıcı belirteçleri ile kimlik doğrulaması, rol talepleri belirteçte göre bir kullanıcının rollerini doldurur. Bir MVC eylem veya denetleyici belirli roller kullanıcılara erişimi sınırlamak için bir rol parametresi Authorize üst bilgisinde, aşağıdaki örnekte gösterildiği gibi ekleyebilirsiniz:
+JWT taşıyıcı belirteçleri ile kimlik doğrulaması, ASP.NET Core JWT taşıyıcı kimlik doğrulaması ara yazılımı belirteçte rol talepleri göre bir kullanıcının rollerini doldurur. Bir MVC eylem veya denetleyici belirli roller kullanıcılara erişimi sınırlamak için bir rol parametresi Authorize açıklamada (öznitelik), aşağıdaki kod parçasını gösterildiği gibi ekleyebilirsiniz:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -69,15 +69,15 @@ public ActionResult API1 ()
 
 Bu örnekte, bir kullanıcı API1, çağrılacak gerekir:
 
--   İçinde Yöneticisi olması *veya* PowerUser rol *ve*
+- Yönetici olması *veya* PowerUser rol *ve*
 
--   RemoteEmployee rolünde olması *ve*
+- RemoteEmployee rolünde olması *ve*
 
--   CustomPolicy yetkilendirme için özel bir işleyici karşılar.
+- CustomPolicy yetkilendirme için özel bir işleyici karşılar.
 
-## <a name="implementing-policy-based-authorization"></a>İlke tabanlı yetkilendirme uygulama
+## <a name="implement-policy-based-authorization"></a>İlke tabanlı yetkilendirme uygulayın
 
-Özel Yetkilendirme kuralları da yazılabilir kullanarak [Yetkilendirme İlkeleri](https://docs.asp.net/en/latest/security/authorization/policies.html). Bu bölümde genel bir bakış sunuyoruz. Daha ayrıntılı çevrimiçi kullanılabilir [ASP.NET yetkilendirme Atölyesi](https://github.com/blowdart/AspNetAuthorizationWorkshop).
+Özel Yetkilendirme kuralları da yazılabilir kullanarak [Yetkilendirme İlkeleri](https://docs.asp.net/en/latest/security/authorization/policies.html). Bu bölümde, genel bir bakış sağlar. Daha fazla bilgi için [ASP.NET yetkilendirme Atölyesi](https://github.com/blowdart/AspNetAuthorizationWorkshop).
 
 Özel Yetkilendirme İlkeleri Startup.ConfigureServices yöntemin hizmeti kullanılarak kaydedilir. AddAuthorization yöntemi. Bu yöntem AuthorizationOptions bağımsız değişken yapılandıran bir temsilciyi alır.
 
@@ -93,37 +93,37 @@ services.AddAuthorization(options =>
 });
 ```
 
-Örnekte gösterildiği gibi ilkeleri farklı gereksinimleri ile ilişkilendirilebilir. İlkeleri kaydolduktan sonra bir eylem veya denetleyici Authorize özniteliği ilke bağımsız değişkeni bir ilkenin adını geçirerek uygulanabilirler (örneğin, \[Authorize(Policy="EmployeesOnly")\]) ilkelerine sahip olabilir birden fazla gereksinimi, yalnızca bir tane değil (Bu örneklerde gösterildiği gibi).
+Örnekte gösterildiği gibi ilkeleri farklı gereksinimleri ile ilişkilendirilebilir. İlkeleri kaydolduktan sonra bir eylem veya denetleyici Authorize özniteliği ilke bağımsız değişkeni bir ilkenin adını geçirerek uygulanabilirler (örneğin, `[Authorize(Policy="EmployeesOnly")]`) İlkeleri (Bu gösterildiği gibi yalnızca bir tane değil birden çok gereksinimleri olabilir örnekler için).
 
-Önceki örnekte, ilk AddPolicy çağrı role göre yetkilendirme yalnızca bir diğer yoludur. Varsa \[Authorize(Policy="AdministratorsOnly")\] yönetici rolündeki kullanıcılar erişebilmesi için yalnızca bir API için uygulanır.
+Önceki örnekte, ilk AddPolicy çağrı role göre yetkilendirme yalnızca bir diğer yoludur. Varsa `[Authorize(Policy="AdministratorsOnly")]` yönetici rolündeki kullanıcılar erişebilmesi için yalnızca bir API için uygulanır.
 
-AddPolicy yapılan ikinci çağrı, belirli bir talep kullanıcı için mevcut olduğunu istemek için kolay bir yolunu gösterir. RequireClaim yöntem Ayrıca isteğe bağlı olarak talep için beklenen değerleri alır. Değer belirtilmişse, yalnızca kullanıcının hem doğru türde bir talep ve belirtilen değerlerden biri varsa bu gereksinimi karşılarsınız. JWT taşıyıcı kimlik doğrulaması ara yazılımı kullanıyorsanız, kullanıcı talepleri tüm JWT özellikleri kullanılabilir.
+İkinci <xref:Microsoft.AspNetCore.Authorization.AuthorizationOptions.AddPolicy%2A> çağrı belirli bir talep kullanıcı için mevcut olduğunu istemek için kolay bir yolunu gösterir. <xref:Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder.RequireClaim%2A> Yöntemi ayrıca isteğe bağlı olarak talep için beklenen değerleri alır. Değer belirtilmişse, yalnızca kullanıcının hem doğru türde bir talep ve belirtilen değerlerden biri varsa bu gereksinimi karşılarsınız. JWT taşıyıcı kimlik doğrulaması ara yazılımı kullanıyorsanız, kullanıcı talepleri tüm JWT özellikleri kullanılabilir.
 
-Özel yetkilendirme gereksinimi kullandığından burada gösterilen en ilginç üçüncü AddPolicy yönteminde ilkedir. Özel yetkilendirme gereksinimleri kullanarak Yetkilendirme nasıl gerçekleştirildiğini denetim harika bir fırsat olabilir. Bunun çalışması için bu tür uygulamanız gerekir:
+Üçüncü İşte gösterilen en ilginç ilke `AddPolicy` yöntemi, bir özel kimlik doğrulama gereksinimini kullandığından. Özel yetkilendirme gereksinimleri kullanarak Yetkilendirme nasıl gerçekleştirildiğini denetim harika bir fırsat olabilir. Bunun çalışması için bu tür uygulamanız gerekir:
 
--   IAuthorizationRequirement türetilen ve gereksinim ayrıntıları belirten alanlar içeren gereksinimleri türü. Örnekte, örnek MinimumAgeRequirement türü için bir yaş alanı budur.
+- Türetilen bir gereksinimleri türü <xref:Microsoft.AspNetCore.Authorization.IAuthorizationRequirement> ve gereksinim ayrıntılarını belirtme alanları içerir. Örnekte, bu örnek için bir yaş alan olup, `MinimumAgeRequirement` türü.
 
--   AuthorizationHandler uygulayan bir işleyici&lt;T&gt;, burada T işleyici karşılayabilecek IAuthorizationRequirement türüdür. İşleyici, kullanıcı hakkında bilgileri içeren belirtilen bir bağlam gereksinimini karşılayıp karşılamadığını denetler HandleRequirementAsync yöntemi uygulaması gerekir.
+- Uygulayan bir işleyici <xref:Microsoft.AspNetCore.Authorization.AuthorizationHandler%601>, burada T türü <xref:Microsoft.AspNetCore.Authorization.IAuthorizationRequirement> işleyici karşılayan. İşleyici uygulamalıdır <xref:Microsoft.AspNetCore.Authorization.AuthorizationHandler%601.HandleRequirementAsync%2A> yöntemi kullanıcı hakkındaki bilgileri içeren belirtilen bir bağlam gereksinimini karşılayıp karşılamadığını denetler.
 
-Kullanıcı, gereksinim, bir bağlam çağrısı karşılıyorsa. Başarılı olacak kullanıcı yetki verildiğini gösterir. Bir kullanıcı bir kimlik doğrulama gereksinimini karşılayan birden çok yol varsa, birden fazla işleyici oluşturulabilir.
+Kullanıcı, gereksinim, bir çağrı karşılayıp karşılamadığını `context.Succeed` kullanıcı yetki verildiğini gösterir. Bir kullanıcı bir kimlik doğrulama gereksinimini karşılayan birden çok yol varsa, birden fazla işleyici oluşturulabilir.
 
-Özel ilke gereksinimlerini AddPolicy çağrıları ile kaydetmeye ek olarak, aynı zamanda özel gereksinim işleyicilerine bağımlılık ekleme (Hizmetler. aracılığıyla kayıt olmanız gereklidir AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
+Özel ilke gereksinimlerine kaydetme yanı sıra `AddPolicy` çağrılar da ihtiyacınız özel gereksinim işleyicilerine bağımlılık ekleme yoluyla kaydetmek (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`).
 
-Özel yetkilendirme gereksinimi ve denetimi (bir DateOfBirth talebi temel alan) bir kullanıcının yaşını işleyici örneği ASP.NET Core kullanılabilir [yetkilendirme belgeleri](https://docs.asp.net/en/latest/security/authorization/policies.html).
+Özel yetkilendirme gereksinimi ve denetimi bir kullanıcının yaşını işleyici örneği (dayalı bir `DateOfBirth` talep) içinde ASP.NET Core kullanılabilir [yetkilendirme belgeleri](https://docs.asp.net/en/latest/security/authorization/policies.html).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET Core kimlik doğrulaması**
-    [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
+- **ASP.NET Core kimlik doğrulaması** \
+  [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
 
--   **ASP.NET Core yetkilendirme**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
+- **ASP.NET Core yetkilendirme** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](/aspnet/core/security/authorization/introduction)
 
--   **Rol tabanlı yetkilendirme**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
+- **Rol tabanlı yetkilendirme** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](/aspnet/core/security/authorization/roles)
 
--   **Özel ilke tabanlı yetkilendirme**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+- **Özel ilke tabanlı yetkilendirme** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

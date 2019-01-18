@@ -1,15 +1,15 @@
 ---
 title: İle Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
-description: Polly ile HttpClientFactory HTTP hatalarını işlemek hakkında bilgi edinin
+description: Polly ile HttpClientFactory HTTP hatalarını işlemek nasıl öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143993"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362762"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 
@@ -36,9 +36,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-**AddPolicyHandler()** yöntemdir hangi ilkeleri ekler `HttpClient` nesnelerini kullanırsınız. Bu durumda, bunu Polly'nın ilke Http yeniden deneme için üstel geri alma ile eklemektir.
+**AddPolicyHandler()** yöntemdir hangi ilkeleri ekler `HttpClient` kullanacağınız nesneleri. Bu durumda, bunu Polly'nın ilke Http yeniden deneme için üstel geri alma ile eklemektir.
 
-Daha modüler bir yaklaşım sahip olmak için Http yeniden deneme ilkesi ConfigureServices() yöntemi içinde ayrı bir yöntem aşağıdaki kodu tanımlanabilir.
+Daha modüler bir yaklaşım için Http yeniden deneme ilkesi içinde ayrı bir yöntemde tanımlanabilir `Startup.cs` aşağıdaki kodda gösterildiği gibi dosya:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Polly ile yeniden denemeler, üstel geri alma yapılandırmasını ve hata günl
 
 Bu nedenle altı kat deneyecek ve her yeniden deneme arasındaki saniye iki saniye cinsinden başlangıç üstel, olacaktır.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Değişimi stratejisi için yeniden deneme ilkesi ekleme
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Değişimi stratejisi için yeniden deneme İlkesi Ekle
 
 Normal bir yeniden deneme ilkesi, sisteminizin durumlarda yüksek eşzamanlılık ve ölçeklenebilirlik ve yüksek Çekişme altında etkileyebilir. En yüksek sayılar kısmi kesintiler durumunda birçok istemcilerden gelen benzer bir yeniden deneme aşmak için iyi bir geçici çözüm değişimi stratejisi için yeniden deneme algoritması/İlkesi eklemektir. Rastgele üstel geri alma için ekleyerek bu uçtan uca sistemin genel performansı artırabilir. Sorunlar ortaya çıktığında bunu ani değişiklikleri yayar. Değişimi uygulamak için kodu, düz bir Polly İlkesi kullandığınızda, aşağıdaki örnekteki gibi görünebilir:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Yeniden deneme düzeni**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **Yeniden deneme düzeni**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly ve HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly ve HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**
+- **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Değişimi: Rastgele olma durumu ile depolanabileceğini şeyler**
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Değişimi: Rastgele olma durumu ile depolanabileceğini şeyler**\
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Önceki](explore-custom-http-call-retries-exponential-backoff.md)

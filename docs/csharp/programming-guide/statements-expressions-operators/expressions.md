@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239296"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362320"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri oluşan bir dizidir. İfadeler, değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri, oluşabilir veya *basit adı*. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>İfade değerleri  
- Çoğunda ifadeler kullanılan bağlamları, örneğin deyimleri ya da yöntem parametreleri ifade bazı değer olarak değerlendirilmesi bekleniyor. X ve y tamsayılardır ifade `x + y` sayısal bir değere değerlendirir. İfade `new MyClass()` yeni bir örneğini bir başvuru olarak değerlendirilen bir `MyClass` nesne. İfade `myClass.ToString()` , yöntemin dönüş türü olduğundan, bir dizeye değerlendirir. Ancak, bir ad alanı adı bir ifade olarak sınıflandırılır ancak bir değer olarak değerlendirilmesi değil ve bu nedenle herhangi bir ifade sonucunu hiçbir zaman olabilir. Bir yöntem parametresi için bir ad alanı adı geçirin veya yeni bir ifadede kullanamaz veya bir değişkene atayın. Geniş bir ifadedeki alt bir ifade olarak yalnızca kullanabilirsiniz. Aynı türleri için geçerlidir (olarak distinct gelen <xref:System.Type?displayProperty=nameWithType> nesneleri), yöntem grubu adları (as distinct from belirli yöntemler) ve olay [ekleme](../../../csharp/language-reference/keywords/add.md) ve [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcileri.  
+ Çoğunda ifadeler kullanılan bağlamları, örneğin deyimleri ya da yöntem parametreleri ifade bazı değer olarak değerlendirilmesi bekleniyor. X ve y tamsayılardır ifade `x + y` sayısal bir değere değerlendirir. İfade `new MyClass()` yeni bir örneğini bir başvuru olarak değerlendirilen bir `MyClass` sınıfı. İfade `myClass.ToString()` , yöntemin dönüş türü olduğundan, bir dizeye değerlendirir. Ancak, bir ad alanı adı bir ifade olarak sınıflandırılır ancak bir değer olarak değerlendirilmesi değil ve bu nedenle herhangi bir ifade sonucunu hiçbir zaman olabilir. Bir yöntem parametresi için bir ad alanı adı geçirin veya yeni bir ifadede kullanamaz veya bir değişkene atayın. Geniş bir ifadedeki alt bir ifade olarak yalnızca kullanabilirsiniz. Aynı türleri için geçerlidir (olarak distinct gelen <xref:System.Type?displayProperty=nameWithType> nesneleri), yöntem grubu adları (as distinct from belirli yöntemler) ve olay [ekleme](../../../csharp/language-reference/keywords/add.md) ve [Kaldır](../../../csharp/language-reference/keywords/remove.md) erişimcileri.  
   
  Her değer, ilişkili bir türe sahip. Örneğin, x ve y hem değişken türünün `int`, ifadenin değerini `x + y` olarak yazıldığı `int`. Değeri, farklı türden bir değişkene atanırsa veya x ve y farklı türleri, tür dönüştürme kurallarını uygulanır. Bu tür dönüştürmeler nasıl çalıştığı hakkında daha fazla bilgi için bkz. [atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

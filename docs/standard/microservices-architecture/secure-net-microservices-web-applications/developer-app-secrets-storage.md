@@ -1,27 +1,27 @@
 ---
 title: Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında depolama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında depolama
+description: .NET mikro Hizmetleri ve Web uygulamaları - güvenlik ASP.NET Core kullanabileceğiniz seçenekler parolalar, bağlantı dizeleri veya kaynak denetimi, API anahtarlarını anlama gibi uygulama parolalarını depolamak yoksa, "kullanıcı ne yapılacağını anlamak zorunda özellikle Gizli dizileri".
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143876"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361995"
 ---
-# <a name="storing-application-secrets-safely-during-development"></a>Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında depolama
+# <a name="store-application-secrets-safely-during-development"></a>Uygulama gizli dizilerini güvenli bir şekilde geliştirme sırasında Store
 
-Korumalı kaynakları ve diğer hizmetler ile bağlanmak için ASP.NET Core uygulamaları genelde bağlantı dizeleri, parolalar veya hassas bilgiler içeren diğer kimlik bilgileri kullanmanız gerekir. Bu hassas bilgilerin adlı *gizli dizileri*. Gizli dizileri kaynak kodunda içermeyecek şekilde ve kesinlikle gizli dizileri kaynak denetiminde depolamamayı en iyi bir yöntemdir. Bunun yerine, gizli dizileri daha güvenli bir konumdan okunamıyor, ASP.NET Core yapılandırma modeli kullanmalısınız.
+Korumalı kaynakları ve diğer hizmetler ile bağlanmak için ASP.NET Core uygulamaları genelde bağlantı dizeleri, parolalar veya hassas bilgiler içeren diğer kimlik bilgileri kullanmanız gerekir. Bu hassas bilgilerin adlı *gizli dizileri*. Gizli dizileri kaynak kodu ve gizli dizileri kaynak denetiminde depolamamayı sağlamaktan içermeyecek şekilde en iyi bir uygulamadır. Bunun yerine, gizli dizileri daha güvenli bir konumdan okunamıyor, ASP.NET Core yapılandırma modeli kullanmalısınız.
 
-Geliştirme erişmek ve bu üretim kaynaklarına erişmek için farklı kişilerin bu gizli dizileri farklı kümeleri erişmesi için kullanılan kaynaklardan hazırlama için gizli dizileri ayırmalısınız. Geliştirme sırasında kullanılan gizli dizileri depolamak için genel yaklaşımları ya da ortam değişkenleri içindeki veya ASP.NET Core gizli dizi Yöneticisi aracını kullanarak gizli dizileri depolamak üzeresiniz. Üretim ortamlarında daha güvenli depolama için mikro hizmetler, gizli dizileri Azure anahtar Kasası'nda depolayabilirsiniz.
+Geliştirme erişmek ve bu üretim kaynaklarına erişmek için erişim gizli dizilerinin farklı bu kümeleri için farklı kişilerin gerekeceğinden Kullanılanlar kaynaklardan hazırlama için gizli dizileri ayırmanız gerekir. Geliştirme sırasında kullanılan gizli dizileri depolamak için genel yaklaşımları ya da ortam değişkenleri içindeki veya ASP.NET Core gizli dizi Yöneticisi aracını kullanarak gizli dizileri depolamak üzeresiniz. Üretim ortamlarında daha güvenli depolama için mikro hizmetler, gizli dizileri Azure anahtar Kasası'nda depolayabilirsiniz.
 
-## <a name="storing-secrets-in-environment-variables"></a>Gizli dizilerin depolanmasında ortam değişkenleri
+## <a name="store-secrets-in-environment-variables"></a>Ortam değişkenlerini Store gizli dizileri
 
-Gizli dizileri kaynak kodunun dışında tutmak için bir yoludur dize tabanlı gizli dizi olarak ayarlamak, geliştiriciler için [ortam değişkenlerini](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) kendi geliştirme makinelerinde. Ortam değişkenlerini kullandığınızda hiyerarşik (Bu yapılandırma bölümleri içinde iç içe geçmiş) adları ile Parolaları depolamak için parolanın adının tam hiyerarşi içeren ortam değişkenleri için bir ad oluşturun, iki nokta (:) ile ayrılmış.
+Gizli dizileri kaynak kodunun dışında tutmak için bir yoludur dize tabanlı gizli dizi olarak ayarlamak, geliştiriciler için [ortam değişkenlerini](/aspnet/core/security/app-secrets#environment-variables) kendi geliştirme makinelerinde. Yapılandırma bölümleri içinde iç içe geçmiş olanlar gibi hiyerarşik adları ile Parolaları depolamak için ortam değişkenlerini kullandığınızda tam iki nokta (:) ile ayrılmış alt bölümlere hiyerarşisini dahil etmek istediğiniz değişkenleri adı olmalıdır.
 
-Örneğin, hata ayıklama için bir ortam değişkenini günlüğe kaydetme: LogLevel:Default ayarlayarak aşağıdaki JSON dosyasındaki yapılandırma değeri olarak eşdeğer olacaktır:
+Örneğin, bir ortam değişkenini ayarlayarak `Logging:LogLevel:Default` için `Debug` değerini aşağıdaki JSON dosyasındaki yapılandırma değeri olarak eşdeğer olacaktır:
 
 ```json
 {
@@ -37,11 +37,11 @@ Bu değerler, ortam değişkenlerinden erişmek için uygulamayı yalnızca AddE
 
 Ortam değişkenleri genellikle düz metin olarak depolandığını unutmayın bir makine ya da işlem ortam değişkenleriyle tehlikedeyse, ortam değişkeni değerlerini görünür olur.
 
-## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>ASP.NET Core gizli dizi Yöneticisi'ni kullanarak gizli dizilerin depolanmasında
+## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Gizli dizileri ile ASP.NET Core gizli dizi Yöneticisi Store
 
-ASP.NET Core [gizli dizi Yöneticisi](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) aracı, kaynak kodunun dışında gizli dizileri tutma başka bir yöntem sağlar. Gizli dizi Yöneticisi aracını kullanmak için proje dosyanızda Microsoft.Extensions.SecretManager.Tools paketine araçları başvurusu (DotNetCliToolReference) içerir. Bu bağımlılık mevcut olduğundan ve geri yüklendikten sonra dotnet kullanıcı parolalarını komutu komut satırından gizli dizileri değerini ayarlamak için kullanılabilir. Bu gizli anahtarları (işletim sistemi tarafından Ayrıntılar değişiklik gösterir) kullanıcının profil dizini, kaynak kodu uzakta bir JSON dosyasında depolanır.
+ASP.NET Core [gizli dizi Yöneticisi](/aspnet/core/security/app-secrets#secret-manager) aracı, kaynak kodunun dışında gizli dizileri tutma başka bir yöntem sağlar. Gizli dizi Yöneticisi aracını kullanmak için paket yükleme **Microsoft.Extensions.Configuration.SecretManager** proje dosyanızda. Bu bağımlılık, mevcut olduğundan ve geri yüklendi, sonra `dotnet user-secrets` komutu, komut satırından gizli dizileri değerini ayarlamak için kullanılabilir. Bu gizli anahtarları (işletim sistemi tarafından Ayrıntılar değişiklik gösterir) kullanıcının profil dizini, kaynak kodu uzakta bir JSON dosyasında depolanır.
 
-Gizli dizi Yöneticisi belirlediği gizli anahtarları, gizli dizileri kullanarak proje UserSecretsId özelliği tarafından düzenlenir. Bu nedenle, proje dosyanızda (aşağıdaki kod parçacığında gösterildiği gibi) UserSecretsId özelliğini ayarladığınızdan emin olmalıdır. Projesi içinde benzersiz olduğu sürece kimlik olarak kullanılan gerçek dize önemli değildir.
+Gizli dizi Yöneticisi belirlediği gizli dizileri tarafından düzenlenir `UserSecretsId` gizli dizileri kullanarak projenin özelliği. Bu nedenle, aşağıdaki kod parçacığında gösterildiği gibi proje dosyasında UserSecretsId özelliğini ayarladığınızdan emin olmanız gerekir. Varsayılan değer, Visual Studio tarafından atanan bir GUID olmakla birlikte, bilgisayarınızın benzersiz olduğu sürece gerçek dize önemli değildir.
 
 ```xml
 <PropertyGroup>
@@ -49,8 +49,9 @@ Gizli dizi Yöneticisi belirlediği gizli anahtarları, gizli dizileri kullanara
 </PropertyGroup>
 ```
 
-Gizli dizi Yöneticisi ile bir uygulama içinde depolanan gizli kullanarak gerçekleştirilir AddUserSecrets çağırarak&lt;T&gt; yapılandırmasında uygulaması için gizli dizileri içerecek şekilde ConfigurationBuilder örneğinde. Genel parametre T UserSecretId uygulandığı bir derlemeden bir tür olmalıdır. Genellikle AddUserSecrets kullanarak&lt;başlangıç&gt; bir sakınca yoktur.
+Gizli dizi Yöneticisi ile bir uygulama içinde depolanan gizli kullanarak gerçekleştirilir çağırarak `AddUserSecrets<T>` yapılandırmasında uygulaması için gizli dizileri içerecek şekilde ConfigurationBuilder örneğinde. Genel parametre T UserSecretId uygulandığı bir derlemeden bir tür olmalıdır. Kullanımı genellikle `AddUserSecrets<Startup>` bir sakınca yoktur.
 
+`AddUserSecrets<Startup>()` Geliştirme ortamı için varsayılan seçenekleri kullanarak dahil `CreateDefaultBuilder` yönteminde *Program.cs*.
 
 >[!div class="step-by-step"]
 >[Önceki](authorization-net-microservices-web-applications.md)

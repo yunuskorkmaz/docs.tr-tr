@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2017'de .NET Core ile bir sınıf kitaplığını test etme
+title: Visual Studio 2017'de .NET Core ile bir .NET standart sınıf kitaplığını test etme
 description: .NET Core sınıf kitaplığı için birim testi projesi oluşturun. .NET Core sınıf kitaplığı ile birim testleri doğru şekilde çalıştığını doğrulayın.
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170801"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362697"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir sınıf kitaplığını test etme
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığını test etme
 
-İçinde [C# ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma](library-with-visual-studio.md) veya [Visual Basic ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma](vb-library-with-visual-studio.md), ekleyen bir basit sınıf kitaplığı oluşturan bir genişletme yöntemi için <xref:System.String> sınıfı. Şimdi beklendiği gibi çalıştığından emin olmak için birim testi oluşturmayı öğreneceksiniz. Önceki konulardan birinde oluşturduğunuz çözüm, birim testi projesi ekleyeceksiniz.
+İçinde [bir .NET Standard kitaplığı ile derleme C# ve Visual Studio 2017'de .NET Core](library-with-visual-studio.md) veya [Visual Basic ve Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığı derleme](vb-library-with-visual-studio.md), basit bir sınıf oluşturuldu bir genişletme yöntemi için ekler Kitaplığı <xref:System.String> sınıfı. Şimdi beklendiği gibi çalıştığından emin olmak için birim testi oluşturmayı öğreneceksiniz. Önceki makalede oluşturduğunuz çözüm, birim testi projesi ekleyeceksiniz.
 
 ## <a name="creating-a-unit-test-project"></a>Birim testi projesi oluşturma
 

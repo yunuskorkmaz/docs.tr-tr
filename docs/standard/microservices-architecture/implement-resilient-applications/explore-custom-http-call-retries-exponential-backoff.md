@@ -1,23 +1,23 @@
 ---
 title: Üstel geri alma ile özel HTTP çağrı yeniden keşfedin
-description: Nasıl size, sıfırdan, olası HTTP hatası senaryolar işlemek için bir üstel geri alma ile HTTP çağrı yeniden uygulayabileceğine öğrenin.
+description: Sıfırdan olası HTTP hatası senaryolar işlemek için üstel geri alma ile HTTP çağrı yeniden nasıl uygulayabileceğine öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145104"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362255"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Üstel geri alma ile özel HTTP çağrı yeniden keşfedin
 
 Dayanıklı mikro hizmetler oluşturma için olası HTTP hatası senaryolar ele gerekir. Önerilmemesine rağmen bu hataları işleme bir yolu, kendi uygulamanız yeniden deneme ile üstel geri alma oluşturmaktır.
 
-**Önemli Not:** Bu bölümde, HTTP çağrı yeniden uygulamak için kendi özel kodunuzu nasıl oluşturabileceğinizi gösterir. Ancak, bunu yapmak için kendi tarafından ancak daha güçlü, güvenilir ve daha basit ancak gibi mekanizmaları kullanın kullanılacak önerilmez `HttpClientFactory` ile Polly, .NET Core 2.1 itibaren kullanılabilir. Bu yaklaşım önerilen sonraki bölümde açıklanmıştır. 
+**Önemli Not:** Bu bölümde, HTTP çağrı yeniden uygulamak için kendi özel kodunuzu nasıl oluşturabileceğinizi gösterir. Ancak, daha güçlü kullanmak için kendi ancak yapmak için önerilen ve daha basit ancak gibi mekanizmaları kullanın güvenilir olmayan `HttpClientFactory` ile Polly, .NET Core 2.1 itibaren kullanılabilir. Bu yaklaşım önerilen sonraki bölümde açıklanmıştır.
 
-İlk inceleme, üstel geri alma gibi için yardımcı program sınıfı ile kendi kodunuzu uygulayabilirsiniz [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), aşağıdaki gibi kod artı (kullanılabildiği ayrıca şu anda [GitHub Depo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+İlk inceleme, üstel geri alma gibi için yardımcı program sınıfı ile kendi kodunuzu uygulayabilirsiniz [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), ayrıca aşağıdaki gibi kod.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Bu kod yalnızca bir kavram kanıtı uygun olduğunu unutmayın. Sonraki bölümlerde HttpClientFactory kullanarak daha basit olsa da, daha karmaşık yaklaşımları açıklanmaktadır.
-HttpClientFactory .NET Core 2.1 beri Polly gibi kendini kanıtlamış dayanıklılık kitaplıkları ile kullanılabilir. 
+Bu kod yalnızca bir kavram kanıtı uygun olduğunu unutmayın. Sonraki bölümlerde HttpClientFactory kullanarak daha basit olsa da, daha karmaşık yaklaşımları açıklanmaktadır. HttpClientFactory .NET Core 2.1 beri Polly gibi kendini kanıtlamış dayanıklılık kitaplıkları ile kullanılabilir.
 
 >[!div class="step-by-step"]
 >[Önceki](implement-resilient-entity-framework-core-sql-connections.md)

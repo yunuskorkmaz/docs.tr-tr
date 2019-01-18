@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170034"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362268"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core Visual Basic Merhaba Dünya uygulaması derleme
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core SDK'sı ile bir Visual Basic Merhaba Dünya uygulaması derleme
 
 Bu konuda, derleme, hata ayıklama ve Visual Studio 2017'de Visual Basic kullanarak basit bir .NET Core konsol uygulaması yayımlama için adım adım bir giriş sağlar. Visual Studio 2017, .NET Core uygulamaları oluşturmaya yönelik tam özellikli bir geliştirme ortamı sağlar. Uygulama, platforma özel bağımlılıklar yok sürece, uygulama, .NET Core hedefleyen herhangi bir platformda çalışabilir ve .NET Core sahip herhangi bir sistemde yüklü.
 
@@ -78,9 +78,9 @@ Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygu
 
 Oluşturduğunuz ve uygulamanızı çalıştırın. Profesyonel uygulama geliştirmek için uygulamanız yayımlanmaya hazır hale getirmek için bazı ek adımlar uygulayın:
 
-- Uygulamanızı hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile C# Merhaba Dünya uygulamanızın hatalarını ayıklama](debugging-with-visual-studio.md).
+- Uygulamanızda hata ayıklamak için bkz: [Visual Studio 2017 kullanarak .NET Core Merhaba Dünya uygulamanızın hatalarını](debugging-with-visual-studio.md).
 
-- Geliştirme ve uygulamanızın dağıtılabilir bir sürümünü yayımlama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile C# Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
+- Uygulamanızı bir dağıtılabilir sürümünü yayımlamak için bkz: [Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

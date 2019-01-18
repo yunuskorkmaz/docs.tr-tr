@@ -1,16 +1,16 @@
 ---
-title: Derleme bir C# Visual Studio 2017'de .NET Core Merhaba Dünya uygulaması
+title: Visual Studio 2017'de .NET Core ile bir C# Merhaba Dünya uygulaması derleme
 description: Visual Studio 2017 kullanarak C# ile basit bir .NET Core konsol uygulaması oluşturmayı öğrenin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168929"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362806"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Derleme bir C# Hello World uygulaması Visual Studio 2017'de .NET Core SDK'sı
 
@@ -76,9 +76,9 @@ Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygu
 
 Oluşturduğunuz ve uygulamanızı çalıştırın. Profesyonel uygulama geliştirmek için uygulamanız yayımlanmaya hazır hale getirmek için bazı ek adımlar uygulayın:
 
-- Uygulamanızı hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile C# Merhaba Dünya uygulamanızın hatalarını ayıklama](debugging-with-visual-studio.md).
+- Uygulamanızı hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 kullanarak .NET Core Merhaba Dünya uygulamanızın hatalarını](debugging-with-visual-studio.md).
 
-- Geliştirme ve uygulamanızın dağıtılabilir bir sürümünü yayımlama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile C# Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
+- Geliştirme ve uygulamanızın dağıtılabilir bir sürümünü yayımlama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>İlgili konular
 

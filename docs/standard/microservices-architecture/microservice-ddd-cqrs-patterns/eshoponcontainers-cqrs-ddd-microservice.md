@@ -4,18 +4,20 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143642"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362853"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 
 CQRS kurallara göre sıralama mikro hizmetine başvuru uygulama tasarımının temel alır. Ancak, yalnızca sorguları komutlardan ayrılması ve için her iki eylem aynı veritabanını kullanarak basit bir yaklaşım kullanır.
 
-Bu desen ve burada önemli olan nokta, sorguları eşgüçlüdür olduğu: bir sistem sorgu kaç kez ne olursa olsun, bu sistem durumu değişmez. İşlem mantığı "etki alanı modeli Yazar daha" sıralama mikro hizmetler, aynı veritabanını kullanıyor olsa da hatta farklı "Okuma" veri modelini kullanabilirsiniz. Bu nedenle basitleştirilmiş bir CQRS yaklaşım budur.
+Bu desen ve burada önemli olan nokta, sorguları eşgüçlüdür olduğu: bir sistem sorgu kaç kez ne olursa olsun, bu sistem durumu değişmez. Diğer bir deyişle, sorguların yan etkisi ücretsiz.
+
+Bu nedenle, etki alanı modeli işlem mantığı "Yazar daha" sıralama mikro hizmetler aynı veritabanı kullanıyor olsa bile farklı "Okuma" veri modelini kullanabilirsiniz. Bu nedenle, Basitleştirilmiş bir CQRS yaklaşım budur.
 
 Öte yandan, işlemleri ve veri güncelleştirmeleri tetiklemek, komutları, sistemin durumunu değiştirin. Komutları ile ne zaman dikkatli olmanız gerekir. karmaşıklığı ve durmaksızın değişen iş kuralları ile ilgili. Burada bir daha iyi Modellenen sistem olacak şekilde DDD teknikleri uygulamak istediğiniz.
 

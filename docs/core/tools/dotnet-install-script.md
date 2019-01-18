@@ -1,13 +1,13 @@
 ---
 title: DotNet yükleme betikleri
 description: .NET Core CLI araçları ve paylaşılan çalışma zamanı'nı yüklemek için dotnet-yükleme betikleri hakkında bilgi edinin.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148340"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362837"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet yükleme komut başvurusu
 
@@ -15,7 +15,7 @@ ms.locfileid: "53148340"
 
 `dotnet-install.ps1` | `dotnet-install.sh` -.NET Core CLI araçları ve paylaşılan çalışma zamanı'nı yüklemek için kullanılan komut dosyası.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 Windows:
 
@@ -73,7 +73,7 @@ Belirli bir sürümünü kullanarak bir yükleyebilirsiniz `--version` bağıms�
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  .NET Core ikili dosyaları yüklemek için Mimari. Olası değerler `auto`, `x64`, ve `x86`. Varsayılan değer `auto`, şu anda çalışan işletim sistemi mimarisi temsil eder.
+  .NET Core ikili dosyaları yüklemek için Mimari. Olası değerler `<auto>`, `amd64`, `x64`, `x86`, `arm64`, ve `arm`. Varsayılan değer `<auto>`, şu anda çalışan işletim sistemi mimarisi temsil eder.
 
 * **`-SharedRuntime`**
 

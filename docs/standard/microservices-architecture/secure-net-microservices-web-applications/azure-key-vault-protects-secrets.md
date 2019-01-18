@@ -1,78 +1,56 @@
 ---
 title: Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
+description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güvenlik tamamen yöneticiler tarafından denetlenen bir uygulama gizli dizilerini işlemek için mükemmel bir yoldur. Yöneticiler, bile atayın ve geliştirme değerleri geliştiricileri kendilerini işlemek zorunda iptal edebilir.
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cbe893dcdd71f0ce8bf8a26a8502d6c0b3a0dedb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151154"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362425"
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
+# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma
 
 Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafından depolanan gizli dizileri hala yerel olarak depolanır ve makinede şifrelenmemiş. Gizli dizileri depolamak için daha güvenli bir seçenektir [Azure anahtar kasası](https://azure.microsoft.com/services/key-vault/), anahtarları ve gizli dizileri depolamak için güvenli, merkezi bir konum sağlar.
 
-Azure Key Vault'tan yapılandırma bilgilerini okumak için bir ASP.NET Core uygulaması Microsoft.Extensions.Configuration.AzureKeyVault paketi sağlar. Bir Azure Key Vault gizli diziler'ı kullanmaya başlamak için aşağıdaki adımları izleyin:
+**Microsoft.Extensions.Configuration.AzureKeyVault** paket, Azure Key Vault'tan yapılandırma bilgilerini okumak için bir ASP.NET Core uygulaması sağlar. Bir Azure Key Vault gizli diziler'ı kullanmaya başlamak için aşağıdaki adımları izleyin:
 
-İlk olarak, bir Azure AD uygulaması kaydedin. (Anahtar kasalarına erişimi, Azure AD tarafından yönetilir.) Bu Azure Yönetim Portalı aracılığıyla yapılabilir.
+1. Uygulamanızı bir Azure AD uygulaması kaydedin. (Anahtar kasalarına erişimi, Azure AD tarafından yönetilir.) Bu Azure Yönetim Portalı aracılığıyla yapılabilir. \
 
-Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet'i. Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir. (Uygulamanızın özel anahtarı kullanır.)
+   Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet'i. Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir. (Uygulamanızın özel anahtarı kullanır.)
 
-İkinci olarak, yeni bir hizmet sorumlusu oluşturarak bir anahtar kasasına kayıtlı uygulama erişimi sağlar. Aşağıdaki PowerShell komutlarını kullanarak bunu yapabilirsiniz:
+2. Kayıtlı uygulama erişimi, anahtar Kasası'na yeni hizmet sorumlusu oluşturma tarafından sağlar. Aşağıdaki PowerShell komutlarını kullanarak bunu yapabilirsiniz:
 
-```powershell
-$sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
-```
+   ```powershell
+   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   ```
 
-Üçüncü olarak, anahtar kasası, uygulamanızın yapılandırma kaynağı olarak IConfigurationRoot örneği oluşturduğunuzda IConfigurationBuilder.AddAzureKeyVault genişletme yöntemi çağrılarak içerir. AddAzureKeyVault çağırma kayıtlı olan ve önceki adımlarda anahtar kasasına erişim verilen uygulama kimliği gerektirecek unutmayın.
+3. Anahtar kasası, uygulamanızın yapılandırma kaynağı olarak çağırarak dahil <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> oluşturduğunuzda genişletme yöntemi bir <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> örneği. Çağırmanın Not `AddAzureKeyVault` kayıtlı olan ve önceki adımlarda anahtar kasasına erişim verilen uygulama Kimliğini gerektirir.
 
-  Şu anda .NET Standard ve .NET Core yapılandırma bilgileri alınırken bir Azure Key vault'tan bir istemci kimliği ve istemci gizli anahtarını kullanarak destekler. .NET framework uygulamaları bir aşırı yüklemesini bir sertifika yerine istemci gizli anahtarını alır IConfigurationBuilder.AddAzureKeyVault kullanabilirsiniz. Bu makalenin yazıldığı tarih itibarıyla eserleridir [sürüyor](https://github.com/aspnet/Configuration/issues/605) .NET Standard ve .NET Core aşırı yükleyen kullanılabilir olması için. Bir sertifika kullanılabilir kabul eden AddAzureKeyVault aşırı kadar ASP.NET Core uygulamaları sertifika tabanlı kimlik doğrulaması ile bir Azure Key Vault açıkça bir KeyVaultClient nesne oluşturarak aşağıdaki örnekte gösterildiği gibi erişebilirsiniz:
+   Bir aşırı yüklemesini kullanabilirsiniz `AddAzureKeyVault` başvuru dahil ederek bir sertifika yerine gizli alan [Microsoft.IdentityModel.Clients.activedirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) paket.
 
-```csharp
-// Configure Key Vault client
-var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(async
-    (authority, resource, scope) =>
-    {
-        var cert = // Get certificate from local store/file/key vault etc. as needed
-        // From the Microsoft.IdentityModel.Clients.ActiveDirectory pacakge
-        var authContext = new AuthenticationContext(authority,
-            TokenCache.DefaultShared);
-        var result = await authContext.AcquireTokenAsync(resource,
-            // From the Microsoft.Rest.ClientRuntime.Azure.Authentication pacakge
-            new ClientAssertionCertificate("{Application ID}", cert));
-        return result.AccessToken;
-    }));
-
-    // Get configuration values from Key Vault
-    var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        // Other configuration providers go here.
-        .AddAzureKeyVault("{KeyValueUri}", kvClient,
-        new DefaultKeyVaultSecretManager());
-```
-
-Bu örnekte, yapılandırma sağlayıcısı kaydını sonunda AddAzureKeyVault çağrısı gelir. Önceki sağlayıcılarından yapılandırma değerleri geçersiz kılmak için fırsatına sahip olmasını ve böylece anahtar kasasından diğer kaynaklardan hiçbir yapılandırma değerleri geçersiz kılar son yapılandırma sağlayıcısı olarak Azure anahtar kasası kaydetmek için en iyi bir uygulamadır.
+> [!IMPORTANT]
+> Önceki sağlayıcılarından yapılandırma değerleri geçersiz kılmak için son yapılandırma sağlayıcısı Azure anahtar kasası kaydetmenizi öneririz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Uygulama parolalarını korumak için Azure anahtar Kasası'nı kullanma**
-    [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
+- **Uygulama parolalarını korumak için Azure anahtar Kasası'nı kullanma** \
+  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Geliştirme sırasında uygulama gizli anahtarlarının güvenli bir şekilde depolanması**
-    [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
+- **Geliştirme sırasında uygulama gizli anahtarlarının güvenli bir şekilde depolanması** \
+  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
 
--   **Veri korumayı yapılandırma**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
+- **Veri korumayı yapılandırma** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
--   **Anahtar Yönetimi ve yaşam süresi**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+- **Anahtar Yönetimi ve yaşam süresi** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   **Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu.
-    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+- **Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu. \
+  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 >[Önceki](developer-app-secrets-storage.md)

@@ -1,20 +1,20 @@
 ---
-title: Visual Studio 2017'de bir Visual Basic .NET Core sınıf kitaplığı oluşturma
-description: Visual Studio 2017'yi kullanarak Visual Basic'te yazılmış bir .NET Core sınıf kitaplığı derleme hakkında bilgi edinin
+title: Visual Studio 2017'de bir Visual Basic .NET Standard sınıf kitaplığı derleme
+description: Visual Studio 2017'yi kullanarak Visual Basic'te yazılmış bir .NET Standard sınıf kitaplığı derleme hakkında bilgi edinin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168838"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362047"
 ---
-# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core SDK'sı ile bir sınıf kitaplığı derleme
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core SDK'sı ile bir .NET Standard kitaplığı derleme
 
 A *sınıf kitaplığı* türlerini ve bir uygulama tarafından çağrılan yöntemlere tanımlar. .NET Standard 2.0 hedefleyen bir sınıf kitaplığı, .NET Standard sürümünü destekleyen herhangi bir .NET uygulaması tarafından çağrılacak kitaplığınızı sağlar. Sınıf kitaplığınıza bitirdikten sonra bir üçüncü taraf bileşeni veya bir veya daha fazla uygulama ile birlikte gelen bir bileşeni olarak dahil etmek isteyip istemediğinizi olarak dağıtmak isteyip istemediğinize karar verebilirsiniz.
 
