@@ -4,13 +4,13 @@ description: Üreten, tasarlama ve .NET yazılım geliştirme için recoommended
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.technology: dotnet
-ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.technology: dotnet-ebooks
+ms.openlocfilehash: cb96b56eb6ad76fc8809e46c86277a96fa7b85c8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404180"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415877"
 ---
 # <a name="net-architecture-guidance"></a>.NET Mimari Kılavuzu
 
@@ -30,6 +30,6 @@ Bu kılavuzda önerilen mimari, tasarım ve dağıtım işlemleri, ASP.NET ve AS
 
 Mikro hizmet tabanlı uygulamaları geliştirmek ve bunları yönetmek için giriş niteliğindeki bu kılavuzda, kapsayıcıları kullanma. Mimari Tasarım açıklar ve .NET Core ve Docker kapsayıcılarını kullanarak uygulama yaklaşıyor.
 
-## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Sunucusuz uygulamalar: mimarisi, desenler ve Azure uygulama](serverless-architecture/index.md)
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Sunucusuz uygulamalar: Mimari, desenler ve Azure'u uygulama](serverless-architecture/index.md)
 
 Bu, Azure kullanan örnekler ile sunucusuz uygulamalar oluşturmak için size kılavuzluk edecektir. Çeşitli mimari açıklanmaktadır ve tasarım ile sunucusuz, gelen güçlükleri ve avantajları yaklaştığında ve senaryoları ve kullanım örnekleri için sunucusuz uygulamalar sağlar.

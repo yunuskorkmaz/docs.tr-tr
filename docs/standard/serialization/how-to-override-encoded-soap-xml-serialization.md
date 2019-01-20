@@ -5,19 +5,18 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003782"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415071"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Nasıl yapılır: Kodlanmış SOAP XML serileştirmesini geçersiz kılma
-[Kod örneği](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
- Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer. Standart XML serileştirme geçersiz kılma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir alternatif öğe adı için bir XML Stream belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer. Standart XML serileştirme geçersiz kılma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Nesneleri serileştirmek SOAP iletilerini olarak geçersiz kılmak için  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Nesneleri serileştirmek SOAP iletilerini olarak geçersiz kılmak için  
   
 1.  Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.SoapAttributeOverrides> sınıfı.  
   
@@ -283,6 +282,6 @@ public class Run
 - [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 - [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
 - [XML Web Hizmetleri ile XML Serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Nasıl yapılır: Bir nesneyi serileştirmek](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Nasıl yapılır: Bir nesne bir SOAP kodlu XML Stream seri hale getirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

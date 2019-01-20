@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235299"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415591"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Belge Etiketleri için Sınırlayıcılar (C# Programlama Kılavuzu)
 XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici gösteren sınırlayıcılar gerektirir. Aşağıdaki türde sınırlayıcıları ile XML belge etiketleri kullanabilirsiniz:  
@@ -38,7 +38,7 @@ XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici 
   
 -   Yalnızca işlenecek şu açıklama ile başlayan satırı parçasıdır `<summary>`. Üç etiket biçimlerini aynı açıklamaları üretir.  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici 
   
 -   Derleyici ortak deseni tanımlayan "*" ikinci ve üçüncü satır başında. Desen çıktısında dahil edilmez.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici 
   
 -   Üçüncü satır ikinci karakteri yıldız olmadığı için derleyici aşağıdaki açıklamada hiçbir ortak desenini bulur. Bu nedenle, tüm metin ikinci ve üçüncü satırlardaki açıklamayı bir parçası olarak işlenir.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ XML belge açıklamaları belge açıklaması burada başlar ve biter derleyici 
   
 -   Derleyici, aşağıdaki açıklamada iki nedenden dolayı hiçbir desenini bulur. İlk olarak, yıldız işareti önce boşluk sayısını tutarlı değil. İkinci olarak, beşinci satır alanları eşleşmiyor bir sekme ile başlar. Bu nedenle, tüm beş aracılığıyla satırlarını iki metinden açıklamayı bir parçası olarak işlenir.  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   

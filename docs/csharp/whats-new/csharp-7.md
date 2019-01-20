@@ -3,12 +3,12 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: C# dilinin gelecek sürümünde 7 gelecek yeni özelliklere genel bakış edinin.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155294"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415734"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
@@ -168,7 +168,7 @@ Desen eşleştirme destekler `is` ifadeleri ve `switch` ifadeler. Her bir nesne 
 
 ### <a name="is-expression"></a>`is` İfade
 
-`is` Desen ifadesi genişletir bilinen `is` bir nesne türünü ötesinde sorgu işleci.
+`is` Desen ifadesi genişletir bilinen [ `is` işleci](../language-reference/keywords/is.md#pattern-matching-with-is) bir nesne türünü ötesinde sorgulamak için.
 
 Basit bir senaryoyla başlayalım. Desen eşleştirme ifadeleri iş ile ilgisiz türleri kolay algoritmalar nasıl oluşturduğunu gösteren bu senaryo özellikleri ekleyeceğiz. Zar pay sayısı toplamını hesaplar bir yöntem ile başlayacağız:
 

@@ -8,76 +8,83 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408118"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415331"
 ---
 # <a name="debugging-structures"></a>Hata Ayıklama Yapıları
-Bu bölümde, hata ayıklama API'si kullanan yönetilmeyen yapılar açıklanmaktadır.  
+Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CLR_DEBUGGING_VERSION Yapısı](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
- Hata ayıklama amacıyla ortak dil çalışma zamanı (CLR) ürün sürümü tanımlar.  
+ Ürün sürümü, hata ayıklama amacıyla ortak dil çalışma zamanı (CLR) tanımlar.  
   
  [CodeChunkInfo Yapısı1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
- Tek bir Öbek bellek kod temsil eder.  
+ Tek bir öbek kod bellekte temsil eder.  
   
  [CorDebugBlockingObject Yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
- Bir iş parçacığı ve iş parçacığı neden engellendi nedeni engelleyen bir nesneyi tanımlar.  
+ Bir iş parçacığı ve iş parçacığı neden engellenir nedeni engelleyen bir nesneyi tanımlar.  
   
  [CorDebugEHClause Yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)  
- Bir özel durum işleme (EH) yan tümcesinin için belirli bir ara dile (IL) temsil eder.  
+ Bir özel durum işleme (EH) yan tümcesi için Ara dil (IL) belirli bir parçasını temsil eder.  
   
  [CorDebugExceptionObjectStackFrame Yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Bir özel durum nesnesi çerçeve bilgilerini temsil yığın.  
+ Temsil, çerçeve bilgileri bir özel durum nesnesinden yığın.  
   
  [CorDebugExceptionObjectStackFrame Yapısı](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- MAPS bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] ilgili GUID [Icordebugtype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) nesnesi.  
+ Eşlemeleri bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] , karşılık gelen GUID [Icordebugtype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) nesne.  
   
  COR_ACTIVE_FUNCTION  
- Bir iş parçacığının çerçevelere şu an etkin olan işlevler hakkında bilgi içerir.  
+ Bir iş parçacığının çerçevelerde şu an etkin olan işlevler hakkında bilgiler içerir.  
   
  [COR_ARRAY_LAYOUT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)  
- Bellekte bir dizi nesnesi düzen hakkında bilgi sağlar.  
+ Bir dizi nesnesinin bellek düzeni hakkında bilgi sağlar.  
   
  COR_DEBUG_IL_TO_NATIVE_MAP  
- Yerel kod Microsoft Ara dili (MSIL) kodunu eşleştirmek için kullanılan uzaklıkları içerir.  
+ Yerel kod için Microsoft Ara dil (MSIL) kodu eşlemek için kullanılan uzaklıkları içerir.  
   
  COR_DEBUG_STEP_RANGE  
- Kod bir aralık için uzaklık bilgileri içerir.  
+ Kod aralığı uzaklık bilgilerini içerir.  
   
  [COR_FIELD Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)  
- Bir nesne bir alanda hakkında bilgi sağlar.  
+ Bir alan bir nesne hakkında bilgi sağlar.  
   
  [COR_GC_REFERENCE Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)  
- Çöp toplanan olması için bir nesne hakkında bilgiler içerir.  
+ Atık olarak toplanmış olacak bir nesneyle ilgili bilgileri içerir.  
   
  [COR_HEAPINFO Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)  
- Numaralandırılabilir olup olmadığını atık toplama yığın hakkında genel bilgi sağlar.  
+ Numaralandırılabilir olup olmadığı dahil çöp toplama yığınındaki hakkında genel bilgiler sağlar.  
   
  [COR_HEAPOBJECT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)  
- Yönetilen yığında bir nesne hakkında bilgi sağlar.  
+ Yönetilen yığındaki bir nesne hakkında bilgi sağlar.  
   
  COR_IL_MAP  
- Değişiklikler bir işlev göreli uzaklığı belirtir.  
+ Değişiklikleri, bir işlevin göreli uzaklığı belirtir.  
   
  [COR_SEGMENT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)  
- Yönetilen yığın bellekte bir bölge hakkında bilgiler içerir.  
+ Bellek yönetilen yığında bir bölge hakkında bilgi içerir.  
   
  [COR_TYPEID Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)  
- Tür tanımlayıcısı içeriyor.  
+ Tür tanımlayıcısını içerir.  
   
  [COR_TYPE_LAYOUT Yapısı](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md)  
- Bir nesnenin bellekte Düzen hakkında bilgi sağlar.  
+ Bellekte bir nesne düzeni hakkında bilgiler sağlar.  
   
  COR_VERSION  
- Ortak dil çalışma zamanı standart dört bölümden oluşan sürüm numarasını depolar.  
+ Ortak dil çalışma zamanı standart Dört bölümlü sürüm numarasını depolar.  
   
  [StackTrace_SimpleContext Yapısı](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Tam yerine kullanılabilir basit bir bağlam sağlar `CONTEXT` yapısı.  
+ Tam yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` yapısı.
+
+ [CLRDATA_ADDRESS_RANGE yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) bir adres aralığı tanımlar.
+ 
+ [CLRDATA_IL_ADDRESS_MAP yapısı](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) bir IL adresi eşleme tanımlar.
+ 
+ [DacpGetModuleAddress yapısı](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) modülü adresi isteği için bir kapsayıcı tanımlar.
+
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklama Coclass’ları](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

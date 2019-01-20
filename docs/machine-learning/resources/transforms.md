@@ -4,12 +4,12 @@ description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri ke�
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: ebcbcc56eeb7c3caf7350e6c4bfd53997582652e
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307506"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415357"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Machine learning veri dönüşümleri - ML.NET
 
@@ -64,7 +64,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Projeksiyon üzerinde düşük sıra alt özellik vektör hesaplar. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Giriş dizesi puanlamak için bir yaklaşım kullanan modeli kullanır. |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Dile özgü durdurma sözcükleri (en yaygın kelimeler) listesini stopword için tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) karşılaştırarak kaldırır. |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Yeni sütun bağımsız değişkenleri ile sağlanan bir harita veri kümesini kullanarak metin değerleri sütunları eşlenir. |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Belirli bir metin ngrams (ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu her ngram karma ve paketi dizin olarak karma değeri kullanarak yapar. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Ayırıcı karakterler kullanarak sözcüklere metin böler. |
@@ -102,7 +101,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Ortalama ve vektör değerli sütun için varyansı hesaplar. Geçerli ortalama ve M2 izler (değerleri mean squared farkları toplamı), NaN'ler ve sıfır olmayan öğe sayısını sayısı. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Ortalama ve vektör değerli sütun için varyansı hesaplar. Geçerli ortalama ve M2 izler (değerleri mean squared farkları toplamı), NaN'ler ve sıfır olmayan öğe sayısını sayısı. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Min, max, seyrek olmayan değerleri (vCount) sayısı ve ProcessValue() çağrı (trainCount) sayısı için bir vektör değerli sütun izler. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Min, max, seyrek olmayan değerleri (vCount) sayısı ve ProcessValue() çağrı (trainCount) sayısı için bir vektör değerli sütun izler. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Özellik aralıkları standart hale getirir. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Özellik aralıkları standart hale getirir. |
 
@@ -176,4 +174,3 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Oluşturulan bir sayı dizisi içeren bir sütun ekler. |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | İmlecin Kimliğine sahip bir sütun bir sütun oluşturur. |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Rastgele bir sayı oluşturur. |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Puanları bir önceden eğitilmiş modelden kullanarak işlem hattı, yeni bir modeli oluşturmak için birden çok Tahmine dayalı modeller aracılığıyla bilgileri bir araya getirir. |

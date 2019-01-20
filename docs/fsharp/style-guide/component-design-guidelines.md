@@ -2,12 +2,12 @@
 title: F#Bileşen tasarım yönergeleri
 description: Yazmak için kılavuzları edinin F# diğer çağıranlar tarafından tüketim için hazırlanmış bileşenleri.
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145679"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415643"
 ---
 # <a name="f-component-design-guidelines"></a>F#Bileşen tasarım yönergeleri
 
@@ -47,7 +47,7 @@ XML belgeleri ortak API'lerde emin olmak için kitaplık dosyaları bu türleri 
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 Kısa form XML açıklamaları kullanabilirsiniz (`/// comment`), veya standart XML açıklamaları (`///<summary>comment</summary>`).
@@ -191,16 +191,16 @@ Arabirim türlerinde işlemler kümesini temsil etmek için kullanın. Bu işlev
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 Preference için:
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ Aşırı `[<AutoOpen>]` kirletilmiş ad alanları ve özniteliklerini müşteri 
 Bazen sınıfları, matematik yapıları vektörleri gibi model oluşturmak için kullanılır. İyi bilinen işleçleri modellenmiş etki alanı varsa, bunları sınıfı iç üyeleri olarak tanımlama yararlıdır.
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ Nesneleri somut temsillerini açıklanmaması Örneğin, somut gösterimini <xre
 Bir dönüş türü bir tanımlama grubu kullanımı iyi bir örnek aşağıda verilmiştir:
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 İçin dönüş türleri birçok bileşen içeren veya bileşenleri tek bir tanımlanabilen varlıkla ilgili yerlerde, adlandırılmış tür yerine bir demet kullanmayı göz önünde bulundurun.
@@ -317,9 +317,9 @@ Adlı karşılık gelen eşzamanlı bir işlem olup olmadığını `Operation` d
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -508,11 +508,11 @@ F#:
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
-C# İÇİN:
+C#:
 
 ```csharp
 public sealed class MyRecord
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ Ancak, bu rağmen görev döndüren zaman uyumsuz programlama .NET üzerinde sta
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ Sık olacaktır ayrıca bir açık iptal belirtecini kabul etmek istiyorsanız:
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ Burada "F# işlev türleri" ortalama "OK" türleri ister `int -> int`.
 Bunun yerine:
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 Bunu yapın:
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ Kullanım için ortak desenler F# seçenek türünde API'leri daha iyi vanilla i
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET koleksiyonu arabirimini kullanın türleri IEnumerable\<T\> ve IDictionary\<anahtar, değer\> için parametreler ve dönüş değerleri
@@ -660,14 +660,14 @@ member this.ParamOverload(x : int, y : int) = x + y
 Yerine F# listeler:
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 Kullanım F# dizileri:
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ Birim türü diğer kullanımları kaçının. İyi şunlardır:
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 Bu hatalı.
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Temel alınan .NET API sınırlarındaki null değerler olup olmadığını denetleyin

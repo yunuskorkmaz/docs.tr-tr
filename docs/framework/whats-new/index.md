@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201024"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416033"
 ---
 # .NET Framework'teki yenilikler <a name="introduction"></a>
 
@@ -60,7 +60,7 @@ Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştiril
 
 - [Çekirdek](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ iletişimi](#net472)
+- [Ağ](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [Bağımlılık ekleme (dı)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) böylece nesnenin kod artık yalnızca bir bağımlılık değiştiği için değiştirilmesi gereken nesneleri ve bunların bağımlılıklarını ayırır. .NET Framework'ü 4.7.2 hedefleyen ASP.NET uygulamaları geliştirirken, aşağıdakileri yapabilirsiniz:
 
-- Ayarlayıcı, arabirimi ve oluşturucu tabanlı yerleştirmeye kullanın [işleyicileri ve modülleri](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [sayfasında örnekleri](xref:System.Web.UI.Page), ve [kullanıcı denetimleri](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) ASP.NET web uygulaması projeleri.
+- Ayarlayıcı, arabirimi ve oluşturucu tabanlı yerleştirmeye kullanın [işleyicileri ve modülleri](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [sayfasında örnekleri](xref:System.Web.UI.Page), ve [kullanıcı denetimleri](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) ASP.NET web uygulaması projeleri.
 
-- Ayarlayıcı ve arabirim tabanlı yerleştirmeye kullanın [işleyicileri ve modülleri](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [sayfasında örnekleri](xref:System.Web.UI.Page), ve [kullanıcı denetimleri](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) ASP.NET web sitesi projeleri.
+- Ayarlayıcı ve arabirim tabanlı yerleştirmeye kullanın [işleyicileri ve modülleri](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [sayfasında örnekleri](xref:System.Web.UI.Page), ve [kullanıcı denetimleri](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) ASP.NET web sitesi projeleri.
 
 - Farklı bağımlılık ekleme çerçeveleri takın.
 
@@ -429,7 +429,7 @@ Windows Forms uygulaması için uygulama yapılandırma dosyası uygulama bildir
 
 - [Çekirdek](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ iletişimi](#net471)
+- [Ağ](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, bir önemli .NET Framework 4.7.1 yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş erişilebilirlik biridir. .NET Framework 4.7.1'teki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
@@ -511,7 +511,7 @@ ASP.NET .NET Framework 4.7 ve önceki sürümlerle geliştiriciler yapılandırm
 .NET Framework 4.7, aşağıdaki alanlarda yeni özellikler içerir:
 
 - [Çekirdek](#Core47)
-- [Ağ iletişimi](#net47)
+- [Ağ](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -683,7 +683,7 @@ Ardından, DataAnnotation.Localization.fr.resx, hata iletisi dizesi, anahtarıd�
 
 | Ad                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
-| Derecelendirme, 1 ile 10 arasında olmalıdır. | La Not seçeneğinden être oluşturan diğer 1 10 et. |
+| Derecelendirme, 1 ile 10 arasında olmalıdır. | La note doit être comprise entre 1 et 10. |
 
  Ayrıca, veri ek açıklama yerelleştirme genişletilebilir. Geliştiriciler eklenti kendi dize yerelleştiriciye sağlayıcısında uygulayarak <xref:System.Web.Globalization.IStringLocalizerProvider> yerelleştirme dize yere dışında bir kaynak dosyasında depolamak için arabirim.
 
@@ -1176,7 +1176,7 @@ SqlClient artık otomatik olarak daha hızlı bağlantıları bir AlwaysOn Kulla
 
 <a name="WWF461" />
 
-### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: işlemler
+### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: İşlemler
  <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> Yöntemi artık MSDTC dışındaki bir Dağıtılmış İşlem Yöneticisi işlem yükseltmek için kullanabilir. Yeni bir GUID işlem promoter tanımlayıcısını belirterek bunu <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> aşırı yükleme. Bu işlem başarılı olursa, işlem yeteneklerine yerleştirilmiş sınırlamaları vardır. MSDTC dışı işlem promoter kayıtlı sonra aşağıdaki yöntemlerden throw bir <xref:System.Transactions.TransactionPromotionException> çünkü bu yöntemler MSDTC yükseltmesine gerektirir:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
@@ -1509,7 +1509,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
      Varsayılan değer `false` şeklindedir.
 
-- **Ağ iletişimi**
+- **Ağ**
 
     - **Yuva yeniden kullanma**
 
@@ -1641,7 +1641,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
     - Windows 8.1, Windows Phone 8.1 ve Windows Phone Silverlight 8. 1'i hedefleyen taşınabilir kitaplıklarda Windows Runtime API'ları kullanabilirsiniz.
 
-    - Windows 8.1 veya Windows Phone 8.1 hedeflediğinizde taşınabilir kitaplıklarda XAML (Windows.UI.XAML türleri) içerebilir. Aşağıdaki XAML şablonları desteklenir: boş bir sayfa, kaynak sözlüğü, şablonlu denetim ve kullanıcı denetimi.
+    - Windows 8.1 veya Windows Phone 8.1 hedeflediğinizde taşınabilir kitaplıklarda XAML (Windows.UI.XAML türleri) içerebilir. Aşağıdaki XAML şablonlar desteklenir:  Boş sayfa, kaynak sözlüğü, şablonlu denetim ve kullanıcı denetimi.
 
     - Windows 8.1 ve Windows Phone 8.1 hedefleyen Store uygulamaları kullanmak için taşınabilir bir Windows çalışma zamanı bileşeni (.winmd dosyası) oluşturabilirsiniz.
 
@@ -1655,7 +1655,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
  Çekirdek yeni özellikler ve .NET Framework 4.5.1'deki geliştirmeler şunları içerir:
 
-- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 ile başlayarak, derleme yaptığınızda hedefleyen bir uygulama [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: etkinleştirme ve devre dışı otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 ile başlayarak, derleme yaptığınızda hedefleyen bir uygulama [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Enable ve Disable otomatik bağlama yeniden yönlendirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Geliştiricilerin sunucu ve bulut uygulamalarının performansını artırmak amacıyla tanılama bilgilerini toplama yeteneği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> ve <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> yöntemleri <xref:System.Diagnostics.Tracing.EventSource> sınıfı.
 

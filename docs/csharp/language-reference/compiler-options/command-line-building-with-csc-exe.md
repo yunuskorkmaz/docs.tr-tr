@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584338"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415916"
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc.exe ile komut satırı derleme
 Yürütülebilir dosyanın adını yazarak C# derleyicisini çağırabilirsiniz (*csc.exe*) bir komut isteminde.
 
 Kullanırsanız **Visual Studio için geliştirici komut istemi** penceresinde tüm gerekli ortam değişkenleri sizin için ayarlanır. Bu araç erişim hakkında daha fazla bilgi için bkz: [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md) konu. 
 
-Standart bir komut istemi penceresi kullanıyorsanız çağırabilirsiniz önce yolunuzu ayarlamanız gerekir *csc.exe* bilgisayarınızdaki herhangi bir alt dizinden. Ayrıca çalıştırmalısınız *vsvars32.bat* komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için. Hakkında daha fazla bilgi için *vsvars32.bat*, bulmak ve çalıştırmak için bkz: hakkında yönergeler dahil olmak üzere [nasıl yapılır: ortam değişkenlerini ayarlamak için Visual Studio komut satırı](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Standart bir komut istemi penceresi kullanıyorsanız çağırabilirsiniz önce yolunuzu ayarlamanız gerekir *csc.exe* bilgisayarınızdaki herhangi bir alt dizinden. Ayrıca çalıştırmalısınız *vsvars32.bat* komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için. Hakkında daha fazla bilgi için *vsvars32.bat*, bulmak ve çalıştırmak için bkz: hakkında yönergeler dahil olmak üzere [nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Yalnızca bir bilgisayarda çalışıyorsanız [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], C# derleyicisi, kullanabileceğiniz **SDK Komut İstemi**, açtığınız **Microsoft .NET Framework SDK'sı** menü seçeneği.
 
@@ -26,11 +26,11 @@ Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i 
 *Csc.exe* yürütülebilir dosyası genellikle bulunan Microsoft.NET\Framework\\*\<sürüm >* klasörü altında *Windows* Dizin. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
->  Visual Studio IDE kullanarak bir proje oluşturduğunuzda, görüntüleyebileceğiniz **csc** komut ve ilgili derleme seçeneklerini de **çıkış** penceresi. Bu bilgileri görüntülemek için yönergeleri izleyin. [nasıl yapılır: görünüm, kaydetme ve yapılandırma derleme günlük dosyalarını](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) günlük verilerinin ayrıntı düzeyini değiştirmek için **Normal** veya **ayrıntılı**. Projenizi yeniden oluşturduktan sonra arama **çıkış** penceresi **csc** C# derleyicisinin çağrısını bulmak için.
+>  Visual Studio IDE kullanarak bir proje oluşturduğunuzda, görüntüleyebileceğiniz **csc** komut ve ilgili derleme seçeneklerini de **çıkış** penceresi. Bu bilgileri görüntülemek için yönergeleri izleyin. [nasıl yapılır: Görüntüleme, kaydetme ve yapılandırma derleme günlük dosyalarını](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) günlük verilerinin ayrıntı düzeyini değiştirmek için **Normal** veya **ayrıntılı**. Projenizi yeniden oluşturduktan sonra arama **çıkış** penceresi **csc** C# derleyicisinin çağrısını bulmak için.
 
  **Bu konudaki**
 
-- [Komut satırı sözdizimi için kurallar](#-rules-for-command-line-syntax-for-the-c-compiler)
+- [Komut satırı sözdizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
 
 - [Örnek komut satırları](#sample-command-lines-for-the-c-compiler)
 
@@ -102,6 +102,6 @@ Hiçbir nesne vardır (*.obj*) dosyaları oluşturan C# derleyicisini çağırma
 - [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
 - [Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-- [Nasıl yapılır: komut satırı bağımsız değişkenlerini görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Nasıl yapılır: Erişim foreach kullanarak komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
 - [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

@@ -6,57 +6,57 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105178"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415409"
 ---
 # <a name="net-guide"></a>.NET Kılavuzu
 
-.NET Kılavuzu büyük miktarda .NET hakkında bilgi sağlar.  .NET, alışkanlığına bağlı olarak, bu kılavuzun farklı bölümleri ve diğer bölümleri .NET belgelerin araştırmak isteyebilirsiniz.
+.NET Kılavuzu, çok miktarda .NET hakkında bilgi sağlar.  .NET ile aşinalık bağlı olarak, bu kılavuzda farklı bölümlerini ve diğer bölümleri .NET belgelerinin keşfetmek isteyebilirsiniz.
 
 ## <a name="new-to-net"></a>.NET için yeni
 
-.NET hakkında üst düzey bir genel bakış istiyorsanız, kullanıma [.NET nedir?](https://www.microsoft.com/net/learn/what-is-dotnet).
+.NET hakkında üst düzey bir genel bakış isterseniz, kullanıma [.NET nedir?](https://www.microsoft.com/net/learn/what-is-dotnet).
 
-.NET ile yeniyseniz, kullanıma [Get Started](get-started.md) makalesi.
+.NET için yeniyseniz, kullanıma [Başlarken](get-started.md) makalesi.
 
-Kılavuzlu Tur .NET ana özelliklerini aracılığıyla olmasını isterseniz, kullanıma [Tur, .NET](tour.md).
+Aracılığıyla .NET'ın temel özelliklerinin Kılavuzlu bir turu sahip olmasını isterseniz, kullanıma [turu, .NET](tour.md).
 
-Hakkında bilgi edinebilirsiniz [.NET Mimari Bileşenleri](components.md) çeşitli "parçaları".NET ve onların birlikte nasıl uyduğunu özetini almak için.
+Ayrıca okuyabilirsiniz [.NET Mimari Bileşenleri](components.md) .NET ve bunlar birbirine nasıl uyduğunu çeşitli "parçaları" genel bakışını almak için.
 
-## <a name="new-to-net-core"></a>.NET Core yeni
+## <a name="new-to-net-core"></a>Yeni .NET Core
 
 .NET Core yeniyseniz, kullanıma [.NET Core ile çalışmaya başlama](../core/get-started.md).
 
-## <a name="new-to-net-standard"></a>.NET standart yeni
+## <a name="new-to-net-standard"></a>.NET Standard için yeni
 
-.NET standart yeni başladıysanız, kullanıma [.NET standart](net-standard.md).
+.NET Standard için yeni başladıysanız kullanıma [.NET Standard](net-standard.md).
 
-## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework kodu .NET Core bağlantı noktası oluşturma
+## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework kodu .NET core'a taşıma
 
-Bir uygulama, hizmet veya .NET Core sisteme bazı bileşeninin bağlantı noktasına arıyorsanız, kullanıma [.NET Core için .NET Framework'ten taşıma](../core/porting/index.md).
+Bir uygulama, hizmet veya .NET Core için sistemin bazı bileşen bağlantı noktasına arıyorsanız, kullanıma [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md).
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework NuGet paketinden .NET standart veya .NET Core için bağlantı noktası oluşturma
+## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework NuGet paketi .NET Standard veya .NET Core için taşıma
 
-Bir NuGet paketi .NET standart için bağlantı noktası arıyorsanız, kullanıma [.NET Core için .NET Framework'ten taşıma](../core/porting/index.md).  .NET standart ve .NET Core için araç paylaşılan içerik .NET standart yanı sıra .NET Core taşıma için ilgili olacak.
+Bir NuGet paketi .NET Standard için bağlantı noktasına arıyorsanız, kullanıma [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md).  .NET Standard ve .NET Core araçları paylaşılır, içerik taşıma .NET Standard hem de .NET Core için ilgili olacak.
 
-## <a name="interested-in-major-net-concepts"></a>Ana .NET kavramı ilgi
+## <a name="interested-in-major-net-concepts"></a>Büyük .NET kavramı ilgileniyor
 
-Bazı önemli kavramlar, .NET ilginizi çekiyorsa gözden geçirin:
+Bazı önemli kavramlar, .NET konusu ilginizi çekiyorsa, gözden geçirin:
 
 * [.NET Mimari Bileşenleri](components.md)
 * [.NET Standard](net-standard.md)
-* [Yerel birlikte çalışabilirliği](native-interop.md)
+* [Yerel birlikte çalışabilirliği](native-interop/index.md)
 * [Atık Toplama](garbagecollection/index.md)
-* [.NET içinde taban türleri](base-types/index.md)
+* [.NET içinde temel türler](base-types/index.md)
 * [Koleksiyonlar](collections/index.md)
 * [Tarihler, saatler ve saat dilimleri](datetime/index.md)
 * [Zaman uyumsuz programlama](async.md)
 
-Ayrıca, üç ana .NET dilleri hakkında bilgi edinmek için her dil Kılavuzu gözden geçirin:
+Buna ek olarak, üç önemli .NET dilleri hakkında bilgi edinmek için her dil Kılavuzu gözden geçirin:
 
 * [C# Kılavuzu](../csharp/index.md)
 * [F# Kılavuzu](../fsharp/index.md)
@@ -64,4 +64,4 @@ Ayrıca, üç ana .NET dilleri hakkında bilgi edinmek için her dil Kılavuzu g
 
 ## <a name="api-reference"></a>API Başvurusu
 
-Kullanıma [.NET API Başvurusu](../../api/index.md) API'leri kullanılabilir derecesini görmek için.
+Kullanıma [.NET API Başvurusu](../../api/index.md) mevcut API'lere kapsamını görmek için.

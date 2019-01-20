@@ -2,12 +2,12 @@
 title: .NET Uzaktan İletişimden WCF'ye Taşınma
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245684"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415981"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET uzaktan iletişim kullanan bir uygulamayı geçirmek açıklar. Bu ürünler arasındaki benzer kavramları karşılaştırır ve ardından WCF birkaç ortak uzaktan iletişim senaryolarında nasıl yapılacağını anlatmaktadır.  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Bir uzaktan uygulama WCF'ye geçirilmiş olan sonra .NET uzaktan iletişim bağımlılıkları kaldırın yine de önemlidir. Bu, herhangi bir uzaktan iletişim açığını uygulamadan kaldırılmasını sağlar. Bu adımlar şunlardır:  
   
--   **MarshalByRefObject bırakmaktır.** MarshalByRefObject türü, yalnızca uzaktan iletişim için bulunmaktadır ve WCF tarafından kullanılmaz. MarshalByRefObject alt sınıf herhangi bir uygulama türünün kaldırılan veya değiştirilen. MarshalByRefObject türü, yalnızca uzaktan iletişim için bulunmaktadır ve WCF tarafından kullanılmaz. MarshalByRefObject alt sınıf herhangi bir uygulama türünün kaldırılan veya değiştirilen.  
+-   **MarshalByRefObject bırakmaktır.** MarshalByRefObject türü, yalnızca uzaktan iletişim için bulunmaktadır ve WCF tarafından kullanılmaz. MarshalByRefObject alt sınıf herhangi bir uygulama türünün kaldırılan veya değiştirilen.  
   
--   **[Serializable] kullanımı ve ISerializable bırakmaktır.** [Serializable] özniteliği ve ISerializable arabirimini başlangıçta güvenilir ortamlar içinde türleri serileştirmek için tasarlanmıştır ve Uzaktan iletişim tarafından kullanılır. WCF seri hale getirme [DataContract] ile işaretlenen türler ve [DataMember] kullanır. Bir uygulama tarafından kullanılan veri türleri [DataContract] kullanın ve ISerializable veya [Serializable] kullanmayacak şekilde değiştirilmesi gerekir. [Serializable] özniteliği ve ISerializable arabirimini başlangıçta güvenilir ortamlar içinde türleri serileştirmek için tasarlanmıştır ve Uzaktan iletişim tarafından kullanılır. WCF seri hale getirme [DataContract] ile işaretlenen türler ve [DataMember] kullanır. Bir uygulama tarafından kullanılan veri türleri [DataContract] kullanın ve ISerializable veya [Serializable] kullanmayacak şekilde değiştirilmesi gerekir.  
+-   **[Serializable] kullanımı ve ISerializable bırakmaktır.** [Serializable] özniteliği ve ISerializable arabirimini başlangıçta güvenilir ortamlar içinde türleri serileştirmek için tasarlanmıştır ve Uzaktan iletişim tarafından kullanılır. WCF seri hale getirme [DataContract] ile işaretlenen türler ve [DataMember] kullanır. Bir uygulama tarafından kullanılan veri türleri [DataContract] kullanın ve ISerializable veya [Serializable] kullanmayacak şekilde değiştirilmesi gerekir.  
   
 ### <a name="migration-scenarios"></a>Geçiş senaryoları  
  Artık aşağıdaki ortak uzaktan iletişim senaryolarında WCF yerine getirmeyi bakalım:  

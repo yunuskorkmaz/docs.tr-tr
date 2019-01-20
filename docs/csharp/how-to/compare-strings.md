@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl Yapılır: -Dizeleri karşılaştırmak C# Kılavuzu'
+title: 'Nasıl yapılır: -Dizeleri karşılaştırmak C# Kılavuzu'
 description: Karşılaştırın ve dize değerleri içeren veya içermeyen durumda olan veya olmayan kültüre özgü sıralama sipariş hakkında bilgi edinin
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334840"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415890"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C dizeleri karşılaştırma\#
 
@@ -29,7 +29,13 @@ Dizeleri karşılaştırmak, aralarında bir sipariş tanımlayın. Karşılaşt
 
 ## <a name="default-ordinal-comparisons"></a>Varsayılan sıralı karşılaştırmalar
 
-Test en yaygın yöntemler, eşitliği <xref:System.String.Equals%2A?displayProperty=nameWithType> ve <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, büyük küçük harfe duyarlı bir sıralı karşılaştırma kullan. Sonuçları, aşağıdaki örnekte gösterilir.
+En yaygın işlemler:
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+büyük küçük harfe duyarlı bir karşılaştırma sıralı bir karşılaştırma ve geçerli kültürü kullanır. Sonuçları, aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144721"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415695"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -94,12 +94,7 @@ Bazı dezavantajları vardır:
 
 ## <a name="step-by-step-examples"></a>Adım adım örnek
 
-CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). Her makalede, aşağıdaki dağıtımlar örnekleri içerir:
-
-- Framework bağımlı dağıtım
-- Framework bağımlı dağıtım üçüncü taraf bağımlılıkları
-- Kendi içinde dağıtım
-- Üçüncü taraf bağımlılıkları kendi içinde dağıtım
+CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtma hakkında adım adım örnekler için bkz [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

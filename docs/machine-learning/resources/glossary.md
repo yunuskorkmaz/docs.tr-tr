@@ -3,12 +3,12 @@ title: Machine learning sözlüğü - ML.NET
 description: Özel Modellerinizi ML.NET oluştururken, yararlı olan önemli makine öğrenimi terimleri sözlüğü.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760399"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415383"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning önemli terimler sözlüğü
 
@@ -17,8 +17,6 @@ ms.locfileid: "53760399"
 ## <a name="accuracy"></a>Doğruluğu
 
 İçinde [sınıflandırma](#classification), doğruluğunu test Kümedeki öğelerin toplam sayısını bölü doğru sınıflandırılmış öğeleri sayısıdır. 1 (en doğru) 0 (doğru az) arasında değişir. Doğruluk, model performansını değerlendirme ölçümleri biridir. İle birlikte düşünün [duyarlık](#precision), [geri çağırma](#recall), ve [F puanı](#f-score).
-
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Eğriyi (AUC) alanında
 
@@ -87,8 +85,6 @@ Tüm işlemlerin bir veri kümesi modeline uyacak şekilde gerekli. Bir işlem h
 ## <a name="precision"></a>Duyarlık
 
 İçinde [sınıflandırma](#classification), duyarlık bir sınıf için o sınıfa ait öğeleri sınıfa ait olarak tahmin edilen toplam sayısına göre bölünmüş olarak doğru şekilde tahmin edilen öğeleri sayısıdır.
-
-İlgili ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Geri çekme
 

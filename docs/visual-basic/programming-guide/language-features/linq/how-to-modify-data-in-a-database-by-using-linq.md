@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme (Visual Basic)'
+title: 'Nasıl yapılır: LINQ (Visual Basic) kullanarak bir veritabanındaki verileri değiştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 02aaf2924c6230615d7d1cbcceac72265419b541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520694"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415214"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ (Visual Basic) kullanarak bir veritabanındaki verileri değiştirme
 Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve veritabanını değerleri değiştirmek kolaylaştırır.  
   
  Aşağıdaki örnek, bir SQL Server veritabanında alır, yeni bir uygulama oluşturma ve güncelleştirme bilgilerini gösterir.  
@@ -40,7 +40,7 @@ Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve v
   
 2.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
   
-3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için açıldığında `northwind.dbml` dosya.  
+3.  Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için açıldığında `northwind.dbml` dosya.  
   
 ### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Sorgu ve tasarımcıya değiştirmek için tablolar eklemek için  
   
@@ -122,7 +122,10 @@ Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve v
       Dim updateCust = (From cust In db.Customers   
                         Where cust.CustomerID = "JILLF").ToList()(0)  
   
-      updateCust.ContactName = "Jill Shrader"  
+      updateCust.ContactName = "Jill Shrader"
+      updateCust.Country = "Wales"
+      updateCust.CompanyName = "Red Yonder Airlines"
+      updateCust.City = "Cardiff"
   
       Try  
         db.SubmitChanges()  

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155482"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415552"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>.NET Core 3.0 (Önizleme 1) yenilikler
 
@@ -30,15 +30,12 @@ Daha fazla bilgi için [.NET Core 3.0 Önizleme 1 Duyurusu](https://blogs.msdn.m
 
 ## <a name="default-executables"></a>Varsayılan yürütülebilir dosyalar
 
-.NET core, artık varsayılan olarak yürütülebilir dosyalar oluşturur. .NET Core genel olarak yüklenmiş bir sürümünü kullanan uygulamalar için yeni bir özelliktir. Şimdiye kadar yalnızca [müstakil dağıtımları](../deploying/index.md#self-contained-deployments-scd) yürütülebilir dosyalar vardı.
+.NET core artık derler [framework bağımlı yürütülebilir dosyaları](../deploying/index.md#framework-dependent-executables-fde) varsayılan olarak. .NET Core genel olarak yüklenmiş bir sürümünü kullanan uygulamalar için yeni bir özelliktir. Şimdiye kadar yalnızca [müstakil dağıtımları](../deploying/index.md#self-contained-deployments-scd) yürütülebilir bir dosya oluşturur.
 
 Sırasında `dotnet build` veya `dotnet publish`, kullanmakta olduğunuz SDK platform ve ortam ile eşleşen sağlanan yürütülebilir bir dosya oluşturulur. Diğer yerel yürütülebilir dosyalar gibi olduğu gibi bu yürütülebilir dosyaları ile aynı şey geçerli olacaktır:
 
 * Yürütülebilir dosya üzerine çift tıklayabilirsiniz.
 * Doğrudan bir komut isteminden uygulama başlatma gibi `myapp.exe` Windows, şirket ve `./myapp` Linux ve Macos'ta.
-
-> [!NOTE]
-> Belirli bir çalışma zamanı ile belirtme `dotnet publish -r` veya `dotnet build -r` bağımsız değişkenleri diğer çalışma zamanı ortamları için desteklenmez.
 
 ## <a name="build-copies-dependencies"></a>Derleme bağımlılıkları kopyalar.
 

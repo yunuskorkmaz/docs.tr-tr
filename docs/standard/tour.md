@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232852"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415929"
 ---
 # <a name="tour-of-net"></a>.NET turu
 
@@ -27,11 +27,11 @@ Kod örnekleri çalıştırmak için bir geliştirme ortamı hakkında bilgi edi
 
 .NET, birden fazla programlama dili destekler. .NET uygulamalarında uygulama [ortak dil altyapısı (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), başka şeylerin yanında bir dilden bağımsız çalışma zamanı ve dil birlikte çalışabilirliği belirtir. Başka bir deyişle, .NET uygulamaları ve hizmetleri oluşturmak için dilediğiniz .NET dilini seçin.
 
-Microsoft etkin olarak geliştirir ve üç .NET dilleri desteklemektedir: C#, F # ve Visual Basic (VB). 
+Microsoft, etkin olarak geliştirir ve üç .NET dilleri destekler: C#, F#ve Visual Basic (VB). 
 
 * C# basit, güçlü, tür kullanımı uyumlu ve nesne yönelimli anlamlılık ve inceliğini C stili dillerin korurken. C ve benzer dilleri ile tanıdık herkes, birkaç sorun C# ' tan uyarlama içinde bulur. Kullanıma [C# Kılavuzu](../csharp/index.md) C# hakkında daha fazla bilgi edinmek için.
 
-* F # de Geleneksel nesne yönelimli ve buyurgan programlamayı destekleyen bir platformlar arası ve işlevsellik öncelikli programlama dilidir. Kullanıma [F # Kılavuzu](../fsharp/index.md) F # hakkında daha fazla bilgi edinmek için.
+* F#platformlar arası, işlev öncelikli programlama da geleneksel nesne yönelimli ve buyurgan programlamayı destekleyen dili. Kullanıma [ F# Kılavuzu](../fsharp/index.md) hakkında daha fazla bilgi edinmek için F#.
 
 * Visual Basic .NET üzerinde çalışan uygulamalar çeşitli oluşturmak için kullandığınız öğrenmek için kolay bir dildir. .NET diller arasında VB, genellikle kişiler için yeni yazılım geliştirme için kolaylaştırarak sıradan İnsan dil en yakın sözdizimidir.
 
@@ -64,7 +64,7 @@ Bir kez `using` blok tamamlandıktan, .NET çalışma zamanı otomatik olarak ç
 Daha fazla ayrıntı için aşağıdaki konulara bakın:
 
 * C# için bkz: [using deyimi (C# Başvurusu)](../csharp/language-reference/keywords/using-statement.md) konu.
-* F # için bkz: [kaynak yönetimi: use anahtar sözcüğü](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* İçin F#, bkz: [kaynak yönetimi: Use anahtar sözcüğü](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * VB için bkz: [Using deyimi (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) konu.
 
 ## <a name="type-safety"></a>Tür güvenliği
@@ -79,11 +79,11 @@ Tür güvenliği erişimci anahtar sözcükleri kalitesini güvence altına alma
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB ve F # desteği yerel *anlam çıkarma*. Tür çıkarımı, derleyicinin'ın işlecin sağ tarafındaki ifadesinden sol taraftaki ifadenin türü çıkarır anlamına gelir. Bu tür güvenliği bozuk veya önlenmiş gelmez. Sonuç türü gelir güçlü bir tür ile her şey yok. Önceki örnekte `dog` tür çıkarımı tanıtmak için yazılan ve örnek geri kalanında değiştirilmez:
+C#, VB ve F# destek yerel *anlam çıkarma*. Tür çıkarımı, derleyicinin'ın işlecin sağ tarafındaki ifadesinden sol taraftaki ifadenin türü çıkarır anlamına gelir. Bu tür güvenliği bozuk veya önlenmiş gelmez. Sonuç türü gelir güçlü bir tür ile her şey yok. Önceki örnekte `dog` tür çıkarımı tanıtmak için yazılan ve örnek geri kalanında değiştirilmez:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F # daha da C# ve vb bulunan yöntemi yerel tür çıkarımı daha tür çıkarımı yeteneklere sahip Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
+F#yöntem yerel tür çıkarımı bulunan çok daha da tür çıkarımı yeteneklere sahip C# ve VB. Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -125,7 +125,7 @@ Yerel birlikte çalışabilirliği yapmak için ana yol "platform çağırma" ve
 
 Java ve Objective-C Mono'nın (ve bu nedenle Xamarin'in) birlikte çalışabilirlik desteği çoğu benzer şekilde oluşturulmuş, diğer bir deyişle, bunlar aynı ilkeleri kullanın.
 
-Bunun hakkında daha fazla bilgiyi yerel birlikte çalışabilirlik [yerel birlikte çalışabilirliği](native-interop.md) konu.
+Yerel birlikte çalışabilirlik hakkında daha fazla bilgi için bkz: [yerel birlikte çalışabilirliği](native-interop/index.md) makalesi.
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
 
@@ -139,7 +139,7 @@ Aşağıdaki örnek, değiştirilmiş bir sürümünü `ToString()` yönteminden
 
 C# özellikleri bir tur makalemize göz atın [turu C# ' in](../csharp/tour-of-csharp/index.md).
 
-F # özelliklerinin bir tur ilgileniyorsanız bkz [turu, F #](../fsharp/tour.md).
+Tura içinde ilgileniyorsanız F# özellikler bkz [Turu F# ](../fsharp/tour.md).
 
 Kendi ziyaret edin, kod yazmaya başlamak istiyorsanız [Başlarken](get-started.md).
 

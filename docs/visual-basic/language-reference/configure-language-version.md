@@ -2,12 +2,12 @@
 title: Visual Basic dil sürümünü seçin
 description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyicinin yapılandırın.
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194728"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415110"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic dil sürümünü seçin
 
@@ -60,7 +60,7 @@ Oluşturabileceğiniz bir **Directory.build.props** içeren dosya `<LangVersion>
 </Project>
 ```
 
-Artık, her alt bu dosyayı içeren dizine yapılarında Visual Basic sürüm 15.5 sözdizimi kullanır. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build.md).
+Artık, her alt bu dosyayı içeren dizine yapılarında Visual Basic sürüm 15.5 sözdizimi kullanır. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="set-the-langversion-compiler-option"></a>Langversion derleyici seçeneği ayarlama
 
