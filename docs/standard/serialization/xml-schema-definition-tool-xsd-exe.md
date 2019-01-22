@@ -2,12 +2,12 @@
 title: XML şema tanımı Aracı (XSD.exe'nin)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148610"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443661"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.  
@@ -45,7 +45,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/c\[sınıfları\]**|Belirtilen şemaya karşılık gelen sınıflar oluşturur. XML veri nesnesine okumak için kullanın <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> yöntemi.|  
-|**/d**[**ataset**]|Türetilen bir sınıf oluşturur <xref:System.Data.DataSet> belirtilen şemaya karşılık gelir. Türetilen sınıfın XML verileri okumak için kullanın <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> yöntemi.|  
+|**/d [ataset]**|Türetilen bir sınıf oluşturur <xref:System.Data.DataSet> belirtilen şemaya karşılık gelir. Türetilen sınıfın XML verileri okumak için kullanın <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> yöntemi.|  
   
  .Xsd dosyaları için aşağıdaki seçeneklerden birini belirleyebilirsiniz.  
   
