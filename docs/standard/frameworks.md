@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727410"
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -131,10 +131,10 @@ Aşağıdaki hedef çerçeveleri kullanım dışı bırakılmıştır. Bu hedef 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paketler, Meta Paketler ve Çerçeveler](../core/packages.md)  
-- [Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [.NET core sürüm oluşturma](../core/versions/index.md)  
-- [DotNet/standart GitHub deposu](https://github.com/dotnet/standard)  
-- [NuGet araçları GitHub deposu](https://github.com/joelverhagen/NuGetTools)  
+- [Paketler, Meta Paketler ve Çerçeveler](../core/packages.md)
+- [Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [.NET core sürüm oluşturma](../core/versions/index.md)
+- [DotNet/standart GitHub deposu](https://github.com/dotnet/standard)
+- [NuGet araçları GitHub deposu](https://github.com/joelverhagen/NuGetTools)
 - [.NET Framework profillerinde](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c281d03c6e3774938cfa6e4b4b3a541738b38489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722198"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc Yöntemi
-.Reloc yönerge kodu Bankası'na ekler.  
+Kod tabanına .reloc yönergesi ekler.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -42,25 +42,25 @@ HRESULT AddSectionReloc (
   
 #### <a name="parameters"></a>Parametreler  
  `section`  
- [in] Bellek içi kodun bir .reloc yönergesi eklenecek bölümü.  
+ [in] Bellek içi kod .reloc yönerge eklenecek bölümünün.  
   
  `offset`  
- [in] Bölüm uzaklığı.  
+ [in] Bölümün uzaklığı.  
   
  `relativeTo`  
- [in] Bölümüne `offset` başvuruyor.  
+ [in] Bölümüne `offset` ifade eder.  
   
  `relocType`  
  [in] Aşağıdakilerden birini [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) eklemek için .reloc yönerge türünü belirten değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: c8f15ac33ae92a13159c2a95435ba3d2391ace8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42751897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739212"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Verileri Panoda depolama ve panodan (Visual Basic) okuma
 Pano, metin ve görüntü gibi verileri depolamak için kullanılabilir. Tüm etkin işlemler tarafından Pano paylaşıldığından, bunlar arasında veri aktarmak için kullanılabilir. `My.Computer.Clipboard` Nesne kolayca panoya erişebilir ve okuma ve yazma olanak tanır.  
@@ -68,9 +68,9 @@ Pano, metin ve görüntü gibi verileri depolamak için kullanılabilir. Tüm et
 > [!IMPORTANT]
 >  Pano, diğer kullanıcılar tarafından erişilebilir olduğundan, parolalar veya gizli verileri gibi hassas bilgileri depolamak için kullanmayın.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
- [Nasıl Yapılır: Nesne Verilerini bir XML Dosyasından Okuma](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Nasıl Yapılır: Nesne Verilerini bir XML Dosyasına Yazma](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
+- [Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

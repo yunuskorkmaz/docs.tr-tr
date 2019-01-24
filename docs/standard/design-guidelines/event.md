@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632029"
 ---
 # <a name="event-design"></a>Olay tasarımı
 Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı için framework izin yapıları) biçimindedir. Başka bir geri çağırma mekanizmalar Temsilciler, sanal üyeleri ve arabirim tabanlı eklentileri alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiricilerin çoğu kullandıkları için bir geri çağırma mekanizmaları çok olayları kullanarak daha iyi olduğunu gösterir. Olayları Visual Studio ve birçok dili ile sorunsuz şekilde tümleşiktir.  
@@ -72,5 +72,5 @@ Olayları en yaygın kullanılan geri çağırmalar (kullanıcı koda çağrı i
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

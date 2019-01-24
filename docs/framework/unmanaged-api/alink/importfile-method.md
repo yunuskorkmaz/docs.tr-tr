@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619691"
 ---
 # <a name="importfile-method"></a>ImportFile Yöntemi
-Derlemeler ve ilişkisiz modülleri içeri aktarır.  
+Derlemeler ve bağlantısız modülleri içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ HRESULT ImportFile(
   
 #### <a name="parameters"></a>Parametreler  
  `pszFilename`  
- İçeri aktarılacak dosya tam adı.  
+ İçeri aktarılacak dosyasının tam adı.  
   
  `pszTargetName`  
- Derlemeye bağlı olarak dosyayı yeniden adlandırmak için kullanılan isteğe bağlı çıktı dosyası adı.  
+ Bütünleştirilmiş kod içine bağlı olarak dosyayı yeniden adlandırmak için kullanılabilecek isteğe bağlı bir çıkış dosyası adı.  
   
  `fSmartImport`  
- TRUE ise, Importtypes kullanılan, aksi takdirde içeri aktarma el ile yapılmalıdır.  
+ TRUE ise Importtypes kullanılır, aksi takdirde içe aktarma el ile uygulanması gerekir.  
   
  `pImportToken`  
- Benzersiz dosya kimliği depolanacağı belirtecine işaretçi. Dosya, bir derlemeyi ya da bir dosya olabilir.  
+ Benzersiz dosya kimliği depolanacağı belirteç için işaretçi. Dosyanın bir derleme veya bir dosya olabilir.  
   
  `ppAssemblyScope`  
- İşaretçi alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Dosya bir derleme değilse NULL olabilir.  
+ İşaretçi alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Dosyanın bir derleme değilse NULL olabilir.  
   
  `pdwCountOfScopes`  
- Dosyaları ve/veya içeri aktarıldığını kapsamların sayısı işaretçi.  
+ Dosyaları ve/veya alınmış kapsamlar sayısı için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -64,7 +64,7 @@ HRESULT ImportFile(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

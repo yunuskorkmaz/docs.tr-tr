@@ -2,12 +2,12 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ec2ae0db7239ff0c376ab4a8f050cc4f1df4f71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683982"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
@@ -48,7 +48,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
   
  Bir parça istemci veya hizmet serileştirilmiş ileti iletmek için kullanılan arabellek boyutu.  
   
-### <a name="hostnamecomparisonmode"></a>hostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  Veri türü: dize  
   
  Erişim türü: salt okunur  
@@ -96,5 +96,5 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

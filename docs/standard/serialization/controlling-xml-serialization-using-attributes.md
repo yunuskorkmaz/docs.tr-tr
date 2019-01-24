@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686172"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Öznitelikleri kullanarak XML serileştirmeyi denetleme
 
-Öznitelikler, nesnenin XML serileştirme denetlemek için veya alternatif bir XML akışı sınıfları aynı kümesinden oluşturmak için kullanılabilir. Alternatif bir XML akışı oluşturma hakkında daha fazla ayrıntı için bkz. [nasıl yapılır: bir alternatif öğe adı için bir XML Stream belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Öznitelikler, nesnenin XML serileştirme denetlemek için veya alternatif bir XML akışı sınıfları aynı kümesinden oluşturmak için kullanılabilir. Alternatif bir XML akışı oluşturma hakkında daha fazla ayrıntı için bkz. [nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
 > Oluşturulan XML başlıklı bölümüne World Wide Web Consortium (W3C) belgesinin 5 uymalıdır, [Basit Nesne Erişim Protokolü (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), listelenen öznitelikleri kullanın [öznitelikleri emin denetim kodlanmış SOAP Serileştirme](attributes-that-control-encoded-soap-serialization.md).
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>Denetleme dizisi seri hale getirme
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> Ve <xref:System.Xml.Serialization.XmlArrayItemAttribute> öznitelikleri dizileri serileştirmek denetlemek için tasarlanmıştır. Bu öznitelikler kullanarak ("XML şema bölümü 2: veri türleri" başlıklı World Wide Web Consortium [www.w3.org] belgede tanımlanan) öğe adı, ad alanı ve XML Şeması (XSD) veri türü denetleyebilirsiniz. Bir dizide dahil edilebilir türleri de belirtebilirsiniz.
+<xref:System.Xml.Serialization.XmlArrayAttribute> Ve <xref:System.Xml.Serialization.XmlArrayItemAttribute> öznitelikleri dizileri serileştirmek denetlemek için tasarlanmıştır. Bu öznitelikler kullanarak, öğe adı, ad alanı ve XML Şeması (XSD) veri türü denetleyebilirsiniz (başlıklı World Wide Web Consortium [www.w3.org] belgede tanımlanan "XML şema bölümü 2: "Veri türleri"). Bir dizide dahil edilebilir türleri de belirtebilirsiniz.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> Bir dizi serileştirilmiş olduğunda, kapsayan XML öğesi özelliklerini belirler. Örneğin, varsayılan olarak, aşağıdaki dizi serileştirmek adlı bir XML öğesi sonuçlanacak `Employees`. `Employees` Öğesi, bir dizi sonra dizi türü adlı öğeleri içerecek `Employee`.
 
@@ -317,10 +317,10 @@ Ortak özelliği olduğunda durumlar olabilir veya alan seri hale gerekmez. Örn
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)  
-- [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](attributes-that-control-encoded-soap-serialization.md)  
-- [XML Serileştirmeye Giriş](introducing-xml-serialization.md)  
-- [XML Serileştirme Örnekleri](examples-of-xml-serialization.md)  
-- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)  
-- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)  
+- [XML Serileştirmeyi Denetleyen Öznitelikler](attributes-that-control-xml-serialization.md)
+- [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](attributes-that-control-encoded-soap-serialization.md)
+- [XML Serileştirmeye Giriş](introducing-xml-serialization.md)
+- [XML Serileştirme Örnekleri](examples-of-xml-serialization.md)
+- [Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Nasıl yapılır: Bir nesneyi serileştirmek](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](how-to-deserialize-an-object.md)

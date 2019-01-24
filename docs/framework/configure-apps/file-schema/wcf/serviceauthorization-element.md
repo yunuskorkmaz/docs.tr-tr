@@ -2,12 +2,12 @@
 title: '&lt;serviceAuthorization&gt; öğesi'
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: 6c69d10eb2f6cdf4546dd5895d196723417f5494
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 49b89c17f9858c111791276fe15e4a418845c8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622578"
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt; öğesi
 Hizmet işlemleri erişim yetkisi ayarlarını belirtir  
@@ -39,7 +39,7 @@ Hizmet işlemleri erişim yetkisi ayarlarını belirtir
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |ImpersonateCallerForAllOperations|Hizmetteki tüm işlemlerin çağıranın kimliğine bürünüp bürünmediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Belirli bir hizmet işlemine çağıranın kimliğine bürünür, iş parçacığı bağlamını, belirtilen hizmet yürütmeden önce çağıranın bağlamına anahtarlanır.|  
-|PrincipalPermissionMode|Sunucu üzerinde işlem gerçekleştirmek için kullanılan asıl öğeleri ayarlar. Değerler aşağıdakileri içerir:<br /><br /> -Yok<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Özel<br /><br /> UseWindowsGroups varsayılan değerdir. Değer türünde <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Bu öznitelik kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|PrincipalPermissionMode|Sunucu üzerinde işlem gerçekleştirmek için kullanılan asıl öğeleri ayarlar. Değerler aşağıdakileri içerir:<br /><br /> -Yok<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-Özel<br /><br /> UseWindowsGroups varsayılan değerdir. Değer türünde <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Bu öznitelik kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Bir Windows Communication Foundation (WCF) uygulaması için rol bilgileri sağlayan rol sağlayıcısının adını belirten dize. Varsayılan değer boş bir dizedir.|  
 |ServiceAuthorizationManagerType|Hizmet Yetkilendirme Yöneticisi türünü içeren bir dize. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
   
@@ -95,11 +95,11 @@ Hizmet işlemleri erişim yetkisi ayarlarını belirtir
   
  Bu yapılandırma öğesini kullanarak bir ayrıntılı örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) ve [yetkilendirme ilkesi](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Yetkilendirme İlkesi](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Yetkilendirme İlkesi](../../../../../docs/framework/wcf/samples/authorization-policy.md)

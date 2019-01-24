@@ -2,12 +2,12 @@
 title: Bağlantı bilgilerini koruma
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662224"
 ---
 # <a name="protecting-connection-information"></a>Bağlantı bilgilerini koruma
 Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güvenliğini sağlama andır. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin halinde depolanmasını veya sisteminizin ödün bellek riskleri kalıcı. Bağlantı dizeleri gömülü kaynak kodunuzu kullanarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş derlemede Microsoft Ara dilini (MSIL) görüntülemek için.  
@@ -39,8 +39,8 @@ Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güve
 ## <a name="encrypt-configuration-files"></a>Yapılandırma dosyaları şifreleyin  
  Da bağlantı dizelerini yapılandırma dosyalarında, uygulamanızın kodunda eklemek gereğini ortadan kaldırır depolayabilirsiniz. Yapılandırma dosyaları .NET Framework, ortak bir öğe kümesini tanımladığı standart XML dosyalarıdır. Bağlantı dizelerini yapılandırma dosyaları içinde depolanan genellikle  **\<connectionStrings >** öğesinde **app.config** bir Windows uygulaması için veya  **Web.config** ASP.NET uygulaması için dosya. Alma ve yapılandırma dosyaları, bağlantı dizeleri şifreleme depolamak temelleri hakkında daha fazla bilgi için bkz: [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Şifreleme yapılandırma bilgilerini kullanarak korumalı yapılandırma](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Şifreleme yapılandırma bilgilerini kullanarak korumalı yapılandırma](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
+- [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

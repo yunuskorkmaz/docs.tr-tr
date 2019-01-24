@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586337"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess Yöntemi
-Bir ortak dil çalışma zamanı (CLR) modülü işleminde yüklenen karşılık gelen Icordebugprocess arabirimi alır.  
+Ortak dil çalışma zamanı (CLR) modül işleme yüklendiğinde karşılık gelen Icordebugprocess arabirimi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,43 +43,43 @@ HRESULT OpenVirtualProcess(
   
 #### <a name="parameters"></a>Parametreler  
  `moduleBaseAddress`  
- [in] Hedef işlemin modülünde temel adres. Belirtilen modül CLR modül değilse COR_E_NOT_CLR döndürülür.  
+ [in] Hedef işlemde bir modülün temel adres. Belirtilen modül bir CLR modülünü değilse COR_E_NOT_CLR döndürülür.  
   
  `pDataTarget`  
- [in] İşlem durumu denetlemek yönetilen hata ayıklayıcı sağlayan veri hedef özeti. Hata ayıklayıcı uygulamalıdır [Icordebugdatatarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) arabirimi. Uygulamanız gerekir [Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) , ayıklanacak CLR yüklü olmayan yerel bilgisayarda senaryoları desteklemek için arabirim.  
+ [in] İşlem durumu denetlemek yönetilen hata ayıklayıcı sağlayan veri hedef özeti. Hata ayıklayıcı uygulamalıdır [Icordebugdatatarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) arabirimi. Uygulamalıdır [Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) ayıklanmakta olan CLR yüklü olmayan yerel bilgisayarda senaryoları desteklemek için arabirim.  
   
  `pLibraryProvider`  
- [in] Sürüme özgü hata ayıklama kitaplıkları bulunduğu ve yüklenen üzerinde isteğe bağlı olmasını sağlayan bir kitaplığı sağlayıcısı geri çağırma arabirimi. Bu parametre yalnızca gerekli ise `ppProcess` veya `pFlags` değil `null`.  
+ [in] Ve yüklenecek üzerine yerleştirilecek sürümüne özel hata ayıklama kitaplıklarına izin veren bir kitaplık sağlayıcı geri arama arabirimi. Bu parametre yalnızca gereklidir `ppProcess` veya `pFlags` değil `null`.  
   
  `pMaxDebuggerSupportedVersion`  
- [in] Bu hata ayıklayıcı ayıklayabilirsiniz CLR yüksek sürümü. Ana, ikincil, belirtin ve bu hata ayıklayıcı destekleyen en son CLR sürümü sürümlerden yapı ve düzeltme numarası 65535 sürümleri bakım gelecekteki yerinde CLR uyum sağlayacak şekilde ayarlayın.  
+ [in] Bu hata ayıklayıcı hata ayıklaması yapabilirsiniz CLR en yüksek sürümü. Ana, alt, belirtin ve bu hata ayıklayıcı destekleyen en son CLR sürümü sürümlerinden yapı ve düzeltme numarası 65535 hizmet sürümlerini gelecekteki yerinde CLR uyum sağlayacak şekilde ayarlayın.  
   
  `riidProcess`  
- [in] Alınacak Icordebugprocess arabirimi kimliği. Şu anda, kabul edilen değerler yalnızca IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 ve IID_CORDEBUGPROCESS ' dir.  
+ [in] Alınacak Icordebugprocess arabirimi kimliği. Şu anda, kabul edilen değerler yalnızca IID_CORDEBUGPROCESS3 IID_CORDEBUGPROCESS2 ve IID_CORDEBUGPROCESS ' dir.  
   
  `ppProcess`  
- [out] Tarafından tanımlanan COM arabirimi için bir işaretçi `riidProcess`.  
+ [out] Bir işaretçi tarafından tanımlanan COM arabirimi `riidProcess`.  
   
  `pVersion`  
- [içinde out] CLR sürümü. Giriş, bu değer olabilir `null`. Bu da işaret edebilir bir [clr_debuggıng_versıon](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) yapısı, bu durumda yapısı `wStructVersion` alan 0 (sıfır) başlatılmalıdır.  
+ [out içinde] CLR sürümü. Bu değer, giriş olabilir `null`. Bu da işaret edebilir bir [clr_debuggıng_versıon](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) yapısı, bu durumda yapısı `wStructVersion` alan 0 (sıfır) başlatılması gerekir.  
   
- Çıktıyı, döndürülen `CLR_DEBUGGING_VERSION` yapısı, CLR sürüm bilgileri ile doldurulur.  
+ Çıktıda, döndürülen `CLR_DEBUGGING_VERSION` yapısı, CLR sürüm bilgilerini oturum doldurulur.  
   
  `pdwFlags`  
- [out] Belirtilen çalışma zamanı hakkında bilgi bayraklar. Bkz: [clr_debuggıng_process_flags](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) konu bayrakları açıklaması.  
+ [out] Belirtilen çalışma zamanı hakkında bilgi bayrakları. Bkz: [clr_debuggıng_process_flags](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) konu bayrakları açıklaması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.  
+ Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`pDataTarget` olan `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) geri çağırma bir hata döndürür veya geçerli bir tanıtıcı sağlamaz.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` çalışma zamanı bu sürümü için gerekli verileri hedef arabirimleri uygulamıyor.|  
-|CORDBG_E_NOT_CLR|Belirtilen modül bir CLR modül değil. Bir CLR modül bozuk belleği, modülü kullanılamıyor veya CLR sürümü dolgusu sürümünden daha yeni olduğundan algılanamıyor olduğunda bu HRESULT da döndürülür.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama model CLR sürümlerinden önce tarafından desteklenmiyor [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Çıktı parametresi hala olarak bu hatadan sonra doğru değerine ayarlanır.|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Bu hata ayıklayıcı desteği iddia sürümünden büyük CLR sürümüdür. `pwszVersion` Çıktı parametresi hala olarak bu hatadan sonra doğru değerine ayarlanır.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` çalışma zamanının bu sürümü için gerekli verileri hedef arabirimi uygulamıyor.|  
+|CORDBG_E_NOT_CLR|Belirtilen modül bir CLR modülünü değil. Bir CLR modül bellek bozulmuş, modül kullanılabilir olmadığı veya CLR sürümünün dolgu sürümden daha sonraki algılanamıyor olduğunda bu HRESULT da döndürülür.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü, bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama modeli önce CLR sürümleri tarafından desteklenmeyen [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Çıkış parametresi doğru değer yine de bu hatadan sonra ayarlanır.|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Bu hata ayıklayıcı desteği iddia sürümünden büyük CLR sürümüdür. `pwszVersion` Çıkış parametresi doğru değer yine de bu hatadan sonra ayarlanır.|  
 |E_NO_INTERFACE|`riidProcess` Arabirimi kullanılabilir değil.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Yapısı için tanınan bir değer yok `wStructVersion`. Şu anda yalnızca kabul edilen değeri 0'dır.|  
   
@@ -88,14 +88,14 @@ HRESULT OpenVirtualProcess(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

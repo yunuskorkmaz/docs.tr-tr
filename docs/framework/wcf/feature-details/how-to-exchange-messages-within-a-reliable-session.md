@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
+title: 'Nasıl yapılır: Güvenilir oturum içinde Exchange ileti'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720060"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir oturum içinde Exchange ileti
 
 Bu konuda, bu tür bir oturumu destekleyen sistem tarafından sağlanan bağlamalar, ancak değil, varsayılan olarak kullanarak bir güvenilir oturum etkinleştirmek için gereken adımlar açıklanmaktadır. Kesin kod kullanarak bir güvenilir oturum etkinleştirmek ya da yapılandırma dosyanızdaki bildirimli olarak. Bu yordam, güvenilir oturum etkinleştirmek ve iletileri, gönderildiği aynı sırada ulşamasını işleyebileceği için hizmet ve istemci yapılandırma dosyalarını kullanır.
 
@@ -79,4 +79,4 @@ Güvenilir oturumlar destekleyen özel bağlama oluşturma örneği için bkz: [
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

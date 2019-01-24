@@ -2,15 +2,15 @@
 title: Dağıtım Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705891"
 ---
 # <a name="syndication-extensibility"></a>Dağıtım Genişletilebilirliği
-Dağıtım API, çeşitli biçimlerde hat yazılması dağıtılmış içerik sağlayan bir biçim Tarafsız programlama modeli sağlamak için tasarlanmıştır. Soyut veri modeli şu sınıflardan oluşur:  
+Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat yazılmasına izin veren bir biçim nötr programlama modeli sağlamak için tasarlanmıştır. Aşağıdaki sınıflar soyut bir veri modeli oluşur:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
@@ -22,28 +22,28 @@ Dağıtım API, çeşitli biçimlerde hat yazılması dağıtılmış içerik sa
   
 -   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
- Adlarından bazıları farklı olmasına rağmen bu sınıfların Atom 1.0 belirtiminde tanımlanan yapıları yakından eşlenir.  
+ Bazı adları farklı olmasına rağmen bu sınıfların Atom 1.0 belirtiminde tanımlanan yapıları yakından eşlenir.  
   
- Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Atom 1.0 ve RSS 2.0 eklemeniz öznitelikler ve öğeler belirtimleri tanımlanmamış dağıtım akışlarını. Windows Communication Foundation (WCF) dağıtım programlama modeli özel özniteliklere ve uzantıları, geniş yazılmış erişim ile çalışma ve yeni bir sınıf türetme aşağıdaki yöntemleri sağlar.  
+ Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Atom 1.0 hem de RSS 2.0 ekleyin öznitelikler ve öğeler'de tanımlanmayan, dağıtım akışlarını. Windows Communication Foundation (WCF) dağıtım programlama modeli, özel öznitelikler ve uzantıları, geniş yazılmış erişim ile çalışma ve yeni bir sınıf türetmek aşağıdaki yöntemler sağlar.  
   
 ## <a name="loosely-typed-access"></a>Gevşek yazılmış erişim  
- Yeni bir sınıf türetme tarafından uzantılar ekleme ek kod yazma gerektirir. Başka bir seçenek uzantıları geniş yazılmış bir yolla erişiyor. Tüm dağıtım soyut veri modelinde tanımlanan türleri adlı özelliklerini içeren `AttributeExtensions` ve `ElementExtensions` (bir durumla <xref:System.ServiceModel.Syndication.SyndicationContent> sahip bir `AttributeExtensions` özelliği ancak hiçbir `ElementExtensions` özelliği). Bu özellikler tarafından işlenmemiş uzantıları koleksiyonlarıdır `TryParseAttribute` ve `TryParseElement` yöntemleri sırasıyla. İşlenmemiş uzantılara çağırarak erişebilirsiniz <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> üzerinde `ElementExtensions` özelliği <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson>, ve <xref:System.ServiceModel.Syndication.SyndicationCategory>. Bu yöntemler kümesi belirtilen ve ad alanına sahip tüm uzantıları bulur, bunları tek tek örneklerini seri durumdan çıkarır `TExtension` ve koleksiyonu olarak döndürür `TExtension` nesneleri.  
+ Yeni bir sınıf türetilerek uzantılar ekleme, ek kod yazılmasını gerektirir. Başka bir seçenek uzantıları geniş yazılmış şekilde erişir. Adlı özellikleri sendikasyonu soyut veri modelinde tanımlanan türleri içerir `AttributeExtensions` ve `ElementExtensions` (bir özel durum ile <xref:System.ServiceModel.Syndication.SyndicationContent> sahip bir `AttributeExtensions` özelliği ancak Hayır `ElementExtensions` özelliği). Bu özellikler tarafından işlenmemiş uzantıları koleksiyonlarıdır `TryParseAttribute` ve `TryParseElement` yöntemlerini sırasıyla. İşlenmemiş uzantılara çağırarak erişebileceğiniz <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> üzerinde `ElementExtensions` özelliği <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson>, ve <xref:System.ServiceModel.Syndication.SyndicationCategory>. Bu yöntem kümesi belirtilen ad ve ad alanı ile tüm uzantıları bulur, bunları tek tek örneğine çıkarır `TExtension` ve bir koleksiyonu olarak döndürür `TExtension` nesneleri.  
   
-## <a name="deriving-a-new-class"></a>Yeni bir sınıf türetme  
- Yeni bir sınıf herhangi bir varolan soyut veri modeli sınıfı türetilemeyeceğini. Bunu, birlikte çalıştığınız akışları çoğunu belirli bir uzantıya sahip bir uygulama uygularken yapın. Bu konuda, program çalışır akışları çoğunu içeren bir `MyExtension` uzantısı. Geliştirilmiş bir programlama deneyimi sunmak için aşağıdaki adımları uygulayın:  
+## <a name="deriving-a-new-class"></a>Yeni sınıf türetme  
+ Mevcut soyut veri modeli sınıfların herhangi yeni bir sınıf türetebilirsiniz. Çalıştığınız akışları çoğu belirli bir uzantısı olan bir uygulama uygularken bunu. Bu konu başlığında, programın çalıştığı akışları çoğunu içeren bir `MyExtension` uzantısı. Geliştirilmiş bir programlama deneyimi sağlamak için aşağıdaki adımları uygulayın:  
   
--   Uzantısını verileri tutmak için bir sınıf oluşturun. Bu durumda, MyExtension adlı bir sınıf oluşturun.  
+-   Uzantı verileri tutmak için bir sınıf oluşturun. Bu durumda, MyExtension adlı bir sınıf oluşturun.  
   
--   Gelen MyExtensionItem adlı bir sınıf türetin <xref:System.ServiceModel.Syndication.SyndicationItem> programlamasına amacıyla MyExtension türünde bir özellik kullanıma sunmak için.  
+-   Gelen MyExtensionItem adlı bir sınıf türetin <xref:System.ServiceModel.Syndication.SyndicationItem> amaçlar programlanabilme MyExtension türünün bir özelliği kullanıma sunmak için.  
   
--   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> MyExtensionItem sınıfında içinde bir MyExtension okurken bir yeni MyExtension örneği.  
+-   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> MyExtensionItem sınıfındaki bir MyExtension okunduğunda yeni bir MyExtension örneği oluşturmak için.  
   
--   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> bir XML yazıcı MyExtension özelliği içeriğini yazmak için MyExtensionItem sınıfında.  
+-   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> MyExtensionItem sınıfında MyExtension özelliğinin içeriği yazmak için bir XML yazıcısı.  
   
 -   Gelen MyExtensionFeed adlı bir sınıf türetin <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
   
--   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> MyExtensionItem varsayılan yerine örneği oluşturmak için MyExtensionFeed sınıfında <xref:System.ServiceModel.Syndication.SyndicationItem>. Bir dizi yöntem tanımlanmış <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> , oluşturabilirsiniz <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationPerson> nesneleri (örneğin, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Her biri özel bir türetilmiş sınıf oluşturmak için geçersiz kılınabilir.  
+-   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> varsayılan yerine bir MyExtensionItem örneklemek için MyExtensionFeed sınıfında <xref:System.ServiceModel.Syndication.SyndicationItem>. Bir dizi yöntem tanımlanmış <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> oluşturabilir, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationPerson> nesneleri (örneğin, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Her biri, özel olarak türetilmiş bir sınıf oluşturmak için kılınabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628168"
 ---
 # <a name="mysettings-object"></a>My.Settings Nesnesi
 Özellikler ve uygulama ayarlarının erişmek için yöntemler sağlar.  
@@ -59,10 +59,10 @@ ms.locfileid: "43861682"
   
  Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` biriminin türü `String`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Configuration.ApplicationSettingsBase>  
- [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.ApplicationSettingsBase>
+- [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)

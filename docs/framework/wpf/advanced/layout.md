@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738832"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,11 +146,11 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Yenilikler  
- Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
 author: KrzysztofCwalina
-ms.openlocfilehash: 332917e5d31c2299f7d68a8fe6716d28ed08759d
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698901"
 ---
 # <a name="attributes"></a>Öznitelikler
 <xref:System.Attribute?displayProperty=nameWithType> bir temel sınıf özel öznitelikler tanımlamak için kullanılır.  
@@ -51,5 +51,5 @@ ms.locfileid: "53451176"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
 - [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)

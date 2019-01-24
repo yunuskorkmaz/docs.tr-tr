@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716784"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType Numaralandırması
 Bir modül türünü belirtir.  
@@ -45,22 +45,22 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|Geçersiz bir tür modülüdür.|  
-|`ValidatorModuleTypeMin`|En küçük değerini `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Modül geçersiz bir türdür.|  
+|`ValidatorModuleTypeMin`|En küçük değerini `CorValidatorModuleType` sabit listesi.|  
 |`ValidatorModuleTypePE`|Modül bir taşınabilir yürütülebilir (PE) dosyasıdır.|  
-|`ValidatorModuleTypeObj`|Modül bir .obj dosyasıdır.|  
-|`ValidatorModuleTypeEnc`|Düzenle ve devam et hata ayıklayıcı oturum modülüdür.|  
-|`ValidatorModuleTypeIncr`|Modül artımlı olarak yerleşik biridir.|  
-|`ValidatorModuleTypeMax`|En büyük değerini `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeObj`|Bir .obj dosyası modülüdür.|  
+|`ValidatorModuleTypeEnc`|Düzenle ve devam et hata ayıklayıcı oturumu modülüdür.|  
+|`ValidatorModuleTypeIncr`|Artımlı olarak derlenen bir modüldür.|  
+|`ValidatorModuleTypeMax`|En büyük değerini `CorValidatorModuleType` sabit listesi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

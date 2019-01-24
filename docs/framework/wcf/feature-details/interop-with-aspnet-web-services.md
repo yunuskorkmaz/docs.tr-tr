@@ -2,17 +2,17 @@
 title: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 8a0737a36989dd8bc6f5d5670555c7b2218798bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d4416a67d467f60fa381abc648c3a7ea0b9ada1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713333"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
-Birlikte çalışabilirlik [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri ve Windows Communication Foundation (WCF) Web hizmetlerini elde edilebilir iki teknolojiyi kullanılarak uygulanan Hizmetleri WS uygun sağlayarak-ı temel Profil 1.1 belirtimini. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web WS uygun Hizmetleri-ı temel Profil 1.1 WCF istemcileriyle birlikte çalışabilir WCF sistem tarafından sağlanan bağlama kullanarak <xref:System.ServiceModel.BasicHttpBinding>.  
+Birlikte çalışabilirliği [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri ve Windows Communication Foundation (WCF) Web hizmetleri hem teknolojiler kullanılarak uygulanan Hizmetleri WS uygun sağlayarak gerçekleştirilebilir-ı Basic Profile 1.1 belirtimi. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web için WS uygun Hizmetleri-ı Basic Profile 1.1 ile WCF istemcileri birlikte çalışabilen WCF sistem tarafından sağlanan bağlama kullanarak <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Kullanım [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] ekleme seçeneği <xref:System.Web.Services.WebService> ve <xref:System.Web.Services.WebMethodAttribute> öznitelikleri bir arabirime yerine bir sınıf ve aşağıdaki örnek kodda gösterildiği gibi arabirimini uygulayan bir sınıf yazma.  
+ Kullanım [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] ekleme seçeneği <xref:System.Web.Services.WebService> ve <xref:System.Web.Services.WebMethodAttribute> bir arabirim yerine bir sınıf ve arabirim uygulamak için bir sınıf aşağıdaki örnek kodda gösterildiği gibi yazmak için öznitelikler.  
   
 ```  
 [WebService]  
@@ -32,22 +32,22 @@ public class Service : IEcho
 }  
 ```  
   
- Bu seçeneği kullanarak, tercih edilen, çünkü arabirimiyle <xref:System.Web.Services.WebService> özniteliği oluşturduğunu aynı sözleşme farklı şekillerde uygulayabilir çeşitli sınıflarıyla yeniden hizmeti tarafından gerçekleştirilen işlemler için bir sözleşmede.  
+ Bu seçenek kullanılarak tercih edilir, çünkü arabirimiyle <xref:System.Web.Services.WebService> özniteliği aynı sözleşme farklı şekillerde uygulayabilir, çeşitli sınıflarla yeniden kullanılabilir bir hizmet tarafından gerçekleştirilen işlemleri için bir sözleşmeyi oluşturur.  
   
- Kullanmaktan kaçının <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> yöntemlere yönlendirilmiş iletiler için öznitelik tabanlı SOAP iletisi body öğesi tam olarak nitelenmiş adına yerine `SOAPAction` HTTP üstbilgisi. WCF kullanan `SOAPAction` iletileri yönlendirmek için HTTP üstbilgisi.  
+ Kullanmaktan kaçının <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> yöntemlere yönlendirilmiş iletiler için öznitelik SOAP iletisinin gövde öğesi tam olarak nitelenmiş adını temel alarak yerine `SOAPAction` HTTP üstbilgisi. WCF kullanan `SOAPAction` iletileri yönlendirmek için HTTP üstbilgisi.  
   
- Hangi içine XML <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlam olarak hangi içine XML aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir tür serileştirir. İle kullanmak için bir veri türü tanımlarken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web Hizmetleri WCF benimsenmesi, kapatıldığını, aşağıdakileri yapın:  
+ XML'e <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlamı da XML'e aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir türü seri hale getirir. Bir veri türü ile kullanılmak üzere tanımlarken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web Hizmetleri WCF'nu benimsemenin olasılığına, aşağıdakileri yapın:  
   
 -   XML şeması yerine .NET Framework sınıfları kullanarak türünü tanımlayın.  
   
--   Yalnızca ekleme <xref:System.SerializableAttribute> ve <xref:System.Xml.Serialization.XmlRootAttribute> sınıfına türünün ad alanını açıkça tanımlamak için ikinci kullanarak. Ek özniteliklerden eklemeyin <xref:System.Xml.Serialization> .NET Framework sınıf nasıl XML çevrilmesi denetlemek için ad alanı.  
+-   Yalnızca ekleme <xref:System.SerializableAttribute> ve <xref:System.Xml.Serialization.XmlRootAttribute> sınıf türünün ad alanını açıkça tanımlamak için ikinci kullanarak. Ek öznitelikleri eklemeyin <xref:System.Xml.Serialization> nasıl XML'e çevrilmesi için .NET Framework sınıf olduğunu denetlemek için ad alanı.  
   
--   Bu yaklaşım kabul ederek, daha sonra .NET eklenmesi veri Sözleşmelerle içine sınıflarının gerekir <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> içine sınıfları aktarım için serileştirilir XML önemli ölçüde değiştirmeden. İleti tarafından kullanılan türleri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri, diğer avantajlar arasında WCF uygulamaları daha iyi performans sağlayan, WCF uygulamaları tarafından veri sözleşmeleri işlenebilir.  
+-   Bu yaklaşım benimseyerek, daha sonra ek olarak veri sözleşmeleri içine .NET sınıfları oluşturmak erişebileceğinizi <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> içine sınıfları aktarım için serileştirilir XML önemli ölçüde boyutlandırabiliriz. İleti tarafından kullanılan türleri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri, diğer avantajlar arasında WCF uygulamalarında daha iyi performans sağlayan, WCF uygulamaları tarafından veri sözleşmeleri işlenebilir.  
   
- Internet Information Services (IIS) tarafından sağlanan kimlik doğrulama seçenekleri kullanmaktan kaçının. WCF istemcileri onları desteklemez. Bir hizmeti güvenli hale getirilmelidir, çünkü bu seçenekler sağlam ve standart protokollerine dayalıdır WCF tarafından sağlanan seçenekleri kullanın.  
+ Internet Information Services (IIS) tarafından sağlanan kimlik doğrulama seçenekleri kullanmaktan kaçının. WCF istemcileri onları desteklemez. Bir hizmeti güvenli hale getirilmelidir, çünkü bu seçenekler, sağlam ve standardı protokollerine dayalıdır WCF tarafından sağlanan seçenekleri kullanın.  
   
-## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HTTP yükleyerek neden performans etkisi  
- .NET Framework 3.0, WCF `HttpModule` kök Web.config dosyasında her ASP.NET uygulama etkin bir WCF olduğu şekilde yüklendi. Kaldırabilmeniz için bu performansını etkileyebilir `ServiceModel` aşağıdaki örnekte gösterildiği gibi Web.config dosyası için.  
+## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule yükleyerek nedeniyle performans etkisi  
+ .NET Framework 3.0, WCF `HttpModule` kök Web.config dosyasında her bir ASP.NET uygulaması etkinleştirilmiş WCF olduğu şekilde yüklendi. Bu nedenle bu performansını etkileyebilir `ServiceModel` aşağıdaki örnekte gösterildiği gibi Web.config dosyası için.  
   
 ```xml  
 <httpModules>  
@@ -55,5 +55,5 @@ public class Service : IEcho
 <httpModules/>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak için yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

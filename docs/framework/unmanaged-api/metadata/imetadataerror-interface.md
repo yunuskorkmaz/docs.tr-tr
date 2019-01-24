@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c264bfd31f8cd31bacf2d194ddbd07338569294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720385"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError Arabirimi
 Meta veri birleştirme sırasında hata raporlama için bir geri dönüş mekanizması sağlar.  
   
 > [!NOTE]
->  `IMetaDataError` İstemci tarafından arabirimi uygulanmadı.  
+>  `IMetaDataError` İstemci tarafından arabirimi uygulanır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Meta veri birleştirme sırasında oluşan hataları bildirim sağlar.|  
+|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Meta veri birleştirme sırasında oluşan hataları bildirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

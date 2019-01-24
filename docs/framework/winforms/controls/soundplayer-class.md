@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674342"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer Sınıfı
 `SoundPlayer` Sınıfı sesleri uygulamalarınıza kolayca dahil etmenize imkan sağlar.  
@@ -22,22 +22,22 @@ ms.locfileid: "48835587"
  [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Sınıfı ve yaygın olarak kullanılan özelliklerini, yöntemlerini ve olaylarını tanıtır.  
   
- [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  Belirtilen dosya yolu, UNC yolu veya HTTP yolu Çıkart yönelik kod sağlar.  
   
- [Nasıl yapılır: Bir Windows Formdan Bip Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows formdan bip sesi çalma](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
  Bilgisayarın bip sesi ses çal yönelik kod sağlar.  
   
- [Nasıl yapılır: Bir Windows Formundan Kaynağa Yerleştirilmiş Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows formundan kaynağa yerleştirilmiş sesi çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
  Bir kaynaktan Çıkart yönelik kod sağlar.  
   
- [Nasıl yapılır: Bir Windows Formundan Sistem Sesi Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows formundan sistem sesi çalma](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Bir sistem sesleri oynatmak için kod sağlar.  
   
- [Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows Form içinde zaman uyumsuz ses yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  Ses URL'den zaman uyumsuz olarak yükleme ve yürütün yönelik kod sağlar.  
   
- [Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ [Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Sürekli bir ses çalar kodu sağlar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -51,6 +51,6 @@ ms.locfileid: "48835587"
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
-## <a name="see-also"></a>Ayrıca bkz. 
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

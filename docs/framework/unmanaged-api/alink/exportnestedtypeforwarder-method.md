@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dfb31a2fad8a07b3821ac85bbb43b25693f11d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25b7a708bb2f16433d9de9b5fc1c178cb48874a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658474"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder Metodu
-İç içe geçmiş tür için bir tür iletici verilen derleme türü tablosuna ekler.  
+Bir iç içe geçmiş bir tür ileticisi verilen derleme türü tabloya ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,22 +45,22 @@ HRESULT ExportNestedTypeForwarder(
  Dışarı aktarmak için derleme kimliği.  
   
  `FileToken`  
- Dosya belirteç veya derleme kimliği türü tanımlayan dosyası.  
+ Belirteç veya derleme kimliği türü tanımlayan dosyasının dosya.  
   
  `TypeToken`  
- Belirteç türü için.  
+ Belirteç türü.  
   
  `ParentType`  
  Üst tür belirteci.  
   
  `pszTypename`  
- Dışarı aktarmak için tam olarak nitelenmiş tür adı.  
+ Dışarı aktarmak için tam nitelikli tür adı.  
   
  `dwFlags`  
  `ComType` gibi bayrakları `tdPublic` veya `tdNested`.  
   
  `pType`  
- Dışarı aktarma türünde belirteç alır. Bu, yalnızca iç içe geçmiş türler yayma için gereklidir.  
+ Dışarı aktarma türü belirtecini alır. Bu, iç içe geçmiş türler yalnızca yayma için gereklidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -68,7 +68,7 @@ HRESULT ExportNestedTypeForwarder(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

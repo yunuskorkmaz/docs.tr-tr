@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme'
+title: 'Nasıl yapılır: Bir Windows formunda doldurulmuş dikdörtgen çizme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: 96e8f5babb194cfd2934c2bb71f3007483c68fd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9722b2939e77282453743a4dea165a340412a21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587040"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme
-Bu örnek bir formunda doldurulmuş dikdörtgen çizer.  
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Nasıl yapılır: Bir Windows formunda doldurulmuş dikdörtgen çizme
+Bu örnek, bir form üzerinde doldurulmuş bir dikdörtgen çizer.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
@@ -28,15 +28,15 @@ Bu örnek bir formunda doldurulmuş dikdörtgen çizer.
  [!code-vb[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu yöntem çağıramazsınız <xref:System.Windows.Forms.Form.Load> olay işleyicisi. Formu yeniden boyutlandırılmış veya başka bir form tarafından getirilmemeli çizilmiş içeriği yeniden değil. İçeriğinizi otomatik olarak yeniden boyamak yapmak için geçersiz kılmalıdır <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
+ Bu yöntem çağıramazsınız <xref:System.Windows.Forms.Form.Load> olay işleyicisi. Formu yeniden boyutlandırılabilir veya başka bir form tarafından engellediği çizilen içeriği yeniden değil. İçeriğinizi otomatik olarak repaint yapmak için geçersiz kılmanız <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> sistem kaynakları gibi kullanabilecek tüm nesneler üzerinde <xref:System.Drawing.Brush> ve <xref:System.Drawing.Graphics> nesneleri.  
+ Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> gibi sistem kaynaklarının kullanan herhangi bir nesne üzerinde <xref:System.Drawing.Brush> ve <xref:System.Drawing.Graphics> nesneleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Graphics.FillRectangle%2A>  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [GDI+'da Fırçalar ve Dolgulu Şekiller](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Graphics.FillRectangle%2A>
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [GDI+'da Fırçalar ve Dolgulu Şekiller](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)

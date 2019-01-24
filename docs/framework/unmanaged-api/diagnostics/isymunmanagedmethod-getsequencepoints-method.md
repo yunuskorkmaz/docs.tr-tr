@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623631"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints Metodu
-Bu yöntem içindeki tüm sıralama noktaları alır.  
+Bu yöntem içinde tüm dizi noktalarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,31 +46,31 @@ HRESULT GetSequencePoints(
  [in] A `ULONG32` boyutunu alır `offsets`, `documents`, `lines`, `columns`, `endLines`, ve `endColumns` dizileri.  
   
  `pcPoints`  
- [out] Bir işaretçi bir `ULONG32` sıralama noktaları içermesi gerekir arabelleği uzunluğunu alır.  
+ [out] Bir işaretçi bir `ULONG32` dizi noktalarını içerecek şekilde gerekli arabellek uzunluğunu alır.  
   
  `offsets`  
- [in] Sıralama noktaları yöntemi başından itibaren dili (MSIL) kaydırır, Microsoft Ara depolamak bir dizi.  
+ [in] Bir dizi saklanacağı Microsoft Ara dili (MSIL) sıralama noktaları yöntemi başından itibaren kaydırır.  
   
  `documents`  
- [in] Sıralama noktaları bulunan belgeleri depolamak üzere bir dizi.  
+ [in] Dizi noktaları bulunan belgeleri depolamak için bir dizi.  
   
  `lines`  
- [in] Satırları sıralama noktaları bulunduğu olan belgeleri depolamak üzere bir dizi.  
+ [in] Satırları sıralama noktaları yer olan belgeleri depolamak için bir dizi.  
   
  `columns`  
- [in] Sütunları sıralama noktaları bulunduğu olan belgeleri depolamak üzere bir dizi.  
+ [in] Sütunları sıralama noktaları yer olan belgeleri depolamak için bir dizi.  
   
  `endLines`  
- [in] En son sırası işaret belgelerde satırları dizisi.  
+ [in] Belgelerde dizisi son işaret ettiği satırları dizisi.  
   
  `endColumns`  
- [in] En son sırası işaret belgelerde sütun dizisi.  
+ [in] Sütun sırası son işaret ettiği belgelerdeki dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

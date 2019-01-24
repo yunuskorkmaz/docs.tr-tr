@@ -1,42 +1,42 @@
 ---
-title: 'Azaltma: WPF Düzeni'
+title: 'Azaltma: WPF düzeni'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a9bc9e14621b22cad6491f6f5132ef302e7ef06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686042"
 ---
-# <a name="mitigation-wpf-layout"></a>Azaltma: WPF Düzeni
+# <a name="mitigation-wpf-layout"></a>Azaltma: WPF düzeni
 WPF denetimleri düzenini biraz değiştirebilirsiniz.  
   
 ## <a name="impact"></a>Etki  
- Bu değişikliğin sonucu olarak:  
+ Bu değişikliğin ardından:  
   
--   Genişlik veya yüksekliğinden öğelerinin büyütür veya en çok bir piksel küçültür.  
+-   Öğelerin yükseklik ve genişlik büyütür veya en fazla bir piksel küçültür.  
   
--   Bir nesne yerleşimini en çok bir piksel taşıyabilirsiniz.  
+-   Bir nesne yerleşimini en fazla bir piksel taşıyabilirsiniz.  
   
--   Ortalanmış öğeleri dikey veya yatay olarak merkezi en çok bir piksel tarafından devre dışı olabilir.  
+-   Ortalanmış öğeleri yatay veya dikey olarak en fazla bir piksel merkezin olabilir.  
   
- Varsayılan olarak, bu yeni düzen .NET Framework 4.6 hedefleyen uygulamalar için etkinleştirilir.  
+ Bu yeni bir düzen, varsayılan olarak, yalnızca .NET Framework 4.6 hedefleyen uygulamalar için etkinleştirilir.  
   
 ## <a name="mitigation"></a>Azaltma  
- Kırpma sağa ya da yüksek DPIs WPF denetimleri alt ortadan kaldırmak için bu değişiklik eğilimlidir olduğundan, .NET Framework'ün önceki sürümlerini hedefleyen ama .NET Framework 4.6 üzerinde çalışan uygulamalar bu yeni davranış aşağıdaki satırı ekleyerek seçebilirsiniz `<runtime>` app.config dosyasının:  
+ Bu yana sağında veya altında yüksek Dpı'larda WPF denetimleri, kırpma ortadan kaldırmak için bu değişikliği eğilimi gösterir, ancak .NET Framework 4.6 üzerinde çalışan .NET Framework'ün önceki sürümlerini hedefleyen uygulamalar bu yeni davranış aşağıdaki satırı ekleyerek seçebilirsiniz `<runtime>` app.config dosyasının:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- .NET Framework 4.6 hedef ancak WPF denetimleri önceki düzeni algoritmasını kullanarak oluşturmak istediğiniz uygulamalar yapabilirsiniz aşağıdaki satırı ekleyerek `<runtime>` app.config dosyasının:  
+ .NET Framework 4.6 hedef ancak önceki yerleşimi algoritmasını kullanarak işlemek için WPF denetimleri isteyen uygulamalar bunu aşağıdaki satırı ekleyerek `<runtime>` app.config dosyasının:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

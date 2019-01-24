@@ -1,19 +1,19 @@
 ---
-title: 'İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma'
+title: 'İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730275"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma
 Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
   
 -   Implements <xref:System.ComponentModel.IComponent>;  
@@ -80,7 +80,7 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
   
 1.  Çözümden proje Kaldır.  
   
-     Projeleri kaldırma hakkında daha fazla bilgi için bkz. [NIB: nasıl yapılır: kaldırma ve yeniden projeleri](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmeniz istenirse seçin **Evet**.  
+     Projeleri kaldırma hakkında daha fazla bilgi için bkz. [NIB: nasıl yapılır: Projeleri yeniden yükleyin ve kaldırma](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmeniz istenirse seçin **Evet**.  
   
 2.  Yeni bir **Windows uygulama** çözüme bir proje. Formda açın **Tasarımcısı**.  
   
@@ -93,8 +93,8 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu izlenecek yol gösteren **araç kutusu** projenin bileşenlerinin alır ancak **araç kutusu** ayrıca alır denetimleri hesabıdır. İle kendi özel denetimler ekleyerek ve çözümünüze ait denetim projeleri kaldırma denemeler yapın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Nasıl yapılır: araç kutusu sekmeleri düzenleme](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [Nasıl yapılır: Araç kutusu sekmeleri düzenleme](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
+- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

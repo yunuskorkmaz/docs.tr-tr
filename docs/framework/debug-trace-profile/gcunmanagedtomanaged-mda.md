@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfaa77adef7cdc21b1ad8abaca1439361a33d4b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c99ae7d222db2e44de471eb9a41fed614362e300
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614386"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
-`gcUnmanagedToManaged` Yönetilen hata ayıklama Yardımcısı (MDA) yönetilmeyen koddan yönetilen koda gelen bir iş parçacığı geçişleri her bir atık toplama neden olur.  
+`gcUnmanagedToManaged` Yönetilen hata ayıklama Yardımcısı (MDA) yönetilen kodu için yönetilmeyen bir iş parçacığı gelen geçiş her bir çöp toplamanın neden olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- COM ve platform kullanarak çalışan yönetilmeyen kullanıcı bileşenleri çağırma uygulama CLR belirleyici olmayan erişim ihlali neden oluyor.  
+ COM ve platformu kullanarak çalışan yönetilmeyen kullanıcı bileşenleri çağırma uygulama CLR'de belirleyici olmayan erişim ihlaline neden oluyor.  
   
 ## <a name="cause"></a>Sebep  
- Ardından uygulamanın yönetilmeyen kullanıcı bileşenleri çalışıyorsa, bu bileşenlerin çöpünün toplanma yığın bozulmuş. Çöp toplayıcı nesnesi grafik yol denediğinde bu CLR bir erişim ihlali neden olur.  
+ Ardından uygulamanın yönetilmeyen kullanıcı bileşenleri çalışıyorsa, bu bileşenlerin atık olarak toplanmış yığınla bozulmuş. Atık toplayıcı Nesne grafiğini yol denediğinde bu CLR'de erişim ihlaline neden olur.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu yardımcı etkinleştirme ne zaman yönetilmeyen bileşen çöpünün toplanma yığın bozarsa ve erişim ihlali her yönetilen geçiş önce gerçekleşmesi için bir atık toplama zorlayarak durumda arasındaki süreyi azaltır.  
+ Bu Yardımcısı'nı etkinleştirme, yönetilmeyen bileşeni atık olarak toplanmış yığınla bozarsa ve bir çöp toplama, yönetilen her geçiş önce gerçekleşmesi için zorlayarak erişim ihlali durumda arasındaki süreyi azaltır.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- İş parçacığı geçişleri yönetilmeyenden yönetilen kodu her bir atık toplama neden olur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Yönetilen kod için yönetilmeyen bir iş parçacığı geçişler her bir çöp toplamanın neden olur.  
   
 ## <a name="output"></a>Çıkış  
- Bu MDA herhangi bir çıktı oluşturmaz.  
+ Bu mda'nın herhangi bir çıktı üretmez.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -49,8 +49,8 @@ ms.locfileid: "33386632"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

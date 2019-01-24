@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2b821a1deb947db86e89207c447045f76a8bb842
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4571af701ea28c3b7dbecbb1b1a82e7093c2831e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646467"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI Otomasyonda Önbelleğe Alma
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "48035116"
   
  Önbellek güncelleştirme var olan tüm özelliklerini değiştirmez <xref:System.Windows.Automation.AutomationElement> başvuruları.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [FetchTimer örnek](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [FetchTimer örnek](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)

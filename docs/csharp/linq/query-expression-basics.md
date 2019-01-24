@@ -3,12 +3,12 @@ title: Sorgu ifadesi temelleri (C# üzerinde LINQ)
 description: Sorgu ifadeleri ilgili kavramlar tanıtılmaktadır.
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709123"
 ---
 # <a name="query-expression-basics"></a>Sorgu ifadesi temelleri
 
@@ -174,7 +174,7 @@ Daha fazla bilgi için [nasıl yapılır: gruplandırma işleminde alt sorgu ger
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# programlama kılavuzu](../programming-guide/index.md)  
-- [Dil ile Tümleşik Sorgu (LINQ)](index.md)  
-- [Sorgu anahtar sözcükleri (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [Standart sorgu işleçlerine genel bakış](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [C# programlama kılavuzu](../programming-guide/index.md)
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)
+- [Query keywords (LINQ)](../language-reference/keywords/query-keywords.md)
+- [Standart sorgu işleçlerine genel bakış](../programming-guide/concepts/linq/standard-query-operators-overview.md)

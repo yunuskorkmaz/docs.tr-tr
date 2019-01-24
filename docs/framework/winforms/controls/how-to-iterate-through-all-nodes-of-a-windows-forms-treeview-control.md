@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms TreeView Denetiminin Tüm Düğümlerinde Yineleme'
+title: 'Nasıl yapılır: Bir Windows Forms TreeView denetiminin tüm düğümlerinde yineleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 89a2c1411ab64b4a20ad291165cfa6d83511c4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651857"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Nasıl yapılır: Bir Windows Forms TreeView Denetiminin Tüm Düğümlerinde Yineleme
-Windows Forms kümedeki her düğüm incelemek bazen yararlıdır <xref:System.Windows.Forms.TreeView> bazı hesaplama düğümü değerlerine gerçekleştirmek için denetim. Bu işlem yapılabilir her düğümün her koleksiyonundaki ağacının dolaşır özyinelemeli yordamı (C# ve C++ yöntemi özyinelemeli) kullanarak.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Nasıl yapılır: Bir Windows Forms TreeView denetiminin tüm düğümlerinde yineleme
+Her düğüm bir Windows Forms incelemeniz bazen kullanışlıdır <xref:System.Windows.Forms.TreeView> düğüm değerleri üzerinde bazı hesaplama gerçekleştirmek için denetimi. Bu işlem yapılabilir bir özyinelemeli yordamı kullanarak (yinelemeli yönteminde C# ve C++) ağacının her bir koleksiyon içindeki her bir düğümün aracılığıyla yinelenir.  
   
- Her <xref:System.Windows.Forms.TreeNode> nesne ağaç görünümünde ağaç görünümü gitmek için kullanabileceğiniz özellikler içeriyor: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, ve <xref:System.Windows.Forms.TreeNode.Parent%2A>. Değeri <xref:System.Windows.Forms.TreeNode.Parent%2A> geçerli düğümünün üst düğümün bir özelliktir. Varsa, geçerli düğümün alt öğelerinin listelenen kendi <xref:System.Windows.Forms.TreeNode.Nodes%2A> özelliği. <xref:System.Windows.Forms.TreeView> Denetiminin kendisini <xref:System.Windows.Forms.TreeView.TopNode%2A> tüm ağaç görünümünün kök düğüm özelliği.  
+ Her <xref:System.Windows.Forms.TreeNode> nesne ağaç görünümünde, ağaç görünümünde gezinmek için kullanabileceğiniz özelliklere sahiptir: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, ve <xref:System.Windows.Forms.TreeNode.Parent%2A>. Değerini <xref:System.Windows.Forms.TreeNode.Parent%2A> üst düğümünün geçerli düğüm bir özelliktir. Varsa, geçerli düğümünün alt düğümleri listelenen kendi <xref:System.Windows.Forms.TreeNode.Nodes%2A> özelliği. <xref:System.Windows.Forms.TreeView> Denetiminin kendisini <xref:System.Windows.Forms.TreeView.TopNode%2A> tüm ağaç görünümünün kök düğüm özelliği.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView denetiminin tüm düğümlerinde yineleme için  
   
-1.  Her düğüm testleri bir özyinelemeli yordamı (C# ve C++ yöntemi özyinelemeli) oluşturun.  
+1.  Bir özyinelemeli yordam oluşturma (özyinelemeli yönteminde C# ve C++), her düğüm test eder.  
   
 2.  Yordam çağrısı.  
   
-     Aşağıdaki örnekte, her yazdırma gösterilmiştir <xref:System.Windows.Forms.TreeNode> nesnenin <xref:System.Windows.Forms.TreeNode.Text%2A> özelliği:  
+     Aşağıdaki örnek, her yazdırma işlemi gösterilmektedir <xref:System.Windows.Forms.TreeNode> nesnenin <xref:System.Windows.Forms.TreeNode.Text%2A> özelliği:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -123,6 +123,6 @@ Windows Forms kümedeki her düğüm incelemek bazen yararlıdır <xref:System.W
        }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Özyinelemeli Yordamlar](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Özyinelemeli Yordamlar](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

@@ -2,12 +2,12 @@
 title: Yükleme veya XML1 Ayrıştırma sırasında boşluk koruma
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 019b4452bcd76fff462edab6a584cf5ae0276ee7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3dbbbc8412cdef6ea62197171bb950d6c5344350
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704949"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML yükleme veya Ayrıştırma sırasında boşluk koruma
 Bu konuda boşluk davranışını denetlemek nasıl açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,6 +37,6 @@ Bu konuda boşluk davranışını denetlemek nasıl açıklar [!INCLUDE[sqltecxl
   
  Bir XML ağacı kullanarak oluşturabileceğiniz bir <xref:System.Xml.XmlWriter>. Yazılan düğümleri <xref:System.Xml.XmlWriter> ağacında doldurulur. Bu yöntemi kullanarak bir XML ağacı oluşturma sırasında ancak tüm düğümleri korunan, düğüm boşluk olup veya boşluk önemli olup olmamasına bakılmaksızın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

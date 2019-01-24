@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643396"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter Yöntemi
-Tek bir parametre geçerli yöntemi tanımlar. Parametre türü yöntemin imzası parametre konumlarını (sıralı) alınır.  
+Tek bir parametre, geçerli yöntemi tanımlar. Parametre türü yöntemin imzasını içinde parametrenin konumu (sıra) alınmıştır.  
   
- Parametreleri, verilen bir yöntem için meta verilerde tanımlanmışsa, bu yöntemi kullanarak bunları yeniden tanımlamanız gerekmez. Sembol okuyucular parametreler için normal meta veriler sembol deposu denetlemeden önce denetlemeniz gerekir.  
+ Parametreler için belirli bir yöntemin meta verilerindeki tanımlanmışsa, bu yöntemi kullanarak bunları yeniden tanımlamanız gerekmez. Sembol okuyucu parametreleri için normal meta veriler, sembol deposuna iade etmeden önce işaretlemeniz gerekir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,19 +56,19 @@ HRESULT DefineParameter(
  [in] Adres türü.  
   
  `addr1`  
- [in] Parametre belirtimini ilk adresi.  
+ [in] Parametre belirtimine ilk adresi.  
   
  `addr2`  
- [in] Parametre belirtimini ikinci adresi.  
+ [in] Parametre belirtimine ikinci adresi.  
   
  `addr3`  
- [in] Parametre belirtimini üçüncü adresi.  
+ [in] Parametre belirtimine üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

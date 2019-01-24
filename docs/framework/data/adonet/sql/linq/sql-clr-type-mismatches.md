@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700955"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR tür uyumsuzlukları
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve SQL Server arasındaki çeviriyi çoğunu otomatikleştirir. Bununla birlikte, bazı durumlarda, tam çeviri engelleyin. Aşağıdaki bölümlerde bu anahtar uyuşmazlıklarını ortak dil çalışma zamanı (CLR) türleri ve SQL Server veritabanı türleri özetlenir. Özel tür eşlemeleri ve işlev çeviri sırasında hakkında daha fazla ayrıntı bulabilirsiniz [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) ve [veri türleri ve işlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  Anlam farklılıklara ek olarak, CLR türü sistemleri ve SQL Server arasında geçen zaman performans etkilerini dikkate almak önemlidir. Büyük veri kümeleri için bu tür performans sorunlarını, uygulama dağıtılabilir olup olmadığını belirleyebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

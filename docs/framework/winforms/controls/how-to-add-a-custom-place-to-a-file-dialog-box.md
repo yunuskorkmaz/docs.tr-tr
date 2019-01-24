@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Dosya İletişim Kutusuna Özel Yer Ekleme'
+title: 'Nasıl yapılır: Dosya iletişim kutusuna özel yer ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 7a6ace385f7594a467785fbc677517c8a6e1ab53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674654"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Nasıl Yapılır: Dosya İletişim Kutusuna Özel Yer Ekleme
-Varsayılan açın ve iletişim kutuları kaydetmek [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] başlıklı iletişim kutusunun sol tarafında bir alana sahip **sık kullanılan bağlantılar**. Bu alan özel yerler adı verilir. <xref:System.Windows.Forms.OpenFileDialog> Ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları klasörlere eklemenize izin <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonu.  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Nasıl yapılır: Dosya iletişim kutusuna özel yer ekleme
+Varsayılan açın ve iletişim kutuları tasarruf [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] başlıklı iletişim kutusunun sol tarafında bir alana sahip **sık kullanılan bağlantılar**. Bu alanı özel yerler çağrılır. <xref:System.Windows.Forms.OpenFileDialog> Ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları klasörlere eklemenize izin <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonu.  
   
 > [!NOTE]
->  Görünmesi özel bir yere sırayla <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> özelliği ayarlanmalıdır `true` (varsayılan).  
+>  Görünmesi özel bir alan için sırayla <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> özelliği ayarlanmalıdır `true` (varsayılan).  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Dosya iletişim kutusuna özel yer eklemek için  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Dosya iletişim kutusuna özel yer ekleme  
   
--   Bir bilinen klasör GUID bir yolu ekleyin veya bir <xref:System.Windows.Forms.FileDialogCustomPlace> nesnesine <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> iletişim kutusunun koleksiyonu.  
+-   Bilinen klasör GUID, bir yol eklemek veya bir <xref:System.Windows.Forms.FileDialogCustomPlace> nesnesini <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> iletişim kutusunun koleksiyonu.  
   
      Aşağıdaki kod örneği, bir yol eklemek gösterilmektedir:  
   
@@ -36,7 +36,7 @@ Varsayılan açın ve iletişim kutuları kaydetmek [!INCLUDE[wiprlhext](../../.
     openFileDialog1.CustomPlaces.Add("C:\\MyCustomPlace");  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.FileDialog>  
- <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>  
- [Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.FileDialog>
+- <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
+- [Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)

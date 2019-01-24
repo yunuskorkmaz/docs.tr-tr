@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma'
+title: 'Nasıl yapılır: Bağlama göre öğeleri bulan bir sorgu yazma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667957"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Nasıl yapılır: bağlama (C#) göre öğeleri bulan bir sorgu yazma
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Nasıl yapılır: Bağlama göre öğeleri bulan bir sorgu yazma (C#)
 Bazen, bağlama göre öğeleri seçen bir sorgu yazmak zorunda kalabilirsiniz. Bağlı olarak önceki veya Eşdüzey öğeleri aşağıdaki filtreleme isteyebilirsiniz. Temel alınarak alt veya üst öğeleri filtrelemek isteyebilirsiniz.  
   
  Bir sorgu yazma ve sorgu sonuçlarının kullanarak bunu yapabilirsiniz `where` yan tümcesi. İlk null karşı test etmeyi ve ardından değeri test varsa, sorgu yapılacağı daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.  
@@ -98,10 +98,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Linq.XElement.Parse%2A>  
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
-- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
-- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
 - [Temel sorgular (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

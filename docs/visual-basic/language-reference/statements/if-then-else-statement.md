@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 08d51326ee0c9f91eec02467ebcb116354b5033f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ceca58b2d69d72e079a9f2e2791f7f586c459167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743653"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else Deyimi (Visual Basic)
 İfadenin değerine bağlı olarak bir deyim grubunu koşullu yürütür.  
@@ -49,7 +49,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 
 ## <a name="quick-links-to-example-code"></a>Örnek kod için hızlı bağlantılar
 
-Bu makalede kullanımını gösteren birkaç örnekleri içeren `If`... `Then`... `Else` deyimi:
+Bu makalede kullanımlarını gösteren birkaç örnek içeren `If`... `Then`... `Else` deyimi:
 
 * [Çok satırlı sözdizimi örneği](#multi-line)
 * [İç içe geçmiş sözdizimi örneği](#nested)
@@ -57,52 +57,52 @@ Bu makalede kullanımını gösteren birkaç örnekleri içeren `If`... `Then`..
 
 ## <a name="parts"></a>Bölümler  
  `condition`  
- Gerekli. İfade. Değerlendirilmelidir `True` veya `False`, ya da örtük olarak parametresinin veri türü için `Boolean`.  
+ Gerekli. Expression. Değerlendirilmelidir `True` veya `False`, ya da örtük olarak dönüştürülebilir bir veri türüne `Boolean`.  
   
- İfade ise bir [null atanabilir](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` değerlendiren değişkeni [hiçbir şey](../../../visual-basic/language-reference/nothing.md), ifade ise, koşulu kabul edilir `False` ve `Else` blok gerçekleştirilir.  
+ İfade ise bir [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` değerlendiren değişkeni [hiçbir şey](../../../visual-basic/language-reference/nothing.md), ifade ise, koşulu kabul edilir `False` ve `Else` bloğu yürütülür.  
   
  `Then`  
  Tek satırlı sözdiziminde gerekli; çok satırlı sözdiziminde isteğe bağlı.  
   
  `statements`  
- İsteğe bağlı. Bir veya daha fazla deyimleri aşağıdaki `If`... `Then` varsa yürütülme `condition` değerlendiren `True`.  
+ İsteğe bağlı. Bir veya daha fazla deyimlerini aşağıdaki `If`... `Then` durumunda yürütülen `condition` değerlendiren `True`.  
   
  `elseifcondition`  
- Gerekli olursa `ElseIf` mevcuttur. İfade. Değerlendirilmelidir `True` veya `False`, ya da örtük olarak parametresinin veri türü için `Boolean`.  
+ Gerekli if `ElseIf` mevcuttur. Expression. Değerlendirilmelidir `True` veya `False`, ya da örtük olarak dönüştürülebilir bir veri türüne `Boolean`.  
   
  `elseifstatements`  
- İsteğe bağlı. Bir veya daha fazla deyimleri aşağıdaki `ElseIf`... `Then` varsa yürütülme `elseifcondition` değerlendiren `True`.  
+ İsteğe bağlı. Bir veya daha fazla deyimlerini aşağıdaki `ElseIf`... `Then` durumunda yürütülen `elseifcondition` değerlendiren `True`.  
   
  `elsestatements`  
- İsteğe bağlı. Hayır önceki varsa yürütülen bir veya daha fazla deyimleri `condition` veya `elseifcondition` ifadeyi hesaplar için `True`.  
+ İsteğe bağlı. Hayır önceki durumunda yürütülen bir veya daha fazla deyimleri `condition` veya `elseifcondition` ifadeyi hesaplar için `True`.  
   
  `End If`  
- Çok satırlı sürümü sonlandırır `If`... `Then`... `Else` bloğu.  
+ Çok satırlı sürümünü sonlandırır `If`... `Then`... `Else` blok.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
-### <a name="multiline-syntax"></a>Çok satırlı sözdizimi  
- Zaman bir `If`... `Then`... `Else` deyimi karşılaştı, `condition` test edilmiştir. Varsa `condition` olan `True`, aşağıdaki deyimleri `Then` yürütülür. Varsa `condition` olan `False`, her `ElseIf` deyimi (varsa) değerlendirildiği sırayla. Zaman bir `True` `elseifcondition` , hemen ilişkili aşağıdaki deyimleri bulunan `ElseIf` yürütülür. Öyle değilse `elseifcondition` değerlendiren `True`, veya varsa hiçbir `ElseIf` deyimleri, aşağıdaki deyimleri `Else` yürütülür. Deyimlerini aşağıdaki yürütme sonrasında `Then`, `ElseIf`, veya `Else`, yürütülmeye deyimi aşağıdaki `End If`.  
+### <a name="multiline-syntax"></a>Çok satırlı söz dizimi  
+ Olduğunda bir `If`... `Then`... `Else` deyimi karşılaştı, `condition` test edilir. Varsa `condition` olduğu `True`, aşağıdaki deyimleri `Then` yürütülür. Varsa `condition` olduğu `False`, her `ElseIf` deyimi (varsa) değerlendirilir sırada. Olduğunda bir `True` `elseifcondition` hemen ilişkili aşağıdaki deyimleri bulunana `ElseIf` yürütülür. Hayır ise `elseifcondition` değerlendiren `True`, veya varsa hiçbir `ElseIf` ifadeleri, aşağıdaki deyimleri `Else` yürütülür. Deyimler yürütüldükten sonra `Then`, `ElseIf`, veya `Else`, yürütme devam eder, deyimi aşağıdaki `End If`.  
   
- `ElseIf` Ve `Else` yan tümceleri olan isteğe bağlı hem de. Kadar olabilir `ElseIf` yan tümceleri aynı istediğiniz bir `If`... `Then`... `Else` deyimi ancak hiçbir `ElseIf` yan tümcesi sonra görünebilir bir `Else` yan tümcesi. `If`... `Then`... `Else` deyimleri iç içe geçirilemez diğer içinde.  
+ `ElseIf` Ve `Else` yan tümceleri olan hem de isteğe bağlı. Kadar olabilir `ElseIf` istediğiniz şekilde yan tümceleri bir `If`... `Then`... `Else` deyimi, ancak Hayır `ElseIf` yan tümcesi, sonra görünebilir bir `Else` yan tümcesi. `If`... `Then`... `Else` ifadeleri iç içe geçirilemez diğer içinde.  
   
- Çok satırlı sözdiziminde `If` deyimi, ilk satırda yegane deyim olmalıdır. `ElseIf`, `Else`, Ve `End If` deyimleri yalnızca bir satır etiketle öncesinde. `If`... `Then`... `Else` bloğu ile bitmelidir bir `End If` deyimi.  
+ Çok satırlı sözdiziminde `If` deyimi ilk satırda tek deyim olması gerekir. `ElseIf`, `Else`, Ve `End If` deyimleri yalnızca bir satır etiketi tarafından öncesinde. `If`... `Then`... `Else` blok sonlanmalı bir `End If` deyimi.  
   
 > [!TIP]
->  [Seçin... Case deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md) birkaç olası değerlere sahip tek bir ifade değerlendirme daha yararlı olabilir.  
+>  [Seçin... Case deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md) birkaç olası değerleri içeren tek bir ifade değerlendirirken daha kullanışlı olabilir.  
   
-### <a name="single-line-syntax"></a>Tek satırlı sözdizimi  
- True ise yürütmek için kodu ile tek bir koşul için tek satırlı sözdizimini kullanabilirsiniz. Ancak, birden çok satırlı sözdizimi yapısı ve daha fazla esneklik sağlar ve okuma, korumanıza ve hata ayıklama kolaydır.  
+### <a name="single-line-syntax"></a>Tek satırlı söz dizimi  
+ True ise yürütmek için kod ile tek bir koşul için tek satır sözdizimini kullanabilirsiniz. Ancak, çok satırlı söz dizimi daha fazla yapısı ve esneklik sağlar ve daha kolay okumak, güncelleştirmek ve hata ayıklama.  
   
- Hangi aşağıdaki `Then` anahtar sözcüğü bir deyim tek satırlı olup olmadığını belirlemek için incelenir `If`. Bir yorum dışında her şey sonra görünürse `Then` aynı satırda deyim tek satırlı kabul edilir `If` deyimi. Varsa `Then` yoksa, birden çok satırlı başlangıcı olmalıdır `If`... `Then`... `Else`.  
+ Aşağıda `Then` anahtar sözcüğü bir deyim tek satırlı olup olmadığını belirlemek için incelenir `If`. Bir açıklama dışındaki herhangi bir şey sonra görünürse `Then` aynı satırda deyimi tek satır kabul edilir `If` deyimi. Varsa `Then` eksik, çok satırlı başlangıcını olmalıdır `If`... `Then`... `Else`.  
   
- Tek satırlı sözdiziminde sonucu olarak yürütülen birden çok deyime olabilir bir `If`... `Then` karar. Tüm ifadeler aynı satırda olmalıdır ve virgüllerle ayrılmış.  
+ Tek satırlı sözdiziminde sonucu olarak çalıştırılan birden çok deyime sahip bir `If`... `Then` karar. Tüm ifadeler aynı satırda olmalıdır ve virgüllerle ayrılmış.  
 
 ## <a name="multiline-syntax-example"></a>Çok satırlı sözdizimi örneği
 
 <a name="multi-line"></a>
  
- Aşağıdaki örnek çok satırlı sözdizimi kullanımı gösterilmektedir `If`... `Then`... `Else` deyimi.  
+ Çok satırlı söz diziminin kullanılması aşağıdaki örnekte `If`... `Then`... `Else` deyimi.  
   
  [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
 
@@ -116,16 +116,16 @@ Bu makalede kullanımını gösteren birkaç örnekleri içeren `If`... `Then`..
 
 ## <a name="single-line-syntax-example"></a>Tek satırlı sözdizimi örneği
   
-<a name="single-line"></a> Aşağıdaki örnek, tek satırlı sözdizimi kullanımını göstermektedir.  
+<a name="single-line"></a> Aşağıdaki örnek, tek satırlı söz dizimi kullanımını gösterir.  
   
  [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
   
-## <a name="see-also"></a>Ayrıca bkz.  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
- <xref:Microsoft.VisualBasic.Interaction.Switch%2A>  
- [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Select...Case Deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Karar Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
+- <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
+- [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Select...Case Deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Karar Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)

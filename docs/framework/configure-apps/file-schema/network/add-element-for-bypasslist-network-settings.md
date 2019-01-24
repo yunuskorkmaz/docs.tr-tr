@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680787"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;ekleme&gt; bypasslist (ağ ayarları) için
 Bir IP adresi veya DNS adı için proxy atlama listesi ekler.  
@@ -23,7 +23,7 @@ Bir IP adresi veya DNS adı için proxy atlama listesi ekler.
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist >  
+\<bypasslist>  
 \<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -80,6 +80,6 @@ Bir IP adresi veya DNS adı için proxy atlama listesi ekler.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

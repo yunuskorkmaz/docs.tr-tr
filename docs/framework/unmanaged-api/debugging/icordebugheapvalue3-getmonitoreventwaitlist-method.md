@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628519"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList Metodu
-İzleyici kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.  
+Monitör kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT GetMonitorEventWaitList (
   
 #### <a name="parameters"></a>Parametreler  
  `ppThreadEnum`  
- [out] İş parçacıkları sıralı listesini sağlar Icordebugthreadenum Numaralandırıcı.  
+ [out] Icordebugthreadenum Numaralandırıcı iş parçacıkları sıralı listesini sağlar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.  
+ Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
@@ -50,25 +50,25 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- Listedeki ilk iş parçacığı için sonraki çağrı tarafından yayınlanan ilk parçacığıdır <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Sonraki iş parçacığı listesinde aşağıdaki çağrıyı ve benzeri yayımlanır.  
+ Listedeki ilk iş parçacığında sonraki çağrı tarafından yayınlanan ilk iş parçacığıdır <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Bir sonraki iş parçacığı listesinde aşağıdaki çağrı ve benzeri serbest bırakılır.  
   
- Liste boş değilse, bu yöntem S_OK döndürür. Liste boş ise, yöntem S_FALSE döndürür; Bu durumda, boş olmasına rağmen numaralandırma hala geçerli değil.  
+ Liste boş değilse bu yöntem S_OK döndürür. Liste boş ise, yöntem S_FALSE döndürür; Bu durumda, sabit listesi boş olmasına rağmen hala geçerli.  
   
- Her iki durumda da, yalnızca geçerli eşitlenmiş durumuna süresince numaralandırması arabirimi kullanılabilir. Ancak, iş parçacığı çıkar kadar ondan dispensed iş parçacığının arabirimleri geçerli değildir.  
+ Her iki durumda da, yalnızca geçerli eşitleme durumunun süresi boyunca sabit listesi arabirimi kullanılabilir. Ancak, iş parçacığının arabirimleri buradan dispensed iş parçacığı çıkana kadar geçerlidir.  
   
- Varsa `ppThreadEnum` geçerli bir işaretçi değil sonucu tanımlanmadı.  
+ Varsa `ppThreadEnum` geçerli bir işaretçi değil sonuç tanımsızdır.  
   
- Sağlayacak şekilde, varsa, iş parçacıkları izleme için bekleyen belirlenemiyor bir hata oluşursa hata olduğunu gösteren bir HRESULT yöntemi döndürür.  
+ Bu, varsa, iş parçacıkları için izleme, bekleyen belirlenemiyor, bir hata oluşursa yöntemi hata olduğunu gösteren bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,28 +2,28 @@
 title: Değişken genel arabirimler oluşturma (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663264"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Değişken genel arabirimler oluşturma (Visual Basic)
-Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan daha fazla türetilmiş arabirim yöntemleri sağlar. *Değişken karşıtı* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Eşdeğişken sahip genel arabirim veya karşıtı genel tür parametreleri çağrılır *değişken*.  
+Genel Tür parametrelerine birlikte değişken olarak arabirimleri bildirebilir veya değişken karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan değerinden daha fazla türetilmiş arabirim yöntemleri sağlar. *Kontravaryans* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Birlikte değişken olan genel bir arabirim veya değişken karşıtı genel tür parametreleri çağrılır *değişken*.  
   
 > [!NOTE]
->  .NET framework 4 birkaç mevcut genel arabirimler sapma desteği sunmuştur. .NET Framework'teki değişken arabirimler listesi için bkz: [genel arabirimler (Visual Basic) varyans](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+>  .NET framework 4, çeşitli genel arabirimlerin mevcut sapma desteği sunmuştur. .NET Framework'teki değişken arabirimler listesi için bkz. [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
-## <a name="declaring-variant-generic-interfaces"></a>Bildiren değişken genel arabirimler  
+## <a name="declaring-variant-generic-interfaces"></a>Bildirim değişken genel arabirimler  
  Değişken genel arabirimler kullanarak bildirebilirsiniz `in` ve `out` genel tür parametreleri için anahtar sözcükler.  
   
 > [!IMPORTANT]
->  `ByRef` Visual Basic'de değişken olamaz. Türlerin varyans da desteklemez.  
+>  `ByRef` Visual Basic'te parametreleri varyant olamaz. Değer türleri varyansı da desteklemez.  
   
- Genel tür parametresi eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Eşdeğişken türü aşağıdaki koşulları karşılaması gerekir:  
+ Genel tür parametresi birlikte değişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Birlikte değişen türde aşağıdaki koşulları karşılaması gerekir:  
   
--   Türü yalnızca bir dönüş türü arabirim yöntemleri olarak kullanılan ve yöntem bağımsız değişkenleri bir tür olarak kullanılmaz. Bu, aşağıdaki örnekte gösterilmiştir türü `R` eşdeğişken bildirilir.  
+-   Türü yalnızca bir dönüş türü arabirim yöntemleri olarak kullanılan ve yöntem bağımsız bir türü olarak kullanılmaz. Bu, aşağıdaki örnekte gösterilmiştir türü `R` birlikte değişken olarak bildirilir.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -33,7 +33,7 @@ Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya 
     End Interface  
     ```  
   
-     Bu kural için bir istisna vardır. Karşıtı Genel temsilci bir yöntem parametresi olarak varsa, türü için temsilci genel tür parametresi olarak kullanabilirsiniz. Bu türü tarafından gösterilen `R` aşağıdaki örnekte. Daha fazla bilgi için bkz: [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [işlev ve eylem genel temsilciler (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+     Bu kuralın tek istisnası yoktur. Bir yöntem parametresi olarak bir değişken karşıtı Genel temsilci varsa, türü için temsilci genel tür parametre olarak kullanabilirsiniz. Bu tür tarafından gösterilmiştir `R` aşağıdaki örnekte. Daha fazla bilgi için [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [işlev ve eylem genel temsilcileri (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -41,7 +41,7 @@ Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya 
     End Interface  
     ```  
   
--   Türü, arabirim yöntemleri için genel bir kısıtlama olarak kullanılmaz. Bu aşağıdaki kodda gösterilmiştir.  
+-   Türü genel kısıtlama olarak arabirim yöntemleri için kullanılmaz. Bu, aşağıdaki kodda gösterilmiştir.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -52,7 +52,7 @@ Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya 
     End Interface  
     ```  
   
- Genel tür parametresi karşıtı kullanarak bildirebilirsiniz `in` anahtar sözcüğü. Karşıtı türü arabirim yöntemleri dönüş türü olarak değil de yalnızca yöntem bağımsız değişkenleri bir tür olarak kullanılabilir. Karşıtı türü, genel kısıtlamalar için de kullanılabilir. Aşağıdaki kod karşıtı arabirimi bildirin ve genel bir kısıtlama yöntemlerinden biri için nasıl kullanılacağını gösterir.  
+ Bir genel tür parametresi değişken karşıtı kullanarak bildirebilirsiniz `in` anahtar sözcüğü. Değişken karşıtı türü arabirim yöntemleri dönüş türü olarak değil de yalnızca bir tür yöntem bağımsız olarak kullanılabilir. Değişken karşıtı türü genel kısıtlamalar için de kullanılabilir. Aşağıdaki kod, bir değişken karşıtı arabirimi bildirme ve bir genel kısıtlama yöntemlerinden biri için kullanma gösterilmektedir.  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -63,7 +63,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- Ayrıca aşağıdaki kod örneğinde gösterildiği gibi farklı tür parametreleri yanı sıra, aynı arabiriminde Kovaryans ve kontravaryans desteklemek mümkündür.  
+ Ayrıca aşağıdaki kod örneğinde gösterildiği gibi aynı arabirimi, ancak farklı türde parametreler için hem Kovaryans ve kontravaryans desteklemek mümkündür.  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- Visual Basic'te temsilci türü belirtmeden değişken arabirimler olayları bildiremezsiniz. Ayrıca, bir değişken arabirimi sınıfları, numaralandırmaları ve yapıları iç içe geçmiş olamaz, ancak arabirimleri içe. Bu aşağıdaki kodda gösterilmiştir.  
+ Visual Basic'te, temsilci türü belirtmeden değişken Arabirimlerdeki olaylar bildiremezsiniz. Ayrıca, bir değişken arabirimi sınıflar, numaralandırmalar ve yapılar iç içe geçmiş olamaz, ancak arabirimleri içe. Bu, aşağıdaki kodda gösterilmiştir.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -96,8 +96,8 @@ Interface ICovariant(Of Out R)
 End Interface  
 ```  
   
-## <a name="implementing-variant-generic-interfaces"></a>Uygulama değişken genel arabirimler  
- Değişken genel arabirimler değişmez arabirimleri için kullanılan aynı sözdizimini kullanarak sınıflarda uygulayın. Aşağıdaki kod örneğinde, genel bir sınıf bir eşdeğişken arabirimini uygulayan gösterilmektedir.  
+## <a name="implementing-variant-generic-interfaces"></a>Değişken genel arabirimler uygulama  
+ Değişken genel arabirimler sınıflarda sabit arabirimler için kullanılan aynı sözdizimini kullanarak uygulayın. Aşağıdaki kod örneği, birlikte değişken arabirimi genel bir sınıf uygulamak gösterilmektedir.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -113,7 +113,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- Değişken arabirimler uygulayan sınıflar değişmez. Örneğin, aşağıdaki kodu göz önünde bulundurun.  
+ Sabit değişken arabirimleri uygulayan sınıflar. Örneğin, aşağıdaki kodu düşünün.  
   
 ```vb  
  The interface is covariant.  
@@ -130,7 +130,7 @@ Dim button As SampleImplementation(Of Button) =
 ```  
   
 ## <a name="extending-variant-generic-interfaces"></a>Genişletme değişken genel arabirimler  
- Değişken genel bir arabirim genişlettiğinizde kullanmak zorunda `in` ve `out` açıkça türetilmiş bir arabirim farkı destekleyip desteklemediğini belirlemek için anahtar sözcükler. Derleyici genişletilen arabiriminden varyansı Infer değil. Örneğin, aşağıdaki arabirimleri göz önünde bulundurun.  
+ Bir değişken genel arabirim genişlettiğinizde kullanmak zorunda `in` ve `out` açıkça türetilmiş bir arabirim varyansı destekleyip desteklemediğini belirlemek için anahtar sözcükler. Derleyici, varyans Genişletilmekte olan arabiriminden Infer değil. Örneğin, aşağıdaki arabirimlerinden göz önünde bulundurun.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -145,9 +145,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- İçinde `Invariant(Of T)` arabirim, genel tür parametresi `T` değişmez, olan ancak içinde `IExtCovariant (Of Out T)`aynı arabirimi her iki arabirimde genişletmek rağmen tür parametresi değişkendir. Aynı kural karşıtı genel tür parametreleri için uygulanır.  
+ İçinde `Invariant(Of T)` arabirim, genel tür parametresi `T` değişmezdir, ise içinde `IExtCovariant (Of Out T)`hem arabirimleri aynı arabirimi genişletmek rağmen tür parametresi değişkendir. Aynı kural, değişken karşıtı genel tür parametreleri için uygulanır.  
   
- Genel parametre girildiği iki arabirim genişleten bir arabirim oluşturabilirsiniz `T` değişkendir ve varsa genişletme içinde karşıtı olduğu arabirimi arabirim genel tür parametresi `T` sabit değil. Bu aşağıdaki kod örneğinde gösterilmiştir.  
+ Burada, genel tür parametresi her iki arabirimini genişletir bir arabirim oluşturabilirsiniz `T` birlikte değişkendir ve genel tür parametresi, genişletme, değişken karşıtı olduğu arabirimi arabirim `T` değişmezdir. Bu aşağıdaki kod örneğinde gösterilmiştir.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -161,7 +161,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- Ancak, genel türde bir parametre değilse `T` olan bir arabiriminde eşdeğişken bildirilen, siz onu karşıtı bildiremezsiniz genişletme arabiriminde veya tersi. Bu aşağıdaki kod örneğinde gösterilmiştir.  
+ Ancak, genel tür parametresi, `T` olan tek bir arabirimde bildirilen değişken, değişken karşıtı bildirip genişletme arabiriminde veya tam tersi. Bu aşağıdaki kod örneğinde gösterilmiştir.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -173,13 +173,13 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>Belirsizliği önleme  
- Değişken genel arabirimler uyguladığınızda farkı bazen belirsizlik için yol açabilir. Bu kaçınılmalıdır.  
+### <a name="avoiding-ambiguity"></a>Belirsizlik kaçınma  
+ Değişken genel arabirimler uyguladığınızda, varyans bazen için karışıklığa neden olabilir. Bu kaçınılmalıdır.  
   
- Örneğin, bir sınıf tarafından açıkça farklı genel tür parametreleri ile aynı değişken genel arabirim uygularsanız, belirsizlik oluşturabilirsiniz. Derleyici bir hata bu durumda üretmez, ancak çalışma zamanında hangi arabirim uygulamasına seçilir belirtilmedi. Bu, kodunuzda Zarif hataları neden olabilir. Aşağıdaki kod örneği göz önünde bulundurun.  
+ Örneğin, bir sınıf içinde farklı bir genel tür parametreleri ile aynı değişken genel arabirim açıkça uygularsanız, belirsizlik oluşturabilirsiniz. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulaması seçilir belirtilmedi. Bu küçük hatalar, kodunuzda neden olabilir. Aşağıdaki kod örneği göz önünde bulundurun.  
   
 > [!NOTE]
->  İle `Option Strict Off`, Visual Basic belirsiz arabirim uygulamasına olduğunda bir derleyici uyarı oluşturur. İle `Option Strict On`, Visual Basic derleyici hatası oluşturur.  
+>  İle `Option Strict Off`, Visual Basic belirsiz arabirimi uygulaması olduğunda bir derleyici uyarısı oluşturur. İle `Option Strict On`, Visual Basic derleyici hatası oluşturur.  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -223,8 +223,8 @@ Sub Main()
 End Sub  
 ```  
   
- Bu örnekte, belirtilmeyen nasıl `pets.GetEnumerator` ücretlerinin arasında `Cat` ve `Dog`. Bu, kodunuzda sorunlara neden olabilir.  
+ Bu örnekte, belirtilmeyen nasıl `pets.GetEnumerator` ücretlerinin arasında `Cat` ve `Dog`. Kodunuzda bu sorunlara neden olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel arabirimler (Visual Basic) varyans](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [İşlev ve eylem genel temsilciler (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

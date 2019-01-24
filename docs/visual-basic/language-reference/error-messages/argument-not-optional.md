@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: 32edc55220acdbe547bd8808f32bd2508c6e319f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2004cf10d7827ac7b77773459de8158449136239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683144"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Bağımsız değişken isteğe bağlı değil (Visual Basic)
-Sayısı ve türleri bağımsız değişkenler beklenen eşleşmelidir. Yanlış sayıda bağımsız değişken yok veya belirtilmemiş bir bağımsız değişken isteğe bağlı değil. Bunu bildirildi bağımsız değişken yalnızca kullanıcı tanımlı bir yordamı çağrısından atlanabilir `Optional` yordamı tanımı'nda.  
+Bu beklenen sayısı ve bağımsız değişkenlerinin türleri eşleşmelidir. Yanlış sayıda bağımsız değişken yok veya atlanmış bir bağımsız değişken isteğe bağlı değil. Bu bildirilen bağımsız değişken yalnızca bir kullanıcı tanımlı yordam çağrısından atlanabilir `Optional` yordam tanımında.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 1.  Tüm gerekli bağımsız değişkenleri sağlayın.  
   
-2.  Atlanan bağımsız değişkenler isteğe bağlı olduğundan emin olun. Değilse, çağrısında bağımsız değişken sağlayın ya da parametre bildirme `Optional` tanımında.  
+2.  Atlanmış bir bağımsız değişken isteğe bağlı olduğundan emin olun. Değilse, çağrısında bağımsız değişken sağlayın veya parametre bildirmek `Optional` tanımında.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf35715564e58f1811618b6859a860008e9660c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655406"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Metodu
-Tam etki alanı adı veya uzaktan hata ayıklama hedef makine IPv4 adresini döndürür. IPv6, şu anda desteklenmiyor.  
+Tam etki alanı adı veya uzaktan hata ayıklama hedef makinesinin IPv4 adresini döndürür. IPv6 şu anda desteklenmiyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,33 +39,33 @@ HRESULT GetHostName (
   
 #### <a name="parameters"></a>Parametreler  
  `cchHostName`  
- [in] Karakter, boyutu, `szHostName` arabellek. Bu parametre 0 (sıfır) ise `szHostName` null olmalıdır.  
+ [in] Karakter cinsinden boyutu, `szHostName` arabellek. Bu parametre 0 (sıfır) ise `szHostName` null olmalıdır.  
   
  `pcchHostName`  
- [out] Ana bilgisayar adı veya IP adresi null Sonlandırıcı dahil karakter sayısı. Bu parametre null olabilir.  
+ [out] Konak adı veya IP adresi null sonlandırıcıyı da dahil olmak üzere karakter sayısı. Bu parametre null olabilir.  
   
  `szHostName`  
- [out] Ana bilgisayar adı veya IP adresini içeren bir arabellek.  
+ [out] Ana bilgisayar adı veya IP adresini içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Ana bilgisayar adı veya IP adresi başarıyla döndürüldü.  
+ Konak adı veya IP adresi başarıyla döndürüldü.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Ana bilgisayar adı veya IP adresi iade edilemiyor.  
+ Konak adı veya IP adresini döndürmek yüklenemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklayıcı yazıcı tarafından uygulanır. Birden fazla çağrı standardı izlemelidir: ilk çağrıda çağıran her ikisi de null değerini iletir `cchHostName` ve `szHostName`, ve `pcchHostName` gerekli arabellek boyutu döndürür. İkinci çağrıda önceden döndürüldü boyutu geçirilen `cchHostName`, ve uygun şekilde boyutlu bir arabellek geçirilen `szHostName`.  
+ Bu yöntem, hata ayıklayıcıyı yazan tarafından uygulanır. Birden fazla arama paradigması izlemelidir: İlk çağrı, çağıran her ikisi de null geçirir `cchHostName` ve `szHostName`, ve `pcchHostName` gerekli arabellek boyutunu döndürür. İkinci çağrıda, daha önce döndürülen boyutu geçirilen `cchHostName`, ve uygun boyutlandırılmış bir arabellek geçirilen `szHostName`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl  
+ **Üst bilgi:** CorDebug.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 3.5 SP1  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

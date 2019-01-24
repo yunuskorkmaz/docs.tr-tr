@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709396"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -28,7 +28,7 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Etki alanı/bölge|Güvenlik yönetimi ya da güven tek bir birim. Tipik bir etki alanı, tek bir kuruma içerebilir.|  
+|Domain/realm|Güvenlik yönetimi ya da güven tek bir birim. Tipik bir etki alanı, tek bir kuruma içerebilir.|  
 |Federasyon|Güveni olan etki alanları koleksiyonu. Güven düzeyi farklılık gösterebilir, ancak genellikle kimlik doğrulaması içerir ve hemen her zaman yetkilendirme içerir. Tipik bir federasyon güveni için bir kaynak kümesi için paylaşılan erişim kuruluşların sayısı içerebilir.|  
 |Güvenlik Belirteci Hizmeti (STS)|Güvenlik belirteçleri bir Web hizmeti; diğer bir deyişle, onaylamalar yanınızda güvendiği, çok güvendiği kanıta göre yapar. Bu, etki alanı arasında güven aracılığı yapmaktan'ın temelini oluşturur.|  
   
@@ -60,7 +60,7 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
   
  İsterseniz kuruluşunuzdaki B kimlik doğrulamasından geçiren ve kullanıcıların erişimini yetkilendirir bir geçerli güvenlik belirtecine kuruluştaki B, STS sunması gerekir Web hizmetine erişmek birleşik güvenliği mimaride, bir kuruluşun kullanıcıları biliyor belirli hizmet.  
   
- STS B başvurarak üzerinde bir STS ile ilişkili ilkeden başka bir yöneltme düzeyi kullanıcıları alır. Geçerli bir güvenlik sunması gerekir (diğer bir deyişle, istemci güven bölge) STS A'dan belirteci STS B bir güvenlik belirteci vermeden önce. Bu iki kuruluş arasında bir güven ilişkisi bir corollary ve kuruluş B A. kuruluştan kullanıcılar için kimlikleri yönetme yok anlamına gelir. Uygulamada, STS B null olan `issuerAddress` ve `issuerMetadataAddress`. Daha fazla bilgi için [nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Bu durumda, istemci STS A. bulmak için yerel bir ilke başvurur Bu yapılandırma olarak adlandırılır *giriş bölge Federasyon* ve STS B STS A. hakkındaki bilgileri tutmak sahip olmadığından, daha iyi ölçeklendirir.  
+ STS B başvurarak üzerinde bir STS ile ilişkili ilkeden başka bir yöneltme düzeyi kullanıcıları alır. Geçerli bir güvenlik sunması gerekir (diğer bir deyişle, istemci güven bölge) STS A'dan belirteci STS B bir güvenlik belirteci vermeden önce. Bu iki kuruluş arasında bir güven ilişkisi bir corollary ve kuruluş B A. kuruluştan kullanıcılar için kimlikleri yönetme yok anlamına gelir. Uygulamada, STS B null olan `issuerAddress` ve `issuerMetadataAddress`. Daha fazla bilgi için [nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Bu durumda, istemci STS A. bulmak için yerel bir ilke başvurur Bu yapılandırma olarak adlandırılır *giriş bölge Federasyon* ve STS B STS A. hakkındaki bilgileri tutmak sahip olmadığından, daha iyi ölçeklendirir.  
   
  Kullanıcılar ardından kuruluştaki bir STS ile iletişime geçin ve normalde A. kuruluştaki herhangi bir kaynağa erişmek için kullandıkları kimlik doğrulama bilgileri sunarak bir güvenlik belirteci elde Bu, birden çok kimlik bilgileri kümesi sürdürmek zorunda veya birden çok hizmet sitede aynı kimlik bilgileri kümesini kullanarak kullanıcı sorununu da azaltır.  
   
@@ -289,5 +289,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ## <a name="summary"></a>Özet  
  Birleşik güvenliği sorumluluk temiz bir bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarisi oluşturmak için yardımcı olur. Dağıtılmış uygulama oluşturup dağıtırken için bir platform, WCF, Federasyon güvenlik uygulamak için yerel destek sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

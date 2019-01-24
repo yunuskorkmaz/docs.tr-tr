@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 543dfa8900fb14b30f6e70cdd0b4d281cc52708d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0efebfaa9c922ea7b72a7c4314801eb2c35dda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595532"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Bellek yok (Visual Basic Derleyici Hatası)
-Daha fazla bellek bulunandan gerekli değil.  
+Daha fazla bellek, kullanılabilir alandan gerekiyordu.  
   
  **Hata Kimliği:** BC2004  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Gereksiz uygulamalar, belgeler ve kaynak dosyaları kapatın.  
+-   Gereksiz uygulamaları, belgeler ve kaynak dosyaları kapatın.  
   
--   Gereksiz denetimleri ortadan kaldırmak ve böylece daha az forms aynı anda yüklenir  
+-   Gereksiz denetimleri ortadan kaldırabilir ve böylece daha az forms aynı anda yüklenir  
   
 -   Sayısını azaltın `Public` değişkenleri.  
   
 -   Kullanılabilir disk alanını denetle.  
   
--   Kullanılabilir RAM Miktarını ek bellek yüklemeden veya bellek tahsis artırın.  
+-   Ek bellek veya bellek tahsis tarafından kullanılabilir RAM Miktarını artırın.  
   
--   Emin olun artık gerekli olmadığında bu belleği serbest bırakılır.  
+-   Emin olun artık gerekli olmadığında o bellek serbest bırakılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)

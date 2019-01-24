@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679389"
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
-Visual C++ ve Visual Basic'te yığın yukarı daha fazla filtre ifadesi önce çalışır **son** deyimi. **Catch** blok ile ilişkili sonra bu filtre çalışan **son** deyimi. Daha fazla bilgi için bkz: [Using User-Filtered özel durumları](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sırada güvenlik etkilerini inceler. Hangi filtre ifadesini sırayla gösterilmektedir aşağıdaki sahte kod örneği göz önünde bulundurun ve **son** deyimleri çalıştırın.  
+Visual C++ ve Visual Basic'te yığınına daha fazla filtre ifadesi önce çalışan **son** deyimi. **Catch** blok ile ilişkili filtre sonra çalışan **son** deyimi. Daha fazla bilgi için [Using User-Filtered özel durumları](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sırada güvenlik etkilerini inceler. Filtre ifadeleri hangi sırayla gösteren aşağıdaki sözde kod örneği göz önünde bulundurun ve **son** deyimleri çalıştırın.  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- Bu kod aşağıdakileri yazdırılır.  
+ Bu kod aşağıdaki yazdırır.  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- Filtre öncesinde çalışan **son** güvenlik sorunları diğer kod yürütmeyi avantajı burada ele geçirebilir değiştirme durumu sağlayan şey tanıtılabilir şekilde deyimi. Örneğin:  
+ Filtre öncesinde çalışan **son** güvenlik sorunları diğer kod yürütmeyi avantajı burada ele geçirebilir değiştirme bir duruma yaptığı şey tanıtılmak şekilde deyimi. Örneğin:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Bu sahte kod yığını rastgele bir kodu çalıştırmak için daha yüksek bir filtre izin verir. İş parçacığı ile ilişkilendirilmiş kültürü değiştirme veya diğer örnekler geçici kimliğe bürünme başka bir kimlik, bazı güvenlik denetimi atlayan bir iç bayrağı ayarlama işlemlerinin benzer bir etkisi yoktur. Önerilen çözüm kodun değişiklikler iş parçacığı durumu arayanlar filtre bloklarından ayırmak için bir özel durum işleyici uygulamaktır. Ancak, özel durum işleyici düzgün bir şekilde uygulanması önemlidir veya bu sorun değil düzeltilecektir. Aşağıdaki örnek UI kültürü geçer, ancak her türlü iş parçacığı durumu değişikliği benzer şekilde açığa çıkabileceği.  
+ Bu sözde kod yığınına rasgele kodu çalıştırmak için daha yüksek bir filtre izin verir. Diğer örnekler bazı güvenlik denetimini atladığından bir iç bayrak ayarlandığında, başka bir kimlik geçici kimliğe bürünme benzer bir etkisi olmaz işlemleri veya iş parçacığıyla ilişkilendirilmiş kültürü değiştirme. Kod değişiklikleri için iş parçacığı durumu çağıranlar filtre bloklarından yalıtmak için bir özel durum işleyicisi tanıtmak için önerilen çözümdür bakın. Ancak, özel durum işleyicisi düzgün tanıtılmak önemlidir veya bu sorun değil düzeltilecektir. Aşağıdaki örnek kullanıcı Arabirimi kültürünü geçer, ancak herhangi bir türden iş parçacığı durumu değişikliği benzer şekilde sunulabilir.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Varolan kaydırmak için bu durumda durumda doğru düzeltme **deneyin**/**son** engelleyin bir **deneyin**/**catch** Blok. Yalnızca Tanıtımı bir **catch throw** varolan INTO yan tümcesinin **deneyin**/**son** bloğu değil düzeltme sorun aşağıdaki örnekte gösterildiği gibi.  
+ Doğru düzeltmeyi bu durumda varolan sarmaktır **deneyin**/**son** engelleyin bir **deneyin**/**catch** Blok. Yalnızca Giriş bir **catch throw** varolan INTO yan **deneyin**/**son** blok değil düzeltme sorun aşağıdaki örnekte gösterildiği gibi.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Bu sorunu nedeniyle gideremiyor **son** deyimi önce çalıştırılacak `FilterFunc` denetim alır.  
+ Bu sorun nedeniyle düzeltmemeyi **son** deyimi önce çalıştırılacak `FilterFunc` denetimi alır.  
   
- Aşağıdaki örnek, sağlayarak sorunu giderir **son** yan tümcesi yürütülebilir bir özel durum arayanlar özel durum filtresi bloklarını yukarı sunmadan önce.  
+ Aşağıdaki örnek, sağlayarak sorunu düzeltir **son** yan tümcesi yürütülen sunmadan önce bir özel durum çağıranlar özel durum filtresi bloklarını ayarlama.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

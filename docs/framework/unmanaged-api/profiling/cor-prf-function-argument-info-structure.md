@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714241"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO Yapısı
-Soldan sağa sırayla bir işlevin bağımsız değişkenler temsil eder.  
+Soldan sağa doğru sırayla bir işlevin bağımsız değişkenlerini temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`numRanges`|Bağımsız değişkenler blok sayısı. Diğer bir deyişle, bu değer sayısıdır [cor_prf_functıon_argument_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) içindeki yapıları `ranges` dizi.|  
-|`totalArgumentSize`|Tüm bağımsız değişkenler toplam boyutu. Diğer bir deyişle, bu değer bağımsız değişken uzunlukta toplamıdır.|  
+|`numRanges`|Bağımsız değişkenlerin blokların sayısı. Diğer bir deyişle, bu değer sayısıdır [cor_prf_functıon_argument_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) içindeki yapıları `ranges` dizisi.|  
+|`totalArgumentSize`|Tüm bağımsız değişkenler toplam boyutu. Diğer bir deyişle, bu bağımsız değişken uzunluklarının toplamını değerdir.|  
 |`ranges`|Bir dizi `COR_PRF_FUNCTION_ARGUMENT_RANGE` yapıları, her biri bir işlev bağımsız değişkenleri bloğunu temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir işlev fazla sayıda bağımsız değişken olabilir. Bu bağımsız değişkenlerden bitişik bellek depolanabilir değil. Tek bir yerde üç bağımsız değişken bloğunu, başka bir yerde iki bağımsız değişken bir blok ve farklı bir yerde tek bir bağımsız değişken son bloğunu olabilir. Bu bağımsız değişkenler tüm aynı işlevin; yalnızca farklı yerlerde depolandıkları.  
+ Bir işlev, fazla sayıda bağımsız değişken olabilir. Bu bağımsız değişkenlerden bitişik bellekte depolanması. Tek bir yerde üç bağımsız değişken bir blok, iki bağımsız değişkeni başka bir yerde bloğunu ve farklı bir yerde bir bağımsız değişkenin bir son blok olabilir. Bu bağımsız değişkenler tüm; aynı işlevi farklı yerlerde yalnızca depolandıkları.  
   
- `COR_PRF_FUNCTION_ARGUMENT_INFO` Yapısı tek bir işlevin tüm bağımsız değişkenler temsil eder. İşlev bağımsız değişkenleri tüm bloklarını başvurmak için bir dizi kullanır. Bu nedenle, tek bir işlev için tek bir elinizde `COR_PRF_FUNCTION_ARGUMENT_INFO` birden çok başvuran yapısı `COR_PRF_FUNCTION_ARGUMENT_RANGE` yapıları, her biri bir veya daha fazla işlev bağımsız değişkenleri için işaret eder.  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO` Yapısı tek bir işlevin tüm bağımsız değişkenleri temsil eder. Bir dizi işlev bağımsız değişkenlerinin tüm blokları başvurmak için kullanır. Bu nedenle, tek bir sahip tek bir işlev için `COR_PRF_FUNCTION_ARGUMENT_INFO` birden çok başvuran yapısı `COR_PRF_FUNCTION_ARGUMENT_RANGE` yapıları, her biri bir veya daha fazla işlev bağımsız değişkenleri için işaret eder.  
   
- Yazmaçları depolanan bağımsız değişkenleri yapılarının belleğe geçmiş.  
+ Kayıtlara depolanan bağımsız değişkenler, yapıları yapı belleğe geçmiş.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

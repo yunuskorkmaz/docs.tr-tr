@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732654"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
 
@@ -23,7 +23,7 @@ Bu, WCF Veri Hizmetleri Hızlı Başlangıç Son görevdir. Bu görevde, bir kon
 
 1.  İçinde **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle**ve ardından **yeni proje**.
 
-2.  Sol bölmede seçin **yüklü** > [**Visual C#** veya **Visual Basic**] > **Windows Masaüstü**seçip **WPF uygulaması** şablonu.
+2.  Sol bölmede seçin **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Windows Masaüstü**ve ardından seçin **WPF uygulaması** şablonu.
 
 3.  Girin `NorthwindClient` proje adı ve ardından **Tamam**.
 
@@ -86,7 +86,7 @@ Bulunan örnek Northwind OData akışındaki erişen istemci uygulaması başar�
 
 Gelen OData erişme hakkında daha fazla bilgi akışına bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulaması, bakın [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

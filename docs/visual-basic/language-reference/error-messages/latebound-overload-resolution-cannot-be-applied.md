@@ -1,5 +1,5 @@
 ---
-title: Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; çünkü erişen örnek bir arabirim türü
+title: Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; örnek bir arabirim türü olduğundan
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651528"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; çünkü erişen örnek bir arabirim türü
-Derleyici aşırı yüklenmiş özelliği ya da yordamı başvuru çözümlemeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvuran nesne bir arabirim veri türüne sahip. `Object` Bağımsız değişkeni referans geç bağlama olarak çözmek için derleme zorlar.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; örnek bir arabirim türü olduğundan
+Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvurulan nesne bir arabirim için veri türüne sahip. `Object` Bağımsız değişken başvuru geç bağlama olarak çözümlemek için derleyici zorlar.  
   
- Bu durumlarda, derleyici yerine uygulayan sınıfa temel arabirimi aracılığıyla aracılığıyla aşırı çözümler. Sınıfı aşırı yüklenmiş sürümlerinden birini adlandırdığında derleyici adından farklı olduğundan bir aşırı olması için bu sürümü dikkate almaz. Bu sırayla başvuruyu çözümlemek için doğru seçim olabilir, yeniden adlandırılmış sürüm yoksay derleyici neden olur.  
+ Bu durumlarda, derleyici aşırı yükleme yerine temel alınan arabirimini uygulayan sınıfa aracılığıyla çözümler. Sınıfı aşırı yüklü sürümlerini adlandırdığında derleyici bu sürümü adını farklı olduğundan, bir yükleme olarak dikkate almaz. Bu sırayla başvuru gidermek için doğru seçim olabilir, yeniden adlandırılmış sürüm yoksayma konusunda derleyici neden olur.  
   
  **Hata Kimliği:** BC30933  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Kullanım `CType` bağımsız değişkende yayınlanamıyor `Object` istediğiniz çağırmak için aşırı yük imzayı tarafından belirtilen tür için.  
+-   Kullanım `CType` bağımsız değişkende bir şekilde `Object` istediğiniz çağırmak için aşırı yükleme imzası tarafından belirtilen tür için.  
   
-     Bu temel arabirimi başvuran nesnesi yayınlanamıyor korumaz unutmayın. Bu hatayı önlemek için bağımsız değişken dönüştürmeniz gerekir.  
+     Bu temel arabirimi başvuran nesnenin korumaz unutmayın. Bu hatayı önlemek için bağımsız değişken dönüştürmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir aşırı yüklenmiş bir çağrı gösterilmektedir `Sub` derleme zamanında bu hataya neden yordamı.  
+ Aşağıdaki örnek, aşırı yüklenmiş bir çağrı gösterir `Sub` yordam derleme zamanında bu hataya neden olur.  
   
 ```  
 Module m1  
@@ -53,18 +53,18 @@ Module m1
 End Module  
 ```  
   
- Önceki örnekte derleyici çağrısına izin veriyorsa `s1` yazıldığı şekilde çözümleme sınıfı aracılığıyla gerçekleşmesi `c1` arabirimi yerine `i1`. Derleyici değil düşünün anlamına gelir `s2` adından farklı olduğundan `c1`, doğru seçim tarafından tanımlanan olmasına rağmen `i1`.  
+ Önceki örnekte derleyici çağrısına izin veriliyorsa `s1` yazıldığı gibi çözümleme sınıfı üzerinden gerçekleşmesi `c1` arabirimi yerine `i1`. Bu derleyici değil dikkate alır anlamına gelir `s2` adını farklı olduğundan `c1`, doğru seçeneği tarafından tanımlanan olmasına rağmen `i1`.  
   
- Aşağıdaki kod satırlarını birini çağrısı değiştirerek hatayı çözebilirsiniz:  
+ Hatayı düzeltmek için ya da aşağıdaki kod satırlarını çağrısı değiştirerek:  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Her bir önceki kod satırları açıkça bıraktığı `Object` değişkeni `o1` aşırı yüklemeleri için tanımlanan parametre türleri birine.  
+ Her biri önceki kod satırlarını açıkça bıraktığı `Object` değişkeni `o1` biri aşırı yüklemeleri için tanımlanmış bir parametre türleri olarak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Aşırı Yükleme Çözümü](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Aşırı Yükleme Çözümü](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: ef0518bfd53ea5696c9369fe78e4ceccd3c6260c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708135"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Bir veri kümesi bir XmlDataDocument ile eşitleme
 Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma siparişinin tek bir adımda gösterir <xref:System.Data.DataSet> ile eşitlenen bir <xref:System.Xml.XmlDataDocument>. Aşağıdaki örneklerde oluşturma bir **veri kümesi** kaynak XML belgesi yalnızca bir kısmını eşleşen bir simge durumuna küçültülmüş şema ile. Örneklerde bir **XmlDataDocument** kaynak XML belge kalitesini korumak için etkinleştirme **veri kümesi** bir alt XML belgesi oluşturmak için kullanılacak.  
@@ -231,6 +231,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

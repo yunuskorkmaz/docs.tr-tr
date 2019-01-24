@@ -3,12 +3,12 @@ title: WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirme yöne
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696197"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirme yönergeleri
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -94,7 +94,7 @@ ms.locfileid: "48582521"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio Araçları değişiklikleri  
  WIF 3.5 SDK'sı bir tek başına Federasyon yardımcı programı, sunulan kimlik yönetimi için güvenlik belirteci hizmeti (STS) WIF özelliği etkinleştirilmiş uygulamalarında dış kullanabileceğinizi FedUtil.exe (FedUtil). Bu araç, WIF ayarları bir veya daha fazla Sts'ler güvenlik belirteçleri elde etmek için uygulamaya etkinleştirmek için uygulama yapılandırma dosyasına eklenir ve Visual Studio aracılığıyla yaşanan **STS hizmet Başvurusu Ekle** düğmesi. FedUtil WIF 4.5 ile birlikte gelmez. Bunun yerine, WIF 4.5, uygulamanızın yapılandırma dosyasına dış bir sts'ye kimlik yönetimi için gereken WIF ayarları değiştirmek için kullanabileceğiniz Visual Studio 2012 için kimlik ve erişim aracı adlı yeni bir Visual Studio uzantısı destekler. Kimlik ve erişim aracı, WIF özelliği etkinleştirilmiş uygulamalarınızı test etmek için kullanabileceğiniz yerel STS olarak adlandırılan bir STS de uygular. Çoğu durumda, bu özellik genellikle WIF 3.5, geliştirme aşamasındaki çözümlerini test etmek için gerekli özel Sts'ler oluşturma gerek obviates. Bu nedenle, STS şablonları artık Visual Studio 2012'de desteklenir; Ancak, Sts'ler geliştirilmesini destekleyen sınıflar WIF 4. 5 ' yine kullanılabilir durumdadır.  
   
- Uzantılar ve güncelleştirmeler Yöneticisi'nde Visual Studio kimlik ve erişim aracı yükleyebilirsiniz veya kod Galerisi'nde şu sayfadan indirebilirsiniz: [kimlik ve erişim aracı kod galerisindeki Visual Studio 2012 için](https://go.microsoft.com/fwlink/?LinkID=245849). Visual Studio Araçları değişiklikleri aşağıda özetlenmiştir:  
+ Uzantılar ve güncelleştirmeler Yöneticisi'nde Visual Studio kimlik ve erişim aracı yükleyebilirsiniz veya kod Galerisi'nde şu sayfadan indirebilirsiniz: [Kimlik ve erişim aracı kod galerisindeki Visual Studio 2012 için](https://go.microsoft.com/fwlink/?LinkID=245849). Visual Studio Araçları değişiklikleri aşağıda özetlenmiştir:  
   
 -   STS hizmet Başvurusu Ekle işlevselliğini kaldırılır. Bu değişiklik, kimlik ve erişim Aracı ' dir.  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  Birlikte WIF 3.5 ile WIF 4.5 hem kullanırken sınıflar WIF 3.5 ile WIF 4.5 birçoğu aynı adı paylaştığından, tam nitelikli sınıf adları kullanabilir veya sınıflar WIF 3.5 ile WIF 4.5 arasında ayrım yapmak için ad alanı diğer adlarını kullanma emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WIF Yapılandırma Şeması](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [WIF 3.5 ile WIF 4.5 Arasında Ad Alanı Eşleme](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Windows Identity Foundation 4.5'teki Yenilikler](../../../docs/framework/security/whats-new-in-wif.md)  
- [Visual Studio 2012 için Kimlik ve Erişim Aracı](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WIF Yapılandırma Şeması](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 ile WIF 4.5 Arasında Ad Alanı Eşleme](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5'teki Yenilikler](../../../docs/framework/security/whats-new-in-wif.md)
+- [Visual Studio 2012 için Kimlik ve Erişim Aracı](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723543"
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a> Komut vermeye genel olan bir giriş mekanizmasında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cihaz girişi daha fazla anlam düzeyinde işleme giriş sağlar. Komut örneklerindendir **kopyalama**, **Kes**, ve **Yapıştır** operations birçok uygulama üzerinde bulunamadı.  
@@ -164,7 +164,7 @@ ms.locfileid: "44086225"
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Command_Manager"></a>   
-### <a name="the-commandmanager"></a>CommandManager  
+### <a name="the-commandmanager"></a>The CommandManager  
  <xref:System.Windows.Input.CommandManager> İlgili işlevler bir dizi komut görev yapar.  Ekleme ve kaldırma için statik yöntemler kümesi sağlar <xref:System.Windows.Input.CommandManager.PreviewExecuted>, <xref:System.Windows.Input.CommandManager.Executed>, <xref:System.Windows.Input.CommandManager.PreviewCanExecute>, ve <xref:System.Windows.Input.CommandManager.CanExecute> olay işleyicileri için ve belirli bir öğe.  Kaydetmek için bir yol sağlar <xref:System.Windows.Input.CommandBinding> ve <xref:System.Windows.Input.InputBinding> nesnelerin üzerine belirli bir sınıf.  <xref:System.Windows.Input.CommandManager> Ayrıca aracılığıyla bir yol sağlar <xref:System.Windows.Input.CommandManager.RequerySuggested> bunu tetiklemelidir komutu bildirmek için olay <xref:System.Windows.Input.ICommand.CanExecuteChanged> olay.  
   
  <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> Yöntemi zorlar <xref:System.Windows.Input.CommandManager> yükseltmenizi <xref:System.Windows.Input.CommandManager.RequerySuggested> olay.  Gereken koşullar için kullanışlıdır devre dışı bırak/etkinleştir komutu ancak olmayan koşulları <xref:System.Windows.Input.CommandManager> farkındadır.  
@@ -183,13 +183,13 @@ ms.locfileid: "44086225"
   
  Özel bir oluşturma örneği için <xref:System.Windows.Input.RoutedCommand>, bkz: [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Input.RoutedCommand>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Input.InputBinding>  
- <xref:System.Windows.Input.CommandManager>  
- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Nasıl yapılır: bir MenuItem'a komut ekleme](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Input.RoutedCommand>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Input.InputBinding>
+- <xref:System.Windows.Input.CommandManager>
+- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Nasıl yapılır: MenuItem için bir komut ekleme](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

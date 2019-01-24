@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f68565977551a54244f3caf6a0250f67005a6ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665558"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo Metodu
-Geçerli Win32 iş parçacığı kimliği için belirtilen iş parçacığı alır.  
+Belirtilen iş parçacığı için geçerli bir Win32 iş parçacığı kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetThreadInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Win32 geçerli kimliği edinmek için iş parçacığı kimliği  
+ [in] Geçerli Win32 kimliği alınacağı iş parçacığının kimliği  
   
  `pdwWin32ThreadId`  
- [out] Belirtilen iş parçacığının geçerli Win32 iş parçacığı için bir işaretçi kimliği  
+ [out] Bir işaretçi belirtilen iş parçacığının geçerli Win32 iş parçacığı kimliği  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

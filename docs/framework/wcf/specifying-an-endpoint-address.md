@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709228"
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde kendi uç noktalar üzerinden gerçekleşir. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve adresi hizmet nerede bulacağını belirler. Her uç nokta, benzersiz bir adres olmalıdır. Uç nokta adresini tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini temsil eden bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmetin güvenlik kimliğini ve isteğe bağlı bir koleksiyonunu temsil eden <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üst bilgileri tanımlamak veya uç nokta ile etkileşime geçmek için adresleme daha ayrıntılı bilgi sağlar. Örneğin, gelen iletileri işlemek nasıl, nerede uç nokta bir yanıt iletisi göndermelidir veya birden fazla örneği bulunduğunda, belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin üst bilgileri belirtebilir.  
@@ -45,7 +45,7 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
   
  Zaman <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> (diğer bir deyişle, barındırma uygulaması hizmeti başlatmayı denediğinde) yöntemi çağrıldığında, sistem arayan bir [ \<hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) "UE. belirten bir ad özniteliği olan öğe Samples.HelloService". Varsa [ \<hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğe bulundu, Sistem belirtilen sınıf yükler ve yapılandırma dosyasında sağlanan uç nokta tanımlarını kullanarak uç noktaları oluşturur. Bu mekanizma, yükleme ve bağlama ve adresleme bilgilerini kodunuz dışında tutulması sırasında iki kod satırlarını içeren bir hizmet başlatmaya olanak tanır. Bu yaklaşımın avantajı, bu değişiklikleri yeniden derleyin veya uygulama yeniden dağıtmaya gerek kalmadan yapılabilir olmasıdır.  
   
- İsteğe bağlı üst bilgiler bildirilen bir [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Bir hizmet için uç noktalar arasında iki üstbilgi ayıran bir yapılandırma dosyası belirtmek için kullanılan öğelerin bir örneği verilmiştir: "Altın" istemcilerden `http://tempuri1.org/` ve "Standart" istemcilerden `http://tempuri2.org/`. Bu hizmete çağrı yapma istemci uygun olmalıdır [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) kendi yapılandırma dosyası.  
+ İsteğe bağlı üst bilgiler bildirilen bir [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Bir hizmet için uç noktalar arasında iki üstbilgi ayıran bir yapılandırma dosyası belirtmek için kullanılan öğelerin bir örnek verilmiştir: "Altın" istemcilerden `http://tempuri1.org/` ve "Standart" istemcilerden `http://tempuri2.org/`. Bu hizmete çağrı yapma istemci uygun olmalıdır [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) kendi yapılandırma dosyası.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -82,8 +82,8 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
   
  Uç noktalar açıkça verdiyse, varsayılan uç noktaları hala çağırarak eklenebilir <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> üzerinde <xref:System.ServiceModel.ServiceHost> çağırmadan önce <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.EndpointAddress>  
- [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Barındırma](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.EndpointAddress>
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Barındırma](../../../docs/framework/wcf/feature-details/hosting.md)

@@ -2,12 +2,12 @@
 title: Toplama işlevleri (Entity Framework için SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 55a10b82ffc189f5cf4118cb225a96963226256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724193"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplama işlevleri (Entity Framework için SqlClient)
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevleri sağlar. Toplama işlevleri, bir giriş değerleri kümesi üzerinde hesaplamalar ve bir değer döndürür. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  
@@ -92,7 +92,7 @@ Bir `Int64`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
 
-## <a name="maxexpression"></a>MAX(Expression)
+## <a name="maxexpression"></a>MAX(expression)
 
 En yüksek değer koleksiyonunu döndürür.
 
@@ -224,8 +224,8 @@ A `Double`.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 SqlClient destekleyen toplama işlevleri hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:  
-  
-**SQL Server 2005'te**: [toplama işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
-**SQL Server 2008 ve üzeri**: [toplama işlevleri (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
-[Entity SQL Dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
-[Toplu Kurallı İşlevler](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+
+**SQL Server 2005**: [Toplama işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**SQL Server 2008 ve üzeri**:  [Toplama işlevleri (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+- [Entity SQL Dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Toplu Kurallı İşlevler](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

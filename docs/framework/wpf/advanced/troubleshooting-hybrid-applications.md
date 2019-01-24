@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710124"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a> Bu konuda kullanan karma uygulamalar yazma olduğunda oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
@@ -88,7 +88,7 @@ ms.locfileid: "45972760"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stillerin bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Şablonunda yöntemi çağrıldığında bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz ancak [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için erişmenizi sağlayacak [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Comctl32.dll sürüm 6.0 varsa denetimler için görsel stilleri. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> işleyiciler iş parçacığı üzerinde oluşturulmadan önce yöntemi. Daha fazla bilgi için [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stillerin bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Şablonunda yöntemi çağrıldığında bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz ancak [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için erişmenizi sağlayacak [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Comctl32.dll sürüm 6.0 varsa denetimler için görsel stilleri. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> işleyiciler iş parçacığı üzerinde oluşturulmadan önce yöntemi. Daha fazla bilgi için [nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lisanslı Denetimler  
@@ -114,13 +114,13 @@ ms.locfileid: "45972760"
 ## <a name="elementhost-and-ime"></a>ElementHost ve IME  
  WPF denetimleri barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> şu anda desteklemediği <xref:System.Windows.Forms.Control.ImeMode%2A> özelliği. Değişikliklerini <xref:System.Windows.Forms.Control.ImeMode%2A> barındırılan denetimler tarafından göz ardı edilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF Tasarımcısı'nda birlikte çalışabilirlik](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [WPF Tasarımcısı'nda birlikte çalışabilirlik](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

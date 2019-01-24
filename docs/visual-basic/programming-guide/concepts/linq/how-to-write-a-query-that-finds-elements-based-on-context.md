@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: bağlama (Visual Basic) göre öğeleri bulur bir sorgu yazın'
+title: 'Nasıl yapılır: (Visual Basic) bağlama göre öğeleri bulan bir sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: a16f591fc08e8822059bae2ee07d96af575059bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4921652b5b9c59f767e0477e26987edaf4655897
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708148"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: bağlama (Visual Basic) göre öğeleri bulur bir sorgu yazın
-Bazen kendi bağlamına dayalı öğeleri seçer bir sorgu yazmak zorunda kalabilirsiniz. Temel alınarak önceki veya Eşdüzey öğeleri aşağıdaki filtre uygulamak isteyebilirsiniz. Temel alınarak alt veya üst öğeleri Filtrele isteyebilirsiniz.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: (Visual Basic) bağlama göre öğeleri bulan bir sorgu yazma
+Bazen, bağlama göre öğeleri seçen bir sorgu yazmak zorunda kalabilirsiniz. Bağlı olarak önceki veya Eşdüzey öğeleri aşağıdaki filtreleme isteyebilirsiniz. Temel alınarak alt veya üst öğeleri filtrelemek isteyebilirsiniz.  
   
- Sorgu yazma ve sorgunun sonuçlarını kullanarak bunu yapabilirsiniz `where` yan tümcesi. İlk null karşı test etmek ve değeri test etmek varsa, sorgu yapmak daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.  
+ Bir sorgu yazma ve sorgu sonuçlarının kullanarak bunu yapabilirsiniz `where` yan tümcesi. İlk null karşı test etmeyi ve ardından değeri test varsa, sorgu yapılacağı daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tüm seçer `p` tarafından hemen ardından öğeleri bir `ul` öğesi.  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -106,9 +106,9 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

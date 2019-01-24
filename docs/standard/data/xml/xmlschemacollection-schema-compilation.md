@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaCollection şema derlemesi
+title: XmlSchemaCollection Schema Compilation
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704322"
 ---
-# <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection şema derlemesi
+# <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection Schema Compilation
 **XmlSchemaCollection** bir önbellek ya da burada XML verileri azaltılmış (XDR) ve XML Şeması Tanım Dili (XSD) şemalarını depolanabilir ve doğrulanmış kitaplığı. **XmlSchemaCollection** şemaları bir dosyadan veya URL'den erişmek yerine bellekte önbelleğe alarak performansını artırır.  
   
 > [!NOTE]
@@ -59,5 +59,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XmlSchemaCollection ile XDR Doğrulaması](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+- [XmlSchemaCollection ile XDR Doğrulaması](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

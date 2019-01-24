@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 020df45f7f18a029f8c098fcc4dea1c131da017c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706923"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next Yöntemi
-Geçerli konumdan başlayarak numaralandırma, belirtilen sayıda "ICorDebugValue" örneklerini alır.  
+Numaralandırma, geçerli konumdan başlayarak belirtilen "ICorDebugValue" örnek sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,23 +40,23 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugValue` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugValue` alınacak örnekleri.  
   
  `values`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugValue` nesnesi.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugValue` nesne.  
   
  `pceltFetched`  
- [out] İşaretçi sayısına `ICorDebugValue` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] İşaretçi sayısına `ICorDebugValue` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-    
- 
+## <a name="see-also"></a>Ayrıca bkz.
+
+

@@ -1,20 +1,20 @@
 ---
-title: "Nasıl Yapılır: Visual Basic'te StreamWriter ile Dosyalara Metin Yazma"
+title: "Nasıl yapılır: Visual Basic'te StreamWriter ile dosyalara metin yazma"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: 4cb589125286082b9c7d5886a51b0ef8d998474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39c6ad59ad965f566c77f72dd4a97335494d6382
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678531"
 ---
-# <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te StreamWriter ile Dosyalara Metin Yazma
-Bu örnek açılır bir <xref:System.IO.StreamWriter> nesnesi ile `My.Computer.FileSystem.OpenTextFileWriter` yöntemi ve bir metin dosyasına bir dize yazmak için kullandığı <xref:System.IO.TextWriter.WriteLine%2A> yöntemi <xref:System.IO.StreamWriter> sınıfı.  
+# <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te StreamWriter ile dosyalara metin yazma
+Bu örnek açılır bir <xref:System.IO.StreamWriter> nesnesi ile `My.Computer.FileSystem.OpenTextFileWriter` yöntemi ve bir dize içeren bir metin dosyası yazmak için kullandığı <xref:System.IO.TextWriter.WriteLine%2A> yöntemi <xref:System.IO.StreamWriter> sınıfı.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
@@ -22,17 +22,17 @@ Bu örnek açılır bir <xref:System.IO.StreamWriter> nesnesi ile `My.Computer.F
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dosya var ve salt okunurdur (<xref:System.IO.IOException>).  
+-   Dosya var ve salt okunur (<xref:System.IO.IOException>).  
   
--   Disk dolu olduğundan (<xref:System.IO.IOException>).  
+-   Disk dolu (<xref:System.IO.IOException>).  
   
 -   Yol çok uzun (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu örnek, dosyanın zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturmak gerekirse, bu uygulamanın ihtiyacı `Create` klasörü için erişim. Dosya zaten varsa, uygulamanın yalnızca ihtiyacı `Write` erişimi, daha düşük ayrıcalık. Mümkünse, dağıtım sırasında dosyası oluşturun ve yalnızca izni için daha güvenli olan `Read` tek bir dosyaya erişim yerine `Create` bir klasör için erişim.  
+ Bu örnek, bir dosya zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturması gerekiyorsa, bu uygulamayı gerekli `Create` klasörü için erişim. Dosya zaten varsa, uygulamanın yalnızca ihtiyacı `Write` erişim, daha az ayrıcalıkla. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca vermek için daha güvenli olan `Read` tek bir dosyaya erişimi yerine `Create` erişim için bir klasör.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO.StreamWriter>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- [Nasıl yapılır: metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IO.StreamWriter>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
+- [Nasıl yapılır: Metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

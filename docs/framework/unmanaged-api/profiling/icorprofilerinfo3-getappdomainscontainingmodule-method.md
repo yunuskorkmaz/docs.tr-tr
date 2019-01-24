@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0d560b81aca1c6d859000cda682ee6c75fd7acb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343834492776fdb09a68210fb80138ec2c588773
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741158"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule Metodu
-Belirtilen modül yüklendi uygulama etki alanları tanımlayıcısını alır.  
+Belirtilen modül yüklenmiş olan uygulama etki alanları tanımlayıcılarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,28 +43,28 @@ HRESULT GetAppDomainsContainingModule(
  [in] Yüklenen modül kimliği.  
   
  `cAppDomainIds`  
- [in] Boyutunu `appDomainIds` dizi.  
+ [in] Boyutu `appDomainIds` dizisi.  
   
  `pcAppDomainIds`  
- [out] Döndürülen öğe toplam sayısını gösteren bir işaretçi.  
+ [out] Döndürülen öğelerin toplam sayısını bir işaretçi.  
   
  `appDomainIds`  
  [out] Uygulama etki alanı kimliği değerleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemini çağıran arabellekleri ayrılan kullanır.  
+ Yöntemi arayana ayrılan arabellekler kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerFunctionEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerFunctionEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669321"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma
 Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Bir işaretsiz türe almayan bir Windows işlevi çağırma  
@@ -77,9 +77,9 @@ Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yap�
     > [!IMPORTANT]
     >  Windows API çağırmak, kısmi güven durumlarında yürütme şeklinizi etkileyebilecek olan yönetilmeyen kod iznini gerektirir. Daha fazla bilgi için <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

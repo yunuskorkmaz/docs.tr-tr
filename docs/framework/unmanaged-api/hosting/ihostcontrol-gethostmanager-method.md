@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742035"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager Metodu
-Arabirim işaretçisi arabirimi ana bilgisayarın uygulaması için belirtilen alır `IID`.  
+Ana bilgisayarın uygulanmasına arabirimi belirtilen bir arabirim işaretçisi alır `IID`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,54 +41,54 @@ HRESULT GetHostManager (
  [in] `IID` Ortak dil çalışma zamanı (CLR) için sorgulama arabirimi.  
   
  `ppObject`  
- [out] Ana bilgisayar uygulanan arabirimi ya da ana bilgisayar bu arabirim desteklemiyorsa null işaretçi.  
+ [out] Konak uygulanan arabirimi ya da konak bu arabirimi desteklemiyorsa null bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`GetHostManager` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |E_INVALIDARG|İstenen `IID` geçerli değil.|  
-|E_NOINTERFACE|İstenen arabirimi desteklemiyor.|  
+|E_NOINTERFACE|İstenen arabirim desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR bir veya daha fazla aşağıdaki arabirimleri destekleyip desteklemediğini belirlemek için ana sorgular:  
+ CLR bir veya daha fazla aşağıdaki arabirimlerinden destekleyip desteklemediğini belirlemek üzere konak sorgular:  
   
 -   [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
--   [Ihosttaskmanager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+-   [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
--   [Ihostthreadpoolmanager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+-   [IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
   
--   [Ihostıocompletionmanager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+-   [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
   
--   [Ihostsyncmanager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+-   [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
   
--   [Ihostassemblymanager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+-   [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
   
--   [Ihostgcmanager](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+-   [IHostGCManager](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
   
--   [Ihostpolicymanager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+-   [IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
   
--   [Ihostsecuritymanager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+-   [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Konak belirtilen arabirim destekliyorsa, ayarlar `ppObject` bu arabirimin uygulaması için. Aksi takdirde, ayarlar `ppObject` null.  
+ Konak belirtilen arabirim destekliyorsa, bu ayarlar `ppObject` bu arabirimi uygulaması için. Aksi takdirde ayarlar `ppObject` null.  
   
- CLR çağrılmayan `Release` bile, kapattığınızda konak yöneticilere.  
+ CLR çağrılmayan `Release` konak yöneticileri bile bunu kapattığınızda, şirket.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

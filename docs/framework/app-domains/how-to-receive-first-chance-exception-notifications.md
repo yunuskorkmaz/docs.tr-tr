@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma'
+title: 'Nasıl yapılır: İlk fırsat özel durum bildirimleri alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875cdb2837109e922233f42d6241a7e1888e0693
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677764"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk fırsat özel durum bildirimleri alma
 <xref:System.AppDomain.FirstChanceException> Olayı <xref:System.AppDomain> sınıfı bir özel durum bir bildirim almanızı sağlar, önce ortak dil çalışma zamanı için özel durum işleyicileri aramaya başladı.
 
  Olay, uygulama etki alanı düzeyinde oluşturulur. Bir uygulama etki alanında işlenmeyen bir özel durum başka bir uygulama etki alanında ele alınması için bir iş parçacığı, birden çok uygulama etki alanları geçirebilirsiniz. Uygulama etki alanı özel durumu işleyen kadar olay işleyicisi eklediğiniz her uygulama etki alanında bildirim gerçekleşir.
@@ -102,5 +102,5 @@ ms.locfileid: "49452280"
 
 -   Bu örnek, bir komut satırı uygulamasıdır. Derlemek ve Visual Studio'da bu kodu çalıştırmak için C# kodu ekleyin. `Console.ReadLine();` (Visual Basic'te `Console.ReadLine()`) sonunda `Main()`komut penceresi çıktısı okuyabilirsiniz önce kapatılmasını önlemek için.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.AppDomain.FirstChanceException>

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662172"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem Arabirimi
 Tek bir derleme genel derleme önbelleğinde temsil eder.  
@@ -30,18 +30,18 @@ Tek bir derleme genel derleme önbelleğinde temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AbortItem Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Serbest bırakılmadan önce temizleme işlemleri gerçekleştirmek derleme genel derleme önbelleğinde sağlar.|  
-|[Commit Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Bellek için önbelleğe alınmış derleme başvurusu kaydeder.|  
-|[CreateStream Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Belirtilen ada ve biçimi ile bir akış oluşturur.|  
+|[AbortItem Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Derleme genel derleme önbelleğinde serbest bırakılmadan önce temizleme işlemleri gerçekleştirmesini sağlar.|  
+|[Commit Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Bellek için önbelleğe alınan derleme başvurusu kaydeder.|  
+|[CreateStream Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Belirtilen ada ve biçimi bir akış oluşturur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)  
- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

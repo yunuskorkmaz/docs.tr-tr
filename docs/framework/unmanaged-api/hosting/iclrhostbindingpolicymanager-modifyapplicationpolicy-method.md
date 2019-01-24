@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726890"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi
-Bağlama ilkesi için belirtilen derlemeyi değiştirir ve ilke yeni bir sürümünü oluşturur.  
+Belirtilen derleme için bağlama ilkesi değiştirir ve ilke yeni bir sürümünü oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,50 +43,50 @@ HRESULT  ModifyApplicationPolicy (
   
 #### <a name="parameters"></a>Parametreler  
  `pwzSourceAssemblyIdentity`  
- [in] Değiştirmek için derleme kimliği.  
+ [in] Değiştirilecek derleme kimliği.  
   
  `pwzTargetAssemblyIdentity`  
- [in] Değiştirilen derleme yeni kimliği.  
+ [in] Değiştirilen derlemenin yeni kimliği.  
   
  `pbApplicationPolicy`  
- [in] Veri bağlama ilkesini değiştirmek derleme içeren bir arabellek için bir işaretçi.  
+ [in] Değiştirilecek derleme için bağlama ilkesi verileri içeren arabellek için işaretçi.  
   
  `cbAppPolicySize`  
  [in] Değiştirilecek bağlama ilkesi boyutu.  
   
  `dwPolicyModifyFlags`  
- [in] Mantıksal OR bileşimini [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) yeniden yönlendirme denetimini belirten değer.  
+ [in] Bir mantıksal OR kombinasyonudur [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) yeniden yönlendirme denetimini gösteren değer.  
   
  `pbNewApplicationPolicy`  
- [out] Yeni bağlama ilke verilerini içeren bir arabellek için bir işaretçi.  
+ [out] Yeni veri bağlama ilkesi içeren arabellek için işaretçi.  
   
  `pcbNewAppPolicySize`  
- [içinde out] Yeni bağlama ilkesi arabellek boyutu için bir işaretçi.  
+ [out içinde] Yeni bağlama ilkesi arabellek boyutu için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|İlke başarıyla değiştirildi.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity` veya `pwzTargetAssemblyIdentity` null bir başvuru olduğundan.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` veya `pwzTargetAssemblyIdentity` null başvuru oluştu.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` çok küçüktür.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. CLR, artık bir yöntem E_FAIL döndükten sonra işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ModifyApplicationPolicy` Yöntemi iki kez çağrılabilir. İlk çağrı için boş bir değer sağlamanız `pbNewApplicationPolicy` parametresi. Bu çağrı için gerekli değerle döndürülecek `pcbNewAppPolicySize`. Bu değer için ikinci çağrı sağlamanız `pcbNewAppPolicySize`ve bu boyut için bir arabellek noktasına `pbNewApplicationPolicy`.  
+ `ModifyApplicationPolicy` Yöntemi iki kez çağrılabilir. İlk çağrı için bir null değer sağlamanız `pbNewApplicationPolicy` parametresi. Bu çağrı için gerekli olan değerle döndüreceği `pcbNewAppPolicySize`. Bu değer için yapılan ikinci çağrı sunmalıdır `pcbNewAppPolicySize`ve bu boyut için bir arabellek işaret `pbNewApplicationPolicy`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRHostBindingPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRHostBindingPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

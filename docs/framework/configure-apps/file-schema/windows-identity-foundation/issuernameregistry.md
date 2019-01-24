@@ -3,12 +3,12 @@ title: '&lt;issuerNameRegistry&gt;'
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f23f0103e228bc23a06a3ff0e0c5c2a12bdae73f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748109"
 ---
 # <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
 Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verenin ad Kayıt Defteri'ni yapılandırır.  
@@ -17,7 +17,7 @@ Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan vereni
 \<identityConfiguration >  
 \<securityTokenHandlers >  
 \<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
+\<issuerNameRegistry>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -77,6 +77,6 @@ Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan vereni
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

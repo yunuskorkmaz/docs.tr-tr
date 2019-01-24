@@ -2,12 +2,12 @@
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 1e0512ce62f5a7b25546e8824a745fdaabb5ec72
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664167"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konuda çeşitli özelliklerini denetimi kaynak tüketimi için çalışma ve performans ölçümlerini etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisi açıklanmaktadır.
@@ -41,12 +41,12 @@ Bu konuda çeşitli özelliklerini denetimi kaynak tüketimi için çalışma ve
 > [!NOTE]
 > Önceden oluşturulan serileştirme kod, yalnızca istemci uygulamaları ve Hizmetleri kullanılabilir.
 
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derlenmiş bütünleştirilmiş uygulama için gerekli serileştirme kod oluşturarak bu uygulamaları için başlatma performansını geliştirebilir. Daha fazla bilgi için [nasıl yapılır: başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+ [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derlenmiş bütünleştirilmiş uygulama için gerekli serileştirme kod oluşturarak bu uygulamaları için başlatma performansını geliştirebilir. Daha fazla bilgi için [nasıl yapılır: Başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF hizmetleri altında ASP.NET barındırırken performans sorunları
  Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, aktarım hızı ve bellek Ayak izi WCF Hizmeti IIS ve ASP.NET yapılandırma ayarlarının etkileyebilir.  ASP.NET performansıyla ilgili daha fazla bilgi için bkz. [ASP.NET performans geliştirme](https://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçları olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemciler sabit ya da küçük bir dizi varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2'ye bir CPU kullanımı % 100 olan bir çok işlemcili bir makine üzerinde bir aktarım hızı boost sağlayabilir. Bu performans artışı bir maliyetle birlikte gelir: Ayrıca ölçeklenebilirliği de azaltabilir bellek kullanımında artışa neden olur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)
 - [Büyük Veriler ve Akış Yapma](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4e12015adc3d6e67ad9c8ba8b152cd775b85e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3109d5ba49b01f25c72aaa1c31c74984a683dd73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746537"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure Numaralandırması
-Bir ana bilgisayar ilkesi eylemleri ayarlayabilirsiniz hataları açıklar.  
+Bir ana bilgisayar ilkesi eylemleri ayarlayabilirsiniz hataları kümesini açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,28 +44,28 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Kod kritik olmayan bir bölgede bir kaynak (örneğin, bir iş parçacığı, bir bellek bloğu veya kilit) tahsis girişimi sırasında hata oluştu.|  
-|`FAIL_CriticalResource`|Kod kritik bir bölgede bir kaynak (örneğin, bir iş parçacığı, bir bellek bloğu veya kilit) tahsis girişimi sırasında hata oluştu.|  
-|`FAIL_FatalRuntime`|Ortak dil çalışma zamanı (CLR) artık işleminde yönetilen kod çalıştırabilir. Henceforth, barındırma hiçbir işlev çağrıları HOST_E_CLRNOTAVAILABLE HRESULT değerini döndürür.|  
-|`FAIL_OrphanedLock`|Bir iş parçacığı döndürme bağlı bir kilidi serbest bırakmak başarısız oldu bir <xref:System.AppDomain> nesnesi. Ana bilgisayar iptal etmek bir iş parçacığı neden bu hatanın ayarlanamıyor.|  
+|`FAIL_NonCriticalResource`|Kod kritik olmayan bir bölgede (örneğin, bir iş parçacığı, bir bellek bloğu veya bir kilit) bir kaynağı ayırmak girişimi sırasında bir hata oluştu.|  
+|`FAIL_CriticalResource`|Kod kritik bir bölgede (örneğin, bir iş parçacığı, bir bellek bloğu veya bir kilit) bir kaynağı ayırmak girişimi sırasında bir hata oluştu.|  
+|`FAIL_FatalRuntime`|Ortak dil çalışma zamanı (CLR) artık yönetilen kod işlemde çalışan mümkün değildir. Henceforth, herhangi bir barındırma işlevleri çağrıları HOST_E_CLRNOTAVAILABLE bir HRESULT değerini döndürür.|  
+|`FAIL_OrphanedLock`|Bir iş parçacığı döndürme bağlı bir kilidi serbest bırakmak başarısız bir <xref:System.AppDomain> nesne. Konak bu hatanın neden iptal etmek için bir iş parçacığı ayarlanamıyor.|  
 |`FAIL_StackOverflow`|Bir yığın taşması oluştu.|  
-|`FAIL_AccessViolation`|Okuma veya yazma korumalı bellek için girişimde bulunuldu. İçinde desteklenmez [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
-|`FAIL_CodeContract`|Kodu sözleşme hatası oluştu. Bkz: [kod sözleşmeleri](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_AccessViolation`|Okuma veya yazma korumalı bellek girişimde bulunuldu. Desteklenmez [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|`FAIL_CodeContract`|Bir kod sözleşmesi hata oluştu. Bkz: [kod sözleşmeleri](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bkz: [Iclrpolicymanager::setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) yöntemi listesini görmek için [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) değerleri konak hata koşulları için ilke eylemleri belirtmek için kullanabilirsiniz. Kod kritik ve kritik olmayan bölgeleri hakkında daha fazla bilgi için bkz: [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Bkz: [Iclrpolicymanager::setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) yöntemi bir listesi için [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) değerleri konak hata koşulları için ilke eylemleri belirtmek için kullanabilirsiniz. Kod kritik ve kritik olmayan bölgeleri hakkında daha fazla bilgi için bkz. [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [SetActionOnFailure Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)  
- [IHostPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [SetActionOnFailure Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
+- [IHostPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

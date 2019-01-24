@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683696"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
 Bu örnek ile çalışmak için basit normal ifadeler dönüştürülmesi gösterilmektedir <xref:System.Windows.Forms.MaskedTextBox> denetimi.  
@@ -55,8 +55,8 @@ Bu örnek ile çalışmak için basit normal ifadeler dönüştürülmesi göste
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|ABD telefon numarası alan kodu isteğe bağlı. Kullanıcı, isteğe bağlı karakterler girin istiyorsanız değil, Filiz boşluk girin veya doğrudan ilk 0 tarafından temsil edilen maskesi konumda fare işaretçisi yerleştirin.|  
 |`$\d{6}.00`|`$999,999.00`|Para birimi değeri için 0 ile 999999 aralığında. Para birimi, 214.748,3648 ve ondalık karakterler çalışma zamanında kültüre özgü eşdeğerleri ile değiştirilecek.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

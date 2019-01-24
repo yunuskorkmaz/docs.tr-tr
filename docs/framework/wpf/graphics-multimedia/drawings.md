@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684125"
 ---
 # <a name="drawings"></a>Çizimler
-<xref:System.Windows.Media.Drawing> nesneleri şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır. Çizimler ile Boyama yaparken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.  
+<xref:System.Windows.Media.Drawing> nesnelerini şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır. Çizimler ile boyarken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Drawing>  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Drawing>
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

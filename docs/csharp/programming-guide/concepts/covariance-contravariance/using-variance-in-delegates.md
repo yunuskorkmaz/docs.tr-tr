@@ -2,12 +2,12 @@
 title: Temsilcilerde varyans (C#) kullanma
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667287"
 ---
 # <a name="using-variance-in-delegates-c"></a>Temsilcilerde varyans (C#) kullanma
 Bir temsilci için bir yöntem atadığınızda *Kovaryans* ve *kontravaryans* yöntem imzasını bir temsilci türüyle eşleştirmek için esneklik sağlar. Kovaryans Temsilcide tanımlanan daha fazla türetilmiş dönüş türüne sahip bir yöntem sağlar. Kontravaryans, temsilci türü olanlardan daha az türetilmiş parametre türleri olan bir yönteme izin verir.  
@@ -48,7 +48,7 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>Örnek 2: kontravaryans  
+## <a name="example-2-contravariance"></a>Örnek 2: Kontravaryans  
   
 ### <a name="description"></a>Açıklama  
  Bu örnek, bir türün temsilci imzası parametre türü temel tür parametreleri olan yöntemler ile temsilciler nasıl kullanılabileceğini gösterir. Kontravaryans ile ayrı işleyicileri yerine bir olay işleyicisi kullanabilirsiniz. Kabul eden bir olay işleyicisi oluşturma gibi bir `EventArgs` giriş parametresi ve kullanılmakta olan bir `Button.MouseClick` gönderen olay bir `MouseEventArgs` türü bir parametre olarak ve ile bir `TextBox.KeyDown` gönderen olay bir `KeyEventArgs` parametresi.  
@@ -77,7 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

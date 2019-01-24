@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628857"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
@@ -32,17 +32,17 @@ WMIClass [options]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*WMIClass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
+|*Wmıclass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/l***dili* |Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Belirleyebileceğiniz **CS** (C#; varsayılan), **VB** (Visual Basic) **MC** (C++) veya **JS** (JScript) dil bağımsız olarak.|  
+|**/l***dil* |Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Belirtebileceğiniz **CS** (C#; varsayılan), **VB** (Visual Basic) **MC** (C++) veya **JS** (JScript) dil bağımsız değişken olarak.|  
 |**/m***makine* |WMI sınıfının bulunduğu, bağlanılacak bilgisayarı belirtir. Varsayılan, yerel bilgisayardır.|  
-|**/n***yolu* |WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur *WMIClass* varsayılan **Root\cimv2** ad alanı.|  
-|**/o***classnamespace* |Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **Win32_OperatingSystem** sınıfını **Root\cimv2** ad alanı, oluşturma aracı sınıfında **kök. CIMV2. Win32**.|  
-|**/p***filepath* |Üretilen kodun içinde kaydedileceği dosyanın yolunu belirtir. Bu seçeneği belirtmezseniz, araç dosyayı geçerli dizinde oluşturur. Oluşturur sınıfını kullanarak dosya ve sınıf adları *WMIClass* bağımsız değişkeni. Sınıf ve dosya adını adı aynı olan *WMIClass.* Varsa *WMIClass* bir alt çizgi karakteri içeren alt çizgi karakterini izleyen sınıf adı bölümü Aracı'nı kullanır. Örneğin, varsa *WMIClass* adıdır biçiminde **Win32_LogicalDisk**, oluşturulan sınıf ve dosya "MantıksalDisk" olarak adlandırılır. Bir dosya zaten varsa, araç varolan dosyanın üzerine yazar.|  
-|**/pw***parola* |Tarafından belirtilen bir bilgisayara oturum açarken kullanılacak parolayı belirtir **/m** seçeneği.|  
-|**/u***kullanıcı adı* |Tarafından belirtilen bir bilgisayara oturum açarken kullanılacak kullanıcı adını belirtir **/m** seçeneği.|  
+|**/n***yolu* |WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur. *Wmıclass* varsayılan **root\cımv2** ad alanı.|  
+|**/o***classnamespace* |Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **Win32_OperatingSystem** sınıfını **root\cımv2** ad oluşturma aracı sınıfında **kök. CIMV2. Win32**.|  
+|**/p***dosya yolu* |Üretilen kodun içinde kaydedileceği dosyanın yolunu belirtir. Bu seçeneği belirtmezseniz, araç dosyayı geçerli dizinde oluşturur. Oluşturur sınıfını kullanarak dosya ve sınıf adları *Wmıclass* bağımsız değişken. Sınıfın ve dosyanın adı olan adı ile aynı *Wmıclass.* Varsa *Wmıclass* bir alt çizgi karakteri içeren sınıf adının alt çizgi karakterinden parçası Aracı'nı kullanır. Örneğin, varsa *Wmıclass* addır biçiminde **Win32_LogicalDisk**, üretilen sınıf ve dosya "logicaldisk" olarak adlandırılır. Bir dosya zaten varsa, araç varolan dosyanın üzerine yazar.|  
+|**/pw***parola* |Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak parolayı belirtir **/m** seçeneği.|  
+|**/u***kullanıcı adı* |Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak kullanıcı adını belirtir **/m** seçeneği.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -63,12 +63,12 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Tek**|  
-|CIM_REAL64|**Çift**|  
+|CIM_REAL64|**çift**|  
 |CIM_BOOLEAN|**Boole değeri**|  
-|CIM_String|**Dize**|  
+|CIM_String|**dize**|  
 |CIM_DATETIME|**DateTime** veya **TimeSpan**|  
-|CIM_REFERENCE|**ManagementPath'i**|  
-|CIM_CHAR16|**char**|  
+|CIM_REFERENCE|**ManagementPath**|  
+|CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
 |CIM_IUNKNOWN|**Nesne**|  
 |CIM_ARRAY|Yukarıda sözü edilen nesnelerin dizisi|  
@@ -79,28 +79,28 @@ WMIClass [options]
   
 -   Oluşturulan bir sınıftaki bir özellik veya yöntemin adının hedef programlama dilinde bir anahtar sözcük olması olanaklıdır. Bu durumda, araç, adlandırma çakışmalarından kaçınmak için, oluşturulan sınıfta özellik veya yöntemin adını değiştirir.  
   
--   WMI'da, niteleyiciler bir sınıfı, örneği, özelliği veya yöntemi tanımlamak için bilgi içeren değiştiricilerdir. WMI kullanan standart niteleyicileri gibi **okuma**, **yazma**, ve **anahtar** oluşturulan sınıf özelliğinde açıklamak için. Örneğin, ile değiştiren bir özelliği bir **okuma** niteleyicisi yalnızca özelliğiyle tanımlanmış **almak** oluşturulan sınıf erişimcisi. Bir özellik ile işaretlediğinden **okuma** niteleyicisi salt okunur olacak şekilde tasarlanmıştır bir **ayarlamak** erişimci tanımlı değil.  
+-   WMI'da, niteleyiciler bir sınıfı, örneği, özelliği veya yöntemi tanımlamak için bilgi içeren değiştiricilerdir. WMI kullanan standart niteleyiciler gibi **okuma**, **yazma**, ve **anahtar** oluşturulan bir sınıftaki bir özelliği tanımlamak için. Örneğin, değiştirilen bir özellik bir **okuma** niteleyicisi olan bir özellik tanımlanmıştır **alma** oluşturulan sınıftaki erişimcisi. İşaretlenen bir özelliğin çünkü **okuma** niteleyicisi salt okunur olacak şekilde tasarlanmıştır bir **ayarlamak** erişimcisi tanımlanmaz.  
   
--   Sayısal bir özellik tarafından değiştirilebilir **değerleri** ve **ValueMaps** niteleyicileri özelliği yalnızca ayarlanabilir belirtmek için izin verilebilir değerler belirtildi. Numaralandırma bunlarla oluşturulan **değerleri** ve **ValueMaps** ve özellik numaralandırma eşlendi.  
+-   Sayısal bir özellik tarafından değiştirilebilir **değerleri** ve **ValueMaps** niteleyicileri özelliği yalnızca ayarlanabilir belirtmek için izin verilen değerler belirtildi. Bir numaralandırma ile oluşturulan **değerleri** ve **ValueMaps** ve özellik numaralandırmayla eşleştirilir.  
   
 -   WMI, yalnızca bir örneği olabilecek bir sınıf tanımlamak için singleton terimini kullanır. Bu nedenle, tek bir singleton sınıfı için varsayılan oluşturucu, sınıfı sınıfın tek örneğine hazırlar.  
   
 -   Bir WMI sınıfının, nesne olan özellikleri olabilir. Bu tür WMI sınıfı için kesin olarak belirlenmiş bir sınıf ürettiğinizde, gömülü nesne özellikleri türleri için kesin olarak belirlenmiş türler oluşturmayı düşünmelisiniz. Bu, gömülü nesnelere kesin olarak belirlenmiş bir şekilde erişmenize olanak tanır. Üretilen kodun gömülü nesnenin türünü algılayamayacağını unutmayın. Bu durumda, sorunu size bildirmek için, üretilen kodda bir açıklama oluşturulur. Sonra, özelliği üretilen diğer sınıfa yazmak için, üretilen kodu değiştirebilirsiniz.  
   
--   WMI'da, CIM_DATETIME veri türünün veri değeri belirli bir tarih ve saati veya bir zaman aralığını gösterebilir. Bir tarih ve saat veri değerini temsil eder, oluşturulan sınıfın veri türü ise **DateTime**. Veri değeri bir zaman aralığı temsil ediyorsa, oluşturulan sınıfın veri türü olan **TimeSpan**.  
+-   WMI'da, CIM_DATETIME veri türünün veri değeri belirli bir tarih ve saati veya bir zaman aralığını gösterebilir. Veri değeri bir tarih ve saat gösterirse, oluşturulan sınıftaki veri türü olan **DateTime**. Veri değeri bir zaman aralığını gösterirse oluşturulan sınıftaki veri türü olan **TimeSpan**.  
   
  Alternatif olarak, Visual Studio .NET'te Sunucu Gezgini Yönetim Uzantısı'nı kullanarak, kesin olarak belirlenmiş bir sınıf oluşturabilirsiniz.  
   
- WMI hakkında daha fazla bilgi için bkz: **Windows Yönetim Araçları** konuda Platform SDK Belgeleri.  
+ WMI hakkında daha fazla bilgi için bkz. **Windows Yönetim Araçları'nı** Platform SDK belgelerinde konu.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komutu bir yönetilen Sınıf C# kodunu oluşturur **Win32_LogicalDisk** WMI sınıfında **Root\cimv2** ad alanı. Aracı yönetilen sınıf içinde c:\disk.cs konumundaki kaynak dosyasına yazar **kök. CIMV2. Win32** ad alanı.  
+ Yönetilen sınıfta aşağıdaki komutu oluşturur C# için kod **Win32_LogicalDisk** WMI sınıfının **root\cımv2** ad alanı. Aracı yönetilen sınıf içinde c:\disk.cs konumundaki kaynak dosyasına yazar. **kök. CIMV2. Win32** ad alanı.  
   
 ```  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- Aşağıdaki kod örneği, oluşturulan bir sınıfın programsal olarak nasıl kullanılacağını göstermektedir. İlk olarak, sınıfın bir örneği numaralandırılır ve yol yazdırılır. Ardından, başlatılacak oluşturulan sınıfın bir örneği bir WMI örneğiyle oluşturulur. `Process` oluşturulan sınıf **Win32_Process** ve `LogicalDisk` için oluşturulan sınıf **Win32_LogicalDisk** içinde **Root\cimv2** ad alanı.  
+ Aşağıdaki kod örneği, oluşturulan bir sınıfın programsal olarak nasıl kullanılacağını göstermektedir. İlk olarak, sınıfın bir örneği numaralandırılır ve yol yazdırılır. Ardından, başlatılacak oluşturulan sınıfın bir örneği bir WMI örneğiyle oluşturulur. `Process` için oluşturulan sınıftır **Win32_Process** ve `LogicalDisk` için oluşturulan sınıftır **Win32_LogicalDisk** içinde **root\cımv2** ad alanı.  
   
 ```vb  
 Imports System  
@@ -150,9 +150,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Management>  
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Management>
+- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
+- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668996"
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
 CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel alınan türü bir nesne.  
@@ -79,8 +79,8 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
   
  WPF içinde ancak yalnızca gevşek XAML için (biçimlendirme yapılmayan XAML) XAML 2009 özelliklerini kullanabilirsiniz. WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Style>  
- [Stil ve Şablon Oluşturma](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Style>
+- [Stil ve Şablon Oluşturma](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -2,12 +2,12 @@
 title: Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1a5f9f1789d8c0446a2816c2c07f61b6a373869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710384"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçlerinin çoğu, tamsayı bağımsız değişken kabul eden aşırı yüklenmiş bir sürümü vardır. Tamsayı bağımsız değişkeni sıfır tabanlı bir dizin üzerinde çalıştırılan dizisindeki karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş sürümleri LINQ standart sorgu işleçlerinin desteklenmez ve kullanılmaya çalışılırsa, bir özel durum oluşturur.  
@@ -178,5 +178,5 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Desteklenmez|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Desteklenmez|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to Entities Sorgularında Standart Sorgu İşleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to Entities Sorgularında Standart Sorgu İşleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

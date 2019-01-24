@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 9883f9166007405c3f47a9a1d66a3f4c546197d0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683930"
 ---
 # <a name="varieties-of-custom-controls"></a>Özel Denetim Çeşitleri
 .NET Framework ile geliştirin ve yeni denetimleri uygulayın. Devralma yoluyla da olarak mevcut denetimleri hakkında bilgi sahibi kullanıcı denetiminin işlevselliğini genişletebilirsiniz. Ayrıca, kendi boyama gerçekleştiren özel denetimler yazabilirsiniz.  
@@ -85,7 +85,7 @@ ms.locfileid: "43884568"
   
  Özel denetim uygulamak için kod yazma <xref:System.Windows.Forms.Control.OnPaint%2A> gereksinim duyduğunuz herhangi bir özelliğe özgü kod yanı sıra denetim olayı. Ayrıca geçersiz kılabilirsiniz <xref:System.Windows.Forms.Control.WndProc%2A> doğrudan yöntemi ve tutamacı windows iletileri. Bu en güçlü bir şekilde bir denetim oluşturmak için ancak bu tekniği etkili bir şekilde kullanmak için Microsoft Win32® API ile ilgili bilgi sahibi olmanız gerekir.  
   
- Örnek bir özel denetimin görünümünü ve davranışını bir analog saatinin çoğaltan bir saat denetimidir. Özel boyama yanıt olarak taşımak için saat kullanımına neden çağrıldığında <xref:System.Windows.Forms.Timer.Tick> bir iç olayları <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [nasıl yapılır: basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Örnek bir özel denetimin görünümünü ve davranışını bir analog saatinin çoğaltan bir saat denetimidir. Özel boyama yanıt olarak taşımak için saat kullanımına neden çağrıldığında <xref:System.Windows.Forms.Timer.Tick> bir iç olayları <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
  **Öneri**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "43884568"
 -   Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
   
 ### <a name="activex-controls"></a>ActiveX Denetimleri  
- Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows formlarına ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Penceresiz denetimleri  
  The Microsoft Visual Basic® 6.0and ActiveX teknolojilerini desteklemek *penceresiz* kontrol eder. Windows Forms'ta penceresiz denetimleri desteklenmez.  
@@ -104,11 +104,11 @@ ms.locfileid: "43884568"
 ## <a name="custom-design-experience"></a>Özel tasarım deneyimi  
  Özel bir tasarım zamanı deneyimi uygulamanız gerekiyorsa, kendi Tasarımcısı yazabilirsiniz. Bileşik denetimler için özel Tasarımcı sınıfından türetilen <xref:System.Windows.Forms.Design.ParentControlDesigner> veya <xref:System.Windows.Forms.Design.DocumentDesigner> sınıfları. Genişletilmiş ve özel denetimler için özel Tasarımcı sınıfından türetilen <xref:System.Windows.Forms.Design.ControlDesigner> sınıfı.  
   
- Kullanım <xref:System.ComponentModel.DesignerAttribute> denetiminiz tasarımcınıza ile ilişkilendirilecek. Daha fazla bilgi için [tasarım zamanı desteğini genişletmek](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) ve [nasıl yapılır: bir Windows Forms denetimi, alan avantajı, tasarım zamanı özelliklerini oluşturma](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Kullanım <xref:System.ComponentModel.DesignerAttribute> denetiminiz tasarımcınıza ile ilişkilendirilecek. Daha fazla bilgi için [tasarım zamanı desteğini genişletmek](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) ve [nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Bileşik Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [Tasarım zamanı desteği sunma](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Nasıl yapılır: tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Bileşik Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [Tasarım zamanı desteği sunma](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

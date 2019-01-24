@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692408"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML'de xml:lang İşleme
 `xml:lang` Özniteliği bir [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-XML'deki bir öğenin dil ve kültür bilgilerini bildiren tanımlı öznitelik. Bu öznitelik aynı anlamı devam ederse XAML; Ancak, bazı ek hususlar geçerlidir.  
@@ -43,5 +43,5 @@ ms.locfileid: "43747976"
 ## <a name="wpf-usage-nodes"></a>WPF kullanım düğümleri  
  Öğeleri türetilmiş sınıfları için <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>, eşdeğer kullanabileceğiniz <xref:System.Windows.FrameworkElement.Language%2A> bağımlılık özelliği yerine `xml:lang` özniteliği. Varsayılan olarak, <xref:System.Windows.FrameworkElement.Language%2A> özelliğini "en-US" kullanır, aksi takdirde, özelliği veya işleme yoluyla ayarlanmazsa `xml:lang` özniteliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

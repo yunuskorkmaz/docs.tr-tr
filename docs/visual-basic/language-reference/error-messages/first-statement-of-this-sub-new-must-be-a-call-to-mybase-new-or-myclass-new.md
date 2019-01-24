@@ -1,5 +1,5 @@
 ---
-title: Bu ilk deyimi &#39;Sub New&#39; yapılan bir çağrı olmalıdır &#39;MyBase.New&#39; veya &#39;MyClass.New&#39; (No Parametreler olmadan erişilebilir yapıcı)
+title: Bu ilk deyimi &#39;Sub New&#39; bir çağrı olmalıdır &#39;MyBase.New&#39; veya &#39;MyClass.New&#39; (Hayır Parametreler olmadan erişilebilir yapıcı)
 ms.date: 07/20/2015
 f1_keywords:
 - bc30148
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-ms.openlocfilehash: 3b24385932700a4843ae295bc82ef9529cc86b9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75832ae88908094c1cb74ce04ad84c0d2ae91e68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728901"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>Bu ilk deyimi &#39;Sub New&#39; yapılan bir çağrı olmalıdır &#39;MyBase.New&#39; veya &#39;MyClass.New&#39; (No Parametreler olmadan erişilebilir yapıcı)
-Bu 'Sub New' ilk deyimi 'MyBase.New' veya 'MyClass.New' için bir çağrı olmalıdır, çünkü temel sınıfı\<basename >', '\<derivedname >' bir erişilebilir 'Sub bağımsız değişkenler olmadan çağrılabilen New' yok.  
+# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>Bu ilk deyimi &#39;Sub New&#39; bir çağrı olmalıdır &#39;MyBase.New&#39; veya &#39;MyClass.New&#39; (Hayır Parametreler olmadan erişilebilir yapıcı)
+Bu 'Sub New' öğesinin ilk deyimi 'MyBase.New' veya 'MyClass.New' çağrısı olmalıdır, çünkü temel sınıfı\<basename >', '\<derivedname >' bir erişilebilir 'Sub bağımsız değişken olmadan çağrılabilecek New' yok.  
   
- Türetilen bir sınıfta her Oluşturucusu bir temel sınıf oluşturucu çağırmanız gerekir (`MyBase.New`). Taban sınıfı türetilen sınıflar için erişilebilir olan bir parametresiz oluşturucu varsa `MyBase.New` otomatik olarak çağrılabilir. Yoksa, bir taban sınıf oluşturucu parametrelerle çağrılması gerekir ve bu otomatik olarak yapılamaz. Bu durumda, her türetilmiş sınıf oluşturucu ilk deyimi gerekir parametreli Oluşturucusu çağrı üzerinde temel sınıfı veya başka bir oluşturucu çağrısı bir temel sınıf oluşturucu yapar türetilen sınıfta çağırın.  
+ Türetilen bir sınıfta bir temel sınıf oluşturucusu her Oluşturucu çağırmanız gerekir (`MyBase.New`). Temel sınıfın türetilmiş sınıflar için erişilebilir olan parametresiz bir oluşturucu varsa `MyBase.New` otomatik olarak çağrılabilir. Aksi halde bir temel sınıf oluşturucusunu parametrelerle çağrılması gerekir ve bu otomatik olarak yapılamaz. Bu durumda, her türetilmiş sınıf oluşturucusunun ilk deyimi gerekir parametreli bir kurucu taban sınıfını çağırın veya bir temel sınıf oluşturucusunu çağırma kılan türetilmiş bir sınıf içindeki başka bir oluşturucusunu çağırın.  
   
  **Hata Kimliği:** BC30148  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Her iki çağrı `MyBase.New` gerekli parametreleri belirtin veya böyle bir çağrı yapar eş Oluşturucusu çağırın.  
+-   Her iki çağrı `MyBase.New` gerekli parametreleri belirtin veya bu tür bir çağrıda bir eş oluşturucusunu çağırın.  
   
-     Örneğin, temel sınıf olarak bildirilen bir oluşturucu varsa `Public Sub New(ByVal index as Integer)`, ilk ifade türetilen sınıf oluşturucu olabilir `MyBase.New(100)`.  
+     Örneğin, temel sınıf olarak bildirilen bir oluşturucusu varsa `Public Sub New(ByVal index as Integer)`, ilk ifade türetilen sınıf oluşturucusu olabilir `MyBase.New(100)`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671505"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma
 Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik veri türü*.  
   
  [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) yapıları, diziler ve sınıfları içerir. Bileşik veri türünde bir değişken başlangıç veri türleri ve diğer bileşik türler bir birleşimini içerebilir. Yapılar ve sınıflar, verilerin yanı sıra, kod barındırabilir.  
@@ -41,11 +41,11 @@ Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik 
   
 5.  İzleyin `As` anahtar sözcüğü ile uygun bileşik veri türünün adı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

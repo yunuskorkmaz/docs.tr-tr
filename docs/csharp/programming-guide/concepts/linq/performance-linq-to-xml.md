@@ -2,12 +2,12 @@
 title: Performans (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-ms.openlocfilehash: 340be61f55f2b77ed22d608ec151daa737389771
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4655620bbf432cd64578a7959b3a1be9434d5054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728102"
 ---
 # <a name="performance-linq-to-xml-c"></a>Performans (LINQ to XML) (C#)
 Bu bölümde performansı hakkında bilgiler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], özellikle işlevsel oluşturma ve sorgu performansını.  
@@ -25,6 +25,6 @@ Bu bölümde performansı hakkında bilgiler [!INCLUDE[sqltecxlinq](~/includes/s
  [Sorgular (LINQ to XML)'statik olarak derlenmiş (C#)](../../../../csharp/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  Ayrıştırma ve bir XPath ifade değerlendiricisi tarafından gerçekleştirilen işleme aksine, statik olarak derlenmiş sorgular hakkında performans bilgileri sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

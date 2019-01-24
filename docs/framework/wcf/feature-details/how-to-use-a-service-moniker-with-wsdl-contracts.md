@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
+title: 'Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726578"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma
 Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz durumlar vardır. Hizmeti çağırmak istediğinizde bir MEX uç noktası ve DLL COM birlikte çalışması için kayıtlı olmayabilir WCF istemcisini açığa çıkarmamak. Bu durumlarda, hizmeti tanımlayan bir WSDL dosyası oluşturun ve WCF hizmet bilinen adını geçirin. Bu konu, bir WSDL WCF bilinen adını kullanarak çalışmaya WCF başlama örneği çağrılacak açıklar.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>WSDL hizmet bilinen adı kullanma  
@@ -56,6 +56,6 @@ Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz du
   
 7.  Visual Basic uygulamasını çalıştırın. Bir ileti kutusu arama çıkarma (145, 76.54) sonuçlarını görüntülenir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

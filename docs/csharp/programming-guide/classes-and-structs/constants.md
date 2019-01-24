@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: b723bb23559f88e7498c22295a6b2f70312461fc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3cfb238317e14df8d663bc96ddf46e863c7b98be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663881"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Program süresince değiştirmeyin ve derleme zamanında bilinen değişmez değerler sabittir. Sabitler ile bildirilmiş [const](../../../csharp/language-reference/keywords/const.md) değiştiricisi. Yalnızca C# yerleşik türleri (hariç <xref:System.Object?displayProperty=nameWithType>) olarak bildirilebilir `const`. Yerleşik türler bir listesi için bkz. [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md). Kullanıcı tanımlı türler, sınıflar, yapılar ve diziler de dahil olmak üzere olamaz `const`. Kullanım [salt okunur](../../../csharp/language-reference/keywords/readonly.md) değiştiricisi bir sınıf, yapı veya çalışma zamanı (örneğin, bir oluşturucu) ve bundan sonra bir kez başlatılan bir dizi oluşturmak için değiştirilemez.  
@@ -46,11 +46,11 @@ Program süresince değiştirmeyin ve derleme zamanında bilinen değişmez değ
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Türler](../../../csharp/programming-guide/types/index.md)  
-- [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Türler](../../../csharp/programming-guide/types/index.md)
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)
 - [İçinde değiştirilemezlik C# birinci bölüm: Değiştirilemezlik türleri](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

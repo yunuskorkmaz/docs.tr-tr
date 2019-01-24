@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 539fa890a4a7b73c9e1744601d8613a246cb2240
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596819"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic'teki yenilikler
 
@@ -252,5 +252,5 @@ End Interface
   
  Derleyici, normal aşırı yükleme çözünürlüğü kuralları en uygun seçmek için kullanacağı artık `GetDetails` çağırmak için ve Visual Basic'te arabirimi ilişkileri gibi bu örnekte gösterilen bildirebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)

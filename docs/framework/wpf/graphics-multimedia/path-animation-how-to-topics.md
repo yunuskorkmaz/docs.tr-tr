@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665857"
 ---
 # <a name="path-animation-how-to-topics"></a>Yol Animasyonu ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, nesnenin yol boyunca animasyon göstermektedir.  
+Bu bölümdeki konular, bir nesnenin yol üzerinde animasyonunu nasıl ekleyebileceğiniz gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Çift Animasyon)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
@@ -30,7 +30,7 @@ Bu bölümdeki konular, nesnenin yol boyunca animasyon göstermektedir.
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

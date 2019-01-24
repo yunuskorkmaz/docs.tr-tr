@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ea860c185d68a24c31ec24de4a087b9b98fe791f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727813"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Temizle&gt; öğesi için &lt;namedCaches&gt;
 Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbellek.  
   
  \<System.Runtime.Caching >  
-\<memoryCache >  
-\<namedCaches >  
+\<memoryCache>  
+\<namedCaches>  
 \<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -47,10 +47,10 @@ Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbel
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `clear` Öğesi tümünü temizler `namedCache` girişleri adlandırılmış önbelleği koleksiyondaki bir önbellek. Kullanabileceğiniz `clear` kullanmadan önce öğesi `add` vardır başka hiçbir emin olmak için yeni bir adlandırılmış önbellek girdisi eklemek için öğesi adlı önbellekler koleksiyondaki.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

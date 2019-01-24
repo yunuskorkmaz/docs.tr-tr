@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 903be68e71ad590b4b669545afd077175534ef4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c57f431350d4f63507ee7374616b62ca32151c86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639412"
 ---
 # <a name="bad-file-name-or-number"></a>Hatalı dosya adı veya numarası
-Belirtilen dosyaya erişmeye çalışırken bir hata oluştu. Bu hatanın olası nedenleri arasında aşağıdakiler vardır:  
+Belirtilen dosyaya erişmeye çalışırken bir hata oluştu. Bu hata için olası nedenler arasındadır:  
   
--   Bir ifade belirtilmedi bir dosya adı veya numarası sahip bir dosya başvuruyor `FileOpen` deyimi ya da değeri belirtilmiş bir `FileOpen` deyimi ancak edildi sonradan kapalı.  
+-   Belirtilmedi bir dosyanın dosya adı veya numarası ile bir deyim başvurduğu `FileOpen` içinde deyim ya da, belirtilmiş bir `FileOpen` deyimi ancak olan sonradan kapalı.  
   
--   Bir deyim bir dosyayı dosya sayı aralık dışında bir sayı ile ifade eder.  
+-   Dosya numaraları aralığının dışında bir sayı içeren bir dosyaya bir bildirimi gösterir.  
   
--   Bir deyim bir dosya adı veya geçersiz sayı başvuruyor.  
+-   Bir deyim için bir dosya adı veya geçersiz sayı ifade eder.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Emin olun dosya adında belirtilen bir `FileOpen` deyimi. Çağrılan gerçekleştiriyorsanız `FileClose` deyimi bağımsız değişkenler olmadan, yanlışlıkla tüm açık dosyalar kapanır.  
+1.  Emin dosya adı belirtilen bir `FileOpen` deyimi. Çağrılan gerçekleştiriyorsanız `FileClose` ifadesi bağımsız değişkeni olmadan yanlışlıkla tüm açık dosyalar kapattıysanız.  
   
-2.  Kodunuzu dosya numaraları algorithmically oluşturuyorsa sayıları geçerli olduğundan emin olun.  
+2.  Kodunuzu dosya numaraları algorithmically oluşturuyorsa numaralarının geçerli olduğundan emin olun.  
   
-3.  İşletim sistemi kuralları için uygun emin olmak için dosya adlarını denetleyin.  
+3.  Dosya adları, işletim sistemi kuralları için uygun emin olmak için kontrol edin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>  
- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
+- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

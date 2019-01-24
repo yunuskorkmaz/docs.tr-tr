@@ -2,27 +2,22 @@
 title: Uygulama Ayarları Şeması
 ms.date: 05/01/2017
 helpviewer_keywords:
-- schema app settings
-- app settings, schema [Windows Forms]
-- Windows Forms, app settings schema
-- configuration schema [.NET Framework], app settings
+  - schema app settings
+  - 'app settings, schema [Windows Forms]'
+  - 'Windows Forms, app settings schema'
+  - 'configuration schema [.NET Framework], app settings'
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191154"
 ---
+
 # <a name="app-settings-schema"></a>Uygulama Ayarları Şeması
 
 Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Ekle >**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
+&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<Temizleme >**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<kaldırma >**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
@@ -72,5 +67,5 @@ Aşağıdaki örnek, dış ayarları dosyası ayarı kullanır ve bir uygulama a
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)

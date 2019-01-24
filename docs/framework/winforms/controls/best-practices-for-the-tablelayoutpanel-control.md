@@ -14,47 +14,47 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674199"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel Denetimi için En İyi Yöntemler
-<xref:System.Windows.Forms.TableLayoutPanel> Denetim dikkatle Windows formlarında kullanmadan önce dikkate almanız gereken güçlü yerleşim özellikleri sağlar.  
+<xref:System.Windows.Forms.TableLayoutPanel> Denetim dikkatli bir şekilde Windows formlarınızı kullanmadan önce dikkate almanız gereken güçlü düzen özelliklerini sağlar.  
   
-## <a name="recommendations"></a>Önerileri  
- Aşağıdaki öneriler kullanmanıza yardımcı <xref:System.Windows.Forms.TableLayoutPanel> en iyi kendi yararınıza denetim.  
+## <a name="recommendations"></a>Öneriler  
+ Aşağıdaki öneriler kullanmanıza yardımcı olacak <xref:System.Windows.Forms.TableLayoutPanel> en iyi avantajı denetimi.  
   
 ### <a name="targeted-use"></a>Hedeflenen kullanın  
- Kullanım <xref:System.Windows.Forms.TableLayoutPanel> tutumlu denetim. Onu yeniden boyutlandırılabilir düzeni gerektiren tüm durumlarda kullanmamanız gerekir. Aşağıdaki listede kullanımı en fazla yararlanır düzenleri açıklanmaktadır <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
+ Kullanım <xref:System.Windows.Forms.TableLayoutPanel> olabildiğince az denetim. Bunu yeniden boyutlandırılabilir düzeni gerektiren tüm durumlarda kullanmamalısınız. Aşağıdaki listede açıklanmıştır kullanımını en iyi yararlanan düzenleri <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
   
--   Formun orantılı olarak birbirlerine yeniden boyutlandırmak birden çok bölümleri olan düzenler.  
+-   Birbirleriyle orantılı olarak yeniden boyutlandırmak birden çok form parçası olan düzenler.  
   
--   Değiştirilen veya eklenir veya çıkarılır kullanıcı özelleştirilebilir alanlar veri girişi formları gibi çalışma zamanında dinamik olarak üretilen düzenleri tercihlerinize göre temel.  
+-   Değiştirildiğinde veya eklendiğinde veya çıkarıldığında kullanıcı tarafından özelleştirilebilir alanlara sahip veri girişi formları gibi çalışma zamanında dinamik olarak oluşturulan düzenleri tercihleri temelinde.  
   
--   Genel sabit boyutta kalacağı düzenler. Örneğin, 800 x 600'den küçük kalması gereken bir iletişim kutusu olabilir, ancak yerelleştirilmiş dizeleri desteklemesi gerekir.  
+-   Genel bir sabit boyutta kalması gereken düzenler. Örneğin, 800 x 600 ' küçük kalması gereken bir iletişim kutusu olabilir, ancak yerelleştirilmiş dizeleri desteklemeniz gerekiyor.  
   
- Aşağıdaki listede kullanımından büyük ölçüde faydalanmaz düzenleri açıklanmaktadır <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
+ Aşağıdaki liste önemli ölçüde kullanarak avantaj elde değil düzenleri açıklar <xref:System.Windows.Forms.TableLayoutPanel> denetimi:  
   
--   Basit veri girişi formlarla tek bir sütun etiketleri ve metin girişi alanlarının tek bir sütun.  
+-   Etiket ve metin girişi alanlarının tek bir sütun basit veri girişi formları ile tek bir sütun.  
   
--   Tek bir büyük formlarla bir yeniden boyutlandırma meydana geldiğinde, tüm kullanılabilir alanı dolduracak alanı görüntüler. Bu, tek bir görüntüleyen bir form örneğidir <xref:System.Windows.Forms.PropertyGrid> denetim. Bu durumda, formu yeniden boyutlandırıldığında hiçbir şey genişletmeniz gerekir çünkü sabitleme, kullanın.  
+-   Bir yeniden boyutlandırma meydana geldiğinde, tüm kullanılabilir alanı dolduracak alan büyük tek bir form görüntüler. Bu, tek bir görüntüleyen bir form örneğidir <xref:System.Windows.Forms.PropertyGrid> denetimi. Formu yeniden boyutlandırıldığında başka bir şey genişletmeniz gerekir çünkü bu durumda, sabitleme, kullanın.  
   
- Hangi denetimlerin olması gereken seçerken dikkatli bir <xref:System.Windows.Forms.TableLayoutPanel> denetim. %30 sabitleme kullanarak tarafından büyümeye metninizi yer varsa, kullanmayı <xref:System.Windows.Forms.Control.Anchor%2A> yalnızca özelliği. Düzeninizi tarafından gerekli alanı tahmin edebilirsiniz, kullanımı <xref:System.Windows.Forms.Control.Dock%2A> ve <xref:System.Windows.Forms.Control.Anchor%2A> kalan alanın ayrıntılarını tahmin daha kolaydır ve <xref:System.Windows.Forms.Control.AutoSize%2A> davranışı.  
+ Hangi denetimlerin olması gereken seçerken dikkatli bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Bağlama kullanarak 30 oranında büyümesine metni yer varsa kullanmayı <xref:System.Windows.Forms.Control.Anchor%2A> yalnızca özellik. Düzeninizi tarafından gerekli alanı tahmin edebilirsiniz, kullanım <xref:System.Windows.Forms.Control.Dock%2A> ve <xref:System.Windows.Forms.Control.Anchor%2A> kalan alanı ayrıntılarını tahmin etmek daha kolaydır ve <xref:System.Windows.Forms.Control.AutoSize%2A> davranışı.  
   
- Genel olarak, düzeniyle tasarlarken, <xref:System.Windows.Forms.TableLayoutPanel> denetlemek, tasarım olabildiğince basit tutun.  
+ Genel olarak ile düzeninizi tasarlarken, <xref:System.Windows.Forms.TableLayoutPanel> denetlemek, tasarım, olabildiğince basit tutun.  
   
-### <a name="use-the-document-outline-window"></a>Belge Anahattı penceresi kullanın  
- Belge Anahattı penceresi denetimlerinizi z düzeni ve üst-alt ilişkilerini yönetmek için kullanabileceğiniz düzeninizi ağaç görünümünü sağlar. Gelen **Görünüm menüsünde**seçin **diğer pencereler**seçeneğini belirleyip **belge anahattı**.  
+### <a name="use-the-document-outline-window"></a>Belge Anahattı penceresini kullanma  
+ Belge Anahattı penceresi denetimlerinizi z düzenini ve üst-alt ilişkilerini yönetmek için kullanabileceğiniz düzeninizi ağaç görünümünü sağlar. Gelen **Görünüm menüsü**seçin **diğer Windows**, ardından **belge anahattı**.  
   
 ### <a name="avoid-nesting"></a>İç içe geçme kaçının  
- İç içe geçme diğer kaçının <xref:System.Windows.Forms.TableLayoutPanel> içinde denetleyen bir <xref:System.Windows.Forms.TableLayoutPanel> denetim. İç içe geçmiş düzenleri hata ayıklama zor olabilir.  
+ İç içe diğer önlemek <xref:System.Windows.Forms.TableLayoutPanel> içinde denetleyen bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi. İç içe geçmiş düzenleri hata ayıklaması zor olabilir.  
   
-### <a name="avoid-visual-inheritance"></a>Görsel devralma kaçının  
- <xref:System.Windows.Forms.TableLayoutPanel> Denetimi Windows Forms Tasarımcısı'nda görsel devralma desteklemez. A <xref:System.Windows.Forms.TableLayoutPanel> türetilmiş bir sınıf denetiminde "tasarım zamanında kilitli"olarak görüntülenir.  
+### <a name="avoid-visual-inheritance"></a>Görsel devralmadan kaçının  
+ <xref:System.Windows.Forms.TableLayoutPanel> Denetimi Windows Form Tasarımcısı'nda görsel devralmayı desteklemez. A <xref:System.Windows.Forms.TableLayoutPanel> "tasarım zamanında kilitli gibi" Denetim türetilmiş bir sınıf içinde görünür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

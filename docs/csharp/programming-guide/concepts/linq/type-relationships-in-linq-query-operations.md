@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 574021f09948f2358eb0023588ee0fab9c142687
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8bc366e6c88c8ea378504535bb259e81dad83306
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674316"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
 Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerinin birbirleriyle nasıl ilişkili olduğunu anlamanız gerekir. Bu ilişkileri anladıysanız, daha kolay anlarsınız [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örneklerini ve kod örneklerini belgelerinde. Ayrıca, değişkenleri kullanarak örtük olarak belirlenmiş ne olacağını perde arkasında anlayacaksınız `var`.  
@@ -65,6 +65,6 @@ Etkili bir şekilde sorgu yazmak için bir sorgu işleminde değişken türlerin
   
  Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

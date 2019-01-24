@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696223"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana gerekmez. Nesne odaklı programlama ile ilgili bilgi sahibi olduğunuz ve sınıfları tasarlama ne yapılacağını bildiğiniz, ihtiyacınız olan bilgileri çoğunu zaten vardır. Özel öznitelikler sınıflardır doğrudan veya dolaylı olarak türetilen temelde geleneksel <xref:System.Attribute?displayProperty=nameWithType>. Yalnızca geleneksel sınıflar gibi özel öznitelikler, veri depolama ve alma yöntemler içerir.  
@@ -47,7 +47,7 @@ Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana ger
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> Özel öznitelikler oluşturmak için önemli olan üç üye vardır: [AttributeTargets](#attributetargets-member), [devralınan](#inherited-property), ve [AttributeUsage](#allowmultiple-property).  
+ <xref:System.AttributeUsageAttribute> Özel öznitelikler oluşturmak için önemli olan üç üyeleri içerir: [AttributeTargets](#attributetargets-member), [devralınan](#inherited-property), ve [AttributeUsage](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets üyesi  
  Önceki örnekte, <xref:System.AttributeTargets.All?displayProperty=nameWithType> , bu öznitelik tüm program öğelerine uygulanabilir belirten belirtilir. Alternatif olarak, belirtebilirsiniz <xref:System.AttributeTargets.Class?displayProperty=nameWithType>, gösteren, özniteliği yalnızca bir sınıfa uygulanabilir veya <xref:System.AttributeTargets.Method?displayProperty=nameWithType>, gösteren, özniteliği yalnızca bir yöntem için uygulanabilir. Tüm program öğelerinin açıklaması için bu şekilde özel bir öznitelik tarafından işaretlenebilir.  
@@ -150,6 +150,6 @@ Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana ger
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [Öznitelikler](../../../docs/standard/attributes/index.md)

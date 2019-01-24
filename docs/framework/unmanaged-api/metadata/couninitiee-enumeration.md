@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcd7dc7c51caa94308760c0086384c8eea184ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 475ae98d2bf7ea5132c9ec4555070f8bb2999cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744017"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE Numaralandırması
-Tarafından kullanılan sabitlerini belirtir [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ortak dil çalışma zamanı başlatırken.  
+Tarafından kullanılan sabitlerini belirtir [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ortak dil çalışma zamanı başlatılırken.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,17 +40,17 @@ typedef enum tagCOUNINITEE
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Varsayılan başlatılmaması modunu belirtir.|  
-|`COUNINITEE_DLL`|Bir derlemeyi kaldırılması için başlatılmaması modunu belirtir.|  
+|`COUNINITEE_DEFAULT`|Varsayılan başlatmasını geri modunu belirtir.|  
+|`COUNINITEE_DLL`|Bir derlemeyi kaldırılması için başlatmasını geri modunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

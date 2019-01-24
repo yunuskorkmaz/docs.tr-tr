@@ -2,12 +2,12 @@
 title: Performansla ilgili önemli noktalar (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43194baeaaeefd8748980a8542bea199d3e8d29f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732017"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performansla ilgili önemli noktalar (varlık çerçevesi)
 Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Entity Framework uygulamalarının performansını artırmak için bazı değerlendirmeleri sağlar.  
@@ -153,5 +153,5 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
   
 -   [ADO.NET Entity Framework performans karşılaştırması](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

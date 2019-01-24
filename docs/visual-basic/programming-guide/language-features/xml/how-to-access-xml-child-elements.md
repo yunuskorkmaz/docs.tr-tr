@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML Alt Öğelerine Erişme (Visual Basic)'
+title: 'Nasıl yapılır: Erişim XML alt öğelerine (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML axis [Visual Basic], child
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 4ec7743a30b8101d813ac414a8f5164aeb6c593d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92ecea2c2e6e117add37b30498f5fb34adfeac6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626665"
 ---
-# <a name="how-to-access-xml-child-elements-visual-basic"></a>Nasıl yapılır: XML Alt Öğelerine Erişme (Visual Basic)
-Bu örnek belirtilen ada sahip bir XML öğesi tüm XML alt öğelerine erişmek için axis özelliği bir alt kullanmayı gösterir. Özellikle, kullanan <xref:System.Xml.Linq.XElement.Value%2A> özelliğine koleksiyonda ilk öğenin değerini almak `name` alt axis özelliği döndürür. `name` Child axis özelliği alır adlı tüm alt öğeleri `phone` içinde `contact` nesnesi. Bu örnek ayrıca kullanır `phone` adlı tüm alt öğeleri erişmek için alt axis özelliği `phone` içerdiği `contact` nesnesi.  
+# <a name="how-to-access-xml-child-elements-visual-basic"></a>Nasıl yapılır: Erişim XML alt öğelerine (Visual Basic)
+Bu örnek belirtilen ada sahip bir XML öğesi tüm XML alt öğelerine erişmek için axis özelliği bir alt kullanmayı gösterir. Özellikle, kullandığı <xref:System.Xml.Linq.XElement.Value%2A> özelliğini koleksiyondaki ilk öğenin değerini alma `name` alt eksen özelliğini döndürür. `name` Child axis özelliği adlı tüm alt öğe alır `phone` içinde `contact` nesne. Bu örnekte ayrıca `phone` adlı tüm alt öğelere erişmek için alt axis özelliği `phone` içerdiği `contact` nesne.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-child-elements_1.vb)]  
@@ -25,9 +25,9 @@ Bu örnek belirtilen ada sahip bir XML öğesi tüm XML alt öğelerine erişmek
   
 -   Bir başvuru <xref:System.Xml.Linq> ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
- [XML Alt Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [Visual Basic'de XML'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- [XML Alt Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [Visual Basic'de XML'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

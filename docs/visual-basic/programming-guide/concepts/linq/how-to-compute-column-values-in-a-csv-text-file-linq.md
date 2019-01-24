@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir CSV metinde dosyasında (LINQ) (Visual Basic) sütun değerlerini hesaplama'
+title: 'Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c99696472deaa79842e3270d05b63cd591754d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671908"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Nasıl yapılır: bir CSV metinde dosyasında (LINQ) (Visual Basic) sütun değerlerini hesaplama
-Bu örnek, birleşik toplam, ortalama, Min ve Max gibi bir .csv dosyası sütunlarda hesaplamalar gösterilmektedir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)
+Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir. Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.  
   
 ### <a name="to-create-the-source-file"></a>Kaynak dosyası oluşturmak için  
   
-1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasöründe kaydedin. İlk sütun Öğrenci Kimliğini temsil eder ve sonraki sütunları puanları dört alıştırmalar temsil varsayılır.  
+1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunda bir öğrenci Kimliğini temsil eder ve sonraki sütun, dört sınavları puanları temsil varsayılır.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -140,11 +140,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir diziye dönüştürmek için yöntem. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütunundaki metni kendi sayısal gösterim dönüştürülür. Dosyanız bir sekmeyle ayrılmış dosyası ise, bağımsız değişkeninde yalnızca güncelleştirme `Split` yöntemine `\t`.  
+ Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir dizisine dönüştürmek için yöntemi. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Bağımsız değişkende dosyanızı sekmeyle ayrılmış bir dosya ise, yalnızca güncelleştirme `Split` yönteme `\t`.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+ .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

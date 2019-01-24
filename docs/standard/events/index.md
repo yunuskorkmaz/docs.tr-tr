@@ -3,21 +3,15 @@ title: Olaylar Oluşturma ve İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- delegate model for events
-- application development [.NET Framework], events
-- events [.NET Framework]
+  - delegate model for events
+  - 'application development [.NET Framework], events'
+  - 'events [.NET Framework]'
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127933"
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
 .NET Framework olayları temsilci modeline dayanır. Temsilci modeli ile kaydetmek ve bildirim sağlayıcıdan almak abone sağlayan gözlemci tasarım deseni izler. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  
@@ -82,17 +76,17 @@ ms.locfileid: "53127933"
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl Yapılır: Olaylar oluşturma ve kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Olayları oluşturma ve tüketme örnekleri içerir.|  
-|[Nasıl Yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işlemek için nasıl kullanılacağını gösterir.|  
+|[Nasıl yapılır: Olaylar oluşturma ve kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Olayları oluşturma ve tüketme örnekleri içerir.|  
+|[Nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işlemek için nasıl kullanılacağını gösterir.|  
 |[Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)|Kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlayan tasarım düzenini açıklar.|  
-|[Nasıl Yapılır: Web formları uygulamasında olayları kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
+|[Nasıl yapılır: Web formları uygulamasında olayları kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Olaylar ve yönlendirilmiş olaylara genel bakış (UWP uygulamaları)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Olaylar (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Olaylar ve yönlendirilmiş olaylara genel bakış (UWP uygulamaları)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Olaylar (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Olaylar (C# programlama Kılavuzu)](../../csharp/programming-guide/events/index.md)

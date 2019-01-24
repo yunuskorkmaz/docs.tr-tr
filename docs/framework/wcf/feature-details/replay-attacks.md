@@ -2,44 +2,44 @@
 title: Yeniden Yürütme Saldırıları
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712083"
 ---
 # <a name="replay-attacks"></a>Yeniden Yürütme Saldırıları
-A *tekrarlama saldırı* bir saldırgan, iki taraf arasında ileti akışı kopyalar ve bir veya daha fazla tarafların akışa başlayarak yeniden oynatılır oluşur. Azaltıldığından sürece, bilgisayarlar saldırı tabi akış yasal iletileri, bir öğenin yedekli siparişleri gibi hatalı sonuçları aralığında kaynaklanan olarak işler.  
+A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Saldırı bilgisayarların akış azaltılabilir sürece, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi çeşitli yasal iletileri olarak işleyin.  
   
-## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Yansıma saldırılarına maruz bağlamaları olabilir  
- *Yansıma saldırıları* alıcısı yanıt olarak geldiği gibi iletileri gönderen dön yürütmelerini demektir. Standart *yeniden yürütme algılaması* Windows Communication Foundation (WCF) mekanizması otomatik olarak bu işlemez.  
+## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Bağlamaları yansıma saldırılarıyla karşılaşabilir  
+ *Yansıma saldırıları* yanıt olarak alıcı geldiği gibi iletileri gönderen dön olumsuzlukları demektir. Standart *yeniden yürütme algılaması* Windows Communication Foundation (WCF) mekanizması otomatik olarak bu işlemez.  
   
- WCF hizmet modeli imzalı ileti kimliği istek iletilerini ekler ve bir imzalı bekliyor olduğundan, yansıma saldırıları varsayılan olarak azaltıldığından `relates-to` üstbilgisi yanıt iletileri. Sonuç olarak, isteğine yanıt olarak yeniden olamaz. Güvenli güvenilir ileti (RM) senaryolarında yansıma saldırıları çünkü azaltıldığından:  
+ Yansıma saldırıları WCF service model imzalı ileti kimliği, istek iletilerini ekler ve bir imzalı bekliyor çünkü varsayılan olarak azaltılabilir `relates-to` üstbilgisi yanıt iletileri. Sonuç olarak, isteğine yanıt olarak yürütülemez. Güvenli, güvenilir, ileti (RM) senaryolarında, çünkü yansıma saldırıları azaltıldığından:  
   
--   Oluşturma sırası ve Oluşturma sırası yanıt iletisi şemaları farklıdır.  
+-   Oluşturma sırası yanıt iletisi şemaları ve Oluşturma sırası farklıdır.  
   
--   İstemci bu türden iletilere anlayamıyor çünkü tek yönlü sıraları için istemci gönderir sırası iletilerinin yeniden yeniden yürütülmesi olamaz.  
+-   İstemci bu türden iletilere anlayamıyor çünkü tek yönlü sıraları için istemcinin gönderdiği sırası iletileri yeniden yürütülemez.  
   
--   Çift yönlü sıraları için iki sırası kimliklerinin benzersiz olması gerekir. Bu nedenle, bir giden sırası iletisi (tüm dizisi üstbilgi ve gövdelerini, çok imzalanmış) geri gelen sırası iletisi yeniden olamaz.  
+-   Çift yönlü dizileri için iki sıranın kimlikleri benzersiz olmalıdır. Bu nedenle, bir giden dizisi iletisi (tüm dizisi üstbilgileri gövdeleri, çok oturum açtığınızı) geri gelen sırası iletiyi yürütülemez.  
   
- Yansıma saldırılarına yalnızca bağlamaları WS adresleme olmadan olanlardır: WS adresleme-devre dışı olması ve simetrik anahtar tabanlı güvenlik kullanan özel bağlamalar. <xref:System.ServiceModel.BasicHttpBinding> Kullanılmıyor WS adresleme varsayılan olarak yapar, ancak bunu simetrik anahtar tabanlı güvenlik, bu saldırıya karşı savunmasız izin veren şekilde kullanmıyor.  
+ Yansıma saldırılarına yalnızca bağlamaları WS-Addressing olmadan olanlardır: simetrik anahtar tabanlı güvenliği kullanın-devre dışı WS Addressing ve özel bağlamalar. <xref:System.ServiceModel.BasicHttpBinding> Kullanılmıyor WS-Addressing varsayılan olarak yapar, ancak bunları simetrik anahtar tabanlı güvenlik, bu saldırısına açık olmasını sağlayan bir yolla kullanmaz.  
   
- Özel bağlamalar azaltma güvenlik bağlamı kurmak değil veya WS adresleme üstbilgileri gerektirecek şekilde kullanmaktır.  
+ Risk azaltma özel bağlamalar için güvenlik bağlamı kurmak değil veya WS-Addressing üst bilgileri gerektirecek şekilde kullanmaktır.  
   
-## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Web grubu: Saldırgan yürütmelerini isteği birden çok düğüme  
- Bir istemci bir Web grubuna uygulanan bir hizmet kullanır. Bir saldırgan gruptaki başka bir düğüme gruptaki bir düğüm için gönderilen bir istek başlayarak yeniden oynatılır. Bir hizmeti yeniden başlatılırsa, ayrıca, tekrar yürütme önbelleğine, isteği yeniden göndermek bir saldırgan izin vererek temizlenir. (Önbellek kullanılan, daha önce görülen ileti imzası değerler içeriyor ve bu imzaların yalnızca bir kez kullanılabilmesi için yürütmelerini önler. Yeniden yürütme önbellekleri bir Web grubu arasında paylaşılmaz.)  
+## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Web grubu: Saldırgan olumsuzlukları isteği birden çok düğüm  
+ Bir istemci, bir Web grubunda uygulanan bir hizmeti kullanır. Bir saldırganın bir düğüm grubunda gruptaki başka bir düğüme gönderilen bir istek başlayarak yeniden oynatılır. Hizmet yeniden başlatılırsa, ayrıca, yeniden yürütme önbellek, saldırganın isteği yeniden yürütme temizlenir. (Önbellek kullanılan, daha önce görülen ileti imzası değerlerini içerir ve bu nedenle bu imzaların yalnızca bir kez kullanılabilir olumsuzlukları önler. Yeniden yürütme önbellekler bir Web grubu arasında paylaşılmaz.)  
   
- Azaltıcı Etkenler şunlardır:  
+ Risk azaltma işlemleri şunlardır:  
   
--   İleti modu güvenlik durum bilgisi olan güvenlik bağlamı belirteçleri (ile veya etkin güvenli konuşma olmadan) kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+-   İleti modu güvenlik durum bilgisi olan güvenlik bağlamı belirteçleri (ile veya etkin güvenli konuşma olmadan) kullanın. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
--   Hizmetini aktarım düzeyinde güvenlik kullanacak şekilde yapılandırın.  
+-   Hizmetini aktarım düzeyi güvenlik kullanacak şekilde yapılandırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

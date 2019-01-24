@@ -2,15 +2,15 @@
 title: (Varlık SQL) kullanma
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: 89306c8b4c317ebaba0d964869c4fe9e1028631a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a07ee1c32a93ee22b7418784fbd893e7699c553e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744303"
 ---
 # <a name="using-entity-sql"></a>(Varlık SQL) kullanma
-Ad alanları sorgu ifadesinde kullanılan belirtir.  
+Bir sorgu ifadesinde kullanılan ad alanlarını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,22 +20,22 @@ USING [ alias = ] namespace
   
 ## <a name="arguments"></a>Arguments  
  `alias`  
- Bir ad alanıyla nitelemek için daha kısa bir diğer ad belirtir.  
+ Bir ad alanı ile nitelemek için daha kısa bir diğer ad belirtir.  
   
  `namespace`  
- Tüm geçerli ad alanı.  
+ Geçerli bir ad alanı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusunu kullanarak işleci sorgu ifadesinde kullanılan ad alanları belirtmek için kullanır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusunu kullanarak işleci bir sorgu ifadesinde kullanılan ad alanları belirtmek için kullanır. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür PrimitiveType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
   
 ```  
 using SqlServer; RAND()  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ad Alanları](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ad Alanları](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

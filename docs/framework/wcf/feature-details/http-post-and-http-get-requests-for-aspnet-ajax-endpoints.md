@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma'
+title: 'Nasıl yapılır: İstekleri ASP.NET AJAX uç noktaları için HTTP POST ve HTTP GET arasında seçim yapma'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8de65bbf8cd9e0eab3861504946967ad319cd824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718812"
 ---
-# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma
+# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Nasıl yapılır: İstekleri ASP.NET AJAX uç noktaları için HTTP POST ve HTTP GET arasında seçim yapma
 
-Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten çağrılabilen bir ASP.NET AJAX etkinleştirilmiş bir uç nokta hizmetidir oluşturmanıza olanak sağlar. Bu hizmetler oluşturmaya yönelik temel yordamları ele alınmıştır [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) ve [nasıl yapılır: bir ASP.NET AJAX uç noktası olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten çağrılabilen bir ASP.NET AJAX etkinleştirilmiş bir uç nokta hizmetidir oluşturmanıza olanak sağlar. Bu hizmetler oluşturmaya yönelik temel yordamları ele alınmıştır [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) ve [nasıl yapılır: Yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
  ASP.NET AJAX varsayılan olan HTTP POST ile HTTP POST ve GET HTTP fiilleri kullanan işlemleri destekler. Bir işlem oluşturma yan etkileri varsa ve nadiren bağlanan veya hiç değişen verileri döndürür, HTTP GET bunun yerine kullanın. GET işlemleri sonuçlarını, aynı işlemi birden çok çağrı hizmetinize tek bir istekte neden olabilir yani önbelleğe alınabilir. WCF tarafından belirtilmez ancak (tarayıcıda bir kullanıcının, bir ara sunucu ve diğer düzeylere.) herhangi bir düzeyde gerçekleştirilebildiği önbelleğe alma Önbelleğe alma hizmeti performansını artırmak istiyorsanız verileri sık sık değişiyorsa kabul edilebilir olmayabilir ancak veya işlem bir eylem gerçekleştirirse avantajlıdır.  
   
@@ -90,6 +90,6 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
   
 2. Diğer bir ASP.NET AJAX Hizmetleri aynı şekilde GET işlemleri ile Hizmetleri'ni kullanabilirsiniz - URL ASP.NET AJAX komut Yöneticisi'nin betikleri koleksiyonuna hizmet girerek denetim. Bir örnek için bkz. [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
+- [Nasıl yapılır: AJAX etkinleştirilmiş ASP.NET Web hizmetlerini WCF'ye taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

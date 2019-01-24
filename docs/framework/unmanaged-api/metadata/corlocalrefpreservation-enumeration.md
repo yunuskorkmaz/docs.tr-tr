@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9ed3cdac726fbdbf9ee2b33f42565d8594bc36e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669685"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Sabit Listesi
-Yerel başvuruları işlenmesi için bayrak değeri içerir.  
+Yerel başvurular alınmasına yönelik bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,15 +42,15 @@ typedef enum CorLocalRefPreservation
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`MDPreserveLocalRefsNone`|Yerel başvuru korur.|  
-|`MDPreserveLocalTypeRef`|Yerel tür başvuruları korur.|  
+|`MDPreserveLocalTypeRef`|Yerel tür başvurularını korur.|  
 |`MDPreserveLocalMemberRef`|Yerel üye başvuruları korur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

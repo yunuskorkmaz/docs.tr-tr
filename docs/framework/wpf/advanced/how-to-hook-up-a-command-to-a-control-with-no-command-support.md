@@ -10,22 +10,22 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: e6ef78cd7e1578745f0bde5c0e9e799bb5e641a9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 5f963c871ed9b600586c32403a288eadd6e9daec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725382"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Nasıl yapılır: Komut Desteği Olmadan Denetime Komut Bağlama
-Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> değil sahip derlendiği komutu için destek.  Birden çok kaynak komutları tam bir örnek için bkz: [özel bağlayan örneği oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
+Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> hangi değil olması için yerleşik desteğe komutu.  Komutları için birden çok kaynaktan eksiksiz bir örnek için bkz. [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Uygulama programcıları düzenli olarak karşılaştığı yaygın komutları kitaplığını sağlar.  Komut kitaplığı oluşturan sınıfları şunlardır: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzenli olarak uygulama programcıların karşılaştığı yaygın komutları içeren bir kitaplık sağlar.  Komut kitaplığı oluşturan sınıfları: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
   
- Statik <xref:System.Windows.Input.RoutedCommand> bu sınıfları yapan nesneleri komut mantığı sağlamaz.  Komutu için mantığı komutu ile ilişkilendirilmiş bir <xref:System.Windows.Input.CommandBinding>.  Birçok denetimlerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bazı komutlar komut kitaplığındaki desteği yerleşik.  <xref:System.Windows.Controls.TextBox>, örneğin, uygulama Düzenle komutların çoğu gibi destekleyen <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, ve <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Uygulama geliştiricisinin bu denetimlerle çalışmak üzere bu komutları almak için özel bir şey yapmanız gerekmez.  Varsa <xref:System.Windows.Controls.TextBox> komut hedefi komutu çalıştırıldığında komutunu kullanarak işleyecek <xref:System.Windows.Input.CommandBinding> denetime oluşturulur.  
+ Statik <xref:System.Windows.Input.RoutedCommand> bu sınıfları oluşturan nesneleri komut mantıksal sağlamaz.  Mantıksal komutu için komut ile ilişkili bir <xref:System.Windows.Input.CommandBinding>.  Birçok denetimlerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] desteklemek için bazı komutlar komutu Kitaplığı'nda yerleşik olarak.  <xref:System.Windows.Controls.TextBox>, örneğin, birçok uygulama Düzenle komutu gibi destekleyen <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, ve <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Uygulama geliştiricisinin bu denetimleri ile çalışmak için bu komutları almak için özel bir şey yapmanız gerekmez.  Varsa <xref:System.Windows.Controls.TextBox> komut hedefi komut yürütüldüğünde, komutunu kullanarak işleyecek <xref:System.Windows.Input.CommandBinding> denetime oluşturulur.  
   
- Aşağıdaki nasıl kullanılacağını gösterir bir <xref:System.Windows.Controls.Button> komut kaynağı olarak <xref:System.Windows.Input.ApplicationCommands.Open%2A> komutu.  A <xref:System.Windows.Input.CommandBinding> ilişkilendiren belirtilen oluşturulan <xref:System.Windows.Input.CanExecuteRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> ile <xref:System.Windows.Input.RoutedCommand>.  
+ Aşağıdakileri nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Button> komut kaynağı olarak <xref:System.Windows.Input.ApplicationCommands.Open%2A> komutu.  A <xref:System.Windows.Input.CommandBinding> ilişkilendiren belirtilen oluşturulan <xref:System.Windows.Input.CanExecuteRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> ile <xref:System.Windows.Input.RoutedCommand>.  
   
  İlk olarak, komut kaynağı oluşturulur.  A <xref:System.Windows.Controls.Button> komut kaynağı olarak kullanılır.  
   
@@ -34,7 +34,7 @@ Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Window
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- Ardından, <xref:System.Windows.Input.ExecutedRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> oluşturulur.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> Yalnızca açılır bir <xref:System.Windows.MessageBox> komutu yürütüldüğünü belirtmek için.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> Ayarlar <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> özelliğine `true`.  Normal olarak, execute işleyici komutu geçerli komut hedefinde yürütüldüğünü görmek için daha sağlam denetimleri gerçekleştirir.  
+ Ardından, <xref:System.Windows.Input.ExecutedRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> oluşturulur.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> Yalnızca açılır bir <xref:System.Windows.MessageBox> komutu yürütüldüğünü belirtmek için.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> Ayarlar <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> özelliğini `true`.  Normal olarak, execute işleyici komutun geçerli komut hedefi üzerinde yürütüldüğünü görmek için daha güçlü denetimler gerçekleştirir.  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
@@ -46,6 +46,6 @@ Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Window
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Komut Destekli Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Komut Destekli Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

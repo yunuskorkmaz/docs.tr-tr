@@ -1,20 +1,14 @@
 ---
-title: C# Anahtar Sözcükleri
+title: 'C# Anahtar Sözcükleri'
 ms.date: 03/07/2017
 f1_keywords:
-- cs.keywords
+  - cs.keywords
 helpviewer_keywords:
-- keywords [C#]
-- C# language, keywords
-- Visual C#, keywords
-- '@ keyword'
+  - 'keywords [C#]'
+  - 'C# language, keywords'
+  - 'Visual C#, keywords'
+  - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861939"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, ayrılmış tanıtıcılardır. Bunların içerdiği sürece bunlar programlarınızda tanımlayıcı olarak kullanılamaz `@` öneki olarak. Örneğin, `@if` geçerli bir tanıtıcı ancak `if` değil çünkü `if` bir anahtar sözcüktür.  
@@ -24,7 +18,7 @@ Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, 
 |||||  
 |---|---|---|---|  
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|[as](../../../csharp/language-reference/keywords/as.md)|[base](../../../csharp/language-reference/keywords/base.md)|[bool](../../../csharp/language-reference/keywords/bool.md)|  
-|[break](../../../csharp/language-reference/keywords/break.md)|[byte](../../../csharp/language-reference/keywords/byte.md)|[Servis talebi](../../../csharp/language-reference/keywords/switch.md)|[Yakalama](../../../csharp/language-reference/keywords/try-catch.md)|  
+|[break](../../../csharp/language-reference/keywords/break.md)|[byte](../../../csharp/language-reference/keywords/byte.md)|[case](../../../csharp/language-reference/keywords/switch.md)|[Yakalama](../../../csharp/language-reference/keywords/try-catch.md)|  
 |[char](../../../csharp/language-reference/keywords/char.md)|[checked](../../../csharp/language-reference/keywords/checked.md)|[class](../../../csharp/language-reference/keywords/class.md)|[const](../../../csharp/language-reference/keywords/const.md)|  
 |[continue](../../../csharp/language-reference/keywords/continue.md)|[decimal](../../../csharp/language-reference/keywords/decimal.md)|[default](../../../csharp/language-reference/keywords/default.md)|[delegate](../../../csharp/language-reference/keywords/delegate.md)|  
 |[do](../../../csharp/language-reference/keywords/do.md)|[double](../../../csharp/language-reference/keywords/double.md)|[else](../../../csharp/language-reference/keywords/if-else.md)|[enum](../../../csharp/language-reference/keywords/enum.md)|  
@@ -60,7 +54,7 @@ Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, 
 |[value](value.md)|[var](var.md)|[when (filtre koşulu)](when.md)|
 |[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[Burada (sorgu yan tümcesi)](where-clause.md)|[yield](yield.md)|
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

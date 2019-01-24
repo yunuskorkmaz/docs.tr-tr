@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
+title: 'Nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726903"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma
 Bu konuda Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ' için gereken adımları açıklar [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde, bu yapılandırmanın adımları özetlemektedir:  
   
 -   Yükleme (veya yüklenmesini onaylayın) WCF etkinleştirme bileşenlerini.  
   
 -   WAS olmayan HTTP protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam yapılandırır [!INCLUDE[wv](../../../../includes/wv-md.md)] TCP Etkinleştirmesi için.  
   
- Yükleme ve yapılandırma WAS gördükten sonra [nasıl yapılır: was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) yordamları WAS kullanan bir HTTP olmayan uç noktasını kullanıma sunan bir WCF hizmeti oluşturma.  
+ Yükleme ve yapılandırma WAS gördükten sonra [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) yordamları WAS kullanan bir HTTP olmayan uç noktasını kullanıma sunan bir WCF hizmeti oluşturma.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yükleme  
   
@@ -100,8 +100,8 @@ Bu konuda Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ' için
     > [!NOTE]
     >  Tek metin satırı komutudur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ Etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [NamedPipe Etkinleştirme](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [MSMQ Etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [NamedPipe Etkinleştirme](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a65de26f3fc088b292ec9f8a96ca4e503a17edd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680912"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted Yöntemi
-Profil Oluşturucu tam zamanında (JIT) derleyici işlevi yeniden derleyin başladıktan bildirir.  
+Profil Oluşturucu, just-ın-time (JIT) derleyici bir işlevi yeniden derle başladı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,30 +38,30 @@ HRESULT ReJITCompilationStarted(
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] JIT Derleyici yeniden derleyin başladıktan işlevi kimliği.  
+ [in] JIT derleyicisi yeniden derle başladı işlevi kimliği.  
   
  `rejitId`  
- [in] İşlev yeni sürümünü yeniden derlenmek kimliği.  
+ [in] İşlevi yeni sürümünü yeniden derleme kimliği.  
   
  `fIsSafeToBlock`  
- [in] `true` engelleme bu geri aramasından; döndürülecek çağıran iş parçacığı beklemek çalışma zamanı yaratabilir belirtmek için `false` engelleme işlemi çalışma zamanının etkilemez belirtmek için. Değerini `true` çalışma zamanı zarar değil, ancak profil sonuçları etkileyebilir.  
+ [in] `true` engelleme bu geri çağrısından; döndürmek çağıran iş parçacığını beklemek çalışma zamanı neden olabileceğini göstermek için `false` engelleme zamanının işlemi etkilemez belirtmek için. Değerini `true` çalışma zamanı zarar değil, ancak profil oluşturma sonuçlarından etkileyebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden fazla Çifti almak mümkündür `ReJITCompilationStarted` ve [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) yöntemini çağırır için her işlevi nedeniyle şekilde çalışma zamanı tanıtıcıları sınıf oluşturucu. Örneğin, çalışma zamanı yöntemi A derlenir başlar, ancak sınıf B sınıf oluşturucusu çalıştırılması gerekiyor. Bu nedenle, çalışma zamanı Sınıf B Oluşturucusu yeniden derler ve çalıştırır. Oluşturucusu çalışırken yeniden derlenmesi için bir yöntem neden olan bir yöntemine bir çağrı yapar. Bu senaryoda, A yönteminin ilk yeniden derlenmek durdurulur. Bununla birlikte, her ikisi de saldırılara JIT derleme olayları ile bir rapor yöntemi yeniden derleyin.  
+ Birden fazla çiftinin almak mümkündür `ReJITCompilationStarted` ve [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) yöntemini çağırır her işlev için şekli nedeniyle çalışma zamanı sınıf oluşturucuları işler. Örneğin, bir yöntem yeniden derlemek çalışma zamanı başlatmaz, bunun Sınıf B sınıf oluşturucusu çalıştırılması gerekiyor. Bu nedenle, çalışma zamanı Sınıf B için oluşturucu yeniden derler ve çalıştırır. Oluşturucu çalışırken yeniden derlenmesi için bir yöntem neden olan bir yönteme bir çağrı yapar. Bu senaryoda, bir yöntemin ilk yeniden derleme işlemi durdurulur. Ancak, her ikisi de dener JIT yeniden derleme olayları ile bir rapor yöntemi yeniden derleyin.  
   
- Profil oluşturucular JIT derleme geri aramalar dizisini iki iş parçacığı aynı anda yapıyor geri aramalar olduğu durumlarda desteklemesi gerekir. Örneğin, iş parçacığı A çağırır `ReJITCompilationStarted`; ancak, iş parçacığı A çağrıları önce [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), iş parçacığı B çağrıları [Icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) işlevi kimliği gelen `ReJITCompilationStarted` iş parçacığı A. için geri çağırma İşlev kimliği henüz geçerli olmamalıdır, görünebilir için yapılan bir çağrı [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) henüz Profil Oluşturucu tarafından almadı. Ancak, bu durumda, işlev kimliği geçerli değil.  
+ Profil oluşturucular JIT yeniden derleme geri çağırmalar dizisi, burada iki iş parçacığı geri çağırmaları aynı anda çağırıyorsanız durumlarda desteklemesi gerekir. Örneğin, bir iş parçacığı çağrı `ReJITCompilationStarted`; ancak, bir dizi çağrıları önce [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), iş parçacığı B çağrıları [Icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) işlevi kimliği gelen `ReJITCompilationStarted` A. iş parçacığı için geri çağırma İşlev kimliği henüz geçerli gerektiğini görünebilir çünkü bir çağrı [Rejıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) henüz Profil Oluşturucu tarafından almadı. Ancak, bu durumda, işlev kimliği geçerli değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [JITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)  
- [ReJITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [JITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+- [ReJITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)

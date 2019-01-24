@@ -2,12 +2,12 @@
 title: Anahtar XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: fcc2799a929340f68d8a8740512ed061fd51090e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68c43e9ab0a47c6a38bc794bac7d3ceb71391f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677634"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
 Şemada, bir öğenin anahtar kısıtlaması belirtebilir veya özniteliğini kullanarak **anahtar** öğesi. Öğe veya öznitelik bir anahtar kısıtlaması belirtilen şema örnek benzersiz değerlere sahip olmalıdır ve null değer olamaz.  
@@ -78,7 +78,7 @@ TableName: customers
   
  Değerini **ConstraintName** özelliği **UniqueConstraint** içinde **veri kümesi** değeri **msdata:ConstraintName** Belirtilen öznitelik **anahtar** şema öğesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

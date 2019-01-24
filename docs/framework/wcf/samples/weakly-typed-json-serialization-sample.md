@@ -2,15 +2,15 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676061"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
-Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: seri hale getirmek ve JSON verilerini seri durumdan](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmet veya istemcinin hizmet veya geliştiricisinin denetimi dışında olan istemci tarafından oluşturulan JSON nesneleri erişmeniz gerekir. Daha fazla Web Hizmetleri JSON API'leri genel kullanıma gibi hangi rastgele JSON nesneleri seri durumdan çıkarılacak yerel kullanıcı tanımlı türler oluşturmak WCF Geliştirici kullanışsız hale gelebilir. Bu örnek, WCF geliştiricileri, kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle birlikte çalışmasını sağlayan bir mekanizma sağlar. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesneleri, içine bir JSON nesnesi seri durumdan çıkarır türü olmadığı için derleme zamanında bilinen.  
   
@@ -140,4 +140,4 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

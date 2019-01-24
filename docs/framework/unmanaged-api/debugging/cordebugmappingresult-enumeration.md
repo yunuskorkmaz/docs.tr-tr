@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691833"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult Numaralandırması
 Yönerge işaretçisi (IP) değerini nasıl edinilen ayrıntılarını sağlar.  
@@ -43,24 +43,24 @@ typedef enum CorDebugMappingResult {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Yerel kod giriş bölümünde olduğundan, IP değeri 0'dır.|  
-|`MAPPING_EPILOG`|Yerel kod bir bitiş içinde olduğundan, yönteminin son yönerge adresi IP değeri.|  
-|`MAPPING_NO_INFO`|0 IP değeri için hiçbir eşleme bilgilerini yöntemi için kullanılabilir.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Geçerli adres yöntemi için eşleme bilgilerini olsa da, Microsoft Ara dili (MSIL) kodu eşlenemez. IP değeri 0'dır.|  
-|`MAPPING_EXACT`|Tam olarak MSIL koda yöntemi eşler ya da IP değeri doğru biçimde çerçeve, yorumlanan.|  
-|`MAPPING_APPROXIMATE`|Yöntem başarıyla eşlendi, ancak IP değerini yaklaşık olabilir.|  
+|`MAPPING_PROLOG`|Yerel kod giriş bölümünde olduğundan IP değeri 0'dır.|  
+|`MAPPING_EPILOG`|Yerel kod bir sonuç içinde olduğundan, yöntemin son yönerge adresi IP değeri.|  
+|`MAPPING_NO_INFO`|IP değeri 0, bu nedenle yöntemi için hiçbir eşleme bilgisi kullanılabilir.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Eşleme bilgileri yöntemi olsa da, Microsoft Ara dili (MSIL) kodu için geçerli adresi eşlenemez. IP değeri 0'dır.|  
+|`MAPPING_EXACT`|Yöntemin MSIL kodu tam olarak eşler ya da IP değeri doğru Bu nedenle çerçeve, algılanır.|  
+|`MAPPING_APPROXIMATE`|Yöntem başarılı bir şekilde eşlendi ancak IP değeri yaklaşık olabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz [Icordebugılframe::getıp](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) yönerge işaretçisi değeri elde etmek için yöntem.  
+ Kullanabileceğiniz [Icordebugılframe::getıp](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) yönerge işaretçisini değerini elde etmek için yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594817"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
 Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımları görüntüleme.  
@@ -119,7 +119,7 @@ Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme
   
 -   Eylem Ekle işlendi.  
   
--   Güvenli oturum (ilk isteğe bu OLUŞTU) ayarlama ve üç güvenlik altyapısı yanıt iletilerini işlenebilir: lk, RSTR, SCT (işlem iletisi 1, 2, 3).  
+-   Güvenli oturum (ilk isteğe bu OLUŞTU) ve işlenen üç güvenlik altyapısı yanıt iletilerini ayarlayın: K, RSTR, SCT (işlem iletisi 1, 2, 3).  
   
 -   Çıkarma birden çok kez işlenen ve bölme ister.  
   
@@ -138,7 +138,7 @@ Oluşturma zamanı (sol paneli) ve iç içe geçmiş etkinlikleri ve izlemeler (
  İşlem Eylem Ekle etkinliği sol bölmede çift tıkladıktan, eklenecek ilgili istemci WCF etkinlikleri grafik gösterimi görebiliriz. İlk soldaki Kök etkinlik (0000), varsayılan etkinlik olduğu etkinliğidir. WCF dışında ortam etkinlik aktarır. Bu tanımlı değil, WCF dışında 0000 aktarır. Burada, ikinci etkinlik işlem eylem eklemek, dışında 0 aktarır. Daha sonra Kurulum güvenli oturum bakın.  
   
  ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Graf görünümü WCF istemci etkinlik: ortam etkinlik (burada 0), işlem eylem ve güvenli oturum yukarı ayarlayın  
+WCF istemci Etkinlik Grafiği görünümü: Ortam etkinlik (burada 0), işlem eylem ve güvenli oturum yukarı ayarlayın  
   
  Üst Sağdaki panelde, işlem Eylem Ekle etkinliği ilgili tüm izlemeleri görebiliriz. Özellikle, biz istek iletisi ("gönderilen bir kanal üzerinden ileti") gönderdiğiniz ve aynı etkinlik ("alınan bir kanal üzerinden ileti") yanıt alındı. Bu, aşağıdaki grafikte gösterilir. Anlaşılsın diye, güvenli oturum etkinliği kurma grafikte daraltılmıştır.  
   
@@ -198,7 +198,7 @@ Sorunun kök nedenini izlemek için etkinlikleri genişletme
  ![İzleme görüntüleyicisini kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Sorun gidermeye başlamak için ayrıca bir kırmızı veya sarı bir ileti izleme seçin ve çift kökenini izlemek için tıklatın  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

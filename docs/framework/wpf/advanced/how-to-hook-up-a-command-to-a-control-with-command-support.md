@@ -10,32 +10,32 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 22aca20eb3f6bc2e31fb5a01ed7c153cccef0bd8
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663212"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Nasıl yapılır: Komut Destekli Denetime Komut Bağlama
-Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> komutu desteği içinde yerleşik.  Birden çok kaynak komutları tam bir örnek için bkz: [özel bağlayan örneği oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
+Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> komutu desteği de yerleşik.  Komutları için birden çok kaynaktan eksiksiz bir örnek için bkz. [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Uygulama programcıları düzenli olarak karşılaştığı yaygın komutları kitaplığını sağlar.  Komut kitaplığı oluşturan sınıfları şunlardır: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzenli olarak uygulama programcıların karşılaştığı yaygın komutları içeren bir kitaplık sağlar.  Komut kitaplığı oluşturan sınıfları: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
   
- Statik <xref:System.Windows.Input.RoutedCommand> bu sınıfları yapan nesneleri komut mantığı sağlamaz.  Komutu için mantığı komutu ile ilişkilendirilmiş bir <xref:System.Windows.Input.CommandBinding>.  Bazı denetimler CommandBindings bazı komutlar için yerleşik sahiptir.  Bir komut gerçek uygulamayı olsa da aynı kalmasını semantiği değiştirebilirsiniz Bu mekanizma sağlar.  A <xref:System.Windows.Controls.TextBox>, örneğin, işleme <xref:System.Windows.Input.ApplicationCommands.Paste%2A> görüntüleri desteklemek için tasarlanmış bir denetim, ancak bir şeyi yapıştırmanın anlamı temel olarak aynı kalır daha farklı komutu.  Komut mantığı komutu tarafından sağlanan, ancak bunun yerine denetim veya uygulama tarafından sağlanmalıdır.  
+ Statik <xref:System.Windows.Input.RoutedCommand> bu sınıfları oluşturan nesneleri komut mantıksal sağlamaz.  Mantıksal komutu için komut ile ilişkili bir <xref:System.Windows.Input.CommandBinding>.  Bazı denetimler CommandBindings bazı komutlar için oluşturdunuz.  Bu mekanizma, bir komut gerçek uygulama olsa da aynı kalmasını semantiği değiştirebilirsiniz sağlar.  A <xref:System.Windows.Controls.TextBox>, örneğin, işleme <xref:System.Windows.Input.ApplicationCommands.Paste%2A> görüntüleri desteklemek için tasarlanmış bir denetimi, ancak yapıştırmanın ne demek, temel olarak aynı kalır daha farklı komutu.  Komut mantığını komutu tarafından sağlanan, ancak bunun yerine bir denetim veya uygulama tarafından sağlanmalıdır.  
   
- Birçok denetimlerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerleşik desteğe sahiptir bazı komut kitaplığı komutlar için.  <xref:System.Windows.Controls.TextBox>, örneğin, uygulama Düzenle komutların çoğu gibi destekleyen <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, ve <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Uygulama geliştiricisinin bu denetimlerle çalışmak üzere bu komutları almak için özel bir şey yapmanız gerekmez.  Varsa <xref:System.Windows.Controls.TextBox> komut hedefi komutu çalıştırıldığında komutunu kullanarak işleyecek <xref:System.Windows.Input.CommandBinding> denetime oluşturulur.  
+ Birçok denetimlerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sahip yerleşik bazı komut kitaplığındaki komutları için destek.  <xref:System.Windows.Controls.TextBox>, örneğin, birçok uygulama Düzenle komutu gibi destekleyen <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, ve <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Uygulama geliştiricisinin bu denetimleri ile çalışmak için bu komutları almak için özel bir şey yapmanız gerekmez.  Varsa <xref:System.Windows.Controls.TextBox> komut hedefi komut yürütüldüğünde, komutunu kullanarak işleyecek <xref:System.Windows.Input.CommandBinding> denetime oluşturulur.  
   
- Aşağıdaki nasıl kullanılacağını gösterir bir <xref:System.Windows.Controls.MenuItem> komut kaynağı olarak <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutu, burada bir <xref:System.Windows.Controls.TextBox> komutu hedefidir.  Tanımlayan tüm mantığı nasıl <xref:System.Windows.Controls.TextBox> gerçekleştirir ve yapıştırmayı yerleşik <xref:System.Windows.Controls.TextBox> denetim.  
+ Aşağıdakileri nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.MenuItem> komut kaynağı olarak <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutu, burada bir <xref:System.Windows.Controls.TextBox> komut hedefi.  Tanımlayan tüm mantığı nasıl <xref:System.Windows.Controls.TextBox> gerçekleştirir ve yapıştırmayı yerleşiktir <xref:System.Windows.Controls.TextBox> denetimi.  
   
- A <xref:System.Windows.Controls.MenuItem> oluşturulur ve bu <xref:System.Windows.Controls.MenuItem.Command%2A> özelliği ayarlanmış <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutu.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> Açıkça ayarlanmazsa <xref:System.Windows.Controls.TextBox> nesnesi.  Zaman <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ayarlı değil, hedef komutu klavye odağı olan öğedir.  Klavye odağı olan öğe desteklemiyorsa <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutunu veya şu anda (Pano boş olduğundan, örneğin) Yapıştır komutu yürütülemiyor sonra <xref:System.Windows.Controls.MenuItem> gri.  
+ A <xref:System.Windows.Controls.MenuItem> oluşturulur ve <xref:System.Windows.Controls.MenuItem.Command%2A> özelliği <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutu.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> Açıkça ayarlanmazsa <xref:System.Windows.Controls.TextBox> nesne.  Zaman <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ayarlı değil, hedef komut için klavye girintisine sahip olan öğe.  Klavye girintisine sahip olan öğe desteklemiyorsa <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutunu ya da şu anda (Pano boş olduğundan, örneğin) Yapıştır komut yürütülemiyor sonra <xref:System.Windows.Controls.MenuItem> gri.  
   
  [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
  [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Komut Desteği Olmadan Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Komut Desteği Olmadan Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

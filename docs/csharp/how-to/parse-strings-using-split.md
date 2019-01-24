@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrıştırma'
+title: 'Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma (C# Kılavuzu)'
 description: String.Split sınırlayıcılar kümesinden bölme dizisini döndürür. Dizeleri ayrıştırma kolay bir yoludur.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603735"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrıştırma
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma (C# Kılavuzu)
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> Yöntemi, bir veya daha fazla ayırıcıları göre giriş dizesini bölerek alt dizeler dizisi oluşturur. Bir sözcük sınırlarından dizesine ayırmak için genellikle en kolay yoludur. Ayrıca, diğer belirli karakterler veya dizelerin dizeleri bölmek için kullanılır.
 
@@ -50,8 +50,8 @@ Tüm ayırıcı ardışık örnekleri bir çıkış dizisinde boş dize üretir:
 
 Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../programming-guide/index.md)  
-- [Dizeler](../programming-guide/strings/index.md)  
+- [C# Programlama Kılavuzu](../programming-guide/index.md)
+- [Dizeler](../programming-guide/strings/index.md)
 - [.NET normal ifadeler](../../standard/base-types/regular-expressions.md)

@@ -11,23 +11,23 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: bd50b369666a1b65226b2b7eb6f3d866ec670bde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3862ffcb8e0dcabd2de67c495204470ac9fa6c14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726396"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Nasıl yapılır: Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama
-Bu örnek nasıl uygulanacağını gösterir bir <xref:System.Windows.Media.ScaleTransform> olay oluştuğunda. Burada gösterilen Dönüşümlerin diğer türleri uygulamak için kullandığınız aynı kavramdır. Dönüşümlerin kullanılabilir türleri hakkında daha fazla bilgi için bkz: <xref:System.Windows.Media.Transform> sınıfı veya [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.ScaleTransform> bir olay gerçekleştiğinde. Burada gösterilen diğer tür dönüştürmeleri uygulamak için kullandığınız aynı kavramdır. Dönüşümlerin kullanılabilir türleri hakkında daha fazla bilgi için bkz. <xref:System.Windows.Media.Transform> sınıfı veya [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
   
- Bu iki yoldan biriyle bir öğe için bir dönüşüm uygulayabilirsiniz:  
+ Bu iki yöntemden biriyle öğeye dönüşüm uygulayabilirsiniz:  
   
--   Bunu yaparsanız *değil* dönüşümü düzenini etkileyen, kullanmak istediğiniz <xref:System.Windows.UIElement.RenderTransform%2A> öğesi özelliği.  
+-   Bunu yaparsanız *değil* dönüşümü düzenini etkiler, kullanmak istediğiniz <xref:System.Windows.UIElement.RenderTransform%2A> öğesinin özelliği.  
   
--   Düzen etkilemek için dönüştürme istiyorsanız kullanın <xref:System.Windows.FrameworkElement.LayoutTransform%2A> öğesi özelliği.  
+-   Düzen etkileyen dönüşüm istiyorsanız kullanın <xref:System.Windows.FrameworkElement.LayoutTransform%2A> öğesinin özelliği.  
   
- Aşağıdaki örnek uygular bir <xref:System.Windows.Media.ScaleTransform> için <xref:System.Windows.UIElement.RenderTransform%2A> düğmesinin özelliği. Fare düğmesini hareket ettiğinde <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> özelliklerini <xref:System.Windows.Media.ScaleTransform> ayarlanır `2`, düğme daha büyük hale gelmesine neden olur. Fare düğmesini devre dışı taşındığında <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> ayarlanır `1`, özgün durumuna döndürmek için düğmesine neden olur.  
+ Aşağıdaki örnek geçerli bir <xref:System.Windows.Media.ScaleTransform> için <xref:System.Windows.UIElement.RenderTransform%2A> düğmesinin özelliği. Düğme üzerinde fareyi hareket ettirdiğinde <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> özelliklerini <xref:System.Windows.Media.ScaleTransform> ayarlandığından `2`, düğmeyi daha büyük hale gelmesine neden olur. Düğmeyi, fareyi hareket ettirdiğinde <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> ayarlandığından `1`, özgün boyutuna döndürmek için düğmeyi neden olur.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
@@ -35,9 +35,9 @@ Bu örnek nasıl uygulanacağını gösterir bir <xref:System.Windows.Media.Scal
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
  [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

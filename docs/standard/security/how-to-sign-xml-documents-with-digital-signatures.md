@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama'
+title: 'Nasıl yapılır: XML belgelerini dijital imzalarla imzalama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622630"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML belgelerini dijital imzalarla imzalama
 Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi ya da bir dijital imzaya sahip bir XML belgesi bir parçası olarak imzalamak için ad alanı.  XML dijital imzaları (XMLDSIG) imzalandıktan sonra veri değiştirilmiş değil olduğunu doğrulamanızı sağlar.  World Wide Web Consortium (W3C) öneri XMLDSIG standart hakkında daha fazla bilgi için bkz. [XML imza söz dizimi ve işleme](https://www.w3.org/TR/xmldsig-core/).  
   
  Kod örneği, bu yordamı dijital olarak tüm bir XML belgesi oturum ve imza belgede ekleme yapmayı gösteren bir <`Signature`> öğesi.  Örnek, RSA imzalama anahtarı oluşturur, anahtarı güvenli bir anahtar kapsayıcısına ekler ve ardından bir XML belgesinin dijital olarak imzalamak için anahtar kullanır.  Anahtar XML dijital imzasını alınabilir veya başka bir XML belgesi imzalamak için kullanılabilir.  
   
- Bu yordamı kullanılarak oluşturulan bir XML dijital imza doğrulama hakkında daha fazla bilgi için bkz: [nasıl yapılır: dijital imzalar, XML belgeleri doğrulamak](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Bu yordamı kullanılarak oluşturulan bir XML dijital imza doğrulama hakkında daha fazla bilgi için bkz: [nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Bir XML belgesinin dijital olarak imzalamak için  
   
@@ -120,5 +120,5 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

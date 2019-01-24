@@ -2,12 +2,12 @@
 title: SQL Server'da uygulama güvenliği senaryoları
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687459"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server'da uygulama güvenliği senaryoları
 Güvenli bir SQL Server istemci uygulaması oluşturmak için tek bir doğru yolu yoktur. Her uygulamanın kendi gereksinimler, dağıtım ortamı ve kullanıcı kitlesiyle benzersizdir. Başlangıçta dağıtıldığında, makul güvenli bir uygulama, zaman içinde daha az güvenli hale gelebilir. Hangi tehditleri gelecekte ortaya çıkan herhangi doğrulukla tahmin etmek mümkün değildir.  
@@ -56,8 +56,8 @@ Güvenli bir SQL Server istemci uygulaması oluşturmak için tek bir doğru yol
  [SQL Server'da Veritabanları Arası Erişimi Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Güvenliği tehlikeye atmadan veritabanları arası erişimi etkinleştirmeyi açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

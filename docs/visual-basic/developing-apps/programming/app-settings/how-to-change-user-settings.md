@@ -1,5 +1,5 @@
 ---
-title: "Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Değiştirme"
+title: "Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 2f67c3713a77c37ce43647980a9d3b17e47ba1bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cf50f838124539dc774574cd1ad0b629d01a9ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688205"
 ---
-# <a name="how-to-change-user-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Değiştirme
-Kullanıcı ayarı üzerinde ayarın özelliği için yeni bir değer atayarak değiştirebileceğiniz `My.Settings` nesnesi.  
+# <a name="how-to-change-user-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme
+Üzerinde yeni bir değer ayarlar özelliğine atayarak bir kullanıcı ayarı değiştirebilirsiniz `My.Settings` nesne.  
   
- `My.Settings` Nesne her ayar özelliği olarak kullanıma sunar. Özellik adı ayar adı ile aynıdır ve özellik türü ayar türü ile aynıdır. Ayarın **kapsam** özelliği salt okunur olup olmadığını belirler: özelliği için bir **uygulama**-kapsam ayarıdır hatayla özelliği için salt okunur bir **kullanıcı**-kapsamı salt okunur bir ayardır. Daha fazla bilgi için bkz: [My.Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ `My.Settings` Nesnesi, her ayarın bir özellik olarak kullanıma sunar. Özellik adı ayar adı ile aynıdır ve özellik türü ayar türü ile aynıdır. Ayarın **kapsam** özelliği salt okunur olup olmadığını belirler: Özellik için bir **uygulama**-kapsam ayardır sırasında özelliği salt okunur bir **kullanıcı**-kapsam ayarı okuma-yazma. Daha fazla bilgi için [My.Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
->  Değiştirmek ve çalışma zamanında kullanıcı kapsam ayarlarının değerleri kaydedin, ancak uygulama kapsamı ayarları salt okunurdur ve programlı olarak değiştirilemez. Kullanarak uygulama oluşturduğunuzda uygulama kapsamı ayarlarını değiştirebilirsiniz **Proje Tasarımcısı** ya da uygulamanın yapılandırma dosyasını düzenleyerek. Daha fazla bilgi için bkz: [yönetme uygulama ayarları (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+>  Değiştirin ve çalışma zamanında kullanıcı kapsamlı ayarların değerleri kaydedin olsa da, uygulama kapsamı ayarları salt okunurdur ve program aracılığıyla değiştirilemez. Kullanarak bir uygulama oluşturduğunuzda, uygulama kapsamı ayarlarını değiştirebilirsiniz **Proje Tasarımcısı** veya uygulama yapılandırma dosyasını düzenleyerek. Daha fazla bilgi için [uygulama ayarlarını yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek değerini değiştirir `Nickname` kullanıcı ayarı.  
+ Bu örnekte değiştirir `Nickname` kullanıcı ayarı.  
   
  [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
   
- Bu örnekte çalışması, uygulamanızın olmalıdır bir `Nickname` türü kullanıcı ayarı `String`.  
+ Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` türü kullanıcı ayarı `String`.  
   
- Uygulama kapatıldığında uygulama kullanıcı ayarlarını kaydeder. Ayarlar hemen kaydetmek için arama `My.Settings.Save` yöntemi. Daha fazla bilgi için bkz: [nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ Uygulama kapatıldığında kullanıcı ayarlarını uygulamayı kaydeder. Hemen ayarları kaydetmek için çağrı `My.Settings.Save` yöntemi. Daha fazla bilgi için [nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını sürdürmek](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzları oluşturma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)

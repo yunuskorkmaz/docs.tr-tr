@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28864de79e809968f7efa6f3b052cfd599961854
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685032"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; öğesi (ağ ayarları)
 Bir ağ konak bağlantı maksimum sayısını belirtir.  
@@ -69,7 +69,7 @@ Bir ağ konak bağlantı maksimum sayısını belirtir.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

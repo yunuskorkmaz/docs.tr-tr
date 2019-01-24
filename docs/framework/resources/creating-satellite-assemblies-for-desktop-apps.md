@@ -25,84 +25,84 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678804"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
-Kaynak dosyaları yerelleştirilmiş uygulamalarda merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeleri, resimleri ve diğer verileri görüntülemek ve kullanıcının kendi dilini veya kültür için kaynaklar kullanılamıyorsa alternatif veri sağlamak için etkinleştirin. .NET Framework bulun ve yerelleştirilmiş kaynaklar almak için bir hub ve bağlı bileşen modeli kullanır. Hub yerelleştirilemeyen yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> uygulamanın varsayılan kültürü kültürünü atamak özniteliği. Her bağlı bileşen tek bir yerelleştirilmiş kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır. Uydu derlemeleri ana derleme parçası olmadığından, kolayca güncelleştirme veya uygulama için ana derleme değiştirmeden belirli bir kültür karşılık kaynakları değiştirin.  
+Kaynak dosyaları, yerelleştirilmiş uygulamalar olarak merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeler, görüntüler ve diğer verileri görüntüler ve kullanıcının kendi dil veya kültür için kaynaklar kullanılamıyorsa, alternatif veri sağlamak için etkinleştirin. .NET Framework, bulun ve yerelleştirilmiş kaynakları almak için bir hub-and-spoke modelini kullanır. Yerelleştirilemeyen yürütülebilir kod ve nötr olarak adlandırılan tek bir kültür için kaynakları içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> kültürü uygulamanın varsayılan kültürünü belirtmek için özniteliği. Her bir uçtaki tek bir yerelleştirilmiş kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır. Uydu derlemeleri ana derlemenin parçası olmadığından, kolayca güncelleştirmek veya uygulamanın ana derlemesini değiştirmeden belirli bir kültüre karşılık gelen kaynakları değiştirin.  
   
 > [!NOTE]
->  Bir uygulamanın varsayılan kültürü kaynakları da bir uydu derlemede depolanabilir. Bunu yapmak için Ata <xref:System.Resources.NeutralResourcesLanguageAttribute> değerini özniteliği <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
+>  Bir uygulamanın varsayılan kültürünü kaynaklarını bir uydu derlemesine da depolanabilir. Bunu yapmak için Ata <xref:System.Resources.NeutralResourcesLanguageAttribute> değeri öznitelik <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Uydu derleme adı ve konumu  
- Hub ve bağlı bileşen modeli, böylece bunlar kolayca bulunan ve kullanılabilecek kaynaklar belirli konumlara yerleştirebilir gerektirir. Derleme ve ad kaynakları beklendiği gibi yapmak veya bunları doğru konumlara yerleştirmeyin, ortak dil çalışma zamanı bunları bulmak mümkün olmaz ve varsayılan kültürü kaynakları yerine kullanır. .NET Framework kaynağı tarafından temsil edilen Yöneticisi bir <xref:System.Resources.ResourceManager> nesnesi, otomatik olarak yerelleştirilmiş kaynaklara erişmek için kullanılır. Kaynak Yöneticisi için şunlar gerekir:  
+ Bunlar kolayca bulunan kaldırılabilir ve böylece kaynakları belirli konumlara yerleştirin hub-and-spoke modelini gerektirir. Beklendiği gibi değil derleme ve adı kaynakları yapmak veya bunları doğru konumda yerleştirmeyin, ortak dil çalışma zamanı bunları bulmanız mümkün olmayacaktır ve varsayılan kültürün kaynakları yerine kullanır. .NET Framework kaynak tarafından temsil edilen Yöneticisi bir <xref:System.Resources.ResourceManager> nesne, otomatik olarak yerelleştirilmiş kaynaklara erişmek için kullanılır. Kaynak Yöneticisi için aşağıdakiler gereklidir:  
   
--   Belirli bir kültür için tüm kaynakları tek bir uydu derlemesi içermelidir. Diğer bir deyişle, bir tek ikili kaynaklar dosyasına birden çok .txt veya .resx dosyaları derlemeniz gerekir.  
+-   Tek bir uydu derlemesi, belirli bir kültüre ait tüm kaynakları içermelidir. Diğer bir deyişle, bir tek bir ikili .resources dosyasına birden çok .txt veya .resx dosyalarına derlemeniz gerekir.  
   
--   Bu kültürün kaynaklarının depolar her yerelleştirilmiş kültür için uygulama dizinindeki ayrı bir alt dizin olmalıdır. Alt dizinin adı kültür adı ile aynı olması gerekir. Alternatif olarak, genel derleme önbelleğinde uydu derlemelerini depolayabilirsiniz. Bu durumda, derleme tanımlayıcı adı kültür bilgilerini bileşeninin kültürü belirtmeniz gerekir. (Bkz [yükleme uydu derlemeleri Genel Derleme Önbelleği'ndeki](#SN) bu konunun ilerleyen bölümlerinde.)  
+-   Uygulama dizininde, kültürün kaynakları depolayan her yerelleştirilmiş kültür için ayrı bir alt dizin olmalıdır. Alt ad kültür adı ile aynı olmalıdır. Alternatif olarak, genel derleme önbelleğinde uydu bütünleştirilmiş kodlarınızı depolayabilirsiniz. Bu durumda, derlemenin tanımlayıcı ad kültür bilgilerini bileşeninin kültürü belirtmeniz gerekir. (Bkz [yükleme uydu derlemeleri genel derleme önbelleğinde](#SN) bu konunun ilerleyen bölümlerinde.)  
   
     > [!NOTE]
-    >  Uygulamanızı subcultures kaynakları içeriyorsa, her alt uygulama dizini altındaki ayrı bir alt dizin yerleştirin. Subcultures kendi ana kültürün dizini altındaki dizinlerindeki yerleştirmeyin.  
+    >  Uygulamanızı subcultures için kaynaklar içeriyorsa, her alt ayrı bir alt dizinde uygulama dizinine yerleştirin. Kendi ana kültürün dizin alt dizinler subcultures yerleştirmeyin.  
   
--   Uydu derlemesi uygulama adıyla aynı olmalıdır ve dosya adı uzantısını kullanmalıdır ". resources.dll". Örneğin, bir uygulama Example.exe olarak adlandırılmışsa, her uydu derlemenin adını Example.resources.dll olmalıdır. Uydu derleme adı, kaynak dosyaları kültürünü göstermez unutmayın. Ancak, uydu derlemesi kültür belirtmek bir dizinde görünür.  
+-   Uydu derleme uygulama ile aynı ada sahip olmalıdır ve dosya adı uzantısını kullanmanız gerekir ". resources.dll". Örneğin, bir uygulama Example.exe adlandırılmışsa, her bir uydu derlemesini adını Example.resources.dll olmalıdır. Uydu derleme adı kaynak dosya kültürünü göstermez unutmayın. Ancak, uydu derleme kültürü belirten bir dizinde görünür.  
   
--   Uydu derlemesi kültürle ilgili bilgileri derlemenin meta verilerde eklenmesi gerekir. Kültür adı uydu derlemenin meta verilerini depolamak için belirttiğiniz `/culture` seçeneğini kullandığınızda [derleme bağlayıcı](../../../docs/framework/tools/al-exe-assembly-linker.md) kaynakları uydu derlemede katıştırmak için.  
+-   Uydu derlemesinin kültürle ilgili bilgileri derlemenin meta verilerde eklenmesi gerekir. Kültür adı uydu derleme meta verilerini depolamak için belirttiğiniz `/culture` seçeneğini kullandığınızda [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) kaynakları uydu derlemede katıştırmak için.  
   
- İçinde yüklemiyorsanız uygulamaları için bir örnek dizin yapısını ve konum gereksinimleri aşağıda gösterilmiştir [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md). .Txt ve .resources uzantıları öğeleriyle son uygulama ile birlikte değil. Bu, son uydu kaynak derlemelerini oluşturmak için kullanılan ara kaynak dosyalarıdır. Bu örnekte, .resx dosyaları .txt dosyaları için alternatif. Daha fazla bilgi için bkz: [paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ İçinde yüklemiyorsanız uygulamalar için bir örnek dizin yapısını ve konum gereksinimleri aşağıdaki çizimde [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md). .Txt ve .resources uzantılı öğeleri son uygulama ile gelmeyecektir. Bu, son uydu kaynak derlemeleri oluşturmak için kullanılan ara kaynak dosyalarıdır. Bu örnekte, .resx dosyalarını .txt dosyaları için alternatif. Daha fazla bilgi için [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
  ![Uydu derlemeleri](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 Uydu derleme dizini  
   
 ## <a name="compiling-satellite-assemblies"></a>Uydu derlemelerini derleme  
- Kullandığınız [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) metin veya ikili .resources dosyaları için kaynakları içeren XML (.resx) dosyaları derlemek için. Daha sonra [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) .resources dosyaları uydu derlemeye derlemesi için. Al.exe bir derleme belirttiğiniz .resources dosyaları oluşturur. Uydu derlemeleri yalnızca kaynakları içerebilir; Bunlar yürütülebilir kod içeremez.  
+ Kullandığınız [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) metin dosyalarını veya ikili .resources dosyalarına kaynakları içeren XML (.resx) dosyalarını derlemek için. Daha sonra [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) .resources dosyalarını uydu derlemeler içinde derlemek için. Al.exe .resources dosyaları, belirttiğiniz bir derleme oluşturur. Uydu derlemeleri yalnızca kaynakları içerebilir. herhangi bir yürütülebilir kod içeremezler.  
   
- Uygulama için bir uydu derleme aşağıdaki Al.exe komut oluşturur `Example` Almanca kaynakları dosya strings.de.resources gelen.  
+ Uygulama için bir uydu derleme aşağıdaki Al.exe komut oluşturur `Example` Almanca kaynakları dosya strings.de.resources öğesinden.  
   
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
- Aşağıdaki Al.exe komut ayrıca uygulama için bir uydu derleme oluşturur `Example` dosya strings.de.resources gelen. **/Template** seçenek kültür bilgilerini hariç tüm derleme meta verilerini üst derleme (Example.dll) devralmak uydu derlemesi neden olur.  
+ Aşağıdaki Al.exe komutu ayrıca uygulama için bir uydu derlemesi oluşturur `Example` dosya strings.de.resources öğesinden. **/Template** seçeneği üst derlemeden (Example.dll) kültür bilgilerini dışında tüm derleme meta verileri devralmak uydu derleme neden olur.  
   
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
- Aşağıdaki tabloda daha ayrıntılı bu komutları kullanılan Al.exe seçenekleri açıklanmaktadır.  
+ Aşağıdaki tabloda, bu komutların ayrıntılı kullanılan Al.exe seçeneklerini açıklar.  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**-Hedef:** lib|Uydu derlemenizi kitaplığı (.dll) dosyasına derlenir belirtir. Uydu derlemesi yürütülebilir kod içermiyor ve bir uygulamanın ana derleme olmadığından uydu derlemelerini DLL'ler olarak kaydetmeniz gerekir.|  
-|**-katıştırmak:** strings.de.resources|Al.exe derleme derlediğinde katıştırmak için kaynak dosya adını belirtir. Uydu bütünleştirilmiş kodunda birden fazla .resources dosyaları eklenebilir, ancak hub ve bağlı bileşen modeli izliyorsanız, her kültür için bir uydu derlemesi derlemeniz gerekir. Ancak, dizeleri ve nesneler için ayrı .resources dosyaları oluşturabilirsiniz.|  
-|**-kültür:** Gizle|Derlemek için kaynak kültürü belirtir. Belirtilen kültür için kaynakları için aradığında ortak dil çalışma zamanı bu bilgileri kullanır. Bu seçeneği atlayın, Al.exe kaynak derleme, ancak çalışma zamanı bir kullanıcı bulmak mümkün olmaz ister.|  
-|**-out:** Example.resources.dll|Çıktı dosyası adını belirtir. Ad adlandırma standardı izlemelidir *baseName*.resources. *Uzantı*, burada *baseName* ana derleme adıdır ve *uzantısı* geçerli dosya adı uzantısıdır (örneğin, .dll). Çalışma zamanı, çıkış dosyasının adına dayanarak bir uydu derleme kültürünü belirlemek mümkün olmadığını unutmayın; kullanmalısınız **/kültür** belirlemek için seçeneği.|  
-|**-Şablon:** Example.dll|Uydu derlemesi kültür alanı dışında tüm derleme meta verilerini devralır derleme belirtir. Bu seçenek, uydu derlemelerini etkiler, yalnızca sahip bir derleme belirtirseniz bir [güçlü ad](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-Hedef:** lib|Uydu bütünleştirilmiş kodunuzda bir kitaplık (.dll) dosyasına derlenir belirtir. Bir uydu derleme yürütülebilir kodu içermiyor ve bir uygulamanın ana derleme olmadığından, uydu derlemeleri dll kaydetmeniz gerekir.|  
+|**-ekleme:** strings.de.resources|Al.exe derleme derlediğinde eklemek için kaynak dosyasının adını belirtir. Birden çok .resources dosyasına bir uydu derlemesine gömebilirsiniz ancak hub-and-spoke modelini izliyorsanız, her bir kültür için bir uydu derleme derlemeniz gerekir. Ancak, dizeleri ve nesneler için ayrı .resources dosyaları oluşturabilirsiniz.|  
+|**-culture:** Gizle|Kaynak derleme kültürü belirtir. Belirtilen bir kültürün kaynaklarını aradığında, ortak dil çalışma zamanı bu bilgileri kullanır. Bu seçeneği atlarsanız, Al.exe hala kaynak derlenir, ancak çalışma zamanı bir kullanıcı bulmak mümkün olmayacaktır, ister.|  
+|**-out:** Example.resources.dll|Çıkış dosyasının adını belirtir. Ad adlandırma standardı izlemelidir *baseName*.resources. *Uzantı*burada *baseName* ana derlemenin adıdır ve *uzantısı* geçerli dosya adı uzantısıdır (örneğin, .dll). Çalışma zamanı, çıkış dosyasının adına dayanarak bir uydu derleme kültürü belirlemek mümkün olmadığını unutmayın; kullanmalısınız **/kültür** seçeneği belirlemek için.|  
+|**-Şablon:** Example.dll|Uydu derlemesini kültür alanı dışında tüm derleme meta verilerinin devralacak bir derleme belirtir. Bu seçenek, uydu derlemeleri etkiler, yalnızca sahip bir derleme belirtirseniz bir [tanımlayıcı ad](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
- Al.exe ile kullanılabilir seçenekler tam bir listesi için bkz: [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
+ Al.exe ile kullanılabilen seçenekleri tam bir listesi için bkz. [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
-## <a name="satellite-assemblies-an-example"></a>Uydu derlemeleri: Örnek  
- Yerelleştirilmiş Tebrik içeren bir ileti kutusu görüntüler basit bir "Hello world" örnek verilmiştir. İngilizce (ABD), Fransızca (Fransa) ve Rusça (Rusya) kültürler için örnek kaynaklar içerir ve geri dönüş kültürü İngilizce'dir. Örnek oluşturmak için aşağıdakileri yapın:  
+## <a name="satellite-assemblies-an-example"></a>Uydu derlemeleri: Bir Örnek  
+ Yerelleştirilmiş bir karşılama içeren bir ileti kutusu görüntüleyen basit bir "Hello world" örnek verilmiştir. İngilizce (Amerika Birleşik Devletleri), Fransızca (Fransa) ve Rusça (Rusya) kültürleri için örnek kaynakları içerir ve geri dönüş kültürü İngilizce olarak. Örneği oluşturmak için aşağıdakileri yapın:  
   
-1.  Greeting.resx veya Greeting.txt varsayılan kültür için kaynak içerecek şekilde adlı bir kaynak dosyası oluşturun. Adlı tek bir dize depolamak `HelloString` "Hello world!" değeri olan Bu dosyada.  
+1.  Greeting.resx veya Greeting.txt varsayılan kültürünün kaynak içerecek şekilde adlı bir kaynak dosyası oluşturun. Adlı tek bir dize Store `HelloString` "Hello world!" değeri olan Bu dosyada.  
   
-2.  İngilizce (TR) uygulamanın varsayılan kültürü olduğunu belirtmek için aşağıdaki ekleyin <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> uygulamanın AssemblyInfo dosyası veya uygulamanın ana derlemeye derlenmiş ana kaynak kodu dosyasına özniteliği.  
+2.  İngilizce (TR) uygulamanın varsayılan kültürünü olduğunu belirtmek için aşağıdakileri ekleyin <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> özniteliği uygulamanın AssemblyInfo dosyası veya uygulamanın ana bütünleştirilmiş kod içine derlenmiş ana kaynak kodu dosyası.  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  Ek kültürler (en-US, fr-FR ve ru-RU) için destek uygulamayı aşağıdaki şekilde ekleyin:  
+3.  Ek kültürleri (en-US, fr-FR ve ru-RU) için destek uygulamaya aşağıdaki şekilde ekleyin:  
   
-    -   En-US veya İngilizce (ABD) kültür desteklemek için Greeting.en US.resx veya Greeting.en US.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `HelloString` "Hi world!" değeri olan  
+    -   En-US veya İngilizce (ABD) kültürü desteklemek için Greeting.en-US.resx veya Greeting.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Merhaba Dünya!" değeri olan  
   
-    -   Fr-FR veya Fransızca (Fransa) kültür desteklemek için Greeting.fr FR.resx veya Greeting.fr FR.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `HelloString` "Salut tout le monde!" değeri olan  
+    -   Fr-FR ya da Fransızca (Fransa) kültürü desteklemek için Greeting.fr-FR.resx veya Greeting.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Salut tout le monde!" değeri olan  
   
-    -   Ru-RU veya Rusça (Rusya) kültür desteklemek için Greeting.ru RU.resx veya Greeting.ru RU.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `HelloString` "Всем привет!" değeri olan  
+    -   Ru-RU veya Rusça (Rusya) kültürü desteklemek için Greeting.ru RU.resx veya Greeting.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `HelloString` "Всем привет!" değeri olan  
   
-4.  Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya ikili .resources dosyası XML kaynak dosyasına derlemek için. Çıkış, kök dosya adıyla aynı .resx veya .txt dosyaları, ancak bir .resources uzantısına sahip dosyalar kümesidir. Visual Studio ile örnek oluşturursanız, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyaları .resources dosyalarıyla derlemek için aşağıdaki komutları çalıştırın:  
+4.  Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya XML kaynak dosyası bir ikili .resources dosyasına derlemek için. Çıktı, .resx veya .txt dosyaları, ancak bir .resources uzantısını olarak aynı kök dosya adı olan dosyalar kümesidir. Örneğin Visual Studio ile oluşturma, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyalarını .resources dosyalarına derlemek için aşağıdaki komutları çalıştırın:  
   
     ```console
     resgen Greeting.resx  
@@ -111,17 +111,17 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     resgen Greeting.ru-RU.resx  
     ```  
   
-     XML dosyaları yerine metin dosyalarında kaynaklarınız varsa, .resx uzantısı .txt ile değiştirin.  
+     XML dosyaları yerine metin dosyalarında kaynaklarınız varsa, .resx uzantısına .txt ile değiştirin.  
   
-5.  Aşağıdaki kaynak kodu varsayılan kültür için kaynaklar yanı sıra uygulamanın ana derlemeye derleyin:  
+5.  Aşağıdaki kaynak kodu kaynaklar için varsayılan kültürü yanı sıra, uygulamanın ana derlemeye derleyin:  
   
     > [!IMPORTANT]
-    >  Örnek oluşturmak için Visual Studio yerine komut satırı kullanıyorsanız çağrısı değiştirmelisiniz <xref:System.Resources.ResourceManager> şu sınıfı oluşturucusu: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  Örneği oluşturmak için komut satırı yerine Visual Studio kullanıyorsanız, çağrı değiştirmelisiniz <xref:System.Resources.ResourceManager> aşağıdaki sınıf oluşturucusuna: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
-     Örnek uygulama adı ve komut satırından derleme, C# derleyici komut şöyledir:  
+     Uygulama örneği olarak adlandırılır ve komutu için komut satırından derlediğiniz C# derleyici:  
   
     ```console  
     csc Example.cs -res:Greeting.resources  
@@ -133,43 +133,43 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  Uygulama tarafından desteklenen her yerelleştirilmiş kültür için ana uygulama dizinindeki bir dizin oluşturun. Bir en-US, fr-FR ve ru-RU alt oluşturmanız gerekir. Bu alt dizinleri, Visual Studio derleme işleminin bir parçası otomatik olarak oluşturur.  
+6.  Uygulamanın desteklediği her bir yerelleştirilmiş kültür için ana uygulama dizininde bir dizin oluşturun. En-US, fr-FR ve ru-RU alt oluşturmanız gerekir. Bu alt dizinleri, Visual Studio derleme işleminin bir parçası otomatik olarak oluşturur.  
   
-7.  Uydu derlemeleri tek tek kültüre özgü .resources dosyaları ekleme ve uygun dizinine kaydedin. Bunu yapmak için her .resources dosyası için bir komut şöyledir:  
+7.  Uydu derlemeler içinde tek bir kültüre özgü .resources dosyaları ekleme ve bunları uygun dizine kaydedin. Bunu yapmak için her bir .resources dosyası için komut şöyledir:  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
-     Burada *kültür* kaynakları uydu derleme içeren kültür adı. Visual Studio bu işlemi otomatik olarak işler.  
+     Burada *kültür* kaynakları uydu bütünleştirilmiş kod içeren kültür adı. Visual Studio bu işlemi otomatik olarak işler.  
   
- Bu örnek daha sonra çalıştırabilirsiniz. Bu rastgele desteklenen birini yapacak geçerli kültürü cultures ve yerelleştirilmiş Tebrik görüntüler.  
+ Örnek daha sonra çalıştırabilirsiniz. Bu rastgele desteklenen birini yapacak cultures geçerli kültürü ve yerelleştirilmiş bir karşılama görüntüleyen.  
   
 <a name="SN"></a>   
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Uydu derlemeleri genel derleme önbelleğine yükleme  
- Yerel uygulama alt dizinindeki derlemelerini yüklemek yerine, genel derleme önbelleğinde yükleyebilirsiniz. Sınıf kitaplıkları ve birden çok uygulama tarafından kullanılan sınıf kitaplığı kaynak derlemeleri varsa, bu özellikle yararlıdır.  
+ Bir yerel uygulama alt dizinine derlemeleri yüklemek yerine, genel derleme önbelleğine yükleyebilirsiniz. Sınıf kitaplıkları ve birden çok uygulama tarafından kullanılan sınıf kitaplığı kaynak derlemeler varsa, bu özellikle yararlıdır.  
   
- Genel derleme önbelleğinde derlemeleri yükleme tanımlayıcı adlar sahip olmasını gerektirir. Tanımlayıcı adlı derlemeler ile geçerli bir ortak/özel anahtar çifti imzalanmıştır. Çalışma zamanı hangi derleme bağlama isteği karşılamak için kullanılacağını belirlemek için kullanır sürüm bilgilerini içerir. Tanımlayıcı adlar ve sürüm oluşturma hakkında daha fazla bilgi için bkz: [derleme sürümü oluşturma](../../../docs/framework/app-domains/assembly-versioning.md). Tanımlayıcı adlar hakkında daha fazla bilgi için bkz: [Strong-Named derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md).  
+ Genel derleme önbelleğinde derlemeleri yükleme tanımlayıcı adlara sahip olmasını gerektirir. Tanımlayıcı adlandırılmış derlemeler, geçerli bir ortak/özel anahtar çifti ile imzalanmış. Çalışma zamanının hangi derleme bağlama isteğini yerine getirmek için kullanılacağını belirlemek için kullandığı sürüm bilgileri içerirler. Güçlü adlar ve sürüm oluşturma hakkında daha fazla bilgi için bkz: [derleme sürümlendirme](../../../docs/framework/app-domains/assembly-versioning.md). Güçlü adlar hakkında daha fazla bilgi için bkz: [Strong-Named derlemeleri](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
- Bir uygulama geliştirirken, son ortak/özel anahtar çifti erişimi sahip düşüktür. Bir derlemeyi genel derleme önbelleğinde yüklemek ve beklendiği gibi çalıştığından emin olmak için Gecikmeli imzalama adı verilen bir tekniği kullanabilirsiniz. Derleme zamanında oturum bütünleştirilmiş gecikme, dosyanın sağlam ad imzası için alan ayırın. Daha sonra gerçek imzalama gecikti son ortak/özel anahtar çifti olduğunda kullanılabilir. Gecikmeli imzalama hakkında daha fazla bilgi için bkz: [Gecikmeli bir derleme imzalama](../../../docs/framework/app-domains/delay-sign-assembly.md).  
+ Bir uygulama geliştirirken, son ortak/özel anahtar çifti erişimi olacağını düşüktür. Uydu derlemesi genel derleme önbelleğine yüklemek ve beklendiği gibi çalıştığından emin olmak için Gecikmeli imzalamayı olarak adlandırılan tekniği kullanabilirsiniz. Derlemeyi imzala gecikme, oluşturma zamanında dosyanın tanımlayıcı ad imzası için alan ayırın. Daha sonra gerçek imzalama ertelendi son ortak/özel anahtar çifti ne zaman kullanılabilir. Gecikmeli imzalama hakkında daha fazla bilgi için bkz. [derlemeyi imzalamayı geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   
 ### <a name="obtaining-the-public-key"></a>Ortak anahtarı edinme  
- Oturum bütünleştirilmiş geciktirmek için ortak anahtar erişiminiz olmalıdır. Ya da gerçek ortak anahtarı kuruluş tarafından nihai imzalama yapın veya ortak anahtar kullanarak oluşturmak, şirketinizdeki alabilirsiniz [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Derlemeyi imzala geciktirmek için ortak anahtarına erişimi olmalıdır. Ya da gerçek ortak anahtarı kuruluştan şirketinizdeki nihai imzalama yapın veya bir ortak anahtar kullanarak oluşturma alabilirsiniz [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
- Aşağıdaki Sn.exe komut bir test ortak/özel anahtar çifti oluşturur. **– K** seçeneği belirtir Sn.exe'nin yeni bir anahtar çifti oluşturma ve TestKeyPair.snk adlı bir dosyaya kaydedin.  
+ Aşağıdaki Sn.exe komut bir test ortak/özel anahtar çifti oluşturur. **– K** Sn.exe yeni bir anahtar çifti oluşturma ve TestKeyPair.snk adlı bir dosyaya kaydet seçeneğini belirtir.  
   
 ```console
 sn –k TestKeyPair.snk   
 ```  
   
- Ortak anahtar test anahtar çiftini içeren dosyasından ayıklayabilirsiniz. Aşağıdaki komut ortak anahtar TestKeyPair.snk ayıklar ve içinde PublicKey.snk kaydeder:  
+ Test anahtar çiftini içeren dosyasından ortak anahtar ayıklayabilirsiniz. Aşağıdaki komut, TestKeyPair.snk ortak anahtarı ayıklar ve içinde PublicKey.snk kaydeder:  
   
 ```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
 ### <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme  
- Ortak anahtar oluşturma veya alma sonra kullandığınız [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) derlemeyi derlemek ve belirtmek için imzalama ertelendi.  
+ Ortak anahtarı oluşturma veya alma sonra kullandığınız [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) Gecikmeli imzalama bütünleştirilmiş kodu derler ve belirtin.  
   
  Aşağıdaki Al.exe komutu StringLibrary uygulama için bir uydu tanımlayıcı adlı derleme strings.ja.resources dosyasından oluşturur:  
   
@@ -177,77 +177,77 @@ sn –p TestKeyPair.snk PublicKey.snk
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- **-Gecikme +** seçeneği, derleme bağlayıcı derlemenin imzalanmasını gecikme belirtir. **- Keyfile** seçeneği, gecikme için kullanılacak ortak anahtarı içeren anahtar dosyasının adını derleme oturum belirtir.  
+ **-Gecikme +** seçeneği Assembly Linker derlemenin imzalanmasını gecikme belirtir. **- Keyfile** seçeneği oturum derleme geciktirmek için kullanılacak ortak anahtarı içeren anahtar dosyasının adını belirtir.  
   
 ### <a name="re-signing-an-assembly"></a>Bir derlemeyi yeniden imzalama  
- Uygulamanızı dağıtmadan önce gecikme yeniden imzalamalısınız uydu derleme gerçek anahtar çifti ile imzalanmamış. Sn.exe kullanarak bunu yapabilirsiniz.  
+ Uygulamanızı dağıtmadan önce gecikme süresini yeniden imzalamanız gerekir uydu derlemesi gerçek anahtar çifti ile imzalanmış. Sn.exe kullanarak bunu yapabilirsiniz.  
   
- Aşağıdaki Sn.exe komutu StringLibrary.resources.dll RealKeyPair.snk dosyasında depolanan anahtar çifti ile imzalar. **– R** seçeneği belirtir daha önce imzalanmış veya gecikme imzalı derlemedir yeniden imzalanması gerekir.  
+ Aşağıdaki Sn.exe komutunu StringLibrary.resources.dll RealKeyPair.snk dosyasında depolanan anahtar çifti ile imzalar. **– R** seçeneği belirtir, daha önce imzalanmış veya gecikmeli imzalanmış derlemesidir yeniden imzalanması gerekir.  
   
 ```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
-### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Bir derlemeyi genel derleme önbelleğinde yükleme  
- Çalışma zamanı için kaynak geri dönüş işlemi kaynaklarında aradığında, görünüyor [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md) ilk. (Daha fazla bilgi için "Kaynak geri dönüş işlemi" bölümüne bakın [paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) konu.) Bir uydu derleme güçlü bir ad ile imzalandığında hemen genel derleme önbelleğinde kullanılarak yüklenebilir [Genel Derleme Önbelleği Aracı (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Uydu derlemesi genel derleme önbelleğine yükleme  
+ Çalışma zamanı için kaynak geri dönüş işlemi kaynaklarında ararken bakar [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md) ilk. (Daha fazla bilgi için "Kaynak geri dönüş işlemi" bölümüne bakın. [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) konu.) Bir uydu derleme güçlü bir adla imzalanır hemen sonra genel derleme önbelleğinde kullanarak yüklenebilir [Genel Derleme Önbelleği Aracı (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
- Aşağıdaki Gacutil.exe komutu StringLibrary.resources.dll genel derleme önbelleğinde yükler:  
+ Aşağıdaki Gacutil.exe komutu StringLibrary.resources.dll genel bütünleştirilmiş kod önbelleğine yükler:  
   
 ```console
 gacutil -i:StringLibrary.resources.dll  
 ```  
   
- **/İ** seçeneği, Gacutil.exe belirtilen derleme genel derleme önbelleğine yüklemeniz gerekip gerekmediğini belirtir. Uydu sonra uydu derlemesi kullanmak üzere tasarlanmış tüm uygulamalar için kullanılabilir hale içerdiği kaynakların önbelleğinde derleme yüklenir.  
+ **/İ** seçeneği Gacutil.exe belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğine yüklemeniz gerekip gerekmediğini belirtir. Sonra uydu bütünleştirilmiş kod önbelleği, uydu derlemesini kullanmak üzere tasarlanmış tüm uygulamalar için kullanılabilir hale içerdiği tüm kaynakları yüklenir.  
   
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Genel Derleme Önbelleği kaynaklarında: örneği  
- Aşağıdaki örnek ayıklamak ve bir kaynak dosyasından yerelleştirilmiş Tebrik dönmek için bir .NET Framework Sınıf Kitaplığı'nda bir yöntem kullanır. Kitaplık ve kaynaklarına genel derleme önbelleğinde kaydedilir. Örneğin İngilizce (ABD), Fransızca (Fransa), Rusça (Rusya) ve İngilizce kültürler için kaynakları içerir. İngilizce varsayılan kültürdür; kaynaklarıyla ana derlemede depolanır. Kitaplık ve kendisine ait bir ortak anahtar ile uydu derlemelerini daha sonra yeniden oturum açtığında bunları ortak/özel anahtar çifti ile işaretlerini başlangıçta gecikme örnek. Örnek oluşturmak için aşağıdakileri yapın:  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Genel derleme önbelleğinde kaynaklar: Bir Örnek  
+ Aşağıdaki örnek, ayıklamak ve bir kaynak dosyasından yerelleştirilmiş bir karşılama döndürmek için bir .NET Framework sınıf kitaplığında bir yöntem kullanır. Kitaplığını ve kaynaklarını genel derleme önbelleğinde kayıtlı. Örneğin, İngilizce (Amerika Birleşik Devletleri), Fransızca (Fransa), Rusça (Rusya) ve İngilizce kültürler için kaynakları içerir. İngilizce varsayılan kültürüdür; kaynaklarını ana derlemesinde depolanır. Örnek başlangıçta gecikme kitaplığı ve bir ortak anahtar ile uydu derlemelerini daha sonra yeniden imzalar bunları bir ortak/özel anahtar çifti ile imzalar. Örneği oluşturmak için aşağıdakileri yapın:  
   
-1.  Visual Studio kullanmıyorsanız, aşağıdaki kullanın [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) komutu ResKey.snk adlı bir genel/özel anahtar çifti oluşturmak için:  
+1.  Visual Studio kullanmıyorsanız, aşağıdaki kullanın [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) komutunu ResKey.snk adlı bir ortak/özel anahtar çifti oluşturun:  
   
     ```console
     sn –k ResKey.snk  
     ```  
   
-     Visual Studio kullanıyorsanız **imzalama** Proje sekmesinde **özellikleri** anahtar dosyası oluşturmak için iletişim kutusu.  
+     Visual Studio kullanıyorsanız, **imzalama** proje için sekmesinde **özellikleri** anahtar dosyası oluşturmak için iletişim kutusu.  
   
-2.  Aşağıdaki [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) komutu PublicKey.snk adlı ortak bir anahtar dosyası oluşturmak için:  
+2.  Aşağıdaki [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) komutunu PublicKey.snk adlı bir ortak anahtar dosyası oluşturun:  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  Varsayılan kültür için kaynak içerecek şekilde Strings.resx adlı bir kaynak dosyası oluşturun. Adlı tek bir dize depolamak `Greeting` değeri olan "Nasıl you musunuz?" Bu dosyada.  
+3.  Varsayılan kültürünün kaynak içerecek şekilde Strings.resx adlı bir kaynak dosyası oluşturun. Adlı tek bir dize Store `Greeting` değeri olan "Nasıl aldığınız musunuz?" Bu dosyada.  
   
-4.  "En" uygulamanın varsayılan kültürü olduğunu belirtmek için aşağıdaki ekleyin <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> özniteliği uygulamanın AssemblyInfo dosyası veya uygulamanın ana derlemeye derlenmiş ana kaynak kodu dosyasına:  
+4.  "En" uygulamanın varsayılan kültürünü olduğunu belirtmek için aşağıdakileri ekleyin <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> özniteliği uygulamanın AssemblyInfo dosyası veya uygulamanın ana bütünleştirilmiş kod içine derlenmiş ana kaynak kod dosyasına:  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  Ek kültürler (en-US, fr-FR ve ru-RU kültürler) için destek uygulamayı aşağıdaki şekilde ekleyin:  
+5.  Ek kültürleri (en-US, fr-FR ve ru-RU kültürler) için destek uygulamaya aşağıdaki şekilde ekleyin:  
   
-    -   "En-US" veya İngilizce (ABD) kültür desteklemek için Strings.en US.resx veya Strings.en US.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `Greeting` değeri olan "Hello!".  
+    -   "En-US" ya da İngilizce (ABD) kültürü desteklemek için Strings.en-US.resx veya Strings.en US.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` değeri olan "Hello!".  
   
-    -   "Fr-FR" veya Fransızca (Fransa) kültür desteklemek için Strings.fr FR.resx veya Strings.fr FR.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `Greeting` "İyi günlüğü!" değeri olan  
+    -   "Fr-FR" ya da Fransızca (Fransa) kültürü desteklemek için Strings.fr-FR.resx veya Strings.fr FR.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "İyi günlüğü!" değeri olan  
   
-    -   "Ru-RU" veya Rusça (Rusya) kültür desteklemek için Strings.ru RU.resx veya Strings.ru RU.txt adlı bir kaynak dosyası oluşturun ve bunu adlı tek bir dize depolamak `Greeting` "Привет!" değeri olan  
+    -   Rusça (Rusya) kültürü ve "ru-RU" desteklemek için Strings.ru RU.resx veya Strings.ru RU.txt adlı bir kaynak dosyası oluşturun ve adlı tek bir dize depolamak `Greeting` "Привет!" değeri olan  
   
-6.  Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya ikili .resources dosyası XML kaynak dosyasına derlemek için. Çıkış, kök dosya adıyla aynı .resx veya .txt dosyaları, ancak bir .resources uzantısına sahip dosyalar kümesidir. Visual Studio ile örnek oluşturursanız, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyaları .resources dosyalarıyla derlemek için aşağıdaki komutu çalıştırın:  
+6.  Kullanım [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) her bir metin veya XML kaynak dosyası bir ikili .resources dosyasına derlemek için. Çıktı, .resx veya .txt dosyaları, ancak bir .resources uzantısını olarak aynı kök dosya adı olan dosyalar kümesidir. Örneğin Visual Studio ile oluşturma, derleme işlemi otomatik olarak gerçekleştirilir. Visual Studio kullanmıyorsanız, .resx dosyalarını .resources dosyalarına derlemek için aşağıdaki komutu çalıştırın:  
   
     ```console
     resgen filename  
     ```  
   
-     Burada *filename* isteğe bağlı yol, dosya adı ve uzantısı .resx veya metin dosyası.  
+     Burada *filename* isteğe bağlı bir yolu, dosya adı ve .resx veya metin dosyasının uzantısı.  
   
-7.  Aşağıdaki kaynak kodu derleyin StringLibrary.vb veya StringLibrary.cs için bir gecikme içine varsayılan kültür için kaynaklar birlikte StringLibrary.dll adlı kitaplığı derleme imzalanmamış:  
+7.  Aşağıdaki kaynak kodu derleyin StringLibrary.vb veya StringLibrary.cs kaynaklar için varsayılan kültürü bir gecikme ile birlikte StringLibrary.dll adlı kitaplık derlemesine imzalı:  
   
     > [!IMPORTANT]
-    >  Örnek oluşturmak için Visual Studio yerine komut satırı kullanıyorsanız çağrısı değiştirmelisiniz <xref:System.Resources.ResourceManager> sınıfı oluşturucuya `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Örneği oluşturmak için komut satırı yerine Visual Studio kullanıyorsanız, çağrı değiştirmelisiniz <xref:System.Resources.ResourceManager> sınıf oluşturucusuna `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
   
-     C# derleyici komut şöyledir:  
+     Komut için C# derleyici:  
   
     ```console
     csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
@@ -259,15 +259,15 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  Uygulama tarafından desteklenen her yerelleştirilmiş kültür için ana uygulama dizinindeki bir dizin oluşturun. Bir en-US, fr-FR ve ru-RU alt oluşturmanız gerekir. Bu alt dizinleri, Visual Studio derleme işleminin bir parçası otomatik olarak oluşturur. Tüm uydu derlemelerini aynı dosya adına sahip olduğundan, alt dizinleri ortak/özel anahtar çifti ile imzalanmış kadar tek tek kültüre özgü uydu derlemeleri depolamak için kullanılır.  
+8.  Uygulamanın desteklediği her bir yerelleştirilmiş kültür için ana uygulama dizininde bir dizin oluşturun. En-US, fr-FR ve ru-RU alt oluşturmanız gerekir. Bu alt dizinleri, Visual Studio derleme işleminin bir parçası otomatik olarak oluşturur. Tüm uydu derlemelerin aynı dosya adına sahip olduğundan, dizinler bireysel kültüre özel uydu derlemeler ortak/özel anahtar çifti ile imzalanmış kadar depolamak için kullanılır.  
   
-9. Tek tek ekleme kültüre özgü .resources dosyaları imzalı gecikme içine uydu derlemeleri ve bunları uygun dizinine kaydedin. Bunu yapmak için her .resources dosyası için bir komut şöyledir:  
+9. Tek tek ekleme ertelenmiş olarak imzalandığında kültüre özgü .resources dosyalarına uydu bütünleştirilmiş kodlar ve bunları uygun dizine kaydedin. Bunu yapmak için her bir .resources dosyası için komut şöyledir:  
   
     ```console
     al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
-     Burada *kültür* bir kültür adı. Bu örnekte kültür en-US, fr-FR ve ru-RU adlarıdır.  
+     Burada *kültür* bir kültür adı. Bu örnekte, kültür en-US, fr-FR ve ru-RU adlarıdır.  
   
 10. StringLibrary.dll kullanarak yeniden oturum [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) gibi:  
   
@@ -275,7 +275,7 @@ gacutil -i:StringLibrary.resources.dll
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
-11. Tek tek uydu derlemelerini yeniden oturum açın. Bunu yapmak için kullanın [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) gibi her uydu derlemesi için:  
+11. Tek tek uydu derlemeleri yeniden oturum açın. Bunu yapmak için [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) gibi her bir uydu derlemesini için:  
   
     ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
@@ -287,20 +287,20 @@ gacutil -i:StringLibrary.resources.dll
     gacutil -i filename  
     ```  
   
-     Burada *filename* kaydetmek için dosyayı adıdır.  
+     Burada *filename* kaydedilecek dosyanın adıdır.  
   
-13. Visual Studio kullanıyorsanız, yeni bir oluşturma **konsol uygulaması** adlı projesi `Example`StringLibrary.dll başvuru ve aşağıdaki kaynak kodu ekleyin ve derleyin.  
+13. Visual Studio kullanıyorsanız, yeni bir oluşturma **konsol uygulaması** adlı proje `Example`StringLibrary.dll başvuru ve aşağıdaki kaynak kodunu ekleyin ve derleyin.  
   
      [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
      [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
   
-     Komut satırından derlemek için C# derleyici için aşağıdaki komutu kullanın:  
+     Komut satırından derleme için aşağıdaki komutu kullanın. C# derleyici:  
   
     ```console
     csc Example.cs -r:StringLibrary.dll   
     ```  
   
-     Visual Basic derleyici komut satırı şöyledir:  
+     Visual Basic Derleyicisi için komut satırı verilmiştir:  
   
     ```console
     vbc Example.vb -r:StringLibrary.dll   
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. Example.exe çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

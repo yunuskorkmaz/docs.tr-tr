@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ardışık Düzende Engelleme Koleksiyonu Dizilerini Kullanma'
+title: 'Nasıl yapılır: Bir ardışık düzende engelleme koleksiyonları dizilerini kullanma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e2e312668a7cf4fe39596ae018adaf62cd850e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627206"
 ---
-# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Nasıl yapılır: Ardışık Düzende Engelleme Koleksiyonu Dizilerini Kullanma
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Nasıl yapılır: Bir ardışık düzende engelleme koleksiyonları dizilerini kullanma
 Aşağıdaki örnek, dizileri kullanma işlemi gösterilmektedir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> statik yöntemleriyle gibi nesneleri <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> ve <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> bileşenleri arasında hızlı ve esnek bir veri aktarımı uygulamak için.  
   
 ## <a name="example"></a>Örnek  
@@ -28,5 +28,5 @@ Aşağıdaki örnek, dizileri kullanma işlemi gösterilmektedir <xref:System.Co
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

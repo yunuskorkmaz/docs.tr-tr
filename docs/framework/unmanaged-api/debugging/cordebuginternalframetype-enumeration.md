@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736539"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType Numaralandırması
-Yığın çerçevesi türünü tanımlar. Bu numaralandırma tarafından kullanılan [Icordebugınternalframe::getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) yöntemi.  
+Yığın çerçevesinin türünü tanımlar. Bu sabit listesi tarafından kullanılan [Icordebugınternalframe::getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,26 +49,26 @@ typedef enum CorDebugInternalFrameType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Bir null değer. `ICorDebugInternalFrame::GetFrameType` Yöntemi, hiçbir zaman bu değeri döndürür.|  
-|`STUBFRAME_M2U`|Yönetilmeyen saplama çerçevesi.|  
-|`STUBFRAME_U2M`|Bir yönetilen için yönetilmeyen saplama çerçevesi.|  
+|`STUBFRAME_NONE`|Bir null değer. `ICorDebugInternalFrame::GetFrameType` Yöntemi hiçbir zaman bu değeri döndürür.|  
+|`STUBFRAME_M2U`|Bir saplama yönetilmeyen çerçevesi.|  
+|`STUBFRAME_U2M`|Bir saplama yönetilene çerçevesi.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uygulama etki alanları arasında geçiş.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Basit yöntem çağrısı.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Basit bir yöntem çağrısı.|  
 |`STUBFRAME_FUNC_EVAL`|İşlev değerlendirmesi başlangıcı.|  
-|`STUBFRAME_INTERNALCALL`|Ortak dil çalışma zamanı iç çağrısından.|  
-|`STUBFRAME_CLASS_INIT`|Bir sınıf başlatma başlangıcı.|  
+|`STUBFRAME_INTERNALCALL`|Ortak dil çalışma zamanı bir iç çağrı.|  
+|`STUBFRAME_CLASS_INIT`|Sınıf başlatması başlangıcı.|  
 |`STUBFRAME_EXCEPTION`|Oluşturulan bir özel durum.|  
-|`STUBFRAME_SECURITY`|Kod erişim güvenliği için kullanılan çerçeve.|  
-|`STUBFRAME_JIT_COMPILATION`|Çalışma zamanı JIT-derleme bir yöntem ' dir.|  
+|`STUBFRAME_SECURITY`|Kod erişimi güvenliği için kullanılan bir çerçeve.|  
+|`STUBFRAME_JIT_COMPILATION`|Çalışma zamanı JIT-derleme bir yöntem var.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-ms.openlocfilehash: c7037acac58de56a396bd89f595ef897743ff4e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e474bd686cc753a0265df1fc2914a73d1b62f1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737328"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-Visual Basic Amerikan Ulusal Standartlar Enstitüsü (ANSI) değerleri bildirilen dış yordamın adını bağımsız olarak tüm dizeleri sıralama belirtir.  
+Visual Basic Amerikan Ulusal Standartlar Enstitüsü (ANSI) değerleri bildirilen dış yordam adından bağımsız olarak tüm dizeleri sıralaması olduğunu belirtir.  
   
- Projenizin dışında tanımlı bir yordam çağrısı, Visual Basic derleyici yordamı doğru çağırmak gereken bilgilere erişimi yok. Bu bilgiler yordamı bulunduğu, nasıl tanımlanır, kendi arama sırası ve dönüş türü içerir ve dize karakter kullanır ayarlayın. [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md) dış bir yordam için bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
+ Projenizin dışında tanımlı bir yordamı çağırdığınızda, Visual Basic Derleyicisi yordamı doğru şekilde çağırmak gereken bilgilere erişimi yok. Bu bilgileri yordamı bulunduğu, nasıl tanımlandığını, çağrı sırası ve dönüş türü içeren ve isteğe bağlı olarak dize karakteri kullanır ayarlayın. [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) bir dış yordam bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
   
- `charsetmodifier` Bölümün `Declare` deyimi dış yordamı yapılan bir çağrı sırasında dizeleri sıralama için karakter kümesi bilgileri sağlar. Visual Basic dış yordamı adı için dış dosyasını nasıl arayacağını etkiler. `Ansi` Değiştiricisi, Visual Basic ANSI değerleri tüm dizeleri sıralama ve yordam arama sırasında adını değiştirmeden görünmelidir belirtir.  
+ `charsetmodifier` Kısmını `Declare` deyimi bir dış yordam çağrısı sırasında dizelerini hazırlama için karakter kümesi bilgileri sağlar. Ayrıca, Visual Basic dış dosya için dış yordam adının nasıl arama etkiler. `Ansi` Değiştiricisi, Visual Basic tüm dizeleri ANSI değerleri olarak sıralaması ve yordamı arama sırasında adını değiştirmeden araması gerektiğini belirtir.  
   
- Herhangi bir karakter kümesi değiştiricisi belirtilirse, `Ansi` varsayılandır.  
+ Herhangi bir karakter kümesi değiştiricisi belirtilmişse `Ansi` varsayılandır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `Ansi` Bu bağlamda değiştirici kullanılabilir:  
@@ -32,7 +32,7 @@ Visual Basic Amerikan Ulusal Standartlar Enstitüsü (ANSI) değerleri bildirile
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
  Bu anahtar sözcük desteklenmiyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

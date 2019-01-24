@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: 53199c2d7081445dc5490d5c54c98f93ee7522eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbf8df5942e9df4b9696aeea4e3492121efe21a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746318"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a>&#39;Modül&#39; deyimleri yalnızca dosya veya ad alanı düzeyinde oluşabilir
-`Module` deyimler, kaynak dosyanızın en üstte görünmelidir hemen sonra `Option` ve `Imports` deyimleri, genel öznitelikler ve ad alanı bildirimleri, ancak diğer tüm bildirimleri öncesinde.  
+`Module` deyimleri, kaynak dosyasının en üstüne görünmelidir hemen sonra `Option` ve `Imports` deyimleri, genel öznitelik ve ad alanı bildirimi, ancak önce diğer tüm bildirimler.  
   
  **Hata Kimliği:** BC30617  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Taşıma `Module` ad alanı bildirimini veya kaynak dosyanın en üstüne ifadesine.  
+-   Taşıma `Module` ad alanı bildirimi veya kaynak dosyasının en üstüne deyimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimine Dosyaları Yükleme'
+title: 'Nasıl yapılır: Windows Forms RichTextBox denetimine dosyaları yükleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 4d43536cab7806b8cf2de3d63b2d9f7f10024c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666052"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimine Dosyaları Yükleme
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim düz metin, Unicode düz metin veya zengin metin biçimi (RTF) dosyasını görüntüleyebilirsiniz. Bunu yapmak için arama <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi. Aynı zamanda <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> bir akışından veri yükleme yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox denetimine dosyaları yükleme
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, bir düz metin, Unicode düz metin veya zengin metin biçimi (RTF) dosyasını görüntüleyebilirsiniz. Bunu yapmak için çağrı <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi. Ayrıca <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi bir akıştan verileri yüklenemedi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>RichTextBox denetimine bir dosya yüklemek için  
   
-1.  Kullanılarak açılması için dosyanın yolunu belirlemek <xref:System.Windows.Forms.OpenFileDialog> bileşeni. Genel bir bakış için bkz: [OpenFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
+1.  Kullanılarak açılmasını dosyasının yolunu belirlemek <xref:System.Windows.Forms.OpenFileDialog> bileşeni. Genel bakış için bkz. [OpenFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
   
-2.  Çağrı <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi <xref:System.Windows.Forms.RichTextBox> denetim, yüklemek için dosya ve isteğe bağlı olarak bir dosya türünü belirtme. Aşağıdaki örnekte, yük dosyaya alınırlar <xref:System.Windows.Forms.OpenFileDialog> bileşenin <xref:System.Windows.Forms.FileDialog.FileName%2A> özelliği. Yalnızca bağımsız değişkeni olarak bir dosya adıyla yöntemini çağırırsanız, dosya türü RTF olarak kabul edilir. Başka bir dosya türü belirtmek için değerini yöntemi çağırma <xref:System.Windows.Forms.RichTextBoxStreamType> numaralandırması ikinci bağımsız değişkeni olarak.  
+2.  Çağrı <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi <xref:System.Windows.Forms.RichTextBox> yüklenecek dosyanın ve isteğe bağlı olarak bir dosya türünü belirten denetimi. Aşağıdaki örnekte, yüklenecek dosyanın sınıfından alınmıştır <xref:System.Windows.Forms.OpenFileDialog> bileşenin <xref:System.Windows.Forms.FileDialog.FileName%2A> özelliği. Bir dosya adı yalnızca bağımsız değişken olarak yöntemi çağırın, dosya türü RTF olarak kabul edilir. Başka bir dosya türü belirtmek için bir değerini yöntemi çağırın <xref:System.Windows.Forms.RichTextBoxStreamType> ikinci bağımsız değişken olarak numaralandırması.  
   
-     Aşağıdaki örnekte <xref:System.Windows.Forms.OpenFileDialog> bileşen bir düğme tıklatıldığında gösterilir. Seçilen dosya sonra açılır ve görüntülenen <xref:System.Windows.Forms.RichTextBox> denetim. Bu örnek bir biçime sahip bir düğme varsayar`btnOpenFile`.  
+     Aşağıdaki örnekte <xref:System.Windows.Forms.OpenFileDialog> bileşeni, bir düğmeye tıklandığında gösterilir. Seçilen dosya sonra açıldı ve görüntülenen <xref:System.Windows.Forms.RichTextBox> denetimi. Bu örnek, bir formda bir düğme bulunur varsayar`btnOpenFile`.  
   
     ```vb  
     Private Sub btnOpenFile_Click(ByVal sender As System.Object, _  
@@ -78,10 +78,10 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim düz metin, Unicod
     ```  
   
     > [!IMPORTANT]
-    >  Bu işlem çalıştırmayı derlemenizi ayrıcalık düzeyi verilen tarafından gerektirebilir <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Bu işlemi çalıştırmak için derlemenizi ayrıcalık düzeyi verilen tarafından gerekli kılabiliriz <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle özel bir durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

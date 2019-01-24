@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-ms.openlocfilehash: 30f24d8dba7c09271a5957822439af6b64e05aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20e2b21b10129c096398606501768a7ace0617fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674238"
 ---
 # <a name="how-to-create-a-stackpanel"></a>Nasıl yapılır: StackPanel Oluşturma
-Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Controls.StackPanel>.  
+Bu örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.StackPanel>.  
   
 ## <a name="example"></a>Örnek  
- A <xref:System.Windows.Controls.StackPanel> , belirtilen yönde öğeleri yığın olanak sağlar. Üzerinde tanımlanan özellikleri kullanarak <xref:System.Windows.Controls.StackPanel>, içerik akış her ikisi de dikey olarak, varsayılan ayar olan ya da yatay olarak.  
+ A <xref:System.Windows.Controls.StackPanel> belirtilen yönde öğeleri yığma olanak tanır. Üzerinde tanımlanan özelliklerini kullanarak <xref:System.Windows.Controls.StackPanel>, içeriği akış her ikisi de dikey olarak varsayılan ayar olan ya da yatay olarak.  
   
- Aşağıdaki örnek dikey olarak beş yığınlar <xref:System.Windows.Controls.TextBlock> denetimleri, her biri farklı bir <xref:System.Windows.Controls.Border> ve <xref:System.Windows.Controls.Border.Background%2A>, kullanarak <xref:System.Windows.Controls.StackPanel>. Belirtilen en alt öğeleri <xref:System.Windows.FrameworkElement.Width%2A> ana pencereyi doldurmak için yayılır; ancak, alt öğeleri olan bir belirtilen <xref:System.Windows.FrameworkElement.Width%2A>, pencere içinde ortalanır.  
+ Aşağıdaki örnek dikey olarak beş yığınlar <xref:System.Windows.Controls.TextBlock> denetimleri, her biri farklı bir <xref:System.Windows.Controls.Border> ve <xref:System.Windows.Controls.Border.Background%2A>, kullanarak <xref:System.Windows.Controls.StackPanel>. Belirtilen sahip alt öğeleri <xref:System.Windows.FrameworkElement.Width%2A> üst pencere dolduracak şekilde uzatılır; ancak, alt öğeleri olan belirtilen <xref:System.Windows.FrameworkElement.Width%2A>, pencere içinde ortalanır.  
   
- Varsayılan yığın yönü bir <xref:System.Windows.Controls.StackPanel> dikeydir. İçindeki içerik akışını denetlemek için bir <xref:System.Windows.Controls.StackPanel>, kullanın <xref:System.Windows.Controls.StackPanel.Orientation%2A> özelliği. Yatay hizalama kullanarak denetleyebilirsiniz <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliği.  
+ Varsayılan yığın yönde bir <xref:System.Windows.Controls.StackPanel> dikeydir. Denetim içerik akışı için bir <xref:System.Windows.Controls.StackPanel>, kullanın <xref:System.Windows.Controls.StackPanel.Orientation%2A> özelliği. Yatay hizalama kullanarak denetleyebilirsiniz <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliği.  
   
 ```xaml  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
@@ -43,7 +43,7 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
 </Page>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.StackPanel>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.StackPanel>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

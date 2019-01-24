@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703386"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı haklarını veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni, kod dosya sistemine erişebilir izin; Kullanıcı bir veritabanına erişmek için izin verilen, kod veritabanına erişmeye izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü olan yürütülebilir dosyaları, kod için kabul edilebilir olsa da, bunlar Internet veya yerel Intranet gelen kötü amaçlı kodlar için kabul edilebilir olmayabilir. Bu kod, kullanıcının izni olmadan bilgisayar kaynaklarına erişebilmesi olmamalıdır.  
@@ -75,17 +75,17 @@ Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)
   
  Seçtiğiniz teknolojileri dağıtım ortamınıza bağlıdır. Daha fazla bilgi için [ClickOnce dağıtım stratejisini seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ya da Visual Studio kullanarak dağıtılmış uygulamalar veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK Araçları (Mage.exe ve MageUI.exe) tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Visual Studio ile bunu yapabilirsiniz veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] dağıtımınız yapılandırdığınızda MageUI.exe SDK aracıdır. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: bir ClickOnce uygulamasını komut satırından dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinler ayarlayın](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinler ayarlayın](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ya da Visual Studio kullanarak dağıtılmış uygulamalar veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK Araçları (Mage.exe ve MageUI.exe) tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Visual Studio ile bunu yapabilirsiniz veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] dağıtımınız yapılandırdığınızda MageUI.exe SDK aracıdır. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Güvenlik yönleri hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ve izin yükseltme bakın, [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Uygulamayı Test Etme  
- Visual Studio kullanarak, Windows Forms uygulaması dağıttıysanız, kısmi güven veya geliştirme ortamından ayarlanan sınırlı izin kümesinde hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz: [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) veya [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Visual Studio kullanarak, Windows Forms uygulaması dağıttıysanız, kısmi güven veya geliştirme ortamından ayarlanan sınırlı izin kümesinde hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz: [nasıl yapılır: Sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) veya [nasıl yapılır: Sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
- [Kod erişimi güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)  
- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)
+- [Kod erişimi güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)
+- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

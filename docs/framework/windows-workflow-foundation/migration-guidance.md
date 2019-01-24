@@ -2,12 +2,12 @@
 title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676880"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft ikinci ana sürüm Windows Workflow Foundation (WF) yayımladı. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çıkan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; artık WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğunu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yeni bir iş akışı teknoloji vardır (System.Activities. türlerinde\* ad alanları; WF4 başvurulan). WF4 benimsemek ne zaman düşünürken öncelikle zamanlamasını denetlemek bilmek önemlidir.  
@@ -29,7 +29,7 @@ ms.locfileid: "48850419"
  [WF geçişi: WF3 geliştirme için en iyi uygulamalar](https://go.microsoft.com/fwlink/?LinkId=153852)  
  WF3 yapıtları WF4 için daha kolay geçirilebilecek şekilde tasarlamak nasıl ele alınmaktadır.  
   
- [WF Kılavuzu: kuralları](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ [WF kılavuz: kuralları](https://go.microsoft.com/fwlink/?LinkId=153854)  
  Kuralları ile ilgili yatırım İleri Getir anlatılmaktadır [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] çözümler.  
   
  [WF kılavuz: Durum makinesi](https://go.microsoft.com/fwlink/?LinkId=153855)  
@@ -37,13 +37,13 @@ ms.locfileid: "48850419"
   
  Bu kılavuz yalnızca .NET Framework 4'ü hedefleyen iş akışı projeleri için geçerli olduğunu unutmayın. Durum makine iş akışları .NET 4.0.1'in Platform güncelleştirme 1 sürümünde eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. .NET 4.0.1'in - 4.0.3 ve .NET Framework 4.5, durum makine iş akışları hakkında daha fazla bilgi için bkz. [4.0.1'in güncelleştirmek için Microsoft .NET Framework 4 özellikleri](https://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) ve [durum makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
- [WF Geçiş Kılavuzu: Özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=153856)  
+ [WF geçiş Kitapçığı: Özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Örnekler ve yeniden tasarlanmasını WF4 WF3 özel etkinliklere yönelik yönergeler sağlar.  
   
- [WF geçiş Kitapçığı: Özel etkinlikler Gelişmiş](https://go.microsoft.com/fwlink/?LinkId=275560)  
+ [WF geçiş Kitapçığı: Gelişmiş özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=275560)  
  WF3 kuyrukları kullanan gelişmiş WF3 özel etkinlikler ve zamanlama çocuk etkinliklerinin WF4 özel etkinlikler olarak yeniden tasarlanmasını yönelik rehberlik sağlar.  
   
- [WF geçiş Kitapçığı: iş akışları](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [WF geçiş Kitapçığı: İş akışları](https://go.microsoft.com/fwlink/?LinkId=153858)  
  Örnekler ve WF4 WF3 iş akışlarında yeniden tasarlanmasını için yönergeler sağlar.  
   
  [WF geçiş Kitapçığı: İş akışı barındırma](https://go.microsoft.com/fwlink/?LinkId=275561)  
@@ -55,5 +55,5 @@ ms.locfileid: "48850419"
  [WF kılavuz: İş akışı Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=275564)  
  (Genellikle iş akışı hizmetleri adlandırılır) Windows Communication Foundation (WCF) web hizmetlerini WF3 WF4, yaygın senaryoları için kullanıma hazır kullanılmak üzere oluşturulan uygulamayı iş akışlarını yeniden tasarlanmasını örnek yönelik adım adım yönergeler sağlar etkinlikler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Activities.Statements.Interop>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Activities.Statements.Interop>

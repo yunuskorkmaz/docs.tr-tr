@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704910"
 ---
 # <a name="structure-statement"></a>Structure Yapısı
 Bir yapının adını bildirir ve değişkenleri, özellikleri, olayları ve yapısını oluşturan yordamların tanımını tanıtır.  
@@ -104,14 +104,14 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Yapılar ve Sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Yapılar ve Sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

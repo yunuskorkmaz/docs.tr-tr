@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665909"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
 Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesneleri. A <xref:System.Windows.Shapes.Shape> bir tür <xref:System.Windows.UIElement> ekrana bir şekil çizme olanak sağlar. Kullanıcı Arabirimi öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri içinde kullanılabilir <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim.  
@@ -155,13 +155,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Uzat özelliği şu değerlerden birini alır:  
   
--   <xref:System.Windows.Media.Stretch.None><xref:System.Windows.Shapes.Shape> Nesnenin içeriğini değil uzatılır.  
+-   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini değil uzatılır.  
   
--   <xref:System.Windows.Media.Stretch.Fill><xref:System.Windows.Shapes.Shape> Nesnenin içeriğini kendi düzen alanı dolduracak şekilde uzatılır.  En boy oranı korunur değil.  
+-   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini kendi düzen alanı dolduracak şekilde uzatılır.  En boy oranı korunur değil.  
   
--   <xref:System.Windows.Media.Stretch.Uniform><xref:System.Windows.Shapes.Shape> Nesnenin içeriğini mümkün olduğunca, özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini mümkün olduğunca, özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill><xref:System.Windows.Shapes.Shape> Nesnenin içeriğini, tamamen kendi özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriğini, tamamen kendi özgün en boy oranını korurken kendi düzen alanı dolduracak şekilde uzatılır.  
   
  Unutmayın, bir <xref:System.Windows.Shapes.Shape> nesnenin içeriğini uzatılır <xref:System.Windows.Shapes.Shape> nesnenin anahat uzatma sonra boyanır.  
   
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  Önceki örneklerde, her şekil nesnesi için tek bir dönüştürme uygulandı. Bir şekil (veya başka bir kullanıcı Arabirimi öğesi) birden çok dönüşüm uygulamak için bir <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

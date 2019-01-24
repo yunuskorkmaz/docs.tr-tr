@@ -1,69 +1,69 @@
 ---
-title: Türler (varlık SQL) oluşturma
+title: Oluşturma türleri (SQL varlık)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718591"
 ---
-# <a name="constructing-types-entity-sql"></a>Türler (varlık SQL) oluşturma
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür oluşturucular sağlar: satır Oluşturucular, adlandırılmış türü oluşturucuları ve koleksiyon oluşturucular.  
+# <a name="constructing-types-entity-sql"></a>Oluşturma türleri (SQL varlık)
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür oluşturucular sağlar: Oluşturucular, adlandırılmış Tür oluşturucu ve koleksiyon oluşturucular satır.  
   
 ## <a name="row-constructors"></a>Satır oluşturucular  
- Satır kurucularda kullandığınız [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir veya daha fazla değer anonim, yapısal olarak yazılan kayıtları oluşturmak için. Bir satır oluşturucusunda sonuç türü, alan türlerini satır oluşturmak için kullanılan değerlerin türleri için karşılık gelen bir satır türüdür. Örneğin, aşağıdaki deyim türünde bir değer oluşturur `Record(a int, b string, c int)`:  
+ Satır oluşturucularda kullandığınız [!INCLUDE[esql](../../../../../../includes/esql-md.md)] anonim, yapısal olarak belirlenmiş bir veya daha fazla değer kayıtları oluşturmak için. Bir satır oluşturucusunda sonuç türü, alan türlerini satır oluşturmak için kullanılan değerleri türlerine karşılık gelen bir satır türüdür. Örneğin, aşağıdaki ifade türünde bir değer oluşturur `Record(a int, b string, c int)`:  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- Row kurucusunda bir ifade için bir diğer ad belirtmezseniz, Entity Framework oluşturur dener. Daha fazla bilgi için bkz: "Diğer ad kuralları" bölümünde [tanımlayıcıları](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ Row oluşturucusunda bir ifade için bir diğer ad belirtmezseniz, Entity Framework bir çalışacaktır. "Diğer ad kuralları" bölümünde daha fazla bilgi için bkz. [tanımlayıcıları](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
   
- Row kurucusunda ifade yumuşatma aşağıdaki kurallar geçerlidir:  
+ Row oluşturucusunda ifade yumuşatma aşağıdaki kurallar geçerlidir:  
   
--   Bir satır oluşturucusunda ifadelerinde başka diğer adlar aynı oluşturucuda başvuruda bulunamaz.  
+-   Row oluşturucusunda ifadeleri başka diğer adlar aynı oluşturucu içinde başvurulamaz.  
   
--   İki ifadeye aynı row kurucusunda aynı ada sahip olamaz.  
+-   Aynı row oluşturucusunda iki ifadeler aynı ada sahip olamaz.  
   
- Satır oluşturucular hakkında daha fazla bilgi için bkz: [satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ Satır oluşturucular hakkında daha fazla bilgi için bkz. [satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Koleksiyon oluşturucular  
- Koleksiyon kurucularda kullandığınız [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değerler listesinden bir çoklu küme örneği oluşturmak için. Oluşturucu tüm değerleri karşılıklı olarak uyumlu türünde olmalıdır `T`, ve Oluşturucusu türünden bir koleksiyona üretir `Multiset<T>`. Örneğin, aşağıdaki ifade tamsayılar bir koleksiyonunu oluşturur:  
+ Koleksiyon oluşturucularda kullandığınız [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değerler listesinden bir çoklu küme örneği oluşturmak için. Oluşturucu tüm değerleri karşılıklı olarak uyumlu türünde olmalıdır `T`, oluşturucu türü bir koleksiyon oluşturur `Multiset<T>`. Örneğin, aşağıdaki ifade, tamsayı bir koleksiyonunu oluşturur:  
   
  `Multiset(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
- Boş multiset oluşturucular öğelerin türü belirlenemediğinden izin verilmiyor. Şu geçerli değil:  
+ Öğelerin türü belirlenemiyor çünkü boş multiset oluşturuculara izin verilmez. Aşağıdakiler geçerli değil:  
   
  `multiset() {}`  
   
- Daha fazla bilgi için bkz: [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
+ Daha fazla bilgi için [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
   
-## <a name="named-type-constructors-namedtype-initializers"></a>Adlandırılmış türü oluşturucuları (NamedType başlatıcıları)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] türü oluşturucuları (adlandırılmış karmaşık türlerin örnekleri oluşturmak için başlatıcıları) ve varlık türleri sağlar. Örneğin, aşağıdaki ifade bir örneğini oluşturur bir `Person` türü.  
+## <a name="named-type-constructors-namedtype-initializers"></a>Adlandırılmış Tür oluşturucu (NamedType başlatıcılar)  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tür oluşturucular (başlatıcılar adlandırılmış karmaşık türlerin örneklerini oluşturmak için) ve varlık türleri sağlar. Örneğin, aşağıdaki ifade bir örneği oluşturan bir `Person` türü.  
   
  `Person("abc", 12)`  
   
- Aşağıdaki ifade, karmaşık türün bir örneğini oluşturur.  
+ Aşağıdaki ifade, karmaşık bir türün örneğini oluşturur.  
   
  `MyModel.ZipCode(‘98118’, ‘4567’)`  
   
- Aşağıdaki ifade, iç içe geçmiş bir karmaşık tür bir örneğini oluşturur.  
+ Aşağıdaki ifade, iç içe geçmiş bir karmaşık türün örneğini oluşturur.  
   
  `MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567'))`  
   
- Aşağıdaki ifade ile iç içe geçmiş bir karmaşık türü bir varlığın bir örneğini oluşturur.  
+ Aşağıdaki ifade ile iç içe geçmiş bir karmaşık türü bir varlık örneği oluşturur.  
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- Aşağıdaki örnek, bir özellik NULL karmaşık türün başlatmak gösterilmiştir. `MyModel.ZipCode(‘98118’, null)`  
+ Aşağıdaki örnek, bir karmaşık türü null bir özelliğini başlatmak gösterilmektedir. `MyModel.ZipCode(‘98118’, null)`  
   
- Oluşturucu bağımsız değişken türü özniteliklerini bildirimi aynı sırada olduğu varsayılır.  
+ Oluşturucusuna bağımsız değişken türü özniteliklerini bildirimi aynı sırada olduğu varsayılır.  
   
- Daha fazla bilgi için bkz: [adlı Tür oluşturucu](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
+ Daha fazla bilgi için [adlandırılmış Tür oluşturucu](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Tür Sistemi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Tür Sistemi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

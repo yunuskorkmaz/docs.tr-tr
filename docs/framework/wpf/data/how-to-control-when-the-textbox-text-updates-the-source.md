@@ -9,41 +9,41 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 52f3a8d3a5d78a211367722b3042eb50f6ac36d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e43f5c84a4e93e35f0d8350442870239408fdc7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690377"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Nasıl yapılır: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
-Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynak güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> denetim bir örnek olarak.  
+Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynağı güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> örnek olarak denetimi.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> özelliğinin varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Bir uygulama olup olmadığını yani bir <xref:System.Windows.Controls.TextBox> veri bağlama ile <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> özelliği, yazdığınız içine metin <xref:System.Windows.Controls.TextBox> kadar kaynak güncelleştirmez <xref:System.Windows.Controls.TextBox> odağı kaybettiğinde (örneğin, tıkladığınızda merkezden <xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> özelliğine sahip bir varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Bu bir uygulama olup olmadığını anlamına gelir. bir <xref:System.Windows.Controls.TextBox> verilere bağlı ile <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> özelliği, denetimine yazdığınız metnin <xref:System.Windows.Controls.TextBox> kadar kaynak güncelleştirmez <xref:System.Windows.Controls.TextBox> odağı kaybettiğinde (örneğin tıkladığınızda liste kutusundan <xref:System.Windows.Controls.TextBox>).  
   
- Siz yazarken güncelleştirilmesi kaynak istiyorsanız ayarlayın <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamanın <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Aşağıdaki örnekte, kod vurgulanan satırlar, Göster `Text` her ikisi de özelliklerini <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBlock> aynı kaynak özelliğe bağlıdır. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği <xref:System.Windows.Controls.TextBox> bağlama ayarlanmış <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
+ Siz yazarken güncelleştirilecek kaynak istiyorsanız ayarlayın <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamanın <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Kod vurgulanan satırları aşağıdaki örnekte, gösteren `Text` özelliklerinin her ikisi de <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBlock> aynı kaynak özelliğine bağlıdır. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği <xref:System.Windows.Controls.TextBox> bağlama ayarlandığında <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
  [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
- Sonuç olarak, <xref:System.Windows.Controls.TextBlock> (kaynak değiştiğinden) metne kullanıcının girdiği aynı metni gösterir <xref:System.Windows.Controls.TextBox>örnek aşağıdaki ekran görüntüsü tarafından gösterildiği gibi:  
+ Sonuç olarak, <xref:System.Windows.Controls.TextBlock> (kaynak değiştiğinden dolayı) kullanıcının girdiği metin olarak aynı metni gösterir <xref:System.Windows.Controls.TextBox>tarafından örnek aşağıdaki ekran görüntüsünde gösterildiği gibi:  
   
- ![Basit veri bağlama örnek ekran görüntüsü](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Basit veri bağlama örnek ekran görüntüsünde](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
- Bir iletişim kutusu veya kullanıcı tarafından düzenlenebilir bir forma sahip ve kullanıcı alanları düzenleme tamamlandı ve "Tamam" seçeneğine tıklar kadar kaynak güncelleştirmelerinin erteleneceği istediğiniz, ayarlayabileceğiniz <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamaları için değerini <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, aşağıdaki örnekte olduğu gibi:  
+ Bir iletişim kutusu veya kullanıcı tarafından düzenlenebilir bir forma sahip ve kullanıcı alanları düzenleme bitti ve "Tamam" a tıklayarak kadar kaynak güncelleştirmelerinin erteleneceği istediğiniz, ayarlayabileceğiniz <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamalarınızı için değerini <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, aşağıdaki örnekte olduğu gibi:  
   
  [!code-xaml[UpdateSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
   
- Ayarladığınızda <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değeri <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, uygulama çağırdığında kaynak değeri yalnızca değiştirir <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> yöntemi. Aşağıdaki örnekte nasıl çağrılacağını gösterir <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> için `itemNameTextBox`:  
+ Ayarladığınızda <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, uygulama çağırdığında kaynak değeri yalnızca değişiklikleri <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> yöntemi. Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> için `itemNameTextBox`:  
   
  [!code-csharp[UpdateSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
  [!code-vb[UpdateSource#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
   
 > [!NOTE]
->  Diğer denetimlerin özellikleri için aynı yöntemleri kullanabilirsiniz, ancak diğer özelliklerin çoğu varsayılan olduğunu aklınızda bulundurun <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Daha fazla bilgi için bkz: <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özellik sayfası.  
+>  Diğer denetimlerin özelliklerini açma için aynı tekniği, ancak diğer özelliklerin çoğu varsayılan olduğunu aklınızda bulundurun <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Daha fazla bilgi için <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özellik sayfası.  
   
 > [!NOTE]
->  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği kaynak güncelleştirmeleri ile ilgilenir ve bu nedenle yalnızca ilgili <xref:System.Windows.Data.BindingMode.TwoWay> veya <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlar. İçin <xref:System.Windows.Data.BindingMode.TwoWay> ve <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlamalarının çalışması için özellik değişikliği bildirimlerini sağlaması kaynak nesnesi gerekiyor. Daha fazla bilgi için bu konudaki bildirdi örnekleri başvurabilirsiniz. Ayrıca, bakabilirsiniz [uygulama özellik değişikliği bildirimi](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+>  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği kaynak güncelleştirmeleriyle ilgilenir ve bu nedenle yalnızca ilgili <xref:System.Windows.Data.BindingMode.TwoWay> veya <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlar. İçin <xref:System.Windows.Data.BindingMode.TwoWay> ve <xref:System.Windows.Data.BindingMode.OneWayToSource> çalışmak için özellik değişikliği bildirimleri sağlamak için kaynak nesnesi gereksinimlerini bağlamalar. Daha fazla bilgi için bu konuda bahsedilen örnekleri başvurabilirsiniz. Ayrıca, bakabilirsiniz [özellik değişikliği bildirimi uygulama](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

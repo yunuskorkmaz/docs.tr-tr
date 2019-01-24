@@ -8,12 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7db55dd9d2ca79342cadb2320d08ca9235223def
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671861"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;ayarları&gt; öğesi (ağ ayarları)
 Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWithType> ad alanı.  
@@ -26,13 +26,13 @@ Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWi
   
 ```xml  
 <settings>  
-  <httpListener> … </httpListener>  
-  <httpWebRequest> … </httpWebRequest>  
-  <ipv6> … </ipv6>  
-  <performanceCounters> … </performanceCounters>  
-  <servicePointManager> … </servicePointManager>  
-  <socket> … </socket>  
-  <webProxyScript> … </webProxyScript>  
+  <httpListener>...</httpListener>  
+  <httpWebRequest>...</httpWebRequest>  
+  <ipv6>...</ipv6>  
+  <performanceCounters>...</performanceCounters>  
+  <servicePointManager>...</servicePointManager>  
+  <socket>...</socket>  
+  <webProxyScript>...</webProxyScript>  
 </settings>  
 ```  
   
@@ -65,6 +65,6 @@ Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWi
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

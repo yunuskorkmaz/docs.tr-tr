@@ -2,16 +2,10 @@
 title: Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
 ms.date: 07/20/2015
 helpviewer_keywords:
-- My namespace [Visual Basic], customizing
-- My namespace
-- My namespace [Visual Basic], extending
+  - 'My namespace [Visual Basic], customizing'
+  - My namespace
+  - 'My namespace [Visual Basic], extending'
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083539"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
 Ek sağlamak için proje şablonları özelleştirebilirsiniz `My` nesneleri. Bu, nesneleri bulup diğer geliştiriciler için kolaylaştırır.  
@@ -45,5 +39,5 @@ Ek sağlamak için proje şablonları özelleştirebilirsiniz `My` nesneleri. Bu
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  Açıklar `My` ilgili geçerli uygulamaya özellikleri, yöntemleri ve olayları sağlayan nesne.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)

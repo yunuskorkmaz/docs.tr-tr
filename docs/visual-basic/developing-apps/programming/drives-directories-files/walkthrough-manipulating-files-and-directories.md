@@ -15,14 +15,14 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: ab1c119d2c5cd9bfa0ff725774144bc65817cad4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709737"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme
 Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu listeler ve bir dizinde metin dosyaları inceler, küçük bir uygulamanın nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya öznitelikleri ve içeriğindeki birinci satırın uygulama sağlar. Bir günlük dosyasına yazmak için bir seçenek yoktur.  
   
  Bu izlenecek yolda üyeleri kullanan `My.Computer.FileSystem Object`, Visual Basic'te kullanılabilir olduğu. Daha fazla bilgi edinmek için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>. İzlenecek yol sonunda sınıflarını kullanan eşdeğer bir örnek sağlanır <xref:System.IO> ad alanı.  
@@ -33,7 +33,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 1.  Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
   
-     **Yeni proje** iletişim kutusu görüntülenir.  
+     **Yeni Proje** iletişim kutusu görünür.  
   
 2.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic**ve ardından **Windows**. İçinde **şablonları** Orta tıklayarak bölmesinde **Windows Forms uygulaması**.  
   
@@ -159,8 +159,8 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
- [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IO>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
+- [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

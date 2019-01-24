@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e0c2764f96a2592ad0a4dfe5caa46536373eb80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 81b16f7e4f216d1879c57dfb2dc2bfb1e1191aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683342"
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
@@ -105,7 +105,7 @@ ms.locfileid: "47193284"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(Statik özelliği) <xref:System.Windows.Automation.AutomationElement> Giriş odağı olan.|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Statik özelliği) Kök <xref:System.Windows.Automation.AutomationElement>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

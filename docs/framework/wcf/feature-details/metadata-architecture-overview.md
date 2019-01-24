@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664206"
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı aktarma, yayımlama, alma ve zengin bir altyapı sağlar. WCF hizmetleri, böylece Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturmak hizmet uç noktaları ile etkileşim kurmayı açıklamak için meta verileri kullanın.  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı akt
 > [!CAUTION]
 > Uygulama yapılandırma dosyanızda bir MEX uç nokta ekleyin ve ekleme denemesi <xref:System.ServiceModel.Description.ServiceMetadataBehavior> kod, hizmet ana bilgisayar için şu özel durum alın:  
 >
-> System.InvalidOperationException: Sözleşme adı 'IMetadataExchange' Service1 hizmeti tarafından uygulanan sözleşmelerin listesinde bulunamadı. Yapılandırma dosyası veya doğrudan bu sözleşme desteğini etkinleştirmek için ServiceHost bir ServiceMetadataBehavior ekleyin.  
+> System.InvalidOperationException: Sözleşme Adı 'IMetadataExchange' Service1 hizmeti tarafından uygulanan sözleşmelerin listesinde bulunamadı. Yapılandırma dosyası veya doğrudan bu sözleşme desteğini etkinleştirmek için ServiceHost bir ServiceMetadataBehavior ekleyin.  
 >
 > Ya da ekleyerek bu sorunu geçici olarak çözmek <xref:System.ServiceModel.Description.ServiceMetadataBehavior> yapılandırma dosyası veya her iki uç nokta ekleme ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior> kod.  
 >
@@ -87,12 +87,12 @@ Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı akt
 ## <a name="dynamic-bindings"></a>Dinamik bağlama  
  Uç nokta için bağlama değişiklikleri olay, hizmet uç noktası için bir kanal oluşturmak için kullandığınız bağlama dinamik olarak güncelleştir veya aynı anlaşmaya kullanan, ancak farklı bir bağlama sahip bir uç nokta için bir kanal oluşturmak istiyorsunuz. Kullanabileceğiniz <xref:System.ServiceModel.Description.MetadataResolver> almak ve çalışma zamanında belirli sözleşmesini uygulama hizmet uç noktaları için meta verileri içeri aktarmak için statik sınıf. Daha sonra içeri aktarılan kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> nesneleri istenen uç noktası için bir istemci veya kanal fabrikası oluşturursunuz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description>  
- [Meta Veri Biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [Meta Verileri Dışarı ve İçeri Aktarma](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Meta Verileri Alma](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description>
+- [Meta Veri Biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [Meta Verileri Dışarı ve İçeri Aktarma](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [Meta Verileri Alma](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

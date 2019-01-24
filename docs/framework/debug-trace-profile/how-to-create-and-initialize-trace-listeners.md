@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma'
+title: 'Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583109"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma
-<xref:System.Diagnostics.Debug?displayProperty=nameWithType> Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıfları almak ve bu iletileri işleyen dinleyicileri olarak adlandırılan nesnelere ileti gönderme. Bu tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, otomatik olarak oluşturulur ve izleme veya hata ayıklama etkinleştirildiğinde başlatıldı. İsterseniz <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.Debug> herhangi bir ek kaynağına yönlendirilmesi için çıktı, oluşturmalı ve ek izleme dinleyicileri başlatılamıyor.  
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma
+<xref:System.Diagnostics.Debug?displayProperty=nameWithType> Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıfları almak ve bu iletileri işleyen dinleyicileri adlı nesnelere iletiler gönderir. Tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, otomatik olarak oluşturulur ve izleme ya da hata ayıklama etkin olduğunda başlatılır. İsterseniz <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.Debug> herhangi bir ek kaynaklar için yönlendirilmesine çıktısını oluşturmalı ve ek izleme dinleyicileri başlatır.  
   
- Oluşturduğunuz dinleyicileri uygulamanızın gereksinimlerine yansıtmalıdır. Örneğin, metin kaydı tüm izleme çıktısını istiyorsanız, oluşturun bir <xref:System.Diagnostics.TextWriterTraceListener> dinleyici etkinleştirildiğinde, tüm çıktı yeni bir metin dosyasına yazar. Diğer taraftan, yalnızca uygulama yürütmesi sırasında çıktı görüntülemek istiyorsanız, oluşturma bir <xref:System.Diagnostics.ConsoleTraceListener> tüm çıkış konsol penceresine yönlendirir dinleyicisi. <xref:System.Diagnostics.EventLogTraceListener> İzleme çıktısı için bir olay günlüğüne yönlendirebilirsiniz. Daha fazla bilgi için bkz: [izleme dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
+ Oluşturduğunuz dinleyicileri, uygulamanızın ihtiyaçlarına yansıtmalıdır. Örneğin, bir metin kayıt tüm izleme çıkışı istiyorsanız, oluşturun bir <xref:System.Diagnostics.TextWriterTraceListener> dinleyicisi etkinleştirildiğinde, tüm çıktı yeni bir metin dosyasına yazar. Öte yandan, yalnızca uygulama yürütme sırasında çıkış görüntülemek istiyorsanız, oluşturun bir <xref:System.Diagnostics.ConsoleTraceListener> dinleyici, tüm çıkış için bir konsol penceresi yönlendirir. <xref:System.Diagnostics.EventLogTraceListener> Bir olay günlüğüne izleme çıkış yönlendirebilir. Daha fazla bilgi için [izleme dinleyicilerine](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
- İzleme dinleyicileri oluşturabileceğiniz bir [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) ya da kodunuzdaki. Eklemek, değiştirmek veya iz dinleyicileri kodunuzu değiştirmek zorunda kalmadan kaldırmanıza izin vermek için uygulama yapılandırma dosyaları, kullanılmasını öneririz.  
+ İzleme dinleyicilerine içinde oluşturduğunuz bir [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) ya da kodunuzda. Ekleme, değiştirme veya kodunuzu değiştirmek zorunda kalmadan izleme dinleyicilerine kaldırmanıza olanak tanıdığı uygulama yapılandırma dosyaları, kullanılmasını öneririz.  
   
-### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Oluşturma ve yapılandırma dosyası kullanarak bir izleme dinleyicisi kullanma  
+### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Oluşturma ve yapılandırma dosyası kullanarak izleme dinleyicisi  
   
-1.  Uygulama yapılandırma dosyanızda, İzleme dinleyicisi bildirin. Oluşturmakta olduğunuz dinleyicisi diğer nesneleri gerektiriyorsa, bunları da bildirin. Aşağıdaki örnek olarak adlandırılan bir dinleyici oluşturulacağını gösterir `myListener` metin dosyasına yazar `TextWriterOutput.log`.  
+1.  Uygulama yapılandırma dosyasında, İzleme dinleyicisi bildirin. Oluşturmakta olduğunuz dinleyici diğer nesneler gerektiriyorsa, bunları da bildirin. Aşağıdaki örnekte adlı bir dinleyici oluşturma işlemi gösterilmektedir `myListener` metin dosyasına yazar `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "33389206"
     </configuration>  
     ```  
   
-2.  Kullanım <xref:System.Diagnostics.Trace> kodunuzda izleme dinleyicileri bir ileti yazmak için sınıf.  
+2.  Kullanım <xref:System.Diagnostics.Trace> izleme dinleyicilerine ileti yazmak için kodunuzda sınıfı.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  
@@ -58,9 +58,9 @@ ms.locfileid: "33389206"
     Trace.Flush();  
     ```  
   
-### <a name="to-create-and-use-a-trace-listener-in-code"></a>Oluşturma ve İzleme dinleyicisi kod içinde kullanma  
+### <a name="to-create-and-use-a-trace-listener-in-code"></a>Oluşturma ve İzleme dinleyicisi kodda kullanma  
   
--   İzleme dinleyicisi eklemek <xref:System.Diagnostics.Trace.Listeners%2A> izleme dinleyicileri için bilgi toplama ve Gönder.  
+-   İzleme dinleyicisi için ekleme <xref:System.Diagnostics.Trace.Listeners%2A> izleme dinleyicilerine bilgi toplama ve Gönder.  
   
     ```vb  
     Trace.Listeners.Add(New TextWriterTraceListener("TextWriterOutput.log", "myListener"))  
@@ -78,7 +78,7 @@ ms.locfileid: "33389206"
   
      - veya -  
   
--   İzleme çıktısını almak için dinleyici istemiyorsanız, kendisine eklemeyin <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonu. Bağımsız bir dinleyici aracılığıyla çıktı yayma <xref:System.Diagnostics.Trace.Listeners%2A> dinleyicisi 's kendi çağırarak koleksiyon yöntemleri çıktı. Aşağıdaki örnek, kullanımda olmayan bir dinleyici için bir satır yazmak gösterilmiştir <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonu.  
+-   Dinleyicinize izleme çıkışını almak istemiyorsanız, kendisine eklemeyin <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonu. Bağımsız bir dinleyici çıkışını yayar <xref:System.Diagnostics.Trace.Listeners%2A> dinleyicinin kendi çağırarak koleksiyon çıkış yöntemleri. Aşağıdaki örnek, bir çizgi olmayan bir dinleyici için yazma işlemi gösterilmektedir <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonu.  
   
     ```vb  
     Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")  
@@ -94,8 +94,8 @@ ms.locfileid: "33389206"
     myListener.Flush();  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

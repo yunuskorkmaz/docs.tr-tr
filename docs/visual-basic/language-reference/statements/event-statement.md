@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653625"
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -117,15 +117,15 @@ End Event
 > [!NOTE]
 >  `My.Application.DoEvents` Yöntemi olayları form mu aynı şekilde işlemez. Doğrudan olaylarını işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [yönetilen iş parçacığı](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler Deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Nasıl Yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Nasıl Yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler Deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Nasıl yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Nasıl yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706332"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL Metodu
-Bu belge için Tekdüzen Kaynak Konum Belirleyici (URL) döndürür.  
+Tekdüzen Kaynak Konum Belirleyicisi (URL)'için bu belgeyi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +38,16 @@ HRESULT GetURL(
   
 #### <a name="parameters"></a>Parametreler  
  `cchUrl`  
- [in] Karakter, boyutu, `szURL` arabellek.  
+ [in] Karakter cinsinden boyutu, `szURL` arabellek.  
   
  `pcchUrl`  
  [out] Bir işaretçi bir değişkene null sonlandırma dahil olmak üzere URL'yi boyutunu alır.  
   
  `szUrl`  
- [out] URL'sini içeren arabelleği.  
+ [out] URL'sini içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

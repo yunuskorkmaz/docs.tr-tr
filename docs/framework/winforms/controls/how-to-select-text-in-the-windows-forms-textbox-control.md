@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme'
+title: 'Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 8fd1cfb0764d16b86cd639d8266d1cceff874932
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649420"
 ---
-# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme
-Windows Forms'ta program aracılığıyla metin seçebilirsiniz <xref:System.Windows.Forms.TextBox> denetim. Örneğin, belirli bir dizenin metni arar işlevi oluşturursanız, görsel olarak bulunan dizesinin konumu okuyucu uyarı metne seçebilirsiniz.  
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç
+Windows Forms'ta program aracılığıyla metin seçebilirsiniz <xref:System.Windows.Forms.TextBox> denetimi. Örneğin, belirli bir dizenin metnini arayan bir işlev oluşturma, görsel olarak bulunan dizenin konumu okuyucu uyarı metni seçebilirsiniz.  
   
 ### <a name="to-select-text-programmatically"></a>Program aracılığıyla metni seçmek için  
   
-1.  Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> seçmek istediğiniz metnin başına özelliğine.  
+1.  Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> özellik başına seçmek istediğiniz metin.  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Özellik metin dizesi içinde ekleme noktasını belirten bir sayı, 0 ile en solundaki konumu bırakılıyor. Varsa <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> özelliği ayarlanmış değerine eşit veya daha fazla karakter metin kutusuna, ekleme noktasını son karakter sonra yerleştirilir.  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Özelliği metin dizesinin içinde ekleme noktasını gösteren bir sayı ise, en soldaki konumu 0 ile oluşturuluyor. Varsa <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> özelliği ayarlanmışsa değerine eşit veya bundan karakter sayısından metin kutusuna, ekleme noktasının son karakterden sonra yerleştirilir.  
   
 2.  Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> özelliğini seçmek istediğiniz metnin uzunluğu.  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Ekleme noktasını genişliğini ayarlar sayısal bir değeri bir özelliktir. Ayar <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> bu seçilecek karakter sayısı 0 neden olan daha büyük bir sayı geçerli ekleme noktasından başlatılıyor.  
+     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Noktasını genişliğini ayarlar sayısal bir değer bir özelliktir. Ayarı <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> , seçilecek karakter sayısı 0 neden olan daha büyük bir sayı geçerli ekleme noktasından başlatılıyor.  
   
-3.  (İsteğe bağlı) Seçili metni üzerinden erişim <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> özelliği.  
+3.  (İsteğe bağlı) Seçili metni aracılığıyla erişim <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> özelliği.  
   
-     Bir metin içeriğini seçer aşağıdaki kodu kutusunu denetimin <xref:System.Windows.Forms.Control.Enter> olayı oluşur. Bu örnek metin kutusu için bir değer olup olmadığını denetler <xref:System.Windows.Forms.TextBox.Text%2A> olmayan özellik `null` ya da boş bir dize. Metin kutusu odağı aldığında, metin kutusuna geçerli metin seçilir. `TextBox1_Enter` Olay işleyicisi bağlı denetimi; daha fazla bilgi için bkz: [nasıl yapılır: olay işleyicileri oluşturma çalıştırma süresi için Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Bir metin içeriğini seçer aşağıdaki kodu kutusunu denetimin <xref:System.Windows.Forms.Control.Enter> olayı oluşur. Bu örnekte, metin kutusu için bir değer olup olmadığını denetler <xref:System.Windows.Forms.TextBox.Text%2A> olmayan özellik `null` ya da boş bir dize. Geçerli metin metin kutusundaki metin kutusu odağı aldığında seçilir. `TextBox1_Enter` Olay işleyicisi bağlı denetime; daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Bu örnekte test etmek için metin kutusunun odaklanmış kadar SEKME tuşuna basın. Metin kutusuna tıklayın, metin seçilmemiş demektir.  
+     Bu örnekte test etmek için metin kutusu odağı sahip oluncaya kadar SEKME tuşuna basın. Metin kutusuna tıklayın, metin seçilmemiş demektir.  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -67,12 +67,12 @@ Windows Forms'ta program aracılığıyla metin seçebilirsiniz <xref:System.Win
     }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.TextBox>  
- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Nasıl yapılır: Dizeye Tırnak İşaretleri Koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.TextBox>
+- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde ekleme noktasını belirleme](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Nasıl yapılır: Dizeye tırnak işaretleri koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

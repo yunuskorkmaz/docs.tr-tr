@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme'
+title: 'Nasıl yapılır: Bir ToolBar denetimine düğme ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711557"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Nasıl yapılır: Bir ToolBar denetimine düğme ekleme
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ToolBar> kontrol; ancak, <xref:System.Windows.Forms.ToolBar> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+>  <xref:System.Windows.Forms.ToolStrip> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ToolBar> denetler; ancak, <xref:System.Windows.Forms.ToolBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
- Bütünleyici <xref:System.Windows.Forms.ToolBar> denetimidir ona eklediğiniz düğmeler. Bunlar, menü komutlarını kolay erişim sağlamak için kullanılabilir veya alternatif olarak, bunlar menü yapısındaki kullanılabilir değil, kullanıcılarınıza komutları kullanıma sunmak için uygulamanızın kullanıcı arabiriminin bir diğer alan yerleştirilebilir.  
+ En önemli parçalarından biri <xref:System.Windows.Forms.ToolBar> ona eklediğiniz düğmeler denetimidir. Bunlar, menü komutlarını kolay erişim sağlamak için kullanılabilir veya alternatif olarak, bunlar başka bir alanda komutları menüsü yapısı içinde kullanılabilir değil, kullanıcılarınıza göstermek için uygulamanızın kullanıcı arabiriminin yerleştirilebilir.  
   
- Aşağıdaki örnekleri bir <xref:System.Windows.Forms.ToolBar> denetimi için Windows formu eklendi (`Form1`).  
+ Aşağıdaki örnekleri bir <xref:System.Windows.Forms.ToolBar> Windows Form denetimi eklendi (`Form1`).  
   
-### <a name="to-add-buttons-programmatically"></a>Düğmeleri programlı olarak eklemek için  
+### <a name="to-add-buttons-programmatically"></a>Program aracılığıyla düğme eklemek için  
   
 1.  Bir yordamda ekleyerek araç çubuğu düğmelerini oluşturma <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> koleksiyonu.  
   
-2.  Bireysel bir düğme için özellik ayarları aracılığıyla düğmenin dizin geçirerek belirtmek <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği.  
+2.  Tek bir düğme için özellik ayarları aracılığıyla düğmenin dizin geçirerek belirtin <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği.  
   
-     Aşağıdaki örnek bir formla varsayar bir <xref:System.Windows.Forms.ToolBar> denetimi zaten eklendi.  
+     Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.ToolBar> denetim zaten eklendi.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Koleksiyonu kodu buna göre devam etmemelisiniz sıfır tabanlı bir koleksiyon olduğundan.  
+    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Koleksiyondur sıfır tabanlı bir koleksiyon için kod buna göre devam etmelisiniz.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527108"
        }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ToolBar>  
- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar Denetimi](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ToolBar>
+- [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [ToolBar Denetimi](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

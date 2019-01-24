@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d154985e9c1614e6b8f13a55410ead0cb5e861b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719943"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions Numaralandırması
 Meta veri bağlayıcı seçeneklerini seçmek için bayrakları belirtir.  
@@ -39,15 +39,15 @@ typedef enum CorLinkerOptions {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDAssembly`|Özel türler ve genel işlevler korunmaz.|  
-|`MDNetModule`|Özel türler ve genel işlevler korunur.|  
+|`MDAssembly`|Özel türleri ve genel işlevler korunmaz.|  
+|`MDNetModule`|Özel türleri ve genel işlevler korunur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

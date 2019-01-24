@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676854"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu formlarda bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilen tüm denetimler içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
@@ -23,7 +23,7 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
  Tarih, saat, para birimi ve diğer bilgileri ile bir uygulamanın nasıl çalıştığını, kültür ve UI kültür ayarları belirleyin. Diğer diller için olduğu gibi kültür ve kullanıcı Arabirimi kültürünü desteği çift yönlü diller için aynıdır.   Ayrıca bkz: [genel Windows Formları ve Web formları için kültüre özgü sınıflar](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) veya [genel Windows Formları ve Web formları için kültüre özgü sınıflar](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft ve RightToLeftLayout özellikleri  
- Temel <xref:System.Windows.Forms.Control> forms türettiğiniz, sınıfı içeren bir <xref:System.Windows.Forms.Control.RightToLeft%2A> form denetimlerini ve okuma düzenini değiştirmek için ayarlayabileceğiniz özelliği. Formun ayarlarsanız <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği, varsayılan form üzerinde denetimleri tarafından devralınan bu ayarı. Ancak, aynı zamanda ayarlayabileceğiniz <xref:System.Windows.Forms.Control.RightToLeft%2A> çoğu denetimlerinde Tek tek özellik. Ayrıca bkz: [nasıl yapılır: Windows Forms Genelleştirme için görünen sağdan sola metin](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Temel <xref:System.Windows.Forms.Control> forms türettiğiniz, sınıfı içeren bir <xref:System.Windows.Forms.Control.RightToLeft%2A> form denetimlerini ve okuma düzenini değiştirmek için ayarlayabileceğiniz özelliği. Formun ayarlarsanız <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği, varsayılan form üzerinde denetimleri tarafından devralınan bu ayarı. Ancak, aynı zamanda ayarlayabileceğiniz <xref:System.Windows.Forms.Control.RightToLeft%2A> çoğu denetimlerinde Tek tek özellik. Ayrıca bkz: [nasıl yapılır: Görüntüleme sağdan sola metin Windows Forms Genelleştirme için](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  Etkisini <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği bir denetimden diğerine gösterebileceğini. Bazı denetimler özelliği yalnızca okuma düzeni olarak ayarlar <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ToolTip> kontrol eder. Diğer denetimlerde <xref:System.Windows.Forms.Control.RightToLeft%2A> okuma düzeni hem Düzen özelliğini değiştirir. Bu içerir <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.CheckBox> kontrol eder. Diğer denetimleri gerektiren <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> özelliği, sağdan sola düzenini yansıtmak için uygulanabilir. Aşağıdaki tabloda Ayrıntılar üzerinde nasıl sağlar <xref:System.Windows.Forms.Control.RightToLeft%2A> ve <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> özellikleri ayrı ayrı Windows Forms denetimlerini etkiler.  
   
@@ -78,7 +78,7 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
 |<xref:System.Windows.Forms.UserControl>|Sol taraftaki dikey kaydırma çubuğu görünür; Yatay kaydırma çubuğu sağ tarafta thumb sahiptir.|Doğrudan destek yok; kullanan bir <xref:System.Windows.Forms.TableLayoutPanel>|Hayır|  
 |<xref:System.Windows.Forms.VScrollBar>|Sol tarafta kaydırılabilir denetimleri sağ tarafında yerine görüntülenir|Herhangi bir etkisi|Hayır|  
   
-## <a name="encoding"></a>Kodlama  
+## <a name="encoding"></a>Encoding  
  Windows Forms Unicode desteğini, çift yönlü uygulamalarınızı oluşturduğunuzda herhangi bir karakter içerebilir. Ancak, tüm Windows Forms denetimleri, tüm platformlarda Unicode'u destekler. Daha fazla bilgi için [kodlama ve Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
@@ -119,5 +119,5 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[ASP.NET Web uygulamaları için çift yönlü destek](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)
+- [ASP.NET Web uygulamaları için çift yönlü destek](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)

@@ -2,19 +2,19 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 1978c898039a6ff9ab3303427951c214cde96e24
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5180b8866d8b0155a8683ab9cb6135c26f696929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734993"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 Özel eş Çözücü hizmetinin ayarlarını belirtir.  
   
 \<system.serviceModel>  
 \<bağlamaları >  
-\<netPeerBinding >  
+\<netPeerBinding>  
 \<bağlama >  
 \<Çözümleyici >  
 \<Özel >  
@@ -55,10 +55,10 @@ ms.locfileid: "54145763"
 ## <a name="remarks"></a>Açıklamalar  
  Bu öğe, hizmet ve herhangi bir özel bağlayıcı ayarları barındıran eş uç nokta adresini de dahil olmak üzere bir özel eş Çözücü hizmetinin temel ayarlarını tanımlar. Bir özel Çözücü oluşturma hakkında daha fazla bilgi için bkz. [PeerChannel'a uygulamaya özel Çözücü ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Bir özel Çözücü PeerChannel'a uygulamaya ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
+- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
+- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
+- [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Bir özel Çözücü PeerChannel'a uygulamaya ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

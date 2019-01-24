@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: sorgu (LINQ) (C#) bir dizedeki karakterleri'
+title: 'Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: c6e5fb14e0be277f53511aaddd362f2f203531e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c577fc2dc2ae07574580f819a6fb51336107dfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665636"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: sorgu (LINQ) (C#) bir dizedeki karakterleri
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)
 Çünkü <xref:System.String> sınıfın uyguladığı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi, bir karakter dizisi herhangi bir dize sorgulanabilir. Ancak, bu yaygın bir LINQ kullanımı değildir. İşlem eşleştirme karmaşık deseni için kullanmak <xref:System.Text.RegularExpressions.Regex> sınıfı.  
   
 ## <a name="example"></a>Örnek  
@@ -57,7 +57,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

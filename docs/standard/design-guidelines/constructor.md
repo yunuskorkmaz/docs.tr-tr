@@ -13,12 +13,12 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: b140be34d9359cfdca1250a924db787563127d19
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722175"
 ---
 # <a name="constructor-design"></a>Oluşturucu tasarımı
 Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazın.  
@@ -80,5 +80,5 @@ Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

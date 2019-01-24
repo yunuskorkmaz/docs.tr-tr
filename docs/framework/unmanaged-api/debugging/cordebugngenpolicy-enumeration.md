@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671232"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy Sabit Listesi
-Bir hata ayıklayıcısı yerel görüntü önbellekten yerel (NGen) görüntüler yükler olup olmadığını belirleyen bir değer sağlar.  
+Bir hata ayıklayıcı yerel görüntü önbelleğinden kaldırırız (NGen) yerel görüntüleri yükleyip yüklemediğini belirleyen bir değer sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +40,19 @@ enum CorDebugNGENPolicy {
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|İçinde bir [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] uygulama, yerel yerel görüntü önbelleği görüntülerden kullanımını devre dışı bırakıldı. Bir masaüstü uygulamasının bu ayarın etkisi yoktur.|  
+|`DISABLE_LOCAL_NIC`|İçinde bir [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] uygulama, görüntüleri yerel görüntü önbelleğinden kullanımını devre dışı bırakıldı. İçinde bir masaüstü uygulaması, bu ayar etkisizdir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugNGENPolicy` Numaralandırması tarafından kullanılan [Icordebugprocess5::enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) yöntemi. Yerel yerel görüntü önbelleği görüntülerden kullanımını devre dışı bırakma, hata ayıklayıcı en iyi duruma getirilmiş yerel görüntüler yerine debuggable JIT derlenmiş görüntüleri yükler sağlayarak için hata ayıklama tutarlı bir deneyim sağlar.  
+ `CorDebugNGENPolicy` Numaralandırması tarafından kullanılan [Icordebugprocess5::enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) yöntemi. Görüntüleri yerel görüntü önbelleğinden kullanımını devre dışı bırakma, hata ayıklayıcı hata ayıklanabilir JIT olarak derlenmiş görüntüleri yerine en iyi duruma getirilmiş yerel görüntüleri yükler sağlayarak için tutarlı bir hata ayıklama deneyimi sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

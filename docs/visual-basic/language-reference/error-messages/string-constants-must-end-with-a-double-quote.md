@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: c195c6892097818f4292f0732c2444644fdcb96a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 499190a711e4092122dbee8c7edfc315daea5432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700275"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Dize sabitleri çift tırnak işaretiyle bitmelidir
-Dize sabitleri başlar ve tırnak işaretiyle bitmelidir.  
+Dize sabitleri başlayıp tırnak işaretiyle bitmelidir.  
   
  **ErrorID:** BC30648  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Dize sabit değeri bir tırnak işareti (") ile biter emin olun. Diğer metin düzenleyicileri değerlerinden yapıştırmak isterseniz, geçerli bir tırnak işareti ve, "Akıllı" veya "süslü" tırnak işaretleri gibi benzer karakterden oluşan bir yapıştırılan karakter olduğundan emin olun ("veya") ya da iki tek tırnak işaretleri (").  
+-   Dize sabit değeri tırnak işaretiyle (") sona erer emin olun. Diğer metin düzenleyiciler değerlerinden yapıştırırsanız, yapıştırılan karakteri geçerli bir tırnak işareti ve, benzer gibi "Akıllı" veya "büyük" tırnak karakterleri biri olduğundan emin olun ("veya") veya iki tek tırnak işaretleri (").  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)

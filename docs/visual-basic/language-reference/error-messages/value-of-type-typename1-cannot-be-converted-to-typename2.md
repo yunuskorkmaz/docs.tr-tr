@@ -1,5 +1,5 @@
 ---
-title: Değer türü &#39; &lt;typename1&gt; &#39; dönüştürülemiyor &#39; &lt;typename2&gt;&#39;
+title: Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 9b3c029ed7bf73ff92dba65438d797b27fa135f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627609"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Değer türü &#39; &lt;typename1&gt; &#39; dönüştürülemiyor &#39; &lt;typename2&gt;&#39;
-Türündeki değeri '\<typename1 >' şekilde dönüştürülemeyen '\<typename2 >'. Tür uyuşmazlığı proje başvurusu derleme dosyası başvurusuyla karıştırılması nedeniyle olabilir '\<assemblyname >'. Dosya başvurusunu değiştirmeyi deneyin '\<filepath >' projesindeki '\<projectname1 >' proje başvuru '\<projectname2 >'.  
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt;&#39;
+Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derleme bir proje başvurusu olan bir dosya başvurusunun karışması tür uyuşmazlığı olabilir '\<assemblyname >'. Dosya başvurusu değiştirmeyi deneyin '\<DosyaYolu >' projesinde '\<projectname1 >' proje başvurusu ile '\<projectname2 >'.  
   
- Burada bir proje proje başvurusu ve bir dosya başvuru yapar bir durumda, bir tür için başka bir dönüştürülebileceğinden derleyici garanti edemez.  
+ Bir proje, hem bir proje başvurusu hem de bir dosya başvurusu burada yapar bir durumda, derleyici bir türden diğerine dönüştürülüp dönüştürülemeyeceği garanti edemez.  
   
- Aşağıdaki sözde kod bu hatayı üreten bir durumu gösterir.  
+ Bu hatayı oluşturan durumu aşağıdaki sözde kod gösterilmiştir.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ Türündeki değeri '\<typename1 >' şekilde dönüştürülemeyen '\<typename2 
   
  `End Class`  
   
- Proje `P1` dolaylı proje başvurusu aracılığıyla projeyi yapar `P2` projesine `P3`ve aynı zamanda doğrudan dosya başvurusu `P3`. Bildirimi `commonObject` dosya başvurusu için kullandığı `P3`, while çağrısı `P2.getCommonClass` proje başvurusu kullanan `P3`.  
+ Proje `P1` bir proje aracılığıyla dolaylı proje başvuru yapar `P2` projesine `P3`ve ayrıca doğrudan bir dosya başvurusu `P3`. Bildirimi `commonObject` dosya başvurur `P3`, while çağrısı `P2.getCommonClass` proje başvurur `P3`.  
   
- Bu durumda dosya başvurusunu bir dosya yolu ve çıkış dosyasının adı belirtir bir sorundur `P3` (genellikle p3.dll) kaynak projesini proje başvuruları tanımlayın sırada (`P3`) proje adıyla. Bu nedenle, derleme, tür garanti edemez `P3.commonClass` iki farklı başvurular aracılığıyla aynı kaynak kodu alanından gelir.  
+ Dosya başvurusu bir dosya yolu ve çıkış dosyasının adını belirtir, bu durum sorun olduğunu `P3` (genellikle p3.dll) kaynak projenin proje başvurularını tanımlamak sırada (`P3`) tarafından proje adı. Bu nedenle, derleyici bu tür garanti edemez `P3.commonClass` aynı kaynak kodunun iki farklı başvuruları ile gelir.  
   
- Bu durum genellikle ortaya başvuruları'ne zaman proje ve başvurulara karma. Önceki çizimde, sorun varsa oluşmaz `P1` doğrudan proje başvurusu yapılan `P3` yerine dosya başvurusu.  
+ Bu durum genellikle ortaya başvurular'ne zaman proje ve dosya başvuruları karma. Önceki çizimde, sorun oluşmaz `P1` doğrudan proje başvurusu yapılan `P3` yerine dosya başvurusu.  
   
  **Hata Kimliği:** BC30955  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Proje başvurusu dosya başvurusunu değiştirin.  
+-   Dosya başvurusu bir proje başvurusu olarak değiştirin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
+

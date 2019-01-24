@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678362"
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve geçersiz bir değer girildiğinde, kullanıcıyı bilgilendirmek üzere görsel geri bildirim sağlamak için bir stil tetikleyicisi dayalı bir özel doğrulama kuralı.  
@@ -37,6 +37,6 @@ Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Control
   
  Özel bir sağlamazsanız unutmayın <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bir doğrulama hatası olmadığında kullanıcıya görsel geribildirim sağlamak için varsayılan hata şablon görüntülenir. "Veri doğrulama" bölümüne bakın [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md) daha fazla bilgi için. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynak özelliği güncelleştirme sırasında oluşturulan özel durumları yakalayan bir yerleşik doğrulama kuralları sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

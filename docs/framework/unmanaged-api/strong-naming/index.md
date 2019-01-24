@@ -2,18 +2,12 @@
 title: Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
 ms.date: 03/30/2017
 helpviewer_keywords:
-- strong naming [.NET Framework], using the unmanaged API
-- native API reference [.NET Framework], strong naming
-- unmanaged API reference [.NET Framework], strong naming
+  - 'strong naming [.NET Framework], using the unmanaged API'
+  - 'native API reference [.NET Framework], strong naming'
+  - 'unmanaged API reference [.NET Framework], strong naming'
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb67e9b9f8f972075a98415de63d50585974823
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193961"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
 Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adlandırma API sağlar.  
@@ -111,6 +105,6 @@ Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adla
  [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Bir ortak/özel anahtar çifti ikili biçimindeki ortak anahtarı temsil eder.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [Yönetilmeyen API Başvurusu](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Yönetilmeyen API Başvurusu](../../../../docs/framework/unmanaged-api/index.md)

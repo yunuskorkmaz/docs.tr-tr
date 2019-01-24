@@ -2,22 +2,22 @@
 title: SQL oluşturma
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: e130fed22b9ea450c848d45195346dc717e63515
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1eb2830d96000e61d62b2fc934cd246df3ad3e0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701514"
 ---
 # <a name="sql-generation"></a>SQL oluşturma
-Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevir gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle için gibi anlayabileceği SQL içine ağaçları komutu. Bu bölümde, için bir SQL oluşturma bileşeni (için SELECT sorgular) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi, güncelleştirme ve sorguları silmek için bkz: [değişikliği SQL üretimi](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
+Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevirme gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle gibi anlayabilmeniz SQL içine ağaçları komutu. Bu bölümde, için SQL oluşturma bileşeni (için SELECT sorgusu) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi için güncelleştirme ve sorguları silmek için bkz [değişiklik SQL oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
   
- Bu bölümde anlamak için aşina olmalısınız [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve ADO.NET sağlayıcısı modeli. Komut ağaçlarını anlamanız gerekir ve <xref:System.Data.Common.CommandTrees.DbExpression>.  
+ Bu bölümde anlamak için aşina olmalısınız [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve ADO.NET sağlayıcısı modeli. Komut ağaçlarının de anlamanız gerekir ve <xref:System.Data.Common.CommandTrees.DbExpression>.  
   
-## <a name="the-role-of-the-sql-generation-module"></a>SQL oluşturma modülü rolü  
- SQL nesil modül, bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcı çevirir verilen sorgu komut ağacındaki bir SQL:1999 hedefleyen bir tek SQL SELECT INTO deyimi-uyumlu veritabanı. Oluşturulan SQL az sayıda sorguları mümkün olduğunca iç içe geçmiş. SQL oluşturma modülü çıkış sorgu komut ağacı basitleştirmek değil. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Bu, örneğin birleştirmeler kaldırarak ve ardışık filtre düğümlerinin daraltma işlemi yapar.  
+## <a name="the-role-of-the-sql-generation-module"></a>SQL üretimi modülü rolü  
+ SQL üretimi modülün bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı bir SQL:1999 hedefleyen bir tek SQL SELECT INTO deyimi belirli sorgu komut ağacı çevirir-uyumlu veritabanı. Oluşturulan SQL kadar az sorguları mümkün olduğunca iç içe. SQL üretimi modülü çıkış sorgu komut ağacı basitleştirin değil. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Örneğin ardışık filtre düğümlerinin daraltma ve birleşimler ortadan kaldırarak bunu.  
   
- <xref:System.Data.Common.DbProviderServices> Sınıfı komutu ağaçlara dönüştürmek için SQL nesil katman erişmek için başlangıç noktasıdır <xref:System.Data.Common.DbCommand>.  
+ <xref:System.Data.Common.DbProviderServices> Sınıftır içine komut ağaçlarını dönüştürmek için SQL oluşturma katmanında erişmek için başlangıç noktası <xref:System.Data.Common.DbCommand>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Komut Ağaçlarının Şekli](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
@@ -26,5 +26,5 @@ Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../incl
   
  [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

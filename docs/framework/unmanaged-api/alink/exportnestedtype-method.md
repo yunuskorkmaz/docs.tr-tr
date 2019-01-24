@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710345"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType Metodu
-İç içe geçmiş türler verilebilir olarak belirtir. [ExportType yöntemi](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) iç içe geçmiş verme türlerini de kullanabilirsiniz, ancak bu daha hızlı bir yöntemdir.  
+İç içe geçmiş türler dışarı aktarılabilir olarak belirtir. [ExportType yöntemi](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) dışarı aktarma iç içe geçmiş türleri de kullanabilirsiniz, ancak bu daha hızlı bir yöntemdir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,16 +46,16 @@ HRESULT ExportNestedType(
  Dışarı aktarmak için derleme kimliği.  
   
  `FileToken`  
- Dosya belirteci veya derleme dosyasının dışa aktarılabilir duruma getirilmek üzere türü tanımlar.  
+ Dosya belirteci veya derleme dosyasının dışarı aktarılabilir hale türünü tanımlar.  
   
  `TypeToken`  
- Dışarı aktarılabilir yapılması türünde belirteç yazın.  
+ Dışarı aktarılabilir hale türünde belirteç türü.  
   
  `ParentType`  
  Üst tür belirteci.  
   
  `pszTypename`  
- Dışarı aktarmak için tam olarak nitelenmiş tür adı.  
+ Dışarı aktarmak için tam nitelikli tür adı.  
   
  `dwFlags`  
  `ComType` gibi bayrakları `tdPublic` veya `tdNested`. Bu değer için geçirilebilir [DefineExportedType yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
@@ -69,7 +69,7 @@ HRESULT ExportNestedType(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

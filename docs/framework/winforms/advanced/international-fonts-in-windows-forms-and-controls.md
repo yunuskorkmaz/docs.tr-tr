@@ -1,5 +1,5 @@
 ---
-title: Windows Forms ve denetimlerin uluslararası yazı tipleri
+title: Windows formlar ve denetimler uluslararası yazı tipleri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: b2738f174c9837a2ba83c1306f4617f39ce17de1
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693246"
 ---
-# <a name="international-fonts-in-windows-forms-and-controls"></a>Windows Forms ve denetimlerin uluslararası yazı tipleri
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Windows formlar ve denetimler uluslararası yazı tipleri
 
-Uluslararası uygulamalarda yazı tipleri seçme önerilen yöntem yazı tipi geri dönüşü mümkün olduğunda kullanmaktır. Ait ne karakter komut dosyası sistemini belirler yazı tipi geri dönüş anlamına gelir.
+Uluslararası uygulamalar, yazı tiplerini seçme önerilen yöntem yazı tipi geri dönüşü mümkünse kullanmaktır. Ait neler karakterle betik sistemi belirler yazı tipi geri dönüş anlamına gelir.
 
-## <a name="using-font-fallback"></a>Yazı tipi geri dönüşü kullanma
+## <a name="using-font-fallback"></a>Yazı tipi geri dönüş kullanma
 
-Bu özelliğin avantajlarından yararlanmak için ayarlamazsanız <xref:System.Drawing.Font> formunuz veya başka bir öğenin özellik. Uygulama, işletim sisteminin bir yerelleştirilmiş dilden diğerine farklı varsayılan sistem yazı otomatik olarak kullanır. Uygulama çalıştığında, sistem doğru yazı tipi işletim sisteminde seçilen kültür için otomatik olarak sağlar.
+Bu özelliğin avantajlarından yararlanmak için ayarlamamanız <xref:System.Drawing.Font> formunuza veya başka bir öğenin özellik. Uygulama, işletim sisteminin bir yerelleştirilmiş dilden diğerine farklılık gösterir. varsayılan sistem yazı otomatik olarak kullanacak. Uygulama çalışırken, sistemin doğru yazı tipi işletim sisteminin seçili kültür için otomatik olarak sağlar.
 
-Yazı tipi stilini değiştirmek için yazı tipi ayarı bulunamadı, kural için bir özel yoktur. Bu, kullanıcı bir düğme kalın olarak bir metin kutusundaki metin görünür yapmak için bir uygulama için önemli olabilir. Bunu yapmak için kalın, metin kutusunun yazı tipi stilini değiştirmek için bir işlev ne olursa olsun formun yazı tipi temel alınarak yazarsınız. İki yerde bu işlevi çağırmak önemlidir: düğmenin içinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve <xref:System.Windows.Forms.Control.FontChanged> olay işleyicisi. İşlevi yalnızca çağrıldıysa <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve bazı diğer kod parçası, formun tamamı yazı tipi ailesi değiştirir, metin kutusuna form geri kalanı ile değiştirmez.
+Yazı tipi stilini değiştirmek için yazı tipi ayarlanmaması, kural için bir özel yoktur. Bu, kullanıcı kalın yazı tipinde metin kutusunda metnin görünmesini sağlamak için bir düğmeye tıkladığında bir uygulama için önemli olabilir. Bunu yapmak için hangi formun yazı tipi bağlı kalın için metin kutusunun yazı tipi stilini değiştirmek için bir işlev yazmalısınız. İki yerde bu işlevi çağırmak önemlidir: düğmenin içinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve <xref:System.Windows.Forms.Control.FontChanged> olay işleyicisi. İşlev çağrılırsa yalnızca <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve bazı bir kod parçası, formun tamamını yazı tipi ailesini değiştirir, metin kutusuna form geri kalanı ile değiştirmez.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Ancak, uygulamanızı yerelleştirme sırasında kalın yazı tipiyle kötü belirli diller görüntüleyebilir. İlgili bir sorun varsa, normal metne kalın gelen yazı tipini değiştirme seçeneğiniz çevirmenler istiyorsunuz. Çevirmenler genelde geliştiricilerinin değildir ve kaynak kodu erişiminiz yok olduğundan, kaynak dosyaları için yalnızca bu seçenek kaynak dosyalarında ayarlanması gerekir. Bunu yapmak için ayarlamalısınız <xref:System.Drawing.Font.Bold%2A> özelliğine `true`. Bu, kaynak dosyaları nerede çevirmenler düzenleyebilirsiniz, yazılmakta yazı tipi ayarı sonuçlanır. Ardından koddan sonra Yazma `InitializeComponent` yazı tipi sıfırlama yöntemi temel ne olursa olsun formun yazı tipi açıktır, ancak kaynak dosyasında belirtilen yazı tipi stilini kullanarak.
+Ancak, uygulamanız yerelleştirdiğiniz zaman kalın yazı tipiyle kötü performans gösteren bazı diller görüntüleyebilir. Bu önemliyse, çevirmenlerin normal metin yazı tipinin kalın'ndan geçiş yapma seçeneğine sahip olmasını istediğiniz. Yerelleştiriciler genellikle geliştiriciler değildir ve kaynak koduna erişiminiz yoksa bu yana, yalnızca kaynak dosyaları için bu seçeneği kaynak dosyalarında ayarlanması gerekir. Bunu yapmak için ayarlarsınız <xref:System.Drawing.Font.Bold%2A> özelliğini `true`. Kaynak dosyaları nerede yerelleştiriciler düzenleyebilirsiniz, yazılan yazı tipi ayarlarını sonuçlanır. Ardından sonra kodu yazdığınız `InitializeComponent` yazı sıfırlamak için gereken yöntemini temel ne olursa olsun formun yazı tipi açıktır, ancak kaynak dosyasında belirtilen yazı tipi stili kullanarak.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,5 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)  
-[Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)
+- [Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)
+- [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)

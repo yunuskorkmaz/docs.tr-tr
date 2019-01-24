@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638112"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS Yapısı
-Ortak dil çalışma zamanı (CLR) atık toplama mekanizmasını ilgili istatistikler sağlar.  
+Ortak dil çalışma zamanı (CLR) çöp toplama mekanizması hakkında istatistikler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,21 +49,21 @@ typedef struct _COR_GC_STATS {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`Flags`|Hangi alan değerlerini hesaplanır ve döndürülen gösterir.|  
-|`ExplicitGCCount`|Dış istek tarafından zorlanan çöp koleksiyonlarının sayısını gösterir.|  
-|`GenCollectionsTaken`|Her oluşturulmasında gerçekleştirilen çöp koleksiyonlarının sayısını gösterir.|  
-|`CommittedKBytes`|Tüm yığın kaydedilen kilobayt toplam sayısı.|  
-|`ReservedKBytes`|Tüm yığın ayrılmış kilobayt toplam sayısı.|  
-|`Gen0HeapSizeKBytes`|Kilobayt cinsinden nesil sıfır yığın boyutu.|  
-|`Gen1HeapSizeKBytes`|Kilobayt cinsinden oluşturma-bir yığın boyutu.|  
-|`Gen2HeapSizeKBytes`|Kilobayt cinsinden nesil iki yığın boyutu.|  
-|`LargeObjectHeapSizeKBytes`|Kilobayt cinsinden büyük nesne yığın boyutu.|  
-|`KBytesPromotedFromGen0`|Nesil biri sıfır kuşaktan yükseltilen nesnelerin kilobayt cinsinden boyutu.|  
-|`KBytesPromotedFromGen1`|Nesil iki kuşaktan bir yükseltilmiş nesnelerin kilobayt cinsinden boyutu.|  
+|`ExplicitGCCount`|Dış istek tarafından zorlanan çöp koleksiyonları sayısını gösterir.|  
+|`GenCollectionsTaken`|Her bir oluşturmada gerçekleştirilen çöp koleksiyonları sayısını gösterir.|  
+|`CommittedKBytes`|Tüm yığınlara kaydedilen kilobayt sayısı.|  
+|`ReservedKBytes`|Tüm yığınlara ayrılmış kilobayt sayısı.|  
+|`Gen0HeapSizeKBytes`|Nesil sıfır yığın kilobayt cinsinden boyutu.|  
+|`Gen1HeapSizeKBytes`|Oluşturma bir yığın kilobayt cinsinden boyutu.|  
+|`Gen2HeapSizeKBytes`|Nesil iki yığın kilobayt cinsinden boyutu.|  
+|`LargeObjectHeapSizeKBytes`|Büyük nesne yığının kilobayt cinsinden boyutu.|  
+|`KBytesPromotedFromGen0`|Oluşturma bir sıfır kuşaktan yükseltilen nesnelerin kilobayt cinsinden boyutu.|  
+|`KBytesPromotedFromGen1`|Oluşturma bir nesle iki yükseltilir nesnelerin kilobayt cinsinden boyutu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) gerektirdiğine `Flags` alanını `COR_GC_STATS` yapısı bir veya daha fazla değerlere ayarlamak için [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) belirtmek için numaralandırması İstatistikleri ayarlanması üzeresiniz.  
+ [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) gerektirdiğine `Flags` alanını `COR_GC_STATS` yapısı bir veya daha fazla değere ayarlanacak [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) belirtmek için sabit listesi Ayarlanacak istatistikleri şunlardır.  
   
- Aşağıdaki tabloda bu iki yapısına tarafından sağlanan istatistikleri eşleyen [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırma değerlerinin `COR_GC_COUNTS` ve `COR_GC_MEMORYUSAGE`.  
+ Aşağıdaki tabloda bu yapı için iki tarafından sağlanan istatistikleri eşler [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırma değerlerinin `COR_GC_COUNTS` ve `COR_GC_MEMORYUSAGE`.  
   
 |COR_GC_COUNTS tarafından belirtilen|COR_GC_MEMORYUSAGE tarafından belirtilen|  
 |----------------------------------|---------------------------------------|  
@@ -78,15 +78,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** GCHost.idl  
+ **Üst bilgi:** GCHost.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)  
- [Atık Toplama](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)
+- [Atık Toplama](../../../../docs/standard/garbage-collection/index.md)

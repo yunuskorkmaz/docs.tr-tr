@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f4c8e9a7ce5eddde18c1266cb724d5c3b0d5f41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621714"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE Yapısı
-Çöp toplama yapılıyor bir bellek aralığı (yani, blok) açıklar.  
+Çöp toplama aşamasında bir bellek aralığı (yani, blok) açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`generation`|Değerini [cor_prf_gc_generatıon](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) bellek bloğu hangi neslini belirten numaralandırma ait.|  
-|`rangeStart`|Bellek bloğu başlangıç konumunu belirten bir nesne kimliği.|  
-|`rangeLength`|Kullanılan bellek bloğu (diğer bir deyişle, bloğu içinde kullanılan bellek miktarı) bölümünü boyutunu belirten bir tamsayı gösteren bir işaretçi.|  
-|`rangeLengthReserved`|(Diğer bir deyişle, blok için ayrılmış bellek miktarı) bellek bloğu boyutu belirten bir tamsayı gösteren bir işaretçi.|  
+|`generation`|Değerini [cor_prf_gc_generatıon](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) ait nesli olan bellek bloğunu belirten sabit listesi.|  
+|`rangeStart`|Bellek bloğunu başlangıç konumunu belirten bir nesne kimliği.|  
+|`rangeLength`|Kullanılan bellek bloğu (diğer bir deyişle, blok içinde kullanılan bellek miktarı) bölümü boyutunu belirten bir tamsayı işaretçisi.|  
+|`rangeLengthReserved`|(Diğer bir deyişle, blok için ayrılmış bellek miktarı) bellek bloğu boyutunu belirten bir tamsayı işaretçisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rangeLength` Değeri doğru olmasını garanti yalnızca [Icorprofilerınfo2::getgenerationbounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) veya [Icorprofilerınfo2::getobjectgeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), kullanan her ikisi de `COR_PRF_GC_GENERATION_RANGE` Yapı, çağrılır [Icorprofilercallback2::garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) veya [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) yöntemi.  
+ `rangeLength` Değeri doğru olarak garantisi yalnızca [Icorprofilerınfo2::getgenerationbounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) veya [Icorprofilerınfo2::getobjectgeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), hangi kullanım hem de `COR_PRF_GC_GENERATION_RANGE` Yapı, çağrılır [Icorprofilercallback2::garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) veya [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

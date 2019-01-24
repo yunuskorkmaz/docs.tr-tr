@@ -2,15 +2,9 @@
 title: Visual Basic'te Programlama
 ms.date: 07/20/2015
 helpviewer_keywords:
-- programming [Visual Basic], Visual Basic
-- programming
+  - 'programming [Visual Basic], Visual Basic'
+  - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990030"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
 Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi için isteyebilirsiniz programlama görevlerini açıklar.  
@@ -37,8 +31,8 @@ Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi i�
  [Sürücüleri, Dizinleri ve Dosyaları İşleme](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
  Kullanarak dosya sistemini erişim hakkında belgeleri içerir `My.Computer.FileSystem` nesne.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)  
- [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)  
- [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)  
- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)
+- [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)
+- [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)
+- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)

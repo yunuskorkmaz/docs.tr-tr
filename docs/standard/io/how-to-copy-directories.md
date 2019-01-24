@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Dizinleri Kopyalama'
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: Dizinleri kopyalama'
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671076"
 ---
-# <a name="how-to-copy-directories"></a>Nasıl yapılır: Dizinleri Kopyalama
-Bu örnekte, bir dizinin içeriklerini eşzamanlı olarak başka bir konuma kopyalamak için G/Ç sınıflarının nasıl kullanılacağı gösterilir. Bu örnekte, kullanıcı alt dizinlerin de kopyalanıp kopyalanmayacağını belirtebilir. Eğer alt dizinler kopyalanırsa bu örnekteki yöntem, başka bir kopyası kalmayana kadar sonraki her bir alt dizinde kendisini çağırarak yinelemeli olarak bu alt dizinleri kopyalar.  
-  
- Dosyaların eşzamansız kopyalanmasına bir örnek için bkz [zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md).  
+# <a name="how-to-copy-directories"></a>Nasıl yapılır: Dizinleri kopyalama
+Bu konu, bir dizinin içeriklerini eşzamanlı olarak başka bir konuma kopyalanacak g/ç sınıflarını kullanmayı gösterir. 
+
+Zaman uyumsuz dosya kopyalama örneği için bkz: [zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md). 
+
+Bu örnekte ayarlayarak alt dizinleri kopyalar `copySubDirs` , `DirectoryCopy` yönteme `true`. `DirectoryCopy` Kalmayana kadar fazla kopyalamak için kendisini her bir alt dizinde çağırarak yöntemi yinelemeli olarak alt dizinleri kopyalar.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -32,9 +34,9 @@ Bu örnekte, bir dizinin içeriklerini eşzamanlı olarak başka bir konuma kopy
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.FileInfo>  
-- <xref:System.IO.DirectoryInfo>  
-- <xref:System.IO.FileStream>  
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
-- [Ortak G/Ç Görevleri](../../../docs/standard/io/common-i-o-tasks.md)  
-- [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)
+- <xref:System.IO.FileInfo>
+- <xref:System.IO.DirectoryInfo>
+- <xref:System.IO.FileStream>
+- [Dosya ve akış g/ç](../../../docs/standard/io/index.md)
+- [Ortak g/ç görevleri](../../../docs/standard/io/common-i-o-tasks.md)
+- [Zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md)

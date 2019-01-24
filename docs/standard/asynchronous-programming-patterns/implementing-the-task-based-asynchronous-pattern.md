@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678219"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz desen (TAP) üç yolla gerçekleştirebilirsiniz: Visual Studio'da C# ve Visual Basic derleyicileri kullanarak, el ile veya derleyici ve el yönteminin bir birleşimi yoluyla. Aşağıdaki bölümlerde, her bir yöntemin ayrıntılı ele alınmıştır. DOKUNUN deseni hesaplama bağlantılı hem miyim/O-ilişkili zaman uyumsuz işlemleri uygulamak için kullanabilirsiniz. [İş yükleri](#workloads) bölümde her işlem türü açıklanmaktadır.
@@ -103,6 +103,6 @@ Tek bir iptal belirteci aracılığıyla birden çok zaman uyumsuz işlemler nas
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [Görev Tabanlı Zaman Uyumsuz Desen Kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
-- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Görev Tabanlı Zaman Uyumsuz Desen Kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

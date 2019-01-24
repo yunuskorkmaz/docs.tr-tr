@@ -1,5 +1,5 @@
 ---
-title: "Nasıl Yapılır: Visual Basic'te Aynı Dizinde Dosya Kopyası Oluşturma"
+title: "Nasıl yapılır: Visual Basic'te aynı dizinde dosya kopyası oluşturma"
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,64 +9,64 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 1147e89292181060589b38be2972e2ff1a3e386c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667108"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Aynı Dizinde Dosya Kopyası Oluşturma
-Kullanım `My.Computer.FileSystem.CopyFile` dosyaları kopyalamak için yöntem. Parametreler, var olan dosyaların üzerine yazıp, dosyayı yeniden adlandırın, işlemin ilerlemesini Göster ve kullanıcı işlemi iptal izin ver olanak tanır.  
+# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te aynı dizinde dosya kopyası oluşturma
+Kullanım `My.Computer.FileSystem.CopyFile` dosyaları kopyalamak için yöntemi. Parametreleri, mevcut dosyaların üzerine yaz, dosyayı yeniden adlandırın, işlemin ilerlemesini Göster ve kullanıcı işlemi iptal olanak tanır.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Aynı klasörde bir dosyanın bir kopyasını oluşturmak için  
   
--   Kullanım `CopyFile` yöntemi, hedef dosya ve konum belirtin. Aşağıdaki örnek, bir kopyasını oluşturur `test.txt` adlı `test2.txt`.  
+-   Kullanım `CopyFile` yöntemi, hedef dosya ve konumu belirtin. Aşağıdaki örnek, bir kopyasını oluşturur. `test.txt` adlı `test2.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Var olan dosyaların üzerine yazılması aynı klasörde bir dosyanın bir kopyasını oluşturmak için  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Varolan dosyaların üzerine aynı klasörde bir dosyanın bir kopyasını oluşturmak için  
   
--   Kullanım `CopyFile` için bir hedef dosya ve konum sağlayarak ve ayarlama yöntemi `overwrite` için `True`. Aşağıdaki örnek, bir kopyasını oluşturur `test.txt` adlı `test2.txt` ve bu adı mevcut dosyaların üzerine yazar.  
+-   Kullanım `CopyFile` konumu ve hedef dosya sağlayan ve ayarı yöntemi `overwrite` için `True`. Aşağıdaki örnek, bir kopyasını oluşturur. `test.txt` adlı `test2.txt` ve var olan dosyalar bu adla üzerine yazar.  
   
      [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Aşağıdaki koşullar, bir özel durum oluşturulmasına neden olabilir:  
+ Aşağıdaki koşullar, bir özel durum oluşturulmasına neden:  
   
--   Yolu şu nedenlerden biri için geçerli değil: sıfır uzunlukta bir dize değil, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir aygıt yol olduğundan (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
+-   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
   
 -   Sistem mutlak yolu alınamadı (<xref:System.ArgumentException>).  
   
--   Çünkü yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+-   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Kaynak dosyası geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
--   Birleşik yolu işaret ediyor. Varolan bir dizin (<xref:System.IO.IOException>).  
+-   Birleşik yolun mevcut bir dizine işaret (<xref:System.IO.IOException>).  
   
--   Hedef dosyanın var olduğundan ve `overwrite` ayarlanır `False` (<xref:System.IO.IOException>).  
+-   Hedef dosya var ve `overwrite` ayarlanır `False` (<xref:System.IO.IOException>).  
   
--   Kullanıcının dosyaya erişmek için yeterli izinleri yok (<xref:System.IO.IOException>).  
+-   Kullanıcının dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.IO.IOException>).  
   
--   Hedef klasörde aynı ada sahip bir dosya kullanımda (<xref:System.IO.IOException>).  
+-   Hedef klasörde aynı adda bir dosya kullanımda (<xref:System.IO.IOException>).  
   
--   Yolda bir dosya veya klasör adı biçimi geçersiz veya iki nokta üst üste (:) içerir (<xref:System.NotSupportedException>).  
+-   Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   `ShowUI` ayarlanmış `True`, `onUserCancel` ayarlanır `ThrowException`, ve kullanıcı işlemi iptal etti (<xref:System.OperationCanceledException>).  
+-   `ShowUI` ayarlanır `True`, `onUserCancel` ayarlanır `ThrowException`, ve kullanıcı işlemi iptal etti (<xref:System.OperationCanceledException>).  
   
--   `ShowUI` ayarlanmış `True`, `onUserCancel` ayarlanır `ThrowException`, belirtilmeyen bir g/ç hatası nedeniyle oluşur (<xref:System.OperationCanceledException>).  
+-   `ShowUI` ayarlanır `True`, `onUserCancel` ayarlanır `ThrowException`, belirtilmeyen bir g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
   
--   Yolu sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+-   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
 -   Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
   
--   Kullanıcı yolunu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+-   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
- [Nasıl Yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- [Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [Nasıl Yapılır: Bir Dizini Diğerine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- [Nasıl Yapılır: Dosyayı Yeniden Adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
+- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
+- [Nasıl yapılır: Belirli bir düzendeki dosyaları dizine kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Nasıl yapılır: Farklı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Nasıl yapılır: Bir dizini diğerine kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
+- [Nasıl yapılır: Dosyayı yeniden adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

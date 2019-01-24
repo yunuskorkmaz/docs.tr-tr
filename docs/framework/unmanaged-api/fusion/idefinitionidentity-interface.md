@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb97c545d2d57ef589b5a7a5b3618eaa2b6f364f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687004"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity Arabirimi
-Uygulama geçerli kapsamda tanımlar kodunun benzersiz imza temsil eder.  
+Uygulama geçerli kapsamda tanımlar kod benzersiz imzası temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Arabirim işaretçisi yeni bir alır `IDefinitionIdentity` için aynı nesne `IDefinitionIdentity`, belirtilen öznitelik değişikliklerini dışında.|  
-|`IDefinitionIdentity::EnumAttributes`|Bir arabirim işaretçisi alır bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) bu ile ilişkili öznitelikleri içeren nesne `IDefinitionIdentity`.|  
-|`IDefinitionIdentity::GetAttribute`|Belirtilen ada sahip özniteliğin değerini belirtilen ad alanında alır.|  
-|`IDefinitionIdentity::SetAttribute`|Belirtilen değer için belirtilen ad alanında belirtilen ada sahip öznitelik ayarlar.|  
+|`IDefinitionIdentity::Clone`|Yeni bir arabirim işaretçisi alır `IDefinitionIdentity` için aynı olan nesne `IDefinitionIdentity`, belirtilen öznitelik değişiklikleri dışında.|  
+|`IDefinitionIdentity::EnumAttributes`|Bir arabirim işaretçisi alır bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) bununla ilişkili öznitelikleri içeren nesne `IDefinitionIdentity`.|  
+|`IDefinitionIdentity::GetAttribute`|Belirtilen ad alanında belirtilen ada sahip bir öznitelik değerini alır.|  
+|`IDefinitionIdentity::SetAttribute`|Belirtilen değer için belirtilen ad alanında belirtilen ada sahip özniteliğini ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

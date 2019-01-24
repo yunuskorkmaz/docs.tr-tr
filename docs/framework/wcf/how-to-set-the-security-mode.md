@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Güvenlik Modunu Ayarlama'
+title: 'Nasıl yapılır: Güvenlik modunu ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663043"
 ---
-# <a name="how-to-set-the-security-mode"></a>Nasıl yapılır: Güvenlik Modunu Ayarlama
+# <a name="how-to-set-the-security-mode"></a>Nasıl yapılır: Güvenlik modunu ayarlama
 Windows Communication Foundation (WCF) güvenlik üzerinde en önceden tanımlanmış bağlamaları bulunan üç yaygın güvenlik modu vardır: aktarım iletisi ve "ileti kimlik bilgileri ile aktarma." İki ek modları için iki bağlamaları belirli: "yalnızca Aktarım-credential" modu sonucuna <xref:System.ServiceModel.BasicHttpBinding>ve bulunan "Hem" modu <xref:System.ServiceModel.NetMsmqBinding>. Ancak, bu konuda üç yaygın güvenlik modlarını yoğunlaşır: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, ve <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Önceden tanımlanmış her bağlama tüm bu modlardan desteklediğini unutmayın. Bu konuda moduyla ayarlar <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> sınıfları ve programlı ve yapılandırma yoluyla modunu ayarlama işlemi gösterilmektedir.  
@@ -111,15 +111,15 @@ Windows Communication Foundation (WCF) güvenlik üzerinde en önceden tanımlan
 ### <a name="using-transportwithmessagecredential"></a>TransportWithMessageCredential kullanma  
  Güvenlik modunu ayarlama zaman `TransportWithMessageCredential`, aktarım düzeyi güvenlik sağlayan gerçek mekanizması taşıma belirler. Örneğin, HTTP protokolü, HTTP (HTTPS) üzerinden Güvenli Yuva Katmanı (SSL) kullanır. Bu nedenle, ayarı `ClientCredentialType` herhangi bir aktarım güvenliği nesnenin özellik (gibi <xref:System.ServiceModel.HttpTransportSecurity>) göz ardı edilir.  Diğer bir deyişle, yalnızca ayarlayabilirsiniz `ClientCredentialType` ileti güvenlik nesnesi (için `WSHttpBinding` bağlamayı <xref:System.ServiceModel.NonDualMessageSecurityOverHttp> nesne).  
   
- Daha fazla bilgi için [nasıl yapılır: kullanım taşıma Güveniği ve ileti kimlik bilgilerini](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ Daha fazla bilgi için [nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgilerini](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Nasıl yapılır: Aktarım Güvenliği ve İleti Kimlik Bilgilerini Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Aktarım Güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md)  
- [İleti Güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Aktarım Güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md)
+- [İleti Güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

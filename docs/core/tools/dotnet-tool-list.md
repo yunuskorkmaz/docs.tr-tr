@@ -2,12 +2,12 @@
 title: DotNet araç Listele komutu
 description: Belirtilen .NET Core genel aracı makinenizden dotnet araç Listele komutu listelenmektedir.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0c17534beb80ed87a8f260342b0f82882a9e17b6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712940"
 ---
 # <a name="dotnet-tool-list"></a>DotNet araç listesi
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169774"
 
 `dotnet tool list` -Tüm listeler [.NET Core Araçları Genel](global-tools.md) makinenizde varsayılan dizinde veya belirtilen yolun şu anda yüklü.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet tool list <-g|--global>
@@ -59,4 +59,4 @@ Belirli Linux/macOS klasöründe bulunan genel araçlarını listeler:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET core Araçları Genel](global-tools.md)
+- [.NET core Araçları Genel](global-tools.md)

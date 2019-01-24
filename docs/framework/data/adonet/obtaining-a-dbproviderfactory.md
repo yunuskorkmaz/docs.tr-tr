@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: daaa93c4da16ac67b7f7018fdafdc2b2d9f0784a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692788"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory alma
 Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir veri sağlayıcısı hakkında bilgi içerir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adı olan bir dize. Bir aşırı yüklemesini `GetFactory` götüren bir <xref:System.Data.DataRow>. Sağlayıcı üreteci oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Yöntemlerinin bazılarını bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -44,7 +44,7 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir 
 |0|**Ad**|SqlClient veri sağlayıcısı|Okunabilir veri sağlayıcısı adı|  
 |1.|**Açıklama**|SQL Server için .net framework veri sağlayıcısı|Veri sağlayıcısı okunabilir açıklaması|  
 |2|**Invariantname**|System.Data.SqlClient|Program aracılığıyla veri sağlayıcısına başvurmak için kullanılan ad|  
-|3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, sürüm 2.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089|Nesne örneği oluşturmak için yeterli bilgi içerdiğinden Fabrika sınıfının tam adı|  
+|3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Nesne örneği oluşturmak için yeterli bilgi içerdiğinden Fabrika sınıfının tam adı|  
   
  Bu `DataTable` seçmesini etkinleştirmek için kullanılan bir <xref:System.Data.DataRow> çalışma zamanında. Seçili `DataRow` ardından geçirilebilir <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> türü kesin belirlenmiş yöntemini <xref:System.Data.Common.DbProviderFactory>. Seçili <xref:System.Data.DataRow> geçirilebilir `GetFactory` istenen yöntemini `DbProviderFactory` nesne.  
   
@@ -95,8 +95,8 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir 
  [!code-csharp[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

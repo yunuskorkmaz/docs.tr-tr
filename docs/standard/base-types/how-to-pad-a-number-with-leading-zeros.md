@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
+title: 'Nasıl yapılır: Bir sayı önünde sıfır ile doldurur.'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673042"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir sayı önünde sıfır ile doldurur.
 "D"'ı kullanarak bir tamsayıya baştaki sıfırlar ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) bir duyarlık belirtici ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlar ekleyebilirsiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu konuda, her iki yöntem de sıfırları bir sayının paneli için nasıl kullanılacağı gösterilmektedir.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Bir tamsayı, belirli bir süre için sıfırları ile doldurulacak  
@@ -80,7 +80,7 @@ ms.locfileid: "44086728"
   
     2.  Ondalık noktası simgesi dahil ederseniz, Ondalık ayırıcının solundaki karakter sayısını belirler.  
   
-         veya  
+         -veya-  
   
          Ondalık noktası simgesi içermez, dizenin uzunluğunu belirler.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "44086728"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)

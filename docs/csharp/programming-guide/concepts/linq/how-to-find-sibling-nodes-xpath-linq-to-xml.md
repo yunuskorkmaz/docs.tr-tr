@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: eşdüzey düğümleri (XPath-LINQ to XML) bulma (C#)'
+title: 'Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646770"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Nasıl yapılır: eşdüzey düğümleri (XPath-LINQ to XML) bulma (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (C#)
 Belirli bir ada sahip tüm bir düğümün eşdüzey bulmak isteyebilirsiniz. Bağlam düğümünün belirli bir ada sahipse, sonuçta elde edilen koleksiyon bağlam düğümünün içerebilir.  
   
  XPath ifadesidir:  
@@ -19,7 +19,7 @@ Belirli bir ada sahip tüm bir düğümün eşdüzey bulmak isteyebilirsiniz. Ba
 ## <a name="example"></a>Örnek  
  Bu örnekte ilk bulur bir `Book` öğesi ve bulduğu tüm Eşdüzey öğeleri adlı `Book`. Sonuçta elde edilen koleksiyon bağlam düğümü içerir.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -74,6 +74,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

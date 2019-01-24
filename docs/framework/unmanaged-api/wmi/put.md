@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625776"
 ---
 # <a name="put-function"></a>Put işlevi
 Adlandırılmış bir özelliği, yeni değere ayarlar.
@@ -72,7 +72,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Özellik türü tanınmıyor. Bu değer, sınıf zaten varsa, sınıf örnekleri oluşturulurken döndürülür. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | İçin örnek: gösterir `pVal` işaret eden bir `VARIANT` özelliği için yanlış türde. <br/> Sınıf tanımları için: özellik üst sınıfta zaten mevcut ve yeni bir COM tür eski bir COM türünden farklıdır. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | İçin örnek: Bildiren `pVal` işaret eden bir `VARIANT` özelliği için yanlış türde. <br/> Sınıf tanımları için: Özellik üst sınıfta zaten mevcut ve yeni bir COM tür eski bir COM türünden farklıdır. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu. |
   
 ## <a name="remarks"></a>Açıklamalar
@@ -94,11 +94,11 @@ Kullanım `vtType` yalnızca bir CIM sınıf tanımına yeni özellikler oluştu
 Bir örnek için bkz. [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622604"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, başarısızlık veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilirsiniz. Olayları Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
@@ -98,12 +98,12 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 |Denetim İlkesi Yönetimi|Uygulanamaz.|Yapılandırması ile birlikte, güvenlik günlüğü ayrıca yerel güvenlik yetkilisi (LSA) ilkesi tarafından kontrol edilir. "Nesne erişimini denetle" kategorisi de etkinleştirilmesi gerekir.|  
 |Varsayılan kullanıcı deneyimi|Uygulama işlemleri için hiçbir ek adım gerekmez, tüm kimliği doğrulanmış kullanıcılara uygulama günlüğüne yazabilirsiniz.|(Bağlam) uygulama işlemi olmalıdır `SeAuditPrivilege`.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
- [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 733a4d4ee7296d96a18e8ba4763dfa12e218c028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680487"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir bazı kodu yeniden kullanmak daha etkili.  
@@ -27,7 +27,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 -   Konak bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu teknik ile var olan bir özel kullanabilirsiniz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetim diğer bağlamında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve sınırları arasında verileri geçirebilirsiniz.  
   
- Bu tekniklerin, bu konudaki kavramsal olarak sunulmuştur. Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], bakın [izlenecek yol: barındırma WPF içeriğini Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [izlenecek yol: WPF'te Win32 denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Bu tekniklerin, bu konudaki kavramsal olarak sunulmuştur. Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], bkz: [izlenecek yol: Win32'de WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Daha fazla kod odaklı bir gösterim barındırma [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [izlenecek yol: WPF içinde Win32 denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF birlikte çalışabilirlik projeleri  
@@ -87,7 +87,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
 > [!NOTE]
 >  Bazılarını veya tümünü yapabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik için adım bir sınıf tanımının [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ayrı bir derleme oluşturmak ve ardından ona başvuran içerik sınıfının varsayılan kısmi sınıf kullanarak. Genellikle içerse bir <xref:System.Windows.Application> derleme işleminin parçası olarak nesne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir derlemeye, söz konusu bitmeyen <xref:System.Windows.Application> birlikte çalışma işleminin bir parçası olarak, yalnızca bir veya daha fazla kök sınıflar için kullandığınız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan dosyaları için uygulama tarafından ve bunların kısmi sınıflar başvuru. Yordamın geri kalanını, yukarıda özetlenen temelde benzerdir.  
 >   
->  Bu adımların her biri konusunda daha fazla kod aracılığıyla gösterilmiştir [izlenecek yol: barındırma WPF içeriğini Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
+>  Bu adımların her biri konusunda daha fazla kod aracılığıyla gösterilmiştir [izlenecek yol: Win32'de WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>WPF Microsoft Win32 penceresinde barındırma  
@@ -115,7 +115,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
  Aşağıdaki adımları fare girişi ile çalışan bir uygulama oluşturur. Uygulama tarafından barındırılan pencereniz sekme desteği ekleyebilirsiniz <xref:System.Windows.Interop.IKeyboardInputSink> arabirimi.  
   
- Bu adımların her biri konusunda daha fazla kod aracılığıyla gösterilmiştir [izlenecek yol: WPF'te Win32 denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Bu adımların her biri konusunda daha fazla kod aracılığıyla gösterilmiştir [izlenecek yol: WPF içinde Win32 denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 ### <a name="hwnds-inside-wpf"></a>Cwnd'lerden içinde WPF  
  Düşünebilirsiniz <xref:System.Windows.Interop.HwndHost> bir özel denetim olarak. (Teknik olarak <xref:System.Windows.Interop.HwndHost> olduğu bir <xref:System.Windows.FrameworkElement> sınıfı türetilmemiş bir <xref:System.Windows.Controls.Control> türetilmiş sınıf, ancak bir denetim birlikte çalışabilirlik amaçları için kabul edilebilir.) <xref:System.Windows.Interop.HwndHost> soyutlar arka plandaki [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] barındırılan içeriğin doğasını şekilde geri kalanında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlemek ve işlem girişi gereken başka bir denetim benzeri nesne olmasını barındırılan içeriğe göz önünde bulundurur. <xref:System.Windows.Interop.HwndHost> genellikle diğer gibi davranır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>, ancak çıkış (çizim ve grafikler) etrafında önemli bazı farklar vardır ve temel alınan Cwnd'lerden sınırlamalar göre giriş (fare ve klavye) destekleyebilir.  
@@ -156,9 +156,9 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
  Yalnızca arabirimleri arasında geçiş hakkında neler için destek sağlamak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bölgeleri. İçinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bölge davranışı sekmeyle gitmeyi tamamen tarafından denetlenir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletmelisiniz mantığı varsa uygulanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Interop.HwndHost>  
- <xref:System.Windows.Interop.HwndSource>  
- <xref:System.Windows.Interop>  
- [İzlenecek yol: WPF'te Win32 Denetimi Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [İzlenecek yol: Win32'de WPF Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Interop.HwndHost>
+- <xref:System.Windows.Interop.HwndSource>
+- <xref:System.Windows.Interop>
+- [İzlenecek yol: WPF içinde Win32 denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
+- [İzlenecek yol: Win32'de WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

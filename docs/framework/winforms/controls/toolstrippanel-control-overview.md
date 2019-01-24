@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 104ccfd0370eff48312372a2391031575b53b3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660235"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel Denetimine Genel Bakış
 A <xref:System.Windows.Forms.ToolStripPanel> konumlandırma ve radye için tek bir alan sağlar <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.StatusStrip> kontrol eder. Birden çok <xref:System.Windows.Forms.ToolStrip> bağlı denetimleri yığın yatay veya dikey olarak <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> , <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -28,7 +28,7 @@ A <xref:System.Windows.Forms.ToolStripPanel> konumlandırma ve radye için tek b
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|Alır <xref:System.Windows.Forms.ToolStripPanelRow> bu <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|Ekler bir <xref:System.Windows.Forms.ToolStrip> için bir <xref:System.Windows.Forms.ToolStripPanel>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ToolStripContainer>  
- <xref:System.Windows.Forms.ToolStripContentPanel>  
- [ToolStrip örnek](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ToolStripContainer>
+- <xref:System.Windows.Forms.ToolStripContentPanel>
+- [ToolStrip örnek](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

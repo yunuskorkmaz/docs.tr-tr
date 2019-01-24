@@ -5,59 +5,59 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658058"
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
-*Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırganın yetkilendirme vermesine neden olur. Örneğin, bir saldırganın bir ayrıcalık kümesi "salt okunur" izinleri ile "okuma ve yazma" içerecek şekilde kümesi şekilde yükseltir  
+*Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırgan yetkilendirme vermesine neden olur. Örneğin, bir ayrıcalık kümesi "salt okunur" izinlere sahip bir saldırgan kümesi "okuma ve yazma" eklenecek şekilde yükseltir  
   
-## <a name="trusted-sts-should-sign-saml-token-claims"></a>STS SAML belirteç talep imzalamalısınız güvenilir  
- Verilen belirteçler için varsayılan türdür genel bir XML belirteci bir güvenlik onaylar biçimlendirme dili (SAML) belirtecidir. SAML belirteci tarafından bir güvenlik belirteci hizmeti (Web hizmeti bitiş tipik Exchange'de güvendiği STS) oluşturulabilir. SAML belirteçleri deyimlerinde içerir. Bir saldırgan, uygulamasından geçerli bir belirteç talep kopyalama, yeni bir SAML belirteci oluşturun ve farklı bir veren ile oturum açın. Sunucu verenler doğrulama olup olmadığını belirlemek ve değilse, bu amaçlayan bir güvenilen STS tarafından ötesinde ayrıcalıklarına izin SAML belirteçleri oluşturmak için zayıflık kullanmak için hedefi değil.  
+## <a name="trusted-sts-should-sign-saml-token-claims"></a>SAML belirteç taleplerinden STS imzalamalısınız güvenilir  
+ Güvenlik onaylama işaretleme dili (SAML) belirteci verilen belirteçler için varsayılan türü olan genel bir XML belirtecidir. SAML belirteci tarafından bir güvenlik belirteci hizmeti (Web Hizmeti uç tipik Exchange'de güvendiği STS) oluşturulabilir. SAML belirteçlerini deyimleri talepleri içerir. Bir saldırganın, geçerli bir belirteç talep kopyalama, yeni bir SAML belirteci oluştur ve sahip farklı bir veren oturum. Aksi takdirde, güvenilen bir STS tarafından bu amaçlayan ötesinde ayrıcalıkları izin SAML belirteçleri oluşturmak için zayıflık yazılımınız olması ve sunucu verenler doğrulama olup olmadığını belirlemek için hedefi olur.  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> Sınıfı bir SAML belirtecine ve varsayılan içinde bulunan dijital imzayı doğrular <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> SAML belirteçleri geçerli olduğunda bir X.509 sertifikası tarafından imzalanmış olmasını gerektirir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> içinsetsınıfı<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` tek başına modunda SAML belirteci veren güvenilir olup olmadığını belirlemek için yeterli değil. Daha ayrıntılı bir güven modeli ya da gerektirebilirsiniz Hizmetleri verilen belirteç kimlik doğrulaması tarafından üretilen talep kümelerinin veren denetleyin veya üzerinde X.509 doğrulama ayarlarını kullanmak için yetkilendirme ve zorlama ilkelerini kullanmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kümesini kısıtlamak için İmzalama sertifikaları izin verilir. Daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) ve [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> Sınıfı bir SAML belirtecine ve varsayılan içinde bulunan dijital imzayı doğrular <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> SAML belirteçlerini geçerli olduğunda X.509 sertifikası tarafından imzalanması gerektiren <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> içinsetsınıfı<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` tek başına modu SAML belirteci veren güvenilir olup olmadığını belirlemek için yeterli değil. Daha ayrıntılı bir güven modeli olabilir ya da gerektiren hizmetler verilen belirteç kimlik doğrulaması tarafından üretilen talep kümelerinin veren denetlemek veya X.509 doğrulama ayarlarını kullanmak için yetkilendirme ve zorlama ilkelerini kullanmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kümesini sınırlamak için İmzalama sertifikaları izin verilir. Daha fazla bilgi için [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) ve [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
-## <a name="switching-identity-without-a-security-context"></a>Bir güvenlik bağlamı olmadan kimliğini değiştirme  
+## <a name="switching-identity-without-a-security-context"></a>Bir güvenlik bağlamı olmadan geçiş kimliği  
  Aşağıdaki yalnızca geçerli [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Bir istemci ve sunucu, istemci kimliğini arasında bir bağlantı kuran zaman değiştirmez, dışındaki bir durumda: aşağıdaki koşulların tümü doğruysa, WCF istemcisini açtıktan sonra:  
+ Bir istemci ve sunucu, istemci kimliği arasında bir bağlantı kurulan ne zaman değiştirmez, dışındaki bir durumda: aşağıdaki koşulların tümü doğruysa, WCF istemcisini açtıktan sonra:  
   
--   (Aktarım güvenlik oturumu veya ileti güvenlik oturumu kullanarak) bir güvenlik bağlamı kurmak için yordamları işlev kapalı (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği ayarlanmış `false` ileti güvenliği veya güvenlik değil kurabilen aktarım durumunda oturumları Aktarım güvenlik durumda kullanılır. HTTPS bir tür taşıma örnektir).  
+-   (Aktarım güvenliği oturumu veya ileti güvenlik oturumu kullanarak) bir güvenlik bağlamı'kurmak için yordamlar geçti (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği `false` ileti güvenliği veya aktarım güvenliği değil kurabilen durumunda oturumlarının aktarım güvenliği durumda kullanılır. HTTPS gibi aktarım örneğidir).  
   
--   Windows kimlik doğrulaması kullanıyor.  
+-   Windows kimlik doğrulaması kullanıyorsunuz.  
   
--   Açıkça kimlik bilgisi ayarlamayın.  
+-   Kimlik bilgisi açıkça ayarlamayın.  
   
--   Hizmetin Kimliğine bürünülen güvenlik bağlamı altında aradığınız.  
+-   Hizmet Kimliğine bürünülen güvenlik bağlamı altında arıyoruz.  
   
- Bu koşullar doğru olduğunda, istemci hizmeti için kimlik doğrulaması için kullanılan kimlik değiştirebilirsiniz (bunu Kimliğine bürünülen kimlik ancak işlem kimliği yerine olmayabilir) WCF istemcisini açıldıktan sonra. Bu, istemci hizmeti için kimlik doğrulaması için kullanılan Windows kimlik bilgileri ile her ileti iletilir ve kimlik doğrulaması için kullanılan kimlik bilgileri geçerli iş parçacığının Windows kimlik elde nedeniyle oluşur. Geçerli iş parçacığının Windows kimliğini (örneğin, farklı çağıran kimliğine bürünerek) değişirse iletisine ve hizmet için istemci kimlik doğrulaması için kullanılan kimlik bilgisini de değişebilir.  
+ Bu koşullar geçerli olduğunda, bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik değişiklik yapmış olabilir (bunu başkasının kimliğine bürünülerek gerçekleştirilen kimlik ancak işlem kimliği yerine olmayabilir) WCF istemcisini açıldıktan sonra. Bu, hizmete istemcinin kimliğini doğrulamak için kullanılan Windows kimlik bilgilerini, her ileti ile aktarılan ve kimlik doğrulaması için kullanılan kimlik bilgileri geçerli iş parçacığının Windows kimlikten elde edilen nedeniyle oluşur. İletiye eklenmiş ve bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisi, geçerli iş parçacığının Windows kimliği (örneğin, farklı bir çağıranın kimliğine bürünerek) değişirse, de değişebilir.  
   
- Kimliğe bürünme ile birlikte Windows kimlik doğrulamasını kullanırken belirleyici davranışı sahip olmak istiyorsanız açıkça Windows kimlik bilgilerini ayarlamanız gerekir veya bir güvenlik bağlamı hizmetiyle oluşturmanız gerekir. Bunu yapmak için bir ileti güvenlik oturumu veya bir aktarım güvenlik oturumu kullanın. Örneğin, net.tcp aktarım taşıma güvenlik oturumu sağlayabilir. Ayrıca, hizmeti çağrılırken istemci işlemleri zaman uyumlu bir sürümünü kullanmanız gerekir. Bir ileti güvenlik bağlamı kurmak, kimliğini de oturum yenileme işlemi sırasında değişebildiğinden, hizmeti bağlantısı yapılandırılmış oturum yenileme süresini daha uzun açık tutmalısınız değil.  
+ Kimliğe bürünme ile birlikte Windows kimlik doğrulamasını kullanırken belirleyici davranışa sahip istiyorsanız açıkça Windows kimlik bilgilerini ayarlamanız gerekir veya hizmeti ile bir güvenlik bağlamı yapmanız gerekir. Bunu yapmak için bir ileti güvenlik oturumu veya aktarım güvenlik oturumu kullanın. Örneğin, net.tcp taşıma Aktarım güvenlik oturumu sağlayabilir. Ayrıca, hizmeti çağrılırken istemci işlemleri zaman uyumlu bir sürümünü kullanmanız gerekir. Bir ileti güvenlik bağlamı oluşturmak, kimlik oturum yenileme işlemi sırasında da değiştirebilirsiniz çünkü, hizmet bağlantı yapılandırılmış oturum yenileme süresini daha uzun açık tutmalısınız değil.  
   
 ### <a name="credentials-capture"></a>Kimlik bilgilerini yakalama  
  Aşağıdaki uygulandığı [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]ve sonraki sürümleri.  
   
- Kimlik bilgileri istemci tarafından kullanılan veya hizmet, geçerli bağlam iş parçacığı üzerinde dayalı. Kimlik bilgileri ne zaman elde edilen `Open` yöntemi (veya `BeginOpen`, zaman uyumsuz çağrılar için) istemci veya hizmet adlandırılır. Her ikisi için de <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ClientBase%601> sınıfları `Open` ve `BeginOpen` yöntemleri devral <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> ve <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> yöntemlerinin <xref:System.ServiceModel.Channels.CommunicationObject> sınıfı.  
+ Kimlik bilgileri, istemci tarafından kullanılmış veya hizmetin geçerli bağlam iş parçacığı üzerinde temel. Kimlik bilgilerini ne zaman elde edilen `Open` yöntemi (veya `BeginOpen`, zaman uyumsuz çağrılar) istemci veya hizmet olarak adlandırılır. Her ikisi için de <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ClientBase%601> sınıfları `Open` ve `BeginOpen` yöntemleri devralmanız <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> ve <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> yöntemlerinin <xref:System.ServiceModel.Channels.CommunicationObject> sınıfı.  
   
 > [!NOTE]
->  Kullanırken `BeginOpen` yöntemi, yakalanan kimlik bilgilerini garanti edilemediği yöntemini çağırır işlem kimlik bilgileri olmalıdır.  
+>  Kullanırken `BeginOpen` yöntemi, yakalanan kimlik bilgilerini kullanılamaz garanti kimlik bilgilerini yöntemi çağıran işlemin.  
   
-## <a name="token-caches-allow-replay-using-obsolete-data"></a>Belirteç önbellekleri kullanarak eski verileri yeniden yürütme izin ver  
- WCF yerel güvenlik yetkilisi (LSA) kullanan `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliklerini doğrulamak için işlev. Oturum açma işlevini pahalı bir işlem olduğundan, WCF temsil eden önbellek belirteçleri için performansı artırmak için kullanıcıların kimlik doğrulaması sağlar. Önbelleğe alma mekanizması sonuçlarından kaydeder `LogonUser` sonraki kullanımlar için. Bu düzenek, varsayılan olarak devre dışıdır; etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğine `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+## <a name="token-caches-allow-replay-using-obsolete-data"></a>Yeniden yürütme süresi geçmiş verilerini kullanarak belirteci önbellekler izin ver  
+ WCF kullanan yerel güvenlik yetkilisi (LSA) `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliğini doğrulamak için işlevi. Oturum açma işlevi pahalı bir işlem olduğundan, WCF temsil eden önbellek belirteçleri, performansı artırmak için kullanıcıların kimlik doğrulamasını sağlar. Önbelleğe alma mekanizması sonuçlardan kaydeder `LogonUser` sonraki kullanımlar için. Bu mekanizma, varsayılan olarak devre dışıdır; Bunu etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğini `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Ayarlayarak için önbelleğe alınmış belirteçleri Live (TTL) bir süresini ayarlayabilirsiniz <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> özelliğine bir <xref:System.TimeSpan>, veya `cachedLogonTokenLifetime` özniteliği `userNameAuthentication` öğesi; varsayılan değer 15 dakikadır. Bir belirteç önbelleğe olsa da, aynı kullanıcı adı ve parola sunan herhangi bir istemci bir belirteç kullanıcı hesabı Windows'dan silinse bile veya parolasını değiştirdiyseniz kullanabileceğinizi unutmayın. TTL süresi ve belirteç önbellekten kaldırıldı kadar WCF (büyük olasılıkla kötü amaçlı) kullanıcının kimlik doğrulamasını sağlar.  
+ Ayarlayarak önbelleğe alınan belirteçleri için Canlı (TTL) bir zaman ayarlayabilirsiniz <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> özelliğini bir <xref:System.TimeSpan>, veya `cachedLogonTokenLifetime` özniteliği `userNameAuthentication` öğesi; varsayılan değer 15 dakikadır. Bir belirteç önbelleğe alınmış olsa aynı kullanıcı adı ve parolayı sunan herhangi bir istemci belirteci bile Windows kullanıcı hesabı silinir veya parolası değiştirildiyse kullanabileceğinizi unutmayın. Belirteç önbellekten kaldırılır ve TTL süresi dolana kadar WCF (kötü amaçlı olabilecek) kullanıcının kimlik doğrulamasını sağlar.  
   
- Bunu azaltmak için: ayarlayarak saldırı penceresini azaltmak `cachedLogonTokenLifetime` en kısa süre değerine span kullanıcılar gereksiniminizi.  
+ Bunu azaltmak için: Ayarlayarak saldırı penceresini düşürün `cachedLogonTokenLifetime` kısa bir süre değerine, kullanıcılarının ihtiyaç duyduğu span.  
   
-## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Verilen belirteç yetkilendirme: Büyük değer sona erme Sıfırla  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Yetkilendirme belirteci verilen: Büyük bir değer sona erme Sıfırla  
  Belirli koşullar altında <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> özelliği <xref:System.IdentityModel.Policy.AuthorizationContext> beklenmedik bir şekilde daha büyük bir değere ayarlanabilir ( <xref:System.DateTime.MaxValue> alan değer eksi bir günden veya 20 Aralık 9999).  
   
- Bu kullanırken oluşur <xref:System.ServiceModel.WSFederationHttpBinding> ve kimlik bilgisi herhangi bir istemci olarak verilen bir belirteç olan sistem tarafından sağlanan bağlamalar türü.  
+ Kullanırken böyle <xref:System.ServiceModel.WSFederationHttpBinding> ve kimlik bilgisi herhangi bir istemci olarak verilen bir belirteç olan sistem tarafından sağlanan bağlamalar türü.  
   
- Bu ayrıca, aşağıdaki yöntemlerden birini kullanarak özel bağlama oluşturma oluşur:  
+ Bu ayrıca, aşağıdaki yöntemlerden birini kullanarak özel bağlamalar oluşturma oluşur:  
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
@@ -69,23 +69,23 @@ ms.locfileid: "33496200"
   
  Bunu azaltmak için yetkilendirme ilkesi, eylem ve süre sonu zamanı her yetkilendirme ilkesinin denetlemelisiniz.  
   
-## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>Hizmet, istemci istenen değerinden farklı bir sertifika kullanır.  
- Belirli koşullar altında bir istemci dijital olarak bir X.509 sertifikası içeren bir ileti oturum ve hedeflenen olandan farklı bir sertifika almak hizmet olmalıdır.  
+## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>Hizmet istemci hedeflenen değerinden farklı bir sertifika kullanır.  
+ Bazı koşullar altında bir istemci dijital olarak X.509 sertifikası ile bir ileti oturum ve hedeflenen olandan farklı bir sertifika alma hizmeti.  
   
  Bu şu durumlarda oluşabilir:  
   
--   İstemci bir X.509 sertifikası kullanarak ileti dijital imzalar ve X.509 sertifikası iletiye eklemek değil, ancak yerine yalnızca kendi konu anahtarı tanımlayıcısı kullanarak sertifikaya başvurur.  
+-   İstemci bir X.509 sertifikası kullanarak ileti dijital olarak imzalar ve X.509 sertifikasının iletiye eklemek değil, ancak yerine yalnızca kendi konu anahtarı tanımlayıcısı'nı kullanarak sertifikaya başvurur.  
   
--   Hizmetin bilgisayar aynı ortak anahtara sahip iki veya daha fazla sertifikaları içerir, ancak farklı bilgiler içerir.  
+-   Hizmetin bilgisayarda aynı ortak anahtara sahip iki veya daha fazla sertifika içeriyor, ancak farklı bilgileri içerirler.  
   
--   Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmet alır, ancak istemci kullanmak için amaçlanan bir değil. WCF ileti alır ve imzayı doğrular, WCF istenmeyen X.509 sertifikası bilgileri ne istemcisi beklenenden farklı ve büyük olasılıkla yükseltilmiş talepler kümesi eşler.  
+-   Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmeti alır, ancak kullanmak için istemci hedeflenen sürüm değil. WCF iletiyi alır ve imzayı doğrular, WCF istenmeyen X.509 sertifika bilgileri istemci beklenen gelen farklı ve potansiyel olarak yükseltilmiş bir talepler kümesi eşlenir.  
   
- Başvuru X.509 Sertifika kullanarak gibi başka bir yolu, bunu azaltmak için <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
+ Bunu azaltmak için başvuru X.509 sertifika kullanma gibi başka bir deyişle, <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

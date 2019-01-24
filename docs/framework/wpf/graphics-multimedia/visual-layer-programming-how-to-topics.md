@@ -8,15 +8,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655861"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, isabet sınama ve alt düzey bileşimi visual katmanı kullanmak üzere nasıl ekleyebileceğiniz gösterilmektedir.  
+Bu bölümdeki konular, görsel katman için isabet testi ve alt düzey birleşimi kullanma işlemini gösterir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Görselin Sapmasını Alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
@@ -26,9 +26,9 @@ Bu bölümdeki konular, isabet sınama ve alt düzey bileşimi visual katmanı k
  [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

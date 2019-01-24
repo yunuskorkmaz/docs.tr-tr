@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707485"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda JIT şifrelenmemiş bir bağlantı dizeleri kullanarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Ayrıca, bağlantı dizesini hiç olmadığı kadar değişirse, uygulamanızı derlenmelidir. Bu nedenle, bir uygulama yapılandırma dosyasında bağlantı dizelerini depolamanızı öneririz.  
@@ -89,13 +89,13 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Örnek: bir bağlantı dizesi ada göre alma  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Örnek: Adıyla bir bağlantı dizesini alma  
  Bu örnek adını belirterek bir yapılandırma dosyasından bağlantı dizesini almak nasıl gösterir. Kod oluşturur bir <xref:System.Configuration.ConnectionStringSettings> için sağlanan giriş parametresiyle eşleşen nesne <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> adı. Hiç eşleşen adı bulunursa işlevi döndürür `null` (`Nothing` Visual Basic'te).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Örnek: bir bağlantı dizesi sağlayıcı ada göre alma  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Örnek: Sağlayıcı adı ile bir bağlantı dizesini alma  
  Bu örnek biçiminde sağlayıcı değişmez değer adı belirterek bir bağlantı dizesini almak nasıl gösterir *System.Data.ProviderName*. Kod gezinir <xref:System.Configuration.ConnectionStringSettingsCollection> ve ilk bağlantı dizesini döndürür <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> bulunamadı. Sağlayıcı adı bulunamazsa, işlev döndürür `null` (`Nothing` Visual Basic'te).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,12 +167,12 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Daha fazla bilgi için ASP.NET uygulamalarının güvenliğini sağlama [NIB: ASP.NET güvenlik](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik uygulamaları bir bakışta](https://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici merkezinde.  
+ Daha fazla bilgi için ASP.NET uygulamalarının güvenliğini sağlama [NIB: ASP.NET güvenlik](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik yöntemler bir bakışta](https://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici merkezinde.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Uygulamaları Yapılandırma](../../../../docs/framework/configure-apps/index.md)  
- [ASP.NET Web sitesi yönetimi](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Uygulamaları Yapılandırma](../../../../docs/framework/configure-apps/index.md)
+- [ASP.NET Web sitesi yönetimi](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

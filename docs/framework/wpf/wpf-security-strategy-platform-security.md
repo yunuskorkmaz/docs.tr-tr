@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640452"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -208,12 +208,12 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] içerir ve güvenlik özelliklerini genişletir [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] çabası güvenlik bir parçası olarak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [Anlama ve korumalı modda Internet Explorer'ın çalışma](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP hizmet paketi 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Windows Vista Güvenliği Kılavuzu](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)  
- [Güvenlik](../../../docs/framework/wpf/security-wpf.md)  
- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [Anlama ve korumalı modda Internet Explorer'ın çalışma](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP hizmet paketi 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Windows Vista Güvenliği Kılavuzu](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [Güvenlik](../../../docs/framework/wpf/security-wpf.md)
+- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

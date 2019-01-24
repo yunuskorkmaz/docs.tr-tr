@@ -2,12 +2,12 @@
 title: Yayma
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686341"
 ---
 # <a name="propagation"></a>Yayma
 Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma açıklar.  
@@ -76,8 +76,8 @@ Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma 
 ## <a name="synchronization"></a>Eşitleme  
  Olaylar farklı makinelerde çalışan uç noktalar arasında eşitlemek için bir bağıntı kimliği iletilerinde yayılır ActivityID üst bilgi eklenir. Araçları olayları makineler arasında saat tutarsızlık ile eşitlemek için bu kodu kullanabilirsiniz. Özellikle, hizmet izleme Görüntüleyicisi aracı, uç noktalar arasında ileti akışları göstermek için bu kimliği kullanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

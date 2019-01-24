@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 04abb999ae232d2dd49b1fad8887a596530ea369
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4c1b52622ccd70a591af3134642d4e0528bd32fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681696"
 ---
 # <a name="ui-automation-overview"></a>UI Otomasyonuna Genel Bakış
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "48842677"
 |---------------|-----------------|  
 |Sağlayıcı [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll ve UIAutomationTypes.dll)|UI Otomasyon sağlayıcıları tarafından uygulanan arabirim tanımlarının bir dizi ilgili bilgi sağlayan nesneleri [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri ve programlı girişine yanıt vermedi.|  
 |İstemci API'si (UIAutomationClient.dll ve UIAutomationTypes.dll)|Bir dizi türleri hakkında bilgi edinmek için UI Otomasyonu istemci uygulamaları etkinleştiren yönetilen kod için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve denetimlerine giriş göndermek için.|  
-|UIAutomationCore.dll|Arka plandaki kod (olarak da adlandırılır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek), sağlayıcıları ve istemciler arasındaki iletişimi gerçekleştirir.|  
+|UiAutomationCore.dll|Arka plandaki kod (olarak da adlandırılır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek), sağlayıcıları ve istemciler arasındaki iletişimi gerçekleştirir.|  
 |UIAutomationClientsideProviders.dll|Eski standart denetimler için UI Otomasyonu sağlayıcıları bir dizi. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetiminiz için yerel destek [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Bu destek, istemci uygulamaları için otomatik olarak kullanılabilir.|  
   
  Yazılım geliştirici açısından bakıldığında, kullanmanın iki yolu vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: özel denetimler (' % s'sağlayıcısı API'si kullanarak) için destek oluşturmak için ve kullanan uygulamaları oluşturma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ile iletişim kurmak için çekirdek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (kullanarak öğeleri İstemci API'si). Odağınızı bağlı olarak, belgelerinin farklı bölümlerine başvurmanız gerekir. Kavramları hakkında daha fazla bilgi edinmek ve aşağıdaki bölümlerde pratik yapılır bilgi elde edebilirsiniz.  
@@ -76,9 +76,9 @@ ms.locfileid: "48842677"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar ile istemci uygulamaları için bilgi de sağlar. Farklı [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)], [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar üzerinde bir yayın mekanizması bağlı değil. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemcilerin belirli olay bildirimleri için kaydolun ve bu özel talep edebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri ve denetim düzeni bilgileri olay işleyicilerini geçirilir. Ayrıca, bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay ortaya çıkan öğeye bir başvuru içerir. Sağlayıcıları, olayları seçerek, tüm istemciler olup olmadığını dinleyen bağlı olarak yükselterek performansı geliştirebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI Otomasyonu Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [UI Otomasyonu Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

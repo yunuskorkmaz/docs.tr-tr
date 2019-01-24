@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666585"
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
+# <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek yol: Visual Basic'de sorgu yazma
 Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde. İzlenecek yol, sorgu Öğrenci nesnelerin listesini oluşturma, sorgularının nasıl çalıştırılacağını ve bunları değiştirmek nasıl gösterir. Sorguları nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özelliklerini bir araya getirin.  
   
  Bu kılavuzu tamamladıktan sonra belirli belgeleri ve örnekleri taşımaya hazır olmayacak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları içerir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -23,7 +23,7 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 #### <a name="to-create-a-console-application-project"></a>Konsol uygulama projesi oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   
@@ -43,11 +43,11 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
 -   Tanımlayan bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturun.  
   
     > [!IMPORTANT]
-    >  Tanımlamak için gereken kodu `Student` sınıfı ve kullanılan liste oluşturma izlenecek yolda örnekler sağlanır [nasıl yapılır:, bir liste öğesi oluşturun](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Buradan kopyalayın ve projenize yapıştırın. Projeyi oluşturduğunuzda görünen kodu yeni kodu değiştirir.  
+    >  Tanımlamak için gereken kodu `Student` sınıfı ve kullanılan liste oluşturma izlenecek yolda örnekler sağlanır [nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Buradan kopyalayın ve projenize yapıştırın. Projeyi oluşturduğunuzda görünen kodu yeni kodu değiştirir.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Öğrenciler listesine yeni bir öğrenci eklemek için  
   
--   Düzende izleyin `getStudents` başka bir örneğini ekleme yöntemi `Student` listesine sınıfı. Bir öğrenci eklemek için nesne başlatıcıları başlatacaktır. Daha fazla bilgi için [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Düzende izleyin `getStudents` başka bir örneğini ekleme yöntemi `Student` listesine sınıfı. Bir öğrenci eklemek için nesne başlatıcıları başlatacaktır. Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Sorgu oluşturma  
  Çalıştırıldığında, bu bölüme eklendiğinden sorgu, akademik derece bunları en iyi on koyar Öğrenciler listesini oluşturur. Sorgu tam seçer çünkü `Student` sorgu sonuç türü her zaman nesnedir `IEnumerable(Of Student)`. Ancak, sorgu türü genellikle sorgu tanımlarında belirtilmedi. Bunun yerine, derleyici yerel tür çıkarımı türünü belirlemek için kullanır. Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Sorgunun aralık değişkeni `currentStudent`, her bir başvuru olarak hizmet veren `Student` kaynak örneğinde `students`, her bir nesnenin özelliklerini erişim sağlamaya `students`.  
@@ -144,11 +144,11 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)

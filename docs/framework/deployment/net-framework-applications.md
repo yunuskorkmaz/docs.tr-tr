@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3b0bfbc3ad274ba9cb2176ed8a8fd8dac513bfbb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689633"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework Uygulamalarını Dağıtma
 .NET Framework belgelerinin bu bölümü, uygulamanızın performansını iyileştirme derlemeleri yükleme ve derleme başvurularını çözümlemek için yönergeler de dahil olmak üzere, .NET Framework uygulamalarını dağıtmak için gerekli bilgileri sağlar. Yerel görüntü oluşturma.  
@@ -24,5 +24,5 @@ ms.locfileid: "50235758"
  [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  Yol açabilir türü kimliği sorunları önlemek için yollar ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

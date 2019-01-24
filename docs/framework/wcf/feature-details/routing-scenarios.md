@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699603"
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir yapılandırma sıfırdan oluştururken, verimli yönlendirme mantığı tasarlamak için bir mücadele haline gelebilir.  Ancak, çoğu yönlendirme hizmeti yapılandırma izleyin birçok yaygın senaryo vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli değil. ancak, yönlendirme hizmeti bu senaryolar işlemek için nasıl yapılandırılabileceğini anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  
@@ -39,12 +39,12 @@ Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir 
 ### <a name="service-data-partitioning"></a>Hizmet verilerini bölümlendirme  
  Dağıtılmış bir ortama tasarlarken, genellikle yüksek kullanılabilirlik sağlamak için tek tek bilgisayarlarda işleme yükünü azaltın ya da belirli bir alt kümesi için ayrılmış kaynak sağlamak için işleme yükünü birden fazla bilgisayara yaymak için tercih edilir iletileri. Yönlendirme hizmeti, bir adanmış yük dengeleme çözümü değiştirmez, ancak içerik tabanlı yönlendirme gerçekleştirme becerisi, belirli hedeflere aksi benzer iletileri yönlendirmek için kullanılabilir. Örneğin, ayrı olarak diğer istemcilerden alınan iletileri belirli bir istemciden iletilerini işlemek için bir gereksinim olabilir.  
   
- Yapılandırma bölümleme verileri bir hizmet oluşturmak için kullanılan adımları için bkz [nasıl yapılır: hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Yapılandırma bölümleme verileri bir hizmet oluşturmak için kullanılan adımları için bkz [nasıl yapılır: Hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Dinamik yönlendirme  
  Genellikle bir yol filtresi yönlendirir, belirli bir ileti yönlendirme ölçütlerini değiştirmek ya da hedef bitiş noktasını değiştirerek bir hizmeti daha yeni bir sürümüne ekleme gibi değişen iş gereksinimlerini karşılamak için yönlendirme yapılandırmasını değiştirmek için tercih edilir. Yönlendirme hizmeti aracılığıyla bunu sağlar <xref:System.ServiceModel.Routing.RoutingExtension>, çalışma zamanı sırasında yeni bir RoutingConfiguration sağlamak sağlar. Yeni yapılandırma hemen etkili olur, ancak yalnızca yönlendirme hizmeti tarafından işlenen tüm yeni oturumlar etkiler.  
   
- Dinamik yönlendirme uygulamak için kullanılan adımları için bkz. [nasıl yapılır: dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ Dinamik yönlendirme uygulamak için kullanılan adımları için bkz. [nasıl yapılır: Dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Çok noktaya yayın  
  Genellikle ileti yönlendirme, belirli bir hedef uç noktasına her ileti yönlendirme.  Bununla birlikte, iletinin bir kopyasını birden çok hedef Uç noktalara yönlendirmek zaman zaman gerekebilir. Çok noktaya yayın yönlendirme gerçekleştirmek için aşağıdaki koşulların doğru olması gerekir:  
@@ -63,16 +63,16 @@ Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir 
   
  Yönlendirme hizmeti sağlam hata işleme özellikleri için ağ veya iletişim ile ilgili hataları karşılaşmanız iletileri sağlayarak bu senaryoyu çözmek çalışır. Olası hedef uç noktaları listesi oluşturma ve bu liste her ileti Filtresi ile ilişkilendirerek, tek tek bir olası hedef sağlayarak sonucunda hata noktasını kaldırın. Bir hata olması durumunda, yönlendirme hizmeti, tüm uç noktalar tüketmiş ya da olmayan bir iletişim hatası oluştuğunda hata, ileti taşınana kadar listedeki sonraki uç nokta için ileti teslim dener.  
   
- Hata işleme yapılandırmak için kullanılan adımları için bkz. [nasıl yapılır: hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Hata işleme yapılandırmak için kullanılan adımları için bkz. [nasıl yapılır: Hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Hizmet Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Nasıl yapılır: Hizmet Verilerini Bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Nasıl yapılır: Hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Nasıl yapılır: Dinamik Güncelleme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Nasıl yapılır: Dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Nasıl yapılır: Hata İşleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Nasıl yapılır: Hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
