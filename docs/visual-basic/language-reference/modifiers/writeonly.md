@@ -11,44 +11,44 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 4f34f7f4ada3f8d61c9d855eab1b8b073a3d5ed8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c8a05a4575c5d1ec01aa1b2badf2129c54bc2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522784"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
-Bir özellik yazılmış ancak okunamıyor belirtir.  
+Bir özellik yazılabileceğini ancak okunamayacağını olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="rules"></a>Kurallar  
- **Bildirim bağlamı.** Kullanabileceğiniz `WriteOnly` yalnızca modülü düzeyinde. Bu bildirimi bağlamının anlamına gelir bir `WriteOnly` özelliği bir sınıf, yapı veya modülü olmalıdır ve bir kaynak dosyasını, ad alanı veya yordamı olamaz.  
+ **Bildirim bağlamı.** Kullanabileceğiniz `WriteOnly` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `WriteOnly` özellik bir sınıf, yapı veya modül olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
   
- Bir özellik olarak bildirebilir `WriteOnly`, ancak bir değişken değil.  
+ Bir özellik olarak bildirebilirsiniz `WriteOnly`, ancak bir değişken değil.  
   
-## <a name="when-to-use-writeonly"></a>WriteOnly kullanma zamanı  
- Bazen bir değere ayarlayın ancak nedir Bul değil Süren kod istersiniz. Örneğin, bir sosyal kayıt numarası veya bir parola gibi hassas verileri, ayarlamamış herhangi bir bileşenin erişime karşı korunması gerekir. Bu durumlarda, kullanabileceğiniz bir `WriteOnly` özellik değeri ayarlanamıyor.  
+## <a name="when-to-use-writeonly"></a>WriteOnly kullanıldığı durumlar  
+ Bazen bir değeri ayarlandı, ancak bunun ne olduğunu Bul değil yapabilmek için kullanan kodu istersiniz. Örneğin, sosyal kayıt numarası veya parola gibi hassas verilerin, ayarlamamış herhangi bir bileşeni erişime karşı korunması gerekir. Bu durumlarda, kullandığınız bir `WriteOnly` değeri ayarlamak için özellik.  
   
 > [!IMPORTANT]
 >  Ne zaman tanımlama ve kullanma bir `WriteOnly` özelliği, aşağıdaki ek koruyucu ölçüleri göz önünde bulundurun:  
   
--   **Geçersiz kılma.** Özellik bir sınıf üyesi ise, varsayılan olarak izin [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)ve bunu bildirme `Overridable` veya `MustOverride`. Bu, türetilmiş bir sınıf bir geçersiz kılma istenmeyen erişimin yapmasını engeller.  
+-   **Geçersiz kılma.** Özellik bir sınıf üyesi ise, varsayılan olarak izin [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)ve onu bildirmeyin `Overridable` veya `MustOverride`. Bu, türetilmiş bir sınıf bir geçersiz kılma yoluyla istenmeyen erişim bulunmasını önler.  
   
--   **Erişim düzeyi.** Bir veya daha fazla değişkenlerde özelliğin hassas verileri tutarsanız, bunları bildirme [özel](../../../visual-basic/language-reference/modifiers/private.md) başka bir kod bunlara erişebilmesi için.  
+-   **Erişim düzeyi.** Bir veya daha fazla değişkenlerinde özelliğin hassas verileri tutarsanız, bunları bildirdiğinizde [özel](../../../visual-basic/language-reference/modifiers/private.md) böylece başka bir kod onlara erişebilir.  
   
--   **Şifreleme.** Şifrelenmiş biçimde yerine düz metin tüm hassas verileri depolar. Kötü amaçlı kod şekilde bellek alanı erişim sağlarsa, yapmak daha zor olduğundan verileri kullanın. Şifreleme de hassas verileri seri hale getirmek gerekliyse, yararlıdır.  
+-   **Şifreleme.** Tüm hassas verileri, şifreli biçimde yerine düz metin Store. Kötü amaçlı kod şekilde bellek alanı erişim kazanırsa, yapmak daha zor olan verilerin kullanın. Şifreleme de hassas verileri seri hale getirmek gerekli olması durumunda yararlıdır.  
   
--   **Sıfırlanıyor.** Sınıf, yapı veya özellik tanımlama modülü sonlandırılıyor, hassas verileri varsayılan değerleri veya diğer anlamsız değerlere sıfırlanır. Genel erişim için bellek alanı Boşaltıldığında bu ek koruma sağlar.  
+-   **Sıfırlanıyor.** Sınıf, yapı veya modül özellik tanımlama Sonlandırılmakta, hassas verileri varsayılan değerlerine veya diğer anlamsız değerlere sıfırlayın. Genel erişim için bellek alanı Boşaltıldığında bu ek koruma sağlar.  
   
--   **Kalıcılık.** Bunu önlemek, örneğin diskteki herhangi bir duyarlı veri devam etmez. Ayrıca, herhangi bir duyarlı veri panoya yazma.  
+-   **Kalıcılık.** Bunu önlemek, örneğin diskte hassas verilerin kalıcı olarak tutmaz. Aynı zamanda, hassas verileri panoya yazma değil.  
   
  `WriteOnly` Bu bağlamda değiştirici kullanılabilir:  
   
  [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

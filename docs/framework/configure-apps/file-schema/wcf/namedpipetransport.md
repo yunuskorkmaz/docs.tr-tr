@@ -1,22 +1,22 @@
 ---
-title: '&lt;Connectionpoolsettings&gt;'
+title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518845"
 ---
-# <a name="ltnamedpipetransportgt"></a>&lt;Connectionpoolsettings&gt;
+# <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Özel bir bağlamaya dahil olduğunda Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.  
   
 \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
-\<namePipeTransport >  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -72,14 +72,14 @@ Bu aktarım "net.pipe://hostname/path" biçiminin bir URI'leri kullanır. Diğer
   
 `namedPipeTransport` Öğesi, başlangıç noktası adlandırılmış Aktarım Protokolü uygulayan özel bağlamayı oluşturmak için. Bu aktarım için makinede Windows Communication Foundation (WCF) - to - WCF iletişim kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[Taşıma seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[Bağlamaları](../../../../../docs/framework/wcf/bindings.md)   
-[Bağlamaları genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[Özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

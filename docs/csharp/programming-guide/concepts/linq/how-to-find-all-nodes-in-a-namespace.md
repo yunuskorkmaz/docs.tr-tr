@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)'
+title: 'Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524656"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)
 Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Örnek  
  Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir. Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -95,6 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Temel sorgular (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

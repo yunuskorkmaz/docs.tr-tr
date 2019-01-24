@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525267"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasında iletileri güvenli hale getirme verileri korumak için gereklidir. WCF güvenlik altyapınız hem SOAP iletilerini tanınan güvenlik standartlarını temel güvenli ileti değişimi için verimli ve birlikte çalışabilen bir platform sağlar.  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
 ### <a name="standards-and-interoperability"></a>Standartlar ve birlikte çalışabilirlik  
  Var olan büyük dağıtımları ile bir dünyada, homojenlik ilkesinden nadir olarak rastlanıyor. Farklı satıcıların teklif teknolojileri ile çalışmak dağıtılmış bilgi işlem/iletişimleri platformları gerekir. Benzer şekilde, güvenlik de birlikte çalışabilir olmalıdır.  
   
- Birlikte çalışabilen güvenlik sistemleri etkinleştirmek için şirket Web Hizmetleri sektörün etkin standartları çeşitli oluşturdunuz. Özellikle güvenlik ile ilgili birkaç önemli standartlarına önerilen: WS-güvenlik: SOAP ileti güvenliği (OASIS standartları gövdesi kabul edilir ve daha önce WS-güvenlik bilinen), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
+ Birlikte çalışabilen güvenlik sistemleri etkinleştirmek için şirket Web Hizmetleri sektörün etkin standartları çeşitli oluşturdunuz. Özellikle güvenlik ile ilgili birkaç önemli standartları önerilen: WS-güvenlik: SOAP ileti güvenliği (OASIS standartları gövdesi kabul edilir ve daha önce WS-güvenlik bilinen), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
   
  WCF çok çeşitli birlikte çalışabilirlik senaryolarında destekler. <xref:System.ServiceModel.BasicHttpBinding> Sınıfı, temel güvenlik profili (BSP) adresindeki hedeflediği ve <xref:System.ServiceModel.WSHttpBinding> sınıfı, WS-güvenlik 1.1 ve WS-SecureConversation gibi en son güvenlik standartları hedeflenmiştir. WCF güvenlik, bu standartlara uygun olarak çalışmak ve işletim sistemleri ve Microsoft Windows dışındaki platformları üzerinde barındırılan Web Hizmetleri ile tümleştirin.  
   
@@ -95,21 +95,21 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
  WCF'de, ortak dil çalışma zamanı (CLR) ile tümleştirme yoluyla erişim denetimi özellikleri sağlanır <xref:System.Security.Permissions.PrincipalPermissionAttribute> ve bir dizi olarak bilinen bir API aracılığıyla *kimlik modeli*. Erişim denetimi ve beyana dayalı yetkilendirme hakkında daha fazla ayrıntı için bkz: [genişletme güvenlik](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Denetim  
- *Denetim* Windows olay günlüğüne güvenlik olayları günlüğe kaydetme işlemi. Kimlik doğrulama hataları (veya başarılar) gibi güvenlikle ilgili olayları oturum açabilirsiniz. Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama için bilgi [nasıl yapılır: güvenlik olaylarının](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Denetim* Windows olay günlüğüne güvenlik olayları günlüğe kaydetme işlemi. Kimlik doğrulama hataları (veya başarılar) gibi güvenlikle ilgili olayları oturum açabilirsiniz. Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama için bilgi [nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)  
- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federasyon ve Verilen Belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
+- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Federasyon ve Verilen Belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

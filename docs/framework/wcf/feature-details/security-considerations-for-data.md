@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527958"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 Windows Communication Foundation (WCF) verilerle ilgilenirken, bir dizi tehdit kategorileri dikkate almanız gerekir. Veri işleme ile ilgili en önemli tehdit sınıfları aşağıdaki tabloda listelenmektedir. WCF bu tehditleri azaltmak için araçlar sağlar.  
@@ -223,9 +223,9 @@ Windows Communication Foundation (WCF) verilerle ilgilenirken, bir dizi tehdit k
   
  Bilinen türlerinin bir listesini döndüren bir yöntem yazarken veya bir liste doğrudan geçerken <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucusu, listenin hazırlar kod güvenlidir ve yalnızca güvenilen veriler üzerinde çalışıyor olun.  
   
- Yapılandırmada bilinen türleri belirtme yapılandırma dosyası güvenli olduğundan emin olun. Güçlü adlar (tür bulunduğu imzalanmış derlemenin ortak anahtar belirterek), her zaman yapılandırmasında kullanmasına rağmen türün yüklenecek sürümü belirtmez. Yükleyici türü en son sürümü, mümkünse otomatik olarak seçer. Belirli bir sürüm yapılandırması belirtirseniz, aşağıdaki riskiyle karşılaşırsınız: bir tür gelecekteki bir sürümde giderilen bir güvenlik açığı olabilir, ancak savunmasız sürüm yapılandırmasında açıkça belirtilmediği için yine de yükler.  
+ Yapılandırmada bilinen türleri belirtme yapılandırma dosyası güvenli olduğundan emin olun. Güçlü adlar (tür bulunduğu imzalanmış derlemenin ortak anahtar belirterek), her zaman yapılandırmasında kullanmasına rağmen türün yüklenecek sürümü belirtmez. Yükleyici türü en son sürümü, mümkünse otomatik olarak seçer. Belirli bir sürüm yapılandırması belirtirseniz, aşağıdaki risk çalıştırın: Bir türe gelecekte yayımlanacak bir sürümde giderilen bir güvenlik açığına sahip olabilir, ancak savunmasız sürüm yapılandırmasında açıkça belirtilmediği için yine de yükler.  
   
- Çok fazla bilinen türleri olan başka bir klona: <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirmek ve seri durumdan gerekir her tür için bir giriş ile uygulama etki alanındaki bir önbellek serileştirme/seri durumundan çıkarma kod oluşturur. Bu önbellek, uygulama etki alanı çalıştığı sürece hiçbir zaman kaldırılır. Bu nedenle, bir uygulamanın birçok bilinen türleri kullandığı farkındadır bir saldırganın bir orantısız miktarda bellek kullanmak önbellek neden tüm bu tür, seri durumundan çıkarma neden olabilir.  
+ Çok fazla bilinen türüne sahip olan başka bir klona sahiptir: <xref:System.Runtime.Serialization.DataContractSerializer> Seri hale getirmek ve seri durumdan gerekir her tür için bir giriş ile uygulama etki alanındaki bir önbellek serileştirme/seri durumundan çıkarma kod oluşturur. Bu önbellek, uygulama etki alanı çalıştığı sürece hiçbir zaman kaldırılır. Bu nedenle, bir uygulamanın birçok bilinen türleri kullandığı farkındadır bir saldırganın bir orantısız miktarda bellek kullanmak önbellek neden tüm bu tür, seri durumundan çıkarma neden olabilir.  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>Tür istenmeyen bir durumda olmasını önleyen  
  Bir tür uygulanmasını gerektiren iç tutarlılık kısıtlamaları olabilir. Bu kısıtlamalar seri durumundan çıkarma sırasında bozmayı önlemek için dikkatli olunması gerekir.  
@@ -353,8 +353,8 @@ Windows Communication Foundation (WCF) verilerle ilgilenirken, bir dizi tehdit k
   
 -   Genel olarak, bir kota kabul eden herhangi bir bileşeni kullanırken, kendi güvenlik etkilerini anlamak ve güvenli bir değere ayarlayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

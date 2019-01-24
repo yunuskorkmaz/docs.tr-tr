@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme'
+title: 'Nasıl yapılır: Bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520102"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Nasıl yapılır: bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Nasıl yapılır: Bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme
 Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosyanın derleme olup. Derlemeler ve meta veriler hakkında daha fazla bilgi için Ek Yardım konusuna [derleme bildirimi](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>El ile bir dosyanın derleme olup olmadığını belirleme  
@@ -18,7 +18,7 @@ Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosy
   
 2.  Test etmek istediğiniz dosya yükleyin.  
   
-3.  Varsa **ILDASM** raporlar dosya taşınabilir çalıştırılabilir (PE) dosyası değil ve ardından bir derleme değil. Daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: derleme içeriği görüntüle](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Varsa **ILDASM** raporlar dosya taşınabilir çalıştırılabilir (PE) dosyası değil ve ardından bir derleme değil. Daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: Bütünleştirilmiş kod içeriklerini görüntüleme](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Program aracılığıyla bir dosyanın derleme olup olmadığını belirleme  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection.AssemblyName>  
-- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](index.md)

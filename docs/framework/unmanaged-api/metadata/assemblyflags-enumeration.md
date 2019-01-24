@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521263"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags Numaralandırması
-Çalışma zamanı bütünleştirilmiş özelliklerini açıklayan değerlerini içerir.  
+Bir derlemenin çalışma zamanı özellikleri açıklayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,24 +42,24 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Dışarı aktarılan tür tanımları derleme oluşturan dosyaların içinde örtük olduğunu belirtir. .NET Framework sürüm 1.0 ve 1.1, bu değer her zaman için ayarlanacak kabul edilir.|  
-|`afImplicitResources`|Kaynak tanımları derleme oluşturan dosyaların içinde örtük olduğunu belirtir. .NET Framework 1.0 ve 1.1, bu değer her zaman için ayarlanacak kabul edilir.|  
-|`afNonSideBySideAppDomain`|Aynı uygulama etki alanında çalıştırıyorsanız derleme diğer sürümleriyle yürütülemiyor belirtir.|  
-|`afNonSideBySideProcess`|Aynı işlem içinde çalıştırıyorsanız derleme diğer sürümleriyle yürütülemiyor belirtir.|  
-|`afNonSideBySideMachine`|Aynı bilgisayar üzerinde çalıştırıyorsanız, derleme diğer sürümleriyle yürütülemiyor belirtir.|  
+|`afImplicitExportedTypes`|Dışarı aktarılan tür tanımlarını derlemeyi oluşturan dosyaları içinde örtük olduğunu belirtir. .NET Framework sürüm 1.0 ve 1.1, bu değeri ayarlamak için her zaman varsayılır.|  
+|`afImplicitResources`|Kaynak tanımları derlemeyi oluşturan dosyaları içinde örtük olduğunu belirtir. .NET Framework 1.0 ve 1.1, bu değeri ayarlamak için her zaman varsayılır.|  
+|`afNonSideBySideAppDomain`|Derleme aynı uygulama etki alanında çalıştırıyorsanız diğer sürümlerle yürütülemez belirtir.|  
+|`afNonSideBySideProcess`|Aynı işlem içinde çalıştırıyorsanız derleme diğer sürümlerle yürütülemez belirtir.|  
+|`afNonSideBySideMachine`|Aynı bilgisayarda çalışıyorsa derleme diğer sürümlerle yürütülemez belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- 0x0010 ve 0x0070 (dahil) arasında değerler başvurulan derlemeyi yan yana uyumluluk özelliklerini tanımlamak için kullanılır. Bu değerlerin hiçbiri ayarlanmazsa derleme yan yana uyumlu olduğu varsayılır.  
+ 0x0010 ve 0x0070 (dahil) arasında değerler, yan yana uyumluluk özelliklerini başvurulan derlemeyi tanımlamak için kullanılır. Bu değerlerin hiçbiri ayarlanmazsa derleme yan yana uyumlu olduğu varsayılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MsCorEE.h  
+ **Üst bilgi:** MsCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

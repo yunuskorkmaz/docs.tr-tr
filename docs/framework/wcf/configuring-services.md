@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525059"
 ---
 # <a name="configuring-services"></a>Hizmetleri Yapılandırma
-Tasarlanmış ve hizmet sözleşmesini uygulanmış sonra hizmetiniz yapılandırmaya hazırsınız demektir. Burada tanımlayın ve hizmetinizi burada bulunabilir, taşıma ve iletileri ve gerektirdiği güvenlik türünü göndermek ve almak için kullandığı ileti kodlama adresini belirtme dahil olmak üzere istemcilere nasıl kullanıma sunulan özelleştirme budur.  
+Tasarlanmış ve hizmet sözleşmeniz uygulanan sonra hizmetinizin yapılandırmaya hazırsınız. Burada tanımlayın ve hizmetinizi burada bulunabilir, taşıma ve iletileri ve gerektiren güvenlik türünü göndermek ve almak için kullandığı ileti kodlama adresi belirtme dahil olmak üzere istemcilere nasıl kullanıma sunulan özelleştirme budur.  
   
- Yapılandırma burada kullanılan gibi imperatively kodda veya tanımlama ve belirtme, uç nokta adresleri, kullanılan aktarımları ve kendi güvenlik düzenleri gibi bir hizmet çeşitli yönlerini özelleştirme bir yapılandırma dosyası kullanarak tüm yöntemleri içerir. Bir ana uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
+ Yapılandırma burada kullanılan kesin kod veya tanımlayın ve bir hizmetin kendi güvenlik düzenleri, uç nokta adresleri ve kullanılan taşımalar belirleme gibi çeşitli yönlerini de özelleştirerek bir yapılandırma dosyası kullanarak tüm yöntemleri içerir. Büyük bir uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma belirtmezseniz, çalışma zamanı varsayılan uç noktalar, bağlamaları ve davranışları ile otomatik olarak hizmetinizi yapılandırır.  
+ İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri basitleştiren yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma sağlamazsanız, çalışma zamanı varsayılan uç noktaları, bağlamalar ve davranışları ile otomatik olarak hizmetinizi yapılandırır.  
   
  [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) hizmetini yapılandırılabilir kullanmaktır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin.  
+ Yapılandırılabilir kullanarak bir Windows Communication Foundation (WCF) hizmetidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknoloji. En yaygın olarak, XML öğeleri, bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek makine tarafından makine olarak sağlar.  
   
  [Bağlamalar](../../../docs/framework/wcf/bindings.md)  
- Ayrıca, WCF en temel özellikleri nasıl bir istemci ve hizmet iletişim kurmak için aktarımları, güvenlik ve Kodlamalar kullanılan ileti gibi hızlı bir şekilde seçmenize olanak bağlamaları biçiminde birkaç sistem tarafından sağlanan ortak yapılandırmaları içerir.  
+ Ayrıca, WCF, hızlı bir şekilde nasıl bir istemci ve hizmet iletişim kurmak için aktarımlar, güvenlik ve kodlamaları kullanılan ileti gibi en temel özellikler seçmenizi sağlayacak bağlamaları biçiminde birçok sistem tarafından sağlanan genel yapılandırmaları içerir.  
   
  [Uç Noktalar](../../../docs/framework/wcf/endpoints.md)  
- Tüm WCF Hizmeti ile aracılığıyla iletişimin *uç noktaları* hizmetinin. Uç noktaları sözleşme, bağlamaları belirtilen yapılandırma bilgilerini ve hizmet nerede bulacağını veya hizmeti hakkında bilgi almak nereye belirtmek adresleri içerir.  
+ Bir WCF Hizmeti ile tüm iletişimi üzerinden gerçekleşir *uç noktaları* hizmeti. Uç noktaları, sözleşmenin bağlamaları belirtilen yapılandırma bilgilerini ve hizmet nerede bulacağını veya hizmet hakkında bilgi almak nereye belirtmek adresleri içerir.  
   
  [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
- WCF kullanarak ve mevcut güvenlik mekanizmaları gizliliğini, bütünlüğünü, kimlik doğrulama ve yetkilendirme herhangi bir hizmet uygulamasına uygulayabilirsiniz. Ayrıca, güvenlik başarı ve başarısızlık için de denetleyebilirsiniz.  
+ WCF kullanan ve var olan güvenlik mekanizmaları, gizlilik, bütünlük, kimlik doğrulama ve yetkilendirme, herhangi bir hizmet uygulayabilirsiniz. Ayrıca, güvenlik başarı ve başarısızlık için de denetleyebilirsiniz.  
   
  [WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
- Birlikte çalışabilir hizmetler ve istemcileri herhangi bir platform veya işletim sistemi ile bir hizmeti dağıtma gereksinimleri WS özetlenen-ı temel Profil 1.1 belirtimini.  
+ Hizmetler ve istemcileri herhangi bir platform veya işletim sistemi ile birlikte çalışabilen bir hizmeti dağıtmak için gereksinimleri WS içinde ana hatlarıyla özetlenen-ı Basic Profile 1.1 belirtimi.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -55,7 +55,7 @@ Tasarlanmış ve hizmet sözleşmesini uygulanmış sonra hizmetiniz yapılandı
   
  [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)  
- [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)
+- [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)

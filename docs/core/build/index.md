@@ -4,13 +4,8 @@ description: .NET Core ve .NET Core CLI kaynak kodundan oluşturmayı öğrenin.
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170073"
 ---
+
 # <a name="build-net-core-from-source"></a>Kaynaktan .NET Core derleme
 
 .NET Core, kaynak koddan oluşturma imkanı birden çok yolla önemlidir: .NET Core numaralı bağlantı noktasına yeni platformlara kolaylaştırır, katkı sağlar ve düzeltmeleri ürüne ve .NET özel sürümlerini oluşturulmasını sağlar.
@@ -101,6 +96,6 @@ Kullanım `dotnet` gelen yürütülebilir *yapıtları / {os}-{arch} / stage2* y
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET core ortak dil çalışma zamanı (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET core CLI Geliştirici Kılavuzu](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core dağıtımı paketleme](./distribution-packaging.md)
+- [.NET core ortak dil çalışma zamanı (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET core CLI Geliştirici Kılavuzu](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core dağıtımı paketleme](./distribution-packaging.md)

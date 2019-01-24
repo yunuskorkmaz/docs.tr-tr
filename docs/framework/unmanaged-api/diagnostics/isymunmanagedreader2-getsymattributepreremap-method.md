@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 326f970f53293b74bbf8c5e77830f3f6ce1b73ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519690"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap Metodu
-Adını dayalı özel bir öznitelik alır. Meta veri özel öznitelikler farklı olarak bu öznitelikler simgesi deposunda tutulur.  
+Özel bir öznitelik adı üzerinde temel alır. Meta veri özel öznitelikleri farklı olarak bu öznitelikler sembol deposundaki tutulur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +41,25 @@ HRESULT GetSymAttributePreRemap(
   
 #### <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Üst meta veri simgesi.  
+ [in] Ana meta veri belirteci.  
   
  `name`  
- [in] Bir işaretçi bir `WCHAR` adı içeriyor.  
+ [in] Bir işaretçi bir `WCHAR` , adı içeriyor.  
   
  `cBuffer`  
- [in] A `ULONG32` boyutunu gösterir `buffer` dizi.  
+ [in] A `ULONG32` boyutunu gösteren `buffer` dizisi.  
   
  `pcBuffer`  
- [out] Bir işaretçi bir `ULONG32` özniteliği bayt içermesi gerekir arabellek boyutunu alır.  
+ [out] Bir işaretçi bir `ULONG32` içeren öznitelik bayt için gerekli arabellek boyutunu alır.  
   
  `buffer`  
- [out] Öznitelik bayt alır arabellek için bir işaretçi.  
+ [out] Öznitelik bayt alan arabellek için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

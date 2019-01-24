@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0e77b26bdc7eaa038c69a6fb706ee066aa223a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523707"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] istemciler, platformlar ve altyapıları çeşitli kullanıcı arabirimleri başlatılmayabilir veya incelemek için kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Kalite güvencesi (test) kod hem kullanıcı arabirimi öğeleri incelenir ve diğer koddan onlarla kullanıcı etkileşiminin benzetimini ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] erişilebilirlik tüm platformlarda bakın.  
@@ -154,7 +154,7 @@ End Class
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonuna Genel Bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://go.microsoft.com/fwlink/?LinkID=160025)  
- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonuna Genel Bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://go.microsoft.com/fwlink/?LinkID=160025)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

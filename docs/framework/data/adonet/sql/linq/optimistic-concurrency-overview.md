@@ -1,72 +1,72 @@
 ---
-title: 'İyimser eşzamanlılık: genel bakış'
+title: 'İyimser eşzamanlılık: Genel Bakış'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 5b4603526896364285cb3c85d12568ed9031ed47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5395134a536969788252524ccd7c2936d3d9e2d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517467"
 ---
-# <a name="optimistic-concurrency-overview"></a>İyimser eşzamanlılık: genel bakış
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] İyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda iyimser eşzamanlılık uygulamak terimler açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri:  
+# <a name="optimistic-concurrency-overview"></a>İyimser eşzamanlılık: Genel Bakış
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] İyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda iyimser eşzamanlılık uygulamak terimleri açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri:  
   
 |Koşulları|Açıklama|  
 |-----------|-----------------|  
-|eşzamanlılık|Durum aynı anda iki veya daha fazla kullanıcı veritabanı satıra güncelleştirmeyi deneyin.|  
-|Eşzamanlılık çakışması|İki veya daha fazla kullanıcı aynı anda bir veya daha fazla sütun satır için çakışan değerleri gönderme deneyin durum.|  
-|eşzamanlılık denetimi|Eşzamanlılık çakışmalarını çözmek için kullanılan yöntem.|  
-|İyimser eşzamanlılık denetimi|İlk gönderilecek değişiklikleri sorgulamasına önce diğer işlemleri bir satır değerleri değişip değişmediğini araştırır yöntemi.<br /><br /> İle karşılaştırın *eşzamanlılık denetim*, eşzamanlılık çakışmaları önlemek için kayıt kilitler.<br /><br /> *İyimser* denetim bir işlem başka bir işlemle tahmin edilemez olmalıdır engellemesini olasılığını algıladığından bu nedenle ifade.|  
-|çakışma çözümü|Veritabanını yeniden sorgulama ve farkları mutabık kılma çakışan öğe yenileme işlemi.<br /><br /> Bir nesne yenilendiğinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişikliği İzleyicisi aşağıdaki veriler tutar:<br /><br /> -İlk olarak veritabanından alınır ve güncelleştirme için kullanılan değerlerini denetleyin.<br />-Yeni veritabanı değerlerini kullanarak sonraki sorgu.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ardından nesne (diğer bir deyişle, bir veya daha fazla üye değerlerinin değiştirilip) çakışma olup olmadığını belirler. Nesne, çakışma ise [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonraki çakışma üyeleri olan belirler.<br /><br /> Herhangi bir üyenin çakışma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulur çakışma listesine eklenir.|  
+|eşzamanlılık|İki veya daha fazla kullanıcı aynı anda aynı veritabanına satırı güncelleştirmek deneyin durumu.|  
+|Eşzamanlılık çakışması|İki veya daha fazla kullanıcı aynı anda bir veya daha fazla sütun bir satır için çakışan değerleri göndermek deneyin durumu.|  
+|eşzamanlılık denetimi|Eşzamanlılık çakışmalarını çözümlemek için kullanılan yöntem.|  
+|İyimser eşzamanlılık denetimi|İlk değişiklikleri ayrılmak üzere gönderilmesine izin veren önce diğer işlemleri bir satır değerleri değişip değişmediğini araştırır tekniğidir.<br /><br /> İle Karşıtlık *kötümser eşzamanlılık denetimi*, eşzamanlılık çakışmalarını önlemek için kayıt kilitler.<br /><br /> *İyimser* denetimi bir işlem başka olası olacak şekilde müdahale etmeden olasılığını varsaydığı şekilde ifade.|  
+|Çakışma çözümü|Çakışan öğe yenilenmesini veritabanını yeniden sorgulama ve ardından farkları mutabık kılma işlemi.<br /><br /> Bir nesne yenilendiğinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişikliği İzleyicisi aşağıdaki veri tutar:<br /><br /> -İlk olarak veritabanından alınan ve kullanılan güncelleştirmesi değerleri kontrol edin.<br />-Yeni veritabanı değerlerini izleyen sorgu.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ardından, nesne çakışan (diğer bir deyişle, bir veya daha fazla üye değerlerinin değiştirilip) olup olmadığını belirler. Çakışan nesne ise [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonraki çakışma içinde olan üyelerinin belirler.<br /><br /> Herhangi bir üye çakışma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulur bir çakışma listesine eklenir.|  
   
- İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli, bir *iyimser eşzamanlılık çakışması* aşağıdaki koşulların her ikisi de doğruysa oluşur:  
+ İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli, bir *iyimser eşzamanlılık çakışması* aşağıdaki koşulların her ikisinin de doğru olduğunda oluşur:  
   
--   Değişiklikler veritabanına göndermek istemci dener.  
+-   İstemci, veritabanına değişiklikleri gönderme dener.  
   
--   İstemcinin son okuyabilir bu yana veritabanında bir veya daha fazla güncelleştirme denetimi değerleri güncelleştirildi.  
+-   İstemcinin en son bunları okumak bu yana veritabanında bir veya daha fazla güncelleştirme denetimi değerler güncelleştirildi.  
   
- Bu çakışma çözümlemesi nesne hangi üyelerinin çakışıyor bulmak ve bununla ilgili istediğiniz karar içerir.  
+ Bu çakışma çözümlemesi çakışma nesnenin hangi üyelerin bulmak ve ardından bunu yapmak istediğinize karar içerir.  
   
 > [!NOTE]
->  Yalnızca üyeleri eşlenen olarak <xref:System.Data.Linq.Mapping.UpdateCheck.Always> veya <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> iyimser eşzamanlılık denetimlerinde katılın. Denetimsiz işaretlenmiş üyeleri için gerçekleştirilen <xref:System.Data.Linq.Mapping.UpdateCheck.Never>. Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+>  Yalnızca üyeleri eşleştirilmiş olarak <xref:System.Data.Linq.Mapping.UpdateCheck.Always> veya <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> iyimser eşzamanlılık denetimlerini katılın. Onay için işaretlenen üyelerin gerçekleştirilir <xref:System.Data.Linq.Mapping.UpdateCheck.Never>. Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.UpdateCheck>.  
   
 ## <a name="example"></a>Örnek  
- Örneğin, aşağıdaki senaryoda, bir satır için veritabanı sorgulayarak bir güncelleştirme hazırlamak Kullanıcı1 başlatır. Kullanıcı1 Alfreds, Maria ve satış değerlerle satırını alır.  
+ Örneğin, aşağıdaki senaryoda, bir satır için veritabanını sorgulayarak bir güncelleştirme hazırlamak User1 başlatır. User1 Alfreds, Maria ve satış değerleri içeren bir satır alır.  
   
- Kullanıcı1 Alfred ve pazarlama departmanı sütuna değerini Yöneticisi sütunun değeri değiştirmek istiyor. Bu değişiklikleri Kullanıcı1 göndermeden önce kullanıcı2 değişiklikler veritabanına gönderdi. Şimdi Yardımcısı sütunun değeri Mary ve hizmetine departmanı sütunun değeri değiştirildi.  
+ User1 Alfred ve pazarlama departmanı sütununun değerini Manager sütununun değerini değiştirmek istiyor. User1 bu değişiklikleri gönderebilmeniz için önce kullanıcı2 veritabanında yapılan değişiklikler gönderdi. Şimdi Yardımcısı sütununun değeri, Gamze ve hizmet için bölüm sütununun değeri değiştirildi.  
   
- Kullanıcı1 şimdi değişiklikleri gönderme çalıştığında gönderme başarısız olur ve bir <xref:System.Data.Linq.ChangeConflictException> özel durumu oluşur. Yardımcısı sütunu ve bölüm sütunu veritabanı değerlerini beklenmiyordu o olmadığından bu sonucu oluşur. Yardımcısı ve bölüm sütunları temsil eden üyeleri çakışıyor. Durumu aşağıdaki tabloda özetlenmiştir.  
+ Gönderim user1 şimdi değişiklikleri gönderme çalıştığında başarısız ve <xref:System.Data.Linq.ChangeConflictException> özel durumu oluşturulur. Veritabanı değerlerin Yardımcısı sütunu ve bölüm sütunu için beklenmiyordu o olmadığından bu sonucu oluşur. Üyeleri Yardımcısı ve bölüm sütunları temsil eden çakışıyor. Durum aşağıdaki tabloda özetlenmiştir.  
   
 ||Yöneticisi|Yardımcısı|Bölüm|  
 |------|-------------|---------------|----------------|  
-|Özgün durumu|Alfreds|Maria|Satış|  
-|Kullanıcı1|Alfred||Pazarlama|  
+|Özgün durumuna|Alfreds|Maria|Satış|  
+|user1|Alfred||Pazarlama|  
 |Kullanıcı2||Mary|Hizmet|  
   
- Bu gibi farklı yollarla çakışmaları çözümleyebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: yönetmek değişiklik çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Bu gibi çakışmaları farklı şekilde çözebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
-## <a name="conflict-detection-and-resolution-checklist"></a>Çakışma algılamasını ve çözümleme denetim listesi  
- Algılayabilir ve ayrıntı herhangi bir düzeyde çakışmaları. Bir uçta tüm üç yöntemden birini çakışmaları (bakın <xref:System.Data.Linq.RefreshMode>) sağlayabildiği olmadan. Diğer uçta çakışma çakışan her üye üzerinde her tür için belirli bir eylemi belirlemek için kullanabilirsiniz.  
+## <a name="conflict-detection-and-resolution-checklist"></a>Çakışma algılama ve çözümleme denetim listesi  
+ Algılayın ve herhangi bir düzeyde ayrıntı çakışmaları çözün. Bir uçta üç yoldan biriyle bütün çakışmaları çözün (bkz <xref:System.Data.Linq.RefreshMode>) sağlayabildiği olmadan. Diğer uçta her üye çakışma içinde çakışma oluştu her türü için belirli bir eylemi belirleyebilirsiniz.  
   
--   Belirtin veya düzeltmek <xref:System.Data.Linq.Mapping.UpdateCheck> nesne modelinde seçenekleri.  
+-   Belirtin veya düzeltmek <xref:System.Data.Linq.Mapping.UpdateCheck> , nesne modelinde seçenekleri.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: belirtin üyeler eşzamanlılık çakışmalar için test](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     Daha fazla bilgi için [nasıl yapılır: Hangi üyelerin eşzamanlılık çakışmaları için test edildiğini belirtme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
--   Aramanız için try/catch bloğu içinde <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, hangi noktada durum için özel durumlar istediğinizi belirtin.  
+-   Try/catch bloğunda, çağrınız <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, hangi noktada özel durum oluşturulmasına istediğinizi belirtin.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: belirtin, eşzamanlılık özel durumlar](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     Daha fazla bilgi için [nasıl yapılır: Zaman eşzamanlılık özel durum belirtin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
--   Almak istediğiniz ne kadar çakışma ayrıntısı belirlemek ve kodu buna göre try/catch bloğunda içerir.  
+-   Almak istediğiniz kadar çakışma ayrıntının belirleme ve kodu uygun şekilde, try/catch bloğu içinde içerir.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: Varlık çakışma bilgilerini almak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) ve [nasıl yapılır: üye çakışma bilgisi almak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     Daha fazla bilgi için [nasıl yapılır: Varlık çakışma bilgilerini alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) ve [nasıl yapılır: Üye çakışma bilgilerini alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Dahil, `try` / `catch` bulduğunuz çeşitli çakışmalarını çözmek istediğiniz kod.  
+-   Dahil, `try` / `catch` nasıl bulduğunuz çeşitli çakışmaları çözümlemek istediğiniz kodu.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: çakışmaları korunuyor veritabanı değerlere göre](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [nasıl yapılır: çakışmaları üzerine veritabanı değerlere göre](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), ve [nasıl yapılır: çakışmaları birleştirme tarafından Veritabanı değerlerle](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     Daha fazla bilgi için [nasıl yapılır: Veritabanı değerlerini tutarak çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [nasıl yapılır: Veritabanı değerlerinin üzerine yazarak çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), ve [nasıl yapılır: Veritabanı değerleri ile birleştirerek çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
-## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ-SQL, destek çakışma bulma ve çözüm türleri  
- Sınıfları ve özellikleri iyimser eşzamanlılık çakışmalarını çözümleme desteklemek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları içerir:  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ to SQL türleri, çakışma bulma ve çözümleme desteği  
+ Sınıfları ve özellikleri iyimser eşzamanlılık çakışmaları çözümleme desteklemek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları içerir:  
   
 -   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
@@ -88,5 +88,5 @@ ms.locfileid: "33362934"
   
 -   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Değişiklik Çakışmalarını Yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

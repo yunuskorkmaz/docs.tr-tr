@@ -5,57 +5,57 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 176ee23c48d8b6678cb1fd9ebbf262daa1294318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517792"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller
-`DataGridView` Denetim temel hücrelerin görünüşünü ve görüntüyü biçimlendirme hücre değerleri tanımlamak kolaylaştırır. Görünüm tanımlayabilir ve biçimlendirme stilleri tek tek hücreler, belirli sütunları ve satırları hücrelerde veya denetimdeki tüm hücreleri özelliklerini ayarlayarak `DataGridViewCellStyle` çeşitli erişilen nesneler `DataGridView` denetleyen özellikler. Ayrıca, dinamik olarak hücre değeri gibi etkenlere işleyerek göre bu stiller değiştirebileceğiniz `CellFormatting` olay.  
+`DataGridView` Denetim temel hücrelerin görünüşünü ve görüntü biçimlendirme hücre değerlerini tanımlamak kolaylaştırır. Görünüm tanımlayabilirsiniz ve biçimlendirme stilleri tek tek hücrelere, özel sütunlar ve satırlar hücreleri veya denetimindeki tüm hücreleri özelliklerini ayarlayarak `DataGridViewCellStyle` çeşitli erişilen nesneler `DataGridView` denetim özellikleri. Ayrıca, bu stilleri hücre değerini gibi faktörlere göre işleyerek dinamik olarak değiştirebilirsiniz `CellFormatting` olay.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Kenarlık ve Kılavuz Çizgi Stillerini Değiştirme](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
- Nasıl ayarlanacağını açıklar `DataGridView` denetim sınır ve sınır satırları hücreler arasında görünümünü tanımlayan özellikleri.  
+ [Nasıl yapılır: Kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde değiştirme](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ Nasıl ayarlanacağı açıklanır `DataGridView` denetimi sınır ve sınır satırları hücreler arasındaki görünümü tanımlayan özellikleri.  
   
  [Windows Forms DataGridView Denetimindeki Hücre Stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- Açıklar `DataGridViewCellStyle` sınıfı ve bu tür özellikleri denetiminde hücrelerin nasıl görüntüleneceğini tanımlamak için nasıl etkileşim kurduklarını.  
+ Açıklar `DataGridViewCellStyle` sınıfı ve bu türün özelliklerini denetiminde hücrelerin nasıl görüntüleneceğini tanımlamak için nasıl etkileşim kuracağını.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stillerini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- Nasıl kullanılacağını açıklar `DataGridViewCellStyle` belirli satırları ve sütunları ve tüm denetiminde hücreler varsayılan görünümünü tanımlamak için özellikleri.  
+ [Nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ Nasıl kullanılacağını açıklar `DataGridViewCellStyle` belirli satırlar ve sütunlar ve tüm denetiminde hücreler varsayılan görünümünü tanımlamak için özellikleri.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Verileri Biçimlendirme](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
- Kullanarak hücre görüntüleme değerlerinin nasıl biçimlendirileceğini tanımlar `DataGridViewCellStyle` özellikleri.  
+ [Nasıl yapılır: Verileri biçimlendirme Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ Kullanarak hücre görüntüleme değerlerinin nasıl biçimlendirileceğini açıklar `DataGridViewCellStyle` özellikleri.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Yazı Tipi ve Renk Stillerini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
- Nasıl kullanılacağını açıklar `DefaultCellStyle` temel ayarlamak için özellik denetiminde tüm hücreleri için özellikleri görüntüleyin.  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde yazı tipi ve renk stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ Nasıl kullanılacağını açıklar `DefaultCellStyle` temel ayarlamak için özellik denetiminde tüm hücreler için özellikleri görüntüler.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetimi İçin Alternatif Satır Stillerini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- Büyük defter benzeri etkisi farklı görüntülenen değişen satırların kullanarak denetiminde oluşturmayı açıklar.  
+ [Nasıl yapılır: Windows Forms DataGridView denetimi için alternatif satır stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ Büyük defter benzeri etkisi farklı görüntülenen değişen satırların kullanarak denetimi oluşturmayı açıklar.  
   
- [Nasıl Yapılır: Windows Forms DataGridView Denetimindeki Satırları Özelleştirmek için Satır Şablonunu Kullanma](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- Nasıl kullanılacağını açıklar `RowTemplate` denetimdeki tüm satırlar için kullanılacak satır özelliklerini ayarlamak için özellik.  
+ [Nasıl yapılır: Windows Forms DataGridView denetimindeki satırları özelleştirmek için satır şablonunu kullanma](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ Nasıl kullanılacağını açıklar `RowTemplate` denetiminde tüm satırlar için kullanılacak satır özellikleri ayarlamak için özellik.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.DataGridView> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
   
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı.  
   
  <xref:System.Windows.Forms.DataGridView.CellFormatting>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.DataGridView.CellFormatting> olay.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.CellFormatting> olay.  
   
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- Özel boyama açıklayan konulara sağlar <xref:System.Windows.Forms.DataGridView> hücre ve satırları ve oluşturma türetilmiş hücre, sütun ve satır türleri.  
+ Özel boyama açıklayan konuları sağlar <xref:System.Windows.Forms.DataGridView> hücre ve satırları ve oluşturma türetilmiş hücre, sütun ve satır türleri.  
   
  [Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Yaygın olarak açıklayan konulara hücre, satır ve sütun özelliklerinin kullanılmasını sağlar.  
+ Yaygın olarak açıklayan konulara kullanılan hücre, satır ve sütun özellikleri sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

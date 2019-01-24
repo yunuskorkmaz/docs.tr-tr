@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009f7d20dfd6efc279b3187af8f5c95132ae51e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525241"
 ---
 # <a name="closeenum-method"></a>CloseEnum Yöntemi
 Belirtilen numaralandırma kapatır ve ilişkili kaynakları serbest bırakır.  
@@ -37,7 +37,7 @@ HRESULT CloseEnum(
   
 #### <a name="parameters"></a>Parametreler  
  `hEnum`  
- Kapatılması için numaralandırma tanıtıcısı.  
+ Kapatılan numaralandırma tanıtıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -45,7 +45,7 @@ HRESULT CloseEnum(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

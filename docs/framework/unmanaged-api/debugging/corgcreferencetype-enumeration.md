@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ac36f6d0dba92742ea7a7acfadc194930ccd74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516453"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType Sabit Listesi
-Çöp toplanan olması için bir nesne kaynak tanımlar.  
+Kaynağı olarak atık olarak toplanmış bir nesneyi tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,34 +53,34 @@ typedef enum {
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Nesne işleyicisi tablosundan bir güçlü başvuruya işleyici.|  
-|`CorHandleStrongPinning`|Sabitlenmiş güçlü bir başvuru için bir tanıtıcı nesnesi tanıtıcı tablosundan.|  
-|`CorHandleWeakShort`|Zayıf başvuru için bir tanıtıcı nesnesi tanıtıcı tablosundan.|  
-|`CorHandleWeakRefCount`|Zayıf başvuruları sayılan nesnesi için tanıtıcı nesnesi tanıtıcı tablosundan.|  
-|`CorHandleStrongRefCount`|Başvuruları sayılan nesnesi için bir tanıtıcı nesnesi tanıtıcı tablosundan.|  
-|`CorHandleStrongDependent`|Bağımlı bir nesne için bir tanıtıcı nesnesi tanıtıcı tablosundan.|  
+|`CorHandleStrongPinning`|Nesne işleyicisi tablosundan bir sabitlenmiş güçlü başvuru işleyici.|  
+|`CorHandleWeakShort`|Nesne işleyicisi tablosundan bir tanıtıcı zayıf bir başvuru.|  
+|`CorHandleWeakRefCount`|Nesne işleyicisi tablosundan bir tanıtıcı zayıf bir başvuru sayılan nesne.|  
+|`CorHandleStrongRefCount`|Nesne işleyicisi tablosundan bir başvurusu sayılan nesne için tanıtıcı.|  
+|`CorHandleStrongDependent`|Nesne işleyicisi tablosundan bir bağımlı nesne için tanıtıcı.|  
 |`CorHandleStrongAsyncPinned`|Nesne işleyicisi tablosundan bir zaman uyumsuz sabitlenmiş nesne.|  
 |`CorHandleStrongSizedByref`|Atık toplama zamanında tüm nesnelerin ve nesne köklerinin toplu kapanışının yaklaşık boyutunu tutan bir güçlü işleyici.|  
-|`CorReferenceStack`|Yönetilen yığın bir başvuru.|  
-|`CorReferenceFinalizer`|Sonlandırıcı sırasından başvuru.|  
-|CorHandleStrongOnly|Yalnızca güçlü başvurular tanıtıcısı bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
-|`CorHandleWeakOnly`|Yalnızca zayıf başvurular tanıtıcısı bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
-|`CorHandleAll`|Tüm başvuruları tanıtıcısı bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
+|`CorReferenceStack`|Yönetilen yığından başvuru.|  
+|`CorReferenceFinalizer`|Sonlandırma sırasından bir başvuru.|  
+|CorHandleStrongOnly|Yalnızca tanımlayıcı başvuruları, işleyici bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
+|`CorHandleWeakOnly`|Zayıf başvurular yalnızca tanıtıcı bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
+|`CorHandleAll`|Tüm başvuruları, işleyici bir tablo döndürür. Bu değer tarafından kullanılan [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yalnızca yöntemi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorGCReferenceType` Numaralandırma aşağıdaki gibi kullanılır:  
+ `CorGCReferenceType` Numaralandırması şu şekilde kullanılır:  
   
--   Değeri olarak `type` alanını [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) yapısı, başvuru veya tanıtıcı kaynağını gösterir.  
+-   Değeri olarak `type` alanını [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) yapısı, başvuru veya tanıtıcısı kaynağını gösterir.  
   
--   Olarak `types` bağımsız değişkeni [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yöntemi, numaralandırmada içerecek şekilde tanıtıcıları türlerini belirtir.  
+-   Olarak `types` bağımsız değişkeni [Icordebugprocess5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yöntemi numaralandırmada içerecek şekilde tanıtıcıları türlerini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518962"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>İşlevsel programlama ve Kesin programlama karşılaştırması (C#)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  
@@ -50,8 +50,8 @@ Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (
   
  Hem zorunlu hem de işlevsel programlama yaklaşımları desteklediğinden Neyse ki, C# işlevsel programlamaya, tam artık gerektirmez. Bir geliştirici, hangi yaklaşımın belirli bir senaryo için en uygun seçebilirsiniz. Aslında, programlar genellikle iki yaklaşımı birleştirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)  
+- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)
 - [Saf işlevler halinde (C#) yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

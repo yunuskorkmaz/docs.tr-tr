@@ -4,33 +4,33 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: ac21c4d52b248025ee26bac3e511bb5b0a0b668e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a0a443fd9f8a6dec5ead24bc75c97d89d6c36b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518468"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL yüklenirken hata (Visual Basic)
-Dinamik bağlantı kitaplığı (DLL) içinde belirtilen bir kitaplıktır `Lib` yan tümcesinde bir `Declare` deyimi. Bu hatanın olası nedenleri şunlardır:  
+Bir dinamik bağlantı kitaplığı (DLL) belirtilen bir kitaplıktır `Lib` yan tümcesi bir `Declare` deyimi. Bu hata için olası nedenler şunlardır:  
   
--   Dosya DLL yürütülebilir değil.  
+-   DLL yürütülebilir dosya değil.  
   
--   Dosya bir Microsoft Windows dll dosyası değil.  
+-   Dosya, Microsoft Windows DLL değil.  
   
--   DLL mevcut değil başka bir DLL başvurur.  
+-   DLL mevcut değilse başka bir DLL başvurusu.  
   
--   DLL veya başvurulan DLL yolunda belirtilen bir dizin değil.  
+-   DLL veya başvurulan DLL belirtilen yolda bir dizin değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Dosya bir kaynak metin dosyası ve bu nedenle değil DLL yürütülebilir ise derlenmiş ve gerekir DLL yürütülebilir dosya biçimine bağlı.  
+-   Dosya bir kaynak metin dosyası ve bu nedenle DLL çalıştırılabilir değil ise, derlenmiş ve gerekir DLL yürütülebilir dosya biçimine bağlı.  
   
--   Dosya bir Microsoft Windows DLL değilse, Microsoft Windows eşdeğer edinin.  
+-   Microsoft Windows DLL dosyası değil, eşdeğer Microsoft Windows edinin.  
   
--   DLL mevcut değil başka bir DLL başvuruyorsa, başvurulan DLL edinmek ve kullanılabilir yapın.  
+-   DLL mevcut değilse başka bir DLL başvuruyorsa, başvurulan DLL edinin ve kullanılabilir hale getirmek.  
   
--   DLL veya başvurulan DLL yolu tarafından belirtilen bir dizinde değilse, DLL başvurulan bir dizinine taşıyın.  
+-   DLL veya başvurulan DLL yolu tarafından belirtilen bir dizinde değilse DLL başvurulan bir dizinine taşıyın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)

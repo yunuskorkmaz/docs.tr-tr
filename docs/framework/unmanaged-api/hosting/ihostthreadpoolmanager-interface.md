@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522732"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager Arabirimi
-Ortak dil çalışma zamanı (CLR) iş parçacığı havuzu yapılandırmak için ve iş parçacığı havuzu iş öğelerine kuyruğuna sağlayan yöntemler sağlar.  
+Ortak dil çalışma zamanı (CLR) iş parçacığı havuzu yapılandırmak ve iş parçacığı havuzu iş öğelerine kuyruğuna olanak tanıyan yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetAvailableThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|İş öğeleri şu anda işlenmiyor iş parçacığı havuzundaki iş parçacığı sayısını alır.|  
-|[GetMaxThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|Konak tutar iş parçacığı sayısı, iş parçacığı havuzundaki eşzamanlı olarak alır.|  
-|[GetMinThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|Ana bilgisayar tutar boş iş parçacığı en az sayıda istekleri kapatıldığını içinde alır.|  
-|[QueueUserWorkItem Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Bir işlev yürütme için sıraya koyar ve işlev tarafından kullanılacak verilerini içeren bir nesne sağlar.|  
+|[GetAvailableThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|İş öğeleri şu anda işleme değil iş parçacığı havuzundaki iş parçacığı sayısını alır.|  
+|[GetMaxThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|Konak tutan iş parçacığı sayısı, iş parçacığı havuzundaki eşzamanlı olarak alır.|  
+|[GetMinThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|En az sayıda konak tutar boşta iş parçacıkları istekleri olasılığına alır.|  
+|[QueueUserWorkItem Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Bir işlev yürütme için sıralar ve işlev tarafından kullanılan veri içeren bir nesne sağlar.|  
 |[SetMaxThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|Ana iş parçacığı havuzundaki koruyabilirsiniz iş parçacığı sayısını ayarlar.|  
-|[SetMinThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|Konak korumalıdır boş iş parçacığı sayısı alt sınırını istekleri kapatıldığını içinde ayarlar.|  
+|[SetMinThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|En az sayıda konak korumalıdır boşta iş parçacıkları istekleri olasılığına ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ana bilgisayar çağrıları belirtilen değerleri kullanarak iş parçacığı havuzu yapılandırmak için gerekli olmayan `SetMaxThreads` ve `SetMinThreads` yöntemleri. Bu durumda, ana bilgisayar bu yöntemlerden E_NOTIMPL HRESULT değerini döndürmelidir.  
+ Ana iş parçacığı havuzu yapılan çağrıda belirtilen değerleri kullanarak yapılandırmak için gerekli değildir `SetMaxThreads` ve `SetMinThreads` yöntemleri. Bu durumda, konak, bu yöntemlerden E_NOTIMPL bir HRESULT değerini döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading>  
- <xref:System.Threading.ThreadPool>  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Threading>
+- <xref:System.Threading.ThreadPool>
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

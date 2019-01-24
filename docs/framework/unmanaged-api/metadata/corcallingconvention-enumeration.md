@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523252"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention Numaralandırması
-Yönetilen kodda yapılan çağırma kurallarını türlerini açıklayan değerlerini içerir.  
+Yönetilen kodda yapılan çağrı kuralları türlerini açıklayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,26 +54,26 @@ typedef enum CorCallingConvention
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Çağırma kuralı varsayılan gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Yöntem değişken sayıda parametre isteyen gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Aramanın bir alan olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Arama için yerel bir yöntemi gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Çağrı özelliğe olduğunu gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Varsayılan çağırma kuralını belirtir.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Yöntem değişik sayıda parametreyi alır gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Arama için bir alan olduğunu gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Arama için yerel bir yöntem olduğunu gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Arama için bir özellik olduğunu gösterir.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Çağrı yönetilmeyen olduğunu gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Genel yöntem örnekleme gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Değişken sayıda parametre isteyen bir yöntem 64-bit PInvoke çağrısı gösterir.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Geçersiz bir 4-bit değer açıklar.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Çağırma kuralı alt dört BITS tarafından açıklanan gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Bir genel yöntem örnekleme gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Bir 64-bit PInvoke çağrısına değişken sayıda parametre isteyen bir yöntemi gösterir.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Geçersiz 4-bit bir değer tanımlar.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Çağırma kuralı alt dört bitleri tarafından açıklanan gösterir.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Üst bit açıklayan gösteren bir `this` parametresi.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Belirten bir `this` parametredir imzada açıkça açıklanmıştır.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Bir genel yöntem imza açık sayıda tür bağımsız değişkeni ile gösterir. Bu, normal parametre sayısı önce gelir.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Bildiren bir `this` parametredir imzasında açıkça açıklanmıştır.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Açık bir tür bağımsız değişkeni sayısına sahip bir genel metot imzasını gösterir. Bu, bir sıradan parametre sayısı önce gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

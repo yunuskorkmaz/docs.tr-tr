@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e19f6a51afd6d1e532631a950f4695c8e3d38eb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521458"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile Metodu
-Belirtilen dosya yolu konumunda derlemesi için veri bağlama derleme kimliğini alır.  
+Belirtilen dosya yolunda derleme için veri bağlama derleme kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,43 +40,43 @@ HRESULT GetBindingIdentityFromFile(
   
 #### <a name="parameters"></a>Parametreler  
  `pwzFilePath`  
- [in] Değerlendirilecek dosya yolu.  
+ [in] Değerlendirilecek dosyanın yolu.  
   
  `dwFlags`  
- [in] Değerini [Eclrassemblyıdentityflags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) bir derlemenin kimlik türünü gösteren numaralandırma. Gelecekteki genişletilebilirliği için sağlanır. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ortak dil çalışma zamanı (CLR) sürüm 2.0 destekleyen tek değerdir.  
+ [in] Değerini [Eclrassemblyıdentityflags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) bir derlemenin kimlik türü belirten sabit listesi. Sonra genişletilebilmek için sağlanır. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ortak dil çalışma zamanı (CLR) sürüm 2. 0'ı destekleyen tek bir değerdir.  
   
  `pwzBuffer`  
- [out] Katı derleme kimlik verilerini içeren bir arabellek.  
+ [out] Donuk derleme kimlik verilerini içeren arabellek.  
   
  `pcchBufferSize`  
- [içinde out] Bir işaretçi boyutunu `pwzBuffer`.  
+ [out içinde] Bir işaretçinin boyutuna `pwzBuffer`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Yöntem başarıyla döndürüldü.|  
+|S_OK|Yöntemi başarıyla döndürüldü.|  
 |E_INVALIDARG|Sağlanan `pwzFilePath` null.|  
-|ERROR_INSUFFICIENT_BUFFER|Boyutunu `pwzBuffer` çok küçük.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|ERROR_INSUFFICIENT_BUFFER|Boyutu `pwzBuffer` çok küçük.|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetBindingIdentityFromFile` genellikle iki kez çağrılır. İlk çağrıda null değerini sağlayan `pwzBuffer`, ve uygun boyutta yöntemi döndürür `pcchBufferSize`. İkinci çağrı uygun şekilde ayrılmış bir arabellek sağlar ve tamamlandıktan sonra gerçek arabellek verilerle yöntemi döndürür.  
+ `GetBindingIdentityFromFile` genellikle iki kez çağrılır. İlk çağrı için bir null değer sağlayan `pwzBuffer`, ve yöntemi içinde uygun boyutta `pcchBufferSize`. İkinci çağrı uygun şekilde ayrılan bir arabellek sağlar ve tamamlandığında gerçek arabellek verilerle yöntemi döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [ICLRHostBindingPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [ICLRHostBindingPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

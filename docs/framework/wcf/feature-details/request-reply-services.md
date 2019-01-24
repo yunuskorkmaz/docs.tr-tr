@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: 8fe1343a4b3590622becf71f1167f4b19dbc67af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8d9ee30df5198335b15d2d7130d853f4dd73a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516661"
 ---
 # <a name="request-reply-services"></a>İstek-Yanıt Hizmetleri
-İstek-yanıt Hizmetleri işlemi sözleşme Windows Communication Foundation (WCF) varsayılan türüdür. İstemcileri hizmet işlemleri çağrı yapmak ve hizmetinden bir yanıt bekleyin. Bir hizmet işlemi çağrıları ya da zaman uyumlu olarak gerçekleştirebileceğiniz, kadar istemci engeller burada bu hizmetin veya çağrı süreleri bir yanıt alır veya zaman uyumsuz olarak, istemci hizmet işlemi için bir çağrı yapar burada çalışmaya devam eder ve alır başka bir iş parçacığında hizmetinden gelen yanıt.  
+İstek-yanıt Hizmetleri işlem anlaşması Windows Communication Foundation (WCF) varsayılan türüdür. İstemcilerin hizmet işlemlerine aramaları yapmak ve hizmetten bir yanıt bekler. Bir hizmet işlemi çağrısına ya da zaman uyumlu olarak gerçekleştirebileceğiniz, istemci kadar engeller, hizmet veya çağrısı süreleri bir yanıt alır veya zaman uyumsuz olarak, istemci bir hizmet işlemi çağrıda burada çalışmaya devam eder ve alır başka bir iş parçacığında hizmetinden gelen yanıt.  
   
  İstek-yanıt hizmeti sözleşme oluşturmak için hizmet sözleşmesini tanımlama ve uygulama <xref:System.ServiceModel.OperationContractAttribute> aşağıdaki örnek kodda gösterildiği gibi her işlem için sınıf.  
   
@@ -28,8 +28,8 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- Ayarlama gerekmez <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğine `false` bu varsayılan davranış olduğu için.  
+ Ayarlamak zorunda değilsiniz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `false` çünkü bu varsayılan davranışı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)  
- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)

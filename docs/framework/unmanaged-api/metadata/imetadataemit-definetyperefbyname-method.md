@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517142"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName Yöntemi
-Bir meta veri geçerli kapsamı dışında belirtilen kapsamda tanımlanan bir tür için belirteç alır.  
+Bir meta veri geçerli kapsamı dışında olan Belirtilen kapsam içinde tanımlanan bir tür için belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,17 +39,17 @@ HRESULT DefineTypeRefByName (
   
 #### <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- [in] Çözümleme kapsamı belirleme belirteci. Aşağıdaki belirteç türlerini geçerlidir:  
+ [in] Çözüm kapsamını belirten belirteç. Aşağıdaki belirteç türlerini geçerlidir:  
   
--   `mdModuleRef`, türü arayanın tanımlanır aynı bütünleştirilmiş kodda tanımlanmış olması durumunda.  
+-   `mdModuleRef`, çağıran tanımlanır aynı bütünleştirilmiş kodda tür tanımlı ise.  
   
--   `mdAssemblyRef`, türü arayanın tanımlanır farklı bir derlemede tanımlanmış olması durumunda.  
+-   `mdAssemblyRef`, bir çağıranın tanımlanır dışındaki bir bütünleştirilmiş kodda tür tanımlı ise.  
   
--   `mdTypeRef`, tür iç içe geçmiş tür ise.  
+-   `mdTypeRef`, iç içe türü türü ise.  
   
--   `mdModule`, türü arayanın tanımlanır modülünde tanımlanmış olması durumunda.  
+-   `mdModule`, türü çağıran tanımlanır aynı modülde tanımlandıysa.  
   
--   Tür genel olarak tanımlanmışsa null.  
+-   Türü genel olarak tanımlanmışsa null.  
   
  `szName`  
  [in] Unicode hedef türünün adı.  
@@ -58,14 +58,14 @@ HRESULT DefineTypeRefByName (
  [out] Bir işaretçi `mdTypeRef` türüne atanan belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,25 +1,25 @@
 ---
-title: Visual Basic'de varsayılan ad alanları kapsamı
+title: Visual Basic'de varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a0c07c1b6ca4fea836bd37e4a311655fcb1d7878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527022"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic'de varsayılan ad alanları kapsamı
-XML ağacında belirtildiği şekilde varsayılan ad alanları sorgular için kapsamında değildir. Varsayılan ad alanı içinde XML varsa, yine bildirmelisiniz bir <xref:System.Xml.Linq.XNamespace> , değişken ve Sorguda kullanılacak bir tam ad yapmak için yerel ad ile birleştirerek.  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic'de varsayılan ad alanlarının kapsamı
+XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir. Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.  
   
- XML ağaçları sorgulanırken en yaygın sorunları XML ağacında bir varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanındaki Geliştirici bazen sorgu yazdığını biridir.  
+ XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  
   
- Bu konudaki örnekler ilk kümesi, bir varsayılan ad alanı XML yüklenir, ancak yanlış sorgulanan tipik bir yolunu gösterir.  
+ Bu konudaki örnekler ilk kümesi XML varsayılan ad alanı içinde yüklenir, ancak yanlış sorgulanır normal bir şekilde gösterir.  
   
  XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanındaki XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
+ Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
   
 ### <a name="code"></a>Kod  
   
@@ -48,7 +48,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -56,9 +56,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu XML oluşturulmasını gösterir.  
+ Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.  
   
- Yukarıdaki yanlış kodlanmış örnek aksine, Visual Basic kullanırken doğru bildirin ve genel varsayılan ad alanı başlatma yaklaşımdır. Bu, varsayılan ad alanını tüm XML özellikleri yerleştirir. Başka bir değişiklikler örneği düzgün çalışması için gereklidir.  
+ Yukarıdaki yanlış kodlanmış örnek aksine, Visual Basic kullanırken doğru bildirmek ve bir genel varsayılan ad alanı başlatmak için yaklaşımdır. Bu, varsayılan ad alanındaki tüm XML özellikleri yerleştirir. Herhangi bir değişiklik örneği düzgün çalışması için gereklidir.  
   
 ### <a name="code"></a>Kod  
   
@@ -89,7 +89,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -99,5 +99,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

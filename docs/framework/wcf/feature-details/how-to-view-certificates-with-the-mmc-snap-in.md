@@ -1,61 +1,61 @@
 ---
-title: 'Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme'
+title: 'Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: d924121b9d9fa267fa7d1ada13c9dc5f5bf1523d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521588"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme
-Bir ortak kimlik bilgisi X.509 sertifikası türüdür. Güvenli Hizmetleri veya istemcileri oluştururken, bir sertifika, istemci veya hizmet kimlik bilgisi olarak yöntemleri kullanarak kullanılabilir belirtebilirsiniz <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Yöntemi, sertifikanın depolandığı deposu ve sertifika için ararken kullanmak için bir değer gibi çeşitli parametreleri gerektirir. Aşağıdaki yordam, uygun bir sertifika bulmak için bir bilgisayarda depoları incelemek gösterilmiştir. Sertifika parmak izini bulma örneği için bkz: [nasıl yapılır: bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
+Ortak bir kimlik bilgisi türünü X.509 sertifikasıdır. Güvenli Hizmetleri veya istemciler oluştururken, bir sertifika yöntemleri kullanarak istemci veya hizmet kimlik bilgisi olarak kullanılabilir belirtebilirsiniz <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Yöntemi, sertifikanın depolandığı deponun ve sertifikasını ararken kullanmak için bir değer gibi çeşitli parametreler gerektirir. Aşağıdaki yordam bir bilgisayarda uygun bir sertifika bulmak için depoları incelemek nasıl gösterir. Sertifika parmak izi bulma örneği için bkz: [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>MMC ek bileşeninde sertifikaları görüntülemek için  
+### <a name="to-view-certificates-in-the-mmc-snap-in"></a>Sertifikalar MMC ek bileşeninde görüntülemek için  
   
 1.  Bir komut istemi penceresi açın.  
   
-2.  Tür `mmc` ve ENTER tuşuna basın. Yerel makine deposunda sertifikaları görüntülemek için yönetici rolünde olması gerektiğini unutmayın.  
+2.  Tür `mmc` ve ENTER tuşuna basın. Yerel makine deposuna sertifikaları görüntülemek için yönetici rolünde olması gerektiğini unutmayın.  
   
-3.  Üzerinde **dosya** menüsünde tıklatın **Ekle/Kaldır ek bileşenini**.  
+3.  Üzerinde **dosya** menüsünde tıklatın **Ekle/Kaldır ek bileşen içinde**.  
   
 4.  **Ekle**'yi tıklatın.  
   
-5.  İçinde **tek başına ek bileşen Ekle alanında** iletişim kutusunda **Sertifikalar**.  
+5.  İçinde **tek başına ek eklentisi** iletişim kutusunda **sertifikaları**.  
   
 6.  **Ekle**'yi tıklatın.  
   
-7.  İçinde **Sertifikalar ek bileşenini** iletişim kutusunda **bilgisayar hesabı** tıklatıp **sonraki**. İsteğe bağlı olarak seçebileceğiniz **My kullanıcı hesabı** veya **hizmet hesabı**. Bilgisayarın yöneticisi değilse, yalnızca kullanıcı hesabınız için sertifikaları yönetebilirsiniz.  
+7.  İçinde **Sertifikalar ek bileşenini** iletişim kutusunda **bilgisayar hesabı** tıklatıp **sonraki**. İsteğe bağlı olarak seçebileceğiniz **My kullanıcı hesabı** veya **hizmet hesabı**. Bilgisayarın Yönetici değilseniz, yalnızca kullanıcı hesabınız için sertifikaları yönetebilir.  
   
-8.  İçinde **Bilgisayar Seç** iletişim kutusu, tıklatın **son**.  
+8.  İçinde **Bilgisayar Seç** iletişim kutusu, tıklayın **son**.  
   
-9. İçinde **tek başına ek bileşen Ekle alanında** iletişim kutusu, tıklatın **Kapat**.  
+9. İçinde **tek başına ek eklentisi** iletişim kutusu, tıklayın **Kapat**.  
   
-10. Üzerinde **Ekle/Kaldır ek bileşenini** iletişim kutusu, tıklatın **Tamam**.  
+10. Üzerinde **Ekle/Kaldır ek bileşenini** iletişim kutusu, tıklayın **Tamam**.  
   
-11. İçinde **konsol kökü** penceresinde tıklatın **sertifikalar (yerel bilgisayar)** sertifikayı görüntülemek için bilgisayar için depolar.  
+11. İçinde **konsol kökü** penceresinde tıklayın **sertifikalar (yerel bilgisayar)** sertifikayı görüntülemek için bilgisayar için depolar.  
   
-12. İsteğe bağlı. Hesabınıza ilişkin sertifikaları görüntülemek için 3-6 adımlarını yineleyin. Seçmek yerine 7. adımda **bilgisayar hesabı**, tıklatın **My kullanıcı hesabı** ve 8-10 adımları yineleyin.  
+12. İsteğe bağlı. Hesabınız için sertifikaları görüntülemek için 3-6 adımlarını yineleyin. Yerne 7. adımda **bilgisayar hesabı**, tıklayın **My kullanıcı hesabı** 8-10 adımları yineleyin.  
   
-13. İsteğe bağlı. Üzerinde **dosya** menüsünde tıklatın **kaydetmek** veya **Kaydet**. Daha sonra yeniden kullanmak için konsol dosyasına kaydedin.  
+13. İsteğe bağlı. Üzerinde **dosya** menüsünde tıklatın **Kaydet** veya **Kaydet**. Daha sonra yeniden kullanmak için konsol dosyayı kaydedin.  
   
 ## <a name="viewing-certificates-with-internet-explorer"></a>Internet Explorer ile sertifikaları görüntüleme  
- Da görüntüleyebilir, dışarı aktarmak ve Internet Explorer kullanarak sertifikaları silmek.  
+ Da görüntüleyebilir, dışarı aktarma almak ve Internet Explorer'ı kullanarak sertifikaları silin.  
   
 #### <a name="to-view-certificates-with-internet-explorer"></a>Internet Explorer ile sertifikaları görüntülemek için  
   
-1.  Internet Explorer'daki **Araçları**, ardından **Internet Seçenekleri** görüntülemek için **Internet Seçenekleri** iletişim kutusu.  
+1.  Internet Explorer'ı tıklatın **Araçları**, ardından **Internet Seçenekleri** görüntülenecek **Internet Seçenekleri** iletişim kutusu.  
   
-2.  Tıklatın **içerik** sekmesi.  
+2.  Tıklayın **içerik** sekmesi.  
   
-3.  Altında **sertifikaları**, tıklatın **Sertifikalar**.  
+3.  Altında **sertifikaları**, tıklayın **sertifikaları**.  
   
-4.  Herhangi bir sertifika ayrıntılarını görüntüleyin, sertifikayı seçin ve ' **Görünüm**.  
+4.  Herhangi bir sertifika ayrıntılarını görüntülemek için sertifikayı seçin ve tıklayın **görünümü**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -2,12 +2,12 @@
 title: '&lt;ekleme&gt; schemeSettings (Uri ayarları) için'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d64744cf3c88d5ec0f0edf1a31cdf184c3c8277e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524110"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;ekleme&gt; schemeSettings (Uri ayarları) için
 Düzen adı için bir düzen ayarı ekler.  
@@ -42,7 +42,7 @@ Düzen adı için bir düzen ayarı ekler.
 |genericUriParserOptions|Bu düzen ayrıştırıcısı seçenekleri. Yalnızca desteklenen değer genericUriParserOptions "DontUnescapePathDotsAndSlashes" =.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -81,11 +81,11 @@ Düzen adı için bir düzen ayarı ekler.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

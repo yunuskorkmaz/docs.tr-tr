@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519408"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sorgu söz dizimi destekler ve doğrudan dilinde diğer dil yapıları teknoloji ifade eder. İle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], dış veri kaynağına karşı sorgu için yeni bir dil öğrenmek gerekmez. İlişkisel veritabanlarını, XML depoları veya nesneleri verilere karşı Visual Basic kullanarak sorgulayabilirsiniz. Sorgu dili özellikleri, bu tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimi sağlar. Visual Basic'te, çeşitli zengin sorguları yazma bilmek zorunda çoğunu zaten bildiğiniz Bu tümleştirme de sağlar.  
   
- Aşağıdaki bölümlerde, tanıtım belgeler, kod örnekleri ve örnek uygulamalar okuma kullanmaya başlamak sağlamak için yeterli ayrıntı LINQ destekleyen dil yapıları açıklanmaktadır. Nasıl dil özellikleri birlikte dil açısından tümleştirilmiş sorgunun etkinleştirmek için gelen, daha ayrıntılı açıklamaları bulmak için bağlantıları tıklatabilirsiniz. Başlamak için iyi bir yerdir [izlenecek yol: Visual Basic'te yazma sorguları](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ Aşağıdaki bölümlerde, tanıtım belgeler, kod örnekleri ve örnek uygulamalar okuma kullanmaya başlamak sağlamak için yeterli ayrıntı LINQ destekleyen dil yapıları açıklanmaktadır. Nasıl dil özellikleri birlikte dil açısından tümleştirilmiş sorgunun etkinleştirmek için gelen, daha ayrıntılı açıklamaları bulmak için bağlantıları tıklatabilirsiniz. Başlamak için iyi bir yerdir [izlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Sorgu İfadeleri  
  Visual Basic'de sorgu ifadeleri, SQL veya XQuery benzer bir bildirim temelli söz diziminde ifade edilebilir. Derleme zamanında sorgu söz dizimi bir LINQ Sağlayıcısı'nın uygulamasında standart sorgu işleci genişletme yöntemleri, yöntem çağrılarını dönüştürülür. Standart sorgu işleçleri ile uygun bir ad belirterek kapsamda olan uygulamaların denetimi bir `Imports` deyimi. Visual Basic sorgu ifadesi söz dizimi şu şekilde görünür:  
@@ -44,7 +44,7 @@ Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sor
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Daha fazla bilgi için [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Daha fazla bilgi için [nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Anonim Türler  
  Anonim türler, geçici olarak bir sorgu sonucunda dahil etmek istediğiniz öğenin içine bir özellikler kümesini gruplamak için kullanışlı bir yol sağlar. Bu öğe için bir adlandırılmış veri türü tanımlanmadan sorgusunda herhangi bir sırada kullanılabilir alanlar herhangi bir birleşimini seçmenize olanak sağlar.  
@@ -93,9 +93,9 @@ Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sor
   
  Daha fazla bilgi için [Lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

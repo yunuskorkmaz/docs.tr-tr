@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 16bc9475599510a5e55f246d49aaa0be19314979
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23b1b92c52988761aa67eb2de16a1b9141a0de30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524876"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI Otomasyon Öğelerini Alma
 > [!NOTE]
@@ -98,7 +98,7 @@ ms.locfileid: "47208691"
 ### <a name="from-the-focused-control"></a>Odaklanmış denetiminden  
  Alabileceğiniz bir <xref:System.Windows.Automation.AutomationElement> odaklı denetimin statik temsil eden <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

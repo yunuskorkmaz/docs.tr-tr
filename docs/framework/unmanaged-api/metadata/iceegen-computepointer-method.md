@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522420"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer Yöntemi
-Belirtilen kod bölümü için arabellek belirler.  
+Belirtilen kod bölümüne yönelik arabellek belirler.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -41,22 +41,22 @@ HRESULT ComputePointer (
   
 #### <a name="parameters"></a>Parametreler  
  `section`  
- [in] Kod bölümünde olan bir arabellek dönün.  
+ [in] Kod bölümünde bir arabellek döndürülecek.  
   
  `RVA`  
- [in] Bir işaretçi alma yöntemini göreli sanal adresi.  
+ [in] Yöntem bir işaretçi alınacağı göreli sanal adres.  
   
  `lpBuffer`  
- [out] Döndürülen arabellek için bir işaretçi.  
+ [out] Döndürülen arabellek için işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

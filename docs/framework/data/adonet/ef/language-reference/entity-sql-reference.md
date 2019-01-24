@@ -2,12 +2,12 @@
 title: Entity SQL Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522160"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL Başvurusu
 
@@ -142,4 +142,4 @@ Aşağıdaki tabloda diğer varlık SQL işleçleri listelenir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Entity SQL Dili](entity-sql-language.md)
+- [Entity SQL Dili](entity-sql-language.md)

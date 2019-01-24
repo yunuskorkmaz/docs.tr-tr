@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma'
+title: 'Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: 41bfb2bc1a1ead5bb289264c44145b88721efe49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523996"
 ---
-# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma
-Parola kutusu yer tutucu karakterler bir kullanıcı bir dize türleri sırada görüntüleyen bir Windows Forms metin kutusu olur.  
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma
+Bir kullanıcı bir dize türleri, yer tutucu karakterleri görüntüler bir Windows Forms metin kutusuna bir parola kutusudur.  
   
-### <a name="to-create-a-password-text-box"></a>Parola metin kutusu oluşturmak için  
+### <a name="to-create-a-password-text-box"></a>Parola metin kutusu oluşturma  
   
-1.  Ayarlama <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği <xref:System.Windows.Forms.TextBox> denetlemek için bir özel karakter.  
+1.  Ayarlama <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği <xref:System.Windows.Forms.TextBox> belirli bir karakterin denetime.  
   
-     <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellik metin kutusunda görüntülenen karakter belirtir. Örneğin, parola kutusunda görüntülenen yıldızlar istiyorsanız belirtin * için <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellikleri penceresinde özelliği. Ardından, metin kutusuna bir kullanıcı türleri hangi karakter bağımsız olarak bir yıldız işareti görüntülenir.  
+     <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellik metin kutusunda görüntülenen karakter belirtir. Örneğin, yıldız işareti (parola) kutusunda görüntülenen istiyorsanız belirtin * için <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellikler penceresindeki özellik. Ardından, metin kutusuna bir kullanıcı türleri, hangi karakter bağımsız olarak bir yıldız işareti görüntülenir.  
   
-2.  (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> özelliği. Özelliği kaç karakterin metin kutusunda girilebilen belirler. En büyük uzunluğu aştı, sistem bip sesi yayar ve metin kutusuna daha fazla tüm karakterleri kabul etmez. Bu parola uzunluk üst sınırı yapmak isteyebilirsiniz Not kullanım için parolanızı tahmin etmeyi denemelerini saldırganlar olabilir.  
+2.  (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> özelliği. Özellik karakterlerinin kaçının tutulacağını metin kutusuna yazılabilir belirler. En fazla uzunluk aşıldığında, sistem bir bip sesi yayar ve metin kutusunda daha fazla tüm karakterleri kabul etmez. Bu bir parola uzunluğu en fazla yapmak isteyebilirsiniz Not, parolanızı tahmin etmeye çalıştığınız saldırganlar için kullanışlı olabilir.  
   
-     Aşağıdaki kod örneği, en çok 14 karakter uzunluğunda bir dize kabul etmek ve dize yerine bir yıldız işareti görüntüleme bir metin kutusu başlatılmaya gösterilmektedir. `InitializeMyControl` Yordamı değil yürütülecek otomatik olarak; çağrılması gerekir.  
+     Aşağıdaki kod örneğinde nasıl başlatılacağını en fazla 14 karakter uzunluğunda bir dize kabul edin ve dize yerine bir yıldız görüntüler bir metin kutusu gösterir. `InitializeMyControl` Yordamı değil yürütülecek otomatik olarak; çağrılması gerekir.  
   
     > [!IMPORTANT]
-    >  Kullanarak <xref:System.Windows.Forms.TextBox.PasswordChar%2A> bir metin kutusu özellikte diğer kişilerin bunu giren kullanıcı gözlemlerseniz, bir kullanıcının parolasını belirlemek mümkün olmaz olun yardımcı olabilir. Bu güvenlik önlemi her tür depolama ya da uygulama mantığınızın nedeniyle oluşabilir parola iletimini kapsamaz. Girilen metin herhangi bir şekilde şifrelenmediğinden diğer gizli veriler gibi düşünmelisiniz. Bu nedenle görünmez olsa bile (bazı ek güvenlik önlemi uygulanan sürece) parola hala bir düz metin dizesi olarak kabul ediliyor.  
+    >  Kullanarak <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özellik metin kutusundaki diğer kişilerin bunlar, girerek kullanıcı gözlemlerseniz, bir kullanıcının parolasını belirlemek mümkün olmayacaktır olun yardımcı olabilir. Bu güvenlik önlemi depolama veya uygulama mantığınızın nedeniyle gerçekleşen parola iletim tamamını kapsamaz. Girilen metin herhangi bir yolla şifrelenmediğinden diğer gizli verileri gibi düşünmelisiniz. Bu nedenle görünmez olsa da, (bazı ek güvenlik önlemi uygulanmış sürece) parola yine de bir düz metin dizesi olarak kabul ediliyor.  
   
     ```vb  
     Private Sub InitializeMyControl()  
@@ -71,12 +71,12 @@ Parola kutusu yer tutucu karakterler bir kullanıcı bir dize türleri sırada g
        }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.TextBox>  
- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Nasıl yapılır: Dizeye Tırnak İşaretleri Koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.TextBox>
+- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde ekleme noktasını belirleme](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Nasıl yapılır: Dizeye tırnak işaretleri koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5d2dc8f5bdb0b89d5fd265ad86cbb13401bc8b14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523590"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Arabirimlerdeki Dizin Oluşturucular (C# Programlama Kılavuzu)
 Dizin oluşturucular bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Arabirim dizin oluşturucuları erişicilerini erişicilerini farklı [sınıfı](../../../csharp/language-reference/keywords/class.md) dizin oluşturucuları aşağıdaki yollarla:  
@@ -59,9 +59,9 @@ string ICitizen.this[int index]
   
  Dizin Oluşturucu üzerinde uygulayan `ICitizen` arabirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)

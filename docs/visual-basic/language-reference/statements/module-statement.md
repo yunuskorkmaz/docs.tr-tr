@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524188"
 ---
 # <a name="module-statement"></a>Module Deyimi
 Bir modülün adını bildirir ve değişkenleri, özellikleri, olayları ve modülü oluşturan yordamların tanımını tanıtır.  
@@ -96,10 +96,10 @@ End Module
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

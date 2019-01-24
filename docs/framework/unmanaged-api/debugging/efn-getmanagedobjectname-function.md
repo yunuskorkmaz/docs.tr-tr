@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527789"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName İşlevi
-Sağlanan yönetilen nesne işaretçisi kullanılarak bir türün adını alır.  
+Belirtilen yönetilen nesne işaretçisi kullanılarak bir tür adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,20 +45,20 @@ HRESULT _EFN_GetManagedObjectName(
  [in] Bir yönetilen nesne işaretçisi.  
   
  szName  
- [out] Türünün adı.  
+ [out] Tür adı.  
   
  `cbName`  
- [out] Karakter dizesi arabellekte kullanılabilir sayısı.  
+ [out] Dize arabellek kullanılabilir karakter sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlevi HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değeri ve 0x1000 hata kodunu döndürür.  
+ Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değerini ve 0x1000 hata kodu ile döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519625"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabiriminde içeriği genellikle bir bilgisayar ekranının ekran alandan daha büyük. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin gezinmeye olanak sağlamak için kolay bir yol sağlar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve çeşitli kullanım örnekleri sağlar.  
@@ -60,11 +60,11 @@ Bir kullanıcı arabiriminde içeriği genellikle bir bilgisayar ekranının ekr
   
  Belge biçimleri ve sunum seçenekleri hakkında ek bilgi için bkz. [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.ScrollViewer>  
- <xref:System.Windows.Controls.Primitives.ScrollBar>  
- <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [Kaydırma Görüntüleyicisi oluşturma](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.ScrollViewer>
+- <xref:System.Windows.Controls.Primitives.ScrollBar>
+- <xref:System.Windows.Controls.Primitives.IScrollInfo>
+- [Kaydırma Görüntüleyicisi oluşturma](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
+- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20f65218928ee07d67ea742154469ac3cbea9241
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 163704bf9a71ceda04bdfd73f9ca676c19d8a62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526647"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome::GetArgumentIndex yöntemi
-Bir işlev bağımsız değişkeni dizinini alır.  
+İşlev bağımsız değişkeni dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,20 +44,20 @@ HRESULT GetArgumentIndex(
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Yöntem çağrısının geçerli bir bağımsız değişken dizin döndürdü.|  
-|`E_FAIL`|Geçerli [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği yerel bir değişkeni temsil eder.|  
+|`S_OK`|Yöntem çağrısının geçerli bağımsız değişken dizini döndürdü.|  
+|`E_FAIL`|Geçerli [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği yerel bir değişken temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bağımsız değişken dizini, bu bağımsız değişken için meta verilerini almak için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

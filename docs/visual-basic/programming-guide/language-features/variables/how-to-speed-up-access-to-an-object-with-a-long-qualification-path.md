@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uzun Bir Nitelenmiş Yola Sahip Nesneye Erişimi Hızlandırma (Visual Basic)'
+title: 'Nasıl yapılır: Uzun bir nitelenmiş yola (Visual Basic) sahip nesneye erişimi hızlandırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: d52d13feb0f85065c0623b5937f558b841c036dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 827d7d1574e85a30ec2724f7739f6c3a08dbd975
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519731"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Nasıl yapılır: Uzun Bir Nitelenmiş Yola Sahip Nesneye Erişimi Hızlandırma (Visual Basic)
-Çeşitli yöntemleri ve özellikleri nitelenmiş yolunu gerektirir nesneyi sık erişirse, nitelenmiş yola tekrarlayarak değil, kod hızlandırabilir.  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Nasıl yapılır: Uzun bir nitelenmiş yola (Visual Basic) sahip nesneye erişimi hızlandırma
+Bir nitelenmiş yola çeşitli yöntemleri ve özellikleri gerektiren bir nesne sık erişirseniz, kodunuzu oluşturan nitelenmiş yola tekrarlayarak değil hızlandırabilirsiniz.  
   
- Nitelenmiş yola kaçınmanızı iki yolu vardır. Nesneyi bir değişkene atayın veya içinde kullanabileceğiniz bir `With`... `End With` bloğu.  
+ Nitelenmiş yola kaçınmanızı iki yolu vardır. Nesneyi bir değişkene atayın ya da içinde kullanabileceğiniz bir `With`... `End With` blok.  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Bir değişkene atayarak yoğun olarak tam bir nesneye erişimi hızlandırma için  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Bir değişkene atayarak yoğun tam bir nesneye erişimi hızlandırma için  
   
-1.  Sık sık eriştiğiniz nesne türünde bir değişken bildirin. Nitelenmiş yola bildirimi başlatma parçası belirtin.  
+1.  Sık sık eriştiğiniz nesne türünde bir değişken bildirir. Nitelenmiş yola bildirimi başlatma kısmında belirtin.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Nesnenin üyelere erişmek için değişkeni kullanın.  
+2.  Bir nesnenin üyelerine erişmek için bu değişkeni kullanın.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -36,7 +36,7 @@ ms.locfileid: "33650205"
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Bir WITH kullanarak yoğun olarak tam bir nesneye erişimi hızlandırma için... End With bloğu  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Bir ile kullanarak, yoğun bir şekilde tam bir nesneye erişimi hızlandırma için... End With bloğu  
   
 1.  Nitelenmiş yola yerleştirecek bir `With` deyimi.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33650205"
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Nesnenin üyeleri içinde erişim `With` önce bloğunu `End With` deyimi.  
+2.  İçinde bir nesnenin üyelerine erişmek `With` önce bloğunda `End With` deyimi.  
   
     ```  
         .Text = "Test"  
@@ -53,6 +53,6 @@ ms.locfileid: "33650205"
     End With  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [With...End With Deyimi](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [With...End With Deyimi](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

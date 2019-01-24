@@ -2,12 +2,12 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26a84f035246c02898deacfb8fcb2c2101fddf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524279"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve Yardım bilgileri özelliklerini belirtir.  
@@ -70,9 +70,9 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve Yard�
   
  İsteğe bağlı `httpHelpPageBinding` ve `httpHelpPageBinding` öznitelikleri izin, hizmet web sayfasına erişmek için kullanılan bağlamaları yapılandırmak. Bunlar belirtilmezse, varsayılan bağlamaları (`HttpTransportBindingElement`, HTTP söz konusu olduğunda ve `HttpsTransportBindingElement`, HTTPS söz konusu olduğunda) uygun şekilde hizmet yardım sayfasına erişim için kullanılır. Bu öznitelikler yerleşik WCF bağlamaları ile kullanamazsınız dikkat edin. Xref:System.ServiceModel.Channels.IReplyChannel destekleyen iç bağlama öğeleri içeren bağlamaları yalnızca > desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> bağlama özelliğini olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Özel Durum ve Hataları İşleme](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Hizmet Hata Ayıklama Davranışı](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Özel Durum ve Hataları İşleme](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Hizmet Hata Ayıklama Davranışı](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

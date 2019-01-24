@@ -8,80 +8,80 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527334"
 ---
 # <a name="application-startup-time"></a>Uygulama Başlangıç Zamanı
-Bir WPF uygulaması başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve fiili başlangıç zamanını azaltmak için çeşitli teknikleri açıklar.  
+Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve gerçek başlangıç süresini azaltmak için çeşitli teknikler açıklanır.  
   
-## <a name="understanding-cold-startup-and-warm-startup"></a>Soğuk Başlangıcı ve Sıcak Başlangıcı Anlama  
- Uygulamanızı bir sistem yeniden başlatma işleminden sonra ilk kez başlatıldığında soğuk başlangıç oluşur veya uygulamanızın başlattığınızda kapatın ve sonra yeniden bir uzun süre sonra Başlat. Bir uygulama başlatıldığında gerekli sayfalar (kod, statik verileri, kayıt defteri, vb.) Windows Bellek Yöneticisi'nin bekleme listesinde mevcut değilse, sayfa hataları oluşur. Disk erişimi sayfaları belleğe taşımak için gereklidir.  
+## <a name="understanding-cold-startup-and-warm-startup"></a>Soğuk başlangıç ve orta Gecikmeli Başlangıç anlama  
+ Uygulamanız bir sistem yeniden başlatma işleminden sonra ilk kez başlatıldığında, soğuk başlangıç oluşur veya uygulamanızı başlatın, kapatın ve sonra zaman uzun süre sonra yeniden başlatın. Bir uygulamayı başlatır (kod, statik veriler, kayıt defteri, vb.) gerekli sayfalar Windows Bellek Yöneticisi'nin bekleme listesinde mevcut değilse, sayfa hataları ortaya çıkar. Disk erişimi sayfaları belleğe taşımak için gereklidir.  
   
- Sıcak başlangıç ana ortak dil çalışma zamanı (CLR) bileşenlerini sayfaların çoğu pahalı disk erişim süresini kaydeder bellekte zaten yüklenmiş olan oluşur. İkinci kez çalıştırıldığında bir yönetilen uygulamayı daha hızlı başlamasının nedeni budur.  
+ Orta Gecikmeli Başlangıç sayfaları ana ortak dil çalışma zamanı (CLR) bileşenleri için birçok pahalı disk erişim süresi kaydeder bellekte zaten yüklenmiş olan oluşur. İkinci kez yürütüldüğünde bir yönetilen uygulama daha hızlı başlatılan nedeni budur.  
   
 ## <a name="implement-a-splash-screen"></a>Uygulama giriş ekranı  
- Kaçınılmaz durumlarda, ilk UI görüntüleme ve uygulama başlatma arasında gecikme, algılanan başlangıç zamanını kullanarak iyileştirin bir *ekranı*. Bu yaklaşım görüntüyü hemen görüntüler sonra kullanıcı uygulamayı başlatır. Uygulamayı ilk kullanıcı Arabiriminde görüntülenecek hazır olduğunda, giriş ekranı kaybolur. İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], kullanabileceğiniz <xref:System.Windows.SplashScreen> Karşılama ekranı uygulamak için sınıf. Daha fazla bilgi için bkz: [WPF uygulaması için bir giriş ekranı eklemek](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Kaçınılmaz durumlarda, uygulama başlatma ve ilk kullanıcı arabirimini görüntüleyen arasındaki gecikme, kullanarak algılanan başlangıç zamanını iyileştirme bir *giriş ekranı*. Bu yaklaşım, hemen bir resim görüntüler sonra kullanıcı uygulamayı başlatır. Uygulama ilk kullanıcı arabirimini görüntülemek hazır olduğunda, giriş ekranı belirerek. İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], kullanabileceğiniz <xref:System.Windows.SplashScreen> giriş ekranı uygulamak için sınıfı. Daha fazla bilgi için [WPF uygulamasına giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Ayrıca, yerel Win32 grafiğini kullanarak kendi giriş ekranı uygulayabilirsiniz. Önce uygulamanızı görüntüleyin <xref:System.Windows.Application.Run%2A> yöntemi çağrılır.  
+ Ayrıca, yerel Win32 grafikler kullanarak kendi giriş ekranı uygulayabilirsiniz. Önce uygulamanızı görüntüleyin <xref:System.Windows.Application.Run%2A> yöntemi çağrılır.  
   
-## <a name="analyze-the-startup-code"></a>Başlangıç kodu çözümleme  
- Yavaş soğuk başlangıç nedenini belirleyin. Disk g/ç sorumlu olabilir, ancak bu her zaman geçerli değildir. Genel olarak, ağ, Web Hizmetleri veya disk gibi dış kaynakların kullanımını en aza.  
+## <a name="analyze-the-startup-code"></a>Başlangıç kodunu çözümleme  
+ Yavaş bir soğuk başlangıç nedeni belirleyin. Disk g/ç sorumlu olabilir, ancak bu her zaman böyle değildir. Genel olarak, ağ, Web Hizmetleri veya disk gibi dış kaynakların kullanımını olabildiğince az tutmalısınız.  
   
- Test önce hiçbir diğer çalışan uygulamalara veya hizmetlere yönetilen kodu veya WPF kodunu kullandığından emin olun.  
+ Test etmeden önce diğer çalışan uygulamaları veya hizmetleri yönetilen kod veya WPF kod kullandığından emin olun.  
   
- WPF uygulamanızı bir yeniden başlatma işleminden hemen sonra başlatmak ve görüntülemek için gereken süreyi belirler. Uygulamanızın (sıcak başlatma) sonraki tüm başlatmaları çok daha hızlı olması durumunda, soğuk başlatma sorunu g/ç tarafından kaynaklanıyordur.  
+ WPF uygulamanızı yeniden başlattıktan sonra hemen Başlat ve görüntülemek için ne kadar süreceğini belirlemek. Tüm sonraki başlatır (Orta Gecikmeli Başlatma), uygulamanızın daha hızlı bir şekilde, soğuk başlangıç sorununuzu g/ç tarafından büyük olasılıkla kaynaklanır.  
   
- Uygulamanızın soğuk, başlatma sorununu g/ç için uygulamanızın bazı uzun başlatma veya hesaplama, tamamlamak bazı olay bekler gerçekleştirir olabilir ilişkili değil veya çok sayıda JIT derleme başlangıçta gerektirir. Aşağıdaki bölümlerde bu durumlardan daha ayrıntılı bazıları açıklanmaktadır.  
+ Uygulamanızın soğuk, başlangıç sorunu g/ç için bu büyük olasılıkla uygulama bazı uzun başlatma veya tamamlamak bazı olay bekler olan hesaplamayı gerçekleştiren ilişkili değil veya JIT derlemesi başlangıçta çok fazla gerektirir. Aşağıdaki bölümlerde daha ayrıntılı bir şekilde bu durumlardan bazıları açıklanmaktadır.  
   
-## <a name="optimize-module-loading"></a>Modül yüklemesini iyileştirme  
- Kullanım, uygulamanızın modüllerine belirlemek için işlem Gezgini'ni (Procexp.exe) ve Tlist.exe gibi araçları yükler. Komut `Tlist <pid>` işlemi tarafından yüklenen tüm modülleri gösterir.  
+## <a name="optimize-module-loading"></a>Modül yükleme en iyi duruma getirme  
+ Kullanın uygulamanızı Process Explorer (Procexp.exe) ve hangi modüllerin belirlemek için Tlist.exe gibi araçları yükler. Komut `Tlist <pid>` bir işlem tarafından yüklenen modülleri gösterir.  
   
- Örneğin, Web bağlanan değil System.Web.dll yüklenir, ardından uygulamanızda bir modül olduğunu görürseniz, bu derlemeye başvurur. Başvuru gerekli olduğundan emin olmak için kontrol edin.  
+ Örneğin, Web bağlanan System.Web.dll yüklendikten sonra uygulamanızda bir modül olduğunu görürseniz, bu derlemeye başvurur. Başvurunun gerekli olduğundan emin olun.  
   
- Uygulamanız birden fazla modülü varsa, bunları tek bir modüle birleştirin. Bu yaklaşım, daha az CLR derleme-yükleme yükü gerektirir. Daha az derleme CLR daha az durumunu koruyan anlamına gelir.  
+ Uygulamanız birden çok modül varsa, bunları tek bir modüle birleştirin. Bu yaklaşım, daha az CLR derleme Yükleme ek yükü gerektirir. Daha az derlemeleri CLR'ın daha az durumunu koruyan anlamına gelir.  
   
-## <a name="defer-initialization-operations"></a>Başlatma işlemlerini erteleme  
- Ana uygulama penceresi işlendikten sonra kadar başlatma kodunu ertelemeyi düşünün.  
+## <a name="defer-initialization-operations"></a>Başlatma işlemleri erteleme  
+ Ana uygulama penceresini oluşturulduğunda kadar başlatma kodunu ertelemeyi düşünün.  
   
- Başlatma bir sınıf oluşturucusu içinde gerçekleştirilebilir ve başlatma kodu diğer sınıflara başvurursa, birçok sınıf oluşturucular yürütüldüğü bir efektine neden olabileceğini unutmayın.  
+ Bir sınıf oluşturucusu içinde başlatma gerçekleştirilebilir ve diğer sınıfları başlatma kodu başvuruda bulunuyorsa, birçok sınıf oluşturucuları yürütüldüğü bir basamaklandırma efektini neden olabilir unutmayın.  
   
 ## <a name="avoid-application-configuration"></a>Uygulama yapılandırması kaçının  
- Uygulama yapılandırması önleme göz önünde bulundurun. Örneğin, bir uygulama basit yapılandırma gereksinimleri vardır ve katı başlangıç amaçlarına sahipse, kayıt defteri girdileri veya basit INI dosyası daha hızlı bir başlangıç alternatif olabilir.  
+ Uygulama yapılandırması önleme göz önünde bulundurun. Örneğin, kayıt defteri girdileri veya basit bir INI dosyasını uygulama basit yapılandırma gereksinimleri ve katı başlangıç süresi amaçlarını varsa, daha hızlı bir başlangıç alternatif olabilir.  
   
 ## <a name="utilize-the-gac"></a>GAC kullanma  
- Bir derlemeyi Genel Derleme Önbelleği'ne (GAC) yüklü değilse bu derleme için doğal bir görüntü bilgisayarda kullanılabilir ise tanımlayıcı adlı derlemeler karma doğrulanması ve Ngen tarafından kaynaklanan gecikmeler vardır. Tanımlayıcı ad doğrulaması GAC'de yüklü tüm derlemeler için atlanır. Daha fazla bilgi için bkz: [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Bir derlemeyi Genel Derleme Önbelleği'ne (GAC) yüklü değilse, bilgisayar üzerinde o derleme için bir yerel görüntü varsa, karma doğrulaması tanımlayıcı adlı derlemelerin ve Ngen tarafından neden gecikmeler vardır. GAC'de kurulu tüm derlemeler için tanımlayıcı ad doğrulama atlandı. Daha fazla bilgi için [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-## <a name="use-ngenexe"></a>Ngen.exe kullanma  
- Uygulamanızda yerel Görüntü Oluşturucu (Ngen.exe) kullanmayı düşünün. Ngen.exe kullanarak Ngen.exe tarafından oluşturulan yerel görüntü büyük olasılıkla MSIL görüntüden daha büyük olduğu için daha fazla disk erişimi için CPU tüketimi ticaret anlamına gelir.  
+## <a name="use-ngenexe"></a>Ngen.exe kullanın  
+ Uygulamanızda Native Image Generator (Ngen.exe) kullanmayı düşünün. Ngen.exe kullanarak, Ngen.exe ile oluşturulan yerel görüntü büyük olasılıkla MSIL görüntüsü daha büyük olduğu için daha fazla disk erişimi için CPU tüketimi alım-satım anlamına gelir.  
   
- Bu uygulama kodunun JIT derleme CPU maliyetini önler çünkü sıcak başlangıç zamanını geliştirmek için her zaman Ngen.exe uygulamanızda kullanmanız gerekir.  
+ Bu uygulama kodunun JIT derlemesi CPU maliyeti önlediği için Orta Gecikmeli Başlangıç süresini artırmak için her zaman Ngen.exe uygulamanızda kullanmanız gerekir.  
   
- Bazı soğuk başlangıç senaryolarda Ngen.exe kullanarak da yararlı olabilir. JIT Derleyici (mscorjit.dll) yüklenecek olmadığından budur.  
+ Soğuk başlangıç bazı senaryolarda, Ngen.exe kullanarak da yararlı olabilir. Bu durum, JIT derleyicisi (mscorjit.dll) yüklenmesi gerekmez çünkü.  
   
- Ngen ve JIT modülleri olan en kötü etkisi olabilir. Mscorjit.dll yüklenmesi gereken ve JIT Derleyici kodunuz üzerinde çalışırken, JIT derleyicisi derlemelerin meta verilerini okuduğunda Ngen görüntülerindeki birçok sayfa erişilmesi gerekir çünkü budur.  
+ Ngen hem JIT modülleri sahip, en kötü bir etkisi olabilir. Bu mscorjit.dll yüklenmesi gereken ve JIT derleyicisi kodunuz üzerinde çalışırken, JIT Derleyici derlemelerin meta verilerini okuduğunda Ngen görüntülerinin birçok sayfalarında erişilmelidir olmasıdır.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen ve ClickOnce  
- Uygulamanızı dağıtmak için planladığınız yol, yükleme zamanında bir fark de yapabilirsiniz. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulama dağıtımı Ngen desteklemez. Uygulamanız için Ngen.exe kullanmaya karar verirseniz, Windows Installer gibi başka bir dağıtım mekanizması kullanması gerekir.  
+ Uygulamanızı dağıtmayı planladığınız yolu bir fark yükleme süresi de yapabilirsiniz. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] Ngen uygulaması dağıtımını desteklemez. Uygulamanız için Ngen.exe kullanmaya karar verirseniz, Windows Installer gibi başka bir dağıtım mekanizmasının kullanılması gerekir.  
   
- Daha fazla bilgi için bkz: [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Daha fazla bilgi için [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Yeniden Temellendirme ve DLL adres çakışması  
- Ngen.exe kullanırsanız, yerel görüntüler belleğe yüklendiğinde yeniden Temellendirme oluşabileceğini unutmayın. Windows Yükleyici adres aralığı zaten ayrılmış olduğundan DLL tercih edilen temel adrese yüklenmezse uzun süren bir işlem olabilir, başka bir adresinde yükler.  
+ Ngen.exe kullanıyorsanız, yerel görüntüler belleğe yüklendiğinde yeniden Temellendirme oluşabileceğini unutmayın. Windows Yükleyici DLL zaten ayrılmış adres aralığı için tercih edilen temel adresinde yüklenmezse, zaman alıcı bir işlem, başka bir adreste yükler.  
   
- Tüm sayfaları özel modüller olup olmadığını denetlemek için sanal adres dökümü (Vadump.exe) aracını kullanabilirsiniz. Bu durumda, modülü farklı bir adres temellendirilebilir. Bu nedenle, kendi sayfaları paylaşılamaz.  
+ Tüm sayfaları özel modüller olup olmadığını denetlemek için sanal adres dökümü (Vadump.exe) aracını kullanabilirsiniz. Bu durumda, modülü farklı bir adres ReBase işlemi gerçekleştirildi. Bu nedenle, sayfalarını paylaşılamaz.  
   
- Temel adres ayarlama hakkında daha fazla bilgi için bkz: [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Temel adresini ayarlama hakkında daha fazla bilgi için bkz. [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Authenticode en iyi duruma getirme  
- Authenticode doğrulaması başlangıç zamanına ekler. Authenticode imzalı derlemelerin sertifika yetkilisi (CA) ile doğrulanması gerekir. Geçerli sertifika iptal listelerini indirmek için birkaç kez ağ bağlantısı gerektirebilir çünkü bu doğrulama zaman alıcı olabilir. Ayrıca, tam bir güvenilen kök yolunda geçerli bir sertifika zinciri olduğundan emin olur. Derleme yüklenirken bu gecikme birkaç saniye çevirebilir.  
+ Authenticode doğrulama başlangıç zamanına ekler. Authenticode imzalı derlemelerin sertifika yetkilisi (CA) ile doğrulanması gerekir. Geçerli sertifika iptal listeleri indirmek için birkaç kez ağa bağlamak isteyebilirsiniz, çünkü bu doğrulamayı zaman alıcı olabilir. Ayrıca, tam bir güvenilen kök yolu geçerli sertifika zinciri olduğundan emin olur. Derleme yüklenirken bu gecikme birkaç saniye çevirebilir.  
   
- CA sertifikasını istemci bilgisayara yüklemeyi göz önünde bulundurun ve mümkün olduğunda Authenticode kullanmaktan kaçının. Uygulamanızın yayımcı kanıt gerekmez biliyorsanız, imza doğrulaması maliyetini ödemeniz gerekmez.  
+ CA sertifika istemci bilgisayara yüklemeyi göz önünde bulundurun ve mümkün olduğunda Authenticode kullanmaktan kaçının. Uygulamanızı yayımcı kanıt gerekmeyen biliyorsanız, imza doğrulama ücreti ödersiniz gerekmez.  
   
- İtibariyle [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], Authenticode doğrulamasının atlanmasına izin veren bir yapılandırma seçeneği yoktur. Bunu yapmak için app.exe.config dosyasına aşağıdaki ayarı ekleyin:  
+ İtibariyle [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], Authenticode doğrulama atlanmasına izin veren bir yapılandırma seçeneği yoktur. Bunu yapmak için aşağıdaki ayarı app.exe.config dosyasına ekleyin:  
   
 ```xml  
 <configuration>  
@@ -91,42 +91,42 @@ Bir WPF uygulaması başlatmak gerekli süreyi büyük ölçüde farklılık gö
 </configuration>  
 ```  
   
- Daha fazla bilgi için bkz: [ \<generatePublisherEvidence > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Daha fazla bilgi için [ \<generatePublisherEvidence > öğe](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
-## <a name="compare-performance-on-windows-vista"></a>Windows Vista performans karşılaştırma  
- Windows Vista Bellek yöneticisinde hızlı getirme adlı bir teknolojiye sahiptir. Hızlı getirme, belirli bir kullanıcı için en iyi bellek içeriğini belirlemek için zaman içinde bellek kullanım desenlerini çözümler. Her zaman bu içeriği korumak için sürekli çalışmaktadır.  
+## <a name="compare-performance-on-windows-vista"></a>Windows Vista performans karşılaştırın  
+ Windows Vista Bellek yöneticisinde hızlı getirme adı verilen bir teknoloji var. Hızlı getirme, belirli bir kullanıcı için en iyi bellek içeriğini belirlemek için zaman içinde bellek kullanım desenlerini analiz eder. Her zaman bu içeriği korumak için sürekli olarak çalışır.  
   
- Bu yaklaşım kullanım desenlerini çözümleme olmadan veri belleğe önceden yükler Windows XP'de kullanılan getirme öncesi teknik farklıdır. Kullanıcı, WPF uygulaması Windows Vista'da sık kullanıyorsa, zaman içinde uygulamanızın soğuk başlangıç zamanını artırabilir.  
+ Bu yaklaşım, veri, kullanım biçimlerini çözümleme olmadan belleğe önceden yükler Windows XP'de kullanılan getirme öncesi teknik farklıdır. Kullanıcı WPF uygulamanızı Windows Vista'da sık kullanıyorsa, zaman içinde uygulamanızın soğuk başlangıç süresini artırabilir.  
   
 ## <a name="use-appdomains-efficiently"></a>Uygulama etki alanları verimli şekilde kullanma  
- Mümkünse, yerel görüntü varsa, uygulama içinde oluşturulan tüm appdomains oluşturuyor kullanıldığını emin olmak için bir etki alanı Tarafsız kodu alanına derlemeler yükleme.  
+ Mümkünse, varsa, yerel görüntü uygulama içinde oluşturulan tüm uygulama etki alanları kullanıldığını emin olmak için bir alan-bağımsız kod alanına derlemeler yükleme.  
   
- En iyi performans için etki alanları arası çağrılar azaltarak verimli etki alanları arası iletişimi uygulayın. Mümkün olduğunda, çağrıları bağımsız değişkenler olmadan veya ilkel tür bağımsız değişkeni kullanın.  
+ En iyi performans için etki alanları arası çağrılar azaltarak verimli etki alanları arası iletişimi uygular. Mümkün olduğunda, çağrıları bağımsız değişkenler olmadan veya ilkel tür bağımsız değişkenleri kullanın.  
   
-## <a name="use-the-neutralresourceslanguage-attribute"></a>NeutralResourcesLanguage özniteliğini kullanın  
- Kullanım <xref:System.Resources.NeutralResourcesLanguageAttribute> için bağımsız kültür belirtmek üzere <xref:System.Resources.ResourceManager>. Bu yaklaşım başarısız derleme aramalarını önler.  
+## <a name="use-the-neutralresourceslanguage-attribute"></a>NeutralResourcesLanguage özniteliği kullanın  
+ Kullanım <xref:System.Resources.NeutralResourcesLanguageAttribute> bağımsız kültür için belirtmek üzere <xref:System.Resources.ResourceManager>. Bu yaklaşım, başarısız derleme aramalarını önler.  
   
-## <a name="use-the-binaryformatter-class-for-serialization"></a>Serileştirme için BinaryFormatter sınıfını kullanma  
- Serileştirme kullanmanız gerekiyorsa kullanın <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıfının yerine <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Sınıfı mscorlib.dll derlemesindeki temel sınıf kitaplığı (BCL) içinde uygulanır. <xref:System.Xml.Serialization.XmlSerializer> Yüklemek için ek bir DLL olabilen System.xml.dll içinde uygulanır.  
+## <a name="use-the-binaryformatter-class-for-serialization"></a>BinaryFormatter sınıfı seri hale getirme için kullanın.  
+ Serileştirme kullanmanız gerekirse kullanmak <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıfı yerine <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Sınıfı mscorlib.dll derlemesindeki Temel Class Library (BCL) olarak uygulanır. <xref:System.Xml.Serialization.XmlSerializer> Yüklemek için ek bir DLL olabilecek System.xml.dll içinde uygulanır.  
   
- Kullanmanız gerekiyorsa <xref:System.Xml.Serialization.XmlSerializer> sınıfı, elde edebileceğiniz daha iyi performans serileştirme derlemesini önceden oluşturursanız.  
+ Kullanmanız gerekirse <xref:System.Xml.Serialization.XmlSerializer> sınıfı elde edebileceğiniz daha iyi performans serileştirme bütünleştirilmiş kodu önceden oluşturursanız.  
   
-## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Güncelleştirmeleri denetlemek için ClickOnce başlatma işleminden sonra yapılandırma  
- Uygulamanız kullanıyorsa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], ağ erişimi başlangıçta yapılandırmamak [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulama başladıktan sonra güncelleştirmeler için dağıtım sitesini denetlemek için.  
+## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Başlangıcından sonra güncelleştirmeleri denetleme için ClickOnce yapılandırın  
+ Uygulamanız kullanıyorsa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], ağ erişimi başlangıçta yapılandırmamak [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] güncelleştirmeler için dağıtım sitesini uygulama başladıktan sonra denetlemek için.  
   
- XAML tarayıcısı uygulaması (XBAP) modelini kullanırsanız, aklınızda [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] XBAP zaten olsa bile güncelleştirmeler için dağıtım sitesini denetler [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] önbelleği. Daha fazla bilgi için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
+ XAML tarayıcısı uygulaması (XBAP) modeli kullandığınız aklınızda [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] XBAP zaten kullanımda olsa bile dağıtım sitenin güncelleştirmeleri denetler [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] önbellek. Daha fazla bilgi için [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Otomatik olarak başlatmak için PresentationFontCache hizmetini yapılandırma  
- Bir yeniden başlatmadan sonra çalıştırmak için ilk WPF uygulaması PresentationFontCache hizmetidir. Hizmetin sistem yazı tiplerini önbellekler, yazı tipi erişimini geliştirir ve genel performansı iyileştirir. Bir ek yük hizmeti başlatılıyor ve denetlenen bazı ortamlarda, hizmeti sistem yeniden başladığında otomatik olarak başlayacak şekilde yapılandırmayı deneyin.  
+ Yeniden başlatma sonrası çalıştırılacak ilk WPF uygulaması PresentationFontCache hizmetidir. Hizmet sistem yazı tiplerini önbelleğe alır, yazı tipi erişim artırır ve genel performansı artırır. Bir ek hizmeti başlatmayı ve denetlenen bazı ortamlarda, sistem yeniden başladığında otomatik olarak başlayacak şekilde hizmeti yapılandırabilirsiniz.  
   
 ## <a name="set-data-binding-programmatically"></a>Veri bağlamayı programlı olarak ayarlama  
- Ayarlamak için XAML kullanmak yerine <xref:System.Windows.FrameworkElement.DataContext%2A> bildirimli olarak için ana penceresinde, programlı olarak ayarlamayı göz önünde bulundurun <xref:System.Windows.Application.OnActivated%2A> yöntemi.  
+ Ayarlamak için XAML kullanmak yerine <xref:System.Windows.FrameworkElement.DataContext%2A> bildirimli olarak ana penceresi için programlı olarak ayarlamayı göz önünde bulundurun <xref:System.Windows.Application.OnActivated%2A> yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [WPF Uygulamasına Giriş Ekranı Ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<generatePublisherEvidence > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [WPF Uygulamasına Giriş Ekranı Ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence > öğe](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

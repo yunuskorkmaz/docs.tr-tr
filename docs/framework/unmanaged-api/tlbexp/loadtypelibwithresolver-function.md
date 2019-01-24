@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527378"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
 Bir tür kitaplığı yükler ve sağlanan kullanan [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) tüm dahili olarak başvurulan tür kitaplıkları çözümlenecek.  
@@ -58,7 +58,7 @@ HRESULT LoadTypeLibWithResolver(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.  
   
-|Dönüş değeri|Anlamı|  
+|Dönüş değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_OUTOFMEMORY`|Bellek yetersiz.|  
@@ -85,14 +85,14 @@ HRESULT LoadTypeLibWithResolver(
  Eğer `LoadTypeLibWithResolver` doğrudan, kendi sağlamalısınız [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulaması.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** TlbRef.h  
+ **Üst bilgi:** TlbRef.h  
   
  **Kitaplığı:** TlbRef.lib  
   
  **.NET framework sürümü:** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

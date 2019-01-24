@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma'
+title: 'Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 7cc11eaf4a671c76933c2705b41a4df6c35c0536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac554f080cdabc7034ca839c3a9086e927429f7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520041"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip
 Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
   
- Windows Forms <xref:System.Windows.Forms.ContextMenu> bileşeni, seçilen nesneye ilgili sık kullanılan komutlar menüsüne sağlar. Ekleyerek kısayol menüsü öğelerini ekleyebilirsiniz <xref:System.Windows.Forms.MenuItem> nesneleri <xref:System.Windows.Forms.Menu.MenuItems%2A> koleksiyonu.  
+ Windows Forms <xref:System.Windows.Forms.ContextMenu> bileşeni menüsü seçili nesne için uygun olan sık kullanılan komutlar sağlar. Ekleyerek öğeler için kısayol menüsünü ekleyebilirsiniz <xref:System.Windows.Forms.MenuItem> nesneleri için <xref:System.Windows.Forms.Menu.MenuItems%2A> koleksiyonu.  
   
- Öğe bir kısayol menüsünden kalıcı olarak kaldırabilirsiniz; Ancak, çalışma zamanında yerine öğelerini devre dışı bırakın veya gizlemek daha uygun olabilir.  
+ Öğe bir kısayol menüsünden kalıcı olarak kaldırabilirsiniz. Ancak, çalışma zamanında öğeleri yerine devre dışı bırakmak veya gizlemek daha uygun olabilir.  
   
 > [!IMPORTANT]
->  Ancak <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinin denetimleri <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+>  Ancak <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> denetimleri önceki sürümlerinin <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
-### <a name="to-remove-items-from-a-shortcut-menu"></a>Kısayol menüsünden öğeleri kaldırmak için  
+### <a name="to-remove-items-from-a-shortcut-menu"></a>Bir kısayol menüsünden öğeleri kaldırmak için  
   
-1.  Kullanım <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> veya <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.Menu.MenuItems%2A> koleksiyonu <xref:System.Windows.Forms.ContextMenu> belirli menü öğesi kaldırmak için bileşen.  
+1.  Kullanım <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> veya <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.Menu.MenuItems%2A> koleksiyonunu <xref:System.Windows.Forms.ContextMenu> belirli menü öğesini kaldırmak için bileşen.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.
   
      -veya-  
   
-2.  Kullanım `Clear` yöntemi `MenuItems` koleksiyonu <xref:System.Windows.Forms.ContextMenu> menüsünden tüm öğeleri kaldırmak için bileşen.  
+2.  Kullanım `Clear` yöntemi `MenuItems` koleksiyonunu <xref:System.Windows.Forms.ContextMenu> menüsünden tüm öğeleri kaldırmak için bileşen.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
@@ -74,7 +74,7 @@ Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ContextMenu>  
- [ContextMenu Bileşeni](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- [ContextMenu Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ContextMenu>
+- [ContextMenu Bileşeni](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)
+- [ContextMenu Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
