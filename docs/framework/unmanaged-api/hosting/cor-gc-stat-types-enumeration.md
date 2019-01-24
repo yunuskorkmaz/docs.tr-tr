@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710332"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES Numaralandırması
-Çöp toplama için kaydedilecek istatistikleri belirtir.  
+Bir çöp toplama için kaydedilecek istatistikleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma hangi istatistiklerine belirtir [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) yapısı olan ayarlanması [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) yöntemi.  
+ Bu numaralandırma, hangi istatistikleri belirtir [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) yapısı olan ayarlanması [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) yöntemi.  
   
 ## <a name="members"></a>Üyeler  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_GC_COUNTS`|Kayıtları çöp koleksiyonu sayısı için her oluşturmayı gerçekleştirilir.|  
-|`COR_GC_MEMORYUSAGE`|Kayıtları bellek kullanımı ve atık toplama boyutu istatistikleri.|  
+|`COR_GC_COUNTS`|Kayıtları atık toplamaları sayısı için her bir oluşturmada gerçekleştirdi.|  
+|`COR_GC_MEMORYUSAGE`|Kayıtları bellek kullanımı ve çöp toplama boyutu istatistikleri.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** GCHost.idl, GCHost.h  
+ **Üst bilgi:** GCHost.idl, GCHost.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

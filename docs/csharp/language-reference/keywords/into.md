@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: 4445674c77be397bd6e1d7e385dbd839fbb916aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631522"
 ---
 # <a name="into-c-reference"></a>into (C# Başvurusu)
 
@@ -31,6 +31,6 @@ Kullanımını gösteren bir örnek `into` içinde bir `join` yan tümcesi bkz [
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)  
-- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [group yan tümcesi](group-clause.md)  
+- [Query Keywords (LINQ)](query-keywords.md)
+- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [group yan tümcesi](group-clause.md)

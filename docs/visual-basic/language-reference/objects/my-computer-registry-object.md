@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: a37c7cc903279b284921a0e9c2628ef9a0fcc769
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d3a736cb4ff274382a4ce881928e284a8e632e02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656056"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry Nesnesi
 Özellikler ve kayıt defterini düzenlemek için yöntemler sağlar.  
@@ -30,5 +30,5 @@ ms.locfileid: "43528466"
   
  **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

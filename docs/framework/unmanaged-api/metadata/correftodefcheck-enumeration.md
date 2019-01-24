@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657200"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck Numaralandırması
-Hangi başvurulan öğelerin tanımlarını için kod iyileştirmek üzere dönüştürülür denetim bayrakları belirtir.  
+Başvurulan öğeleri kod iyileştirmek için tanımları için dönüştürülür denetim bayrakları belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Tür başvuruları ve üye başvuruları tanımlarını dönüştürülüp dönüştürülmeyeceğini belirtir. Bu varsayılan değerdir (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Başvurulan tüm öğeleri tanımlarını dönüştürülüp dönüştürülmeyeceğini belirtir.|  
-|`MDRefToDefNone`|Başvuruda bulunulan öğe tanımları dönüştürülüp dönüştürülmeyeceğini belirtir.|  
-|`MDTypeRefToDef`|Yalnızca tür başvuruları tür tanımı için dönüştürüleceğini belirtir.|  
-|`MDMemberRefToDef`|Yalnızca üye başvurular tanımlarını dönüştürülüp dönüştürülmeyeceğini belirtir. Diğer bir deyişle, üye başvuruları yöntemi tanımları veya alan tanımları için dönüştürülmelidir.|  
+|`MDRefToDefDefault`|Tür başvurularını ve üye başvuruları tanımlara dönüştürülüp dönüştürülmeyeceğini belirtir. Varsayılan değer budur (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Tüm başvurulan öğelerin tanımlarını dönüştürülmesi gerektiğini belirtir.|  
+|`MDRefToDefNone`|Başvurulan öğe tanımlarını dönüştürülmesi gerektiğini belirtir.|  
+|`MDTypeRefToDef`|Yalnızca tür başvurularını tür tanımlarına dönüştürülmesi gerektiğini belirtir.|  
+|`MDMemberRefToDef`|Yalnızca üye başvuruları tanımlara dönüştürülmesi gerektiğini belirtir. Diğer bir deyişle, üye başvuruları yöntemi tanımları veya alan tanımları dönüştürülmelidir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

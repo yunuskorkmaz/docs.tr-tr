@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731532"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma (Visual Basic)
 Çoğu durumda, tasarım zamanında bir nesnenin yöntemleri ve özellikleri keşfedin ve bunları işlemek için kod yazın. Ancak, bazı durumlarda, bir nesnenin özellikleri ve yöntemleri hakkında önceden bilmeyebilir veya yalnızca bir son kullanıcının özelliklerini belirtin veya çalışma zamanında bir yöntem yürütülemez etkinleştirme esnekliğine isteyebilirsiniz.  
@@ -46,6 +46,6 @@ ms.locfileid: "42911652"
 > [!NOTE]
 >  Sırada `CallByName` işlevi bazı durumlarda yararlı olabilir, yararlılığını performans etkilerinin karşı yaratmasını önlemelidir — kullanarak `CallByName` bir yordam çağırmak için geç bağlanan çağrı kısmen daha yavaştır. Çağırdığınız gibi bir döngü olduğu gibi içinde tekrar tekrar çağrılan bir işlev ise `CallByName` performansı üzerinde önemli bir etkisi olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [Nesne Türünü Belirleme](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [Nesne Türünü Belirleme](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma'
+title: 'Nasıl yapılır: Windows Server App Fabric ile bir iş akışı hizmeti barındırma'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 2c1e4e8763ad9bd65099173c75d272965ac8caa8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651194"
 ---
-# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma
+# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Nasıl yapılır: Windows Server App Fabric ile bir iş akışı hizmeti barındırma
 App Fabric içinde iş akışı hizmetlerini barındırma IIS altında barındırmak için benzer / WAS'da. Tek fark, App Fabric dağıtma, izleme ve yönetme iş akışı hizmetleri için sağladığı araçlara olmasıdır. Bu konuda oluşturulan iş akışı hizmeti kullanan [uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Bu konu bir iş akışı hizmeti oluşturma işleminde size yol gösterir. Bu konuda, App Fabric kullanarak iş akışı hizmeti barındırma nasıl açıklayacak. Windows Server App Fabric hakkında daha fazla bilgi için bkz: [Windows Server App Fabric belgeleri](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Aşağıdaki adımları tamamlamadan önce Windows Server App Fabric olduğundan emin olun.  Bu açık Internet bilgi hizmetlerini (inetmgr.exe) yapmak için sunucu adınıza tıklayın **bağlantıları** görüntülemek, siteler ve tıklayın **varsayılan Web sitesi**. Ekranın sağ tarafı adlandırılan bir bölüm görmeniz gerekir **App Fabric**. Bu bölümde (sağ bölmenin üst kısmındaki olacaktır) görmüyorsanız, App Fabric yüklü yoktur. Windows Server AppFabric yükleme hakkında daha fazla bilgi için bkz. [yükleme Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Basit bir iş akışı hizmeti oluşturma  
@@ -90,8 +90,8 @@ App Fabric içinde iş akışı hizmetlerini barındırma IIS altında barındı
   
      Windows Server App Fabric hakkında daha fazla bilgi için özellikleri ve bunları nasıl kullanacağınızı görmek [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=193143)  
- [Windows Server AppFabric yükleme](https://go.microsoft.com/fwlink/?LinkId=193136)  
- [Windows Server App Fabric belgeleri](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=193143)
+- [Windows Server AppFabric yükleme](https://go.microsoft.com/fwlink/?LinkId=193136)
+- [Windows Server App Fabric belgeleri](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

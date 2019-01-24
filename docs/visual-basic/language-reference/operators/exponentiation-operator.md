@@ -14,15 +14,15 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fb52a57a9d96f93c31ab1419e81e7f05967f831
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659728"
 ---
 # <a name="-operator-visual-basic"></a>^ İşleci (Visual Basic)
-Bir sayıyı diğer bir sayının kuvvetine yükseltir.  
+Bir sayıyı diğer bir sayının başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,43 +44,43 @@ number ^ exponent
  `Double`. Tüm farklı türündeki işlenenler için dönüştürülür `Double`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Basic her zaman içinde üs gerçekleştirir [Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md).  
+ Visual Basic içinde üs her zaman gerçekleştirir [Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md).  
   
- Değeri `exponent` kesir olabilir negatif veya her ikisi de.  
+ Değerini `exponent` kesir olabilir negatif veya her ikisini de.  
   
- Tek bir deyimde birden fazla üs gerçekleştirildiğinde `^` işleci soldan sağa karşılaşılana olarak değerlendirilir.  
+ Tek bir deyimde birden fazla üs gerçekleştirildiğinde `^` işleci soldan sağa karşılaşılanaa olarak değerlendirilir.  
   
 > [!NOTE]
->  `^` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Bu tür bir sınıf veya yapı üzerinde kodunuzu bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  `^` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `^` işleci üs gücünü sayıya yükseltin. İkinci üssünün ilk işlenen sonucudur.  
+ Aşağıdaki örnekte `^` birkaç üs değerini artırmak için işleci. İkinci üssü birinci işlenenin sonucudur.  
   
  [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
- Önceki örnekte aşağıdaki sonuçları verir:  
+ Yukarıdaki örnekte, aşağıdaki sonuçları üretir:  
   
  `exp1` (2 kare) 4'e ayarlanır.  
   
- `exp2` 19683 (3 küpünü, ardından küpünü bu değere) ayarlayın.  
+ `exp2` (3 üssüne, ardından bu değeri üssüne) 19683 için ayarlanır.  
   
- `exp3` -125 (küpünü -5) olarak ayarlanır.  
+ `exp3` -125 (üssüne -5) için ayarlanır.  
   
  `exp4` 625'in (Dördüncü gücüne -5) ayarlanır.  
   
- `exp5` 2 (8 kökündeki küpü)'ye ayarlanır.  
+ `exp5` 2 (8 kökünde küpü)'ye ayarlanır.  
   
- `exp6` 0,5 (8 küp kök tarafından bölünmüş 1.0) ayarlanır.  
+ `exp6` 0,5 (8'in küpü kök tarafından ayrılmış 1.0) ayarlanır.  
   
- Önceki örnekte ifadelerde parantez önemini unutmayın. Nedeniyle *İşleç önceliği*, Visual Basic normalde gerçekleştirir `^` herhangi diğer önce işleci birli bile `–` işleci. Varsa `exp4` ve `exp6` hesaplanan parantez olmadan, bunlar üretilen aşağıdaki sonuçları:  
+ Önceki örnekte ifadelerde parantezler önemini unutmayın. Nedeniyle *İşleç önceliği*, Visual Basic normalde gerçekleştirir `^` işlecinden önce diğer tüm abonelikler, hatta birli `–` işleci. Varsa `exp4` ve `exp6` parantez olmadan, bunlar üretilen aşağıdaki sonuçları hesaplanmadığını:  
   
- `exp4 = -5 ^ 4` (5 olarak – dördüncü güç), hesaplanan-625 içinde sonuçlanacak.  
+ `exp4 = -5 ^ 4` (5 – olarak dördüncü güç), hesaplanacaktı-625 içinde sonuçlanır.  
   
- `exp6 = 8 ^ -1.0 / 3.0` (8 – 1 güç veya 0,125) olarak hesaplanır 0.041666666666666666666666666666667 içinde oluşturacağı 3.0 bölü.  
+ `exp6 = 8 ^ -1.0 / 3.0` (8 – 1 güç veya 0,125) olarak hesaplanacaktı 0.041666666666666666666666666666667 içinde oluşacak 3.0, bölü.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
+- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

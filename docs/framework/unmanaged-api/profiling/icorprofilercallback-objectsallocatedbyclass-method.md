@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746641"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass Yöntemi
-Profil Oluşturucu en son çöp toplamadan beri oluşturulan her belirtilen sınıf örneklerini sayısı hakkında uyarır.  
+En son çöp toplamadan beri oluşturulan her belirtilen sınıf örneklerini sayısı hakkında daha fazla profil oluşturucu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,29 +38,29 @@ HRESULT ObjectsAllocatedByClass(
   
 #### <a name="parameters"></a>Parametreler  
  `cClassCount`  
- [in] Boyutunu `classIds` ve `cObjects` dizileri.  
+ [in] Boyutu `classIds` ve `cObjects` dizileri.  
   
  `classIds`  
- [in] Bir dizi sınıfının kimlikleri, burada her kimliği ile bir veya daha fazla örnekleri bir sınıfı belirtir.  
+ [in] Bir dizi sınıfının kimlikleri, burada her kimliği ile bir veya daha fazla örneğini bir sınıfı belirtir.  
   
  `cObjects`  
- [in] Dizisi burada her tamsayı belirtir, karşılık gelen sınıf için örnek sayısı, `classIds` dizi.  
+ [in] Burada her tamsayı karşılık gelen sınıf için örnek sayısını belirtir, tamsayı dizisi `classIds` dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `classIds` Ve `cObjects` paralel diziler dizidir. Örneğin, `classIds[i]` ve `cObjects[i]` aynı sınıf başvurusu. Bir sınıf örneği önceki çöp toplamadan beri oluşturulduysa sınıfı atlanır. `ObjectsAllocatedByClass` Geri çağırma büyük nesne yığın ayrılmış nesneleri bildirmez.  
+ `classIds` Ve `cObjects` paralel diziler dizilerdir. Örneğin, `classIds[i]` ve `cObjects[i]` başvuru aynı sınıfı. Sınıfı, önceki çöp toplama işleminden itibaren hiçbir bir sınıf örneği oluşturulmuşsa atlanır. `ObjectsAllocatedByClass` Geri çağırma büyük nesne yığınında nesneleri bildirmez.  
   
- Sayıları tarafından bildirilen `ObjectsAllocatedByClass` yalnızca tahminleri. Tam sayılar için kullanmak [Icorprofilercallback::objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Sayıları tarafından bildirilen `ObjectsAllocatedByClass` yalnızca biriminizdeki tahmini fiyatlardır. Tam sayıları için kullanmak [Icorprofilercallback::objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- `classIds` Dizisi, bir veya daha fazla null girdiler içerebilir, varsa karşılık gelen `cObjects` dizi kaldırılması türü içerir.  
+ `classIds` Varsa, dizi bir veya daha fazla null girişler içeriyor olabilir karşılık gelen `cObjects` dizi kaldırma tür vardır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

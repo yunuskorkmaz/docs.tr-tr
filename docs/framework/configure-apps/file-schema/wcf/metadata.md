@@ -2,12 +2,12 @@
 title: '&lt;Meta verileri&gt;'
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 119cd4d5b63f8d957bc6db9dd6aabdf9e2beeb64
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 017a58c7e48a1c4c5b4abdcb7cc603e95f6516a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723972"
 ---
 # <a name="ltmetadatagt"></a>&lt;Meta verileri&gt;
 Hizmet meta verileri nasıl işleyebileceğiniz belirtir.  
@@ -51,11 +51,11 @@ Hizmet meta verileri nasıl işleyebileceğiniz belirtir.
 |-------------|-----------------|  
 |[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|İstemci bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
- <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
- <xref:System.ServiceModel.Description.MetadataImporter>  
- <xref:System.ServiceModel.Description.WsdlImporter>  
- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
+- <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
+- <xref:System.ServiceModel.Description.MetadataImporter>
+- <xref:System.ServiceModel.Description.WsdlImporter>
+- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ed486a885514d02bf2be9c473e102c2c5f0e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656264"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs Yöntemi
 Geçerli kapsamdaki tüm türleri temsil eden TypeDef belirteçleri numaralandırır.  
@@ -40,13 +40,13 @@ HRESULT EnumTypeDefs (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out] Yeni Numaralandırıcı gösteren bir işaretçi. Bu, bu yöntem ilk çağrısı için NULL olmalıdır.  
+ [out] Yeni Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
   
  `rTypeDefs`  
- [in] TypeDef belirteçleri depolamak için kullanılan dizisi.  
+ [in] TypeDef simgeleri depolamak için kullanılan dizisi.  
   
  `cMax`  
- [in] En büyük boyutunu `rTypeDefs` dizi.  
+ [in] En büyük boyutunu `rTypeDefs` dizisi.  
   
  `pcTypeDefs`  
  [out] Döndürülen TypeDef belirteçleri sayısı `rTypeDefs`.  
@@ -59,17 +59,17 @@ HRESULT EnumTypeDefs (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTypeDefs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeDef belirteci genişletilebilirlik mekanizması eklenen herhangi bir tür yanı sıra, bir sınıf veya arabirim gibi bir türü temsil eder.  
+ TypeDef simgesi genişletilebilirlik mekanizması eklenen herhangi bir tür yanı sıra, bir sınıf veya arabirim gibi bir türü temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

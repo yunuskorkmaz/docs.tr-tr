@@ -3,12 +3,12 @@ title: '&lt;trustedIssuers&gt;'
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 1459027ae22344d5b1abc917c490b8e98fa0f2c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634005"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen yayıncı sertifikaları listesinde yapılandırır (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
@@ -17,7 +17,7 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
 \<identityConfiguration >  
 \<securityTokenHandlers >  
 \<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
+\<issuerNameRegistry>  
 \<trustedIssuers >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -44,7 +44,7 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -58,7 +58,7 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Yayınlayıcı adı yapılandırır. **Önemli:** `type` özniteliği `<issuerNameRegistry>` öğesi başvurmalıdır <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfının `<trustedIssuers>` geçerli olması için öğesi.|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Yayınlayıcı adı yapılandırır. **Önemli:**  `type` Özniteliği `<issuerNameRegistry>` öğesi başvurmalıdır <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfının `<trustedIssuers>` geçerli olması için öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Windows Identity Foundation (WIF) tek bir uygulamasını sağlar <xref:System.IdentityModel.Tokens.IssuerNameRegistry> sınıfı ilk günden <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfı. Yapılandırma verenin ad Kayıt Defteri'ni yapılandırmasından yüklenen güvenilen verenler listesini tutar. Listenin her verenin adı veren tarafından üretilen belirteçleri imzasını için gereken X.509 sertifikası ile ilişkilendirir. Güvenilen yayıncı sertifikaları listesi altında belirtilen `<trustedIssuers>` öğesi. Listedeki her öğe bir anımsatıcı verenin adı, veren tarafından üretilen belirteçleri imzasını doğrulamak için gereken X.509 sertifikası ile ilişkilendirir. Güvenilen sertifikalar ASN.1 kullanarak kodlanmış sertifika parmak izi biçiminde belirtilir ve koleksiyonu kullanılarak eklenen `<add>` öğesi. Temizleyin veya verenler (sertifika) kullanarak listeden kaldırma `<clear>` ve `<remove>` öğeleri.  
@@ -76,6 +76,6 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

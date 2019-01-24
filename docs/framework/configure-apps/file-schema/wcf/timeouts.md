@@ -2,12 +2,12 @@
 title: '&lt;zaman aşımı&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: e39deeb251865b87eb7734e4447088ca2f221d1d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 42f4db1d954834cbfa3c526328cca45443751506
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629664"
 ---
 # <a name="lttimeoutsgt"></a>&lt;zaman aşımı&gt;
 Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirten bir yapılandırma öğesini temsil eder.  
@@ -44,7 +44,7 @@ Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını be
 |-------------|-----------------|  
 |[\<konak >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Hizmet konak makinesi ayarlarını belirten bir yapılandırma öğesi.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)

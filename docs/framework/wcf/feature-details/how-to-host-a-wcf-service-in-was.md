@@ -1,18 +1,18 @@
 ---
-title: "Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma"
+title: "Nasıl yapılır: Was'ta WCF Hizmeti barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651181"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
+# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: Was'ta WCF Hizmeti barındırma
 Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda barındırılan Windows Communication Foundation (WCF) hizmet. OLAN HTTP olmayan aktarım kurallarıyla çalışma Internet Information Services (IIS) özellikleri genelleştirilmiş olduğundan yeni işlem Etkinleştirme hizmeti. WCF dinleyici bağdaştırıcı arabirimi gibi TCP ve adlandırılmış kanallar ve Message Queuing, WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullanır.  
   
- WAS etkinleştirme bileşenleri düzgün şekilde yüklenir ve yapılandırılır, ancak uygulamanın bir parçası yazılması için herhangi bir barındırma kod gerektirmeyen bu barındırma seçeneği gerektirir. Yükleme ve WAS'ta yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: yükleme ve yapılandırma WCF etkinleştirme bileşenlerini](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ WAS etkinleştirme bileşenleri düzgün şekilde yüklenir ve yapılandırılır, ancak uygulamanın bir parçası yazılması için herhangi bir barındırma kod gerektirmeyen bu barındırma seçeneği gerektirir. Yükleme ve WAS'ta yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  OLUŞTU. web sunucusunun istek işleme ardışık düzeni için Klasik modu olarak ayarlanmışsa etkinleştirme desteklenmiyor. WAS etkinleştirme kullanılacak ise ardışık düzen işleme, web sunucusu isteği tümleşik moduna ayarlanmalıdır.  
@@ -98,6 +98,6 @@ Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da b
   
 6.  Derleyin ve istemci çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

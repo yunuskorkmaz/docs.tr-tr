@@ -1,15 +1,15 @@
 ---
-title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
+title: 'Taşıma: WSE 3.0 TCP birlikte çalışabilirliği'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653014"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
+# <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP birlikte çalışabilirliği
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü oturumu özel bir Windows Communication Foundation (WCF) aktarım olarak uygulamak nasıl gösterir. Kanal katmanını genişletilmesinde arabirimine dağıtılan var olan sistemlerle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma yapı işlemini gösterir:  
   
 1.  Bir TCP yuva ile başlayarak, istemci ve sunucu uygulamaları oluşturma <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ayıklanmış çerçeveleme DIME iletisi sınırları ayırmak için.  
@@ -23,7 +23,7 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü otu
 5.  Bir kanal yığınına özel taşıma ekleyen bir bağlama öğesi ekleyin. [Bir bağlama öğesi ekleme] daha fazla bilgi için bkz.  
   
 ## <a name="creating-iduplexsessionchannel"></a>Da IDuplexSessionChannel öğelerini oluşturma  
- WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üst kısmındaki bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt ve (2) bu baytlardan çerçeveleme ve kablo göndererek ileti kodlama.  
+ WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üst kısmındaki bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt ve (2) bu baytlardan çerçeveleme ve kablo göndererek, ileti kodlama.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -195,4 +195,4 @@ Symbols:
   
     8.  TCP aktarımı test istemcisinin yeni bir konsolda başlatır. İstemci, hisse senedi fiyatlarını hizmetten ister ve ardından sonuçları, konsol penceresinde görüntüler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

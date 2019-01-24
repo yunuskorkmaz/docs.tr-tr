@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45d85be4e4987e5a5234ca2d57c85a56f9f544bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657031"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd Metodu
-Birleştirmeler geçerli kapsam için bir veya daha fazla önceki çağrıları tarafından belirtilen tüm meta veri kapsamları [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
+Birleştirmeleri geçerli kapsam için bir veya daha fazla önceki çağrılar tarafından belirtilen tüm meta veri kapsamları [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,39 +37,39 @@ HRESULT MergeEnd ();
  Bu yöntem parametre almaz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yordam gerçek birleştirme meta verilerin tetikler, tüm kapsamlar çağrıları koyarak belirtilen alma `IMetaDataEmit::Merge`, geçerli çıkış kapsam içine.  
+ Bu yordam meta verilerinin gerçek birleştirme tetiklenir, tüm çağrıları koyarak Belirtilen kapsam içeri `IMetaDataEmit::Merge`, geçerli çıkış kapsama.  
   
- Aşağıdaki özel koşullar birleştirme için geçerlidir:  
+ Birleştirme için aşağıdaki özel koşullar geçerlidir:  
   
--   Meta veri alma kapsamında benzersiz olduğundan modülü sürüm tanıtıcısını (MVID) hiçbir zaman alınır.  
+-   Meta veri içeri aktarma kapsamı içinde benzersiz olduğu için modülü sürüm tanımlayıcısı (MVID) hiçbir zaman aktarılır.  
   
--   Varolan modülü genelinde özellik üzerine yazılır.  
+-   Mevcut hiçbir modül genelinde özellik üzerine yazılır.  
   
-     Modülü özellikleri zaten geçerli kapsam için ayarlandıysa, hiçbir modülü özellikleri içeri aktarılır. Modülü özellikleri geçerli kapsamda ayarlanmamış, yalnızca zaman ilk karşılaşılan sonra ancak bunlar içeri aktarılır. Bu modülü özellikleri yeniden aldıysanız, yinelenen oldukları. (MVID dışında) tüm modülü özelliklerinin değerlerini karşılaştırılır ve yinelenen bulunan, bir hata oluştu.  
+     Hiçbir modül özellik modülü özellikleri geçerli kapsam için zaten belirlenmişse içeri aktarılır. Modülü özellikleri geçerli kapsamda ayarlanmamış ise yalnızca zaman ilk karşılaşılan sonra ancak bunlar içeri aktarılır. Bu modülü özellikleri yeniden karşılaşılırsa, çoğaltmaları değildirler. Tüm modül özelliklerini (dışında MVID) değerlerini karşılaştırılır ve yinelenen öğeler bulundu, bir hata ortaya çıkar.  
   
--   Tür tanımları için (`TypeDef`), yinelenen geçerli kapsam birleştirilir. `TypeDef` nesneleri her karşı çoğaltmaları denetlenir *tam nesne adı* + *GUID* + *sürüm numarası*. Adı veya GUID bir eşleşme yoktur ve herhangi bir diğer iki farklı ise, bir hata oluştu. Aksi durumda, tüm üç öğe eşleşiyorsa `MergeEnd` girişleri gerçekten Tekrarların; sağlamak için basit bir denetim gerçekleştirir değilse, bir hata oluşur. Bu basit onay arar:  
+-   Tür tanımları (`TypeDef`), yinelemelere geçerli kapsam birleştirilir. `TypeDef` nesneleri her karşı çoğaltmaları denetlenir *nesne tam adı* + *GUID* + *sürüm numarası*. Bir eşleşme adı veya GUID ve diğer iki öğelerden farklı ise, bir hata ortaya çıkar. Aksi durumda, tüm üç öğe eşleşiyorsa `MergeEnd` girişleri çoğaltmaları; aslında olduğundan emin olmak için basit bir denetim gerçekleştirir Aksi takdirde bir hata ortaya çıkar. Bu basit bir onay arar:  
   
-    -   Aynı sırada gerçekleşen aynı üye bildirimleri. Olarak işaretlenmiş üyeleri `mdPrivateScope` (bkz [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) numaralandırması) bu iade; bulunmayan özel birleştirilir.  
+    -   Aynı sırada gerçekleşen aynı üye bildirim kullanımları. Olarak işaretlenmiş üyeleri `mdPrivateScope` (bkz [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) numaralandırması) bu iade; bulunmayan özel birleştirilir.  
   
     -   Aynı sınıf düzeni.  
   
-     Bunun anlamı bir `TypeDef` nesne her zaman tam olarak ve tutarlı bir şekilde tanımlanması gerekir her meta veri kapsamda durumda bildirilmiş; bunun üye uygulamalarını (için bir sınıf) birden çok derleme biriminden yayılır, tam tanımı olarak kabul edilir Her kapsamda varsa ve her bir kapsama artımlı. Parametre adları sözleşmesine ilgili varsa, örneğin, bunlar aynı şekilde her kapsam içine yayınlaması gerekir; ilgili değilseniz, bunların meta verileri yayınlaması gerektiğini değil.  
+     Diğer bir deyişle bir `TypeDef` nesne her zaman tam olarak ve tutarlı bir şekilde tanımlanmalıdır her meta veri kapsamında, BT bildirilir; bunun üye uygulamalarını (için bir sınıf) arasında birden çok derleme biriminden yayılır, tam tanımı olarak kabul edilir Her kapsamda varsa ve her kapsam için artımlı. Parametre adları sözleşmesine uygun olan, örneğin, bunlar aynı şekilde her kapsamına yayılan gerekir; ilgili olmayan, bunların meta verilere yayılan değil.  
   
-     Özel durum olan bir `TypeDef` nesne artımlı üyeleri olarak işaretlenmiş olabilir `mdPrivateScope`. Bunlar, karşılaşmadan üzerine `MergeEnd` artımlı olarak bakmadan çoğaltmalar için geçerli bir kapsama ekler. Derleyici özel kapsam anlar olduğundan derleyici kural zorlama için sorumlu olmalıdır.  
+     Özel durum olan bir `TypeDef` nesne artımlı üyeleri olarak işaretlenmiş olabilir `mdPrivateScope`. Bunlar, karşılaşıldığında üzerinde `MergeEnd` artımlı olarak çoğaltmaları olmadan geçerli bir kapsama ekler. Derleyici özel kapsam anlayan olduğundan derleyici kurallar uygulamaktan sorumlu olması gerekir.  
   
--   Göreli sanal adresleri (RVAs) içeri aktarılan veya birleştirilmiş; Derleyici, bu bilgileri yeniden yayma olması beklenir.  
+-   Göreli sanal adreslerine (RVA) içeri aktarılan veya birleştirilmiş; Derleyici bu bilgileri yeniden yayma bekleniyor.  
   
--   Özel öznitelikler yalnızca bağlı olan öğe birleştirildiğinde birleştirilir. Örneğin, bir sınıfla ilişkilendirilen özel öznitelikler sınıfı ilk karşılaşıldığında birleştirilir. Özel öznitelikler ilişkilendirilen bir `TypeDef` veya `MemberDef` , derleme birimine (örneğin, bir üye derleme zaman damgası) belirli, bunlar birleştirilmez ve kaldırmak veya bu tür meta verilerini güncelleştirmek için derleyici kadar olur.  
+-   Özel öznitelikler, bağlı öğe birleştirildiğinde birleştirilir. Örneğin, sınıf ilk karşılaşıldığında bir sınıf ile ilişkili özel öznitelikler birleştirilir. Özel öznitelikler ilişkilendirilen bir `TypeDef` veya `MemberDef` derleme birimi (örneğin, bir üye derleme zaman damgasını) özgü olan, birleştirilmiş değil ve kaldırın veya bu tür meta verileri güncelleştirmek için derleyici en fazla olan.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

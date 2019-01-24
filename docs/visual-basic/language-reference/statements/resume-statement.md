@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624801"
 ---
 # <a name="resume-statement"></a>Resume Deyimi
 Bir hata işleme yordamını tamamlandıktan sonra yürütmeye devam eder.  
@@ -60,9 +60,9 @@ Resume [ Next | line ]
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Error Deyimi](../../../visual-basic/language-reference/statements/error-statement.md)  
- [On Error Deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Error Deyimi](../../../visual-basic/language-reference/statements/error-statement.md)
+- [On Error Deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)

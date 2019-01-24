@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655965"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Her şey, ekranda görünen fırça tarafından boyanan çünkü görülebilir. Örneğin, fırça bir düğme ve metin ön bir şeklin arka planı tanımlamak için kullanılır. Bu konu ile Boyama kavramları tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyama etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] basit, düz renk düzenleri ve görüntü karmaşık kümelerine nesneleri.  
@@ -160,14 +160,14 @@ VisualBrush'ı kullanarak bir dikdörtgen boyanır
   
  Neden hakkında daha fazla bilgi için <xref:System.Windows.Media.VisualBrush> nesneler olamaz dondurulmuş, bkz: <xref:System.Windows.Media.VisualBrush> türü sayfası.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Fırça örneği](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Fırça örneği](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

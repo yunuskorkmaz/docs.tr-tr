@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661366"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML Karakter Varlıkları ve XAML
 XAML, XML'de özel karakterler için tanımlanan karakter varlıkları kullanır. Bu konuda, bazı belirli karakter varlıkları ve XAML içinde diğer XML kavramları yönelik genel konular açıklanmaktadır.  
@@ -62,8 +62,8 @@ XAML, XML'de özel karakterler için tanımlanan karakter varlıkları kullanır
 ## <a name="xml-processing-instructions"></a>XML işleme yönergeleri  
  XAML XML işleme yönergeleri yönergeleri ile geçirilmelidir state XML belirtimleri göre işler. XAML içinde .NET Framework XAML hizmetlerinde işleme işleme yönergeleri kullanmaz. XAML kullanan diğer mevcut altyapılarınız, ayrıca XAML işleme yönergeleri kullanmayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName Dilbilgisi](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Boşluk XAML içinde işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName Dilbilgisi](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [Boşluk XAML içinde işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

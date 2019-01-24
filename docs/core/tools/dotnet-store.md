@@ -4,12 +4,12 @@ description: "'Dotnet deposu' komutunu belirtilen derlemeleri çalışma zamanı
 author: bleroy
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: db1af95150a8949f218169b2999c92c00ac94d56
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606757"
 ---
 # <a name="dotnet-store"></a>DotNet deposu
 
@@ -19,7 +19,7 @@ ms.locfileid: "53170736"
 
 `dotnet store` -Belirli derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md).
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
@@ -83,4 +83,4 @@ Belirtilen paket Store *packages.csproj* iyileştirme olmadan:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Çalışma zamanı paket deposu](../deploying/runtime-store.md)
+- [Çalışma zamanı paket deposu](../deploying/runtime-store.md)

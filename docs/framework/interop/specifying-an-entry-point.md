@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31bb28b5bda51fb1579021e47b8d5ec49adb644e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658292"
 ---
 # <a name="specifying-an-entry-point"></a>Giriş Noktası Belirtme
 Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar. Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.  
@@ -31,7 +31,7 @@ Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetil
  Bu konu, bir DLL işlevinin yönetilen kod içinde nasıl yeniden adlandıracağını gösterir.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Visual Basic'te bir İşlevi Yeniden Adlandırma  
- Visual Basic kullanan **işlevi** anahtar sözcük **Declare** ayarlamak için ifade <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alan. Aşağıdaki örnek, temel bir bildirimi gösterir.  
+ Visual Basic kullanan **işlevi** anahtar sözcüğünü **Declare** ayarlamak için ifade <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alan. Aşağıdaki örnek, temel bir bildirimi gösterir.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -43,7 +43,7 @@ Public Class Win32
 End Class  
 ```  
   
- Değiştirebileceğiniz **MessageBox** giriş noktasıyla **MsgBox** ekleyerek **diğer** tanımınızı, aşağıdaki örnekte gösterildiği gibi bir anahtar sözcük. Her iki örneklerde **otomatik** anahtar sözcüğü Giriş noktası karakter kümesi sürümünü belirtme ihtiyacını ortadan kaldırır. Bir karakter seçme hakkında daha fazla bilgi için bkz: [karakter kümesini belirtme](../../../docs/framework/interop/specifying-a-character-set.md).  
+ Değiştirebilirsiniz **MessageBox** giriş noktasıyla **MsgBox** ekleyerek **diğer** aşağıdaki örnekte gösterildiği gibi tanımınızı, anahtar sözcük. Her iki örnek **otomatik** anahtar sözcüğü giriş noktasının karakter kümesi sürümünü belirtme ihtiyacını ortadan kaldırır. Bir karakter seçme hakkında daha fazla bilgi için bkz: [bir karakter kümesi belirtme](../../../docs/framework/interop/specifying-a-character-set.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -56,7 +56,7 @@ End Class
 ```  
   
 ## <a name="renaming-a-function-in-c-and-c"></a>C# ve C++'de bir İşlevi Yeniden Adlandırma  
- Bir DLL işlevini ada veya sıraya göre belirtmek için <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alanını kullanabilirsiniz. Adı yöntemi tanımınızı işlevi, giriş noktası ile aynı ise DLL'de açıkça işleviyle tanımlamak gerekmez **EntryPoint** alan. Aksi halde, bir ad veya sıra belirtmek için aşağıdaki öznitelik biçimlerinden birini kullanın:  
+ Bir DLL işlevini ada veya sıraya göre belirtmek için <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alanını kullanabilirsiniz. Yöntem tanımınızdaki işlevin adı giriş noktasıyla aynıysa DLL'deki işlevi açıkça tanımlamak gerekmez **EntryPoint** alan. Aksi halde, bir ad veya sıra belirtmek için aşağıdaki öznitelik biçimlerinden birini kullanın:  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
@@ -65,7 +65,7 @@ End Class
   
  Bir sıralı sayıyı (#) işareti ile kullanmanız gerektiğini unutmayın.  
   
- Aşağıdaki örnekte nasıl değiştirileceğini göstermektedir **MessageBoxA** ile **MsgBox** kullanarak kodunuzda **EntryPoint** alan.  
+ Aşağıdaki örnek nasıl değiştirileceğini gösterir **MessageBoxA** ile **MsgBox** kullanarak kodunuzda **EntryPoint** alan.  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -88,8 +88,8 @@ extern "C" int MsgBox(HWND hWnd,
                       unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

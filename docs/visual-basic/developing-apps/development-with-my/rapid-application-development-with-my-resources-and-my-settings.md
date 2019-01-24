@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4150d2f9634045351cb52e02c4f4807e55d118e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717923"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources ve My.Settings ile Hızlı Uygulama Geliştirme (Visual Basic)
 `My.Resources` Nesne uygulamanın kaynaklara erişim sağlar ve uygulamanız için kaynakları dinamik olarak almanıza olanak tanır.  
@@ -26,7 +26,7 @@ ms.locfileid: "44032773"
   
  Benzer şekilde, `My.Settings` nesne uygulamanın ayarlarına erişim sağlar ve dinamik olarak depolamak ve özellik ayarlarını ve uygulamanızın diğer bilgilerini almak sağlar. Daha fazla bilgi için [My.Resources nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md) ve [My.Settings nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)  
- [My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)
+- [My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)

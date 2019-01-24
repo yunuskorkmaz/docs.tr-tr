@@ -2,12 +2,12 @@
 title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622617"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 
@@ -48,7 +48,7 @@ OData eylemleri bağlı bir OData hizmetinden bir kaynağı görevi gören bir d
   
  Parametre belirteçleri geçirilebilir. Veri hizmeti sağlayıcısı (hazırlama) dönüştürmeniz gerekebilir Durum buysa, kaynakları temsil eden belirteçleri ile çalışan gerçek eyleme dağıtmadan önce bu belirteçleri gerçek Kaynakları Yazmayı mümkün olduğundan bu değildir. Parametre sıraya sonra böylelikle eylemi çağrıldığında oluşan değişiklikleri kaynağa kaydedilmiş ve üzerine yazılma disk düzenlenebilir bir durumda olması gerekir.  
   
- Bu arabirim, iki yöntem gerektirir: çağırmak ve GetResult. Çağırma eylemin davranışı ve GetResult döndürür uygulayan temsilci eylem sonucunu çağırır.  
+ Bu arabirim, iki yöntem gerektirir: Çağırma ve GetResult. Çağırma eylemin davranışı ve GetResult döndürür uygulayan temsilci eylem sonucunu çağırır.  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>Bir WCF veri hizmeti eylemi çağırma  
  Eylemler, bir HTTP POST isteği kullanılarak çağrılır. Ardından eylem adı kaynak URL'sini belirtir. Parametreleri istek gövdesinde geçirilir. Örneğin, varsa oranı olarak adlandırılan bir eylem ifşa eden MovieService adlı bir hizmet. Belirli bir filmi oranı eylemi çağırmak için aşağıdaki URL'yi kullanabilirsiniz:  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  Yukarıdaki kod parçacığında `MoviesModel` sınıfı, WCF veri hizmetine hizmet başvurusu eklemek için Visual Studio kullanılarak oluşturuldu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)  
- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [WCF Veri Hizmetleri Geliştirme ve Dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)
+- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Veri Hizmetleri Geliştirme ve Dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

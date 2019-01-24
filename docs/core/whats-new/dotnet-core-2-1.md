@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96f592799c42e96a5607489f18ee584264b167e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693684"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -239,6 +239,6 @@ Linux ve Macos'ta, yalnızca yapılandırabilirsiniz <xref:System.Net.Http.HttpC
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [​.NET Core'daki Yenilikler](index.md)  
-* [EF Core 2.1 yeni özellikler](/ef/core/what-is-new/ef-core-2.1)  
-* [ASP.NET Core 2.1 yenilikler nelerdir?](/aspnet/core/aspnetcore-2.1)
+- [​.NET Core'daki Yenilikler](index.md)
+- [EF Core 2.1 yeni özellikler](/ef/core/what-is-new/ef-core-2.1)
+- [ASP.NET Core 2.1 yenilikler nelerdir?](/aspnet/core/aspnetcore-2.1)

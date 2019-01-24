@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635032"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar, artık kullanılmayan türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenmiş. Eski türler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz. [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md).
@@ -84,7 +84,7 @@ ms.locfileid: "47196763"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Lütfen kullanın <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> yerine.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> Sınıfı kullanımdan kaldırıldı.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|İlk .NET Framework 4. 5 ' kullanım dışı. Kullanım <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> System.Runtime.CompilerServices ad alanı bunun yerine sınıf.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Alternatif bir API mevcuttur: yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Alternatif bir API kullanılabilir: Yayma <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özel özniteliği yerine.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> kullanın.|
@@ -587,7 +587,7 @@ ms.locfileid: "47196763"
  Aşağıdaki bölümlerde, Microsoft derlemelerde eski türleri listelenmektedir. Bu derlemeler, ayrı bir dil (örneğin, Microsoft.JScript.dll'ye veya Microsoft.VisualC.dll) hedef derlemeler gibi özel amaçlı derlemelerdir.
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Bütünleştirilmiş kod: IEHost.dll ve IEExec.exe
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Derleme: IEHost.dll ve IEExec.exe
  IEHost.dll ve IEExec.exe derlemeler .NET Framework'den kaldırıldı. Tüm türleri ve üyeleri artık kullanılmayan ve sürümünden desteklenmez [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Bu derlemeler, Internet Explorer'da yürütülebilir dosyaları çalışan ve Windows Forms denetimleri barındırmak için kullanıldı. Önerilen alternatifler, ClickOnce, XAML tarayıcı uygulamaları (XBAP) içerir ve Microsoft Silverlight.
 
  [Başa dön](#introduction)
@@ -603,7 +603,7 @@ ms.locfileid: "47196763"
  [Başa dön](#introduction)
 
 <a name="jscript"></a>
-### <a name="assembly-microsoftjscriptdll"></a>Derleme: Microsoft.JScript.dll'ye
+### <a name="assembly-microsoftjscriptdll"></a>Derleme: Microsoft.JScript.dll
 
 |Tür|İleti|
 |----------|-------------|
@@ -776,5 +776,6 @@ ms.locfileid: "47196763"
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll eski bir derleme ve yalnızca geriye dönük uyumluluk bulunmaktadır.|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll eski bir derleme ve yalnızca geriye dönük uyumluluk bulunmaktadır.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
- [Sınıf kitaplığında artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md) [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Eski Üyeler](../../../docs/framework/whats-new/obsolete-members.md)

@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532688"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -165,7 +165,7 @@ public class Startup
 
 EF Core bağlantıları yeniden deneme etkinleştirildiğinde, EF Core kullanarak gerçekleştirdiğiniz her işlem yeniden denenebilir kendi işlem olur. Geçici bir hata oluşursa, her sorgu ve SaveChanges yapılan her çağrı bir birim olarak yeniden denenecek.
 
-Kodunuzu BeginTransaction'ı kullanarak bir işlem başlatır, ancak bir birim olarak kabul edilmesi için gereken işlemleri kendi grubu tanımladığınız — işlem içinde her şeyi sahip olması toplu geri bir arıza oluşması durumunda. EF yürütme stratejisi (yeniden deneme ilkesi) kullanılırken, işlem yürütme girişimi ve birden çok DbContexts gelen birkaç SaveChanges bunu aşağıdaki gibi bir özel durum görürsünüz.
+Ancak, kodunuzu BeginTransaction'ı kullanarak bir işlem başlatırsa, bir birim olarak kabul edilmesi için gereken işlemleri kendi grubu tanımlıyorsanız; işlem içinde her şeyi bir hata oluşursa geri alınması gerekir. EF yürütme stratejisi (yeniden deneme ilkesi) kullanılırken, işlem yürütme girişimi ve birden çok DbContexts gelen birkaç SaveChanges bunu aşağıdaki gibi bir özel durum görürsünüz.
 
 System.InvalidOperationException: 'SqlServerRetryingExecutionStrategy' yapılandırılmış yürütme stratejisi, kullanıcı tarafından başlatılan işlemleri desteklemiyor. İşlem yeniden denenebilir bir birim olarak tüm işlemleri yürütmek için 'DbContext.Database.CreateExecutionStrategy()' tarafından döndürülen yürütme stratejisi kullanın.
 
@@ -323,7 +323,7 @@ ASP.NET Core yanıt önbelleğe alma iki düzeylerini destekler. İlk düzeyi, s
 
 Önceki örnekte, sonuç 60 saniye için önbelleğe almak için istemcileri söyleyen yanıta eklenen aşağıdaki üst bilgisindeki neden olur.
 
-Cache-Control: Genel, max-age 60 =
+Cache-Control: public,max-age=60
 
 Sunucu tarafı uygulamayı bellek içi önbelleğe alma ekleme için başvuru Microsoft.AspNetCore.ResponseCaching NuGet paketini ve ardından yanıt önbelleğe alma ara yazılımı eklemeniz gerekir. Bu ara yazılımın Createservicereplicalisteners() hem de Yapılandırma başlangıç yapılandırılır:
 

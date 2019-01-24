@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620090"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksiyon kullanımını kısıtlayabilirsiniz. Genel olarak, türlerini kullanmaktan <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Genel ve eş zamanlı koleksiyonlar, büyük tür güvenliği ve diğer iyileştirmeler nedeniyle tercih edilen olarak sürümleridir.  
@@ -48,13 +48,13 @@ Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksi
   
 -   Her öğe bir değer, bir anahtar ve bir değer veya bir birleşimini bir anahtar ve birden çok değer içerir?  
   
-    -   Bir değer: dayalı koleksiyonlar dilediğinizi <xref:System.Collections.IList> arabirimi veya <xref:System.Collections.Generic.IList%601> genel arabirim.  
+    -   Tek değer: Temel koleksiyonları dilediğinizi <xref:System.Collections.IList> arabirimi veya <xref:System.Collections.Generic.IList%601> genel arabirim.  
   
-    -   Bir anahtarı ve tek bir değer: dayalı koleksiyonlar dilediğinizi <xref:System.Collections.IDictionary> arabirimi veya <xref:System.Collections.Generic.IDictionary%602> genel arabirim.  
+    -   Bir anahtarı ve tek bir değer: Temel koleksiyonları dilediğinizi <xref:System.Collections.IDictionary> arabirimi veya <xref:System.Collections.Generic.IDictionary%602> genel arabirim.  
   
-    -   Katıştırılmış bir anahtara sahip bir değer: kullanım <xref:System.Collections.ObjectModel.KeyedCollection%602> genel bir sınıf.  
+    -   Katıştırılmış bir anahtara sahip bir değer: Kullanım <xref:System.Collections.ObjectModel.KeyedCollection%602> genel bir sınıf.  
   
-    -   Bir anahtar ve birden çok değer: kullanım <xref:System.Collections.Specialized.NameValueCollection> sınıfı.  
+    -   Bir anahtar ve birden çok değer: Kullanım <xref:System.Collections.Specialized.NameValueCollection> sınıfı.  
   
 -   Girilen nasıl öğesinden farklı öğeleri sıralama gerekiyor mu?  
   
@@ -81,7 +81,7 @@ Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)

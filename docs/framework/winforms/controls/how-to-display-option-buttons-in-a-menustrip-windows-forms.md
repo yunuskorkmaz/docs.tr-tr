@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme (Windows Forms)'
+title: 'Nasıl yapılır: MenuStrip (Windows Forms) seçenek düğmeleri görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,68 +9,68 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: da2bb7edceaf83aa5178618fd4098631d65a7d49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07dd6a93e88119fa8a729747e0cb716170072cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643721"
 ---
-# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme (Windows Forms)
-Seçenek düğmeleri, olarak da bilinen radyo düğmeleri, kullanıcılar yalnızca birer birer seçebilirsiniz onay kutularını benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesi davranışı sağlamaz, sınıf menü öğeleri için seçenek düğmesi davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranışı sağlamak bir <xref:System.Windows.Forms.MenuStrip> denetim.  
+# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: MenuStrip (Windows Forms) seçenek düğmeleri görüntüleme
+Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnızca teker teker seçebilir dışında onay kutularını işaretleyin benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesini davranışı sağlamaz, sınıfı menü öğeleri için seçenek düğmesini davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranış sağlayan bir <xref:System.Windows.Forms.MenuStrip> denetimi.  
   
- Zaman <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> menü öğesi özelliği `true`, kullanıcıların bir onay işareti görüntüsünü geçiş yapmak için öğeyi tıklatabilirsiniz. <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Özelliği öğesi geçerli durumunu gösterir. Temel seçenek düğmesi davranışı uygulamak için bir öğe seçildiğinde, ayarladığınız sağlamanız gerekir. <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> özelliği daha önce seçilen öğeye için `false`.  
+ Zaman <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> özelliği bir menü öğesinin `true`, kullanıcılar, bir onay işareti görünümünü değiştirmek için öğeyi tıklatabilirsiniz. <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Özelliği öğesinin geçerli durumunu gösterir. Temel seçenek düğmesini davranışı uygulamak için bir öğe seçildiğinde, ayarladığınız emin olmalısınız <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> özelliği için daha önce seçilen öğe için `false`.  
   
- Aşağıdaki yordamlar bu uygulamak nasıl açıklar ve ek işlevsellik devralan bir sınıf <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı. `ToolStripRadioButtonMenuItem` Sınıfı üyeleri gibi geçersiz kılmaları <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> ve <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> seçme davranışı ve seçenek düğmeleri görünümünü sağlamak için. Ayrıca, bu sınıfı geçersiz kılan <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> üst öğesi seçmediğiniz sürece bir alt menüsündeki Seçenekler özelliğini devre dışı.  
+ Aşağıdaki yordamlarda, bunu uygulamak açıklanır ve devralınan bir sınıf ek işlevsellik <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı. `ToolStripRadioButtonMenuItem` Sınıfı üyeleri gibi geçersiz kılmalar <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> ve <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> seçim davranışı ve seçenek düğmeleri görünümünü sağlamak için. Ayrıca, bu sınıfı geçersiz kılan <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> üst öğe seçili değilse, bir alt menüsünde Seçenekler özelliğini devre dışı.  
   
-### <a name="to-implement-option-button-selection-behavior"></a>Seçenek düğmesi seçimi davranışı uygulamak için  
+### <a name="to-implement-option-button-selection-behavior"></a>Seçenek düğmesini seçme davranışı uygulamak için  
   
-1.  Initialize <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> özelliğine `true` öğe seçimi etkinleştirmek için.  
+1.  Başlatma <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> özelliğini `true` öğe seçimini etkinleştirmek için.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> yeni bir öğe seçildiğinde daha önce seçilen öğenin seçimini yöntemi.  
+2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> yöntemi yeni bir öğe seçildiğinde daha önce seçilen öğenin seçimini temizleyin.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> o zaten seçilmiş bir öğeyi tıklatarak emin olmak için yöntem değil seçimi temizleyin.  
+3.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> yöntemi zaten seçildi bir öğe sonuçlandığını emin olmak için değil seçimi temizleyin.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
-### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Seçenek düğmesi öğelerinin görünümünü değiştirmek için  
+### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Seçenek düğmesini öğelerin görünümünü değiştirmek için  
   
-1.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> yöntemi kullanarak bir seçenek düğmesine sahip varsayılan onay işareti yerine <xref:System.Windows.Forms.RadioButtonRenderer> sınıfı.  
+1.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> yöntemini kullanarak varsayılan onay işareti ile bir düğmeyi değiştirin <xref:System.Windows.Forms.RadioButtonRenderer> sınıfı.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, ve <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> fare durumunu izlemek ve emin olmak için yöntemler <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> yöntemi doğru seçenek düğmesi durumu boyar.  
+2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, ve <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> fare durumunu izlemek ve emin olmak için yöntemleri <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> yöntemi doğru seçenek düğmesini durumu boyar.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
-### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>Üst öğe seçilmediğinde menüdeki seçenekleri devre dışı bırakmak için  
+### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>Üst öğe seçilmediğinde alt menü seçenekleri devre dışı bırakmak için  
   
-1.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliği böylece her ikisi de sahip bir üst öğesi varsa öğesi devre dışı bir <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> değerini `true` ve <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> değerini `false`.  
+1.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliği, böylece her ikisi de sahip bir üst öğesi varsa öğe devre dışı bir <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> değerini `true` ve <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> değerini `false`.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> abone olmak için yöntem <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> üst öğenin olay.  
+2.  Geçersiz kılma <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> abone olmak için yöntem <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> olay üst öğesi.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  Üst öğesi için işleyicisinde <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> olay, yeni etkin durumu ile görüntü güncellenecek öğe geçersiz.  
+3.  Üst öğenin işleyicisinde <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> olay öğe ekranı ile yeni etkin durumu güncelleştirmek için geçersiz.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde eksiksiz `ToolStripRadioButtonMenuItem` sınıfı ve bir <xref:System.Windows.Forms.Form> sınıfı ve `Program` sınıfı seçenek düğmesi davranışı sergiler.  
+ Aşağıdaki kod örneği eksiksiz `ToolStripRadioButtonMenuItem` sınıfı ve <xref:System.Windows.Forms.Form> sınıfı ve `Program` seçenek düğmesini davranışını göstermek için sınıf.  
   
  [!code-csharp[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
  [!code-vb[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]  
@@ -78,16 +78,16 @@ Seçenek düğmeleri, olarak da bilinen radyo düğmeleri, kullanıcılar yalnı
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms derlemelerine başvurular.  
+-   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RadioButtonRenderer>  
- [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- [Nasıl yapılır: Özel ToolStripRenderer Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RadioButtonRenderer>
+- [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Nasıl yapılır: Özel ToolStripRenderer uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)

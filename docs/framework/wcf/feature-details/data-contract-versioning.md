@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646925"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
-Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>VS kesiliyor. Bölünemez değişiklikleri  
  Bir veri sözleşmesi önemli değişiklikler veya bölünemez. Bir veri anlaşması bölünemez şekilde değiştirildiğinde, Sözleşme'nin eski sürümünü kullanan bir uygulamanın daha yeni sürümünü kullanarak bir uygulama ile iletişim kurabilir ve sözleşmenin daha yeni sürümünü kullanarak bir uygulama bir uygulamayla iletişim kurabilir eski sürümü kullanıyor. Öte yandan, bir değişiklik, bir veya iki yönlü iletişimi engeller.  
@@ -115,17 +115,17 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
  Çoğu koleksiyonu değişiklikler bölünemez çünkü çoğu koleksiyon türü veri anlaşması modelinde birbirleri ile değiştirilebilir. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tam tersi bölünmesi farklıdır. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirme bölünmesi farklıdır; diğer bir deyişle, ad alanı, öğe adı, anahtar öğe adı ve değeri öğe adı yinelenen ve veri anlaşması adına değiştiriliyor. Koleksiyon özelleştirme hakkında daha fazla bilgi için bkz. [veri anlaşmalarında koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Doğal olarak, içeriğinin (örneğin, bir dize listesi tamsayılar listesinden değiştirme) bir koleksiyon veri anlaşması değiştirme bölünmesi farklıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [İleri Uyumlu Veri Anlaşmaları](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [İleri Uyumlu Veri Anlaşmaları](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e8366e1050217f3d993d510683252728aba0c3d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7c393abe0e1ff9872de6bdf4d3bc3befa5cde0d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746188"
 ---
 # <a name="-bugreport"></a>-bugreport
 Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
@@ -60,9 +60,9 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
 vbc -bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [trustLevel öğesi securityPolicy (ASP.NET Settings Schema) için](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [trustLevel öğesi securityPolicy (ASP.NET Settings Schema) için](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)

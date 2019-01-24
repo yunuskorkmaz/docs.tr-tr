@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646951"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Anonim türün bir alanı başka bir alanı başlatmak için kullanıldığından; anonim tür, ifade ağacına dönüştürülemiyor.
 Anonim türün başka bir özelliğini başlatmak için anonim türün bir özellik kullanıldığında, derleyici dönüştürülmesi anonim bir ifade ağacı kabul etmiyor. Örneğin, aşağıdaki kodda, `Prop1` başlatma listesinde bildirilen ve ardından ilk değeri olarak kullanılan `Prop2`.  
@@ -48,6 +48,6 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Anonim türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-[İfade ağaçları (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)  
-[Nasıl yapılır: dinamik sorgular (Visual Basic) derlemek için ifade ağaçları kullanma](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  
+- [Anonim türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [İfade ağaçları (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)
+- [Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade ağaçları kullanma](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)

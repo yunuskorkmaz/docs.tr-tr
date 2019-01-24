@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (Visual Basic)'
+title: 'Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714795"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (Visual Basic)
-XPath ifadeleri düğümleri belirli bir ad alanında bulabilirsiniz. XPath ifadelerinde ad alanı öneklerini ad alanları belirtmek için kullanın. Ad alanı öneklerini içeriyor bir XPath ifadesi ayrıştırmak için bir nesne uygulayan XPath yöntemleri için geçmesi gereken <xref:System.Xml.IXmlNamespaceResolver>. Bu örnekte <xref:System.Xml.XmlNamespaceManager>.  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (Visual Basic)
+XPath ifadeleri düğüm, belirli bir ad alanında bulabilirsiniz. XPath ifadeleri, ad alanı öneklerini ad alanları belirtmek için kullanın. Ad alanı öneklerini içeren bir XPath ifadesi ayrıştırılamadı XPath yöntemlere uygulayan bir nesne geçmelidir. <xref:System.Xml.IXmlNamespaceResolver>. Bu örnekte <xref:System.Xml.XmlNamespaceManager>.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki ad alanı içeren bir XML ağacı okur. Kullandığı bir <xref:System.Xml.XmlReader> XML belgesi okunamıyor. Ardından alır bir <xref:System.Xml.XmlNameTable> gelen <xref:System.Xml.XmlReader>ve bir <xref:System.Xml.XmlNamespaceManager> gelen <xref:System.Xml.XmlNameTable>. Kullandığı <xref:System.Xml.XmlNamespaceManager> öğeleri seçerken.  
+ Aşağıdaki örnek iki ad alanları içeren bir XML ağacı okur. Bunu kullanan bir <xref:System.Xml.XmlReader> XML belgesi okumak için. Ardından alır bir <xref:System.Xml.XmlNameTable> gelen <xref:System.Xml.XmlReader>ve bir <xref:System.Xml.XmlNamespaceManager> gelen <xref:System.Xml.XmlNameTable>. Kullandığı <xref:System.Xml.XmlNamespaceManager> öğeleri seçerken.  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -80,5 +80,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

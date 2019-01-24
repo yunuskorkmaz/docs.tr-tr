@@ -2,12 +2,12 @@
 title: WS Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 3bc9cf3700e79b62c54c335f838c7fa660d9e780
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bf4a4221e52f3fa57c2dce4c23300ecbead28ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616231"
 ---
 # <a name="ws-transport-security"></a>WS Taşıma Güvenliği
 Bu örnek, SSL Aktarım güvenliği ile kullanımını gösterir. <xref:System.ServiceModel.WSHttpBinding> bağlama. Varsayılan olarak, `wsHttpBinding` bağlama, HTTP iletişimi sağlar. Aktarım güvenliği için yapılandırıldığında, bağlama HTTPS iletişimini destekler. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. `wsHttpBinding` Belirtilen ve uygulama yapılandırma dosyalarında istemci ve hizmet için yapılandırılır.  
@@ -85,4 +85,4 @@ Press <ENTER> to terminate client.
   
 5.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

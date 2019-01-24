@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma'
+title: "İzlenecek yol: Windows Forms'ta tasarım zamanında yeni WPF içeriği oluşturma"
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500505"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'ta tasarım zamanında yeni WPF içeriği oluşturma
 
 Bu konuda kullanım için bir Windows Presentation Foundation (WPF) denetimini Windows Forms tabanlı uygulamalarınızı oluşturma işlemini gösterir.
 
@@ -61,7 +61,7 @@ Yeni bir WPF denetim oluşturma ve bunu projenize ekleyerek herhangi bir öğeyi
 
     - Dosya UserControl1.xaml açılır [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: seçin ve tasarım yüzeyinde taşımak öğeleri](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine **200**.
 
@@ -102,13 +102,13 @@ Yeni WPF denetimi form üzerinde kullanılmaya hazırdır. Windows Forms kullana
 
 Windows Forms ve WPF farklı teknolojilerdir, ancak yakın çalışmak için tasarlanmıştır. Daha zengin görünümünü ve davranışını uygulamalarınızda sağlamak için aşağıdakileri deneyin:
 
-- Bir WPF sayfasındaki bir Windows Forms denetimi barındırma. Daha fazla bilgi için [izlenecek yol: WPF'de Windows Forms denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Bir WPF sayfasındaki bir Windows Forms denetimi barındırma. Daha fazla bilgi için [izlenecek yol: WPF içinde Forms Denetimi'ne bir Windows barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Windows Forms görsel stiller, WPF içeriği için geçerlidir. Daha fazla bilgi için [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Windows Forms görsel stiller, WPF içeriği için geçerlidir. Daha fazla bilgi için [nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- WPF İçerik stilini değiştirin. Daha fazla bilgi için [izlenecek yol: WPF içeriği stil](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- WPF İçerik stilini değiştirin. Daha fazla bilgi için [izlenecek yol: WPF içeriği için stil oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

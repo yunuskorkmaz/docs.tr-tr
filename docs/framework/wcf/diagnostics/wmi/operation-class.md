@@ -2,12 +2,12 @@
 title: İşlem sınıfı
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668307"
 ---
 # <a name="operation-class"></a>İşlem sınıfı
 Çalışma  
@@ -53,7 +53,7 @@ class Operation
  Bir işlem kullanarak zaman uyumsuz olarak uygulandığını belirtir bir `Begin`[Aç/Kapat açılı ayraçlar] ve `End`hizmet sözleşmesi [Aç/Kapat açılı ayraçlar] yöntemi çifti.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: davranışı dizi  
+ Veri türü: Davranış dizi  
   
  Erişim türü: salt okunur  
   
@@ -128,5 +128,5 @@ class Operation
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.OperationDescription>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.OperationDescription>

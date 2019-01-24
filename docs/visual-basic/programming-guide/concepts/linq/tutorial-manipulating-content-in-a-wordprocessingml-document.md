@@ -1,34 +1,34 @@
 ---
-title: 'Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)'
+title: 'Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: 18008ebdf7f8d2bb3ca7abcc157109c9dc9c1ffe
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556278"
 ---
-# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)
-Bu öğretici, XML ve XML belgeleri işlemek için LINQ ve işlevsel transformational yaklaşımı uygulamak gösterilmiştir. Visual Basic örnek sorgu ve Microsoft Word tarafından kaydedilen Office Açık XML WordprocessingML belgelerde bilgiyi işleyebilir.  
+# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme
+Bu öğreticide, işlevsel dönüşümsel yaklaşımını ve LINQ, XML XML belgeleri işlemek için uygulanacak gösterilmektedir. Visual Basic örnekleri sorgulamak ve Microsoft Word tarafından kaydedilen Office Open XML WordprocessingML belgelerde bilgiyi işleyebilir.  
   
- Daha fazla bilgi için bkz: [Eric Beyaz'ın blogu](http://www.ericwhite.com).  
+ Daha fazla bilgi için [Eric White'nın Blog](http://www.ericwhite.com).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Şekil WordprocessingML belgeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|WordprocessingML belgesinin ayrıntılarını hızlı bir açıklamasını sağlar.|  
-|[Kaynak Office Açık XML belge (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Bu öğreticide sorgular için kaynak belge oluşturmak için adım adım yönergeler sağlar.|  
-|[Varsayılan paragraf stili (Visual Basic) bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|Bir belge için varsayılan stili adını bulmak için bir sorguyu gösterir.|  
-|[Paragrafları ve bunların stilleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|Bir belge paragraflarını koleksiyonu alır bir sorguyu gösterir.|  
-|[(Visual Basic) paragrafları metin alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|Her paragraf metni almak için önceki sorgu artırmaktadır.|  
-|[Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|Kod bir genişletme yöntemi yeniden düzenleme'ı kullanarak basitleştirir.|  
-|[Saf işlevi (Visual Basic) kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|Daha fazla kod saf işlevi kullanarak yeniden düzenleme tarafından basitleştirir.|  
-|[Planlanması XML farklı şeklinde (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|Farklı bir şekli özgün belgeye daha planlanması XML'de göre bir XML dönüşümü tamamlar.|  
-|[Word belgeleri (Visual Basic) metin bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Bir belgedeki belirli bir metin dizesinde bulmak için önceki sorgularını kullanır.|  
-|[Ayrıntılar Office Açık XML WordprocessingML belgeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Office Açık XML WordprocessingML belgelerin bazı ayrıntılar sağlar.|  
+|[(Visual Basic) WordprocessingML belgelerinin şekli](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|WordprocessingML belgesinin ayrıntılarını hızlı bir açıklama sağlar.|  
+|[Kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Bu öğreticide kaynak belge için sorguları oluşturmak için adım adım yönergeler sağlar.|  
+|[(Visual Basic) varsayılan paragraf stilini bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|Bir belge için varsayılan stili adını bulmak için bir sorguyu gösterir.|  
+|[Paragrafları ve stillerini (Visual Basic) alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|Paragrafları belgenin bir koleksiyonunu alır. bir sorguyu gösterir.|  
+|[(Visual Basic) paragrafların metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|Her bir paragraf metnini almak için önceki sorguyu artırmaktadır.|  
+|[Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|Kodu yeniden düzenleme bir genişletme yöntemi kullanarak basitleştirir.|  
+|[(Visual Basic) saf işlev kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|Saf işlev kullanarak yeniden düzenleme ile daha fazla kod basitleştirir.|  
+|[Planlanması XML farklı bir şekil (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|Bir XML dönüşümü planlanması XML belgenin özgün değerinden farklı bir şekil tarafından tamamlanır.|  
+|[(Visual Basic) Word belgelerinde metin bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Belirli bir metin dizesinde bir belgede bulmak için önceki sorgularını kullanır.|  
+|[Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Bazı Office Open XML WordprocessingML belgelerinin ayrıntıları sağlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Saf işlevsel dönüşümleri XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
- [Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Saf işlevsel dönüşümlere XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+- [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

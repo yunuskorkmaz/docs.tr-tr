@@ -2,12 +2,12 @@
 title: Yansıma (C#) kullanarak özniteliklere erişme
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660417"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma (C#) kullanarak özniteliklere erişme
 Özel öznitelikler tanımlamak ve bunları kaynak kodunuzu getirin olgu üzerinde çalışan ve bu bilgileri alınırken bir şekilde olmadan küçük değer olacaktır. Yansıma kullanarak özel öznitelik tanımlandı bilgi alabilirsiniz. Anahtar yöntemi `GetCustomAttributes`, kaynak kod özniteliklerini çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür. Bu yöntem, birden fazla aşırı yüklenmiş sürümleri vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
@@ -113,12 +113,12 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
 - [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

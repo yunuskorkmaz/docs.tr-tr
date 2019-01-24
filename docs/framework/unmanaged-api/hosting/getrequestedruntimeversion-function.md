@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 977f63b58ccbc709fb9383acf64686fc92808da4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651536"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion İşlevi
-Belirtilen uygulama tarafından istenen ortak dil çalışma zamanı (CLR) sürüm numarasını alır. Bu sürümü yüklü değilse, önce istenen sürümü yüklü en son sürümünü alır.  
+Belirtilen uygulamanın istediği ortak dil çalışma zamanı (CLR) sürüm numarasını alır. Bu sürüm yüklü değilse istenen sürümden önce yüklenen en son sürümü alır.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,33 +45,33 @@ HRESULT GetRequestedRuntimeVersion (
  [in] Uygulamanın adı.  
   
  `pVersion`  
- [out] Başarıyla tamamlandıktan sonra sürüm numarası dizesi içeren bir arabellek.  
+ [out] Başarıyla tamamlandıktan sonra sürüm numarası dizesi içeren bir arabelleği.  
   
  `cchBuffer`  
  [in] Sürüm arabellek uzunluğu.  
   
  `pdwLength`  
- [out] Sürüm numarası dize uzunluğu için bir işaretçi.  
+ [out] Sürüm numarası dizenin uzunluğu bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Winerror.h'de içinde tanımlandığı şekilde döndürür.  
+ Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |ERROR_INSUFFICIENT_BUFFER|Sürüm arabellek sürüm dizesi depolamak için yeterli büyüklükte değil.|  
-|E_POINTER|`pdwLength` null şeklindedir.|  
+|E_POINTER|`pdwLength` NULL olur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetRequestedRuntimeInfo İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetVersionFromProcess İşlevi](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetRequestedRuntimeInfo İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetVersionFromProcess İşlevi](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

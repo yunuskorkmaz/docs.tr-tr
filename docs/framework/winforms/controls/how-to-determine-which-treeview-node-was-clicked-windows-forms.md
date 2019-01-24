@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hangi TreeView Düğümüne Tıklandığını Belirleme (Windows Forms)'
+title: 'Nasıl yapılır: (Windows Forms) hangi TreeView düğümüne tıklandığını belirleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: d1e9df6a928f1ea60e4663c78d204ec2b16baf23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 802367c26562d1b5aaf2398ed122cb97afbff255
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580118"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Nasıl yapılır: Hangi TreeView Düğümüne Tıklandığını Belirleme (Windows Forms)
-Windows Forms ile çalışırken <xref:System.Windows.Forms.TreeView> denetimi, bir ortak görevdir belirlemek için hangi düğümüne tıklandığını ve uygun şekilde yanıt verir.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Nasıl yapılır: (Windows Forms) hangi TreeView düğümüne tıklandığını belirleme
+Windows Forms ile çalışırken <xref:System.Windows.Forms.TreeView> denetimi, genel bir görevdir belirlemek için hangi düğümüne tıklandığını ve uygun şekilde yanıt verin.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>Hangi TreeView düğümüne tıklandığını belirleme  
   
-1.  Kullanım <xref:System.EventArgs> tıklatılan düğüm nesnesi bir başvuru döndürmek için nesne.  
+1.  Kullanım <xref:System.EventArgs> tıklanan düğümü nesnesine bir başvuru döndürülecek nesne.  
   
-2.  Denetleyerek hangi düğümüne tıklandığını belirleme <xref:System.Windows.Forms.TreeViewEventArgs> olaya ilgili verileri içeren sınıf.  
+2.  Kontrol ederek hangi düğümüne tıklandığını belirleme <xref:System.Windows.Forms.TreeViewEventArgs> ve olayla ilişkili verileri içeren sınıf.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,7 @@ Windows Forms ile çalışırken <xref:System.Windows.Forms.TreeView> denetimi, 
     ```  
   
     > [!NOTE]
-    >  Alternatif olarak, kullandığınız <xref:System.Windows.Forms.MouseEventArgs> , <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.MouseUp> almak için olay <xref:System.Drawing.Point.X%2A> ve <xref:System.Drawing.Point.Y%2A> koordine değerlerini <xref:System.Drawing.Point> oluştuğu tıklatın. Ardından, <xref:System.Windows.Forms.TreeView> denetimin <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> hangi düğümüne tıklandığını belirleme yöntemi.  
+    >  Alternatif olarak, kullandığınız <xref:System.Windows.Forms.MouseEventArgs> , <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.MouseUp> almak için olay <xref:System.Drawing.Point.X%2A> ve <xref:System.Drawing.Point.Y%2A> koordinat değerlerini <xref:System.Drawing.Point> oluştuğu yeri tıklatın. Ardından, <xref:System.Windows.Forms.TreeView> denetimin <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> hangi düğümüne tıklandığını belirleme için yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

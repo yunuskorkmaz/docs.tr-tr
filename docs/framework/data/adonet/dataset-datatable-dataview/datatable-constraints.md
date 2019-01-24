@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: fa70af311d6b4fa4e17bb3ba6110e4cea420c34c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611767"
 ---
 # <a name="datatable-constraints"></a>DataTable kısıtlamaları
 Kısıtlamaları verileri kısıtlamalarını uygulamak için kullanabileceğiniz bir <xref:System.Data.DataTable>, veri bütünlüğünü korumak için. Bir sınırlamadır uygulanan otomatik bir kural, bir sütun veya ilgili sütunlar için belirleyen kursu eyleminin bir satırın değerini şekilde değiştirildiğinde. Kısıtlamaları zorunlu olduğunda `System.Data.DataSet.EnforceConstraints` özelliği <xref:System.Data.DataSet> olduğu **true**. Nasıl ayarlanacağı gösteren kod örneği için `EnforceConstraints` özelliği bkz <xref:System.Data.DataSet.EnforceConstraints%2A> başvuru konusu.  
@@ -27,7 +27,7 @@ Kısıtlamaları verileri kısıtlamalarını uygulamak için kullanabileceğini
 |**Basamakla**|Silin veya ilişkili satırları güncelleştirin.|  
 |**SetNull**|İlişkili satırların değerleri ayarlayın **DBNull**.|  
 |**SetDefault**|Değerleri ilişkili satırları için varsayılan değer olarak ayarlayın.|  
-|**Yok**|İlgili satır eylem yok. Bu varsayılandır.|  
+|**Yok.**|İlgili satır eylem yok. Bu varsayılandır.|  
   
  A **ForeignKeyConstraint** yaymak olarak değişiklikleriyle ilgili sütunları, kısıtlayabilirsiniz. Özellikleri için bağlı olarak **ForeignKeyConstraint** bir sütunun varsa **EnforceConstraints** özelliği **veri kümesi** olduğu **true**, belirli işlemleri üst satırda bir özel durum neden olur. Örneğin, varsa **DeleteRule** özelliği **ForeignKeyConstraint** olduğu **hiçbiri**, herhangi bir alt satır varsa, bir üst satır silinemiyor.  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Kural ayarı|Açıklama|  
 |------------------|-----------------|  
 |**Basamakla**|Veya alt satırlara değişiklikler reddedebilirsiniz.|  
-|**Yok**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
+|**Yok.**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.ForeignKeyConstraint>, birkaç dahil olmak üzere özellikleri ayarlar <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>ve bu gruba ekler <xref:System.Data.ConstraintCollection> , bir <xref:System.Data.DataTable> nesne.  
@@ -92,11 +92,11 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Data.DataRelation>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.ForeignKeyConstraint>  
- <xref:System.Data.UniqueConstraint>  
- [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Data.DataRelation>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.ForeignKeyConstraint>
+- <xref:System.Data.UniqueConstraint>
+- [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

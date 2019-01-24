@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730236"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Metodu
-Belirtilen meta veri imzayla derleme başvurusu için özellikler kümesini alır.  
+Belirtilen meta veri imzası olan derleme başvurusu için özellikler kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,46 +46,46 @@ HRESULT GetAssemblyRefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mdar`  
- [in] `mdAssemblyRef` Özellikleri almak istediğiniz derleme başvurusunu gösteren meta veri simgesi.  
+ [in] `mdAssemblyRef` Derleme başvurusu özellikleri alınacağı temsil eden bir meta veri belirteci.  
   
  `ppbPublicKeyOrToken`  
- [out] Ortak anahtar veya meta veri simgesi için bir işaretçi.  
+ [out] Ortak anahtarı veya meta veri belirteci için bir işaretçi.  
   
  `pcbPublicKeyOrToken`  
- [out] Döndürülen bir ortak anahtar ya da belirteci bayt sayısı.  
+ [out] Döndürülen bir ortak anahtar veya belirteç bayt sayısı.  
   
  `szName`  
- [out] Derleme basit adı.  
+ [out] Derlemenin basit adını.  
   
  `cchName`  
- [in] Geniş karakter boyutu, `szName`.  
+ [in] Geniş karakter, boyutunu, `szName`.  
   
  `pchName`  
- [out] Gerçekte döndürülen geniş karakter sayısını gösteren bir işaretçi `szName`.  
+ [out] Gerçekte döndürülen geniş karakter sayısı için bir işaretçi `szName`.  
   
  `pMetaData`  
- [out] Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısı için bir işaretçi.  
+ [out] Derleme meta verileri içeren bir ASSEMBLYMETADATA yapısı işaretçisi.  
   
  `ppbHashValue`  
- [out] Karma değer için bir işaretçi. SHA-1 algoritmasını kullanan karma budur `PublicKey` arfFullOriginator bayrak sürece, başvurulan derleme özelliğinin [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırma ayarlanır.  
+ [out] Karma değeri için bir işaretçi. Bu, SHA-1 algoritmasını kullanan karma `PublicKey` arfFullOriginator bayrak sürece, başvurulan derleme özelliği [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırma ayarı.  
   
  `pcbHashValue`  
  [out] Döndürülen karma değeri geniş karakter sayısı.  
   
  `pdwAssemblyRefFlags`  
- [out] Bir derlemeye uygulanan meta verileri açıklayan bayrakları gösteren bir işaretçi. Bir veya birden çok bayrak değeri birleşimidir [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerleri.  
+ [out] Bir derlemeye uygulanan meta verileri açıklayan bayrakları için bir işaretçi. Bir veya daha fazla flags değeri birleşimidir [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem başarılı olursa S_OK döndürür; Aksi takdirde, bu Winerror.h'de üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
+ Bu yöntem başarılı olursa başarılıysa S_OK döndürür; Aksi takdirde wınerror üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639568"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields Yöntemi
-Belirtilen TypeDef belirteç tarafından başvurulan türü için fieldDef simgesi belirteçleri numaralandırır.  
+FieldDef simgesi belirteçleri için belirtilen TypeDef belirteci tarafından başvurulan türünü numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,16 +41,16 @@ HRESULT EnumFields (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `cl`  
- [in] Numaralandırılacak alanları olan sınıfın TypeDef simgesi.  
+ [in] Numaralandırılacak alanları sınıfı TypeDef simgesi.  
   
  `rFields`  
  [out] FieldDef simgesi belirteçleri listesi.  
   
  `cMax`  
- [in] En büyük boyutunu `rFields` dizi.  
+ [in] En büyük boyutunu `rFields` dizisi.  
   
  `pcTokens`  
  [out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.  
@@ -63,14 +63,14 @@ HRESULT EnumFields (
 |`S_FALSE`|Numaralandırılacak alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

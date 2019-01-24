@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73d4cc609694610aead2a3bfaeed1f5cca5f33fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643734"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants Metodu
 Bu kapsam içinde tanımlanan yerel sabitleri alır.  
@@ -40,19 +40,19 @@ HRESULT GetConstants(
   
 #### <a name="parameters"></a>Parametreler  
  `cConstants`  
- [in] Arabelleğin uzunluğu, `pcConstants` parametresi işaret eder.  
+ [in] Arabellek uzunluğu, `pcConstants` parametre işaret eder.  
   
  `pcConstants`  
- [out] Bir işaretçi bir `ULONG32` karakter sabitleri içermesi gerekir arabellek boyutunu alır.  
+ [out] Bir işaretçi bir `ULONG32` karakter sabitleri içerecek şekilde gerekli arabellek boyutunu alır.  
   
  `constants`  
- [out] Sabitler depolayan bir arabellek.  
+ [out] Sabitler depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedScope2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedScope2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

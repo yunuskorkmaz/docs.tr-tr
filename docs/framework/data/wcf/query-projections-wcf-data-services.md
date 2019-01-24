@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cd39355fec310bc33a3d02524a4d4cc060dba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646087"
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonları (WCF Data Services)
-Projeksiyon mekanizması sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akıştaki yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen veri miktarını azaltmak için. Daha fazla bilgi için [OData: Sistem sorgusu seçeneği seçin ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
+Projeksiyon mekanizması sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akıştaki yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen veri miktarını azaltmak için. Daha fazla bilgi için [OData: Sistem sorgusu seçeneği ($select) seçin](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  Bu konu nasıl varlık için gereksinimler nelerdir sorgu projeksiyon tanımlamak için ve varlık olmayan türleri, yapmadan öngörülen türleri oluşturma tahmini sonuçlarını güncelleştirir ve bazı projeksiyon konuları listeler açıklar.  
   
@@ -65,9 +65,9 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
 
-- Varlık türü: desteklenir
+- Varlık türü: Desteklenir
 
-- Olmayan varlık türü: desteklenir
+- Olmayan varlık türü: Desteklenir
 
 **Oluşturucuları kullanarak yeni bir tahmini örneği oluşturma**
 
@@ -78,7 +78,7 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
 
 - Varlık türü: A <xref:System.NotSupportedException> tetiklenir.
 
-- Olmayan varlık türü: desteklenir
+- Olmayan varlık türü: Desteklenir
 
 **Bir özellik değerini dönüştürmek için yansıtma kullanma**
 
@@ -87,9 +87,9 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
    
-- Varlık türü: karışıklık ve büyük olasılıkla başka bir varlığa ait veri kaynağındaki verileri üzerine neden olabileceği için varlık türleri için bu dönüştürme desteklenmiyor. A <xref:System.NotSupportedException> tetiklenir.
+- Varlık türü: Karışıklık ve büyük olasılıkla başka bir varlığa ait veri kaynağındaki verileri üzerine neden olabileceği için bu dönüştürme varlık türleri için desteklenmiyor. A <xref:System.NotSupportedException> tetiklenir.
 
-- Olmayan varlık türü: desteklenir  
+- Olmayan varlık türü: Desteklenir  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>Projeksiyon konuları  
@@ -107,7 +107,7 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
   
 -   Sorgu projeksiyonları sorgular istemcide çevrilmiş kullanılacak `$select` seçeneği istek URI'SİNDE sorgu. Ne zaman bir projeksiyon sorgu yürütüldüğünde önceki bir sürümünü karşı [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] desteklemeyen `$select` sorgu seçeneği bir hata döndürülür. De gerçekleşebilir, <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> , <xref:System.Data.Services.DataServiceBehavior> için veri hizmeti için bir değer ayarlanır <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
- Daha fazla bilgi için [nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Sorgu sonuçlarını yansıtma](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14908ae641c8539659e6014deb2c5f35a6d1cfbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655718"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction Numaralandırması
-Ana bilgisayar tarafından açıklanan işlemleri için ayarlayabileceğiniz ilke eylemleri açıklar [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ve hataları tarafından açıklanan [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+Ana bilgisayar tarafından açıklanan işlemleri için ayarlayabileceğiniz İlkesi eylemleri açıklar [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ve hataları tarafından açıklanan [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,31 +47,31 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eAbortThread`|Ortak dil çalışma zamanı (CLR) iş parçacığı düzgün biçimde iptal belirtir. Tüm çalıştırma denemelerini normal iptal içeren `finally` engeller, herhangi bir `catch` blokları ilgili iş parçacığı iptalleri ve sonlandırıcılar.|  
-|`eDisableRuntime`|CLR devre dışı durumuna girmelisiniz belirtir. Yönetilen kod etkilenen işleminde başka çalıştırılabilir ve iş parçacıkları CLR girmesini engellenir.|  
+|`eAbortThread`|Ortak dil çalışma zamanı (CLR) iş parçacığı düzgün bir şekilde iptal belirtir. Normal iptal tüm çalıştırma girişimlerini içerir `finally` engeller, tüm `catch` blokları, iş parçacığı iptalleri ve sonlandırıcılar ilgili.|  
+|`eDisableRuntime`|CLR devre dışı durumuna girdiğini belirtir. Yönetilen kod etkilenen işlemde başka yürütülebilecek ve iş parçacıkları CLR girmesini engellenir.|  
 |`eExitProcess`|CLR işleminin sonlandırıcılar çalıştırma ve temizleme ve günlüğe kaydetme işlemlerini gerçekleştirme gibi normal bir çıkış denemesi belirtir.|  
-|`eFastExitProcess`|CLR işlemi hemen sonlandırıcılar çalıştıran veya temizleme ve günlüğe kaydetme işlemlerini gerçekleştirme çıkış belirtir. Nowever, hata ayıklayıcı için bildirim gönderilir.|  
+|`eFastExitProcess`|CLR işlemi hemen sonlandırıcılar çalıştırma veya temizleme ve günlüğe kaydetme işlemlerini gerçekleştiren çıkış belirtir. Nowever, hata ayıklayıcı için bildirim gönderilir.|  
 |`eNoAction`|Hiçbir işlem yapılmadı olduğunu belirtir.|  
-|`eRudeAbortThread`|CLR utangaç iş parçacığı iptal gerçekleştirileceğini belirtir. Yalnızca `catch` ve `finally` blokları işaretlenmiş <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür.|  
-|`eRudeExitProcess`|CLR sonlandırıcılar çalıştıran veya işlem günlüğü işlemi kapanmamalıdır belirtir.|  
-|`eRudeUnloadAppDomain`|CLR, utangaç unload gerçekleştirileceğini belirtir <xref:System.AppDomain>. Yalnızca sonlandırıcılar işaretlenmiş <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür. Benzer şekilde, tüm iş parçacıklarını bu <xref:System.AppDomain> kendi yığınında alma bir `ThreadAbortException`, ancak yalnızca `catch` ve `finally` blokları işaretlenmiş <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür.|  
-|`eThrowException`|Bellek yetersiz arabellek taşması ve benzeri, gibi koşula uygun bir özel durum olduğunu belirtir.|  
-|`eUnloadAppDomain`|Belirleyen <xref:System.AppDomain> kaldırılmış olması gerekir. CLR sonlandırıcılar çalıştırmayı dener.|  
+|`eRudeAbortThread`|CLR rude iş parçacığı iptal gerçekleştirileceğini belirtir. Yalnızca `catch` ve `finally` simgesiyle işaretli blok <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür.|  
+|`eRudeExitProcess`|Sonlandırıcılar çalıştıran veya işlem günlüğü CLR işleminden çıkış olduğunu belirtir.|  
+|`eRudeUnloadAppDomain`|CLR bir rude kaldırmaya gerçekleştirileceğini belirtir <xref:System.AppDomain>. Yalnızca bir sonlandırıcı işaretlenmiş <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür. Benzer şekilde, tüm iş parçacıkları bu <xref:System.AppDomain> almak, yığındaki bir `ThreadAbortException`, ancak yalnızca `catch` ve `finally` simgesiyle işaretli blok <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür.|  
+|`eThrowException`|Bellek yetersiz arabellek taşması ve benzeri, gibi koşula uygun bir özel durumun oluşturulmasını da belirtir.|  
+|`eUnloadAppDomain`|Belirten <xref:System.AppDomain> kaldırılmış olması gerekir. CLR, sonlandırıcılar çalıştırmayı dener.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ana bilgisayar ilkesi eylemleri yöntemlerini çağırarak ayarlar [Iclrpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) arabirimi. Utangaç ve normal iptalleri hakkında daha fazla bilgi için bkz: [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) numaralandırması.  
+ Ana bilgisayar ilkesi eylemleri yöntemleri çağırarak ayarlar [Iclrpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) arabirimi. İşlenmemiş ve normal iptal edilmesini hakkında daha fazla bilgi için bkz. [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) sabit listesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [EClrFailure Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [EClrFailure Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

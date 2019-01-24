@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635684"
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS üzerinden iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarlarında zaman barındırılan (inetmgr.exe aracını kullanarak) IIS içinde yapılandırılabilir. Şirket içinde barındırılan bir WCF Hizmeti ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP için belirli sorunları  
  IIS üzerinde bağlantı noktası paylaşımı desteklemez [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. IIS çalıştıran ve bir WCF hizmeti bir ad alanı ile aynı bağlantı noktası kullanmayı dener WCF hizmeti başlatmak başarısız olur. 80 numaralı bağlantı noktasını kullanarak hem de varsayılan IIS ve WCF. Hizmetlerden biri için bağlantı noktası atamasını değiştirin veya WCF hizmeti, IIS tarafından kullanılmayan bir ağ bağdaştırıcısı atamak için dinleme IP listeyi kullanın. IIS 6.0 ve üzeri HTTP sunucu API'leri kullanmak için tasarlanmıştır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [Nasıl Yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573315"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
 Visual Basic önceden tanımlı sabitler ve numaralandırmalar geliştiriciler için sunar. Sabitler, bir uygulamanın yürütülmesini sabit kalması değerlerini depolar. Numaralandırmalar ilgili sabitlerinin kümeleri ile birlikte çalışır ve adları ile sabit değerleri ilişkilendirmek için kullanışlı bir yol sağlar.  
@@ -77,8 +77,8 @@ Visual Basic önceden tanımlı sabitler ve numaralandırmalar geliştiriciler i
 |<xref:Microsoft.VisualBasic.VariantType>|Tarafından döndürülen bir değişken nesne türünü gösteren <xref:Microsoft.VisualBasic.Information.VarType%2A> işlevi.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Çağrılırken gerçekleştirmek için dönüştürme türünü belirten <xref:Microsoft.VisualBasic.Strings.StrConv%2A> işlevi.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [Sabitlere Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Sabit Listelerine Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [Sabitlere Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Sabit Listelerine Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

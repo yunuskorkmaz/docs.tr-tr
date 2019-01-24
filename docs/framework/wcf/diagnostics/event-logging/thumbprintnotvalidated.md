@@ -2,23 +2,23 @@
 title: ThumbPrintNotValidated
 ms.date: 03/30/2017
 ms.assetid: e3e110f5-2853-4150-99c9-18236df320e2
-ms.openlocfilehash: e59247e5193ea706e2e5d390a075224e563d1dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7737032cfcfe3ef0cad2d51b444c15e865fcd0e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745408"
 ---
 # <a name="thumbprintnotvalidated"></a>ThumbPrintNotValidated
 Kimliği: 153  
   
- Önem derecesi: hata  
+ Önem derecesi: Hata  
   
  Kategori: TransactionBridge  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, belirtilen parmak izine sahip bir kimlik sertifikası doğrulanamadı gösterir. İşlem kimliği ve işlem adı olay listeler  
+ Bu olay, belirtilen parmak izine sahip bir kimlik sertifikası doğrulanamadı gösterir. Olay işlem kimliği ve işlem adını listeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

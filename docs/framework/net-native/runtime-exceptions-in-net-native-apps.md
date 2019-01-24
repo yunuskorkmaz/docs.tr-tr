@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696873"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET Native uygulamalarında çalışma zamanı özel durumları
 Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan kendi Hedef platformlar üzerinde Evrensel Windows platformu uygulamanızın sürüm derlemeleri test etmek önemlidir. Varsayılan olarak, uygulamanızı derlemek için .NET Core çalışma zamanı hata ayıklama yapılandırması kullanır, ancak sürüm yapılandırmasını yerel kod için uygulamanızı derlemek için .NET Native kullanır.  
   
 > [!IMPORTANT]
->  İşlemleri ile ilgili daha fazla bilgi için [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) olabilir, özel durumlar Yayın sürümleri uygulamanızı test ederken karşılaşırsanız, bkz: "4. adım: meta veriler eksik el ile çözümlemeniz: içinde [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md) konu, yanı [yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) ve [ Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+>  İşlemleri ile ilgili daha fazla bilgi için [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) olabilir, özel durumlar Yayın sürümleri uygulamanızı test ederken karşılaşırsanız, bkz: "4. adım: Meta veriler eksik elle Çözümle: içinde [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md) konu yanı [yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) ve [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Hata ayıklama ve yayın derlemeleri  
  Hata ayıklama derlemesini .NET Core çalışma zamanı karşı yürütüldüğünde, yerel koda derlenmedi. Bu, normalde uygulamanıza kullanılabilir çalışma zamanı tarafından sağlanan tüm hizmetleri sağlar.  
@@ -59,6 +59,6 @@ Additional information: Value does not fall within the expected range.
   
  Tam yığın almak için hata ayıklama derlemesini çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET yerel Windows Evrensel uygulamaları hata ayıklama](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET yerel Windows Evrensel uygulamaları hata ayıklama](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732823"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods Yöntemi
-Belirtilen türdeki yöntemleri temsil eden MethodDef belirteçleri numaralandırır.  
+Belirtilen türün yöntemlerini temsil eden MethodDef belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,16 +41,16 @@ HRESULT EnumMethods (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu, bu yöntem ilk çağrısı için NULL olmalıdır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
   
  `cl`  
- [in] Numaralandırılacak yöntemleriyle türünü temsil eden bir TypeDef simgesi.  
+ [in] Numaralandırma için yöntemlerle türünü temsil eden bir tür tanımı belirteci.  
   
  `rMethods`  
- [out] MethodDef belirteçleri depolama dizisi.  
+ [out] MethodDef simgeleri depolamak için dizi.  
   
  `cMax`  
- [in] En büyük boyutunu MethodDef `rMethods` dizi.  
+ [in] En büyük boyutunu MethodDef `rMethods` dizisi.  
   
  `pcTokens`  
  [out] Döndürülen MethodDef belirteçleri sayısı `rMethods`.  
@@ -63,14 +63,14 @@ HRESULT EnumMethods (
 |`S_FALSE`|Numaralandırılacak hiçbir MethodDef belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

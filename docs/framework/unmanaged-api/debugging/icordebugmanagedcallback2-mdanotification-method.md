@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608095"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification Yöntemi
-Kod yürütmeyi ayıklanacak uygulamasında yönetilen hata ayıklama Yardımcısı (MDA) karşılaştı bildirim sağlar.  
+Kod yürütmeyi ayıklanmakta olan uygulamada yönetilen hata ayıklama Yardımcısı (MDA) karşılaştı bildirim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +39,39 @@ HRESULT MDANotification(
   
 #### <a name="parameters"></a>Parametreler  
  `pController`  
- [in] Bir işlem sunan Icordebugcontroller arabirimi veya MDA oluştuğu uygulama etki alanı için bir işaretçi.  
+ [in] Bir işlem sunan Icordebugcontroller arabirimi veya MDA gerçekleştiği uygulama etki alanı için bir işaretçi.  
   
- Her zaman bir belirlenmesi için arabirimi sorgulayabilirsiniz olsa da bir hata ayıklayıcısı bir işlem veya bir uygulama etki alanı denetleyici olup olmadığına dair varsayımlar yapmamalısınız.  
+ Her zaman bir bulguyu arabirimi sorgulayabilirsiniz ancak bir hata ayıklayıcı bir işlem veya bir uygulama etki alanı denetleyicisi olup olmadığı hakkında varsayımlar yapmamalısınız.  
   
  `pThread`  
- [in] Hata ayıklama olayın oluştuğu yönetilen iş parçacığı kullanıma sunan bir Icordebugthread arabirimi için bir işaretçi.  
+ [in] Yönetilen iş parçacığı hata ayıklama olayın gerçekleştiği kullanıma sunan bir Icordebugthread arabirimi için bir işaretçi.  
   
- MDA yönetilmeyen üzerinde oluştuysa iş parçacığı, değeri `pThread` null olur.  
+ MDA yönetilmeyen üzerinde oluştuysa iş parçacığı, değerini `pThread` null olacaktır.  
   
- İşletim sistemi (OS) iş parçacığı kimliği MDA nesnesinin kendisi almanız gerekir.  
+ İşletim sistemi (OS) iş parçacığı kimliği MDA nesnenin kendisini almanız gerekir.  
   
  `pMDA`  
- [in] Bir işaretçi bir [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) MDA bilgi kullanıma sunan arabirim.  
+ [in] Bir işaretçi bir [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) MDA bilgileri kullanıma sunan arabirim.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir MDA buluşsal bir uyarıdır ve arama dışında herhangi bir açık hata ayıklayıcı eylem gerektirmez [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ayıklanacak uygulamanın yürütülmesini sürdürmek için.  
+ Bir MDA buluşsal bir uyarıdır ve arama dışında herhangi bir açık hata ayıklayıcı eylem gerektirmeyen [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ayıklanmakta olan uygulamanın yürütülmesini sürdürmek için.  
   
- Ortak dil çalışma zamanı (CLR) Mda'lar tetiklenir ve herhangi bir noktada verilen tüm MDA hangi verilerin bulunduğu belirleyebilirsiniz. Bu nedenle, hata ayıklayıcıları belirli MDA desenleri gerektiren herhangi bir işlevsellik oluşturup değil.  
+ Ortak dil çalışma zamanı (CLR) Mda'leri tetiklenir ve herhangi belirli MDA herhangi bir noktada hangi verilerin bulunduğu belirleyebilirsiniz. Bu nedenle, hata ayıklayıcıları belirli MDA desenleri gerektiren herhangi bir işlevsellik tasarlanmamış.  
   
- Mda'lar sıraya alındı ve kısa süre içinde MDA karşılaştı sonra gönderilir. Çalışma zamanı bu karşılaştığında MDA tetikleme yerine MDA tetikleme için güvenli bir noktası ulaşana kadar bekleyin gerekiyorsa, bu durum oluşabilir. Ayrıca, çalışma zamanı numarasında sıraya alınan geri aramalar ("Ekle" olay işlem için benzer) tek bir dizi Mda'lar yangın anlamına gelir.  
+ Mda'leri kuyruğa alınır ve kısa süre içinde MDA karşılaşıldıktan sonra gönderilir. Çalışma zamanı bu karşılaştığında MDA tetikleme yerine MDA tetikleme için güvenli bir noktadan ulaşana kadar beklenecek gerektiriyorsa Bu durum gerçekleşebilir. Ayrıca, çalışma zamanı sıraya alınan geri çağırmalar (bir "ekleme" olay işleme benzer) tek bir kümedeki Mda'leri birkaç yangın anlamına gelir.  
   
- Bir hata ayıklayıcısı referansı serbest bırakmalısınız bir `ICorDebugMDA` döndürme hemen sonra örneği `MDANotification` bir MDA tarafından tüketilen bellek geri dönüştürmek CLR izin vermek için geri çağırma. Birçok Mda'lar tetikleme varsa örnek serbest performansını artırabilir.  
+ Başvuru için hata ayıklayıcı serbest bırakmalısınız bir `ICorDebugMDA` döndürme hemen sonra örnek `MDANotification` bir MDA tarafından kullanılan belleği geri dönüştürmek CLR izin vermek için geri çağırma. Birçok Mda'leri tetikleme, örneği serbest performansını artırabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

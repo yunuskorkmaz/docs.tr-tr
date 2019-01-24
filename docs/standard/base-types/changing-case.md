@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648978"
 ---
 # <a name="changing-case-in-net"></a>. NET'te değiştirme
 Bir kullanıcı girişi kabul eden bir uygulama yazıyorsanız, hiçbir zaman isterse veri girmek için kullanacağı hangi çalışması emin olabilirsiniz. Genellikle, özellikle, bunların kullanıcı arabiriminde görüntülüyorsanız dizeleri tutarlı olarak büyük küçük harfleri istersiniz. Aşağıdaki tabloda, üç durum değiştirme yöntemleri açıklar. İlk iki yöntem bir kültür kabul eden bir aşırı yüklemesini sağlar.  
@@ -74,5 +74,5 @@ Bir kullanıcı girişi kabul eden bir uygulama yazıyorsanız, hiçbir zaman is
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)
 - [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

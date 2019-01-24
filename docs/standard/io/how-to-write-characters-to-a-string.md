@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
+title: 'Nasıl yapılır: Bir dizeye karakter yazma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bea51eaf11bd9d73d5a68eb09795bd9f9f143f95
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 125c8ba03c4d1006535dd1e10cbd162b32fede4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740989"
 ---
-# <a name="how-to-write-characters-to-a-string"></a>Nasıl yapılır: Bir Dizeye Karakter Yazma
+# <a name="how-to-write-characters-to-a-string"></a>Nasıl yapılır: Bir dizeye karakter yazma
 Aşağıdaki kod örnekleri karakter zaman uyumlu ve zaman uyumsuz olarak bir karakter dizisinden bir dize olarak yazın.  
   
 ## <a name="example"></a>Örnek  
@@ -37,14 +37,14 @@ Aşağıdaki kod örnekleri karakter zaman uyumlu ve zaman uyumsuz olarak bir ka
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.StringWriter>  
-- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
-- <xref:System.Text.StringBuilder>  
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
-- [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Nasıl yapılır: Dosyadan Metin Okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Nasıl yapılır: Bir Dosyaya Metin Yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Nasıl yapılır: Dizeden Karakterleri Okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- <xref:System.IO.StringWriter>
+- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>
+- <xref:System.Text.StringBuilder>
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+- [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Nasıl yapılır: Dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Nasıl yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Nasıl yapılır: Açın ve bir günlük dosyasına Ekle](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Nasıl yapılır: Bir dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Nasıl yapılır: Bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Nasıl yapılır: Dizeden karakterleri okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

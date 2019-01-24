@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731926"
 ---
 # <a name="file-encodings-visual-basic"></a>Dosya Kodlamaları (Visual Basic)
-Dosya kodlamaları, olarak da bilinen karakter kodlamaları temsil etmek nasıl belirtin ne zaman karakter metin işleme. Unicode genellikle tercih edilen olmasına rağmen bir kodlama başka hangi dil karakterlerini bakımından veya yükleyebilir işleyemez, tercih edilebilir.  
+Dosya kodlamaları olarak da bilinen karakter kodlamalarını temsil etmek nasıl belirtin ne zaman karakter metin işleme. Unicode genellikle tercih edilir olsa da bir kodlama başka hangi dil karakterlerini açısından olabilir veya işleyemez, tercih edilebilir.  
   
- Dosyalara yazma veya okuma, hatalı dosya kodlamaları eşleşen özel durumları veya hatalı sonuçlar neden olabilir.  
+ Dosyalara yazma veya okuma, hatalı dosya kodlamaları eşleşen özel durumlar veya hatalı sonuçlar neden olabilir.  
   
-## <a name="types-of-encodings"></a>Kodlamalar türleri  
- Unicode dosyaları ile çalışırken, tercih edilen kodlamayı ' dir. Unicode modern, teknik simgeler ve yayımlama içinde kullanılan özel karakterleri dahil olmak üzere bilgisayar kullanılan tüm karakterleri temsil edecek 16 bit kod değerleri kullanan bir dünya çapında karakter kodlamasını standardıdır.  
+## <a name="types-of-encodings"></a>Tür kodlamayı  
+ Unicode dosyalarıyla çalışırken tercih edilen kodlamada değil. Unicode modern teknik simgeleri ve yayımlama içinde kullanılan özel karakterler dahil olmak üzere bilgi işlem, içinde kullanılan tüm karakterleri temsil etmek için 16-bit kod değerleri kullanan bir dünya çapında karakter kodlama standardıdır.  
   
- Belirli bir dil veya coğrafi bölge içinde kullanılan karakterleri temsil etmek için 8 bit kod değerleri veya 8 bit değerleri birleşimlerini kullanan Windows ANSI karakter kümesini gibi geleneksel karakter kümesinden karakter kodlamasını önceki standartları içermektedir.  
+ Belirli bir dil veya coğrafi bölge içinde kullanılan karakterleri temsil etmek için 8-bit kod değerleri veya 8-bit değerleri birleşimlerini kullanan Windows ANSI karakter kümesi gibi geleneksel karakter kümesi, önceki karakter kodlama standartları oluşmuştur.  
   
 ## <a name="encoding-class"></a>Kodlama sınıfı  
- <xref:System.Text.Encoding> Sınıfı, bir karakter kodlama temsil eder. Bu tabloda Kodlamalar kullanılabilir türünü listeler ve her açıklanmaktadır.  
+ <xref:System.Text.Encoding> Sınıfı, karakter kodlamasını temsil eder. Bu tablo, kullanılabilir Kodlamalar türünü listeler ve her açıklar.  
   
 |Ad|Açıklama|
 |---|---|    
-|<xref:System.Text.ASCIIEncoding>|Bir ASCII karakteri Unicode karakter kodlama temsil eder.|  
-|<xref:System.Text.UnicodeEncoding>|UTF-16 kodlamasını Unicode karakterinden temsil eder.|  
-|<xref:System.Text.UTF32Encoding>|UTF-32 kodlama Unicode karakterinden temsil eder.|  
-|<xref:System.Text.UTF7Encoding>|UTF-7 kodlama Unicode karakterinden temsil eder.|  
-|<xref:System.Text.UTF8Encoding>|UTF-8 kodlaması Unicode karakterinden temsil eder.|  
+|<xref:System.Text.ASCIIEncoding>|ASCII karakter kodlama Unicode karakterini temsil eder.|  
+|<xref:System.Text.UnicodeEncoding>|UTF-16 kodlamasını Unicode karakterini temsil eder.|  
+|<xref:System.Text.UTF32Encoding>|UTF-32 kodlama Unicode karakterini temsil eder.|  
+|<xref:System.Text.UTF7Encoding>|UTF-7 kodlaması Unicode karakterini temsil eder.|  
+|<xref:System.Text.UTF8Encoding>|UTF-8 kodlamalı Unicode karakterini temsil eder.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

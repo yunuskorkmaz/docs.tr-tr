@@ -1,5 +1,5 @@
 ---
-title: Yöntemlerinin &#39;System.Nullable (Of T)&#39; işlenenleri olarak kullanılamaz &#39;AddressOf&#39; işleci
+title: Yöntemlerinin &#39;System.Nullable (Of T)&#39; işleneni kullanılamaz &#39;AddressOf&#39; işleci
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32126
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 3a3e4fc033f47fb6a72076dff79f1eece8d01a30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3e34e79f2e91bb55bb2e053ae3e59fd42c4250c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655328"
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Yöntemlerinin &#39;System.Nullable (Of T)&#39; işlenenleri olarak kullanılamaz &#39;AddressOf&#39; işleci
-Bir ifade kullanıyor `AddressOf` , bir yordamı temsil eden işleneni işleciyle <xref:System.Nullable%601> yapısı.  
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Yöntemlerinin &#39;System.Nullable (Of T)&#39; işleneni kullanılamaz &#39;AddressOf&#39; işleci
+Bir ifade kullanıyor `AddressOf` işleci, bir yordamı temsil eden bir işlenen <xref:System.Nullable%601> yapısı.  
   
  **Hata Kimliği:** BC32126  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Yordam adıyla değiştirin `AddressOf` yan tümcesiyle birlikte bir üyesi olmayan işleneni <xref:System.Nullable%601>.  
+-   Yordam adı yerine `AddressOf` yan tümcesi bir üyesi değil bir işlenen <xref:System.Nullable%601>.  
   
--   Yöntemi saran bir sınıf yazma <xref:System.Nullable%601> kullanmak istediğiniz. Aşağıdaki örnekte, `NullableWrapper` sınıfı tanımlayan adlı yeni bir yöntem `GetValueOrDefault`. Bu yeni yöntemin bir üyesi olmadığından <xref:System.Nullable%601>, için uygulanabilir `nullInstance`, için bağımsız değişken oluşturmak için boş değer atanabilir bir tür örneği `AddressOf`.  
+-   Yazma yöntemi saran bir sınıf <xref:System.Nullable%601> kullanmak istediğiniz. Aşağıdaki örnekte, `NullableWrapper` sınıf adlı yeni bir yöntem tanımlar `GetValueOrDefault`. Bu yeni yöntemi üyesi olmadığından <xref:System.Nullable%601>, için uygulanabilir `nullInstance`, bir bağımsız değişken oluşturmak için boş değer atanabilir bir tür örneği `AddressOf`.  
   
 ```vb  
 Module Module1  
@@ -61,8 +61,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Nullable%601>  
- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Boş Değer Atanabilen Değer Türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Nullable%601>
+- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Boş Değer Atanabilen Değer Türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

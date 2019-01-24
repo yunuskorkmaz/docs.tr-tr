@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
-ms.openlocfilehash: db64d728f3d4c63b0b994fef69a5139944e39af4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd657901c8cc4f5b63442f4f7001dfb9ea1ef8b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577420"
 ---
 # <a name="literal-keywords-c-reference"></a>Literal Anahtar Sözcükleri (C# Başvurusu)
 C# aşağıdaki literal anahtar sözcükleri içerir:  
@@ -23,8 +23,8 @@ C# aşağıdaki literal anahtar sözcükleri içerir:
   
 -   [default](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

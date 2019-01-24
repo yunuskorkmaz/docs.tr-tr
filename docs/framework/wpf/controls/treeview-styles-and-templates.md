@@ -9,73 +9,73 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 9f963e4b60193197ae56e2021d76d541ad6bfbef
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 938adf5b20f289cc219821a549a9dd47df297ae1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624047"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView Stilleri ve Şablonları
-Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.TreeView> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.TreeView> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="treeview-parts"></a>TreeView bölümleri  
- <xref:System.Windows.Controls.TreeView> Denetim adlandırılmış tüm bölümler sahip değil.  
+ <xref:System.Windows.Controls.TreeView> Denetim herhangi bir adlandırılmış bölümü yok.  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.TreeView>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.TreeView>; <xref:System.Windows.Controls.ScrollViewer> içinde denetimin kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, vermeniz gerekir <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
+ Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.TreeView>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.TreeView>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
   
 ## <a name="treeview-states"></a>TreeView durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.TreeView> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.TreeView> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="treeviewitem-parts"></a>TreeViewItem bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda listelenmektedir <xref:System.Windows.Controls.TreeViewItem> denetim.  
+ Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.TreeViewItem> denetimi.  
   
 |Bölümü|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|PART_Header|<xref:System.Windows.FrameworkElement>|İçeriği bu üst bilgiyi içeren bir görsel öğe <xref:System.Windows.Controls.TreeView> denetim.|  
+|PART_Header|<xref:System.Windows.FrameworkElement>|Bu üst bilgi içeriği içeren bir görsel öğe <xref:System.Windows.Controls.TreeView> denetimi.|  
   
 ## <a name="treeviewitem-states"></a>TreeViewItem durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.TreeViewItem> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.TreeViewItem> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Fare üzerinde|CommonStates|Fare işaretçisini üzerine getirildiği <xref:System.Windows.Controls.TreeViewItem>.|  
-|Devre dışı|CommonStates|<xref:System.Windows.Controls.TreeViewItem> Devre dışı bırakılır.|  
+|Fareyi üzerine getirme|CommonStates|Fareyi üzerine getirildiği <xref:System.Windows.Controls.TreeViewItem>.|  
+|Devre dışı|CommonStates|<xref:System.Windows.Controls.TreeViewItem> Devre dışı bırakıldı.|  
 |Odaklanmış|FocusStates|<xref:System.Windows.Controls.TreeViewItem> Odağa sahip.|  
-|Odaksız|FocusStates|<xref:System.Windows.Controls.TreeViewItem> Odağa sahip değil.|  
+|Plana odaklanmadan|FocusStates|<xref:System.Windows.Controls.TreeViewItem> Odağa sahip değil.|  
 |Genişletilmiş|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> Denetim genişletilir.|  
-|Daraltılmış|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> Denetimi daraltıldığında.|  
-|Hasıtems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> Öğelerine sahip.|  
+|Daraltılmış|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> Denetimini daralttı.|  
+|Hasıtems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> Öğeler içeriyor.|  
 |NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> Öğe yok.|  
-|Seçili|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Seçilir.|  
+|Seçildi|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Seçilir.|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Seçili ancak etkin değil.|  
-|Seçilmemiş|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Seçilmemiş.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Seçimi kaldırıldı|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Seçilmez.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate Örneği  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.TreeView> denetimi ve onun ilişkili türler.  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.TreeView> denetimi ve ilişkili türleri.  
   
  [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
- Önceki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

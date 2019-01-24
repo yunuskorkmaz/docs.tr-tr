@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme'
+title: 'Nasıl yapılır: Uygulama etki alanına derlemeler yükleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c6b816c3a2c4f684993117deb38b40f4436a627c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653807"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama etki alanına derlemeler yükleme
 Uygulama etki alanına bir derlemeyi yüklemek için birkaç yolu vardır. Kullanmak için önerilen yoldur `static` (`Shared` Visual Basic'te) <xref:System.Reflection.Assembly.Load%2A> yöntemi <xref:System.Reflection.Assembly?displayProperty=nameWithType> sınıfı. Derlemeleri yüklenebilir diğer yolları:  
   
 -   <xref:System.Reflection.Assembly.LoadFrom%2A> Yöntemi <xref:System.Reflection.Assembly> sınıfı, dosya konumu verilen bir derleme yükler. Bu yöntemle derlemeler yüklemek, farklı yükleme bağlamı kullanır.  
   
--   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> Ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri salt yansıma bağlamına bir derlemeyi yüklemek. Bu bağlamı yüklenen derlemeler incelenir, ancak yürütülmedi, diğer platformları hedefleyen derlemeleri incelenmesi izin verme. Bkz: [nasıl yapılır: salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> Ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri salt yansıma bağlamına bir derlemeyi yüklemek. Bu bağlamı yüklenen derlemeler incelenir, ancak yürütülmedi, diğer platformları hedefleyen derlemeleri incelenmesi izin verme. Bkz: [nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 >  Yalnızca yansıma bağlamı, .NET Framework 2.0 sürümünde yenidir.  
@@ -46,10 +46,10 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yolu vardır. Kulla
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
-- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)  
-- [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)  
-- [Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
+- [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)
+- [Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Uygulama Etki Alanları ve Derlemeler](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

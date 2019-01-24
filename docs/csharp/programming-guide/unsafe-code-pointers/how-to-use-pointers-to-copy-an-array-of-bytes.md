@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl Yapılır: -Bayt dizisine kopyalamak için işaretçiler kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -Bayt dizisine kopyalamak için işaretçiler kullanma C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640309"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Nasıl Yapılır: Bir bayt dizisine kopyalamak için işaretçiler kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Nasıl yapılır: Bir bayt dizisine kopyalamak için işaretçiler kullanma (C# Programlama Kılavuzu)
 
 Aşağıdaki örnek, bayt bir diziden kopyalamak için işaretçiler kullanır.
 
@@ -25,9 +25,9 @@ Bu örnekte, ikinci bir yönetilmeyen işaretçi yerine dizinleri hem dizilerin 
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)  
-- [Güvenli Olmayan Kod ve İşaretçiler](index.md)  
-- [-unsafe (C# Derleyici Seçenekleri)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [Atık Toplama](../../../standard/garbage-collection/index.md)  
+- [C# Programlama Kılavuzu](../index.md)
+- [Güvenli Olmayan Kod ve İşaretçiler](index.md)
+- [-unsafe (C# Derleyici Seçenekleri)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [Atık Toplama](../../../standard/garbage-collection/index.md)

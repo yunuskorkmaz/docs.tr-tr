@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)'
+title: 'Nasıl yapılır: Paragrafları alma Office Open XML belgesinden (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624261"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)
-Bu konuda, bir Office Açık XML belge açılır ve belgedeki paragrafları bir koleksiyonunu alır bir örnek sunulmaktadır.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: Paragrafları alma Office Open XML belgesinden (Visual Basic)
+Bu konuda, bir Office Open XML belge açılır ve belge paragraflarda bir koleksiyonunu alır. bir örnek sunulmaktadır.  
   
- Office Açık XML hakkında daha fazla bilgi için bkz: [Eric Beyaz'ın blogu](http://www.ericwhite.com).  
+ Office Open XML hakkında daha fazla bilgi için bkz. [Eric White'nın Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir Office Açık XML paketi açıldığında, Open XML paketin içinde ilişkileri belge ve stil bölümleri bulmak için kullanır. Ardından paragraf içeren anonim bir tür topluluğu yansıtma belgenin sorgular <xref:System.Xml.Linq.XElement> düğümü, her paragraf stili adını ve her paragraf metni.  
+ Bu örnek, bir Office Open XML paket açtığında, belge ve stil bölümleri bulmak için Open XML paket içindeki ilişkileri kullanır. Ardından belge koleksiyonu paragraf içeren bir anonim tür yansıtma sorgular <xref:System.Xml.Linq.XElement> düğümü, her bir paragrafına stil adı ve her bir paragraf metni.  
   
- Örnek adlı bir genişletme yöntemi kullanır `StringConcatenate`, hangi sağlanır örnekte.  
+ Örnek adlı bir genişletme yöntemi kullanan `StringConcatenate`, hangi sağlanır örnekte.  
   
- Bu örnek nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz: [saf işlevsel dönüşümleri XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz [saf işlevsel dönüşümleri XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Bu örnek WindowsBase derlemesinde sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -152,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- Bölümünde açıklanan örnek Open XML belgesiyle çalıştırdığınızda [kaynak Office Açık XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek şu çıkışı üretir:  
+ Açıklanan örnek Open XML belge çalıştırdığınızda [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -172,5 +172,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

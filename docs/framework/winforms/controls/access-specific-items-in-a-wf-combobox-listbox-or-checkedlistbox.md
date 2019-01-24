@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme'
+title: 'Nasıl yapılır: Özel erişim öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 731527f2d6adb206fa4d8bc4bc2e488c61b86200
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6478c24550f9f32ea75899521f7aa610ef12955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656706"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme
-Windows Forms birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusunda belirli öğelere erişme önemli bir görevdir. Bir listedeki herhangi belirli konumunda nedir programlı olarak belirlemenizi sağlar.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Özel erişim öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi
+Bir Windows Forms birleşik giriş kutusu, liste kutusu ya da işaretli liste kutusu belirli öğeleri erişme önemli bir görevdir. Bir listenin herhangi bir konuma nedir programlı bir şekilde belirlemenizi sağlar.  
   
-### <a name="to-access-a-specific-item"></a>Belirli bir öğeyi erişmek için  
+### <a name="to-access-a-specific-item"></a>Belirli bir öğeye erişmek için  
   
-1.  Sorgu `Items` belirli öğenin dizini kullanarak koleksiyonu:  
+1.  Sorgu `Items` belirli öğenin dizinini kullanarak koleksiyon:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,8 +51,8 @@ Windows Forms birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusu
        }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727280"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot Yöntemi
 Belirtilen iş parçacığı için yığın üzerinde yönetilen çerçeve size yol gösterir ve profil oluşturucu bir geri çağırma aracılığıyla bilgi gönderir.  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  Çerçeve yığınına nasıl gönderildi, geriye doğru yığın öğrendiniz, sırasıdır: son (en son gönderilen) ilk, ana (ilk gönderildi) kareler yaprak.  
   
- Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [.NET Framework 2.0 Profiler Programlayacağınız yığın: temeller ve ötesi](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [.NET Framework 2.0 Profiler Programlayacağınız yığını: Temeller ve ötesi](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Yığın ilerlemesi, aşağıdaki bölümlerde açıklandığı gibi zaman uyumlu veya zaman uyumsuz olabilir.  
   
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  Olup olmadığını da kilitlenme riski çağırmanızı `DoStackSnapshot` , profil oluşturucu oluşturdu ve böylece ayrı hedef iş parçacığı yığınının inceleyebileceğiniz bir iş parçacığından. İlk kez oluşturduğunuz iş parçacığı girer belirli `ICorProfilerInfo*` yöntemleri (dahil olmak üzere `DoStackSnapshot`), CLR iş parçacığı başına, bu iş parçacığı üzerinde CLR özel başlatma gerçekleştirir. Profil Oluşturucu yığını yol çalıştığınız hedef diziyle askıya aldı ve bu hedef iş parçacığı bir kilide bu iş parçacığı başına başlatma gerçekleştirmek için gerekli sahip oluştuysa, karşılıklı bir kilitlenme ortaya çıkar. Bu kilitlenmeyi önlemek için bir ilk çağrı yapmak `DoStackSnapshot` yürütmek için Profil Oluşturucu tarafından oluşturulan iş parçacığından ayrı bir hedef iş parçacığı, ancak hedef iş parçacığı önce askıya değil. Bu ilk çağrı, iş parçacığı başına başlatma kilitlenme tamamlayabilirsiniz sağlar. Varsa `DoStackSnapshot` başarılı olur ve en az bir çerçeve raporları bu noktadan sonra herhangi bir hedef iş parçacığı ve çağrı askıya alma, Profil Oluşturucu tarafından oluşturulan iş parçacığı için güvenli olacaktır `DoStackSnapshot` bu hedef iş parçacığı yığınını görmek için.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

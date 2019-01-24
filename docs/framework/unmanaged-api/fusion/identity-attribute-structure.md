@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a90b6725d53774053293c04842b761da6ab12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717681"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE Yapısı
-İlgili meta verileri öznitelik bilgileri içeren bir [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) örneği.  
+Hakkında meta veri özniteliğinin bilgilerini içeren bir [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,23 +40,23 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pszNamespace`|Ad alanı içeren bir null olarak sonlandırılan bir karakter dizesi için bir işaretçi özniteliği kullanılıyor.|  
-|`pszName`|Özniteliğin adını içeren bir null olarak sonlandırılan bir karakter dizesi için bir işaretçi.|  
-|`pszValue`|Öznitelik değerini içeren bir null olarak sonlandırılan bir karakter dizesi için bir işaretçi.|  
+|`pszNamespace`|Ad uzayını içeren null ile sonlandırılmış dizeye bir işaretçi olarak özniteliğidir.|  
+|`pszName`|Özniteliğin adını içeren null ile sonlandırılmış dizeye bir işaretçi.|  
+|`pszValue`|Öznitelik değerini içeren null ile sonlandırılmış dizeye bir işaretçi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IDENTITY_ATTRIBUTE` Yapısı null olarak sonlandırılan bir karakter dizeleri üç işaretçiler içerir. Bu üç dizeleri bir öznitelik açıklar.  
+ `IDENTITY_ATTRIBUTE` Yapısı null ile sonlandırılmış dizeleri üç işaretçileri içerir. Bu üç dizeleri bir öznitelik açıklanmaktadır.  
   
- Örneği bir `IDENTITY_ATTRIBUTE` yapısı örneği ile ilişkili bir [ıdentıty_attrıbute_blob](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) yapısı. `IDENTITY_ATTRIBUTE` Yapısı içeren gerçek dizeler ve karşılık gelen `IDENTITY_ATTRIBUTE_BLOB` yapısı listeler listelenen üç dizelere uzaklıkları `IDENTITY_ATTRIBUTE` yapısı.  
+ Örneği bir `IDENTITY_ATTRIBUTE` yapısı örneği ile ilişkili bir [ıdentıty_attrıbute_blob](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) yapısı. `IDENTITY_ATTRIBUTE` Yapısı içeren gerçek dizeleri ve karşılık gelen `IDENTITY_ATTRIBUTE_BLOB` yapısı listeler listelenen üç dizelere uzaklıkları `IDENTITY_ATTRIBUTE` yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDefinitionIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- [IDENTITY_ATTRIBUTE_BLOB Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IDefinitionIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+- [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

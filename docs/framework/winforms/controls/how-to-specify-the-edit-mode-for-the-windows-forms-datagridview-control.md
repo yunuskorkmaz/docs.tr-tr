@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminin Düzenleme Modunu Belirtme'
+title: 'Nasıl yapılır: İçin Windows Forms DataGridView denetiminin düzenleme modunu belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 5117dfe2e017cf4af1d352fdbf23c6599c0e56a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628272"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Düzenleme Modunu Belirtme
-Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:System.Windows.Forms.DataGridView> metin kutusu hücresinin içine yazarak veya F2 tuşuna basın. Aşağıdaki koşulların tümü yerine getirilirse bu hücre düzenleme moduna girer:  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Nasıl yapılır: İçin Windows Forms DataGridView denetiminin düzenleme modunu belirtme
+Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:System.Windows.Forms.DataGridView> yazmak ya da F2 tuşuna basarak metin kutusu hücre. Tüm aşağıdaki koşullardan biri karşılanırsa bu hücre düzenleme moduna girer:  
   
--   Veri kaynağındaki düzenlemeyi destekler.  
+-   Temel alınan veri kaynağına düzenlemeyi destekler.  
   
--   <xref:System.Windows.Forms.DataGridView> Denetim etkin.  
+-   <xref:System.Windows.Forms.DataGridView> Denetimi etkinleştirildi.  
   
 -   <xref:System.Windows.Forms.DataGridView.EditMode%2A> Özellik değeri değil <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
--   `ReadOnly` Hücre, satır, sütun ve denetim özellikleridir tüm kümesine `false`.  
+-   `ReadOnly` Hücre, satır, sütun ve denetim özellikleri olan tüm kümesine `false`.  
   
- Düzenleme modunda kullanıcı hücrenin değerini değiştirin ve değişikliği veya özgün değeri hücreye geri dönmek için ESC yürütmek için ENTER tuşuna basın.  
+ Kullanıcı düzenleme modunda hücre değerini değiştirin ve değişikliği veya özgün değerine hücreye dönmek için ESC kaydetmek için ENTER tuşuna basın.  
   
- Yapılandırabileceğiniz bir <xref:System.Windows.Forms.DataGridView> geçerli hücreyi hale hemen bir hücre düzenleme moduna girer. böylece denetim. ENTER ve ESC anahtarları davranışını bu durumda değiştirilmez, ancak değeri yürütülmeli veya geri sonra hücre düzenleme modunda kalır. Böylece yalnızca kullanıcı hücrenin veya yalnızca kullanıcıların F2 basın yazarken hücre düzenleme moduna denetimi de yapılandırabilirsiniz. Son olarak, çağırdığınızda dışında düzenleme moduna geçmesini hücreleri engel olabilirsiniz <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> yöntemi.  
+ Yapılandırabileceğiniz bir <xref:System.Windows.Forms.DataGridView> böylece geçerli hücreyi duruma geldiğinde bir hücre düzenleme moduna girer. Bu durumda ENTER ve ESC anahtarları davranışını değiştirilmez, ancak değeri kaydedilmiş veya geri sonra hücre düzenleme modunda kalır. Yalnızca kullanıcılar hücre veya yalnızca, kullanıcılar F2 tuşuna yazarken hücre düzenleme moduna girin. böylece, denetimi yapılandırabilirsiniz. Son olarak, çağırdığınızda dışında düzenleme moduna geçmesini hücreleri engelleyebilir miyim <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> yöntemi.  
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>DataGridView denetiminin düzenleme modunu değiştirmek için  
   
--   Ayarlama <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> özelliğine uygun <xref:System.Windows.Forms.DataGridViewEditMode> numaralandırması.  
+-   Ayarlama <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> özelliğini uygun <xref:System.Windows.Forms.DataGridViewEditMode> sabit listesi.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -44,7 +44,7 @@ Varsayılan olarak, kullanıcılar geçerli içeriğini düzenleyebilir <xref:Sy
   
 -   Başvurular <xref:System> ve <xref:System.Windows.Forms> derlemeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- [Windows Forms DataGridView Denetiminde Veri Girişi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
+- [Windows Forms DataGridView Denetiminde Veri Girişi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)

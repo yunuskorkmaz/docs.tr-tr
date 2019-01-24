@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08f2640613335b0ba54a4ff970b7d105d52b92c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743484"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 ve Windows Server 2016 üzerinde .NET Framework yükleme
 
@@ -20,7 +20,7 @@ Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-472"></a>.NET framework 4.7.2
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 .NET Framework 4.7.2 bulunur:
 
@@ -78,6 +78,6 @@ Yüklü .NET Framework'ün doğru sürümü alınamıyor. Yapabiliyorsanız [Yar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET yükleme](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)
+- [.NET yükleme](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)

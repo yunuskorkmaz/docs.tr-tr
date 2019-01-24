@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: KrzysztofCwalina
-ms.openlocfilehash: 93b294c4b535e015c7f4b021e0f950f038a60361
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b13f9e1551aec7e53ba1ac2ed0b9049d46b0a756
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636658"
 ---
 # <a name="member-overloading"></a>Üye aşırı yüklemesi
 Üye aşırı yüklemesi, iki veya daha fazla üye, yalnızca sayı veya parametre türünü farklılık gösterir ancak aynı ada sahip aynı türde oluşturma anlamına gelir. Örneğin, aşağıdaki içinde `WriteLine` yöntemi aşırı yüklüdür:  
@@ -59,5 +59,5 @@ public static class Console {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

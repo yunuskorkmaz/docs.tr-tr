@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: 75a08b411a4afd7ea8e11953f1d465b082faa712
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cda72e03eb5c2469b8106957a0c50fbfa5314549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567041"
 ---
 # <a name="file-already-open"></a>Dosya zaten açık
-Bazen bir dosya başka önce kapatılması gerekir `FileOpen` veya başka bir işlem oluşabilir. Bu hatanın olası nedenleri arasında şunlardır:  
+Bazen bir dosyayı başka önce kapatılması gereken `FileOpen` veya başka bir işlem ortaya çıkabilir. Bu hatanın olası nedenleri arasında:  
   
--   Sıralı çıkış modu `FileOpen` işlemi için zaten açık olan bir dosya yürütüldü  
+-   Bir sıralı çıkış modu `FileOpen` işlemi zaten açık olan bir dosya için yürütüldü  
   
--   Bir deyim açık olan bir dosyaya başvuruyor.  
+-   Bir deyimi açık bir dosyaya.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Deyimini yürütmeden önce dosyayı kapatın.  
+1.  Deyim yürütülmeden önce dosyayı kapatın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>

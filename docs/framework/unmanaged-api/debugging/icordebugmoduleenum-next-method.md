@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7624a22e5d65ae94797779a0b8cfa70f226450ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f71901acf8227d018bf288b6cd0265f053e6a3a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510838"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next Yöntemi
-Belirtilen "ICorDebugModule" örneklerinin sayısını alır `celt` gelen geçerli konumdan başlayarak numaralandırması.  
+Tarafından belirtilen "ICorDebugModule" örnek sayısını alır `celt` öğesinden geçerli konumunda başlayan sabit listesi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugModule` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugModule` alınacak örnekleri.  
   
  `modules`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugModule` nesnesi.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugModule` nesne.  
   
  `pceltFetched`  
- [out] İşaretçi sayısına `ICorDebugModule` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] İşaretçi sayısına `ICorDebugModule` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

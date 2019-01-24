@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706754"
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 Visual Basic Derleyicisi kullanan *anlam çıkarma* olmadan bildirilen yerel değişkenlerin veri türlerini belirlemek için bir `As` yan tümcesi. Derleyici, başlatma ifadesinin türünden değişkeninin türü çıkarır. Bu, açıkça bir türü bildirmeden aşağıdaki örnekte gösterildiği gibi değişkenleri tanımlayın sağlar. Bildirimleri sonucu olarak hem de `num1` ve `num2` tamsayı olarak kesin olarak belirlenmiştir.  
@@ -71,11 +71,11 @@ Visual Basic Derleyicisi kullanan *anlam çıkarma* olmadan bildirilen yerel de�
   
  Daha fazla bilgi için [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Erken ve Geç Bağlama](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next Deyimi](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Erken ve Geç Bağlama](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next Deyimi](../../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

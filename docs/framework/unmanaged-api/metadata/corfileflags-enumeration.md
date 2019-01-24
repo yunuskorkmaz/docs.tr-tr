@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624269"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags Numaralandırması
-Çağrı tanımlanan dosya türü açıklamak değerleri içeren [Imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Bir çağrı içinde tanımlanan dosya türü tanımlayan değerleri içeren [Imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,15 +41,15 @@ typedef enum CorFileFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Dosyanın kaynak dosyası olmadığını gösterir.|  
-|`ffContainsNoMetaData`|Kaynak dosya büyük olasılıkla, dosya meta veri içermiyor gösterir.|  
+|`ffContainsMetaData`|Dosya kaynak dosyası olmadığını gösterir.|  
+|`ffContainsNoMetaData`|Meta veri dosyası, büyük olasılıkla bir kaynak dosya içermiyor gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

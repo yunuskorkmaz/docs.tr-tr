@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: a61fd8e10c39569d92dd84180f678a1ff05a9310
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 491bbb24be8e6a3044b0a433c5ad262596ae00d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655289"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Visual Basic Unicode değerleri bildirilen dış yordamın adını bağımsız olarak tüm dizeleri sıralama belirtir.  
+Visual Basic dizeleri Unicode değerleri bildirilen dış yordam adından bağımsız olarak tüm hazırlama belirtir.  
   
- Projenizin dışında tanımlı bir yordam çağrısı, Visual Basic derleyici yordamı doğru çağırmak için içermelidir bilgilere erişimi yok. Bu bilgiler yordamı bulunduğu, nasıl tanımlanır, kendi arama sırası ve dönüş türü içerir ve dize karakter kullanır ayarlayın. [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md) dış bir yordam için bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
+ Projenizin dışında tanımlı bir yordamı çağırdığınızda, Visual Basic Derleyicisi yordamı doğru şekilde çağırmak için olmalıdır bilgilere erişimi yok. Bu bilgileri yordamı bulunduğu, nasıl tanımlandığını, çağrı sırası ve dönüş türü içeren ve isteğe bağlı olarak dize karakteri kullanır ayarlayın. [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) bir dış yordam bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
   
- `charsetmodifier` Bölümün `Declare` deyimi dış yordamı yapılan bir çağrı sırasında dizelerini sıralama için karakter kümesi bilgileri sağlar. Visual Basic dış yordamı adı için dış dosyasını nasıl arayacağını etkiler. `Unicode` Değiştiricisi, Visual Basic Unicode değerleri tüm dizeleri sıralama ve yordam arama sırasında adını değiştirmeden görünmelidir belirtir.  
+ `charsetmodifier` Kısmını `Declare` deyimi bir dış yordam çağrısı sırasında dizelerini sıralama için karakter kümesi bilgileri sağlar. Ayrıca, Visual Basic dış dosya için dış yordam adının nasıl arama etkiler. `Unicode` Değiştiricisi, Visual Basic tüm dizeleri Unicode değerleri olarak sıralaması ve yordamı arama sırasında adını değiştirmeden araması gerektiğini belirtir.  
   
- Herhangi bir karakter kümesi değiştiricisi belirtilirse, `Ansi` varsayılandır.  
+ Herhangi bir karakter kümesi değiştiricisi belirtilmişse `Ansi` varsayılandır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `Unicode` Bu bağlamda değiştirici kullanılabilir:  
@@ -33,7 +33,7 @@ Visual Basic Unicode değerleri bildirilen dış yordamın adını bağımsız o
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
  Bu anahtar sözcük desteklenmiyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

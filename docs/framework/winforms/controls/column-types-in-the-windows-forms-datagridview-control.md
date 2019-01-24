@@ -6,90 +6,90 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591603"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Türleri
-<xref:System.Windows.Forms.DataGridView> Denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcıların sağlamak için birkaç sütun türleri kullanır.  
+<xref:System.Windows.Forms.DataGridView> Denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcıları etkinleştirmek için birden fazla sütun türleri kullanır.  
   
- Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> denetleyin ve ayarlayın <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> özelliğine `true`, sütunları, varsayılan sütun türleri bağlı veri kaynağında bulunan veri türleri için uygun kullanarak otomatik olarak oluşturulur.  
+ Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> denetleyin ve ayarlayın <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> özelliğini `true`, sütunlar, bağlı veri kaynağında bulunan veri türleri için uygun bir varsayılan sütun türleri kullanarak otomatik olarak oluşturulur.  
   
- Ayrıca sütun sınıflarından herhangi biriyle örneklerini kendiniz oluşturabilir ve bunları tarafından döndürülen koleksiyonuna ekleyin <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği. Bağlanmamış sütunlar olarak kullanmak için bu örnekler oluşturabilir veya bunları el ile bağlayabilirsiniz. El ile ilişkili sütun, örneğin, başka bir türünde bir sütun türünün otomatik olarak oluşturulan bir sütun değiştirmek istediğinizde faydalıdır.  
+ Ayrıca herhangi bir sütun sınıfı örneklerini kendiniz oluşturabilir ve bunları tarafından döndürülen bir koleksiyona ekler <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği. Bağlanmamış sütunlar olarak kullanmak için bu örneği oluşturabilir veya bunları el ile bağlayabilirsiniz. El ile ilişkili sütun, örneğin, bir tür otomatik olarak oluşturulan bir sütunu başka bir türe sahip bir sütun değiştirmek istediğinizde yararlıdır.  
   
- Aşağıdaki tabloda kullanılabilir çeşitli sütun sınıflar açıklanmaktadır <xref:System.Windows.Forms.DataGridView> denetim.  
+ İçinde kullanılabilen çeşitli sütun sınıfları aşağıdaki tabloda açıklanmıştır <xref:System.Windows.Forms.DataGridView> denetimi.  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Metin tabanlı değerlerle kullanılır. Sayılara hem de dizelere için bağlama sırasında otomatik olarak oluşturulur.|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|İle kullanılan <xref:System.Boolean> ve <xref:System.Windows.Forms.CheckState> değerleri. Bu tür değerler için bağlama sırasında otomatik olarak oluşturulur.|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|Görüntüleri göstermek için kullanılır. Bayt dizileri için bağlama sırasında otomatik olarak oluşturulan <xref:System.Drawing.Image> nesneleri veya <xref:System.Drawing.Icon> nesneleri.|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Hücrelerde düğmeleri görüntülemek için kullanılır. Otomatik olarak bağlama sırasında oluşturulmadı. Genellikle, bağlantısız sütun olarak kullanılır.|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Aşağı açılır listeler hücrelerde görüntülemek için kullanılır. Otomatik olarak bağlama sırasında oluşturulmadı. Genellikle veri el ile ilişkili.|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Hücrelerde bağlantıları görüntülemek için kullanılır. Otomatik olarak bağlama sırasında oluşturulmadı. Genellikle veri el ile ilişkili.|  
-|Özel sütun türü|Kendi sütun sınıfı devralarak oluşturabileceğiniz <xref:System.Windows.Forms.DataGridViewColumn> sınıf veya herhangi bir özel görünüm, davranışı ya da barındırılan denetimlerin sağlamak türetilmiş. Daha fazla bilgi için bkz: [nasıl yapılır: hücre özelleştirme ve genişletme Their davranış ve görünümünü göre Windows Forms DataGridView denetiminde sütunları](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Metin tabanlı değerlerle kullanılır. Sayılar ve dizeler için bağlama sırasında otomatik olarak oluşturulur.|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|İle kullanılan <xref:System.Boolean> ve <xref:System.Windows.Forms.CheckState> değerleri. Bu tür değerlere bağlama sırasında otomatik olarak oluşturulur.|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|Resimleri görüntülemek için kullanılır. Bayt dizileri için bağlama sırasında otomatik olarak oluşturulan <xref:System.Drawing.Image> nesneleri veya <xref:System.Drawing.Icon> nesneleri.|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Hücrelerde düğmeleri görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle, bağlanmamış sütunlar kullanılır.|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Hücrelerde açılan listeleri görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle veri el ile ilişkili.|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Hücrelerde bağlantılarını görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle veri el ile ilişkili.|  
+|Özel sütun türü|Kendi sütun sınıfı devralarak oluşturabileceğiniz <xref:System.Windows.Forms.DataGridViewColumn> sınıfı veya özel görünüşünü, davranış veya barındırılan denetim sağlamak için ondan türetilen sınıflardan biri. Daha fazla bilgi için [nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
- Bu sütun türleri aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.  
+ Bu sütun türleri, aşağıdaki bölümlerde daha ayrıntılı açıklanmıştır.  
   
 ## <a name="datagridviewtextboxcolumn"></a>DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn> Numaraları ve dizeler gibi metin tabanlı değerler ile kullanmak için genel amaçlı sütunun türü. Düzenleme modundaki bir <xref:System.Windows.Forms.TextBox> hücre değerini değiştirmek kullanıcıları etkinleştirme denetim etkin hücreye görüntülenir.  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn> Sayılar ve dizeler gibi metin tabanlı değerleri ile kullanmak için bir genel amaçlı sütunu türü. Düzenleme modundaki bir <xref:System.Windows.Forms.TextBox> denetim hücre değerini değiştirmek kullanıcıların etkin hücreye görüntülenir.  
   
- Hücre değerlerini otomatik olarak görüntülenecek dizelerin dönüştürülür. Girilen veya kullanıcı tarafından değiştirilmiş değerleri uygun veri türünde bir hücre değerini oluşturmak üzere otomatik olarak ayrıştırılır. Bu dönüşümleri işleyerek özelleştirebilirsiniz <xref:System.Windows.Forms.DataGridView.CellFormatting> ve <xref:System.Windows.Forms.DataGridView.CellParsing> olayları <xref:System.Windows.Forms.DataGridView> denetim.  
+ Hücre değerlerini otomatik olarak görüntülemek için dizelere dönüştürülür. Girilen veya kullanıcı tarafından değiştirilmiş değerleri uygun veri türünün bir hücre değerini oluşturmak için otomatik olarak ayrıştırılır. Bu dönüştürmeler işleyerek özelleştirebilirsiniz <xref:System.Windows.Forms.DataGridView.CellFormatting> ve <xref:System.Windows.Forms.DataGridView.CellParsing> olayları <xref:System.Windows.Forms.DataGridView> denetimi.  
   
  Bir sütunun hücre değeri veri türü belirtilen <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> sütunun özelliği.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> İle kullanılan <xref:System.Boolean> ve <xref:System.Windows.Forms.CheckState> değerleri. <xref:System.Boolean> değerleri görüntüler iki durumlu veya üç durumlu onay kutularını değerine bağlı olarak olarak <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> özelliği. Ne zaman sütun bağlı <xref:System.Windows.Forms.CheckState> değerleri, <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> özellik değeri `true` varsayılan olarak.  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> İle kullanılan <xref:System.Boolean> ve <xref:System.Windows.Forms.CheckState> değerleri. <xref:System.Boolean> değerleri görüntülemek için iki veya üç durumu onay kutularını değerine göre olarak <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> özelliği. Ne zaman sütunu bağlı <xref:System.Windows.Forms.CheckState> değerleri <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> özellik değeri `true` varsayılan olarak.  
   
- Genellikle, onay kutusunu hücre değerlerini gibi diğer herhangi bir veri depolama veya toplu işlemleri gerçekleştirmek için tasarlanmıştır. Kullanıcılar bir onay kutusu hücreyi tıklattığınızda işleyebilir hemen yanıt vermek istiyorsanız <xref:System.Windows.Forms.DataGridView.CellClick> olay ancak bu olay hücre değerini güncelleştirilmeden önce oluşur. Yeni değer tıklatın aynı anda gerekiyorsa, beklenen değer ne olacağını hesaplamak için bir seçenek olan geçerli değere göre. Değişikliği hemen kaydetmek ve işlemek için başka bir yaklaşımdır <xref:System.Windows.Forms.DataGridView.CellValueChanged> yanıtlamak için olay. Hücre tıklatıldığında değişikliği kaydetmek için işlemelidir <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> olay. Geçerli hücreyi bir onay kutusu hücreyse işleyicisinde çağrısı <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> yöntemi ve geçişinde <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> değeri.  
+ Genellikle, onay kutusunu hücre değerlerini gibi diğer herhangi bir veri depolama veya toplu işlemleri gerçekleştirmek için tasarlanmıştır. Kullanıcılar bir onay kutusu hücreyi tıklatın, işleyebileceği hemen yanıt vermek istiyorsanız <xref:System.Windows.Forms.DataGridView.CellClick> olay, ancak bu olay bir hücre değerini güncelleştirilmeden önce gerçekleşir. Tıklamanın zaman yeni bir değer gerekiyorsa, beklenen değer ne olacağını hesaplamak için bir seçenek olan geçerli değere göre. Değişikliği hemen işleyin ve işlemek için başka bir yaklaşımdır <xref:System.Windows.Forms.DataGridView.CellValueChanged> yanıtlamak için olay. Hücre tıklandığında değişikliği kaydetmek için işlemelidir <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> olay. Geçerli hücreyi bir onay kutusu hücreyse işleyicisinde çağrı <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> yöntemi ve geçişinde <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> değeri.  
   
 ## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
- <xref:System.Windows.Forms.DataGridViewImageColumn> Görüntüleri göstermek için kullanılır. Görüntü sütunları otomatik olarak bir veri kaynağından doldurulur, bağlanmamış sütunlar için el ile doldurulur veya için bir işleyici içinde dinamik olarak doldurulan <xref:System.Windows.Forms.DataGridView.CellFormatting> olay.  
+ <xref:System.Windows.Forms.DataGridViewImageColumn> Resimleri görüntülemek için kullanılır. Resim sütunları bir veri kaynağından otomatik olarak doldurulur, bağlanmamış sütunlar için el ile doldurulmuş veya dinamik olarak bir işleyicisindeki doldurulmuş <xref:System.Windows.Forms.DataGridView.CellFormatting> olay.  
   
- Bayt dizileri resim biçimleri tarafından desteklenen tüm biçimleri dahil olmak üzere, çeşitli veri kaynağından bir görüntü sütunu otomatik popülasyonunu çalışır <xref:System.Drawing.Image> sınıfı ve Microsoft® Access ve Northwind örnek veritabanı tarafından kullanılan OLE resim biçimi.  
+ Görüntü biçimlerini tarafından desteklenen tüm biçimler dahil olmak üzere, çeşitli bayt dizileri ile birlikte çalışır bir görüntü sütunu bir veri kaynağından otomatik popülasyonu <xref:System.Drawing.Image> sınıfı ve Microsoft® Access ve Northwind örnek veritabanı tarafından kullanılan OLE resim biçimi.  
   
- Bir görüntü sütunu el ile doldurma yararlıdır işlevselliğini sağlamak istediğinizde bir <xref:System.Windows.Forms.DataGridViewButtonColumn>, ancak bir özelleştirilmiş görünüm. İşleyebilir <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> tıklama bir görüntü hücre içinde yanıt verecek şekilde olay.  
+ Bir görüntü sütunu el ile doldurma yararlıdır işlevselliğini sağlamak istediğinizde bir <xref:System.Windows.Forms.DataGridViewButtonColumn>, ancak özelleştirilmiş bir görünüm. İşleyebilirsiniz <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> olayı bir görüntü hücresi içinde tıklamalara yanıt verme.  
   
- Bir görüntü sütunu için bir işleyici hücrelerinin doldurma <xref:System.Windows.Forms.DataGridView.CellFormatting> olay, görüntüleri veya görüntü olmayan biçimlerini değerler hesaplanan değerler sağlamak istediğinizde yararlıdır. Örneğin, dize değerleri "Riskli" bir sütunla gibi olabilir `"high"`, `"middle"`, ve `"low"` simgelerle görüntülemek istediğiniz. Alternatif olarak, görüntüleri ikili içerik yerine yüklenmesi gereken görüntüleri konumlarını içeren bir "Görüntü" sütun olabilir.  
+ Bir görüntü sütunu için bir işleyici Hücre doldurma <xref:System.Windows.Forms.DataGridView.CellFormatting> olay, hesaplanan değerler ya da resmi olmayan biçimde değerler için görüntüleri sağlamak istediğinizde yararlıdır. Örneğin, dize değerlerini içeren bir "Risk" sütun gibi olabilir `"high"`, `"middle"`, ve `"low"` simgeler olarak görüntülemek istediğiniz. Alternatif olarak, görüntüleri yerine ikili içeriğini yüklenmesi gereken görüntüleri konumlarını içeren bir "Görüntü" sütunu olabilir.  
   
 ## <a name="datagridviewbuttoncolumn"></a>DataGridViewButtonColumn  
- İle <xref:System.Windows.Forms.DataGridViewButtonColumn>, bir sütun düğmelerini içeren bir hücre görüntüleyebilirsiniz. Bir sipariş yerleştirme veya ayrı bir pencerede alt kayıtları görüntüleme gibi belirli kayıtlarda eylemleri gerçekleştirmek, kullanıcılar için kolay bir yol sağlamak istediğinizde kullanışlıdır.  
+ İle <xref:System.Windows.Forms.DataGridViewButtonColumn>, düğmelerini içeren hücre içeren bir sütun görüntüleyebilirsiniz. Kullanıcılarınızın sipariş verme veya ayrı bir pencerede alt kayıtları görüntüleme gibi belirli kayıtlarda eylemleri gerçekleştirmek kolay bir yol sağlamak istediğinizde bu kullanışlıdır.  
   
- Düğme sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetim. Düğme sütunları kullanmak için bunları el ile oluşturmak ve bunları tarafından döndürülen koleksiyonuna ekleyin <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> özelliği.  
+ Düğme sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetimi. Düğme sütunları kullanmak için bunları el ile oluşturmanız ve tarafından döndürülen bir koleksiyonda eklemek <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> özelliği.  
   
- Kullanıcı tıklatma düğme hücrelerini ile işleyerek yanıt verebilirsiniz <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> olay.  
+ Düğme hücrelerini kullanıcı tıklamayla işleyerek yanıt verebilirsiniz <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> olay.  
   
-## <a name="datagridviewcomboboxcolumn"></a>ÖzelliðiniDataGridViewComboBoxColumn  
- İle <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, aşağı açılan liste kutuları içeren hücre bir sütun görüntüleyebilirsiniz. Bu, yalnızca Northwind örnek veritabanı Ürünler tablosunun kategori sütunu gibi belirli değerler içerebilir alanları veri girişi için kullanışlıdır.  
+## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
+ İle <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, aşağı açılan liste kutuları içeren hücre içeren bir sütun görüntüleyebilirsiniz. Bu, yalnızca kategori sütunu Northwind örnek veritabanındaki Ürünler tablosunun gibi belirli değerleri içeren alanları veri girişi için kullanışlıdır.  
   
- Doldurmak aynı şekilde tüm hücreler için kullanılan açılan listeyi doldurmak bir <xref:System.Windows.Forms.ComboBox> aşağı açılan listesinde, el ile tarafından döndürülen koleksiyonu aracılığıyla ya da <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> özelliği veya bir veri kaynağına bağlama tarafından <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özellikleri. Daha fazla bilgi için bkz: [ComboBox denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ Açılan listenin doldurmak aynı şekilde tüm hücreler için kullanılan doldurabilirsiniz bir <xref:System.Windows.Forms.ComboBox> aşağı açılan listesinde, el ile tarafından döndürülen koleksiyon üzerinden <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> özelliği veya veri kaynağına bağlama <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özellikleri. Daha fazla bilgi için [ComboBox denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
   
- Tarafından kullanılan veri kaynağı gerçek hücre değerlerini bağlayabilirsiniz <xref:System.Windows.Forms.DataGridView> ayarlayarak denetim <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> özelliği <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
+ Veri kaynağı tarafından kullanılan gerçek hücre değerlerinin bağlayabilirsiniz <xref:System.Windows.Forms.DataGridView> ayarlayarak denetim <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> özelliği <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
- Birleşik giriş kutusu sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetim. Birleşik giriş kutusu sütunları kullanmak için bunları el ile oluşturun ve bunları tarafından döndürülen koleksiyonuna ekleyin <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği.  
+ Birleşik giriş kutusu sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetimi. Birleşik giriş kutusu sütunları kullanmak için el ile oluşturun ve bunları tarafından döndürülen bir koleksiyona ekler <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği.  
   
 ## <a name="datagridviewlinkcolumn"></a>DataGridViewLinkColumn  
- İle <xref:System.Windows.Forms.DataGridViewLinkColumn>, bir sütun köprüler içeren bir hücre görüntüleyebilirsiniz. Bu, veri kaynağı veya alt kayıtlarıyla bir pencere açarak gibi özel davranışları düğme sütununda alternatif olarak URL değerleri için kullanışlıdır.  
+ İle <xref:System.Windows.Forms.DataGridViewLinkColumn>, köprüler içeren hücre içeren bir sütun görüntüleyebilirsiniz. Bu, veri kaynağına veya alternatif olarak alt kayıtları bir pencere açarak gibi özel davranışları için düğme sütununda URL değerleri için kullanışlıdır.  
   
- Bağlantı sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetim. Bağlantı sütunları kullanmak için bunları el ile oluşturun ve bunları tarafından döndürülen koleksiyonuna ekleyin <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği.  
+ Bağlantı sütunları oluşturulmaz otomatik olarak veri bağlama sırasında bir <xref:System.Windows.Forms.DataGridView> denetimi. Bağlantı sütunları kullanmak için el ile oluşturmak ve bunları tarafından döndürülen bir koleksiyona ekler <xref:System.Windows.Forms.DataGridView.Columns%2A> özelliği.  
   
- Kullanıcı tıklama bağlantılarında işleyerek yanıt verebilirsiniz <xref:System.Windows.Forms.DataGridView.CellContentClick> olay. Bu olay farklıdır <xref:System.Windows.Forms.DataGridView.CellClick> ve <xref:System.Windows.Forms.DataGridView.CellMouseClick> bir kullanıcı herhangi bir yerden bir hücreye tıkladığında oluşan olaylar.  
+ İşleyerek bağlantılarında kullanıcı tıklamalara yanıt verebilir <xref:System.Windows.Forms.DataGridView.CellContentClick> olay. Bu olay kodundan <xref:System.Windows.Forms.DataGridView.CellClick> ve <xref:System.Windows.Forms.DataGridView.CellMouseClick> kullanıcı bir hücreye herhangi bir yere tıkladığında oluşan olaylar.  
   
- <xref:System.Windows.Forms.DataGridViewLinkColumn> Sınıfı bağlantıların görünümünü önce sırasında ve sonrasında değiştirmek için çeşitli özellikler sağlayan tıklattığınız.  
+ <xref:System.Windows.Forms.DataGridViewLinkColumn> Sınıfı önce sırasında ve sonrasında bağlantıların görünümünü değiştirmek için çeşitli özellikler sağlar bunlar tıkladı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn>  
- <xref:System.Windows.Forms.DataGridViewButtonColumn>  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
- <xref:System.Windows.Forms.DataGridViewImageColumn>  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
- <xref:System.Windows.Forms.DataGridViewLinkColumn>  
- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Resim Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn>
+- <xref:System.Windows.Forms.DataGridViewButtonColumn>
+- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+- <xref:System.Windows.Forms.DataGridViewImageColumn>
+- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
+- <xref:System.Windows.Forms.DataGridViewLinkColumn>
+- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminin hücrelerinde görüntü görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

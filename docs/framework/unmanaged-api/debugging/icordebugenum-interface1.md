@@ -1,5 +1,5 @@
 ---
-title: Icordebugenum Interface1
+title: Icordebugenum arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732758"
 ---
-# <a name="icordebugenum-interface1"></a>Icordebugenum Interface1
-Hata ayıklama bir uygulama tarafından kullanılan numaralandırmalar için Özet temel arabirim görevi görür.  
+# <a name="icordebugenum-interface1"></a>Icordebugenum arabirimi1
+Hata ayıklama bir uygulama tarafından kullanılan numaralandırıcılar için soyut temel arayüz görev yapar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Bu bir kopyasını oluşturur `ICorDebugEnum` nesnesi.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Bu bir kopyasını oluşturur `ICorDebugEnum` nesne.|  
 |[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Sabit listede öğe sayısını alır.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|İmleç numaralandırması başlangıcına taşır.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|İmleç numaralandırma başlangıcına taşır.|  
 |[Skip Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki numaralandırıcılar türetin `ICorDebugEnum`:  
+ Aşağıdaki numaralandırıcılar türetilmesi `ICorDebugEnum`:  
   
 -   "ICorDebugAppDomainEnum"  
   
@@ -78,19 +78,19 @@ Hata ayıklama bir uygulama tarafından kullanılan numaralandırmalar için Öz
   
 -   "ICorDebugValueEnum"  
   
--   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+-   [Icordebugvariablehomeenum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

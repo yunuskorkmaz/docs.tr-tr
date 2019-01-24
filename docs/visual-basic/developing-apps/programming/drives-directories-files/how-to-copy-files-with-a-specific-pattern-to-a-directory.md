@@ -1,5 +1,5 @@
 ---
-title: "Nasıl Yapılır: Visual Basic'te Belirli Düzendeki Dosyaları Dizine Kopyalama"
+title: "Nasıl yapılır: Belirli bir düzendeki dosyaları Visual Basic'te bir dizine kopyalayın"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 6b8df24014cf809326993958472df4dae213dbab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c2ed926d21bf73b9b93863e5c3a3ed9ccc950aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634083"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli Düzendeki Dosyaları Dizine Kopyalama
-<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Yöntemi dosyaları için yol adları temsil eden dizeleri salt okunur bir koleksiyonunu döndürür. Kullanabileceğiniz `wildCards` parametresini kullanarak belirli bir desen belirtin.  
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Nasıl yapılır: Belirli bir düzendeki dosyaları Visual Basic'te bir dizine kopyalayın
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Yöntemi dosyaları için yol adlarını temsil eden dizeleri salt okunur bir koleksiyonunu döndürür. Kullanabileceğiniz `wildCards` parametresini kullanarak belirli bir desen belirtin.  
   
- Eşleşen hiç dosya bulunamazsa, boş bir koleksiyon döndürülür.  
+ Eşleşen hiçbir dosya bulunamazsa, boş bir koleksiyon döndürülür.  
   
- Kullanabileceğiniz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> yöntemi bir dizine kopyalayın.  
+ Kullanabileceğiniz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> bir dizinine dosyalar kopyalamak için yöntemi.  
   
-### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Belirli bir düzendeki dosyaları dizine kopyalamak için  
+### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Belirli bir düzendeki dosyaları dizine kopyalama  
   
-1.  Kullanım `GetFiles` dosyaların listesini döndürmek için yöntem. Bu örnek belirtilen dizindeki tüm .rtf dosyaları döndürür.  
+1.  Kullanım `GetFiles` dosyaların listesini döndürmek için yöntemi. Bu örnek belirtilen dizindeki tüm .rtf dosyaları döndürür.  
   
      [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_1.vb)]  
   
-2.  Kullanım `CopyFile` yöntemi dosyaları kopyalayın. Bu örnek dosyaları adlı dizine kopyalar `testdirectory`.  
+2.  Kullanım `CopyFile` dosyaları kopyalamak için yöntemi. Bu örnek adlı bir dizin dosyaları kopyalar `testdirectory`.  
   
      [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
   
@@ -36,30 +36,30 @@ ms.locfileid: "33586692"
      [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
   
 ## <a name="example"></a>Örnek  
- Yukarıdaki kod parçacıkları tam biçiminde gösterir, aşağıdaki örnekte, tüm .rtf dosyaları belirtilen dizinde adlı dizine kopyalar `testdirectory`.  
+ Yukarıdaki kod, formun tamamını sunar, aşağıdaki örnekte, tüm .rtf dosyaları belirtilen dizine adlı dizine kopyalar `testdirectory`.  
   
  [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Yolu şu nedenlerden biri için geçerli değil: sıfır uzunlukta bir dize değil, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir aygıt yol olduğundan (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
+-   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   Çünkü yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+-   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Dizin yok (<xref:System.IO.DirectoryNotFoundException>).  
+-   Dizin mevcut değil (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Varolan bir dosyayı dizin işaret (<xref:System.IO.IOException>).  
+-   Mevcut bir dosyayı dizine işaret (<xref:System.IO.IOException>).  
   
--   Yolu sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+-   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
--   Yolda bir dosya veya dizin adı biçimi geçersiz veya iki nokta üst üste (:) içerir (<xref:System.NotSupportedException>).  
+-   Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   Kullanıcı yolunu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>). Kullanıcı gerekli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
+-   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>). Kullanıcı gerekli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>  
- [Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
- [Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
+- <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
+- [Nasıl yapılır: Belirli bir desendeki alt dizinleri bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Nasıl yapılır: Bir dizindeki dosya koleksiyonunu alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

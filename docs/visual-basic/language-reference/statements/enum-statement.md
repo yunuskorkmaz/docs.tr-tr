@@ -11,15 +11,15 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: f1086fdc26f1909e751617b78e0cd31f2a8b1b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656667"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum Deyimi (Visual Basic)
-Numaralandırma bildirir ve üyeleri değerleri tanımlar.  
+Bir sabit listesi bildirir ve üyelerinin değerlerini tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ End Enum
   
 -   `attributelist`  
   
-     İsteğe bağlı. Bu numaralandırma uygulamak öznitelikler listesi. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç ("`<`"ve"`>`").  
+     İsteğe bağlı. Bu sabit listesi için geçerli olan özniteliklerin listesi. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar içinde ("`<`"ve"`>`").  
   
-     <xref:System.FlagsAttribute> Öznitelik, numaralandırma örneği değerini birden fazla numaralandırma üyeleri içerebilir ve her üye numaralandırma değeri bit alanında temsil ettiğini gösterir.  
+     <xref:System.FlagsAttribute> Özniteliği örneği numaralandırma değerini birden fazla numaralandırma üyelerini içerebilir ve her üyesi bir bit alanı numaralandırma değeri temsil ettiğini gösterir.  
   
 -   `accessmodifier`  
   
-     İsteğe bağlı. Bu numaralandırma hangi kod erişip belirtir. Aşağıdakilerden biri olabilir:  
+     İsteğe bağlı. Bu sabit listesi kod erişip belirtir. Aşağıdakilerden biri olabilir:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -50,104 +50,104 @@ End Enum
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    - [Korumalı Friend](../../language-reference/modifiers/protected-friend.md)
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
     
-    - [Özel korumalı](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
 -   `Shadows`  
   
-     İsteğe bağlı. Bu numaralandırma redeclares ve bir aynı adlı programlama öğesi ya da bir taban sınıf içinde aşırı yüklenmiş öğelerin gizler belirtir. Belirleyebileceğiniz [gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md) yalnızca numaralandırma, tüm üyeleri üzerinde değil.  
+     İsteğe bağlı. Bu numaralandırma redeclares ve bir programlama aynı adlı bir öğeyi veya taban sınıfında aşırı yüklenmiş bir öğe kümesini gizler belirtir. Belirtebileceğiniz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) yalnızca numaralandırma, tüm üyeleri üzerinde değil.  
   
 -   `enumerationname`  
   
-     Gerekli. Numaralandırma adı. Geçerli adları hakkında daha fazla bilgi için bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Gerekli. Sabit listesinin adı. Geçerli adlar hakkında daha fazla bilgi için bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `datatype`  
   
-     İsteğe bağlı. Numaralandırma ve tüm üyelerini veri türü.  
+     İsteğe bağlı. Sabit listesi ve tüm üyeleri veri türü.  
   
 -   `memberlist`  
   
-     Gerekli. Bu deyim içinde bildirilen üye sabitleri listesi. Birden çok üye bağımsız kaynak kodu satırlarda görünür.  
+     Gerekli. Bu deyiminde bildirilen üye sabit listesi. Birden çok üye bağımsız kaynak kod satırlarında görünür.  
   
      Her `member` aşağıdaki söz dizimini ve bölümleri vardır: `[<attribute list>] member name [ = initializer ]`  
   
     |Bölümü|Açıklama|  
     |---|---|  
-    |`membername`|Gerekli. Bu üye adı.|  
+    |`membername`|Gerekli. Bu üyenin adı.|  
     |`initializer`|İsteğe bağlı. Derleme zamanında değerlendirilir ve bu üye için atanan ifade.|  
   
 -   `End``Enum`  
   
-     Sonlandırır `Enum` bloğu.  
+     Sonlandırır `Enum` blok.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir mantıksal olarak birbiriyle ilişkili değişmeyen değerleri kümesi varsa, bunları bir numaralandırma birlikte tanımlayabilirsiniz. Bu numaralandırma ve değerlerine kolay üyelerini için anlamlı adlar sağlar. Numaralandırma üyeleri kodunuzda birçok yerde kullanın.  
+ Mantıksal olarak birbiriyle ilişkili değişmeyen değerlerini bir dizi varsa, bunları bir numaralandırmada birlikte tanımlayabilirsiniz. Bu sabit listesi ve bunların değerlerini kolay üyelerini için anlamlı adlar sağlar. Daha sonra kodunuzda pek çok yerde numaralandırma üyelerini kullanabilirsiniz.  
   
  Numaralandırmalar kullanmanın avantajları şunlardır:  
   
--   Sırasını değiştirme veya numaraları yanlış yazmanız kaynaklanan hataları azaltır.  
+-   Sırasını değiştirme ya da sayı yanlış yazmanız kaynaklanan hataları azaltır.  
   
--   Gelecekte değerlerini değiştirmek kolaylaştırır.  
+-   Değerleri gelecekte değiştirilmesini daha kolay hale getirir.  
   
--   Hataları görülecektir olasılığını anlamına gelen kod okumak daha kolay hale getirir.  
+-   Hataları görülecektir olasılığını olduğu anlamına gelir, daha kolay kodu sağlar.  
   
--   İleriye dönük uyumluluk sağlar. Numaralandırmalar kullanırsanız, kodunuzu gelecekte birinin üyesi adlarına karşılık gelen değerleri değişirse başarısız daha az olasıdır.  
+-   İleriye dönük uyumluluk sağlar. Numaralandırmalar kullanırsanız, kodunuzu gelecekte birinin üyesi adlara karşılık gelen değerleri değişirse başarısız etkilenme olasılığı da düşer.  
   
- Numaralandırma bir ad, bir temel alınan veri türü ve bir üye kümesi vardır. Her üye bir sabiti temsil eder.  
+ Bir numaralandırma bir ad, temel alınan bir veri türü ve bir üye kümesi vardır. Her üye bir sabiti temsil eder.  
   
- Sınıfı, yapısı, modül veya dışında herhangi bir yordam arabirimi düzeyinde bildirilen bir numaralandırma bir *üye numaralandırma*. Sınıfı, yapısı, modül veya onu tanımlandığı arabirimi bir üyesidir.  
+ Sınıfı, yapı, modül veya dışında herhangi bir yordam arabirimi düzeyinde bildirilen bir sabit listesidir bir *üye numaralandırması*. Sınıfı, yapısı, modül veya onu bildiren arabirimin bir üyesidir.  
   
- Üye numaralandırmalar gelen yerden kendi sınıfı, yapısı, modül veya arabirimi içinde erişilebilir. Kod bir sınıf dışında yapısı veya modülü bu sınıf, yapı veya modül adını bir üye numaralandırmanın adıyla nitelemeniz gerekir. Tam olarak nitelenmiş adlar ekleyerek kullanmaya gerek önleyebilirsiniz bir [içeri aktarmalar](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kaynak dosyasına deyimi.  
+ Üye numaralandırmalar öğesinden herhangi bir yerde kendi sınıf, yapı, modül veya arabirimi içinde erişilebilir. Kod bir sınıf dışında yapısını veya modülünü Bu sınıf, yapı veya modül adını bir üye sabit listesinin adıyla nitelemeniz gerekir. Tam olarak nitelenmiş adlar ekleyerek kullanmaya gerek kaçınabilirsiniz bir [içeri aktarmalar](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) bildirimi kaynak dosyası.  
   
- Sınıfı, yapısı, modül veya arabirim dışında ad alanı düzeyinde bildirilen numaralandırma göründüğü ad alanının bir üyesidir.  
+ Ad alanı düzeyinde sınıf, yapı, modül veya arabirimi, dışında bildirilen bir numaralandırma göründüğü ad alanının bir üyesidir.  
   
- *Bildirimi bağlam* numaralandırma bir kaynak dosya, ad alanı, sınıf, yapısı, modül veya arabirimi olmalı ve bir yordam olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ *Bildirim içeriğinin* numaralandırması bir kaynak dosyası, ad alanı, sınıf, yapı, modül veya arabirimi olması gerekir ve bir yordam olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Öznitelikler için sabit bir bütün olarak ancak üyeleri için ayrı ayrı uygulayabilirsiniz. Bir öznitelik derlemenin meta verilerini bilgileri katkıda bulunur.  
+ Öznitelikleri numaralandırması bir bütün olarak, ancak üyelerini tek tek uygulayabilirsiniz. Bir özniteliği derleme meta bilgileri katkıda bulunur.  
   
 ## <a name="data-type"></a>Veri Türü  
- `Enum` Deyimi veri türü bir numaralandırmanın bildirebilirsiniz. Her üye sabit veri türünü alır. Belirleyebileceğiniz `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, veya `UShort`.  
+ `Enum` Deyimi, veri türü bir numaralandırmanın bildirebilirsiniz. Her üye, sabit listesinin veri türünü alır. Belirtebileceğiniz `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, veya `UShort`.  
   
- Belirtmezseniz, `datatype` numaralandırma için her üye veri türünü alır. kendi `initializer`. Her ikisini de belirtirseniz, `datatype` ve `initializer`, veri türü `initializer` dönüştürülebilir olmalıdır `datatype`. Ne `datatype` ya da `initializer` varsa, veri türü için varsayılan `Integer`.  
+ Siz belirtmezseniz `datatype` sabit listesi için her üye veri türünü alır. kendi `initializer`. Her ikisini de belirtirseniz `datatype` ve `initializer`, veri türü `initializer` dönüştürülebilmelidir `datatype`. Kullanılmazsa `datatype` ya da `initializer` varsa, veri türü için varsayılan değerleri `Integer`.  
   
 ## <a name="initializing-members"></a>Üyeleri başlatma  
- `Enum` Deyimi içinde seçilen üyeleri içeriğini başlatma `memberlist`. Kullandığınız `initializer` üyesine atanacak bir ifade sağlamak için.  
+ `Enum` Deyimi Seçili üyelerin içeriğini başlatmak `memberlist`. Kullandığınız `initializer` üyesine atanmış bir ifade sağlamanız için.  
   
- Belirtmezseniz, `initializer` bir üye için Visual Basic, sıfır ya da başlatır (ilk ise `member` içinde `memberlist`), ya da tek hemen önceki, daha büyük bir değere `member`.  
+ Siz belirtmezseniz `initializer` bir üye için Visual Basic ya da sıfırdan başlatır (ilk ise `member` içinde `memberlist`), ya da tek hemen önceki ait olandan daha büyük bir değere `member`.  
   
- Her sağlanan ifade `initializer` değişmez değerleri, önceden tanımlanmış diğer sabitleri ve zaten, önceki bu numaralandırma üyesi de dahil olmak üzere tanımlanan numaralandırma üyeleri herhangi bir bileşimi olabilir. Bu öğeler birleştirmek için aritmetik ve mantıksal işleçleri kullanabilirsiniz.  
+ Her sağlanan ifade `initializer` değişmez değerleri, önceden tanımlanmış diğer sabitleri ve zaten, önceki bu sabit listesi üyesi de dahil olmak üzere tanımlanan numaralandırma üyeleri herhangi bir birleşimi olabilir. Bu öğeleri birleştirin, aritmetik ve mantıksal işleçlerini kullanabilirsiniz.  
   
- Değişkenleri veya işlevleri kullanamazsınız `initializer`. Ancak, dönüşüm anahtar sözcükleri gibi kullanabilir `CByte` ve `CShort`. Aynı zamanda `AscW` bir sabit ile çağırırsanız `String` veya `Char` derleme zamanında değerlendirilebilir beri bağımsız değişkeni.  
+ Değişkenler veya işlevlerinde kullanılamaz `initializer`. Bununla birlikte, dönüşüm anahtar sözcükleri gibi kullanabileceğiniz `CByte` ve `CShort`. Ayrıca `AscW` bir sabit ile çağırırsanız `String` veya `Char` bağımsız değişkeni, derleme zamanında değerlendirilebilen olduğundan.  
   
- Numaralandırmalar kayan nokta değerlerine sahip olamaz. Üye bir kayan nokta değer atanırsa ve `Option Strict` , bir derleyici hatası oluşursa ayarlanır. Varsa `Option Strict` kapalıysa, değeri için otomatik olarak dönüştürülür `Enum` türü.  
+ Numaralandırmalar, kayan nokta değerlerine sahip olamaz. Üye bir kayan noktalı değere atanırsa ve `Option Strict` , bir derleyici hatası oluşursa ayarlanır. Varsa `Option Strict` kapalıysa, değer otomatik olarak dönüştürülür `Enum` türü.  
   
- Temel alınan veri türü için izin verilen aralığın bir üyesinin değerini aşması durumunda veya herhangi bir üyesi temel alınan veri türü tarafından izin verilen en yüksek değere başlatmak, derleyici bir hata bildirir.  
+ Temel alınan veri türü için izin verilen aralık bir üyenin değerini aşarsa veya herhangi bir üyesi temel alınan veri türü tarafından izin verilen en yüksek değere başlatmak, derleyici bir hata bildirir.  
   
 ## <a name="modifiers"></a>Değiştiriciler  
- Sınıfı, yapısı, modül ve arabirim üye numaralandırmalar varsayılan genel erişim için. Erişim değiştiricileri ile erişim düzeylerine göre ayarlayabilirsiniz. Namespace üye numaralandırmalar varsayılan friend erişim. Ortak, ancak özel veya korumalı erişim düzeylerine göre ayarlayabilirsiniz. Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Sınıfı, yapı, modül ve arabirim üyesi numaralandırmalar varsayılan genel erişim için. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz. Namespace üye numaralandırmalar varsayılan'öğesine friend erişimi için. Genel, ancak özel veya korumalı, erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- Tüm numaralandırma üyeleri ortak erişimi vardır ve bunlar üzerinde hiçbir erişim değiştiricileri kullanamazsınız. Numaralandırma daha kısıtlı erişim düzeyi varsa, ancak belirtilen numaralandırma erişim düzeyi önceliklidir.  
+ Tüm numaralandırma üyelerini genel erişimi vardır ve bunlar üzerinde herhangi bir erişim değiştiricileri kullanamazsınız. Numaralandırma, daha kısıtlı bir erişim düzeyi varsa, ancak belirtilen numaralandırma erişim düzeyi önceliklidir.  
   
- Varsayılan olarak, tüm numaralandırma türleri ve onların alanları sabitleri. Bu nedenle `Shared`, `Static`, ve `ReadOnly` numaralandırma veya üyeleri bildirirken anahtar sözcükler kullanılamaz.  
+ Varsayılan olarak, tüm numaralandırmalar türleridir ve onların alanları sabittir. Bu nedenle `Shared`, `Static`, ve `ReadOnly` numaralandırma veya üyelerinin bildirirken, anahtar sözcükler kullanılamaz.  
   
-## <a name="assigning-multiple-values"></a>Birden çok değerler atama  
- Numaralandırmalar genellikle birbirini dışlayan değerleri temsil eder. Ekleyerek <xref:System.FlagsAttribute> özniteliğini `Enum` bildirimi, bunun yerine atayabilirsiniz birden çok değer numaralandırması örneğine. <xref:System.FlagsAttribute> Özniteliği, numaralandırma bayrakları diğer bir deyişle, bir dizi bir bit alanı olarak değerlendirilmesi belirtir. Bunlar adlandırılır *Bitsel* numaralandırmalar.  
+## <a name="assigning-multiple-values"></a>Birden çok değer atama  
+ Numaralandırmalar genellikle birbirini dışlayan değerleri temsil eder. Ekleyerek <xref:System.FlagsAttribute> özniteliğini `Enum` bildirimi, bunun yerine atayabilirsiniz birden çok değer numaralandırma örneği. <xref:System.FlagsAttribute> Özniteliği sabit listesi flags diğer bir deyişle, bir dizi bir bit alanı olarak değerlendirilmesi belirtir. Bunlar adlandırılır *bit düzeyinde* numaralandırma.  
   
- Ne zaman bildirdiğiniz numaralandırma kullanarak <xref:System.FlagsAttribute> özniteliği öneririz, 2, 1, 2, 4, 8, 16 ve vb. tabanların değerlerini kullanın. Ayrıca, "None" değeri 0 olan bir üyenin adını olmasını öneririz. Ek yönergeler için bkz: <xref:System.FlagsAttribute> ve <xref:System.Enum>.  
+ Kullanarak bir numaralandırma bildirdiğinizde <xref:System.FlagsAttribute> özniteliği öneririz, 2, 1, 2, 4, 8, 16 ve benzeri tabanların değerlerini kullanın. Ayrıca, "None" değeri 0 olan bir üyenin adını olmasını öneririz. Ek yönergeler için bkz: <xref:System.FlagsAttribute> ve <xref:System.Enum>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir `Enum` deyimi. Üye olarak adlandırılır Not `EggSizeEnum.Medium`, değil de `Medium`.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `Enum` deyimi. Üye olarak adlandırılır Not `EggSizeEnum.Medium`, olarak değil `Medium`.  
   
  [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte yöntemi dışında `Egg` sınıfı. Bu nedenle, `EggSizeEnum` olarak tam olarak nitelenmiş `Egg.EggSizeEnum`.  
+ Aşağıdaki örnekte yöntemi dışında `Egg` sınıfı. Bu nedenle, `EggSizeEnum` olarak tam olarak `Egg.EggSizeEnum`.  
   
  [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Enum` ilgili kümesini tanımlamak için deyimi adlı sabit değerleri. Bu durumda, bir veritabanı için veri girişi formları tasarlama tercih edebileceğiniz renkleri değerlerdir.  
+ Aşağıdaki örnekte `Enum` ilgili bir kümesini tanımlamak için deyimi adlı sabit değerler. Bu durumda, bir veritabanı için veri girişi formları tasarlama tercih edebileceğiniz renkleri değerlerdir.  
   
  [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
   
@@ -157,25 +157,25 @@ End Enum
  [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir `As` yan tümcesini belirtmek için kullanılan `datatype` bir numaralandırma.  
+ Aşağıdaki örnekte, bir `As` yan tümcesini belirtmek için kullanılır `datatype` bir numaralandırma.  
   
  [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir bit düzeyinde numaralandırma kullanmayı gösterir. Bit düzeyinde numaralandırması örneğine birden çok değer atanabilir. `Enum` Bildirimi içerir <xref:System.FlagsAttribute> numaralandırma bayrakları kümesi olarak işlenebilir gösteren özniteliği.  
+ Aşağıdaki örnek, bit düzeyinde bir numaralandırma kullanma işlemini gösterir. Bit düzeyinde bir sabit listesi örneğini birden çok değer atanabilir. `Enum` Bildirimi içeren <xref:System.FlagsAttribute> özniteliği sabit listesi flags bir dizi ele alınıp alınamayacağını belirtir.  
   
  [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir numaralandırma yineler. Kullanır <xref:System.Enum.GetNames%2A> numaralandırma içinden üye adlarının dizisini almak için yöntemini ve <xref:System.Enum.GetValues%2A> üye değerleri dizisi alınamadı.  
+ Aşağıdaki örnek, bir sabit listesi yinelenir. Kullandığı <xref:System.Enum.GetNames%2A> sabit listesinden alınmış üye adlarının dizisini almak için yöntemi ve <xref:System.Enum.GetValues%2A> üye değerler dizisini almak için.  
   
  [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Enum>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Enum>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)

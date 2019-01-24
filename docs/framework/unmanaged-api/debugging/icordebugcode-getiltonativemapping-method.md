@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13ec60999db88b9d7191a3866fcebe8098b4edee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8614dd612fff2886c4e44a977d05a575fce74eec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648949"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping Metodu
-Eşlemeleri Ara dili (MSIL) kaydırır Microsoft'tan yerel uzaklıkları temsil "Cor_debug_ıl_to_natıve_map" örnekleri dizisi alır.  
+Eşlemeleri için yerel uzaklıklar Microsoft Ara dili (MSIL) kaydırır temsil eden "Cor_debug_ıl_to_natıve_map" örneklerinin bir dizisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ HRESULT GetILToNativeMapping (
   
 #### <a name="parameters"></a>Parametreler  
  `cMap`  
- [in] Boyutunu `map` dizi.  
+ [in] Boyutu `map` dizisi.  
   
  `pcMap`  
- [out] Döndürülen öğe gerçek sayısını gösteren bir işaretçi `map` dizi.  
+ [out] Gerçek döndürülen öğe sayısına bir işaretçi `map` dizisi.  
   
  `map`  
- [out] Bir dizi `COR_DEBUG_IL_TO_NATIVE_MAP` stuctures, her biri bir yerel uzaklığı MSIL uzaklığı bir eşleme temsil eder.  
+ [out] Bir dizi `COR_DEBUG_IL_TO_NATIVE_MAP` stuctures, her biri bir MSIL uzaklık bir eşleme yerel uzaklık temsil eder.  
   
- Döndürülen öğeleri dizisi sıralamaya yoktur.  
+ Sıralama yok döndürülen öğe dizisi yok.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetILToNativeMapping` Yöntemi yalnızca bu "ICorDebugCode" örneğinin yalnızca MSIL koddan derlenmiş zamanında (JIT) olan yerel kod temsil ediyorsa anlamlı sonuçlar döndürür.  
+ `GetILToNativeMapping` Yöntemi yalnızca bu "ICorDebugCode" örneği, yalnızca derlenmiş MSIL kodunu zamanında (JIT) yerel kod temsil ediyorsa anlamlı sonuçlar döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugCode Arabirimi1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugCode Arabirimi1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

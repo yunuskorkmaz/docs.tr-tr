@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c010208075f0f6cb0ad0e24e05984bf6dc15aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653781"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain Arabirimi
 Bir uygulama etki alanını temsil eder ve bu etki alanı hakkında bilgi sağlar.  
@@ -30,18 +30,18 @@ Bir uygulama etki alanını temsil eder ve bu etki alanı hakkında bilgi sağla
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Bunun için benzersiz tanımlayıcıyı alır `ICorPublishAppDomain`.|  
-|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Bu tarafından başvurulan uygulama etki alanı adını alır `ICorPublishAppDomain`.|  
+|[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Bu benzersiz tanımlayıcısını alır `ICorPublishAppDomain`.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Bu tarafından başvurulan uygulama etki alanının adını alır `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub.idl, CorPub.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

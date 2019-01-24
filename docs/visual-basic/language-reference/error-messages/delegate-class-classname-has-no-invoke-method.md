@@ -1,5 +1,5 @@
 ---
-title: Temsilci sınıfı &#39; &lt;classname&gt; &#39; hiçbir Invoke yöntemi sahiptir, bu nedenle bu tür bir ifade bir yöntem çağrısı hedefi olamaz
+title: Temsilci sınıfında &#39; &lt;classname&gt; &#39; Invoke yöntemi yok, bu nedenle bu türdeki bir ifade bir yöntem çağrısının hedefi olamaz sahip
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30220
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: cc1abba46224772e733780800dd104dfc7ebe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5421ea05968a221bbbf8f52a575550d1bca3cb2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653170"
 ---
-# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Temsilci sınıfı &#39; &lt;classname&gt; &#39; hiçbir Invoke yöntemi sahiptir, bu nedenle bu tür bir ifade bir yöntem çağrısı hedefi olamaz
-Çağrı `Invoke` bir temsilci başarısız oldu `Invoke` temsilci sınıf üzerinde uygulanmadı.  
+# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Temsilci sınıfında &#39; &lt;classname&gt; &#39; Invoke yöntemi yok, bu nedenle bu türdeki bir ifade bir yöntem çağrısının hedefi olamaz sahip
+Bir çağrı `Invoke` bir temsilci olduğundan başarısız oldu `Invoke` temsilci sınıfı üzerinde uygulanmadı.  
   
  **Hata Kimliği:** BC30220  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Temsilci sınıfının bir örneği ile oluşturulan olun bir `Dim` deyimi ve bir yordam temsilci örneğine atanan `AddressOf` işleci.  
+1.  Temsilci sınıfının örneği ile oluşturulduğundan emin olun. bir `Dim` ifadesi ve bir yordam temsilci örneği ile atanan `AddressOf` işleci.  
   
-2.  Temsilci sınıfı uygulayan kodu bulun ve bunu uygulayan emin olun `Invoke` yordamı.  
+2.  Temsilci sınıfı uygulayan kod bulun ve bunu uygulayan emin `Invoke` yordamı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)

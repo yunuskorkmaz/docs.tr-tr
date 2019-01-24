@@ -1,18 +1,18 @@
 ---
-title: "Nasıl yapılır: IIS'de WCF Hizmeti Barındırma"
+title: "Nasıl yapılır: IIS'de WCF Hizmeti barındırma"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651129"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti Barındırma
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti barındırma
 Bu konuda, Internet Information Services (IIS) barındırılan Windows Communication Foundation (WCF) hizmet oluşturmak için gerekli temel adımlar açıklanmaktadır. Bu konuda, IIS ile ilgili bilgi sahibi olduğunuz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenmenize varsayılır. IIS hakkında daha fazla bilgi için bkz. [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Bir WCF Hizmeti IIS ortamında çalışır gibi işlem geri dönüştürme, IIS özellikleri tüm avantajlarından yararlanır, kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme boş. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası herhangi bir barındırma kod yazılmasını gerektirmez. Yalnızca bir HTTP aktarımı ile IIS barındırma kullanabilirsiniz.  
   
  Hakkında daha fazla bilgi için WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] etkileşim kurmak için bkz: [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Güvenlik yapılandırma hakkında daha fazla bilgi için bkz. [güvenlik](../../../../docs/framework/wcf/feature-details/security.md).  
@@ -75,9 +75,9 @@ Bu konuda, Internet Information Services (IIS) barındırılan Windows Communica
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
- [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
+- [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 236d6dec444c8169c164e9f096c7f81a336fdca4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719228"
 ---
 # <a name="cleartype-overview"></a>ClearType Genel Bakışı
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] teknoloji bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -66,5 +66,5 @@ ClearType y yönünde düzgünleştirme ile metin
   
  [ClearType tarayıcısı PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ClearType Kayıt Defteri Ayarları](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ClearType Kayıt Defteri Ayarları](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: a1758ef83adf11cdeee8bd3560ad2275985b3788
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efcccb651ec838aa8d2173200c100ed89ddb50c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618691"
 ---
 # <a name="self-host"></a>Kendini Barındırma
 Bu örnek, şirket içinde barındırılan hizmeti bir konsol uygulamasında uygulamak nasıl gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırma dosyası için App.config Web.config dosyasından olarak yeniden adlandırıldı ve ana bilgisayar kullanan bir taban adresini yapılandırmak için değiştirilebilir. Statik uygulamak için hizmet kaynak kodu değiştirilmiş `Main` oluşturur ve yapılandırılmış temel adresini sağlayan bir hizmet konağı açar işlevi. Hizmet uygulaması, her işlem için konsola çıkışını yazmak için değiştirildi. İstemci, hizmetin doğru uç nokta adresini yapılandırma dışında değiştirilmemiş olmuştur.  
@@ -75,5 +75,5 @@ public static void Main()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

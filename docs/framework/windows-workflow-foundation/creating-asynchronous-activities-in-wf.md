@@ -2,12 +2,12 @@
 title: WF içinde zaman uyumsuz etkinlikler oluşturma
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650934"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF içinde zaman uyumsuz etkinlikler oluşturma
 <xref:System.Activities.AsyncCodeActivity> Etkinlik yazarlar etkinleştirir ve zaman uyumsuz yürütme mantığı uygulamak için etkinlikleri türetilmiş kullanmak için bir temel sınıf sağlar. Bu, zaman uyumsuz işler, iş akışı Zamanlayıcı iş parçacığı bulunduran ve paralel olarak çalıştırmak için herhangi bir etkinlik engelleme olmadan gerçekleştirmelidir özel etkinlikler için kullanışlıdır. Bu konu, kullanarak özel bir zaman uyumsuz etkinlikler oluşturma genel bir bakış sağlar. <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ ms.locfileid: "48266565"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Eylemler ya da çocuk etkinliklerinin AsyncCodeActivity kullanarak zamanlama  
- <xref:System.Activities.AsyncCodeActivity> türetilmiş özel etkinlikler iş akışı iş parçacığı zaman uyumsuz olarak onaylamaz işlemi gerçekleştirmek için bir yöntem sağlar, ancak alt etkinlikler veya Eylemler zamanlama olanağı sağlamaz. Ancak, zaman uyumsuz davranış alt etkinlik oluşturma yoluyla zamanlama ile birleştirilebilir. Zaman uyumsuz bir etkinlik oluşturulabilir ve ardından ile oluşan bir <xref:System.Activities.Activity> veya <xref:System.Activities.NativeActivity> zaman uyumsuz davranış ve alt etkinlikler veya Eylemler zamanlama sağlamak için etkinlik türetilmiş. Örneğin, bir etkinlik öğesinden türetilen oluşturulabilir <xref:System.Activities.Activity>ve uygulaması bir <xref:System.Activities.Statements.Sequence> etkinliğin mantığını de diğer etkinlikler olarak zaman uyumsuz etkinliğini içeren. Etkinlikleri kullanma oluşturma hakkında daha fazla örnekleri için <xref:System.Activities.Activity> ve <xref:System.Activities.NativeActivity>, bkz: [nasıl yapılır: bir etkinliği oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) ve [etkinlik yazma seçenekleri](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ <xref:System.Activities.AsyncCodeActivity> türetilmiş özel etkinlikler iş akışı iş parçacığı zaman uyumsuz olarak onaylamaz işlemi gerçekleştirmek için bir yöntem sağlar, ancak alt etkinlikler veya Eylemler zamanlama olanağı sağlamaz. Ancak, zaman uyumsuz davranış alt etkinlik oluşturma yoluyla zamanlama ile birleştirilebilir. Zaman uyumsuz bir etkinlik oluşturulabilir ve ardından ile oluşan bir <xref:System.Activities.Activity> veya <xref:System.Activities.NativeActivity> zaman uyumsuz davranış ve alt etkinlikler veya Eylemler zamanlama sağlamak için etkinlik türetilmiş. Örneğin, bir etkinlik öğesinden türetilen oluşturulabilir <xref:System.Activities.Activity>ve uygulaması bir <xref:System.Activities.Statements.Sequence> etkinliğin mantığını de diğer etkinlikler olarak zaman uyumsuz etkinliğini içeren. Etkinlikleri kullanarak oluşturma hakkında daha fazla örnekleri için <xref:System.Activities.Activity> ve <xref:System.Activities.NativeActivity>, bkz: [nasıl yapılır: Bir etkinlik oluşturursunuz](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) ve [etkinlik yazma seçenekleri](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

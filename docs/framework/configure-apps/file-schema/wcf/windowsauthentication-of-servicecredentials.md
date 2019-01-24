@@ -2,12 +2,12 @@
 title: '&lt;serviceCredentials&gt; için &lt;windowsAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3077baf49c13c91c6293823aa841525bf07ca7f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616270"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; için &lt;windowsAuthentication&gt;
 Bir Windows hizmeti kimlik bilgisi ayarlarını belirtir.  
@@ -48,8 +48,8 @@ Bir Windows hizmeti kimlik bilgisi ayarlarını belirtir.
 ## <a name="remarks"></a>Açıklamalar  
  Windows kullanıcıları anonim erişim ayarlayarak izin verilip verilmeyeceğini belirtmek için bu öğeyi kullanırsınız `allowAnonymousLogons` özniteliği. Ayrıca kullanıcıların ait olduğu grubu bilgileri ayarlayarak içinde AuthorizationContext eklenip eklenmeyeceğini belirtebilirsiniz `includeWindowsGroups` özniteliği. Bu ayarlanırsa `true` (varsayılan ayar), hizmet istemcinin ait olduğu Windows grupları belirleyebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.WindowsServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>

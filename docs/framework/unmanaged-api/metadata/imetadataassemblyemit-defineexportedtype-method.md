@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624356"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
-Oluşturur bir `ExportedType` belirtilen türü dışarı ve ilişkili meta veri simgesi döndürür için meta verileri içeren yapısı.  
+Oluşturur bir `ExportedType` yapısı meta verilerini içeren, belirtilen dışarı türü ve ilişkili meta veri belirteci döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,39 +41,39 @@ HRESULT DefineExportedType (
   
 #### <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Dışa aktarılacak türünün adı. 1.1 ortak dil çalışma zamanı sürümü, dışarı aktarılan türünün adı verilen adı tam olarak eşleşmelidir için `TypeDef` türü için.  
+ [in] Dışa aktarılacak tür adı. Sürüm 1.1 ortak dil çalışma zamanının dışarı aktarılan tür adı verilen ad tam eşleşmelidir `TypeDef` türü.  
   
  `tkImplementation`  
- [in] Burada verilen tür uygulanan belirten bir simge. İlişkili anlamlarını ve geçerli değerler şunlardır:  
+ [in] Dışarı aktarılan tür burada uygulanan belirten bir belirteç. Geçerli değerler ve bunların ilişkili anlamları vardır:  
   
 -   `mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.  
   
 -   `mdAssemblyRef` Türü farklı bir derlemede uygulanır.  
   
--   `mdExportedTYpe` Türü, başka bir türü içinde yer alıyor.  
+-   `mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.  
   
--   `mdFileNil` Türü bildirimi aynı dosyasındaki ve iç içe geçmiş bir tür değil.  
+-   `mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.  
   
  `tkTypeDef`  
- [in] Bir belirteç meta verilerinin verilecek türünü belirtir. Bu değer girildiğini `TypeDef` türü uygulayan ve yalnızca bu dosya bu derlemede olduğunda geçerlidir dosya tablosunda.  
+ [in] Bir belirteci meta veri dışarı aktarılmasına izin türünü belirtir. İçinde bu değer girilir `TypeDef` tablo dosyanızda türün uyguladığı ve yalnızca bu dosya bu derlemede olduğunda geçerlidir.  
   
  `dwExportedTypeFlags`  
- [in] Bit düzeyinde bileşimini [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) dışarı aktarılan tür için özellik ayarları tanımlayan numaralandırma değerleri.  
+ [in] Bitsel bir birleşimi [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) özellik ayarları dışarı aktarılan türü tanımlayan sabit listesi değerleri.  
   
  `pmdct`  
- [out] Dışarı aktarılan türünü gösteren döndürülen meta veri simgesi için bir işaretçi.  
+ [out] Dışarı aktarılan tür gösteren döndürülen meta veri belirteci için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `ExportedType` meta veri yapısı, bu derlemesi tarafından gösterilir ve bildirim içeren farklı bir modüldeki uygulanan her tür için tanımlanmalıdır.  
+ Bir `ExportedType` meta veri yapısı, bu derleme tarafından kullanıma sunulan ve bildirimini içeren farklı bir modül içinde uygulanan her türü için tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

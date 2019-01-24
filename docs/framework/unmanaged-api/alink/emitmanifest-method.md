@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9217a045a8ddf6ad41adcc71a9568a05fe3fb334
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565555"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest Yöntemi
-Son bildirim yayar. Diğer tüm dosyaları alma ve tüm seçeneklerini ayarlama sonra bu yöntemi çağırın. İlişkisiz modülleri için bu yöntemi çağırmanız gerekmez.  
+Son bildirim yayar. Diğer tüm dosyalar ve tüm ayarları sonra bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmanız gerekmez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,10 +42,10 @@ HRESULT EmitManifest(
  Derleme kimliği.  
   
  `pdwReserveSize`  
- Kaynağından alınan derleme dosyasını ayrılacak boyutu alır [StrongNameSignatureSize işlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ Alınan derleme dosyasında ayrılacak boyutu alır [StrongNameSignatureSize işlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- İsteğe bağlı olarak derleme bildirim belirteci alır.  
+ İsteğe bağlı olarak, derleme bildirimi belirteci alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -53,7 +53,7 @@ HRESULT EmitManifest(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

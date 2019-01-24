@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma'
+title: 'Nasıl yapılır: Kayıtsız etkinleştirme için .NET Framework tabanlı COM bileşenlerini yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530712"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız etkinleştirme için .NET Framework tabanlı COM bileşenlerini yapılandırma
 Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri için olandan biraz daha karmaşık. Kurulum, iki bildirimleri gerektirir:  
   
 -   COM uygulamaları yönetilen bileşen tanımlamak için bir Win32 stili bildiriminin olması gerekir.  
@@ -172,8 +172,8 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
   
      Yeniden `myresource.res` gömülü kaynak içeren kaynak dosyasının adıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)  
- [Kayıtsız COM birlikte çalışma için gereksinimleri](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
- [Kayıtsız etkinleştirme. AĞ tabanlı bileşenler: İzlenecek yollar](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
+- [Kayıtsız COM birlikte çalışma için gereksinimleri](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))
+- [Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))
+- [Kayıtsız etkinleştirme. AĞ tabanlı bileşenler: İzlenecek yollar](https://msdn.microsoft.com/library/ms973915.aspx)

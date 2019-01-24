@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b7684d6dad5ffecaf9c359ac004d7ecc982f0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc01cf25000d4b5f3fa44ae96cb885b7cb67365b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737130"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool Arabirimi
 İş parçacığı havuzu erişmek için yöntemler sağlar.  
   
 > [!NOTE]
->  Bu arabirim yalnızca iç kullanım için ayrılmıştır.  
+>  Bu arabirim, yalnızca iç kullanım için ayrılmıştır.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -46,13 +46,13 @@ ms.locfileid: "33437449"
 |[CorGetAvailableThreads Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

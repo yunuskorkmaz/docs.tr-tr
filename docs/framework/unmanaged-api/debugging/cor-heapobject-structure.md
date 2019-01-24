@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b02dfa3fb0f1e5f4cfadc297194dc4f3160c8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628480"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT Yapısı
-Yönetilen yığında bir nesne hakkında bilgi sağlar.  
+Yönetilen yığındaki bir nesne hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,30 +40,30 @@ typedef struct _COR_HEAPOBJECT {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`address`|Bellekteki nesne adresi.|  
-|`size`|Nesnesinin bayt olarak toplam boyutu.|  
-|`type`|A [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) nesne türünü temsil eden belirteci.|  
+|`address`|Bellekteki nesnenin adresi.|  
+|`size`|Nesnesinin bayt cinsinden toplam boyutu.|  
+|`type`|A [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) nesnenin türünü temsil eden belirteci.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_HEAPOBJECT` örnekleri numaralandırılırken tarafından alınabilir bir [Icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) çağırarak doldurulur arabirimi nesnesi [Icordebugprocess5::enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) yöntemi.  
+ `COR_HEAPOBJECT` örnekleri numaralandırarak alınabilir bir [Icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) çağırarak doldurulur arabirimi nesnesi [Icordebugprocess5::enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) yöntemi.  
   
- A `COR_HEAPOBJECT` örneği yönetilen yığında canlı bir nesneyle ilgili ya da herhangi bir nesne tarafından kökü değil, ancak henüz atık toplayıcısı tarafından toplanan değil bir nesne hakkında bilgi sağlar.  
+ A `COR_HEAPOBJECT` örneği, yönetilen yığındaki bir canlı nesne hakkında ya da herhangi bir nesne tarafından kökü belirtilmemiş ancak henüz çöp toplayıcısı tarafından toplanmış değil bir nesne hakkında bilgi sağlar.  
   
- Daha iyi performans için `COR_HEAPOBJECT.address` alan bir `CORDB_ADDRESS` Icordebugvalue yerine değeri arabirimi hata ayıklama API'si çoğunu kullanılan değer. Verilen nesne adresi için bir Icordebugvalue nesnesi edinmek için iletebilirsiniz `CORDB_ADDRESS` değeri [Icordebugprocess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) yöntemi.  
+ Daha iyi performans için `COR_HEAPOBJECT.address` alan bir `CORDB_ADDRESS` değeri yerine Icordebugvalue arabirimi hata ayıklama API çoğunu kullanılan değer. Icordebugvalue nesnenin verilen nesnenin adresini almak için geçirebilirsiniz `CORDB_ADDRESS` değerini [Icordebugprocess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) yöntemi.  
   
- Daha iyi performans için `COR_HEAPOBJECT.type` alan bir `COR_TYPEID` Icordebugtype yerine değeri arabirimi hata ayıklama API'si çoğunu kullanılan değer. Icordebugtype nesne için belirtilen tür kimliği edinmek için iletebilirsiniz `COR_TYPEID` değeri [Icordebugprocess5::gettypefortypeıd](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) yöntemi.  
+ Daha iyi performans için `COR_HEAPOBJECT.type` alan bir `COR_TYPEID` değeri yerine Icordebugtype arabirimi hata ayıklama API çoğunu kullanılan değer. Icordebugtype nesneyi bir verilen tür Kimliğini almak için geçirebilirsiniz `COR_TYPEID` değerini [Icordebugprocess5::gettypefortypeıd](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) yöntemi.  
   
- `COR_HEAPOBJECT` Yapısı başvuruları sayılan COM arabirimi içerir. Aldığınız varsa bir `COR_HEAPOBJECT` çağırarak numaralandırıcı örneğinden [Icordebugheapenum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) yöntemi, daha sonra başvuru serbest bırakmanız gerekir.  
+ `COR_HEAPOBJECT` Yapısı başvuru sayılan bir COM arabirimi içerir. Aldığınız varsa bir `COR_HEAPOBJECT` çağırarak numaralandırıcı örneğinden [Icordebugheapenum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) yöntemi, başvuru daha sonra serbest bırakmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

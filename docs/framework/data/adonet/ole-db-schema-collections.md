@@ -2,12 +2,12 @@
 title: OLE DB şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658461"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB şema koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıları için şema koleksiyonu desteğini açıklar.  
@@ -29,7 +29,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="tables"></a>Tabloları  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -43,7 +43,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -81,7 +81,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -94,7 +94,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -116,14 +116,14 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="catalog"></a>Kataloğu  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |CATALOG_NAME|Dize|  
 |AÇIKLAMASI|Dize|  
   
 ### <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -170,7 +170,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="tables"></a>Tabloları  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -184,7 +184,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -217,7 +217,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -230,7 +230,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -252,7 +252,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="views"></a>Görünümler  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -266,7 +266,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -309,7 +309,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="tables"></a>Tabloları  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -323,7 +323,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -356,7 +356,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
@@ -369,7 +369,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="views"></a>Görünümler  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -383,7 +383,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 ### <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|Dize|  
 |TABLE_SCHEMA|Dize|  
@@ -411,5 +411,5 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 |FILTER_CONDITION|Dize|  
 |TÜMLEŞİK|Boole değeri|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

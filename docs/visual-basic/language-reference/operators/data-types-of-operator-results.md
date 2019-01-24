@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650489"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
 Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü belirler. Bazı durumlarda bu iki işlenenden ait olandan daha kapsamlı bir veri türü olabilir.  
@@ -60,7 +60,7 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 ||`Decimal`|`Single`|`Double`|Herhangi bir tamsayı türü|  
 |`Decimal`|Ondalık|Tek|Çift|Ondalık|  
 |`Single`|Tek|Tek|Çift|Tek|  
-|`Double`|Çift|Çift|Çift|Çift|  
+|`Double`|Çift|çift|çift|Çift|  
 |Herhangi bir tamsayı türü|Ondalık|Tek|Çift|Çift|  
   
  `^` İşleci yalnızca tanımlanmış `Double` veri türü. Visual Basic widens gerekli olduğu her işlenen `Double` önce işlem ve veri türü, her zaman sonucu `Double`.  
@@ -85,8 +85,8 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Birli `+`|kısa|SByte|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|Birli `–`|kısa|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|Ondalık|  
+|Birli `+`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|Birli `–`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
   
 ### <a name="-and--operators"></a><\< ve >> işleçleri  
  Aşağıdaki tablo sonuç veri türleri iki bit kaydırma işleçleri için gösterir `<<` ve `>>`. Visual Basic her bit kaydırma işleci (kaydırılmasına bit deseni) sol işlenen üzerinde birli işleç olarak değerlendirir.  
@@ -94,7 +94,7 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|kısa|SByte|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
+|`<<`, `>>`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
   
  Sol işlenen ise `Decimal`, `Single`, `Double`, veya `String`, Visual Basic çalışır öğesine dönüştürmek `Long` önce işlem ve veri türü sonucu `Long`. Sağ işlenen (kaydırılacak bit konumları sayısı) olmalıdır `Integer` ya da bir tür için widens `Integer`.  
   
@@ -104,14 +104,14 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|kısa|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|Ondalık|  
-|`SByte`|SByte|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|Ondalık|  
-|`Byte`|kısa|kısa|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Short`|kısa|kısa|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|Ondalık|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|uzun|uzun|Ondalık|  
-|`UInteger`|uzun|uzun|Uınteger|uzun|Uınteger|uzun|Uınteger|uzun|ULong|  
-|`Long`|uzun|uzun|uzun|uzun|uzun|uzun|uzun|uzun|Ondalık|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`UInteger`|Uzun|Uzun|Uınteger|Uzun|Uınteger|Uzun|Uınteger|Uzun|ULong|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Ondalık|  
 |`ULong`|Ondalık|Ondalık|ULong|Ondalık|ULong|Ondalık|ULong|Ondalık|ULong|  
   
 ### <a name="-operator"></a>\ İşleci  
@@ -120,15 +120,15 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|kısa|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`SByte`|SByte|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`Byte`|kısa|kısa|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Short`|kısa|kısa|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`UInteger`|uzun|uzun|Uınteger|uzun|Uınteger|uzun|Uınteger|uzun|ULong|  
-|`Long`|uzun|uzun|uzun|uzun|uzun|uzun|uzun|uzun|uzun|  
-|`ULong`|uzun|uzun|ULong|uzun|ULong|uzun|ULong|uzun|ULong|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UInteger`|Uzun|Uzun|Uınteger|Uzun|Uınteger|Uzun|Uınteger|Uzun|ULong|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
+|`ULong`|Uzun|Uzun|ULong|Uzun|ULong|Uzun|ULong|Uzun|ULong|  
   
  Her iki işleneninin `\` işleci [ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [tek](../../../visual-basic/language-reference/data-types/single-data-type.md), veya [çift](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic çalışır öğesine dönüştürmek [uzun](../../../visual-basic/language-reference/data-types/long-data-type.md)önce işlem ve veri türü sonucu `Long`.  
   
@@ -146,7 +146,7 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Not`|Boole değeri|SByte|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
+|`Not`|Boole değeri|SByte|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
   
  İşlenen `Decimal`, `Single`, `Double`, veya `String`, Visual Basic çalışır öğesine dönüştürmek `Long` önce işlem ve veri türü sonucu `Long`.  
   
@@ -156,15 +156,15 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boole değeri|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`SByte`|SByte|SByte|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`Byte`|kısa|kısa|Bayt|kısa|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Short`|kısa|kısa|kısa|kısa|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|uzun|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|uzun|uzun|uzun|  
-|`UInteger`|uzun|uzun|Uınteger|uzun|Uınteger|uzun|Uınteger|uzun|ULong|  
-|`Long`|uzun|uzun|uzun|uzun|uzun|uzun|uzun|uzun|uzun|  
-|`ULong`|uzun|uzun|ULong|uzun|ULong|uzun|ULong|uzun|ULong|  
+|`Boolean`|Boole değeri|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|Uınteger|Uzun|ULong|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UInteger`|Uzun|Uzun|Uınteger|Uzun|Uınteger|Uzun|Uınteger|Uzun|ULong|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
+|`ULong`|Uzun|Uzun|ULong|Uzun|ULong|Uzun|ULong|Uzun|ULong|  
   
  Bir işlenen `Decimal`, `Single`, `Double`, veya `String`, Visual Basic çalışır öğesine dönüştürmek `Long` işlenen zaten olsaydı olarak önce işlemi ve sonuçta elde edilen veri türü aynıdır `Long`.  
   
@@ -175,14 +175,14 @@ Visual Basic işlenen veri türlerine göre bir işlem sonucu veri türünü bel
   
  `Like` İşleci yalnızca deseni, eşleşen için tanımlanan `String` işlenen. Visual Basic dönüştürmek için gerektiği gibi her işlenen girişimlerini `String` işleminden önce. Sonuç veri türünün her zaman olduğu `Boolean`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [İşleçler](../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [İşleçler](../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)

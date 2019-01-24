@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType2 arabirimi
+title: Icordebugtype2 arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 038598e6fa8c0f7d47a161783d21f03b3c87af0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f61efdecfb87ed598dd9675c0b8804259849e64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706277"
 ---
-# <a name="icordebugtype2-interface"></a>ICorDebugType2 arabirimi
-Bir taban türü veya karmaşık türü (kullanıcı tanımlı) türü tanıtıcısı almak için Icordebugtype arabirimi genişletir.  
+# <a name="icordebugtype2-interface"></a>Icordebugtype2 arabirimi
+Tür tanımlayıcısını bir taban türü veya karmaşık türü (kullanıcı tanımlı) almak için Icordebugtype arabirimi genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -33,13 +33,13 @@ Bir taban türü veya karmaşık türü (kullanıcı tanımlı) türü tanıtıc
 |[GetTypeID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Alır bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu tür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim Icordebugtype arabirimi mantıksal bir uzantısıdır.  
+ Icordebugtype arabirimi öğesinin mantıksal uzantısı arabirimidir.  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod parçası kullanımını göstermektedir [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yöntemi.  
+ Aşağıdaki kod parçası kullanışını [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yöntemi.  
   
 ```  
 // (error checking omitted for brevity)  
@@ -55,13 +55,13 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

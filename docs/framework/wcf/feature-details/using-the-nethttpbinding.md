@@ -2,12 +2,12 @@
 title: NetHttpBinding Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658734"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding Kullanma
 <xref:System.ServiceModel.NetHttpBinding> HTTP veya WebSocket hizmetlerini kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding> İstek-yanıt anlaşması veya çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve davranışını eşleşecek şekilde değiştirmesine - HTTP istek-yanıt sözleşmeleriyle ve WebSockets için çift yönlü sözleşmeler için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ayarı:  
@@ -45,7 +45,7 @@ ms.locfileid: "46696748"
         </binding>  
       </netHttpBinding>  
     </bindings>  
-    <!- ... -->   
+    ...
   </system.serviceModel>  
 ```  
   
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler için Bağlamaları Yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmetler için Bağlamaları Yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)

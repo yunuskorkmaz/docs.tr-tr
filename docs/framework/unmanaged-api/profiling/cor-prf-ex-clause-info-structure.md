@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3cf8b8735fc10b741d13b041eedc3e96607bef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6576dc19ed092ca12846a9780236e041daa64956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727137"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO Yapısı
-Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini ilgili bilgileri depolar.  
+Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini hakkındaki bilgileri saklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,15 +41,15 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`clauseType`|Değerini [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) numaralandırma özel durum yan tümcesi yalnızca girilen kod veya sol türünü belirtir.|  
-|`programCounter`|Yerel giriş noktası yan tümcesi işleyicisinin — Örneğin, X86 EIP kayıt içeriği.|  
-|`framePointer`|Yan tümcesi işleyici mantıksal çerçeve işaretçisi — Örneğin, X86 EBP kayıt içeriği.|  
-|`shadowStackPointer`|Gölge yığınına işaretçi. Bu değer BSP kayıt, içeriği ve yalnızca IA64 için geçerlidir.|  
+|`clauseType`|Değerini [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) özel durum yan tümcesi yalnızca girilen kod veya sol türünü belirten sabit listesi.|  
+|`programCounter`|Yerel giriş noktası yan tümcesi işleyicisinin — Örneğin, X86 EIP kaydının içeriğini.|  
+|`framePointer`|Yan tümcesi işleyicisi için mantıksal çerçeve işaretçisi — Örneğin, X86 EBP kaydının içeriğini.|  
+|`shadowStackPointer`|Gölge yığın işaretçisi. Bu değer BSP kaydının içeriğini ve yalnızca IA64 için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özel durum bildirimi alındığında [Icorprofilerınfo2::getnotifiedexceptionclauseınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) özel durum yan tümcesinin yerel adres ve çerçeve bilgilerini almak için kullanılan (`catch` / `finally`/filtre) hakkında çalıştırılacak veya yalnızca çalıştırın.  
+ Bir özel durum bildirimi alındığında [Icorprofilerınfo2::getnotifiedexceptionclauseınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) özel durum yan tümcesinin yerel adres ve çerçeve bilgilerini almak için kullanılabilir (`catch` / `finally`/filtreleme) hakkında çalıştırılacak veya yalnızca çalıştırın.  
   
- Özel durum yan tümcesinin yürütme bu geri aramalar ortak dil çalışma zamanı (CLR) gelen içerir:  
+ Bu geri aramalarda ortak dil çalışma zamanının (CLR) yürütme bir özel durum yan tümcesinin içerir:  
   
 -   [Icorprofilercallback::exceptioncatcherenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
@@ -64,13 +64,13 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 -   [Icorprofilercallback::exceptionsearchfilterleave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -18,55 +18,55 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: b0ab186945b456d7fb4dde3f52724b08a99e2827
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731744"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
-Çoğu durumda, bir yordam, onu çağrıldı koşullar hakkında bazı bilgiler gerekir. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler değişkenlerinin, sabitleri ve onu çağırdığınızda, yordama geçirdiğiniz ifadeler oluşur.  
+Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler gerekiyor. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
   
- A *parametresi* yordamı, çağırdığınızda temin etmeniz bekliyor bir değeri temsil eder. Yordam bildirimi parametrelerini tanımlar.  
+ A *parametre* yordamı çağırdığınızda, temin etmeniz bekliyor. bir değeri temsil eder. Yordam bildirimi parametrelerini tanımlar.  
   
- Hiçbir parametre, bir parametre veya birden fazla ile bir yordam tanımlayabilirsiniz. Parametreleri belirtir yordamı tanımının bir parçası olarak adlandırılan *parametre listesi*.  
+ Bir yordam parametre, bir parametre veya birden fazla tanımlayabilirsiniz. Parametreleri belirtir bir yordam tanımının bir parçası olarak adlandırılan *parametre listesi*.  
   
- Bir *bağımsız değişkeni* yordam çağrısı, sağladığınız değeri bir yordam parametresini temsil eder. Yordam çağrıları, çağrıyı yapan kod bağımsız değişkenler sağlar. Bağımsız değişkenleri belirten yordam çağrısı parçası olarak adlandırılan *bağımsız değişken listesi*.  
+ Bir *bağımsız değişken* yordamı çağırdığınızda, sağladığınız değerin bir yordamın parametresini temsil eder. Yordamı çağırdığında, çağıran kodun bağımsız değişkenleri sağlar. Bağımsız değişkenleri belirten yordam çağrısı bir parçası olarak adlandırılan *bağımsız değişken listesi*.  
   
- Yordamı çağırma kod aşağıda gösterilmiştir `safeSquareRoot` iki farklı yerde. İlk çağrıda değişkenin değeri olarak geçirir `x` (4.0) parametresine `number`ve dönüş değeri `root` (2.0) değişkenine atanan `y`. Değişmez değer 9.0 için ikinci çağrı geçirir `number`ve dönüş değeri (3.0) değişkenine atar `z`.  
+ Yordamı çağırma kodu aşağıdaki çizimde `safeSquareRoot` iki farklı yerde. İlk çağrı değişkenin değeri olarak geçirir `x` (4.0) parametresine `number`ve dönüş değeri `root` (2.0) değişkenine atanan `y`. Değişmez değer 9.0 için yapılan ikinci çağrı geçirir `number`ve dönüş değeri (3.0) değişkene atar `z`.  
   
  ![Parametresi için bağımsız değişken geçirme grafik diyagramı](./media/parametersargue.gif "ParametersArgue")  
 Bir parametre bağımsız değişken geçirme  
   
- Daha fazla bilgi için bkz: [arasındaki farklar parametreler ve bağımsız değişkenler](./differences-between-parameters-and-arguments.md).  
+ Daha fazla bilgi için [arasındaki farklar parametreler ve bağımsız değişkenler](./differences-between-parameters-and-arguments.md).  
   
 ## <a name="parameter-data-type"></a>Parametre veri türü  
- Kullanarak bir veri türü için bir parametre tanımlayın `As` bildiriminden yan tümcesinde. Örneğin, aşağıdaki işlev bir dize ve tamsayı kabul eder.  
+ Bir parametrenin veri türünü kullanarak tanımladığınız `As` bildiriminden yan tümcesi. Örneğin, aşağıdaki işlev bir dize ve tamsayı kabul eder.  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- Tür denetleme geçiş yaparsanız ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off,` `As` yan tümcesi olduğunu isteğe bağlı, herhangi bir parametre kullanıyorsa, tüm parametreleri bunu kullanmalı dışında. Tür denetleme ise `On`, `As` yan tümcesi tüm yordam parametreleri için gereklidir.  
+ Tür denetleme geçerseniz ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off,` `As` yan tümcesi, isteğe bağlıdır, hariç, herhangi bir parametre kullanıyorsa, tüm parametreleri onu kullanmanız gerekir. Tür denetleme ise `On`, `As` yan tümcesi tüm parametreler için gereklidir.  
   
- Çağıran kodu bir bağımsız değişken bir veri türü, karşılık gelen bir parametre farklı gibi sağlayın bekliyor varsa `Byte` için bir `String` parametresi, aşağıdakilerden birini yapmalısınız:  
+ Çağıran kod gibi bir bağımsız değişkeni, karşılık gelen parametresinin farklı bir veri türü ile sağlamak bekliyor durumunda `Byte` için bir `String` parametresi, aşağıdakilerden birini yapmalısınız:  
   
--   Tedarik yalnızca bağımsız değişken parametre veri türü genişletmek veri türleriyle;  
+-   Kaynağı yalnızca bağımsız değişkenler için parametre veri türü genişletmek veri türleriyle;  
   
--   Ayarlama `Option Strict Off` örtük daraltma dönüşümleri; izin vermek veya  
+-   Ayarlama `Option Strict Off` daraltma dönüştürmelerini örtülü; izin vermek veya  
   
--   Dönüştürme anahtar sözcüğü açıkça veri türüne dönüştürmek için kullanın.  
+-   Dönüştürme anahtar sözcüğü, veri türüne açıkça dönüştürmek için kullanın.  
   
 ### <a name="type-parameters"></a>Tür ParameTReleri  
- A *genel yordam* de bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerinin yanı sıra. Veri türleri farklı veri türleri tek tek her çağrı gereksinimlerini uyarlayabilirsiniz şekilde yordam çağrıları her zaman geçmesi için çağıran kodu genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ A *genel yordam* ayrıca bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerini yanı sıra. Çağıran kod, veri türleri için her bir çağrıyı gereksinimlerini karşılayacak hale getirebilirsiniz şekilde yordamı, çağırdığı her zaman geçiş farklı veri türleri genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamlar](./index.md)  
- [Alt Yordamlar](./sub-procedures.md)  
- [İşlev Yordamları](./function-procedures.md)  
- [Özellik Yordamları](./property-procedures.md)  
- [İşleç Yordamları](./operator-procedures.md)  
- [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yordamlar](./index.md)
+- [Alt Yordamlar](./sub-procedures.md)
+- [İşlev Yordamları](./function-procedures.md)
+- [Özellik Yordamları](./property-procedures.md)
+- [İşleç Yordamları](./operator-procedures.md)
+- [Nasıl yapılır: Bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
+- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
+- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

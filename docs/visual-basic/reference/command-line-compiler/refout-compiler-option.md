@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 8a8068c467f9066af3153434187749fa80d254ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d7f5f9065ba53bd037d7307f62c9acad913b8e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638713"
 ---
 # <a name="-refout-visual-basic"></a>-refonly (Visual Basic)
 
@@ -40,8 +40,8 @@ Başvuru derlemelerini içeren bir derleme düzeyi [ReferenceAssembly](xref:Syst
 
 `-refout` Ve [ `-refonly` ](refonly-compiler-option.md) seçenekleri karşılıklı olarak birbirini dışlar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[-refonly](refonly-compiler-option.md)   
-[Visual Basic komut satırı derleyicisi](index.md)  
-[Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [-refonly](refonly-compiler-option.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
 

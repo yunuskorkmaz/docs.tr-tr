@@ -3,12 +3,12 @@ title: İlk talep kullanan ASP.NET Web uygulamamı derleme
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 76b02a0e6869b0d4de181b59296a0858aa80948c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588970"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>İlk talep kullanan ASP.NET Web uygulamamı derleme
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -41,11 +41,11 @@ ms.locfileid: "48840855"
   
  WIF kullanarak ilk talep kullanan ASP.NET uygulamanızı oluşturmak için aşağıdakilerden birinde yer alan yönergeleri uygulayın:  
   
--   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Nasıl yapılır: Form tabanlı kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WIF Kullanmaya Başlama](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WIF Kullanmaya Başlama](../../../docs/framework/security/getting-started-with-wif.md)
