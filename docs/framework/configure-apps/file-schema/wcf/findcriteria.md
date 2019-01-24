@@ -1,15 +1,15 @@
 ---
-title: '&lt;FindCriteria&gt;'
+title: '&lt;findCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 0a2fb7ae641f8ec34c518d8dc2c11fbc2ae26190
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b90e6cab923075dbf750dc0d26a0eb1196cfde32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741266"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
+# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
 Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt, arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütünü (ne kadar süreyle arama son) bulun.  
   
  \<system.ServiceModel>  
@@ -67,6 +67,6 @@ Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanıla
 |-------------|-----------------|  
 |[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Hizmet keşif işlemine bir istemci olarak katılmak için bir uygulama tarafından gerekli olan ayarları içerir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

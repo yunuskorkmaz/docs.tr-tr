@@ -10,25 +10,25 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: bf8240f318200df0ce228449e3b2368e08430e22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cf3d26427e483a1e1e5c1bc5316a829325a841f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731913"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Tarihler ve Saatlere İlişkin Özet (Visual Basic)
-Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amacına göre düzenlenir ve kullanın.  
+Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Geçerli tarih ve saati alır.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
-|Tarih hesaplamaları gerçekleştirin.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
-|Bir tarihi döndürür.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
-|Bir süre döndür.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|Geçerli tarih ve saati alın.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
+|Tarih hesaplamalar gerçekleştirin.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
+|Bir tarih döndürür.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
+|Bir saat döndürür.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
 |Tarih veya saat ayarlayın.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
 |Bir işlem süresi.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)

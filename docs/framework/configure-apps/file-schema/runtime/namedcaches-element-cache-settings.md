@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d6f741f4ecd3ea52dacc9f981024690a0031a533
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a824e958a2b75b28aa66a15212e0276d6c127739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536535"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; öğesi (önbellek ayarları)
 Yapılandırma ayarları için adlandırılmış bir koleksiyonunu belirtir <xref:System.Runtime.Caching.MemoryCache> örnekleri. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> Özelliği, bir veya daha fazla yapılandırma ayarları koleksiyonu başvurur `namedCaches` yapılandırma dosyasının öğeleri.  
   
  \<Yapılandırma >  
 \< System.Runtime.Caching >  
-\<memoryCache >  
-\<namedCaches >  
+\<memoryCache>  
+\<namedCaches>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -58,7 +58,7 @@ Yapılandırma ayarları için adlandırılmış bir koleksiyonunu belirtir <xre
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<memoryCache >](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı.|  
+|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bellek önbelleğini yapılandırma bölümü Web.config dosyasının içerebilir `add`, `remove`, ve `clear` özniteliklerini `namedCaches` koleksiyonu. Her `namedCaches` giriş tarafından benzersiz şekilde tanımlanır `name` özniteliği.  
@@ -89,5 +89,5 @@ Yapılandırma ayarları için adlandırılmış bir koleksiyonunu belirtir <xre
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [\<memoryCache > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

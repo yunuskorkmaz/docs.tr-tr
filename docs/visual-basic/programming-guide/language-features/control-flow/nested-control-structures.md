@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: ec3d4d477290480cdfa0f5b1c88aa82c81040d11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520470"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
-Diğer denetim ifadelerine içine denetim ifadeleri örneğin yerleştirebilirsiniz bir `If...Then...Else` içinde engelleme bir `For...Next` döngü. Başka bir denetim deyimi içinde yerleştirilen bir denetim ifadesi olarak kabul edilir *iç içe geçmiş*.  
+Örneğin denetim ifadeleri diğer denetim ifadelerine içine yerleştirebilirsiniz bir `If...Then...Else` içinde engelleyecek bir `For...Next` döngü. Başka bir denetim deyiminin içinde yer bir denetim deyimidir olduğu söylenir *iç içe geçmiş*.  
   
 ## <a name="nesting-levels"></a>İç içe geçme düzeyi  
- Visual Basic'de denetim yapıları için istediğiniz kadar çok düzeyde iç içe. Her biri gövdesi girintileme tarafından iç içe geçmiş yapılar daha okunabilir hale getirmek için yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi'ni otomatik olarak bunu yapar.  
+ Visual Basic'de denetim yapıları için istediğiniz sayıda düzeyi yuvalanabilir. İç içe geçmiş yapılar gövdesi her biri, girintilendirme tarafından daha okunabilir yapmak için yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi'ni otomatik olarak bunu yapar.  
   
- Aşağıdaki örnekte, yordamı `sumRows` birlikte pozitif öğeleri matrisin her bir satır ekler.  
+ Aşağıdaki örnekte, yordam `sumRows` matris her satırın pozitif öğeleri bir araya getirir.  
   
 ```  
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Önceki örnekte, ilk `Next` deyimi kapatır iç `For` döngü ve son `Next` deyimi kapatır dış `For` döngü.  
+ Yukarıdaki örnekte, ilk `Next` deyimi kapatır iç `For` döngüsü ve son `Next` deyimi kapatır dış `For` döngü.  
   
- Benzer şekilde, iç içe geçmiş `If` deyimleri `End If` deyimleri otomatik olarak uygulamak için en yakın önceki `If` deyimi. İç içe geçmiş `Do` döngüler iş ise en içteki ile benzer bir şekilde `Loop` ise en içteki eşleşen deyimi `Do` deyimi.  
+ Buna benzer şekilde, iç içe `If` deyimleri `End If` ifadeleri otomatik olarak uygulamak için en yakın önceki `If` deyimi. İç içe geçmiş `Do` döngüler çalışma en içteki ile benzer bir biçimde `Loop` ifade en içteki eşleşen `Do` deyimi.  
   
 > [!NOTE]
->  Bir anahtar sözcüğü tıklattığınızda birçok denetim yapıları için tüm anahtar sözcükleri yapısında vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` yapım, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar sözcüğe taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
+>  Bir anahtar sözcük tıkladığınızda birçok denetim yapıları için anahtar sözcükleri yapısındaki tüm vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` oluşturma, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türde denetim yapıları geçirme  
- Başka bir tür denetimi yapısında bir tür yerleştirebilirsiniz. Aşağıdaki örnek kullanan bir `With` içinde engelleme bir `For Each` döngü ve iç içe `If` içinde engeller `With` bloğu.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türlerde denetim yapılarını iç içe geçirme  
+ Bir tür denetim yapısı başka bir tür içinde iç içe yerleştirebilirsiniz. Aşağıdaki örnekte bir `With` içinde engelleyecek bir `For Each` döngü ve iç içe geçmiş `If` içinde engeller `With` blok.  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,15 +65,15 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Çakışan denetim yapıları  
- Denetim yapıları çakışamaz. Başka bir deyişle, herhangi bir iç içe geçmiş yapısını tamamen sonraki en içteki yapısı içinde bulunmalıdır. Örneğin, aşağıdaki düzenleme geçersiz olduğundan `For` döngü sonlandırır önce iç `With` blok sona erer.  
+ Denetim yapıları çakışamaz. Başka bir deyişle, tüm iç içe yapı tamamen sonraki en içteki yapısı içinde bulunmalıdır. Örneğin, aşağıdaki düzenleme geçersiz olduğundan `For` döngüyü sonlandırır önce iç `With` bloğunu sonlandırır.  
   
- ![Geçersiz iç içe grafik diyagramı](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Geçersiz iç içe geçmiş için ile yapıları  
+ ![Geçersiz iç içe geçme grafik diyagram](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
+Geçersiz iç içe geçmiş için ve yapıları  
   
- Visual Basic derleyici böyle çakışan denetim yapıları algılar ve bir derleme zamanı hatası işaret eder.  
+ Visual Basic Derleyicisi, böyle çakışan denetim yapıları algılar ve bir derleme zamanı hatası bildirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

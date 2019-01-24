@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636430"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Sayısal Veri Türleri (Visual Basic)
 Visual Basic sağlayan birkaç *sayısal veri türleri* çeşitli gösterimlerini numaraları işlemek için. *İntegral* türleri yalnızca (pozitif, negatif ve sıfır) tamsayılar, temsil ve *nonintegral* türleri tamsayı ve kesirli bölümleri ile sayıları temsil eder.  
@@ -78,9 +78,9 @@ Visual Basic sağlayan birkaç *sayısal veri türleri* çeşitli gösterimlerin
 ### <a name="small-fractional-numbers"></a>Küçük kesirli sayılar  
  Tam aralığının gerekmiyorsa `Double` kullanabileceğiniz veri türü `Single` from - 3.4028235E + 38 3.4028235E + 38 aracılığıyla kayan nokta sayıları tutabilir veri türü. İçin en küçük massively `Single` değişkenleri şunlardır:-1.401298E-negatif değerler ve 1.401298E 45-45 pozitif değerler için. Çok sayıda küçük bir kayan noktalı sayıların tutan değişken varsa, ortak dil çalışma zamanı bazen depolayabilir, `Single` değişkenleri daha verimli bir şekilde ve bellek tüketimi kaydedin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Karakter Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Çeşitli Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Karakter Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Çeşitli Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

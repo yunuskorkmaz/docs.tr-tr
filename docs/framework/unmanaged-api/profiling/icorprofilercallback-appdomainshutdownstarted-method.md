@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705501"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted Yöntemi
-Profil Oluşturucu uygulama etki alanı bir işlemden yüklenmemiş olduğunu bildirir.  
+Profil Oluşturucu, bir uygulama etki alanı bir işlemden boşaltılıyor bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT AppDomainShutdownStarted(
   
 #### <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Uygulamanın derlemelerini depolandığı etki alanını tanımlar.  
+ [in] Uygulamanın derlemelerin saklandığı etki alanını tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değeri `appDomainId` sonra herhangi bir bilgi istek için geçerli değil `AppDomainShutdownStarted` yöntemi döndürür — bu bu uygulama etki alanı hakkında bilgi almak için Profil Oluşturucu'nın son şansınızdır.  
+ Değerini `appDomainId` sonra herhangi bir bilgi isteği için geçerli değil `AppDomainShutdownStarted` yöntemi döndürür; bu uygulama etki alanı hakkında bilgi almak için profil oluşturucunun son şans budur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Sabit Bildirme (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) bir sabit bildirme'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678843"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: Bir Sabit Bildirme (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir sabit bildirme
 Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. Bir sabit bildirme tarafından bir değer anlamlı bir ad atayın. Bir sabit bildirildiğinde, değiştiren veya yeni bir değer atanır.  
   
  Size, bir yordam içinde veya bir modül, sınıf veya yapı bildirimleri bölümünde bir sabit bildirme. Sınıf veya yapı düzeyi sabitleri `Private` , varsayılan olarak da bildirilmeleri ancak `Public`, `Friend`, `Protected`, veya `Protected Friend` uygun düzeyde kod erişim için.  
@@ -65,14 +65,25 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)  
- [Sabitlere genel bakış](constants-overview.md) [nasıl yapılır: bir sabit bildirme](how-to-declare-a-constant.md) [kullanıcı tanımlı sabitler](user-defined-constants.md) [sabit ve değişmez değerli veri türleri](constant-and-literal-data-types.md) [nasıl yapılır: Grup Sabit değerleri birlikte ilgili](how-to-group-related-constant-values-together.md) [numaralandırmalara genel bakış](enumerations-overview.md) [nasıl yapılır: numaralandırmaları bildirme](how-to-declare-enumerations.md) [nasıl yapılır: bir numaralandırma üyesine başvurma](how-to-refer-to-an-enumeration-member.md) [Numaralandırmalar ve ad niteliği](enumerations-and-name-qualification.md) [nasıl yapılır: bir sabit listesi yoluyla yineleme](how-to-iterate-through-an-enumeration.md) [nasıl yapılır: bir numaralandırma değeriyle ilişkili dizeyi belirleme](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Bir numaralandırmanın ne zaman kullanılacağı](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)
+- [Sabitlere Genel Bakış](constants-overview.md)
+- [Nasıl yapılır: Bir sabit bildirme](how-to-declare-a-constant.md)
+- [Kullanıcı Tanımlı Sabitler](user-defined-constants.md)
+- [Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)
+- [Nasıl yapılır: İlgili sabit değerleri birlikte gruplandırma](how-to-group-related-constant-values-together.md)
+- [Sabit Listelerine Genel Bakış](enumerations-overview.md)
+- [Nasıl yapılır: Sabit listesi bildirme](how-to-declare-enumerations.md)
+- [Nasıl yapılır: Bir numaralandırma üyesine başvurma](how-to-refer-to-an-enumeration-member.md)
+- [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)
+- [Nasıl yapılır: Bir sabit listesi yoluyla yineleme](how-to-iterate-through-an-enumeration.md)
+- [Nasıl yapılır: Bir numaralandırma değeriyle ilişkili dizeyi belirleme](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Sabit Listesi Ne Zaman Kullanılır?](when-to-use-an-enumeration.md)
 
- [Sabit Listelerine Genel Bakış](enumerations-overview.md)  
- [Sabitlere Genel Bakış](constants-overview.md)  
- [Nasıl yapılır: bir numaralandırma bildirme](how-to-declare-enumerations.md)  
- [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)  
- [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Sabit Listelerine Genel Bakış](enumerations-overview.md)
+- [Sabitlere Genel Bakış](constants-overview.md)
+- [Nasıl yapılır: Bir numaralandırma bildirme](how-to-declare-enumerations.md)
+- [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)
+- [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)

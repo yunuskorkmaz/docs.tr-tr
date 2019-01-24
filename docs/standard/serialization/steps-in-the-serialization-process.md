@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517363"
 ---
 # <a name="steps-in-the-serialization-process"></a>Serileştirme işlemi adımları
 Zaman <xref:System.Runtime.Serialization.Formatter.Serialize*> yöntemi çağrıldığında bir [biçimlendirici](xref:System.Runtime.Serialization.Formatter), nesne seri hale getirme aşağıdaki kuralları dizisini göre devam eder:
@@ -27,5 +27,5 @@ Zaman <xref:System.Runtime.Serialization.Formatter.Serialize*> yöntemi çağrı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İkili Serileştirme](binary-serialization.md)  
+- [İkili Serileştirme](binary-serialization.md)
 - [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)

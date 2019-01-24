@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a38c8323157cee866ac0ecab97532b9b72a932b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3574d7e889481931f40dbfb3158ad523c7e5637e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535001"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress Metodu
-Belirtilen iş parçacığı kapsamında belirtilen statik iş parçacığı alan adresini alır.  
+Belirtilen iş parçacığı kapsamında belirtilen statik iş parçacığı alanı adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT GetThreadStaticAddress(
   
 #### <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İstenen iş parçacığı statik alan içeren sınıf kimliği.  
+ [in] İstenen iş parçacığı statik alanı içeren sınıf kimliği.  
   
  `fieldToken`  
  [in] İstenen iş parçacığı statik alan için meta veri belirteci.  
   
  `threadId`  
- [in] İstenen statik alanın kapsamı iş parçacığı kimliği.  
+ [in] Kapsamı istenen statik alan için iş parçacığı kimliği.  
   
  `ppAddress`  
- [out] Belirtilen iş parçacığı içinde statik alan adresini gösteren bir işaretçi.  
+ [out] Belirtilen iş parçacığı içinde statik alanı adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetThreadStaticAddress` Yöntemi döndürebilir şunlardan biri:  
+ `GetThreadStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:  
   
--   Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanda belirtilen bağlam bir adres değil atanmışsa HRESULT.  
+-   Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
   
--   Çöp toplama yığınında olabilir nesneleri adresleri. Bu adresler çöp toplama sonra geçersiz hale gelebilir bunu atık toplama profil oluşturucular geçerli varsayımında bulunmamalıdır sonra.  
+-   Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından bu adresler geçersiz hale gelebilir bunu sonra atık toplama profil oluşturucular geçerli olduğunu varsayın değil.  
   
- Sınıf sınıfı oluşturucusu tamamlanmadan önce `GetThreadStaticAddress` statik alanları bazıları zaten başlatılmamış olabilir ancak CORPROF_E_DATAINCOMPLETE tüm kendi statik alanları için döndürür ve atık toplama nesneleri kök dizini değiştirme.  
+ Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetThreadStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

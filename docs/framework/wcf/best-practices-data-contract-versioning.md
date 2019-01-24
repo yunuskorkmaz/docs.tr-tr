@@ -1,5 +1,5 @@
 ---
-title: 'En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
+title: 'En iyi uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,101 +7,101 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738358"
 ---
-# <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
-Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için konulara bakın [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+# <a name="best-practices-data-contract-versioning"></a>En iyi uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
+Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
-## <a name="note-on-schema-validation"></a>Şema doğrulaması göz önünde bulundurun  
- Veri sözleşmesi sürümü oluşturma ele de, Windows Communication Foundation (WCF) tarafından verilen veri sözleşmesi şema öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm destek yok dikkate almak önemlidir.  
+## <a name="note-on-schema-validation"></a>Şema doğrulaması ilgili not  
+ Veri sözleşmesi sürümü oluşturma görüştükten içinde Windows Communication Foundation (WCF) tarafından verilen veri sözleşmesi şema öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm oluşturma desteği sahip olmadığını unutmayın.  
   
- Bu, yeni bir veri üye ekleme gibi bile en yaygın sürüm senaryo, belirli bir şema ile sorunsuz bir şekilde uygulanamayacağını anlamına gelir. Bir veri sözleşmesine (yeni bir veri üyesi, örneğin) daha yeni sürümleri eski Şeması'nı kullanarak doğrulamaz.  
+ Başka bir deyişle, yeni bir veri üyesi ekleme gibi bile en yaygın sürüm oluşturma senaryosu, bir şema ile ilgili sorunsuz bir şekilde uygulanamaz. Bir veri anlaşması (ile yeni veri üyesi, örneğin) daha yeni sürümleri eski şemayı kullanarak doğrulamaz.  
   
- Ancak, kesin şema uyumluluk gerekli değil birçok senaryo vardır. ASP.NET kullanılarak oluşturulan WCF ve XML Web Hizmetleri dahil olmak üzere birçok Web Hizmetleri platformda değil şema doğrulaması varsayılan olarak gerçekleştirmek ve bu nedenle şema tarafından açıklanmayan ekstra öğeler tolerans. Bu tür platformları ile çalışırken, çok sayıda sürüm oluşturma senaryoları uygulamak daha kolaydır.  
+ Ancak, katı şema uyumluluk gerekli değil birçok senaryo vardır. ASP.NET kullanılarak oluşturulan WCF ve XML Web Hizmetleri gibi birçok Web Hizmetleri platformları değil şema doğrulaması varsayılan olarak gerçekleştirin ve bu nedenle şema tarafından açıklanmayan ekstra öğeler tolerans. Böyle platformları ile çalışırken, birçok sürüm oluşturma senaryoları uygulamak daha kolaydır.  
   
- Bu nedenle, var olan iki veri kümesi sözleşme sürüm oluşturma yönergelerini: Burada kesin şema geçerlilik önemlidir ve başka ayarlayın senaryoları için olmadığında senaryolar için ayarlayın.  
+ Bu nedenle, var olan iki veri kümesi sözleşmesi sürümü oluşturma yönergeleri: Burada katı şema geçerlilik önemlidir ve başka ayarlayın senaryoları için olmadığında senaryolar için ayarlayın.  
   
-## <a name="versioning-when-schema-validation-is-required"></a>Şema doğrulaması gerekli olduğunda sürüm oluşturma  
- Kesin Şema geçerlilik tüm yönlerde (eski yeni ve eski yeni) gerekirse, veri sözleşmeleri değişmez dikkate alınmalıdır. Sürüm oluşturma gerekiyorsa, yeni bir veri sözleşmesi, farklı bir ad veya ad alanı, ile oluşturulmalıdır ve veri türünü kullanarak hizmet sözleşmesini uygun şekilde sürümlü olmalıdır.  
+## <a name="versioning-when-schema-validation-is-required"></a>Şema doğrulaması gerektiğinde sürüm oluşturma  
+ Veri sözleşmeleri katı şema geçerlilik tüm yönde (eski yeni ve eski yeni) gerekiyorsa, sabit düşünülmelidir. Sürüm oluşturma gerekiyorsa, yeni bir veri sözleşmesi, farklı bir ad veya ad alanı ile oluşturulmalıdır ve veri türü kullanan bir hizmet sözleşmesini uygun şekilde tutulan olmalıdır.  
   
- Örneğin, hizmet sözleşmesini adlı işleme bir satın alma siparişi `PoProcessing` ile bir `PostPurchaseOrder` işlem için uyumlu bir parametre alan bir `PurchaseOrder` veri sözleşme. Varsa `PurchaseOrder` sözleşme sahip değiştirmek, diğer bir deyişle, yeni bir veri sözleşmesi oluşturmalısınız `PurchaseOrder2`, değişiklikler içerir. Ardından hizmet sözleşmesi düzeyinde sürüm işlemesi gerekir. Oluşturarak Örneğin, bir `PostPurchaseOrder2` alır işlemi `PurchaseOrder2` parametresi veya oluşturarak bir `PoProcessing2` hizmet sözleşmesini nerede `PostPurchaseOrder` işlemi alır bir `PurchaseOrder2` veri sözleşme.  
+ Örneğin, hizmet sözleşmesi adlı işleme satınalma siparişi `PoProcessing` ile bir `PostPurchaseOrder` işlemi uyan bir parametre alır bir `PurchaseOrder` veri anlaşması. Varsa `PurchaseOrder` sözleşme sahip değiştirmek, diğer bir deyişle, yeni bir veri anlaşması oluşturmalısınız `PurchaseOrder2`, değişiklikler içerir. Ardından, hizmet sözleşmesi düzeyinde sürüm işlemesi gerekir. Oluşturarak Örneğin, bir `PostPurchaseOrder2` alan işlemi `PurchaseOrder2` parametresi veya oluşturarak bir `PoProcessing2` hizmet sözleşmesini nereden `PostPurchaseOrder` işlemi alır bir `PurchaseOrder2` veri anlaşması.  
   
- Diğer veri sözleşmeleri tarafından başvurulan veri sözleşmelerinde değişiklikleri Ayrıca hizmet modeli katmanını genişletme unutmayın. Örneğin, önceki senaryoda `PurchaseOrder` veri sözleşmesi değiştirmeniz gerekmez. Ancak, bir veri üyesi içeren bir `Customer` sırayla veri üyesi yer alan veri sözleşmesi `Address` değiştirilmesi gereken veri sözleşme. Bu durumda, oluşturmanız gerekecek bir `Address2` veri sözleşmesi gerekli değişiklikleri bir `Customer2` içeren veri sözleşmesi `Address2` veri üyesi ve `PurchaseOrder2` içeren veri sözleşmesi bir `Customer2` veri üyesi. Önceki durumda olduğu gibi hizmet sözleşmesi de sürümlü olması gerekir.  
+ Diğer veri sözleşmeleri tarafından başvurulan veri anlaşmalarında değişiklikler de için hizmet modeli katmanını genişletme unutmayın. Örneğin, önceki senaryoda `PurchaseOrder` veri anlaşması değiştirmeniz gerekmez. Ancak, veri üyesi içerdiği bir `Customer` sırayla veri üyesi bulunan veri anlaşması `Address` değiştirilmesi gereken veri sözleşmesi,. Bu durumda, oluşturmanız gerekecektir bir `Address2` gerekli değişiklikleri ile veri anlaşması bir `Customer2` içeren veri anlaşması `Address2` veri üyesi ve `PurchaseOrder2` içeren veri anlaşması bir `Customer2` veri üyesi. Önceki örnekte olduğu gibi hizmet sözleşmesi de tutulan olması gerekir.  
   
- ("2" ekleyerek) adlarının değiştirilmesi bu örneklerde rağmen yeni ad alanları bir sürüm numarası veya bir tarih ile ekleyerek adları yerine ad alanlarını değiştirmek için önerilir. Örneğin, `http://schemas.contoso.com/2005/05/21/PurchaseOrder` veri sözleşmesi değiştirmek için `http://schemas.contoso.com/2005/10/14/PurchaseOrder` veri sözleşme.  
+ Bu örneklerde ("2" ekleyerek) adları değiştirildi olsa da, yeni ad alanları bir sürüm numarası veya bir tarih ile ekleyerek adları yerine ad alanlarını değiştirmek için kullanılması önerilir. Örneğin, `http://schemas.contoso.com/2005/05/21/PurchaseOrder` veri anlaşması değiştirmek `http://schemas.contoso.com/2005/10/14/PurchaseOrder` veri anlaşması.  
   
- En iyi yöntemleri daha fazla bilgi için bkz: [hizmet sürümü oluşturma](../../../docs/framework/wcf/service-versioning.md).  
+ Daha fazla bilgi için bkz: [Hizmet sürümü oluşturma](../../../docs/framework/wcf/service-versioning.md).  
   
- Bazen, uygulamanız tarafından gönderilen iletiler için kesin şema uyumluluğu güvence altına almalıdır ancak kesinlikle şeması uyumlu olacak şekilde gelen iletileri bağlı olamaz. Bu durumda, gelen iletiyi gereksiz veriler içerebilir tehlike yoktur. Yabancı değerler depolanabilir ve WCF tarafından döndürülen ve böylece gönderilen şema geçersiz iletilerinde sonuçlanır. Bu sorunu önlemek için gidiş özelliği kapatılması. Bunu yapmanın iki yolu vardır.  
+ Bazen, uygulamanız tarafından gönderilen iletiler için katı şema uyumluluğu garanti gerekir ancak kesinlikle şema uyumlu olması için gelen iletiler güvenemezsiniz. Bu durumda, gelen ileti fazlalık veri içerebilir bir olma tehlikesi yoktur. Fazlalık değerler depolanabilir ve WCF tarafından döndürülen ve bu nedenle gönderilen iletileri şema geçersiz olur. Bu sorunu önlemek için gidiş dönüşü özellik kapatılmalıdır. Bunu yapmanın iki yolu vardır.  
   
--   Uygulamayan <xref:System.Runtime.Serialization.IExtensibleDataObject> türlerinizi hiçbirinde arabirimi.  
+-   Uygulamayın <xref:System.Runtime.Serialization.IExtensibleDataObject> tüm türleri arabirimi.  
   
 -   Geçerli bir <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, hizmet sözleşmesi ile <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true`.  
   
- Gidiş hakkında daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Gidiş dönüşü hakkında daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
-## <a name="versioning-when-schema-validation-is-not-required"></a>Şema doğrulama gerekli olmadığında sürüm oluşturma  
- Kesin şema uyumluluk nadiren gereklidir. Birçok platformda şeması tarafından açıklanmayan ekstra öğeler tolerans. Bu izin sürece, özellikleri, tamamını açıklanan [veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) ve [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) kullanılabilir. Aşağıdaki yönergeler tavsiye edilir.  
+## <a name="versioning-when-schema-validation-is-not-required"></a>Şema doğrulaması gerekmediğinde sürüm oluşturma  
+ Katı şema uyumluluk nadiren gereklidir. Birçok platformda bir şema tarafından açıklanmayan ekstra öğeler tolerans. Bu izin sürece, özelliklerin tamamı açıklanan [veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) ve [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) kullanılabilir. Aşağıdaki yönergeler önerilir.  
   
- Bazı kılavuzları tam olarak bir tür yeni sürümleri daha eski bir beklenirken göndermek için izlenmesi gereken veya yeni bir beklenirken eski bir gönderin. Diğer yönergeleri kesinlikle gerekli değildir, ancak şema sürüm gelecekteki tarafından etkilenebilir çünkü burada listelenir.  
+ Bazı yönergeler daha eski beklenirken yeni sürümleri bir türün tam olarak göndermek için izlenmesi gereken veya yeni bir tane beklenirken eski bir gönderin. Diğer yönergeleri kati şekilde gerekli değildir, ancak şema sürümü geleceği tarafından etkilenebilir, çünkü burada listelenir.  
   
-1.  Sürüm veri sözleşmelerine göre tür devralma çalışmayın. Daha yeni sürümlerini oluşturmak için mevcut bir türle veri sözleşme değiştirin veya yeni ilişkisiz türü oluşturun.  
+1.  Sürüm veri sözleşmelerine göre türü devralma çalışmayın. Sonraki sürümler oluşturmak için var olan bir türü veri anlaşması değiştirin veya yeni ilişkisiz türü oluşturun.  
   
-2.  Veri sözleşmeleri birlikte devralma kullanımını, devralma sürüm oluşturma mekanizması olarak kullanılmaz ve belirli kurallar ardından koşuluyla izin verilir. Bazı temel türünden bir türü türetilen varsa, onu farklı bir taban türü gelecek bir sürümünde öğesinden türetilen yapmayın (aynı verilere sahip olmadığı sürece sözleşme). Bu bir istisna vardır: bir veri sözleşmesi türünün temel türü arasındaki hiyerarşi içine bir türü ekleyebilirsiniz, ancak yalnızca veri üyeleriyle içermiyorsa, aynı diğer üyeleri hiyerarşideki diğer türleri olası tüm sürümlerini adları. Genel olarak, veri üyeleri aynı farklı düzeylerde aynı adlarıyla kullanarak Devralma Hiyerarşisi ciddi sürüm sorunlara yol açabilir ve kaçınılmalıdır.  
+2.  Devralma, sürüm oluşturma mekanizması olarak kullanılmaz ve belirli kuralları takip koşuluyla devralma veri sözleşmeleri ile birlikte kullanımı verilmez. Bir tür belirli temel türünden türer ise, gelecek sürümlerinden farklı bir temel tür türetilir yapmayın (aynı verilere sahip olmadığı sürece sözleşme). Bunun tek istisnası vardır: bir veri anlaşması türü kendi temel türü arasındaki hiyerarşi içine bir tür ekleyebilirsiniz, ancak yalnızca veri üyeleri ile içermiyorsa hiyerarşideki diğer türleri olası tüm sürümlerini diğer üyelerin aynı adları. Genel olarak, farklı düzeylerde aynı aynı ada sahip veri üyeleri kullanarak Devralma Hiyerarşisi sürüm ciddi sorunlara yol açabilir ve kaçınılmalıdır.  
   
-3.  İlk veri sözleşmesi sürümü ile başlayarak, her zaman uygulamak <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş etkinleştirmek için. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir türü bir veya daha fazla sürümleri yayımlandı durumunda türü bir sonraki sürümde uygulayın.  
+3.  Bir veri sözleşmesi ilk sürümünden itibaren her zaman uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş dönüşü etkinleştirmek için. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir veya daha fazla sürümleri bir türün yayımlandı, türü bir sonraki sürümünde uygulayın.  
   
-4.  Sonraki sürümlerde, veri sözleşme adı veya ad alanı değiştirmeyin. Adı veya temel veri sözleşmesi türünün ad alanını değiştirme, uygun mekanizmaları gibi kullanarak ad alanı ve veri sözleşmesi adını doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. Adlandırma hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Sonraki sürümlerde, veri anlaşması adına veya ad alanı değiştirmeyin. Adını veya temel alınan veri anlaşması türünün ad alanını değiştirme, ad alanı ve veri anlaşması adına gibi uygun mekanizmaları kullanarak doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. Adlandırma hakkında daha fazla bilgi için bkz. [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  Sonraki sürümlerde, herhangi bir veri üyesi adlarını değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adı korumak için.  
+5.  Sonraki sürümlerde, tüm veri üyelerinin adları değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adına korumak için.  
   
-6.  Sonraki sürümlerde, herhangi bir alan, özelliği veya bu veri üye değişiklikleri için ortaya çıkan veri sözleşmesi şekilde veri üyesi temel olay türünü değiştirmeyin. Arabirim türleri unutmayın eşdeğer <xref:System.Object> , beklenen veri sözleşmesi belirlemek amacıyla.  
+6.  Sonraki sürümlerde, herhangi bir alan, özelliği veya sağlayacak şekilde ilgili veri üye değişiklikleri için ortaya çıkan veri anlaşması veri üyesi temel olay türünü değiştirmeyin. Arabirim türleri etkilenebileceğini eşdeğer <xref:System.Object> beklenen veri anlaşması belirleme amacıyla.  
   
-7.  Sonraki sürümlerde, var olan verileri üyeleri sırasını ayarlayarak değiştirmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliğinin <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  
+7.  Sonraki sürümlerde, mevcut veri üyelerinin sırasını ayarlayarak değiştirmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  
   
-8.  Sonraki sürümlerde, yeni veri üyeleri eklenebilir. Her zaman bu kurallara uygun olmalıdır:  
+8.  Sonraki sürümlerde, yeni veri üyeleri eklenebilir. Bunlar, her zaman bu kuralları izlemelidir:  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerinde `false`.  
+    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerine `false`.  
   
-    2.  Varsayılan değer olarak, `null` veya sıfır üye için kabul edilemez ise, bir geri çağırma yöntemi kullanılarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> makul varsayılan bir durumda gelen akışını üye yok sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Varsayılan değeri, `null` veya üye için sıfır kabul edilemez, bir geri çağırma yöntemi kullanarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> üye gelen akışta mevcut değilse, makul bir varsayılan değer sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüme dayanıklı serileştirme geri çağırmaları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  `Order` Özellikte `DataMemberAttribute` tüm yeni eklenen veri üyelerinin sonra varolan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. İçin önerilen yol bunu yaparsanız, bu şu şekildedir: veri sözleşmesi ilk sürümünde veri üyeleri hiçbiri olmalıdır kendi `Order` özellik kümesi. Tüm veri sözleşmesi 2 sürümünde eklenen veri üyeleri olmalıdır kendi `Order` özelliği 2 olarak ayarlanmış. Sürüm veri sözleşmesi 3 eklenen veri üyelerin tümünü olmalıdır kendi `Order` 3'e ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayısı.  
+    3.  `Order` Özelliği `DataMemberAttribute` tüm yeni eklenen veri üyelerinin sonra var olan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. Bu önerilen yöntem aşağıdaki gibidir: İlk veri sözleşmesi sürümü veri üyeleri hiçbiri olmalıdır, `Order` özellik kümesi. Tüm veri anlaşması 2 sürümünde eklenen veri üyelerinin olması gerekir, `Order` özelliği 2 olarak ayarlayın. Tüm veri anlaşması 3. sürümüne eklenen veri üyelerinin olması gerekir, `Order` 3 olarak ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayı.  
   
-9. Veri üyeleri sonraki sürümlerde kaldırmayın olsa bile <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği, varsayılan özelliğinin sol `false` önceki sürümlerinde.  
+9. Veri üyeleri, sonraki sürümlerde kaldırmayın bile <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği, varsayılan özellik sol `false` önceki sürümlerinde.  
   
-10. Değiştirmeyin `IsRequired` herhangi varolan bir veri üyesi sürümünden sürümüne özelliği.  
+10. Değişmez `IsRequired` tüm var olan sürüm veri üyelerinin sürümünden özelliği.  
   
-11. Gerekli verileri üyeler için (burada `IsRequired` olan `true`), değiştirmeyin `EmitDefaultValue` sürüm sürümünden özelliğine.  
+11. Gerekli veri üyeleri için (burada `IsRequired` olduğu `true`), değiştirmeyin `EmitDefaultValue` sürüm özelliğine sürümü.  
   
-12. Dallı sürüm oluşturma hiyerarşileri oluşturmaya çalışmayın. Diğer bir deyişle, her zaman olmamalıdır bir yolu yalnızca bu yönergeleri tarafından izin verilen değişiklikleri kullanarak başka bir sürüm için herhangi bir sürümünden en az bir yönde.  
+12. Dallı sürüm hiyerarşileri oluşturmaya çalışmayın. Diğer bir deyişle, her zaman olmalıdır bir yolu yalnızca bu yönergeleri tarafından izin verilen değişiklikleri kullanarak başka bir sürüm için herhangi bir sürümünden en az bir yönde.  
   
-     Sürüm 1 bir kişi veri sözleşmesi yalnızca adı veri üyesi içeriyorsa, örneğin, sürüm 2a yalnızca yaş üye ve sürüm 2b ekleme sözleşmesinin oluşturmamalısınız yalnızca adres üye ekleme. 2a gitmeyi 2b yaş kaldırarak ve adres ekleyerek içerir; başka bir yöne giderek kaldırma adresi ve ekleme yaş gerektirdiği. Bu yönergeleri üyeleri kaldırma izin verilmiyor.  
+     Bir kişi veri sözleşmesi sürümü 1 yalnızca adı veri üyesi içeriyorsa, örneğin, yalnızca yaş üye ve sürüm 2b ekleme Sözleşme sürümü 2a oluşturmamalısınız adresi üyesi ekleniyor. 2a gitmeyi 2b yaş kaldırarak ve eklemenin içerir; diğer yönde giderek kaldırma adresi ve ekleme yaş gerektirdiği. Bu yönergelere göre üyeler kaldırılırken izin verilmez.  
   
-13. Genellikle, uygulamanızın yeni sürümde mevcut veri sözleşmesi türlerinin yeni alt oluşturmamalısınız. Benzer şekilde, yerine üyeleri olarak bildirilen veri nesnesi veya arabirim türleri olarak kullanılan yeni veri sözleşmeleri oluşturmamalısınız. Eski uygulamasının tüm örneklerini bilinen türleri listesine yeni türleri ekleyebilirsiniz biliyorsanız, bu yeni sınıflar oluşturma izin verilir. Örneğin, sürümünde uygulamanızı 1 gazete veri türlerinde sözleşme ve kitap türüyle sözleşme LibraryItem veri olabilir. LibraryItem sonra kitap veya gazete içeren bir bilinen türleri listesini gerekir. Alt LibraryItem türünün olan sürüm 2 şimdi dergisi türü eklemek varsayalım. Sürüm 2 ' sürüm 1 dergisi örneği gönderirseniz, dergi veri sözleşmesi bilinen türler listesinde bulunamadı ve bir özel durum.  
+13. Genellikle, uygulamanızın yeni bir sürümünde var olan veri anlaşması türleri yeni subtypes oluşturmamalısınız. Benzer şekilde, veri üyeleri yerine nesnesi veya arabirim türleri olarak kullanılan yeni veri sözleşmeleri oluşturmamalısınız. Yeni türleri, eski uygulamanın tüm örneklerini bilinen türler listesine ekleyebilirsiniz bildiğinizde, bu yeni sınıflar oluşturma izin verilir. Örneğin, sürümünde uygulamanızı 1 LibraryItem veri sözleşme türü Defterinizle ve subtypes sözleşme gazete veri olabilir. LibraryItem ardından kitap ve gazete içeren bilinen türleri listesi gerekir. Bir alt LibraryItem olan sürüm 2 şimdi Magazine türü ekleyin varsayalım. Sürüm 2 ' sürüm 1 Magazine örneği gönderirseniz, dergi veri sözleşme bilinen türleri listesinde bulunamadı ve bir özel durum oluşturulur.  
   
-14. Değil ekleyin veya sürümleri arasında numaralandırma üyeleri kaldırmanız gerekir. Name özelliği üzerinde kullanmadığınız sürece, aynı zamanda numaralandırma üyeleri değiştirmemeniz gerekir `EnumMemberAttribute` adlarını veri sözleşmesi modelinde aynı kalmasını özniteliği.  
+14. Değil ekleyin veya sürümleri arasında numaralandırma üyelerini kaldırmanız gerekir. Name özelliği kullanmıyorsanız, ayrıca numaralandırma üyelerini değiştirmemeniz gerekir `EnumMemberAttribute` adlarını aynı veri anlaşması modelinde tutmak için özniteliği.  
   
-15. Koleksiyonları açıklandığı gibi veri sözleşmesi modelindeki birbirinin yerine [veri sözleşmelerinde koleksiyon türleri](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Bu harika dereceli bir esneklik sağlar. Ancak, farkında olmadan bir olmayan-birbirinin yerine bir koleksiyon türü şekilde sürümden sürüme değiştirmemenizi emin olun. Örneğin, özelleştirilmiş olmayan bir koleksiyondan değiştirmeyin (diğer bir deyişle, olmadan `CollectionDataContractAttribute` özniteliği) özelleştirilmiş bir ya da özelleştirilmiş olmayan bir özelleştirilmiş bir koleksiyona. Ayrıca, özellikleri değiştirmeyin `CollectionDataContractAttribute` sürümü başka bir sürümü. Yalnızca izin verilen değişiklik Name ya da Namespace özelliği temel alınan koleksiyon tür adı veya ad alanı değişti ve verilerini yapmanız ekleme Sözleşme ve ad alanına önceki bir sürümü ile aynı.  
+15. Koleksiyonları açıklanan veri sözleşme modelinde birbirinin yerine [veri anlaşmalarında koleksiyon türleri](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Bu işlem için önemli ölçüde esneklik sağlar. Ancak, yanlışlıkla bir olmayan-birbirinin yerine bir koleksiyon türü şekilde sürümü sürümü değiştirmemenizi emin olun. Örneğin, özelleştirilmiş olmayan bir koleksiyondan değiştirme (olmadan, diğer bir deyişle, `CollectionDataContractAttribute` özniteliği) özelleştirilmiş bir ya da özelleştirilmiş olmayan bir özelleştirilmiş bir koleksiyon. Ayrıca, özelliklerini değiştirmeyin `CollectionDataContractAttribute` sürümü başka bir sürümü. İzin verilen tek değişiklik bir Name ya da Namespace özelliği temel alınan koleksiyon türün adı veya ad alanı değişmişse ve verilerini yapmanız ekliyor ve ad alanına sözleşme önceki bir sürümü ile aynıdır.  
   
- Özel durumlar uyguladığınızda, burada listelenen yönergeleri bazıları güvenle yoksayılabilir. Seri hale getirme, seri durumdan çıkarma ve şema mekanizmaları yönergeleri deviating önce söz konusu tam olarak anladığınızdan emin olun.  
+ Burada listelenen yönergeleri bazı özel durumlar uygulandığında güvenle yoksayılabilir. Seri hale getirme, seri durumundan çıkarma ve şema mekanizmaları ilgili yönergeleri'ndeki deviating önce tam olarak anladığınızdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri Anlaşması Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Veri Anlaşması Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [İleri Uyumlu Veri Anlaşmaları](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Veri Anlaşması Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [İleri Uyumlu Veri Anlaşmaları](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

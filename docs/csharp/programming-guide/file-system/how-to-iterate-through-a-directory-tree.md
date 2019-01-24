@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl Yapılır: -Dizin ağacı ile yineleme C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -Dizin ağacı ile yineleme C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613850"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl Yapılır: Bir dizin ağacı ile yineleme (C# Programlama Kılavuzu)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Bir dizin ağacı ile yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
   
 > [!NOTE]
@@ -57,8 +57,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Sağlam bir dosya yineleme kod dosya sistemi birçok karmaşıklığını dikkate almanız gerekir. Windows dosya sistemi hakkında daha fazla bilgi için bkz. [NTFS genel bakış](/windows-server/storage/file-server/ntfs-overview).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO>  
-- [LINQ ve Dosya Dizinleri](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- <xref:System.IO>
+- [LINQ ve Dosya Dizinleri](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

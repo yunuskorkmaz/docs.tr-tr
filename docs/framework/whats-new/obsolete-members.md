@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635981"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -781,7 +781,7 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Yalnızca sürüm 3.5 geriye dönük uyumluluk için kullanılır.|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>Derleme: Microsoft.VisualBasic.dll içinde  
+### <a name="assembly-microsoftvisualbasicdll"></a>Derleme: Microsoft.VisualBasic.dll  
   
 |Tür|Üye|İleti|  
 |----------|------------|-------------|  
@@ -798,6 +798,6 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|Bu üye kullanımı bir derleyici hatası oluşturur.<br /><br /> Bu yöntemi kullanmayın.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Kayıt defteri anahtarı çalışır yalnızca Win9x, .NET Framework'ün bu sürümü tarafından desteklenmiyor. Kullanım `PerformanceData` kayıt defteri anahtarı yerine. Bu özellik gelecek bir sürümünde Framework kaldırılacak.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)

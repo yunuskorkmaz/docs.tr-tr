@@ -2,12 +2,12 @@
 title: Sorgu ifadesi örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: f3c3d861ab13fe974b1846ae3351cab50000e168
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98acbbc3b2271fac0d44728becdaffd09e5d28b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584720"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Sorgu ifadesi örnekleri (LINQ to DataSet)
 Bu bölümde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standart sorgu işleçleri kullanmak sorgu ifadesi söz dizimi örneklerde programlama. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanarak doldurulur `FillDataSet` yöntemi içinde belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için [standart sorgu işleçlerine genel bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -34,7 +34,7 @@ Bu bölümde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] s
  [Birleşim İşleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.GroupJoin%2A> ve <xref:System.Linq.Enumerable.Join%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Metot Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- [DataSet’e Özgü İşleç Örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Metot Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
+- [DataSet’e Özgü İşleç Örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
+- [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

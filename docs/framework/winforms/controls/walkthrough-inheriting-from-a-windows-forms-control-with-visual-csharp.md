@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma"
+title: "İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 392f0e98c3401ca5ae5e01fefbf35462462b3a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531258"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma #
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma #
 İle [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], güçlü özel denetimler aracılığıyla oluşturabilirsiniz *devralma*. Devralma üzerinden tüm standart Windows Forms denetimleri devralınan işlevlerini korur, ancak özel işlevler de dahil denetimleri oluşturabilirsiniz. Bu izlenecek yolda, adlı basit bir devralınan denetim oluşturacaksınız `ValueButton`. Bu düğme, standart Windows Forms işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı bir özel özellik açığa çıkarır `ButtonValue`.  
   
 > [!NOTE]
@@ -141,8 +141,8 @@ ms.locfileid: "45595730"
   
      '5' sayısal görüntülenen `label1`elde, `ButtonValue` devralınan denetim özelliği için geçirilmiş `label1` aracılığıyla `valueButton1_Click` yöntemi. Bu nedenle, `ValueButton` denetimi, standart Windows Forms düğmesini tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bileşenler ile programlama](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Bileşen yazma izlenecek yolları](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bileşenler ile programlama](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [Bileşen yazma izlenecek yolları](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [İzlenecek yol: Visual C# ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

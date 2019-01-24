@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma'
+title: 'Nasıl yapılır: Temel bir RSS akışı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695575"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma
+# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl yapılır: Temel bir RSS akışı oluşturma
 Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluşturmanıza olanak sağlar. Bu konu, bir RSS dağıtım akışı sunan bir dağıtım hizmetinin nasıl oluşturulduğunu açıklar.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel Sendikasyon hizmeti oluşturmak için  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Geçerli olan tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> özniteliği, HTTP GET isteklerini eşleştirilir. İşlemi farklı bir HTTP yöntemine eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. Daha fazla bilgi için [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Geçerli olan tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> özniteliği, HTTP GET isteklerini eşleştirilir. İşlemi farklı bir HTTP yöntemine eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. Daha fazla bilgi için [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Hizmet sözleşmesini uygulama.  
   
@@ -94,6 +94,6 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki kod derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

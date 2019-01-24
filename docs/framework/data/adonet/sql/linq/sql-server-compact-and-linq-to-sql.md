@@ -2,12 +2,12 @@
 title: SQL Server Compact ve LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: 1229fcb285038875950776a924870c9be6bef13b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4385dc10d36e1f175fa52a8821401b2a9bc9bd31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697276"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact ve LINQ to SQL
 SQL Server Compact ile Visual Studio yüklü varsayılan bir veritabanıdır. Daha fazla bilgi için [PAVE üzerinden kullanarak SQL Server Compact (Visual Studio)](https://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc).  
@@ -42,5 +42,5 @@ SQL Server Compact ile Visual Studio yüklü varsayılan bir veritabanıdır. Da
   
 -   SQL Server Compact, kısmi güven desteklemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

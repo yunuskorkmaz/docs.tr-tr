@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme"
+title: "İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543230"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. Windows Form Tasarımcısı, bunu gerçekleştirmek için çok sayıda düzen araçları sunar. En önemli biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
   
  Dayama çizgileri denetimleri başka denetimler ile hizalamak tam olarak nerede gösterir. Bunlar ayrıca, Windows kullanıcı arabirimi yönergelerine belirtildiği gibi denetimleri arasında kenar boşlukları için önerilen uzaklıkları gösterir. Ayrıntılar için bkz [kullanıcı arabirimi tasarımı ve geliştirme](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -92,7 +92,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 > [!NOTE]
 >  Formun <xref:System.Windows.Forms.Control.Padding%2A> özelliği için 0,0,0,0 ayarlandığında, Windows Form Tasarımcısı gölgeli bir form sağlar <xref:System.Windows.Forms.Control.Padding%2A> 9,9,9,9 değeri. Bu davranışı geçersiz kılmak için 0,0,0,0 dışında bir değere atayın.  
   
-1.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğinin 0. Ayrıntılar için bkz [izlenecek yol: yerleştirme kullanıma Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+1.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğinin 0. Ayrıntılar için bkz [izlenecek yol: Yerleştirme Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
   
 2.  Taşıma <xref:System.Windows.Forms.Button> bir snapline görünene kadar formun sağ kenarının yakınında denetimi. Bu uzaklık artık formun değeriyle verilir <xref:System.Windows.Forms.Control.Padding%2A> özelliği.  
   
@@ -165,7 +165,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>Etiket denetimin metni hizalama  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.TextBox> denetimi **araç kutusu** formunuza. Bıraktığınız zaman <xref:System.Windows.Forms.TextBox> forma denetim, akıllı etiket karakterini tıklayıp seçin **metin ayarlamak için textBox1** seçeneği. Ayrıntılar için bkz [izlenecek yol: gerçekleştirme ortak görevleri kullanarak akıllı etiketler Windows Forms denetimlerinde](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+1.  Sürükleme bir <xref:System.Windows.Forms.TextBox> denetimi **araç kutusu** formunuza. Bıraktığınız zaman <xref:System.Windows.Forms.TextBox> forma denetim, akıllı etiket karakterini tıklayıp seçin **metin ayarlamak için textBox1** seçeneği. Ayrıntılar için bkz [izlenecek yol: Denetimleri form üzerinde Windows akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
 2.  Sürükleme bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** formunuza.  
   
@@ -239,9 +239,9 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
  Kitap Windows kullanıcı arabirimi tasarımı hakkında daha fazla bilgi için bkz. *Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Design.Behavior.SnapLine>
+- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

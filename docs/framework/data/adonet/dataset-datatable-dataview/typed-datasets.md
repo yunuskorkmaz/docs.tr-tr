@@ -2,12 +2,12 @@
 title: Türü belirtilmiş DataSets
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3a61005f0064ec9ba0bbe70b759394d3691018de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680367"
 ---
 # <a name="typed-datasets"></a>Türü belirtilmiş DataSets
 Zayıf yazılmış değişkenlerin yoluyla değerlere geç bağlanan erişime birlikte <xref:System.Data.DataSet> kesin türü belirtilmiş bir benzetme verilerine erişim sağlar. Tablolar ve parçası olan sütunlar **veri kümesi** değişkenleri kesin ve kullanımı kolay adları kullanılarak erişilebilir.  
@@ -23,6 +23,6 @@ Zayıf yazılmış değişkenlerin yoluyla değerlere geç bağlanan erişime bi
  [Türü Belirtilmiş DataSets için Yorum Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Türü kesin belirlenmiş oluşturmak için kullanılan XML Şeması Tanım Dili (XSD) şemaya açıklama açıklar **veri kümesi**vermek için **veri kümesi** öğeleri kolay adlar arka plandaki şema boyutlandırabiliriz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

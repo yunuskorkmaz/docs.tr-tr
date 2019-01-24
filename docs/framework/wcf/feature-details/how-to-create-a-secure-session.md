@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Güvenli oturum oluşturma'
+title: 'Nasıl yapılır: Güvenli oturum oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2e2b34c1d1589f26f3aea80384b5a96f1c64fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544724"
 ---
-# <a name="how-to-create-a-secure-session"></a>Nasıl Yapılır: Güvenli oturum oluşturma
+# <a name="how-to-create-a-secure-session"></a>Nasıl yapılır: Güvenli oturum oluşturma
 Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlama, sistem tarafından sağlanan bağlamalar Windows Communication Foundation (WCF) otomatik olarak ileti güvenliği etkinleştirildiğinde güvenli oturumlar kullanın.  
   
  Varsayılan olarak, güvenli oturumlar dönüştürülmeden bir Web sunucusu sürdürmez. Güvenli bir oturum kurulduktan sonra istemci ve hizmet güvenli bir oturum ile ilişkili anahtar önbelleğe alın. Önbelleğe alınan anahtarı için bir tanımlayıcı mesajları olarak değiştirilir. Web sunucusu dönüştürülmeden, Web sunucusunda önbelleğe alınan anahtar tanımlayıcısı alınamıyor, önbellek Ayrıca, dönüştürülmeden. Bu durumda, bir özel durum geri istemcinin durum oluşturulur. Bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanan güvenli oturumlar dönüştürüldüğü bir Web sunucusu hayatta kalamaz. Durum bilgisi olan SCT güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
@@ -30,9 +30,9 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Hayır|  
     |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Evet|  
     |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Evet|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Evet|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Evet|  
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Hayır|  
-    |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Hayır|  
+    |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Hayır|  
   
      Aşağıdaki kod örneği, adında bir bağlaması belirtmek için yapılandırma kullanır. `wsHttpBinding_Calculator` kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)ileti güvenlik ve güvenli oturumlar.  
   
@@ -83,5 +83,5 @@ Dışında [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/fil
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Bağlamalarına Genel Bakış](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Bağlamalarına Genel Bakış](../../../../docs/framework/wcf/bindings-overview.md)

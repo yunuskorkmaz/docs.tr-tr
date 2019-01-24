@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12b81d02e5db613c96d19a4aa3730b95e3477b7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558624"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirmesi
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Sürüm 2.0 kullanılmaya aracılığıyla erişilebilen bir işlem framework <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri, tamamen tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]de dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -228,6 +228,6 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

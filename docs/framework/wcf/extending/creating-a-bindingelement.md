@@ -2,12 +2,12 @@
 title: BindingElement Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684885"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 Bağlamalar ve bağlama öğeleri (genişletirler <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları kullanarak özel kanallar kanal düzeyi programlama açıklandığı gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, WCF, geliştirme sürecini kanalınızı kullanarak etkinleştirmek için en düşük gereksinim ele alınmaktadır bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve etkinleştirme kullanımdan 4 adımda açıklandığı gibi uygulama için [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  Bir bağlama öğesi için kanalınızı oluşturduktan sonra dönmek [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md) olup, bağlama öğeniz için yapılandırma dosyası desteği eklemek istiyorsanız ve meta veri yayımlama desteği ekleme görmek için konu ve olup olmadığını ve ne kadar bağlama öğesi kullanan kullanıcı tanımlı bir bağlama oluşturun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

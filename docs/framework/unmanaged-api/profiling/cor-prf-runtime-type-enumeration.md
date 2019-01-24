@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6e95bbcca35ad39f30adcf100519748c02838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3a3581d2a9a1cb79f4ffe1d0a37269c18789a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652191"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE Numaralandırması
-Ortak dil çalışma zamanı (CLR) sürümünü gösteren değerler içerir: Masaüstü veya Silverlight kullanılan CoreCLR.  
+Ortak dil çalışma zamanı (CLR) sürümünü gösteren değerleri içerir: Masaüstü veya Silverlight'ta kullanılan CoreCLR.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,18 +41,18 @@ typedef enum
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_DESKTOP_CLR`|CLR Masaüstü sürümü.|  
-|`COR_PRF_CORE_CLR`|Silverlight kullanılan CLR çekirdek sürümü.|  
+|`COR_PRF_CORE_CLR`|Silverlight'ta kullanılan CLR, çekirdek sürümü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

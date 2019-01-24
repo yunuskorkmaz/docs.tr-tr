@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 49da971975deecfde8e299a46dd59d469da63802
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521042"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList Bileşenine Genel Bakış (Windows Forms)
 
@@ -27,7 +27,7 @@ Görüntü listesi olan herhangi bir denetim ile kullanabileceğiniz bir `ImageL
 
 Anahtar özelliği <xref:System.Windows.Forms.ImageList> bileşeni <xref:System.Windows.Forms.ImageList.Images%2A>, içerir ilişkili bir denetim tarafından kullanılacak resim. Tek tek her görüntü dizini değerini veya anahtarıyla tarafından erişilebilir. <xref:System.Windows.Forms.ImageList.ColorDepth%2A> Özelliği ile görüntüleri işlenen renk sayısını belirler. Görüntüleri tümü aynı boyutta belirlediği görüntülenir <xref:System.Windows.Forms.ImageList.ImageSize%2A> özelliği. Daha büyük görüntüleri uyacak şekilde ayarlanacaktır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ImageList>
-- [Nasıl yapılır: Windows Forms ImageList Bileşeni ile Görüntü Ekleme veya Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Nasıl yapılır: Windows Forms ImageList bileşeni ile görüntüleri eklemek veya kaldırmak](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

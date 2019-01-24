@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama'
+title: 'Nasıl yapılır: Geri çağırma işlevlerini uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718682"
 ---
-# <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
-Aşağıdaki yordamı ve örnek platformu kullanılarak yönetilen bir uygulamanın nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilirsiniz. Özellikle, yordam ve örnek kullanım **EnumWindows** işlev adıma windows ve yönetilen geri çağırma işlevi adlandırılmış (bir pencere tanıtıcının değerini yazdırmak için geri çağırma) listesi aracılığıyla.  
+# <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri çağırma işlevlerini uygulama
+Aşağıdaki yordam ve örnek platformunu kullanarak yönetilen bir uygulamada nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilir. Özellikle, yordam ve örnek kullanım **EnumWindows** işlev için windows ve yönetilen bir geri çağırma işlevi (pencere tanıtıcısı değerini yazdırmak için adlandırılmış geri çağırma işlemini) listesinde ilerleyin.  
   
 ### <a name="to-implement-a-callback-function"></a>Bir geri çağırma işlevini uygulamak için  
   
-1.  İmza için bakabilir **EnumWindows** başka bir uygulama ile geçmeden önce işlevi. **EnumWindows** aşağıdaki imzası vardır:  
+1.  İmzası bakın **EnumWindows** başka bir uygulama ile geçmeden önce işlevi. **EnumWindows** şu imzaya sahip:  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     Bu işlev bir geri çağırma gerektiren bir ipucu olan varlığını **lpEnumFunc** bağımsız değişkeni. Yaygın **lp** (uzun işaretçisi) öneki birlikte **Func** bir geri çağırma işlevini gösteren bir işaretçi ele bağımsız değişken adına soneki. Win32 işlevleri ile ilgili belgeler için Microsoft Platformu SDK'sı bakın.  
+     Bu işlev bir geri çağırma gerektiren bir ipucudur varlığını **lpEnumFunc** bağımsız değişken. Yaygın **lp** (uzun işaretçisi) öneki Sunucusu'yla birlikte **Func** soneki adını almak için bir geri arama işlevine bir işaretçi bağımsız değişkenler. Microsoft Platform SDK'sı Win32 işlevlerini ilgili belgeler için bkz.  
   
-2.  Yönetilen geri çağırma işlevi oluşturun. Örnek olarak adlandırılan bir temsilci türü bildirir `CallBack`, iki bağımsız değişkeni alır (**hwnd** ve **lparam**). İlk bağımsız değişkeni bir tanıtıcı penceresine değil; İkinci bağımsız değişkeni uygulama tanımlanır. Bu sürümde, her iki değişken tamsayı olması gerekir.  
+2.  Yönetilen bir geri çağırma işlevi oluşturun. Örnek adlı bir temsilci türü bildirir `CallBack`, iki bağımsız değişken alır (**hwnd** ve **lparam**). İlk bağımsız değişken penceresinde bir işleyicisidir; İkinci bağımsız değişkeni uygulama tarafından tanımlanır. Bu sürümde, her iki değişken tamsayılar olmalıdır.  
   
-     Geri arama işlevleri genellikle başarı ve başarısızlık belirtmek için sıfır belirtmek için sıfır olmayan değerler döndürür. Bu örnek açıkça dönüş değeri olarak ayarlar **true** numaralandırma devam etmek için.  
+     Geri çağırma işlevleri genellikle başarı ve başarısızlık belirtmek için sıfır belirtmek için sıfır olmayan değerler döndürür. Bu örnek açıkça dönüş değeri ayarlar **true** numaralandırma devam etmek için.  
   
-3.  Bir temsilci oluşturun ve bu bağımsız değişken olarak geçirin **EnumWindows** işlevi. Platform çağırma temsilcisi tanıdık geri çağırma biçimine otomatik olarak dönüştürür.  
+3.  Temsilci oluşturmak ve bağımsız değişken olarak geçirin **EnumWindows** işlevi. Platform çağırma temsilci otomatik olarak tanıdık geri çağırma biçimine dönüştürür.  
   
-4.  Geri çağırma işlevi çalışmasını tamamlanmadan önce atık toplayıcı temsilci geri değil emin olun. Parametre olarak bir temsilci geçirmek ya da bir yapı bir alan olarak bulunan bir temsilci geçirmek için çağrı süresi uncollected kalır. Bu nedenle, aşağıdaki numaralandırma örnekte olduğu gibi geri çağırma işlevi çalışmasını çağrı döndürür ve yönetilen çağıran tarafından başka bir eylem gerektiren önce tamamlanır.  
+4.  Geri çağırma işlevi, iş tamamlanmadan önce çöp toplayıcı temsilci kazanmıyor emin olun. Bir temsilci bir parametre olarak geçir veya yapısına bir alan olarak yer alan bir temsilci geçirmek, çağrı süresi boyunca uncollected kalır. Bu nedenle, sabit listesi aşağıdaki örnekte olduğu gibi geri çağırma işlevi işini tamamlayıncaya önce çağrı döndürür ve yönetilen çağıran tarafından başka bir işlem gerektirir.  
   
-     Eğer, ancak geri çağırma işlevi çağrısı döndükten sonra çağrılabilir, yönetilen arayan geri çağırma işlevi tamamlanana kadar temsilci uncollected kaldığından emin olmak için adımlar atmanız gerekir. Çöp toplama önleme hakkında ayrıntılı bilgi için bkz: [birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md) Platform Çağırma ile.  
+     Eğer, ancak geri çağırma işlevi çağrısı döndürdükten sonra çağrılabilir, yönetilen çağırana geri çağırma işlevi bitene kadar temsilci uncollected kalmasını sağlamak için adımları uygulamanız gerekir. Çöp toplama engelleme hakkında ayrıntılı bilgi için bkz: [birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md) Platform Çağırma ile.  
   
 ## <a name="example"></a>Örnek  
   
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Geri Arama İşlevleri](../../../docs/framework/interop/callback-functions.md)  
- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Geri Arama İşlevleri](../../../docs/framework/interop/callback-functions.md)
+- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

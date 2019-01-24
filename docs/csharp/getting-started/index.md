@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: dc5e3c48ef5f8d1aa25cc43cae9e2d7be23503a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542918"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
@@ -64,4 +64,4 @@ Aşağıdaki konular da mevcuttur:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual C# ve Visual Basic kullanarak Visual Studio ile çalışmaya başlama](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual C# ve Visual Basic kullanarak Visual Studio ile çalışmaya başlama](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744199"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA Yapısı
-Kendi sürüm ve alt düzey yerel ayarlar, işlemcileri ve işletim sistemleri için destek dahil olmak üzere başvurulan derleme hakkında bilgiler içerir.  
+Başvurulan derlemenin sürümü ve yerel ayarlar, işlemcileri ve işletim sistemleri için destek düzeyini de dahil olmak üzere, ilgili bilgiler içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,27 +47,27 @@ typedef struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`usMajorVersion`|Başvurulan derlemeyi ana sürüm numarası. Bu değer sıfır olamaz. Varsa, tüm BITS `usMajorVersion` , ana sürüm belirtilmezse ayarlanmıştır.|  
-|`usMinorVersion`|Başvurulan derlemeyi ikincil sürüm numarası. Bu değer sıfır olamaz. Varsa, tüm BITS `usMinorVersion` , alt sürüm belirtilmezse ayarlanmıştır.|  
-|`usBuildNumber`|Başvurulan derlemeyi yapı sayısı. Bu değer sıfır olamaz. Varsa, tüm BITS `usBuildNumber` , yapı numarası belirtilmezse ayarlanmıştır.|  
-|`usRevisionNumber`|Başvurulan derlemeyi düzeltme sayısı. Bu değer sıfır olamaz. Varsa, tüm BITS `usRevisionNumber` , düzeltme numarası belirtilmezse ayarlanmıştır.|  
-|`szLocale`|Başvurulan derleme tarafından desteklenen yerel ayarlar belirtme noktalı virgül ile ayrılmış RFC1766 belirtimine uygun yerel ayar adları listesi. Bir null değer yerel bağımsızlığı gösterir. **Not:** .NET Framework sürüm 1.0 birden fazla yerel ayar belirtemezsiniz.|  
+|`usMajorVersion`|Başvurulan derlemenin sürüm sayısı. Bu değer sıfır olamaz. Tüm bit'leri `usMajorVersion` , ana sürüm belirtilmezse ayarlanmıştır.|  
+|`usMinorVersion`|Başvurulan derlemenin ikincil sürüm sayısı. Bu değer sıfır olamaz. Tüm bit'leri `usMinorVersion` , alt sürüm belirtilmezse ayarlanmıştır.|  
+|`usBuildNumber`|Başvurulan derlemenin derleme sayısı. Bu değer sıfır olamaz. Tüm bit'leri `usBuildNumber` , derleme numarası belirtilmemiş ayarlanmıştır.|  
+|`usRevisionNumber`|Başvurulan derlemenin düzeltme sayısı. Bu değer sıfır olamaz. Tüm bit'leri `usRevisionNumber` , düzeltme numarası belirtilmezse ayarlanmıştır.|  
+|`szLocale`|Yerel ayar adları noktalı virgül, başvurulan derleme tarafından desteklenen yerel ayarlar belirterek ayırarak RFC1766 belirtimine uyan bir listesi. Null değeri, yerel ayar bağımsızlığı gösterir. **Not:**  .NET Framework sürüm 1.0 birden fazla yerel ayar belirtilemez.|  
 |`cbLocale`|Geniş karakter cinsinden boyutu `szLocale`.|  
-|`rdwProcessor`|Winnt.h içinde başvurulan derleme tarafından desteklenen İşlemci türleri için tanımlanan tanımlayıcıları dizisi. NULL değeri işlemci bağımsızlığı gösterir.|  
-|`ulProcessor`|Uzunluğu `rdwProcessor` dizi.|  
-|`rOS`|Bir dizi [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) başvurulan derleme tarafından desteklenen işletim sistemleri belirtme örnekleri. NULL değeri, işletim sistemi bağımsızlığı gösterir.|  
-|`ulOS`|Uzunluğu `rOS` dizi.|  
+|`rdwProcessor`|Tanımlayıcılar, Winnt.h başvurulan derleme tarafından desteklenmeyen İşlemci türleri için tanımlanan bir dizi. NULL değeri işlemci bağımsızlığı gösterir.|  
+|`ulProcessor`|Uzunluğunu `rdwProcessor` dizisi.|  
+|`rOS`|Bir dizi [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) başvurulan derleme tarafından desteklenen işletim sistemlerini belirten örneği. NULL değeri, işletim sistemi bağımsızlığı gösterir.|  
+|`ulOS`|Uzunluğunu `rOS` dizisi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [OSINFO Yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [OSINFO Yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

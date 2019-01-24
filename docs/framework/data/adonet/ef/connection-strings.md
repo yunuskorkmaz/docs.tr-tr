@@ -2,17 +2,17 @@
 title: Bağlantı dizeleri ADO.NET varlık çerçevesi
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497465"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Bağlantı dizeleri ADO.NET varlık çerçevesi
 Bir bağlantı dizesi, bir veri kaynağı için veri sağlayıcısı'ndan bir parametre olarak geçen başlatma bilgileri içerir. Veri sağlayıcısında söz dizimi bağlıdır ve bağlantı dizesini bağlantı denemesi sırasında ayrıştırılır. Entity Framework tarafından kullanılan bağlantı dizeleri, Entity Framework'ü destekleyen temel alınan ADO.NET veri sağlayıcısına bağlanmak için kullanılan bilgileri içerir. Ayrıca gerekli model ve eşleme dosyaları hakkındaki bilgileri içerirler.  
   
- Bağlantı dizesi model ve eşleme meta veri erişirken EntityClient sağlayıcı tarafından kullanılır ve veri kaynağına bağlanma. Bağlantı dizesi erişilen veya aracılığıyla ayarlanan <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfı, program aracılığıyla oluşturmak veya bağlantı dizesindeki parametreleri erişmek için kullanılabilir. Daha fazla bilgi için [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ Bağlantı dizesi model ve eşleme meta veri erişirken EntityClient sağlayıcı tarafından kullanılır ve veri kaynağına bağlanma. Bağlantı dizesi erişilen veya aracılığıyla ayarlanan <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfı, program aracılığıyla oluşturmak veya bağlantı dizesindeki parametreleri erişmek için kullanılabilir. Daha fazla bilgi için [nasıl yapılır: Bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  [Varlık veri modeli Araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bir bağlantı dizesi oluşturur. <xref:System.Data.Objects.ObjectContext> Bu bağlantı bilgisini nesne sorgularını oluşturulurken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için [bağlantılarını yönetme ve işlemleri](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Seçenek|Açıklama|  
 |-|-|  
-|`assemblyFullName`|Katıştırılmış kaynak ile bir bütünleştirilmiş kodun tam adı. Adı basit bir ad, sürüm adı, desteklenen bir kültür ve ortak anahtarı içerir. Bunlar:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Kaynakları, uygulama tarafından erişilebilen herhangi bir derleme eklenebilir.<br /><br /> Joker karakter belirtirseniz (\*) için `assemblyFullName`, Entity Framework çalışma zamanı kaynakları aşağıdaki konumlarda şu sırayla arar:<br /><br /> 1.  Çağrıyı yapan derlemeyi.<br />2.  Başvurulan bütünleştirilmiş kodları.<br />3.  Bir uygulamanın depo dizini içindeki derlemeler.<br /><br /> Dosyaların bu konumlardan birinde değilseniz, bir özel durum oluşturulur. **Not:** Entity Framework joker karakter (*) kullandığınızda, kaynakların doğru ada sahip tüm derlemeleri göz gerekir. Performansı artırmak için joker karakter yerine derleme adı belirtin.|  
+|`assemblyFullName`|Katıştırılmış kaynak ile bir bütünleştirilmiş kodun tam adı. Adı basit bir ad, sürüm adı, desteklenen bir kültür ve ortak anahtarı içerir. Bunlar:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Kaynakları, uygulama tarafından erişilebilen herhangi bir derleme eklenebilir.<br /><br /> Joker karakter belirtirseniz (\*) için `assemblyFullName`, Entity Framework çalışma zamanı kaynakları aşağıdaki konumlarda şu sırayla arar:<br /><br /> 1.  Çağrıyı yapan derlemeyi.<br />2.  Başvurulan bütünleştirilmiş kodları.<br />3.  Bir uygulamanın depo dizini içindeki derlemeler.<br /><br /> Dosyaların bu konumlardan birinde değilseniz, bir özel durum oluşturulur. **Not:**  Joker karakter (*) kullandığınızda, Entity Framework kaynakları doğru ada sahip tüm derlemelerde göz gerekir. Performansı artırmak için joker karakter yerine derleme adı belirtin.|  
 |`resourceName`|AdvendtureWorksModel.csdl gibi birlikte kaynağın adı. Meta Veri Hizmetleri dosyaları veya aşağıdaki uzantılara sahip kaynaklar için yalnızca görünür: .csdl, .ssdl veya .msl. Varsa `resourceName` belirtilmezse, tüm meta veri kaynakları yüklenemedi. Kaynaklar derleme içinde benzersiz adlara sahip olmalıdır. Aynı ada sahip birden çok dosyayı derleme farklı dizinlerde tanımlanmışsa `resourceName` klasör yapısını kaynak, örneğin FolderName.FileName.csdl adından önce içermelidir.<br /><br /> `resourceName` joker karakter (*) belirttiğinizde için gerekli değildir `assemblyFullName`.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  Çözümlenmesi `DataDirectory` değiştirme dizesi ve ~ yinelemesiz işlecidir. Örneğin, `DataDirectory` içerir `~` karakter, bir özel durum oluşur. Bu, sonsuz özyineleme durumuna yol engeller.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Bağlantılarını yönetme ve işlemler](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Bağlantılarını yönetme ve işlemler](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)

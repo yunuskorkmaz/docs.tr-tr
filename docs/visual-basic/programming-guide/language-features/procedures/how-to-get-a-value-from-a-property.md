@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)'
+title: 'Nasıl yapılır: Değer bir özelliği (Visual Basic) alma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -8,44 +8,44 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 9f97669e8d18e7fc633cb0e691d973a611a8cea0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543376"
 ---
-# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)
-Bir ifadeyi özellik adı dahil olmak üzere bir özelliğin değerini alır.  
+# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Değer bir özelliği (Visual Basic) alma
+Bir özelliğin değeri, özellik adı bir ifade dahil ederek alın.  
   
- Özelliğin `Get` yordamı değeri alır, ancak siz açıkça, ada göre çağırmayın. Bir değişken kullandığınız özelliğini kullanın. Visual Basic özelliğin yordamları çağrılar.  
+ Özelliğin `Get` yordamı değeri alır, ancak siz açıkça bu ada göre çağırmayın. Bir değişken kullanma gibi özelliğini kullanın. Visual Basic özelliğin yordamları çağrılar yapar.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Bir özellikten değer almak için  
   
-1.  Özellik adı bir ifade bir değişken adı kullanacağınız aynı şekilde kullanın. Bir özellik kullanabileceğiniz bir değişken veya sabit herhangi bir yerde kullanabilirsiniz.  
+1.  Özellik adı bir ifade bir değişken adı kullanacağınız aynı şekilde kullanın. Bir özellik kullanabileceğiniz bir değişken veya sabit her yerde kullanabilirsiniz.  
   
      -veya-  
   
-     Eşittir aşağıdaki özellik adı kullanın (`=`) bir atama deyiminde oturum açın.  
+     Eşit aşağıdaki özellik adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
-     Aşağıdaki örnek Visual Basic değerini okur `Now` örtük olarak arama özelliği, kendi `Get` yordamı.  
+     Aşağıdaki örnek, Visual Basic değerini okur `Now` örtük olarak arama özelliğini kendi `Get` yordamı.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
-2.  Özellik bağımsız değişken alıyorsa, özellik adı bağımsız değişken listesi kapsamak için parantez ile izleyin. Bağımsız değişkenler varsa, isteğe bağlı olarak parantez atlayabilirsiniz.  
+2.  Özellik bağımsız değişkeni alır, parantez içine bağımsız değişken listesi için özellik adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.  
   
-3.  Bağımsız değişkenler, virgülle ayrılmış parantez içinde bağımsız değişken listesinde yerleştirin. Bağımsız değişkenler özelliği ilgili parametreleri tanımlar aynı sırada sağladığınız emin olun.  
+3.  Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler özelliği karşılık gelen parametreleri tanımlar aynı sırada sağladığınız emin olun.  
   
- İfade bir değişken olarak yalnızca özelliğin değerini katıldığı sabiti misiniz veya değişkenin veya özelliğin Atama ifadesinin sol tarafında depolanır.  
+ İfade bir değişken gibi bir özelliğin değerini katıldığı sabiti misiniz veya değişken veya özellik atama ifadesi sol tarafında depolanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamlar](./index.md)  
- [Özellik Yordamları](./property-procedures.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Visual Basic'de özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)  
- [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
- [Nasıl yapılır: bildirme ve Visual Basic'te varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)  
- [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yordamlar](./index.md)
+- [Özellik Yordamları](./property-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Nasıl yapılır: Özellik oluşturma](./how-to-create-a-property.md)
+- [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Nasıl yapılır: Bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)
+- [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme'
+title: 'Nasıl yapılır: Erişim WSE 3.0 hizmetine bir WCF istemcisi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9824d4fdb7ffe78da8a8abaf3bac53d5c2e7ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580154"
 ---
-# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme
+# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Nasıl yapılır: Erişim WSE 3.0 hizmetine bir WCF istemcisi
 WCF istemcileri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak için yapılandırıldığı zaman Windows Communication Foundation (WCF) istemcileri hat düzeyinde Web Services Enhancements (WSE) 3.0 ile Microsoft .NET hizmetleri için uyumludur. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) bir WCF istemcisi sınıfı oluşturmak için güvenlik ayarları uygulanmaz oluşturulan WCF istemcisi. Bu nedenle, güvenlik ayarlarını belirtmelisiniz WCF istemcisini oluşturulduktan sonra WSE 3.0 hizmet gerektirir.  
   
  WSE 3.0 hizmetin gereksinimlerini ve bir WCF istemcisi ile WSE 3.0 hizmet arasındaki birlikte çalışabilen gereksinimlerini dikkate almanız için özel bir bağlama kullanarak bu güvenlik ayarları uygulayabilirsiniz. Bu bir birlikte çalışabilirlik gereksinimleri Ağustos 2004 yukarıda sözü edilen kullanımını içerir ve WS-Addressing belirtim 3.0default WSE iletisi koruma <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. WCF için varsayılan ileti korumadır <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu konuda, birlikte çalışan bir WCF bağlama ile WSE 3.0 hizmet oluşturma işlemi açıklanmaktadır. WCF de bu bağlamayı içeren bir örnek sağlar. Bu örnek hakkında daha fazla bilgi için bkz: [ASMX Web Hizmetleri ile birlikte çalışma](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
@@ -23,7 +23,7 @@ WCF istemcileri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak iç
   
      WSE 3.0 Web hizmeti, bir WCF istemcisi oluşturulur. WSE 3.0 MEX Protokolü desteklemediğinden, Web hizmeti için güvenlik gereksinimlerini almak için Aracı'nı kullanamazsınız. Uygulama geliştiricisi, istemci güvenlik ayarlarını eklemeniz gerekir.  
   
-     Bir WCF istemcisi oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: istemci oluşturma](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Bir WCF istemcisi oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir istemci oluşturmanız](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  WSE 3.0 Web Hizmetleri ile iletişim kurabilen bir bağlama temsil eden bir sınıf oluşturun.  
   
@@ -62,6 +62,6 @@ WCF istemcileri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak iç
   
   
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.Binding>  
- [WSE ile birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.Binding>
+- [WSE ile birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

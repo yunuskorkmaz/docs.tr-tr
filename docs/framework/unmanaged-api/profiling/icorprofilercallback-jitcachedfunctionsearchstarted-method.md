@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9036746fcf0150875ab534fdb774ed3633cf96ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698364"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted Yöntemi
-Profil Oluşturucu, arama yerel Görüntü Oluşturucu (NGen.exe) kullanarak önceden derlenen bir işlev için başlatıldı bildirir.  
+Profil Oluşturucu, arama Native Image Generator (NGen.exe) kullanarak önceden derlenen bir işlev için başlatıldığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,28 +37,28 @@ HRESULT JITCachedFunctionSearchStarted(
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Arama gerçekleştirildiği işlevi kimliği.  
+ [in] Aramanın gerçekleştirildiği işlevi kimliği.  
   
  `pbUseCachedFunction`  
- [out] `true` yürütme altyapısı, (varsa) bir işlev önbelleğe alınmış sürümünü kullanmanız gerekir, aksi takdirde `false`. Değer ise `false`, yürütme altyapısı JIT derlerken JIT derlenmiş olmayan bir sürüm kullanmak yerine işlevi.  
+ [out] `true` yürütme altyapısı, (varsa) bir işlev önbelleğe alınmış sürümünü kullanmanız gerekir, aksi takdirde `false`. Değer ise `false`, JIT olarak derlenmiş değil bir sürümünü kullanmak yerine, işlevi yürütme altyapısı JIT derlenir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 2.0, `JITCachedFunctionSearchStarted` ve [Icorprofilercallback::jıtcachedfunctionsearchfinished yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) geri aramalar değil oluşturulacak normal NGen görüntüleri uygulamasında tüm işlevleri için. Yalnızca bir profil için en iyi duruma getirilmiş NGen görüntüleri tüm işlevleri için geri çağırmaları görüntüde oluşturur. Yalnızca bir işlevin derlenmiş tam zamanında (JIT) olmasını zorlamak için bu geri aramalar kullanmaya çalışırsa, ancak ek yükü nedeniyle, bir profil oluşturucu profil oluşturucu en iyileştirilmiş NGen görseller istemeniz gerekir. Aksi takdirde, profil oluşturucu işlevi bilgilerini toplamak için yavaş bir strateji kullanmanız gerekir.  
+ .NET Framework sürüm 2.0 `JITCachedFunctionSearchStarted` ve [Icorprofilercallback::jıtcachedfunctionsearchfinished yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) geri çağırmaları değil oluşturulacak normal NGen görüntülerinin tüm işlevler için. Bir profil için en iyi duruma getirilmiş NGen görüntülerinin geri çağırmaları tüm işlevler görüntüde oluşturur. Ancak, yalnızca derlenmiş just-in-time (JIT) gereken işlevi zorlamak için bu geri aramalarda kullanmaya çalışırsa, ek yükü nedeniyle, bir profil oluşturucu profil oluşturucu için iyileştirilmiş NGen görüntülerinin istemelidir. Aksi takdirde, profil oluşturucu işlevi bilgileri toplamak için yavaş bir strateji kullanmalıdır.  
   
- Profil oluşturucular burada profili uygulamasının birden çok iş parçacığı aynı yöntemi aynı anda aramakta olduğunuz durumlarda desteklemesi gerekir. Örneğin, iş parçacığı A çağırır `JITCachedFunctionSearchStarted` ve profil oluşturucu ayarlayarak yanıt verdiğini *pbUseCachedFunction*JIT derleme zorlamak için false. Sonra A çağıran iş parçacığı [Icorprofilercallback::jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) ve [Icorprofilercallback::jıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ Profil Oluşturucular, burada, profili oluşturulmuş bir uygulama birden çok iş parçacığı aynı yöntemi aynı anda aradığınız çalışmaları desteklemesi gerekir. Örneğin, bir iş parçacığı çağrı `JITCachedFunctionSearchStarted` ve profil oluşturucu ayarlayarak yanıt *pbUseCachedFunction*JIT derlemesi zorlamak için false. Bir daha sonra çağıran iş parçacığı [Icorprofilercallback::jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) ve [Icorprofilercallback::jıtcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- Şimdi B çağrıları iş parçacığı `JITCachedFunctionSearchStarted` aynı işlevi için. Profil Oluşturucu Niyet JIT derleme işlevi için belirtilen olsa bile, iş parçacığı A'ın çağrısı için profil oluşturucu yanıtladı önce iş parçacığı B geri gönderdiği için profil oluşturucu ikinci geri çağırma alır `JITCachedFunctionSearchStarted`. İş parçacıklarını nasıl zamanlanmış iş parçacıklarının çağrıları yapma sırası bağlıdır.  
+ Artık B çağrılar iş parçacığı `JITCachedFunctionSearchStarted` aynı işlevi. Profil Oluşturucu Niyet JIT derleme işlevi için belirtilen olsa da, profil oluşturucu için iş parçacığı A çağrısına yanıtladı önce geri çağırma iş parçacığı B gönderdiği için profil oluşturucu ikinci geri çağırma alır `JITCachedFunctionSearchStarted`. İş parçacıklarını nasıl zamanlanmış iş parçacıklarını çağrı nasıl siparişe bağlıdır.  
   
- Profil Oluşturucu yinelenen geri aramalar aldığında, tarafından başvurulan değer ayarlamalısınız `pbUseCachedFunction` tüm yinelenen geri aramalar için aynı değeri için. Diğer bir deyişle, ne zaman `JITCachedFunctionSearchStarted` birden çok kez aynı adlı `functionId` değeri, profil oluşturucu her zaman aynı yanıtlaması gerekir.  
+ Profil oluşturucuyu yinelenen geri çağırmaları aldığında tarafından başvurulan değer ayarlamalısınız `pbUseCachedFunction` için yinelenen tüm geri çağırmalar için aynı değeri. Diğer bir deyişle, `JITCachedFunctionSearchStarted` birden çok kez aynı adlı `functionId` değeri, profil oluşturucu her zaman aynı yanıt vermelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

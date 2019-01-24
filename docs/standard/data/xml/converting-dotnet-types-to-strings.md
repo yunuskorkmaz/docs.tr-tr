@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59e288a756a022763bae2235964a8b25a9d72bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 98ebc9248b0585295adf12e04dece0fef654c2e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583135"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>.NET Framework türlerini dizelere dönüştürme
 .NET Framework türü bir dizeye dönüştürmek istiyorsanız kullanmanız **ToString** yöntemi. **ToString** yöntemi geçirilen tür dize gösterimini döndürür. Aşağıdaki tablo XML Şeması (XSD) belirtimlerine eşleyen biçiminde bir dize döndürecek .NET Framework türleri listeler.  
@@ -27,5 +27,5 @@ ms.locfileid: "48835871"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [.NET Framework Veri Türleri için Dizeleri Dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

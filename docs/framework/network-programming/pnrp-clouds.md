@@ -2,12 +2,12 @@
 title: PNRP Bulutları
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 22401459a183d8d21e37211d942b24dbc76a6f94
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742204"
 ---
 # <a name="pnrp-clouds"></a>PNRP Bulutları
 Bir PNRP "bulut" ağ üzerinden birbiriyle iletişim kurabilir düğümleri kümesini temsil eder. "Bulut" terimi, "eş kafes" ve "eşler arası grafik" ile eşanlamlıdır.  
@@ -31,6 +31,6 @@ Bir PNRP "bulut" ağ üzerinden birbiriyle iletişim kurabilir düğümleri küm
   
  Bir bulut örneği oluşturulduğunda veya elde sonra eş adları bilinen eş ağ oluşturmak için kaydedilebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.PeerToPeer.Cloud>  
- [Eş Adı Çözümleme Protokolü](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.PeerToPeer.Cloud>
+- [Eş Adı Çözümleme Protokolü](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

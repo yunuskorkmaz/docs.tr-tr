@@ -2,12 +2,12 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: 19a04b6432f1ecc38a3b906b7e677175863134db
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 76e28b18cd595a4a18f573dfe9539b646196c944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720349"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 ServiceMetadataBehavior  
@@ -45,21 +45,21 @@ class ServiceMetadataBehavior : Behavior
   
  Hizmet tarafından denetlenen adresten WSDL yayınlamayacağını denetleyen `HttpGetUrl` özniteliği.  
   
-### <a name="httpgeturl"></a>httpGetUrl  
+### <a name="httpgeturl"></a>HttpGetUrl  
  Veri türü: dize  
   
  Erişim türü: salt okunur  
   
  WSDL hizmet HTTP kullanılarak alınması için yayımlanan konumunu ayarlar.  
   
-### <a name="httpsgetenabled"></a>De  
+### <a name="httpsgetenabled"></a>HttpsGetEnabled  
  Veri türü: Boole  
   
  Erişim türü: salt okunur  
   
  Hizmet, WSDL HTTPS üzerinden denetlediği adresten yayınlamayacağını denetleyen `HttpsGetUrl` özniteliği.  
   
-### <a name="httpsgeturl"></a>httpsGetUrl  
+### <a name="httpsgeturl"></a>HttpsGetUrl  
  Veri türü: dize  
   
  Erişim türü: salt okunur  
@@ -72,5 +72,5 @@ class ServiceMetadataBehavior : Behavior
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>

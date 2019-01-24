@@ -2,12 +2,12 @@
 title: WCF Hizmet Konağı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505646"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe),
 >  WCF hizmet konağı, kısmi güven desteklemez. Bir WCF hizmetini kısmi güven kullanmak istiyorsanız, WCF hizmet kitaplığı proje şablonu Visual Studio'da hizmetinizi oluşturmak için kullanmayın. Bunun yerine, WCF kısmi güven, desteklenen bir Web sunucusu hizmeti barındıran WCF Hizmeti Web sitesi şablonunu seçerek Visual Studio'da yeni bir Web sitesi oluşturun.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF hizmet konağı tarafından barındırılan proje türleri  
- WCF hizmet konağı, WCF hizmet kitaplığı projesi türleri barındırabilir: WCF hizmet kitaplığı, sıralı iş akışı hizmet kitaplığı, Durum makinesi iş akışı hizmet kitaplığı ve dağıtım hizmeti kitaplığı. WCF hizmet konağı bir hizmet kitaplığı kullanarak proje eklenebilmesi için bu hizmetleri de barındırabilir **Öğe Ekle** işlevselliği. Bu, WCF hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmeti, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmeti içerir.  
+ WCF hizmet konağı WCF hizmet kitaplığı projesi türleri barındırabilirsiniz: WCF hizmet kitaplığı, sıralı iş akışı hizmet kitaplığı, Durum makinesi iş akışı hizmet kitaplığı ve dağıtım hizmeti kitaplığı. WCF hizmet konağı bir hizmet kitaplığı kullanarak proje eklenebilmesi için bu hizmetleri de barındırabilir **Öğe Ekle** işlevselliği. Bu, WCF hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmeti, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmeti içerir.  
   
  Size, ancak araç, bir konak yapılandırmanıza yardımcı olmayacağı dikkat etmelisiniz. Bu görev için App.config dosyasına el ile düzenlemeniz gerekir. Araç ayrıca kullanıcı tanımlı yapılandırma dosyalarını doğrulamaz.  
   
@@ -72,19 +72,19 @@ Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe),
   
  **WCF hizmet konağı** ana penceresi iki menüleri içerir:  
   
--   **Dosya**: içeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır, ancak barındırılan hizmetler devam. Tıkladığınızda **çıkış**, WCF hizmet konağı aynı zamanda kapatılır. Bu, tüm barındırılan hizmetlerin de durdurulur.  
+-   **Dosya**: İçeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır, ancak barındırılan hizmetler devam. Tıkladığınızda **çıkış**, WCF hizmet konağı aynı zamanda kapatılır. Bu, tüm barındırılan hizmetlerin de durdurulur.  
   
--   **Yardım**: içeren **hakkında** sürüm bilgisi içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
+-   **Yardım**: İçeren **hakkında** sürüm bilgisi içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
   
  Ana **WCF hizmet konağı** penceresi iki alanları içerir:  
   
 -   İlk alan **hizmet**. Tüm hizmetlerin temel bilgileri görüntüleyen bir listesini içerir. Bilgileri içerir:  
   
-    -   **Hizmet**: tüm hizmetler listelenir.  
+    -   **Hizmet**: Tüm hizmetler listelenir.  
   
     -   **Durum**: Hizmet durumunu listeler. Geçerli değerler şunlardır: "Başlatıldı", "Stopped" ve "Error".  
   
-    -   **Meta veri adresi**: Hizmetleri meta veri adresini görüntüler.  
+    -   **Meta veri adresi**: Meta veri adresi hizmetleri görüntüler.  
   
 -   İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunu ayrıntılı bir açıklama görüntüler **hizmet** alan. Durum hatası ise, ekrandaki tüm hata iletilerini görüntüleyebilirsiniz.  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Netsh.exe hakkında daha fazla bilgi için bkz. "[Netsh.exe aracı ve komut satırı anahtarları nasıl kullanılacağını](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -7,34 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 20f36a06000d0197ad80b83766f6612a474d5758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e303a9ac6529fbbc818c94497a16463897fb0c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496133"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>Tür &#39; &lt;typename&gt; &#39; tanımlı değil
-Deyim tanımlanmamış bir tür referansı yaptı. Bir bildirim deyiminde gibi bir tür tanımlayabilirsiniz `Enum`, `Structure`, `Class`, veya `Interface`.  
+İfade tanımlanmadı bir türe başvuru yaptı. Bir bildirim deyiminde gibi bir tür tanımlayabilirsiniz `Enum`, `Structure`, `Class`, veya `Interface`.  
   
  **Hata Kimliği:** BC30002  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tür tanımı ve kendi başvuru her ikisi de aynı yazım kullandığınızdan emin olun.  
+-   Tür tanımını ve onun başvurusu aynı yazım kullandığınızdan emin olun.  
   
--   Tür tanımı referansı erişilebilir olduğundan emin olun. Örneğin, türü başka bir modülde ise ve bildirilmiş `Private`, tür tanımı için başvuru modülü taşımak veya bildirirken `Public`.  
+-   Tür tanımını başvuru erişilebilir olduğundan emin olun. Örneğin, tür başka bir modül ve bildirilmiş `Private`, tür tanımını başvuran modülüne taşıyın veya bildirirken `Public`.  
   
--   Türünün ad alanını, projeyi yeniden değil emin olun. Gerekiyorsa, kullanın `Global` tür adı tam olarak nitelemek için anahtar sözcüğü. Örneğin, bir proje adlı bir ad alanını tanımlayan `System`, <xref:System.Object?displayProperty=nameWithType> türü ile tam olmadığı sürece erişilemiyor `Global` anahtar sözcüğü: `Global.System.Object`.  
+-   Türün ad alanı içinde projenizi yeniden değil emin olun. İse, kullanın `Global` tür adı tam olarak nitelemek için anahtar sözcüğü. Örneğin, bir proje adındaki bir ad tanımlar `System`, <xref:System.Object?displayProperty=nameWithType> türü ile tam olmadığı sürece erişilemez `Global` anahtar sözcüğü: `Global.System.Object`.  
   
--   Tür tanımlandı, ancak nesne kitaplığı ya da tanımlanmış tür kitaplığı Visual Basic, tıklatın kaydedilmemiş **Başvuru Ekle** üzerinde **proje** menüsüne ve ardından uygun nesnesi kitaplığı veya tür kitaplığı.  
+-   Türü tanımlandı, ancak nesne kitaplığı veya tür kitaplığı içinde tanımlanmış olduğu Visual Basic, tıklama kayıtlı değil **Başvuru Ekle** üzerinde **proje** menüsüne ve ardından uygun nesne kitaplık veya tür kitaplığı.  
   
--   Türü hedef .NET Framework profilinin parçası olan bir derlemede olduğundan emin olun. Daha fazla bilgi için bkz: [.NET Framework hedefleme hataları giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
+-   Türü hedeflenen .NET Framework profilinin bir parçası olan bir derlemede olduğundan emin olun. Daha fazla bilgi için [.NET Framework hedefleme hataları giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)

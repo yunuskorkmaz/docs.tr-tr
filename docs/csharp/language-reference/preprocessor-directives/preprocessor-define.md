@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 7be2a2d00e96b4b734e1a68f6dc63180bcbe5e82
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3b543181e3d836226759e77f0d56ed3c3e57e7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696210"
 ---
 # <a name="define-c-reference"></a>#define (C# Başvurusu)
 Kullandığınız `#define` simge tanımlamak için. Geçirilen ifade olarak sembol kullanırken [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi, ifade için değerlendirilecek olan `true`aşağıdaki örnekte gösterildiği gibi:  
@@ -64,12 +64,12 @@ public class TestDefine
   
  Bir sembolün tanımını kaldırmaya ilişkin bir örnek için bkz. [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
-- [const](../../../csharp/language-reference/keywords/const.md)  
-- [Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [const](../../../csharp/language-reference/keywords/const.md)
+- [Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

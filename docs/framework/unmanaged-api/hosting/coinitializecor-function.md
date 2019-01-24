@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91315e8af0cc46a3450a7515b885988cffe34927
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 438f2f58a4ce61d1757238fc46674611e4d677dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508541"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor İşlevi
-`CoInitializeCor` Kullanımdan kalktı.  
+`CoInitializeCor` artık kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,10 +35,10 @@ STDAPI CoInitializeCor (
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı başlatmak için kullanın ya da [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
+ Ortak dil çalışma zamanı'nı başlatmak için ya da kullanmak [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

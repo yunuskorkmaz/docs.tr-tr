@@ -2,12 +2,12 @@
 title: Programlama modeli öğe ağacı
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f6f625ae7cd5251f7d7935d018142b32ea71b13f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fe2076740331df861d1861b0cecef43cf96039b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694158"
 ---
 # <a name="programming-model-item-tree"></a>Programlama modeli öğe ağacı
 Bu örnek nasıl gidileceğini gösteren <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) ağaç görünümünden bildirim temelli veriler bağlama kullanarak ağaç.
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2.  Çözüm seçerek yapı **Çözümü Derle** gelen **derleme** menüsü.
 
-3.  Uygulamayı çalıştırmak için F5 tuşuna basın. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Formu görüntülenir.
+3.  Uygulamayı çalıştırmak için F5'e basın. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Formu görüntülenir.
 
 4.  Tıklayın **yük WF** yüklemek için düğmeye <xref:System.Activities.Presentation.Model.ModelItem> ve ağaç görünümüne bağlayın.
 
@@ -48,5 +48,5 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Data.IValueConverter>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Data.IValueConverter>

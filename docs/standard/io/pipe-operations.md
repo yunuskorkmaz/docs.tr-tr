@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 919d4606e4ba72f07ba382244f8508975beffec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741269"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework'te Kanal İşlemleri
 Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür vardır:  
@@ -26,7 +26,7 @@ Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür va
   
      .NET Framework anonim kanalları kullanarak uygulamanız <xref:System.IO.Pipes.AnonymousPipeServerStream> ve <xref:System.IO.Pipes.AnonymousPipeClientStream> sınıfları.  
   
-     Bkz: [nasıl yapılır: yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     Bkz: [nasıl yapılır: Yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 -   Adlandırılmış Kanallar.  
   
@@ -34,10 +34,10 @@ Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür va
   
      .NET Framework'teki adlandırılmış kanallar kullanarak uygulamanız <xref:System.IO.Pipes.NamedPipeServerStream> ve <xref:System.IO.Pipes.NamedPipeClientStream> sınıfları.  
   
-     Bkz: [nasıl yapılır: ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     Bkz: [nasıl yapılır: Ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
-- [Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
-- [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+- [Nasıl yapılır: Yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [Nasıl yapılır: Ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

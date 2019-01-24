@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 86a51605ad8ea8b394c5b8a5961f32e96baf9e58
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542606"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request yöntemi
 
@@ -54,7 +54,7 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 **Kitaplığı:** Hiçbiri  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [DacpGetModuleAddress arabirimi](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)

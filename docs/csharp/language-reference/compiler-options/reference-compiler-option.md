@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679441"
 ---
 # <a name="-reference-c-compiler-options"></a>-başvurusu (C# Derleyici Seçenekleri)
 **-Başvuru** içeri aktarmak derleyici seçeneği neden [genel](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosyada geçerli projeye bu nedenle belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  
@@ -61,7 +61,7 @@ ms.locfileid: "46003639"
  Yaygın olarak kullanılan .NET Framework derlemelerine başvuran, csc yanıt (.rsp) dosyasını, varsayılan olarak kullanılır. Kullanma [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) derleyici csc.rsp kullanmak istemiyorsanız.  
   
 > [!NOTE]
-> Visual Studio'da kullanmak **Başvuru Ekle** iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: başvurular ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Kullanarak başvurular ekleme arasında eşdeğer davranışı sağlamak açısından `-reference` ve kullanarak başvurular ekleme **Başvuru Ekle** iletişim kutusu, kümesi **birlikte çalışma türlerini katıştır** özelliğini**False** eklemekte derleme. **Doğru** özelliği için varsayılan değerdir.  
+> Visual Studio'da kullanmak **Başvuru Ekle** iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: Başvurular ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Kullanarak başvurular ekleme arasında eşdeğer davranışı sağlamak açısından `-reference` ve kullanarak başvurular ekleme **Başvuru Ekle** iletişim kutusu, kümesi **birlikte çalışma türlerini katıştır** özelliğini**False** eklemekte derleme. **Doğru** özelliği için varsayılan değerdir.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek nasıl kullanılacağını gösterir [extern diğer adı](../../../csharp/language-reference/keywords/extern-alias.md) özelliği.  
@@ -92,7 +92,7 @@ GridV1::Grid
 GridV2::Grid   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

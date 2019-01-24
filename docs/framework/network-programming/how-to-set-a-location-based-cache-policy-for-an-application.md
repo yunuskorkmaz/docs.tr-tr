@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: uygulama için bir konum temelli önbellek İlkesi ayarlama'
+title: 'Nasıl yapılır: Uygulama için bir konum temelli önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514055"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Nasıl yapılır: uygulama için bir konum temelli önbellek İlkesi ayarlama
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Nasıl yapılır: Uygulama için bir konum temelli önbellek İlkesi ayarlama
 Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak önbelleğe alma davranışını tanımlamak bir uygulama sağlar. Bu konuda önbellek ilkesini programlı olarak ayarlama gösterilir. Yapılandırma dosyalarını kullanarak bir uygulama için bir ilke ayarlama hakkında daha fazla bilgi için bkz. [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Bir uygulama için bir konum temelli önbellek İlkesi ayarlama  
@@ -153,9 +153,9 @@ Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak 
     End Sub  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

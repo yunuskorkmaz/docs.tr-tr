@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea250cd413836796e8e6a3438ac7d6933035091e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714288"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables Arabirimi
-Depolama ve meta veri bilgileri tablolardaki alınması için yöntemleri sağlar.  
+Tablo meta veri bilgilerini alma ve depolama için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Bir işaretçi ikili büyük nesne (BLOB) için belirtilen sütun dizininde alır.|  
-|[GetBlobHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|BLOB yığın bayt cinsinden boyutu alır.|  
-|[GetCodedTokenInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Belirtilen satır dizini ile ilişkili belirteçleri dizisi için bir işaretçi alır.|  
-|[GetColumn Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Belirtilen sütun dizininde tablonun belirtilen tablo dizinindeki sütunda bulunan değerlerin için bir işaretçi alır.|  
-|[GetColumnInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Belirtilen tabloda belirtilen sütun hakkındaki verileri alır.|  
-|[GetGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Belirtilen dizindeki satırdan bir GUID alır.|  
-|[GetGuidHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|GUID yığın bayt cinsinden boyutu alır.|  
-|[GetNextBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Tabloda sonraki BLOB dizinini alır.|  
+|[GetBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Bir işaretçi ikili büyük nesne (BLOB) için belirtilen sütun dizini alır.|  
+|[GetBlobHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|BLOB yığın bayt cinsinden boyutunu alır.|  
+|[GetCodedTokenInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Belirteçlerin belirtilen satır dizini ile ilişkili bir diziye bir işaretçi alır.|  
+|[GetColumn Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Belirtilen tablo dizini altındaki tabloda belirtilen sütun dizinindeki sütunda bulunan değerleri için bir işaretçi alır.|  
+|[GetColumnInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Belirtilen tabloda belirtilen sütuna ilişkin verileri alır.|  
+|[GetGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Belirtilen dizindeki satırdaki bir GUID alır.|  
+|[GetGuidHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|GUID yığın bayt cinsinden boyutunu alır.|  
+|[GetNextBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Sonraki blob dizin tablosunda alır.|  
 |[GetNextGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Geçerli bir tablo sütununda sonraki GUID değeri dizinini alır.|  
-|[GetNextString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Sonraki dizenin dizini geçerli bir tablo sütununda alır.|  
-|[GetNextUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Sonraki sabit kodlanmış dize geçerli tablo sütununda içeren satırın dizinini alır.|  
-|[GetNumTables Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Geçerli kapsamda tablo sayısını alır `IMetaDataTables` örneği.|  
-|[GetRow Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Belirtilen satır dizininde belirtilen tablo dizinindeki tablosundaki satır alır.|  
-|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Dize belirtilen dizindeki geçerli başvuru kapsamda tablo sütunuyla bağlantısı alır.|  
-|[GetStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Dize yığın bayt cinsinden boyutu alır.|  
+|[GetNextString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Geçerli bir tablo sütununda sonraki dize dizinini alır.|  
+|[GetNextUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Sonraki sabit kodlanmış dize geçerli bir tablo sütunu içeren satırı dizinini alır.|  
+|[GetNumTables Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Tablo sayısı geçerli kapsamda alır `IMetaDataTables` örneği.|  
+|[GetRow Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Belirtilen tablo dizini altındaki tabloda belirtilen satır dizinindeki bir satır alır.|  
+|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Dize, geçerli başvuru kapsamda tablo sütunuyla bağlantısı belirtilen dizindeki alır.|  
+|[GetStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Dize yığın bayt cinsinden boyutunu alır.|  
 |[GetTableIndex Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Belirtilen belirteç tarafından başvurulan tablo için dizinini alır.|  
-|[GetTableInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Ad, satır boyutu, satır sayısı, sütun sayısı ve tablo anahtar sütun dizini belirtilen tablo dizininde alır.|  
-|[GetUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Geçerli kapsamdaki dize sütununda belirtilen dizindeki sabit kodlanmış dize alır.|  
-|[GetUserStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Kullanıcı dize yığın bayt cinsinden boyutu alır.|  
+|[GetTableInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Belirtilen tablo dizin adı, satır boyutu, satır sayısı, sütun sayısı ve tablonun anahtar sütunu dizini alır.|  
+|[GetUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Geçerli kapsamdaki dize sütununda belirtilen dizindeki sabit kodlanmış bir dize alır.|  
+|[GetUserStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Kullanıcı dize yığın bayt cinsinden boyutunu alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

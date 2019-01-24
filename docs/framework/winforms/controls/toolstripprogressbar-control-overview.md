@@ -8,27 +8,28 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 0ce2347be055cc1840341747f202125cbbf678c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528634"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar Denetimine Genel Bakış
-<xref:System.Windows.Forms.ToolStripProgressBar> Radye ve tüm işleme işlevlerini birleştiren <xref:System.Windows.Forms.ToolStrip> normal işlem izleme işlevselliğini denetimleriyle. A <xref:System.Windows.Forms.ToolStripProgressBar> en genellikle tarafından barındırılan <xref:System.Windows.Forms.StatusStrip>, sık tarafından küçük bir <xref:System.Windows.Forms.ToolStrip>.  
+<xref:System.Windows.Forms.ToolStripProgressBar> Radye ve tüm işleme işlevselliğini bir araya getiren <xref:System.Windows.Forms.ToolStrip> tipik işlem izleme işlevselliği denetimleriyle. A <xref:System.Windows.Forms.ToolStripProgressBar> en genellikle tarafından barındırılan <xref:System.Windows.Forms.StatusStrip>, sık göre küçük bir <xref:System.Windows.Forms.ToolStrip>.  
   
  Ancak <xref:System.Windows.Forms.ToolStripProgressBar> değiştirir ve önceki sürümlerde, denetim için işlevsellik ekler <xref:System.Windows.Forms.ToolStripProgressBar> geriye dönük uyumluluk ve gelecekte kullanım için isterseniz korunur.  
   
-### <a name="important-toolstripprogressbar-members"></a>Önemli ToolStripProgressBar üyeleri  
+### <a name="important-toolstripprogressbar-members"></a>ToolStripProgressBar önemli üyeleri  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Her arasındaki gecikme temsil eden bir değeri alır veya ayarlar <xref:System.Windows.Forms.ProgressBarStyle.Marquee> güncelleştirme, milisaniye cinsinden görüntüler.|  
-|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Alır veya ayarlar bu için tanımlanan aralığın üst sınırının <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|Alır veya ayarlar bu için tanımlanan aralığının alt sınırı <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|Alır veya stilini ayarlar <xref:System.Windows.Forms.ToolStripProgressBar> bir işlemin ilerlemesini görüntülemek için kullanır.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|Geçerli değeri alır veya ayarlar <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|İlerleme çubuğu geçerli konumunu miktarı ilerler <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> özelliği.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Her arasındaki gecikmeyi temsil eden bir değer alır veya ayarlar <xref:System.Windows.Forms.ProgressBarStyle.Marquee> güncelleştirme, milisaniye cinsinden görüntüler.|  
+|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Bunun için tanımlanan aralığın üst sınırını ayarlar veya alır <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|Alır veya ayarlar bu tanımlanan aralığının alt sınırı <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|Alır veya ayarlar stili <xref:System.Windows.Forms.ToolStripProgressBar> bir işlemin ilerlemesini görüntülemek için kullanır.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|Alır veya ayarlar geçerli değerini <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|İlerleme çubuğu geçerli konumunu miktarına göre ilerler <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> özelliği.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ToolStripProgressBar>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ToolStripProgressBar>

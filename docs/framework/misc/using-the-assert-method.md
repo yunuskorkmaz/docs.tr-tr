@@ -18,60 +18,60 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea8be23eb6fd2500e59527890b874b8f19ec06d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516521"
 ---
 # <a name="using-the-assert-method"></a>Onay Yöntemini Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> kod erişim izni sınıflarında çağrılabilen ve açık bir yöntem <xref:System.Security.PermissionSet> sınıfı. Kullanabileceğiniz **Assert** kodunuzu uygun izinlere sahip eylemler ancak kendi arayanlar gerçekleştirmek, kodunu (ve aşağı akış arayanlar) etkinleştirmek için izniniz olmayabilir. Güvenlik onaylama işlemi çalışma zamanı sırasında bir güvenlik denetimi gerçekleştirir normal işlem değiştirir. Bir izin assert, kodunuzu sürülen izni arayanlar denetlemek için güvenlik sistemi söyler.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> kod erişim izni sınıflarında çağrılabilen ve üzerinde bir yöntem <xref:System.Security.PermissionSet> sınıfı. Kullanabileceğiniz **Assert** kodunuzu uygun izinlere sahip eylemler ancak çağıranlarını gerçekleştirmek, kodu (ve aşağı akış arayanlar) etkinleştirmek için izniniz olmayabilir. Güvenlik onaylama işlemi, bir güvenlik denetimi sırasında çalışma zamanı yapar normal işlem değiştirir. İzin onayı, kodunuzun olarak onaylanan izin için çağıranlar denetlemek için güvenlik sistemi söyler.  
   
 > [!CAUTION]
->  Güvenlik açıklarını açın ve güvenlik kısıtlamaları zorlama zamanının mekanizması olumsuz olduğundan onaylar dikkatli kullanın.  
+>  Güvenlik açıkları açın ve güvenlik kısıtlamaları zorunlu tutmak için çalışma zamanının mekanizması olumsuz onaylar dikkatle kullanın.  
   
- Onaylar kitaplığı yönetilmeyen koda çağrı veya kitaplığın kullanıma açıktır ilgili olmayan bir izni gerektiren çağrıda durumlarda faydalıdır. Örneğin, tüm yönetilen yönetilmeyen koda çağrı olmalıdır kodu **SecurityPermission** ile **UnmanagedCode** bayrağı belirtilmiş. Yerel bilgisayardan yerel intranetten indirilen kod gibi kaynaklanmayan kod varsayılan olarak bu izin verilmez. Bu nedenle, yönetilmeyen kod kullandığı bir kitaplık çağırmak yerel bir intranet bağlantısı indirilen kodu için sırayla kitaplığı tarafından uygulanan izni olmalıdır. Ayrıca, bazı kitaplıklar arayanlara görünmeyen ve özel izinleri gerektiren aramaları yapabilir.  
+ Onaylar, Kitaplık'ın yönetilmeyen koda çağıran veya kitaplığın kullanım amacını açıkça ilgili olmayan bir izni gerektiren çağrıda durumlarda kullanışlıdır. Örneğin, tüm yönetilen yönetilmeyen koda çağrı olmalıdır kod **SecurityPermission** ile **UnmanagedCode** bayrağı belirtilmiş. Varsayılan olarak yerel bilgisayardan, yerel intranet üzerinden indirilen kod gibi kaynaklanmayan kod bu izin verilmez. Bu nedenle, çağırma kullanan yönetilmeyen kod kitaplığı için yerel intranet üzerinden indirilen kod için sırada bu kitaplığı tarafından onaylanan iznine sahip olmalıdır. Ayrıca, bazı kitaplıklar arayanlara görünmeyen ve özel izinleri gerektiren çağrıları neden olabilir.  
   
- İçinde ve kodunuzu tamamen gizli bir şekilde bir kaynak arayanlar erişen durumlarda onaylar de kullanabilirsiniz. Örneğin, kitaplık bir veritabanından bilgi edinme, ancak işleminde, bilgileri de bilgisayar kayıt defterinden okur. varsayalım. Kitaplığınızı kullanan geliştiriciler kaynağınıza erişimi yoktur çünkü bunlar kendi kodlarını gerektirdiğini bilerek bir yolu yoktur **RegistryPermission** kodunuzu kullanmak için. Bu durumda, makul ya da kodunuzu arayanlar kayıt defterine erişim iznine sahip gerektirecek şekilde gerekli olmadığını karar verirseniz, kayıt defterini okuma iznine assert. Bu durumda, bu arayanlar olmadan izni bunu onaylanacak kitaplığı için uygun olan **RegistryPermission** kitaplığını kullanabilirsiniz.  
+ Onaylamalar içinde ve kodunuzu tamamen gizli bir şekilde bir kaynak çağrı yapanlardan eriştiği durumlarda de kullanabilirsiniz. Örneğin, kitaplığınızı veritabanından bilgi edinme, ancak işlem sırasında ayrıca bilgisayar kayıt defterinden bilgilerini okur varsayalım. Kitaplığınızı kullanan geliştiriciler kaynağınıza erişimi olmadığından, kodlarını gerektirdiğini olduğunu bilmesinin imkanı sahiptirler **RegistryPermission** kodunuzu kullanmak için. Bu durumda, makul veya kodunuzun çağıranlar kayıt defterine erişim izni olmasını gerektiren için gerekli olmadığını karar verirseniz, kayıt defterini okuma izni onay. Bu durumda, Arayanların olmadan bunu izin onay kitaplık için uygun olan **RegistryPermission** kitaplığını kullanabilirsiniz.  
   
- Onaylama işlemi, yalnızca aynı türde sürülen ve bir aşağı akış çağıran tarafından talep izninizin olup olmadığını ve istenilen izni sürülen izin kümesini ise yığın ilerlemesi etkiler. Örneğin, assert, **FileIOPermission** C sürücüsünde ve bir aşağı akış isteğe bağlı tüm dosyaları okumak için yapılan **FileIOPermission** C:\Temp klasöründeki dosyaları okumak için onaylama yığın ilerlemesi; etkileyebilir Ancak, talep için ise **FileIOPermission** C sürücüsü yazmak için onay hiçbir etkisi yoktur.  
+ Onaylama işlemi, yalnızca aynı tür olarak onaylanan ve bir aşağı akış çağıran tarafından talep edilen bir izninizin olması durumunda ve talep edilen izni olarak onaylanan izin kümesini ise yığın ilerlemesi etkiler. Örneğin, onaylama, **FileIOPermission** C sürücüsü ve aşağı akış isteğe bağlı tüm dosyaları okumak için yapıldığı **FileIOPermission** C:\Temp klasöründeki dosyaları okumak için yığın ilerlemesi; onaylama işlemi etkileyebilir Ancak, talep için ise **FileIOPermission** C sürücüsüne yazmak için onay hiçbir etkisi yoktur.  
   
- Onaylar gerçekleştirmek için kodunuzu sunduğundan hem iznine sahip olmanız ve <xref:System.Security.Permissions.SecurityPermission> onaylar yapma hakkı temsil eder. Kodunuzu verilmediği bir izin assert rağmen onaylama işlemi başarılı şekilde neden olabilecek önce güvenlik denetimi başarısız olacağı için onaylama durum olacaktır.  
+ Onaylamalar gerçekleştirmek için kodunuzu sunduğundan hem iznine sahip olmanız gerekir ve <xref:System.Security.Permissions.SecurityPermission> onaylar yapma hakkı temsil eder. Kodunuzu verilmedi bir izin onay olsa da, onaylama işlemi başarılı olması için neden olabilecek önce güvenlik denetimi başarısız olacağı için onaylama anlamsız olacaktır.  
   
- Aşağıdaki çizimde kullandığınızda ne olacağını gösterir **Assert**. Aşağıdaki deyimleri derlemeler A, B, C, E ve F ve P1 ve P1A iki izinleri hakkında doğru olduğunu varsayın:  
+ Aşağıdaki gösterimde kullandığınızda neler **Assert**. Aşağıdaki deyimleri derlemeleri A, B, C, E ve F ve P1 ve P1A iki izinleri hakkında doğru olduğunu varsayalım:  
   
--   P1A C sürücüsünde .txt dosyaları okuma hakkı temsil eder.  
+-   P1A C sürücüsündeki .txt dosyaları okuma hakkı temsil eder.  
   
 -   P1 C sürücüsündeki tüm dosyaları okuma hakkı temsil eder.  
   
--   P1A ve P1 olan her ikisi de **FileIOPermission** türleri ve P1A P1, bir alt kümesidir.  
+-   P1A ve P1 olan hem de **FileIOPermission** türleri ve P1A P1 özelliklerinin bir alt kümesidir.  
   
--   Derlemeleri E ve F P1A izin verildi.  
+-   Derlemeleri E ve F P1A izin vermiş olmalıdır.  
   
 -   Derleme C P1 izin verildi.  
   
--   Derlemeleri A ve B P1 ne P1A izinleri verildi.  
+-   A ve B derlemeleri P1 ne P1A izinleri verilmiş.  
   
--   Yöntemi bir A derlemesinde bulunan, Yöntem B derleme B ve benzeri yer alır.  
+-   Yöntemi bir bir derlemede yer alan, Yöntem B derleme B ve benzeri yer alır.  
   
  ![](../../../docs/framework/misc/media/assert.gif "Assert")  
 Assert kullanma  
   
- Bu senaryo, yöntem A çağrıları B, B çağrıları C, C çağrıları E ve E çağrıları F'ye yöntemi C C sürücüsü (izni P1) dosyalarda okuma izni ve .txt dosyaları (izin P1A) C sürücüsünde okuma yöntemi E taleplerini izni onaylar. F'nde isteğe çalışma zamanında karşılaşıldığında, C C'ın onaylama nerede bulunduğundan, izinlerini incelemek için yığın ilerlemesi geçer şekilde yığın ilerlemesi F, tüm arayanlar izinlerini denetlemek için gerçekleştirilen E. E ile başlayan P1A izin verildi. Talep edilen izni (P1A) bir alt kümesini sürülen izni (P1) olduğundan, yığın ilerlemesi durur ve güvenlik denetimi otomatik olarak başarılı olur. A ve B P1A izni verilmemiş bu derlemeler önemli değildir. P1 sunduğundan tarafından yöntemi C arayanlar bu kaynağa erişim izni verilmemiş olsa bile onun arayanlar P1 tarafından korunan kaynak erişebilmesini sağlar.  
+ Bu senaryo, yöntemi bir çağrıları B, C B çağrıları, C çağrı E ve E çağrılar F. yöntemi C (izin P1) C sürücüsündeki dosyaları okuma izni ve (izni P1A) C sürücüsündeki .txt dosyaları okumak için yöntem E taleplerini izni onaylar. Talep f çalışma zamanında karşılaşıldığında, C, C'ın onaylama nerede bulunduğundan izinlerini incelemek için yığın ilerlemesi geçer şekilde yığın ilerlemesi f, tüm çağıranların izinlerini kontrol etmek için gerçekleştirilir E. E başlangıç P1A izin verildi. Talep edilen izni (P1A) olarak onaylanan izni (P1) bir alt kümesi olduğundan, otomatik olarak yığın ilerlemesi durur ve güvenlik denetimi başarılı. A ve B P1A izni verilmemiş bu derlemeler önemli değildir. P1 sunduğundan tarafından C yöntemi çağıranlar, bu kaynağa erişim izni verilmemiş bile çağıranlarını P1 tarafından korunan kaynak erişebilmesini sağlar.  
   
- Bir sınıf kitaplığı tasarlayın ve bir sınıf korunan bir kaynağa erişir, çoğu durumda, sınıfın Arayanların uygun izinlere sahip gerektiren bir güvenlik isteğe bağlı oluşturmanız gerekir. Sınıfı için bir işlem ardından gerçekleştirirse, kendi arayanlar çoğunu bildiğiniz izni olmaz ve kodunuzun çağırması bu arayanlara izin vererek sorumluluğunu yapılacak istekli olup olmadığını çağırarak izin assert **Assert** kodu işlemini temsil eden bir izni nesnesi üzerinde yöntemi gerçekleştirme. Kullanarak **Assert** bu yolla bunu normal olarak yapamadı sağlar arayanlar kodunuzu çağırın. Bu nedenle, bir izin assert, bileşeniniz kötüye kullanımını önlemek için önceden uygun güvenlik denetimleri gerçekleştirmek üzere emin olmalıdır.  
+ Bir sınıf kitaplığı tasarlayın ve bir sınıf, korunan bir kaynağa erişir, çoğu durumda, sınıfın çağıranlar uygun izinlere sahip gerektiren bir güvenlik talebi oluşturmanız gerekir. Sınıfı için bir işlem gerçekleştirir, hangi çağıranlarını çoğunu tanıdığınız izni olmaz ve kodunuzun çağrı bu arayanlara izin vererek sorumluluğunu yararlanmak istekliyse çağırarak izin onay **Assert** işlemini temsil eden bir izin nesnesi üzerinde yöntemi, şu kod gerçekleştiriyor. Kullanarak **Assert** bu yolla bunu normal olarak yapamadı sağlar çağıranlar kodunuzu çağırın. Bu nedenle, bir izin assert, bileşeninizin kötüye kullanımını engeller önlemek için önceden uygun güvenlik denetimleri gerçekleştirmek emin olmalısınız.  
   
- Örneğin, yüksek oranda güvenilir kitaplığı sınıfınız dosyalarını siler bir yöntem olduğunu varsayalım. Dosya bir yönetilmeyen Win32 işlevini çağırarak erişir. Çağıran, kodun çağırır **silmek** silinecek, dosya adına geçirerek yöntemini C:\Test.txt. İçinde **silmek** yöntemi, kodunuzu oluşturur bir <xref:System.Security.Permissions.FileIOPermission> yazma erişimi için C:\Test.txt temsil eden nesne. (Yazma erişimi bir dosyayı silmek için gereklidir.) Sonra kodunuzu çağırarak kesinlik temelli güvenliği onay çağırır **FileIOPermission** nesnenin **talep** yöntemi. Çağrı yığınında arayanlar biri bu izne sahip değilse bir <xref:System.Security.SecurityException> oluşturulur. Hiçbir özel durum varsa, tüm arayanlar C:\Test.txt erişim hakkı olduğunu bilirsiniz. Düşündüğünüz olduğundan, arayanlar çoğunu yönetilmeyen kod erişim iznine sahip olmaz, kodunuzu daha sonra oluşturur bir <xref:System.Security.Permissions.SecurityPermission> yönetilmeyen kodu çağırma hakkı temsil eder ve nesnenin çağrıları nesne **Assert** yöntemi. Son olarak, C:\Text.txt silmek için yönetilmeyen Win32 işlevini çağırır ve çağırana denetimini döndürür.  
+ Örneğin, yüksek derecede güvenilen kitaplığı sınıfınıza dosyaları silen bir yöntem olduğunu varsayalım. Dosya, yönetilmeyen bir Win32 işlevini çağırarak erişir. Çağıran kod çağırır **Sil** silinecek dosyanın adını geçirerek yöntemini C:\Test.txt. İçinde **Sil** yöntemi, kod oluşturur bir <xref:System.Security.Permissions.FileIOPermission> yazma erişimi için C:\Test.txt temsil eden nesne. (Bir dosyayı silmek için yazma erişimi gereklidir.) Sonra kodunuzu çağırarak zorunlu güvenlik denetimi çağırır **FileIOPermission** nesnenin **isteğe** yöntemi. Çağrı yığınında çağıranlar birini bu izne sahip değilse bir <xref:System.Security.SecurityException> oluşturulur. Hiçbir özel durum varsa, tüm çağıranların C:\Test.txt erişim hakkı olduğunu bilirsiniz. Olduğuna inanıyorsanız, Arayanların çoğunu yönetilmeyen koda erişim iznine sahip olmaz, kodunuzu daha sonra oluşturur çünkü bir <xref:System.Security.Permissions.SecurityPermission> yönetilmeyen kod çağırmak için sağ temsil eder ve çağıran nesne **Assert** yöntemi. Son olarak, C:\Text.txt silmek için yönetilmeyen Win32 işlevini çağırır ve denetim çağırana döner.  
   
 > [!CAUTION]
->  Kodunuzu onaylar kodunuzun başka bir kodla ettiği taraf olduğunu izni tarafından korunan bir kaynağa erişmek için kullanıldığı durumlarda kullanmadığından emin olmanız gerekir. Örneğin, adında bir parametre olarak çağıran tarafından belirtilen bir dosyaya yazar kodda, değil assert **FileIOPermission** kodunuzu bir üçüncü taraf tarafından kötüye açık olduğundan dosyalara yazma için.  
+>  Kodunuzu onaylar burada kodunuzu başka kod tarafından sunduğundan izni tarafından korunan bir kaynağa erişmek için kullanılabilir durumda kullanmadığından emin olmanız gerekir. Örneğin, adında bir parametre olarak çağıran tarafından belirtilen bir dosyaya yazar kodunda, yok assert **FileIOPermission** kodunuzu bir üçüncü taraf tarafından kötüye açık olacağından, dosyalara yazma için.  
   
- Kesinlik temelli güvenliği sözdizimini kullandığınızda çağırma **Assert** yöntemi aynı yöntemi birden çok izinlerde durum bir güvenlik özel durumu neden olur. Bunun yerine, oluşturmalısınız bir **PermissionSet** nesne, istediğiniz çağırma ve ardından çağırmak için tek tek izinleri geçirmek **Assert** yöntemi **PermissionSet** nesne. Çağırabilirsiniz **Assert** yöntemi kez bildirimsel güvenliği sözdizimini kullandığınızda'den fazla.  
+ Kesinlik temelli güvenlik sözdizimi kullandığınızda, çağırma **Assert** aynı yöntemi içinde birden fazla izinleri yöntemi, bir güvenlik özel durum oluşturulmasına neden olur. Bunun yerine, oluşturacağınız bir **PermissionSet** nesne, istediğiniz çağırır ve ardından çağırmak için ayrı ayrı izinler geçirmek **Assert** yöntemi **PermissionSet** nesne. Çağırabilirsiniz **Assert** yöntemi daha fazla kez bildirim temelli güvenlik sözdizimi kullandığınızda.  
   
- Aşağıdaki örnek, bildirim temelli söz dizimini gösterir, kullanarak geçersiz kılma güvenlik denetimleri için **Assert** yöntemi. Dikkat **FileIOPermissionAttribute** sözdizimi iki değerleri alır: bir <xref:System.Security.Permissions.SecurityAction> numaralandırma ve dosya veya iznine sahip olduğu verilebilmesi için dizin konumu. Çağrı **Assert** erişmek için talepleri neden `C:\Log.txt` arayanlar dosyaya erişim izni için denetlenmez olsa bile, başarılı olması için.  
+ Kullanarak geçersiz kılma güvenlik denetimleri için aşağıdaki örnek, bildirim temelli söz dizimini gösterir. **Assert** yöntemi. Dikkat **FileIOPermissionAttribute** söz dizimi iki değer alır: bir <xref:System.Security.Permissions.SecurityAction> numaralandırma ve dosya veya dizin izni olduğu verilecek konumu. Çağrı **Assert** erişmek için talepleri neden `C:\Log.txt` dosyaya erişim izni için çağıranlar alınmamış olsa da, başarılı olması için.  
   
 ```vb  
 Option Explicit  
@@ -120,7 +120,7 @@ namespace LogUtil
 }   
 ```  
   
- Kullanarak geçersiz kılma güvenlik denetimleri için aşağıdaki kod parçası kesinlik temelli sözdizimi show **Assert** yöntemi. Bu örnekte, bir örneğini **FileIOPermission** nesne bildirildi. Kurucusu geçirilen **FileIOPermissionAccess.AllAccess** erişimine izin verilir, türünü tanımlamak için dosyanın konumunu tanımlayan bir dize tarafından izlenen. Bir kez **FileIOPermission** nesne tanımlanır, yalnızca çağırmanız gerekir, **Assert** güvenlik denetimi geçersiz kılmak için yöntem.  
+ Kullanarak geçersiz kılma güvenlik denetimleri için aşağıdaki kod parçası kesinlik temelli sözdizimi show **Assert** yöntemi. Bu örnekte, bir örneğini **FileIOPermission** nesne bildirilir. Oluşturucusuna geçirilen **FileIOPermissionAccess.AllAccess** izin, erişim türünü tanımlamak için dosyanın konumunu tanımlayan bir dize tarafından izlenen. Bir kez **FileIOPermission** nesne tanımlanır, yalnızca çağırmanız gerekir, **Assert** güvenlik denetimi geçersiz kılmak için yöntemi.  
   
 ```vb  
 Option Explicit  
@@ -168,10 +168,10 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Security.PermissionSet>  
- <xref:System.Security.Permissions.SecurityPermission>  
- <xref:System.Security.Permissions.FileIOPermission>  
- <xref:System.Security.Permissions.SecurityAction>  
- [Öznitelikler](../../../docs/standard/attributes/index.md)  
- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Security.PermissionSet>
+- <xref:System.Security.Permissions.SecurityPermission>
+- <xref:System.Security.Permissions.FileIOPermission>
+- <xref:System.Security.Permissions.SecurityAction>
+- [Öznitelikler](../../../docs/standard/attributes/index.md)
+- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)

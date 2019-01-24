@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: nesne modeli dış dosyası olarak oluştur'
+title: 'Nasıl yapılır: Nesne modelini dış dosya oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 00e8563b361a36de6c31e9ff0c0fd8f3b6f46b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499177"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: nesne modeli dış dosyası olarak oluştur
-Öznitelik tabanlı eşleme için alternatif olarak, harici bir XML dosyası olarak SQLMetal komut satırı aracını kullanarak nesne modeli oluşturabilir. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Dış XML eşleme dosyası kullanarak, kodunuzda görünmesine. Ayrıca, uygulamanızı ikili dosyaları derlemeden dış dosyasını değiştirerek davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: Nesne modelini dış dosya oluşturma
+Öznitelik tabanlı eşleme için alternatif olarak, nesne modeli, dış bir XML dosyası olarak SQLMetal komut satırı aracını kullanarak oluşturabilirsiniz. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Dış XML eşleme dosyası kullanarak kodunuzda dağınıklığını azaltın. Ayrıca, uygulamanızın ikili dosyaları yeniden derlemeye gerek kalmadan dış dosyasını değiştirerek davranışını değiştirebilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Bir dış eşleme dosyasını oluşturmayı desteklemiyor.  
+>  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Dış eşleme dosyasının oluşturulmasını desteklemiyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komutu, Northwind örnek veritabanı'ndaki bir dış eşleme dosyası oluşturur.  
+ Aşağıdaki komut, Northwind örnek veritabanındaki bir dış eşleme dosyası oluşturur.  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
 ## <a name="example"></a>Örnek  
- Bir dış eşleme dosyasından aşağıdaki alıntı Müşteriler tablosu için eşleme Northwind örnek veritabanında gösterir. Bu alıntı SQLMetal ile yürüterek oluşturulan **/map** seçeneği.  
+ Bir dış eşleme dosyası alınan aşağıdaki alıntıda Northwind örnek veritabanındaki Müşteriler tablosu için eşlemeyi gösterir. SQLMetal ile çalıştırarak bu alıntı oluşturulan **/map** seçeneği.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,7 +48,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

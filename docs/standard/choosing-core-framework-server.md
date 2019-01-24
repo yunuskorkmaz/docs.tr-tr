@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699512"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -85,15 +85,15 @@ Burada kitaplıkları veya NuGet paketlerini de .NET standart/.NET Core kullanı
 
 ' De .NET Core bazı .NET Framework teknolojilerini kullanılamaz. Bunların bazılarını daha sonra .NET Core sürümlerinde kullanılabilir olabilir. Diğer .NET Core tarafından hedeflenen yeni uygulama desenleri için geçerli değildir ve hiçbir zaman kullanılabilir. Aşağıdaki liste, en yaygın teknolojileri de .NET Core bulunamadı gösterir:
 
-* ASP.NET Web formları uygulamalarını: ASP.NET Web Forms yüklenebilir yalnızca .NET Framework. ASP.NET Core, ASP.NET Web formları için kullanılamaz. .NET Core ile ASP.NET Web Forms getirmek için herhangi bir plan yoktur.
+* ASP.NET Web formları uygulamalarını: ASP.NET Web Forms, yalnızca .NET Framework içinde kullanılabilir. ASP.NET Core, ASP.NET Web formları için kullanılamaz. .NET Core ile ASP.NET Web Forms getirmek için herhangi bir plan yoktur.
 
-* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil edilmemiş. 
+* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil edilmez. 
 
 * WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerinden kullanmak için WCF sunucusu uygulaması şu anda yalnızca .NET Framework içinde kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir ancak geleceğe yönelik değerlendiriliyor.
 
-* İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla "ADO.NET Data Services" da bilinir), yalnızca .NET Framework içinde kullanılabilir.  WF/WCF + WF/WCF Data Services için .NET Core getirmek için herhangi bir plan yoktur.
+* İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla "ADO.NET Data Services" da bilinir) yalnızca .NET Framework içinde kullanılabilir.  WF/WCF + WF/WCF Data Services için .NET Core getirmek için herhangi bir plan yoktur.
 
-* Dil desteği: Visual Basic ve F # şu anda desteklenen .NET Core, ancak tüm proje türleri için değil. Desteklenen proje şablonları listesi için bkz. [dotnet yeni şablon seçeneklerini](../core/tools/dotnet-new.md#arguments).
+* Dil desteği: Visual Basic ve F# şu anda .NET Core, ancak tüm proje türleri için desteklenir. Desteklenen proje şablonları listesi için bkz. [dotnet yeni şablon seçeneklerini](../core/tools/dotnet-new.md#arguments).
 
 Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeveler vardır. Olarak işaretlenmiş Corefx'te sorunlar tam listesi için bkz. [bağlantı noktası çekirdek](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Bu liste, bu bileşenler, .NET Core getirmek için Microsoft'un taahhüdü temsil etmez. Bunlar yalnızca bunu yapma arzusu topluluğundan yakalayacağınızı. Olarak işaretlenmiş bileşenleri hakkında dikkatli olun `port-to-core`, GitHub üzerindeki tartışmaların katılın. Bir şeyler eksik olduğunu düşünüyorsanız, yeni bir konu dosya [Corefx'te depo](https://github.com/dotnet/corefx/issues/new).
 
@@ -103,11 +103,11 @@ Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)
-* [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Hedef çerçeveler](frameworks.md)
-* [.NET Core Kılavuzu](../core/index.md)  
-* [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  
-* [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
-* [.NET bileşenleri'ne genel bakış](components.md)  
-* [.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi](microservices-architecture/index.md)
+- [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)
+- [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Hedef çerçeveler](frameworks.md)
+- [.NET Core Kılavuzu](../core/index.md)
+- [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)
+- [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)
+- [.NET bileşenleri'ne genel bakış](components.md)
+- [.NET mikro Hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi](microservices-architecture/index.md)

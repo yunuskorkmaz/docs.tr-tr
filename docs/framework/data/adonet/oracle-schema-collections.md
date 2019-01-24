@@ -2,12 +2,12 @@
 title: Oracle şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694470"
 ---
 # <a name="oracle-schema-collections"></a>Oracle şema koleksiyonları
 Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları ek olarak aşağıdaki belirli şema koleksiyonları destekler:  
@@ -22,7 +22,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 -   Diziler  
   
--   Eş anlamlıları  
+-   Eş anlamlılar  
   
 -   Tabloları  
   
@@ -50,7 +50,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Tablo, görünüm veya kümesinin sahibi.|  
 |TABLE_NAME|Dize|Tablo, görünüm veya küme adı.|  
@@ -64,7 +64,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Sahip dizini|  
 |INDEX_NAME|Dize|Dizinin adı.|  
@@ -99,7 +99,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |NUM_ROWS|Ondalık|Dizin içinde satır sayısını belirtir.|  
 |SAMPLE_SIZE|Ondalık|Dizin analiz etmek için kullanılan örnek boyutu.|  
 |LAST_ANALYZED|DateTime|Bu dizini en yakın zamanda çözümlendi tarih.|  
-|DERECE|Dize|Dizin tarama için örnek başına iş parçacığı sayısı.|  
+|DEGREE|Dize|Dizin tarama için örnek başına iş parçacığı sayısı.|  
 |ÖRNEKLERİ|Dize|Hangi örneklerinde sayısı taranacak dizinler.|  
 |BÖLÜMLENMİŞ|Dize|Bu dizin olup bölümlenen (Evet &#124; yok).|  
 |GEÇİCİ|Dize|Dizin geçici bir tablo olup olmadığı.|  
@@ -107,7 +107,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |İKİNCİL|Dize|Dizin Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup (Y&#124;N).|  
 |BUFFER_POOL|Dize|Dizin blokları için kullanılacak varsayılan arabellek havuzunun adı.|  
 |USER_STATS|Dize|Olup istatistikleri doğrudan kullanıcı tarafından girilen.|  
-|SÜRESİ|Dize|Geçici tablo süresini gösterir: 1) SYS$ oturum: satır 2) SYS$ işlem oturum süresi boyunca korunur: satırları işleme, kalıcı bir tablo için Null 3) sonra silinir.|  
+|SÜRESİ|Dize|Geçici tablo süresini gösterir: (1) SYS$ oturum: satır 2) SYS$ işlem oturum süresi boyunca korunur: satırları işleme, kalıcı bir tablo için Null 3) sonra silinir.|  
 |PCT_DIRECT_ACCESS|Ondalık|İkincil bir dizin için dizin düzenli bir tablosunda, geçerli satırlarla yüzdesini tahmin|  
 |ITYP_OWNER|Dize|Etki alanı dizini için indextype sahibi.|  
 |ITYP_NAME|Dize|Etki alanı dizini için indextype adı.|  
@@ -115,12 +115,12 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |GLOBAL_STATS|Dize|Bölümlenmiş dizinleri için istatistik dizini (Evet) bir bütün olarak incelenerek toplanan veya temel dizin bölümlerini ve subpartitions (Hayır) İstatistikler tahmini gösterir.|  
 |DOMIDX_STATUS|Dize|Etki alanı dizini durumunu yansıtır. NULL: Belirtilen dizin, bir etki alanı dizini değil. Geçerli: dizini geçerli bir etki alanı dizini değil. IDXTYP_INVLD: Bu etki alanı dizininin dizin türü geçersiz.|  
 |DOMIDX_OPSTATUS|Dize|Bir etki alanı dizini gerçekleştirilen bir işlem durumunu yansıtır: NULL: Belirtilen dizin, bir etki alanı dizini değil. Geçerli: hatasız işlemi gerçekleştirildi. Başarısız oldu: işlem bir hata ile başarısız oldu.|  
-|FUNCIDX_STATUS|Dize|İşlev tabanlı bir dizin durumunu gösterir: NULL: Bu işlev tabanlı değil dizin yeniden etkin: işlevi tabanlı bir dizin etkin, devre dışı: işlevi tabanlı dizini devre dışı bırakıldı.|  
+|FUNCIDX_STATUS|Dize|İşlev tabanlı bir dizin durumunu gösterir: NULL: Bu işlev tabanlı değil dizin yeniden etkin: işlev tabanlı bir dizin etkin, devre dışı: işlevi tabanlı dizini devre dışı bırakıldı.|  
 |JOIN_INDEX|Dize|Bu bir birleştirme dizin olup olmadığını gösterir.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |INDEX_OWNER|Dize|Dizin sahibi.|  
 |INDEX_NAME|Dize|Dizinin adı.|  
@@ -130,11 +130,11 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |COLUMN_POSITION|Ondalık|Sütun veya içinde dizin özniteliği konumu.|  
 |COLUMN_LENGTH|Ondalık|Sütun dizini oluşturulmuş uzunluğu.|  
 |CHAR_LENGTH|Ondalık|Sütun uzunluğu en fazla kod noktası.|  
-|DÜZEN|Dize|Olup sütun azalan düzende sıralanır.|  
+|DESCEND|Dize|Olup sütun azalan düzende sıralanır.|  
   
 ## <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi.|  
 |OBJECT_NAME|Dize|Nesnesinin adı.|  
@@ -151,7 +151,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="sequences"></a>Diziler  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SEQUENCE_OWNER|Dize|Sıranın sahibinin adı.|  
 |SEQUENCE_NAME|Dize|Sıra adı.|  
@@ -163,9 +163,9 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |CACHE_SIZE|Ondalık|Önbellek için sıra numaralarının sayısı.|  
 |LAST_NUMBER|Ondalık|Son dizi diske yazılan numarası. Bir dizi önbelleğe alma, yazılan numarası kullanıp kullanmadığını disk dizisi önbelleğine yerleştirilen son sayıdır. Bu sayı, kullanılan son sıra numarasından daha büyük olması olasıdır.|  
   
-## <a name="synonyms"></a>Eş anlamlıları  
+## <a name="synonyms"></a>Eş anlamlılar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Eş anlamlı sahibi.|  
 |SYNONYM_NAME|Dize|Eş adı.|  
@@ -175,7 +175,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="tables"></a>Tabloları  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Tablonun sahibi.|  
 |TABLE_NAME|Dize|Tablonun adı.|  
@@ -183,7 +183,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="users"></a>Kullanıcılar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |NAME|Dize|Kullanıcı adı.|  
 |Kimlik|Ondalık|Kullanıcı Kimliği sayısı.|  
@@ -191,14 +191,14 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="views"></a>Görünümler  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Görünümün sahibi.|  
 |VIEW_NAME|Dize|Görünümün adı.|  
 |TEXT_LENGTH|Ondalık|Görünüm metnin uzunluğu.|  
 |METİN|Dize|Metni görüntüleyin.|  
 |TYPE_TEXT_LENGTH|Ondalık|Türü belirtilmiş görünüm türü yan tümcesi uzunluğu.|  
-|METİN_TÜRÜ|Dize|Türü belirtilmiş görünüm türü yan tümcesi.|  
+|TYPE_TEXT|Dize|Türü belirtilmiş görünüm türü yan tümcesi.|  
 |OID_TEXT_LENGTH|Ondalık|Türü belirtilmiş görünüm ile OID yan tümcesi uzunluğu.|  
 |OID_TEXT|Dize|Türü belirtilmiş görünüm OID yan TÜMCESİYLE.|  
 |VIEW_TYPE_OWNER|Dize|Görünüm türü belirtilmiş görünüm ise Görünüm türü sahibi.|  
@@ -207,7 +207,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="functions"></a>İşlevler  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi.|  
 |OBJECT_NAME|Dize|Nesnesinin adı.|  
@@ -225,7 +225,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="packages"></a>Paketler  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi.|  
 |OBJECT_NAME|Dize|Nesnesinin adı.|  
@@ -242,7 +242,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="packagebodies"></a>PackageBodies  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi.|  
 |OBJECT_NAME|Dize|Nesnesinin adı.|  
@@ -259,7 +259,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="arguments"></a>Arguments  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi adı.|  
 |PACKAGE_NAME|Dize|Paket adı.|  
@@ -277,7 +277,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="uniquekeys"></a>UniqueKeys  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Kısıtlama tanımının sahibi.|  
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|  
@@ -298,7 +298,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="primarykeys"></a>PrimaryKeys  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Kısıtlama tanımının sahibi.|  
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|  
@@ -319,7 +319,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="foreignkeys"></a>ForeignKeys  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |PRIMARY_KEY_CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|  
 |PRIMARY_KEY_OWNER|Dize|Kısıtlama tanımının sahibi.|  
@@ -341,7 +341,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="foreignkeycolumns"></a>ForeignKeyColumns  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Kısıtlama tanımının sahibi.|  
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|  
@@ -351,7 +351,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
   
 ## <a name="procedureparameters"></a>ProcedureParameters  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SAHİBİ|Dize|Nesnenin sahibi.|  
 |OBJECT_NAME|Dize|Yordam veya işlevin adı.|  
@@ -369,7 +369,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |DATA_LENGTH|Ondalık|Uzunluğu (bayt cinsinden) sütunu.|  
 |DATA_PRECISION|Ondalık|Ondalık basamak (sayı) veya ikili basamak (FLOAT) cinsinden uzunluğu.|  
 |DATA_SCALE|Ondalık|Bir sayı ondalık noktasının sağındaki basamak.|  
-|SAYI TABANI|Ondalık|Bağımsız değişken tabanı için bir sayı.|  
+|RADIX|Ondalık|Bağımsız değişken tabanı için bir sayı.|  
 |CHARACTER_SET_NAME|Dize|Karakter kümesi bağımsız değişkeni adı.|  
 |TYPE_OWNER|Dize|Bağımsız değişken türünü sahibi.|  
 |TYPE_NAME|Dize|Bağımsız değişkenin türünün adı. Tür paketini yerel bir tür ise (diğer bir deyişle, bir paket belirtiminde bildirildiği), bu sütun paketinin adını görüntüler.|  
@@ -379,5 +379,5 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 |CHAR_LENGTH|Ondalık|Dize veri türleri için karakter sınırı.|  
 |CHAR_USED|Dize|Bayt (B) veya char sınırı (C) dizesi resmi olup olmadığını belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

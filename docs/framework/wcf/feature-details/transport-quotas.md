@@ -4,59 +4,60 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542775"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
-Taşıma kotaları bağlantı aşırı kaynakları zaman tüketen karar verme bir ilke sistemdir. Bir kota kota değeri aşıldı sonra ek kaynakların kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını önler.  
+Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için bir ilke mekanizmasıdır. Kota kota değeri aşıldı sonra ek kaynaklar kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını engeller.  
   
- Windows Communication Foundation (WCF) taşımaları koruyucu tahsis edilen kaynakların dayalı varsayılan kota değerlerini vardır. Bu varsayılan değerler, geliştirme ortamları ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, taşıma kotaları gözden geçirin ve yüklemenin kaynakları tükendi çalıştırıyorsa veya ek kaynaklar kullanılabilirlik rağmen bağlantıları sınırlı tek tek kota değerlerini ayarlayın.  
+ Windows Communication Foundation (WCF) taşımalar koruyucu tahsis edilen kaynakların dayalı varsayılan kota değerlerini sahip. Bu varsayılan değerler, geliştirme ortamları ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri taşıma kotaları gözden geçirmeniz ve kaynaklar yetersiz bir yüklemesi çalışıyor veya ek kaynakların kullanılabilirliğini rağmen bağlantı sınırlı kotaya değerleri ayarlayın.  
   
 ## <a name="types-of-transport-quotas"></a>Taşıma kotaları türleri  
- WCF taşımaları kotaları üç tür vardır:  
+ WCF taşımalar kotalar üç tür vardır:  
   
--   *Zaman aşımları* kaynakları uzun bir süre için bağlamadan kullanan hizmet reddi saldırılarını etkisini azaltır.  
+-   *Zaman aşımları* uzun bir süre için kaynakları bağlamadan üzerinde kullanan hizmet reddi saldırılarını azaltın.  
   
--   *Bellek ayırma sınırları* sistem belleği tüketilmesine neden olabilir ve diğer bağlantılar hizmeti reddetme tek bir bağlantı engelleme.  
+-   *Bellek ayırma sınırı* engelle tüketme sistem belleği ve diğer bağlantıları için hizmet engelleme tek bir bağlantı.  
   
--   *Koleksiyon boyutu sınırları* sınırlı tedarike dolaylı olarak bellek ayırma ya da kaynaklarının kullanımını bağlı.  
+-   *Koleksiyon boyutu sınırları* içinde sınırlı kaynağı dolaylı olarak bellek ya da kaynakların tüketimini bağlı.  
   
 ## <a name="transport-quota-descriptions"></a>Aktarım kotası açıklamaları  
- Bu bölümde standart WCF aktarımları için kullanılabilir taşıma kotaları açıklar: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel taşımaları bu listede yer almayan kendi yapılandırılabilir kotalar getirebilir. Kotalarını hakkında bilgi almak özel bir taşıma için belgelere bakın.  
+ Bu bölümde, standart WCF taşımalar için kullanılabilir taşıma kotaları açıklanmaktadır: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel aktarımları bu listede yer almayan kendi yapılandırılabilir kotalar getirebilir. Kotalarını hakkında bilgi almak özel bir taşıma belgelerine bakın.  
   
- Her kota ayarı türü, minimum değer ve varsayılan değer var. Bir kota en büyük değerini kendi türüne göre sınırlıdır. Makine sınırlamaları nedeniyle, her zaman bir kota için maksimum değeri ayarlamak mümkün değildir.  
+ Her kota ayarı türü, minimum değer ve varsayılan değeri var. Kota en yüksek değeri kendi türüne göre sınırlıdır. Makine sınırlamaları nedeniyle, bu her zaman bir kota için maksimum değeri ayarlamak mümkün değildir.  
   
 |Ad|Tür|Min.<br /><br /> value|Varsayılan<br /><br /> value|Açıklama|  
 |----------|----------|--------------------|-----------------------|-----------------|  
-|`ChannelInitializationTimeout`|TimeSpan|1 onay|5 saniye|İlk okuma sırasında girişin gönderilecek bir bağlantı için beklenecek en uzun süre. Kimlik doğrulaması gerçekleşmeden önce bu veri aldı. Bu ayar genellikle çok daha küçük `ReceiveTimeout` kota değeri.|  
-|`CloseTimeout`|TimeSpan|0|1 dak|Bir bağlantı için bir özel durum taşıma oluşturmadan önce kapatmak beklenecek en uzun süre.|  
-|`ConnectionBufferSize`|Tamsayı|1.|8 KB|, İletme bayt cinsinden boyutu ve arka plandaki aktarım arabelleklerini alabilirsiniz. Arabellek boyutunu artırmayı büyük iletileri gönderirken üretilen işi artırabilir.|  
-|`IdleTimeout`|TimeSpan|0|2 min|Bir havuza alınan bağlantı kapalı önce boşta kalabileceği en uzun süre.<br /><br /> Bu ayar yalnızca havuza alınmış bağlantılara uygulanır.|  
-|`LeaseTimeout`|TimeSpan|0|5 dk.|Etkin bir havuza alınan bağlantı en uzun kullanım ömrünü. Belirtilen süre geçtikten sonra geçerli istek hizmet sonra bağlantıyı kapatır.<br /><br /> Bu ayar yalnızca havuza alınmış bağlantılara uygulanır.|  
-|`ListenBacklog`|Tamsayı|1.|10|Dinleyici ek bağlantılar, uç nokta için önce unserviced bağlantısı sayısı reddedilir.|  
-|`MaxBufferPoolSize`|uzun|0|512 KB|Yeniden kullanılabilir ileti arabellek havuzu için taşıma düzeyde bayt cinsinden en yüksek bellek. İleti arabellek havuzu sağlayamıyor yeni bir arabellek geçici kullanım için ayrılır.<br /><br /> Birçok kanal fabrikaları veya dinleyicileri oluşturma yüklemeleri büyük miktarlarda bellek arabellek havuzu için tahsis edebilirsiniz. Bu arabellek boyutunu azaltma bellek kullanımı bu senaryoda önemli ölçüde azaltabilir.|  
-|`MaxBufferSize`|Tamsayı|1.|64 KB|Veri akış için kullanılan arabelleğin bayt cinsinden en büyük boyutu. Bu aktarım kotası ayarlanmadı veya taşıma akış kullanmayan durumunda kota değeri küçük aynıdır, `MaxReceivedMessageSize` kota değeri ve <xref:System.Int32.MaxValue>.|  
-|`MaxOutboundConnectionsPerEndpoint`|Tamsayı|1.|10|En fazla özel bir uç nokta ile ilişkilendirilebilir giden bağlantı sayısı.<br /><br /> Bu ayar yalnızca havuza alınmış bağlantılara uygulanır.|  
-|`MaxOutputDelay`|TimeSpan|0|200 ms|Ek iletiler tek bir işlemde toplu işleme için gönderme işleminden sonra beklenecek en uzun süre. Arka plandaki aktarım arabellek dolarsa iletileri daha önce gönderilir. Ek ileti gönderme gecikme süresi sıfırlamaz.|  
-|`MaxPendingAccepts`|Tamsayı|1.|1.|Maksimum sayısı için kanal dinleyicisi bekliyor olabilir kabul eder.<br /><br /> Bir accept tamamlama ve yeni başlangıç kabul arasında zaman aralığı yok. Bu koleksiyon boyutunu artırmayı bırakılan gelen bu aralığında bağlanan istemciler engelleyebilir.|  
-|`MaxPendingConnections`|Tamsayı|1.|10|Uygulama tarafından kabul edilmesi için bekleyen dinleyicisi olabilir bağlantılarının maksimum sayısı. Bu kota değeri aşıldığında, yeni gelen bağlantıları bırakılan yerine kabul edilmesi için bekleniyor.<br /><br /> İleti güvenliği gibi bağlantı özellikleri birden fazla bağlantı açmak bir istemci neden olabilir. Hizmet yöneticileri bu ek bağlantılar için bu kota değeri ayarlanırken dikkate.|  
-|`MaxReceivedMessageSize`|uzun|1.|64 KB|Bayt cinsinden üst bilgiler, özel bir durum taşıma oluşturmadan önce dahil olmak üzere bir alınan iletinin en büyük boyutu.|  
-|`OpenTimeout`|TimeSpan|0|1 dak|Bir bağlantının önce taşıma kurulmasını beklemek için en uzun süre bir özel durum oluşturur.|  
-|`ReceiveTimeout`|TimeSpan|0|10 min|Taşıma bir özel durum oluşturmadan önce bir okuma işlemin tamamlanması için beklenecek en uzun süre.|  
-|`SendTimeout`|TimeSpan|0|1 dak|Önce aktarımı tamamlamak bir yazma işlemi için beklenecek en uzun süre bir özel durum oluşturur.|  
+|`ChannelInitializationTimeout`|Zaman aralığı|1 değer çizgisi|5 sn|İlk okuma sırasında giriş gönderilecek bir bağlantı için beklenecek en uzun süre. Kimlik doğrulaması gerçekleşmeden önce bu verileri alınır. Bu ayar genellikle daha küçüktür `ReceiveTimeout` kota değeri.|  
+|`CloseTimeout`|Zaman aralığı|0|1 dakika|Bir bağlantı için bir özel durum taşıma yükseltmeden önce kapatmak beklenecek en uzun süre.|  
+|`ConnectionBufferSize`|Tamsayı|1.|8 KB|, İletme bayt cinsinden boyut ve temel alınan aktarımda arabelleklerini alabilirsiniz. Arabellek boyutunu artırmayı büyük iletileri gönderirken, aktarım hızı artırabilir.|  
+|`IdleTimeout`|Zaman aralığı|0|2 dk|Havuza alınan bağlantı kapatıldı önce boşta kalacağını en uzun süre.<br /><br /> Bu ayar yalnızca, havuza alınmış bağlantıları için de geçerlidir.|  
+|`LeaseTimeout`|Zaman aralığı|0|5 dakika|Etkin bir havuza alınmış bağlantı en fazla ömrü. Belirtilen süre geçtikten sonra geçerli istek hizmet sonra bağlantıyı kapatır.<br /><br /> Bu ayar yalnızca, havuza alınmış bağlantıları için de geçerlidir.|  
+|`ListenBacklog`|Tamsayı|1.|10|Dinleyici için bu endpoint ek bağlantılar önce unserviced bağlantı sayısı üst sınırı reddedilir.|  
+|`MaxBufferPoolSize`|Uzun|0|512 KB|Taşıma, yeniden kullanılabilir ileti arabellek havuzu için düzeyde bayt cinsinden en yüksek bellek. İleti arabellek havuzu sağlayamazsınız, yeni bir arabellek geçici kullanım için ayrılır.<br /><br /> Pek çok kanal fabrikaları veya dinleyicileri oluşturma yüklemeler arabellek havuzu için büyük miktarlarda bellek ayırabilirsiniz. Bu arabellek boyutunu azaltma, bu senaryoda bellek kullanımı önemli ölçüde azaltabilir.|  
+|`MaxBufferSize`|Tamsayı|1.|64 KB|Akış verileri için kullanılan arabelleğin bayt cinsinden en büyük boyutu. Bu aktarım kotası ayarlı değil, ya da akış taşıma kullanmıyor durumunda kota değeri küçük aynıdır, `MaxReceivedMessageSize` kota değeri ve <xref:System.Int32.MaxValue>.|  
+|`MaxOutboundConnectionsPerEndpoint`|Tamsayı|1.|10|Belirli bir uç nokta ile ilişkilendirilebilir giden bağlantıları sayısı.<br /><br /> Bu ayar yalnızca, havuza alınmış bağlantıları için de geçerlidir.|  
+|`MaxOutputDelay`|Zaman aralığı|0|200 ms|Ek iletiler tek bir işlemde toplu işleme için bir gönderme işlemi sonra beklenecek en uzun süre. Temel alınan aktarımda arabelleğinin dolarsa iletileri daha önce gönderilir. Ek ileti gönderme, gecikme süresi sıfırlanmaz.|  
+|`MaxPendingAccepts`|Tamsayı|1.|1.|Sayısı kanallar için Dinleyicide bekleyen olduğunu kabul eder.<br /><br /> Bir accept tamamladıktan ve yeni başlangıç kabul arasındaki zaman aralığı yok. Bu koleksiyon boyutunu artırmayı bırakılmakta öğesinden bu aralık sırasında bağlanan istemciler engelleyebilirsiniz.|  
+|`MaxPendingConnections`|Tamsayı|1.|10|Dinleyici uygulama tarafından kabul edilmeyi bekliyor olabilir bağlantılarının maksimum sayısı. Bu kota değeri aşıldığında, yeni gelen bağlantılar kesilir yerine kabul edilmeyi bekliyor.<br /><br /> Bağlantı özellikleri ileti güvenliği gibi birden fazla bağlantı açmak bir istemci neden olabilir. Hizmet yöneticileri, bu ek bağlantılar için bu kota değeri ayarlarken hesap.|  
+|`MaxReceivedMessageSize`|Uzun|1.|64 KB|Bayt cinsinden aktarım özel durum harekete önce başlıkları dahil alınan iletinin en büyük boyutu.|  
+|`OpenTimeout`|Zaman aralığı|0|1 dakika|Aktarım, özel durum harekete önce kurulan bir bağlantı için beklenecek en uzun süre.|  
+|`ReceiveTimeout`|Zaman aralığı|0|10 dakikalık|Taşıma bir özel durum oluşturmadan önce tamamlamak okuma işlemi için beklenecek en uzun süre.|  
+|`SendTimeout`|Zaman aralığı|0|1 dakika|Aktarım, özel durum harekete önce tamamlanması gereken bir yazma işlemi için beklenecek en uzun süre.|  
   
- Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` olarak adlandırılan tek aktarım kota birleştirilir `MaxConnections` bağlama veya yapılandırma ayarlandığında. Bu kota değerlerini ayrı ayrı ayarı yalnızca bağlama öğesi sağlar. `MaxConnections` Aktarım kotası minimum ve varsayılan değerlere sahip.  
+ Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` adlı bir tek aktarım kotası birleştirilir `MaxConnections` bağlama veya yapılandırma ayarlandığında. Yalnızca bağlama öğesi, özel olarak bu kota değerlerini ayrı ayrı ayarlamaya izin verir. `MaxConnections` Aktarım kotası, minimum ve varsayılan değerlerine sahip.  
   
-## <a name="setting-transport-quotas"></a>Ayar taşıma kotaları  
- Taşıma kotaları aktarım bağlama öğesi, aktarım bağlama, uygulama yapılandırması veya ana bilgisayar ilkesine ayarlanır. Bu belge ana bilgisayar ilkesi aracılığıyla ayarı taşımaları kapsamaz. Ana bilgisayar ilkesi kotaları ayarlarını bulmak temel aktarımı belgelerine bakın. [Yapılandırma HTTP ve HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) konu Http.sys sürücüsünü için kota ayarları açıklar. Windows'u yapılandırma hakkında daha fazla bilgi için Microsoft Bilgi Bankası arama HTTP, TCP/IP'yi ve adlandırılmış kanal bağlantılarına sınırlar.  
+## <a name="setting-transport-quotas"></a>Taşıma kotaları ayarlama  
+ Taşıma kotaları aktarım bağlama öğesi, aktarım bağlama, uygulama yapılandırması veya ana bilgisayar ilkesine ayarlanır. Bu belge, ana bilgisayar ilkesi aracılığıyla ayarı taşımalar kapsamaz. Ana bilgisayar ilkesi kotalar ayarlarını bulmak temel alınan aktarımda belgelerine bakın. [Yapılandırma HTTP ve HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) konu, Http.sys sürücüsü için kota ayarları açıklar. Windows yapılandırma hakkında daha fazla bilgi için Microsoft Bilgi Bankası arama HTTP, TCP/IP'yi ve adlandırılmış kanal bağlantılarına sınırlar.  
   
- Diğer türler kotaları dolaylı olarak aktarımları için geçerlidir. Bir ileti baytlara dönüştürmek için taşıma kullanır ileti Kodlayıcı kendi kota ayarları olabilir. Ancak, bu kotalar kullanılan aktarım türünü bağımsızdır.  
+ Diğer tip kotalar taşımalarına dolaylı olarak uygulanır. Bir iletiyi baytlara dönüştürmek için taşıma kullanan ileti Kodlayıcı kendi kota ayarları olabilir. Ancak, bu kotalar kullanılan taşıma türü bağımsızdır.  
   
-### <a name="controlling-transport-quotas-from-the-binding-element"></a>Taşıma kotaları bağlama öğeden denetleme  
- Bağlama öğesi aracılığıyla taşıma kotaları ayarlama taşıma'nin davranışını denetleme içindeki en büyük esnekliği sağlar. Varsayılan zaman aşımlarını, alma, Aç, Kapat ve bir kanal yapılandırıldığında işlemleri bağlamayı alınır gönderin.  
+### <a name="controlling-transport-quotas-from-the-binding-element"></a>Taşıma kotaları bağlama öğesinden denetleme  
+ Taşıma kotaları bağlama öğesi aracılığıyla ayarı taşıma ait davranışı denetlemek, en büyük esnekliği sunar. Varsayılan zaman aşımlarını, alma, açık, kapatın ve kanal oluşturulduğunda operations bağlamayı alınır gönderin.  
   
 |Ad|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
@@ -78,7 +79,7 @@ Taşıma kotaları bağlantı aşırı kaynakları zaman tüketen karar verme bi
 |`SendTimeout`||||  
   
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Taşıma kotaları bağlama gelen denetleme  
- Bağlama aracılığıyla taşıma kotaları ayarlama hala yaygın kota değerlerini erişim verilirken aralarından seçim yapabileceğiniz kotalarını basitleştirilmiş bir dizi sunar.  
+ Taşıma kotaları ayarlama bağlama aracılığıyla yine de en sık karşılaşılan kota değerlerine erişim sağlarken aralarından seçim yapabileceğiniz kotalar basitleştirilmiş bir dizi sunar.  
   
 |Ad|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
@@ -99,17 +100,17 @@ Taşıma kotaları bağlantı aşırı kaynakları zaman tüketen karar verme bi
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` Aktarım kotası kullanılabilir ise yalnızca `BasicHttp` bağlama. `WSHttp` Bağlamaları için akış aktarım modları desteklemeyen senaryolar vardır.  
+1.  `MaxBufferSize` Aktarım kotası kullanılabilir ise yalnızca `BasicHttp` bağlama. `WSHttp` Bağlamaları akış aktarım modu desteği olmayan senaryolar için vardır.  
   
-2.  Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` olarak adlandırılan tek aktarım kota birleştirilir `MaxConnections`.  
+2.  Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` adlı bir tek aktarım kotası birleştirilir `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Taşıma kotaları yapılandırmasından denetleme  
- Uygulama yapılandırması, bir bağlama özellikleri doğrudan erişimini olarak aynı taşıma kotaları ayarlayabilirsiniz. Yapılandırma dosyalarında bir aktarım kotasına adını her zaman küçük harfle başlar. Örneğin, `CloseTimeout` bağlama özelliğine karşılık gelir `closeTimeout` yapılandırmasında ayarlama ve `MaxConnections` karşılık gelen bir bağlama özellikte `maxConnections` yapılandırmasında ayarlama.  
+ Uygulama yapılandırması, doğrudan bir bağlaması üzerindeki özelliklerine erişme olarak aynı taşıma kotaları ayarlayabilirsiniz. Yapılandırma dosyalarında aktarım kotası adını her zaman küçük harfle başlar. Örneğin, `CloseTimeout` karşılık gelen bir bağlama özelliği `closeTimeout` yapılandırmasında ayarlama ve `MaxConnections` karşılık gelen bir bağlama özelliği `maxConnections` yapılandırmasında ayarlama.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

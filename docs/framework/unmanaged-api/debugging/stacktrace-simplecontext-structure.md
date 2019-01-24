@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698927"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext Yapısı
-Tam yerine kullanılabilir basit bir bağlam sağlar `CONTEXT` yapısı.  
+Tam yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` yapısı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,20 +42,20 @@ struct StackTrace_SimpleContext
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`StackOffset`|Yığın işaretçisi veya x86 enter yığın işaretçisi (ESP) platformlar.|  
-|`FrameOffset`|Çerçeve uzaklık ya da x86 EBP kasayla platformlar.|  
-|`InstructionOffset`|Yönerge işaretçisi veya x86 enter yönerge işaretçisi (EIP) platformlar.|  
+|`StackOffset`|Yığın işaretçisi veya x86 enter yığın işaretçisi (ESP) platformları.|  
+|`FrameOffset`|Çerçeve uzaklığı veya x86 EBP kayıt platformlar.|  
+|`InstructionOffset`|Yönerge işaretçisi veya x86 enter yönerge işaretçisi (EIP) platformları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın izleme işlevleri genellikle yalnızca adresini, çerçeve uzaklık ve yığın adresini döndürülecek gerektiğinden, isteğe bağlı olarak kullanabileceğiniz `SimpleContext` büyük yerine yapısı `CONTEXT` yapısı.  
+ Yığın izleme işlevleri genellikle yalnızca adresi, çerçeve uzaklığı ve yığın adresi döndürülecek gerektiğinden, isteğe bağlı olarak kullanabileceğiniz `SimpleContext` yapısı yerine büyük `CONTEXT` yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

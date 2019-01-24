@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701930"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; öğesi
 Performans sayaçlarını birer paylaşılan genel bellek boyutunu belirtir.  
@@ -56,8 +56,8 @@ Performans sayaçlarını birer paylaşılan genel bellek boyutunu belirtir.
   
  Ayrı bir paylaşılan bellek boyutu için kayıt defteri DWORD FileMappingSize değerinde anahtar HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvuruluyor yapılandırma dosyasındaki genel paylaşılan bellek için belirtilen değer ilk olarak, arkasından. FileMappingSize değeri yok sonra ayrı bir paylaşılan bellek boyutu için bir dördüncü ayarlanır (1/4) yapılandırma dosyasındaki genel ayarı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

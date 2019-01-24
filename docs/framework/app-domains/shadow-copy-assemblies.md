@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572291fa5674c541136e587bc40818da85f71a65
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741712"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
 Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygulama etki alanında kullanılan etkinleştirir derlemeler. Bu, özellikle sürekli olarak ASP.NET siteleri gibi kullanılabilir olması gereken uygulamalar için yararlıdır.  
@@ -77,9 +77,9 @@ Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygu
 ## <a name="obsolete-methods"></a>Eski Yöntemler  
  <xref:System.AppDomain> Sınıfına sahip çeşitli yöntemler gibi <xref:System.AppDomain.SetShadowCopyFiles%2A> ve <xref:System.AppDomain.ClearShadowCopyPath%2A>, bir uygulama etki alanında gölge kopyalama denetlemek için kullanılabilir, ancak bu .NET Framework 2.0 sürümünde geçersiz olarak işaretlendi. Gölge kopyalama özelliklerini kullanmak için bir uygulama etki alanı yapılandırmak için önerilen yöntem <xref:System.AppDomainSetup> sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
 - [\<shadowCopyVerifyByTimestamp > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

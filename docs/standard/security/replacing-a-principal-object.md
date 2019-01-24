@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5193756861f407315ec82e4419f1d04495c7dd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606039"
 ---
 # <a name="replacing-a-principal-object"></a>Asıl Nesneyi Değiştirme
 Kimlik doğrulama hizmetleri sağlayan uygulamalar sağlayabilmelidir değiştirin **asıl** nesne (<xref:System.Security.Principal.IPrincipal>) belirli bir iş parçacığı için. Ayrıca, güvenlik sistemi değiştirme olanağı korumanız gerekir **asıl** çünkü nesneleri bir kötü amaçlı olarak eklenen, yanlış **asıl** uygulamanız tarafından güvenliği tehlikeye atar bir doğru kimlik veya bir rolü beyanda bulunma. Bu nedenle, uygulamaları gerektiren değiştirme olanağı **asıl** nesneleri verilmelidir <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> asıl denetim için nesne. (Bu izni rol tabanlı güvenlik denetimleri gerçekleştirme veya oluşturmak için gerekli olmadığını unutmayın **asıl** nesneleri.)  
@@ -36,5 +36,5 @@ Kimlik doğrulama hizmetleri sağlayan uygulamalar sağlayabilmelidir değiştir
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: a0ff8f69f7725b40eaac01acef74857c2a99247c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e406b72e5d2932464c407dce014dd8eceee59fb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577301"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
 Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca statik üyeleri içeren sınıflar genel olarak kullanılır. Bir sınıf, bir veya daha fazla özel oluşturucular ve genel Oluşturucusu varsa, diğer sınıflar (iç içe geçmiş sınıflar dışında) bu sınıfın örnekleri oluşturulamaz. Örneğin:  
@@ -35,11 +35,11 @@ Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca stat
 
 Daha fazla bilgi için [özel oluşturucular](~/_csharplang/spec/classes.md#private-constructors) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
 - [public](../../../csharp/language-reference/keywords/public.md)

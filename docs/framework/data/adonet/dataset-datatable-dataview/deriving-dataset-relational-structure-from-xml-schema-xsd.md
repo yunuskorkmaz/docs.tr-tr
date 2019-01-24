@@ -2,17 +2,17 @@
 title: XML şemasından (XSD) DataSet ilişkisel yapısını türetme
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717950"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML şemasından (XSD) DataSet ilişkisel yapısını türetme
 Bu bölümde bir bakış sunulmaktadır ilişkisel şemasını bir `DataSet` bir XML Şeması Tanım Dili (XSD) şeması belgesinden oluşturulmuştur. Genel olarak, her biri için `complexType` şema öğesi alt öğesi, bir tablo üretilir `DataSet`. Tablo yapısı, karmaşık tür tanımına göre belirlenir. Tablolar oluşturulur `DataSet` şemanın en üst düzey öğeleri için. Ancak, bir tablo yalnızca bir üst düzey için oluşturulur `complexType` öğesi olduğunda `complexType` öğesi iç içe başka içinde `complexType` öğesi, iç içe case `complexType` öğesi eşlenmiş durumda bir `DataTable` içinde `DataSet`.  
   
- World Wide Web Consortium (W3C) XSD hakkında daha fazla bilgi için bkz. [XML şema bölüm 0: ilk öneri](https://www.w3.org/TR/xmlschema-0/), [XML Şeması Kısım 1: yapıları öneri](https://www.w3.org/TR/xmlschema-1/)ve [XML Şema bölümü 2: Veri türleri öneri](https://www.w3.org/TR/xmlschema-2/).  
+ World Wide Web Consortium (W3C) XSD hakkında daha fazla bilgi için bkz [XML şema bölüm 0: İlk öneri](https://www.w3.org/TR/xmlschema-0/), [XML Şeması Kısım 1: Yapıları öneri](https://www.w3.org/TR/xmlschema-1/)ve [XML şema bölümü 2: Veri türleri öneri](https://www.w3.org/TR/xmlschema-2/).  
   
  Aşağıdaki örnek, bir XML şeması gösterir. burada `customers` bir alt öğesidir `MyDataSet` olan öğenin bir **veri kümesi** öğesi.  
   
@@ -96,5 +96,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Yük ve ilişkisel yapısını ve verileri kalıcı hale açıklar bir `DataSet` XML verileri olarak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

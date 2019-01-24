@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) konuma göre (C#)'
+title: 'Nasıl yapılır: Konum (XPath-LINQ to XML) göre alt öğeleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 5d62418fe6d89c8dc5c7ddb4975404f1a7e0aa2d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d9cf80b5d5edfe995196751b4f769ed6088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577444"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) konuma göre (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Nasıl yapılır: Konum (XPath-LINQ to XML) göre alt öğeleri bulma (C#)
 Bazen kendi konumlarına göre öğeleri bulmak istediğiniz. İkinci öğe bulmak isteyebilirsiniz veya beşinci öğeyi aracılığıyla üçüncü bulmak isteyebilirsiniz.  
   
  XPath ifadesidir:  
@@ -21,7 +21,7 @@ Bazen kendi konumlarına göre öğeleri bulmak istediğiniz. İkinci öğe bulm
 ## <a name="example"></a>Örnek  
  Bu örnekte ikinci dördüncü aracılığıyla bulur `Test` öğesi. Öğelerinin bir koleksiyonunu sonucudur.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: Test yapılandırması (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Test yapılandırması (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -78,6 +78,6 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

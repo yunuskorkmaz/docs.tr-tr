@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697354"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  
@@ -38,7 +38,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
 5.  Sunucuda veya bir veri kaynağındaki ikili kaynaklara erişimini etkinleştirir.  
   
- Bu konudaki örnekleri akış derinlemesine gönderisinde açıklanan fotoğraf hizmeti, bir örneği temel alarak [Veri Hizmetleri Akış sağlayıcısı serisi: bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989). Bu örnek hizmeti için kaynak kodu kullanılabilir [akış fotoğraf veri hizmeti örnek sayfası](https://go.microsoft.com/fwlink/?LinkID=198988) MSDN Kod Galerisi'nde.  
+ Bu konudaki örnekleri akış derinlemesine gönderisinde açıklanan fotoğraf hizmeti, bir örneği temel alarak [Veri Hizmetleri Akış sağlayıcısı serisi: Bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989). Bu örnek hizmeti için kaynak kodu kullanılabilir [akış fotoğraf veri hizmeti örnek sayfası](https://go.microsoft.com/fwlink/?LinkID=198988) MSDN Kod Galerisi'nde.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Veri modelinde bir medya bağlantısı girişinin tanımlama  
  Veri kaynağı sağlayıcı bir varlık veri modeli bir medya bağlantı giriş olarak tanımlandığı şekilde belirler.  
@@ -50,7 +50,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
  Ad alanı da eklemelisiniz `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` veya varlık veri modelini tanımlar .edmx veya .csdl dosyasının kök.  
   
- Veri hizmetinin kullanan bir örnek [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve ortaya çıkaran bir medya kaynağı gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989).  
+ Veri hizmetinin kullanan bir örnek [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve ortaya çıkaran bir medya kaynağı gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: Bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Yansıma Sağlayıcısı**  
  Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme <xref:System.Data.Services.Common.HasStreamAttribute> yansıma sağlayıcısı varlık türü tanımlayan sınıf.  
@@ -129,7 +129,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

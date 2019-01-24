@@ -2,12 +2,12 @@
 title: İleti Dağıtımını Sınırlandırma
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686770"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, bir sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Ancak, birçok uygulama için ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almayı isteyen, örneğin, bu isteği kafes her üyesi için yığılma olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları neredeyse sınırlı olabilir. İletileri kafes tek bir düğümde da gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, ileti yayma filtresini, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçme için genel yönergeleri sağlar.  
@@ -46,23 +46,23 @@ Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes
   
 -   **Kullanan**  
   
-    -   *Tek tek düğüm*: yerel bir filtre veya doğrudan bağlantı.  
+    -   *Tek tek düğüm*:  Yerel bir filtre veya doğrudan bağlantı.  
   
-    -   *Belirli bir çevre içinde Komşuları*: PeerHopCount.  
+    -   *Belirli bir çevre içinde Komşuları*:  PeerHopCount.  
   
-    -   *Karmaşık alt ağı*: MessagePropagationFilter.  
+    -   *Karmaşık alt ağı*:  MessagePropagationFilter.  
   
 -   **Ne sıklıkta**  
   
-    -   *Çok sık*: doğrudan bağlantı, PeerHopCount, MessagePropagationFilter.  
+    -   *Çok sık*:  Doğrudan bağlantı, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Bazen*: Yerel filtre.  
+    -   *Bazen*:  Yerel Filtresi.  
   
 -   **Bant genişliğini kullanma**  
   
-    -   *Yüksek*: doğrudan bağlantı MessagePropagationFilter veya yerel bir filtre kullanmayı daha az önerilir.  
+    -   *Yüksek*:  Doğrudan bağlantı, MessagePropagationFilter veya yerel bir filtre kullanmayı daha az önerilir.  
   
-    -   *Düşük*: büyük olasılıkla gerekli herhangi biri doğrudan bir bağlantı.  
+    -   *Düşük*:  Büyük olasılıkla gerekli herhangi biri doğrudan bağlantı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

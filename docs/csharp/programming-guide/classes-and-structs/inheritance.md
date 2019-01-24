@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: e69d1dba59858ff0988806dd3ed0dd22e5213313
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607023"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -54,9 +54,9 @@ Sınıf devralma
 ## <a name="derived-class-hiding-of-base-class-members"></a>Temel sınıf üyelerinin türetilmiş sınıf gizleme  
  Türetilmiş bir sınıf, taban sınıfı üyeleri aynı ada ve imzaya sahip üyeler bildirerek gizleyebilirsiniz. [Yeni](../../../csharp/language-reference/keywords/new.md) değiştiricisi üye, temel üyeyi geçersiz kılma olacak şekilde tasarlanmamıştır açıkça belirtmek için kullanılabilir. Kullanımını [yeni](../../../csharp/language-reference/keywords/new.md) gerekli değildir, ancak bir derleyici uyarısı oluşturulur [yeni](../../../csharp/language-reference/keywords/new.md) kullanılmaz. Daha fazla bilgi için [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [bilerek, kullanım geçersiz kılma ve yeni anahtar sözcüklerle](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)

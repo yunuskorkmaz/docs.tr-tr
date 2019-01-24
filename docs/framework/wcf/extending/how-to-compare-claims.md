@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Beyanları Karşılaştırma'
+title: 'Nasıl yapılır: Talepleri karşılaştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,68 +8,68 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720255"
 ---
-# <a name="how-to-compare-claims"></a>Nasıl yapılır: Beyanları Karşılaştırma
-Windows Communication Foundation (WCF) kimlik modeli altyapı yetkilendirme denetimi yapmak için kullanılır. Bu nedenle, bir ortak istenen eylemi gerçekleştirmek ya da istenen kaynağa erişmek için gerekli talep için talep yetkilendirme bağlamında karşılaştırmak için bir görevdir. Bu konu, yerleşik ve özel talep türleri dahil olmak üzere, talep Karşılaştırılacak açıklar. Kimlik modeli altyapısı hakkında daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+# <a name="how-to-compare-claims"></a>Nasıl yapılır: Talepleri karşılaştırma
+Windows Communication Foundation (WCF) kimlik modeli altyapısı, yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, genel istenen eylemi gerçekleştirmek veya istenen kaynağa erişim için gerekli talep için talep yetkilendirme bağlamında karşılaştırılacak bir görevdir. Bu konu, yerleşik ve özel talep türleri dahil olmak üzere, talep Karşılaştırılacak açıklar. Kimlik modeli altyapısı hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
- Talep karşılaştırma eşit olup olmadığını görmek için başka bir talep aynı bölümlerinde karşı talep (türü, sağa ve kaynak) üç bölümden karşılaştırma içerir. Aşağıdaki örnekte bakın.  
+ Bir talep (tür, sağa ve kaynak) eşit olup olmadığını görmek için başka bir talep aynı bölümlerinde karşı üç parçaları karşılaştırmak talep karşılaştırma gerektirir. Aşağıdaki örnekte bakın.  
   
  [!code-csharp[c_CustomClaimComparison#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#9)]
  [!code-vb[c_CustomClaimComparison#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#9)]  
   
- Her iki talep bir talep türüne sahip <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, sağ <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>ve kaynak dizesi "biri". Talep tüm üç bölümden eşit olduğu gibi kendilerini eşit taleplerdir.  
+ Her iki talepler bir talep türüne sahip <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, sağ <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>ve bir kaynak dizesinin "kişi". Talepler, talep tüm üç bölümden eşit olarak eşit olur.  
   
- Yerleşik talep türlerini kullanarak karşılaştırılır <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Talep özgü karşılaştırma kod gerektiğinde kullanılır. Örneğin, aşağıdaki iki kullanıcı asıl adı (UPN) talep verilen:  
+ Yerleşik talep türleri kullanılarak karşılaştırılır <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Talep özgü karşılaştırma kodu gerektiğinde kullanılır. Örneğin, aşağıdaki iki kullanıcı asıl adı (UPN) talep verilen:  
   
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- Karşılaştırma kodda <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi döndürür `true`olduğunu varsayarak `example\someone` aynı etki alanı kullanıcısı olarak tanımlayan "someone@example.com".  
+ Karşılaştırma kodu <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi döndürür `true`olduğunu varsayarak `example\someone` aynı etki alanı kullanıcısı olarak tanımlayan "someone@example.com".  
   
- Özel talep türleri de karşılaştırılabilir kullanarak <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Ancak, burada türü tarafından döndürülen durumlarda <xref:System.IdentityModel.Claims.Claim.Resource%2A> talep özelliği bir ilkel türe dışında bir şey olduğunda <xref:System.IdentityModel.Claims.Claim.Equals%2A> döndürür `true` tarafından döndürülen değerlerin yalnızca varsa `Resource` özellikleri göre eşit<xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Bu olduğu uygun durumlarda, özel türü tarafından döndürülen `Resource` özelliği geçersiz <xref:System.IdentityModel.Claims.Claim.Equals%2A> ve <xref:System.Object.GetHashCode%2A> ne olursa olsun özel işleme gereklidir gerçekleştirmek için yöntemleri.  
+ Özel talep türleri de karşılaştırılabilir kullanarak <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Bununla birlikte, burada tarafından döndürülen tür durumlarda <xref:System.IdentityModel.Claims.Claim.Resource%2A> talep özelliği bir temel türü dışında bir şey olduğunda <xref:System.IdentityModel.Claims.Claim.Equals%2A> döndürür `true` tarafından döndürülen değerlerin yalnızca, `Resource` özellikleri göreeşit<xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi. Burada bu uygun olmaması durumunda, özel bir tür tarafından döndürülen `Resource` özelliği geçersiz kılmalıdır <xref:System.IdentityModel.Claims.Claim.Equals%2A> ve <xref:System.Object.GetHashCode%2A> özel işlemleri gereklidir gerçekleştirmek için yöntemleri.  
   
-### <a name="comparing-built-in-claims"></a>Yerleşik talep karşılaştırma  
+### <a name="comparing-built-in-claims"></a>Yerleşik talepleri karşılaştırma  
   
-1.  İki örneği verilen <xref:System.IdentityModel.Claims.Claim> sınıfı, kullanın <xref:System.IdentityModel.Claims.Claim.Equals%2A> aşağıdaki kodda gösterildiği gibi karşılaştırma yapmak için.  
+1.  Verilen iki örneğini <xref:System.IdentityModel.Claims.Claim> sınıfı, kullanın <xref:System.IdentityModel.Claims.Claim.Equals%2A> aşağıdaki kodda gösterildiği gibi karşılaştırma yapmak.  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
-### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Özel talep ilkel kaynak türleri ile karşılaştırma  
+### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Özel talepler temel kaynak türleri ile karşılaştırma  
   
-1.  İlkel kaynak türleri ile özel talepler için karşılaştırma yerleşik talepler için olduğu gibi aşağıdaki kodda gösterildiği gibi gerçekleştirilebilir.  
+1.  Temel kaynak türleri ile özel talepler için karşılaştırma yerleşik talepler olduğu gibi aşağıdaki kodda gösterildiği şekilde gerçekleştirilebilir.  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  Özel talep yapısı veya temel sınıfı kaynak türleri, kaynak türü geçersiz kılmalıdır için <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi.  
+2.  Özel talepler yapısı veya temel sınıf kaynak türleri, kaynak türü'ı geçersiz kılmalıdır için <xref:System.IdentityModel.Claims.Claim.Equals%2A> yöntemi.  
   
-3.  İlk denetleyin olup olmadığını `obj` parametresi `null`ve bulunursa, `false`.  
+3.  İlk denetleyin olmadığını `obj` parametresi `null`ve bu durumda, dönüş `false`.  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  Sonraki çağrı <xref:System.Object.ReferenceEquals%2A> ve geçirin `this` ve `obj` parametre olarak. Döndürürse `true`, ardından dönüş `true`.  
+4.  Sonraki çağrı <xref:System.Object.ReferenceEquals%2A> ve `this` ve `obj` parametre olarak. Döndürürse `true`, ardından dönüş `true`.  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Sonraki denemesi atamak `obj` yerel değişkene sınıf türü. Bu başarısız olursa, başvurudur `null`. Böyle durumlarda, dönüş `false`.  
+5.  Sonraki deneme atamak `obj` sınıf türünün yerel bir değişkene. Bu başarısız olursa, başvurudur `null`. Bu gibi durumlarda, iade `false`.  
   
-6.  Özel karşılaştırma doğru geçerli talep kümesine sağlanan talep karşılaştırmak gerekli gerçekleştirin.  
+6.  Sağlanan talep geçerli talep doğru karşılaştırma için gereken özel bir karşılaştırma yapar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, talep kaynak olmayan ilkel türünün olduğu özel talep karşılaştırması gösterir.  
+ Aşağıdaki örnek, talep kaynak ilkel olmayan türü olduğu bir özel talep karşılaştırmasını gösterir.  
   
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Nasıl yapılır: Özel talep oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

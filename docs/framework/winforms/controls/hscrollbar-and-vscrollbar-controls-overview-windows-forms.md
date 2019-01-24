@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 02adffef32dcd58eedc11309ae272b72818a563f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683209"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri yatay kaydırma tarafından veya içinde bir uygulamanın veya denetimin dikey olarak uzun bir liste aracılığıyla kolay gezinti öğeleri veya büyük miktarda bilgi sağlamak amacıyla kullanılır. Kaydırma çubukları Windows arabiriminin ortak bir öğesi olan böylece <xref:System.Windows.Forms.ScrollBar> öğesinden türetilen değil denetimlerle genellikle Denetim kullanılır <xref:System.Windows.Forms.ScrollableControl> sınıfı. Benzer şekilde, dahil etmek birçok geliştiricinin seçin <xref:System.Windows.Forms.ScrollBar> denetlemek, kendi kullanıcı denetimleri yazma.  
@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri yatay kaydırma 
   
  Kullanıcı oka birini bastığında anahtarları veya kaydırma çubuğu düğmelerden birine tıklar <xref:System.Windows.Forms.ScrollBar.Value%2A> içinde ayarlanan değere göre özellik değişiklikleri <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.HScrollBar>  
- <xref:System.Windows.Forms.VScrollBar>  
- [.NET Framework 2.0 Windows Forms'a eklemeler](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.HScrollBar>
+- <xref:System.Windows.Forms.VScrollBar>
+- [.NET Framework 2.0 Windows Forms'a eklemeler](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

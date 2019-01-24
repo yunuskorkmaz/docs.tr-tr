@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513795"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange Numaralandırması
-Değişiklikleri işleme dayalı atılan gerekir önbelleğe alınan veri miktarı açıklar.  
+Değişiklikler iş akışına dayalı atılması gerekir önbelleğe alınan veri miktarı açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,24 +36,24 @@ typedef enum CorDebugStateChange
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`PROCESS_RUNNING`|İşlem ileriye doğru yürütme aracılığıyla yeni bir bellek durum sınırına ulaşıldı.|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|İşlem bellek öncekinden daha rasgele farklı olabilir.|  
+|`PROCESS_RUNNING`|İşlem, iletme yürütme aracılığıyla yeni bir bellek durumuna erişmedi.|  
+|`SET_CONTEXT_FLAG_UNWIND_FRAME`|İşlem bellek öncekinden rasgele farklı olabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye `CorDebugStateChange` numaralandırma, bağımsız değişken olarak sağlanır, hata ayıklayıcı çağırdığında [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) yöntemi  
+ Üye `CorDebugStateChange` numaralandırma hata ayıklayıcı çağırdığında bir bağımsız değişken olarak sağlanan [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) yöntemi  
   
 > [!NOTE]
->  Bu numaralandırma .NET senaryoları yalnızca hata ayıklama yerel olarak kullanıma yöneliktir.  
+>  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

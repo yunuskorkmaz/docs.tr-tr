@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 077bc9d7a433c6fdf60f739f34c25a1b469fea02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509573"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Temsilcilerin adlandırılmış ve. Anonim Yöntemler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandırılmış bir yöntemle ilişkili olabilir. Adlandırılmış bir yöntemi kullanarak bir temsilci örneğini oluştururken yöntemi örneğin bir parametre olarak geçirilir:  
@@ -37,10 +37,10 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandır�
   
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
-- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [Nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
+- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [Olaylar](../../../csharp/programming-guide/events/index.md)

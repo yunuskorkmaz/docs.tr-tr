@@ -2,12 +2,12 @@
 title: Başlatmayı Örneklendirme
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4162eb454a0cdeb0db68c1e469da289b8e7ba78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720973"
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
 Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.md) örnek bir arabirim tanımlayarak `IObjectControl`, etkinleştirme ve devre dışı bırakmadan başlatma bir nesnenin özelleştirir. İstemci, nesne havuza geri dönün ve olan nesne havuza döndürmeyen yöntemleri çağırır.  
@@ -25,7 +25,7 @@ Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.m
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Bir ileti geldiğinde, dağıtıcı çağrıları <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> iletiyi işlemek için hizmet sınıfının bir örneğini oluşturmak için yöntemi. Bu yöntem çağrıları sıklığını belirlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, hizmet sınıfının yeni bir örneğini, bunu ulaşan her iletiyi işlemek için oluşturulan <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> bir ileti geldiğinde çağrılır.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: EndpointDispatcher hizmet örneği, iletiyi işlemeyi tamamladıktan sonra çağıran <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemi. Olarak <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemi, bu yöntem çağrıları sıklığına göre belirlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği.  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Hizmet örneği, iletiyi işlemeyi tamamladıktan sonra EndpointDispatcher çağırır <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemi. Olarak <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemi, bu yöntem çağrıları sıklığına göre belirlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği.  
   
 ## <a name="the-object-pool"></a>Nesne havuzu  
  `ObjectPoolInstanceProvider` Sınıfı nesne havuzu uygulamasını içerir. Bu sınıfın uyguladığı <xref:System.ServiceModel.Dispatcher.IInstanceProvider> hizmet modeli katmanını ile etkileşim kurmak için arabirim. EndpointDispatcher çağırdığında <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemi, yeni bir örneğini oluşturmak yerine, özel uygulama var olan bir nesne, bellek havuzunda arar. Varsa, döndürülür. Aksi takdirde, `ObjectPoolInstanceProvider` denetler olmadığını `ActiveObjectsCount` özelliği (sayı havuzdan döndürülen nesnelerin) maksimum havuz boyutuna ulaştı. Değilse, yeni bir örneği oluşturulur ve çağırana döndürülen varsa ve `ActiveObjectsCount` sonradan artırılır. Aksi takdirde bir nesne oluşturma isteği, yapılandırılmış bir süre için sıraya alınır. Uygulamasını `GetObjectFromThePool` aşağıdaki örnek kodda gösterilmiştir.  
@@ -136,7 +136,7 @@ if (activeObjectsCount == 0)
   
  ServiceModel katman uzantıları aşağıdaki davranışları kullanarak sayfaya bağlanır:  
   
--   Hizmet davranışları: Bunlar özelleştirme tüm hizmet çalışma zamanı ile ilgili izin verir.  
+-   Hizmet davranışları: Bunlar, tüm hizmet çalışma zamanı özelleştirme için izin verir.  
   
 -   Uç nokta davranışları: Bu EndpointDispatcher dahil olmak üzere belirli bir hizmet uç noktası, özelleştirme yapma olanağı sağlar.  
   
@@ -156,7 +156,7 @@ if (activeObjectsCount == 0)
   
  <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntem de WCF tarafından çağrıldığında, <xref:System.ServiceModel.ServiceHost> Başlatılmakta olan. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; Bu tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem, yalnızca çok Gelişmiş senaryolar gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırma sorumludur. Aşağıdaki parametre olarak geçirilen <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
--   `Description`: Tüm hizmet için hizmet açıklaması bu parametreyi sağlar. Bu hizmet uç noktaları, sözleşmeler, bağlamalar ve hizmetiyle ilişkili diğer veri hakkında açıklama verilerini incelemek için kullanılabilir.  
+-   `Description`: Bu parametre, tüm hizmet hizmet açıklamasını sağlar. Bu hizmet uç noktaları, sözleşmeler, bağlamalar ve hizmetiyle ilişkili diğer veri hakkında açıklama verilerini incelemek için kullanılabilir.  
   
 -   `ServiceHostBase`: Bu parametreyi sağlar <xref:System.ServiceModel.ServiceHostBase> başlatılan şu anda.  
   
@@ -265,4 +265,4 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

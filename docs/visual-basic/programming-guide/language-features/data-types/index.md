@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cf16fc1d9b5713be43a041c92dbd1228f3995d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694457"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic'de Veri Türleri
 *Veri türü* programlama öğesinin, içerebileceği verilerin türünü ve bu verileri nasıl depoladı ifade eder. Veri türleri, bilgisayar belleğinde depolanabilir veya bir ifade değerlendirmesi katılabilirsiniz tüm değerleri için geçerlidir. Her değişken, değişmez değeri, sabiti, numaralandırma, özellik, yordam parametresi, yordam bağımsız değişkeninin ve yordamın dönüş değerini bir veri türüne sahip.  
@@ -34,15 +34,15 @@ ms.locfileid: "45971844"
   
  Visual Basic veri türleri listesi için bkz. [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Diziler](tuples.md)     
- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Demetler](tuples.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

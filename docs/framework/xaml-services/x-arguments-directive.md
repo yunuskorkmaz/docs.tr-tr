@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4cff4c2f95d1418371921a3ac992a3b243d1c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490823"
 ---
 # <a name="xarguments-directive"></a>x:Arguments Yönergesi
-Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğesi bildiriminde ya da bir fabrika yöntemi nesne bildirimi.  
+Paketleri yapım bağımsız XAML varsayılan olmayan bir oluşturucu nesne öğe bildiriminde ya da bir fabrika yöntemi nesne bildirimi.  
   
-## <a name="xaml-element-usage-nondefault-constructor"></a>XAML öğesi kullanımı (varsayılan olmayan Oluşturucu)  
+## <a name="xaml-element-usage-nondefault-constructor"></a>XAML öğesi kullanımı (varsayılan oluşturucu)  
   
 ```  
 <object ...>  
@@ -26,7 +26,7 @@ Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğe
 </object>  
 ```  
   
-## <a name="xaml-element-usage-factory-method"></a>XAML öğesi kullanımı (fabrika yöntemi)  
+## <a name="xaml-element-usage-factory-method"></a>XAML öğesi kullanımı (Üreteç yöntemi)  
   
 ```  
 <object x:FactoryMethod="methodName"...>  
@@ -40,29 +40,29 @@ Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğe
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|Yedekleme varsayılan olmayan Oluşturucusu veya Fabrika yönteme iletilecek bağımsız değişkenleri belirtin bir veya daha fazla nesne öğeleri.<br /><br /> Tipik kullanım gerçek bağımsız değişken değerleri belirtmek için nesne öğeleri başlatma metinde kullanmaktır. Örnekler bölümüne bakın.<br /><br /> Öğelerin sırasını önemlidir. XAML türleri sırayla türlerinin eşleşmesi gerekir ve yedekleme Oluşturucusu veya Fabrika yöntemi aşırı yüklemesini sırasını yazın.|  
-|`methodName`|Herhangi bir işlem Fabrika yöntemin adını `x:Arguments` bağımsız değişkenler.|  
+|`oneOrMoreObjectElements`|Yedekleme varsayılan olmayan oluşturucu veya Fabrika yöntemine geçirilecek bağımsız değişkenleri belirten bir veya daha fazla nesne öğeler.<br /><br /> Tipik kullanım gerçek bağımsız değişken değerlerini belirtmek için nesne öğelerini başlatma metinde kullanmaktır. Örnekler bölümüne bakın.<br /><br /> Öğelerin sırasını büyük/küçük harf önemlidir. XAML türleri sırayla, türlerinin eşleşmesi ve yedekleme Oluşturucusu veya Fabrika yöntemi aşırı yüklemesini sırasını yazın.|  
+|`methodName`|Tüm işlemelisiniz Üreteç yöntemi adını `x:Arguments` bağımsız değişkenler.|  
   
-## <a name="dependencies"></a>Bağımlılıklar  
- `x:FactoryMethod` kapsam ve davranışını değiştirebilirsiniz nerede `x:Arguments` uygular.  
+## <a name="dependencies"></a>Bağımlılıkları  
+ `x:FactoryMethod` kapsam ve davranışını değiştirebilirsiniz burada `x:Arguments` uygular.  
   
- Öyle değilse `x:FactoryMethod` belirtilirse, `x:Arguments` yedekleme oluşturucular alternatif (varsayılan olmayan) imzalar için geçerlidir.  
+ Hayır ise `x:FactoryMethod` belirtilen `x:Arguments` yedekleme oluşturucular alternatif (varsayılan olmayan) imzalar için geçerlidir.  
   
- Varsa `x:FactoryMethod` belirtilirse, `x:Arguments` bir adlandırılmış yöntemi aşırı için geçerlidir.  
+ Varsa `x:FactoryMethod` belirtilen `x:Arguments` adlandırılmış yöntemi aşırı yüklemesi için geçerlidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XAML 2006 varsayılan olmayan başlatma başlatma metin aracılığıyla destekleyebilir. Ancak, bir başlatma metin oluşturma teknik pratik uygulamasının sınırlıdır. Başlatma metin tek bir metin dizesi kabul edilir; Bu nedenle, özel bilgiler öğeleri ve özel sınırlayıcıları dizesinden ayrıştıramıyor oluşturma davranışı için tür dönüştürücüsünü tanımlanmadıkça yalnızca tek bir parametre başlatma için özelliğini ekler. Ayrıca, nesne mantığı potansiyel olarak doğru bir dize dışında temelleri işleme için belirli bir XAML Ayrıştırıcıyı ait yerel varsayılan türü dönüştürücü metindir.  
+ XAML 2006 başlatma metnin varsayılan olmayan başlatma destekleyebilir. Ancak, bir başlatma metin oluşturma teknik uygulaması pratik sınırlıdır. Başlatma metin tek metin dizesi olarak kabul edilir; Bu nedenle, bir tür dönüştürücüsü özel bilgi öğeleri ve özel sınırlayıcıları dizesinden ayrıştırabilen oluşturma davranışı için tanımlı olmadığı sürece yalnızca tek bir parametre başlatma özelliği ekler. Ayrıca, nesne mantığı potansiyel olarak doğru bir dize dışında temelleri işlemek için bir verilen XAML ayrıştırıcı ait yerel varsayılan tür dönüştürücüsü metindir.  
   
- `x:Arguments` XAML kullanımı tipik herkese açık özellik öğesi kullanımı yönerge biçimlendirme içeren nesne öğenin türü başvurmuyor olmadığından değil. Gibi diğer yönergeleri benzer daha fazla `x:Code` burada öğesi demarks içinde işaretleme kabul varsayılandan gibi alt içeriği için bir aralığı. Bu durumda, her nesne öğesi XAML tür XAML ayrıştırıcıları göre hangi belirli Oluşturucusu fabrika yöntemi imza belirlemek için kullanılan bağımsız değişken türleri hakkında bilgi iletişim kuran bir `x:Arguments` kullanım başvurmak çalışıyor.  
+ `x:Arguments` XAML kullanım değil özellik öğesi kullanımı tipik anlamında yönerge biçimlendirme içeren nesne öğe türünün başvurmadığından. Gibi diğer yönergeleri yakındır daha fazla `x:Code` burada öğe demarks içine işaretleme yorumlanabilir alt içeriğini için varsayılan olarak dışındaki bir aralık. Bu durumda, her nesne öğesi XAML türü XAML ayrıştırıcıları tarafından hangi belirli Oluşturucusu Fabrika yöntem imzası belirlemek için kullanılan bağımsız değişken türleri hakkında bilgi iletişim kuran bir `x:Arguments` kullanım başvurmak çalışıyor.  
   
- `x:Arguments` bir nesne öğesi için yapılandırılan herhangi diğer özellik öğelerinin, içerik, iç metni veya başlatma dizeleri nesne öğesinin gelmelidir. İçinde nesne öğelerin `x:Arguments` öznitelikleri ve başlatma dizeleri XAML türü ve yedekleme Oluşturucusu veya Fabrika yöntemi tarafından izin verildiği şekilde içerebilir. Nesne veya bağımsız değişkenler için özel XAML türler veya aksi takdirde varsayılan XAML ad uzayı dışında kurulan önek eşlemeleri başvurarak XAML türlerini belirtebilirsiniz.  
+ `x:Arguments` bir nesne öğesi için yapılandırılan herhangi diğer özellik öğeleri, içerik, iç metni veya nesne öğesi başlatma dizeleri gelmelidir. Nesne öğeleri içinde `x:Arguments` öznitelikleri ve başlatma dizeleri, XAML türü ve yedekleme Oluşturucusu veya Fabrika yöntemi tarafından izin verildiğinde içerebilir. Nesne veya bağımsız değişkenleri için özel bir XAML türleri ya da aksi takdirde varsayılan XAML ad alanı dışında belirlenen önek eşletirmeleri başvurarak XAML türlerini belirtebilirsiniz.  
   
- XAML işlemcileri bağımsız değişkenleri nasıl belirtilen belirlemek için aşağıdaki kılavuzları kullanın `x:Arguments` bir nesne oluşturmak için kullanılmalıdır. Varsa `x:FactoryMethod` belirtilirse, bilgi karşılaştırıldığı belirtilen `x:FactoryMethod` (unutmayın değerini `x:FactoryMethod` yöntem adı ve adlandırılmış yöntemi aşırı olabilir. Varsa `x:FactoryMethod` belirtilmezse, bilgi nesnesinin tüm ortak oluşturucu aşırı kümesine karşılaştırılan. XAML işleme mantığı sonra parametrelerin sayısı karşılaştırır ve eşleşen parametre ile aşırı seçer. Birden fazla eşleşme varsa XAML işlemci sağlanan nesne öğeleri XAML türlerine göre parametre türlerini karşılaştırmanız gerekir. XAML işlemci davranış hala birden fazla eşleşme varsa, tanımlanmamıştır. Varsa bir `x:FactoryMethod` belirtildi, ancak yöntem çözümlenemiyor, XAML işlemci bir özel durum oluşturması gerekir.  
+ XAML işlemci bağımsız değişkenlerin nasıl belirtilen belirlemek için aşağıdaki yönergeleri kullanın `x:Arguments` bir nesne oluşturmak için kullanılmalıdır. Varsa `x:FactoryMethod` belirtilirse, bilgi karşılaştırılır belirtilen `x:FactoryMethod` (unutmayın değerini `x:FactoryMethod` yöntem adı ve aşırı yüklemeleri adlandırılmış yöntemi olabilir. Varsa `x:FactoryMethod` belirtilmezse, bilgi, nesnenin tüm ortak oluşturucu aşırı yüklemeleri kümesine karşılaştırılır. XAML işleme mantığı, parametrelerin sayısıyla karşılaştırır ve aşırı yükleme ile eşleşen kutup seçer. Birden fazla eşleşme varsa, XAML işlemci sağlanan nesne öğeleri XAML türlerine bağlı parametre türleri karşılaştırmanız gerekir. Yine de birden çok eşleşme varsa, XAML işlemci davranışı tanımsızdır. Varsa bir `x:FactoryMethod` belirtildi ancak metodu nelze rozpoznat, XAML işlemci özel bir durum oluşturmamalıdır.  
   
- XAML öznitelik kullanımı `<x:Arguments>string</x:Arguments>` teknik olarak mümkün değildir. Ancak, bu ne aksi başlatma metin ve tür dönüştürücüleri yapılabilir ötesinde hiçbir özellikleri sağlar ve bu sözdiziminin kullanıldığı XAML 2009 fabrika yöntemi özellikleri tasarım amacı değil.  
+ XAML öznitelik kullanımı `<x:Arguments>string</x:Arguments>` teknik olarak mümkündür. Ancak, bu ne aksi başlatma metin ve tür dönüştürücüleri yapılabilir dışında hiçbir özellikleri sağlar ve bu sözdizimi kullanarak XAML 2009 fabrika yöntemi özelliklerini tasarım amacınıza değil.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki örnek, varsayılan olmayan bir oluşturucu imza sonra XAML kullanımını gösterir `x:Arguments` Bu imza erişir.  
+ Aşağıdaki örnek, varsayılan olmayan bir oluşturucu imzası ve XAML kullanımını gösterir `x:Arguments` , bu imza erişir.  
   
 ```csharp  
 public class Food {  
@@ -84,7 +84,7 @@ public class Food {
 </my:Food>  
 ```  
   
- Aşağıdaki örnek, bir hedef fabrika yöntemi imzası sonra XAML kullanımını gösterir `x:Arguments` Bu imza erişir.  
+ Aşağıdaki örnek, bir hedef Fabrika yöntem imzası ve XAML kullanımını gösterir. `x:Arguments` , bu imza erişir.  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -106,6 +106,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

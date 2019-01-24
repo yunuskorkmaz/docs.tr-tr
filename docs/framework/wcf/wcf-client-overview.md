@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492604"
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini nasıl açıklanmaktadır.  
@@ -171,6 +171,6 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF istemci kanalları kullanarak arama hizmetleri  
  WCF istemci türleri genişleten <xref:System.ServiceModel.ClientBase%601>, kendisi türetilir <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> arka plandaki kanal sistem kullanıma sunmak için arabirim. Hedef hizmet söyleşmesi kullanarak Hizmetleri çağırabilirsiniz <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfı. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

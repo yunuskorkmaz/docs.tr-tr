@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720658"
 ---
 # <a name="cvstruct-structure"></a>CVStruct Yapısı
-Bir modül veya bileşik görüntü yüklenirken kullanılan bilgileri içerir.  
+Bir modül veya bileşik görüntü yüklerken kullanılan bilgileri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +42,18 @@ typedef struct {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |Ana|Ana sürüm yapı numarası.|  
-|Küçük|İkincil sürüm yapı numarası.|  
+|İkincil|İkincil sürüm derleme numarası.|  
 |Alt|Alt yapı numarası.|  
 |Derleme|Yapı numarası.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

@@ -1,22 +1,22 @@
 ---
-title: "İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)"
+title: "İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 8998ed715306402f4d8cc98be82cbb8e4aac3f8e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709500"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)
 Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay ve sezgisel bir şekilde yazabilirsiniz. Zaman uyumlu kod gibi görünen zaman uyumsuz kod yazabilir ve zor geri çağırma işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar derleyici olanak tanır.  
   
  Async özelliği hakkında daha fazla bilgi için bkz. [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Bu izlenecek yol, Web sitelerinin bir listesiyle bayt sayısını toplar. zaman uyumlu bir Windows Presentation Foundation (WPF) uygulaması ile başlar. İzlenecek yol, yeni özellikleri kullanarak zaman uyumsuz bir çözümü uygulamaya ardından dönüştürür.  
   
- Uygulamaları kendiniz yapılandırmak istemiyorsanız indirebilirsiniz "zaman uyumsuz örneği: Web gözden geçirme (C# ve Visual Basic) erişim" den [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+ Uygulamaları kendiniz yapılandırmak istemiyorsanız indirebilirsiniz "zaman uyumsuz örneği: İzlenecek yol erişme (C# ve Visual Basic) "den [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Bu kılavuzda, aşağıdaki görevleri tamamlayın:  
   
@@ -49,7 +49,7 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
 ###  <a name="CreateWPFApp"></a> Bir WPF uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -282,7 +282,7 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Çağrı `webReq.GetResponseAsync` döndürür bir `Task(Of WebResponse)` veya `Task<WebResponse>`. Ardından bir `Await` işleci almak için göreve uygulanır `WebResponse` değeri.  
   
-     Zaman uyumsuz yöntem görev öğesinin tamamlanmasına bağlı olmayan bağımsız yapılacak çalışmaya sahipse yöntemin zaman uyumsuz yöntemin ve await işleci uygulanır önce çağırdıktan sonra bu iki deyimden arasındaki, iş devam edebilirsiniz. Örnekler için bkz [nasıl yapılır: olun birden çok Web isteğini paralel kullanarak Async ve Await (Visual Basic) tarafından](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: Task.WhenAll kullanarak (Visual Basic) tarafından zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Zaman uyumsuz yöntem görev öğesinin tamamlanmasına bağlı olmayan bağımsız yapılacak çalışmaya sahipse yöntemin zaman uyumsuz yöntemin ve await işleci uygulanır önce çağırdıktan sonra bu iki deyimden arasındaki, iş devam edebilirsiniz. Örnekler için bkz [nasıl yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) ve [nasıl yapılır: (Visual Basic) Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
 3.  Eklediğiniz çünkü `Await` işleci önceki adımda, bir derleyici hatası oluşur. İşleci ile işaretlenmiş yöntemler kullanılabilir [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) değiştiricisi. Çağrısını için dönüştürme adımı yineleyin ancak hatasını görmezden Gel `CopyTo` çağrısıyla `CopyToAsync`.  
   
@@ -673,12 +673,12 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz örneği: izlenecek yol (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Görev tabanlı zaman uyumsuz desen (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)  
- [Nasıl yapılır: Task.WhenAll (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [Nasıl yapılır: zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman uyumsuz örneği: İzlenecek yol erişme (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Görev tabanlı zaman uyumsuz desen (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Nasıl yapılır: (Visual Basic) Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Nasıl yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

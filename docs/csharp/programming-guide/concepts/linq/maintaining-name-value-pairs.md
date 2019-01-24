@@ -2,12 +2,12 @@
 title: Ad-değer çiftleri (C#) sağlama
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2f350083724cba7d5b9cfa593ed5733cc9836df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701423"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Ad/değer çiftleri Bakımı (C#)
 Çoğu uygulama iyi ad/değer çiftleri tutulur bilgileri korumak sahip. Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad/değer çiftleri kümesini tutmak kolaylaştıran bazı yöntemler içerir. Öğeleri bilgilerin öznitelikleri veya bir alt kümesi olarak ya da koruyabilir.  
@@ -118,8 +118,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
-- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>
 - [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

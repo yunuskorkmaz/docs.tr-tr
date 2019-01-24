@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573406"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parçasıdır. Simetrik algoritmalar, bir anahtarın ve başlangıç vektörünün (IV) oluşturulmasını gerektirir. Anahtar, verinizin şifresini çözmemesi gereken herkesten gizli tutulmalıdır. IV'nin gizli olması gerekmez ancak her oturum için değiştirilmesi gerekir. Asimetrik algoritmalar bir ortak anahtarın, bir de özel anahtarın oluşturulmasını gerektirir. Ortak anahtar herhangi birine verilebilirken, özel anahtar yalnızca ortak anahtar ile şifrelenen verilerin şifresini çözecek tarafça bilinmelidir. Bu bölümde, hem simetrik, hem de asimetrik algoritmalar için anahtarların nasıl oluşturulacağı ve yönetileceği açıklanmaktadır.  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
-- [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
-- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)  
-- [Nasıl Yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)
+- [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+- [Nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

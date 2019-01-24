@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742753"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteği açıklanmaktadır. WCF yararlanarak Microsoft Message (daha önce MSMQ da bilinir) Queuing tarafından bir aktarım olarak queuing için destek sağlar ve aşağıdaki senaryolara olanak tanır:  
@@ -22,7 +22,7 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
   
 -   Bağlantısı kesilmiş işlemler. Gönderme, alma ve işleme gibi yüksek Gecikmeli ağlar veya sınırlı kullanılabilirlik ağlar üzerinden mobil cihazlar söz konusu olduğunda iletişim kaybedebilir. Kuyruklar, bu işlemler devam etmek bile uç noktaları ne zaman kesilir izin verin. Bağlantı kurulduğunda, alıcı uygulamasına iletileri kuyruğa gönderir.  
   
- WCF uygulaması kuyrukları özelliği kullanmak için standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları birini gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamaları ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF uygulaması kuyrukları özelliği kullanmak için standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları birini gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamaları ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ile mesaj alışverişi ve ileti kuyruğa alma uygulamaları](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  WCF kuyruk desteğine genel bakış.  
   
- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Nasıl kullanılacağını açıklar <xref:System.ServiceModel.NetMsmqBinding> bir WCF istemcisi ve WCF hizmeti arasında iletişim kurmak için sınıf.  
   
- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Nasıl kullanılacağını açıklar <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> WCF ve Message Queuing uygulamalar arasında iletişim kurmak için.  
   
  [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
  [Kuyruğa Alınan İletişim için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Kuyruğa alınmış iletişim WCF kullanmak için en iyi uygulamalar açıklanmaktadır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

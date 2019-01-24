@@ -2,12 +2,12 @@
 title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493319"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana eylemleri biridir. Bir bulma gerçekleştirme ağ üzerinden bir WS-bulma işlemi araştırma iletisi gönderir. Ölçütlerle eşleşen Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-bulma belirtimi](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

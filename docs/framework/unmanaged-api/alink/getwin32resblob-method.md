@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601551"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob Metodu
-Win32 kaynak blob alır. Derleme seçenekleri ayarladıktan sonra bu yöntemi çağırın.  
+Win32 kaynak blob alır. Derleme Seçenekleri'ni ayarladıktan sonra bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,13 +44,13 @@ HRESULT GetWin32ResBlob(
  Derleme kimliği.  
   
  `FileToken`  
- Win32 sürümü kaynak oluşturulurken kullanılacak dosya adını almak için kullanılan dosya simgesi  
+ Win32 sürüm kaynağı oluşturulurken kullanılacak dosya adını almak için kullanılan dosya simgesi  
   
  `fDll`  
  Dosya bir DLL için bir EXE false ise, TRUE.  
   
  `pszIconFile`  
- Kaynak blob'a eklemek için isteğe bağlı simge.  
+ Kaynak blob eklenecek isteğe bağlı simge.  
   
  `ppResBlob`  
  Kaynak blob alır.  
@@ -64,7 +64,7 @@ HRESULT GetWin32ResBlob(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

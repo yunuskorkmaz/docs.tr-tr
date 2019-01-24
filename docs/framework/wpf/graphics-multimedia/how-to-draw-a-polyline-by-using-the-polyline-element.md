@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: d065d3cead1ed9746a9615ce2bb6d3ec4cbd614d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4aab17958180710c392491a27cc22fa006f8c5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688980"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Nasıl yapılır: Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme
 Bu örnekte bir dizi bağlantılı çizgiler kullanmaktır çoklu çizgi çizme gösterilmektedir <xref:System.Windows.Shapes.Polyline> öğesi.  
@@ -34,9 +34,9 @@ Bu örnekte bir dizi bağlantılı çizgiler kullanmaktır çoklu çizgi çizme 
   
  Bu örnek, daha büyük bir örnek bir parçasıdır; tam bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Shapes.Polyline>  
- <xref:System.Windows.Shapes.Polygon>  
- <xref:System.Windows.Shapes.Shape>  
- [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Shapes.Polyline>
+- <xref:System.Windows.Shapes.Polygon>
+- <xref:System.Windows.Shapes.Shape>
+- [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

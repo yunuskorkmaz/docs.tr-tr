@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XML (Visual Basic) CSV dosyalarından oluştur'
+title: 'Nasıl yapılır: (Visual Basic) CSV dosyalarından XML oluşturma'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706686"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Nasıl yapılır: XML (Visual Basic) CSV dosyalarından oluştur
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Nasıl yapılır: (Visual Basic) CSV dosyalarından XML oluşturma
 Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguda bir dizeler dizisi.  
+ Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dizelerden oluşan bir dizi üzerindeki sorgu.  
   
 ```vb  
       ' Create the text file.  
@@ -107,5 +107,5 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeksiyonlar ve dönüştürmeler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

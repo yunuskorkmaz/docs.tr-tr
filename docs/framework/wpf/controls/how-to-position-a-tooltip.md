@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: e51be52301197a66ef49339245e60404d823b36c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 403b070e782a6f243fd5a420e569daa02044dbb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727709"
 ---
 # <a name="how-to-position-a-tooltip"></a>Nasıl yapılır: ToolTip Konumlandırma
 Bu örnek, ekranda bir araç ipucunun konumunu belirtmek gösterilmektedir.  
@@ -58,9 +58,9 @@ Yerleştirme ve PlacementRectangle uzaklığı özellikleri kullanarak, araç ip
  [!code-csharp[ToolTipService#NoToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
  [!code-vb[ToolTipService#NoToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipService>  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
- [Araç İpucuna Genel Bakış](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [Araç İpucu servisinin ve ContextMenuService kullanın](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipService>
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Araç İpucuna Genel Bakış](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [Araç İpucu servisinin ve ContextMenuService kullanın](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

@@ -9,52 +9,52 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e26bab4823795ba5d8afc88266b05cd71f4daf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721038"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Tür eşdeğerliği ve katıştırılmış birlikte çalışma türleri
 
-İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], doğrudan birlikte çalışma derlemeleri COM türleri için tür bilgisi almak Yönetilen derlemeler gerektirmek yerine Yönetilen derlemeler içine COM türleri için tür bilgilerini katıştırma ortak dil çalışma zamanı destekler. Gömülü tür bilgileri yalnızca türleri ve gerçekte yönetilen derlemesi tarafından kullanılan üyeler içerdiği için iki Yönetilen derlemeler çok farklı görünümleri aynı COM türde olabilir. Her yönetilen derleme farklı bir sahip <xref:System.Type> COM türünün kendi görünümünü temsil eden nesne. Ortak dil çalışma zamanı tür denkliği arabirimleri, yapıları, numaralandırmalar ve temsilciler için bu farklı görünümleri arasında destekler.
+İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], birlikte çalışma derlemeleri COM türleri için tür bilgisi almak Yönetilen derlemeler göstermek zorunda kalmadan doğrudan Yönetilen derlemeler, COM türleri için tür bilgilerini katıştırma ortak dil çalışma zamanı destekler. Gömülü tür bilgileri yalnızca türler ve gerçekten yönetilen bir derleme tarafından kullanılan üyeler içerdiğinden, iki Yönetilen derlemeler çok farklı görünümleri aynı COM tür olabilir. Yönetilen her derlemenin farklı bir sahip <xref:System.Type> COM türü onun görünümünü temsil eden nesne. Ortak dil çalışma zamanı tür denklik arabirimleri, yapılar, sabit listeleri ve temsilciler için bu farklı görünümleri arasında destekler.
 
-Tür denkliği yönetilen alıcı derlemesindeki türü bir yönetilen derleme başka bir uygun atanabilecek geçirilen bir COM nesnesi anlamına gelir.
+Tür eşdeğerliği birinden diğerine yönetilen bütünleştirilmiş kod uygun olarak atanabilir geçirilen bir COM nesnesi türü alma derlemedeki yönetilen anlamına gelir.
 
 > [!NOTE]
-> Uygulamaları ile birlikte çalışma derlemeleri dağıtmak gerekli olmadığından, uygulamaların dağıtımını ve COM bileşenlerini kullanmak eklentiler tür eşdeğerliği ve katıştırılmış birlikte çalışma türlerini basitleştirin. Paylaşılan COM bileşenlerini geliştiricileri yine .NET Framework'ün önceki sürümleri tarafından kullanılacak bileşenleri istiyorsanız birincil birlikte çalışma derlemeleri (PIA) oluşturmanız gerekir.
+> Birlikte çalışma derlemeleriyle uygulamaları dağıtmak gerekli olmadığından tür eşdeğerliği ve katıştırılmış birlikte çalışma türleri, uygulamaların dağıtımını ve COM bileşenlerini kullanmak eklentileri basitleştirin. Geliştiricilerin paylaşılan COM bileşenlerinin, yine de .NET Framework'ün önceki sürümleri tarafından kullanılan bileşenleri istediğinde birincil birlikte çalışma derlemeleri (PIA) oluşturmanız gerekir.
 
 ## <a name="type-equivalence"></a>Tür denkliği
 
- COM türlerinin eşdeğer arabirimleri, yapıları, numaralandırmalar ve temsilciler için desteklenir. Aşağıdakilerin tümü doğruysa, COM türlerini eşdeğer olarak nitelemek:
+ COM tür denklik arabirimleri, yapılar, sabit listeleri ve temsilciler için desteklenir. COM türleri, aşağıdakilerin tümü doğru olduğunda denk olarak uygun:
 
-- , Hem arabirimleri veya hem yapıları veya hem numaralandırmalar veya her iki temsilciler türleridir.
+- , Hem arabirimleri veya hem yapıları veya hem sabit listeleri veya her iki temsilci türleridir.
 
-- Türleri, sonraki bölümde açıklandığı gibi aynı kimliğe sahip.
+- Sonraki bölümde açıklandığı gibi türleri aynı kimliğe sahip.
 
-- Bölümünde açıklandığı gibi her iki tür denkliği için uygun olan [işaretleme COM türleri tür denkliği için](#marking-com-types-for-type-equivalence) bölümü.
+- Her iki türü de açıklandığı gibi tür denklik için uygun olan [işaretleme COM türleri tür eşdeğerliğine için](#marking-com-types-for-type-equivalence) bölümü.
 
 ### <a name="type-identity"></a>Tür kimliği
 
-İki tür kendi kapsamları ve kimlikler, diğer bir deyişle, eşleştiğinde her varsa aynı kimliğe sahip belirlenir <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> özniteliğine ve iki özelliklere sahip eşleşen <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> ve <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> özellikleri. Karşılaştırma için <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> büyük küçük harfe duyarlıdır.
+İki tür, kapsamları ve kimlikler, diğer bir deyişle, eşleştiğinde her varsa aynı kimliğe sahip belirlenir <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> özniteliği ve iki öznitelik sahip eşleşen <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> ve <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> özellikleri. Karşılaştırma için <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> büyük küçük harfe duyarlıdır.
 
-Bir tür yoksa <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> özniteliği veya varsa bir <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> belirtmiyor kapsamı ve tanımlayıcı olarak türü özniteliği hala sayılabileceğini için eşdeğer gibi:
+Bir tür yoksa <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> özniteliği veya varsa bir <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> belirtmiyor kapsamı ve tanımlayıcı, türü özniteliği hala olarak kabul edilir denklik için şu şekilde:
 
-- Arabirimler, değeri için <xref:System.Runtime.InteropServices.GuidAttribute> yerine kullanılan <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> özelliği ve <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği (ad alanı dahil diğer bir deyişle, tür adını) yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType> özelliği.
+- Arabirimlerin, değerini <xref:System.Runtime.InteropServices.GuidAttribute> yerine kullanılan <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> özelliği ve <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği (ad alanı dahil diğer bir deyişle, tür adını) yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType> özelliği.
 
-- Yapılar, numaralandırmalar ve Temsilciler <xref:System.Runtime.InteropServices.GuidAttribute> içeren derlemenin yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> özelliği ve <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> özelliği.
+- Yapılar, sabit listeleri ve Temsilciler <xref:System.Runtime.InteropServices.GuidAttribute> içeren derlemenin yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> özelliği ve <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin yerine kullanılır <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> özelliği.
 
-### <a name="marking-com-types-for-type-equivalence"></a>COM türleri tür denkliği için işaretleme
+### <a name="marking-com-types-for-type-equivalence"></a>COM türleri tür eşdeğerliğine için işaretleme
 
- Bir tür için iki yolla tür denkliği uygun olarak işaretleyebilirsiniz:
+ Bir tür için iki yolla türü eşdeğerlik uygun olarak işaretleyebilirsiniz:
 
-- Uygulama <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> öznitelik türü.
+- Uygulama <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> öznitelik türü için.
 
-- Türünün bir COM alma türü olmasını sağlayın. Bu arabirim COM alma türü ise <xref:System.Runtime.InteropServices.ComImportAttribute> özniteliği. İçinde tanımlanmış derleme bir arabirim, yapısı, numaralandırma veya temsilci COM alma türü ise <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> özniteliği.
+- Türünün bir COM içeri aktarma türü olmasını sağlayın. Bu arabirim bir COM içeri aktarma türü ise <xref:System.Runtime.InteropServices.ComImportAttribute> özniteliği. Derleme içinde tanımlanmış olduğu bir arabirim, yapı, sabit listesi veya temsilci bir COM içeri aktarma türü ise <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> özniteliği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Type.IsEquivalentTo%2A>  
-[Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
-[Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)  
+- <xref:System.Type.IsEquivalentTo%2A>
+- [Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)

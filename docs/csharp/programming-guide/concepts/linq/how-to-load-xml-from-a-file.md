@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: XML yükleme bir dosyadan (C#)'
+title: 'Nasıl yapılır: Bir dosyadan XML yükleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: b8322863ad33f8116e26d98467490b9114339553
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688138"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Nasıl yapılır: XML yükleme bir dosyadan (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>Nasıl yapılır: Bir dosyadan XML yükleme (C#)
 Bu konuda, XML, kullanarak bir URI'den yüklemek gösterilmektedir <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir XML belgesi bir dosyadan yüklemek gösterilmektedir. Aşağıdaki örnek, books.xml yükler ve konsola XML ağacı çıkarır.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
@@ -48,6 +48,6 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

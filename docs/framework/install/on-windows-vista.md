@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 92745ed32ab671e7401d61c8edcbbe325fc1ddea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740707"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista ve Windows Server 2008'de .NET Framework yükleme
 
@@ -34,6 +34,6 @@ Yükleyebileceğiniz [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkI
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework'ü indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)
+- [.NET Framework'ü indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)

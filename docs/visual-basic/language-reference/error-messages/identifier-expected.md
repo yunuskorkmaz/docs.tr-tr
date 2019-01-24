@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: ddbb0481ed51d9daad1eedff72fbdb9f6b4a9a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56d405bfe1079e9862d47bc64566fee62a573be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731042"
 ---
 # <a name="identifier-expected"></a>Tanımlayıcı bekleniyor
-Burada bir öğe adı bağlamı gerektiriyor tanınabilir bildirilen öğe adları değil bir programlama öğesi oluşur. Olası bir nedeni olan bir öznitelik dışında bir yerde belirtilmiş deyim başındaki.  
+Burada bir öğe adı bağlamı gerektirir tanınabilir bildirilen öğe adları değil bir programlama öğesi gerçekleşir. Olası nedenlerinden biri olan bir öznitelik dışında bir yerde belirtilmiş deyimin başında.  
   
  **Hata Kimliği:** BC30203  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tüm öznitelikleri deyimindeki tüm başında yerleştirileceğini doğrulayın.  
+-   Herhangi bir özniteliği deyimindeki tüm başında yerleştirildiğinden emin olun.  
   
--   Deyimindeki tüm öğe adları doğru yazdığınızdan emin olun.  
+-   Tüm öğe adları deyiminde doğru yazdığınızdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme'
+title: 'Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifresini çözme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72630fce122c2b0acadb074724ed41394695f2c6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682144"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifresini çözme
 Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifreleme ve şifre çözme bir XML belgesi içindeki bir öğe için ad alanı.  XML şifreleme, exchange veya bir kolayca okunan verilerin hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifreleme konumundaki XML şifreleme standardı hakkında daha fazla bilgi için World Wide Web Consortium (W3C) belirtimi bakın <https://www.w3.org/TR/xmldsig-core/>.  
   
- Bu örnekte açıklanan yöntemleri kullanılarak şifrelenmiş bir XML öğesi şifresini çözer: [nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Bulduğu bir <`EncryptedData`> öğesi, öğenin şifresini çözer ve daha sonra öğenin özgün düz metin XML öğesi ile değiştirir.  
+ Bu örnekte açıklanan yöntemleri kullanılarak şifrelenmiş bir XML öğesi şifresini çözer: [Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Bulduğu bir <`EncryptedData`> öğesi, öğenin şifresini çözer ve daha sonra öğenin özgün düz metin XML öğesi ile değiştirir.  
   
  Kod örneği, bu yordamı geçerli kullanıcı hesabı yerel sertifika deposundan bir X.509 sertifikası kullanarak bir XML öğesinin şifresini çözer.  Örnekte <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> otomatik olarak X.509 sertifika almak ve bir oturum anahtarı depolanan şifresini çözmek için gereken yöntemini <`EncryptedKey`> öğesi <`EncryptedData`> öğesi.  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Yöntemi ardından otomatik olarak oturum anahtarı XML öğesinin şifresini çözmek için kullanır.  
   
@@ -79,5 +79,5 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelem
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

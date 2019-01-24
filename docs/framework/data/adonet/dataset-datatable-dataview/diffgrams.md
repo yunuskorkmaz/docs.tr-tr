@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513665"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yüklemek ve içeriğini kalıcı hale getirmek ve ağ bağlantısı üzerinden aktarım için içeriği seri hale getirmek için biçimini kullanır. Olduğunda bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru içeriği, ancak şeması değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hatası bilgileri ve satır sırası.  
@@ -83,8 +83,8 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**id**|Öğeleri eşleştirmiş  **\<diffgr: önce >** ve  **\<diffgr:errors >** blokları öğelere **\<** ***DataInstance*** **>** blok. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`.|  
-|**parentId**|Hangi öğeyi tanımlayan **\<** ***DataInstance*** **>** blok, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
+|**id**|Öğeleri eşleştirmiş  **\<diffgr: önce >** ve  **\<diffgr:errors >** blokları öğelere **\<** ***DataInstance*** **>** blok. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`|  
+|**parentId**|Hangi öğeyi tanımlayan **\<** ***DataInstance*** **>** blok, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`|  
 |**hasChanges**|Bir satır tanımlayan **\<** ***DataInstance*** **>** değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden birine sahip olabilir:<br /><br /> **eklenen**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **Değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** blok. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** blok, ancak hiçbir ek açıklamalı öğesindeolmasıbulunmaz**\<** ***DataInstance*** **>** blok.|  
 |**hasErrors**|Bir satır tanımlayan **\<** ***DataInstance*** **>** ile engelleyecek bir **RowError**. Hata yerleştirilmemiş  **\<diffgr:errors >** blok.|  
 |**Hata:**|Metni içeren **RowError** belirli bir öğe için  **\<diffgr:errors >** blok.|  
@@ -94,7 +94,7 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
 |**RowOrder**|Özgün veriler satır sıralamasını korur ve belirli bir satır dizini tanımlayan <xref:System.Data.DataTable>.|  
-|**Gizli**|Sahip olarak bir sütun tanımlayan bir **Columnmapping'in** özelliğini **MappingType.Hidden**. Öznitelik bir biçimde yazılmış **msdata: gizli** *[ColumnName]*= "*değer*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Veri içeren, gizli sütunlarda yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
+|**Gizli**|Sahip olarak bir sütun tanımlayan bir **Columnmapping'in** özelliğini **MappingType.Hidden**. Öznitelik bir biçimde yazılmış **msdata: gizli** *[ColumnName]*= "*değer*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> Veri içeren, gizli sütunlarda yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
   
 ## <a name="sample-diffgram"></a>Örnek DiffGram  
  Biçimini örneği aşağıda gösterilmiştir. Değişiklikleri işlendikten önce bu örnek bir tabloda bir satır için bir güncelleştirme sonucunu gösterir. "ALFKI" satırının bir CustomerID ile değiştirilmiş, ancak güncelleştirilmez. Sonuç olarak, var olan bir **geçerli** ile satırın bir **diffgr:id** "Customers1", **\<** ***DataInstance*** **>** bloğu ve **özgün** ile satırın bir **diffgr:id** "Customers1",  **\<diffgr: önce >** blok. "ANATR" ile bir CustomerID satırını içeren bir **RowError**, ile açıklanıyor `diffgr:hasErrors="true"` ve ilgili bir öğe içinde  **\<diffgr:errors >** blok.  
@@ -131,9 +131,9 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [XML Verileri Olarak DataSet İçeriği Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [XML Verileri Olarak DataSet İçeriği Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74b0fc10b7d838265a6ccd9e2581f67a432f2c9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56273146670dc2f4efde06a2f96e755f6fb86d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712761"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a>ICorDebugEditAndContinueErrorInfo::GetString Metodu
-`GetString` Kullanımdan kalktı. Bu yöntemi çağırmanız gerekmez.  
+`GetString` artık kullanılmıyor. Bu yöntemi çağırmanız gerekmez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

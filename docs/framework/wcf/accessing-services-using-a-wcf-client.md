@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620207"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  Yalnızca bir dosya adı verilir, çıktı dosyası adını olmasıdır. İki dosya adları verilirse, ardından ilk dosyanın içerikleri ile oluşturulan yapılandırmayı birleştirilmiş ve ikinci dosyaya yazılan bir giriş yapılandırma dosyasıdır. Yapılandırma hakkında daha fazla bilgi için bkz. [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Güvenli olmayan meta veri isteği herhangi bir güvenli ağ isteği yapan aynı şekilde belirli riskler neden: sizin kurduğunuz uç noktası olan bu söylüyor olduğundan emin değilseniz, aldığınız bilgiler kötü amaçlı bir hizmet meta verileri olabilir.
+> Güvenli olmayan meta veri isteği yapan herhangi bir güvenli ağ isteği aynı şekilde belirli riskler konusunda sizi uyarmayı: Uç nokta ile iletişim kuran kimin, söylüyor olduğundan emin değilseniz, aldığınız bilgiler kötü amaçlı bir hizmet meta verileri olabilir.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio'da hizmet Başvurusu Ekle
 
@@ -186,14 +186,14 @@ Birçok özel durumlar bir WCF istemcisi tarafından oluşturulan bir özel hizm
 
 Bu tür özel durumlar oluştuğunda, sorunu çözmek için en iyi hizmet tarafında izlemeyi ve var. hangi özel durum oluştu belirlemek için yoludur. İzleme hakkında daha fazla bilgi için bkz: [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme için izleme kullanarak](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Nasıl yapılır: WSE 3.0 Hizmetine Erişme](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Nasıl yapılır: Hizmet işlemlerini zaman uyumsuz olarak çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Nasıl yapılır: Erişim Hizmetleri tek yönlü ve istek-yanıt sözleşmeleriyle](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Nasıl yapılır: WSE 3.0 Erişim hizmeti](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Oluşturulmuş İstemci Kodlarını Anlama](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [İstemci Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)

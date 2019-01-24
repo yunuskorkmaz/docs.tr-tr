@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609805"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder
 Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürütülmesi devam eder. Çağrının sonucuna 'Await' işleci uygulamayı düşünün.  
@@ -117,7 +117,7 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
   
      Bir düğme ve metin kutusu içeren basit bir pencere **tasarım** MainWindow.xaml görünümü.  
   
-     XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Basit, kendi kullanıcı arabirimini oluşturma hakkında daha fazla bilgi için bkz: "WPF uygulaması oluşturmak için" ve "Basit bir WPF MainWindow tasarlamak için" bölümlerini [izlenecek yol: kullanarak Async ve Await ile Web'e erişme](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Basit, kendi kullanıcı arabirimini oluşturma hakkında daha fazla bilgi için bkz: "WPF uygulaması oluşturmak için" ve "Basit bir WPF MainWindow tasarlamak için" bölümlerini [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 4.  MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
   
@@ -205,5 +205,5 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async ve Await ile Zaman Uyumsuz Programlama](../../../visual-basic/programming-guide/concepts/async/index.md)

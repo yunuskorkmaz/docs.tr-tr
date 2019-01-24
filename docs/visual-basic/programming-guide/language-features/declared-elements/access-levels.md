@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 433d5dfd4bb3af9b6fbd0dfc951bb0448eb7efcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704660"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic'de Erişim Düzeyleri
 *Erişim düzeyi* bildirilen bir öğenin erişim olanağı kapsamını, başka bir deyişle, hangi kod dosyayı okuma veya yazma izni yoktur. Bu, yalnızca öğenin kendisinin nasıl bildirdiğiniz tarafından aynı zamanda öğenin kapsayıcı erişim düzeyine göre belirlenir. Bir kapsayıcı öğe erişemiyor kod herhangi birini kendi içerilen öğelerin erişemez, bile olarak bildirilen `Public`. Örneğin, bir `Public` değişkeninde bir `Private` yapısı erişilebilir değil, ancak yapı içeren bir sınıf içinde o sınıf dışında.  
@@ -113,14 +113,14 @@ Daha fazla bilgi için [Visual Basic dil sürümü ayarını](../../../language-
 |`Private`|Bildirim içeriği:<br /><br /> Kod içinde kapsanan türleri dahil olmak üzere özel bir öğe, öğe erişip bildiren türü kodu|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Modül<br /><br /> örneği<br /><br /> Yapı|
 |`Private Protected`|Özel bir korumalı öğe bildirir bir sınıftaki kod veya bas sınıf olarak aynı derlemede bulunan türetilmiş bir sınıf içinde kod.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
+- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

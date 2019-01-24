@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8985fb081443d931be3210c81099d510e2da057d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491902"
 ---
 # <a name="-operator"></a>\\= İşleci
 Bir değişken veya özellik değeri tarafından bir ifadenin değerine böler ve tamsayı sonuç değişken veya özellik atar.  
@@ -49,11 +49,11 @@ variableorproperty \= expression
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
- [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
- [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: öznitelikleri (Visual Basic) kullanarak C C++ birleşimi oluşturma'
+title: 'Nasıl yapılır: (Visual Basic) öznitelikleri kullanarak C / C++ birleşimi oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663290"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Nasıl yapılır: öznitelikleri (Visual Basic) kullanarak C/C++ birleşimi oluşturma
-Öznitelikleri kullanarak yapılar bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, kullanarak C/c++ birleşimi olarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Nasıl yapılır: Öznitelikler (Visual Basic) kullanarak bir C/C++ birleşimi oluşturma
+Öznitelikleri kullanarak yapı birimleri bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, olarak C/C++'ta bir birleşim kullanarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  
   
 ## <a name="example"></a>Örnek  
- Bu kesimdeki kod, tüm alanları `TestUnion` bellek aynı konumda başlatın.  
+ Bu kesimdeki kod, tüm alanları `TestUnion` bellekte aynı konuma başlangıç.  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -36,7 +36,7 @@ End Structure
 ```  
   
 ## <a name="example"></a>Örnek  
- Başka bir örnek farklı alanları başlangıcında açıkça konumları belirlendiği verilmiştir.  
+ Başka bir örnek farklı alanları başlangıcında konumları açıkça ayarlandığı verilmiştir.  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -64,14 +64,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- İki tamsayı alanlarının `i1` ve `i2`, aynı bellek konumları olarak paylaşma `lg`. Platform çağırma kullanırken bu tür bir yapı düzeni denetime yararlıdır.  
+ İki tamsayı alanları `i1` ve `i2`, aynı bellek konumları olarak paylaşma `lg`. Platform çağırma kullanırken, bu tür bir yapı yerleşimi üzerinde denetim yararlı olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)  
- [Öznitelikler](../../../../standard/attributes/index.md)  
- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [Özel öznitelikler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [(Visual Basic) yansıma kullanarak özniteliklere erişme](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Öznitelikler](../../../../standard/attributes/index.md)
+- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Özel öznitelikler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [(Visual Basic) yansıma kullanarak özniteliklere erişme](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

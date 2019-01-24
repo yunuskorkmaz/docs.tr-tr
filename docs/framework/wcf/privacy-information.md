@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683979"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  
@@ -95,7 +95,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
 ### <a name="tracing"></a>İzleme  
  WCF altyapısının tanılama özelliği, taşıma ve hizmet modeli katmanları ve etkinlikleri ve bu iletileri ile ilişkili olayları geçişine iletileri günlüğe kaydeder. Bu özellik varsayılan olarak kapalıdır. Uygulamanın yapılandırma dosyası kullanılarak etkinleştirilir ve izleme davranışı, çalışma zamanında WCF WMI sağlayıcısı kullanılarak değiştirilebilir. Etkinleştirildiğinde, izleme altyapısına iletileri, etkinlikleri ve olayları işlemeyi yapılandırılmış dinleyicilerine içeren bir Tanılama izleme yayar. Çıktı konumunu ve biçim yöneticinin dinleyici yapılandırma seçeneklerine göre belirlenir, ancak genellikle bir XML biçimli dosyasıdır. Yönetici, izleme dosyaları üzerinde erişim denetim listesi (ACL) ayarlamaktan sorumludur. Özellikle, Windows etkinleştirme sistem (WAS) tarafından barındırıldığında, yönetici dosyaları ortak sanal kök dizininden sunulur, bu fırça istenen değilse değil emin olmanız gerekir.  
   
- İzlemenin iki tür vardır: ileti günlüğe kaydetme ve tanılama hizmet modeli aşağıdaki bölümde açıklanan izleme,. Her kendi izleme kaynağı yapılandırılır: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> ve <xref:System.ServiceModel>. Bu günlük izleme kaynakları her iki uygulamada yerel olarak veri yakalayın.  
+ İzlemenin iki tür vardır: İleti günlüğe kaydetme ve tanılama hizmet modeli, izleme, aşağıdaki bölümde açıklanan. Her kendi izleme kaynağı yapılandırılır: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> ve <xref:System.ServiceModel>. Bu günlük izleme kaynakları her iki uygulamada yerel olarak veri yakalayın.  
   
 ### <a name="message-logging"></a>İleti Günlüğe Kaydetme  
  İleti izleme kaynağı günlüğe kaydetme (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) sistemi üzerinden akan iletilerini günlüğe kaydetmek için bir yöneticinin sağlar. Yapılandırma yoluyla, kullanıcının tüm iletileri veya yalnızca ileti üstbilgileri, aktarımı ve/veya hizmet modeli katmanına kaydedilip edilmeyeceğini ve yanlış biçimlendirilmiş iletiler eklenip eklenmeyeceğini oturum karar verebilirsiniz. Ayrıca, kullanıcının hangi iletilerin kaydedilip kısıtlamak için filtreleme yapılandırabilirsiniz.  
@@ -127,7 +127,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  Kaldırılan anahtarları:  
   
- \- İçin xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
@@ -159,11 +159,11 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  Veren = "[string]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<NotBefore koşulları "[dateTime]" NotOnOrAfter = "[dateTime]" = >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
  \<AudienceRestrictionCondition >  
   
@@ -171,7 +171,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  \</ AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--soyut temel tür  
   
@@ -247,7 +247,7 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  < AuthorityBinding  
   
- AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
  Konumu = "[URI]"  
   
@@ -401,6 +401,6 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  Web Hizmetleri Açıklama Dili (WSDL), bağlantı noktasının bir tanım içeriyor. Her bağlantı noktası bir uç nokta adresi ve uygulama tarafından kullanılan hizmetler temsil eden bir bağlaması var. WSDL gösterme, yapılandırma kullanrak kapatılabilir. Makinede hiçbir bilgi tutulmaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation'a](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Communication Foundation'a](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)

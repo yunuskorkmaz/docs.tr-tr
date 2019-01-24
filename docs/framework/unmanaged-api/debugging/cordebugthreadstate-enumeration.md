@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba8bca6d14308284c869b923853f7e27e045bca5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2296f6e386f35aed91a8aea4392a9cd00ec27ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724372"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState Numaralandırması
 Hata ayıklama için bir iş parçacığı durumunu belirtir.  
@@ -39,22 +39,22 @@ typedef enum CorDebugThreadState {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`THREAD_RUN`|Hata ayıklama olayı oluşmadığı sürece ücretsiz olarak, iş parçacığı çalıştırır.|  
-|`THREAD_SUSPEND`|İş parçacığı çalıştırılamıyor.|  
+|`THREAD_RUN`|İş parçacığı, ücretsiz, hata ayıklama olayı gerçekleşmediği sürece çalıştırır.|  
+|`THREAD_SUSPEND`|İş parçacığı çalıştıramazsınız.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı kullanan `CorDebugThreadState` bir iş parçacığının yürütme denetlemek için numaralandırması. Bir iş parçacığı durumu kullanarak ayarlayabilirsiniz [Icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) veya [Icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi.  
+ Hata ayıklayıcı kullanan `CorDebugThreadState` bir iş parçacığının yürütmesini denetlemek için sabit listesi. Bir iş parçacığı durumunu kullanarak ayarlayabilirsiniz [Icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) veya [Icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi.  
   
- Sağlanan bir geri çağırma [API barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md) kesintiye uğramış bir durum gerekli olmadığı için ileti Pompalama, sağlar.  
+ Sağlanan bir geri çağırma [API'sini barındıran](../../../../docs/framework/unmanaged-api/hosting/index.md) kesintiye uğramış bir duruma gerekli olmadığı için ileti Pompalama, sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDegug.h  
+ **Üst bilgi:** CorDebug.idl, CorDegug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

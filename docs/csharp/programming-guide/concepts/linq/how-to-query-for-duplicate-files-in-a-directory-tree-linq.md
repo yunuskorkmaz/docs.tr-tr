@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl Yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)'
+title: 'Nasıl yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 66bdcf1b713a80f2a7cda753cb0f39c016178b9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aa1db0c4de2a4b149ee4dd859cd7ab5ee4b78031
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747862"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl Yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)
 Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip. Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir. İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.  
   
 ## <a name="example"></a>Örnek  
@@ -172,7 +172,7 @@ class QueryDuplicateFileNames
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

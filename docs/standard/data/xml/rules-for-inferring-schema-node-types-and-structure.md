@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683670"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema düğüm türleri ve yapısını çıkarma kuralları
 Bu konu nasıl bir XML belgesi bir XML Şeması Tanım Dili (XSD) yapısını düğüm türleri şema çıkarımı işleminin çevirir açıklar.  
@@ -148,8 +148,8 @@ Bu konu nasıl bir XML belgesi bir XML Şeması Tanım Dili (XSD) yapısını d�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [XML Şemasından Çıkarım Yapma](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Şemasından Çıkarım Yapma](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Basit Türlerin Çıkarımını Yapma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

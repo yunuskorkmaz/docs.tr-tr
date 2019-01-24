@@ -2,12 +2,12 @@
 title: .NET core çalışma zamanı tanımlayıcı (RID) Kataloğu
 description: Çalışma zamanı tanımlayıcı (RID) ve RID'de .NET Core nasıl kullanıldığı hakkında bilgi edinin.
 ms.date: 07/19/2018
-ms.openlocfilehash: b801b7866b563ae06499d8ccd2d07cf5fd52b928
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534555"
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -196,4 +196,4 @@ Bkz: [macos'ta .NET Core önkoşulları](macos-prerequisites.md) daha fazla bilg
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Çalışma zamanı kimlikleri](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [Çalışma zamanı kimlikleri](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

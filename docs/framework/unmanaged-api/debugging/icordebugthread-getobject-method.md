@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544542"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject Metodu
-Arabirim işaretçisi ortak dil çalışma zamanı (CLR) iş parçacığına alır.  
+Ortak dil çalışma zamanı (CLR) iş parçacığına bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetObject (
   
 #### <a name="parameters"></a>Parametreler  
  `ppObject`  
- [out] CLR iş parçacığı temsil eden bir Icordebugvalue arabirimi nesnesi adresini gösteren bir işaretçi.  
+ [out] CLR iş parçacığı temsil eden bir Icordebugvalue arabirimi nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Threading.Thread>

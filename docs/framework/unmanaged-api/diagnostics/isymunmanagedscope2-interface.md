@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a33d8b489551dc69542e1b12bcf83602ec5a2008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: beb48835039f142ea1d9e18871f77ada1b6f4f3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706319"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 Arabirimi
-Bir yöntem sözcük kapsamında temsil eder. Bu arabirim genişletir [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) kapsamı içinde tanımlanan sabitleri hakkında bilgi alma yöntemleriyle arabirimi.  
+Bir sözlü kapsamda bir yöntemi temsil eder. Bu arabirim genişletir [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirim yöntemleriyle kapsamında tanımlanmış sabitleri hakkında bilgi edinin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetConstantCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|Bu kapsam içinde tanımlanan sabitleri sayısını alır.|  
+|[GetConstantCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|Bu kapsam içinde tanımlı sabitlerden sayısını alır.|  
 |[GetConstants Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|Bu kapsam içinde tanımlanan yerel sabitleri alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688902"
 ---
 # <a name="comparing-strings-in-net"></a>. NET'te dizeleri karşılaştırma
 .NET, dizeleri karşılaştırmak için çeşitli yöntemler sunar. Aşağıdaki tabloda, listeler ve değer karşılaştırma yöntemleri açıklar.  
   
-|Yöntem adı|Kullan|  
+|Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|İki dizenin değerini karşılaştırır. Bir Integer değeri döndürür.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Yerel kültüre bakılmaksızın iki dizeyi karşılaştırır. Bir Integer değeri döndürür.|  
@@ -152,7 +152,7 @@ ms.locfileid: "45698568"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)
 - [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sıralama ağırlık tablolar (için Windows üzerinde .NET)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [Varsayılan Unicode Harmanlama öğesi tablosu (Linux ve Macos'ta .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

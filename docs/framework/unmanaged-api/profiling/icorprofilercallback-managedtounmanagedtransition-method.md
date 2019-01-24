@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a3d784aa9d6d71418e2a48f56c7de08d3fe3d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694496"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition Yöntemi
-Profil Oluşturucu yönetilen koddan yönetilmeyen koda geçiş oluştuğunu bildirir.  
+Profil Oluşturucu, yönetilen koddan yönetilmeyen koda geçiş oluştuğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +37,24 @@ HRESULT ManagedToUnmanagedTransition(
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Çağrıldığından işlevi kimliği.  
+ [in] Aranan işlev kimliği.  
   
  `reason`  
- [in] Değerini [cor_prf_transıtıon_reason](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) numaralandırması geçişi yönetilen koddan yönetilmeyen koda bir çağrı nedeniyle veya yönetilmeyen bir tarafından adında bir yönetilen işlevi bir dönüş nedeniyle oluşup oluşmadığını gösterir.  
+ [in] Değerini [cor_prf_transıtıon_reason](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) geçiş nedeniyle yönetilen koddan yönetilmeyen koda bir çağrı veya yönetilmeyen bir tarafından çağrılan yönetilen bir işlev geri döndürme nedeniyle oluşup oluşmadığını belirten sabit listesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa değerini `reason` COR_PRF_TRANSITION_CALL, kimliği: Yönetilmeyen işlevinin hangi asla tam zamanı derleyici kullanarak derlenmiştir, işlevi değil. Yönetilmeyen işlevleri, bir ad ve bazı meta verileri gibi ilişkili temel bilgilere sahip. Yönetilmeyen işlev örtük platform kullanarak çağrıldıklarında (PInvoke) çağırma, çalışma zamanının çağrı hedef ve değerini belirleyemiyor `functionId` null olur. Örtük PInvoke hakkında daha fazla bilgi için bkz: [C++ Çalışabilirliği kullanarak (örtük PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
+ Varsa değerini `reason` COR_PRF_TRANSITION_CALL, kimliğidir yönetilmeyen işlevi, hangi asla tam zamanında derleyici kullanarak derlenen, işlevi olduğu. Yönetilmeyen işlevleri, kendileriyle bir ad ve bazı meta veriler gibi ilgili temel bilgiler vardır. Örtük platform kullanarak yönetilmeyen işlev çağrıldı (PInvoke) çağırmak, çalışma zamanının çağrı hedefi ve değeri belirlenemiyor `functionId` null olacaktır. Örtük PInvoke hakkında daha fazla bilgi için bkz. [C++ Çalışabilirliği kullanma (örtük PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [UnmanagedToManagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
- [C++'ta Açık PInvoke Kullanma (DllImport Özniteliği)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [UnmanagedToManagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)
+- [C++'ta Açık PInvoke Kullanma (DllImport Özniteliği)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)

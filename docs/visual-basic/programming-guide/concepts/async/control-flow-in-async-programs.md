@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24a3ece8393fd739ff76fbe759a5572414ce5748
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532532"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 Yazma ve zaman uyumsuz programları daha kolay kullanarak koruduğunuz `Async` ve `Await` anahtar sözcükleri. Ancak, nasıl programınızı anlamazsanız sonuçlar sizi şaşırtabilir. Bu konu, her zaman denetimi başka bir ve hangi bilgileri bir yöntemden diğerine taşır. göstermek için basit bir zamanuyumsuz program aracılığıyla denetim akışını aktarılır izler.  
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Yeni bilgisayarınızda yüklü veya örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
 ### <a name="download-the-program"></a>Programı indir  
- Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Zamanuyumsuz programlarda akış denetimi](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.  
+ Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.  
   
 1.  İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
@@ -111,7 +111,7 @@ Length of the downloaded string: 33946.
   
  Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -358,8 +358,8 @@ Dim contentLength As Integer = Await getLengthTask
   
  ![ALTI adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace altı")  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Zaman uyumsuz örneği: Zaman uyumsuz programlarda (C# ve Visual Basic) denetim akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

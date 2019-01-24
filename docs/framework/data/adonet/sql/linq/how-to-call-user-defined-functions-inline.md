@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: çağrı kullanıcı tanımlı işlevler satır içi'
+title: 'Nasıl yapılır: Kullanıcı tanımlı satır içi işlevleri çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 39eeab06952e1d8a1128580a2be79ed4711d58d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692775"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Nasıl yapılır: çağrı kullanıcı tanımlı işlevler satır içi
-Kullanıcı tanımlı işlevler satır içi çağırabilirsiniz olsa da, sorgu yürütülür kadar yürütme ertelenmiş sorguda içerdiği işlevleri yürütülmez. Daha fazla bilgi için bkz: [LINQ sorgularını (C#) giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+# <a name="how-to-call-user-defined-functions-inline"></a>Nasıl yapılır: Kullanıcı tanımlı satır içi işlevleri çağırma
+Kullanıcı tanımlı satır içi işlevleri çağırabilir olsa da, sorgu yürütülene kadar olan yürütme ertelenmiştir bir sorguya dahil işlevleri yürütülmez. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- Aynı işlevin bir sorgu dışında çağırdığınızda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yöntemi çağrısı ifadesinden basit bir sorgu oluşturur. SQL söz dizimi aşağıdaki gibidir (parametre `@p0` geçirilen sabiti bağlı):  
+ Bir sorgu dışında aynı işlev çağırdığınızda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yöntemi çağrısı ifadesinden basit bir sorgu oluşturur. SQL sözdizimi verilmiştir (parametre `@p0` geçirilen sabiti bağlıdır):  
   
 ```  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki oluşturur:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdakileri oluşturur:  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu için oluşturulan kullanıcı tanımlı işlev yöntemini çağırın satır içi görebilirsiniz `ReverseCustName`. Sorgu yürütme ertelenmiş çünkü işlev hemen yürütülemiyor. SQL veritabanındaki kullanıcı tanımlı işlev çağrısı için bu sorguyu çevirir için oluşturulmuş (sorgu aşağıdaki SQL kodunu bakın).  
+ Aşağıdaki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu için oluşturulan kullanıcı tanımlı işlev yöntem çağrısı bir satır içi görebilirsiniz `ReverseCustName`. Sorgu yürütme ertelenmiş çünkü işlevi hemen yürütülmez. SQL veritabanında kullanıcı tanımlı işlev çağrısı için bu sorgu çevirir için yerleşik (sorgu aşağıdaki SQL kodu bakın).  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -38,5 +38,5 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

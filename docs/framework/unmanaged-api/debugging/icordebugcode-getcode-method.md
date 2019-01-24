@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728771"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode Metodu
-Belirtilen işlev için ayrıştırılmış biçimlendirilmiş tüm kodu alır. Bu yöntem .NET Framework sürüm 2.0 kullanım dışıdır. Kullanım [Icordebugcode2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) yerine.  
+Ayrıştırma için biçimlendirilmiş belirtilen işlevi tüm kod alır. Bu yöntem .NET Framework 2.0 sürümünde kullanım dışı bırakıldı. Kullanım [Icordebugcode2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) yerine.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,32 +42,32 @@ HRESULT GetCode (
   
 #### <a name="parameters"></a>Parametreler  
  `startOffset`  
- [in] İşlev başlangıç uzaklığı.  
+ [in] İşlevin başlangıcına uzaklık.  
   
  `endOffset`  
  [in] İşlevin sonuna uzaklığı.  
   
  `cBufferAlloc`  
- [in] Boyutunu `buffer` dizi kodu, döndürülecek içine.  
+ [in] Boyutu `buffer` dizi kod, döndürülecek içine.  
   
  `buffer`  
- [out] Dizi içine kodu döndürülür.  
+ [out] Dizi içine kod döndürülür.  
   
  `pcBufferSize`  
  [out] Döndürülen bayt sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlevin kodunu birden çok parçalara bölünür varsa, bunlar, yerel uzaklığı artan sırada birleşir. Yönerge sınırları denetlenmez.  
+ Birden çok öbeklere işlevin kodunu bölünmüş, bunlar, yerel uzaklık artan sırada bitiştirilir. Yönerge sınırları denetlenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 1.1, 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetCodeChunks Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetCodeChunks Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+
