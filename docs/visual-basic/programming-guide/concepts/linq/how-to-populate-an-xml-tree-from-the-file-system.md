@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma'
+title: 'Nasıl yapılır: (Visual Basic) dosya sisteminden bir XML ağacı doldurma'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559794"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="c2239-102">Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma</span><span class="sxs-lookup"><span data-stu-id="c2239-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
-<span data-ttu-id="c2239-103">Bir ortak ve kullanışlı XML ağaçları hiyerarşik ad/değer veri deposu olarak uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="c2239-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="c2239-104">Bir XML ağacı hiyerarşik verilerle doldurmak ve ardından onu sorgulama yapabilir, dönüştürmek ve gerekirse, seri.</span><span class="sxs-lookup"><span data-stu-id="c2239-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="c2239-105">Bu kullanım senaryosunda ad alanları ve boşluk davranışı gibi XML belirli semantiğini çoğunu önemli değildir.</span><span class="sxs-lookup"><span data-stu-id="c2239-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="c2239-106">Bunun yerine, bellek, tek bir kullanıcı hiyerarşik veritabanı küçük bir olarak XML ağaç kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="c2239-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="9e7bb-102">Nasıl yapılır: (Visual Basic) dosya sisteminden bir XML ağacı doldurma</span><span class="sxs-lookup"><span data-stu-id="9e7bb-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
+<span data-ttu-id="9e7bb-103">Bir ortak ve kullanışlı XML ağaçlarını hiyerarşik ad/değer veri deposu olarak uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="9e7bb-104">Hiyerarşik veriler ile XML ağacı doldurma ve ardından, sorgulama yapabilir, dönüştürmek ve gerekirse, seri hale.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="9e7bb-105">Bu kullanım senaryosunda, ad alanları ve boşluk davranışını gibi XML belirli semantikler birçok önemli değildir.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="9e7bb-106">Bunun yerine, bellek, hiyerarşik veritabanı tek kullanıcı küçük bir olarak XML ağacı kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c2239-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="c2239-107">Example</span></span>  
- <span data-ttu-id="c2239-108">Aşağıdaki örnek, yerel dosya sistemi özyineleme kullanılarak XML ağacından doldurur.</span><span class="sxs-lookup"><span data-stu-id="c2239-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="c2239-109">Ardından, ağacında tüm dosyaların boyutunu toplam hesaplama ağacında sorgular.</span><span class="sxs-lookup"><span data-stu-id="c2239-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="9e7bb-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="9e7bb-107">Example</span></span>  
+ <span data-ttu-id="9e7bb-108">Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacı doldurur.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="9e7bb-109">Ardından, toplam ağacındaki tüm dosyaların boyutunu hesaplama ağaç sorgular.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c2239-110">Bu örnek, aşağıdakine benzer bir çıktı üretir:</span><span class="sxs-lookup"><span data-stu-id="c2239-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="9e7bb-110">Bu örnekte aşağıdakine benzer bir çıktı oluşturulur:</span><span class="sxs-lookup"><span data-stu-id="9e7bb-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,5 +114,5 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c2239-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c2239-111">See Also</span></span>  
- [<span data-ttu-id="c2239-112">Gelişmiş sorgu teknikler (LINQ-XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2239-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9e7bb-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e7bb-111">See also</span></span>
+- [<span data-ttu-id="9e7bb-112">Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e7bb-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

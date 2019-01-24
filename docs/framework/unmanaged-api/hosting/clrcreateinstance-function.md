@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab16d78b210c2824bf6172f80d1b15e3533a05b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535664"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="0f427-102">CLRCreateInstance İşlevi</span><span class="sxs-lookup"><span data-stu-id="0f427-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="0f427-103">Üç arabirimi birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="0f427-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="5785a-102">CLRCreateInstance İşlevi</span><span class="sxs-lookup"><span data-stu-id="5785a-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="5785a-103">Üç arabirimlerinden birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5785a-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f427-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0f427-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5785a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5785a-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRCreateInstance(  
@@ -37,34 +37,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0f427-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0f427-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5785a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5785a-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="0f427-106">[in] Üç sınıf tanımlayıcıları birini: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy veya CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="0f427-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="5785a-106">[in] Üç sınıf tanımlayıcıları biri: Clsıd_clrmetahost, CLSID_CLRMetaHostPolicy veya CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="5785a-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="0f427-107">[in] Üç arabirim tanımlayıcıları (IID'leri) birini: IID_ICLRMetaHost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="0f427-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="5785a-107">[in] Üç arabirim tanımlayıcıları (IID'leri) biri: Iıd_ıclrmetahost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="5785a-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="0f427-108">[out] Üç arabirimi birini: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="0f427-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="5785a-108">[out] Üç arabirimlerinden birini: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5785a-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0f427-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0f427-109">Return Value</span></span>  
- <span data-ttu-id="0f427-110">Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="0f427-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5785a-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5785a-109">Return Value</span></span>  
+ <span data-ttu-id="5785a-110">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="5785a-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="0f427-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0f427-111">HRESULT</span></span>|<span data-ttu-id="0f427-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0f427-112">Description</span></span>|  
+|<span data-ttu-id="5785a-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5785a-111">HRESULT</span></span>|<span data-ttu-id="5785a-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5785a-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0f427-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="0f427-113">S_OK</span></span>|<span data-ttu-id="0f427-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="0f427-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="0f427-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="0f427-115">E_POINTER</span></span>|<span data-ttu-id="0f427-116">`ppInterface` null şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="0f427-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="5785a-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="5785a-113">S_OK</span></span>|<span data-ttu-id="5785a-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="5785a-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="5785a-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5785a-115">E_POINTER</span></span>|<span data-ttu-id="5785a-116">`ppInterface` NULL olur.</span><span class="sxs-lookup"><span data-stu-id="5785a-116">`ppInterface` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0f427-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0f427-117">Remarks</span></span>  
- <span data-ttu-id="0f427-118">Aşağıdaki tablo için desteklenen birleşimlerin gösterir `clsid` ve `riid`.</span><span class="sxs-lookup"><span data-stu-id="0f427-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5785a-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5785a-117">Remarks</span></span>  
+ <span data-ttu-id="5785a-118">Aşağıdaki tablo için desteklenen kombinasyonlar gösterir `clsid` ve `riid`.</span><span class="sxs-lookup"><span data-stu-id="5785a-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="0f427-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="0f427-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="0f427-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="0f427-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="0f427-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="0f427-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="0f427-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="0f427-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="0f427-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="0f427-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="0f427-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="0f427-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="5785a-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="5785a-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="5785a-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="5785a-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="5785a-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="5785a-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="5785a-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="5785a-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="5785a-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="5785a-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="5785a-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="5785a-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="0f427-125">Aşağıdaki kodu nasıl kullanılacağını gösterir `CLRCreateInstance` tüm üç arabirimi almak için:</span><span class="sxs-lookup"><span data-stu-id="0f427-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="5785a-125">Aşağıdaki kod nasıl kullanılacağını gösterir `CLRCreateInstance` üç arabirimlerinin almak için:</span><span class="sxs-lookup"><span data-stu-id="5785a-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```  
 #include <metahost.h>  
@@ -82,14 +82,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0f427-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0f427-126">Requirements</span></span>  
- <span data-ttu-id="0f427-127">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f427-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5785a-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5785a-126">Requirements</span></span>  
+ <span data-ttu-id="5785a-127">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5785a-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f427-128">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="0f427-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="5785a-128">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5785a-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="0f427-129">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="0f427-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5785a-129">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5785a-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0f427-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f427-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="5785a-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5785a-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f427-131">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0f427-131">See Also</span></span>  
- [<span data-ttu-id="0f427-132">Barındırma</span><span class="sxs-lookup"><span data-stu-id="0f427-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="5785a-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5785a-131">See also</span></span>
+- [<span data-ttu-id="5785a-132">Barındırma</span><span class="sxs-lookup"><span data-stu-id="5785a-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

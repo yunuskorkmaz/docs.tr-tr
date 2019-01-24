@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552248"
 ---
-# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="e224e-102">CorDebugStepReason Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="e224e-102">CorDebugStepReason Enumeration</span></span>
-<span data-ttu-id="e224e-103">Tek bir adımı sonucunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="e224e-103">Indicates the outcome of an individual step.</span></span>  
+# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="06a29-102">CorDebugStepReason Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="06a29-102">CorDebugStepReason Enumeration</span></span>
+<span data-ttu-id="06a29-103">Bir adımın sonucunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="06a29-103">Indicates the outcome of an individual step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e224e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e224e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06a29-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="06a29-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugStepReason {  
@@ -40,27 +40,27 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e224e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="e224e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="06a29-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="06a29-105">Members</span></span>  
   
-|<span data-ttu-id="e224e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="e224e-106">Member</span></span>|<span data-ttu-id="e224e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e224e-107">Description</span></span>|  
+|<span data-ttu-id="06a29-106">Üye</span><span class="sxs-lookup"><span data-stu-id="06a29-106">Member</span></span>|<span data-ttu-id="06a29-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="06a29-107">Description</span></span>|  
 |------------|-----------------|  
-|`STEP_NORMAL`|<span data-ttu-id="e224e-108">Atlama normal olarak, aynı işlev içinde tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="e224e-108">Stepping completed normally, within the same function.</span></span>|  
-|`STEP_RETURN`|<span data-ttu-id="e224e-109">İşlev sonra atlama normal şekilde devam.</span><span class="sxs-lookup"><span data-stu-id="e224e-109">Stepping continued normally, after the function returned.</span></span>|  
-|`STEP_CALL`|<span data-ttu-id="e224e-110">Atlama normal olarak, yeni çağrılan işlev başında devam eder.</span><span class="sxs-lookup"><span data-stu-id="e224e-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
-|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="e224e-111">Bir özel durum oluşturuldu ve denetim için bir özel durum filtresi geçirildi.</span><span class="sxs-lookup"><span data-stu-id="e224e-111">An exception was generated and control was passed to an exception filter.</span></span>|  
-|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="e224e-112">Bir özel durum oluşturuldu ve denetim için bir özel durum işleyici geçirildi.</span><span class="sxs-lookup"><span data-stu-id="e224e-112">An exception was generated and control was passed to an exception handler.</span></span>|  
-|`STEP_INTERCEPT`|<span data-ttu-id="e224e-113">Denetim bir dinleyiciyi geçirildi.</span><span class="sxs-lookup"><span data-stu-id="e224e-113">Control was passed to an interceptor.</span></span>|  
-|`STEP_EXIT`|<span data-ttu-id="e224e-114">Adım tamamlanmadan önce iş parçacığı çıkıldı.</span><span class="sxs-lookup"><span data-stu-id="e224e-114">The thread exited before the step was completed.</span></span>|  
+|`STEP_NORMAL`|<span data-ttu-id="06a29-108">Adımlama, normalde, aynı işlevin içinde tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="06a29-108">Stepping completed normally, within the same function.</span></span>|  
+|`STEP_RETURN`|<span data-ttu-id="06a29-109">İşlev sonra Adımlama normal olarak devam.</span><span class="sxs-lookup"><span data-stu-id="06a29-109">Stepping continued normally, after the function returned.</span></span>|  
+|`STEP_CALL`|<span data-ttu-id="06a29-110">Adımlama normalde, yeni çağrılan bir işlevin başında devam eder.</span><span class="sxs-lookup"><span data-stu-id="06a29-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
+|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="06a29-111">Bir özel durum oluşturuldu ve özel durum filtresi için denetimi geçildi.</span><span class="sxs-lookup"><span data-stu-id="06a29-111">An exception was generated and control was passed to an exception filter.</span></span>|  
+|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="06a29-112">Bir özel durum oluşturuldu ve bir özel durum işleyicisine denetimi geçildi.</span><span class="sxs-lookup"><span data-stu-id="06a29-112">An exception was generated and control was passed to an exception handler.</span></span>|  
+|`STEP_INTERCEPT`|<span data-ttu-id="06a29-113">Denetim için bir dinleyiciyi geçirildi.</span><span class="sxs-lookup"><span data-stu-id="06a29-113">Control was passed to an interceptor.</span></span>|  
+|`STEP_EXIT`|<span data-ttu-id="06a29-114">İş parçacığı adımı tamamlanmadan önce çıkıldı.</span><span class="sxs-lookup"><span data-stu-id="06a29-114">The thread exited before the step was completed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e224e-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e224e-115">Requirements</span></span>  
- <span data-ttu-id="e224e-116">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e224e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06a29-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="06a29-115">Requirements</span></span>  
+ <span data-ttu-id="06a29-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06a29-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e224e-117">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e224e-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="06a29-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06a29-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e224e-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e224e-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="06a29-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06a29-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e224e-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e224e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="06a29-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06a29-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e224e-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e224e-120">See Also</span></span>  
- [<span data-ttu-id="e224e-121">StepComplete Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e224e-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [<span data-ttu-id="e224e-122">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="e224e-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="06a29-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="06a29-120">See also</span></span>
+- [<span data-ttu-id="06a29-121">StepComplete Yöntemi</span><span class="sxs-lookup"><span data-stu-id="06a29-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [<span data-ttu-id="06a29-122">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="06a29-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

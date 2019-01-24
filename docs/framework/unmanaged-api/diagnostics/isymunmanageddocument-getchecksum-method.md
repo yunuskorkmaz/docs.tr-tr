@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561406"
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="389c0-102">ISymUnmanagedDocument::GetCheckSum Metodu</span><span class="sxs-lookup"><span data-stu-id="389c0-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="389c0-103">Sağlama toplamı alır.</span><span class="sxs-lookup"><span data-stu-id="389c0-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="59828-102">ISymUnmanagedDocument::GetCheckSum Metodu</span><span class="sxs-lookup"><span data-stu-id="59828-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="59828-103">Sağlama toplamı alır.</span><span class="sxs-lookup"><span data-stu-id="59828-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="389c0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="389c0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59828-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="59828-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSum(  
@@ -36,18 +36,18 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="389c0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="389c0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="59828-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="59828-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="389c0-106">[in] Tarafından sağlanan arabellek uzunluğu `data` parametresi</span><span class="sxs-lookup"><span data-stu-id="389c0-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="59828-106">[in] Tarafından sağlanan arabellek uzunluğu `data` parametresi</span><span class="sxs-lookup"><span data-stu-id="59828-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="389c0-107">[out] Boyutu ve sağlama toplamı bayt cinsinden uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="389c0-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="59828-107">[out] Boyutu ve sağlama toplamı bayt cinsinden uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="59828-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="389c0-108">[out] Sağlama toplamı alan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="389c0-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="59828-108">[out] Sağlama toplamı alan arabellek.</span><span class="sxs-lookup"><span data-stu-id="59828-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="389c0-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="389c0-109">Return Value</span></span>  
- <span data-ttu-id="389c0-110">Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="389c0-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="59828-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="59828-109">Return Value</span></span>  
+ <span data-ttu-id="59828-110">Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="59828-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="389c0-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="389c0-111">See Also</span></span>  
- [<span data-ttu-id="389c0-112">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="389c0-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="59828-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="59828-111">See also</span></span>
+- [<span data-ttu-id="59828-112">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="59828-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

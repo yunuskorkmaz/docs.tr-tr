@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eae9180ddf05cbeae8ddfea600f0cc0aeef54d55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b13a2342510b48e72c7fd535cd085d0f50ca474
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534663"
 ---
-# <a name="icorthreadpoolcorqueueuserworkitem-method"></a><span data-ttu-id="44360-102">ICorThreadpool::CorQueueUserWorkItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="44360-102">ICorThreadpool::CorQueueUserWorkItem Method</span></span>
-<span data-ttu-id="44360-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="44360-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorqueueuserworkitem-method"></a><span data-ttu-id="26d95-102">ICorThreadpool::CorQueueUserWorkItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="26d95-102">ICorThreadpool::CorQueueUserWorkItem Method</span></span>
+<span data-ttu-id="26d95-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="26d95-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44360-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="44360-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26d95-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="26d95-104">Syntax</span></span>  
   
 ```  
 HRESULT CorQueueUserWorkItem (  
@@ -38,14 +38,14 @@ HRESULT CorQueueUserWorkItem (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="44360-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="44360-105">Requirements</span></span>  
- <span data-ttu-id="44360-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44360-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26d95-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="26d95-105">Requirements</span></span>  
+ <span data-ttu-id="26d95-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26d95-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44360-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="44360-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="26d95-107">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="26d95-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="44360-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="44360-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="26d95-108">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="26d95-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="44360-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44360-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="26d95-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26d95-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44360-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="44360-110">See Also</span></span>  
- [<span data-ttu-id="44360-111">ICorThreadpool Arabirimi</span><span class="sxs-lookup"><span data-stu-id="44360-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a><span data-ttu-id="26d95-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26d95-110">See also</span></span>
+- [<span data-ttu-id="26d95-111">ICorThreadpool Arabirimi</span><span class="sxs-lookup"><span data-stu-id="26d95-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

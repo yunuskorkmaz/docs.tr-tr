@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543899"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="af513-102">ICorDebugErrorInfoEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="af513-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="af513-103">`ICorDebugErrorInfoEnum::Next` Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="af513-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="af513-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="af513-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="2b09b-102">ICorDebugErrorInfoEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2b09b-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="2b09b-103">`ICorDebugErrorInfoEnum::Next` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="2b09b-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="2b09b-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="2b09b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af513-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="af513-105">See Also</span></span>  
- [<span data-ttu-id="af513-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="af513-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2b09b-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2b09b-105">See also</span></span>
+- [<span data-ttu-id="2b09b-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="2b09b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

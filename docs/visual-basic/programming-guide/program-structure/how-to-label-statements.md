@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Deyimler (Visual Basic)'
+title: 'Nasıl yapılır: Etiket ifadeleri (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: df368bdba73ca35dd70bdd2f4e88cc10af894b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00a08bd3bd1f866cec883b6591b03ebd9d858b90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552272"
 ---
-# <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="6c791-102">Nasıl yapılır: Deyimler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c791-102">How to: Label Statements (Visual Basic)</span></span>
-<span data-ttu-id="6c791-103">Deyim blokları virgüllerle ayrılmış kod satırlarını oluşur.</span><span class="sxs-lookup"><span data-stu-id="6c791-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="6c791-104">Öncesinde bir tanımlayıcı string veya tamsayı kod satırlarını olmasını denirse *etiketli*.</span><span class="sxs-lookup"><span data-stu-id="6c791-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="6c791-105">Deyimi etiketleri kullanılmak üzere ifadelerle gibi tanımlamak için kod satırı işaretlemek için kullanılan `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="6c791-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  
+# <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="47129-102">Nasıl yapılır: Etiket ifadeleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47129-102">How to: Label Statements (Visual Basic)</span></span>
+<span data-ttu-id="47129-103">Deyim blokları virgüllerle ayrılmış kod satırlarının oluşur.</span><span class="sxs-lookup"><span data-stu-id="47129-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="47129-104">Öncesinde tanımlayan bir dize veya tamsayı kod satırlarını söylenebilir olmasını *etiketli*.</span><span class="sxs-lookup"><span data-stu-id="47129-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="47129-105">Deyim etiketleri kullanmak için ifadelerle gibi tanımlamak için kod satırını işaretlemek için kullanılan `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="47129-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  
   
- <span data-ttu-id="6c791-106">Etiketleri ya da geçerli Visual Basic tanımlayıcıları olabilir — programlama öğeleri tanımlamak olanlar gibi — veya tamsayı değişmez değerleri.</span><span class="sxs-lookup"><span data-stu-id="6c791-106">Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals.</span></span> <span data-ttu-id="6c791-107">Bir etiket bir kaynak kod satırı başında görünmesi gerekir ve olup, aynı satırda bir deyimi tarafından izlenir bakılmaksızın bir iki nokta gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="6c791-107">A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.</span></span>  
+ <span data-ttu-id="47129-106">Etiketler, geçerli ya da Visual Basic tanımlayıcıları olabilir — programlama öğeleri tanımlayan olanlar gibi — veya tamsayı sabit değerlerinde.</span><span class="sxs-lookup"><span data-stu-id="47129-106">Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals.</span></span> <span data-ttu-id="47129-107">Bir etiket, kaynak kod satırının başında yer almalıdır ve, aynı satırdaki bir deyimi tarafından olup izlenir bakılmaksızın, bir virgül gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="47129-107">A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.</span></span>  
   
- <span data-ttu-id="6c791-108">Derleyici satırının başına, önceden tanımlanan bir tanımlayıcı eşleşip eşleşmediğini kontrol ederek etiketleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6c791-108">The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier.</span></span> <span data-ttu-id="6c791-109">Yoksa, derleyici bir etiket olduğunu varsayar.</span><span class="sxs-lookup"><span data-stu-id="6c791-109">If it does not, the compiler assumes it is a label.</span></span>  
+ <span data-ttu-id="47129-108">Derleyici, satırın başına zaten tanımlı herhangi bir tanımlayıcı ile eşleşip eşleşmediğini kontrol ederek etiketleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="47129-108">The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier.</span></span> <span data-ttu-id="47129-109">Kullanmıyorsa, derleyici bir etiket olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="47129-109">If it does not, the compiler assumes it is a label.</span></span>  
   
- <span data-ttu-id="6c791-110">Etiketler kendi bildirimi alanınız ve diğer tanımlayıcıları ile engel olmaz.</span><span class="sxs-lookup"><span data-stu-id="6c791-110">Labels have their own declaration space and do not interfere with other identifiers.</span></span> <span data-ttu-id="6c791-111">Bir etiketin yönteminin gövdesi kapsamıdır.</span><span class="sxs-lookup"><span data-stu-id="6c791-111">A label's scope is the body of the method.</span></span> <span data-ttu-id="6c791-112">Etiket bildirimi herhangi bir belirsiz durumda önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="6c791-112">Label declaration takes precedence in any ambiguous situation.</span></span>  
+ <span data-ttu-id="47129-110">Etiketler, kendi bildirim alanına sahip ve diğer tanımlayıcıları ile müdahale etmez.</span><span class="sxs-lookup"><span data-stu-id="47129-110">Labels have their own declaration space and do not interfere with other identifiers.</span></span> <span data-ttu-id="47129-111">Bir etiketin, yöntemin gövdesi kapsamıdır.</span><span class="sxs-lookup"><span data-stu-id="47129-111">A label's scope is the body of the method.</span></span> <span data-ttu-id="47129-112">Etiket bildirimi herhangi bir belirsiz durumda daha önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="47129-112">Label declaration takes precedence in any ambiguous situation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6c791-113">Etiketleri yalnızca executable deyimleri yöntemleri içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6c791-113">Labels can be used only on executable statements inside methods.</span></span>  
+>  <span data-ttu-id="47129-113">Etiketleri yalnızca yürütülebilir deyimleri yöntem içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="47129-113">Labels can be used only on executable statements inside methods.</span></span>  
   
-### <a name="to-label-a-line-of-code"></a><span data-ttu-id="6c791-114">Etiket bir kod satırı</span><span class="sxs-lookup"><span data-stu-id="6c791-114">To label a line of code</span></span>  
+### <a name="to-label-a-line-of-code"></a><span data-ttu-id="47129-114">Etiket için bir kod satırı</span><span class="sxs-lookup"><span data-stu-id="47129-114">To label a line of code</span></span>  
   
--   <span data-ttu-id="6c791-115">Kaynak kodu satır başında, iki nokta arkasından bir tanımlayıcı yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="6c791-115">Place an identifier, followed by a colon, at the beginning of the line of source code.</span></span>  
+-   <span data-ttu-id="47129-115">Kaynak kod satırının başında, iki nokta arkasından bir tanımlayıcı yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="47129-115">Place an identifier, followed by a colon, at the beginning of the line of source code.</span></span>  
   
-     <span data-ttu-id="6c791-116">Örneğin, aşağıdaki kod satırlarını ile etiketlenir `Jump` ve `120`sırasıyla:</span><span class="sxs-lookup"><span data-stu-id="6c791-116">For example, the following lines of code are labeled with `Jump` and `120`, respectively:</span></span>  
+     <span data-ttu-id="47129-116">Örneğin, aşağıdaki kod satırlarını ile etiketlenmiş `Jump` ve `120`sırasıyla:</span><span class="sxs-lookup"><span data-stu-id="47129-116">For example, the following lines of code are labeled with `Jump` and `120`, respectively:</span></span>  
   
      [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="6c791-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6c791-117">See Also</span></span>  
- [<span data-ttu-id="6c791-118">Deyimler</span><span class="sxs-lookup"><span data-stu-id="6c791-118">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)  
- [<span data-ttu-id="6c791-119">Bildirilen Öğe Adları</span><span class="sxs-lookup"><span data-stu-id="6c791-119">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [<span data-ttu-id="6c791-120">Program Yapısı ve Kod Kuralları</span><span class="sxs-lookup"><span data-stu-id="6c791-120">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+## <a name="see-also"></a><span data-ttu-id="47129-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="47129-117">See also</span></span>
+- [<span data-ttu-id="47129-118">Deyimler</span><span class="sxs-lookup"><span data-stu-id="47129-118">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="47129-119">Bildirilen Öğe Adları</span><span class="sxs-lookup"><span data-stu-id="47129-119">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [<span data-ttu-id="47129-120">Program Yapısı ve Kod Kuralları</span><span class="sxs-lookup"><span data-stu-id="47129-120">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
