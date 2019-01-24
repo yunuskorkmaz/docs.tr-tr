@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b4909ae23d077ee079e062d0252dbf1ee11663c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538836"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute Yöntemi
-Derleme düzeyi özel öznitelikleri ayarlamak için çağırın.  
+Özel derleme düzeyinde öznitelikler ayarlanacak çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,22 +46,22 @@ HRESULT EmitAssemblyCustomAttribute(
  Derleme kimliği.  
   
  `FileToken`  
- Öznitelik defiles dosyası. NULL olabilir `AssemblyID` ilişkisiz netmodule göstermez.  
+ Öznitelik defiles dosyası. NULL olabilir `AssemblyID` ilişkisiz bir netmodule göstermez.  
   
  `tkType`  
- Özel öznitelik türü.  
+ Özel özniteliğin türü.  
   
  `pCustomValue`  
- Özel değer verisi.  
+ Özel değer verileri.  
   
  `cbCustomValue`  
  Özel değer verisi uzunluğu.  
   
  `bSecurity`  
- Özel öznitelik derleme imzalama ilişkiliyse TRUE.  
+ Derleme imzalama için özel özniteliği ilişkiliyse TRUE.  
   
  `bAllowMulti`  
- Birden çok öznitelik yayınlaması gerekiyorsa TRUE.  
+ Birden çok öznitelik yayılan gerekiyorsa TRUE.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -69,7 +69,7 @@ HRESULT EmitAssemblyCustomAttribute(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

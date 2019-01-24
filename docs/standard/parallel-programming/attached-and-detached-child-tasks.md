@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603319"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 A *alt görev* (veya *iç içe görev*) olan bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> olarak da bilinen başka bir görevin kullanıcı temsilcisinde oluşturulan örnek *üst görev*. Bir alt görev ya da iliştirilemez ya da. A *ayrılmış alt görev* üst bağımsız olarak yürütülen bir görevdir. Bir *iliştirilmiş alt görevi* ile oluşturulan iç içe bir görevdir <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> ana değil açıkça veya varsayılan olarak engelliyor, bağlı olmak seçeneği. Bir görev yalnızca sistem kaynakları tarafından sınırlanan, eklenen veya ilişkisi kesilen alt herhangi bir sayıda oluşturabilirsiniz.  
@@ -58,7 +58,7 @@ A *alt görev* (veya *iç içe görev*) olan bir <xref:System.Threading.Tasks.Ta
  Ayrılmış alt görev, bir özel durum oluşturursa, bu özel durum gözlemlenen veya doğrudan üst görevde olduğu gibi yuvalı olmayan görev işlenmiş. Bir eklenmiş alt görev, bir özel durum oluşturursa, özel durum otomatik olarak üst göreve ve bekler ya da görevin erişmeye çalıştığında geri iş parçacığına yayılır <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği. Bu nedenle, eklenen alt görevler kullanarak, tek bir noktada yapılan çağrıda tüm özel durumları işleyebilir <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> çağıran iş parçacığında. Daha fazla bilgi için [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>İptal ve alt görevler  
- Görev iptali ortaktır. Diğer bir deyişle, iptal edilebilir olması için her ekli veya ayrılmış alt görev iptal belirtecini durumunu izlemeniz gerekir. Bir iptal isteği kullanarak üst öğe ve tüm alt öğelerini iptal etmek istiyorsanız, aynı belirteci için tüm görevler bağımsız değişken olarak geçirin ve her görevde her görevdeki isteğe yanıt mantığını girin. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: bir görevi ve kendi alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Görev iptali ortaktır. Diğer bir deyişle, iptal edilebilir olması için her ekli veya ayrılmış alt görev iptal belirtecini durumunu izlemeniz gerekir. Bir iptal isteği kullanarak üst öğe ve tüm alt öğelerini iptal etmek istiyorsanız, aynı belirteci için tüm görevler bağımsız değişken olarak geçirin ve her görevde her görevdeki isteğe yanıt mantığını girin. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: Bir görevi ve alt öğelerini iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Üst öğe iptal ettiğinde  
  Alt görevi başlatılmadan önce bir üst kendisini iptal ederse, alt hiçbir zaman başlamaz. Alt öğesi zaten başlatıldıktan sonra bir üst kendisini iptal ederse, alt öğe kendi iptal mantığına sahip değilse tamamlanana kadar çalışacaktır. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md).  
@@ -76,9 +76,9 @@ A *alt görev* (veya *iç içe görev*) olan bir <xref:System.Threading.Tasks.Ta
   
  Bir alt görevin ana görevine eklenmesini engellemek için bu seçeneği belirtin <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneği üst oluşturduğunuzda <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesne. Ne zaman bir görevin kendi üst öğesine eklemek çalışır ve üst belirtir <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneği, alt görev üst öğeye Ekle & mümkün olmayacaktır ve yalnızca yürütme gibi <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği belirtilmedi.  
   
- Bir alt görev alt görev zamanında tamamladığında kendi üst öğesine eklenmesini önleme isteyebilirsiniz. Tüm alt görevler tamamlanıncaya kadar bir üst görev sonlanmaz, uzun süre çalışan alt görev genel uygulamanın sonlanmayacağından neden olabilir. Bir görev ana görevine eklenmesini önleyerek uygulama performansını gösteren bir örnek için bkz [nasıl yapılır: alt görevin kendi üst öğesinden iliştirme önleme](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Bir alt görev alt görev zamanında tamamladığında kendi üst öğesine eklenmesini önleme isteyebilirsiniz. Tüm alt görevler tamamlanıncaya kadar bir üst görev sonlanmaz, uzun süre çalışan alt görev genel uygulamanın sonlanmayacağından neden olabilir. Bir görev ana görevine eklenmesini önleyerek uygulama performansını gösteren bir örnek için bkz [nasıl yapılır: Bir alt görevin kendi üst öğesine eklenmesini önleme](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
 - [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

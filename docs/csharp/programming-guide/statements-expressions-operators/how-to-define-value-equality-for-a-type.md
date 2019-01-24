@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: -Tür için değer eşitliği tanımlama C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -Tür için değer eşitliği tanımlama C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589327"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl Yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  
   
 1.  `x.Equals(x)` döndürür `true`. Bu yansıma özelliğin çağırılır.  
@@ -63,7 +63,7 @@ Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliğ
   
  [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) Ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) işleçleri struct açıkça bunları aşırı sürece yapı üzerinde çalışamaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşitlik Karşılaştırmaları](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [Eşitlik Karşılaştırmaları](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

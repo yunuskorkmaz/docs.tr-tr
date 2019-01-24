@@ -2,12 +2,12 @@
 title: Yazma için açık olduğunda dosya bilgisi sorgulanamıyor.
 ms.date: 07/20/2015
 ms.assetid: 2198af10-f128-4b1d-baba-a251e1369146
-ms.openlocfilehash: 1df1630eecc688dbe61400398838c7edaf75a7b2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1df6994109055f52795169bd615bec31b2de1592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597183"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>Yazma için açık olduğunda dosya bilgisi sorgulanamıyor.
 Yazma için açılmış olan bir dosya hakkında bilgi edinmek için girişimde bulunuldu.  
@@ -16,7 +16,7 @@ Yazma için açılmış olan bir dosya hakkında bilgi edinmek için girişimde 
   
 -   Dosyayı kapatın ve işlemi yeniden deneyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO.FileInfo>  
- <xref:System.Security.Permissions.FileIOPermission>  
- [Nasıl yapılır: Visual Basic'te dosya hakkında bilgi alma](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IO.FileInfo>
+- <xref:System.Security.Permissions.FileIOPermission>
+- [Nasıl yapılır: Visual Basic'te dosya hakkında bilgi edinin](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)

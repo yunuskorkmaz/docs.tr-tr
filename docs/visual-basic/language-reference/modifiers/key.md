@@ -8,52 +8,52 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 92d54e3135142bc02a17f3ce5ac078a356c139be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 695f356f44bfd6ea5ad3c0a977ec31ddfbea2b05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668229"
 ---
 # <a name="key-visual-basic"></a>Anahtar (Visual Basic)
-`Key` Anahtar sözcüğü anonim türdeki özellikleri davranışını belirtmenize olanak sağlar. Anonim tür örneği veya karma kodu değerleri hesaplama arasında eşitlik testleri anahtar özellikleri katılan gibi yalnızca özellikleri, belirleyin. Anahtar özellikleri değerleri değiştirilemez.  
+`Key` Anahtar sözcüğü anonim türler, özellikler için davranışını belirtmenize imkan tanır. Anonim tür örnekleri veya bir karma kod değerleri hesaplama arasındaki testlerinde anahtar özellikleri arttıkça, yalnızca özellikleri belirleyin. Anahtar özelliklerin değerlerini değiştirilemez.  
   
- Anahtar sözcüğünü girerek bir anahtar özellik olarak belirttiğiniz anonim bir türün bir özellik `Key` bildiriminden başlatma listesinde önünde. Aşağıdaki örnekte, `Airline` ve `FlightNo` anahtar özellikleri, ancak `Gate` değil.  
+ Anahtar sözcüğünü koyarak bir anahtar özellik olarak belirlediğiniz anonim bir türün bir özellik `Key` başlatma listesi bildiriminde önünde. Aşağıdaki örnekte, `Airline` ve `FlightNo` anahtar özellikleri, ancak `Gate` değil.  
   
  [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
   
- Yeni bir anonim türü oluşturulduğunda, doğrudan öğesinden devralınan <xref:System.Object>. Derleyici üç devralınan üyeleri geçersiz kılar: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, ve <xref:System.Object.ToString%2A>. İçin üretilen geçersiz kılma kodu <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> anahtar özelliklerinde dayanır. Tür, anahtar özellik varsa <xref:System.Object.GetHashCode%2A> ve <xref:System.Object.Equals%2A> değil geçersiz kılınır.  
+ Yeni bir anonim tür oluşturulduğunda, doğrudan devralan <xref:System.Object>. Derleyici, üç devralınan üyeleri geçersiz kılar: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, ve <xref:System.Object.ToString%2A>. İçin üretilen geçersiz kılma kod <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> anahtar özelliklerini temel alır. Tür, anahtar özellik varsa <xref:System.Object.GetHashCode%2A> ve <xref:System.Object.Equals%2A> geçersiz kılınmadığını.  
   
 ## <a name="equality"></a>Eşitlik  
- İki anonim tür örnekleri aynı türde olup olmadığını ve anahtar özelliklerini değerleri aynıysa eşit örnekleridir. Aşağıdaki örneklerde, `flight2` eşittir `flight1` aynı anonim örneklerini olduklarından önceki örnekten türüne ve bunlar eşleşen anahtar özellikleri için değerleri sahip. Ancak, `flight3` eşit değil `flight1` bir anahtar özellik için farklı bir değere sahip olduğundan `FlightNo`. Örnek `flight4` aynı türde değil `flight1` çünkü bunlar farklı özellikleri anahtar özellik olarak belirleyin.  
+ Aynı türdeki örneklerin olmaları durumunda ve bunların anahtar özelliklerinin değerler eşitse, iki anonim tür örnekleri eşit olur. Aşağıdaki örneklerde, `flight2` eşittir `flight1` aynı anonim örneklerini olduklarından önceki örnekteki tür değerleri kendi anahtar özellikleri için eşleşen sahip olur. Ancak, `flight3` eşit değildir `flight1` , bir anahtar özellik için farklı bir değer içerdiğinden `FlightNo`. Örnek `flight4` aynı türde değil `flight1` çünkü bunlar farklı özellikleri anahtar özellik olarak belirleyin.  
   
  [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
   
- Yalnızca anahtar olmayan özellikler, ad, tür, sipariş ve değer, aynı olan iki örneği bildirilen, iki örneği eşit değildir. Anahtar özellikleri olmayan bir örneği yalnızca kendisine eşittir.  
+ Yalnızca anahtar olmayan özellikleri olan adı, türü, sırası ve değeri, aynı iki örneği bildirilmişse iki örnek eşit değildir. Örneği anahtar özellikleri olmadan yalnızca kendisine eşittir.  
   
- İki anonim tür örnekleri altında aynı anonim türdeki örneklerin olan koşullar hakkında daha fazla bilgi için bkz: [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ İki anonim tür örnekleri altında aynı anonim tür örnekleri olan koşullar hakkında daha fazla bilgi için bkz. [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="hash-code-calculation"></a>Karma kod hesaplama  
- Gibi <xref:System.Object.Equals%2A>, tanımlanan karma işlevi <xref:System.Object.GetHashCode%2A> anonim bir tür türü anahtar özelliklerinde temel alınır. Aşağıdaki örnekler anahtar özellikleri ve karma arasındaki etkileşim kod değerleri gösterir.  
+ Gibi <xref:System.Object.Equals%2A>, tanımlanan karma işlevi <xref:System.Object.GetHashCode%2A> türü anahtar özellikleri anonim bir tür temel alınır. Aşağıdaki örnekler arasındaki etkileşimler anahtar özellikleri ve karma kod değerlerini gösterir.  
   
- Anahtar olmayan özellikler eşleşen değerleri olmasa bile, tüm anahtar özellikler için aynı değerlere sahip anonim bir tür örnekleri aynı karma kodu değere sahip. Aşağıdaki deyim döndürür `True`.  
+ Anahtar olmayan özellikler eşleşen değerler olmasa bile, tüm anahtar özellikleri için aynı değerlere sahip anonim bir türün örneklerinin aynı karma kodu değeri var. Aşağıdaki ifade döndürür `True`.  
   
  [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
   
- Bir veya daha fazla anahtar özellikleri için farklı değerlere sahip anonim bir tür örnekleri farklı bir karma kod değerlere sahiptir. Aşağıdaki deyim döndürür `False`.  
+ Bir veya daha fazla anahtar özelliği için farklı değerlere sahip anonim bir türün örneklerinin farklı bir karma kod değerlere sahip. Aşağıdaki ifade döndürür `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
   
- Farklı özellikleri anahtar özellikler örnekleri aynı türde olmadığından tanımladığınız anonim türler örnekleri. Adları ve değerleri tüm özelliklerin aynı olsa bile farklı bir karma kod değerleri sahiptirler. Aşağıdaki deyim döndürür `False`.  
+ Farklı özellikleri anahtar özellik olarak belirlediğiniz anonim türlerin örneklerini örnekleri aynı türde değil. Adları ve değerleri tüm özelliklerin aynı olsa bile farklı bir karma kod değerlere sahiptirler. Aşağıdaki ifade döndürür `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
   
 ## <a name="read-only-values"></a>Salt okunur değerleri  
- Anahtar özellikleri değerleri değiştirilemez. Örneğin, `flight1` önceki örneklerde, `Airline` ve `FlightNo` alanları salt okunur, ancak `Gate` değiştirilebilir.  
+ Anahtar özelliklerin değerlerini değiştirilemez. Örneğin, `flight1` önceki örneklerde, `Airline` ve `FlightNo` alanları salt okunur ancak `Gate` değiştirilebilir.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anonim Tip Tanımı](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anonim Tip Tanımı](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
+- [Nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3341159600c85915cd3c1a138265dc386edbb766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edafb60e5b6f9b913e89f4785dc34a58bf390f2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638775"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Metodu
-Katıştırılmış kaynak bayt cinsinden uzunluğu alır.  
+Katıştırılmış kaynak bayt cinsinden uzunluğunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,10 +36,10 @@ HRESULT GetSourceLength(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bayt cinsinden uzunluğu katıştırılmış kaynak gösteren bir değişken için bir işaretçi.  
+ [out] Uzunluğu, bayt cinsinden katıştırılmış kaynak gösteren bir değişken için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 18261b2f7a71822684707de7c8c6a37793a8a410
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33563049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574683"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Özelliği bir <xref:System.Windows.Media.GeometryGroup> veya <xref:System.Windows.Media.PathGeometry>, "bileşik şeklin belirli bir noktaya parçası olup olmadığını belirlemek için kullandığı bir kuralı" belirtir. Olası iki değeri vardır <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde, bu iki kuralın kullanmayı anlatmaktadır.  
   
- **EvenOdd:** bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve kestiği belirli bir şeklin içindeki yol bölümlerinin sayısını sayma dolgu bölgesi içinde olup olmadığını belirler. Bu sayı tek ise, noktanın içindedir; çift ise noktası dışında.  
+ **EvenOdd:** Bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve kestiği belirli bir şeklin içindeki yol bölümlerinin sayısını sayma dolgu bölgesi içinde olup olmadığını belirler. Bu sayı tek ise, noktanın içindedir; çift ise noktası dışında.  
   
  Örneğin, aşağıdaki XAML ile Eşmerkezli halkalarının (hedef) bir dizi oluşan bileşik şekil oluşturur bir <xref:System.Windows.Media.GeometryGroup.FillRule%2A> kümesine <xref:System.Windows.Media.FillRule.EvenOdd>.  
   
@@ -25,13 +25,13 @@ ms.locfileid: "33563049"
   
  Önceki örnekte oluşturulan şekli aşağıda gösterilmiştir.  
   
- ![Ekran: FillRule EvenOdd özelliği](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
+ ![Ekran: EvenOdd FillRule özelliği](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
   
  Yukarıdaki çizimde, 3 ve merkezi olmayan doldurulur dikkat edin. Parçaların bir çift sayı ya da bu iki halkalarının içinde herhangi bir noktasından çizilmiş bir ray geçirir olmasıdır. Aşağıdaki resme bakın:  
   
- ![Diyagram: FillRule özellik değeri EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
+ ![Diyagram: EvenOdd FillRule özellik değeri](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero:** bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve ardından nerede çizip şeklin kestiği kestiği yerleri inceleyerek yolun dolgu bölgesinde olup olmadığını belirler. Sıfır sayısı ile başlayarak, ekleme her biri bir Segment aştığında ray soldan sağa ve her biri çıkarmak için zaman zaman bir yol kesimi sağdan sola ray aştığında. Sonuç sıfırsa kesişimlerin sayım sonra ardından yolu dışına noktasıdır. Aksi takdirde, içindedir.  
+ **Sıfır dışında:** Bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve ardından nerede çizip şeklin kestiği yerleri inceleyerek yolun dolgu bölgesinde olup olmadığını belirler. Sıfır sayısı ile başlayarak, ekleme her biri bir Segment aştığında ray soldan sağa ve her biri çıkarmak için zaman zaman bir yol kesimi sağdan sola ray aştığında. Sonuç sıfırsa kesişimlerin sayım sonra ardından yolu dışına noktasıdır. Aksi takdirde, içindedir.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
@@ -55,12 +55,12 @@ ms.locfileid: "33563049"
   
  ![Diyagram: FillRule özellik değeri NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **Not:** amacıyla <xref:System.Windows.Media.FillRule>, tüm şekiller kapalı olarak kabul edilir. Bir segmenti boşluk varsa, kapatmak için hayali bir çizgi çizin. Yukarıdaki örnekte, küçük boşlukları halkaları vardır. Bunu göz önünde bulundurulduğunda, bir farklı bir sonuç sağlamak için boşluk üzerinden çalışan bir ray sonra başka bir yönde bir ray bekleyebilirsiniz. Bu boşlukları ve "sanal segment" biri genişletilmiş bir gösterimi aşağıda verilmiştir (uygulamak amacıyla çizilmiş segment <xref:System.Windows.Media.FillRule>), kapatır.  
+ **Not:** Amacıyla <xref:System.Windows.Media.FillRule>, tüm şekiller kapalı olarak kabul edilir. Bir segmenti boşluk varsa, kapatmak için hayali bir çizgi çizin. Yukarıdaki örnekte, küçük boşlukları halkaları vardır. Bunu göz önünde bulundurulduğunda, bir farklı bir sonuç sağlamak için boşluk üzerinden çalışan bir ray sonra başka bir yönde bir ray bekleyebilirsiniz. Bu boşlukları ve "sanal segment" biri genişletilmiş bir gösterimi aşağıda verilmiştir (uygulamak amacıyla çizilmiş segment <xref:System.Windows.Media.FillRule>), kapatır.  
   
  ![Diyagram: FillRule için kesimler her zaman kapalıdır](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
 ## <a name="example"></a>Örnek  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bileşik Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bileşik Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)
+- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

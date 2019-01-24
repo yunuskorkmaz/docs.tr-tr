@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538683"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>Nasıl yapılır: Bir Kılavuzun Alt Öğelerini Konumlandırma
 Bu örnek, get ve üzerinde tanımlanan yöntemlerini nasıl kullanılacağını gösterir. <xref:System.Windows.Controls.Grid> alt öğeleri konumlandırmak için.  
@@ -30,6 +30,6 @@ Bu örnek, get ve üzerinde tanımlanan yöntemlerini nasıl kullanılacağını
  
  ![bir WPF kullanıcı arabirimi iki sütunlu bir ekran görüntüsü gösterilmektedir, sağ tarafındaki 3 x 3 kılavuz ve sol kılavuza satırlar ve sütunlar arasında renkli bir dikdörtgen geçmek düğmelerini sahiptir](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.Grid>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.Grid>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)

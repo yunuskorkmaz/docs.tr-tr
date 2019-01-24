@@ -3,12 +3,12 @@ title: .NET core komut satırı arabirimi (CLI) araçları
 description: .NET Core komut satırı arabirimi (CLI) araçları ve özellikleri genel bakış.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5af0dfa01763aaa2ec35576ff30117d458ca7f7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565806"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçlarını
 
@@ -27,7 +27,7 @@ Varsayılan olarak, CLI yan yana (SxS) şekilde yüklediği CLI araçları birde
 
 Aşağıdaki komutlar, varsayılan olarak yüklenir:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 **Temel komutlar**
 
@@ -35,7 +35,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [restore](dotnet-restore.md)
 * [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [Çalıştırma](dotnet-run.md)
+* [run](dotnet-run.md)
 * [Test](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
@@ -69,7 +69,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [restore](dotnet-restore.md)
 * [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [Çalıştırma](dotnet-run.md)
+* [run](dotnet-run.md)
 * [Test](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
@@ -101,7 +101,7 @@ CLI'yı projeleriniz için ek araçlar belirtmenizi sağlar bir genişletilebili
 
 CLI komut yapısını oluşur [("dotnet") sürücü](#driver), [komutu (veya "eylem")](#command-verb)ve büyük olasılıkla komut [bağımsız değişkenleri](#arguments) ve [seçenekleri](#options). Adlı bir dizinden çalıştırıldığında Göster yeni bir konsol uygulaması oluşturma ve aşağıdaki komutları komut satırından çalıştırma gibi çoğu CLI işlemi bu düzende gördüğünüz *my_app_3.sft*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```console
 dotnet new console
@@ -146,5 +146,5 @@ Preview 2'de üretmek için kullanılan *project.json*-tabanlı projeler başvur
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [DotNet/CLI GitHub deposu](https://github.com/dotnet/cli/)  
-* [.NET core Yükleme Kılavuzu](https://aka.ms/dotnetcoregs)  
+- [DotNet/CLI GitHub deposu](https://github.com/dotnet/cli/)
+- [.NET core Yükleme Kılavuzu](https://aka.ms/dotnetcoregs)

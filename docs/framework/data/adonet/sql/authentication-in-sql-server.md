@@ -2,12 +2,12 @@
 title: SQL Server'da kimlik doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630938"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server'da kimlik doğrulaması
 SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.  
@@ -78,9 +78,9 @@ SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma 
 |--------------|-----------------|  
 |[İlkeleri](/sql/relational-databases/security/authentication-access/principals-database-engine)|Oturum açma bilgileri ve SQL Server'daki diğer güvenlik sorumluları açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

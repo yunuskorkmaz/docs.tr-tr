@@ -2,12 +2,12 @@
 title: Uygulama geliştirmede PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93dd65100e19f16c6597374cbab1e10d6a759562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736552"
 ---
 # <a name="pnrp-in-application-development"></a>Uygulama geliştirmede PNRP
 Windows Vista'da adı yayını ve çözümleme işlevleri bir Basitleştirilmiş PNRP uygulama programlama arabirimiyle (API) ağ uygulamalarına erişebilirsiniz.  
@@ -19,5 +19,5 @@ Windows Vista'da adı yayını ve çözümleme işlevleri bir Basitleştirilmiş
   
  İleti PeerToPeer uygulamalar arasında geçirme PeerChannel'a ve WCF gibi temel mimarileri tarafından işlenen hala [büyük veriler ve akış](https://go.microsoft.com/fwlink/?LinkID=179652).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.PeerToPeer>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648773"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesne destekleyen karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için söz dizimi <xref:System.Windows.PropertyPath> değerlerine türü. Bu konu belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri için uygulanan sözdizimi.  
@@ -90,7 +90,7 @@ ms.locfileid: "44042549"
 > [!NOTE]
 >  Yüzeysel olarak, bu sözdizimi benzer [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Gerçek bir [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] bağlama ifadesi bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri kaynağı olarak kullanılan değil bir <xref:System.Windows.Data.Binding.Path%2A> değer ve bunun yerine birbirini için kullanılması gereken <xref:System.Windows.Data.Binding.XPath%2A> özelliği.  
   
-### <a name="collection-views"></a>Koleksiyon görünümleri  
+### <a name="collection-views"></a>Koleksiyon Görünümleri  
  Adlandırılmış koleksiyon görünümü başvurmak için karma karakteri ile koleksiyon görünümü adı ön eki (`#`).  
   
 ### <a name="current-record-pointer"></a>Geçerli kayıt işaretçisi  
@@ -196,7 +196,7 @@ or
   
  Genel olarak, <xref:System.Windows.PropertyPath> iki farklı Oluşturucu, bir bağlama kullanımları ve basit animasyon kullanımları için ve biri karmaşık animasyon kullanımları için kullanmak üzere tasarlanmıştır. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> imza nesnesinin bir dize olduğu kullanımları, bağlama için. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> tek adımlı animasyon yolları, nesne olduğu için imza bir <xref:System.Windows.DependencyProperty>. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> karmaşık animasyonları imzası. Bu ikinci oluşturucu, ilk parametre ve bir özellik yolu ilişki tanımlamak için belirteç dizesinde konumları dolduracak nesnelerinin bir dizisi için bir belirteç dizesini kullanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.PropertyPath>  
- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.PropertyPath>
+- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

@@ -1,207 +1,168 @@
 ---
-title: Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
-description: Komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması dağıtmayı öğrenin
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: Yayımlama .NET Core CLI ile uygulamaları
+description: .NET Core SDK komut satırı arabirimi (CLI) araçları ile .NET Core uygulaması yayımlama hakkında bilgi alın.
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504008"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
+# <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
-Dağıtabileceğiniz bir .NET Core uygulaması ya da farklı bir *framework bağımlı dağıtım*, uygulama ikili dosyalarını içerir, ancak hedef sistem üzerinde veya olarak .NET Core varlığını bağımlı bir *müstakil Dağıtım*, hem uygulama hem de .NET Core ikili dosyalarını içerir. Genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md).
+Bu makalede, komut satırından .NET Core uygulamanızı nasıl yayımlayabilirsiniz gösterilmektedir. .NET core, uygulamalarınızı yayımlamak için üç yol sunar. Framework bağımlı dağıtım, yerel olarak yüklü .NET Core çalışma zamanı kullanan bir platformlar arası .dll dosyası oluşturur. Framework bağımlı yürütülebilir dosyayı yerel olarak yüklü .NET Core çalışma zamanı kullanan bir platforma özgü çalıştırılabilir dosyası oluşturur. Kendi içinde yürütülebilir, platforma özgü çalıştırılabilir dosyası oluşturur ve .NET Core çalışma zamanı yerel bir kopyasını içerir.
 
-Aşağıdaki bölümlerde nasıl kullanabileceğinizi gösteren [.NET Core komut satırı arabirimi Araçları](../tools/index.md) dağıtımları aşağıdaki türleri oluşturmak için:
+Bu yayımlama modu genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md). 
 
-- Framework bağımlı dağıtım
-- Framework bağımlı dağıtım üçüncü taraf bağımlılıkları
-- Kendi içinde dağıtım
-- Üçüncü taraf bağımlılıkları kendi içinde dağıtım
+Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı örnekler nasıl uygulama yayımlanacağı gösterilmektedir. Hedef çerçeve ile belirttiğiniz `-f <TFM>` parametresi ya da proje dosyasını düzenleyerek. Daha fazla bilgi için [temelleri yayımlama](#publishing-basics).
 
-Komut satırından çalışırken, bir program düzenleyiciyi kullanabilirsiniz. Program düzenleyiciniz ise [Visual Studio Code](https://code.visualstudio.com), Visual Studio Code ortamınız içinde komut konsolunda seçerek açabilirsiniz **görünümü** > **tümleşik Terminalini**.
+| Yayımlama modu | SDK sürümü | Komut |
+| ------------ | ----------- | ------- |
+| Framework bağımlı dağıtım | 2.x | `dotnet publish -c Release` |
+| Framework bağımlı yürütülebilir dosya | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| Kendi içinde dağıtım      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+>[!IMPORTANT]
+>\*SDK'sı sürüm 3.0 kullanırken, framework bağımlı yürütülebilir varsayılan yayımlama modu temel çalıştırırken budur `dotnet publish` komutu. Bu yalnızca projelerine hedefleyen yöneliktir **.NET Core 2.1** veya **.NET Core 3.0**.
+
+## <a name="publishing-basics"></a>Yayımlama temelleri
+
+`<TargetFramework>` Ayar proje dosyasının, uygulamanızı yayımladığınızda, varsayılan hedef Framework'ü belirtir. Hedef çerçeve için herhangi bir geçerli değiştirebilirsiniz [hedef çerçeve adı (TFM)](../../standard/frameworks.md). Örneğin, projeniz kullanıyorsa `<TargetFramework>netcoreapp2.2</TargetFramework>`, .NET Core 2.2 hedefleyen bir ikili oluşturulur. Bu ayarda belirttiğiniz TFM tarafından kullanılan varsayılan hedef olduğunu [ `dotnet publish` ] [ dotnet-publish] komutu.
+
+Birden fazla framework hedeflemek istiyorsanız, ayarlayabileceğiniz `<TargetFrameworks>` birden fazla noktalı virgülle ayrılmış TFM değer ayarlanamadı. İle altyapılarından birini yayımlayabilirsiniz `dotnet publish -f <TFM>` komutu. Örneğin, `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` çalıştırıp `dotnet publish -f netcoreapp2.1`, .NET Core 2.1'i hedefleyen bir ikili oluşturulur.
+
+Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ] [ dotnet-publish] komutu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme Yapılandırması** modu **hata ayıklama** ile değiştirmediyse `-c` parametresi. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` yayımlar `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+
+.NET Core SDK 3.0 kullanıyorsanız, varsayılan mod uygulamaları .NET Core sürümlerini hedefleyen 2.1 veya 2.2 3.0 framework bağımlı yürütülebilir dosya olduğu için yayımlayın.
+
+.NET Core SDK 2.1 kullanırsanız, varsayılan modu .NET Core sürümlerini hedefleyen 2.1 2.2 framework bağımlı dağıtım olan uygulamalar için yayımlayın.
+
+### <a name="native-dependencies"></a>Yerel bağımlılıkları
+
+Uygulamanızı yerel bağımlılıkları varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Win32 API kullanıyorsa, macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlar ve her platform için bir yürütülebilir dosya derlemek gerekir. 
+
+Göz önünde bulundurun, başvurulan kitaplık yerel bağımlılığı varsa, ayrıca, uygulamanızı her platformda çalışabilir. Ancak, sizin için gerekli yerel bağımlılıkları işlemek için platforma özgü sürümlerinde, başvuran bir NuGet paketi eklenmiştir mümkündür.
+
+Yerel bağımlılıkları olan bir uygulamayı dağıtırken kullanmanız gerekebilir `dotnet publish -r <RID>` geçme için yayımlamak istediğiniz hedef platform belirtin. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+
+Platforma özgü ikili dosyaları hakkında daha fazla bilgi ele alınmıştır [Framework bağımlı yürütülebilir](#framework-dependent-executable) ve [müstakil dağıtım](#self-contained-deployment) bölümler.
+
+## <a name="sample-app"></a>Örnek uygulama
+
+Aşağıdaki uygulama yayımlama komutları keşfetmek için kullanabilirsiniz. Uygulama, terminalde aşağıdaki komutları çalıştırarak oluşturulur:
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+`Program.cs` Veya `Program.vb` konsol şablon tarafından oluşturulan dosya şu şekilde değiştirilmesi gerekir:
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+Uygulamayı çalıştırdığınızda ([`dotnet run`][dotnet-run]), aşağıdaki çıktıyı görüntülenir:
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
-Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtımının oluşturmaya, sınamaya ve uygulama yayımlama yalnızca içerir. C# dilinde yazılmış basit bir örnek işlemini gösterir.
+.NET Core SDK 2.x CLI, framework bağımlı dağıtım (FDD) olan temel için varsayılan modu `dotnet publish` komutu.
 
-1. Proje dizini oluşturun.
+Uygulamanızla bir FDD yayımladığınızda bir `<PROJECT-NAME>.dll` dosyasının oluşturulduğunu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` klasör. Uygulamanızı çalıştırmak için çıkış klasörüne gidin ve kullanmak `dotnet <PROJECT-NAME>.dll` komutu.
 
-   Projeniz için bir dizin oluşturun ve geçerli dizininizi kolaylaştırır.
+Uygulamanızı .NET Core belirli bir sürümünü hedefleyecek şekilde yapılandırılır. .NET Core çalışma zamanı, uygulamanızı çalıştırmak için istediğiniz makinede olması gereken hedef. Örneğin, uygulamanız .NET Core 2.2 hedefliyorsa, uygulamanızın üzerinde çalışacağı herhangi bir makineye yüklü olan .NET Core 2.2 çalışma zamanı olması gerekir. Bölümünde belirtildiği [temelleri yayımlama](#publishing-basics) bölümünde, varsayılan hedef Framework'ü değiştirmek veya birden fazla Framework'ü hedefleyen için proje dosyanızı düzenleyebilirsiniz.
 
-1. Projeyi oluşturun.
+Bir FDD yayımlama bir uygulama, otomatik olarak yapar İleri en son .NET Core güvenlik düzeltme eki uygulama çalışır sistemde kullanılabilir oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanmak için .NET Core sürümü](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   Komut satırından yazın [dotnet yeni konsol](../tools/dotnet-new.md) yeni bir C# konsol projesi oluşturmak için veya [dotnet yeni konsol - vb dil](../tools/dotnet-new.md) bu dizinde yeni bir Visual Basic konsol projesi oluşturmak için.
+## <a name="framework-dependent-executable"></a>Framework bağımlı yürütülebilir dosya
 
-1. Uygulamanın kaynak kodunu ekleyin.
+.NET Core SDK'sı 3.x CLI, framework bağımlı yürütülebilir dosyası (FDE) varsayılan modu temel `dotnet publish` komutu. Geçerli işletim sistemi hedeflemek istediğiniz sürece herhangi bir parametre belirtmeniz gerekmez.
 
-   Açık *Program.cs* veya *Program.vb* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
+Bu modda, platforma özgü yürütülebilir bir konak, platformlar arası uygulamanızı barındırmak için oluşturulur. FDD şeklinde bir ana bilgisayar gerektirdiğinden bu mod için FDD benzer `dotnet` komutu. Konak yürütülebilir dosya adı platforma göre değişiklik gösterir ve aşağıdakine benzer adlı `<PROJECT-FILE>.exe`. Doğrudan çağırmak yerine bu yürütülebilir dosyayı çalıştırarak `dotnet <PROJECT-FILE>.dll` olduğu yine de uygulamayı çalıştırmak için kabul edilebilir bir şekilde.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+Uygulamanızı .NET Core belirli bir sürümünü hedefleyecek şekilde yapılandırılır. .NET Core çalışma zamanı, uygulamanızı çalıştırmak için istediğiniz makinede olması gereken hedef. Örneğin, uygulamanız .NET Core 2.2 hedefliyorsa, uygulamanızın üzerinde çalışacağı herhangi bir makineye yüklü olan .NET Core 2.2 çalışma zamanı olması gerekir. Bölümünde belirtildiği [temelleri yayımlama](#publishing-basics) bölümünde, varsayılan hedef Framework'ü değiştirmek veya birden fazla Framework'ü hedefleyen için proje dosyanızı düzenleyebilirsiniz.
 
-1. Proje bağımlılıkları ve Araçları'nı güncelleştirin.
+Bir FDE yayımlama bir uygulama, otomatik olarak yapar İleri en son .NET Core güvenlik düzeltme eki uygulama çalışır sistemde kullanılabilir oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanmak için .NET Core sürümü](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   Çalıştırma [dotnet restore](../tools/dotnet-restore.md) ([bkz. Not](#dotnet-restore-note)), projede belirtilen bağımlılıkları geri yüklemek için komutu.
+Gerekir (.NET Core hariç geçerli platform hedeflediğinizde 3.x) ile aşağıdaki anahtarları kullanarak `dotnet publish` bir FDE yayımlamak için komutu:
 
-1. Uygulamanızı hata ayıklama yapısını oluşturun.
+- `-r <RID>`  
+  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
-   Kullanım [dotnet derleme](../tools/dotnet-build.md) uygulamanızı oluşturmak üzere komut veya [çalıştırma dotnet](../tools/dotnet-run.md) derlemek ve çalıştırmak için komutu.
+- `--self-contained false`  
+  Bu anahtar, yürütülebilir bir FDE olarak oluşturmak için .NET Core SDK'sı söyler.
 
-1. Uygulamanızı dağıtın.
+Herhangi bir zamanda kullandığınız `-r` anahtarı, çıkış klasörü yolu değişir: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   Hata ayıklama ve test programı sonra aşağıdaki komutu kullanarak dağıtımı oluşturun:
+Kullanırsanız [örnek uygulamayı](#sample-app)çalıştırın `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Bu komut aşağıdaki oluşturur çalıştırılabilir: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   Bu, bir yayın (bir hata ayıklama yerine) oluşturur, uygulama sürümü. Ortaya çıkan dosyalar adlı bir dizinde yerleştirilir *yayımlama* projenizin alt dizininde olan *bin* dizin.
+> [!Note]
+> Etkinleştirerek dağıtımınızın toplam boyutunu azaltabilirsiniz **Genelleştirme sabit modu**. Bu mod, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanılabilir [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Hakkında daha fazla bilgi için **Genelleştirme sabit modu** ve etkinleştirmek için bkz [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-   Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. İle uygulamanızın dosyalarını dağıtmak değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
+## <a name="self-contained-deployment"></a>Kendi içinde dağıtım
 
-   İstediğiniz gibi uygulama dosyalarını kümesinin tamamını dağıtabilirsiniz. Örneğin, bunları bir Zip dosyasına paketleyin, basit bir kullanın `copy` komutunu ya da bunları seçtiğiniz herhangi bir yükleme paketi ile birlikte dağıtabilirsiniz.
+Kendi içinde bir dağıtım (SCD) yayımladığınızda, .NET Core SDK'sını bir platforma özgü yürütülebilir dosya oluşturur. Bir SCD yayımlama, uygulamanızı çalıştırmak için gerekli tüm .NET Core dosyaları içerir, ancak bunu içermez [yerel .NET Core bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Bu bağımlılıklar, uygulama çalışmadan önce sistemde bulunmalıdır. 
 
-1. Uygulamanızı çalıştırma
+Bir SCD yayımlama, en son kullanılabilir .NET Core güvenlik düzeltme eki sarma olmayan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanmak için .NET Core sürümü](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
-   Yüklendikten sonra kullanıcılar uygulamanızı kullanarak yürütebilirsiniz `dotnet` komut ve uygulama dosya adı gibi sağlama `dotnet fdd.dll`.
+Aşağıdaki anahtarlar ile kullanmalısınız `dotnet publish` bir SCD yayımlamak için komutu:
 
-   Uygulama ikili dosyalarını ek olarak, yükleyicinizi de paylaşılan framework yükleyici paket veya uygulama yüklemesinin bir parçası olarak bir önkoşul olarak için kontrol edin.  Paylaşılan framework yönetici/kök erişimi gerekir.
+- `-r <RID>`  
+  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Framework bağımlı dağıtım üçüncü taraf bağımlılıkları
+- `--self-contained true`  
+  Bu anahtar, yürütülebilir bir SCD olarak oluşturmak için .NET Core SDK'sı söyler.
 
-Bir framework bağımlı dağıtımının bir veya daha fazla üçüncü taraf bağımlılıkları olan bu bağımlılıkların projeniz için kullanılabilir olmasını gerektirir. Çalıştırmadan önce iki ek adımlar gerekli `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komutu:
+> [!Note]
+> Etkinleştirerek dağıtımınızın toplam boyutunu azaltabilirsiniz **Genelleştirme sabit modu**. Bu mod, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanılabilir [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Hakkında daha fazla bilgi için **Genelleştirme sabit modu** ve etkinleştirmek için bkz [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-1. Gerekli üçüncü taraf kitaplıklara başvurular eklemek `<ItemGroup>` bölümünü, *csproj* dosya. Aşağıdaki `<ItemGroup>` bölüm üzerinde bir bağımlılık içeriyor [Json.NET](https://www.newtonsoft.com/json) bir üçüncü taraf kitaplığı:
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. Henüz yapmadıysanız, üçüncü taraf bağımlılığı'nı içeren NuGet paketini indirin. Paketi indirmek için yürütme `dotnet restore` ([bkz. Not](#dotnet-restore-note)) bağımlılık ekledikten sonra komutu. Bağımlılık yerel NuGet önbelleğini dışında çözümlendiğinden zaman yayımlama, sisteminizde kullanılabilir olmalıdır.
-
-Üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtım yalnızca üçüncü taraf bağımlılıklarını olarak taşınabilir olduğunu unutmayın. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulamayı Windows sistemleri için taşınabilir değildir. Bu, üçüncü taraf bağımlılığı yerel kodu bağımlı olması durumunda gerçekleşir. Bunun iyi bir örnektir [Kestrel sunucu](/aspnet/core/fundamentals/servers/kestrel), üzerinde yerel bir bağımlılık gerektiren [libuv](https://github.com/libuv/libuv). Bu tür bir üçüncü taraf bağımlılığı bir uygulama için bir FDD oluşturulduğunda, yayımlanan çıktısını bir klasöre her biri için içeren [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) yerel bağımlılık destekleyen (ve kendi NuGet paketini var).
-
-## <a name="simpleSelf"></a> Üçüncü taraf bağımlılıkları olmadan kendi içinde dağıtım
-
-Üçüncü taraf bağımlılıkları içerir olmadan projesi oluşturarak kendi içinde bir dağıtım dağıtma değiştirme *csproj* oluşturmaya, sınamaya ve uygulama yayımlama dosyası. C# dilinde yazılmış basit bir örnek işlemini gösterir. Örneğin, kullanarak kendi içinde dağıtımı oluşturma işlemi gösterilmektedir [dotnet yardımcı programı](../tools/dotnet.md) komut satırından.
-
-1. Proje için bir dizin oluşturun.
-
-   Projeniz için bir dizin oluşturun ve geçerli dizininizi kolaylaştırır.
-
-1. Projeyi oluşturun.
-
-   Komut satırından yazın [dotnet yeni konsol](../tools/dotnet-new.md) bu dizinde yeni bir C# konsol projesi oluşturmak için.
-
-1. Uygulamanın kaynak kodunu ekleyin.
-
-   Açık *Program.cs* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. Uygulamanızı hedefleyen platformlar tanımlayın.
-
-   Oluşturma bir `<RuntimeIdentifiers>` içindeki `<PropertyGroup>` bölümünü, *csproj* uygulamanız hedefler ve hedeflediğiniz her platform için çalışma zamanı tanımlayıcı (RID) belirtin platformları tanımlayan dosya. Aynı zamanda RID ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Bkz: [çalışma zamanı tanımlayıcı Kataloğu](../rid-catalog.md) çalışma zamanı tanımlayıcılarının listesi.
-
-   Örneğin, aşağıdaki `<PropertyGroup>` bölümü gösterir uygulama 64-bit Windows 10 işletim sistemleri ve OS X sürüm 10.11 64-bit işletim sistemi üzerinde çalışır.
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   Unutmayın `<RuntimeIdentifiers>` öğe görünebilir `<PropertyGroup>` içinde *csproj* dosya. Eksiksiz bir örnek *csproj* dosyası bu bölümde daha sonra görünür.
-
-1. Proje bağımlılıkları ve Araçları'nı güncelleştirin.
-
-   Çalıştırma [dotnet restore](../tools/dotnet-restore.md) ([bkz. Not](#dotnet-restore-note)), projede belirtilen bağımlılıkları geri yüklemek için komutu.
-
-1. Genelleştirme sabit modu kullanmak isteyip istemediğinizi belirleyin.
-
-   Uygulamanızı Linux hedefliyorsa, özellikle, avantajlarından yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz [Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Genelleştirme sabit modu, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanışlıdır [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture).
-
-   Sabit modunu etkinleştirmek için projenize (çözümü değil) sağ **Çözüm Gezgini**seçip **Düzenle SCD.csproj** veya **Düzenle SCD.vbproj**. Ardından aşağıdaki vurgulanan satırları dosyaya ekleyin:
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. Uygulamanızı hata ayıklama yapısını oluşturun.
-
-   Komut satırından kullanma [dotnet derleme](../tools/dotnet-build.md) komutu.
-
-1. Hata ayıklama ve test programı sonra her platform için uygulamanızdan bu hedefler dağıtılacak dosyaların oluşturun.
-
-   Kullanım `dotnet publish` her ikisi de şu şekilde platformlarını hedeflemek için komutu:
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   Bu, bir yayın (bir hata ayıklama yerine) oluşturur uygulamanızın her hedef platform sürümü. Ortaya çıkan dosyalar adlı bir alt dizinine yerleştirilir *yayımlama* projenizin alt dizininde olan *.\bin\Release\netcoreapp2.1\<runtime_identifier >* alt. Her alt uygulamanızı başlatmak için gerekli dosyaları (uygulama dosyalarınızı ve tüm .NET Core dosyaları) tam kümesini içerdiğine dikkat edin.
-
-Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. Bu paket, uygulamanızın dosyaları ile değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
-
-Yayımlanan dosyaları istediğiniz herhangi bir şekilde dağıtın. Örneğin, bunları bir Zip dosyasına paketleyin, basit bir kullanın `copy` komutunu ya da bunları seçtiğiniz herhangi bir yükleme paketi ile birlikte dağıtabilirsiniz.
-
-Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıkları kendi içinde dağıtım
-
-Bir veya daha fazla üçüncü taraf bağımlılıkları kendi içinde bir dağıtımının bağımlılıkları ekleme içerir. Çalıştırmadan önce iki ek adımlar gerekli `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komutu:
-
-1. Herhangi bir üçüncü taraf kitaplıklara başvurular eklemek `<ItemGroup>` bölümünü, *csproj* dosya. Aşağıdaki `<ItemGroup>` bölümü, bir üçüncü taraf kitaplığı olarak Json.NET kullanır.
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. Henüz yapmadıysanız, üçüncü taraf bağımlılığı sisteminize'nı içeren NuGet paketini indirin. Bağımlılık uygulamanızı kullanılabilir hale getirmek için yürütme `dotnet restore` ([bkz. Not](#dotnet-restore-note)) bağımlılık ekledikten sonra komutu. Bağımlılık yerel NuGet önbelleğini dışında çözümlendiğinden zaman yayımlama, sisteminizde kullanılabilir olmalıdır.
-
-Aşağıdaki tamamlandıktan *csproj* bu proje için dosya:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-Uygulamanızı dağıttığınızda, uygulamanızda kullanılan herhangi bir üçüncü taraf bağımlılıkları ile uygulama dosyalarınızı de yer alır. Üçüncü taraf kitaplıklar, uygulama üzerinde çalıştığı sistemde gerekmez.
-
-Yalnızca bir üçüncü taraf kitaplığı ile kendi içinde bir dağıtım için bu kitaplığı tarafından desteklenen platformlar dağıtabileceğinizi unutmayın. Bu yerel bağımlılıkları burada uygulamanın dağıtıldığı platform ile uyumlu olmalıdır framework bağımlı dağıtımında, üçüncü taraf bağımlılıklarının yerel bağımlılıkları olan olması için benzer.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET core uygulama dağıtımı](index.md)
-* [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+- [.NET core uygulama dağıtımına genel bakış](index.md)
+- [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+
+[dotnet-publish]: ../tools/dotnet-publish.md
+[dotnet-run]: ../tools/dotnet-run.md

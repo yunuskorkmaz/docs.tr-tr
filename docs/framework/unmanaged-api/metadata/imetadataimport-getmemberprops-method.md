@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611416"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
-Adını, ikili imza ve göreli sanal adres, meta veri bilgilerini alır <xref:System.Type> belirtilen meta veri simgesi tarafından başvurulan üye.  
+' In adı, ikili imzası ve göreli sanal adres dahil olmak üzere, meta veri bilgilerini alır <xref:System.Type> belirtilen metaveri belirteci tarafından başvurulan üyesi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,10 +49,10 @@ HRESULT GetMemberProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mb`  
- [in] İlişkili meta verileri almak için üye başvuran belirteci.  
+ [in] Belirteç ilişkili meta verileri almak için bir üyeye başvuruda bulunuyor.  
   
  `pClass`  
- [out] Üye sınıfı temsil eder meta veri simgesi için bir işaretçi.  
+ [out] Üye sınıfı temsil eden meta veri belirteci için bir işaretçi.  
   
  `szMember`  
  [out] Üyenin adı.  
@@ -61,25 +61,25 @@ HRESULT GetMemberProps (
  [in] Geniş karakter cinsinden boyutu `szMember` arabellek.  
   
  `pchMember`  
- [out] Döndürülen adını geniş karakter cinsinden boyutu.  
+ [out] Döndürülen adının geniş karakter cinsinden boyutu.  
   
  `pdwAttr`  
- [out] Üyeye uygulanan tüm bayrak değeri.  
+ [out] Üyeye uygulanan tüm bayrak değerleri.  
   
  `ppvSigBlob`  
- [out] Üyenin ikili meta verileri imza için bir işaretçi.  
+ [out] İkili meta veri imzası üyenin bir işaretçisi.  
   
  `pcbSigBlob`  
  [out] Bayt cinsinden boyutu `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Göreli sanal adres üyesi için bir işaretçi.  
+ [out] Göreli sanal adres üyenin bir işaretçisi.  
   
  `pdwImplFlags`  
  [out] Üye ile ilişkili tüm yöntemi uygulama bayrakları.  
   
  `pdwCPlusTypeFlag`  
- [out] İşaretler bir bayrak bir <xref:System.ValueType>.  
+ [out] İşaretler bayrak bir <xref:System.ValueType>.  
   
  `ppValue`  
  [out] Bu üye tarafından döndürülen bir sabit dize değeri.  
@@ -88,14 +88,14 @@ HRESULT GetMemberProps (
  [out] Karakter cinsinden boyutu `ppValue`, ya da sıfır `ppValue` bir dize tutmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

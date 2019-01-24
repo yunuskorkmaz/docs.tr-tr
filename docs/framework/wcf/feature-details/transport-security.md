@@ -2,12 +2,12 @@
 title: Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559937"
 ---
 # <a name="transport-security"></a>Taşıma Güvenliği
 Seçili bağlamadaki aktarım güvenliği Windows Communication Foundation (WCF) bağlıdır. Bağlama uygulayan aktarım gerçek güvenlik mekanizması belirler. Bu bölümdeki konularda, uygulanan mekanizmaları ve seçeneklerini açıklar.  
@@ -25,7 +25,7 @@ Seçili bağlamadaki aktarım güvenliği Windows Communication Foundation (WCF)
  [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Kimliğe bürünme transport güvenlik modunu ile mümkün olan beş düzeyleri açıklanmaktadır.  
   
- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Bir bağlantı noktası için SSL (taşıma) güvenlik X.509 sertifikası ile bir makinede yapılandırma temelleri gösterilir.  
   
 ## <a name="reference"></a>Başvuru  
@@ -38,5 +38,5 @@ Seçili bağlamadaki aktarım güvenliği Windows Communication Foundation (WCF)
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

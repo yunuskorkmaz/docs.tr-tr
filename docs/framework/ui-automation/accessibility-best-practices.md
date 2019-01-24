@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674826"
 ---
 # <a name="accessibility-best-practices"></a>En İyi Erişilebilirlik Uygulamaları
 > [!NOTE]
@@ -132,7 +132,7 @@ ms.locfileid: "50191083"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>CİHAZDAN bağımsız değişkenli çağrılar standart giriş API'leri kullanın  
  CİHAZDAN bağımsız çağrıları sağlarken klavye ve fare özellik eşitlik sağlamak [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] ile ilgili bilgiler gerekli [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Automation.Peers>  
- [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Klavye kullanıcı arabirimi tasarımı yönergeleri](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Automation.Peers>
+- [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [Klavye kullanıcı arabirimi tasarımı yönergeleri](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

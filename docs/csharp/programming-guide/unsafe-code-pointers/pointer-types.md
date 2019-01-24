@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724050"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -89,14 +89,14 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)  
-- [Güvenli Olmayan Kod ve İşaretçiler](index.md)  
-- [İşaretçi Dönüştürmeler](pointer-conversions.md)  
-- [İşaretçi İfadeleri](pointer-expressions.md)  
-- [Türler](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [C# Programlama Kılavuzu](../index.md)
+- [Güvenli Olmayan Kod ve İşaretçiler](index.md)
+- [İşaretçi Dönüştürmeler](pointer-conversions.md)
+- [İşaretçi İfadeleri](pointer-expressions.md)
+- [Türler](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
 - [Kutulama ve Kutudan Çıkarma](../types/boxing-and-unboxing.md)

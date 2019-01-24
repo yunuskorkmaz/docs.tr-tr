@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631279"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -28,7 +28,7 @@ ms.locfileid: "48845690"
   
 -   Bir durum tabanlı güvenlik bağlamı belirteci (SCT) oluşturulur (oluşturma, varsayılan olarak devre dışıdır).  
   
- Durum tabanlı SCT yalnızca özel bir bağlama kullanarak oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Bir güvenlik bağlama öğesi oluşturarak, kod içinde belirtecinin etkinleştirilip etkinleştirilmediğini (ya da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) kullanarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi ve ayarı `requireCancellation` parametresi `false`. Parametresi SCT önbelleğe almayı gösterir. Değerini `false` durum tabanlı SCT özelliği sağlar.  
+ Durum tabanlı SCT yalnızca özel bir bağlama kullanarak oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Bir güvenlik bağlama öğesi oluşturarak, kod içinde belirtecinin etkinleştirilip etkinleştirilmediğini (ya da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) kullanarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi ve ayarı `requireCancellation` parametresi `false`. Parametresi SCT önbelleğe almayı gösterir. Değerini `false` durum tabanlı SCT özelliği sağlar.  
   
  Alternatif olarak, yapılandırmada belirteci oluşturarak etkin bir <`customBinding`>, ardından ekleyerek bir <`security`> öğesi ve ayarı `authenticationMode` özniteliği için SecureConversation ve `requireSecurityContextCancellation` özniteliğini `true`.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48845690"
   
  Düzeltme içeri aktarma yaptıktan sonra istemci üzerinde doğrudan bağlama değiştirmektir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

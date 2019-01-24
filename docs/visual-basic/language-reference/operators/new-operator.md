@@ -11,35 +11,35 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587560"
 ---
 # <a name="new-operator-visual-basic"></a>New İşleci (Visual Basic)
-Tanıtır bir `New` yeni bir nesne örneğini oluşturmak için yan tümcesi bir tür parametresi bir oluşturucu kısıtlama belirtir veya tanımlayan bir `Sub` bir sınıf oluşturucu yordamı.  
+Tanıtır bir `New` yan tümcesi, yeni bir nesne örneği oluşturmak için bir tür parametresinde Oluşturucu kısıtlaması belirtir ya da tanımlayan bir `Sub` sınıf oluşturucusunu yordamı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bildiriminde ya da atama ifadesi, bir `New` yan tümcesi içinden örneği oluşturulabilir tanımlı bir sınıf belirtmeniz gerekir. Bu sınıf çağıran kodu erişmek için bir veya daha fazla oluşturucular kullanıma gerekir anlamına gelir.  
+ Bir bildirimi veya atama ifadesi bir `New` yan tümcesinin içinden örneği oluşturulabilir tanımlanmış bir sınıf belirtmeniz gerekir. Bu sınıf çağıran kod erişebilen bir veya daha fazla Oluşturucu kullanıma açmalıdır anlamına gelir.  
   
- Kullanabileceğiniz bir `New` bildirimi deyimi veya atama deyiminin yan tümcesi. Deyim çalıştırıldığında, belirtilen sınıfının verdiğiniz herhangi bir bağımsız değişken geçirme uygun oluşturucuyu çağırır. Aşağıdaki örnekte bu örnekleri oluşturarak gösterir. bir `Customer` iki Oluşturucusu vardır sınıfı, parametre almayan diğeri bir dize parametresi alan.  
+ Kullanabileceğiniz bir `New` yan tümcesinde bir bildirim deyiminin veya atama ifadesi. Deyim çalıştırıldığında, belirtilen sınıfın verdiğiniz herhangi bir bağımsız değişken geçirme uygun oluşturucuyu çağırır. Aşağıdaki örnek bu örnekleri oluşturarak gösterir. bir `Customer` sınıfın iki Oluşturucusu vardır, yani parametre almayan diğeri bir dize parametresi alan.  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
- Diziler sınıfları olduğundan `New` yeni bir dizi örnek aşağıdaki örneklerde gösterildiği gibi oluşturabilirsiniz.  
+ Diziler sınıfları olduğundan `New` aşağıdaki örneklerde gösterildiği gibi yeni bir dizi örneği oluşturabilirsiniz.  
   
  [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
- Ortak dil çalışma zamanı (CLR) oluşturur bir <xref:System.OutOfMemoryException> varsa yeni bir örneğini oluşturmak için bellek yetersiz hatası.  
+ Ortak dil çalışma zamanı (CLR) bir <xref:System.OutOfMemoryException> varsa yeni bir örneğini oluşturmak için yetersiz bellek hatası.  
   
 > [!NOTE]
->  `New` Anahtar sözcüğü de tür parametresi listelerinde sağlanan türü erişilebilir parametresiz bir kurucusu kullanıma gerekir belirtmek için kullanılır. Tür parametreleri ve kısıtlamaları hakkında daha fazla bilgi için bkz: [türü listesinde](../../../visual-basic/language-reference/statements/type-list.md).  
+>  `New` Anahtar sözcüğü de türü parametre listelerindeki sağlanan tür erişilebilir parametresiz bir oluşturucu kullanıma açmalıdır belirtmek için kullanılır. Tür parametreleri ve kısıtlamaları hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Bir sınıf için bir oluşturucu yordam oluşturmak için adını ayarlayın bir `Sub` yordamına `New` anahtar sözcüğü. Daha fazla bilgi için bkz: [nesne ömrü: nesneleri oluşturma ve Destroyed şeklini](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Bir sınıf için bir oluşturucu yordam oluşturmak için kümesinin adı bir `Sub` yordama `New` anahtar sözcüğü. Daha fazla bilgi için [nesne ömrü: Nesneler nasıl oluşturulur ve imha](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
- `New` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
+ `New` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -47,9 +47,9 @@ Tanıtır bir `New` yeni bir nesne örneğini oluşturmak için yan tümcesi bir
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.OutOfMemoryException>  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.OutOfMemoryException>
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

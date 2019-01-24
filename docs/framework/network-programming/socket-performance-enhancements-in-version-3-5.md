@@ -2,12 +2,12 @@
 title: Sürüm 3.5 yuva performansı geliştirmeleri
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587771"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Sürüm 3.5 yuva performansı geliştirmeleri
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Sınıfı geliştirilmiştir sürüm 3.5 kullanmak için en yüksek performans elde etmek için zaman uyumsuz ağ g/ç kullanan uygulamalar tarafından. Yeni sınıflar birtakım geliştirmeler kümesinin bir parçası olarak eklenmiştir <xref:System.Net.Sockets.Socket> özel yüksek performanslı yuva uygulamaları tarafından kullanılabilecek bir diğer zaman uyumsuz desen sağlayan sınıf. Bu geliştirmeler, yüksek performans gerektiren ağ sunucu uygulamaları için özel olarak tasarlanmıştır. Bir uygulama Gelişmiş zaman uyumsuz desen özel olarak kullanabilirsiniz ya da yalnızca kendi uygulama sık erişimli alanlarını (büyük miktarlarda veri, örneğin alırken) hedeflenen.  
@@ -33,10 +33,10 @@ ms.locfileid: "50193454"
   
  Yeni zaman uyumsuz yuva işlemi bağlam nesnesinin yaşam süresi, uygulama kodundaki başvuruları ve zaman uyumsuz g/ç başvuruları tarafından belirlenir. Uygulamanın zaman uyumsuz yuva işlemi yöntemlerinden biri olan bir parametre olarak gönderildikten sonra bir zaman uyumsuz yuva işlemi bağlam nesnesine bir başvuru korumak gerekli değildir. Tamamlama geri dönene kadar başvurulan kalır. Ancak uygulama, böylece gelecekteki zaman uyumsuz yuva işlemi için yeniden kullanılabilir içerik nesnesine başvuru korumak avantajlıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Yuva Kod Örnekleri](socket-code-examples.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
+- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Yuva Kod Örnekleri](socket-code-examples.md)

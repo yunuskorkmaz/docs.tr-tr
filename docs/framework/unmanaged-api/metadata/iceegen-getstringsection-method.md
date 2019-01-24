@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605524"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection Metodu
-Belirtilen tanıtıcı tarafından başvurulan kod bölümünde bir dize gösterimini alır.  
+Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimini alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -39,16 +39,16 @@ HRESULT GetStringSection (
   
 #### <a name="parameters"></a>Parametreler  
  `section`  
- [içinde out] Kod bölümü için tanıtıcı.  
+ [out içinde] Kod bölümüne tanıtıcısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

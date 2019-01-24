@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560652"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps Yöntemi
-Derleme düzeyinde özellikler atar.  
+Derleme düzeyi özellikleri atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,13 +42,13 @@ HRESULT SetAssemblyProps(
  Derleme kimliği.  
   
  `FileToken`  
- Özelliği tanımlar dosyası. NULL olabilir `AssemblyID` ilişkisiz netmodule göstermez.  
+ Bu dosya özelliği tanımlar. NULL olabilir `AssemblyID` ilişkisiz bir netmodule göstermez.  
   
  `Option`  
- Değiştirme seçeneğini gösterir.  
+ Değiştirme seçeneğine gösterir.  
   
  `Value`  
- Seçeneği yeni değeri.  
+ Seçenek yeni değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -56,7 +56,7 @@ HRESULT SetAssemblyProps(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

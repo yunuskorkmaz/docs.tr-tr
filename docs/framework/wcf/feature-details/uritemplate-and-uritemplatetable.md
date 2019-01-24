@@ -2,12 +2,12 @@
 title: UriTemplate ve UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722614"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açıklayan olanağına sahip olmalıdır. Windows Communication Foundation (WCF), geliştiricilerin kendi bir URI'leri denetiminin kendilerinde olmasına iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı dağıtım altyapısı WCF'de temelini oluşturur. Bu sınıflar, bir WCF Hizmeti uygulamadan kendi şablonlarını ve URI yararlanmak geliştiricilerin eşleme mekanizmasını de kullanılabilir.  
@@ -50,7 +50,7 @@ Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açık
   
 - net.pipe://  
   
-- SB: / /  
+- sb://  
   
  Düzenleri gibi file:// ve urn: / / değil HTTP URI dilbilgisi uygun ve URI şablonları ile kullanıldığında öngörülemeyen sonuçlara neden.  
   
@@ -75,7 +75,7 @@ Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açık
   
 - ""  
   
-- "/ ayakkabı"  
+- "/shoe"  
   
 - "/shoe/\*"  
   
@@ -87,15 +87,15 @@ Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açık
   
 - "ayakkabı / {bot} /\*"  
   
-- "ayakkabı/bot? x 2 ="  
+- "shoe/boat?x=2"  
   
-- "ayakkabı / {bot}? x = {yatak}"  
+- "shoe/{boat}?x={bed}"  
   
 - "ayakkabı / {bot}? = {yatak} & y x bant ="  
   
-- "? x = {ayakkabı}"  
+- "?x={shoe}"  
   
-- "ayakkabı? x 3 & y = {var} =  
+- "shoe?x=3&y={var}  
   
  Geçersiz şablon dizeleri örnekleri:  
   
@@ -129,7 +129,7 @@ Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açık
 - / {ayakkabı} {bot} - değişkenleri, bir sabit değer ayrılmalıdır.  
   
 ### <a name="matching-and-compound-path-segments"></a>Eşleşen ve bileşik yol kesimleri  
- Bileşik yol kesimleri tek bir yol kesimi içinde birden fazla değişken olan UriTemplate tanımlamanızı sağlar. Örneğin, aşağıdaki şablon dizesindeki: "adresleri / {state}. {Şehir} "(durumu ve şehir) iki değişken aynı kesim içinde tanımlanır. Bu şablon bir URL gibi BC `http://example.com/Washington.Redmond` ancak gibi bir URL eşleşecektir `http://example.com/Washington.Redmond.Microsoft`. İkinci durumda, "Washington" durumu değişkenini içerir ve "Redmond.Microsoft" Şehir değişkeni içerir. Bu durumda herhangi bir metin (dışında '/') {Şehir} değişkeni eşleşir. "Ek" metin eşleşmeyeceği bir şablon istiyorsanız, değişken içinde ayrı bir şablon segment, örneğin yerleştirin: "adresleri / {state} / {şehir}.  
+ Bileşik yol kesimleri tek bir yol kesimi içinde birden fazla değişken olan UriTemplate tanımlamanızı sağlar. Örneğin, aşağıdaki şablonu dizesi: "Adresleri / {state}. {Şehir} "(durumu ve şehir) iki değişken aynı kesim içinde tanımlanır. Bu şablon bir URL gibi BC `http://example.com/Washington.Redmond` ancak gibi bir URL eşleşecektir `http://example.com/Washington.Redmond.Microsoft`. İkinci durumda, "Washington" durumu değişkenini içerir ve "Redmond.Microsoft" Şehir değişkeni içerir. Bu durumda herhangi bir metin (dışında '/') {Şehir} değişkeni eşleşir. "Ek" metin eşleşmeyeceği bir şablon istiyorsanız, değişken içinde ayrı bir şablon segment, örneğin yerleştirin: "Adresleri / {state} / {şehir}.  
   
 ### <a name="named-wildcard-segments"></a>Adlandırılmış bir joker karakter segmentleri  
  Değişken adı joker karakteri ile başlayan yol değişkeni kesimini bir adlandırılmış joker segmenttir '\*'. Aşağıdaki şablonu dizesi "ayakkabı" adlı bir adlandırılmış bir joker karakter segmenti içerir.  
@@ -246,7 +246,7 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - a/{x}/b%20b/{var1}?y=2&x=1  
   
-- a/{y}/B%20B/{z}/?y=2 & x = 1  
+- a/{y}/B%20B/{z}/?y=2&x=1  
   
  Fark gereken bazı noktalar:  
   
@@ -279,7 +279,7 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - ?x=3  
   
-- ? x = 1 & y {var} =  
+- ?x=1&y={var}  
   
 - ?x=2&z={var}  
   
@@ -317,20 +317,20 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - ?x=1  
   
-- ? x = 1 & y {var} =  
+- ?x=1&y={var}  
   
  "x = 1 & y 3 =" iki şablon eşleşir.  
   
-- ? x = 3 & y = 4  
+- ?x=3&y=4  
   
 - ?x=3&z=5  
   
 > [!NOTE]
 > Karakter á ve Á bir URI yolu bir parçası olarak görünürler, farklı karakterler olarak değerlendirilir veya <xref:System.UriTemplate> yol kesimi değişmez değer (ancak karakterler a ve A ile aynı olarak kabul edilir). Karakter á ve Á bir parçası olarak görünürler, aynı karakterler olarak değerlendirilir <xref:System.UriTemplate> {variableName} ya da bir sorgu dizesi (ve a ve bir de kabul edilir aynı karakterler olabilir).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate Tablosu](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate Tablosu Dağıtıcısı](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [UriTemplate Tablosu](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplate Tablosu Dağıtıcısı](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646246"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF mürekkep ile çalışmaya başlama
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF), dijital mürekkep uygulamanıza eklemeniz
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Hızlı Başlangıç
 
@@ -108,7 +108,7 @@ Yordam kodundan tüm WPF özelliklerine erişebilirsiniz. Tüm XAML kullanmayan 
 
 1. Tuşlarına basarak uygulamayı derleyin **F5**.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dijital Mürekkep](../../../../docs/framework/wpf/advanced/digital-ink.md)
 - [Mürekkep Toplama](../../../../docs/framework/wpf/advanced/collecting-ink.md)

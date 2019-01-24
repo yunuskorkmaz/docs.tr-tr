@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576021"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr Numaralandırması
-Meta veriler hakkında bir alan açıklamak değerlerini içerir.  
+Bir alan hakkında açıklayan meta verileri değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -62,32 +62,32 @@ typedef enum CorFieldAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Erişilebilirlik bilgilerini belirtir.|  
+|`fdFieldAccessMask`|Erişilebilirlik bilgileri belirtir.|  
 |`fdPrivateScope`|Alan başvurulamaz belirtir.|  
 |`fdPrivate`|Alan yalnızca kendi üst türü tarafından erişilebilir olduğunu belirtir.|  
-|`fdFamANDAssem`|Alan, derleme türetilmiş sınıflarda tarafından erişilebilir olduğunu belirtir.|  
-|`fdAssembly`|Alan, derleme içindeki tüm türler tarafından erişilebilir olduğunu belirtir.|  
-|`fdFamily`|Alan yalnızca kendi türü tarafından erişilebilir olduğunu ve türetilmiş sınıfları belirtir.|  
-|`fdFamORAssem`|Alan, derleme içindeki tüm türler ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.|  
-|`fdPublic`|Alan tüm türleri bu kapsamı tarafından görünürlük ile erişilebilir olduğunu belirtir.|  
-|`fdStatic`|Alanın türü üyesi yerine örnek üyesine olduğunu belirtir.|  
-|`fdInitOnly`|Alan başlatıldıktan sonra değiştirilemez belirtir.|  
+|`fdFamANDAssem`|Alanın kendi derlemedeki türetilmiş sınıflar tarafından erişilebilir olduğunu belirtir.|  
+|`fdAssembly`|Alanın kendi derlemedeki tüm tür tarafından erişilebilir olduğunu belirtir.|  
+|`fdFamily`|Alan yalnızca türü tarafından erişilebilir olduğundan ve türetilmiş sınıfları belirtir.|  
+|`fdFamORAssem`|Alanın kendi derlemesi içindeki tüm türleri ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.|  
+|`fdPublic`|Alanın tüm türleri bu kapsamı tarafından görünürlük ile erişilebilir olduğunu belirtir.|  
+|`fdStatic`|Alan türünü üyesi yerine bir örnek üyesi olduğunu belirtir.|  
+|`fdInitOnly`|Alan başlatıldıktan sonra değiştirilemeyeceğini belirtir.|  
 |`fdLiteral`|Alan değeri bir derleme zamanı sabiti olduğunu belirtir.|  
-|`fdNotSerialized`|Türünü uzakta olduğunda alan seri değil belirtir.|  
-|`fdSpecialName`|Alan özel ve adını açıklayan belirtir nasıl.|  
-|`fdPinvokeImpl`|Alan uygulama PInvoke aracılığıyla iletilir belirtir.|  
+|`fdNotSerialized`|Alan türünü düğümlerde olduğunda serileştirildiği değil belirtir.|  
+|`fdSpecialName`|Alan özel olduğundan ve adının açıklayan belirtir nasıl.|  
+|`fdPinvokeImpl`|Alan uygulamasında PInvoke aracılığıyla iletilir belirtir.|  
 |`fdReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`fdRTSpecialName`|Ortak dil çalışma zamanı meta verileri iç API adı kodlama denetleyeceğini belirtir.|  
+|`fdRTSpecialName`|Ortak dil çalışma zamanı meta veri adı kodlama dahili API'lerde denetleyeceğini belirtir.|  
 |`fdHasFieldMarshal`|Alan sıralama bilgilerini içerdiğini belirtir.|  
-|`fdHasDefault`|Alan varsayılan bir değer olduğunu belirtir.|  
-|`fdHasFieldRVA`|Göreli sanal adres alanı olduğunu belirtir.|  
+|`fdHasDefault`|Alanın bir varsayılan değer olduğunu belirtir.|  
+|`fdHasFieldRVA`|Bir göreli sanal adres alanına sahip olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
+title: 'Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: f4c2977fe5bc819ff7e9b7a8030b2c2e20b71429
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495207"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
+# <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin
 Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları, WCF hizmetlerini çağırmak sağlar. Çoğu WCF hizmetleri, istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Bir WCF hizmeti bir WCF istemciden çağrılırken, yönetilen kodda ya da bir uygulama yapılandırma dosyasında bu kimlik bilgileri belirtebilirsiniz. Bir WCF hizmeti bir COM uygulamasından çağrılırken kullanabileceğiniz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli yollar ortaya konacaktır <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
   
 > [!NOTE]
@@ -137,9 +137,9 @@ Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları,
   
      Bu yöntem için parametreler hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)
+- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

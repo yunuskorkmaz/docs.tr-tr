@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494397"
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
-Birçok yönetilmeyen işlevleri, işlevi parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler. Yapıları geçirme veya platformu kullanılarak yönetilmeyen kod sınıflarına çağırdığınızda özgün düzeni ve hizalama korumak için ek bilgi sağlamanız gerekir. Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türlerini tanımlamak için kullandığınız özniteliği. Yönetilen yapılar ve sınıflar için tarafından sağlanan bazı tahmin edilebilir düzeni davranışları aralarından seçim yapabileceğiniz **LayoutKind** numaralandırması.  
+Birçok yönetilmeyen işlev, işlev bir parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler. Yapıları geçirme veya platformu kullanarak yönetilmeyen kod için sınıflar çağırdığınızda, hizalama ve özgün düzeni korumak için ek bilgiler sağlamanız gerekir. Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türleri tanımlamak için kullanılan öznitelik. Yönetilen yapıları ve sınıfları için tarafından sağlanan bazı öngörülebilir Düzen davranışları aralarından seçim yapabileceğiniz **LayoutKind** sabit listesi.  
   
- Bu konuda sunulan kavramlarına Orta yapısı ve sınıf türleri arasında önemli bir farktır. Değer türleri olan yapıları ve sınıfları başvuru türleri — sınıflar her zaman en az bir düzeyde bellek yöneltme (bir değer için bir işaretçi) sağlar. Yönetilmeyen İşlevler genellikle yöneltme, isteğe bağlı olduğundan aşağıdaki tablonun ilk sütunu imzaları gösterildiği gibi bu fark daha önemlidir. Kalan sütunlar sınıf bildirimlerinde ve yönetilen yapısı için yöneltme düzeyi, bildiriminde ayarlayabilirsiniz derecesini gösterir. Bildirimler hem Visual Basic ve Visual C# için sağlanır.  
+ Bu konuda sunulan kavramlarına Orta, yapı ve sınıf türleri arasında önemli bir farktır. Yapıları, değer türleri ve başvuru türleri sınıflardır — sınıflar her zaman en az bir (bir değere bir işaretçi) bellek yöneltme düzeyi sağlar. Yönetilmeyen işlevleri yöneltme, genellikle gerektirdiğinden bu fark aşağıdaki tablonun ilk sütunundaki imzaları gösterildiği önemlidir. Sınıf bildirimlerinde ve kalan sütunların ve yönetilen yapısı yöneltme düzeyi, bildiriminde yapabilirsiniz derecesini gösterir. Bildirimleri, Visual Basic ve Visual için sağlanan C#.  
   
-|Yönetilmeyen imza|Yönetilen bildirimi: <br />hiçbir yöneltme<br />`Structure MyType`<br />`struct MyType;`|Yönetilen bildirimi: <br />bir düzey yöneltme<br />`Class MyType`<br />`class MyType;`|  
+|Yönetilmeyen imzası|Yönetilen bildirimi: <br />hiçbir yöneltme<br />`Structure MyType`<br />`struct MyType;`|Yönetilen bildirimi: <br />bir yönlendirme düzeyi<br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Taleplerin yöneltme düzeylerini sıfır.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Yöneltme sıfır düzeylerde ekler.|Zaten yöneltme bir düzey olduğundan yapılamaz.|  
-|`DoWork(MyType* x);`<br /><br /> Bir düzey yöneltme ihtiyaç duyar.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Bir düzey yöneltme ekler.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Yöneltme sıfır düzeylerde ekler.|  
-|`DoWork(MyType** x);`<br /><br /> Yöneltme iki düzeyde ihtiyaç duyar.|Mümkün değildir çünkü **ByRef** **ByRef** veya `ref` `ref` kullanılamaz.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Bir düzey yöneltme ekler.|  
+|`DoWork(MyType x);`<br /><br /> Talepleri, yöneltme düzeyi sıfır.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır, yöneltme düzeyi ekler.|Zaten bir yöneltme düzeyi olduğundan yapılamaz.|  
+|`DoWork(MyType* x);`<br /><br /> Bir düzey yöneltme ihtiyaç duyar.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Yöneltme bir düzey ekler.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır, yöneltme düzeyi ekler.|  
+|`DoWork(MyType** x);`<br /><br /> İki, yöneltme düzeyi ihtiyaç duyar.|Mümkün değildir çünkü **ByRef** **ByRef** veya `ref` `ref` kullanılamaz.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Yöneltme bir düzey ekler.|  
   
- Platform çağırma için bildirimler tablo aşağıdaki yönergeleri açıklar:  
+ Platform çağırma için bildirimleri tabloda aşağıdaki yönergeleri açıklanmaktadır:  
   
--   Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde değeri tarafından geçirilen bir yapı kullanın.  
+-   Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde, değer tarafından geçirilen yapının kullanın.  
   
--   Başvuruya göre geçirilen bir yapı ya da bir sınıf yönetilmeyen işlev yöneltme bir düzey talep ettiğinde değeri tarafından geçirilen kullanın.  
+-   Başvuru tarafından geçirilen yapının ya da bir yöneltme düzeyi yönetilmeyen işlev talep ettiğinde, değer olarak geçilemez bir sınıfı kullanın.  
   
--   Yönetilmeyen işlev yöneltme iki düzeyde talep ettiğinde başvuruya göre geçirilen bir sınıf kullanma.  
+-   Yönetilmeyen işlev iki, yöneltme düzeyi talep ettiğinde, başvuru tarafından geçirilmediğine bir sınıfı kullanın.  
   
 ## <a name="declaring-and-passing-structures"></a>Bildirme ve yapıları geçirme  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir `Point` ve `Rect` yapılarda yönetilen kod ve türleri için parametre olarak geçirmek **PtInRect** User32.dll dosyasındaki işlevi. **PtInRect** aşağıdaki yönetilmeyen imzası vardır:  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir `Point` ve `Rect` yapıları, yönetilen kod ve geçiş türleri parametre olarak **PtInRect** User32.dll dosyasındaki işlevi. **PtInRect** aşağıdaki yönetilmeyen imzası:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- RECT türü için bir işaretçi işlev bekliyor beri başvuruya göre Rect yapısı geçmesi gereken dikkat edin.  
+ Dikdörtgen türü için bir işaretçi işlevi bekliyor olduğundan başvuru ile Rect yapısı geçmesi gereken dikkat edin.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -89,13 +89,13 @@ class Win32API {
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>Bildirme ve sınıfları geçirme  
- Sabit üye düzeni sınıfı olduğu sürece bir yönetilmeyen DLL işlevi için bir sınıf üyeleri geçirebilirsiniz. Aşağıdaki örnek üyeleri geçirmek nasıl gösterir `MySystemTime` sıralı bir düzende için tanımlanan sınıfı **GetSystemTime** User32.dll dosyasında. **GetSystemTime** aşağıdaki yönetilmeyen imzası vardır:  
+ Sabit üye Düzen sınıfı olduğu sürece, bir yönetilmeyen DLL işlevi için bir sınıf üyesi geçirebilirsiniz. Aşağıdaki örnek, üyelerinin geçirilecek gösterilmiştir `MySystemTime` sıralı bir düzende için tanımlanmış olan sınıf **GetSystemTime** User32.dll dosyasında. **GetSystemTime** aşağıdaki yönetilmeyen imzası:  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- Değer türlerinin aksine, sınıflar her zaman yöneltme en az bir düzeyine sahip.  
+ Değer türlerinin aksine, sınıflar her zaman en az bir yöneltme düzeyi var.  
   
 ```vb  
 Imports System  
@@ -175,8 +175,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

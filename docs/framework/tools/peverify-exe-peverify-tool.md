@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598297"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify Aracı)
 PEVerify aracı, Microsoft ara dili (MSIL) (derleyici yazıcıları, betik motor geliştiricileri vb.) oluşturan geliştiricilere, MSIL kodlarının ve ilişkili meta verilerinin güvenlik koşullarına uygun olup olmadığını belirlemede yardımcı olur. Bazı derleyiciler yalnızca belirli dil yapılarını kullanmaktan kaçındığınızda doğrulanabilir şekilde tür kullanımı uyumlu kod üretir. Bir geliştirici olarak, bilgisayar kullanıyorsanız, kodunuzun tür güvenliğini tehlikeye atmadığınızı doğrulamak isteyebilirsiniz. Bu durumda, MSIL ve meta verileri denetlemek için dosyalarınızda PEVerify aracını çalıştırabilirsiniz.  
@@ -44,7 +44,7 @@ peverify filename [options]
 |**/Clock**|Milisaniye olarak aşağıdaki doğrulama zamanlarını ölçer ve bildirir:<br /><br /> **MD Val. döngüsü**<br /> Meta veri doğrulama döngüsü<br /><br /> **MD Val. saf**<br /> Meta veri doğrulama safı<br /><br /> **IL Ver. döngüsü**<br /> Microsoft ara dili (MSIL) doğrulama döngüsü<br /><br /> **IL Ver saf**<br /> MSIL doğrulaması saf<br /><br /> **MD Val. döngüsü** ve **IL Ver. döngüsü** süreleri, gerekli başlatma ve kapatma yordamları gerçekleştirmek için gereken süreyi içerir. **MD Val. saf** ve **IL Ver saf** kez ve yalnızca doğrulamayı gerçekleştirmek için gereken süreyi yansıtır.|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/HRESULT**|Onaltılık biçimde hata kodlarını görüntüler.|  
-|**Yoksay =** *gt;hex.Code* [, *gt;hex.Code*]|Belirtilen hata kodlarını dikkate almaz.|  
+|**/ignore=** *hex.code* [, *hex.code*]|Belirtilen hata kodlarını dikkate almaz.|  
 |**Yoksay = @** *responseFile*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
 |**/İl**|Tarafından belirtilen derlemede uygulanmış yöntemler için MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir *filename*. Araç, belirtmediğiniz sürece bulunan her sorun için ayrıntılı açıklamalar döndürür **/quiet** seçeneği.|  
 |**/ MD**|Tarafından belirtilen derleme meta veri doğrulama denetimleri gerçekleştirir *filename*. Bu, dosya içindeki tüm meta veri yapısını ölçer ve karşılaşılan tüm doğrulama sorunlarını rapor eder.|  
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Doğrulanabilir şekilde tür kullanımı uyumlu kod yazma](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [Tür güvenliği ve Emniyeti](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Doğrulanabilir şekilde tür kullanımı uyumlu kod yazma](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Tür güvenliği ve Emniyeti](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

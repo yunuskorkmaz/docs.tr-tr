@@ -2,12 +2,12 @@
 title: IPv6 devre dışı bırakma ve etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543769"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 devre dışı bırakma ve etkinleştirme
 IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürümünü çalıştırdığından emin olun ve işletim sistemi ve ağ sınıfları düzgün yapılandırıldığından emin olun.  
@@ -24,15 +24,19 @@ IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürü
   
  System.Net ad alanındaki tüm sınıflar için IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyası veya uygulama için yapılandırma dosyasını değiştirmeniz gerekir olduğunu unutmayın. Bir uygulama yapılandırma dosyası, bilgisayar yapılandırma dosyası üzerinde önceliğe sahiptir.  
   
- Bilgisayar yapılandırma dosyasını değiştirme ilişkin bir örnek için *machine.config*, etkinleştirmek için IPv6 desteği bkz [nasıl yapılır: IPv6 desteği etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Ayrıca, IPv6 desteği için işletim sistemi etkinleştirildiğinden emin olun.  
+ Bilgisayar yapılandırma dosyasını değiştirme ilişkin bir örnek için *machine.config*, etkinleştirmek için IPv6 desteği bkz [nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Ayrıca, IPv6 desteği için işletim sistemi etkinleştirildiğinden emin olun.  
   
  .NET Framework sahip bir yapılandırma dosyasında şu şekilde ayarlanan bir yapılandırma anahtarı  
   
 ```xml  
-<system.net>…  
-    <settings>…  
-        <ipv6 enabled="true"/>…  
-    </settings>…  
+<system.net>  
+  ...  
+  <settings>  
+    ...  
+    <ipv6 enabled="true"/>  
+    ...  
+  </settings>  
+  ...  
 </system.net>  
 ```  
   
@@ -40,8 +44,8 @@ IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürü
   
  .NET Framework sürüm 2.0 ve üzeri, Windows IPv6 sonra üyeleri destekliyorsa <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntemi), tek bir kısıtlama olmaksızın IPv6 adreslerini döndürür. Geçersiz DNS üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntemi) okuyun ve yapılandırma dosyasında IPv6 etkin ayarı için değer tanınamıyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Yuvalar](../../../docs/framework/network-programming/sockets.md)  
- [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [\<IPv6 > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+- [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [\<IPv6 > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

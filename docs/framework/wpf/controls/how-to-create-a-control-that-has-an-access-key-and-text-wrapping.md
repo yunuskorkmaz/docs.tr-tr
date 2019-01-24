@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 12410e2abd1031f7ac42bdaab4b8e09a6b8b6006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649589"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Nasıl yapılır: Erişim Anahtarı ve Metin Kaydırması İçeren bir Denetim Oluşturma
 Bu örnek, bir erişim anahtarı ve metin kaydırma destekleyen bir denetim oluşturma işlemi gösterilmektedir. Örnekte bir <xref:System.Windows.Controls.Label> bu kavramları göstermek için denetim.  
@@ -36,5 +36,5 @@ Bu örnek, bir erişim anahtarı ve metin kaydırma destekleyen bir denetim olu�
   
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir etiketin hedef özelliğini ayarlayın](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir etiket için Target özelliği ayarlama](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

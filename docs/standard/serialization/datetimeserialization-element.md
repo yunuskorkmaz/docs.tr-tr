@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b915a1e310d8375f70a09a9cd1f0e3051bda7895
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564961"
 ---
 # <a name="ltdatetimeserializationgt-element"></a>&lt;dateTimeSerialization&gt; öğesi
 Serileştirme modu belirler <xref:System.DateTime> nesneleri.  
@@ -52,10 +52,10 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.DateTime>  
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
-- [\<System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- <xref:System.DateTime>
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)

@@ -1,19 +1,19 @@
 ---
-title: "İzlenecek yol: Win32'de WPF Barındırma"
+title: "İzlenecek yol: Win32'de WPF barındırma"
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 692105d464c005109cbf1ff704045efa7d1e9173
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725603"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF Barındırma
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir eklemek daha etkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özgün kodunuzu yeniden yazma yerine uygulamanızın işlevselliği. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırma için basit bir mekanizma sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi.  
   
  Bu öğretici örnek bir uygulama yazmak açıklar [WPF içeriğini Win32 penceresinde örnek barındırma](https://go.microsoft.com/fwlink/?LinkID=160004), bu Konaklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Bu örnek herhangi barındırmak için genişletebileceğiniz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Yönetilen ve yönetilmeyen kod ile karıştırma gerektirdiğinden, uygulamanın yazıldığı [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
@@ -180,7 +180,7 @@ ms.locfileid: "48842807"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Düzen
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Öğelerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği oluşması beş <xref:System.Windows.Controls.TextBox> denetimleri, ilişkili <xref:System.Windows.Controls.Label> denetimleri: ad, adres, şehir, durum ve Zip. Ayrıca vardır iki <xref:System.Windows.Controls.Button> denetimleri **Tamam** ve **iptal et**
+ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Öğelerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği oluşması beş <xref:System.Windows.Controls.TextBox> denetimleri, ilişkili <xref:System.Windows.Controls.Label> denetimler: Ad, adres, şehir, durum ve Zip. Ayrıca vardır iki <xref:System.Windows.Controls.Button> denetimleri **Tamam** ve **iptal et**
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği içinde uygulanan `WPFPage` sınıfı. Düzen ile işlenir bir <xref:System.Windows.Controls.Grid> Düzen öğesi. Sınıfının devraldığı <xref:System.Windows.Controls.Grid>, hangi etkin hale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik kök öğesi.
 
@@ -228,7 +228,7 @@ ms.locfileid: "48842807"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

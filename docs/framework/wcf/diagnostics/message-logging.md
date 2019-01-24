@@ -2,32 +2,32 @@
 title: İleti Günlüğe Kaydetme
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585857"
 ---
 # <a name="message-logging"></a>İleti Günlüğe Kaydetme
-Windows Communication Foundation (WCF) gelen ve giden iletiler çevrimdışı kullanım için oturum yeteneği sağlar. İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi görülüyor görmenizi sağlar. Bu tür günlükleri size ne içinde bağımsız değişken geçirildi ve nasıl XML olarak ifade edilen bağımsız değişken alan uç noktası gördüğünüz bildiren özellikle yararlıdır. Ayrıca, alındığı gibi ileti günlüğe kaydetme, nasıl ileti ulaştığında görmek için hatalı biçimlendirilmiş iletileri de tanılamak sağlar. Ayrıca, güvenlik inceleyebilirsiniz kullanılan bir belirtece bölümleri şifrelenip imzalanmış ve bölümleri değişmeden kalır.  
+Windows Communication Foundation (WCF) çevrimdışı kullanım için gelen ve giden iletileri günlüğe yeteneği sağlar. İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi aşağıdaki gibi görünür görmenizi sağlar. Bu tür bir günlük bağımsız değişken olarak geçirildi ve nasıl XML olarak ifade edilen bağımsız değişkenleri alan uç noktası gördüğünüz menüsünü genişletmeniz halinde özellikle yararlı olur. Ayrıca, aldığı gibi ileti günlüğe kaydetme, nasıl iletinin geldiği görmek için yanlış biçimlendirilmiş iletiler de tanılama sağlar. Ayrıca, güvenlik inceleyebilirsiniz kullanılan belirteçleri, bölümleri şifrelenir ve imzalanmış ve bölümleri değişmeden.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İleti Akışına Genel Bakış](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- Bu konu, istemci ve hizmet olayları olay günlüğü iletilerini nasıl ilişkilendirileceğini açıklar.  
+ Bu konu, olay günlüğü iletilerini istemci ve hizmet olaylarını nasıl ilişkilendirileceğini açıklar.  
   
  [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandırabileceğiniz açıklanmaktadır.  
+ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.  
   
  [İleti Günlüklerini Görüntüleme](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- Bu konuda, ileti günlüklerini nasıl görüntüleyebileceğiniz açıklanır.  
+ Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.  
   
  [Günlüğe İleti Kaydetme ile İlgili Güvenlik Konuları](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- Bu konu, ileti günlüğe kaydetme tarafından oluşturulan olayları yanı sıra ileti günlüklerini de sağlanmaktadır hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
+ Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)

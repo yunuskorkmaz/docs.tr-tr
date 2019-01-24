@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562784"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -85,7 +85,7 @@ Fırça darbesi ve vurgulamaya uygulanan bir resim fırçası örneği
  ![Metin yolu geometri izleyen küre](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Metin yolu geometri izleyen küre  
   
- Daha fazla bilgi için [nasıl yapılır: bir PathGeometry animasyon metin oluşturmak](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Daha fazla bilgi için [nasıl yapılır: Bir PathGeometry animasyon metnini oluşturmak](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Biçimlendirilmiş metin için ilgi çekici diğer kullanımlar için dönüştürüldükten sonra oluşturabilirsiniz bir <xref:System.Windows.Media.PathGeometry> nesne. Örneğin, içinde görüntülemek için video bölebilirsiniz.  
   
@@ -101,31 +101,31 @@ Metnin yolu geometrisini video görüntüleme
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> ve <xref:System.Windows.Media.FormattedText.Width%2A> çıktı dikdörtgeni hesaplamak için özellikler.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|Yok.|Gerekli değildir. Alan genişliği ve son satırı işleme framework olduğu gibi aynı Denetim Düzenle ' dir.|  
+|DT_EDITCONTROL|Hiçbiri|Gerekli değildir. Alan genişliği ve son satırı işleme framework olduğu gibi aynı Denetim Düzenle ' dir.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Kullanım <xref:System.Windows.TextTrimming.WordEllipsis> almak için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS DT_WORD_ELIPSIS ile son üç nokta — bu durumda, üç nokta karakteri yalnızca tek bir satıra sığmayacak sözcükler ortaya çıkar.|  
-|DT_EXPAND_TABS|Yok.|Gerekli değildir. Sekmeleri otomatik olarak durdurur her 4 ems yaklaşık 8 dilden bağımsız karakter genişliği olduğu genişletilir.|  
-|DT_EXTERNALLEADING|Yok.|Gerekli değildir. Başlıca dış her zaman satır aralığı içinde bulunur. Kullanım <xref:System.Windows.Media.FormattedText.LineHeight%2A> kullanıcı tanımlı satır aralığı oluşturmak için özellik.|  
-|DT_HIDEPREFIX|Yok.|Desteklenmez. '&' Dizesinden oluşturmadan önce Kaldır <xref:System.Windows.Media.FormattedText> nesne.|  
+|DT_EXPAND_TABS|Hiçbiri|Gerekli değildir. Sekmeleri otomatik olarak durdurur her 4 ems yaklaşık 8 dilden bağımsız karakter genişliği olduğu genişletilir.|  
+|DT_EXTERNALLEADING|Hiçbiri|Gerekli değildir. Başlıca dış her zaman satır aralığı içinde bulunur. Kullanım <xref:System.Windows.Media.FormattedText.LineHeight%2A> kullanıcı tanımlı satır aralığı oluşturmak için özellik.|  
+|DT_HIDEPREFIX|Hiçbiri|Desteklenmez. '&' Dizesinden oluşturmadan önce Kaldır <xref:System.Windows.Media.FormattedText> nesne.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Varsayılan metin hizalamasını budur. Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Left>. (Yalnızca WPF)|  
-|DT_MODIFYSTRING|Yok.|Desteklenmez.|  
+|DT_MODIFYSTRING|Hiçbiri|Desteklenmez.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Kırpma otomatik olarak gerçekleştirilmez. Metni kırpmak isterseniz kullanın <xref:System.Windows.Media.Visual.VisualClip%2A> özelliği.|  
-|DT_NOFULLWIDTHCHARBREAK|Yok.|Desteklenmez.|  
-|DT_NOPREFIX|Yok.|Gerekli değildir. Dizelerdeki '&' karakteri, her zaman normal bir karakter olarak kabul edilir.|  
-|DT_PATHELLIPSIS|Yok.|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Yok.|Desteklenmez. Bir kısayol tuşu ya da bağlantı gibi metin için alt çizgi kullanmak istiyorsanız kullanın <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemi.|  
-|DT_PREFIXONLY|Yok.|Desteklenmez.|  
+|DT_NOFULLWIDTHCHARBREAK|Hiçbiri|Desteklenmez.|  
+|DT_NOPREFIX|Hiçbiri|Gerekli değildir. Dizelerdeki '&' karakteri, her zaman normal bir karakter olarak kabul edilir.|  
+|DT_PATHELLIPSIS|Hiçbiri|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.WordEllipsis>.|  
+|DT_PREFIX|Hiçbiri|Desteklenmez. Bir kısayol tuşu ya da bağlantı gibi metin için alt çizgi kullanmak istiyorsanız kullanın <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemi.|  
+|DT_PREFIXONLY|Hiçbiri|Desteklenmez.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Right>. (Yalnızca WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ayarlama <xref:System.Windows.Media.FormattedText.FlowDirection%2A> özelliğini <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Yok.|Gerekli değildir. <xref:System.Windows.Media.FormattedText> nesneleri sürece bir tek satır denetimi gibi davranırlar ya da <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği veya satır başı/satır besleme (CR/LF) metin içeriyor.|  
-|DT_TABSTOP|Yok.|Kullanıcı tanımlı sekme durağı pozisyonlar için destek yok.|  
+|DT_SINGLELINE|Hiçbiri|Gerekli değildir. <xref:System.Windows.Media.FormattedText> nesneleri sürece bir tek satır denetimi gibi davranırlar ya da <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği veya satır başı/satır besleme (CR/LF) metin içeriyor.|  
+|DT_TABSTOP|Hiçbiri|Kullanıcı tanımlı sekme durağı pozisyonlar için destek yok.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Gerekli değildir. Üst gerekçe varsayılandır. Diğer dikey konumlandırma değerleri kullanılarak tanımlanabilir <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
-|DT_WORDBREAK|Yok.|Gerekli değildir. Sözcük bölme ile otomatik olarak gerçekleşir <xref:System.Windows.Media.FormattedText> nesneleri. Bunu devre dışı bırakamaz.|  
+|DT_WORDBREAK|Hiçbiri|Gerekli değildir. Sözcük bölme ile otomatik olarak gerçekleşir <xref:System.Windows.Media.FormattedText> nesneleri. Bunu devre dışı bırakamaz.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.FormattedText>  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Nasıl yapılır: PathGeometry animasyon metnini oluşturma](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.FormattedText>
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [Nasıl yapılır: Bir PathGeometry animasyon metnini oluşturma](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

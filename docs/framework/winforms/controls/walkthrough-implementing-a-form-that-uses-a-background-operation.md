@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama'
+title: 'İzlenecek yol: Arka plan işlemi kullanan bir Form uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543532"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka plan işlemi kullanan bir Form uygulama
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kullanıcı arabirimi (UI) istemediğiniz veya kullanabileceğiniz "askıda," <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  
   
  Bu izlenecek yol nasıl kullanılacağını gösterir <xref:System.ComponentModel.BackgroundWorker> sınıfının "arka planda" zaman hesaplamalar gerçekleştirmek için kullanıcı arabirimi yanıt kalırken.  Aracılığıyla işiniz Fibonacci numaraları zaman uyumsuz olarak hesaplayan bir uygulamaya sahip olursunuz. Fibonacci sayıda belirgin bir süre alabilir bilgisayar olsa da, ana UI iş parçacığı tarafından bu gecikme kesilmez ve form hesaplama sırasında hızlı olacaktır.  
@@ -37,7 +37,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 -   İlerleme durumunu raporlama ve iptal için destek ekleme  
   
- Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -57,7 +57,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 5.  İlk Yeniden Adlandır <xref:System.Windows.Forms.Button> denetimi `startAsyncButton` ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Start Async`. İkinci <xref:System.Windows.Forms.Button> denetimi `cancelAsyncButton`, ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Cancel Async`. Ayarlama, <xref:System.Windows.Forms.Control.Enabled%2A> özelliğini `false`.  
   
-6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Sürükleme bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** forma ve yeniden adlandırmak `resultLabel`.  
   
@@ -75,7 +75,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Zaman uyumsuz olay işleyicileri uygulamak için  
   
-1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Adlı yeni bir yöntem oluşturma `ComputeFibonacci`, formunuzda. Bu yöntem asıl işi yapan ve arka planda çalışır. Bu kod, daha büyük sayılar için tamamlamak için katlanarak uzun zaman ayırdığınız özellikle verimsiz Fibonacci algoritma özyinelemeli uygulamasını gösterir. Uygulamanızdaki gecikmelere neden olabilir bir işlem göstermek için yalnızca tanım amaçlıdır için burada kullanılır.  
   
@@ -140,7 +140,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
     [!code-csharp[System.ComponentModel.BackgroundWorker#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#12)]
     [!code-vb[System.ComponentModel.BackgroundWorker#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#12)]  
   
-## <a name="checkpoint"></a>Denetim noktası  
+## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, derleyin ve Fibonacci hesaplayıcı uygulamayı çalıştırın.  
   
 #### <a name="to-test-your-project"></a>Projenizi test etmek için  
@@ -156,7 +156,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 -   Birden çok kullanın <xref:System.ComponentModel.BackgroundWorker> birkaç eşzamanlı operasyonlar için nesneleri.  
   
--   Çok iş parçacıklı uygulamanızda hata ayıklamak için bkz: [nasıl yapılır: iş parçacıkları penceresini kullanma](/visualstudio/debugger/how-to-use-the-threads-window).  
+-   Çok iş parçacıklı uygulamanızda hata ayıklamak için bkz: [nasıl yapılır: İş parçacıkları penceresini kullanma](/visualstudio/debugger/how-to-use-the-threads-window).  
   
 -   Zaman uyumsuz programlama modelini destekleyen kendi bileşeni uygulayın. Daha fazla bilgi için [olay tabanlı zaman uyumsuz desene genel bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
@@ -169,6 +169,6 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
 - [Yönetilen iş parçacığı oluşturma](../../../../docs/standard/threading/index.md)
 - [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [İzlenecek yol: Arka Planda İşlem Çalıştırma](walkthrough-running-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [İzlenecek yol: Arka planda işlem çalıştırma](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker Bileşeni](backgroundworker-component.md)

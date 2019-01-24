@@ -12,30 +12,30 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6784848a5103dc9206267fc25fe7457257624cb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564675"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
-`marshalCleanupError` Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) geçici yapılar ve yerel ve yönetilen kod sınırlar arasında veri türlerini sıralama için kullanılan bellek temizleme girişimi sırasında bir hatayla karşılaştığında etkinleştirilir.  
+`marshalCleanupError` Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) geçici yapılar ve veri türleri yerel ve yönetilen kod sınırları arasında sıralama için kullanılan bellek temizleme girişimi sırasında bir hatayla karşılaştığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bellek sızıntısı oluşuyor yerel ve yönetilen kod geçiş yaparken, çalışma zamanı durum iş parçacığı kültürünü geri yüklenmemiş veya hataları gerçekleştirilir gibi <xref:System.Runtime.InteropServices.SafeHandle> temizleme.  
+ Yerel ve yönetilen kod geçiş yaparken bir bellek sızıntısı olur, çalışma zamanı durumu gibi iş parçacığı kültürünü geri yüklenmez veya içinde bir hata oluşmamasına <xref:System.Runtime.InteropServices.SafeHandle> temizleme.  
   
 ## <a name="cause"></a>Sebep  
- Geçici yapılarını temizleme sırasında beklenmeyen bir hata oluştu.  
+ Geçici yapıları temizlenirken beklenmeyen bir hata oluştu.  
   
 ## <a name="resolution"></a>Çözüm  
- Tüm gözden <xref:System.Runtime.InteropServices.SafeHandle> yıkıcı, Sonlandırıcı ve hataları için özel sıralayıcı uygulamaları.  
+ Tüm gözden <xref:System.Runtime.InteropServices.SafeHandle> yok Edicisi, Sonlandırıcı ve hatalar için özel bir Sıralayıcı uygulamalar.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Temizleme sırasında başarısız olan işlem raporlama iletisi.  
+ Temizleme sırasında başarısız olan işlem raporlama bir ileti.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33392037"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

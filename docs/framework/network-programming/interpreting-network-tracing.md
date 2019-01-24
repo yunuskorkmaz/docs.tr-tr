@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576531"
 ---
 # <a name="interpreting-network-tracing"></a>Ağ izlemeyi yorumlama
 Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapar yakalamak için kullanabileceğiniz <xref:System.Net> sınıf üyeleri. Bu çağrılarının çıktısı aşağıdaki örneklere benzer olabilir.  
@@ -44,7 +44,7 @@ Ağ izleme etkin olduğunda izleme çağrıları, uygulamanızın çeşitli yapa
   
  `Connection: Close`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Nasıl Yapılır: Ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Nasıl yapılır: Ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)

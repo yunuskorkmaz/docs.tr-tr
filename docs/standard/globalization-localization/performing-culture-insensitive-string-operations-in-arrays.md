@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22815b5ab993b36bc8bcb91f89f346cb6d812e19
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670283"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Overloads biri <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemleri gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bu yöntem tarafından döndürülen kültüre duyarlı sonuçlar sıralamalar farklılıkları nedeniyle kültüre göre değişebilir. Kültüre duyarlı davranışı ortadan kaldırmak için bu yöntemin kabul eden aşırı yüklemeler birini kullanın: bir `comparer` parametresi. `comparer` Parametresinin belirttiği <xref:System.Collections.IComparer> dizideki öğeleri karşılaştırırken kullanılacak uygulama. Parametresi, kullanan bir özel sabit karşılaştırıcısı sınıfı belirtin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Sabit özel bir karşılaştırıcı sınıf örneği "SortedList sınıfı kullanarak" alt konu sağlanan [koleksiyonlarda kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konu.  
@@ -23,7 +23,7 @@ Overloads biri <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
-- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
-- <xref:System.Collections.IComparer>  
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>
+- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>
+- <xref:System.Collections.IComparer>
 - [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

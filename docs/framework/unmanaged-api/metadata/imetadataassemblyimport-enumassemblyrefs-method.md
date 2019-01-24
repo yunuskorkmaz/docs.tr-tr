@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592022"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs Yöntemi
-Sıralar `mdAssemblyRef` derleme bildiriminde tanımlanan örnekleri.  
+Numaralandırır `mdAssemblyRef` derleme bildiriminde tanımlanan örnekleri.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,13 +40,13 @@ HRESULT EnumAssemblyRefs (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu bir null olmalıdır değeri `EnumAssemblyRefs` yöntemi ilk kez çağrılır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu boş olmalıdır ne zaman değer `EnumAssemblyRefs` yöntemi ilk kez çağrılır.  
   
  `rAssemblyRefs`  
- [out] Numaralandırması `mdAssemblyRef` meta veri belirteçleri.  
+ [out] Numaralandırmasını `mdAssemblyRef` meta veri belirteçleri.  
   
  `cMax`  
- [in] Yerleştirilebilir belirteçleri en fazla `rAssemblyRefs` dizi.  
+ [in] Yerleştirilebilir belirteçleri sayısı `rAssemblyRefs` dizisi.  
   
  `pcTokens`  
  [out] Belirteçleri sayısı gerçekte yerleştirilen `rAssemblyRefs`.  
@@ -59,13 +59,13 @@ HRESULT EnumAssemblyRefs (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515332"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason Numaralandırması
-Hata ayıklama izleme anahtarı üzerinde gerçekleştirilen işlemi gösterir.  
+Hata ayıklama izlemeyi anahtarda gerçekleştirilen bir işlemi belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,18 +40,18 @@ typedef enum LogSwitchCallReason {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Hata ayıklama izleme anahtarı oluşturuldu.|  
+|`SWITCH_CREATE`|Hata ayıklama izleme anahtarı oluşturulur.|  
 |`SWITCH_MODIFY`|Hata ayıklama izleme anahtarı değiştirildi.|  
 |`SWITCH_DELETE`|Hata ayıklama izleme anahtarı silindi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

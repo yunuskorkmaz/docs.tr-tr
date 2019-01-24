@@ -2,12 +2,12 @@
 title: Gizlilik ve veri güvenliği
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662146"
 ---
 # <a name="privacy-and-data-security"></a>Gizlilik ve veri güvenliği
 Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan ürünleri ve oluşturmak için kullanılan teknolojileri bağlıdır. ADO.NET Hizmetleri güvenli hale getirme veya verileri şifrelemek için doğrudan sağlamaz.  
@@ -27,7 +27,7 @@ Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan 
   
  <xref:System.Security.SecureString> Sınıfı bellekte veri koruma API'si (DPAPI) kullanarak metin şifrelemek için yöntemler sağlar. Artık gerekli değilse, dize ardından bellekten silinir. Var olan hiçbir `ToString` hızla içeriğini okumak için yöntem bir <xref:System.Security.SecureString>. Yeni bir örneğini başlatabilir `SecureString` herhangi bir değer ile veya bir dizi için bir işaretçi geçirme <xref:System.Char> nesneleri. Ardından, dizeyle çalışmak için sınıfının çeşitli yöntemler kullanabilirsiniz. Daha fazla bilgi için indirme [SecureString örnek uygulama](https://go.microsoft.com/fwlink/?LinkId=120418), nasıl kullanılacağını gösterir `SecureString` gelen sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

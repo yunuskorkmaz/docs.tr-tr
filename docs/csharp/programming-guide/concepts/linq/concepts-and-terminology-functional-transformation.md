@@ -2,12 +2,12 @@
 title: Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583369"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terimler (işlevsel dönüşüm) (C#)
 Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  
@@ -31,7 +31,7 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
 ### <a name="functional-programming"></a>İşlevsel programlama  
  *İşlevsel programlama* saf işlevsel dönüşüm doğrudan destekleyen programlama bir yaklaşımdır.  
   
- Geçmişte, ML, düzeni Haskell ve F # gibi genel amaçlı işlevsel programlama dilleri, öncelikle, akademik topluluk bırakılıyordu. Her zaman saf işlevsel dönüşümlere C# dilinde yazmayı mümkün olsa da, zorluk Bunun yapılması, bu nedenle, çoğu programcıları için çekici bir seçenek yapılmadı. Lambda ifadeleri ve tür çıkarımı işlevsel programlama çok daha kolay ve daha üretken hale gibi en son sürümlerinde C#, ancak yeni dil oluşturur.  
+ Tarihsel olarak, ML, düzeni, Haskell, genel amaçlı işlevsel programlama dilleri ve F#, öncelikle, akademik topluluk olmuştur. Her zaman saf işlevsel dönüşümlere C# dilinde yazmayı mümkün olsa da, zorluk Bunun yapılması, bu nedenle, çoğu programcıları için çekici bir seçenek yapılmadı. Lambda ifadeleri ve tür çıkarımı işlevsel programlama çok daha kolay ve daha üretken hale gibi en son sürümlerinde C#, ancak yeni dil oluşturur.  
   
  İşlevsel programlama hakkında daha fazla bilgi için bkz. [işlevsel Programlama vs. Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
@@ -71,7 +71,7 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
   
  Kod örnekleri bu bölümü boyunca bu dil özellikleri kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

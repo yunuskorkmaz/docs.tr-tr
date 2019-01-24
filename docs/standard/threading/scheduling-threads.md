@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611498"
 ---
 # <a name="scheduling-threads"></a>İş parçacıklarını zamanlama
 
@@ -23,5 +23,5 @@ Her iş parçacığı, kendisine atanmış bir iş parçacığı önceliği vard
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Windows'ta Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
