@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 924708957f02055d1cf20739f8642f0e924d6210
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c428143fa11f15a974d5b4e86327230cf78e3e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495377"
 ---
-# <a name="itypename-interface"></a><span data-ttu-id="8387c-102">ITypeName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8387c-102">ITypeName Interface</span></span>
-<span data-ttu-id="8387c-103">Tür adı bilgilerini alma yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="8387c-103">Provides methods for obtaining type name information.</span></span>  
+# <a name="itypename-interface"></a><span data-ttu-id="b7ee7-102">ITypeName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7ee7-102">ITypeName Interface</span></span>
+<span data-ttu-id="b7ee7-103">Tür adı bilgileri almak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="b7ee7-103">Provides methods for obtaining type name information.</span></span>  
   
- <span data-ttu-id="8387c-104">Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="8387c-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="b7ee7-104">Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="b7ee7-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8387c-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8387c-105">Requirements</span></span>  
- <span data-ttu-id="8387c-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8387c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7ee7-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7ee7-105">Requirements</span></span>  
+ <span data-ttu-id="b7ee7-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7ee7-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8387c-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8387c-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b7ee7-107">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b7ee7-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8387c-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="8387c-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b7ee7-108">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b7ee7-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8387c-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8387c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b7ee7-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7ee7-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8387c-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8387c-110">See Also</span></span>  
- [<span data-ttu-id="8387c-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8387c-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b7ee7-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b7ee7-110">See also</span></span>
+- [<span data-ttu-id="b7ee7-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b7ee7-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

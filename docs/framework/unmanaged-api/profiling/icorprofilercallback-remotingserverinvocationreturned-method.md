@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3f32b9ab9b4e29dd101729dc43cde03985f5994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a64941c35630e76e05ac982725c9eb3f5583d12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496002"
 ---
-# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="0208a-102">ICorProfilerCallback::RemotingServerInvocationReturned Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0208a-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
-<span data-ttu-id="0208a-103">Profil Oluşturucu uzak yöntem çağırma isteğine yanıt olarak bir yöntemi çağırma işlemi tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="0208a-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="e7d41-102">ICorProfilerCallback::RemotingServerInvocationReturned Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e7d41-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
+<span data-ttu-id="e7d41-103">Profil Oluşturucu, bir uzak yöntem çağırma isteğine yanıt olarak bir yöntem çağırma işleminin tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="e7d41-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0208a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0208a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7d41-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e7d41-104">Syntax</span></span>  
   
 ```  
 HRESULT RemotingServerInvocationReturned();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0208a-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0208a-105">Requirements</span></span>  
- <span data-ttu-id="0208a-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0208a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7d41-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e7d41-105">Requirements</span></span>  
+ <span data-ttu-id="e7d41-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7d41-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0208a-107">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0208a-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e7d41-107">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e7d41-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0208a-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0208a-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7d41-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7d41-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0208a-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0208a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e7d41-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7d41-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0208a-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0208a-110">See Also</span></span>  
- [<span data-ttu-id="0208a-111">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0208a-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e7d41-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7d41-110">See also</span></span>
+- [<span data-ttu-id="e7d41-111">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e7d41-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

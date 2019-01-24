@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494814"
 ---
-# <a name="getfileversion-function"></a><span data-ttu-id="4cb26-102">GetFileVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="4cb26-102">GetFileVersion Function</span></span>
-<span data-ttu-id="4cb26-103">Belirtilen arabellek kullanarak dosyanın belirtilen ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="4cb26-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
+# <a name="getfileversion-function"></a><span data-ttu-id="92c67-102">GetFileVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="92c67-102">GetFileVersion Function</span></span>
+<span data-ttu-id="92c67-103">Belirtilen arabelleği kullanarak belirtilen dosya, ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="92c67-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
   
- <span data-ttu-id="4cb26-104">Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4cb26-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="92c67-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="92c67-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cb26-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4cb26-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92c67-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92c67-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFileVersion (  
@@ -39,25 +39,25 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4cb26-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4cb26-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="92c67-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="92c67-106">Parameters</span></span>  
  `szFilename`  
- <span data-ttu-id="4cb26-107">[in] İncelenmesi için dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="4cb26-107">[in] The path of the file to be examined.</span></span>  
+ <span data-ttu-id="92c67-107">[in] İncelenecek dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="92c67-107">[in] The path of the file to be examined.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="4cb26-108">[içinde out] Döndürülen sürüm bilgilerini ayrılan arabellek.</span><span class="sxs-lookup"><span data-stu-id="4cb26-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
+ <span data-ttu-id="92c67-108">[out içinde] Döndürülen sürüm bilgilerini ayrılan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="92c67-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="4cb26-109">[in] Geniş karakterler boyutu, `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="4cb26-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
+ <span data-ttu-id="92c67-109">[in] Geniş karakter cinsinden boyutu, `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="92c67-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="4cb26-110">[out] Dönen bayt cinsinden boyutu `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="4cb26-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
+ <span data-ttu-id="92c67-110">[out] Döndürülen bayt cinsinden boyutu `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="92c67-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cb26-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4cb26-111">Requirements</span></span>  
- <span data-ttu-id="4cb26-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cb26-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92c67-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="92c67-111">Requirements</span></span>  
+ <span data-ttu-id="92c67-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92c67-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cb26-113">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4cb26-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="92c67-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="92c67-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4cb26-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cb26-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="92c67-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92c67-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cb26-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4cb26-115">See Also</span></span>  
- [<span data-ttu-id="4cb26-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="4cb26-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="92c67-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="92c67-115">See also</span></span>
+- [<span data-ttu-id="92c67-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="92c67-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

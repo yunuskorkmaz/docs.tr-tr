@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Basit değeri, bir öğenin (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 228afa6cd4bf0599bf7bd63afff17014799ef1b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a861acafe3b9561b1237e6b6449374374c723805
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505811"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="d0e81-102">Nasıl yapılır: Basit değeri, bir öğenin (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0e81-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
-<span data-ttu-id="d0e81-103">Bu konuda, basit bir öğe değerini almak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d0e81-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="d0e81-104">Basit yalnızca belirli öğesinin değeri tek bir dize halinde birleştirilmiş tüm alt öğelerinin değerlerini içerir derin değeri aksine değerdir.</span><span class="sxs-lookup"><span data-stu-id="d0e81-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="6c761-102">Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma</span><span class="sxs-lookup"><span data-stu-id="6c761-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
+<span data-ttu-id="6c761-103">Bu konuda, bir öğenin yüzeysel değerini alma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6c761-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="6c761-104">Basit yalnızca belirli öğenin değeri tek bir dize olarak birleştirilmiş tüm alt öğe değerlerini içeren ayrıntılı değer aksine değerdir.</span><span class="sxs-lookup"><span data-stu-id="6c761-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
   
- <span data-ttu-id="d0e81-105">Her iki çevrim kullanarak bir öğe değerini aldığınızda veya <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği, derin değeri alacak.</span><span class="sxs-lookup"><span data-stu-id="d0e81-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="d0e81-106">Basit değerini almak için kullanabileceğiniz `ShallowValue` genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="d0e81-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="d0e81-107">Basit değeri alınırken içeriğine göre öğelerini seçmek istediğinizde kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="d0e81-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
+ <span data-ttu-id="6c761-105">Ya da bir çevrim kullanarak bir öğe değeri aldığınızda veya <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği, derin değeri alın.</span><span class="sxs-lookup"><span data-stu-id="6c761-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="6c761-106">Yüzeysel değerini almak için kullanabileceğiniz `ShallowValue` genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="6c761-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="6c761-107">Yüzeysel değerini alma içeriklerine göre öğeleri seçmek istediğinizde yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="6c761-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
   
- <span data-ttu-id="d0e81-108">Aşağıdaki örnekte basit bir öğenin değerini alır. bir genişletme yöntemi bildirir.</span><span class="sxs-lookup"><span data-stu-id="d0e81-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="d0e81-109">Ardından, hesaplanan değeri içeren tüm öğeler listelemek için genişletme yöntemi sorguda kullanır.</span><span class="sxs-lookup"><span data-stu-id="d0e81-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
+ <span data-ttu-id="6c761-108">Aşağıdaki örnek, bir öğenin yüzeysel değerini alır. bir genişletme yöntemi bildirir.</span><span class="sxs-lookup"><span data-stu-id="6c761-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="6c761-109">Ardından, hesaplanan değeri içeren tüm öğeleri listelemek için genişletme yöntemi bir sorguda kullanır.</span><span class="sxs-lookup"><span data-stu-id="6c761-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0e81-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="d0e81-110">Example</span></span>  
- <span data-ttu-id="d0e81-111">Aşağıdaki metin dosyası Report.xml, bu örnek kaynağıdır.</span><span class="sxs-lookup"><span data-stu-id="d0e81-111">The following text file, Report.xml, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c761-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="6c761-110">Example</span></span>  
+ <span data-ttu-id="6c761-111">Aşağıdaki metin dosyası Report.xml, bu örnekte kaynağıdır.</span><span class="sxs-lookup"><span data-stu-id="6c761-111">The following text file, Report.xml, is the source for this example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -65,7 +65,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d0e81-112">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="d0e81-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="6c761-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="6c761-112">This example produces the following output:</span></span>  
   
 ```  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -74,5 +74,5 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0e81-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d0e81-113">See Also</span></span>  
- [<span data-ttu-id="d0e81-114">LINQ-XML eksenleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0e81-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="6c761-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c761-113">See also</span></span>
+- [<span data-ttu-id="6c761-114">LINQ to XML eksenleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c761-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
