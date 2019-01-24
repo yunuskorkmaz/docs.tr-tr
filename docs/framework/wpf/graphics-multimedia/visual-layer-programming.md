@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 13957e60c92a90624882e126fe66aca789b6835a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580791"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="33b63-102">Görsel Katman Programlama</span><span class="sxs-lookup"><span data-stu-id="33b63-102">Visual Layer Programming</span></span>
-<span data-ttu-id="33b63-103"><xref:System.Windows.Media.Visual> Nesnesidir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , birincil rolü işleme desteği sağlamak üzere nesnesi,.</span><span class="sxs-lookup"><span data-stu-id="33b63-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="33b63-104">Kullanıcı arabirimi denetimlerini, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve işleme verilerini sürdürmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="33b63-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="7825d-102">Görsel Katman Programlama</span><span class="sxs-lookup"><span data-stu-id="7825d-102">Visual Layer Programming</span></span>
+<span data-ttu-id="7825d-103"><xref:System.Windows.Media.Visual> Nesnedir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olan birincil rolü, işleme desteği sağlamak için nesne.</span><span class="sxs-lookup"><span data-stu-id="7825d-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="7825d-104">Kullanıcı arabirimi denetimleri, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve bunların işleme verileri kalıcı hale getirmeniz için kullanın.</span><span class="sxs-lookup"><span data-stu-id="7825d-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="33b63-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="33b63-105">In This Section</span></span>  
- [<span data-ttu-id="33b63-106">Görsel Katmanda Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="33b63-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="33b63-107">DrawingVisual Nesnelerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="33b63-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="33b63-108">Eğitmen: Win32 Uygulamasında Görsel Nesneler Barındırma</span><span class="sxs-lookup"><span data-stu-id="33b63-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="33b63-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="33b63-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7825d-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7825d-105">In This Section</span></span>  
+ [<span data-ttu-id="7825d-106">Görsel Katmanda Tıklama Testi</span><span class="sxs-lookup"><span data-stu-id="7825d-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="7825d-107">DrawingVisual Nesnelerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="7825d-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [<span data-ttu-id="7825d-108">Öğretici: Win32 uygulamasında görsel nesneler barındırma</span><span class="sxs-lookup"><span data-stu-id="7825d-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="7825d-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7825d-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="33b63-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="33b63-110">See Also</span></span>  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="33b63-111">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="33b63-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="33b63-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="33b63-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="7825d-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7825d-110">See also</span></span>
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [<span data-ttu-id="7825d-111">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7825d-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="7825d-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="7825d-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -12,30 +12,30 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9341b90f876306ff2e964141c2c729d1cf0e5f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c5b43258b3ce501d1302c31a70f51341d3a84d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588044"
 ---
-# <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="72472-102">Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="72472-102">Retrieving Setup Information from an Application Domain</span></span>
-<span data-ttu-id="72472-103">Her örnek bir uygulama etki alanının her iki özellikten oluşur ve <xref:System.AppDomainSetup> bilgileri.</span><span class="sxs-lookup"><span data-stu-id="72472-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="72472-104">Kullanarak bir uygulama etki alanı kurulum bilgilerini alabilir <xref:System.AppDomain?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="72472-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="72472-105">Bu sınıf, bir uygulama etki alanı yapılandırma bilgilerini almak birkaç üyeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="72472-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  
+# <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="35eb5-102">Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="35eb5-102">Retrieving Setup Information from an Application Domain</span></span>
+<span data-ttu-id="35eb5-103">Her örnek bir uygulama etki alanının her iki özellikten oluşur ve <xref:System.AppDomainSetup> bilgileri.</span><span class="sxs-lookup"><span data-stu-id="35eb5-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="35eb5-104">Kullanarak bir uygulama etki alanı kurulum bilgilerini alabilir <xref:System.AppDomain?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="35eb5-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="35eb5-105">Bu sınıf, bir uygulama etki alanı yapılandırma bilgilerini almak birkaç üyeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="35eb5-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  
   
- <span data-ttu-id="72472-106">Ayrıca Sorgulayabileceğiniz **AppDomainSetup** oluşturulduğunda, etki alanına geçirildi kurulum bilgilerini almak uygulama etki alanı için nesne.</span><span class="sxs-lookup"><span data-stu-id="72472-106">You can also query the **AppDomainSetup** object for the application domain to obtain setup information that was passed to the domain when it was created.</span></span>  
+ <span data-ttu-id="35eb5-106">Ayrıca Sorgulayabileceğiniz **AppDomainSetup** oluşturulduğunda, etki alanına geçirildi kurulum bilgilerini almak uygulama etki alanı için nesne.</span><span class="sxs-lookup"><span data-stu-id="35eb5-106">You can also query the **AppDomainSetup** object for the application domain to obtain setup information that was passed to the domain when it was created.</span></span>  
   
- <span data-ttu-id="72472-107">Aşağıdaki örnek, yeni bir uygulama etki alanı oluşturur ve ardından çeşitli üye değerleri konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="72472-107">The following example creates a new application domain and then prints several member values to the console.</span></span>  
+ <span data-ttu-id="35eb5-107">Aşağıdaki örnek, yeni bir uygulama etki alanı oluşturur ve ardından çeşitli üye değerleri konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="35eb5-107">The following example creates a new application domain and then prints several member values to the console.</span></span>  
   
  [!code-cpp[AppDomain_Setup#2](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source2.cpp#2)]
  [!code-csharp[AppDomain_Setup#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source2.cs#2)]
  [!code-vb[AppDomain_Setup#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source2.vb#2)]  
   
- <span data-ttu-id="72472-108">Örnek ayarlar ve alır, kurulum için aşağıdaki bilgileri uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="72472-108">The following example sets, and then retrieves, setup information for an application domain.</span></span> <span data-ttu-id="72472-109">Unutmayın `AppDomain.SetupInformation.ApplicationBase` yapılandırma bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="72472-109">Note that `AppDomain.SetupInformation.ApplicationBase` gets the configuration information.</span></span>  
+ <span data-ttu-id="35eb5-108">Örnek ayarlar ve alır, kurulum için aşağıdaki bilgileri uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="35eb5-108">The following example sets, and then retrieves, setup information for an application domain.</span></span> <span data-ttu-id="35eb5-109">Unutmayın `AppDomain.SetupInformation.ApplicationBase` yapılandırma bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="35eb5-109">Note that `AppDomain.SetupInformation.ApplicationBase` gets the configuration information.</span></span>  
   
  [!code-cpp[AppDomain_Setup#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source3.cpp#3)]
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="72472-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="72472-110">See Also</span></span>  
-- [<span data-ttu-id="72472-111">Uygulama etki alanlarıyla programlama</span><span class="sxs-lookup"><span data-stu-id="72472-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)  
-- [<span data-ttu-id="72472-112">Uygulama Etki Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="72472-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
+## <a name="see-also"></a><span data-ttu-id="35eb5-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35eb5-110">See also</span></span>
+- [<span data-ttu-id="35eb5-111">Uygulama etki alanlarıyla programlama</span><span class="sxs-lookup"><span data-stu-id="35eb5-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="35eb5-112">Uygulama Etki Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="35eb5-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)

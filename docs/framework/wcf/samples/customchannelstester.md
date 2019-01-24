@@ -2,41 +2,41 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ede9e6b2c2b4d4bf027ff729bc0418d7ac48f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596650"
 ---
-# <a name="customchannelstester"></a><span data-ttu-id="e6487-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="e6487-102">CustomChannelsTester</span></span>
-<span data-ttu-id="e6487-103">`CustomChannelsTester` Bir dizi önceden tanımlanmış hizmet sözleşmelerini, özel kanal uygulamaları test etmek için kullanabileceğiniz bir araçtır.</span><span class="sxs-lookup"><span data-stu-id="e6487-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="e6487-104">Hizmet sözleşmelerini kümeyi seçin ve bir XML dosyası kullanarak aracı geçirin.</span><span class="sxs-lookup"><span data-stu-id="e6487-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="e6487-105">Araç ardından, özel kanal uygulamaları ileti alışverişi sırasında uygular istemci ve hizmet oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e6487-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
+# <a name="customchannelstester"></a><span data-ttu-id="0b674-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="0b674-102">CustomChannelsTester</span></span>
+<span data-ttu-id="0b674-103">`CustomChannelsTester` Bir dizi önceden tanımlanmış hizmet sözleşmeleri, özel kanal uygulamaları test etmek için kullanabileceğiniz bir araçtır.</span><span class="sxs-lookup"><span data-stu-id="0b674-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="0b674-104">Hizmet sözleşmeleri kümesini seçin ve bir XML dosyası kullanarak aracı geçirin.</span><span class="sxs-lookup"><span data-stu-id="0b674-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="0b674-105">Araç ardından, özel kanal uygulamaları ileti değişimi sırasında sınayan istemci ve hizmet oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0b674-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
   
-### <a name="to-build-the-tool"></a><span data-ttu-id="e6487-106">Aracı yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="e6487-106">To build the tool</span></span>  
+### <a name="to-build-the-tool"></a><span data-ttu-id="0b674-106">Aracı yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="0b674-106">To build the tool</span></span>  
   
-1.  <span data-ttu-id="e6487-107">Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e6487-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1.  <span data-ttu-id="0b674-107">Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0b674-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  <span data-ttu-id="e6487-108">Çözümü derledikten üç dosyaları oluşturur: CustomChannelsTester.exe, TestSpec.xml ve SampleRun.cmd.</span><span class="sxs-lookup"><span data-stu-id="e6487-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="e6487-109">Test etmek için bu aracı kullanmak nasıl oluşturulduğunu gösteren örnek komut satırı dosya SampleRun.cmd sahip [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="e6487-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
+2.  <span data-ttu-id="0b674-108">Çözümü üç dosya oluşturur: CustomChannelsTester.exe TestSpec.xml ve SampleRun.cmd.</span><span class="sxs-lookup"><span data-stu-id="0b674-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="0b674-109">' % S'dosyası SampleRun.cmd test etmek için bu aracı kullanmayı gösteren bir örnek komut satırı sahip [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="0b674-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-### <a name="to-run-the-tool"></a><span data-ttu-id="e6487-110">Aracı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="e6487-110">To run the tool</span></span>  
+### <a name="to-run-the-tool"></a><span data-ttu-id="0b674-110">Aracı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="0b674-110">To run the tool</span></span>  
   
--   <span data-ttu-id="e6487-111">Komut isteminde aşağıdaki komutu yazın:</span><span class="sxs-lookup"><span data-stu-id="e6487-111">At the command prompt type the following command:</span></span>  
+-   <span data-ttu-id="0b674-111">Komut isteminde aşağıdaki komutu yazın:</span><span class="sxs-lookup"><span data-stu-id="0b674-111">At the command prompt type the following command:</span></span>  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     <span data-ttu-id="e6487-112">Kullanarak `/binding` seçeneği gereklidir.</span><span class="sxs-lookup"><span data-stu-id="e6487-112">Using the `/binding` option is required.</span></span>  
+     <span data-ttu-id="0b674-112">Kullanarak `/binding` seçeneği gereklidir.</span><span class="sxs-lookup"><span data-stu-id="0b674-112">Using the `/binding` option is required.</span></span>  
   
-     <span data-ttu-id="e6487-113">`/dll` "bağlama" Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bir bağlamayı değilse gereklidir.</span><span class="sxs-lookup"><span data-stu-id="e6487-113">`/dll` is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
+     <span data-ttu-id="0b674-113">`/dll` "bağlama" Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bir bağlamayı değilse gereklidir.</span><span class="sxs-lookup"><span data-stu-id="0b674-113">`/dll` is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
   
-     <span data-ttu-id="e6487-114">`/testspec` isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="e6487-114">`/testspec` is optional.</span></span>  
+     <span data-ttu-id="0b674-114">`/testspec` isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="0b674-114">`/testspec` is optional.</span></span>  
   
-     <span data-ttu-id="e6487-115">Bu, sunucu ve istemcileri test belirtimleri ve bağlama göre oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e6487-115">This creates server and clients based on the test specifications and the binding.</span></span>  
+     <span data-ttu-id="0b674-115">Bu, sunucu ve istemcileri test belirtimleri ve bağlama dayalı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0b674-115">This creates server and clients based on the test specifications and the binding.</span></span>  
   
-     <span data-ttu-id="e6487-116">İstemci ve sunucu çalıştırır ve sonuçları döndürür.</span><span class="sxs-lookup"><span data-stu-id="e6487-116">Executes the client and server and returns the results.</span></span>  
+     <span data-ttu-id="0b674-116">İstemci ve sunucu çalıştırır ve sonuçları döndürür.</span><span class="sxs-lookup"><span data-stu-id="0b674-116">Executes the client and server and returns the results.</span></span>  
   
-     <span data-ttu-id="e6487-117">Test belirtimleri (testspec.xml) açıklaması için XML örneği verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="e6487-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
+     <span data-ttu-id="0b674-117">Örnek XML açıklaması için test belirtimleri (testspec.xml) aşağıdadır:</span><span class="sxs-lookup"><span data-stu-id="0b674-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
   
     ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
@@ -69,4 +69,4 @@ ms.locfileid: "33499394"
     </TestSpec>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e6487-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e6487-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b674-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b674-118">See also</span></span>
