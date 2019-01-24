@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme'
+title: 'Nasıl yapılır: Windows Forms CheckBox tıklamalarına yanıt verme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: aa8a15d4f55fb1dd47fdf004fa05091ec88fe03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726331"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="8c91d-102">Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="8c91d-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
-<span data-ttu-id="8c91d-103">Her bir kullanıcı, bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="8c91d-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="8c91d-104">Onay kutusunun durumunu bağlı olarak bazı eylemleri gerçekleştirmek için uygulamanızın programlama yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8c91d-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="0c3a0-102">Nasıl yapılır: Windows Forms CheckBox tıklamalarına yanıt verme</span><span class="sxs-lookup"><span data-stu-id="0c3a0-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
+<span data-ttu-id="0c3a0-103">Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="0c3a0-104">Onay kutusunun durumunu olarak bazı eylemleri gerçekleştirmek için uygulamanızı programlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
   
-### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="8c91d-105">CheckBox tıklamalarına yanıt verme için</span><span class="sxs-lookup"><span data-stu-id="8c91d-105">To respond to CheckBox clicks</span></span>  
+### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="0c3a0-105">CheckBox tıklamalarına yanıt verme için</span><span class="sxs-lookup"><span data-stu-id="0c3a0-105">To respond to CheckBox clicks</span></span>  
   
-1.  <span data-ttu-id="8c91d-106">İçinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi, kullanım <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimin durumunu belirlemek ve gerekli herhangi bir eylemi gerçekleştirmek için özellik.</span><span class="sxs-lookup"><span data-stu-id="8c91d-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
+1.  <span data-ttu-id="0c3a0-106">İçinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi, kullanım <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimin durumunu belirlemek ve gerekli herhangi bir eylemi gerçekleştirmek için özellik.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ ms.locfileid: "33539743"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="8c91d-107">Kullanıcı çift çalışırsa <xref:System.Windows.Forms.CheckBox> denetim, her tıklatma ayrı ayrı işlenir; Bu, <xref:System.Windows.Forms.CheckBox> denetimi çift olay desteklemez.</span><span class="sxs-lookup"><span data-stu-id="8c91d-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
+    >  <span data-ttu-id="0c3a0-107">Kullanıcının çift çalışırsa <xref:System.Windows.Forms.CheckBox> denetimi her tıklatma ayrı ayrı işlenir; diğer bir deyişle, <xref:System.Windows.Forms.CheckBox> denetimi çift olay desteklemez.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="8c91d-108">Zaman <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> özelliği `true` (varsayılan), <xref:System.Windows.Forms.CheckBox> otomatik olarak seçilir veya tıklandığında temizlenir.</span><span class="sxs-lookup"><span data-stu-id="8c91d-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="8c91d-109">Aksi takdirde, el ile ayarlamanız gerekir <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği zaman <xref:System.Windows.Forms.Control.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="8c91d-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
+    >  <span data-ttu-id="0c3a0-108">Zaman <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> özelliği `true` (varsayılan), <xref:System.Windows.Forms.CheckBox> otomatik olarak seçilir veya tıklandığında temizlenir.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="0c3a0-109">Aksi takdirde, el ile ayarlamanız gerekir <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği olduğunda <xref:System.Windows.Forms.Control.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
   
-     <span data-ttu-id="8c91d-110">Aynı zamanda <xref:System.Windows.Forms.CheckBox> bir eylem gerektiğini belirlemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="8c91d-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
+     <span data-ttu-id="0c3a0-110">Ayrıca <xref:System.Windows.Forms.CheckBox> denetim bir eylemi belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="8c91d-111">Bir eylem bir onay kutusu seçildiğinde gerektiğini belirlemek için tıklattığınız</span><span class="sxs-lookup"><span data-stu-id="8c91d-111">To determine a course of action when a check box is clicked</span></span>  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="0c3a0-111">Bir eylemi bir onay kutusu seçildiğinde belirlemek için tıklandı</span><span class="sxs-lookup"><span data-stu-id="0c3a0-111">To determine a course of action when a check box is clicked</span></span>  
   
-1.  <span data-ttu-id="8c91d-112">Değerini sorgulamak için case deyimi kullanın <xref:System.Windows.Forms.CheckBox.CheckState%2A> bir eylem gerektiğini belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="8c91d-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="8c91d-113">Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği ayarlanmış `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özellik, denetlenen kutusunu temsil, üç olası değerler döndürebilir kutusu görüntülenir kutusunun işaretlenmemiş olması ya da üçüncü belirlenmemiş bir durum ile bir devre dışı görünüm seçeneği belirtmek için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="8c91d-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
+1.  <span data-ttu-id="0c3a0-112">Case deyimi değerini sorgulamanıza <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğini bir eyleme belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="0c3a0-113">Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği, kutunun denetlenen temsil eder ve üç olası değer döndürebilir kutusu görüntülenir kutusu denetlenmeyen durdurulmasını veya üçüncü belirlenmemiş duruma sahip bir devre dışı Görünüm seçeneğini belirtmek için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,10 +133,10 @@ ms.locfileid: "33539743"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="8c91d-114">Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği ayarlanmış `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği döndürür `true` her ikisi için de <xref:System.Windows.Forms.CheckState.Checked> ve <xref:System.Windows.Forms.CheckState.Indeterminate>.</span><span class="sxs-lookup"><span data-stu-id="8c91d-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
+    >  <span data-ttu-id="0c3a0-114">Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği döndürür `true` hem <xref:System.Windows.Forms.CheckState.Checked> ve <xref:System.Windows.Forms.CheckState.Indeterminate>.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c91d-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8c91d-115">See Also</span></span>  
- <xref:System.Windows.Forms.CheckBox>  
- [<span data-ttu-id="8c91d-116">CheckBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8c91d-116">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [<span data-ttu-id="8c91d-117">Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama</span><span class="sxs-lookup"><span data-stu-id="8c91d-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [<span data-ttu-id="8c91d-118">CheckBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="8c91d-118">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0c3a0-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0c3a0-115">See also</span></span>
+- <xref:System.Windows.Forms.CheckBox>
+- [<span data-ttu-id="0c3a0-116">CheckBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0c3a0-116">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="0c3a0-117">Nasıl yapılır: Windows Forms CheckBox denetimleriyle seçenekleri ayarlama</span><span class="sxs-lookup"><span data-stu-id="0c3a0-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [<span data-ttu-id="0c3a0-118">CheckBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="0c3a0-118">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

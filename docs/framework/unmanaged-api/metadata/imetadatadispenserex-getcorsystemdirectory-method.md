@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf580f6d3fb18e729f3eca300aa817036eb61e4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3eccb42caa6fdc62b090cd60ff86ad102511883c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629169"
 ---
-# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="09c31-102">IMetaDataDispenserEx::GetCORSystemDirectory Metodu</span><span class="sxs-lookup"><span data-stu-id="09c31-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
-<span data-ttu-id="09c31-103">Geçerli ortak dil çalışma zamanı (CLR) tutan dizinin alır.</span><span class="sxs-lookup"><span data-stu-id="09c31-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="09c31-104">Bu yöntem yalnızca kullanım için işlem dışı hata ayıklayıcıları tarafından desteklenir.</span><span class="sxs-lookup"><span data-stu-id="09c31-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="09c31-105">Başka bir bileşen tarafından çağrılan olursa E_NOTIMPL döndürür.</span><span class="sxs-lookup"><span data-stu-id="09c31-105">If called from another component, it will return E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="62ff0-102">IMetaDataDispenserEx::GetCORSystemDirectory Metodu</span><span class="sxs-lookup"><span data-stu-id="62ff0-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
+<span data-ttu-id="62ff0-103">Geçerli ortak dil çalışma zamanının (CLR) tutan dizinin alır.</span><span class="sxs-lookup"><span data-stu-id="62ff0-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="62ff0-104">Bu yöntemi kullanmak için yalnızca işlem dışı hata ayıklayıcıları tarafından desteklenir.</span><span class="sxs-lookup"><span data-stu-id="62ff0-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="62ff0-105">Başka bir bileşenden çağrılırsa E_NOTIMPL döndürür.</span><span class="sxs-lookup"><span data-stu-id="62ff0-105">If called from another component, it will return E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09c31-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="09c31-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62ff0-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="62ff0-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCORSystemDirectory (  
@@ -37,25 +37,25 @@ HRESULT GetCORSystemDirectory (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="09c31-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="09c31-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="62ff0-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="62ff0-107">Parameters</span></span>  
  `szBuffer`  
- <span data-ttu-id="09c31-108">[out] Dizin adı almak için bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="09c31-108">[out] The buffer to receive the directory name.</span></span>  
+ <span data-ttu-id="62ff0-108">[out] Dizin adını almak için arabellek.</span><span class="sxs-lookup"><span data-stu-id="62ff0-108">[out] The buffer to receive the directory name.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="09c31-109">[in] Bayt olarak boyutu, `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="09c31-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
+ <span data-ttu-id="62ff0-109">[in] Bayt cinsinden boyutu, `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="62ff0-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="09c31-110">[out] Gerçekte döndürülen bayt sayısı `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="09c31-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
+ <span data-ttu-id="62ff0-110">[out] Gerçekte döndürülen bayt sayısı `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="62ff0-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09c31-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="09c31-111">Requirements</span></span>  
- <span data-ttu-id="09c31-112">**Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09c31-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62ff0-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="62ff0-111">Requirements</span></span>  
+ <span data-ttu-id="62ff0-112">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62ff0-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09c31-113">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="09c31-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="62ff0-113">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="62ff0-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="09c31-114">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="09c31-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="62ff0-114">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="62ff0-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="09c31-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09c31-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="62ff0-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62ff0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09c31-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="09c31-116">See Also</span></span>  
- [<span data-ttu-id="09c31-117">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="09c31-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [<span data-ttu-id="09c31-118">IMetaDataDispenser Yöntemi</span><span class="sxs-lookup"><span data-stu-id="09c31-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="62ff0-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="62ff0-116">See also</span></span>
+- [<span data-ttu-id="62ff0-117">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="62ff0-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="62ff0-118">IMetaDataDispenser Yöntemi</span><span class="sxs-lookup"><span data-stu-id="62ff0-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

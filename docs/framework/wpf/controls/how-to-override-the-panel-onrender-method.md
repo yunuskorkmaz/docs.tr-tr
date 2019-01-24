@@ -14,24 +14,24 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: 8f3b65bdfe96efdc57c6b8d30991439d3bdb0bc5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb2ccffd9eda46eff2c7ee098a5261fc8f128cab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702879"
 ---
-# <a name="how-to-override-the-panel-onrender-method"></a><span data-ttu-id="f2006-102">Nasıl yapılır: Panel OnRender Yöntemini Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="f2006-102">How to: Override the Panel OnRender Method</span></span>
-<span data-ttu-id="f2006-103">Bu örnek nasıl geçersiz kılınacağını gösterir <xref:System.Windows.Controls.Panel.OnRender%2A> yöntemi <xref:System.Windows.Controls.Panel> özel grafik efektleri düzen öğesine eklemek için.</span><span class="sxs-lookup"><span data-stu-id="f2006-103">This example shows how to override the <xref:System.Windows.Controls.Panel.OnRender%2A> method of <xref:System.Windows.Controls.Panel> in order to add custom graphical effects to a layout element.</span></span>  
+# <a name="how-to-override-the-panel-onrender-method"></a><span data-ttu-id="9dd0d-102">Nasıl yapılır: Panel OnRender Yöntemini Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="9dd0d-102">How to: Override the Panel OnRender Method</span></span>
+<span data-ttu-id="9dd0d-103">Bu örnek nasıl geçersiz kılınacağını gösterir <xref:System.Windows.Controls.Panel.OnRender%2A> yöntemi <xref:System.Windows.Controls.Panel> özel grafik efektleri düzen öğesine eklemek için.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-103">This example shows how to override the <xref:System.Windows.Controls.Panel.OnRender%2A> method of <xref:System.Windows.Controls.Panel> in order to add custom graphical effects to a layout element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f2006-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="f2006-104">Example</span></span>  
- <span data-ttu-id="f2006-105">Kullanım <xref:System.Windows.Controls.Panel.OnRender%2A> grafik efektleri işlenen panel öğesine eklemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f2006-105">Use the <xref:System.Windows.Controls.Panel.OnRender%2A> method in order to add graphical effects to a rendered panel element.</span></span> <span data-ttu-id="f2006-106">Örneğin, özel kenarlık veya arka plan etkileri eklemek için bu yöntemi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f2006-106">For example, you can use this method to add custom border or background effects.</span></span> <span data-ttu-id="f2006-107">A <xref:System.Windows.Media.DrawingContext> nesne şekiller, metin, görüntü veya videoları çizmek için yöntemler sağlar bir bağımsız değişken olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="f2006-107">A <xref:System.Windows.Media.DrawingContext> object is passed as an argument, which provides methods for drawing shapes, text, images, or videos.</span></span> <span data-ttu-id="f2006-108">Sonuç olarak, bu yöntem bir panel nesnesinin özelleştirme için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="f2006-108">As a result, this method is useful for customization of a panel object.</span></span>  
+## <a name="example"></a><span data-ttu-id="9dd0d-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="9dd0d-104">Example</span></span>  
+ <span data-ttu-id="9dd0d-105">Kullanım <xref:System.Windows.Controls.Panel.OnRender%2A> grafik efektleri işlenen panel öğesine eklemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-105">Use the <xref:System.Windows.Controls.Panel.OnRender%2A> method in order to add graphical effects to a rendered panel element.</span></span> <span data-ttu-id="9dd0d-106">Örneğin, özel kenarlık veya arka plan etkileri eklemek için bu yöntemi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-106">For example, you can use this method to add custom border or background effects.</span></span> <span data-ttu-id="9dd0d-107">A <xref:System.Windows.Media.DrawingContext> nesne şekiller, metin, görüntü veya videoları çizmek için yöntemler sağlar bir bağımsız değişken olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-107">A <xref:System.Windows.Media.DrawingContext> object is passed as an argument, which provides methods for drawing shapes, text, images, or videos.</span></span> <span data-ttu-id="9dd0d-108">Sonuç olarak, bu yöntem bir panel nesnesinin özelleştirme için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-108">As a result, this method is useful for customization of a panel object.</span></span>  
   
  [!code-csharp[LightWeightCustomPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f2006-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f2006-109">See Also</span></span>  
- <xref:System.Windows.Controls.Panel>  
- [<span data-ttu-id="f2006-110">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f2006-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="f2006-111">Özel Radyal Panel örnek</span><span class="sxs-lookup"><span data-stu-id="f2006-111">Custom Radial Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159982)  
- [<span data-ttu-id="f2006-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f2006-112">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="9dd0d-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9dd0d-109">See also</span></span>
+- <xref:System.Windows.Controls.Panel>
+- [<span data-ttu-id="9dd0d-110">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9dd0d-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="9dd0d-111">Özel Radyal Panel örnek</span><span class="sxs-lookup"><span data-stu-id="9dd0d-111">Custom Radial Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159982)
+- [<span data-ttu-id="9dd0d-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9dd0d-112">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)

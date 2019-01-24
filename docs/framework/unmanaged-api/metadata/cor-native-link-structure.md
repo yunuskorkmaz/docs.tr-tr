@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0d9b8a9a1014d98c51f1471f8203be07f7ff49c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08d27eb834c1a9a3a5d163bb2d3054f599ae1669
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719566"
 ---
-# <a name="cornativelink-structure"></a><span data-ttu-id="9ae4e-102">COR_NATIVE_LINK Yapısı</span><span class="sxs-lookup"><span data-stu-id="9ae4e-102">COR_NATIVE_LINK Structure</span></span>
-<span data-ttu-id="9ae4e-103">Yerel kod bağlamak için kullanılan bilgileri içerir.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-103">Contains information that is used to link native code.</span></span>  
+# <a name="cornativelink-structure"></a><span data-ttu-id="3d705-102">COR_NATIVE_LINK Yapısı</span><span class="sxs-lookup"><span data-stu-id="3d705-102">COR_NATIVE_LINK Structure</span></span>
+<span data-ttu-id="3d705-103">Yerel kod bağlantı için kullanılan bilgileri içerir.</span><span class="sxs-lookup"><span data-stu-id="3d705-103">Contains information that is used to link native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ae4e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9ae4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d705-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d705-104">Syntax</span></span>  
   
 ```  
 typedef struct   
@@ -37,24 +37,24 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9ae4e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="9ae4e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3d705-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="3d705-105">Members</span></span>  
   
-|<span data-ttu-id="9ae4e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="9ae4e-106">Member</span></span>|<span data-ttu-id="9ae4e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9ae4e-107">Description</span></span>|  
+|<span data-ttu-id="3d705-106">Üye</span><span class="sxs-lookup"><span data-stu-id="3d705-106">Member</span></span>|<span data-ttu-id="3d705-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3d705-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_linkType`|<span data-ttu-id="9ae4e-108">Yerel kodda bağlanması türü.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-108">The type to be linked in native code.</span></span> <span data-ttu-id="9ae4e-109">Bu değer biri [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-109">This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.</span></span>|  
-|`m_flags`|<span data-ttu-id="9ae4e-110">Yerel kod bağlarken bağlayıcı tarafından kullanılan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-110">Flags used by the linker when linking native code.</span></span> <span data-ttu-id="9ae4e-111">Bu değer biri [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-111">This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.</span></span>|  
-|`m_entryPoint`|<span data-ttu-id="9ae4e-112">Giriş noktasını temsil eden MemberRef meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-112">The MemberRef metadata token that represents the entry point.</span></span> <span data-ttu-id="9ae4e-113">Biçim `lib:entrypoint`.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-113">The format is `lib:entrypoint`.</span></span>|  
+|`m_linkType`|<span data-ttu-id="3d705-108">Yerel kodda bağlanacak türü.</span><span class="sxs-lookup"><span data-stu-id="3d705-108">The type to be linked in native code.</span></span> <span data-ttu-id="3d705-109">Bu değer biridir [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="3d705-109">This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.</span></span>|  
+|`m_flags`|<span data-ttu-id="3d705-110">Bağlayıcı tarafından yerel kod bağlanırken kullanılan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="3d705-110">Flags used by the linker when linking native code.</span></span> <span data-ttu-id="3d705-111">Bu değer biridir [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="3d705-111">This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.</span></span>|  
+|`m_entryPoint`|<span data-ttu-id="3d705-112">Giriş noktasını temsil eden MemberRef meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="3d705-112">The MemberRef metadata token that represents the entry point.</span></span> <span data-ttu-id="3d705-113">Biçim `lib:entrypoint`.</span><span class="sxs-lookup"><span data-stu-id="3d705-113">The format is `lib:entrypoint`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9ae4e-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9ae4e-114">Requirements</span></span>  
- <span data-ttu-id="9ae4e-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ae4e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d705-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d705-114">Requirements</span></span>  
+ <span data-ttu-id="3d705-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d705-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ae4e-116">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ae4e-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3d705-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="3d705-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9ae4e-117">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="9ae4e-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3d705-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="3d705-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9ae4e-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ae4e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3d705-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d705-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ae4e-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9ae4e-119">See Also</span></span>  
- [<span data-ttu-id="9ae4e-120">Meta Veri Yapıları</span><span class="sxs-lookup"><span data-stu-id="9ae4e-120">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [<span data-ttu-id="9ae4e-121">CorNativeLinkType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="9ae4e-121">CorNativeLinkType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)  
- [<span data-ttu-id="9ae4e-122">CorNativeLinkFlags Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="9ae4e-122">CorNativeLinkFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="3d705-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d705-119">See also</span></span>
+- [<span data-ttu-id="3d705-120">Meta Veri Yapıları</span><span class="sxs-lookup"><span data-stu-id="3d705-120">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="3d705-121">CorNativeLinkType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="3d705-121">CorNativeLinkType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [<span data-ttu-id="3d705-122">CorNativeLinkFlags Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="3d705-122">CorNativeLinkFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

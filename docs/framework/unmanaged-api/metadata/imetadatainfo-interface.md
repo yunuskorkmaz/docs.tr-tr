@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a42a97a659676fc086ed9f4620f2e9d821f057e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8bdaefdd1d7d53cdd3d2d908063fcd68ea83d81f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741476"
 ---
-# <a name="imetadatainfo-interface"></a><span data-ttu-id="b515c-102">IMetaDataInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b515c-102">IMetaDataInfo Interface</span></span>
-<span data-ttu-id="b515c-103">Meta veri eşleme bilgilerini bir disk üzerinde dosyasından belleğe alır bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="b515c-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
+# <a name="imetadatainfo-interface"></a><span data-ttu-id="296f9-102">IMetaDataInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="296f9-102">IMetaDataInfo Interface</span></span>
+<span data-ttu-id="296f9-103">Meta veri eşleme bilgilerini bir disk dosyasından belleğe alır bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="296f9-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b515c-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b515c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="296f9-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="296f9-104">Methods</span></span>  
   
-|<span data-ttu-id="b515c-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="b515c-105">Method</span></span>|<span data-ttu-id="b515c-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b515c-106">Description</span></span>|  
+|<span data-ttu-id="296f9-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="296f9-105">Method</span></span>|<span data-ttu-id="296f9-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="296f9-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b515c-107">GetFileMapping Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b515c-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="b515c-108">Bellek bölge eşlenmiş dosyayı ve eşleme türü alır.</span><span class="sxs-lookup"><span data-stu-id="b515c-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
+|[<span data-ttu-id="296f9-107">GetFileMapping Yöntemi</span><span class="sxs-lookup"><span data-stu-id="296f9-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="296f9-108">Eşleşen dosya ve tür eşlemesi bir bellek bölgesini alır.</span><span class="sxs-lookup"><span data-stu-id="296f9-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b515c-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b515c-109">Requirements</span></span>  
- <span data-ttu-id="b515c-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b515c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="296f9-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="296f9-109">Requirements</span></span>  
+ <span data-ttu-id="296f9-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="296f9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b515c-111">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b515c-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="296f9-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="296f9-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b515c-112">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="b515c-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="296f9-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="296f9-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b515c-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b515c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="296f9-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="296f9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b515c-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b515c-114">See Also</span></span>  
- [<span data-ttu-id="b515c-115">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b515c-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [<span data-ttu-id="b515c-116">CorFileMapping Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="b515c-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="296f9-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="296f9-114">See also</span></span>
+- [<span data-ttu-id="296f9-115">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="296f9-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="296f9-116">CorFileMapping Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="296f9-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

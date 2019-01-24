@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703230"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="af24a-102">Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="af24a-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
-<span data-ttu-id="af24a-103">Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="af24a-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="ffe4a-102">Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="ffe4a-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
+<span data-ttu-id="ffe4a-103">Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="af24a-104">Bir derleme ve arkadaş derleme oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="af24a-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="ffe4a-104">Bir derleme ve arkadaş derleme oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="ffe4a-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="af24a-105">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="af24a-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="ffe4a-105">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="af24a-106">Adlı bir C# dosyası oluşturma `friend_unsigned_A.` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="af24a-106">Create a C# file named `friend_unsigned_A.` that contains the following code.</span></span> <span data-ttu-id="af24a-107">Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_unsigned_B arkadaş derleme olarak bildirmek için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="af24a-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_unsigned_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="ffe4a-106">Adlı bir C# dosyası oluşturma `friend_unsigned_A.` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-106">Create a C# file named `friend_unsigned_A.` that contains the following code.</span></span> <span data-ttu-id="ffe4a-107">Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_unsigned_B arkadaş derleme olarak bildirmek için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_unsigned_B as a friend assembly.</span></span>  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ ms.locfileid: "54362151"
     }  
     ```  
   
-3.  <span data-ttu-id="af24a-108">Derleme ve aşağıdaki komutu kullanarak friend_unsigned_A imzalayın.</span><span class="sxs-lookup"><span data-stu-id="af24a-108">Compile and sign friend_unsigned_A by using the following command.</span></span>  
+3.  <span data-ttu-id="ffe4a-108">Derleme ve aşağıdaki komutu kullanarak friend_unsigned_A imzalayın.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-108">Compile and sign friend_unsigned_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  <span data-ttu-id="af24a-109">Adlı bir C# dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="af24a-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="af24a-110">Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `internal` türleri ve üyeleri friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="af24a-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="ffe4a-109">Adlı bir C# dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="ffe4a-110">Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `internal` türleri ve üyeleri friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,25 +75,25 @@ ms.locfileid: "54362151"
     }  
     ```  
   
-5.  <span data-ttu-id="af24a-111">Aşağıdaki komutu kullanarak friend_unsigned_B derleyin.</span><span class="sxs-lookup"><span data-stu-id="af24a-111">Compile friend_unsigned_B by using the following command.</span></span>  
+5.  <span data-ttu-id="ffe4a-111">Aşağıdaki komutu kullanarak friend_unsigned_B derleyin.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-111">Compile friend_unsigned_B by using the following command.</span></span>  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     <span data-ttu-id="af24a-112">Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="af24a-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="af24a-113">Çıktı derlemesine (.exe veya .dll) adını kullanarak açıkça belirtmeniz gerekir `/out` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="af24a-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="af24a-114">Daha fazla bilgi için [/out (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="af24a-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
+     <span data-ttu-id="ffe4a-112">Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="ffe4a-113">Çıktı derlemesine (.exe veya .dll) adını kullanarak açıkça belirtmeniz gerekir `/out` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="ffe4a-114">Daha fazla bilgi için [/out (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="ffe4a-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-6.  <span data-ttu-id="af24a-115">Friend_unsigned_B.exe dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="af24a-115">Run the friend_unsigned_B.exe file.</span></span>  
+6.  <span data-ttu-id="ffe4a-115">Friend_unsigned_B.exe dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-115">Run the friend_unsigned_B.exe file.</span></span>  
   
-     <span data-ttu-id="af24a-116">Program iki dizeyi yazdırır: "Class1.Test" ve "Class2.Test".</span><span class="sxs-lookup"><span data-stu-id="af24a-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="ffe4a-116">Program iki dizeyi yazdırır: "Class1.Test" ve "Class2.Test".</span><span class="sxs-lookup"><span data-stu-id="ffe4a-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="af24a-117">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="af24a-117">.NET Framework Security</span></span>  
- <span data-ttu-id="af24a-118">Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="af24a-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="af24a-119">Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `internal` türler ve üyeler.</span><span class="sxs-lookup"><span data-stu-id="af24a-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="ffe4a-117">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="ffe4a-117">.NET Framework Security</span></span>  
+ <span data-ttu-id="ffe4a-118">Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="ffe4a-119">Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `internal` türler ve üyeler.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af24a-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="af24a-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffe4a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ffe4a-120">See also</span></span>
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [<span data-ttu-id="af24a-121">Derlemeler ve Genel Derleme Önbelleği (C#)</span><span class="sxs-lookup"><span data-stu-id="af24a-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-- [<span data-ttu-id="af24a-122">Arkadaş derlemeler (C#)</span><span class="sxs-lookup"><span data-stu-id="af24a-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [<span data-ttu-id="af24a-123">Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="af24a-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
-- [<span data-ttu-id="af24a-124">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="af24a-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [<span data-ttu-id="ffe4a-121">Derlemeler ve Genel Derleme Önbelleği (C#)</span><span class="sxs-lookup"><span data-stu-id="ffe4a-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [<span data-ttu-id="ffe4a-122">Arkadaş derlemeler (C#)</span><span class="sxs-lookup"><span data-stu-id="ffe4a-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [<span data-ttu-id="ffe4a-123">Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="ffe4a-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [<span data-ttu-id="ffe4a-124">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="ffe4a-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

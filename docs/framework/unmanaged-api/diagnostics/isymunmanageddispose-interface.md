@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 973fc35bb99bea6b3302760763069b9df6c548e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90f5924bc03a9896442fd61a4c618d18ed999faf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638879"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="5cbec-102">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5cbec-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="5cbec-103">Yönetilmeyen kaynakları siler.</span><span class="sxs-lookup"><span data-stu-id="5cbec-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="8d054-102">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d054-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="8d054-103">Yönetilmeyen kaynakları siler.</span><span class="sxs-lookup"><span data-stu-id="8d054-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5cbec-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="5cbec-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8d054-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="8d054-104">Methods</span></span>  
   
-|<span data-ttu-id="5cbec-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="5cbec-105">Method</span></span>|<span data-ttu-id="5cbec-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5cbec-106">Description</span></span>|  
+|<span data-ttu-id="8d054-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="8d054-105">Method</span></span>|<span data-ttu-id="8d054-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8d054-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5cbec-107">Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5cbec-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="5cbec-108">Tüm iç başvuruları sürüm ve tüm sonraki yöntem çağrılarını hatası dönmek temel alınan nesnenin neden olur.</span><span class="sxs-lookup"><span data-stu-id="5cbec-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="8d054-107">Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8d054-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="8d054-108">Tüm iç başvuruları bırakın ve tüm sonraki yöntem çağrılarında hata döndürmek temel alınan nesnede neden olur.</span><span class="sxs-lookup"><span data-stu-id="8d054-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5cbec-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5cbec-109">Requirements</span></span>  
- <span data-ttu-id="5cbec-110">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5cbec-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d054-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8d054-109">Requirements</span></span>  
+ <span data-ttu-id="8d054-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8d054-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cbec-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5cbec-111">See Also</span></span>  
- [<span data-ttu-id="5cbec-112">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5cbec-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8d054-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8d054-111">See also</span></span>
+- [<span data-ttu-id="8d054-112">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8d054-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

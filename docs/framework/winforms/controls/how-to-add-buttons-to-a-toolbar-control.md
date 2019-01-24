@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme'
+title: 'Nasıl yapılır: Bir ToolBar denetimine düğme ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711557"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="16e90-102">Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme</span><span class="sxs-lookup"><span data-stu-id="16e90-102">How to: Add Buttons to a ToolBar Control</span></span>
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="d9c14-102">Nasıl yapılır: Bir ToolBar denetimine düğme ekleme</span><span class="sxs-lookup"><span data-stu-id="d9c14-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="16e90-103"><xref:System.Windows.Forms.ToolStrip> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ToolBar> kontrol; ancak, <xref:System.Windows.Forms.ToolBar> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.</span><span class="sxs-lookup"><span data-stu-id="16e90-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="d9c14-103"><xref:System.Windows.Forms.ToolStrip> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ToolBar> denetler; ancak, <xref:System.Windows.Forms.ToolBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.</span><span class="sxs-lookup"><span data-stu-id="d9c14-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="16e90-104">Bütünleyici <xref:System.Windows.Forms.ToolBar> denetimidir ona eklediğiniz düğmeler.</span><span class="sxs-lookup"><span data-stu-id="16e90-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="16e90-105">Bunlar, menü komutlarını kolay erişim sağlamak için kullanılabilir veya alternatif olarak, bunlar menü yapısındaki kullanılabilir değil, kullanıcılarınıza komutları kullanıma sunmak için uygulamanızın kullanıcı arabiriminin bir diğer alan yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="16e90-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
+ <span data-ttu-id="d9c14-104">En önemli parçalarından biri <xref:System.Windows.Forms.ToolBar> ona eklediğiniz düğmeler denetimidir.</span><span class="sxs-lookup"><span data-stu-id="d9c14-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="d9c14-105">Bunlar, menü komutlarını kolay erişim sağlamak için kullanılabilir veya alternatif olarak, bunlar başka bir alanda komutları menüsü yapısı içinde kullanılabilir değil, kullanıcılarınıza göstermek için uygulamanızın kullanıcı arabiriminin yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="d9c14-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- <span data-ttu-id="16e90-106">Aşağıdaki örnekleri bir <xref:System.Windows.Forms.ToolBar> denetimi için Windows formu eklendi (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="16e90-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
+ <span data-ttu-id="d9c14-106">Aşağıdaki örnekleri bir <xref:System.Windows.Forms.ToolBar> Windows Form denetimi eklendi (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="d9c14-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
   
-### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="16e90-107">Düğmeleri programlı olarak eklemek için</span><span class="sxs-lookup"><span data-stu-id="16e90-107">To add buttons programmatically</span></span>  
+### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="d9c14-107">Program aracılığıyla düğme eklemek için</span><span class="sxs-lookup"><span data-stu-id="d9c14-107">To add buttons programmatically</span></span>  
   
-1.  <span data-ttu-id="16e90-108">Bir yordamda ekleyerek araç çubuğu düğmelerini oluşturma <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="16e90-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
+1.  <span data-ttu-id="d9c14-108">Bir yordamda ekleyerek araç çubuğu düğmelerini oluşturma <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="d9c14-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
   
-2.  <span data-ttu-id="16e90-109">Bireysel bir düğme için özellik ayarları aracılığıyla düğmenin dizin geçirerek belirtmek <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="16e90-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
+2.  <span data-ttu-id="d9c14-109">Tek bir düğme için özellik ayarları aracılığıyla düğmenin dizin geçirerek belirtin <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d9c14-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
   
-     <span data-ttu-id="16e90-110">Aşağıdaki örnek bir formla varsayar bir <xref:System.Windows.Forms.ToolBar> denetimi zaten eklendi.</span><span class="sxs-lookup"><span data-stu-id="16e90-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
+     <span data-ttu-id="d9c14-110">Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.ToolBar> denetim zaten eklendi.</span><span class="sxs-lookup"><span data-stu-id="d9c14-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="16e90-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Koleksiyonu kodu buna göre devam etmemelisiniz sıfır tabanlı bir koleksiyon olduğundan.</span><span class="sxs-lookup"><span data-stu-id="16e90-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
+    >  <span data-ttu-id="d9c14-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Koleksiyondur sıfır tabanlı bir koleksiyon için kod buna göre devam etmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="d9c14-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527108"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="16e90-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="16e90-112">See Also</span></span>  
- <xref:System.Windows.Forms.ToolBar>  
- [<span data-ttu-id="16e90-113">Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama</span><span class="sxs-lookup"><span data-stu-id="16e90-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [<span data-ttu-id="16e90-114">Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme</span><span class="sxs-lookup"><span data-stu-id="16e90-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [<span data-ttu-id="16e90-115">ToolBar Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="16e90-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [<span data-ttu-id="16e90-116">ToolBar Denetimi</span><span class="sxs-lookup"><span data-stu-id="16e90-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="d9c14-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9c14-112">See also</span></span>
+- <xref:System.Windows.Forms.ToolBar>
+- [<span data-ttu-id="d9c14-113">Nasıl yapılır: ToolBar düğmesi için simge tanımlama</span><span class="sxs-lookup"><span data-stu-id="d9c14-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="d9c14-114">Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme</span><span class="sxs-lookup"><span data-stu-id="d9c14-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [<span data-ttu-id="d9c14-115">ToolBar Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d9c14-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="d9c14-116">ToolBar Denetimi</span><span class="sxs-lookup"><span data-stu-id="d9c14-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

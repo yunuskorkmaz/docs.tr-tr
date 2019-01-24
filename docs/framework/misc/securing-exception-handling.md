@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679389"
 ---
-# <a name="securing-exception-handling"></a><span data-ttu-id="d072a-102">Özel Durum İşleme Güvenliğini Sağlama</span><span class="sxs-lookup"><span data-stu-id="d072a-102">Securing Exception Handling</span></span>
-<span data-ttu-id="d072a-103">Visual C++ ve Visual Basic'te yığın yukarı daha fazla filtre ifadesi önce çalışır **son** deyimi.</span><span class="sxs-lookup"><span data-stu-id="d072a-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="d072a-104">**Catch** blok ile ilişkili sonra bu filtre çalışan **son** deyimi.</span><span class="sxs-lookup"><span data-stu-id="d072a-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="d072a-105">Daha fazla bilgi için bkz: [Using User-Filtered özel durumları](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="d072a-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="d072a-106">Bu bölümde, bu sırada güvenlik etkilerini inceler.</span><span class="sxs-lookup"><span data-stu-id="d072a-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="d072a-107">Hangi filtre ifadesini sırayla gösterilmektedir aşağıdaki sahte kod örneği göz önünde bulundurun ve **son** deyimleri çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="d072a-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
+# <a name="securing-exception-handling"></a><span data-ttu-id="90377-102">Özel Durum İşleme Güvenliğini Sağlama</span><span class="sxs-lookup"><span data-stu-id="90377-102">Securing Exception Handling</span></span>
+<span data-ttu-id="90377-103">Visual C++ ve Visual Basic'te yığınına daha fazla filtre ifadesi önce çalışan **son** deyimi.</span><span class="sxs-lookup"><span data-stu-id="90377-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="90377-104">**Catch** blok ile ilişkili filtre sonra çalışan **son** deyimi.</span><span class="sxs-lookup"><span data-stu-id="90377-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="90377-105">Daha fazla bilgi için [Using User-Filtered özel durumları](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="90377-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="90377-106">Bu bölümde, bu sırada güvenlik etkilerini inceler.</span><span class="sxs-lookup"><span data-stu-id="90377-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="90377-107">Filtre ifadeleri hangi sırayla gösteren aşağıdaki sözde kod örneği göz önünde bulundurun ve **son** deyimleri çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="90377-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- <span data-ttu-id="d072a-108">Bu kod aşağıdakileri yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="d072a-108">This code prints the following.</span></span>  
+ <span data-ttu-id="90377-108">Bu kod aşağıdaki yazdırır.</span><span class="sxs-lookup"><span data-stu-id="90377-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- <span data-ttu-id="d072a-109">Filtre öncesinde çalışan **son** güvenlik sorunları diğer kod yürütmeyi avantajı burada ele geçirebilir değiştirme durumu sağlayan şey tanıtılabilir şekilde deyimi.</span><span class="sxs-lookup"><span data-stu-id="d072a-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="d072a-110">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="d072a-110">For example:</span></span>  
+ <span data-ttu-id="90377-109">Filtre öncesinde çalışan **son** güvenlik sorunları diğer kod yürütmeyi avantajı burada ele geçirebilir değiştirme bir duruma yaptığı şey tanıtılmak şekilde deyimi.</span><span class="sxs-lookup"><span data-stu-id="90377-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="90377-110">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="90377-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- <span data-ttu-id="d072a-111">Bu sahte kod yığını rastgele bir kodu çalıştırmak için daha yüksek bir filtre izin verir.</span><span class="sxs-lookup"><span data-stu-id="d072a-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="d072a-112">İş parçacığı ile ilişkilendirilmiş kültürü değiştirme veya diğer örnekler geçici kimliğe bürünme başka bir kimlik, bazı güvenlik denetimi atlayan bir iç bayrağı ayarlama işlemlerinin benzer bir etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="d072a-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="d072a-113">Önerilen çözüm kodun değişiklikler iş parçacığı durumu arayanlar filtre bloklarından ayırmak için bir özel durum işleyici uygulamaktır.</span><span class="sxs-lookup"><span data-stu-id="d072a-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="d072a-114">Ancak, özel durum işleyici düzgün bir şekilde uygulanması önemlidir veya bu sorun değil düzeltilecektir.</span><span class="sxs-lookup"><span data-stu-id="d072a-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="d072a-115">Aşağıdaki örnek UI kültürü geçer, ancak her türlü iş parçacığı durumu değişikliği benzer şekilde açığa çıkabileceği.</span><span class="sxs-lookup"><span data-stu-id="d072a-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
+ <span data-ttu-id="90377-111">Bu sözde kod yığınına rasgele kodu çalıştırmak için daha yüksek bir filtre izin verir.</span><span class="sxs-lookup"><span data-stu-id="90377-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="90377-112">Diğer örnekler bazı güvenlik denetimini atladığından bir iç bayrak ayarlandığında, başka bir kimlik geçici kimliğe bürünme benzer bir etkisi olmaz işlemleri veya iş parçacığıyla ilişkilendirilmiş kültürü değiştirme.</span><span class="sxs-lookup"><span data-stu-id="90377-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="90377-113">Kod değişiklikleri için iş parçacığı durumu çağıranlar filtre bloklarından yalıtmak için bir özel durum işleyicisi tanıtmak için önerilen çözümdür bakın.</span><span class="sxs-lookup"><span data-stu-id="90377-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="90377-114">Ancak, özel durum işleyicisi düzgün tanıtılmak önemlidir veya bu sorun değil düzeltilecektir.</span><span class="sxs-lookup"><span data-stu-id="90377-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="90377-115">Aşağıdaki örnek kullanıcı Arabirimi kültürünü geçer, ancak herhangi bir türden iş parçacığı durumu değişikliği benzer şekilde sunulabilir.</span><span class="sxs-lookup"><span data-stu-id="90377-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- <span data-ttu-id="d072a-116">Varolan kaydırmak için bu durumda durumda doğru düzeltme **deneyin**/**son** engelleyin bir **deneyin**/**catch** Blok.</span><span class="sxs-lookup"><span data-stu-id="d072a-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="d072a-117">Yalnızca Tanıtımı bir **catch throw** varolan INTO yan tümcesinin **deneyin**/**son** bloğu değil düzeltme sorun aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="d072a-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
+ <span data-ttu-id="90377-116">Doğru düzeltmeyi bu durumda varolan sarmaktır **deneyin**/**son** engelleyin bir **deneyin**/**catch** Blok.</span><span class="sxs-lookup"><span data-stu-id="90377-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="90377-117">Yalnızca Giriş bir **catch throw** varolan INTO yan **deneyin**/**son** blok değil düzeltme sorun aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="90377-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- <span data-ttu-id="d072a-118">Bu sorunu nedeniyle gideremiyor **son** deyimi önce çalıştırılacak `FilterFunc` denetim alır.</span><span class="sxs-lookup"><span data-stu-id="d072a-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
+ <span data-ttu-id="90377-118">Bu sorun nedeniyle düzeltmemeyi **son** deyimi önce çalıştırılacak `FilterFunc` denetimi alır.</span><span class="sxs-lookup"><span data-stu-id="90377-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- <span data-ttu-id="d072a-119">Aşağıdaki örnek, sağlayarak sorunu giderir **son** yan tümcesi yürütülebilir bir özel durum arayanlar özel durum filtresi bloklarını yukarı sunmadan önce.</span><span class="sxs-lookup"><span data-stu-id="d072a-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
+ <span data-ttu-id="90377-119">Aşağıdaki örnek, sağlayarak sorunu düzeltir **son** yan tümcesi yürütülen sunmadan önce bir özel durum çağıranlar özel durum filtresi bloklarını ayarlama.</span><span class="sxs-lookup"><span data-stu-id="90377-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d072a-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d072a-120">See Also</span></span>  
- [<span data-ttu-id="d072a-121">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="d072a-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="90377-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="90377-120">See also</span></span>
+- [<span data-ttu-id="90377-121">Güvenli Kodlama Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="90377-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

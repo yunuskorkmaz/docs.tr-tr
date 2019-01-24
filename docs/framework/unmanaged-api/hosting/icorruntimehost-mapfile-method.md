@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707849"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="60100-102">ICorRuntimeHost::MapFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="60100-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="60100-103">Belirtilen dosya belleğe eşler.</span><span class="sxs-lookup"><span data-stu-id="60100-103">Maps the specified file into memory.</span></span> <span data-ttu-id="60100-104">Bu yöntem artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="60100-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="f8093-102">ICorRuntimeHost::MapFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f8093-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="f8093-103">Belirtilen dosya belleğe eşler.</span><span class="sxs-lookup"><span data-stu-id="f8093-103">Maps the specified file into memory.</span></span> <span data-ttu-id="f8093-104">Bu yöntem artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="f8093-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60100-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="60100-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8093-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f8093-105">Syntax</span></span>  
   
 ```  
 HRESULT MapFile(  
@@ -36,21 +36,21 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="60100-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="60100-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f8093-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f8093-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="60100-107">[in] Eşleştirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="60100-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="f8093-107">[in] Eşleştirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="f8093-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="60100-108">[out] Eşleme dosyasını başlanan başlangıç bellek adresi.</span><span class="sxs-lookup"><span data-stu-id="60100-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="f8093-108">[out] Başlangıç bellek adresi eşleme dosyası başlanacak.</span><span class="sxs-lookup"><span data-stu-id="f8093-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60100-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="60100-109">Requirements</span></span>  
- <span data-ttu-id="60100-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60100-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8093-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f8093-109">Requirements</span></span>  
+ <span data-ttu-id="f8093-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8093-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60100-111">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="60100-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f8093-111">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f8093-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="60100-112">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="60100-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f8093-112">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f8093-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="60100-113">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="60100-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="f8093-113">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="f8093-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60100-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="60100-114">See Also</span></span>  
- [<span data-ttu-id="60100-115">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="60100-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f8093-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8093-114">See also</span></span>
+- [<span data-ttu-id="f8093-115">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f8093-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

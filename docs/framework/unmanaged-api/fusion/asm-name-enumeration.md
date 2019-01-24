@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9902b96a6f9ca56435430b6120a34dfb6cfadd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20bfe7794e1ac6259e5b70c2670801e4c7244520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675366"
 ---
-# <a name="asmname-enumeration"></a><span data-ttu-id="b09e8-102">ASM_NAME Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b09e8-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="b09e8-103">Sürüm, yapı, kültür, imza ve özelliklerini alınan veya belirlenen derlemenin vb. belirten [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="b09e8-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
+# <a name="asmname-enumeration"></a><span data-ttu-id="b7549-102">ASM_NAME Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b7549-102">ASM_NAME Enumeration</span></span>
+<span data-ttu-id="b7549-103">Sürüm, yapı, kültür, imza ve özelliklerini alınan veya belirlenen bütünleştirilmiş kodun belirli bir benzeri belirten [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="b7549-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b09e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b09e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7549-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7549-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -64,15 +64,15 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b09e8-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b09e8-105">Requirements</span></span>  
- <span data-ttu-id="b09e8-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b09e8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7549-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7549-105">Requirements</span></span>  
+ <span data-ttu-id="b7549-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7549-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b09e8-107">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b09e8-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b7549-107">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b7549-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b09e8-108">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b09e8-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b7549-108">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b7549-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b09e8-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b09e8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b7549-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7549-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b09e8-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b09e8-110">See Also</span></span>  
- [<span data-ttu-id="b09e8-111">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b09e8-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="b09e8-112">Fusion Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b09e8-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b7549-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b7549-110">See also</span></span>
+- [<span data-ttu-id="b7549-111">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7549-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="b7549-112">Fusion Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b7549-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

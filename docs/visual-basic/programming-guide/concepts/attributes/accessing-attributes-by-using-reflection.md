@@ -2,17 +2,17 @@
 title: (Visual Basic) yansıma kullanarak özniteliklere erişme
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: dca476eef392a2f57d0c66727c53e0e53310d679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625124"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="acd05-102">(Visual Basic) yansıma kullanarak özniteliklere erişme</span><span class="sxs-lookup"><span data-stu-id="acd05-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
-<span data-ttu-id="acd05-103">Özel öznitelikler tanımlayın ve bunları kaynak kodunda yerleştirmek olgu ve bu bilgileri alma üzerinde çalışan herhangi bir şekilde olmadan az değerinin olacaktır.</span><span class="sxs-lookup"><span data-stu-id="acd05-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="acd05-104">Yansıma kullanarak özel öznitelikler içeren tanımlandı bilgi alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="acd05-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="acd05-105">Anahtar yöntemi `GetCustomAttributes`, kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür.</span><span class="sxs-lookup"><span data-stu-id="acd05-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="acd05-106">Bu yöntem, birden fazla aşırı yüklenmiş sürümlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="acd05-106">This method has several overloaded versions.</span></span> <span data-ttu-id="acd05-107">Daha fazla bilgi için bkz. <xref:System.Attribute>.</span><span class="sxs-lookup"><span data-stu-id="acd05-107">For more information, see <xref:System.Attribute>.</span></span>  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="a70ee-102">(Visual Basic) yansıma kullanarak özniteliklere erişme</span><span class="sxs-lookup"><span data-stu-id="a70ee-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
+<span data-ttu-id="a70ee-103">Özel öznitelikler tanımlamak ve bunları kaynak kodunuzu getirin olgu üzerinde çalışan ve bu bilgileri alınırken bir şekilde olmadan küçük değer olacaktır.</span><span class="sxs-lookup"><span data-stu-id="a70ee-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="a70ee-104">Yansıma kullanarak özel öznitelik tanımlandı bilgi alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a70ee-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="a70ee-105">Anahtar yöntemi `GetCustomAttributes`, kaynak kod özniteliklerini çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür.</span><span class="sxs-lookup"><span data-stu-id="a70ee-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="a70ee-106">Bu yöntem, birden fazla aşırı yüklenmiş sürümleri vardır.</span><span class="sxs-lookup"><span data-stu-id="a70ee-106">This method has several overloaded versions.</span></span> <span data-ttu-id="a70ee-107">Daha fazla bilgi için bkz. <xref:System.Attribute>.</span><span class="sxs-lookup"><span data-stu-id="a70ee-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- <span data-ttu-id="acd05-108">Öznitelik belirtimi gibi:</span><span class="sxs-lookup"><span data-stu-id="acd05-108">An attribute specification such as:</span></span>  
+ <span data-ttu-id="a70ee-108">Bir öznitelik belirtimi gibi:</span><span class="sxs-lookup"><span data-stu-id="a70ee-108">An attribute specification such as:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -21,17 +21,17 @@ Class SampleClass
 End Class  
 ```  
   
- <span data-ttu-id="acd05-109">Bunun için kavramsal olarak eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="acd05-109">is conceptually equivalent to this:</span></span>  
+ <span data-ttu-id="a70ee-109">Bunun için kavramsal olarak eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="a70ee-109">is conceptually equivalent to this:</span></span>  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- <span data-ttu-id="acd05-110">Bununla birlikte, kod kadar yürütülmez `SampleClass` öznitelikler için sorgulanır.</span><span class="sxs-lookup"><span data-stu-id="acd05-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="acd05-111">Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesnesi oluşturulur ve yukarıdaki olarak başlatıldı.</span><span class="sxs-lookup"><span data-stu-id="acd05-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="acd05-112">Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="acd05-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="acd05-113">`GetCustomAttributes` ardından döndürür `Author` nesne ve bir dizi diğer öznitelik nesneleri.</span><span class="sxs-lookup"><span data-stu-id="acd05-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="acd05-114">Bu dizi yineleme öznitelikleri her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgi ayıklamak.</span><span class="sxs-lookup"><span data-stu-id="acd05-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
+ <span data-ttu-id="a70ee-110">Ancak, kod kadar yürütülmez `SampleClass` öznitelikleri için sorgulanır.</span><span class="sxs-lookup"><span data-stu-id="a70ee-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="a70ee-111">Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesne oluşturulur ve yukarıdaki gibi başlatıldı.</span><span class="sxs-lookup"><span data-stu-id="a70ee-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="a70ee-112">Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a70ee-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="a70ee-113">`GetCustomAttributes` ardından döndürür `Author` ve diğer öznitelik nesneleri bir dizideki nesne.</span><span class="sxs-lookup"><span data-stu-id="a70ee-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="a70ee-114">Bu dizi yineleme hangi özniteliklerin her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgiler ayıklayın.</span><span class="sxs-lookup"><span data-stu-id="a70ee-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="acd05-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="acd05-115">Example</span></span>  
- <span data-ttu-id="acd05-116">Burada, tam bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="acd05-116">Here is a complete example.</span></span> <span data-ttu-id="acd05-117">Özel bir öznitelik tanımlı, birkaç varlıklara uygulanan ve yansıma alınır.</span><span class="sxs-lookup"><span data-stu-id="acd05-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="a70ee-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="a70ee-115">Example</span></span>  
+ <span data-ttu-id="a70ee-116">Tam bir örnek aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a70ee-116">Here is a complete example.</span></span> <span data-ttu-id="a70ee-117">Özel bir öznitelik tanımlı, birden fazla varlıklarına uygulanan ve yansıma alınır.</span><span class="sxs-lookup"><span data-stu-id="a70ee-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```vb  
 ' Multiuse attribute  
@@ -99,11 +99,11 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="acd05-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="acd05-118">See Also</span></span>  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [<span data-ttu-id="acd05-119">Visual Basic programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="acd05-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="acd05-120">Özniteliklerde Depolanan Bilgileri Alma</span><span class="sxs-lookup"><span data-stu-id="acd05-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
- [<span data-ttu-id="acd05-121">Yansıma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="acd05-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="acd05-122">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="acd05-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="acd05-123">Özel öznitelikler (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="acd05-123">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="a70ee-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a70ee-118">See also</span></span>
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [<span data-ttu-id="a70ee-119">Visual Basic programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a70ee-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="a70ee-120">Özniteliklerde Depolanan Bilgileri Alma</span><span class="sxs-lookup"><span data-stu-id="a70ee-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [<span data-ttu-id="a70ee-121">Yansıma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a70ee-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="a70ee-122">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a70ee-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="a70ee-123">Özel öznitelikler (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="a70ee-123">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

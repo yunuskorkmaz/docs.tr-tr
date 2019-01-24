@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697042"
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="b3573-102">Dönüşümler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b3573-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="b3573-103">Bu bölümdeki konular, nesnelere farklı dönüştürmeleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3573-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="a7232-102">Dönüşümler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a7232-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="a7232-103">Bu bölümdeki konular, farklı nesnelere dönüştürmeleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="a7232-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b3573-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b3573-104">In This Section</span></span>  
- [<span data-ttu-id="b3573-105">Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="b3573-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="b3573-106">Nesneye Birden Çok Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="b3573-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="b3573-107">Bir Öğenin Yerinde Dönmesini Sağlama</span><span class="sxs-lookup"><span data-stu-id="b3573-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="b3573-108">Nesne Döndürme</span><span class="sxs-lookup"><span data-stu-id="b3573-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [<span data-ttu-id="b3573-109">Öğe Ölçeklendirme</span><span class="sxs-lookup"><span data-stu-id="b3573-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [<span data-ttu-id="b3573-110">Bir Öğeyi Eğme</span><span class="sxs-lookup"><span data-stu-id="b3573-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [<span data-ttu-id="b3573-111">Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme</span><span class="sxs-lookup"><span data-stu-id="b3573-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="b3573-112">Bir Öğeyi Çevirme</span><span class="sxs-lookup"><span data-stu-id="b3573-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [<span data-ttu-id="b3573-113">Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma</span><span class="sxs-lookup"><span data-stu-id="b3573-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a7232-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a7232-104">In This Section</span></span>  
+ [<span data-ttu-id="a7232-105">Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="a7232-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="a7232-106">Nesneye Birden Çok Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="a7232-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="a7232-107">Bir Öğenin Yerinde Dönmesini Sağlama</span><span class="sxs-lookup"><span data-stu-id="a7232-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="a7232-108">Nesne Döndürme</span><span class="sxs-lookup"><span data-stu-id="a7232-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
+ [<span data-ttu-id="a7232-109">Öğe Ölçeklendirme</span><span class="sxs-lookup"><span data-stu-id="a7232-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
+ [<span data-ttu-id="a7232-110">Bir Öğeyi Eğme</span><span class="sxs-lookup"><span data-stu-id="a7232-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
+ [<span data-ttu-id="a7232-111">Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme</span><span class="sxs-lookup"><span data-stu-id="a7232-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="a7232-112">Bir Öğeyi Çevirme</span><span class="sxs-lookup"><span data-stu-id="a7232-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
+ [<span data-ttu-id="a7232-113">Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma</span><span class="sxs-lookup"><span data-stu-id="a7232-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b3573-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b3573-114">See Also</span></span>  
- <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="b3573-115">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="b3573-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="b3573-116">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b3573-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="b3573-117">Düzen</span><span class="sxs-lookup"><span data-stu-id="b3573-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="a7232-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a7232-114">See also</span></span>
+- <xref:System.Windows.Media.Transform>
+- [<span data-ttu-id="a7232-115">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="a7232-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="a7232-116">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a7232-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="a7232-117">Düzen</span><span class="sxs-lookup"><span data-stu-id="a7232-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc88baea130adbec3dd8e4065ac0eb14ece7b8ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7ba2d6f143b6bbb9ddc5a056191e53f719bfeb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643955"
 ---
-# <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="08461-102">IMetaDataEmit::DeleteFieldMarshal Yöntemi</span><span class="sxs-lookup"><span data-stu-id="08461-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
-<span data-ttu-id="08461-103">Belirtilen belirteç tarafından başvurulan nesne için meta veri imzası hazırlama PInvoke bozar.</span><span class="sxs-lookup"><span data-stu-id="08461-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="5be0e-102">IMetaDataEmit::DeleteFieldMarshal Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5be0e-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
+<span data-ttu-id="5be0e-103">Belirtilen belirteç tarafından başvurulan nesne için meta verileri imza hazırlama PInvoke yok eder.</span><span class="sxs-lookup"><span data-stu-id="5be0e-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08461-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="08461-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5be0e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5be0e-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteFieldMarshal (  
@@ -35,19 +35,19 @@ HRESULT DeleteFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="08461-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="08461-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5be0e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5be0e-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="08461-106">[in] Bir `mdFieldDef` veya `mdParamDef` alan veya parametre sıralama meta verileri imza silmek temsil eden belirteci.</span><span class="sxs-lookup"><span data-stu-id="08461-106">[in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.</span></span>  
+ <span data-ttu-id="5be0e-106">[in] Bir `mdFieldDef` veya `mdParamDef` alanı veya sıralama meta verileri imza silmek istediğiniz parametreyi temsil eden belirteci.</span><span class="sxs-lookup"><span data-stu-id="5be0e-106">[in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="08461-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="08461-107">Requirements</span></span>  
- <span data-ttu-id="08461-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08461-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5be0e-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5be0e-107">Requirements</span></span>  
+ <span data-ttu-id="5be0e-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5be0e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08461-109">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="08461-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5be0e-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="5be0e-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="08461-110">**Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="08461-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5be0e-110">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="5be0e-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="08461-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08461-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5be0e-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5be0e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08461-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="08461-112">See Also</span></span>  
- [<span data-ttu-id="08461-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="08461-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="08461-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="08461-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5be0e-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5be0e-112">See also</span></span>
+- [<span data-ttu-id="5be0e-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5be0e-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5be0e-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5be0e-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a5a7fcc495914090450c7fabad60b230c144517
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713895"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="28427-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="28427-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="28427-103">`SetPEBytes` Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="28427-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="28427-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="28427-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="7371b-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7371b-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="7371b-103">`SetPEBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="7371b-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="7371b-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="7371b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28427-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="28427-105">See Also</span></span>  
- [<span data-ttu-id="28427-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="28427-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7371b-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7371b-105">See also</span></span>
+- [<span data-ttu-id="7371b-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7371b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

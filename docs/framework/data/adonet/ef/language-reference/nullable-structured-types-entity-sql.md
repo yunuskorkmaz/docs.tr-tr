@@ -2,76 +2,76 @@
 title: Boş değer atanabilir yapılandırılmış türler (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b949cebfa1b16f8e6fb5a133c61c5668d90b3bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c4b0584283e179be2661e518d5bb350b536b058f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731770"
 ---
-# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="99096-102">Boş değer atanabilir yapılandırılmış türler (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="99096-102">Nullable Structured Types (Entity SQL)</span></span>
-<span data-ttu-id="99096-103">A `null` yapılandırılmış bir tür örneği olan mevcut bir örneği.</span><span class="sxs-lookup"><span data-stu-id="99096-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="99096-104">Bu, tüm özellikleri olan mevcut örneğinden farklı değildir `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="99096-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
+# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="5f220-102">Boş değer atanabilir yapılandırılmış türler (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="5f220-102">Nullable Structured Types (Entity SQL)</span></span>
+<span data-ttu-id="5f220-103">A `null` yapılandırılmış bir tür örneği örneği yok.</span><span class="sxs-lookup"><span data-stu-id="5f220-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="5f220-104">Bu, tüm özelliklere sahip mevcut bir örneğinden farklı `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="5f220-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
   
- <span data-ttu-id="99096-105">Bu konuda, hangi tür boş değer atanabilir ve ürün hangi kod düzenleri dahil olmak üzere boş değer atanabilir yapılandırılmış türler açıklanmaktadır `null` yapılandırılmış boş değer atanabilir türler örnekleri.</span><span class="sxs-lookup"><span data-stu-id="99096-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
+ <span data-ttu-id="5f220-105">Bu konuda, hangi türlerin boş değer atanabilir ve ürün hangi kod desenleri gibi boş değer atanabilir yapılandırılmış türler açıklanmaktadır `null` boş değer atanabilir yapılandırılmış türler örnekleri.</span><span class="sxs-lookup"><span data-stu-id="5f220-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
   
-## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="99096-106">Boş değer atanabilir yapılandırılmış türleri tür</span><span class="sxs-lookup"><span data-stu-id="99096-106">Kinds of Nullable Structured Types</span></span>  
- <span data-ttu-id="99096-107">Üç tür boş değer atanabilir yapı türleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="99096-107">There are three kinds of nullable structure types:</span></span>  
+## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="5f220-106">Tür boş değer atanabilir yapılandırılmış türler</span><span class="sxs-lookup"><span data-stu-id="5f220-106">Kinds of Nullable Structured Types</span></span>  
+ <span data-ttu-id="5f220-107">Boş değer atanabilir yapı türleri üç tür vardır:</span><span class="sxs-lookup"><span data-stu-id="5f220-107">There are three kinds of nullable structure types:</span></span>  
   
--   <span data-ttu-id="99096-108">Satır türleri.</span><span class="sxs-lookup"><span data-stu-id="99096-108">Row types.</span></span>  
+-   <span data-ttu-id="5f220-108">Satır türü.</span><span class="sxs-lookup"><span data-stu-id="5f220-108">Row types.</span></span>  
   
--   <span data-ttu-id="99096-109">Karmaşık türler.</span><span class="sxs-lookup"><span data-stu-id="99096-109">Complex types.</span></span>  
+-   <span data-ttu-id="5f220-109">Karmaşık türler.</span><span class="sxs-lookup"><span data-stu-id="5f220-109">Complex types.</span></span>  
   
--   <span data-ttu-id="99096-110">Varlık türü.</span><span class="sxs-lookup"><span data-stu-id="99096-110">Entity types.</span></span>  
+-   <span data-ttu-id="5f220-110">Varlık türleri.</span><span class="sxs-lookup"><span data-stu-id="5f220-110">Entity types.</span></span>  
   
-## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="99096-111">Yapılandırılmış türlerin Null örnekleri oluşturan kod düzenleri</span><span class="sxs-lookup"><span data-stu-id="99096-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
- <span data-ttu-id="99096-112">Aşağıdaki senaryolarda üretmek `null` örnekleri:</span><span class="sxs-lookup"><span data-stu-id="99096-112">The following scenarios produce `null` instances:</span></span>  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="5f220-111">Null yapılandırılmış türlerin örneklerini oluşturan kod desenleri</span><span class="sxs-lookup"><span data-stu-id="5f220-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
+ <span data-ttu-id="5f220-112">Aşağıdaki senaryolarda üretmek `null` örnekleri:</span><span class="sxs-lookup"><span data-stu-id="5f220-112">The following scenarios produce `null` instances:</span></span>  
   
--   <span data-ttu-id="99096-113">Şekillendirme `null` yapılandırılmış bir tür olarak:</span><span class="sxs-lookup"><span data-stu-id="99096-113">Shaping `null` as a structured type:</span></span>  
+-   <span data-ttu-id="5f220-113">Şekillendirme `null` yapılandırılmış bir tür olarak:</span><span class="sxs-lookup"><span data-stu-id="5f220-113">Shaping `null` as a structured type:</span></span>  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   <span data-ttu-id="99096-114">Üst türe çevirme türetilmiş bir tür için taban türü:</span><span class="sxs-lookup"><span data-stu-id="99096-114">Upcasting of a base type to a derived type:</span></span>  
+-   <span data-ttu-id="5f220-114">Türetilmiş bir tür için bir temel türden yukarı çevrim:</span><span class="sxs-lookup"><span data-stu-id="5f220-114">Upcasting of a base type to a derived type:</span></span>  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   <span data-ttu-id="99096-115">Dış birleşim false koşulunu:</span><span class="sxs-lookup"><span data-stu-id="99096-115">Outer join on false condition:</span></span>  
+-   <span data-ttu-id="5f220-115">Dış birleşim koşul false üzerinde:</span><span class="sxs-lookup"><span data-stu-id="5f220-115">Outer join on false condition:</span></span>  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="99096-116">--veya</span><span class="sxs-lookup"><span data-stu-id="99096-116">--or</span></span>  
+     <span data-ttu-id="5f220-116">--or</span><span class="sxs-lookup"><span data-stu-id="5f220-116">--or</span></span>  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="99096-117">--veya</span><span class="sxs-lookup"><span data-stu-id="99096-117">--or</span></span>  
+     <span data-ttu-id="5f220-117">--or</span><span class="sxs-lookup"><span data-stu-id="5f220-117">--or</span></span>  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
--   <span data-ttu-id="99096-118">Başvurusunun kaldırılmasının bir `null` başvurusu:</span><span class="sxs-lookup"><span data-stu-id="99096-118">Dereferencing a `null` reference:</span></span>  
+-   <span data-ttu-id="5f220-118">Başvuruluyor bir `null` başvurusu:</span><span class="sxs-lookup"><span data-stu-id="5f220-118">Dereferencing a `null` reference:</span></span>  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   <span data-ttu-id="99096-119">ANYELEMENT öğesinden boş koleksiyon alma:</span><span class="sxs-lookup"><span data-stu-id="99096-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
+-   <span data-ttu-id="5f220-119">ANYELEMENT öğesinden boş koleksiyon alma:</span><span class="sxs-lookup"><span data-stu-id="5f220-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   <span data-ttu-id="99096-120">Denetleme `null` yapılandırılmış türlerin örnekleri:</span><span class="sxs-lookup"><span data-stu-id="99096-120">Checking for `null` instances of structured types:</span></span>  
+-   <span data-ttu-id="5f220-120">Denetleme `null` yapılandırılmış türleri örnekleri:</span><span class="sxs-lookup"><span data-stu-id="5f220-120">Checking for `null` instances of structured types:</span></span>  
   
     ```csharp  
     ...  
@@ -88,5 +88,5 @@ ms.locfileid: "32762393"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="99096-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="99096-121">See Also</span></span>  
- [<span data-ttu-id="99096-122">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="99096-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5f220-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5f220-121">See also</span></span>
+- [<span data-ttu-id="5f220-122">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5f220-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

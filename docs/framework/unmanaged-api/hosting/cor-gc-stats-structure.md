@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638112"
 ---
-# <a name="corgcstats-structure"></a><span data-ttu-id="d1c80-102">COR_GC_STATS Yapısı</span><span class="sxs-lookup"><span data-stu-id="d1c80-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="d1c80-103">Ortak dil çalışma zamanı (CLR) atık toplama mekanizmasını ilgili istatistikler sağlar.</span><span class="sxs-lookup"><span data-stu-id="d1c80-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="corgcstats-structure"></a><span data-ttu-id="2667f-102">COR_GC_STATS Yapısı</span><span class="sxs-lookup"><span data-stu-id="2667f-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="2667f-103">Ortak dil çalışma zamanı (CLR) çöp toplama mekanizması hakkında istatistikler sağlar.</span><span class="sxs-lookup"><span data-stu-id="2667f-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1c80-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d1c80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2667f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2667f-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +44,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d1c80-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d1c80-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2667f-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="2667f-105">Members</span></span>  
   
-|<span data-ttu-id="d1c80-106">Üye</span><span class="sxs-lookup"><span data-stu-id="d1c80-106">Member</span></span>|<span data-ttu-id="d1c80-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d1c80-107">Description</span></span>|  
+|<span data-ttu-id="2667f-106">Üye</span><span class="sxs-lookup"><span data-stu-id="2667f-106">Member</span></span>|<span data-ttu-id="2667f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2667f-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="d1c80-108">Hangi alan değerlerini hesaplanır ve döndürülen gösterir.</span><span class="sxs-lookup"><span data-stu-id="d1c80-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="d1c80-109">Dış istek tarafından zorlanan çöp koleksiyonlarının sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d1c80-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="d1c80-110">Her oluşturulmasında gerçekleştirilen çöp koleksiyonlarının sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d1c80-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="d1c80-111">Tüm yığın kaydedilen kilobayt toplam sayısı.</span><span class="sxs-lookup"><span data-stu-id="d1c80-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="d1c80-112">Tüm yığın ayrılmış kilobayt toplam sayısı.</span><span class="sxs-lookup"><span data-stu-id="d1c80-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="d1c80-113">Kilobayt cinsinden nesil sıfır yığın boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="d1c80-114">Kilobayt cinsinden oluşturma-bir yığın boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="d1c80-115">Kilobayt cinsinden nesil iki yığın boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="d1c80-116">Kilobayt cinsinden büyük nesne yığın boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="d1c80-117">Nesil biri sıfır kuşaktan yükseltilen nesnelerin kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="d1c80-118">Nesil iki kuşaktan bir yükseltilmiş nesnelerin kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="d1c80-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="2667f-108">Hangi alan değerlerini hesaplanır ve döndürülen gösterir.</span><span class="sxs-lookup"><span data-stu-id="2667f-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="2667f-109">Dış istek tarafından zorlanan çöp koleksiyonları sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2667f-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="2667f-110">Her bir oluşturmada gerçekleştirilen çöp koleksiyonları sayısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2667f-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="2667f-111">Tüm yığınlara kaydedilen kilobayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="2667f-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="2667f-112">Tüm yığınlara ayrılmış kilobayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="2667f-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="2667f-113">Nesil sıfır yığın kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="2667f-114">Oluşturma bir yığın kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="2667f-115">Nesil iki yığın kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="2667f-116">Büyük nesne yığının kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="2667f-117">Oluşturma bir sıfır kuşaktan yükseltilen nesnelerin kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="2667f-118">Oluşturma bir nesle iki yükseltilir nesnelerin kilobayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2667f-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d1c80-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d1c80-119">Remarks</span></span>  
- <span data-ttu-id="d1c80-120">[Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) gerektirdiğine `Flags` alanını `COR_GC_STATS` yapısı bir veya daha fazla değerlere ayarlamak için [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) belirtmek için numaralandırması İstatistikleri ayarlanması üzeresiniz.</span><span class="sxs-lookup"><span data-stu-id="d1c80-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2667f-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2667f-119">Remarks</span></span>  
+ <span data-ttu-id="2667f-120">[Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) gerektirdiğine `Flags` alanını `COR_GC_STATS` yapısı bir veya daha fazla değere ayarlanacak [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) belirtmek için sabit listesi Ayarlanacak istatistikleri şunlardır.</span><span class="sxs-lookup"><span data-stu-id="2667f-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="d1c80-121">Aşağıdaki tabloda bu iki yapısına tarafından sağlanan istatistikleri eşleyen [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırma değerlerinin `COR_GC_COUNTS` ve `COR_GC_MEMORYUSAGE`.</span><span class="sxs-lookup"><span data-stu-id="d1c80-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="2667f-121">Aşağıdaki tabloda bu yapı için iki tarafından sağlanan istatistikleri eşler [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırma değerlerinin `COR_GC_COUNTS` ve `COR_GC_MEMORYUSAGE`.</span><span class="sxs-lookup"><span data-stu-id="2667f-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="d1c80-122">COR_GC_COUNTS tarafından belirtilen</span><span class="sxs-lookup"><span data-stu-id="d1c80-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="d1c80-123">COR_GC_MEMORYUSAGE tarafından belirtilen</span><span class="sxs-lookup"><span data-stu-id="d1c80-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="2667f-122">COR_GC_COUNTS tarafından belirtilen</span><span class="sxs-lookup"><span data-stu-id="2667f-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="2667f-123">COR_GC_MEMORYUSAGE tarafından belirtilen</span><span class="sxs-lookup"><span data-stu-id="2667f-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="d1c80-124">Kullanım örneği aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="d1c80-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="2667f-124">Kullanım örneği aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="2667f-124">An example of the usage is as follows:</span></span>  
   
 ```  
 COR_GC_STATS GCStats;  
@@ -77,16 +77,16 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d1c80-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d1c80-125">Requirements</span></span>  
- <span data-ttu-id="d1c80-126">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1c80-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2667f-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2667f-125">Requirements</span></span>  
+ <span data-ttu-id="2667f-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2667f-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1c80-127">**Başlık:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="d1c80-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="2667f-127">**Üst bilgi:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="2667f-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="d1c80-128">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="d1c80-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2667f-128">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="2667f-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d1c80-129">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1c80-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2667f-129">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2667f-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1c80-130">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d1c80-130">See Also</span></span>  
- [<span data-ttu-id="d1c80-131">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="d1c80-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [<span data-ttu-id="d1c80-132">Otomatik Bellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="d1c80-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)  
- [<span data-ttu-id="d1c80-133">Atık Toplama</span><span class="sxs-lookup"><span data-stu-id="d1c80-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="2667f-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2667f-130">See also</span></span>
+- [<span data-ttu-id="2667f-131">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="2667f-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="2667f-132">Otomatik Bellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="2667f-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="2667f-133">Atık Toplama</span><span class="sxs-lookup"><span data-stu-id="2667f-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)

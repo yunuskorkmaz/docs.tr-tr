@@ -1,45 +1,36 @@
 ---
-title: 'Nasıl yapılır: Kodun Bölümlerini Daraltma ve Gizleme (Visual Basic)'
-ms.custom: ''
+title: 'Nasıl yapılır: Daraltma ve gizleme (Visual Basic) kod bölümlerini'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 1282269f06f89645c213f3daaa1bd29e95a44d35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668723"
 ---
-# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a><span data-ttu-id="473a7-102">Nasıl yapılır: Kodun Bölümlerini Daraltma ve Gizleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="473a7-102">How to: Collapse and Hide Sections of Code (Visual Basic)</span></span>
-<span data-ttu-id="473a7-103">`#Region` Yönergesi daraltma ve Visual Basic dosyaları kodda bölümlerini gizleme olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="473a7-103">The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files.</span></span> <span data-ttu-id="473a7-104">`#Region` Yönergesi Visual Studio Kod Düzenleyicisi'ni kullanırken, genişletebilirsiniz kodu veya daralt bloğunu belirtmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="473a7-104">The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor.</span></span> <span data-ttu-id="473a7-105">Seçime bağlı olarak kod gizleme olanağı dosyalarınızı daha yönetilebilir ve okuması daha kolay hale getirir.</span><span class="sxs-lookup"><span data-stu-id="473a7-105">The ability to hide code selectively makes your files more manageable and easier to read.</span></span> <span data-ttu-id="473a7-106">Daha fazla bilgi için bkz: [anahat](/visualstudio/ide/outlining).</span><span class="sxs-lookup"><span data-stu-id="473a7-106">For more information, see [Outlining](/visualstudio/ide/outlining).</span></span>  
+# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a><span data-ttu-id="567b0-102">Nasıl yapılır: Daraltma ve gizleme (Visual Basic) kod bölümlerini</span><span class="sxs-lookup"><span data-stu-id="567b0-102">How to: Collapse and Hide Sections of Code (Visual Basic)</span></span>
+<span data-ttu-id="567b0-103">`#Region` Yönergesi daraltma ve gizleme Visual Basic dosyalarında kod bölümlerini olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="567b0-103">The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files.</span></span> <span data-ttu-id="567b0-104">`#Region` Yönergesi Visual Studio Kod Düzenleyicisi'ni kullanırken genişletebileceğiniz kodu veya daralt bloğunu belirtmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="567b0-104">The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor.</span></span> <span data-ttu-id="567b0-105">Kod seçmeli olarak gizleyebilme yeteneği dosyalarınızı daha yönetilebilir ve okunması kolay hale getirir.</span><span class="sxs-lookup"><span data-stu-id="567b0-105">The ability to hide code selectively makes your files more manageable and easier to read.</span></span> <span data-ttu-id="567b0-106">Daha fazla bilgi için [anahat](/visualstudio/ide/outlining).</span><span class="sxs-lookup"><span data-stu-id="567b0-106">For more information, see [Outlining](/visualstudio/ide/outlining).</span></span>  
   
- <span data-ttu-id="473a7-107">`#Region` yönergeleri kod bloğu semantiği gibi destek `#If...#End If`.</span><span class="sxs-lookup"><span data-stu-id="473a7-107">`#Region` directives support code block semantics such as `#If...#End If`.</span></span> <span data-ttu-id="473a7-108">Bu, tek bir blok olarak başlar ve başka bir programda bitiş anlamına gelir; Başlangıç ve bitiş aynı bloğunda olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="473a7-108">This means they cannot begin in one block and end in another; the start and end must be in the same block.</span></span> <span data-ttu-id="473a7-109">`#Region` yönergeleri içinde işlevleri desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="473a7-109">`#Region` directives are not supported within functions.</span></span>  
+ <span data-ttu-id="567b0-107">`#Region` kod bloğu semantiği gibi destek yönergeleri `#If...#End If`.</span><span class="sxs-lookup"><span data-stu-id="567b0-107">`#Region` directives support code block semantics such as `#If...#End If`.</span></span> <span data-ttu-id="567b0-108">Bu, bir blok içinde başlar ve diğerinde anlamına gelir; Başlangıç ve bitiş aynı blok içinde olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="567b0-108">This means they cannot begin in one block and end in another; the start and end must be in the same block.</span></span> <span data-ttu-id="567b0-109">`#Region` yönergeleri içindeki işlevleri desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="567b0-109">`#Region` directives are not supported within functions.</span></span>  
   
-### <a name="to-collapse-and-hide-a-section-of-code"></a><span data-ttu-id="473a7-110">Daraltma ve kod bir bölümünü gizlemek için</span><span class="sxs-lookup"><span data-stu-id="473a7-110">To collapse and hide a section of code</span></span>  
+### <a name="to-collapse-and-hide-a-section-of-code"></a><span data-ttu-id="567b0-110">Daralt ve kodun bir bölümünü gizlemek için</span><span class="sxs-lookup"><span data-stu-id="567b0-110">To collapse and hide a section of code</span></span>  
   
--   <span data-ttu-id="473a7-111">Kod arasında bölümünü yerleştirin `#Region` ve `#End Region` aşağıdaki örnekteki gibi deyimleri:</span><span class="sxs-lookup"><span data-stu-id="473a7-111">Place the section of code between the `#Region` and `#End Region` statements, as in the following example:</span></span>  
+-   <span data-ttu-id="567b0-111">Arasında kod bölümünün yerleştirin `#Region` ve `#End Region` ifadeleri, aşağıdaki örnekte olduğu gibi:</span><span class="sxs-lookup"><span data-stu-id="567b0-111">Place the section of code between the `#Region` and `#End Region` statements, as in the following example:</span></span>  
   
      [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
-     <span data-ttu-id="473a7-112">`#Region` Blok kullanılan kod dosyasında birden çok kez; bu nedenle, kullanıcılar kendi bloklarını yordamları ve sırasıyla daraltılabilen sınıflar tanımlayabilir.</span><span class="sxs-lookup"><span data-stu-id="473a7-112">The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed.</span></span> <span data-ttu-id="473a7-113">`#Region` blokları de iç içe geçirilemez diğer içinde `#Region` engeller.</span><span class="sxs-lookup"><span data-stu-id="473a7-113">`#Region` blocks can also be nested within other `#Region` blocks.</span></span>  
+     <span data-ttu-id="567b0-112">`#Region` Blok kullanılan bir kod dosyasında birden çok kez; bu nedenle, kullanıcılar kendi blokları yordamlar ve sırasıyla daratılmadan sınıfları tanımlayabilir.</span><span class="sxs-lookup"><span data-stu-id="567b0-112">The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed.</span></span> <span data-ttu-id="567b0-113">`#Region` Bloklar da iç içe geçirilemez birbirine `#Region` engeller.</span><span class="sxs-lookup"><span data-stu-id="567b0-113">`#Region` blocks can also be nested within other `#Region` blocks.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="473a7-114">Kod gizleme derlenmiş gelen engellemez ve etkilemez `#If...#End If` deyimleri.</span><span class="sxs-lookup"><span data-stu-id="473a7-114">Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.</span></span>  
+    >  <span data-ttu-id="567b0-114">Kod gizleme Eylemi'ni engellemez ve etkilemez `#If...#End If` deyimleri.</span><span class="sxs-lookup"><span data-stu-id="567b0-114">Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="473a7-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="473a7-115">See Also</span></span>  
- [<span data-ttu-id="473a7-116">Koşullu Derleme</span><span class="sxs-lookup"><span data-stu-id="473a7-116">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [<span data-ttu-id="473a7-117">#Region Yönergesi</span><span class="sxs-lookup"><span data-stu-id="473a7-117">#Region Directive</span></span>](../../../visual-basic/language-reference/directives/region-directive.md)  
- [<span data-ttu-id="473a7-118">#If...Then...#Else Yönergesi</span><span class="sxs-lookup"><span data-stu-id="473a7-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [<span data-ttu-id="473a7-119">Anahat Oluşturma</span><span class="sxs-lookup"><span data-stu-id="473a7-119">Outlining</span></span>](/visualstudio/ide/outlining)
+## <a name="see-also"></a><span data-ttu-id="567b0-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="567b0-115">See also</span></span>
+- [<span data-ttu-id="567b0-116">Koşullu Derleme</span><span class="sxs-lookup"><span data-stu-id="567b0-116">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [<span data-ttu-id="567b0-117">#Region Yönergesi</span><span class="sxs-lookup"><span data-stu-id="567b0-117">#Region Directive</span></span>](../../../visual-basic/language-reference/directives/region-directive.md)
+- [<span data-ttu-id="567b0-118">#If...Then...#Else Yönergesi</span><span class="sxs-lookup"><span data-stu-id="567b0-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="567b0-119">Anahat Oluşturma</span><span class="sxs-lookup"><span data-stu-id="567b0-119">Outlining</span></span>](/visualstudio/ide/outlining)

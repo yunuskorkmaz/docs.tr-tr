@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674172"
 ---
-# <a name="corelementtype-enumeration1"></a><span data-ttu-id="5a963-102">CorElementType sabit listesi1</span><span class="sxs-lookup"><span data-stu-id="5a963-102">CorElementType Enumeration1</span></span>
-<span data-ttu-id="5a963-103">Ortak dil çalışma zamanı belirtir <xref:System.Type>, bir tür değiştiricisi ya da bir türü bir meta veri türü imzada hakkında bilgiler.</span><span class="sxs-lookup"><span data-stu-id="5a963-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
+# <a name="corelementtype-enumeration1"></a><span data-ttu-id="ebc1a-102">CorElementType sabit listesi1</span><span class="sxs-lookup"><span data-stu-id="ebc1a-102">CorElementType Enumeration1</span></span>
+<span data-ttu-id="ebc1a-103">Ortak dil çalışma zamanı belirtir <xref:System.Type>, bir tür değiştiricisi ya da bir türü bir meta veri türü imzada hakkında bilgiler.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5a963-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5a963-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebc1a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ebc1a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorElementType {  
@@ -76,74 +76,74 @@ typedef enum CorElementType {
 } CorElementType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5a963-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="5a963-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ebc1a-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ebc1a-105">Members</span></span>  
   
-|<span data-ttu-id="5a963-106">Üye</span><span class="sxs-lookup"><span data-stu-id="5a963-106">Member</span></span>|<span data-ttu-id="5a963-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5a963-107">Description</span></span>|  
+|<span data-ttu-id="ebc1a-106">Üye</span><span class="sxs-lookup"><span data-stu-id="ebc1a-106">Member</span></span>|<span data-ttu-id="ebc1a-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ebc1a-107">Description</span></span>|  
 |------------|-----------------|  
-|`ELEMENT_TYPE_END`|<span data-ttu-id="5a963-108">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5a963-108">Used internally.</span></span>|  
-|`ELEMENT_TYPE_VOID`|<span data-ttu-id="5a963-109">Void türü.</span><span class="sxs-lookup"><span data-stu-id="5a963-109">A void type.</span></span>|  
-|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="5a963-110">Bir Boolean türü</span><span class="sxs-lookup"><span data-stu-id="5a963-110">A Boolean type</span></span>|  
-|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="5a963-111">Bir karakter türü.</span><span class="sxs-lookup"><span data-stu-id="5a963-111">A character type.</span></span>|  
-|`ELEMENT_TYPE_I1`|<span data-ttu-id="5a963-112">İmzalı bir 1 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-112">A signed 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U1`|<span data-ttu-id="5a963-113">İşaretsiz bir 1 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-113">An unsigned 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I2`|<span data-ttu-id="5a963-114">İmzalı bir 2-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-114">A signed 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U2`|<span data-ttu-id="5a963-115">İmzalanmamış 2-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-115">An unsigned 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I4`|<span data-ttu-id="5a963-116">İmzalı bir 4 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-116">A signed 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U4`|<span data-ttu-id="5a963-117">İşaretsiz bir 4 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-117">An unsigned 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I8`|<span data-ttu-id="5a963-118">İşaretli 8-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-118">A signed 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U8`|<span data-ttu-id="5a963-119">İmzalanmamış 8-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="5a963-119">An unsigned 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_R4`|<span data-ttu-id="5a963-120">4-bayt kayan nokta.</span><span class="sxs-lookup"><span data-stu-id="5a963-120">A 4-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_R8`|<span data-ttu-id="5a963-121">Bir 8-bayt kayan nokta.</span><span class="sxs-lookup"><span data-stu-id="5a963-121">An 8-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_STRING`|<span data-ttu-id="5a963-122">System.String türü.</span><span class="sxs-lookup"><span data-stu-id="5a963-122">A System.String type.</span></span>|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="5a963-123">Bir işaretçi türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-123">A pointer type modifier.</span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="5a963-124">Bir başvuru türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-124">A reference type modifier.</span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="5a963-125">Değer tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-125">A value type modifier.</span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="5a963-126">Bir sınıf türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-126">A class type modifier.</span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="5a963-127">Bir sınıf değişken tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-127">A class variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="5a963-128">Çok boyutlu dizi tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-128">A multi-dimensional array type modifier.</span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="5a963-129">Genel türler için tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-129">A type modifier for generic types.</span></span>|  
-|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="5a963-130">Belirlenmiş bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="5a963-130">A typed reference.</span></span>|  
-|`ELEMENT_TYPE_I`|<span data-ttu-id="5a963-131">Yerel bir tamsayı boyutu.</span><span class="sxs-lookup"><span data-stu-id="5a963-131">Size of a native integer.</span></span>|  
-|`ELEMENT_TYPE_U`|<span data-ttu-id="5a963-132">Yerel bir işaretsiz tamsayı boyutu.</span><span class="sxs-lookup"><span data-stu-id="5a963-132">Size of an unsigned native integer.</span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="5a963-133">Bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-133">A pointer to a function.</span></span>|  
-|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="5a963-134">System.Object türü.</span><span class="sxs-lookup"><span data-stu-id="5a963-134">A System.Object type.</span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="5a963-135">Tek boyutlu, sıfır alt sınırı dizi tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="5a963-136">Bir yöntem değişken tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-136">A method variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="5a963-137">C dili değiştiricisi gereklidir.</span><span class="sxs-lookup"><span data-stu-id="5a963-137">A C language required modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="5a963-138">Bir C dili isteğe bağlı bir değiştirici.</span><span class="sxs-lookup"><span data-stu-id="5a963-138">A C language optional modifier.</span></span>|  
-|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="5a963-139">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5a963-139">Used internally.</span></span>|  
-|`ELEMENT_TYPE_MAX`|<span data-ttu-id="5a963-140">Geçersiz bir tür.</span><span class="sxs-lookup"><span data-stu-id="5a963-140">An invalid type.</span></span>|  
-|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="5a963-141">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5a963-141">Used internally.</span></span>|  
-|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="5a963-142">Değişken bir dizi parametre listesi için bir sentinel olan bir tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5a963-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
-|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="5a963-143">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5a963-143">Used internally.</span></span>|  
+|`ELEMENT_TYPE_END`|<span data-ttu-id="ebc1a-108">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-108">Used internally.</span></span>|  
+|`ELEMENT_TYPE_VOID`|<span data-ttu-id="ebc1a-109">Void türü.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-109">A void type.</span></span>|  
+|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="ebc1a-110">Bir Boolean türü</span><span class="sxs-lookup"><span data-stu-id="ebc1a-110">A Boolean type</span></span>|  
+|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="ebc1a-111">Bir karakter türü.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-111">A character type.</span></span>|  
+|`ELEMENT_TYPE_I1`|<span data-ttu-id="ebc1a-112">İmzalı bir 1 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-112">A signed 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U1`|<span data-ttu-id="ebc1a-113">İşaretsiz bir 1 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-113">An unsigned 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I2`|<span data-ttu-id="ebc1a-114">İmzalı bir 2-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-114">A signed 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U2`|<span data-ttu-id="ebc1a-115">İmzalanmamış 2-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-115">An unsigned 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I4`|<span data-ttu-id="ebc1a-116">İmzalı bir 4 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-116">A signed 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U4`|<span data-ttu-id="ebc1a-117">İşaretsiz bir 4 baytlık tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-117">An unsigned 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I8`|<span data-ttu-id="ebc1a-118">İşaretli 8-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-118">A signed 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U8`|<span data-ttu-id="ebc1a-119">İmzalanmamış 8-bayt tamsayı.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-119">An unsigned 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_R4`|<span data-ttu-id="ebc1a-120">4-bayt kayan nokta.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-120">A 4-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_R8`|<span data-ttu-id="ebc1a-121">Bir 8-bayt kayan nokta.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-121">An 8-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_STRING`|<span data-ttu-id="ebc1a-122">System.String türü.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-122">A System.String type.</span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="ebc1a-123">Bir işaretçi türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-123">A pointer type modifier.</span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="ebc1a-124">Bir başvuru türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-124">A reference type modifier.</span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="ebc1a-125">Değer tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-125">A value type modifier.</span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="ebc1a-126">Bir sınıf türü değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-126">A class type modifier.</span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="ebc1a-127">Bir sınıf değişken tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-127">A class variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="ebc1a-128">Çok boyutlu dizi tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-128">A multi-dimensional array type modifier.</span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="ebc1a-129">Genel türler için tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-129">A type modifier for generic types.</span></span>|  
+|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="ebc1a-130">Belirlenmiş bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-130">A typed reference.</span></span>|  
+|`ELEMENT_TYPE_I`|<span data-ttu-id="ebc1a-131">Yerel bir tamsayı boyutu.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-131">Size of a native integer.</span></span>|  
+|`ELEMENT_TYPE_U`|<span data-ttu-id="ebc1a-132">Yerel bir işaretsiz tamsayı boyutu.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-132">Size of an unsigned native integer.</span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="ebc1a-133">Bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-133">A pointer to a function.</span></span>|  
+|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="ebc1a-134">System.Object türü.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-134">A System.Object type.</span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="ebc1a-135">Tek boyutlu, sıfır alt sınırı dizi tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="ebc1a-136">Bir yöntem değişken tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-136">A method variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="ebc1a-137">C dili değiştiricisi gereklidir.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-137">A C language required modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="ebc1a-138">Bir C dili isteğe bağlı bir değiştirici.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-138">A C language optional modifier.</span></span>|  
+|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="ebc1a-139">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-139">Used internally.</span></span>|  
+|`ELEMENT_TYPE_MAX`|<span data-ttu-id="ebc1a-140">Geçersiz bir tür.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-140">An invalid type.</span></span>|  
+|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="ebc1a-141">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-141">Used internally.</span></span>|  
+|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="ebc1a-142">Değişken bir dizi parametre listesi için bir sentinel olan bir tür değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
+|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="ebc1a-143">Dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-143">Used internally.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5a963-144">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5a963-144">Remarks</span></span>  
- <span data-ttu-id="5a963-145">Tür değiştiricileri daha karmaşık türleri temsil eden temelini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="5a963-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="5a963-146">A `CorElementType` tür değiştiricisi değeri, türü imzada hemen takip eden değerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="5a963-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="5a963-147">Aşağıdaki değeri `CorElementType` tür değiştiricisi değeri olabilir bir `CorElementType` basit tür değeri, bir metaveri belirteci veya aşağıdaki tabloda belirtildiği gibi başka bir değer.</span><span class="sxs-lookup"><span data-stu-id="5a963-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ebc1a-144">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ebc1a-144">Remarks</span></span>  
+ <span data-ttu-id="ebc1a-145">Tür değiştiricileri daha karmaşık türleri temsil eden temelini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="ebc1a-146">A `CorElementType` tür değiştiricisi değeri, türü imzada hemen takip eden değerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="ebc1a-147">Aşağıdaki değeri `CorElementType` tür değiştiricisi değeri olabilir bir `CorElementType` basit tür değeri, bir metaveri belirteci veya aşağıdaki tabloda belirtildiği gibi başka bir değer.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5a963-148">Tüm sayılar (*numarası*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayısı*ve *bağlı*) sıkıştırılmış tamsayı olarak depolanır.</span><span class="sxs-lookup"><span data-stu-id="5a963-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="5a963-149">Bkz: [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA Web sitesinde Ayrıntılar için.</span><span class="sxs-lookup"><span data-stu-id="5a963-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
+>  <span data-ttu-id="ebc1a-148">Tüm sayılar (*numarası*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayısı*ve *bağlı*) sıkıştırılmış tamsayı olarak depolanır.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="ebc1a-149">Bkz: [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA Web sitesinde Ayrıntılar için.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
   
-|<span data-ttu-id="5a963-150">Tür değiştiricisi</span><span class="sxs-lookup"><span data-stu-id="5a963-150">Type modifier</span></span>|<span data-ttu-id="5a963-151">Biçimi</span><span class="sxs-lookup"><span data-stu-id="5a963-151">Format</span></span>|  
+|<span data-ttu-id="ebc1a-150">Tür değiştiricisi</span><span class="sxs-lookup"><span data-stu-id="ebc1a-150">Type modifier</span></span>|<span data-ttu-id="ebc1a-151">Biçimi</span><span class="sxs-lookup"><span data-stu-id="ebc1a-151">Format</span></span>|  
 |-------------------|------------|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="5a963-152">ELEMENT_TYPE_PTR < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="5a963-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="5a963-153">ELEMENT_TYPE_BYREF < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="5a963-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="5a963-154">ELEMENT_TYPE_VALUETYPE < bir `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="5a963-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="5a963-155">ELEMENT_TYPE_CLASS < bir `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="5a963-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="5a963-156">ELEMENT_TYPE_VAR \<sayı ></span><span class="sxs-lookup"><span data-stu-id="5a963-156">ELEMENT_TYPE_VAR \<number></span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="5a963-157">ELEMENT_TYPE_ARRAY < bir `CorElementType` değer > \<derece > \<count1 > \<bound1 >... \<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="5a963-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="5a963-158">ELEMENT_TYPE_GENERICINST < bir `mdTypeDef` meta veri belirteci > \<bağımsız değişken sayısı > \<arg1 >... \<argN ></span><span class="sxs-lookup"><span data-stu-id="5a963-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="5a963-159">ELEMENT_TYPE_FNPTR \<çağırma kuralı dahil olmak üzere işlev için tam imza ></span><span class="sxs-lookup"><span data-stu-id="5a963-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="5a963-160">ELEMENT_TYPE_SZARRAY < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="5a963-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="5a963-161">ELEMENT_TYPE_MVAR \<sayı ></span><span class="sxs-lookup"><span data-stu-id="5a963-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="5a963-162">ELEMENT_TYPE_ < bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="5a963-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="5a963-163">E_T_CMOD_OPT < bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="5a963-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="ebc1a-152">ELEMENT_TYPE_PTR < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="ebc1a-153">ELEMENT_TYPE_BYREF < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="ebc1a-154">ELEMENT_TYPE_VALUETYPE < bir `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="ebc1a-155">ELEMENT_TYPE_CLASS < bir `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="ebc1a-156">ELEMENT_TYPE_VAR \<sayı ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-156">ELEMENT_TYPE_VAR \<number></span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="ebc1a-157">ELEMENT_TYPE_ARRAY < bir `CorElementType` değer > \<derece > \<count1 > \<bound1 >... \<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="ebc1a-158">ELEMENT_TYPE_GENERICINST < bir `mdTypeDef` meta veri belirteci > \<bağımsız değişken sayısı > \<arg1 >... \<argN ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="ebc1a-159">ELEMENT_TYPE_FNPTR \<çağırma kuralı dahil olmak üzere işlev için tam imza ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="ebc1a-160">ELEMENT_TYPE_SZARRAY < bir `CorElementType` değer ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="ebc1a-161">ELEMENT_TYPE_MVAR \<sayı ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="ebc1a-162">ELEMENT_TYPE_ < bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="ebc1a-163">E_T_CMOD_OPT < bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci ></span><span class="sxs-lookup"><span data-stu-id="ebc1a-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5a963-164">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5a963-164">Requirements</span></span>  
- <span data-ttu-id="5a963-165">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5a963-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ebc1a-164">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ebc1a-164">Requirements</span></span>  
+ <span data-ttu-id="ebc1a-165">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ebc1a-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5a963-166">**Başlık:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5a963-166">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="ebc1a-166">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ebc1a-166">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5a963-167">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a963-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ebc1a-167">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ebc1a-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a963-168">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5a963-168">See Also</span></span>  
- [<span data-ttu-id="5a963-169">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="5a963-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="ebc1a-168">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebc1a-168">See also</span></span>
+- [<span data-ttu-id="ebc1a-169">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="ebc1a-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
