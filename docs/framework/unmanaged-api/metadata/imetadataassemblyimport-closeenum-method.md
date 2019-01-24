@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5477578491c3cbc3f5fce694820971e99b45079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 156b2274aa442d9efb129d51ccf5939a09ac7408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710137"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="d9626-102">IMetaDataAssemblyImport::CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9626-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="d9626-103">Belirtilen numaralandırma örneğine başvuru serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="d9626-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="c1d68-102">IMetaDataAssemblyImport::CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c1d68-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="c1d68-103">Belirtilen numaralandırma örneğe bir başvuru serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="c1d68-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9626-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d9626-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1d68-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c1d68-104">Syntax</span></span>  
   
 ```  
 void CloseEnum (  
@@ -35,18 +35,18 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d9626-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d9626-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c1d68-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c1d68-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="d9626-106">[in] Kapatılması numaralandırması örneği.</span><span class="sxs-lookup"><span data-stu-id="d9626-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="c1d68-106">[in] Kapatılması numaralandırma örneği.</span><span class="sxs-lookup"><span data-stu-id="c1d68-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9626-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d9626-107">Requirements</span></span>  
- <span data-ttu-id="d9626-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9626-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1d68-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c1d68-107">Requirements</span></span>  
+ <span data-ttu-id="c1d68-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1d68-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9626-109">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d9626-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c1d68-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c1d68-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d9626-110">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="d9626-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c1d68-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c1d68-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d9626-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9626-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c1d68-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1d68-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9626-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d9626-112">See Also</span></span>  
- [<span data-ttu-id="d9626-113">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d9626-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c1d68-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c1d68-112">See also</span></span>
+- [<span data-ttu-id="c1d68-113">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c1d68-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

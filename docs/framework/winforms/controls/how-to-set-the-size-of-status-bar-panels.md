@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama'
+title: 'Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: d708b94d02b4f1c1e2f00101e6e394043a6057ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be1f216af61c1e7b77e84c584dc9d965a97c56b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539668"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a><span data-ttu-id="f7962-102">Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama</span><span class="sxs-lookup"><span data-stu-id="f7962-102">How to: Set the Size of Status-Bar Panels</span></span>
+# <a name="how-to-set-the-size-of-status-bar-panels"></a><span data-ttu-id="e7da1-102">Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama</span><span class="sxs-lookup"><span data-stu-id="e7da1-102">How to: Set the Size of Status-Bar Panels</span></span>
 > [!NOTE]
->  <span data-ttu-id="f7962-103"><xref:System.Windows.Forms.ToolStripStatusLabel> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.StatusBar> kontrol; ancak, <xref:System.Windows.Forms.StatusBar> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.</span><span class="sxs-lookup"><span data-stu-id="f7962-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="e7da1-103"><xref:System.Windows.Forms.ToolStripStatusLabel> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.StatusBar> denetler; ancak, <xref:System.Windows.Forms.StatusBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.</span><span class="sxs-lookup"><span data-stu-id="e7da1-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="f7962-104">Her örneği <xref:System.Windows.Forms.StatusBarPanel> içinde sınıf bir [StatusBar denetimi](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) kontrolünde genişliğini belirlemek ve çalışma zamanında yeniden boyutlandırma davranışı dinamik özellik sayısı.</span><span class="sxs-lookup"><span data-stu-id="f7962-104">Each instance of the <xref:System.Windows.Forms.StatusBarPanel> class within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control has a number of dynamic properties that determine its width and resize behavior at run time.</span></span>  
+ <span data-ttu-id="e7da1-104">Her bir örneği <xref:System.Windows.Forms.StatusBarPanel> içinde sınıf bir [StatusBar denetimine](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) birkaç genişliğini belirleyin ve çalışma zamanında yeniden boyutlandırma davranışı dinamik özellikleri denetime sahiptir.</span><span class="sxs-lookup"><span data-stu-id="e7da1-104">Each instance of the <xref:System.Windows.Forms.StatusBarPanel> class within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control has a number of dynamic properties that determine its width and resize behavior at run time.</span></span>  
   
-### <a name="to-set-the-size-of-a-panel"></a><span data-ttu-id="f7962-105">Bir panel boyutunu ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="f7962-105">To set the size of a panel</span></span>  
+### <a name="to-set-the-size-of-a-panel"></a><span data-ttu-id="e7da1-105">Bir panel boyutunu ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="e7da1-105">To set the size of a panel</span></span>  
   
-1.  <span data-ttu-id="f7962-106">Bir yordamda ayarladığınız <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, ve <xref:System.Windows.Forms.StatusBarPanel.Width%2A> özellikleri (veya bunların bir alt okuduğunuzu) için durum çubuğunu kendi dizini kullanılarak paneller geçtiğini <xref:System.Windows.Forms.StatusBar.Panels%2A> özelliği <xref:System.Windows.Forms.StatusBarPanel> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="f7962-106">In a procedure, set the <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, and <xref:System.Windows.Forms.StatusBarPanel.Width%2A> properties (or any subset therein) for the status-bar panels using their index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property of the <xref:System.Windows.Forms.StatusBarPanel> collection.</span></span>  
+1.  <span data-ttu-id="e7da1-106">Bir yordamda <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, ve <xref:System.Windows.Forms.StatusBarPanel.Width%2A> özellikleri (veya herhangi bir alt sıralamadaki) için durum çubuğu kendi dizini kullanılarak panelleri geçtiğini <xref:System.Windows.Forms.StatusBar.Panels%2A> özelliği <xref:System.Windows.Forms.StatusBarPanel> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="e7da1-106">In a procedure, set the <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, and <xref:System.Windows.Forms.StatusBarPanel.Width%2A> properties (or any subset therein) for the status-bar panels using their index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property of the <xref:System.Windows.Forms.StatusBarPanel> collection.</span></span>  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -65,9 +65,9 @@ ms.locfileid: "33533786"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7962-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f7962-107">See Also</span></span>  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [<span data-ttu-id="f7962-108">İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="f7962-108">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [<span data-ttu-id="f7962-109">Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="f7962-109">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [<span data-ttu-id="f7962-110">StatusBar Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f7962-110">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e7da1-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7da1-107">See also</span></span>
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [<span data-ttu-id="e7da1-108">İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="e7da1-108">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
+- [<span data-ttu-id="e7da1-109">Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme</span><span class="sxs-lookup"><span data-stu-id="e7da1-109">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [<span data-ttu-id="e7da1-110">StatusBar Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e7da1-110">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

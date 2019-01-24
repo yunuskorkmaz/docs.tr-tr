@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d66177c57acf2f41198ea37169756bc1629a2854
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9f2f2a31247bae19d3cbb3dc667007c1cbc8acb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499073"
 ---
-# <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="19fcb-102">ICLRReferenceAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="19fcb-102">ICLRReferenceAssemblyEnum Interface</span></span>
-<span data-ttu-id="19fcb-103">Bir dosya veya ortak dil çalışma zamanı (CLR) iç oluşturun veya bu kimlikleri anlamak zorunda kalmadan derleme kimlik verilerini kullanarak akış tarafından başvurulan derlemeler kümesini işlemek için ana izin yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="19fcb-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  
+# <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="21ce6-102">ICLRReferenceAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21ce6-102">ICLRReferenceAssemblyEnum Interface</span></span>
+<span data-ttu-id="21ce6-103">Bir dosya veya akışı oluşturmak veya kimliklerle anlamanıza gerek kalmadan iç ortak dil çalışma zamanı (CLR), derleme kimlik verilerini kullanarak tarafından başvurulan derlemeler kümesini işlemek için ana sağlayan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="21ce6-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="19fcb-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="19fcb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="21ce6-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="21ce6-104">Methods</span></span>  
   
-|<span data-ttu-id="19fcb-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="19fcb-105">Method</span></span>|<span data-ttu-id="19fcb-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="19fcb-106">Description</span></span>|  
+|<span data-ttu-id="21ce6-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="21ce6-105">Method</span></span>|<span data-ttu-id="21ce6-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="21ce6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="19fcb-107">Get Yöntemi</span><span class="sxs-lookup"><span data-stu-id="19fcb-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|<span data-ttu-id="19fcb-108">Sağlanan dizininde derleme kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="19fcb-108">Gets the assembly identity at the supplied index.</span></span>|  
+|[<span data-ttu-id="21ce6-107">Get Yöntemi</span><span class="sxs-lookup"><span data-stu-id="21ce6-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|<span data-ttu-id="21ce6-108">Derleme kimliği sağlanan dizini alır.</span><span class="sxs-lookup"><span data-stu-id="21ce6-108">Gets the assembly identity at the supplied index.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="19fcb-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="19fcb-109">Requirements</span></span>  
- <span data-ttu-id="19fcb-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19fcb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21ce6-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21ce6-109">Requirements</span></span>  
+ <span data-ttu-id="21ce6-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21ce6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19fcb-111">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="19fcb-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="21ce6-111">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="21ce6-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="19fcb-112">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="19fcb-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="21ce6-112">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="21ce6-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="19fcb-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19fcb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="21ce6-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21ce6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19fcb-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="19fcb-114">See Also</span></span>  
- [<span data-ttu-id="19fcb-115">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="19fcb-115">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="19fcb-116">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="19fcb-116">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [<span data-ttu-id="19fcb-117">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="19fcb-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="21ce6-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21ce6-114">See also</span></span>
+- [<span data-ttu-id="21ce6-115">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21ce6-115">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="21ce6-116">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21ce6-116">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="21ce6-117">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="21ce6-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

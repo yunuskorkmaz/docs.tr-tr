@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699031"
 ---
-# <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a><span data-ttu-id="a0165-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a0165-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Method</span></span>
-<span data-ttu-id="a0165-103">Varsayılan uygulama etki alanı başlatmak için kullanılan özelliklerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a0165-103">Sets properties that will be used to initialize the default application domain.</span></span>  
+# <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a><span data-ttu-id="8d8d5-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8d8d5-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Method</span></span>
+<span data-ttu-id="8d8d5-103">Varsayılan uygulama etki alanı başlatmak için kullanılacak özelliklerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-103">Sets properties that will be used to initialize the default application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0165-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a0165-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d8d5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8d8d5-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPropertiesForDefaultAppDomain(  
@@ -35,36 +35,36 @@ HRESULT SetPropertiesForDefaultAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a0165-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a0165-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8d8d5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8d8d5-105">Parameters</span></span>  
  `nProperties`  
- <span data-ttu-id="a0165-106">[in] Giriş sayısı `pwszPropertyNames` ve `pwszPropertyValues`.</span><span class="sxs-lookup"><span data-stu-id="a0165-106">[in] The number of entries in `pwszPropertyNames` and `pwszPropertyValues`.</span></span>  
+ <span data-ttu-id="8d8d5-106">[in] Giriş sayısı `pwszPropertyNames` ve `pwszPropertyValues`.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-106">[in] The number of entries in `pwszPropertyNames` and `pwszPropertyValues`.</span></span>  
   
  `pwszPropertyNames`  
- <span data-ttu-id="a0165-107">[in] Bir dizi özellik adları ya da hiçbir özelliği yoksa null.</span><span class="sxs-lookup"><span data-stu-id="a0165-107">[in] An array of property names, or null if there are no properties.</span></span> <span data-ttu-id="a0165-108">Şu anda, bu yöntem tarafından tanınan tek özellik adı "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ' dir.</span><span class="sxs-lookup"><span data-stu-id="a0165-108">Currently, the only property name that is recognized by this method is "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span></span>  
+ <span data-ttu-id="8d8d5-107">[in] Bir dizi özellik adları ya da hiçbir özelliği yoksa null.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-107">[in] An array of property names, or null if there are no properties.</span></span> <span data-ttu-id="8d8d5-108">Şu anda, bu yöntem tarafından tanınan tek özellik adı "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ' dir.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-108">Currently, the only property name that is recognized by this method is "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span></span>  
   
  `pwszPropertyValues`  
- <span data-ttu-id="a0165-109">[in] Bir dizi özellik değerlerini ya da hiçbir özelliği yoksa null.</span><span class="sxs-lookup"><span data-stu-id="a0165-109">[in] An array of property values, or null if there are no properties.</span></span>  
+ <span data-ttu-id="8d8d5-109">[in] Bir dizi özellik değerlerini ya da hiçbir özelliği yoksa null.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-109">[in] An array of property values, or null if there are no properties.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a0165-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a0165-110">Return Value</span></span>  
- <span data-ttu-id="a0165-111">Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="a0165-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8d8d5-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8d8d5-110">Return Value</span></span>  
+ <span data-ttu-id="8d8d5-111">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="a0165-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a0165-112">HRESULT</span></span>|<span data-ttu-id="a0165-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a0165-113">Description</span></span>|  
+|<span data-ttu-id="8d8d5-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8d8d5-112">HRESULT</span></span>|<span data-ttu-id="8d8d5-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8d8d5-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a0165-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="a0165-114">S_OK</span></span>|<span data-ttu-id="a0165-115">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="a0165-115">The method completed successfully.</span></span>|  
-|<span data-ttu-id="a0165-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span><span class="sxs-lookup"><span data-stu-id="a0165-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span></span>|<span data-ttu-id="a0165-117">`pwszPropertyNames` Bu yöntem tarafından tanınmayan bir özellik adı içerir.</span><span class="sxs-lookup"><span data-stu-id="a0165-117">`pwszPropertyNames` includes a property name that is not recognized by this method.</span></span>|  
+|<span data-ttu-id="8d8d5-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="8d8d5-114">S_OK</span></span>|<span data-ttu-id="8d8d5-115">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="8d8d5-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span><span class="sxs-lookup"><span data-stu-id="8d8d5-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span></span>|<span data-ttu-id="8d8d5-117">`pwszPropertyNames` Bu yöntem tarafından tanınmayan bir özellik adı içerir.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-117">`pwszPropertyNames` includes a property name that is not recognized by this method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0165-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a0165-118">Remarks</span></span>  
- <span data-ttu-id="a0165-119">Koşullu sahip bir derleme listesi "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" için özellik değeri olan <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) özniteliğiyle <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> varsayılan uygulamada kısmen güvenilen arayanlara görünür yapılacağı bayrağı etki alanı.</span><span class="sxs-lookup"><span data-stu-id="a0165-119">The property value for "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" is a list of assemblies that have the conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute with the <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flag, which are to be made visible to partially trusted callers in the default application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d8d5-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8d8d5-118">Remarks</span></span>  
+ <span data-ttu-id="8d8d5-119">Koşullu sahip bir derleme listesi "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" özellik değeri olan <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) özniteliğiyle <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> varsayılan uygulamada görünür için kısmen güvenilmeyen çağrıcılara yapılacağı bayrak etki alanı.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-119">The property value for "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" is a list of assemblies that have the conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute with the <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flag, which are to be made visible to partially trusted callers in the default application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0165-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a0165-120">Requirements</span></span>  
- <span data-ttu-id="a0165-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0165-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d8d5-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8d8d5-120">Requirements</span></span>  
+ <span data-ttu-id="8d8d5-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d8d5-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0165-122">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a0165-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8d8d5-122">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8d8d5-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a0165-123">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a0165-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8d8d5-123">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="8d8d5-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a0165-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0165-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8d8d5-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d8d5-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0165-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a0165-125">See Also</span></span>  
- [<span data-ttu-id="a0165-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="a0165-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [<span data-ttu-id="a0165-127">ICLRDomainManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a0165-127">ICLRDomainManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8d8d5-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8d8d5-125">See also</span></span>
+- [<span data-ttu-id="8d8d5-126">Barındırma</span><span class="sxs-lookup"><span data-stu-id="8d8d5-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="8d8d5-127">ICLRDomainManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d8d5-127">ICLRDomainManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

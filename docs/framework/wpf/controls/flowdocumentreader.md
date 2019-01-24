@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: b390c345beee74d505d23196133ed7f82cfd8ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d6b4f066d2bac03092e0418eded34cc604810e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551988"
 ---
-# <a name="flowdocumentreader"></a><span data-ttu-id="8d31a-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="8d31a-102">FlowDocumentReader</span></span>
-<span data-ttu-id="8d31a-103"><xref:System.Windows.Controls.FlowDocumentReader> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> içeriği.</span><span class="sxs-lookup"><span data-stu-id="8d31a-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="8d31a-104">Birden çok görüntüleme modunu destekler.</span><span class="sxs-lookup"><span data-stu-id="8d31a-104">It supports multiple viewing modes.</span></span>  
+# <a name="flowdocumentreader"></a><span data-ttu-id="61551-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="61551-102">FlowDocumentReader</span></span>
+<span data-ttu-id="61551-103"><xref:System.Windows.Controls.FlowDocumentReader> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> içeriği.</span><span class="sxs-lookup"><span data-stu-id="61551-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="61551-104">Bu, birden çok görüntüleme modu destekler.</span><span class="sxs-lookup"><span data-stu-id="61551-104">It supports multiple viewing modes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d31a-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8d31a-105">See Also</span></span>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- [<span data-ttu-id="8d31a-106">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="8d31a-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="8d31a-107">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8d31a-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a><span data-ttu-id="61551-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="61551-105">See also</span></span>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- [<span data-ttu-id="61551-106">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="61551-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="61551-107">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="61551-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

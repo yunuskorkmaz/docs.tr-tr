@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544542"
 ---
-# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="9b8e5-102">ICorDebugThread::GetObject Metodu</span><span class="sxs-lookup"><span data-stu-id="9b8e5-102">ICorDebugThread::GetObject Method</span></span>
-<span data-ttu-id="9b8e5-103">Arabirim işaretçisi ortak dil çalışma zamanı (CLR) iş parçacığına alır.</span><span class="sxs-lookup"><span data-stu-id="9b8e5-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
+# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="f9360-102">ICorDebugThread::GetObject Metodu</span><span class="sxs-lookup"><span data-stu-id="f9360-102">ICorDebugThread::GetObject Method</span></span>
+<span data-ttu-id="f9360-103">Ortak dil çalışma zamanı (CLR) iş parçacığına bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="f9360-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b8e5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9b8e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9360-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f9360-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -35,18 +35,18 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9b8e5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9b8e5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f9360-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f9360-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="9b8e5-106">[out] CLR iş parçacığı temsil eden bir Icordebugvalue arabirimi nesnesi adresini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9b8e5-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
+ <span data-ttu-id="f9360-106">[out] CLR iş parçacığı temsil eden bir Icordebugvalue arabirimi nesnesinin adresine yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f9360-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b8e5-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9b8e5-107">Requirements</span></span>  
- <span data-ttu-id="9b8e5-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b8e5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9360-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f9360-107">Requirements</span></span>  
+ <span data-ttu-id="f9360-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9360-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b8e5-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b8e5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f9360-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9360-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b8e5-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b8e5-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f9360-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9360-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b8e5-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b8e5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9360-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9360-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b8e5-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b8e5-112">See Also</span></span>  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a><span data-ttu-id="f9360-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9360-112">See also</span></span>
+- <xref:System.Threading.Thread>

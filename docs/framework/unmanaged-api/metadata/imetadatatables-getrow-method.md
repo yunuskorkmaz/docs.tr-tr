@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6f6f3018d5e9a1b49191d8e82f91ac8e5c21b77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681956"
 ---
-# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="d2b5c-102">IMetaDataTables::GetRow Metodu</span><span class="sxs-lookup"><span data-stu-id="d2b5c-102">IMetaDataTables::GetRow Method</span></span>
-<span data-ttu-id="d2b5c-103">Belirtilen tablo dizini altındaki tabloda belirtilen satır dizinindeki bir satır alır.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
+# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="2a4a3-102">IMetaDataTables::GetRow Metodu</span><span class="sxs-lookup"><span data-stu-id="2a4a3-102">IMetaDataTables::GetRow Method</span></span>
+<span data-ttu-id="2a4a3-103">Belirtilen tablo dizini altındaki tabloda belirtilen satır dizinindeki bir satır alır.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2b5c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d2b5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a4a3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2a4a3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRow (   
@@ -37,28 +37,28 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d2b5c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d2b5c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2a4a3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2a4a3-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="d2b5c-106">[in] Satır alınır tablosu dizini.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-106">[in] The index of the table from which the row will be retrieved.</span></span>  
+ <span data-ttu-id="2a4a3-106">[in] Satır alınır tablosu dizini.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-106">[in] The index of the table from which the row will be retrieved.</span></span>  
   
  `rid`  
- <span data-ttu-id="d2b5c-107">[in] Alınacak satırın dizini.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-107">[in] The index of the row to get.</span></span>  
+ <span data-ttu-id="2a4a3-107">[in] Alınacak satırın dizini.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-107">[in] The index of the row to get.</span></span>  
   
  `ppRow`  
- <span data-ttu-id="d2b5c-108">[out] Satır için bir işaretçi işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-108">[out] A pointer to a pointer to the row.</span></span>  
+ <span data-ttu-id="2a4a3-108">[out] Satır için bir işaretçi işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-108">[out] A pointer to a pointer to the row.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2b5c-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d2b5c-109">Remarks</span></span>  
- <span data-ttu-id="d2b5c-110">Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="d2b5c-111">GUID tablosu hakkında daha fazla bilgi için özellikle "Bölüm II: meta veri tanımı ve semantiği" ortak dil altyapısı (CLI) belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="d2b5c-112">Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a4a3-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2a4a3-109">Remarks</span></span>  
+ <span data-ttu-id="2a4a3-110">Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="2a4a3-111">Ortak dil altyapısı (CLI) belgeleri GUID tablosu hakkında daha fazla bilgi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı".</span><span class="sxs-lookup"><span data-stu-id="2a4a3-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="2a4a3-112">Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2b5c-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d2b5c-113">Requirements</span></span>  
- <span data-ttu-id="d2b5c-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2b5c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a4a3-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2a4a3-113">Requirements</span></span>  
+ <span data-ttu-id="2a4a3-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a4a3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2b5c-115">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d2b5c-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2a4a3-115">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="2a4a3-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d2b5c-116">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılan</span><span class="sxs-lookup"><span data-stu-id="d2b5c-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2a4a3-116">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="2a4a3-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d2b5c-117">**.NET framework sürümleri**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2b5c-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2a4a3-117">**.NET framework sürümleri**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a4a3-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2b5c-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d2b5c-118">See Also</span></span>  
- [<span data-ttu-id="d2b5c-119">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d2b5c-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="d2b5c-120">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d2b5c-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2a4a3-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a4a3-118">See also</span></span>
+- [<span data-ttu-id="2a4a3-119">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2a4a3-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="2a4a3-120">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2a4a3-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
