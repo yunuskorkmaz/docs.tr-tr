@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631678"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -39,17 +39,17 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
   
 |Biçim belirteci|Ad|Açıklama|Örnekler|  
 |----------------------|----------|-----------------|--------------|  
-|"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.46 0.45678 ("0,00" en-US) -><br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
-|"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen rakamı önemli olmayan 0 ise sonuç dizesinde hiçbir rakam göründüğünü unutmayın. Örneğin, 0003 ("###") -> 3.<br /><br /> Daha fazla bilgi: ["#" özel Belirleyicisi](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#. ##", en-US) ->.46<br /><br /> 0.45678 ("#. ##", fr-FR) ->, 46|  
-|"."|Ondalık noktası|Sonuç dizesindeki ondalık ayracının konumunu belirler.<br /><br /> Daha fazla bilgi: ["." Özel belirleyici](#SpecifierPt).|0.46 0.45678 ("0,00" en-US) -><br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
-|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##, #", en-US) -> 2.147.483.647<br /><br /> 2147483647 ("##, #", es-ES) 2.147.483.647 -><br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) -> 2,147<br /><br /> 2.147 2147483647'ye ("#, #,", es-ES) ->|  
-|"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" özel Belirleyicisi](#SpecifierPct).|% 36.97 0.3697 ("% #0.00" en-US) -><br /><br /> % 36,97 0.3697 ("% #0.00" el-GR) -><br /><br /> 0.3697 ("##.0%", en-US) -> %37.0<br /><br /> 0.3697 ("##.0%", el-GR) 37,0 -> %|  
-|"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" özel Belirleyicisi](#SpecifierPerMille).|0.03697 ("#0.00‰" en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) 36 97‰ ->|  
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel Belirleyicileri](#SpecifierExponent).|98.8e4 987654 ("#0.0e0") -><br /><br /> 1503.92311 ("0.0 ##e + 00") 1.504e + 03 -><br /><br /> 1.8901385E-16 ("0.0e + 00") -> 1.9e-16|  
-|"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: ["\\" kaçış karakteri](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*dize*'<br /><br /> "*dize*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [karakter değişmez değerleri](#character-literals).|68 derece 68 ("# ' derece'") -><br /><br /> 68 ("#' derece") 68 derece ->|  
+|"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
+|"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen rakamı önemli olmayan 0 ise sonuç dizesinde hiçbir rakam göründüğünü unutmayın. Örneğin, 0003 ("###") -> 3.<br /><br /> Daha fazla bilgi: ["#" Özel Belirleyicisi](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
+|"."|Ondalık noktası|Sonuç dizesindeki ondalık ayracının konumunu belirler.<br /><br /> Daha fazla bilgi: ["." Özel belirleyici](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
+|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," Özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##, #", en-US) -> 2.147.483.647<br /><br /> 2147483647 ("##, #", es-ES) 2.147.483.647 -><br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) -> 2,147<br /><br /> 2.147 2147483647'ye ("#, #,", es-ES) ->|  
+|"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" Özel Belirleyicisi](#SpecifierPct).|% 36.97 0.3697 ("% #0.00" en-US) -><br /><br /> % 36,97 0.3697 ("% #0.00" el-GR) -><br /><br /> 0.3697 ("##.0%", en-US) -> %37.0<br /><br /> 0.3697 ("##.0%", el-GR) 37,0 -> %|  
+|"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" Özel Belirleyicisi](#SpecifierPerMille).|0.03697 ("#0.00‰" en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) 36 97‰ ->|  
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel tanımlayıcıları](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
+|"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: ["\\" Kaçış karakteri](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
+|'*dize*'<br /><br /> "*dize*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [Karakter değişmez değerleri](#character-literals).|68 derece 68 ("# ' derece'") -><br /><br /> 68 ("#' derece") 68 derece ->|  
 |;|Bölüm ayırıcı|Pozitif, negatif ve sıfır değerine sahip sayılar için ayrı biçim dizeleri tanımlar.<br /><br /> Daha fazla bilgi: [";" Bölüm ayırıcı](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|Diğer|Diğer karakterler|Karakter, değişmeyen sonuç dizesine kopyalanır.<br/><br/>Daha fazla bilgi: [karakter değişmez değerleri](#character-literals).|68 ("# °") -> 68 °|  
+|Diğer|Diğer karakterler|Karakter, değişmeyen sonuç dizesine kopyalanır.<br/><br/>Daha fazla bilgi: [Karakter değişmez değerleri](#character-literals).|68 ("# °") -> 68 °|  
   
  Aşağıdaki bölümler her özel sayısal biçim tanımlayıcısı hakkında ayrıntılı bilgi sağlar.  
 
@@ -109,11 +109,11 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 ## <a name="the--custom-specifier"></a>"," Özel Belirleyicisi  
  "," karakteri hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır.  
   
--   Grup ayracı: Eğer bir sayının tamsayı basamaklarını biçimlendiren iki basamak yer tutucu karakteri (0 veya #) arasında bir veya daha fazla virgül belirtilirse, çıktının tamsayı bölümündeki her sayı grubunun arasında bir grup ayracı karakteri eklenir.  
+-   Grup ayracı: İki basamak yer tutucu arasında bir veya daha fazla virgül belirtilirse (0 veya #), tamsayı basamaklarını bir sayının, çıktının tamsayı bölümündeki her sayı grubunun arasında bir grup ayracı karakteri eklenir.  
   
      <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> Ve <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> özelliklerinden <xref:System.Globalization.NumberFormatInfo> nesne belirlemek her sayı grubunun boyutu ve sayı grubu ayracı kullanılan karakter. Örneğin, 1000 sayısını biçimlendirmek için "#,#" dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.  
   
--   Sayı ölçekleme tanımlayıcısı: Eğer açık veya örtülü ondalık noktasının hemen solunda bir veya daha fazla virgül belirtilirse, biçimlendirilen sayı her virgül için 1000 ile bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.  
+-   Sayı ölçekleme tanımlayıcısı: Açık veya örtülü ondalık noktasının solunda hemen bir veya daha fazla virgül belirtilirse, biçimlendirilen sayı her virgül için 1000'e bölünür. Örneğin, eğer 100 milyon sayısını biçimlendirmek için "0,," dizesi kullanılırsa, çıktı "100" olur.  
   
  Aynı biçim dizesinde grup ayracı ve sayı ölçekleme tanımlayıcılarını kullanabilirsiniz. Örneğin, eğer bir milyar sayısını biçimlendirmek için "#,0,," dizesi ve sabit kültür kullanılırsa, çıktı "1,000" olur.  
   
@@ -266,8 +266,8 @@ Aşağıdaki örnek, bir özel sayısal biçim dizesinde ayrılmış karakterler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
-- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
-- [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
+- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
+- [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Nasıl yapılır: Bir sayı önünde sıfır ile doldurur.](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Örnek: .NET Framework 4 biçimlendirme yardımcı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: XML ağacını XmlWriter (LINQ to XML) ile doldurun (Visual Basic)'
+title: 'Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: bc17b84b945e93443ab6d9f337e852feba5b0662
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 53c77a9b31fa51f1ba79e99d564e5092f7c079a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625880"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Nasıl yapılır: XML ağacını XmlWriter (LINQ to XML) ile doldurun (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (Visual Basic)
 Bir XML ağacı doldurma yollarından biri kullanmaktır <xref:System.Xml.Linq.XContainer.CreateWriter%2A> oluşturmak için bir <xref:System.Xml.XmlWriter>ve ardından yazma <xref:System.Xml.XmlWriter>. XML ağacı yazılan tüm düğümleri doldurulur <xref:System.Xml.XmlWriter>.  
   
  Kullandığınızda bu yöntem genellikle kullanırsınız [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yazılacak bekliyor başka bir sınıf ile bir <xref:System.Xml.XmlWriter>, gibi <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -62,8 +62,8 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
- <xref:System.Xml.XmlWriter>  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [XML ağaçları (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
+- <xref:System.Xml.XmlWriter>
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [XML ağaçları (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)'
+title: 'Nasıl yapılır: Bir Windows hizmeti (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 255dccfb74eced63ffbeff7ef567083a504cc6da
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612716"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl Yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Bir Windows hizmeti (Visual Basic)
 Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti yerel bilgisayarda devam etmek için bileşen.  
   
 ## <a name="example"></a>Örnek  
@@ -49,7 +49,7 @@ Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti
   
  Kullanarak hizmet bilgilere erişimi kısıtlanabilir <xref:System.Security.Permissions.PermissionState> izinleri ayarlamak için numaralandırma <xref:System.Security.Permissions.SecurityPermission> sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- [Nasıl Yapılır: Windows Hizmetini Duraklatma (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- [Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

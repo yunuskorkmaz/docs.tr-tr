@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma'
+title: 'Nasıl yapılır: WCF Hizmeti işlemlerini zaman uyumsuz olarak çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625555"
 ---
-# <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma
-Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebileceğiniz kapsar. Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimdeki işlemleri olay tabanlı zaman uyumsuz çağırma modelini kullanarak zaman uyumsuz olarak çağırabilirsiniz. (Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [birden çok iş parçacıklı programlama ile olay tabanlı zaman uyumsuz desen](https://go.microsoft.com/fwlink/?LinkId=248184)). Nasıl bir işlem zaman uyumsuz olarak bir hizmet olarak uygulayacağınızı gösteren bir örnek için bkz: [nasıl yapılır: zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [zaman uyumlu ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+# <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF Hizmeti işlemlerini zaman uyumsuz olarak çağırma
+Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebileceğiniz kapsar. Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimdeki işlemleri olay tabanlı zaman uyumsuz çağırma modelini kullanarak zaman uyumsuz olarak çağırabilirsiniz. (Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [birden çok iş parçacıklı programlama ile olay tabanlı zaman uyumsuz desen](https://go.microsoft.com/fwlink/?LinkId=248184)). Nasıl bir işlem zaman uyumsuz olarak bir hizmet olarak uygulayacağınızı gösteren bir örnek için bkz: [nasıl yapılır: Zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [zaman uyumlu ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
->  Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken desteklenmeyen bir <xref:System.ServiceModel.ChannelFactory%601>. Kullanarak zaman uyumsuz çağrıları yapma hakkında bilgi için <xref:System.ServiceModel.ChannelFactory%601>, bkz: [nasıl yapılır: çağrı işlemlerini zaman uyumsuz olarak kullanarak kanal fabrikası](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+>  Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken desteklenmeyen bir <xref:System.ServiceModel.ChannelFactory%601>. Kullanarak zaman uyumsuz çağrıları yapma hakkında bilgi için <xref:System.ServiceModel.ChannelFactory%601>, bkz: [nasıl yapılır: Zaman uyumsuz olarak bir kanal fabrikası kullanarak işlemlere çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
 ## <a name="procedure"></a>Yordam  
   
@@ -63,5 +63,5 @@ Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebilece�
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

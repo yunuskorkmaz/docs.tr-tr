@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Son olarak - kullanarak temizleme kodu yürütme C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Son olarak - kullanarak temizleme kodu yürütme C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d1a95519b2c7fc1d90d677e7a62c549defe289ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596403"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Nasıl Yapılır: Finally anahtar sözcüğünü kullanarak temizleme kodu yürütme (C# Programlama Kılavuzu)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Nasıl yapılır: Finally anahtar sözcüğünü kullanarak temizleme kodu yürütme (C# Programlama Kılavuzu)
 Amacı, bir `finally` deyimdir bile bir özel durum nesneleri, genellikle dış kaynakları tutan nesnelerin gerekli temizleme hemen olmasını sağlamak için. Bu tür temizleme örneği çağırır <xref:System.IO.Stream.Close%2A> üzerinde bir <xref:System.IO.FileStream> nesne gibi ortak dil çalışma zamanı tarafından toplanan çöp olmasını beklemek yerine hemen kullandıktan sonra:  
   
  [!code-csharp[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  
@@ -28,12 +28,12 @@ Amacı, bir `finally` deyimdir bile bir özel durum nesneleri, genellikle dış 
   
  Veritabanı bağlantısı kapatıldığından kuşkulanılıyor için başka bir iyi aday olan bir `finally` blok. Veritabanı sunucusu için izin verilen bağlantı sayısını bazen sınırlı olduğundan, veritabanı bağlantıları mümkün olan en kısa sürede kapatmalısınız. Bağlantınızı kapatmadan önce bir özel durum oluşturulursa, başka bir durum budur kullanıldığında `finally` blok çöp toplama için bekleyen daha iyidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)  
-- [Özel Durum İşleme](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)
+- [Özel Durum İşleme](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

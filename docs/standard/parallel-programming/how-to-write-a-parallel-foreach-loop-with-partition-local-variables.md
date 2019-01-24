@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma'
+title: 'Nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma'
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730990"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma
 Aşağıdaki örnek nasıl yazılacağını gösterir. bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> bölüm yerel değişkenler kullanan yöntemi. Olduğunda bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütür, kendi kaynak koleksiyonu birden çok bölümlere böler. Her bölüm, kendi bölümü yerel değişken kopyasına sahip olur. Bir bölüm yerel değişkene benzer bir [iş parçacığı yerel değişkeni](xref:System.Threading.ThreadLocal%601)dışında birden çok bölüm tek bir iş parçacığı üzerinde çalıştırabilirsiniz.
   
- Bu örnekte parametreleri ve kodu yakından ilgili benzer <xref:System.Threading.Tasks.Parallel.For%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ Bu örnekte parametreleri ve kodu yakından ilgili benzer <xref:System.Threading.Tasks.Parallel.For%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Bir bölüm yerel değişkende kullanmak için bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü çağırmanız iki tür parametreleri alan yöntemi aşırı yüklemelerinden. İlk tür parametresi `TSource`, kaynak öğesi ve ikinci tür parametresi türünü belirten `TLocal`, bölüm yerel değişken türünü belirtir.  
   
@@ -50,6 +50,6 @@ Aşağıdaki örnek nasıl yazılacağını gösterir. bir <xref:System.Threadin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

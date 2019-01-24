@@ -2,12 +2,12 @@
 title: '&lt;userDefinedType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7c8b8e0403fe108f4e8d25dd1de274acc40c9fcc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1a4f371737e9e801f3b929f4d65ac310d5fe0e28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642954"
 ---
 # <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
 Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek olan UDT) temsil eder.  
@@ -90,10 +90,10 @@ Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek
   
  Hizmet başlatıldığında, tümleştirme çalışma zamanının belirtilen türlerini arar ve bunları belirtilen sözleşmeleri Bilinen türlerin koleksiyonuna ekler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
- <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
+- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
+- <xref:System.ServiceModel.Configuration.ComUdtElement>
+- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

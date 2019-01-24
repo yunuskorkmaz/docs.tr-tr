@@ -2,12 +2,12 @@
 title: MessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7f750742-b96b-498f-bf5e-05933a1a5961
-ms.openlocfilehash: 4301da050e7efd22ac5188b8c1c4f62a7af928b6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 92976f355b584977bfba91c445f110cc6caa6ae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508567"
 ---
 # <a name="messageencodingbindingelement"></a>MessageEncodingBindingElement
 MessageEncodingBindingElement  
@@ -39,5 +39,5 @@ class MessageEncodingBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

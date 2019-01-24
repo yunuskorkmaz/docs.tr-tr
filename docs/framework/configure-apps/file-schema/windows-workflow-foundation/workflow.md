@@ -3,12 +3,12 @@ title: '&lt;İş akışı&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-ms.openlocfilehash: 940d396bd6e3dc3cdc5d8fb6f72d293061f3aa0e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6383ab937324efd7178bb06738653b7995c53b4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553730"
 ---
 # <a name="ltworkflowgt"></a>&lt;İş akışı&gt;
 Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> özelliği.  
@@ -134,8 +134,8 @@ Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir 
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
- <xref:System.Activities.Tracking.TrackingProfile>  
- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>
+- <xref:System.Activities.Tracking.TrackingProfile>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

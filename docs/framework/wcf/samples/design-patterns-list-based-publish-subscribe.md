@@ -1,15 +1,15 @@
 ---
-title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
+title: 'Tasarım desenleri: Liste tabanlı yayımlama-abone ol'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717920"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
+# <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım desenleri: Liste tabanlı yayımlama-abone ol
 Bu örnek, bir Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterilmektedir.  
   
 > [!NOTE]
@@ -161,4 +161,4 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: '&lt;kimlik&gt; için &lt;certificateReference&gt;'
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 17c64150edd7cb1763387323f8683ed68d064fb0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626634"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;kimlik&gt; için &lt;certificateReference&gt;
 X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı bağlayan güvenli bir Windows Communication Foundation (WCF) istemci, sunucu tarafından sunulan istemlerin, bu kimliği oluşturmak için kullanılan kimlik talebi içerdiğini doğrular.  
@@ -35,9 +35,9 @@ X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı
 |---------------|-----------------|  
 |findValue|X.509 sertifika deposunda aranacak değerini belirtir. Bu öznitelikte yer alan türü belirtilen gereksinimleri karşılaması gerekir `X509FindType` değeri. Varsayılan değer boş bir dizedir.|  
 |isChainIncluded|Doğrulama yapıldığını belirten bir Boole değeri bir sertifika zinciri.|  
-|storeLocation|İstemcinin sunucu sertifikasını doğrulamak için kullanabileceği sertifika deposunun konumunu belirtir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -LocalMachine: Yerel makineye atanmış sertifika deposu.<br />-CurrentUser: Geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> LocalMachine varsayılan değerdir.<br /><br /> Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|storeLocation|İstemcinin sunucu sertifikasını doğrulamak için kullanabileceği sertifika deposunun konumunu belirtir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -LocalMachine: Yerel makineye atanmış sertifika deposu.<br />-   CurrentUser: Geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> LocalMachine varsayılan değerdir.<br /><br /> Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
 |storeName|Açılacak X.509 Sertifika deposunun adını belirtir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Adres Defteri: Diğer kullanıcılar için sertifika deposu.<br />-AuthRoot: Üçüncü taraf sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-CertificateAuthority: Ara CA'lar için sertifika deposu.<br />-İzin verilmedi: İptal edilen sertifikalar için sertifika deposu.<br />-My: Kişisel Sertifikalar için sertifika deposu.<br />-Kök: Güvenilen kök CA'lar için sertifika deposu.<br />-TrustedPeople: Doğrudan güvenilen kişiler ve kaynaklar için sertifika deposu.<br />-TrustedPublisher: Doğrudan Güvenilen Yayımcılar sertifika deposu.<br /><br /> Varsayılan değer benim.<br /><br /> Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Yürütülecek X.509 arama türünü belirtir. Bulunan tür `findValue` öznitelik belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> FindBySubjectDistinguishedName varsayılan değerdir.<br /><br /> Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|X509FindType|Yürütülecek X.509 arama türünü belirtir. Bulunan tür `findValue` öznitelik belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-   FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> FindBySubjectDistinguishedName varsayılan değerdir.<br /><br /> Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,8 +48,8 @@ X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı
 |-------------|-----------------|  
 |[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması etkinleştiren ayarları belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>

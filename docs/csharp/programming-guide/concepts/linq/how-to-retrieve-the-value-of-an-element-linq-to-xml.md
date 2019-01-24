@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir öğe (LINQ to XML) değerini alma (C#)'
+title: 'Nasıl yapılır: Bir öğe (LINQ to XML) değerini alma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 7537c111e7d869f8a3e2458706864960820f9764
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 2cf7390dde2d0dc1ea37d2dd28f753e5d7580cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642613"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Nasıl yapılır: bir öğe (LINQ to XML) değerini alma (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Nasıl yapılır: Bir öğe (LINQ to XML) değerini alma (C#)
 Bu konuda, öğelerin değerini alma gösterilmektedir. Bunu yapmak için iki ana yolu vardır. Dönüştürülecek bir yolu olan bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> istenen türe. Açık dönüştürme işleci öğe veya öznitelik içeriğini belirtilen türe dönüştürür ve değişkeninize atar. Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliği.  
   
  C# ile ancak atama genellikle daha iyi bir yaklaşımdır. Cast öğesi veya özniteliği için boş değer atanabilir bir tür, ne zaman yazmak daha basit kodudur var olmayabilir veya değeri bir öğenin (veya öznitelik) alma. Bu konu Son örnekte bu gösterir. Ancak aracılığıyla mümkün olduğunca atama, öğenin içeriğini ayarlanamıyor <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği.  
@@ -145,6 +145,6 @@ v4:element does not exist
   
  Genel olarak, öğeleri ve özniteliklerinin içeriğini almak için atama kullanırken daha basit bir kod yazabilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

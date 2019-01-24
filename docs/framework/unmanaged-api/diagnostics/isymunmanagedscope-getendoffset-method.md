@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d13006bc5c09ed065ae1671ee75cf8dce066669d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739398d8c20f58d8b5e458e2de4cbb6f56c50fd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624196"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset Metodu
-Bitiş uzaklığı için bu kapsamı alır.  
+Bu kapsam için bitiş uzaklığı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,14 +36,14 @@ HRESULT GetEndOffset(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` bitiş uzaklığı alır.  
+ [out] Bir işaretçi bir `ULONG32` , bitiş uzaklığı alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- [GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)

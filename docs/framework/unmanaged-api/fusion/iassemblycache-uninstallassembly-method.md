@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6be40ecbb801348ad73fb929741b5a8e8407a7ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621886"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly Yöntemi
-Belirtilen derleme Genel Derleme Önbelleği'nden kaldırır.  
+Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,13 +40,13 @@ HRESULT UninstallAssembly (
   
 #### <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Fusion.idl içinde tanımlı bayrak.  
+ [in] Fusion.idl içinde tanımlanan bayraklar.  
   
  `pszAssemblyName`  
- [in] Kaldırmak için derleme adı.  
+ [in] Kaldırmak için derlemenin adı.  
   
  `pRefData`  
- [in] A [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) derleme için yükleme verilerini içeren yapısı.  
+ [in] A [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) bütünleştirilmiş kod yükleme verilerini içeren yapısı.  
   
  `pulDisposition`  
  [out, isteğe bağlı] Fusion.idl içinde tanımlanan değerlendirme değerlerinden biri. Olası değerler şunlardır:  
@@ -64,11 +64,11 @@ HRESULT UninstallAssembly (
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620064"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>. NET'te StringBuilder sınıfını kullanma
 <xref:System.String> Nesne değişmez. Metotlarından birini her kullanışınızda <xref:System.String?displayProperty=nameWithType> sınıf yeni nesne için yeni bir ayırma alanı gerektiren bellekte yeni bir dize nesnesi oluşturun. Bir dizeye yinelenen değişiklikleri uygulamak için ihtiyacınız olduğu durumlarda ek yükü ilişkili yeni oluşturma ile <xref:System.String> nesne maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Sınıfı, bir dize yeni bir nesne oluşturulmadan değiştirmek istediğinizde kullanılabilir. Örneğin, kullanarak <xref:System.Text.StringBuilder> sınıfı döngü içinde birlikte birçok dizeleri birleştirme, performansı artırmak.  
@@ -70,7 +70,7 @@ ms.locfileid: "44197320"
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Geçerli belirtilen sayıda karakteri kaldırır **StringBuilder**.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Belirtilen dizindeki belirtilen bir karakterin yerini alır.|  
   
-### <a name="append"></a>Ekleme  
+### <a name="append"></a>Ekle  
  **Ekleme** yöntemi, metin veya bir nesnenin dize gösterimini geçerli tarafından temsil edilen bir dizenin sonuna eklemek için kullanılabilir **StringBuilder**. Aşağıdaki örnek başlatır bir **StringBuilder** "Hello World" ve ardından metin nesnesinin sonuna ekler. Alanı gerektiğinde otomatik olarak ayrılır.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -113,6 +113,6 @@ ms.locfileid: "44197320"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
-- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
+- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

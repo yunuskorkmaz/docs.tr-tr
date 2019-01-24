@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: birden çok anahtar (Visual Basic) öğeleri sıralama'
+title: 'Nasıl yapılır: (Visual Basic) birden çok anahtarda öğeleri sıralama'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506478"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Nasıl yapılır: birden çok anahtar (Visual Basic) öğeleri sıralama
-Bu konu, üzerinde birden çok anahtar sıralama gösterilmektedir.  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Nasıl yapılır: (Visual Basic) birden çok anahtarda öğeleri sıralama
+Bu konuda, birden çok anahtarları sıralamak gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sonuçları ilk sevkiyat posta kodu tarafından sonra sipariş tarihine göre sıralanır.  
+ Bu örnekte, sonuçları ilk sevkiyat posta koduna göre ardından sipariş tarihe göre sıralanır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -62,9 +62,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve bir Namespace siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler bir Namespace,](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -116,5 +116,5 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

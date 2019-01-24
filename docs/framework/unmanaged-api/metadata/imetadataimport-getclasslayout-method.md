@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b031fc35a4687a8535e3cb5e9ef2a53bab9fe376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625126"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout Metodu
-Belirtilen TypeDef tarafından başvurulan sınıfı için düzen bilgilerini belirteci alır.  
+Belirtilen tür tanımı tarafından başvurulan sınıfın düzen bilgilerini belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,32 +42,32 @@ HRESULT GetClassLayout  (
   
 #### <a name="parameters"></a>Parametreler  
  `td`  
- [in] Döndürülecek düzeni sınıfı için TypeDef belirteci.  
+ [in] Döndürülecek düzeni ile sınıf için TypeDef simgesi.  
   
  `pdwPackSize`  
- [out] 1, 2, 4, 8 veya 16, paket boyutu sınıftan temsil eden değerlerinden biri.  
+ [out] 1, 2, 4, 8 veya 16, sınıf paketi boyutunu temsil eden değerlerinden biri.  
   
  `rFieldOffset`  
  [out] Bir dizi [cor_fıeld_offset](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) değerleri.  
   
  `cMax`  
- [in] En büyük boyutunu `rFieldOffset` dizi.  
+ [in] En büyük boyutunu `rFieldOffset` dizisi.  
   
  `pcFieldOffset`  
  [out] Döndürülen öğe sayısını `rFieldOffset`.  
   
  `pulClassSize`  
- [out] Tarafından temsil edilen sınıfının bayt boyutunda `td`.  
+ [out] Tarafından temsil edilen sınıf bayt cinsinden boyut `td`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

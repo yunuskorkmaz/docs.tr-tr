@@ -2,12 +2,12 @@
 title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745350"
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 WCF istemci uygulamalarının kullanın <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıf.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
@@ -111,9 +111,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  Tüm örneklerini yukarıdaki örnekte `TestClient` farklı kanal fabrikaları kullanırsınız. Bu, her bir uç nokta farklı güvenlik gereksinimlerine sahip olduğunda ve önbellek için hiçbir mantıklı kullanışlıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ClientBase%601>  
- [İstemci Derleme](../../../../docs/framework/wcf/building-clients.md)  
- [İstemciler](../../../../docs/framework/wcf/feature-details/clients.md)  
- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Nasıl Yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ClientBase%601>
+- [İstemci Derleme](../../../../docs/framework/wcf/building-clients.md)
+- [İstemciler](../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

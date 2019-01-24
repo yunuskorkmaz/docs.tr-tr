@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ca9ed57e62d2c066de2d7c1a1e4b57094dbc0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f2b65b65a5e15239f731ddcb471ee7548e1631
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638073"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule Yöntemi
-Hata ayıklayıcı bir ortak dil çalışma zamanı Modülü (DLL) kaldırıldı bildirir.  
+Hata ayıklayıcı Ortak Dil Çalışma Zamanı Modülü (DLL) kaldırıldı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,23 +38,23 @@ HRESULT UnloadModule (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye modülü bulunan uygulama etki alanını temsil eder.  
+ [in] Modül bulunan uygulama etki alanı temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pModule`  
- [in] Bir işaretçi Icordebugmodule nesneye modülü temsil eder.  
+ [in] Bir modülü temsil eden bir Icordebugmodule nesne işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Modül bu çağrısından sonra kullanılmamalıdır.  
+ Modül, bu çağrıdan sonra kullanılmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LoadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LoadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

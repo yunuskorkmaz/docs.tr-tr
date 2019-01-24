@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74de8838d7f9ad1995bf7b15699b5589d13a0cab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60cbc6f6649db28d06321b59c26c45668628d9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712226"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>COR_GC_THREAD_STATS_TYPES Numaralandırması
-Bir iş parçacığı atık toplama istatistikleri gösterir.  
+Bir iş parçacığı çöp toplama istatistiklerini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,14 +38,14 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|İş parçacığı en son çöp toplama yükseltilmiş bayt vardır.|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|İş parçacığı en son çöp toplamada yükseltilen bayt vardır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** GCHost.idl, GCHost.h  
+ **Üst bilgi:** GCHost.idl, GCHost.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

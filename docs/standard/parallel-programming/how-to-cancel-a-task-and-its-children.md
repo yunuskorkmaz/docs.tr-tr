@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme'
+title: 'Nasıl yapılır: Bir görevi ve alt öğelerini iptal etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb520169f8e7925862d415a4dfb65af09263b0d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642837"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme
+# <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir görevi ve alt öğelerini iptal etme
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:  
   
 1.  İptal edilebilen bir görevi oluşturmak ve başlatmak.  
@@ -40,10 +40,10 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
-- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [Görev Tabanlı Zaman Uyumsuz Desen](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
-- [Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
+- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [Görev Tabanlı Zaman Uyumsuz Desen](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

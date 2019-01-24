@@ -1,20 +1,20 @@
 ---
-title: Veri bağlama ve LINQ-DataSet
+title: Veri bağlama ve LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: e82cc5ecfc1272cfb4594cb556fa9455a7ea7813
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655783"
 ---
-# <a name="data-binding-and-linq-to-dataset"></a>Veri bağlama ve LINQ-DataSet
-*Veri bağlama* uygulama kullanıcı Arabirimi iş mantığı arasında bir bağlantı kurar işlemidir. Bağlama doğru ayarları varsa ve veri değeri değiştiğinde veri uygun bildirimleri sağlarsa, veriye bağlı öğeleri değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağını bakılmaksızın sağlayan veri bellek içi gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sağlar bir <xref:System.Data.DataTable>. Bu işlevsellik, genellikle veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>farklı sıralamalar olan bir tabloda veri getirebilir ve veri satırı durum ya da bir filtre ifadesi göre göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne için bkz: [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+# <a name="data-binding-and-linq-to-dataset"></a>Veri bağlama ve LINQ to DataSet
+*Veri bağlama* iş mantığı ve UI uygulama arasında bağlantı kuran işlemidir. Verilere bağlı öğeleri doğru ayarların bağlama varsa ve veri değeri değiştiğinde verileri uygun bildirimleri sağlar, değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Bir bellek içi tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağı ne olursa olsun sağlayan veri gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sayesinde bir <xref:System.Data.DataTable>. Bu işlevsellik, çoğunlukla veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne, bkz: [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden karmaşık ve güçlü sorgular oluşturmak geliştiriciler sağlayan bir <xref:System.Data.DataSet> kullanarak [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Ancak, bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgunun döndürdüğü numaralandırması <xref:System.Data.DataRow> kolayca bağlama senaryolarda kullanılmayan nesneler. Bağlama kolaylaştırmak için oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu <xref:System.Data.DataView> filtreleme ve sorguda belirtilen sıralama kullanır, ancak daha iyi veri bağlaması için uygundur. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] işlevselliğini genişleten <xref:System.Data.DataView> sağlayarak [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifade tabanlı filtreleme ve sıralama, veren çok daha karmaşık ve güçlü filtreleme ve sıralama daha dize tabanlı filtreleme ve sıralama işlemleri.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinde karmaşık ve güçlü sorgular oluşturmak geliştiricilerinin sağlayan bir <xref:System.Data.DataSet> kullanarak [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Ancak, bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgunun döndürdüğü numaralandırması <xref:System.Data.DataRow> kolayca bir bağlama senaryosunda kullanılmayan nesneler. Bağlama kolaylaştırmak için oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu <xref:System.Data.DataView> filtreleme ve sıralama sorguda belirtilen kullanır, ancak daha iyi veri bağlama için uygundur. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] işlevselliğini genişletir <xref:System.Data.DataView> sağlayarak [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifade tabanlı filtreleme ve sıralama, çok daha karmaşık ve güçlü filtreleme ve sıralama dize tabanlı filtreleme ve sıralama işlemleri sağlar.  
   
- Unutmayın <xref:System.Data.DataView> sorgu temsil eder ve sorgu en üstünde bir görünüm değil. <xref:System.Data.DataView> Gibi UI denetimine bağlı bir <xref:System.Windows.Forms.DataGrid> veya <xref:System.Windows.Forms.DataGridView>, basit veri bağlama modelini sağlama. A <xref:System.Data.DataView> de oluşturulabilir bir <xref:System.Data.DataTable>, bu tablonun varsayılan görünüm sağlar.  
+ Unutmayın <xref:System.Data.DataView> sorgu temsil eder ve sorgu üzerinde bir görünüm değil. <xref:System.Data.DataView> Gibi bir UI denetimine bağlı bir <xref:System.Windows.Forms.DataGrid> veya <xref:System.Windows.Forms.DataGridView>, basit veri bağlama modelini sağlar. A <xref:System.Data.DataView> da oluşturulabilir bir <xref:System.Data.DataTable>, bu tablonun varsayılan bir görünüm.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataView Nesnesi Oluşturma](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
@@ -27,13 +27,13 @@ ms.locfileid: "32757898"
  İle sıralama açıklar <xref:System.Data.DataView>.  
   
  [DataView’da DataRowView Koleksiyonunu Sorgulama](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
- Sorgulama hakkında bilgi sağlayan <xref:System.Data.DataRowView> koleksiyonu kullanıma sunulan <xref:System.Data.DataView>.  
+ Sorgulama hakkında bilgi sağlar <xref:System.Data.DataRowView> koleksiyon tarafından açığa çıkarılan <xref:System.Data.DataView>.  
   
  [DataView Performansı](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Hakkında bilgi sağlar <xref:System.Data.DataView> ve performans.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
- ' E nasıl bağlanacağını açıklar bir <xref:System.Data.DataView> nesnesine bir <xref:System.Windows.Forms.DataGridView>.  
+ [Nasıl yapılır: Windows Forms DataGridView denetimine DataView nesnesi bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ Nasıl bağlanacağını açıklayan bir <xref:System.Data.DataView> nesnesini bir <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

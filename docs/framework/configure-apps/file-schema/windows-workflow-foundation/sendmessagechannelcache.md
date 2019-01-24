@@ -3,21 +3,21 @@ title: '&lt;sendMessageChannelCache&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: 9fb68fb8ef4b1fa74a36005c80dc568e227c6473
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dce81dec9067c25fc85b62cc4aa5860499347ab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657356"
 ---
 # <a name="ltsendmessagechannelcachegt"></a>&lt;sendMessageChannelCache&gt;
-Paylaşım düzeyleri, kanal fabrikası önbellek ayarlarını ve ileti gönderme Mesajlaşma etkinlikleri kullanarak hizmet uç noktalarına gönderme iş akışları için kanal önbellek ayarlarını önbellek özelleştirmesini sağlar hizmet davranışı.  
+Özelleştirme düzeyleri, kanal üreteci önbellek ayarlarını ve ileti göndermek için hizmet bitiş noktası etkinlikler ileti gönderme kullanarak iş akışları için kanal önbellek ayarlarını paylaşımı önbellek sağlayan bir hizmet davranışı.  
   
 \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
-\<sendMessageChannelCache >  
+\<sendMessageChannelCache>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,14 +45,14 @@ Paylaşım düzeyleri, kanal fabrikası önbellek ayarlarını ve ileti gönderm
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|allowUnsafeCaching|Önbelleğe alma'yı açmak belirten bir Boolean değeri. İş akışı hizmetinizi özel bağlamaları veya özel davranışlar varsa, önbelleğe alma güvensiz olabilir ve bu nedenle varsayılan olarak devre dışıdır. Etkinleştirmek istiyorsanız, ancak, önbelleğe alma üzerinde bu özelliği ayarlamak **doğru**.|  
+|allowUnsafeCaching|Önbelleğe alma'yı açmak belirten bir Boolean değeri. İş akışı hizmetinizi özel bağlamaları veya özel davranışlar varsa, önbelleğe alma güvensiz olabilir ve bu nedenle varsayılan olarak devre dışıdır. Etkinleştirmek istiyorsanız, ancak önbelleğe alma üzerinde bu özelliği ayarlamak **true**.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<channelSettings >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/channelsettings.md)|Kanal önbellek ayarlarını belirtir.|  
-|[\<factorySettings >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|Kanal üreteci önbellek ayarlarını belirtir.|  
+|[\<factorySettings>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|Kanal üreteci önbellek ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -65,10 +65,10 @@ Paylaşım düzeyleri, kanal fabrikası önbellek ayarlarını ve ileti gönderm
   
  Varsayılan olarak, bir iş akışı tarafından barındırılan bir <xref:System.ServiceModel.WorkflowServiceHost>, tarafından kullanılan önbellek <xref:System.ServiceModel.Activities.Send> etkinlikler ileti sistemi tüm iş akışı durumlarda arasında paylaşılır <xref:System.ServiceModel.WorkflowServiceHost> (ana bilgisayar önbelleğe alma düzeyi). Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir. Önbelleğe alma herhangi bir gönderme etkinlik bitiş noktaları yapılandırmasında tanımlandığı sahip akışınızın için varsayılan olarak devre dışıdır.  
   
- Varsayılan önbellek paylaşımı düzeylerini ve kanal fabrikası ve kanal önbelleği için önbellek ayarlarını değiştirme hakkında daha fazla bilgi için bkz: [Gönder etkinlikler için önbellek paylaşımı düzeylerini değiştirme](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Düzeyleri ve kanal fabrikası ve kanal önbellek için önbellek ayarlarını paylaşımı varsayılan önbelleği değiştirmek konusunda daha fazla bilgi için bkz. [etkinlikleri göndermek için önbellek paylaşımı düzeylerini değiştirme](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Örnek  
- Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek içeren bir yapılandırma dosyası içeriğini gösterir **MyChannelCacheBehavior** hizmet davranışı özel fabrika önbellek ve kanal önbellek ayarlarına. Bu hizmet davranışı hizmet aracılığıyla eklenen **behaviorConfiguarion** özniteliği.  
+ Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir **MyChannelCacheBehavior** özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen **behaviorConfiguarion** özniteliği.  
   
 ```xml  
 <configuration>    
@@ -92,8 +92,8 @@ Paylaşım düzeyleri, kanal fabrikası önbellek ayarlarını ve ileti gönderm
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
- <xref:System.ServiceModel.Activities.Send>  
- [Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activities.SendMessageChannelCache>
+- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
+- <xref:System.ServiceModel.Activities.Send>
+- [Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

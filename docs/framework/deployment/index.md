@@ -2,21 +2,15 @@
 title: .NET Framework ve Uygulamaları Dağıtma
 ms.date: 03/30/2017
 helpviewer_keywords:
-- deploying applications [.NET Framework], packaging
-- deploying applications [.NET Framework]
-- deploying applications [.NET Framework], features
-- deploying applications [.NET Framework], distribution
-- .NET Framework, deploying
-- .NET Framework application deployment
+  - 'deploying applications [.NET Framework], packaging'
+  - 'deploying applications [.NET Framework]'
+  - 'deploying applications [.NET Framework], features'
+  - 'deploying applications [.NET Framework], distribution'
+  - '.NET Framework, deploying'
+  - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453235"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 Bu makalede, uygulamanızla birlikte .NET Framework'ü dağıtma başlamanıza yardımcı olur. İlgili bilgilerin çoğunu geliştiriciler, OEM'ler ve kuruluş yöneticileri için tasarlanmıştır. Kendi bilgisayarlarına .NET Framework'ü yüklemek isteyen kullanıcıların kimler [.NET Framework yükleme](~/docs/framework/install/index.md).  
@@ -164,7 +158,7 @@ Bu makalede, uygulamanızla birlikte .NET Framework'ü dağıtma başlamanıza y
 |[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Bir Windows Forms uygulaması'nı paketlemek ve ağdaki istemci bilgisayarları ile ClickOnce dağıtma işlemini açıklamaktadır.|  
 |[Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Paketleme ve dağıtma kaynakları için kullandığı .NET Framework merkez ve ışınsal modelini açıklar; Kaynak adlandırma kuralları, geri dönüş işlemi ve paketleme seçenekleri ele alınmaktadır.|  
 |[Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)|Gönderin ve genellikle bir .NET Framework istemci bütünleştirilmiş kodu ayrı bir COM tür kitaplıkları temsil eden bir veya daha fazla birlikte çalışma derlemelerini içeren, birlikte çalışma uygulamaları ve bir veya daha fazla kayıtlı COM bileşenlerini yüklemek açıklanmaktadır.|  
-|[Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.|  
+|[Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

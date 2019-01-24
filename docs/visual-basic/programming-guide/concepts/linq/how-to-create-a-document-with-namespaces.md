@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)'
+title: 'Nasıl yapılır: Ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631301"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: Ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)
 Bu konuda, Visual Basic'de ad alanları ile belge oluşturma gösterilmektedir.  
   
  Visual Basic'de XML değişmez değerlerini kullanarak, kullanıcıların bir genel varsayılan XML ad alanı tanımlayabilirsiniz. Bu ad alanı, hem XML sabit değerleri ve XML özellikleri için varsayılan ad alanı. Varsayılan XML ad alanı, proje düzeyinde veya dosya düzeyinde tanımlanabilir. Dosya düzeyinde tanımlanmışsa, varsayılan ad alanı proje düzeyinde geçersiz kılar.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -2,12 +2,12 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660586"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Özel bir bağlamaya dahil olduğunda MSMQ taşımasında iletilerin aktarımları için bir kanal sağlar.  
@@ -73,7 +73,7 @@ ms.locfileid: "54147921"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Bu bağlama için taşıma güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Bu bağlama için taşıma güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -86,15 +86,15 @@ ms.locfileid: "54147921"
   
  Message Queuing standart bağlama tarafından kullanılan varsayılan bağlama öğesi bu bağlama öğesi olan (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -6,115 +6,115 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 680d7441301b425c088d549f9e0e0d2b976cc69f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da8ffb77391129814e64613e17ea9f4d10cdca98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746214"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
-Geçirgenlik maskeleri bölümleri bir öğe veya görselin saydam veya kısmen saydam yapmanızı sağlar. Geçirgenlik maskesi oluşturmak için uygulamanız bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği, bir öğenin veya <xref:System.Windows.Media.Visual>.  Öğe veya görsel fırça eşlenen ve her fırça piksel geçirgenlik değeri karşılık gelen her piksel öğe veya görselin sonuç geçirgenliğini belirlemek için kullanılır.  
+Opaklık maskeleri saydam veya saydam kısmen bölümleri bir öğe veya görselin yapmanızı sağlar. Geçirgenlik maskesi oluşturma için geçerli bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği bir öğe veya <xref:System.Windows.Media.Visual>.  Fırça öğeye veya görsel eşlenir ve her fırça piksel geçirgenlik değeri elde edilen opaklık öğe veya görselin karşılık gelen her pikselin belirlemek için kullanılır.  
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu genel bakışta aşina olduğunuzu varsayar <xref:System.Windows.Media.Brush> nesneleri. Fırçalar kullanmaya giriş bilgileri için bkz: [gradyan genel bakış ve düz renk ile Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Hakkında bilgi için <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.DrawingBrush>, bkz: [görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Bu genel bakışta aşina olduğunuzu varsayar <xref:System.Windows.Media.Brush> nesneleri. Fırça kullanarak bir giriş için bkz. [düz renkler ve gradyanlar genel bakış boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Hakkında bilgi için <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.DrawingBrush>, bkz: [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="opacitymasks"></a>   
-## <a name="creating-visual-effects-with-opacity-masks"></a>Görsel efektler geçirgenlik maskeleri ile oluşturma  
- Geçirgenlik maskesi öğe veya görsel içeriğinin eşleyerek çalışır. Her bir fırça piksel alfa kanal sonra öğe veya görselin karşılık gelen sonuç geçirgenliğini belirlemek için kullanılır; Fırça gerçek rengi göz ardı edilir. Fırça belirli bir kısmı saydam ise, öğenin veya visual karşılık gelen bölümü saydam olur. Fırça belirli bir kısmı donuk ise, öğe veya görselin karşılık gelen bölümünün geçirgenliğini değiştirilmez. Geçirgenlik maskesi tarafından belirtilen geçirgenlik herhangi geçirgenlik ayarlarıyla öğesinde yok veya visual birleştirilir. Örneğin, bir öğe yüzde 25 donuk ve geçirgenlik maskesi tamamıyla opak görünümden tamamen saydam olarak geçiş uygulanır, sonuç yüzde 25 saydamlığı için tamamen saydam geçişleri bir öğe olur.  
+## <a name="creating-visual-effects-with-opacity-masks"></a>Opaklık maskeleri görsel efekt oluşturma  
+ Bir opaklık maskesi, içeriği öğe veya visual eşleyerek çalışır. Alfa kanalını her fırçanın piksel sonra elde edilen opaklığını öğe veya görselin karşılık gelen piksel belirlemek üzere kullanılır; Fırça rengini gerçek göz ardı edilir. Fırça belirli bir kısmı saydamdır, ilgili kısmının öğe veya visual saydam hale gelir. Fırça belirli bir kısmı katıysa öğe veya görselin ilgili kısmının opaklığını değiştirilmez. Geçirgenlik maskesi tarafından belirtilen opaklık herhangi opaklık ayarlarla öğesinde mevcut veya görsel birleştirilir. Örneğin, yüzde 25 donuk bir öğedir ve tam opak tamamen saydam olarak geçiş uygulanan bir opaklık maskesi, öğenin yüzde 25 opaklığı tamamen saydam olarak geçiş sonucudur.  
   
 > [!NOTE]
->  Bu genel bakıştaki örnekler imaj öğelerinde geçirgenlik maskeleri kullanımını gösterir ancak geçirgenlik maskesi herhangi bir öğeye uygulanan veya <xref:System.Windows.Media.Visual>paneller ve denetimleri dahil olmak üzere.  
+>  Bu genel bakışta örneklerde opaklık maskeleri görüntü öğelerde kullanımını gösteren olsa da, herhangi bir öğeye bir opaklık maskesi uygulanabilir veya <xref:System.Windows.Media.Visual>paneller ve denetimleri dahil olmak üzere.  
   
- Geçirgenlik maskeleri görüntüleri veya silinerek düğmeler görünümünden öğelere dokular ekleme veya cam benzeri yüzeyleri üretmek için gradyanları birleştirme oluşturmak için gibi ilginç görsel efektler oluşturmak için kullanılır. Aşağıdaki çizimde geçirgenlik maskesi kullanımını göstermektedir. Damalı arka plan maskesi bölümlerini saydam göstermek için kullanılır.  
+ Opaklık maskeleri ilgi çekici görsel efektler görünümünden, doku öğeleri eklemek ya da cam benzeri yüzeyler üretmek için gradyan birleştirmek için Soldurma düğme veya görüntü oluşturma gibi oluşturmak için kullanılır. Aşağıdaki çizim bir opaklık maskesi kullanımını gösterir. Damalı arka plan maske saydam bölümlerini göstermek için kullanılır.  
   
- ![LinearGradientBrush geçirgenlik maskesi olan nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
-Geçirgenlik maskeleme örneği  
+ ![Nesne LinearGradientBrush opaklık maskesine sahip](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
+Opaklık maskeleme örneği  
   
 <a name="creatingopacitymasks"></a>   
 ## <a name="creating-an-opacity-mask"></a>Geçirgenlik maskesi oluşturma  
- Geçirgenlik maskesi oluşturmak için oluşturduğunuz bir <xref:System.Windows.Media.Brush> ve uygulayan <xref:System.Windows.UIElement.OpacityMask%2A> bir öğe veya görselin özelliği. Herhangi bir türü kullanabilirsiniz <xref:System.Windows.Media.Brush> geçirgenlik maskesi olarak.  
+ Geçirgenlik maskesi oluşturma için oluşturduğunuz bir <xref:System.Windows.Media.Brush> ve uygulamak <xref:System.Windows.UIElement.OpacityMask%2A> bir öğe veya görselin özelliği. Herhangi bir türde kullanabileceğiniz <xref:System.Windows.Media.Brush> geçirgenlik maskesi olarak.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Bir öğe veya görünümden visual yavaşça yapmak için kullanılır.  
+-   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Bir öğe veya görünümden visual fade yapmak için kullanılır.  
   
-     Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Media.LinearGradientBrush> geçirgenlik maskesi olarak kullanılır.  
+     Aşağıdaki görüntüde bir <xref:System.Windows.Media.LinearGradientBrush> geçirgenlik maskesi olarak kullanılır.  
   
-     ![LinearGradientBrush geçirgenlik maskesi olan bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
-LinearGradientBrush geçirgenlik maskeleme örneği  
+     ![Bir LinearGradientBrush opaklık maskesine sahip bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
+LinearGradientBrush opaklık maskeleme örneği  
   
--   <xref:System.Windows.Media.ImageBrush>: Doku ve Yumuşak ya da bozuk efektler oluşturmak için kullanılır.  
+-   <xref:System.Windows.Media.ImageBrush>: Doku ve yazılım ya da bozuk efektler oluşturmak için kullanılır.  
   
-     Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Media.ImageBrush> geçirgenlik maskesi olarak kullanılır.  
+     Aşağıdaki görüntüde bir <xref:System.Windows.Media.ImageBrush> geçirgenlik maskesi olarak kullanılır.  
   
-     ![ImageBrush geçirgenlik maskesi olan nesneyi](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
-LinearGradientBrush geçirgenlik maskeleme örneği  
+     ![Bir ImageBrush opaklık maskesine sahip bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
+LinearGradientBrush opaklık maskeleme örneği  
   
--   <xref:System.Windows.Media.DrawingBrush>: Şekil, görüntüler ve gradyan modellerinden karmaşık geçirgenlik maskeleri oluşturmak için kullanılır.  
+-   <xref:System.Windows.Media.DrawingBrush>: Şekilleri ve görüntüleri gradyanlar modellerinden karmaşık opaklık maskeleri oluşturmak için kullanılır.  
   
-     Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Media.DrawingBrush> geçirgenlik maskesi olarak kullanılır.  
+     Aşağıdaki görüntüde bir <xref:System.Windows.Media.DrawingBrush> geçirgenlik maskesi olarak kullanılır.  
   
-     ![DrawingBrush geçirgenlik maskesi nesnesiyle](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
-DrawingBrush geçirgenlik maskeleme örneği  
+     ![DrawingBrush opaklık maskesine sahip nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
+DrawingBrush opaklık maskeleme örneği  
   
- Gradyan Fırçalar (<xref:System.Windows.Media.LinearGradientBrush> ve <xref:System.Windows.Media.RadialGradientBrush>) özellikle çok geçirgenlik maskesi olarak kullanım için uygundur. Çünkü bir <xref:System.Windows.Media.SolidColorBrush> dolgular tekdüze bir renk ile alanı yaptıkları zayıf opaklık maskeleri; kullanarak bir <xref:System.Windows.Media.SolidColorBrush> öğenin veya görselin ayarlamaya eşittir <xref:System.Windows.UIElement.OpacityMask%2A> özelliği.  
+ Gradyan Fırçalar (<xref:System.Windows.Media.LinearGradientBrush> ve <xref:System.Windows.Media.RadialGradientBrush>) özellikle bir opaklık maskesi olarak kullanım için uygundur. Çünkü bir <xref:System.Windows.Media.SolidColorBrush> dolgular Tekdüzen bir renk ile bir alanı yaptıkları düşük opaklık maskeleri; kullanarak bir <xref:System.Windows.Media.SolidColorBrush> öğenin veya görselin ayarlamaya eşittir <xref:System.Windows.UIElement.OpacityMask%2A> özelliği.  
   
 <a name="creatingopacitymaskswithgradients"></a>   
 ## <a name="using-a-gradient-as-an-opacity-mask"></a>Gradyan geçirgenlik maskesi kullanma  
- Gradyan dolgusu oluşturmak için iki veya daha fazla gradyan durağı belirtin. Her gradyan durağının içeren bir renk ve bir konuma açıklar (bkz [gradyan genel bakış ve düz renk ile Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) gradyanları oluşturma ve kullanma hakkında daha fazla bilgi için). Renkleri karıştırma yerine opaklık maskesi gradyan alfa kanal değerleri karıştırır dışında işlem gradyan geçirgenlik maskesi olarak, kullanırken aynıdır. Bu nedenle gradyan içeriği gerçek rengi önemli değildir; yalnızca alfa kanal veya her rengin geçirgenliğini önemlidir. Bir örnek verilmiştir.  
+ Gradyan Dolgu oluşturmak için iki veya daha fazla gradyan duraklarının belirtin. Her gradyan durağını içeren bir renk ve bir konumu açıklar (bkz [düz renkler ve gradyanlar genel bakış boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) gradyanları oluşturma ve kullanma hakkında daha fazla bilgi için). Renkleri karıştırma yerine opaklık maskesi gradyan alfa kanalı değerlerini karıştırır dışında aynı gradyan bir opaklık maskesi kullanılırken işlemidir. Bu nedenle gradyan İçindekiler gerçek renk önemli değildir; yalnızca alfa kanalı veya her rengin geçirgenliğini önemlidir. Bir örnek verilmiştir.  
   
  [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
   
 <a name="specifyinggradientcolors"></a>   
-## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Geçirgenlik maskesi için gradyan durakları belirtme  
- Önceki örnekte, sistem tarafından tanımlanan renk <xref:System.Windows.Media.Colors.Black%2A> geçişin başlangıç rengi kullanılır. Çünkü tüm renkleri <xref:System.Windows.Media.Colors> sınıfı dışında <xref:System.Windows.Media.Colors.Transparent%2A>, bunlar yalnızca gradyan geçirgenlik maskesinin başlangıç rengini tanımlamak için kullanılabilecek tam olarak donuk olan.  
+## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Gradyan durakları bir opaklık maskesi için belirtme  
+ Önceki örnekte, sistem tarafından tanımlanan renk <xref:System.Windows.Media.Colors.Black%2A> gradyan başlangıç rengi olarak kullanılır. Çünkü tüm renkleri <xref:System.Windows.Media.Colors> sınıfı dışında <xref:System.Windows.Media.Colors.Transparent%2A>, bunlar yalnızca bir gradyan opaklık maskesi için başlangıç rengini tanımlamak için kullanılabilir tam opak olan.  
   
- Geçirgenlik maskesi tanımlarken alfa değerleri üzerinde ek denetim için kullanarak renklerin alfa kanal belirtebilirsiniz [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] işaretleme veya kullanarak onaltılık gösterimde <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> yöntemi.  
+ Bir opaklık maskesi tanımlarken alfa değerleri üzerinde ek denetim için renkleri kullanarak alfa kanalı belirtebilirsiniz [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] biçimlendirme ya da onaltılık gösterimde <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> yöntemi.  
   
 <a name="argbsyntax"></a>   
-### <a name="specifying-color-opacity-in-xaml"></a>"XAML" içinde Renk Geçirgenliği Belirtme  
- İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkleri geçirgenliğini belirtmek için onaltılık gösterimi. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] onaltılık gösterimi aşağıdaki söz dizimini kullanır:  
+### <a name="specifying-color-opacity-in-xaml"></a>"XAML" renk opaklığı belirtme  
+ İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkler opaklığını belirtmek için onaltılık gösterim. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] onaltılık gösterim aşağıdaki sözdizimini kullanır:  
   
  `#` **aa** *rrggbb*  
   
- *Aa* önceki satırda rengin geçirgenliğini belirtmek için kullanılan iki basamaklı onaltılık değeri temsil eder. *Rr*, *gg*, ve *bb* her rengi kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı onaltılık değeri temsil eder. Her bir onaltılık değerinin 0-9 veya A-f arasında olabilir 0 en küçük değerdir ve F en büyük değerdir. 00 alfa değeri FF alfa değeri bir renk oluştururken, tamamen saydam olacak bir renk tamamıyla opak belirtir.  Aşağıdaki örnekte, onaltılık [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] gösterimi iki rengi belirtmek için kullanılır. İlk tamamıyla opak açıkken ikinci tamamen saydamdır.  
+ *Aa* önceki satıra rengin geçirgenliğini belirtmek için kullanılan iki basamaklı bir onaltılık değer temsil eder. *Rr*, *gg*, ve *bb* her rengin kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı bir onaltılık değeri temsil eder. Her bir onaltılık basamak 0-9 veya A-f arasında bir değer olabilir. en küçük değer 0 ise ve F en büyük değerdir. Alfa değeri 00 ila tamamen opak FF alfa değeri olan bir renk oluştururken tamamen şeffaf olduğundan bir renk belirtir.  Aşağıdaki örnekte, onaltılık [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] gösterim iki renkleri belirtmek için kullanılır. İlk tam opak açıkken ikinci tamamen saydamdır.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
 <a name="usingimageasopacitymask"></a>   
 ## <a name="using-an-image-as-an-opacity-mask"></a>Bir görüntü geçirgenlik maskesi kullanma  
- Görüntüleri geçirgenlik maskesi olarak da kullanılabilir. Aşağıdaki resimde bir örnek gösterilmektedir. Damalı arka plan maskesi bölümlerini saydam göstermek için kullanılır.  
+ Görüntüleri bir opaklık maskesi da kullanılabilir. Aşağıdaki resimde bir örnek gösterilir. Damalı arka plan maske saydam bölümlerini göstermek için kullanılır.  
   
- ![ImageBrush geçirgenlik maskesi olan bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
-Geçirgenlik maskeleme örneği  
+ ![Bir ImageBrush opaklık maskesine sahip bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
+Opaklık maskeleme örneği  
   
- Bir görüntü geçirgenlik maskesi olarak kullanmak için bir <xref:System.Windows.Media.ImageBrush> resmi içerecek. Geçirgenlik maskesi olarak kullanılacak görüntüyü oluştururken, görüntünün saydamlık, birden çok düzeyi gibi destekleyen bir biçimde kaydetmek [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. Aşağıdaki örnek önceki gösterimi oluşturmak için kullanılan kod gösterir.  
+ Bir opaklık maskesi görüntü kullanmak için bir <xref:System.Windows.Media.ImageBrush> resmi içerecek. Bir opaklık maskesi kullanılacak bir görüntü oluşturulurken görüntü gibi birden fazla düzeyde saydamlık destekleyen bir biçimde kaydetmek [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. Aşağıdaki örnek, önceki çizim oluşturmak için kullanılan kodlar gösterilmiştir.  
   
  [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
-### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Geçirgenlik maskesi döşeli görüntü kullanma  
- Aşağıdaki örnekte, başka bir işlemle aynı görüntü kullanılan <xref:System.Windows.Media.ImageBrush>, ancak fırça döşeme özellikleri görüntü 50 piksel kare döşemesi üretmek için kullanılır.  
+### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Döşenmiş bir görüntü geçirgenlik maskesi kullanma  
+ Aşağıdaki örnekte, birbiriyle aynı görüntü kullanılan <xref:System.Windows.Media.ImageBrush>, ancak fırça döşeme özellikleri kutucukları görüntü 50 piksel kare oluşturmak için kullanılır.  
   
  [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## <a name="creating-an-opacity-mask-from-a-drawing"></a>Çizimden Geçirgenlik maskesi oluşturma  
- Çizimler geçirgenlik maskesi kullanılır. Çizim içinde bulunan şekiller kendilerini gradyan, düz renkler, görüntüler veya diğer çizimlerle bile doldurulabilir. Aşağıdaki resimde geçirgenlik maskesi olarak kullanılan bir çizim örneği gösterilmiştir. Damalı arka plan maskesi bölümlerini saydam göstermek için kullanılır.  
+ Çizimler bir opaklık maskesi kullanılır. Çizim içinde bulunan şekilleri gradyanlar, düz renkler, görüntüleri veya hatta diğer çizimler ile kendilerini doldurulabilir. Aşağıdaki görüntüde bir opaklık maskesi kullanılan bir çizim bir örnek gösterilmektedir. Damalı arka plan maske saydam bölümlerini göstermek için kullanılır.  
   
- ![DrawingBrush geçirgenlik maskesi olan bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
-DrawingBrush geçirgenlik maskeleme örneği  
+ ![DrawingBrush opaklık maskesine sahip bir nesne](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
+DrawingBrush opaklık maskeleme örneği  
   
- Çizim geçirgenlik maskesi olarak kullanmak için bir <xref:System.Windows.Media.DrawingBrush> çizimi içerecek. Aşağıdaki örnek önceki gösterimi oluşturmak için kullanılan kod gösterir:  
+ Çizim geçirgenlik maskesi olarak kullanmak için bir <xref:System.Windows.Media.DrawingBrush> çizimi içerecek. Aşağıdaki örnek, önceki çizim oluşturmak için kullanılan kodlar gösterilmiştir:  
   
  [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
-### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Geçirgenlik maskesi döşeli çizim kullanma  
- Gibi <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> kendi çizim döşeme yapılabilir. Aşağıdaki örnekte, çizim Fırçası döşeli geçirgenlik maskesi oluşturmak için kullanılır.  
+### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Döşenmiş çizim geçirgenlik maskesi kullanma  
+ Gibi <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> kendi çizim kutucuğa yapılabilir. Aşağıdaki örnekte, bir çizim Fırçası döşenmiş geçirgenlik maskesi oluşturma için kullanılır.  
   
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

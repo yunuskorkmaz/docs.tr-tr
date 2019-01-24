@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Ayarları Oluşturma'
+title: 'Nasıl yapılır: Uygulama ayarları oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558962"
 ---
-# <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama Ayarları Oluşturma
+# <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama ayarları oluşturma
 Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu ayarlar yüklenir ve çalışma zamanında otomatik olarak kaydedilir bunları özelliklerine formunuza veya form denetimlerinde bağlayın.  
   
  Aşağıdaki yordamda, el ile türetilen bir sarmalayıcı sınıfı oluşturmanız <xref:System.Configuration.ApplicationSettingsBase>. Bu sınıf için kullanıma sunmak istediğiniz her uygulama ayarı için ortak olarak erişilebilen bir özellik ekleyin.  
   
- Ayrıca, bu yordamı Visual Studio Tasarımcısı'nda çok az kod kullanarak gerçekleştirebilirsiniz.  Ayrıca bkz: [nasıl yapılır: oluşturma uygulama ayarlarını kullanarak Tasarımcı](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Ayrıca, bu yordamı Visual Studio Tasarımcısı'nda çok az kod kullanarak gerçekleştirebilirsiniz.  Ayrıca bkz: [nasıl yapılır: Tasarımcıyı kullanarak uygulama ayarları oluşturma](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Yeni uygulama ayarları program aracılığıyla oluşturmak için  
   
@@ -46,8 +46,8 @@ Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu aya
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Varsayılan ayar sağlayıcısı <xref:System.Configuration.LocalFileSettingsProvider>, yapılandırma dosyalarındaki bilgileri düz metin olarak kalıcıdır. Bu, geçerli kullanıcı için işletim sistemi tarafından sağlanan dosya erişim güvenliği için güvenlik sınırlar. Bu nedenle dikkatli yapılandırma dosyalarında depolanan bilgileri alınması gerekir. Örneğin, bir uygulama ayarları uygulamanın veri deposuna işaret eden bağlantı dizeleri depolamak için kullanılır. Ancak, güvenlik kaygıları nedeniyle, parolalar gibi dizeleri içermemelidir. Bağlantı dizeleri hakkında daha fazla bilgi için bkz. <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Nasıl yapılır: Uygulama Ayarlarını Doğrulama](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Nasıl yapılır: Uygulama ayarlarını doğrulama](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

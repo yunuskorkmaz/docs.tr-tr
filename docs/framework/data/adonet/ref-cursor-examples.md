@@ -2,12 +2,12 @@
 title: REF CURSOR örnekleri
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 7edb9cd41c7949dba6c4a5c24179c30d01309214
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 00e1cd1b9c13514979ee22b32996d35e1bd1c3e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615354"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR örnekleri
 REF CURSOR örnekleri REF CURSOR kullanımını gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  
@@ -79,6 +79,6 @@ END CURSPKG;
 /  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

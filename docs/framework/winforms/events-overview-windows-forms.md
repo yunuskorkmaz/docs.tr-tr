@@ -9,40 +9,40 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 79d1ba122bd78b33fbc675ea0b0ec681005819cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543723"
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
-Olaya yanıt verebilirsiniz bir eylem veya "işlemek," kodunu içerir. Olaylar, fareyi tıklatarak veya bir tuşa basılması gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodla; veya sistem tarafından.  
+Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, fareyle tıklamak veya bir tuşuna basmak gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodu tarafından; veya sistemi.  
   
- Olay kaynaklı uygulamaları bir olaya yanıt olarak kodu yürütün. Her form ve denetim karşı program olayları önceden tanımlanmış bir kümesini gösterir. Aşağıdaki olaylardan biri gerçekleşene ve ilişkili olay işleyicisini kod ise, bu kodu çağrılır.  
+ Olay temelli uygulamalar, bir olaya yanıt olarak bir kod yürütün. Her form ve denetim programlayabileceğiniz olayları önceden tanımlanmış bir dizi kullanıma sunar. Bu olaylardan biri gerçekleşene ve ilişkili olay işleyicisinde kodu ise, bu kodu çağrılır.  
   
- Nesne tarafından başlatılan olayları türlerini farklılık, ancak birçok türleri çoğu denetimleri için ortak olan. Örneğin, çoğu nesneyi işleyecek bir <xref:System.Windows.Forms.Control.Click> olay. Bir kullanıcı bir form tıklarsa formun kod <xref:System.Windows.Forms.Control.Click> olay işleyicisi gerçekleştirilir.  
+ Bir nesne tarafından oluşturulan olayları türlerini farklılık gösterir ancak birçok türü çoğu denetimlere ortaktır. Örneğin, çoğu nesneyi işleyecek bir <xref:System.Windows.Forms.Control.Click> olay. Bir kullanıcı bir form tıklarsa formun kod <xref:System.Windows.Forms.Control.Click> olay işleyicisi yürütülür.  
   
 > [!NOTE]
->  Diğer olaylar ile birlikte birçok olaylar oluşur. Örneğin, içinde course, <xref:System.Windows.Forms.Control.DoubleClick> gerçekleşmesini olay <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>, ve <xref:System.Windows.Forms.Control.Click> olayları oluşur.  
+>  Diğer olaylarla birlikte birçok olayları oluşur. Örneğin, içinde course, <xref:System.Windows.Forms.Control.DoubleClick> gerçekleşmesini olay <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>, ve <xref:System.Windows.Forms.Control.Click> olaylar gerçekleşir.  
   
- Yükseltmek ve bir olay kullanma hakkında daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
+ Bir olay yükseltilip tüketileceğini hakkında daha fazla bilgi için bkz. [olayları](../../../docs/standard/events/index.md).  
   
-## <a name="delegates-and-their-role"></a>Temsilciler ve rolleri  
- Temsilciler sınıflardır içinde yaygın olarak kullanılan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] olay işleme mekanizmaları oluşturmak için. Temsilciler kabaca eşitlemek için yaygın olarak kullanılan işlev işaretçileri [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ve diğer nesne yönelimli diller. İşlev işaretçileri, ancak, nesne yönelimli, tür kullanımı uyumlu ve güvenli temsilciler. Ayrıca, burada bir işlev işaretçisi yalnızca belirli bir işleve bir başvuru içeriyor bir temsilci bir nesneye başvuru oluşur ve nesne içinde bir veya daha fazla yöntemlerini başvuruyor.  
+## <a name="delegates-and-their-role"></a>Temsilciler ve kendi rolleri  
+ Temsilcileri, bir sınıf içinde yaygın olarak kullanılan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] olay işleme mekanizmalarını oluşturulacak. Temsilciler kabaca günleriyle işlev işaretçilerine, yaygın olarak kullanılan [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ve diğer nesne yönelimli programlama dili. İşlev işaretçileri, ancak nesne yönelimli, tür kullanımı uyumlu ve güvenli temsilciler. Ayrıca, burada bir işlev işaretçisi yalnızca belirli bir işleve bir başvuru içerir bir temsilci bir nesneye bir başvuru oluşur ve nesnesi içinde bir veya daha fazla yöntemlere başvuruyor.  
   
- Bu olay modelini kullanır, *Temsilciler* bunları işlemek için kullanılan yöntemleri olayları bağlanacak. Temsilci bir işleyici yöntemi belirterek olay bildirimi için kaydolmaya diğer sınıflar sağlar. Olay ortaya çıktığında temsilci ilişkili yöntemi çağırır. Temsilcileri tanımlama hakkında daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
+ Bu olay modeli kullanan *Temsilciler* bunları işlemek için kullanılan yöntemleri için olaylar bağlamak için. Temsilci işleyicisi yöntemi belirterek olay bildirimi için kaydetmek diğer sınıflar sağlar. Olay gerçekleştiğinde temsilci ilişkili yöntemi çağırır. Temsilcileri tanımlama hakkında daha fazla bilgi için bkz. [olayları](../../../docs/standard/events/index.md).  
   
- Temsilciler, tek bir yöntemi veya birden çok yöntem, çok noktaya yayın başvurulan bağlanabilir. Bir olay için bir temsilci oluştururken, sizin (veya Windows Form Tasarımcısı) genellikle bir çok noktaya yayın olay oluşturursunuz. Nadir bir özel durum, mantıksal olarak birden çok kez olay yinelemeniz değil (örneğin bir iletişim kutusunu görüntüleme) belirli bir yordamı sonuçlanan bir olay olabilir. Çok noktaya yayın temsilci oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: temsilcileri birleştirme (çok noktaya yayın temsilcileri)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
+ Temsilciler, tek bir yöntemi veya çok noktaya yayın başvurulan birden çok yöntem bağlanabilir. Bir olay için temsilci oluştururken siz (veya Windows Form Tasarımcısı) genellikle çok noktaya yayın olay oluşturursunuz. Nadir bir özel durum, birden çok kez olay mantıksal olarak tekrarlayın değil belirli yordam (örneğin, bir iletişim kutusunu görüntüleme) sonuçlanır bir olay olabilir. Çok noktaya yayın temsilci oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
- Çok noktaya yayın temsilci bağlı yöntemleri çağırma listesini tutar. Çok noktaya yayını destekleyen temsilci bir <xref:System.Delegate.Combine%2A> bir yöntemi çağırma listesine eklemek için yöntem ve bir <xref:System.Delegate.Remove%2A> kaldırmaya yöntemi.  
+ Çok noktaya yayın temsilci bir bağlı yöntemleri çağırma listesini tutar. Çok noktaya yayını destekleyen temsilci bir <xref:System.Delegate.Combine%2A> bir yöntem çağırma listesine eklemek için gereken yöntemini ve bir <xref:System.Delegate.Remove%2A> kaldırmak için yöntemi.  
   
- Bir olay uygulama tarafından kaydedildiğinde denetimi bu olay için temsilci çağırarak olayını başlatır. Temsilci sırayla ilişkili yöntemi çağırır. (Çok noktaya yayın temsilci) en sık karşılaşılan durumda temsilci her ilişkili yöntemini çağırma listesinde sırasıyla bir-çok bildirim sağlayan çağırır. Bu strateji denetim olayı bildirimi için hedef nesnelerin listesini korumak gerekmez anlamına gelir — tüm kayıt ve bildirim temsilci işler.  
+ Uygulama tarafından bir olay kaydedildiğinde, bu olay için temsilci çağırarak denetim olayı başlatır. Temsilci sırayla ilişkili yöntemi çağırır. (Bir çok noktaya yayın temsilcisi) en yaygın durumda temsilci her ilişkili yöntem çağırma listesinde sırasıyla bir-çok bildirim sağlayan çağırır. Bu strateji, denetimin olay bildirimi için hedef nesnelerin listesini korumak gerekmez anlamına gelir — tüm kaydı ve bildirimi temsilci işler.  
   
- Temsilciler çok bir bildirim izin vererek aynı yönteme bağlı birden çok olay da etkinleştirin. Örneğin, bir düğme tıklama olay ve menü komutu – tıklatma olay her ikisi de aynı şekilde bu ayrı olayları işlemek için tek bir yöntemi çağırır aynı temsilci çağırabilirsiniz.  
+ Temsilciler çok bir bildirim sağlayan aynı yönteme bağlı birden fazla olayın da etkinleştirin. Örneğin, bir düğme tıklama olayı ve bir menü komutu – tıklama olayı hem de daha sonra aynı şekilde bu ayrı olayları işlemek için tek bir yöntemi çağırır aynı temsilci çağırabilirsiniz.  
   
- Temsilciler ile kullanılan bağlama dinamik mekanizmadır: çalışma zamanında, imza, olay işleyicisinin eşleşen herhangi bir yöntemi için bir temsilci bağlanabilir. Bu özellik ile ayarlayın veya bağlı bir koşul olarak ve bir olay işleyicisi için bir denetim dinamik olarak eklemek için bağlama yöntemini değiştirin.  
+ Temsilciler ile kullanılan bir bağlama mekanizması dinamik: bir temsilci imzası olan, olay işleyicisinin eşleşen herhangi bir yöntemi için çalışma zamanında bağlanabilir. Bu özellik ile ayarlayın veya bağımlı bir yöntem bir koşula bağlı ve bir olay işleyicisi bir denetimi dinamik olarak eklemek için değiştirin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

@@ -3,12 +3,12 @@ title: '&lt;Değişkeni&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: c65b377d85783f29ca2a8223e97eb10b073cee0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 185e7e7196f6679ec3d1fae8a2a256b934022ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647887"
 ---
 # <a name="ltvariablegt"></a>&lt;Değişkeni&gt;
 Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.  
@@ -21,7 +21,7 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
 \<trackingProfile>  
 \<İş akışı >  
 \<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQuery>  
 \<değişken >  
 \<değişken >  
   
@@ -77,8 +77,8 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

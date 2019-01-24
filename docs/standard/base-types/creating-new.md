@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659507"
 ---
 # <a name="creating-new-strings-in-net"></a>. NET'te yeni dizeler oluşturma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Basit atama kullanılarak oluşturulması dizeleri sağlar ve ayrıca çok sayıda farklı parametreler kullanarak dize oluşturma desteklemek için bir sınıf oluşturucu aşırı yüklemeleri. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca, çeşitli yöntemler sunar <xref:System.String?displayProperty=nameWithType> yeni dize Oluştur sınıfı nesnelerini bir araya getirerek birkaç dizeleri, dize, veya nesneleri.  
@@ -82,5 +82,5 @@ ms.locfileid: "43870116"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)
 - [Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)

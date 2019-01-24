@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671661"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps Metodu
-İle ilişkili meta verileri alır <xref:System.Type> belirtilen TypeRef belirteç tarafından başvurulan.  
+İle ilişkili meta verileri alır <xref:System.Type> belirtilen TypeRef belirteci tarafından başvurulan.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +41,29 @@ HRESULT GetTypeRefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `tr`  
- [in] Meta veriler için dönüş türü temsil eder TypeRef simgesi.  
+ [in] Meta verileri için döndürülecek türünü temsil eden TypeRef belirteci.  
   
  `ptkResolutionScope`  
- [out] Başvuru yapıldığı kapsam için bir işaretçi. Bu değer bir AssemblyRef veya ModuleRef belirteci olur.  
+ [out] Başvuru yapıldığı kapsamı için bir işaretçi. Bu değer bir AssemblyRef veya ModuleRef belirtecidir.  
   
  `szName`  
- [out] Tür adını içeren bir arabellek.  
+ [out] Tür adı içeren bir arabelleği.  
   
  `cchName`  
- [in] Geniş karakterler istenen boyutta `szName`.  
+ [in] Geniş karakter cinsinden istenen boyuta `szName`.  
   
  `pchName`  
- [out] Geniş karakterler döndürülen boyutu `szName`.  
+ [out] Geniş karakter cinsinden döndürülen boyutu `szName`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

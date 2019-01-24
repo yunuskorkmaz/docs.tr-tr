@@ -9,14 +9,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737526"
 ---
-# <a name="lambda-expressions-c-programming-guide"></a>Lambda İfadeleri (C# Programlama Kılavuzu)
+# <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
 Bir lambda ifadesi; bir [anonim işlev](anonymous-methods.md) oluşturmak için kullanabileceğiniz [Temsilciler](../delegates/using-delegates.md) veya [ifade ağacı](../concepts/expression-trees/index.md) türleri. Lambda ifadeleri kullanarak, bağımsız değişken yerine geçebilecek veya işlev çağrılarının değeri olarak döndürülebilecek, yerel işlevler yazabilirsiniz. Lambda ifadeleri LINQ sorgu ifadeleri yazmak için özellikle yararlıdır.
   
@@ -60,7 +60,7 @@ namespace ConsoleApplication1
   
  Anonim yöntemler için uygulanan tüm kısıtlamalar lambda ifadeleri için de geçerlidir. Daha fazla bilgi için [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
   
-## <a name="expression-lambdas"></a>Lambda İfadeleri
+## <a name="expression-lambdas"></a>Expression lambdas
 
  Bir lambda ifadesi işlecin sağ tarafındaki bir ifadeyle = > işleci çağrıldığında bir *lambda ifadesi*. İfade lambdaları oluşumunu oluşturulurken sıkça kullanılır [ifade ağaçları](../concepts/expression-trees/index.md). Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
   
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  Önceki örnekte bir lambda ifadesi gövdesinin yöntem çağrısından oluşabileceğini unutmayın. Ancak, .NET Framework dışında, örneğin SQL Server'da değerlendirilen ifade ağaçları oluşturuyorsanız, lambda ifadelerinde yöntem çağrısı kullanmamanız gerekir. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.  
   
-## <a name="statement-lambdas"></a>Deyim Lambdaları  
+## <a name="statement-lambdas"></a>Deyim lambdaları
+
  Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:  
   
 (giriş parametreleri) = > {deyimi;}
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kullanılamaz.  
   
-## <a name="async-lambdas"></a>Zaman Uyumsuz Lambdalar  
+## <a name="async-lambdas"></a>Async lambdas
+
  İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) ve [await](../../../csharp/language-reference/keywords/await.md) anahtar sözcükleri. Örneğin, aşağıdaki Windows Forms örneği, çağıran ve bekleyen zaman uyumsuz bir yöntem, bir olay işleyici içerir `ExampleMethodAsync`.  
   
 ```csharp
@@ -154,7 +156,8 @@ public partial class Form1 : Form
 
  Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>Standart Sorgu İşlevleriyle Lambda İfadeleri  
+## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile lambda ifadeleri
+
  Standart sorgu işleçlerinin çoğu, türü bir giriş parametresine sahiptir, <xref:System.Func%602> Genel temsilci ailesinden olan. Bu temsilciler girdi parametrelerinin sayısını ve türünü ve temsilcinin döndürdüğü değerin türünü tanımlamak için tür parametreleri kullanır. `Func` Temsilciler, kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadelerin Kapsüllenmesi için son çok yararlı olur. Örneğin, aşağıdaki temsilci türünü göz önünde bulundurun:  
   
 ```csharp  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Lambda İçinde Tür Çıkarımı  
+## <a name="type-inference-in-lambdas"></a>Lambda içinde tür çıkarımı
+
  Lambda ifadeleri yazarken genellikle giriş parametreleri için bir tür belirtmeniz gerekmez; derleyici lambda gövdesine, parametrenin temsilci türüne ve C# Dil Belirtimi'nde açıklanan diğer etkenlere göre türü çıkarsayabilir. Standart sorgu işleçlerinin çoğunda ilk giriş kaynak dizisindeki öğelerin türüdür. Sorguluyorsanız bunu bir `IEnumerable<Customer>`, giriş değişkeni olması sorguluyorsanız bir `Customer` nesne erişim yöntemleri ve özellikleri iznine sahip olduğunuz anlamına gelir:  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  Ortak tür sisteminin "lambda ifadesi" için iç kavramı olmadığından kendi içlerindeki lambda ifadelerinin türü olmadığını unutmayın. Ancak bazen bir lambda ifadesinin "türünden" resmi olmayan bir şekilde bahsetmek daha kolaydır. Bu gibi durumlarda, tür temsilci türüne başvuruyor. veya <xref:System.Linq.Expressions.Expression> , lambda ifadesinin dönüştürüldüğü yazın.  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda İfadelerinde Değişken Kapsamı  
+## <a name="variable-scope-in-lambda-expressions"></a>Lambda ifadelerinde değişken kapsamı
+
  Lambdalar başvurabilir *dış değişkenlere* (bkz [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), lambda işlevini tanımlayan yöntemin kapsamındaki ya da lambda ifadesini içeren türün kapsamındaki. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   Bir lambda ifadesi içeremez bir `goto` deyimi `break` deyimi veya `continue` varsa atlama bildiriminin hedefi blok dışındaysa lambda işlevi içinde deyimi. Ayrıca, hedef, blok içinde ise lambda işlev bloğu dışında bir deyim olması bir hatadır.  
   
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
+## <a name="c-language-specification"></a>C# dili belirtimi
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>Özel Kitap Bölümü  
+## <a name="featured-book-chapter"></a>Özel Kitap bölümü
+
  [Temsilciler, olayları ve Lambda ifadeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) içinde [ C# 3.0 Cookbook, Third Edition: İçin 250'den fazla çözüm C# 3.0 programcıları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [LINQ (dil ile tümleşik sorgu)](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [İfade Ağaçları](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 2008 C# örnekleri (bkz: LINQ örnek sorgular dosyalar ve XQuery programı)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [LINQ (dil ile tümleşik sorgu)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [İfade Ağaçları](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 2008 C# örnekleri (bkz: LINQ örnek sorgular dosyalar ve XQuery programı)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Yinelemeli lambda ifadeleri](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

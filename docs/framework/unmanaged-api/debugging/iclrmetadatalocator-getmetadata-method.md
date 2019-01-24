@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647692"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata Metodu
 Görüntü meta verilerini almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
@@ -46,7 +46,7 @@ HRESULT GetMetadata(
   
 #### <a name="parameters"></a>Parametreler  
  `imagePath`  
- [in] Görüntü dosyasının yolunu belirten bir dize.  
+ [in] Görüntü dosyasının yolu belirten bir dize.  
   
  `imageTimestamp`  
  [in] Görüntü dosyasının zaman damgası.  
@@ -55,16 +55,16 @@ HRESULT GetMetadata(
  [in] Görüntü dosyasının boyutu.  
   
  `mvid`  
- [in] Görüntü genel benzersiz tanıtıcısı.  
+ [in] Görüntünün benzersiz tanımlayıcısı.  
   
  `mdRva`  
- [in] Meta veri göreli sanal adres (RAV). Görüntü taban adresi göre adresidir.  
+ [in] Meta veri göreli sanal adresi (RVA). Adres göre görüntü taban adresidir.  
   
  `flags`  
  [in] Gelecekte kullanılmak üzere ayrılmış.  
   
  `bufferSize`  
- [in] Meta veriler yerleştirileceği arabelleğin boyutu.  
+ [in] Meta veriler yerleştirileceği arabellek boyutu.  
   
  `buffer`  
  [out] Meta veriler yerleştirileceği arabelleği.  
@@ -73,16 +73,16 @@ HRESULT GetMetadata(
  [out] Döndürülen meta veri boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklama uygulama yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRMetadataLocator Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRMetadataLocator Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

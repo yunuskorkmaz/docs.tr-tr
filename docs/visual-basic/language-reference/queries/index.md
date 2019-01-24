@@ -2,15 +2,9 @@
 title: Sorgular (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- queries [Visual Basic]
-- LINQ, queries
+  - 'queries [Visual Basic]'
+  - 'LINQ, queries'
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861617"
 ---
 # <a name="queries-visual-basic"></a>Sorgular (Visual Basic)
 Visual Basic oluşturmanıza olanak sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzda ifadeler.  
@@ -58,6 +52,6 @@ Visual Basic oluşturmanıza olanak sağlar [!INCLUDE[vbteclinqext](~/includes/v
  [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
  Açıklar `Where` yan tümcesi bir sorgu için filtreleme koşulunu belirtir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

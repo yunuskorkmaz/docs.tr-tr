@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a9a43735ec80821c2380b824bfced99113cf08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651103"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize Metodu
-Bu "Icordebugcode" temsil ikili kod bayt cinsinden boyutu alır.  
+Bu "Icordebugcode" tarafından temsil edilen ikili kod bayt cinsinden boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetSize (
   
 #### <a name="parameters"></a>Parametreler  
  `pcBytes`  
- [out] İkili dosya bayt cinsinden boyutu gösteren bir işaretçi Bu kod `ICorDebugCode` nesne temsil eder.  
+ [out] Bu kod boyutunu bayt cinsinden ikili bir işaretçiye `ICorDebugCode` nesnesini temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

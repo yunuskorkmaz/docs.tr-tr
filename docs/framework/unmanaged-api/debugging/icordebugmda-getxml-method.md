@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874462e37aa10af589f39ed099de899ff7155d24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06eaa77ab655d57ad2cc0a3c5613c05444afd903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660638"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML Metodu
-Tarafından temsil edilen yönetilen hata ayıklama Yardımcısı (MDA) ile ilişkili tam XML akışı alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Tarafından temsil edilen yönetilen hata ayıklama Yardımcısı (MDA) ile ilişkili bir tam XML akışı alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT GetXML (
   
 #### <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutunu `szName` dizi.  
+ [in] Boyutu `szName` dizisi.  
   
  `pcchName`  
- [out] XML akışı uzunluğu için bir işaretçi.  
+ [out] XML akışı uzunluğunu işaretçisi.  
   
  `szName`  
- [out] XML akışı depolanacağı bir dizi. Dizi boş olabilir.  
+ [out] XML akışı depolanacağı dizisi. Dizi, boş olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetXML` Yöntemi olası ilişkili XML akışı boyutuna bağlı olarak performansı etkiler.  
+ `GetXML` Yöntemi büyük olasılıkla ilişkili XML akışı boyutuna bağlı olarak performansı etkileyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugMDA Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugMDA Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

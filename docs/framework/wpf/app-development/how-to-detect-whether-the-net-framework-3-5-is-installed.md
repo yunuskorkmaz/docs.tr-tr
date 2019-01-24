@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: .NET Framework 3.5 yüklü olup olmadığını Algıla'
+title: 'Nasıl yapılır: .NET Framework 3.5 yüklü olup olmadığını algılama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 0d0f99dfa88216d0d768895ea751b0f62eccf701
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbdac46a52ae92ec7a8f6fb819a3da54ddccce7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636432"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Nasıl yapılır: .NET Framework 3.5 yüklü olup olmadığını Algıla
-Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir sistemde dağıtmadan önce [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], bunlar ilk olduğunu onaylaması gerekir [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] çalışma zamanının. Bu konuda yazılmış bir betik sağlar, yöneticilerin belirlemek için kullanabilecekleri HTML/JavaScript içinde olup olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] bir sistemde mevcut.  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Nasıl yapılır: .NET Framework 3.5 yüklü olup olmadığını algılama
+Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir sistemde dağıtmadan önce [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], bunlar ilk olduğunu onaylaması gerekir [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] çalışma zamanının. Bu konu, yazılan bir betik sağlar. Yöneticiler belirlemek için kullanabileceğiniz HTML/JavaScript içinde olup olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] bir sistemde mevcut.  
   
 > [!NOTE]
->  Yükleme, dağıtma ve algılama hakkında daha ayrıntılı bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bkz: [geliştiriciler için .NET Framework'ü yüklemek](../../../../docs/framework/install/guide-for-developers.md).  
+>  Yükleme, dağıtma ve algılama hakkında daha ayrıntılı bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="example"></a>Örnek  
- Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnekte basit bir HTML sayfasında yerleşik bir komut dosyası gösterilmektedir. Komut dosyası belirlemek için UserAgent dizesi arar olup olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] yüklü olduğundan ve arama sonuçlarını durum iletisini görüntüler.  
+ Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası belirlemek için UserAgent dizesi arar olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] yüklenir ve arama sonuçlarını temel bir durum iletisi görüntüler.  
   
 > [!NOTE]
->  Bu komut dosyası, Internet Explorer için tasarlanmıştır. Diğer tarayıcılarda UserAgent dizesi içinde .NET CLR bilgi içermeyebilir.  
+>  Bu betik, Internet Explorer için tasarlanmıştır. Diğer tarayıcılarda UserAgent dizesi içinde .NET CLR bilgileri içermeyebilir.  
   
 ```  
 <HTML>  
@@ -116,7 +116,7 @@ Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir 
 </HTML>  
 ```  
   
- ".NET CLR" sürüm için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:  
+ ".NET CLR" sürümü için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
@@ -128,5 +128,5 @@ Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir 
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)

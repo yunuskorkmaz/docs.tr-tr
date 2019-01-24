@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21dc937bef2bbe197a5dc4af72ff50dff64dbbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5004de587f715a2f3958c36999e432d7d6e9f2fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632666"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo Metodu
 Belirtilen işlev kimlikle ilişkili yerel kod kapsamını alır  
@@ -43,26 +43,26 @@ HRESULT GetCodeInfo(
  [in] Yerel kod ilişkilendirildiği işlevi kimliği.  
   
  `pStart`  
- [out] Yerel kod işlevinin oluşturan bir bayt dizisi için bir işaretçi.  
+ [out] İşlevin yerel kodu oluşturan bir bayt dizisine bir işaretçi.  
   
  `pcSize`  
- [out] Yerel kod bayt cinsinden boyutu belirten bir tamsayı gösteren bir işaretçi.  
+ [out] Yerel kod bayt cinsinden boyutunu belirten bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Performansı iyileştirmek için çalışma zamanında .NET Framework sürüm 2.0 işlevinin önceden derlenmiş, yerel kod birden fazla bölgeye böler. Sonuç olarak, `GetCodeInfo` yöntemi nedeni .NET Framework 2. 0 ' eski bir işlevin yerel kod kapsamını işleyemiyor. Profil oluşturucular geçiş daha genel kullanmaya `ICorProfilerInfo2::GetCodeInfo2` yöntemi yerine.  
+ Performansı iyileştirmek için önceden derlenmiş yerel kod bir işlevin .NET Framework sürüm 2.0 çalışma zamanında birden fazla bölgeye böler. Sonuç olarak, `GetCodeInfo` yöntemi artık kullanılmıyor .NET Framework 2.0 sürümünde çünkü bir işlevin yerel kodunu kapsamını işleyemiyor. Profil oluşturucular geçiş daha genel kullanarak `ICorProfilerInfo2::GetCodeInfo2` yöntemi yerine.  
   
- Bu işlev, çağıran tarafından ayrılan arabellek kullanır.  
+ Bu işlev, arayana ayrılan arabellekler kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

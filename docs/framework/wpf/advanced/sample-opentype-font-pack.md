@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d460eac13b99a503244503bdc3bbcaccfe649205
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600238"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu, örneğine genel bakış sağlar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılan yazı tipleri [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılabilen özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -53,7 +53,7 @@ Lindsey yazı tipi görüntüleme
 ## <a name="using-the-fonts"></a>Yazı tiplerini kullanma  
  Uygulamanızda yazı tipleri kullanabileceğiniz iki yolu vardır. Proje derleme içinde kaynak olarak gömülü içerik öğeleri olarak uygulamanıza yazı tipleri ekleyebilirsiniz. Alternatif olarak, yazı tiplerini uygulamanıza uygulamanın derleme dosyaları içinde gömülü proje kaynak öğeler olarak ekleyebilirsiniz. Daha fazla bilgi için [uygulamalarla yazı tiplerini paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Documents.Typography>  
- [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Uygulamalarla Yazı Tiplerini Paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Documents.Typography>
+- [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Uygulamalarla Yazı Tiplerini Paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

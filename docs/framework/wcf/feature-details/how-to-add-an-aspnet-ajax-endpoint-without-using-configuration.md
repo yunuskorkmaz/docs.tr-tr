@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme'
+title: 'Nasıl yapılır: Yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 18c02644319dd9d11be39ac4956a4dcf50db3078
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df4ba9657fda458a1c6c2b1199fb688135a8fa2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637232"
 ---
-# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Nasıl yapılır: Yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme
 Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten çağrılabilen bir ASP.NET AJAX etkinleştirilmiş bir uç nokta hizmetidir oluşturmanıza olanak sağlar. Böyle bir uç nokta oluşturmak için bir yapılandırma dosyası, tüm diğer WCF uç noktaları ile gibi kullanabilir veya yapılandırma öğeleri gerektirmeyen bir yöntem kullanın. Bu konuda, ikinci yaklaşım gösterilmektedir.  
   
  ASP.NET AJAX uç noktaları yapılandırma olmadan hizmetleri oluşturmak için Internet Information Services (IIS) tarafından Hizmetleri barındırılması gerekir. Bu yaklaşımı kullanarak bir ASP.NET AJAX uç noktası etkinleştirmeyi belirtin <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> Fabrika parametresi olarak [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) .svc dosyasında yönergesi. Bu özel fabrika bir ASP.NET AJAX uç noktası otomatik olarak yapılandırır ve böylece istemci Web sitesinde JavaScript'ten çağrılabilir bileşendir.  
   
  Çalışan bir örnek için bkz. [olmadan AJAX Hizmeti Yapılandırması](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
   
- Özetini yapılandırma öğeleri kullanarak bir ASP.NET AJAX uç noktası nasıl yapılandıracağınızı öğrenmek için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+ Özetini yapılandırma öğeleri kullanarak bir ASP.NET AJAX uç noktası nasıl yapılandıracağınızı öğrenmek için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Temel bir WCF hizmeti oluşturmak için  
   
@@ -96,6 +96,6 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
   
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> , Türetilmiş bir sınıfı <xref:System.ServiceModel.Activation.ServiceHostFactory>. Hizmet ana bilgisayar üreteci mekanizması ayrıntılı bir açıklaması için bkz. [genişletme barındırma ServiceHostFactory kullanarak](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) konu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
+- [Nasıl yapılır: AJAX etkinleştirilmiş ASP.NET Web hizmetlerini WCF'ye taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

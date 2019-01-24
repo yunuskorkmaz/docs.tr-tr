@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702554"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;kaldırma&gt; connectionManagement (ağ ayarları) için
 Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.  
@@ -74,7 +74,7 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

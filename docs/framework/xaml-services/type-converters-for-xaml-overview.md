@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659156"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 XAML biçimlendirmede bir dizeden belirli nesneleri bir nesne grafiğinin dönüştürür bir nesne yazıcısı için tür dönüştürücüleri tedarik mantığı. .NET Framework XAML hizmetlerinde tür dönüştürücüsünü türetildiği bir sınıf olmalıdır <xref:System.ComponentModel.TypeConverter>. Bazı dönüştürücüler ayrıca XAML kaydetme yolu desteklemek ve Serileştirme biçimlendirme dizesi forma bir nesneyi serileştirmek için kullanılan. Bu konu nasıl ve ne zaman XAML içinde tür dönüştürücüleri çağrılır ve, metot geçersiz kılmaları uygulama önerileri sağlar açıklar <xref:System.ComponentModel.TypeConverter>.  
@@ -107,7 +107,7 @@ XAML biçimlendirmede bir dizeden belirli nesneleri bir nesne grafiğinin dönü
 ## <a name="type-converters-in-the-xaml-node-stream"></a>XAML düğümü Stream içinde tür dönüştürücüleri  
  XAML düğümü akışı ile çalışıyorsanız, bir tür dönüştürücüsü nihai sonucu ve eylem henüz yürütülmez. Bir yükleme yolu sonunda yüklemek için türüne dönüştürülmesi gereken öznitelik dizesini bir metin değerinin başlangıç üyesi ve son üye olarak kalır. Bu işlemi kullanarak belirlenebilir için sonuçta gerekli tür dönüştürücüsünü <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> özelliği. Ancak, geçerli bir değer elde etme <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> açık olması gibi bilgileri temel alınan üye veya üyeyi kullanan nesne değeri türü erişebileceğiniz bir XAML şema içeriği kullanır. Tür dönüştürme davranışını çağırma ayrıca gerektirir XAML şema içeriği tür eşlemesi gerektirdiği için ve bir dönüştürücü örneği oluşturma.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ComponentModel.TypeConverterAttribute>  
- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ComponentModel.TypeConverterAttribute>
+- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

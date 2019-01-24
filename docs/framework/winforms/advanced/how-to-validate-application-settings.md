@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Ayarlarını Doğrulama'
+title: 'Nasıl yapılır: Uygulama ayarlarını doğrulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,46 +9,46 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496292"
 ---
-# <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
-Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmiştir.  
+# <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama ayarlarını doğrulama
+Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.  
   
- Uygulama ayarları kesin türü belirtilmiş olduğundan, kullanıcılar için belirli bir ayarı yanlış türde veri atayamazsınız bazı size güven verir. Ancak, kullanıcı hala kabul edilebilir sınırların dışında kalan bir ayar için bir değer atamaya deneyebilir — Örneğin, gelecekte oluşan bir doğum tarihi sağlama. <xref:System.Configuration.ApplicationSettingsBase>, tüm uygulama ayarlarını sınıfları, üst sınıfının denetimi gibi sınırları etkinleştirmek için dört olayları gösterir. Bu olayları işleme tüm doğrulama kodunuzu boyunca projenizin Saçılma yerine tek bir konuma yerleştirir.  
+ Uygulama ayarları kesin olarak belirlenmiştir, kullanıcılar için belirli bir ayarı yanlış türde veri atanamaz bazı güvenle sahip. Ancak, bir kullanıcı hala kabul edilebilir sınırları dışında kalan bir ayar için bir değer atamak denemiş olabilir — örneğin, gelecekte gerçekleşen bir doğum tarihi sağlama. <xref:System.Configuration.ApplicationSettingsBase>, üst sınıfı sınıflarının tüm uygulama ayarları, bu sınır denetimini etkinleştirmek için dört olayları gösterir. Bu olayları işleme doğrulama kodunuzun tamamını proje boyunca Saçılma yerine tek bir konuma yerleştirir.  
   
- Aşağıdaki tabloda açıklandığı gibi ayarlarınızı doğrulamanıza gerektiğinde, kullandığınız olay bağlıdır.  
+ Aşağıdaki tabloda açıklandığı gibi ayarlarınızı doğrulamak ihtiyacınız olduğunda kullandığınız olay bağlıdır.  
   
-|Olay|Geçişi ve kullanımı|  
+|Olay|Yinelenme ve kullanın|  
 |-----------|------------------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Ayarlar özellik grubu ilk yüklemeden sonra oluşur.<br /><br /> Bu olay, uygulama içinde kullanılmadan önce tüm özellik grubu için başlangıç değerlerini doğrulamak için kullanın.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Bir tek ayarları özelliğinin değeri değiştirilmeden önce gerçekleşir.<br /><br /> Bu olay, değiştirilmeden önce tek bir özellik doğrulamak için kullanın. Kullanıcılar kendi eylemleri ve seçenekler ile ilgili anında geri bildirim sağlayabilirsiniz.|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Bir tek ayarları özelliğinin değeri değiştikten sonra gerçekleşir.<br /><br /> Bu olay, değiştirildikten sonra tek bir özellik doğrulamak için kullanın. Uzun ve zaman uyumsuz doğrulama işlemi gerekli olmadığı sürece bu olay için doğrulama nadiren kullanılır.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Ayarlar özellik grubunda depolanan önce gerçekleşir.<br /><br /> Kalıcı yapılan önce tüm özellik grubunun değerlerini doğrulamak için bu olayı kullanın diske.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Ayarlar özellik grubu ilk yüklemesinden sonra gerçekleşir.<br /><br /> Uygulama içinde kullandıkları önce tüm özellik grubunun ilk değerlerini doğrulamak için bu olayı kullanın.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Bir tek ayarları özelliğinin değeri değiştirildikten hemen önce gerçekleşir.<br /><br /> Tek bir özellik, değiştirilmeden önceki doğrulamak için bu olayı kullanın. Kullanıcılar kendi Eylemler ve seçenekler ile ilgili anında geri bildirim sunabilir.|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Bir çoklu ayarları özelliğinin değeri değiştikten sonra gerçekleşir.<br /><br /> Tek bir özellik, değiştirildikten sonra doğrulamak için bu olayı kullanın. Uzun, zaman uyumsuz doğrulama işlemi gerekli olmadığı sürece bu olay için doğrulama nadiren kullanılır.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Ayarlar özellik grubunu depolanmadan önce gerçekleşir.<br /><br /> Kalıcı önce grubunun tüm özellik değerlerini doğrulamak için bu olayı kullanın diske.|  
   
- Tipik olarak, tüm bu olayları aynı uygulamadaki doğrulama amacıyla kullanmaz. Örneğin, genellikle yalnızca işleyerek tüm doğrulama gereksinimlerini karşılamak mümkündür <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
+ Genellikle, bu olayların aynı uygulama içindeki tüm doğrulama amacıyla kullanmaz. Örneğin, genellikle yalnızca işleyerek tüm doğrulama gereksinimlerini karşılamak mümkündür <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
   
- Geçersiz bir değer algıladığında, olay işleyici genellikle aşağıdaki eylemlerden birini gerçekleştirir:  
+ Geçersiz bir değer algıladığında bir olay işleyicisi genellikle aşağıdaki eylemlerden birini gerçekleştirir:  
   
--   Otomatik olarak gibi varsayılan değeri doğru olması için bilinen bir değerini sağlar.  
+-   Otomatik olarak varsayılan değer gibi doğru olduğu bilinen bir değer sağlar.  
   
--   Bilgi için sunucu kodu kullanıcı yeniden sorgular.  
+-   Bilgi için sunucu kodu kullanıcısı yeniden sorgular.  
   
--   İlişkili eylemlerinin önce aşağıdaki gibi başlatılan olayları için <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, kullanan <xref:System.ComponentModel.CancelEventArgs> işlemi iptal etmek için bağımsız değişken.  
+-   Önce ilişkili eylemlerinin, gibi harekete geçirilen olayları <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, kullandığı <xref:System.ComponentModel.CancelEventArgs> işlemi iptal etmek için bağımsız değişken.  
   
- Olay işleme hakkında daha fazla bilgi için bkz: [olay işleyicilerine genel bakış](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Olay işleme hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Aşağıdaki yordamları kullanarak geçerli doğum tarihini test etme Göster <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> veya <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay. Yordamlar, uygulamanızın ayarlarını önceden oluşturduğunuz varsayım altında yazılmış; Bu örnekte, adlı bir ayarda denetimi sınırları gerçekleştiririz `DateOfBirth`. Ayarları oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Aşağıdaki yordamlardan herhangi birini kullanarak geçerli bir doğum tarihi için test etme Göster <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> veya <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay. Yordamları, uygulama ayarlarınızı oluşturduysanız varsayım altında yazılmıştır; Bu örnekte biz sınır adlı ayarda denetimi gerçekleştirir `DateOfBirth`. Ayarları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Uygulama Ayarları nesnesini almak için  
   
--   Uygulama Ayarları nesnesini (sarmalayıcı örneği) referansı aşağıdaki madde işaretli öğelerden birini tamamlayarak alın:  
+-   Uygulama Ayarları nesnesini (sarmalayıcı örnek) başvuru aşağıdaki madde işaretli öğelerden birini tamamlayarak alın:  
   
-    -   Visual Studio uygulama ayarları iletişim kutusunda kullanarak ayarlarınızı oluşturduysanız **Özellik Düzenleyici**, dilinizi ifadesini aracılığıyla oluşturulan varsayılan ayarları nesnesi alabilirsiniz.  
+    -   Visual Studio uygulama ayarları iletişim kutusunda kullanarak ayarlarınızı oluşturduysanız **Özellik Düzenleyici**, dil ifadesini aracılığıyla oluşturulan varsayılan ayarları nesnesi alabilirsiniz.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
   
          -veya-  
   
-    -   Visual Basic Geliştirici misiniz ve uygulama ayarlarınızı, Proje Tasarımcısı'nı kullanarak oluşturduğunuz, kullanarak ayarlarınızı alabilirsiniz [My.Settings nesnesi](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    -   Visual Basic Geliştirici ve uygulama ayarlarınızı, Proje Tasarımcısı'nı kullanarak oluşturduğunuz kullanarak ayarlarınızı alabilirsiniz [My.Settings nesnesi](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          -veya-  
   
-    -   Türetme tarafından ayarlarınızı oluşturduysanız <xref:System.Configuration.ApplicationSettingsBase> doğrudan sınıfınız el ile örneği gerekir.  
+    -   Ayarlarınızı türeterek oluşturduysanız <xref:System.Configuration.ApplicationSettingsBase> doğrudan sınıfınıza el ile oluşturmak ihtiyacınız.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -74,15 +74,15 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
         Dim Settings as New MyCustomSettings()  
         ```  
   
- Aşağıdaki yordamlar, uygulama ayarları nesnesi bu yordam son madde işaretli öğenin tamamlayarak edinilen varsayımına altında yazılmıştır.  
+ Aşağıdaki yordamlar son madde işaretli öğesinde bu yordamı izleyerek uygulamanın ayarlar nesnesi edinilen varsayımı yazılmıştır.  
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Bir ayarı değiştirirken uygulama ayarlarını doğrulamak için  
   
-1.  C# Geliştirici, form veya denetimin olup olmadığını `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
+1.  Eğer bir C# geliştirici, form veya Denetim `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
   
      -veya-  
   
-     Visual Basic Geliştirici olup, bildirmelidir `Settings` değişken kullanarak `WithEvents` anahtar sözcüğü.  
+     Visual Basic Geliştirici olup, size bildirmelidir `Settings` değişken kullanarak `WithEvents` anahtar sözcüğü.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -97,7 +97,7 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
     End Sub   
     ```  
   
-2.  Olay işleyicisi tanımlama ve içinde sınırları doğum tarihi denetimi gerçekleştirmek için kod yazma.  
+2.  Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -124,9 +124,9 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
     End Sub  
     ```  
   
-### <a name="to-validate-application-settings-when-a-save-occurs"></a>Uygulama ayarları kaydetme zaman doğrulamak için oluşur  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a>Kaydetme, uygulama ayarlarını doğrulamak için gerçekleşir.  
   
-1.  Form veya denetimin `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay.  
+1.  Form veya Denetim `Load` olayı için olay işleyicisi eklemek <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
     End Sub  
     ```  
   
-2.  Olay işleyicisi tanımlama ve içinde sınırları doğum tarihi denetimi gerçekleştirmek için kod yazma.  
+2.  Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -160,6 +160,6 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
     End Sub  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Nasıl yapılır: Uygulama Ayarları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
