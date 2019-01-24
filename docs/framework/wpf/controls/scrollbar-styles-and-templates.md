@@ -9,50 +9,50 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: 926fc3373bb40eb12462dcead278d458cefad7cf
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: d38173cad01e0f2d17cd53be102e0b8afd75d608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642980"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar Stilleri ve Şablonları
-Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.Primitives.ScrollBar> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="scrollbar-parts"></a>ScrollBar bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda listelenmektedir <xref:System.Windows.Controls.Primitives.ScrollBar> denetim.  
+## <a name="scrollbar-parts"></a>Kaydırma çubuğu bölümleri  
+ Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
   
 |Bölümü|Tür|Açıklama|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Kapsayıcı konumunu gösterir öğesinin <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Kapsayıcı konumunu gösteren bir öğe için <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
-## <a name="scrollbar-states"></a>ScrollBar durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.Primitives.ScrollBar> denetim.  
+## <a name="scrollbar-states"></a>Kaydırma çubuğu durumları  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Fare üzerinde|CommonStates|Fare işaretçisini üzerinde denetim konumlandırıldı.|  
-|Devre dışı|CommonStates|Denetim devre dışı bırakıldı.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Devre dışı|CommonStates|Denetim devre dışıdır.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
-## <a name="scrollbar-controltemplate-example"></a>ScrollBar ControlTemplate Örneği  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Primitives.ScrollBar> denetim.  
+## <a name="scrollbar-controltemplate-example"></a>Kaydırma çubuğu ControlTemplate Örneği  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
   
  [!code-xaml[ControlTemplateExamples#ScrollBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  
   
- Önceki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

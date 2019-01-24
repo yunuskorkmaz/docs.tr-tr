@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 806675c35c0463047646c70a54f80a69d57dffa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574852"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
 Bir sorgu sonucunun öğelerini gruplandırır. Ayrıca her grup için toplama işlevleri uygulamak için kullanılabilir. Gruplandırma işlemi, bir veya daha fazla anahtarlar üzerinde temel alır.  
@@ -51,7 +51,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
     Into Group  
     ```  
   
-     veya  
+     -veya-  
   
     ```  
     Into <alias> = Group  
@@ -69,11 +69,11 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
+- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)

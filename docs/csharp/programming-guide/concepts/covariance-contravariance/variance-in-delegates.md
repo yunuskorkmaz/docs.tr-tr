@@ -2,12 +2,12 @@
 title: Temsilcilerde varyans (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657213"
 ---
 # <a name="variance-in-delegates-c"></a>Temsilcilerde varyans (C#)
 .NET framework 3.5, tüm temsilciler C# içindeki temsilci türleriyle yöntem imzalarının eşleştirilmesi için varyans desteği sunmuştur. Yalnızca imzalarının eşleştirilmesi içeren yöntemlerin yanı sıra temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip bir parametre kabul eden ya da daha fazla türetilmiş türler (kovaryans) döndüren yöntemler için atayabileceğiniz anlamına gelir temsilciler . Bu, hem genel hem de genel olmayan temsilcileri içerir.  
@@ -196,8 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel Türler](~/docs/standard/generics/index.md)  
-- [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
-- [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Genel Türler](~/docs/standard/generics/index.md)
+- [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

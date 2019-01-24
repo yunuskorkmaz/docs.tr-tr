@@ -2,12 +2,12 @@
 title: Güvenli istemci uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599627"
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güvenlik açıklarına karşı korunması gereken birçok bölümü oluşur. Güvenli kullanıcı arabirimleri oluşturmak, birçok sorunu verileri veya sistem kaynaklarına erişebilmeniz için önce saldırganların engelleyerek engelleyebilirsiniz.  
@@ -51,7 +51,7 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[NIB: ASP.NET güvenlik](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET uygulamalarının güvenliğini nasıl ele alınmaktadır.|  
+|[NIB: ASP.NET güvenliği](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET uygulamalarının güvenliğini nasıl ele alınmaktadır.|  
 |[ASP.NET kullanılarak oluşturulan XML Web Hizmetleri güvenli hale getirme](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET Web hizmeti için güvenlik uygulamak nasıl ele alınmaktadır.|  
 |[Betik açıklara genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Kötü amaçlı karakterler bir Web sayfasına eklemek için çalışır bir betik yararlanma saldırılara karşı koruma sağlamak nasıl ele alınmaktadır.|  
 |[ASP.NET Web uygulamaları için NIB: temel güvenlik uygulamaları](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Genel güvenlik bilgileri ve bağlantılar daha fazla tartışma için|  
@@ -65,9 +65,9 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
 |[Uzaktan iletişim güvenlik](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Kimlik doğrulaması ve şifreleme hem de uzaktan iletişim için ilgili ek güvenlik konuları açıklanmaktadır.|  
 |[Güvenlik ve uzaktan yönetim konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı kesişimi ile ilgili güvenlik konuları açıklanmaktadır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)  
- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)
+- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

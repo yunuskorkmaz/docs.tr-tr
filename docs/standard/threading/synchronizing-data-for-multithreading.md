@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617921"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrı yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi takdirde bir iş parçacığı başka bir iş parçacığı yaptığı yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Böyle kesintilerden korunan üyeleri bir sınıf, iş parçacığı güvenli olarak adlandırılır.  
@@ -69,8 +69,8 @@ Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağ
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
-- [Eşitleme Temellerine Genel Bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [SyncLock Deyimi](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)
+- [Eşitleme Temellerine Genel Bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [SyncLock Deyimi](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock Deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md)

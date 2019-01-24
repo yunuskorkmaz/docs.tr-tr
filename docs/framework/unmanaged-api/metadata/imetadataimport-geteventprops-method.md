@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552365"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Metodu
-Belirtilen olay belirteci bildiri türü, Ekle ve temsilciler remove yöntemlerini ve herhangi bir bayrağı ve diğer ilişkili veriler de dahil olmak üzere tarafından temsil edilen olay için meta veri bilgilerini alır.  
+Bildirim türü, Ekle ve Kaldır Temsilciler, yöntemleri ve tüm bayraklar ve ilişkili diğer veri gibi belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,50 +49,50 @@ HRESULT GetEventProps (
   
 #### <a name="parameters"></a>Parametreler  
  `ev`  
- [in] Meta verilerini almak için olay temsil eden olay meta veri simgesi.  
+ [in] Meta verilerini almak için bir olayı temsil eden olay meta veri belirteci.  
   
  `pClass`  
- [out] Olay bildirir sınıfı temsil eden TypeDef belirteci için bir işaretçi.  
+ [out] TypeDef simgesi sınıfı temsil eden bir işaretçi, bir olay bildirir.  
   
  `szEvent`  
- [out] Tarafından başvurulan olayın adı `ev`.  
+ [out] Tarafından başvuruda bulunulan olay adı `ev`.  
   
  `pchEvent`  
  [in] Geniş karakter cinsinden istenen uzunluğu `szEvent`.  
   
  `pdwEventFlags`  
- [out] Geniş karakter cinsinden döndürülen uzunluğu `szEvent`.  
+ [out] Geniş karakter cinsinden uzunluk `szEvent`.  
   
  `ptkEventType`  
- [out] Bir TypeRef veya TypeDef meta verileri belirteci gösteren bir işaretçi <xref:System.Delegate> olay türü.  
+ [out] TypeRef veya TypeDef meta veri belirteci temsil eden bir işaretçisi <xref:System.Delegate> olay türü.  
   
  `pmdAddOn`  
- [out] Olay işleyicileri ekler yöntemi temsil eden meta veri simgesi için bir işaretçi.  
+ [out] Olay işleyicileri ekler yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `pmdRemoveOn`  
- [out] Olay işleyicileri kaldırır yöntemi temsil eden meta veri simgesi için bir işaretçi.  
+ [out] Olay işleyicilerini kaldırır yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `pmdFire`  
- [out] Olayı oluşturan yöntemi temsil eden meta veri simgesi için bir işaretçi.  
+ [out] Olayı oluşturan yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `rmdOtherMethod`  
- [out] Olayla ilişkili diğer yöntemleri için belirteç işaretçiler dizisi.  
+ [out] Bir olay ile ilişkili diğer yöntemleri için belirteci bir işaretçiler dizisi.  
   
  `cMax`  
- [in] En büyük boyutunu `rmdOtherMethod` dizi.  
+ [in] En büyük boyutunu `rmdOtherMethod` dizisi.  
   
  `pcOtherMethod`  
- [out] Döndürülen belirteçleri sayısı `rmdOtherMethod`.  
+ [out] Döndürülen belirteç sayısı `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

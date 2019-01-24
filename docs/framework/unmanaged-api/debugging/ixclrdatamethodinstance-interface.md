@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5bf724bc76591ae59c073b5b9a788ca065f51dc0
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 0eef69cea9f59911b5076f56579b0192be357431
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659117"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance arabirimi
 
@@ -45,7 +45,7 @@ Bu arabirim, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler v
 **Kitaplığı:** Hiçbiri  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

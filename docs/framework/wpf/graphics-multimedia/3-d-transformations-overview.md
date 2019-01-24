@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646376"
 ---
 # <a name="3-d-transformations-overview"></a>3B Dönüşümlere Genel Bakış
 Bu konu, 3B modeller dönüştürmeleri uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik sistemi. Dönüştürmeleri geliştiricinin yeniden konumlandırma, yeniden boyutlandırma ve bunları tanımlayan temel değerleri değiştirmeden modelleri yeniden yönlendirme sağlar.  
@@ -67,7 +67,7 @@ ScaleVector Örneği
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- Not:[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B bir döndürme açısı pozitif değerini bir saat yönünün döndürme eksen hakkında sonuçlanır anlamına gelir. bir sağ taraf yönelimli sistemi olan.  
+ Not:[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B bir döndürme açısı pozitif değerini bir saat yönünün döndürme eksen hakkında sonuçlanır anlamına gelir sağ taraf yönelimli bir sistemdir.  
   
  Eksen açı döndürmeleri varsayar kaynağa döndürme için bir değer belirtilmezse <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>, <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>, ve <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A> RotateTransform3D özellikleri. Ölçeklendirme gibi döndürme modelin bütün koordinat dönüştüren unutmayın yardımcı olur. Modeli kaynak oluşturulmamış ya da önceden çevrilmiş döndürme "yerinde döndürmek yerine kaynağa pivot".  
   
@@ -105,7 +105,7 @@ Döndürme örneği
   
  Kamera modelleri de olduğundan, kamera özellikleri de dönüştürmek mümkündür.  Görünümü sahnenin kamera konumu veya düzlem uzaklıklarını dönüştürerek kesinlikle değiştirebilirsiniz ancak — aslında tüm Sahne projeksiyon dönüştürme — bu şekilde elde etkileri birçoğu kadar "visual" Görüntüleyicisi çoğaltılmasının anlamı olmayabilir olduğunu unutmayın Konum veya modelleri konumunu sahnedeki uygulanmış olarak dönüşümler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [2B dönüşümleri örneği](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Ayrıca bkz.
+- [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [2B dönüşümleri örneği](https://go.microsoft.com/fwlink/?LinkID=158252)

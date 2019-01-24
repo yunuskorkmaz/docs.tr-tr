@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503170"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Tarih ve saatlerle aritmetik işlemler gerçekleştirme
 
@@ -78,7 +78,7 @@ Göstermek için gün ışığından yararlanma saatine ABD'deki geçiş Merkezi
 
 Ayrıntılar için bkz [saatleri saat dilimleri arasında dönüştürme](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> Sınıfı, tarih ve saat aritmetiği gerçekleştirdiğinizde ayarlama kuralları otomatik olarak geçerli olan herhangi bir yöntem sağlamaz. Ancak, bir saat dilimindeki saati UTC'ye dönüştürme, aritmetik işlemi gerçekleştiren ve ardından saat dilimindeki saati dön UTC'den dönüştürme bunu yapabilirsiniz. Ayrıntılar için bkz [nasıl yapılır: tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> Sınıfı, tarih ve saat aritmetiği gerçekleştirdiğinizde ayarlama kuralları otomatik olarak geçerli olan herhangi bir yöntem sağlamaz. Ancak, bir saat dilimindeki saati UTC'ye dönüştürme, aritmetik işlemi gerçekleştiren ve ardından saat dilimindeki saati dön UTC'den dönüştürme bunu yapabilirsiniz. Ayrıntılar için bkz [nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Örneğin, aşağıdaki kod iki-ve-a-yarım saat 2: 00'da için eklenen önceki koda benzer 9 Mart 2008. Ancak, tarih ve saat aritmetiği gerçekleştirir ve ardından sonucu UTC'den merkezi standart saat geri dönüştürür önce merkezi standart saat UTC'ye dönüştürür olduğundan, sonuçta elde edilen zaman merkezi standart saat diliminin gün ışığından geçiş yansıtır saat.
 
@@ -87,5 +87,5 @@ Ayrıntılar için bkz [saatleri saat dilimleri arasında dönüştürme](../../
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-* [Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

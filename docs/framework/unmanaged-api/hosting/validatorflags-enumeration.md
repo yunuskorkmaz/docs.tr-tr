@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492228"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags Numaralandırması
-Çağrıda gerçekleştirilmelidir doğrulama türünü belirtmek değerleri içeren [Iclrvalidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) yöntemi.  
+Bir çağrıda gerçekleştirilmelidir doğrulama türünü gösteren değerleri içerir [Iclrvalidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,21 +42,21 @@ enum ValidatorFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|Yalnızca Microsoft Ara dilde (MSIL) yürütülebilir dosyası doğrulanması gerektiğini belirtir.|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Yalnızca yürütülebilir dosyasının biçimi doğrulanmalıdır belirtir.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Her türlü doğrulama gerçekleştirilen ve bildirilen belirtir.|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|Yürütülebilir dosya biçimi doğrulanmazsa belirtir.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Doğrulama hatası iletilerinin doğrulama hataları Yükselt kaynak kod satırlarını içermelidir belirtir. Bu alanın değeri .NET Framework 2.0 sürümünde geçerli değil.|  
+|`VALIDATOR_CHECK_ILONLY`|Yalnızca Microsoft Ara dilini (MSIL) yürütülebilir dosyasına doğrulanmalıdır belirtir.|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Sadece yürütülebilir dosya biçimi doğrulanmalıdır belirtir.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Tüm doğrulama türlerinin gerçekleştirilen ve üzerinde bildirilen belirtir.|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|Yürütülebilir dosya biçiminin geçerliliğinin doğrulanması belirtir.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Doğrulama hatası iletilerinin doğrulama hatalarını yükseltmek kaynak kodu satırlarını içermesi gerektiğini belirtir. Bu alanın değeri, .NET Framework 2.0 sürümünde geçerli değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator.idl, IValidator.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: d362f181921a39d274eaee78e85976522ce4fc15
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 73ffb1319e6724a13a80b3cd1ca6985e4cbac05c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567067"
 ---
 # <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
 Bir tür parametresi ad ve açıklama tanımlar.  
@@ -38,5 +38,5 @@ Bir tür parametresi ad ve açıklama tanımlar.
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

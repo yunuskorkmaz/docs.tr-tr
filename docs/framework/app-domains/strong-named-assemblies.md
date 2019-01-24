@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657304"
 ---
 # <a name="strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler
 Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturur ve birleştirme çakışmalarını engelleyebilir.  
@@ -20,7 +20,7 @@ Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturu
 ## <a name="what-makes-a-strong-named-assembly"></a>Bir katı adlı derleme yapan nedir?  
  Güçlü adlı bir derleme, derleme ve derlemenin kendisini dağıtılmış ortak anahtarına karşılık gelen özel anahtar kullanılarak oluşturulur. Derleme adları ve derlemeyi oluşturan tüm dosyaların karma değerlerini içeren derleme bildirimini içerir. Aynı tanımlayıcı ada sahip derlemelerin aynı olmalıdır.  
   
- Tanımlayıcı ad derlemeleri, Visual Studio veya bir komut satırı aracını kullanarak yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: bir derlemeyi tanımlayıcı bir adla imzalamak](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Tanımlayıcı ad derlemeleri, Visual Studio veya bir komut satırı aracını kullanarak yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir derlemeyi katı bir adla imzalamak](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
  Bir katı adlı derleme oluşturulduğunda derleme, sürüm numarası, isteğe bağlı bir kültür bilgilerini, bir dijital imza ve imzalama için kullanılan özel anahtarına karşılık gelen ortak anahtarı basit metin adı içerir.  
   
@@ -42,8 +42,8 @@ Tanımlayıcı adlandırma bir derleme, derleme için benzersiz kimlik oluşturu
   
  Bir açık kaynak geliştiricisi olan ve bir tanımlayıcı adlı bütünleştirilmiş kod kimliği avantajlarını istiyorsanız bir derlemeye kaynak denetim sisteminiz ile ilişkili özel anahtarı denetlemeyi düşünün.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
-- [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
+- [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

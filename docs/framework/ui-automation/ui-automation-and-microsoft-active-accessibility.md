@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603748"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "48036220"
  Bu konu, ana özelliklerini içerir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ve bu özelliklerin nasıl farklılık açıklanmaktadır [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
 <a name="Programming_Languages_compare"></a>   
-## <a name="programming-languages"></a>Programlama dilleri  
+## <a name="programming-languages"></a>Programlama Dilleri  
 <[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] dayanır [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] çift arabirim desteği ile ve bu nedenle C/C++, programlanabilir [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]ve komut dosyası dili. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (Standart denetimler için istemci tarafı sağlayıcı kitaplığını dahil), yönetilen kodda yazılır ve C# veya Visual Basic .NET kullanarak UI otomasyon istemci uygulamaları en kolay programlanmıştır. Arabirim uygulamalarıdır, UI Otomasyonu sağlayıcıları, yönetilen kodda veya C/C++ yazılabilir.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
@@ -251,5 +251,5 @@ ms.locfileid: "48036220"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Modeli aracılığıyla diğer sağlayıcısı kodu çağırmak sağlayıcıları gereksinimini ortadan kaldırır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Çekirdek hizmeti tüm gerekli toplama yapar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)

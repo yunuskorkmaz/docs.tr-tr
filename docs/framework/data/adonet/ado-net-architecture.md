@@ -2,12 +2,12 @@
 title: ADO.NET mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623189"
 ---
 # <a name="adonet-architecture"></a>ADO.NET mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
@@ -56,6 +56,6 @@ ADO.NET mimarisi
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , yakınsama `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: ColorDialog Bileşeni ile Renk Paleti Gösterme'
+title: 'Nasıl yapılır: ColorDialog bileşeni ile renk paleti gösterme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ea12fe19b6c8c7464f0820267face8a1d66de784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34da70280ff6e5b850469e7ba041cc7c7aaf1f47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637131"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Nasıl Yapılır: ColorDialog Bileşeni ile Renk Paleti Gösterme
-[ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) bileşen renk paletini görüntüler ve kullanıcının seçildi renk içeren bir özellik döndürür.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Nasıl yapılır: ColorDialog bileşeni ile renk paleti gösterme
+[ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) bileşeni bir renk paletini görüntüler ve kullanıcının seçtiği bir renk içeren bir özelliğini döndürür.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>ColorDialog bileşeni kullanarak bir renk seçmek için  
   
 1.  İletişim kutusunu kullanarak görüntüleme <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi.  
   
-2.  Kullanım <xref:System.Windows.Forms.DialogResult> iletişim kutusunun nasıl kapatıldığını belirlemek için özellik.  
+2.  Kullanım <xref:System.Windows.Forms.DialogResult> özelliği iletişim kutusu nasıl kapatıldığı belirler.  
   
 3.  Kullanım <xref:System.Windows.Forms.ColorDialog.Color%2A> özelliği <xref:System.Windows.Forms.ColorDialog> seçilen rengini ayarlamak için bileşen.  
   
-     Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır bir <xref:System.Windows.Forms.ColorDialog> bileşeni. Bir renk seçilen ve kullanıcı olduğunda tıklar **Tamam**, <xref:System.Windows.Forms.Button> denetimin arka plan rengi, seçilen renk ayarlanır. Formunuz sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetim ve <xref:System.Windows.Forms.ColorDialog> bileşeni.  
+     Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır bir <xref:System.Windows.Forms.ColorDialog> bileşeni. Bir renk seçilen ve kullanıcı olduğunda tıkladığında **Tamam**, <xref:System.Windows.Forms.Button> denetimin arka plan rengi seçilen renge ayarlayın. Formunuza sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi ve bir <xref:System.Windows.Forms.ColorDialog> bileşeni.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,6 +76,6 @@ ms.locfileid: "33536933"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ColorDialog>  
- [ColorDialog Bileşeni](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ColorDialog>
+- [ColorDialog Bileşeni](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)

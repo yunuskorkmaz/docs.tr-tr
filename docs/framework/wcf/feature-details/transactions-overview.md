@@ -6,40 +6,40 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548488"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation İşlemleri Genel Bakış
-İşlemler eylemler veya tek bir bölünemez birime işlemleri yürütme kümesini gruplamak için bir yol sağlar. Bir işlem, aşağıdaki özelliklere sahip işlemleri koleksiyonudur:  
+İşlem, bir dizi eylem veya işlemi tek bir bölünemez biriminde yürütme gruplamak için bir yol sağlar. Bir işlem, aşağıdaki özelliklere sahip işlemleri koleksiyonudur:  
   
--   Atom oranı. Bu, belirli bir işlem altında tamamlandı güncelleştirmelerini kaydedilen ve dayanıklı hale ya da bunlar tüm durduruldu ve önceki durumlarına geri olduğunu sağlar.  
+-   Özellik sağlar. Bu da tüm güncelleştirmeleri belirli bir işlem altında tamamlandı taahhüt verdiniz ve dayanıklı hale veya bunlar tüm durduruldu ve önceki durumlarına geri sağlar.  
   
--   Tutarlılık. Bu, bir işlem altında yapılan değişiklikleri tutarlı bir durumdan diğerine dönüştürme temsil ettiğini garanti eder. Örneğin, para tasarrufu hesabına denetleme hesabından aktaran bir işlem genel banka hesabı para miktarını değiştirmez.  
+-   Tutarlılık. Bu, bir işlem altında yapılan değişiklikleri tutarlı bir durumdan diğerine dönüştürme temsil garanti eder. Örneğin, para tasarrufu hesabına denetleme hesabından aktaran bir işlem genel banka hesabı miktarda değiştirmez.  
   
--   Yalıtım. Bu, diğer eşzamanlı işlemler ait kaydedilmemiş değişiklikler Gözlemleme gelen bir işlem engeller. Bir işlem sağlarken eşzamanlılık bir soyutlamasını başka bir işlemin yürütülmesi beklenmeyen bir etkiye sahip olamaz, yalıtım da sağlar.  
+-   Yalıtım. Bu, diğer eş zamanlı işlem ait kaydedilmemiş değişiklikler gözleme gelen bir işlem engeller. Bir işlem sağlarken eşzamanlılık bir soyutlamasıdır üzerinde başka bir işlemin yürütülmesi beklenmeyen bir etkiye sahip olamaz yalıtım sağlar.  
   
--   Dayanıklılık. Bu tamamlandıktan sonra yönetilen kaynaklar (örneğin, bir veritabanı kaydını) güncelleştirmeleri hataları karşısında kalıcı olması anlamına gelir.  
+-   Dayanıklılık. Bu tamamlandıktan sonra yönetilen kaynaklara (örneğin, bir veritabanı kaydı) güncelleştirmeleri sorunla karşılaşıldığında kalıcı anlamına gelir.  
   
- Windows Communication Foundation (WCF) zengin bir Web hizmeti uygulamanız dağıtılmış işlemler oluşturmanıza olanak sağlayan özellikler kümesi sağlar.  
+ Windows Communication Foundation (WCF) zengin bir Web hizmeti uygulamanızda dağıtılmış işlemler oluşturmanıza olanak sağlayan özellikler sunar.  
   
- WCF akışı işlemleri, üçüncü taraf teknolojisi kullanılarak oluşturulan birlikte çalışabilen Web Hizmetleri gibi birlikte çalışabilen uygulamaları WCF uygulamaları etkinleştirir WS-AtomicTransaction (WS-AT) protokolü için destek uygular. WCF da burada işlem akışını etkinleştirmek için birlikte çalışma işlevselliği gerekmez senaryolarda kullanılabilir OLE hareketleri protokolü için destek uygular.  
+ WCF üçüncü taraf teknolojisi kullanılarak oluşturulan birlikte çalışabilen Web Hizmetleri gibi birlikte çalışabilen uygulamalar için akış işlem WCF uygulamaları etkinleştiren WS-AtomicTransaction (WS-AT) protokolü için destek uygular. WCF burada işlem akışını etkinleştirmek için birlikte çalışma işlevselliği gerekmez senaryolarda kullanılabilir OLE işlemlerin protokolü için desteği de uygular.  
   
- Uygulama yapılandırma dosyası etkinleştirmek ya da işlem akışını devre dışı bırakmak, aynı zamanda bir bağlama üzerinde istenen işlem protokolü ayarlamak için bağlamalar yapılandırmak için kullanabilirsiniz. Ayrıca, yapılandırma dosyası kullanarak hizmet düzeyinde işlem zaman aşımlarını ayarlayabilirsiniz. Daha fazla bilgi için bkz: [işlem akışını etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Uygulama yapılandırma dosyası, etkinleştirmek veya devre dışı işlem akışı yanı sıra, istenen işlem protokolünü üzerindeki bir bağlamaya ayarlamak için bağlamalar yapılandırmak için kullanabilirsiniz. Ayrıca, işlem zaman aşımlarını yapılandırma dosyası kullanarak hizmet düzeyinde ayarlayabilirsiniz. Daha fazla bilgi için [işlem akışını etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
- İşlem öznitelikleri <xref:System.ServiceModel> ad alanı, aşağıdakileri yapmak izin ver:  
+ İşlem öznitelikleri içinde <xref:System.ServiceModel> ad alanı, aşağıdakileri yapmak izin ver:  
   
--   İşlem zaman aşımlarını ve yalıtım düzeyi kullanılarak filtrelemeyi yapılandırmak <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği.  
+-   İşlem zaman aşımları ve yalıtım düzeyi kullanılarak filtreleme yapılandırma <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği.  
   
--   İşlemler işlevselliğini etkinleştirmek ve işlem tamamlama davranışını kullanarak yapılandırma <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliği.  
+-   İşlem işlevselliğini etkinleştirmek ve işlem tamamlama davranışını kullanarak yapılandırma <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliği.  
   
--   Kullanım <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> gerektirecek şekilde bir sözleşme yöntemi özniteliklerinde izin verin veya işlem akışını reddedin.  
+-   Kullanım <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> gerektirecek şekilde bir sözleşme yöntemi özniteliklerinde veya işlem akışı engellediği.  
   
- Daha fazla bilgi için bkz: [ServiceModel işlem öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Daha fazla bilgi için [ServiceModel işlem öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceModel İşlem Öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- [İşlem Akışını Etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ServiceModel İşlem Öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+- [İşlem Akışını Etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563061"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; öğesi
 Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri içerir.  Dinleyiciler, varsayılan olarak tüm izlemeleri almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir. Paylaşılan dinleyiciler tanımlanan dinleyicileri adına göre kaynakları veya izlemeleri eklenebilir.  
@@ -90,7 +90,7 @@ Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri içerir. 
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.TraceListener>  
- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.TraceListener>
+- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma"
+title: 'Nasıl yapılır: Ekleme ve öğeleri tek tek bir BlockingCollection alır'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0e24c6b5aa02e8bc7ca4bcbf2c69bffd06216962
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535453"
 ---
-# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma
+# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Ekleme ve öğeleri tek tek bir BlockingCollection alır
 Bu örnek nasıl öğelerinden ekleyip gösterir bir <xref:System.Collections.Concurrent.BlockingCollection%601> bir engelleyici ve engelleyici olmayan bir şekilde. Daha fazla bilgi için <xref:System.Collections.Concurrent.BlockingCollection%601>, bkz: [BlockingCollection genel bakışı](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
- Numaralandırma örneği için bir <xref:System.Collections.Concurrent.BlockingCollection%601> boş ve daha fazla öğe eklenecek kadar bkz [nasıl yapılır: bir BlockingCollection öğeleri kaldırmak için ForEach kullanım](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
+ Bir numaralandırma örneği bir <xref:System.Collections.Concurrent.BlockingCollection%601> boş ve daha fazla öğe eklenecek kadar bkz [nasıl yapılır: Bir Blockingcollection'daki öğeleri kaldırmak için ForEach kullanma](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
   
 ## <a name="example"></a>Örnek  
  Bu ilk örnekte, böylece işlemleri geçici olarak koleksiyon geçerli olduğunda engeller ve eklemek için öğeleri (çekerken) boş veya (eklerken) maksimum kapasite veya belirtilen zaman aşımı süresi dolduysa gösterilmektedir. Oluşturucuda belirtilen en yüksek kapasiteli Blockingcollection'a oluşturulduğunda kapasite üst sınırı engelleme yalnızca etkin olduğunu unutmayın.  
@@ -36,5 +36,5 @@ Bu örnek nasıl öğelerinden ekleyip gösterir bir <xref:System.Collections.Co
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [BlockingCollection’a Genel Bakış](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)

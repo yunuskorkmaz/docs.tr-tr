@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: ab8b416afb03b5ce0a64f46c3d7ca5d363d4fd34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672107"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Controls.ScrollViewer> uygulamalarınızda kaydırılabilir bölgeler oluşturmak için öğesi.  
+Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Controls.ScrollViewer> kaydırılabilir bölgeler uygulamalarınızı oluşturmak için öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ScrollChanged Olayını İşleme](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
@@ -27,6 +27,6 @@ Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Window
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)

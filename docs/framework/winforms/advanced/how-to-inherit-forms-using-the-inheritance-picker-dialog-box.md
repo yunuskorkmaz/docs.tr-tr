@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma'
+title: 'Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601837"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
      Taban formun görünüşünü değiştirme hakkında daha fazla bilgi için bkz: [taban formun görünüşünü değiştirmenin etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katman](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katmanlara](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

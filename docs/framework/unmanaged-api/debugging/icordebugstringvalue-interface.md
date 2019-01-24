@@ -1,5 +1,5 @@
 ---
-title: Icordebugstringvalue Interface1
+title: Icordebugstringvalue arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2814f6164f383c36bb5b8e20ce8996b30eef0f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596845"
 ---
-# <a name="icordebugstringvalue-interface1"></a>Icordebugstringvalue Interface1
-Dize değerlerini geçerlidir Icordebugheapvalue sınıfıdır.  
+# <a name="icordebugstringvalue-interface1"></a>Icordebugstringvalue arabirimi1
+Dize değerlerine uygulanan Icordebugheapvalue öğesinin.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -36,16 +36,16 @@ Dize değerlerini geçerlidir Icordebugheapvalue sınıfıdır.
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe5e1267b619d5900ed9af55dd6079a8f38d6550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706978"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason Numaralandırması
-Bir iş parçacığı neden engellenmiş duruma nedeniyle belirli bir nesne üzerinde belirtir.  
+Belirli bir nesne üzerinde bir iş parçacığı neden engellenmiş duruma nedenlerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ Typedef enum CorDebugBlockingReason
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`BLOCKING_NONE`|Yalnızca dahili kullanım.|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|Bir iş parçacığı bir nesne üzerinde İzleyici kilit ile ilişkili kritik bölüm almaya çalışıyor. Birini çağırın genellikle, bu oluşur <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> veya <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> yöntemleri.|  
-|`BLOCKING_MONITOR_EVENT`|Bir iş parçacığı bir nesne için İzleyici kilidi ile ilişkili olay bekliyor. Birini çağırın genellikle, bu oluşur <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` yöntemleri.|  
+|`BLOCKING_NONE`|Yalnızca iç kullanım.|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|Bir iş parçacığı, bir nesne izleme kilidi ile ilişkili olan kritik bölümü almaya çalışıyor. Biri çağırdığınızda genelde böyle <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> veya <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> yöntemleri.|  
+|`BLOCKING_MONITOR_EVENT`|Bir iş parçacığı, bir nesne için İzleyici kilit ile ilişkili olay bekleniyor. Biri çağırdığınızda genelde böyle <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` yöntemleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Zaman `BLOCKING_MONITOR_CRITICAL_SECTION` veya `BLOCKING_MONITOR_EVENT` üye kullanılıyor bir [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısı, `pBlockingObject` giriliyor nesneyi temsil eden bir "ICorDebugValue" arabirim yapısı noktalarına üyesi . Uygulamak için de garanti [Icordebugheapvalue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) arabirimi.  
+ Zaman `BLOCKING_MONITOR_CRITICAL_SECTION` veya `BLOCKING_MONITOR_EVENT` üyesi kullanılan bir [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısını `pBlockingObject` yapısı noktalarına giriliyor nesnesini temsil eden bir "ICorDebugValue" arabirim üyesi . Uygulamak için de garanti [Icordebugheapvalue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) arabirimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

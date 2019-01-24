@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731276"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
   
- Bir WCF hizmeti oluşturma hakkında daha fazla bilgi WAS barındırma ortamında çalışan için bkz: [nasıl yapılır: was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Bir WCF hizmeti oluşturma hakkında daha fazla bilgi WAS barındırma ortamında çalışan için bkz: [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  WAS işlem modeli, uygulamaların daha sağlam, daha kolay yönetilebilir ve kaynakları verimli kullanan bir biçimde barındırılmasına olanak sağlayan birçok özellik sunar:  
   
@@ -40,7 +40,7 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
 |Senaryo|Site bağlamaları|Uygulama yolu|Temel uygulama URI'ler|  
 |--------------|-------------------|----------------------|---------------------------|  
 |Yalnızca HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />NET.TCP://localhost/appTwo/|  
+|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |HTTP olmayan yalnızca|NET.pipe: *|/appThree|NET.pipe://appThree/|  
   
  Hizmet ve uygulama içindeki kaynaklara da çözülebilir. Uygulamanın içinde uygulama kaynaklarını temel uygulama yoluyla göreli ele alınır. Örneğin, bir sitede bir makine adı contoso.com, hem HTTP hem de Net.TCP protokoller için site bağlamaları içerdiğini varsayar. Ayrıca site GetOrders.svc bir hizmeti sunan /Billing konumunda bulunan bir uygulama içerdiğini varsayın. Daha sonra GetOrders.svc hizmeti SecureEndpoint göreli adresi olan bir uç nokta kullanıma sunulan, hizmet uç noktası aşağıdaki iki bir URI'leri sırasında ortaya:  
@@ -51,9 +51,9 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
 ## <a name="the-was-runtime"></a>WAS çalışma zamanı  
  Uygulamaları siteye adresleme ve yönetim amaçları doğrultusunda düzenlenir. Çalışma zamanında uygulamalar da birlikte uygulama havuzları halinde gruplandırılır. Bir uygulama havuzu, birçok farklı uygulama birçok farklı sitelerde barındırmak. Tüm uygulamalar bir uygulama havuzu içindeki ortak çalışma zamanı özelliklerine sahip. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümünü altında çalıştırmak ve bunların tümü ortak bir işlem kimliği paylaşın. Her bir uygulama havuzu bir çalışan işlemi (w3wp.exe) örneğine karşılık gelir. İçinde bir paylaşılan uygulama havuzu çalışan her yönetilen uygulamanın bir CLR AppDomain yoluyla diğer uygulamalardan ayrı tutulur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WAS Etkinleştirme Mimarisi](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
- [Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WAS Etkinleştirme Mimarisi](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

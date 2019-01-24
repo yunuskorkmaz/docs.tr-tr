@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
+title: 'Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614639"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir bir çalışma zamanıdır. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleşik kurulum deneyimi sunmak için sessizce başlatmak isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken, ilerleme durumunu izleyin. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (izlenebilir) Kurulumu kurulumunuzu (İzleyici veya chainer) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokolün ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçlar elde edin, iletilere yanıt verir ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.  
   
 -   **Çağırma** .  Çağrılacak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve olması bölümünden ilerleme bilgilerini alma, Kurulum programınız için aşağıdakileri yapmanız gerekir:  
@@ -35,7 +35,7 @@ ms.locfileid: "50197957"
   
          Lütfen bu adları, Kurulum programınız için benzersiz bir ada değiştirin.  
   
-    2.  OLMASI bölümünden okuyun. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]'de, indirme ve yükleme işlemleri eşzamanlıdır: .NET Framework'ün bir bölümü indirilirken diğeri yüklenebilir. Sonuç olarak, devam eden gönderilir (yani yazılmış) geri olması bölümüne iki sayı olarak (`m_downloadSoFar` ve `m_installSoFar`) 255 0'dan artırın. 255 zaman yazılmıştır ve .NET Framework çıkar yükleme tamamlanır.  
+    2.  OLMASI bölümünden okuyun. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], indirme ve yükleme işlemleri eşzamanlıdır: Başka bir bölümü indirilirken, .NET Framework'ün bir bölümü yükleme. Sonuç olarak, devam eden gönderilir (yani yazılmış) geri olması bölümüne iki sayı olarak (`m_downloadSoFar` ve `m_installSoFar`) 255 0'dan artırın. 255 zaman yazılmıştır ve .NET Framework çıkar yükleme tamamlanır.  
   
 -   **Çıkış kodlarını**. Çağırmak için komutu aşağıdaki çıkış kodlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir program kurulum başarılı veya başarısız olduğu gösterir:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50197957"
   
  İçin tam Visual Studio çözümünü indirebilir [.NET Framework 4.5 bağlayıcı örneği](https://go.microsoft.com/fwlink/?LinkId=231345) MSDN Örnekler Galerisi.  
   
- Aşağıdaki bölümlerde bu önemli dosyaları: Mmıochainer.h ChainingdotNet4.cpp ve Iprogressobserver.h.  
+ Aşağıdaki bölümlerde, bu örnek önemli dosyalarında açıklanmaktadır: Mmıochainer.h ChainingdotNet4.cpp ve Iprogressobserver.h.  
   
 #### <a name="mmiochainerh"></a>Mmıochainer.h  
   
@@ -309,6 +309,6 @@ ms.locfileid: "50197957"
   
  Tipik bir sunucu bir rastgele olması dosya adı oluşturur, dosyayı oluşturur (önceki kod örneğinde gösterildiği gibi `Server::CreateSection`) ve yeniden dağıtılabilir kullanarak başlatır `CreateProcess` adı yöntemi ve kanal geçirme ile `-pipe someFileSectionName` seçeneği. Sunucu uygulamalıdır `OnProgress`, `Send`, ve `Finished` uygulama UI özgü kodla yöntemleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Dağıtım](../../../docs/framework/deployment/index.md)

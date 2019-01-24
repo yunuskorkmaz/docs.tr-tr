@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afc041896615e906ac49eed9a7be139dff217463
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71251af116fc8d634b822e1daa49d90e91fec6f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648829"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData Metodu
-Modül için kaynak sunucu verilerini döndürür. Kullanarak, çağıran kaynakları serbest gerekir `CoTaskMemFree`.  
+Kaynak sunucu verileri modülü için döndürür. Çağıranın kullanarak ücretsiz kaynaklar gerekir `CoTaskMemFree`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetSourceServerData(
   
 #### <a name="parameters"></a>Parametreler  
  `pDataByteCount`  
- [out] Bir işaretçi bir `ULONG32` , kaynak sunucu verilerini bayt cinsinden boyutu alır.  
+ [out] Bir işaretçi bir `ULONG32` , kaynak sunucu verilerin bayt cinsinden boyutunu alır.  
   
  `ppData`  
- [out] Bir işaretçi döndürülen `pDataByteCount` değeri.  
+ [out] Döndürülen işaretçi `pDataByteCount` değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedSourceServerModule Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedSourceServerModule Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

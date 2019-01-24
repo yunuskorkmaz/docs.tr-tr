@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694145"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put işlevi
 Değer ve adlandırılmış niteleyicisi yazar. Yeni niteleyici aynı adlı önceki değerin üzerine yazar. Niteleyici mevcut değilse oluşturulur. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Niteleyici bir türetilmiş sınıf veya örnek geçersiz kılınabilir. **Varsayılan değer budur.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1. | Niteleyici örneklere yayılır. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Türetilmiş sınıflara niteleyici yayılır. |
-| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Niteleyici bir türetilmiş sınıf veya örnek geçersiz kılınamaz. |
-| ' WBEM_FLAVOR_AMENDED | 0x80 | Niteleyici yerelleştirilir. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Niteleyici bir türetilmiş sınıf veya örnek geçersiz kılınamaz. |
+| `WBEM_FLAVOR_AMENDED | 0x80 | Niteleyici yerelleştirilir. |
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -80,11 +80,11 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 Bu işlev bir çağrı sarılır [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

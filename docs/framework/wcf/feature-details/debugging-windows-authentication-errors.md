@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595142"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI), güvenlik işlemlerini işler. SSPI katmanında güvenlik hatası meydana geldiğinde, Windows Communication Foundation (WCF) tarafından takip edilir. Bu konu, çerçeve ve hataları tanılamak üzere soruları sağlar.  
@@ -36,22 +36,22 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
   
  Olası hesap türleri için sunucu tarafından kullanılan tablo üst bilgileri gösterin. Sol sütunda, istemci tarafından kullanılan olası hesap türleri gösterir.  
   
-||Yerel kullanıcı|Yerel Sistem|Etki alanı kullanıcısı|Etki alanı makine|  
+||Yerel kullanıcı|Yerel Sistem|Domain User|Domain Machine|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Yerel kullanıcı|NTLM|NTLM|NTLM|NTLM|  
 |Yerel Sistem|Anonim NTLM|Anonim NTLM|Anonim NTLM|Anonim NTLM|  
-|Etki alanı kullanıcısı|NTLM|NTLM|Kerberos|Kerberos|  
-|Etki alanı makine|NTLM|NTLM|Kerberos|Kerberos|  
+|Domain User|NTLM|NTLM|Kerberos|Kerberos|  
+|Domain Machine|NTLM|NTLM|Kerberos|Kerberos|  
   
  Özellikle, dört hesap türleri şunlardır:  
   
 -   Yerel kullanıcı: Yalnızca makine kullanıcı profili. Örneğin: `MachineName\Administrator` veya `MachineName\ProfileName`.  
   
--   : Yerel yerleşik sistem Hesabını sistemi bir etki alanına katılmamış bir makine üzerinde.  
+-   Yerel sistemi: Bir etki alanına katılmamış bir makinede yerleşik hesap sistem.  
   
--   Etki alanı kullanıcısı: Bir Windows etki alanı kullanıcı hesabı. Örneğin: `DomainName\ProfileName`.  
+-   Etki alanı kullanıcısı: Bir Windows etki alanı kullanıcı hesabı. Örneğin: `DomainName\ProfileName`  
   
--   Etki alanı makine: Makine kimliğini bir Windows etki alanına katılmış bir makinede çalışan bir işlem. Örneğin: `MachineName\Network Service`.  
+-   Makine etki alanı: Makine kimliğini bir Windows etki alanına katılmış bir makinede çalışan bir işlem. Örneğin: `MachineName\Network Service`  
   
 > [!NOTE]
 >  Hizmet kimlik bilgisi yakalanan olduğunda <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi <xref:System.ServiceModel.ServiceHost> sınıfı çağrılır. İstemci kimlik bilgilerini okuma her istemciye bir ileti gönderir.  
@@ -144,10 +144,10 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
 #### <a name="developing-and-deploying-with-different-identities"></a>Geliştirme ve farklı kimlikler ile dağıtma  
  Bir makine, uygulama geliştirmek ve başka dağıtma ve farklı hesap türlerinin her makinede kimlik doğrulaması için kullanmak, farklı bir davranış karşılaşabilirsiniz. Örneğin, Windows XP Pro makine kullanarak uygulamanızı geliştirdiğiniz varsayalım `SSPI Negotiated` kimlik doğrulama modu. Kimlik doğrulaması yapmak için bir yerel kullanıcı hesabı kullanıyorsanız, NTLM protokolü kullanılır. Uygulamanın geliştirilme yöntemi sonra etki alanı hesabı altında çalıştığı Windows Server 2003 makineye hizmeti dağıtın. Bu noktada istemci Kerberos ve bir etki alanı denetleyicisi kullanacak için hizmet kimlik doğrulaması mümkün olmayacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

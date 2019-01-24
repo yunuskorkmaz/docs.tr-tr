@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 955faddfe184ae5cd66281ccff2343d1e3241bf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d1c15c1e63573d6ebdf25f802a380defbe4c97e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535430"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet ile XML Şeması (XSD) doğrulaması
 XML belgeleri doğrulanmış bir XML Şeması Tanım Dili (XSD) şemaya karşı bir <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +23,7 @@ XML belgeleri doğrulanmış bir XML Şeması Tanım Dili (XSD) şemaya karşı 
  XML belgeleri tarafından doğrulanır <xref:System.Xml.XmlReader.Create%2A> yöntemi <xref:System.Xml.XmlReader> sınıfı. Bir XML belgesi doğrulamak için oluşturmak bir <xref:System.Xml.XmlReaderSettings> içeren bir XML Şeması Tanım Dili (XSD) şemaya XML belgeyi doğrulamak kullanılacak nesne.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema> Ad alanı, kolayca kullanırken bir XML ağacı XSD dosyası karşı doğrulamak genişletme yöntemleri içerir [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). XML belgelerini LINQ to XML ile doğrulama ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: doğrulama kullanarak XSD](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b).  
+>  <xref:System.Xml.Schema> Ad alanı, kolayca kullanırken bir XML ağacı XSD dosyası karşı doğrulamak genişletme yöntemleri içerir [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). XML belgelerini LINQ to XML ile doğrulama ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: XSD kullanarak doğrulama](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b).  
   
  Tek bir şema veya şema kümesine (olarak bir <xref:System.Xml.Schema.XmlSchemaSet>) eklenebilen bir <xref:System.Xml.Schema.XmlSchemaSet> ya da tek bir parametre olarak geçirerek <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. Bir belge doğrularken belgesinin hedef ad alanı için şema kümesindeki şema hedef ad alanı eşleşmesi gerektiğini unutmayın.  
   
@@ -45,5 +45,5 @@ XML belgeleri doğrulanmış bir XML Şeması Tanım Dili (XSD) şemaya karşı 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [XML Şemalarıyla Çalışma](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

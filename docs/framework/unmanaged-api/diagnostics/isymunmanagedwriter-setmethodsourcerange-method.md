@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663550"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange Yöntemi
-Gerçek başlangıç ve bitiş kaynak dosyası içinde yönteminin belirtir. Yöntemi içinde mevcut sıralama noktaları bağımsız olarak bir yöntem kapsamını belirtmek için bu yöntemi kullanın.  
+Gerçek başlangıç ve bitiş bir kaynak dosyası içinde bir yöntemin belirtir. Bir yöntem içinde yöntemi mevcut dizi noktaları bağımsız olarak kapsamını belirtmek için bu yöntemi kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +41,28 @@ HRESULT SetMethodSourceRange(
   
 #### <a name="parameters"></a>Parametreler  
  `startDoc`  
- [in] Başlangıç konumu içeren belge için bir işaretçi.  
+ [in] Başlangıç konumu içeren belge işaretçisi.  
   
  `startLine`  
- [in] Başlangıç satır numarası.  
+ [in] Başlangıç satırı numarası.  
   
  `startColumn`  
  [in] Başlangıç sütunu.  
   
  `endDoc`  
- [in] Bitiş konumunu içeren belge için bir işaretçi.  
+ [in] Bitiş konumu içeren belge işaretçisi.  
   
  `endLine`  
- [in] Bitiş satır numarası.  
+ [in] Bitiş satır sayısı.  
   
  `endColumn`  
- [in] Bitiş sütun numarası.  
+ [in] Bitiş sütun sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

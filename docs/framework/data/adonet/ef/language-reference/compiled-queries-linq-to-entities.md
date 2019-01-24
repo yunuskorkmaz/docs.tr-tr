@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 362ba0000c739c8fc216186514a63531e603c637
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582106"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş sorgular (LINQ to Entities)
 Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, sorgu bir kez derleyerek ve birkaç kez farklı parametrelerle yürütme sık performansı artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri alma gerekebilir; Şehir, çalışma zamanında bir forma kullanıcı tarafından belirtilir. LINQ to Entities, bu amaç için derlenmiş sorgular kullanmayı destekler.  
@@ -68,7 +68,7 @@ Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürü
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)

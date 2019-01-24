@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 7559c24151a3c9acc79c0554112c923a23a88564
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736474"
 ---
 # <a name="as-c-reference"></a>as (C# Başvurusu)
 Kullanabileceğiniz `as` belirli türlerdeki uyumlu başvuru türleri arasında dönüştürmeler gerçekleştirmek için işleci veya [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md). Aşağıdaki kod örneği gösterir.  
@@ -46,10 +46,10 @@ expression is type ? (type)expression : (type)null
 
 Daha fazla bilgi için [işleci olarak](~/_csharplang/spec/expressions.md#the-as-operator) içinde [ C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
  
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [?: İşleç](../../../csharp/language-reference/operators/conditional-operator.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [?: İşleç](../../../csharp/language-reference/operators/conditional-operator.md)
 - [İşleç Anahtar Sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Grup, sıralamak ve filtrelemek veri DataGrid denetimi'
+title: 'Nasıl yapılır: Gruplandırma, sıralama ve DataGrid denetiminde verileri filtreleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,65 +9,65 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: 49ed0f43f0ebebe1aff7ef2f12f667ca656a774a
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650463"
 ---
-# <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Nasıl yapılır: Grup, sıralama ve filtre veri DataGrid denetiminde
+# <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Nasıl yapılır: DataGrid denetiminde filtre verileri gruplandırma, sıralama ve
 
-Genellikle verileri görüntülemek için yararlı bir <xref:System.Windows.Controls.DataGrid> gruplandırma, sıralama ve verileri filtreleme, farklı şekillerde. Grup, sıralamak ve verileri filtrelemek için bir <xref:System.Windows.Controls.DataGrid>, onu bağladıktan bir <xref:System.Windows.Data.CollectionView> bu işlevleri destekleyen. Ardından verileri ile çalışabilirsiniz <xref:System.Windows.Data.CollectionView> temel alınan veri kaynağını etkilemeden. Koleksiyon görünümü değişiklikleri yansıtılır <xref:System.Windows.Controls.DataGrid> kullanıcı arabirimi (UI).
+Genellikle verileri görüntülemek için yararlı bir <xref:System.Windows.Controls.DataGrid> gruplandırma, sıralama ve filtreleme verileri tarafından farklı şekillerde. Grup, sıralama ve verileri filtrelemek için bir <xref:System.Windows.Controls.DataGrid>, kendisine bağlamak bir <xref:System.Windows.Data.CollectionView> , bu işlevleri destekler. Ardından verileri ile çalışabilirsiniz <xref:System.Windows.Data.CollectionView> temel kaynak verilerini etkilemeden. Koleksiyon görünümü yapılan değişiklikler yansıtılır <xref:System.Windows.Controls.DataGrid> kullanıcı arabirimi (UI).
 
-<xref:System.Windows.Data.CollectionView> SAX gruplandırma ve işlevselliği uygulayan bir veri kaynağı için sıralama <xref:System.Collections.IEnumerable> arabirimi. <xref:System.Windows.Data.CollectionViewSource> Sınıf özelliklerini ayarlamanıza olanak sağlayan bir <xref:System.Windows.Data.CollectionView> XAML gelen.
+<xref:System.Windows.Data.CollectionView> SAX gruplandırmasını ve sıralamasını işlevselliğini uygulayan bir veri kaynağı için <xref:System.Collections.IEnumerable> arabirimi. <xref:System.Windows.Data.CollectionViewSource> Sınıf özelliklerini ayarlamanıza olanak sağlayan bir <xref:System.Windows.Data.CollectionView> XAML öğesinden.
 
-Bu örnekte, bir koleksiyonu `Task` nesneleri bağlı bir <xref:System.Windows.Data.CollectionViewSource>. <xref:System.Windows.Data.CollectionViewSource> Olarak kullanılan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.DataGrid>. Gruplandırma, sıralama ve filtreleme üzerinde gerçekleştirilir <xref:System.Windows.Data.CollectionViewSource> ve görüntülenen <xref:System.Windows.Controls.DataGrid> UI.
+Bu örnekte, bir koleksiyonu `Task` nesneleri bağlı bir <xref:System.Windows.Data.CollectionViewSource>. <xref:System.Windows.Data.CollectionViewSource> Olarak kullanılan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.DataGrid>. Gruplandırma, sıralama ve filtreleme üzerinde gerçekleştirilir <xref:System.Windows.Data.CollectionViewSource> ve görüntülenen <xref:System.Windows.Controls.DataGrid> kullanıcı Arabirimi.
 
-![Gruplandırılmış bir DataGrid verileri](./media/wpf-datagridgroups.png "WPF_DataGridGroups") gruplandırılmış bir DataGrid verileri
+![Gruplandırılmış veri kılavuzundaki](./media/wpf-datagridgroups.png "WPF_DataGridGroups") gruplandırılmış veri kılavuzundaki
 
-## <a name="using-a-collectionviewsource-as-an-itemssource"></a>Bir CollectionViewSource bir ItemsSource kullanma
+## <a name="using-a-collectionviewsource-as-an-itemssource"></a>Bir Collectionviewsource'a bir ItemsSource kullanma
 
-Grup, sıralama ve filtre verilerde bir <xref:System.Windows.Controls.DataGrid> denetimi bağlarsanız <xref:System.Windows.Controls.DataGrid> için bir <xref:System.Windows.Data.CollectionView> bu işlevleri destekleyen. Bu örnekte, <xref:System.Windows.Controls.DataGrid> bağlı bir <xref:System.Windows.Data.CollectionViewSource> için bu işlevler sağlayan bir <xref:System.Collections.Generic.List%601> , `Task` nesneleri.
+Gruplandırma, sıralama ve filtre verileri için bir <xref:System.Windows.Controls.DataGrid> denetimi bağlarsanız <xref:System.Windows.Controls.DataGrid> için bir <xref:System.Windows.Data.CollectionView> , bu işlevleri destekler. Bu örnekte, <xref:System.Windows.Controls.DataGrid> bağlı bir <xref:System.Windows.Data.CollectionViewSource> bu işlevler için sağlayan bir <xref:System.Collections.Generic.List%601> , `Task` nesneleri.
 
-### <a name="to-bind-a-datagrid-to-a-collectionviewsource"></a>DataGrid bir CollectionViewSource bağlamak için
+### <a name="to-bind-a-datagrid-to-a-collectionviewsource"></a>Bir DataGrid bir Collectionviewsource'a bağlamak için
 
-1. Arabirimini uygulayan bir veri toplama oluşturma <xref:System.Collections.IEnumerable> arabirimi.
+1. Uygulayan bir veri koleksiyonu oluşturma <xref:System.Collections.IEnumerable> arabirimi.
 
-    Kullanırsanız <xref:System.Collections.Generic.List%601> koleksiyonunuzu oluşturmak için devraldığı yeni bir sınıf oluşturmalısınız <xref:System.Collections.Generic.List%601> örneği başlatmasını yerine <xref:System.Collections.Generic.List%601>. Bu, veri bağlamak için XAML koleksiyonunda sağlar.
+    Kullanırsanız <xref:System.Collections.Generic.List%601> koleksiyonunuzu oluşturmak için devralan yeni bir sınıf oluşturmanız gerekir <xref:System.Collections.Generic.List%601> örneği başlatmak yerine <xref:System.Collections.Generic.List%601>. Bu, XAML koleksiyonda verilerin bağlanacağı sağlar.
 
     > [!NOTE]
-    > Koleksiyonundaki nesneleri uygulamalıdır <xref:System.ComponentModel.INotifyPropertyChanged> değiştirilen arabirimi ve <xref:System.ComponentModel.IEditableObject> arabirimi sırayla <xref:System.Windows.Controls.DataGrid> özellik değişikliklerini ve düzenlemeleri için doğru şekilde yanıt vermesi. Daha fazla bilgi için bkz: [uygulama özellik değişikliği bildirimi](../data/how-to-implement-property-change-notification.md).
+    > Koleksiyondaki nesneleri uygulamalıdır <xref:System.ComponentModel.INotifyPropertyChanged> değiştirilen arabirimi ve <xref:System.ComponentModel.IEditableObject> arabirimi için sırayla <xref:System.Windows.Controls.DataGrid> özellik değişiklikleri ve düzenlemeleri için doğru bir şekilde yanıt vermesi. Daha fazla bilgi için [özellik değişikliği bildirimi uygulama](../data/how-to-implement-property-change-notification.md).
 
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML'de koleksiyonu sınıfının bir örneğini oluşturup [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md).
+2. XAML, koleksiyon sınıfı bir örneğini oluşturun ve ayarlayın [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md).
 
-3. XAML'de bir örneğini oluşturmak <xref:System.Windows.Data.CollectionViewSource> sınıfı, Ayarla [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md)ve koleksiyon sınıfınızın örneğini ayarlamak <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
+3. XAML içinde bir örneğini oluşturmak <xref:System.Windows.Data.CollectionViewSource> sınıfı, Ayarla [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md)ve kümesi koleksiyon sınıfının örneği <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 
-4. Bir örneğini oluşturmak <xref:System.Windows.Controls.DataGrid> sınıfı ve ayarlayın <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliğine <xref:System.Windows.Data.CollectionViewSource>.
+4. Bir örneğini oluşturmak <xref:System.Windows.Controls.DataGrid> sınıfı ve ayarlama <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliğini <xref:System.Windows.Data.CollectionViewSource>.
 
     [!code-xaml[DataGrid_GroupSortFilter#002](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#002)]
 
-5. Erişim için <xref:System.Windows.Data.CollectionViewSource> da kodunuzdan kullanmak <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> bir başvuru almak için yöntemi <xref:System.Windows.Data.CollectionViewSource>.
+5. Erişim için <xref:System.Windows.Data.CollectionViewSource> kodunuz içinden kullanmak <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> bir başvuru almak için yöntemi <xref:System.Windows.Data.CollectionViewSource>.
 
     [!code-csharp[DataGrid_GroupSortFilter#102](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#102)]
     [!code-vb[DataGrid_GroupSortFilter#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#102)]
 
-## <a name="grouping-items-in-a-datagrid"></a>DataGrid öğeleri gruplandırma
+## <a name="grouping-items-in-a-datagrid"></a>DataGrid içinde öğeleri gruplandırma
 
-Öğeleri nasıl gruplandırılacağını belirlemek için bir <xref:System.Windows.Controls.DataGrid>, kullandığınız <xref:System.Windows.Data.PropertyGroupDescription> kaynağı görünümündeki öğeleri gruplandırmak için türü.
+Öğeleri nasıl gruplandırıldığını belirtmek için bir <xref:System.Windows.Controls.DataGrid>, kullandığınız <xref:System.Windows.Data.PropertyGroupDescription> kaynağı görünümündeki öğeleri gruplandırmak için türü.
 
-### <a name="to-group-items-in-a-datagrid-using-xaml"></a>XAML kullanılarak DataGrid'de öğeleri gruplandırmak için
+### <a name="to-group-items-in-a-datagrid-using-xaml"></a>XAML kullanarak bir DataGrid içinde öğeleri gruplandırma
 
-1. Oluşturma bir <xref:System.Windows.Data.PropertyGroupDescription> grupla özelliğine belirtir. XAML veya kod özelliği belirtebilirsiniz.
+1. Oluşturma bir <xref:System.Windows.Data.PropertyGroupDescription> gruplama ölçütü özelliği belirtir. Özelliği, XAML ya da kod belirtebilirsiniz.
 
-   1. XAML'de ayarlamak <xref:System.Windows.Data.PropertyGroupDescription.PropertyName%2A> göre gruplamak için özellik adı.
+   1. XAML içinde ayarlamak <xref:System.Windows.Data.PropertyGroupDescription.PropertyName%2A> gruplama ölçütü özelliğinin adı.
 
-   2. Kodda, özelliğin adını oluşturucusu tarafından grubuna geçirin.
+   2. Kodda, özelliğin adını gruplama ölçütü Oluşturucu geçirin.
 
 2. Ekleme <xref:System.Windows.Data.PropertyGroupDescription> için <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A?displayProperty=nameWithType> koleksiyonu.
 
@@ -79,14 +79,14 @@ Grup, sıralama ve filtre verilerde bir <xref:System.Windows.Controls.DataGrid> 
 
 4. Bir grubu kaldırmak için <xref:System.Windows.Data.PropertyGroupDescription> gelen <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> koleksiyonu.
 
-5. Tüm grupları kaldırmak için arama <xref:System.Collections.ObjectModel.Collection%601.Clear%2A> yöntemi <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> koleksiyonu.
+5. Tüm grupları kaldırmak için çağrı <xref:System.Collections.ObjectModel.Collection%601.Clear%2A> yöntemi <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> koleksiyonu.
 
     [!code-csharp[DataGrid_GroupSortFilter#114](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#114)]
     [!code-vb[DataGrid_GroupSortFilter#114](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#114)]
 
-Ne zaman öğeleri gruplandırılır içinde <xref:System.Windows.Controls.DataGrid>, tanımlayabileceğiniz bir <xref:System.Windows.Controls.GroupStyle> her grubu görünümünü belirtir. Uyguladığınız <xref:System.Windows.Controls.GroupStyle> ekleyerek <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> DataGrid koleksiyonu. Gruplandırma birden çok düzeyi varsa, her grup düzeyine farklı stilleri uygulayabilirsiniz. Stilleri tanımlı sırayla uygulanır. Örneğin, iki stili tanımlarsanız, ilk üst düzey satır gruplarına uygulanır. İkinci stili ikinci düzeyde tüm satır grupları uygulanan ve daha düşük olacaktır. <xref:System.Windows.FrameworkElement.DataContext%2A> , <xref:System.Windows.Controls.GroupStyle> Olan <xref:System.Windows.Data.CollectionViewGroup> grubu temsil eden.
+Ne zaman öğeleri gruplanır içinde <xref:System.Windows.Controls.DataGrid>, tanımlayabileceğiniz bir <xref:System.Windows.Controls.GroupStyle> her grubu görünümünü belirtir. Uyguladığınız <xref:System.Windows.Controls.GroupStyle> ekleyerek <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> DataGrid koleksiyonu. Gruplandırma düzeylerinde varsa, her grup düzeyine farklı stil uygulayabilirsiniz. Stiller içinde tanımlandıkları sırayla uygulanır. Örneğin, iki stilleri tanımlarsanız, ilk üst düzey satır gruplarına uygulanır. İkinci stili tüm satır grupları ikinci düzeyinde uygulanabilir ve daha düşük olacaktır. <xref:System.Windows.FrameworkElement.DataContext%2A> , <xref:System.Windows.Controls.GroupStyle> Olduğu <xref:System.Windows.Data.CollectionViewGroup> grubu temsil eden.
 
-### <a name="to-change-the-appearance-of-row-group-headers"></a>Satır grup üstbilgileri görünümünü değiştirmek için
+### <a name="to-change-the-appearance-of-row-group-headers"></a>Satır grup başlıklarının görünümünü değiştirmek için
 
 1. Oluşturma bir <xref:System.Windows.Controls.GroupStyle> , satır grubu görünümünü tanımlar.
 
@@ -94,49 +94,49 @@ Ne zaman öğeleri gruplandırılır içinde <xref:System.Windows.Controls.DataG
 
     [!code-xaml[DataGrid_GroupSortFilter#003](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#003)]
 
-## <a name="sorting-items-in-a-datagrid"></a>DataGrid öğeleri sıralama
+## <a name="sorting-items-in-a-datagrid"></a>Bir DataGrid içindeki öğeleri sıralama
 
-Öğeleri nasıl sıralanacağını belirtmek için bir <xref:System.Windows.Controls.DataGrid>, kullandığınız <xref:System.ComponentModel.SortDescription> kaynağı görünümündeki öğeleri sıralama türü.
+Öğeleri nasıl sıralanacağını belirlemek için bir <xref:System.Windows.Controls.DataGrid>, kullandığınız <xref:System.ComponentModel.SortDescription> kaynağı görünümündeki öğeleri sıralamak için türü.
 
 ### <a name="to-sort-items-in-a-datagrid"></a>DataGrid içindeki öğeleri sıralamak için
 
-1. Oluşturma bir <xref:System.ComponentModel.SortDescription> göre sıralamak için özelliğini belirtir. XAML veya kod özelliği belirtebilirsiniz.
+1. Oluşturma bir <xref:System.ComponentModel.SortDescription> göre sıralamak için özelliği belirtir. Özelliği, XAML ya da kod belirtebilirsiniz.
 
-    1. XAML'de ayarlamak <xref:System.ComponentModel.SortDescription.PropertyName%2A> göre sıralamak için özelliğinin adı.
+    1. XAML içinde ayarlamak <xref:System.ComponentModel.SortDescription.PropertyName%2A> sıralanacak özelliğin adı.
 
-    2. Kod içinde göre sıralamak için özellik adını geçirmek ve <xref:System.ComponentModel.ListSortDirection> Oluşturucusu.
+    2. Sıralanacak özelliğin adını kodda, geçirin ve <xref:System.ComponentModel.ListSortDirection> Oluşturucusu.
 
 2. Ekleme <xref:System.ComponentModel.SortDescription> için <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A?displayProperty=nameWithType> koleksiyonu.
 
-3. Ek örneklerini eklemek <xref:System.ComponentModel.SortDescription> için <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A> ek bir özelliğe göre sıralamak için koleksiyonu.
+3. Ek örneklerini eklemek <xref:System.ComponentModel.SortDescription> için <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A> ek özelliklerine göre sıralamak için koleksiyon.
 
     [!code-xaml[DataGrid_GroupSortFilter#011](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#011)]
     [!code-csharp[DataGrid_GroupSortFilter#211](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml.cs#211)]
     [!code-vb[DataGrid_GroupSortFilter#211](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#211)]
 
-## <a name="filtering-items-in-a-datagrid"></a>DataGrid öğelerinin filtreleme
+## <a name="filtering-items-in-a-datagrid"></a>Bir DataGrid öğeleri filtreleme
 
-Öğelere filtre uygulamak için bir <xref:System.Windows.Controls.DataGrid> kullanarak bir <xref:System.Windows.Data.CollectionViewSource>, işleyicisi filtreleme mantık sağlayan <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> olay.
+Öğelere filtre uygulamak için bir <xref:System.Windows.Controls.DataGrid> kullanarak bir <xref:System.Windows.Data.CollectionViewSource>, filtreleme mantığı işleyici için sağladığınız <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> olay.
 
-### <a name="to-filter-items-in-a-datagrid"></a>DataGrid öğelerinin filtre uygulamak için
+### <a name="to-filter-items-in-a-datagrid"></a>Bir DataGrid içindeki öğeleri filtrelemek için
 
-1. İçin bir işleyici ekleyin <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> olay.
+1. İçin bir işleyici eklemek <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> olay.
 
-2. İçinde <xref:System.Windows.Data.CollectionViewSource.Filter> olay işleyicisi filtreleme mantığı tanımlayın.
+2. İçinde <xref:System.Windows.Data.CollectionViewSource.Filter> olay işleyicisi, filtreleme mantığı tanımlayın.
 
-    Filtre görünümü her yenilendiğinde uygulanacak.
+    Görünümü her yenilendiğinde filtre uygulanır.
 
     [!code-xaml[DataGrid_GroupSortFilter#013](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#013)]
     [!code-csharp[DataGrid_GroupSortFilter#113](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#113)]
     [!code-vb[DataGrid_GroupSortFilter#113](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#113)]
 
-Alternatif olarak, öğeleri filtreleyebilirsiniz bir <xref:System.Windows.Controls.DataGrid> filtreleme mantığı ve ayarı sağlayan bir yöntem oluşturarak <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> özellik filtresini uygulayın. Bu yöntemin bir örnek için bkz [görünümünde filtre veri](../data/how-to-filter-data-in-a-view.md).
+Alternatif olarak, öğeleri filtreleyebilirsiniz bir <xref:System.Windows.Controls.DataGrid> filtreleme mantığı ve ayarı sağlayan bir yöntem oluşturarak <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> filtre uygulamak için özellik. Bu yöntem bir örneğini görmek için bkz: [görünümde veri filtreleme](../data/how-to-filter-data-in-a-view.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, gruplandırma, sıralama ve filtreleme gösterir `Task` verileri bir <xref:System.Windows.Data.CollectionViewSource> ve sıralanmış ve filtre uygulanmış gruplandırılmış, görüntüleme `Task` verileri bir <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Data.CollectionViewSource> Olarak kullanılan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.DataGrid>. Gruplandırma, sıralama ve filtreleme üzerinde gerçekleştirilir <xref:System.Windows.Data.CollectionViewSource> ve görüntülenen <xref:System.Windows.Controls.DataGrid> UI.
+Aşağıdaki örnek, gruplandırma, sıralama ve filtreleme gösterir `Task` verilerinde bir <xref:System.Windows.Data.CollectionViewSource> ve sıralanmış ve filtrelenmiş gruplandırılmış, görüntüleme `Task` verilerinde bir <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Data.CollectionViewSource> Olarak kullanılan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.DataGrid>. Gruplandırma, sıralama ve filtreleme üzerinde gerçekleştirilir <xref:System.Windows.Data.CollectionViewSource> ve görüntülenen <xref:System.Windows.Controls.DataGrid> kullanıcı Arabirimi.
 
-Bu örneği test etmek için proje adı ile eşleşmesi için DGGroupSortFilterExample adı ayarlamak gerekir. Visual Basic kullanıyorsanız, sınıf adını değiştirmeniz gerekir <xref:System.Windows.Window> şu.
+Bu örnekte test etmek için projenizin adına eşleştirilecek DGGroupSortFilterExample adı ayarlamak gerekir. Visual Basic kullanıyorsanız, sınıf adını değiştirmeniz gerekir <xref:System.Windows.Window> aşağıdaki.
 
 `<Window x:Class="MainWindow"`
 
@@ -146,8 +146,8 @@ Bu örneği test etmek için proje adı ile eşleşmesi için DGGroupSortFilterE
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)  
-[ObservableCollection Oluşturma ve Bağlama](../data/how-to-create-and-bind-to-an-observablecollection.md)  
-[Görünümde Veri Filtreleme](../data/how-to-filter-data-in-a-view.md)  
-[Görünümde Verileri Sıralama](../data/how-to-sort-data-in-a-view.md)  
-[XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](../data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [ObservableCollection Oluşturma ve Bağlama](../data/how-to-create-and-bind-to-an-observablecollection.md)
+- [Görünümde Veri Filtreleme](../data/how-to-filter-data-in-a-view.md)
+- [Görünümde Verileri Sıralama](../data/how-to-sort-data-in-a-view.md)
+- [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](../data/how-to-sort-and-group-data-using-a-view-in-xaml.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650986"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Genel Türlerin Yararları (C# Programlama Kılavuzu)
 Genel türler ortak dil çalışma zamanı ve C# dili içinde Genelleştirme gerçekleştirilir atama türleri için ve evrensel temel türe göre önceki sürümlerinde bir sınırlama çözümü sağlamak <xref:System.Object>. Genel sınıf oluşturarak, tür kullanımı uyumlu bir koleksiyon oluşturabilirsiniz derleme zamanında.  
@@ -35,11 +35,11 @@ Genel türler ortak dil çalışma zamanı ve C# dili içinde Genelleştirme ger
   
  İçin istemci kodu, yalnızca eklenen söz dizimiyle <xref:System.Collections.Generic.List%601> karşılaştırıldığında <xref:System.Collections.ArrayList> bağımsız değişken türü bildirimi ve örnek oluşturma. Bu biraz daha kodlama karmaşıklığı tanıtmanın karşılığında, yalnızca daha güvenli olmayan bir liste oluşturabilirsiniz <xref:System.Collections.ArrayList>, ancak Ayrıca önemli ölçüde daha hızlı, özellikle liste öğeleri değer türleri olduğunda.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Generic>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)  
-- [Koleksiyonlar için yönergeler](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)
+- [Koleksiyonlar için yönergeler](../../../standard/design-guidelines/guidelines-for-collections.md)

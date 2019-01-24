@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ebc9fe36955bac8b93ec95e9a55fc8ac1197d9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f2ea9d0e20cb67cc36d0b5883e483ce98941b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743224"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity Arabirimi
 Bir koleksiyonu için bir numaralandırıcı görevi gören `IReferenceIdentity` nesneleri.  
@@ -30,18 +30,18 @@ Bir koleksiyonu için bir numaralandırıcı görevi gören `IReferenceIdentity`
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Arabirim işaretçisi yeni bir alır `IEnumReferenceIdentity` bu aynı üyeleri içeren `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Next`|Belirtilen sayıda alır `IReferenceIdentity` geçerli konumdan başlayarak nesneleri.|  
-|`IEnumReferenceIdentity::Reset`|Yönerge işaretçisi başlangıcına bu taşır `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Skip`|Öğeler, geçerli konumdan başlayarak belirtilen sayıda tarafından yönerge işaretçisi İleri taşınır.|  
+|`IEnumReferenceIdentity::Clone`|Yeni bir arabirim işaretçisi alır `IEnumReferenceIdentity` bu aynı üyeleri içeren `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Next`|Belirtilen sayıda alır `IReferenceIdentity` nesneleri, geçerli konumdan başlayarak.|  
+|`IEnumReferenceIdentity::Reset`|Yönerge işaretçisini bu başlangıcına taşır `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Skip`|Öğe, geçerli konumdan başlayarak belirtilen sayıda yönerge işaretçisini ileriye taşır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

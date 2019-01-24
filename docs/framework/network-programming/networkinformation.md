@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 333baa68f4bd80b98e8bb03929ab41dc9cbed7a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497176"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Ad alanı ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplamanızı sağlar. Kullanarak uzak ana erişilebilir olup olmadığını belirleyebilirsiniz <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfı.  
@@ -23,8 +23,8 @@ ms.locfileid: "53150959"
 ## <a name="determine-if-a-remote-host-is-reachable"></a>Uzak bir ana bilgisayarın erişilebilir olup olmadığını belirler  
  Kullanabileceğiniz <xref:System.Net.NetworkInformation.Ping> uzak bir ana bilgisayarın ayarlama, ağ ve erişilebilir olup olmadığını belirlemek için sınıf. Daha fazla bilgi için [nasıl yapılır: Konağa ping yapma](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Ağ bilgi teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179564)  
- [NetStat aracı teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179562)  
- [Ping istemci teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179565)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Ağ bilgi teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179564)
+- [NetStat aracı teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179562)
+- [Ping istemci teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179565)

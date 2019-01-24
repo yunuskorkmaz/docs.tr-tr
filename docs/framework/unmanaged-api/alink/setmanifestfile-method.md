@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f8398c16b27836b772e8ac56ee1f7e8494f4be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618057"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile Yöntemi
-Bağlayıcı derleme oluşturduğunda kullanan bildirim dosyası sıfırlamak mı sağlar.  
+Bağlayıcı derleme oluşturduğunda kullandığı bildirim dosyası sıfırlamak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT SetManifestFile(
 #### <a name="parameters"></a>Parametreler  
  `pszFile`  
   
- İçerikleri Win32 kaynakları blob'a put bildirim dosyasının adı.  
+ İçerikleri Win32 kaynakları blob yerleştirilir bildirimi dosyasının adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu için Win32ResBlob soran önce çağırın. Değeri `pszFile` parametredir içerikleri okuma ve kimliği, RT_MANIFEST Win32 kaynaklarla koymak bildirim dosyasının adı. Null parametresiyle çağrıldığında, daha önce okuma herhangi bildirimi temizlenir. Bu, başlangıç zamanı bağlayıcı durumunu sıfırlamak için sağlar.  
+ Bu, Win32ResBlob için soran önce çağırın. Değerini `pszFile` parametredir içerikleri okuma ve Win32 kaynakları, kimliği rt_manıfest ile koymak bildirim dosyasının adı. Bir parametre null kullanarak çağrıldığında, daha önce okuma herhangi bir bildirim temizlenir. Bu, bir başlatma süresi, bağlayıcı durumunu sıfırlamak sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink3 Yöntemi](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink3 Yöntemi](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

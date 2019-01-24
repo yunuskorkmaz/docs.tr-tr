@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yayımcı İlkesi Oluşturma'
+title: 'Nasıl yapılır: Yayımcı ilkesi oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530531"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
+# <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı ilkesi oluşturma
 Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi dosyası dahil ederek bir derlemenin daha yeni bir sürümünü kullanacağını durumu. Yayımcı ilkesi dosyası, derleme yeniden yönlendirmesini ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası aynı biçimi kullanır. Yayımcı ilkesi dosyası bir bütünleştirilmiş kod içine derlenmiş ve genel bütünleştirilmiş kod önbelleğine yerleştirilmesi.  
   
  Yayımcı ilkesi oluşturmak için gerekli olan üç adım vardır:  
@@ -102,11 +102,11 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
     > [!IMPORTANT]
     >  Özgün Yayımcı ilkesi dosyası derleme olarak aynı dizinde bulunan sürece, yayımcı ilke derlemesi genel derleme önbelleğine eklenemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)
+- [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531973"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güvenli uygulamalar oluştururken dikkate alınması gereken en iyi yöntemler listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -45,7 +45,7 @@ Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güven
  Meta verilerinizi kaynağına güveniyorsanız ve hiç meta verileriyle yapmadığından emin emin olun. HTTP protokolü kullanılarak alınan meta verileri açık metin olarak gönderilir ve bozuabilir. Hizmet kullanıyorsa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özelliklerini, HTTPS protokolünü kullanarak verileri yüklemek için hizmet oluşturucusu tarafından sağlanan URL kullanın.  
   
 ## <a name="publish-metadata-using-security"></a>Güvenlik kullanarak meta verileri yayımlama  
- Bir hizmetin yayımlanan meta verilerle oynanmasını önlemek için meta veri değişimi uç noktası taşıma veya ileti düzeyi güvenlik ile güvenli hale getirin. Daha fazla bilgi için [meta veri uç noktalarını yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve [nasıl yapılır: meta veri yayımlama için bir hizmet kullanarak kod](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Bir hizmetin yayımlanan meta verilerle oynanmasını önlemek için meta veri değişimi uç noktası taşıma veya ileti düzeyi güvenlik ile güvenli hale getirin. Daha fazla bilgi için [meta veri uç noktalarını yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve [nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Yerel verici kullanımı emin olun  
  Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel sertifika verenin bu bağlamayı kullanan uç noktaları için kullanılmaz. Her zaman yerel dağıtımcının kullanmayı düşündüğünüz istemciler, böyle bir bağlamanın kullanmayın veya veren adresin null olduğundan, bunlar bağlama değiştirme emin olun.  
@@ -56,7 +56,7 @@ Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güven
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>SecurityBindingElement.IncludeTimestamp özel bağlamalar True olarak ayarlayın  
  Özel bağlama oluşturduğunuzda ayarlamalısınız <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> için `true`. Aksi takdirde <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ayarlanır `false`, ve bir asimetrik anahtar tabanlı belirteci x X509 gibi istemcinin kullandığı sertifika, ileti imzalanmamış.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Veriler için Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Veriler için Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

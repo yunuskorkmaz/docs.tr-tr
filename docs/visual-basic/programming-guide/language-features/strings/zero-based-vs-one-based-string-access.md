@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: a0a42f72d94adf1c10865374017fa61e833df40f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535547"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Sıfır tabanlı vs. Visual Basic'te bir tabanlı dize erişimi
 Bu konu Visual Basic karşılaştırır ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bir dizedeki karakter erişim sağlar. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Visual Basic işlevi bağlı olarak, sıfır tabanlı ve bir tabanlı erişim sağlar ancak her zaman bir dizedeki karakter sıfır tabanlı erişim sağlar.  
@@ -20,9 +20,9 @@ Bu konu Visual Basic karşılaştırır ve [!INCLUDE[dnprdnshort](~/includes/dnp
 ## <a name="zero-based"></a>Sıfır tabanlı  
  Sıfır tabanlı bir Visual Basic işlev örneği için göz önünde bulundurun `Split` işlevi. Bir dizeyi böler ve alt dizeler içeren bir dizi döndürür. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> Yöntemi ayrıca bir dizeyi böler ve alt dizeler içeren bir dizi döndürür. Çünkü `Split` işlevi ve <xref:System.String.Split%2A> yöntemi dönüş [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] diziler, bunlar olmalıdır sıfır tabanlı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:System.String.Substring%2A>  
- <xref:System.String.Split%2A>  
- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:System.String.Substring%2A>
+- <xref:System.String.Split%2A>
+- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

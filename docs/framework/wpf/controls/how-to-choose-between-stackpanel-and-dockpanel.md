@@ -11,27 +11,27 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: c9bfb8d29051a9cfa61d3fcb93b8bb9a68d14e00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 458ba2fe23ecde28b3eb15400e7a9fa49c4cca68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622539"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Nasıl yapılır: StackPanel ve DockPanel Arasında Seçim Yapma
-Bu örnek, kullanma arasında seçim yapma gösterir bir <xref:System.Windows.Controls.StackPanel> veya <xref:System.Windows.Controls.DockPanel> yığın zaman içeriğinde bir <xref:System.Windows.Controls.Panel>.  
+Bu örnek nasıl kullanma arasında seçim gösterir bir <xref:System.Windows.Controls.StackPanel> veya <xref:System.Windows.Controls.DockPanel> içeriğinde yığın ne zaman bir <xref:System.Windows.Controls.Panel>.  
   
 ## <a name="example"></a>Örnek  
- Ya da kullanabilirsiniz ancak <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.Controls.StackPanel> alt öğeleri yığmak için iki denetimi her zaman aynı sonucu vermez. Örneğin, alt öğelerini yerleştirme alt öğelerinin boyutunu etkileyebilecek bir <xref:System.Windows.Controls.DockPanel> de bir <xref:System.Windows.Controls.StackPanel>. Bu farklı davranış <xref:System.Windows.Controls.StackPanel> ölçüleri yığının yönde <xref:System.Double>.<xref:System.Double.PositiveInfinity>; ancak, <xref:System.Windows.Controls.DockPanel> yalnızca kullanılabilir boyutu ölçer.  
+ Ya da kullanabilirsiniz, ancak <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.Controls.StackPanel> alt öğeleri yığma için iki denetimi her zaman aynı sonuçları üretmez. Örneğin, alt öğeleri yerleştirme alt öğeleri boyutunu etkileyebilir bir <xref:System.Windows.Controls.DockPanel> fakat bir <xref:System.Windows.Controls.StackPanel>. Bu farklı davranış <xref:System.Windows.Controls.StackPanel> yığının yönde ölçüler <xref:System.Double>.<xref:System.Double.PositiveInfinity>; ancak <xref:System.Windows.Controls.DockPanel> yalnızca kullanılabilir boyutunu ölçer.  
   
- Aşağıdaki örnek, bu arasındaki temel farklılık gösterir <xref:System.Windows.Controls.DockPanel> ve <xref:System.Windows.Controls.StackPanel>.  
+ Aşağıdaki örnek, bu temel farkı göstermektedir <xref:System.Windows.Controls.DockPanel> ve <xref:System.Windows.Controls.StackPanel>.  
   
  [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
  [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
  [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
  [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.StackPanel>  
- <xref:System.Windows.Controls.DockPanel>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.StackPanel>
+- <xref:System.Windows.Controls.DockPanel>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)

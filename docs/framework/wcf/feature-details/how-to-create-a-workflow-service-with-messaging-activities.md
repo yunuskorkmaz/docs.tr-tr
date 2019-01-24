@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
+title: 'Nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584983"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
-Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturma işlemini açıklamaktadır. Bu konu, burada yalnızca Mesajlaşma etkinlikleri hizmet oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek hizmetinde, diğer birçok etkinlik iş akışı içerir. Hizmet, bir dize alır ve dize çağırana döner, Echo adlı bir işlem uygular. Bu konu, ilk iki konuda serisinin yöneliktir. Bir sonraki konu [nasıl yapılır: bir hizmeti bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Bu konu başlığında oluşturduğunuz hizmeti çağıran bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma
+Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturma işlemini açıklamaktadır. Bu konu, burada yalnızca Mesajlaşma etkinlikleri hizmet oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek hizmetinde, diğer birçok etkinlik iş akışı içerir. Hizmet, bir dize alır ve dize çağırana döner, Echo adlı bir işlem uygular. Bu konu, ilk iki konuda serisinin yöneliktir. Bir sonraki konu [nasıl yapılır: Bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Bu konu başlığında oluşturduğunuz hizmeti çağıran bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Bir iş akışı hizmeti projesi oluşturmak için  
   
@@ -87,9 +87,9 @@ Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti ol
   
      ![WCF Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Geçin [nasıl yapılır: bir hizmeti bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu hizmetine çağrı yapan bir iş akışı istemcisi oluşturmak için konu.  
+4.  Geçin [nasıl yapılır: Bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu hizmetine çağrı yapan bir iş akışı istemcisi oluşturmak için konu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

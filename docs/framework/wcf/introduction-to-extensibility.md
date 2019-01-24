@@ -6,51 +6,51 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654860"
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
-Windows Communication Foundation (WCF) uygulama modeli, herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. WCF genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
+Windows Communication Foundation (WCF) uygulama modeli, iletişimi gereksinimleri herhangi bir dağıtılmış uygulamanın büyük kısmını çözmek için tasarlanmıştır. Ancak, sistem tarafından sağlanan uygulamaları ve varsayılan uygulama modelini desteklemeyen senaryoları her zaman vardır. WCF genişletilebilirlik modeli, tüm uygulama modelini değiştirme noktasına bile her düzeyde sistemi davranışını değiştirmek sağlayarak özel senaryoları desteklemek üzere tasarlanmıştır. Bu konu, uzantı çeşitli alanlarına özetler ve her hakkında daha fazla bilgi için işaret eder.  
   
 ## <a name="areas-to-extend"></a>Genişletmek için alanları  
  Genişletebilirsiniz:  
   
--   Uygulama çalışma zamanı. Bu, dağıtma ve uygulama için iletilerinin işlenmesini genişletir. Bu alan, bir güvenlik sistemi, meta veri sistemi, serileştirme sistem ve bağlamaları genişletme ve bağlama temel alınan kanal sistemiyle bağlamak öğeleri de içerir.  
+-   Uygulama çalışma zamanı. Bu, dağıtma ve uygulamanın iletilerinin işlenmesini genişletir. Bu alan ayrıca güvenlik sistemi, meta veri sistemini, serileştirme sistem ve bağlamaları genişletme ve bağlama uygulamayı arka plandaki kanal sistemiyle bağlama öğeleri içerir.  
   
--   Kanal ve kanal çalışma zamanı. Bu protokolü, Aktarım, sağlama ve Destek kodlama ileti düzeyinde işlevleri sistem genişletir.  
+-   Kanalı ve kanal çalışma zamanı. Bu protokolü, Aktarım, sağlama ve Destek kodlama ileti düzeyinde işlevleri sistem genişletir.  
   
--   Ana bilgisayar çalışma zamanı. Bu kanal ve uygulama çalışma zamanı barındırma uygulama etki alanına ilişki genişletir.  
+-   Çalışma zamanı ana bilgisayarı. Bu kanal ve uygulama çalışma zamanı barındırma uygulama etki alanı ilişkisi genişletir.  
   
 ### <a name="extending-the-application-runtime"></a>Uygulama çalışma zamanı genişletme  
- WCF uygulamalarda, uygulama için hedeflenen için karşılık gelen bir kanal hedefleyen iletileri ve iletileri arasında fark yoktur. Kanal iletileri gibi güvenli bir konuşma oluşturma ya da güvenilir bir oturumu bazı kanal ilgili işlevlerini destekler. Bu iletiler uygulama çalışma zamanı için kullanılabilir değil; uygulama katmanı söz konusu önce işlenir.  
+ WCF uygulamaları için karşılık gelen bir kanal gidecek iletiler ve uygulama için hedeflenen iletiler arasında bir ayrım yoktur. Kanal iletileri güvenli konuşma oluşturma veya bir güvenilir oturum oluşturma gibi bazı kanal ile ilgili işlevler destekler. Bu iletiler, uygulama çalışma zamanı için kullanılamaz; uygulama katmanı söz konusu önce işlenir.  
   
- Bir istemci için hedefleyen veri ya da siz veya müşteriniz oluşturduğu hizmeti işlemi uygulama iletileri içerir. Bu iletiler, uygulama düzeyi uzantı sistemi gereksinimlerinize bağlı olarak, ileti ya da nesne formunda için kullanılabilir.  
+ Bir istemci için giden veri veya siz veya müşteriniz oluşturduğu hizmet işlemi uygulama iletileri içerir. Bu iletiler, uygulama düzeyinde uzantı sistemi gereksinimlerinize bağlı olarak, ileti veya nesne formunda kullanılabilir.  
   
- Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sisteminden uygulamasına geçirilir. Yeni kanal düzeyi işlevselliğe oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevselliğe oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). Uygulama çalışma zamanı genişletme hakkında daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sistemden uygulamaya geçirilir. Yeni kanal düzeyi işlevi oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevi oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). Uygulama çalışma zamanı genişletme hakkında daha fazla bilgi için bkz. [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Güvenliği Genişletme  
- Belirteçleri ve kimlik bilgileri gibi özel güvenlik mekanizmaları oluşturmak için bir güvenlik sistemi genişletmeniz gerekir. Daha fazla bilgi için bkz: [genişletme güvenlik](../../../docs/framework/wcf/extending/extending-security.md).  
+ Özel güvenlik mekanizmaları belirteçleri ve kimlik bilgileri gibi oluşturmak için güvenlik sistemi genişletmeniz gerekir. Daha fazla bilgi için [genişletme güvenlik](../../../docs/framework/wcf/extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Meta verileri genişletme  
- Meta verilerde varsayılandan farklı bir şekilde kullanıma sunmak için meta veri sistemi genişletmeniz gerekir. Daha fazla bilgi için bkz: [meta veri sistemini genişletme](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Meta verilerinizi, varsayılandan farklı bir şekilde kullanıma sunmak için meta veri sistemini genişletmeniz gerekir. Daha fazla bilgi için [meta veri sistemini genişletme](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
-#### <a name="extending-serialization"></a>Seri hale getirme genişletme  
- Özel kodlayıcılar yapı, veri yedekleri veya özelleştirme aktarılan verileri ile ilgili diğer işleri sağlamak için seri hale getirme sistem genişletmeniz gerekir. Daha fazla bilgi için bkz: [genişletme Kodlayıcıları ve serileştiricileri](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+#### <a name="extending-serialization"></a>Serileştirme genişletme  
+ Özel kodlayıcılar yapı, veriler yedeklerin veya özelleştirme aktarılan veriler ile ilgili diğer işleri sağlamak için serileştirme sistem genişletmeniz gerekir. Daha fazla bilgi için [genişletme kodlayıcılar ve seri hale getiricileri genişletme](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Bağlamaları Genişletme  
- Taşıma veya protokolü kanalı uygulama katmanı ile ilişkilendirmek için bağlama sistem genişletmeniz gerekir. Daha fazla bilgi için bkz: [bağlamaları genişletme](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Taşıma veya protokol kanalları uygulama katmanı ile ilişkilendirmek için bağlama sistemi genişletmeniz gerekir. Daha fazla bilgi için [bağlamaları genişletme](../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 ### <a name="extending-the-channel-system"></a>Kanal sistemini genişletme  
- Destek özel taşımaları veya protokol işlevselliği kanallar oluşturmak için bkz: [kanal katmanını genişletme](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+ Destek özel taşımalar veya protokol işlevselliği kanallar oluşturmak için bkz [kanal katmanını genişletme](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ### <a name="extending-the-service-hosting-system"></a>Sistem barındırma hizmeti genişletme  
- Hizmet geneli uygulama modeli değiştirmek için genişletmelidir <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> sınıfı. Daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Hizmet genelinde uygulama modeli değiştirmek için genişletmelidir <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> sınıfı. Daha fazla bilgi için [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Barındırma uygulama etki alanı ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. Daha fazla bilgi için bkz: [genişletme barındırma ServiceHostFactory kullanarak](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Uygulama etki alanı barındırma ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. Daha fazla bilgi için [genişletme barındırma ServiceHostFactory kullanarak](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'yi Genişletme](../../../docs/framework/wcf/extending/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF'yi Genişletme](../../../docs/framework/wcf/extending/index.md)

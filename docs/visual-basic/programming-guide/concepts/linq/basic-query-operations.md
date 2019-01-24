@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585623"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
 Bu konu, kısa bir giriş sağlar. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri Visual Basic'te ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -87,7 +87,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
   
-     veya  
+     -veya-  
   
 -   Adlandırılmış tür sonucuna dahil, oluşturma ve başlatma türün örneklerinin istediğiniz belirli alanları içeren tanımlama `Select` yan tümcesi. Yalnızca bireysel sonuçları döndürülen koleksiyon dışında kullanmanız gerekiyorsa veya yöntem çağrılarını parametreler olarak geçirileceğini gerekiyorsa bu seçeneği kullanın. Türünü `londonCusts5` IEnumerable (Of NamePhone) aşağıdaki örnekte olduğu.  
   
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  Oluşturulan Öğrenciler listesiyle birlikte bu kodu çalıştırmak [nasıl yapılır: öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
+>  Oluşturulan Öğrenciler listesiyle birlikte bu kodu çalıştırmak [nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` Anahtar sözcüğü, eşdeğer bir `INNER JOIN` SQL. Bu, iki koleksiyon öğeleri arasında eşleşen anahtar değerlere göre iki koleksiyon birleştirir. Sorgu anahtar değerlerini eşleşen koleksiyon öğelerinin bir kısmını veya tamamını döndürür. Örneğin, aşağıdaki kod önceki örtük birleştirme eylemini çoğaltır.  
   
@@ -116,19 +116,19 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- Oluşturulan Öğrenciler listesini kullanarak bu kodu çalıştırırsanız [nasıl yapılır: öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), çıktısı `For Each` deyimi:  
+ Oluşturulan Öğrenciler listesini kullanarak bu kodu çalıştırırsanız [nasıl yapılır: Bir öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), çıkışı `For Each` deyimidir:  
   
- Yıl: alt düzey  
+ Yıl: Alt düzey  
   
  Tucker, Michael  
   
  Garcia, Hugo  
   
- Garcia, Gamze  
+ Garcia, Debra  
   
  Tucker, Lance  
   
- Yıl: üst düzey  
+ Yıl: Üst düzey  
   
  Omelchenko, Svetlana  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Hakkında daha fazla bilgi için `Group By`, bkz: [Group yan tümcesi tarafından](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)  
- [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672116"
 ---
 # <a name="attribute-list-visual-basic"></a>Öznitelik Listesi (Visual Basic)
 Bildirilmiş programlama öğesine uygulanacak öznitelikleri belirtir. Birden çok öznitelik virgülle ayrılır. Bir öznitelik için sözdizimi aşağıdadır.  
@@ -53,8 +53,8 @@ Bildirilmiş programlama öğesine uygulanacak öznitelikleri belirtir. Birden �
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> Öznitelikli yordamı yönetilmeyen bir dinamik bağlantı kitaplığı (DLL) bir giriş noktası temsil ettiğini gösterir. Öznitelik, konumsal bağımsız değişken olarak DLL adı ve diğer bilgileri değişken başlatıcılar olarak sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

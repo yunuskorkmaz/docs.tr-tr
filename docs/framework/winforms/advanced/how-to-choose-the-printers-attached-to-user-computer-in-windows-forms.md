@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: bir kullanıcıya bağlanan yazıcıları seçme&#39;bilgisayarındaki Windows Forms'ta"
+title: "Nasıl yapılır: Bir kullanıcıya bağlanan yazıcıları seçme&#39;bilgisayarındaki Windows Forms'ta"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 5f54a74dc8118d2ebcb2df7e91f229c1807b0297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f45fadab0f3480d4c475ff8ee448b8d1cddb13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572818"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Nasıl yapılır: bir kullanıcıya bağlanan yazıcıları seçme&#39;bilgisayarındaki Windows Forms'ta
-Genellikle, kullanıcıların yazdırma için varsayılan yazıcı dışında bir yazıcı seçin istersiniz. Bir yazıcı olanlar kullanarak yüklü kümelerini seçmelerini etkinleştirebilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni. Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşeni yakalanan ve yazıcı seçmek için kullanılır.  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Nasıl yapılır: Bir kullanıcıya bağlanan yazıcıları seçme&#39;bilgisayarındaki Windows Forms'ta
+Genellikle, kullanıcıların bir yazıcı yazdırmak için varsayılan yazıcı dışında seçmek istersiniz. Kullanıcıların bunları kullanarak yüklü arasından seçim yapmasını sağlayabilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni. Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşen yakalanır ve yazıcı seçmek için kullanılır.  
   
  Aşağıdaki yordamda, bir metin dosyası varsayılan yazıcıda yazdırılmak üzere seçilir. <xref:System.Windows.Forms.PrintDialog> Sınıfının örneği sonra.  
   
@@ -25,9 +25,9 @@ Genellikle, kullanıcıların yazdırma için varsayılan yazıcı dışında bi
   
 1.  Kullanarak kullanılacak yazıcı seçin <xref:System.Windows.Forms.PrintDialog> bileşeni.  
   
-     Aşağıdaki kod örneğinde işlenen iki olay vardır. İlk bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olayı <xref:System.Windows.Forms.PrintDialog> sınıfı örneği ve kullanıcı tarafından seçilen yazıcı, yakalanan <xref:System.Windows.Forms.DialogResult> özelliği.  
+     Aşağıdaki kod örneğinde, işlenen iki olaylar vardır. İlk bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay <xref:System.Windows.Forms.PrintDialog> sınıfı örneği ve kullanıcı tarafından seçilen yazıcı yakalanan <xref:System.Windows.Forms.DialogResult> özelliği.  
   
-     İkinci olay <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni, örnek bir belge belirtilen yazıcı yazdırılmıştır.  
+     İkinci olay <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni, örnek bir belge belirtilen yazıcıya yazdırılır.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -106,5 +106,5 @@ Genellikle, kullanıcıların yazdırma için varsayılan yazıcı dışında bi
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

@@ -7,37 +7,37 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497544"
 ---
 # <a name="stack-etw-event"></a>Yığın ETW Olayı
-Yığın olayı diğer olaylar ile birlikte bir olay tetiklenir sonra Yığın izlemeleri oluşturmak için kullanılmalıdır. Çalışma zamanı sağlayıcısı etkinleştirildiğinde kaydedilir. Başka bir çalışma zamanı olay tetiklenir her tetiklenir çok sık olay olmasıdır. Bu nedenle, bu olay dikkatli bir şekilde kullanmanızı öneririz.  
+Yığın olayı diğer olayları ile birlikte bir olay tetiklenir sonra yığın izlemelerini oluşturmak için kullanılmalıdır. Çalışma zamanı sağlayıcısı etkin olduğunda günlüğe kaydedilir. Başka bir çalışma zamanı olayı her oluşturulur çünkü bir çok yüksek sıklık düzeyi olay budur. Bu nedenle, bu olay dikkatli kullanmanızı öneririz.  
   
- Aşağıdaki tablo düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için bkz: [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Olay oluşturma için anahtar sözcüğü|Düzey|  
+|Olayı için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
 |`StackKeyword` (0x40000000)|LogAlways(0)|  
   
- Aşağıdaki tabloda olay bilgilerini gösterir.  
+ Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman oluşturulur|  
+|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
 |-----------|--------------|-----------------|  
-|`CLRStackWalk`|82|Bir olay aşağıdaki Yığın izlemeleri oluşturmak için diğer olaylarla birlikte.|  
+|`CLRStackWalk`|82|Yığın izlemelerini izleyerek bir olay oluşturmak için diğer olaylarla birlikte.|  
   
- Aşağıdaki tabloda olay verilerini gösterir.  
+ Aşağıdaki tabloda, olay verilerini gösterir.  
   
 |Alan adı|Veri Türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|Win: Uint16|Benzersiz çalışma zamanı tanımlayıcısı.|  
-|Reserved1|Win: UInt8|Ayrılmış.|  
-|Ayrılmış2|Win: UInt8|Ayrılmış.|  
-|FrameCount|Win: UInt32|Yığın izleme çerçevelere sayısı.|  
-|Yığın|Win: işaretçi|Yönerge işaretçileri sütunlarının.|  
+|ClrInstanceID|Kazanma: Uint16|Benzersiz bir çalışma zamanı tanımlayıcısı.|  
+|Reserved1|Kazanma: UInt8|Ayrılmış.|  
+|Ayrılmış2|Kazanma: UInt8|Ayrılmış.|  
+|FrameCount|Kazanma: UInt32|Yığın izleme çerçeve sayısı.|  
+|Yığın|Kazanma: işaretçi|Yönerge işaretçileri sütunlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

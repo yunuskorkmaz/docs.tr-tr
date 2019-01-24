@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602513"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; öğesi
 Şifreleme ayarlarını içerir.  
@@ -42,7 +42,7 @@ ms.locfileid: "50181387"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Sınıf için kolay adlar eşlemeleri içerir.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -78,7 +78,7 @@ ms.locfileid: "50181387"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)

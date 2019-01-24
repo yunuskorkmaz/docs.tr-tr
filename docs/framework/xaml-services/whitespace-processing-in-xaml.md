@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728375"
 ---
 # <a name="white-space-processing-in-xaml"></a>Boşluk XAML içinde işleme
 XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -53,7 +53,7 @@ XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCL
 ## <a name="preserving-white-space"></a>Koruma boşluk  
  Kaynak boşluk korunması için çeşitli teknikler vardır [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] etkilenmez nihai sunu [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci boşluk normalleştirme.  
   
- **XML: space = "preserve"**: Bu öznitelik burada boşluk korunması isteniyorsa öğe düzeyinde belirtin. Tüm "pretty yazdırma" için kod düzenleme uygulamalar tarafından eklenmiş olabilir alanları içeren, boşluk bu korur, olarak görsel olarak sezgisel bir iç içe öğeleri hizalayın. Ancak bu boşlukları olup işlemek için kapsayıcı öğe içerik modeli belirlenir. Belirtmekten kaçının `xml:space="preserve"` çoğu nesne modellerini beyaz dikkate almaz olduğundan kök düzeyinde öznitelik nasıl ayarlanacağını bağımsız olarak gibi önemli boşluk. Ayar `xml:space` genel performans sonuçları XAML (özellikle seri hale getirme) bazı uygulamalarda işleme sahip olabilir. Yalnızca öznitelik özellikle boşluk dizeler içindeki işleme veya boşluk önemli koleksiyon öğeleri düzeyinde ayarlamak için daha iyi bir uygulamadır.  
+ **xml:space="preserve"**: Bu öznitelik burada boşluk korunması isteniyorsa öğe düzeyinde belirtin. Tüm "pretty yazdırma" için kod düzenleme uygulamalar tarafından eklenmiş olabilir alanları içeren, boşluk bu korur, olarak görsel olarak sezgisel bir iç içe öğeleri hizalayın. Ancak bu boşlukları olup işlemek için kapsayıcı öğe içerik modeli belirlenir. Belirtmekten kaçının `xml:space="preserve"` çoğu nesne modellerini beyaz dikkate almaz olduğundan kök düzeyinde öznitelik nasıl ayarlanacağını bağımsız olarak gibi önemli boşluk. Ayar `xml:space` genel performans sonuçları XAML (özellikle seri hale getirme) bazı uygulamalarda işleme sahip olabilir. Yalnızca öznitelik özellikle boşluk dizeler içindeki işleme veya boşluk önemli koleksiyon öğeleri düzeyinde ayarlamak için daha iyi bir uygulamadır.  
   
  **Varlıklar ve olmayan son boşluk**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] destekleyen herhangi bir yerleştirme [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] metin nesne modeli içindeki varlık. Bölünemez boşluk gibi özel varlık kullanabilirsiniz (&\#160; UTF-8 kodlaması). Bölünemez boşluk karakterleri destekleyen zengin metin denetimleri de kullanabilirsiniz. Tipik bir girintileme sonuçları üreten yetenekleri olduğu kadar temkinli varlıkları çalışma zamanı çıktısı büyük bir dizi etkene göre değişiklik gösterir çünkü girintileme gibi düzen özelliklerini benzetimini yapmak için varlıklar kullanıyorsanız, dikkatli olmalıdır paneller ve kenar boşlukları doğru kullanımı gibi düzen sistemi. Örneğin, varlıkları yazıtipleriyle eşlenir ve yanıt olarak kullanıcı yazı tipi seçimi boyutunu değiştirebilirsiniz.  
   
@@ -74,7 +74,7 @@ XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCL
   
  Ayrıca, bir akış belgesi modelinde bir linebreak connote bazı satır içi öğeleri bile bir koleksiyondaki boşluk önemli ek bir alan eklemeniz gerekir kasıtlı olarak değil. Örneğin, <xref:System.Windows.Documents.LineBreak> öğesinin aynı amaca \<BR / > etiketi içinde [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]ve biçimlendirme içinde okunabilirlik için genellikle bir <xref:System.Windows.Documents.LineBreak> sonraki tüm metni tarafından yazılmış bir satır besleme ayrılır. Bu satır besleme sonraki satırın başında boşluk olacak normalleştirilmeli değil. Bu davranış, sınıf tanımında etkinleştirmek için <xref:System.Windows.Documents.LineBreak> öğesine uygular <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, hangi ardından yorumlanır tarafından [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] çevresindeki boşluk auto'yu İşlemci <xref:System.Windows.Documents.LineBreak> her zaman kırpılır.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML karakter varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: Space XAML içinde işleme](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XML karakter varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XML: Space XAML içinde işleme](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

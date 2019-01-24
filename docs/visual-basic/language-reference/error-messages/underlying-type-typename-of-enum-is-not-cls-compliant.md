@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674800"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Temel alınan türü &lt;typename&gt; Enum CLS uyumlu değil
 Bu sabit listesi değil için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu, bileşen içinde bir hata olmadığından [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ve Visual Basic desteği bu veri türü. Ancak, başka bir bileşen kesinlikle CLS uyumlu bir kod halinde yazılmış bu veri türünü desteklemiyor olabilir. Böyle bir bileşene başarıyla bileşeniniz ile etkileşim kurmak mümkün olmayabilir.  
@@ -41,7 +41,7 @@ Bu sabit listesi değil için belirtilen veri türü parçası [dil bağımsızl
   
 -   Otomasyon ve COM nesneleri ile arabirim, bazı türleri farklı veri genişliği kıyasla olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `uint` 16 bit diğer ortamlarda genellikle olur. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yansıma (Visual Basic)](../../programming-guide/concepts/reflection.md)  
- [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yansıma (Visual Basic)](../../programming-guide/concepts/reflection.md)
+- [Yansıma](../../../framework/reflection-and-codedom/reflection.md)
+

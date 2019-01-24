@@ -7,40 +7,40 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636975"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms için Uygulama Ayarları
-Windows Forms uygulamaları ayarlarını özelliğidir oluşturmak, depolamak ve özel uygulama ve istemci üzerindeki kullanıcı tercihlerini korumak daha kolay hale getirir. Uygulama ayarları, yalnızca veritabanı bağlantı dizelerini gibi uygulama verilerini, aynı zamanda araç çubuğu konumları gibi kullanıcıya özgü verileri depolamak ve en son listeleri kullanılır.  
+Windows Forms uygulamaları ayarları özelliği oluşturulacağı, depolanacağı ve özel uygulama ve istemci üzerindeki kullanıcı tercihlerini korumak daha kolay hale getirir. Uygulama ayarları, yalnızca veritabanı bağlantı dizeleri gibi uygulama verilerini, aynı zamanda araç çubuğu konumları gibi kullanıcıya özgü verileri depolayabilir ve listeleri en son kullanılan.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)  
- Uygulamanız ve kullanıcılarınızın adına ayarları veri depolamak ve oluşturmak nasıl ele alınmaktadır.  
+ Uygulamanız ve kullanıcılarınız adına ayarları veri depolamak ve oluşturmak nasıl ele alınmaktadır.  
   
  [Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)  
- Uygulama ayarları nasıl çalışır özellik açıklar ve mimarisinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikler araştırır.  
+ Nasıl çalıştığını uygulama ayarları özelliğini açıklar ve mimariyi gruplanmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
   
  [Uygulama Ayarları Öznitelikleri](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
- Listeler ve bir uygulama ayarları sarmalayıcı sınıfı veya ayarları özelliklerine uygulanan öznitelikleri açıklanmaktadır.  
+ Listeler ve bir uygulama ayarları sarmalayıcı sınıfı veya ayarları özellikleri için uygulanabilecek öznitelikleri açıklar.  
   
  [Özel Denetimler için Uygulama Ayarları](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
- Özel denetimler üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını sürdürmek vermek için yapılması gerekir açıklanır.  
+ Hangi özel kontrollerinizi üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için gerçekleştirilmesi gereken açıklar.  
   
- [Nasıl yapılır: Uygulama Ayarları Oluşturma](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ [Nasıl yapılır: Uygulama ayarları oluşturma](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
  Uygulama oturumları arasında kalıcı yeni uygulama ayarları oluşturmayı gösterir.  
   
- [Nasıl yapılır: Uygulama Ayarlarını Doğrulama](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- Kalıcı yapılan önce doğrulama uygulama ayarlarını gösterir.  
+ [Nasıl yapılır: Uygulama ayarlarını doğrulama](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ Kalıcı önce doğrulama uygulama ayarları gösterir.  
   
 ## <a name="related-topics"></a>İlgili konular
 
 [Windows Forms yapılandırma bölümü](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
-Belgeleri Windows Forms ile .NET Framework 4.7 başlangıç uygulaması yüksek DPI etkinleştirmek için ayarlarını destekler.
+Belgelerin .NET Framework 4.7 ile başlayarak Windows Forms uygulaması yüksek DPI etkinleştirmek için ayarlarını destekler.
 
-## <a name="see-also"></a>Ayrıca bkz.  
-  
-[Windows Forms](../index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Windows Forms](../index.md)

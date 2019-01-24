@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547098"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
 Bir veya daha fazla toplama işlevleri, bir koleksiyon için geçerlidir.  
@@ -68,7 +68,7 @@ Koleksiyondaki tüm öğelerin ortalamasını hesaplar veya koleksiyondaki tüm 
 
 [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
 
-### <a name="count"></a>Sayısı
+### <a name="count"></a>Sayı
 
 Koleksiyondaki öğe sayısını sayar. İsteğe bağlı bir tedarik `Boolean` ifade yalnızca bir koşulu karşılayan koleksiyondaki öğe sayısı. Bir örnek verilmiştir:
 
@@ -94,7 +94,7 @@ Koleksiyondan minimum değeri hesaplar ve koleksiyondaki tüm öğeler için sa�
 
 [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
 
-### <a name="sum"></a>TOPLA
+### <a name="sum"></a>Toplam
 
 Koleksiyondaki tüm öğelerin toplamını hesaplar ve koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Bir örnek verilmiştir:
 
@@ -118,11 +118,11 @@ Aşağıdaki örnek nasıl kullanılacağını gösterir `Aggregate` yan tümces
   
  [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
-- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
+- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By Yan Tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md)

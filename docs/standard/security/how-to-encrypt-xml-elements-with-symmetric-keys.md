@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme'
+title: 'Nasıl yapılır: XML öğelerini simetrik anahtarlarla şifreleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cbc06264dd2153818d69c0124e8a263bf4265ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622838"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Nasıl yapılır: XML öğelerini simetrik anahtarlarla şifreleme
 Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi bir öğesinde şifrelemek için ad alanı.  XML şifreleme depolamak veya hassas XML kolay okunan verilerin hakkında endişelenmeden taşıma sağlar.  Bu yordam olarak da bilinen Rijndael Gelişmiş Şifreleme Standardı (AES) algoritması kullanılarak bir XML öğesinin şifresini çözer.  
   
  Bu yordam kullanılarak şifrelenmiş bir XML öğesinin şifresini çözmek hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML öğelerini simetrik anahtarlarla şifre çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
@@ -103,5 +103,5 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Nasıl yapılır: XML Öğelerinin Şifresini Simetrik Anahtarlarla Çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Nasıl yapılır: XML öğelerini simetrik anahtarlarla şifre çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

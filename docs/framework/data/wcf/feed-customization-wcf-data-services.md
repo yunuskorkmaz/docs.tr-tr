@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c54ea70049544e5205613ab76eb810798513fab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680227"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veri bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için veri akışı hem Atom hem de JavaScript nesne gösterimi (JSON) biçimlerini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler, HTTP ileti gövdesine eklenebilir bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklarda bulunan verileri ve Atom öğeleri arasında varsayılan varlık özelliği eşlemeyi tanımlar. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -31,7 +31,7 @@ ms.locfileid: "44207498"
 >  Özel akışları tanımladığınızda, tanımlanan özel eşlemelere sahip tüm varlık özellikleri projeksiyonda içerdiği garanti etmeniz gerekir. Projeksiyon eşlenen varlık özelliği bulunmayan, veri kaybı oluşabilir. Daha fazla bilgi için [sorgu projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework sağlayıcısı ile akışları özelleştirme  
- Veri modeli ile kullanılan [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı .edmx dosyası içinde XML olarak temsil edilir. Bu durumda, özel akışları tanımlama öznitelikleri eklenme `EntityType` ve `Property` varlık türleri ve veri modelinde özelliklerini temsil eden öğeler. Bu akış özelleştirme öznitelikleri içinde tanımlı değil [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](https://go.microsoft.com/fwlink/?LinkId=159072), biçim, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı veri modeli tanımlamak için kullanır. Bu nedenle, akış özelleştirme öznitelikleri olarak tanımlanan belirli bir şema ad alanında bildirmeniz gerekir `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Aşağıdaki XML parçası için uygulanan akış özelleştirme öznitelikleri gösterir `Property` öğelerini `Products` tanımlayan varlık türü `ProductName`, `ReorderLevel`, ve `UnitsInStock` özellikleri.  
+ Veri modeli ile kullanılan [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı .edmx dosyası içinde XML olarak temsil edilir. Bu durumda, özel akışları tanımlama öznitelikleri eklenme `EntityType` ve `Property` varlık türleri ve veri modelinde özelliklerini temsil eden öğeler. Bu akış özelleştirme öznitelikleri içinde tanımlı değil [ \[MC CSDL\]: Kavramsal şema tanım dosyası biçimi](https://go.microsoft.com/fwlink/?LinkId=159072), biçim, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı veri modeli tanımlamak için kullanır. Bu nedenle, akış özelleştirme öznitelikleri olarak tanımlanan belirli bir şema ad alanında bildirmeniz gerekir `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Aşağıdaki XML parçası için uygulanan akış özelleştirme öznitelikleri gösterir `Property` öğelerini `Products` tanımlayan varlık türü `ProductName`, `ReorderLevel`, ve `UnitsInStock` özellikleri.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "44207498"
  Yansıma sağlayıcısı kullanılarak yapılıyordu bir veri modeli için akışları özelleştirmek için bir veya daha fazla örneğini ekleme <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> veri modelindeki varlık türleri temsil eden sınıfları özniteliği. Özelliklerini <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> sınıfı önceki bölümde açıklanan akış özelleştirme öznitelikleri karşılık gelir. Aşağıdaki bildirimi örnektir `Order` türüyle özel eşleme için her iki özellik tanımlanan akış.  
   
 > [!NOTE]
->  Bu örnek için veri modeli konusunda tanımlanan [nasıl yapılır: yansıma sağlayıcısını kullanarak bir veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+>  Bu örnek için veri modeli konusunda tanımlanan [nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,7 +72,7 @@ ms.locfileid: "44207498"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Daha fazla bilgi için [nasıl yapılır: yansıma sağlayıcısı ile akışları özelleştirme](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Yansıma sağlayıcısı ile akışları özelleştirme](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Özel veri hizmeti sağlayıcısı ile akışları özelleştirme  
  Çağırarak bir kaynak türü için tanımlı bir özel veri hizmeti sağlayıcısı tarafından tanımlanan bir veri modeli için akış özelleştirme <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> üzerinde <xref:System.Data.Services.Providers.ResourceType> temsil eden bir veri modelindeki varlık türü. Daha fazla bilgi için [özel veri hizmeti sağlayıcılarını](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
@@ -92,6 +92,6 @@ ms.locfileid: "44207498"
   
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

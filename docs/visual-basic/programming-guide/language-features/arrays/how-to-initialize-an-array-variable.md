@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma"
+title: "Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638940"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma
 Bir dizi değişmez değeri ekleyerek bir dizi değişkeni başlatmak bir `New` yan tümcesi ve dizinin başlangıç değerlerini belirterek. Türü belirtin veya dizi değişmez değerlerinin çıkarılan izin verebilirsiniz. Türün gösterilmesi hakkında daha fazla bilgi için bkz: "Doldurma bir dizeyi başlangıç değerleriyle" [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Dizi değişmez değeri kullanarak dizi değişkeni başlatmak için  
@@ -53,6 +53,6 @@ Bir dizi değişmez değeri ekleyerek bir dizi değişkeni başlatmak bir `New` 
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

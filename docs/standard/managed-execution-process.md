@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652026"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı ele alınmıştır aşağıdaki adımları içerir:  
@@ -40,7 +40,7 @@ ms.locfileid: "44192599"
   
 <a name="choosing_a_compiler"></a>   
 ## <a name="choosing-a-compiler"></a>Bir derleme seçme  
- Ortak dil çalışma (CLR) tarafından sağlanan avantajlar elde etmek için Visual Basic, C#, Visual C++, F # veya bir Eiffel, Perl veya COBOL derleyici gibi çok sayıda üçüncü taraf derleyicileri biri gibi çalışma zamanını hedefleyen bir veya daha fazla dil derleyicileri kullanmanız gerekir.  
+ Ortak dil çalışma (CLR) tarafından sağlanan avantajlar elde etmek için Visual Basic gibi çalışma zamanını hedefleyen bir veya daha fazla dil derleyicileri kullanın C#, Visual C++ F#, veya Eiffel, Perl veya COBOL gibi çok sayıda üçüncü taraf derleyicileri Derleyici.  
   
  Çok dilli yürütme ortamı olduğundan, çalışma zamanının çok çeşitli veri türleri ve dil özelliklerini destekler. Bu özellikleri kullanarak kodunuzun tasarlarken ve hangi çalışma zamanı özellikleri kullanılabilir kullandığınız dil derleyicisi belirler. Derleyici, çalışma zamanı değil, kodunuzu kullanmalısınız sözdizimi oluşturur. Bileşeniniz diğer dillerde yazılmış bileşenler tarafından tamamen kullanılabilir olması gerekiyorsa, bileşeninizin dışarı aktarılan türler dahil olan dil özellikleri açığa çıkarmalıdır [dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Kullanabileceğiniz <xref:System.CLSCompliantAttribute> kodunuzu CLS uyumlu olduğundan emin olmak için özniteliği. Daha fazla bilgi için [dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md).  
   
@@ -109,12 +109,12 @@ ms.locfileid: "44192599"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel bakış](../../docs/framework/get-started/overview.md)  
-- [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)  
-- [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)  
-- [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-- [Güvenlik](../../docs/standard/security/index.md)  
-- [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)  
-- [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)  
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Genel bakış](../../docs/framework/get-started/overview.md)
+- [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)
+- [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Güvenlik](../../docs/standard/security/index.md)
+- [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)
+- [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Uygulama Etki Alanları](../../docs/framework/app-domains/application-domains.md)

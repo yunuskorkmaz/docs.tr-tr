@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491369"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communication Foundation (WCF) için size yöneliktir. Bu konu başlığının altındaki listenin sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımlar tanıtıcı bir anlayış verir. Her biri bir veya daha fazla hizmet işlemlerini kullanıma sunan bir veya daha fazla uç noktaları, bir hizmet sunar. *Uç nokta* Hizmetin nerede hizmet bulunabilir, adres nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.
@@ -27,27 +27,27 @@ Sabit diskinize indirilebilir ve çalıştırma, konularına bakın ve örnek uy
 Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+ [Nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 
  Bir kullanıcı tarafından tanımlanan arabirimi kullanarak bir WCF sözleşmesi oluşturmayı açıklar. Sözleşme hizmet tarafından sunulan işlevselliği tanımlar.
 
- [Nasıl yapılır: Bir Hizmet Anlaşmasını Uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+ [Nasıl yapılır: Bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
  Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlayan eklendiğinde, bir hizmet sınıfı ile uygulanmalıdır.
 
- [Nasıl yapılır: Temel Bir Hizmet Barındırma ve Çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+ [Nasıl yapılır: Temel hizmet barındırma ve çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 
  Kodda bir uç nokta hizmeti için yapılandırma ve hizmeti bir konsol uygulamasında nasıl açıklar. Etkin duruma gelmesi hizmet yapılandırılmalı ve çalışma zamanı ortamı içinde barındırılan. Bu ortam hizmeti oluşturur ve yaşam süresi ve bağlam denetler.
 
- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+ [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
  Bir WCF hizmetinden bir WCF istemci proxy oluşturmak için kullanılan meta verilerini almak nasıl açıklar. Bu işlem, Visual Studio'da hizmet Başvurusu Ekle işlevselliğini kullanır.
 
- [Nasıl yapılır: İstemci Yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+ [Nasıl yapılır: İstemci yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
 
  Bir WCF yapılandırmayı açıklar istemci istemci yapılandırma gerektirir İstemcinin hizmete erişmek için kullandığı uç noktası belirtme.
 
- [Nasıl yapılır: İstemci Kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+ [Nasıl yapılır: Bir istemci kullanın](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
  Hizmet işlemleri çağırmak için WCF istemci proxy kullanmayı açıklar.
 
@@ -61,7 +61,7 @@ Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz:
 - [Windows Communication Foundation Örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
 - [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)
 - [Belgeler için Kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)

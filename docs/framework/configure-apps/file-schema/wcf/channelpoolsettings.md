@@ -2,12 +2,12 @@
 title: '&lt;ChannelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 666602bde75cd21b5b3d16bd4d5e6cf63c12d593
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554965"
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
 Özel bağlama için kanal havuzu ayarlarını belirtir.  
@@ -16,7 +16,7 @@ ms.locfileid: "54149104"
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
-\<oneWay >  
+\<oneWay>  
 \<channelPoolSettings >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -45,7 +45,7 @@ ms.locfileid: "54149104"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Paket için özel bir bağlama yönlendirme sağlar.|  
+|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Paket için özel bir bağlama yönlendirme sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kotalar, kaynakların aşırı kullanımını önlemek için bir ilke mekanizması kullanılır. Bunlar, kötü amaçlı veya istenmeyen hizmet reddi (DOS) saldırıları engeller. Bu öğe, kanal kotalar özel bir kanalda ayarlarken kullanın.  
@@ -58,14 +58,14 @@ ms.locfileid: "54149104"
   
 -   `maxOutboundChannelsPerEndpoint` Kota önbellek sınırlarını hem sunucu hem de istemci üzerinde ayarlar ve güvenilirliğini artırmak için kullanılır. Varsayılan değer, bir geliştirme ortamı ve küçük yükleme senaryoları için uygun olan ölçülü uygun kaynakların ayrılması dayanır. Hizmet yöneticileri, bir yükleme kaynaklar yetersiz çalışıyorsa veya ek kaynakların kullanılabilirliğini rağmen bağlantı sayısı değeri gözden geçirmelidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

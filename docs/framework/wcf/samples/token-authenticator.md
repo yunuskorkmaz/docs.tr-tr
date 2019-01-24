@@ -2,12 +2,12 @@
 title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: fbd036001e3b39c7df27e2388bc2ac4b803f0de3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619551"
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek nasıl özel bir belirteç kimlik doğrulayıcısı uygulanacağını gösterir. Belirteç kimlik doğrulayıcısı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için tutarlı ve kimlik doğrulama belirteciyle ilişkili doğrulama kullanılır.
@@ -367,4 +367,4 @@ static void DisplayIdentityInformation()
   
 1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

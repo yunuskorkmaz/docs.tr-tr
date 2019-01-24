@@ -9,18 +9,18 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643968"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms'ta Olayların Sırası
-Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların her biri sırayla işleme ile ilgili belirli ilgi sırasıdır. Bir durum olayların ne zaman formun bölümleri yeniden gibi ince işleme çağırdığında bir tanıma olaylar çalışma zamanında oluşturulur kesin siparişi gereklidir. Bu konu, uygulamalar ve denetimleri ömrü içinde birkaç önemli aşamaları sırasında olayları terabayt bazı ayrıntılar sağlar. Fare giriş olayların sırası hakkında belirli Ayrıntılar için bkz: [Windows Forms'ta fare olayları](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Windows Forms'ta olayların genel bakış için bkz: [olaylara genel bakış](../../../docs/framework/winforms/events-overview-windows-forms.md). Olay işleyicileri yapısıyla hakkında daha fazla ayrıntı için bkz: [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayların her biri sırayla işleme ile ilgili belirli ilgilenilen sırasıdır. Bir durum için olayların ne zaman formun parçalarını yeniden gibi gözlemlemenize işleme çağırdığında bir farkındalık olaylar çalışma zamanında oluşturulur kesin siparişin gereklidir. Bu konu, uygulamalar ve denetimleri ömrünü birkaç önemli aşamaları sırasında olayları bazında bazı ayrıntılar sağlar. Fare giriş olayları sırası hakkında belirli Ayrıntılar için bkz [Windows Forms'ta fare olayları](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Windows Forms'ta olayların genel bakış için bkz. [olaylara genel bakış](../../../docs/framework/winforms/events-overview-windows-forms.md). Olay işleyicileri düzenini hakkında daha fazla ayrıntı için bkz: [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>Uygulama başlatma ve kapatma olayları  
- <xref:System.Windows.Forms.Form> Ve <xref:System.Windows.Forms.Control> sınıfları bir dizi uygulama başlatma ve kapatma ilgili olayları gösterir. Bir Windows Forms uygulaması başlatıldığında, ana formun başlangıç olaylar aşağıdaki sırayla oluşturulur:  
+ <xref:System.Windows.Forms.Form> Ve <xref:System.Windows.Forms.Control> sınıfları bir dizi uygulama başlatma ve kapatma ile ilgili olayları gösterir. Bir Windows Forms uygulaması başladığında, ana formu başlangıç olayları aşağıdaki sırayla oluşturulur:  
   
 -   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
@@ -34,7 +34,7 @@ Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların h
   
 -   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
- Bir uygulama kapandığında ana formun kapatma olayları aşağıdaki sırayla oluşturulur:  
+ Bir uygulama kapandığında ana formu kapatma olayları aşağıdaki sırayla oluşturulur:  
   
 -   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
@@ -46,13 +46,13 @@ Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların h
   
 -   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application.ApplicationExit> Olayı <xref:System.Windows.Forms.Application> sınıfı, ana formu kapatma olayları sonra oluşturulur.  
+ <xref:System.Windows.Forms.Application.ApplicationExit> Olayı <xref:System.Windows.Forms.Application> sınıfı, ana formu kapatma olaylarını sonra oluşturulur.  
   
 > [!NOTE]
 >  Visual Basic 2005 içeren ek uygulama olayları gibi <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> ve <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
   
 ## <a name="focus-and-validation-events"></a>Odak ve doğrulama olayları  
- Çağırarak (SEKMESİ, üst karakter + sekme ve benzeri) klavyeyi kullanarak odağı değiştirdiğinizde <xref:System.Windows.Forms.Control.Select%2A> veya <xref:System.Windows.Forms.Control.SelectNextControl%2A> yöntemleri veya ayarlayarak <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> geçerli formun, odak olayları özelliğine <xref:System.Windows.Forms.Control> sınıfı ortaya aşağıdaki sırayla :  
+ Klavye (SEKMESİ, SHIFT + TAB vb.) kullanarak çağırarak odağı değiştirdiğinizde <xref:System.Windows.Forms.Control.Select%2A> veya <xref:System.Windows.Forms.Control.SelectNextControl%2A> yöntemleri veya ayarlayarak <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> özelliğini geçerli biçime, odak olayları <xref:System.Windows.Forms.Control> sınıfı aşağıdaki sırayla gerçekleşir :  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -66,7 +66,7 @@ Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların h
   
 -   <xref:System.Windows.Forms.Control.LostFocus>  
   
- Değiştirdiğinizde odağı fare kullanarak veya çağırarak <xref:System.Windows.Forms.Control.Focus%2A> yöntemi, odak olayları <xref:System.Windows.Forms.Control> sınıfı aşağıdaki sırayla oluşur:  
+ Değiştirdiğinizde odak fareyi kullanarak veya çağırarak <xref:System.Windows.Forms.Control.Focus%2A> yöntemi, odak olayları <xref:System.Windows.Forms.Control> sınıfı aşağıdaki sırayla gerçekleşir:  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -80,5 +80,5 @@ Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların h
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

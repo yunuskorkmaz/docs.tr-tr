@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+title: 'Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521727"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma
 Şirket içinde barındırılan Windows Communication Foundation (WCF) hizmet ile oluşturulurken <xref:System.ServiceModel.WSHttpBinding> sınıfı bu kullanımları aktarım güvenliği, ayrıca bir X.509 sertifikası ile bir bağlantı noktası yapılandırmanız gerekir. Şirket içinde barındırılan bir hizmet oluşturmuyorsanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
@@ -57,7 +57,7 @@ ms.locfileid: "49308447"
   
 1.  İstemci kimlik doğrulaması amacı olan bir X.509 sertifikası bulunamıyor sertifikalar MMC ek bileşenini kullanın. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Sertifikanın parmak izi erişin. Daha fazla bilgi için [nasıl yapılır: bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Sertifikanın parmak izi erişin. Daha fazla bilgi için [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Sertifikanın parmak izini Not Defteri gibi bir metin düzenleyicisine kopyalayın.  
   
@@ -129,5 +129,5 @@ ms.locfileid: "49308447"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-* [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

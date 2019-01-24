@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660755"
 ---
 # <a name="load-balancing"></a>YükDengeleme
-Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak için bir bunları bir yük dengeli sunucu grubunda dağıtarak ölçeklendirmek için yoludur. WCF uygulamaları teknikler, yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere standart dengelemesini yanı sıra donanım tabanlı Yük Dengeleme cihazları kullanılarak Yük Dengeleme olabilir.  
+Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak yollarından biri, bunları bir yük dengeli bir sunucu grubunda dağıtarak ölçeklendirme sağlamaktır. WCF uygulamaları, Windows Ağ Yükü Dengeleme gibi yazılım yük Dengeleyiciler gibi teknikler, standart yük dengelemeyi ve bunun yanı sıra donanım tabanlı Yük Dengeleme Gereçleri kullanarak Yük Dengeleme olabilir.  
   
- Aşağıdaki bölümlerde, Yük Dengeleme çeşitli sistem tarafından sağlanan bağlamalar kullanılarak oluşturulan WCF uygulamalar için konuları açıklanmaktadır.  
+ Aşağıdaki bölümlerde, çeşitli sistem tarafından sağlanan bağlamalar kullanılarak oluşturulan WCF uygulamaları yük dengelemeyi dikkate alınacak noktalar açıklanmaktadır.  
   
-## <a name="load-balancing-with-the-basic-http-binding"></a>Yük Dengeleme ile temel HTTP bağlama  
- Yük Dengeleme, kullanarak iletişim kuran WCF uygulamaları perspektifinden <xref:System.ServiceModel.BasicHttpBinding> HTTP ortak başka türlerde ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) daha hiç farklı değildir. Bu bağlamayı kullanan WCF kanalları kendiliğinden durum bilgisiz ve kanal kapandığında kendi bağlantılarını sonlandırılacak. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
+## <a name="load-balancing-with-the-basic-http-binding"></a>Yük Dengeleme temel HTTP bağlama  
+ Yük Dengeleme, kullanarak iletişim kuran bir WCF uygulamaları perspektifinden <xref:System.ServiceModel.BasicHttpBinding> hiç HTTP ortak diğer tür ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) çok farklı değildir. Bu bağlamayı kullanan WCF kanalları, doğal olarak durum bilgisiz olduğundan ve kanal kapandığında kendi bağlantılarını sonlandırın. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
   
- Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> iletileri ile bir bağlantı HTTP üstbilgisi gönderir bir `Keep-Alive` bunları destekleyen hizmetler kalıcı bağlantı için istemcileri etkinleştirir değeri. Bu yapılandırma, bağlantıları aynı sunucuya sonraki ileti göndermek için yeniden kullanılabilir daha önce kurulmuş olduğundan Gelişmiş üretimi sunar. Ancak, bağlantı yeniden istemcilerin hepsini bir kez deneme yük dengeleme verimliliğini azaltır yük dengeli grubu içindeki belirli bir sunucuya kesinlikle ilişkili hale gelmesine neden olabilir. Bu davranış istenmeyen, ise HTTP `Keep-Alive` kullanarak sunucu üzerinde devre dışı bırakılabilir <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliği ile bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding>. Aşağıdaki örnek Yapılandırması'nı kullanarak bunu kullanmayı gösterir.  
+ Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> iletileri ile bir bağlantı HTTP üst bilgisi gönderir bir `Keep-Alive` bunları destekleyen hizmetler için kalıcı bağlantılar kurmanın istemcileri etkinleştiren değer. Bu yapılandırma, çünkü bağlantı aynı sunucuya sonraki ileti göndermek için yeniden kullanılabilir daha önce oluşturulan gelişmiş aktarım hızı sunar. Ancak, bağlantı yeniden hepsini bir kez deneme yük dengeleme işleminin verimliliğini azaltır yük dengeli grubu içindeki belirli bir sunucuya kesin ilişkili olmasını istemcilerin neden olabilir. Bu istenmeyen, davranıştır, HTTP `Keep-Alive` kullanılarak sunucuda devre dışı bırakılabilir <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliğiyle bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding>. Aşağıdaki örnek Yapılandırması'nı kullanarak bunun nasıl yapılacağını gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -56,7 +56,7 @@ Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak içi
 </configuration>  
 ```  
   
- Sürümünde sunulan Basitleştirilmiş Yapılandırması'nı kullanarak [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aynı davranışı aşağıdaki Basitleştirilmiş yapılandırma kullanılarak gerçekleştirilebilir.  
+ Sürümünde Basitleştirilmiş yapılandırma kullanarak [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aynı davranışı, aşağıdaki Basitleştirilmiş yapılandırma kullanılarak gerçekleştirilebilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -77,19 +77,19 @@ Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak içi
 </configuration>  
 ```  
   
- Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Yük Dengeleme WSHttp bağlama ve WSDualHttp bağlama  
- Hem <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> çeşitli değişiklikler yapılandırma bağlama varsayılan yapılan sağlanan HTTP Yük Dengeleme teknikler kullanılarak yük dengeli.  
+## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp bağlama ve WSDualHttp bağlama ile Yük Dengeleme  
+ Hem <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> yapılandırma bağlama varsayılan birden fazla değişiklik yapılır sağlanan HTTP Yük Dengeleme teknikleri kullanarak yük dengeli.  
   
--   Güvenlik bağlamı kurma devre dışı bırakma: Bu ayarı tarafından gerçekleştirilebilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği <xref:System.ServiceModel.WSHttpBinding> için `false`. Güvenlik oturumları gerekliyse, alternatif olarak, bu durum bilgisi olan güvenlik oturumları açıklandığı gibi kullanmak da mümkündür [güvenli oturumlar](../../../docs/framework/wcf/feature-details/secure-sessions.md) konu. Durum bilgisi olan güvenlik oturumları koruma güvenlik belirtecinin bir parçası olarak her istek ile tüm güvenlik oturumu durumunun iletilen gibi durum bilgisiz kalmasına hizmetini etkinleştirin. Bir durum bilgisi olan güvenlik oturumu etkinleştirmek için bunu kullanmak için gerekli olduğuna dikkat edin bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarlarını üzerinde açık değildir <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> sistem tarafından sağlanır.  
+-   Güvenlik bağlamı kurma Kapat: Bu ayarı tarafından gerçekleştirilebilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği <xref:System.ServiceModel.WSHttpBinding> için `false`. Güvenlik oturumu gerekliyse, alternatif olarak, bu durum bilgisi olan güvenlik oturumu açıklandığı kullanmak da mümkündür [güvenli oturumlar](../../../docs/framework/wcf/feature-details/secure-sessions.md) konu. Durum bilgisi olan güvenlik oturumu koruma güvenlik belirtecinin bir parçası olarak her bir istekle tüm durumları güvenlik oturumu için iletilen gibi durum bilgisiz kalmasına hizmetini etkinleştirin. Bir durum bilgisi olan güvenlik oturumu etkinleştirmek için bunu kullanmak için gerekli olduğunu unutmayın bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarlarını üzerinde gösterilmez <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> sistem tarafından sağlanır.  
   
--   Güvenilir oturumlar kullanmayın. Bu özellik varsayılan olarak etkin değildir.  
+-   Güvenilir oturumlar kullanmayın. Varsayılan olarak bu özelliği kapalıdır.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Yük Dengeleme Net.TCP bağlama  
- <xref:System.ServiceModel.NetTcpBinding> Yük dengeli IP katmanı Yük Dengeleme teknikleri. Ancak, <xref:System.ServiceModel.NetTcpBinding> bağlantı gecikmesini azaltmak için varsayılan olarak TCP bağlantılarını havuzları. Yük Dengelemesi temel mekanizmasını uğratan bir en iyi duruma getirme budur. En iyi duruma getirme için birincil yapılandırma değeri <xref:System.ServiceModel.NetTcpBinding> bağlantı havuzu ayarları parçası olan kira zaman aşımı. Bağlantı havuzu istemci bağlantılarını grubu içindeki belirli sunuculara ilişkili hale gelmesine neden olur. Bu bağlantıların yaşam süresi (kira zaman aşımı ayarı tarafından denetlenen bir faktör) artırın, gruptaki çeşitli sunucular arasında yük dağıtımı dengesiz haline gelir. Sonuç olarak ortalama süre artar çağırın. Kullanırken bunu <xref:System.ServiceModel.NetTcpBinding> yük dengeli senaryolarda, bağlama tarafından kullanılan varsayılan kira zaman aşımı azaltmayı göz önünde bulundurun. En iyi değeri uygulama bağımlı 30 saniyelik kira zaman aşımı yük dengeli senaryoları için makul bir başlangıç noktası olsa. Kanal kira zaman aşımı ve diğer taşıma kotaları hakkında daha fazla bilgi için bkz: [taşıma kotaları](../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ <xref:System.ServiceModel.NetTcpBinding> Yük dengeli IP-katman Yük Dengeleme teknikleri. Ancak, <xref:System.ServiceModel.NetTcpBinding> bağlantı gecikme süresini azaltmak için varsayılan olarak TCP bağlantı havuzları. Yük Dengeleme temel mekanizması uğratan iyileştirme budur. En iyi duruma getirmek için birincil yapılandırma değeri <xref:System.ServiceModel.NetTcpBinding> kiralama zaman aşımı, bağlantı havuzu ayarlarını bir parçasıdır. Bağlantı havuzu grubu içindeki belirli sunuculara ilişkili olmasını istemci bağlantıları neden olur. (Kiralama zaman aşımı ayarı tarafından denetlenen bir faktör) bu bağlantılar ömrünü artırmak, gruptaki çeşitli sunucular arasında yük dağıtımı dengesiz hale gelir. Sonuç olarak ortalama süresi arttıkça çağırın. Bunu kullanırken <xref:System.ServiceModel.NetTcpBinding> yük dengeli senaryolarda bağlama tarafından kullanılan varsayılan kiralama zaman aşımını azaltmayı göz önünde bulundurun. Uygulama bağımlı olsa da en iyi değeri 30 saniyelik kiralama zaman aşımı yük dengeli senaryoları için makul bir başlangıç noktası var. Kanal kiralama zaman aşımı ve diğer taşıma kotaları hakkında daha fazla bilgi için bkz. [taşıma kotaları](../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Yük dengeli senaryolarda en iyi performans için kullanmayı <xref:System.ServiceModel.NetTcpSecurity> (ya da <xref:System.ServiceModel.SecurityMode.Transport> veya <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services Barındırma En İyi Uygulamaları](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Internet Information Services Barındırma En İyi Uygulamaları](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

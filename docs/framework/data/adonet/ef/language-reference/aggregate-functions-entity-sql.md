@@ -2,45 +2,45 @@
 title: Toplama işlevleri (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492058"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Toplama işlevleri (varlık SQL)
-Bir toplama skaler bir koleksiyona bir grup işleminin bir parçası olarak toplar bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamlar iki biçimde getirir:  
+Toplama, bir skaler bir koleksiyona bir grup işleminin bir parçası olarak basit bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki biçimde toplamlar gelir:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadede herhangi bir yerde kullanılan işlevler koleksiyonu. Bu toplama işlevleri tahminleri ve hareket koşulları üzerinde koleksiyonları kullanarak içerir. Koleksiyon işlevlerdir Toplamaların belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadede herhangi bir yere kullanılabilir işlevler koleksiyonu. Bu toplama işlevleri projeksiyonlar ve hareket doğrulamaları koleksiyonlarda kullanarak içerir. Koleksiyon işlevlerdir toplamalar belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   GROUP BY yan tümcesi bulunan sorgu ifadelerinde Grup toplar. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup toplamalar DISTINCT ve tüm değiştiricileri birleşik giriş olarak kabul edin.  
+-   GROUP BY yan tümcesine sahip sorgu ifadelerinde Grup toplar. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup toplamları DISTINCT ve tüm değiştiricilere birleşik giriş olarak kabul edin.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] İlk ifade bir toplama işlevi olarak yorumlamaya çalışır ve ifade bir SELECT deyimi bağlamında, yorumlar, bir grup toplama olarak.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ifade bir toplama işlevi olarak yorumlamak ilk olarak çalışır ve deyim bir SELECT deyimi bağlamında, yorumlar, bir grup toplama.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] adlı özel bir toplama işleci tanımlar [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Bu işleç gruplandırılmış giriş ayarlamak için bir başvuru sağlar. GROUP BY yan tümcesi sonuçlarını Grup toplama veya toplama işlevleri başka yerde kullanıldığı bu sorgular, gruplandırma daha gelişmiş sağlar.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olarak adlandırılan özel bir toplama işleci tanımlar [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Bu işleç, gruplandırılmış giriş kümesinde bir başvuru almak sağlar. GROUP BY yan tümcesinin sonuçlarını grubu toplama veya toplama işlevleri başka yerde nerede kullanılabilir bu daha gelişmiş sorgular, gruplandırma sağlar.  
   
 ## <a name="collection-functions"></a>Toplama işlevleri  
- Toplama işlevleri koleksiyonlar üzerinde çalışır ve skaler bir değer döndürür. Örneğin, varsa `orders` tüm oluşan bir koleksiyondur `orders`, aşağıdaki ifade en erken sevk tarihi hesaplayabilirsiniz:  
+ Toplama işlevleri koleksiyonlarda çalışır ve bir skaler değer döndürür. Örneğin, varsa `orders` tüm oluşan bir koleksiyondur `orders`, sevk tarihten şu ifadeyle hesaplayabilirsiniz:  
   
  `min(select value o.ShipDate from LOB.Orders as o)`  
   
-## <a name="group-aggregates"></a>Grup toplar  
- Grup toplamları GROUP BY yan tümcesi tarafından tanımlanan bir grup sonucu üzerinden hesaplanır. GROUP BY yan tümcesi gruplar halinde veri bölümler. Her grup için sonuç, toplama işlevi uygulanır ve ayrı bir toplama giriş toplama hesaplama olarak her grupta öğeleri kullanılarak hesaplanır. GROUP BY yan tümcesi yalnızca ifade adları, toplamalar veya sabit ifadeler gruplandırma bir SELECT ifadesinde kullanıldığında sahip, projeksiyon bulunması veya BY yan tümcesi sipariş.  
+## <a name="group-aggregates"></a>Grup toplamları  
+ Grup toplamalar, GROUP BY yan tümcesi tarafından tanımlanan bir grup sonucu üzerinden hesaplanır. GROUP BY yan tümcesi veri gruplara böler. Her grup için sonuç, toplama işlevi uygulanır ve ayrı bir toplama toplam hesaplaması için girdi olarak her gruba öğeleri kullanılarak hesaplanır. GROUP BY yan tümcesi ifade adlarının, toplamlar ve sabit ifadeler yalnızca gruplandırma seçin ifadesinde kullanıldığında sahip, projeksiyonda bulunması veya ORDER BY yan tümcesi.  
   
- Aşağıdaki örnekte, her ürün için sipariş edilen ortalama miktarı hesaplar.  
+ Aşağıdaki örnek, her ürün için sıralı ortalama miktarı hesaplar.  
   
  `select p, avg(ol.Quantity) from LOB.OrderLines as ol`  
   
  `group by ol.Product as p`  
   
- Bir açık GROUP BY yan tümcesi olmadan birleşik bir grup seçin ifadesinde olması mümkündür. Tüm öğeler tek bir grup, bir sabit üzerinde alan bir gruplama belirtmenin durumuna eşdeğer olarak kabul edilir.  
+ Bir açık GROUP BY yan tümcesi olmadan toplama grubu SELECT deyimini olması mümkündür. Tüm öğeleri, eşdeğer bir sabit üzerinde temel alan bir gruplama belirtme kullanım durumu için tek bir grup olarak kabul edilir.  
   
  `select avg(ol.Quantity) from LOB.OrderLines as ol`  
   
  `select avg(ol.Quantity) from LOB.OrderLines as ol group by 1`  
   
- GROUP BY yan tümcesinde kullanılan ifadeleri, WHERE yan tümcesi ifade görünür olacak aynı ad çözümleme kapsamı kullanarak değerlendirilir.  
+ WHERE yan tümcesi ifade görünür olur aynı ad çözümleme kapsamı kullanarak GROUP BY yan tümcesinde kullanılan ifadeler değerlendirilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

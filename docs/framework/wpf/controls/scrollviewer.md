@@ -9,15 +9,15 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671986"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
-<xref:System.Windows.Controls.ScrollViewer> Denetimi; burada görüntülerle içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölge oluşturur.  
+<xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
@@ -28,6 +28,6 @@ ms.locfileid: "33556074"
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)

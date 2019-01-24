@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: tarih ve saat aritmetiğinde saat dilimlerini kullanma'
+title: 'Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682699"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Nasıl yapılır: tarih ve saat aritmetiğinde saat dilimlerini kullanma
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma
 
 Normalde, ne zaman, tarih gerçekleştirmek ve aritmetik kullanarak istediğiniz zaman <xref:System.DateTime> veya <xref:System.DateTimeOffset> değerleri, sonucu herhangi bir saat dilimi ayarlama kurallarını yansıtmıyor. Bu tarih ve saat değerinin saat dilimi açıkça tanımlanabilen olsa bile geçerlidir (örneğin, <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Local>). Bu konuda, belirli bir saat dilimine ait tarih ve saat değerlerini aritmetik işlemleri gösterilmektedir. Aritmetik işlemler sonuçlarını, saat diliminin ayarlama kuralları ücreti yansıtılır.
 
@@ -66,5 +66,5 @@ Bu örnek gerektirir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-* [Tarih ve saatlerle aritmetik işlemler gerçekleştirme](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Tarih ve saatlerle aritmetik işlemler gerçekleştirme](../../../docs/standard/datetime/performing-arithmetic-operations.md)

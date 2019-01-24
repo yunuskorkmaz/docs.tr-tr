@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: ifade ağaçlarını (C#) yürütme'
+title: 'Nasıl yapılır: İfade ağaçlarını yürütme (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583278"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: ifade ağaçlarını (C#) yürütme
+# <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: İfade ağaçlarını yürütme (C#)
 Bu konu nasıl bir ifade ağacı çalıştırılacağını gösterir. İfade ağacı yürütülürken bir değer döndürebilir veya sadece bir yöntemi gibi bir eylem gerçekleştirebilir.  
   
  Lambda ifadeleri temsil eden ifade ağaçları çalıştırılabilir. Lambda ifadeleri temsil eden ifade ağaçları, tür <xref:System.Linq.Expressions.LambdaExpression> veya <xref:System.Linq.Expressions.Expression%601>. Bu ifade ağaçlarını yürütme için çağrı <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> yürütülebilir bir temsilci oluşturmak ve ardından temsilci çağırmak için yöntem.  
@@ -48,7 +48,7 @@ Console.WriteLine(result);
   
 -   System.Linq.Expressions ad alanı içerir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Nasıl yapılır: ifade ağaçlarını (C#) değiştirme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Nasıl yapılır: İfade ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

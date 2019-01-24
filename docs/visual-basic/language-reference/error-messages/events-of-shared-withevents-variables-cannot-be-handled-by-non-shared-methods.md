@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: f61f4cd17b1bb3088117e0a0d91b186fd40db3b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09f56d340322ee88afc54e7e8a53716777782d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505776"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez
-İle bildirilen bir değişken `Shared` değiştiricisi paylaşılan bir değişkendir. Paylaşılan değişken tam olarak bir depolama konumu tanımlar. İle bildirilen bir değişken `WithEvents` değiştiricisi onaylar değişkeni ait olduğu türü değişkeni başlatır olay kümesini işler. Değişkene bir değer atandığında, özellik tarafından oluşturulan `WithEvents` bildirim varolan herhangi bir olay işleyicisini unhooks ve yeni olay işleyicisi kancalarını `Add` yöntemi.  
+Bildirilen bir değişken `Shared` değiştiricisi paylaşılan bir değişkendir. Paylaşılan değişken tam olarak bir depolama konumunu tanımlar. Bildirilen bir değişken `WithEvents` değiştiricisi onaylar değişkeni ait olduğu tür değişken başlatır olay kümesini işler. Bir değeri bir değişkene atandığında, özellik tarafından oluşturulan `WithEvents` bildirimi var olan herhangi bir olay işleyici unhooks ve yeni olay işleyicisi'kurmak kancaları `Add` yöntemi.  
   
  **Hata Kimliği:** BC30594  
   
@@ -23,6 +23,6 @@ ms.locfileid: "33585177"
   
 -   Olay işleyici bildirmek `Shared`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)

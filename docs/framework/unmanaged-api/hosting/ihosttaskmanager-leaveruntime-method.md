@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d31c5c1b95d250f90b202b391d908f9c12afb84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e22ed258390f7adc9bbf8cd425afe208b2f9b12c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607049"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime Yöntemi
 Konak şu anda yürütülen görev hakkında ortak dil çalışma zamanı (CLR) bırakın ve yönetilmeyen kodu girmeniz olduğunu bildirir.  
   
 > [!IMPORTANT]
->  Karşılık gelen çağrıyı [Ihosttaskmanager::enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) ana bilgisayar şu anda yürütülen görev yönetilen kod yeniden girme bildirir.  
+>  Karşılık gelen bir çağrı [Ihosttaskmanager::enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) konak şu anda yürütülmekte olan görevi yönetilen kod yeniden girildi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,43 +40,43 @@ HRESULT LeaveRuntime (
   
 #### <a name="parameters"></a>Parametreler  
  `target`  
- [in] Yönetilmeyen işlevinin çağrılmasına eşlenen taşınabilir yürütülebilir dosyası içinde adresi.  
+ [in] Çağrılacak yönetilmeyen işlev eşlenen taşınabilir çalıştırılabilir dosyasının içinde adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`LeaveRuntime` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |E_OUTOFMEMORY|İstenen ayırma tamamlamak yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı sıraları için ve yönetilmeyen koddan iç içe. Örneğin, aşağıdaki listede bir kuramsal durumda açıklar çağrıları dizisini `LeaveRuntime`, [Ihosttaskmanager::reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [Ihosttaskmanager::reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), ve `IHostTaskManager::EnterRuntime` iç içe geçmiş katmanları tanımlamak için ana sağlar.  
+ Arama dizileri için ve yönetilmeyen koddan yuvalanabilir. Örneğin, aşağıdaki listede, kuramsal bir durumda açıklar için çağrı `LeaveRuntime`, [Ihosttaskmanager::reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [Ihosttaskmanager::reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), ve `IHostTaskManager::EnterRuntime` ana bilgisayarın iç içe katmanlar belirlemenize izin verir.  
   
 |Eylem|İlgili yöntem çağrısı|  
 |------------|-------------------------------|  
-|Yönetilen bir Visual Basic yürütülebilir çağrılar C'de platform kullanılarak yazılmış bir yönetilmeyen işlevi çağırır.|`IHostTaskManager::LeaveRuntime`|  
-|Yönetilmeyen C işlev DLL'de C# dilinde yazılan yönetilen bir yöntemi çağırır.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Ayrıca platformu kullanılarak C'de yazılmış başka bir yönetilmeyen işlev çağırma yönetilen C# işlevi çağırır.|`IHostTaskManager::LeaveRuntime`|  
-|İkinci yönetilmeyen işlevi yürütme için C# işlevi döndürür.|`IHostTaskManager::EnterRuntime`|  
-|C# işlevi yürütme ilk yönetilmeyen işlevi döndürür.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|İlk yönetilmeyen işlevi Visual Basic programı yürütme döndürür.|`IHostTaskManager::EnterRuntime`|  
+|Yönetilen bir Visual Basic yürütülebilir çağrıları platformu kullanarak C için yazılmış yönetilmeyen bir işlev çağırır.|`IHostTaskManager::LeaveRuntime`|  
+|Yönetilmeyen C işlevi yazılan yönetilen bir DLL içindeki bir yöntemi çağıran C#.|`IHostTaskManager::ReverseEnterRuntime`|  
+|Yönetilen C# işlevi C için yazılmış olan ve başka bir yönetilmeyen işlev çağrıları, ayrıca platformunu kullanarak çağırın.|`IHostTaskManager::LeaveRuntime`|  
+|İkinci yönetilmeyen işlev yürütmesi döndürür C# işlevi.|`IHostTaskManager::EnterRuntime`|  
+|C# İşlevi yürütme için ilk yönetilmeyen işlev döndürür.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|İlk yönetilmeyen işlev yürütme için Visual Basic programını döndürür.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

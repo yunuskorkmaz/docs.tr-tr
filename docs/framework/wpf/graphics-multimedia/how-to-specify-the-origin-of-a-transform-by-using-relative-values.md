@@ -6,40 +6,40 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: ff263af8fbedeec483eee213c07dd4ec169805de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570622"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Nasıl yapılır: Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme
-Bu örnek göreli değerlerin kökenini belirlemek için nasıl kullanılacağını gösterir bir <xref:System.Windows.UIElement.RenderTransform%2A> için uygulanan bir <xref:System.Windows.FrameworkElement>.  
+Bu örnekte kaynağını belirtmek için göreli değerlerini kullanmayı gösterir. bir <xref:System.Windows.UIElement.RenderTransform%2A> uygulanan bir <xref:System.Windows.FrameworkElement>.  
   
- Ne zaman döndürme, ölçeklendirme veya eğme bir <xref:System.Windows.FrameworkElement> kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği, varsayılan ayar, öğenin sol üst köşesindeki dönüştürme uygulanır. Döndürme, ölçeklendirme veya öğenin Merkezi'nden eğme istiyorsanız, öğenin merkezine dönüştürme merkezi ayarlayarak dengeleyebilirsiniz. Ancak, bu çözüm öğe boyutunu bilmeniz gerekir. Ayarlamak için öğenin merkezine dönüşüm uygulamanın daha kolay bir yoludur kendi <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliğine (0,5, 0,5) dönüştürme üzerinde merkez değerini ayarlamak yerine.  
+ Ne zaman döndürmek, ölçeklendirme veya eğriltme bir <xref:System.Windows.FrameworkElement> kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği, varsayılan ayar, öğenin sol üst köşesine dönüşüm uygular. Döndürme, ölçeklendirme veya öğenin Merkezi'nden eğriltme istiyorsanız, öğenin merkezine dönüşümünün merkez ayarlayarak dengeleyebilirsiniz. Ancak, bu çözüm, öğe bildiğiniz gerektirir. Bir öğenin merkezine dönüşüm uygulamak için daha kolay bir yolu ayarlamaktır kendi <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliğini (0,5, 0,5) dönüştürme üzerinde orta değer ayarlamak yerine.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Controls.Button> 45 derece saat yönünde. Örnek bir merkezi belirtmediğinden düğmesi, sol üst köşe noktası hakkında (0, 0) döndürür. <xref:System.Windows.Media.RotateTransform> Uygulanan <xref:System.Windows.UIElement.RenderTransform%2A> özelliği.  
+ Aşağıdaki örnekte bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Controls.Button> 45 derece saat yönünde. Örnek bir merkezi belirtmediğinden düğmenin sol üst köşe olan noktası hakkında (0, 0) döndürür. <xref:System.Windows.Media.RotateTransform> Uygulanan <xref:System.Windows.UIElement.RenderTransform%2A> özelliği.  
   
- Aşağıdaki çizimde, izleyen örnek için dönüşüm sonucunu gösterir.  
+ Aşağıdaki örnek dönüştürme sonucu aşağıda gösterilmektedir.  
   
  ![RenderTransform kullanılarak dönüştürülen düğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
-RenderTransform özelliğini kullanarak 45 derece saat yönünde bir döndürme  
+RenderTransform özelliği kullanılarak 45 derece saat yönünde bir döndürme  
   
  [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- Aşağıdaki örnekte de kullanan bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Controls.Button> 45 derece saat yönünde; ancak, bu örnek ayarlar <xref:System.Windows.UIElement.RenderTransformOrigin%2A> için düğmesinin (0,5, 0,5). Sonuç olarak, döndürme, sol üst köşe yerine düğmenin merkezine uygulanır.  
+ Aşağıdaki örnekte de kullanan bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Controls.Button> 45 derece saat yönünde; ancak bu örnekte ayarlar <xref:System.Windows.UIElement.RenderTransformOrigin%2A> düğmenin (0,5, 0,5). Sonuç olarak, döndürme merkezini yerine sol üst köşesindeki düğmeyi uygulanır.  
   
- Aşağıdaki çizimde, izleyen örnek için dönüşüm sonucunu gösterir.  
+ Aşağıdaki örnek dönüştürme sonucu aşağıda gösterilmektedir.  
   
- ![Ortasından dönüştürülen düğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
-RenderTransformOrigin'i ile RenderTransform özelliğini kullanarak 45 derece döndürme (0,5, 0,5)  
+ ![Dönüştürülen ortasından düğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+RenderTransform özelliği RenderTransformOrigin'i ile kullanarak 45 derece döndürme (0,5, 0,5)  
   
  [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
  Dönüştürme hakkında daha fazla bilgi için <xref:System.Windows.FrameworkElement> nesneleri bkz [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Transform>  
- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Transform>
+- [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0756eb0917e812101006f000db07f55f39afda57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597131"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Dataadapter'dan bir DataSet doldurma
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  
@@ -165,7 +165,7 @@ adapter.Fill(customers, "Customers");
   
  Zaman `Fill` işlemi tamamlandıktan sonra `DataSet` iki tablo içerir: `Customers` ve `CustomersOrders`burada `CustomersOrders` bölümlere sütunu temsil eder. Adlı ek bir sütun `Orders` eklenir `Customers` tablo ve adlı ek bir sütun `CustomersOrders` eklenir `CustomersOrders` tablo. `Orders` Sütununda `Customers` tablo otomatik artacak şekilde ayarlayın. A `DataRelation`, `CustomersOrders`, tablolarla eklenen sütunları kullanılarak oluşturulan `Customers` üst tablo olarak. Aşağıdaki tabloda bazı örnek sonuçları gösterir.  
   
-### <a name="tablename-customers"></a>TableName: müşteriler  
+### <a name="tablename-customers"></a>TableName: Müşteriler  
   
 |CustomerID|CompanyName|Siparişler|  
 |----------------|-----------------|------------|  
@@ -181,9 +181,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1.|  
 |ANATR|10625|1.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [DbDataAdapter ile Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [DbDataAdapter ile Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

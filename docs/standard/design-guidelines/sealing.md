@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646665"
 ---
 # <a name="sealing"></a>Mühürleme
 Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve framework Designer'ların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarım tehlike budur. Framework'ünüzün tasarlarken, bu nedenle olduğu için genişletilebilirlik, istendiğinde dikkatlice tasarlayın ve tehlikeli olduğunda genişletilebilirlik sınırlamak için çok önemlidir.  
@@ -49,6 +49,6 @@ Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve f
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Mühürsüz Sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md)

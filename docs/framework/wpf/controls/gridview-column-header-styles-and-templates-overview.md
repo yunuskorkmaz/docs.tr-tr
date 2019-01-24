@@ -8,22 +8,22 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 28b4a64a6c79b226b1ff4b3bfcbf9a55b6d8df78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590909"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView Sütun Üstbilgi Stil ve Şablonlarına Genel Bakış
-Bu genel bir sütun başlığını özelleştirmek için kullandığınız özellikler için öncelik sırasını açıklar <xref:System.Windows.Controls.GridView> görüntüleme modu, bir <xref:System.Windows.Controls.ListView> denetim.  
+Bu genel bakışta bir sütun başlığını özelleştirmek için kullandığınız özellikler için öncelik sırasını anlatır <xref:System.Windows.Controls.GridView> görünüm modu bir <xref:System.Windows.Controls.ListView> denetimi.  
   
-## <a name="customizing-a-column-header-in-a-gridview"></a>GridView içinde bir sütun başlığını özelleştirme  
- İçerik, Düzen ve bir sütun başlığına stilini tanımlayan özellikleri bir <xref:System.Windows.Controls.GridView> üzerinde birçok ilişkili sınıflar bulunur. Bu özelliklerden bazıları, benzer işlevselliği veya aynı sahiptir.  
+## <a name="customizing-a-column-header-in-a-gridview"></a>GridView sütun başlığı özelleştirme  
+ İçerik, Düzen ve bir sütun başlığına stilini tanımlayan özellikleri bir <xref:System.Windows.Controls.GridView> üzerinde birçok ilgili sınıflar bulunur. Bu özelliklerden bazıları benzer işlevselliği veya aynı sahiptir.  
   
- Aşağıdaki tabloda satır grupları aynı işlevi gerçekleştirir özellikleri gösterir. Bu özellikler sütun başlıklarının özelleştirmek için kullanabileceğiniz bir <xref:System.Windows.Controls.GridView>. Sağdan sola özelliği sağdan sağ sütundaki en yüksek önceliğe sahip olduğu ilgili özellikler için öncelik sırasını değil. Örneğin, bir <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> üzerinde ayarlanmış <xref:System.Windows.Controls.GridViewColumnHeader> nesne ve <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> ilişkili üzerinde ayarlandı <xref:System.Windows.Controls.GridViewColumn>, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> önceliklidir. Bu senaryoda, <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> hiçbir etkisi olmaz.  
+ Aşağıdaki tablodaki satırları aynı işlevi gerçekleştirir özellik gruplarını gösterir. Bu özellikler sütun başlıklarının özelleştirmek için kullanabileceğiniz bir <xref:System.Windows.Controls.GridView>. İlgili özellikler için öncelik sağdan sola özelliği görselinin sağ sütundaki en yüksek önceliğe sahip olduğu sırasıdır. Örneğin, bir <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ayarlanır <xref:System.Windows.Controls.GridViewColumnHeader> nesne ve <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> ilişkili ayarlanmışsa <xref:System.Windows.Controls.GridViewColumn>, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> önceliklidir. Bu senaryoda, <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> hiçbir etkisi olmaz.  
   
- **GridView içinde sütun üstbilgilerinin ilgili özellikleri**  
+ **GridView sütun başlıklarını için ilgili özellikleri**  
   
 |||||  
 |-|-|-|-|  
@@ -33,9 +33,9 @@ Bu genel bir sütun başlığını özelleştirmek için kullandığınız özel
 |**Üstbilgi şablonu**<br /><br /> **Özellikler**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Stil özellikleri**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>için **Üstbilgi Şablon Özellikleri**, ayarlarsanız şablonu ve şablon seçici özelliklerini, şablon özelliği önceliğe. Örneğin, her ikisini de ayarlarsanız <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ve <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> özelliklerini <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> özelliği önceliklidir.  
+ <sup>1</sup>için **üstbilgi şablonu özellikleri**ayarlamanız, şablon ve şablon seçiciyi özellikleri, şablon özelliği önceliğe. Örneğin, her ikisi de ayarlarsanız <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ve <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> özellikleri <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> özelliği önceliklidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

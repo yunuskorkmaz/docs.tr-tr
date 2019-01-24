@@ -2,19 +2,19 @@
 title: '&lt;ClientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 3f70a4e6e27507c3820e1b67f49664e538ac736f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d8171254fed64a2d9ba526d5714d5707aa1b1c1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646061"
 ---
 # <a name="ltclientcredentialsgt"></a>&lt;ClientCredentials&gt;
 Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<davranışı >  
 \<clientCredentials >  
   
@@ -68,8 +68,8 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgileri
 ## <a name="remarks"></a>Açıklamalar  
  İstemci kimlik bilgileri, hizmetleri karşılıklı kimlik doğrulaması gerekli olduğu durumlarda istemcinin kimliğini doğrulamak için kullanılır. Bu yapılandırma bölümü de senaryolar için hizmet sertifikaları belirtmek için istemci Hizmet sertifikası ile bir hizmeti iletileri burada güvenlik altına almanız gerekir kullanılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)

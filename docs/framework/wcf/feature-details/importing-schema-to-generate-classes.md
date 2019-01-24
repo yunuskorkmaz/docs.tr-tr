@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620532"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sınıflar oluşturmak için <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu, işlem ve farklılıkları açıklar.  
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
   
 5. Erişim `CodeCompileUnit` aracılığıyla <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> özelliği.  
   
-### <a name="import-options-customizing-the-generated-types"></a>İçeri aktarma seçenekleri: oluşturulan türleri özelleştirme  
+### <a name="import-options-customizing-the-generated-types"></a>İçeri aktarma seçenekleri: Oluşturulan türler özelleştirme  
  Ayarlayabileceğiniz <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliği <xref:System.Runtime.Serialization.XsdDataContractImporter> örneğine <xref:System.Runtime.Serialization.ImportOptions> içeri aktarma işlemi çeşitli yönlerini denetlemek için sınıf. Bir dizi seçenek oluşturulan türler doğrudan etkiler.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Erişim düzeyi denetleme (GenerateInternal veya / iç geçiş)  
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
   
  `ReferencedCollectionTypes` Karşılık gelen özellik **/collectionType** SvcUtil.exe aracını geçin. Birden çok koleksiyon türleri başvurmak için unutmayın **/collectionType** anahtarı birden çok kez belirtilmesi gerekir. Türü MsCorLib.dll içinde değilse, kendi derlemesi de kullanarak başvurulmalıdır **/reference** geçin.  
   
-#### <a name="import-options-referencing-existing-types"></a>İçeri aktarma seçenekleri: Varolan türleri başvurma  
+#### <a name="import-options-referencing-existing-types"></a>İçeri aktarma seçenekleri: Mevcut türlerine başvurma  
  Bazen, türler, varolan karşılık gelen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ve bu tür sıfırdan oluşturmaya gerek yoktur. (Bu bölüm yalnızca noncollection türleri için geçerlidir. Koleksiyon türleri için önceki bölüme bakın.)  
   
  Örneğin, bir kişiyi temsil eden çağrılırken istediğiniz her zaman bir standart şirket çapında "Kişi" veri anlaşması türü olabilir. Bazı hizmet yaptığında bu tür ve şeması görünür hizmet meta verileri içinde varolan yeniden kullanmak isteyebileceğiniz `Person` her hizmet için yeni bir tane oluşturmak yerine bu şemayı içeri aktarılırken yazın.  
@@ -143,7 +143,7 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
 > [!NOTE]
 >  Svcutil.exe kullanırken veya (Visual Studio'da) **hizmet Başvurusu Ekle** araçları, tüm MsCorLib.dll türlerini otomatik olarak başvurulur.  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>İçeri aktarma seçenekleri: DataContract olmayan şema IXmlSerializable türü olarak içeri aktarma  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>İçeri aktarma seçenekleri: DataContract olmayan şemayı IXmlSerializable türü olarak içeri aktarma  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> Şemasının sınırlı bir alt kümesini destekler. Desteklenmeyen şema yapıları (örneğin, XML özniteliği) varsa, içeri aktarma denemesi bir özel durum ile başarısız olur. Ancak, ayarı <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliğini `true` desteklenen şema aralığını genişletir. Ayarlandığında `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> uygulayan türler oluşturur <xref:System.Xml.Serialization.IXmlSerializable> arabirimi. Bu, bu tür XML gösterimini doğrudan erişim sağlar.  
   
 ##### <a name="design-considerations"></a>Tasarım konuları  
@@ -179,13 +179,13 @@ Windows Communication Foundation (WCF) ile kullanılabilir şemaları gelen sın
   
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması, bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Veri Anlaşması Yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Şema İçeri ve Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Veri Anlaşması Yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Şema İçeri ve Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

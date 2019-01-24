@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503128"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
 Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşımak için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
@@ -36,9 +36,9 @@ Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../i
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Varsayılan: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Varsayılan: 0,0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Varsayılan: 1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Varsayılan: 0,0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Varsayılan: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Varsayılan: 0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Varsayılan: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Varsayılan: 1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Varsayılan: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Varsayılan: 0.0|1.0|  
   
  Matris değerlerini işleyerek, döndürme, ölçeklendirme, eğme taşıyın ve (çevirme) bir nesne. Örneğin, üçüncü satırda ilk sütunundaki değeri değiştirin ( <xref:System.Windows.Media.Matrix.OffsetX%2A> değeri) 100'e, nesneyi 100 birim x ekseni boyunca taşımak için kullanabilirsiniz. İkinci satırın ikinci sütundaki değeri 3 olarak değiştirirseniz, üç kez geçerli yükseklik nesneye esnetme için kullanabilirsiniz. Her iki değeri değiştirirseniz, nesne 100 birim x ekseni boyunca taşımak ve 3 faktörüyle yükseklik esnetme. Windows Presentation Foundation (WPF), yalnızca afin dönüşümler'i desteklediğinden, sağdaki sütundaki değerleri her zaman 0, 0, 1.  
   
@@ -149,8 +149,8 @@ Döndür düğmesi için kullanılan LayoutTransform
 ## <a name="freezable-features"></a>Freezable Özellikleri  
  Öğesinden devralındığından <xref:System.Windows.Freezable> sınıfı <xref:System.Windows.Media.Transform> sınıfı birkaç özel özellik sağlar: <xref:System.Windows.Media.Transform> nesneleri olarak bildirilebilir [kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)geliştirmek için salt okunur yapılan birden fazla nesne arasında paylaşılan performans, kopyalanan ve iş parçacığı açısından güvenli hale. Tarafından sağlanan farklı özellikler hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [2B dönüşümleri örneği](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [2B dönüşümleri örneği](https://go.microsoft.com/fwlink/?LinkID=158252)

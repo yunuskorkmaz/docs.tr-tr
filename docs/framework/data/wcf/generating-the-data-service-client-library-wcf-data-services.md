@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 170f9714f3cfbf2350423f28316d665d427fd56e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b550af85bcd4bec30707721c6549c7b9094bfd1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630911"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci Kitaplığı'nı (WCF Veri Hizmetleri) oluşturma
-Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından kullanıma sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [OData: hizmet meta verileri belgesi](https://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Tarafından döndürülen meta veriler için bir başvuru eklemek için bu aracı kullanırken bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projesinde akışı, aşağıdaki eylemleri gerçekleştirir:  
+Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından kullanıma sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [OData: Meta veri belgesi hizmet](https://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Tarafından döndürülen meta veriler için bir başvuru eklemek için bu aracı kullanırken bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projesinde akışı, aşağıdaki eylemleri gerçekleştirir:  
   
 -   Hizmet meta verileri belgesi veri hizmetinden ister ve döndürülen meta verilere yorumlar.  
   
@@ -27,9 +27,9 @@ Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafu
   
 -   Bir başvuru ekler `System.Data.Services.Client` projeyi derlemeye.  
   
- Daha fazla bilgi için [nasıl yapılır: bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
   
- İstemci veri hizmeti sınıfları kullanarak da oluşturulabilir [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) aracı komut isteminde. Daha fazla bilgi için [nasıl yapılır: el ile oluşturmak istemci veri hizmeti sınıfları](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ İstemci veri hizmeti sınıfları kullanarak da oluşturulabilir [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) aracı komut isteminde. Daha fazla bilgi için [nasıl yapılır: El ile istemci veri hizmeti sınıfları oluşturma](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>İstemci veri türü eşlemesi  
  Kullanırken **hizmet Başvurusu Ekle** Visual Studio'da iletişim kutusu veya `DataSvcUtil.exe` aracını temel alan istemci veri sınıfları oluşturmak için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, ilkel türleri .NET Framework veri türlerinin eşlenir aşağıdaki gibi veri modeli:  
@@ -50,8 +50,8 @@ Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafu
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Daha fazla bilgi için [OData: ilkel veri türleri](https://go.microsoft.com/fwlink/?LinkId=186072).  
+ Daha fazla bilgi için [OData: Temel veri türlerinin](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

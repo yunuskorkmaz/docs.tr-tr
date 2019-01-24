@@ -1,32 +1,32 @@
 ---
-title: Saf işlevleri (Visual Basic) yeniden düzenleme
+title: (Visual Basic) saf işlevler halinde yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4be0c3574f2bd3171b8f5a86359d3181fe8731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644472"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Saf işlevleri (Visual Basic) yeniden düzenleme
-Saf işlevsel Dönüşümlerin önemli bir durum kodu saf işlevler kullanılarak yeniden nasıl öğrenme.  
+# <a name="refactoring-into-pure-functions-visual-basic"></a>(Visual Basic) saf işlevler halinde yeniden düzenleme
+Saf işlevsel dönüşümlere önemli bir yönüdür saf işlevler kullanarak kodunuzu yeniden değiştirmenin nasıl öğrenmeye devam ettiği.  
   
- Bu bölümde daha önce belirtildiği gibi saf işlevi iki yararlı özelliklere sahiptir:  
+ Bu bölümde daha önce belirtildiği gibi saf işlev iki yararlı özelliklere sahiptir:  
   
--   Hiçbir yan etkisi vardır. İşlev hiçbir değişken veya işlev dışında herhangi bir türde verileri değiştirmez.  
+-   Bu, yan etkileri vardır. İşlevi, tüm değişkenler veya işlev dışında herhangi bir türde verileri değiştirmez.  
   
--   Tutarlı olur. Aynı dizi girdi verisi verildiğinde, her zaman aynı çıkış değerini döndürür.  
+-   Tutarlı olur. Aynı giriş veri kümesi düşünüldüğünde, bu her zaman aynı çıkış değeri döndürür.  
   
- İşlevsel programlama koddan bir gereksiz yan etkiler ve dış bağımlılıkları ortadan kaldırmak için var olan kodu yeniden düzenlemeniz için yoludur. Bu şekilde, var olan kodu saf işlevi sürümlerini oluşturabilirsiniz.  
+ Yollarından fonksiyonel programlama için geçiş, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleyin sağlamaktır. Bu şekilde, varolan kod sürümlerini saf işlev oluşturabilirsiniz.  
   
- Bu konuda ele alınmıştır saf işlevi ne olduğu ve ne değildir. [Öğreticisi: düzenleme içerik WordprocessingML belgedeki (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğretici WordprocessingML belgeyi işlemek nasıl gösterir ve nasıl saf işlevi kullanarak düzenleme için iki örnek verilmiştir.  
+ Bu konuda ele alınmıştır saf işlev ne olduğunu ve ne değildir. [Öğreticisi: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğretici WordprocessingML belgesinin işlemek nasıl gösterir ve nasıl saf işlev kullanarak yeniden düzenleme için iki örnek verilmiştir.  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkiler ve dış bağımlılıkları ortadan  
- Aşağıdaki örnekler, iki saf olmayan işlevler ve saf işlevi karşılaştırın.  
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkiler ve dış bağımlılıkları ortadan kaldırır.  
+ Aşağıdaki örnekler, iki saf olmayan işlevler ve saf işlev karşılaştırın.  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>Sınıf üyesine değişiklikleri saf olmayan işlevi  
- Aşağıdaki kodda, `HypenatedConcat` işlevi değil saf işlevi değiştirdiği çünkü `aMember` sınıfı veri üyesi:  
+### <a name="non-pure-function-that-changes-a-class-member"></a>Sınıf üyesi değişiklikleri saf olmayan işlevi  
+ Aşağıdaki kodda, `HypenatedConcat` işlevi değil, saf işlev değiştirdiği çünkü `aMember` sınıftaki veri üyesi:  
   
 ```vb  
 Module Module1  
@@ -49,10 +49,10 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Değiştirilen verileri olup ilgisiz olup olmadığını Not `public` veya `private` erişim ya da bir `shared` üyesi veya bir örnek üyesine. Saf işlevi işlevi dışında herhangi bir veri değiştirmez.  
+ Bu verilerin değiştirilmesi olup ilgisiz olduğuna dikkat edin `public` veya `private` erişim ya da bir `shared` veya bir örnek üyesi. Saf işlev, işlev dışındaki tüm verileri değiştirmez.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Bağımsız değişken değişiklikleri saf olmayan işlevi  
- Kendi parametresinin içeriğini değiştirdiği Ayrıca, aynı bu işlevi aşağıdaki sürümü saf olmadığından `sb`.  
+ Kendi parametre içeriğini değiştirir ayrıca, aynı işlevi aşağıdaki sürümü saf olmadığından `sb`.  
   
 ```vb  
 Module Module1  
@@ -68,13 +68,13 @@ Module Module1
 End Module  
 ```  
   
- Çünkü programın bu sürümü aynı ilk sürüm olarak çıktı üretir `HypenatedConcat` işlevini çağırarak, ilk parametresinin değeri (durum) değişti <xref:System.Text.StringBuilder.Append%2A> üye işlevi. Bu değişiklikle rağmen bu olgu oluştuğunu unutmayın, `HypenatedConcat` çağrısı değerli parametre geçirme kullanır.  
+ Çünkü programın bu sürümünü aynı ilk sürümde çıktı üretir `HypenatedConcat` işlevi, birinci parametresinin değerini (durum) çağırarak değişti <xref:System.Text.StringBuilder.Append%2A> üye işlevi. Bu değişikliği rağmen bu durumu kendi lehine oluştuğunu unutmayın, `HypenatedConcat` çağrı değerli parametre geçirme kullanır.  
   
 > [!IMPORTANT]
->  Bir parametre değeri tarafından geçirirseniz başvuru türleri için geçirilen bir nesneye başvuru kopyasını sonuçlanır. (Yeni bir nesneye başvuru değişkeni atanıncaya kadar) Bu hala özgün başvuru olarak aynı örnek verilerle ilişkili bir kopyasıdır. Çağrı tarafından başvuru mutlaka bir işlev parametre değiştirmek gerekli değildir.  
+>  Değere göre bir parametre geçirirseniz başvuru türleri için geçirilen bir nesneye başvuru bir kopyasını sonuçlanır. (Yeni bir nesneye başvuru değişkenini atanıncaya kadar) Bu hala özgün başvuru aynı örnek verileri ile ilişkili bir kopyasıdır. Başvuru ile çağrı parametreyi değiştirmek bir işlev için mutlaka gerekli değildir.  
   
-### <a name="pure-function"></a>Saf işlevi  
- Bu program sonraki sürümü hows nasıl uygulanacağını `HypenatedConcat` işlev saf işlevi.  
+### <a name="pure-function"></a>Saf işlev  
+ Bu program'ın sonraki sürümü sorularının yanıtlarını nasıl uygulanacağı `HypenatedConcat` işlevi saf işlev.  
   
 ```vb  
 Module Module1  
@@ -90,15 +90,15 @@ Module Module1
 End Module  
 ```  
   
- Yeniden, bu sürümü aynı satır çıktı üretir: `StringOne-StringTwo`. Birleştirilmiş değer korumak için onu Ara değişkeninde depolandığını unutmayın `s2`.  
+ Bu sürümü çıktı satırını yeniden üretir: `StringOne-StringTwo`. Birleştirilmiş değer korumak için bu Ara değişkende depolandığını unutmayın `s2`.  
   
- Çok kullanışlı olabilir bir yaklaşım ise yerel olarak Hanuka işlevlerinin (diğer bir deyişle, bunlar bildirme ve yerel değişkenleri değiştirin), ancak genel olarak saf. Bu tür işlevler birçok arzu composability özelliklere sahip, ancak bazı basit bir döngüsü aynı şeyi başarmak zaman özyineleme kullanmak zorunda gibi daha karışık işlevsel programlama deyimleri, kaçının.  
+ Yerel olarak Hanuka işlevleri yazmak için kullanışlı bir yaklaşım olan (diğer bir deyişle, bunlar bildirme ve yerel değişkenleri değiştirin), ancak genel olarak saf. Bu tür işlevleri birçok arzu composability özelliklere sahip, ancak bazı basit döngüyü aynı şeyi yaptığınız zaman, özyineleme kullanmak zorunda gibi daha karışık işlevsel programlama deyimlerini, kaçının.  
   
 ## <a name="standard-query-operators"></a>Standart sorgu işleçleri  
- Bir önemli standart sorgu işleçleri saf işlevleri olarak uygulanan özelliğidir.  
+ Standart sorgu işleçlerinin önemli bir özelliği, saf işlevler uygulanan ' dir.  
   
- Daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [İşlevsel Programlama ve Kesinlik temelli programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

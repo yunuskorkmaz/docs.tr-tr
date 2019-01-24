@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4cb3de06d574f8b9abb3e3e11641a6ada750b56a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cc9ceccef8123d49d6267276e9dcb7be84f78a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670686"
 ---
 # <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
 Bir parametre adı ve açıklama tanımlar.  
@@ -44,5 +44,5 @@ Bir parametre adı ve açıklama tanımlar.
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

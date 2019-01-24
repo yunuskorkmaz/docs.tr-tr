@@ -2,12 +2,12 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 47e683969a62541dd48a3c7211e1edf3bb7b4038
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493852"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Bu öğe, belirli taşıma için hizmet barındırma ortamını gösteren türü tanımlar. Bu öğe boş ise, varsayılan türü kullanılır. Bu öğe yalnızca uygulama veya makine düzeyinde yapılandırma dosyalarını kullanılabilir.  
@@ -50,7 +50,7 @@ Bu öğe, belirli taşıma için hizmet barındırma ortamını gösteren türü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Ön ek filtreler için hizmet ana bilgisayarı tarafından kullanılan tabanı belirten yapılandırma öğelerinin koleksiyonu.|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Ön ek filtreler için hizmet ana bilgisayarı tarafından kullanılan tabanı belirten yapılandırma öğelerinin koleksiyonu.|  
 |[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Aktivasyon ayarlarını tanımlayan bir yapılandırma bölümü.|  
 |[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Belirli bir türünü belirleyen yapılandırma öğelerinin koleksiyonu.|  
   
@@ -92,8 +92,8 @@ Bu öğe, belirli taşıma için hizmet barındırma ortamını gösteren türü
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [WCF Hizmetleri ve ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [WCF Hizmetleri ve ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a7e6c084c84fec1af05a38664bcfbcabc99061ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534348"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerinin bu bölümü Visual Basic ile uygulama geliştirmeye başlamanıza yardımcı olur.  
@@ -33,31 +33,22 @@ Bu sürümde önleyen bir uygulamanın derlenmesini veya çalışma zamanı davr
 Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilecek Web sitelerinin ve haber gruplarının bir listesini sağlar.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual Basic edinin](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Ücretsiz sürümleri dahil olmak üzere, Visual Basic desteği içeren Visual Studio sürümleri için indirme bağlantıları sağlar.  
+- [Visual Basic edinin](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) desteği, ücretsiz sürümleri dahil olmak üzere Visual Basic dahil Visual Studio sürümleri için indirme bağlantılar sağlar.  
 
- [Yeni başlayanlar için Visual Basic temelleri](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
- Microsoft Virtual Academy dersi Visual Basic programlamanın temellerini öğretir.
+- [Yeni başlayanlar için Visual Basic Fundamentals](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Microsoft Virtual Academy dersi, Visual Basic programlamanın temellerini öğretir.
 
- [Nesne Odaklı Programlama](../programming-guide/concepts/object-oriented-programming.md)  
- Nesne yönelimli programlamaya giriş konularını veren, kendi nesnelerinizi nasıl oluşturacağınızı ve kodlamanızı basitleştirmek için nesneleri nasıl kullanacağınızı açıklayan sayfaların bağlantılarını sağlar.  
-  
- [Örnekler](../../visual-basic/sample-applications.md)  
- Visual Basic örnek koda ilişkin bağlantılar sağlar.  
-  
- [İzlenecek Yollar](../../visual-basic/walkthroughs.md)  
- Visual Basic dili yönlerini gösteren Yardım sayfalarının bir listesini sağlar.  
-  
- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  
- Destek alma ve geri bildirimde bulunma konularını ele alır.  
-  
- [Visual Studio](/visualstudio/)  
- Visual Studio belgelerine ilişkin bağlantıları sağlar.  
-  
- [C#](../../csharp/index.md) Visual C# ile uygulama geliştirmeye ilişkin belgelerin bağlantılarını sağlar.  
-  
- [Visual C++](/cpp/)  
- Visual C++ belgelerine ilişkin bağlantıları sağlar.  
-  
- [Office ve SharePoint geliştirme](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)  
- Bir iş uygulamasının bir parçası olarak Microsoft Office ve Visual Studio kullanma hakkında bilgi sağlar.
+- [Nesne yönelimli programlama](../programming-guide/concepts/object-oriented-programming.md) nesne yönelimli programlamaya giriş konularını veren ve kendi nesnelerinizi oluşturma ve kodlamanızı basitleştirmek için nesneleri kullanmayı açıklayan sayfalara bağlantılar sağlar.  
+
+- [Örnekleri](../../visual-basic/sample-applications.md) Visual Basic örnek koda ilişkin bağlantılar sağlar.  
+
+- [İzlenecek yollar](../../visual-basic/walkthroughs.md) Visual Basic dili yönlerini gösteren Yardım sayfalarının bir listesini sağlar.  
+
+- [Bize iletişim kurmasına](/visualstudio/ide/talk-to-us) destek almak ve geri bildirimde bulunmak için nasıl ele alınmaktadır.  
+
+- [Visual Studio](/visualstudio/) Visual Studio belgelerine ilişkin bağlantıları sağlar.  
+
+- [C#](../../csharp/index.md) Visual C# ile uygulama geliştirmeye ilişkin belgelerin bağlantılarını sağlar.  
+
+- [Visual C++](/cpp/) Visual C++ belgelerine ilişkin bağlantıları sağlar.  
+
+- [Office ve SharePoint geliştirme](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) bir iş uygulamasının bir parçası olarak Microsoft Office ve Visual Studio hakkında bilgi sağlar.

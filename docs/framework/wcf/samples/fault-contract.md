@@ -2,12 +2,12 @@
 title: Hatalı Sözleşme
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 39bb9b0ebd9feb6066c1c5e83128eb3a594d6d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653937"
 ---
 # <a name="fault-contract"></a>Hatalı Sözleşme
 Hatalı sözleşme örnek, bir istemci bir hizmet sağlayıcısından hata bilgiler iletmek gösterilmiştir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bazı ek kod bir hata için iç özel durum dönüştürmek için hizmet eklenir. İstemci bir hata koşulu hizmette zorlamak için sıfır ile bölme gerçekleştirmeye çalışır.  
@@ -136,4 +136,4 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

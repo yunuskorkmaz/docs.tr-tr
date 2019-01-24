@@ -2,12 +2,12 @@
 title: '&lt;Udpannouncementendpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: 9c7687e849650a57fca059d68157d1f2c032ee74
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 58931cb70f83378740093615adf89a437e32ff2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667199"
 ---
 # <a name="ltudptransportsettingsgt"></a>&lt;Udpannouncementendpoint&gt;
 Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
@@ -64,5 +64,5 @@ Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpDiscoveryEnd
 |-------------|-----------------|  
 |[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Bulma bağlama sözleşme ve UDP taşıma düzeltmiştir standart bitiş noktası.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

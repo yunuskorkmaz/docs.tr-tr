@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637378"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType Numaralandırması
-Bir nesne ortak dil çalışma zamanı tarafından nasıl serileştirilmiş belirtir.  
+Ortak dil çalışma zamanı tarafından bir nesne seri nasıl belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,33 +59,33 @@ typedef enum CorSerializationType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Nesnenin seri hale getirme tanımlanmamıştır.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Boolean türünde nesne seri hale getirilmiş|  
-|`SERIALIZATION_TYPE_CHAR`|Nesne bir karakter türü olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_I1`|Nesne imzalı 1-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_U1`|Nesne imzasız 1-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_I2`|Nesne olarak imzalanmış bir 2-bayt tamsayı serileştirilir.|  
-|`SERIALIZATION_TYPE_U2`|Nesne imzasız 2-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_I4`|Nesne imzalı 4-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_U4`|Nesne imzasız 4-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_I8`|Nesne işaretli 8-bayt tamsayı serileştirilir.|  
-|`SERIALIZATION_TYPE_U8`|Nesne imzasız 8-bayt tamsayı olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_R4`|Nesne 4-bayt kayan nokta serileştirilir.|  
-|`SERIALIZATION_TYPE_R8`|Nesne 8-bayt kayan nokta serileştirilir.|  
-|`SERIALIZATION_TYPE_STRING`|Nesne System.String türünde serileştirilir.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Nesne seri hale getirilmiş bir tek boyutlu, sıfır alt sınır dizi.|  
-|`SERIALIZATION_TYPE_TYPE`|Nesne genel bir tür serileştirilir.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Nesne etiketli bir nesne olarak seri değildir.|  
-|`SERIALIZATION_TYPE_FIELD`|Nesne bir alan olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Nesne bir özellik olarak serileştirilir.|  
-|`SERIALIZATION_TYPE_ENUM`|Nesne sabit olarak serileştirilir.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Nesnenin seri hale getirme tanımsızdır.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Bir Boolean türünde nesne seri hale getirilmiş|  
+|`SERIALIZATION_TYPE_CHAR`|Nesnesi, bir karakter türü olarak seri hale getirilir.|  
+|`SERIALIZATION_TYPE_I1`|İmzalı bir 1 baytlık tamsayı olarak serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_U1`|Nesne, işaretsiz bir 1 baytlık tamsayı olarak sıralanır.|  
+|`SERIALIZATION_TYPE_I2`|Nesne bir imzalı 2 baytlık tamsayı olarak sıralanır.|  
+|`SERIALIZATION_TYPE_U2`|Nesne, işaretsiz 2 baytlık tamsayı olarak sıralanır.|  
+|`SERIALIZATION_TYPE_I4`|İmzalı bir 4 baytlık tamsayı olarak serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_U4`|Nesne, işaretsiz bir 4 baytlık tamsayı olarak sıralanır.|  
+|`SERIALIZATION_TYPE_I8`|Nesne bir işaretli 8 baytlık tamsayı sıralanır.|  
+|`SERIALIZATION_TYPE_U8`|İmzalanmamış 8 baytlık tamsayı olarak serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_R4`|4-bayt kayan nokta serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_R8`|8-bayt kayan nokta serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_STRING`|Nesne System.String türünde seri hale getirilir.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Nesne seri hale getirilmiş bir tek boyutlu, sıfır alt sınırı dizisi.|  
+|`SERIALIZATION_TYPE_TYPE`|Nesne genel bir tür seri hale getirilir.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Nesne etiketli bir nesnesi olarak seri hale getirilir.|  
+|`SERIALIZATION_TYPE_FIELD`|Bir alan olarak serileştirilmiş nesne.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Nesnenin bir özellik olarak seri hale getirilir.|  
+|`SERIALIZATION_TYPE_ENUM`|Nesne sabit olarak seri hale getirilir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

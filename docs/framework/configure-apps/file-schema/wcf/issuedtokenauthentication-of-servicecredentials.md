@@ -2,12 +2,12 @@
 title: '&lt;serviceCredentials&gt; için &lt;issuedTokenAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 43f03ad32345195324c9ba2a3977d294a7a2b789
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4a9087e319c278ea396b5611b2f7f923bd00b6d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509343"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; için &lt;issuedTokenAuthentication&gt;
 Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.  
@@ -89,13 +89,13 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
   
  Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

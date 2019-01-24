@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGrid Denetimiyle Girişi Doğrulama'
+title: 'Nasıl yapılır: Windows Forms DataGrid denetimiyle girişi doğrulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: a01cb90b7cba596dafa56963dcf9c489deb3e21a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55de6fc1ef4fdf94495ddb07f3329ef9d46b5818
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609492"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimiyle Girişi Doğrulama
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid denetimiyle girişi doğrulama
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.DataGrid> kontrol; ancak, <xref:System.Windows.Forms.DataGrid> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- İki tür giriş doğrulaması Windows Forms için kullanılabilir <xref:System.Windows.Forms.DataGrid> denetim. Kullanıcı hücrenin, tamsayı, örneğin bir dizeye bir kabul edilebilir veri türünde bir değer girmesini çalışırsa yeni geçersiz değer eski değer ile değiştirilir. Bu tür bir giriş doğrulaması otomatik olarak yapılır ve özelleştirilemez.  
+ İki tür giriş doğrulaması Windows Forms'da kullanılabilen <xref:System.Windows.Forms.DataGrid> denetimi. Kullanıcı bir kabul edilebilir veri türü tamsayı, örneğin bir dizeye hücre için bir değer girmeyi denerse yeni geçersiz bir değer eski değer ile değiştirilir. Bu tür bir giriş doğrulama otomatik olarak yapılır ve özelleştirilemez.  
   
- Giriş doğrulaması başka türden herhangi bir kabul edilebilir veri, örneğin 0 değeri sıfırdan büyük veya eşittir 1 ya da uygun olmayan bir dize olmalıdır bir alandaki reddetmek için kullanılır. Bu veri kümesini için bir olay işleyicisi yazarak yapılır <xref:System.Data.DataTable.ColumnChanging> veya <xref:System.Data.DataTable.RowChanging> olay. Kullandığı aşağıdaki örnekte <xref:System.Data.DataTable.ColumnChanging> olay "Ürün" sütunu için özellikle izin verilmeyen kabul edilebilir değer olduğundan. Kullanabileceğinize <xref:System.Data.DataTable.RowChanging> bir "Bitiş tarihi" sütunun değeri daha sonraki bir satıra "Başlangıç tarihi" sütununda olduğunu denetlemek için olay.  
+ Bir giriş doğrulama türünü kabul edilemez tüm verileri, örneğin 0 değerinde büyüktür veya eşittir 1 ya da uygun olmayan bir dize olmalıdır. bir alan reddetmek için kullanılabilir. Bu veri kümesi için bir olay işleyicisi yazarak yapılır <xref:System.Data.DataTable.ColumnChanging> veya <xref:System.Data.DataTable.RowChanging> olay. Kullanan aşağıdaki örnekte <xref:System.Data.DataTable.ColumnChanging> olay "Product" sütunu için özellikle izin verilmeyen kabul edilemez değeri olduğundan. Kullanabileceğinize <xref:System.Data.DataTable.RowChanging> bir "Bitiş tarihi" sütunun değeri "StartDate" sütun ile aynı satırdaki daha olduğunu denetlemek için olay.  
   
-### <a name="to-validate-user-input"></a>Kullanıcı girişi doğrulamak için  
+### <a name="to-validate-user-input"></a>Kullanıcı girişini doğrulamak için  
   
-1.  İşlemek için kod yazma <xref:System.Data.DataTable.ColumnChanging> uygun tablosu için olay. Uygunsuz giriş algılandığında, çağrı <xref:System.Data.DataRow.SetColumnError%2A> yöntemi <xref:System.Data.DataRow> nesnesi.  
+1.  İşlemek için kod yazma <xref:System.Data.DataTable.ColumnChanging> uygun tablosu için olay. Uygun olmayan giriş algılandığında, çağrı <xref:System.Data.DataRow.SetColumnError%2A> yöntemi <xref:System.Data.DataRow> nesne.  
   
     ```vb  
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _  
@@ -67,7 +67,7 @@ ms.locfileid: "33535899"
   
 2.  Olay işleyicisi olaya bağlayın.  
   
-     Yere aşağıdaki kod içinde ya da formun <xref:System.Windows.Forms.Form.Load> olay ya da kendi Oluşturucusu.  
+     Yere aşağıdaki kod içinde ya da formun <xref:System.Windows.Forms.Form.Load> olay ya da kendi Oluşturucu.  
   
     ```vb  
     ' Assumes the grid is bound to a dataset called customersDataSet1  
@@ -83,8 +83,8 @@ ms.locfileid: "33535899"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGrid>  
- <xref:System.Data.DataTable.ColumnChanging>  
- <xref:System.Data.DataRow.SetColumnError%2A>  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.DataGrid>
+- <xref:System.Data.DataTable.ColumnChanging>
+- <xref:System.Data.DataRow.SetColumnError%2A>
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

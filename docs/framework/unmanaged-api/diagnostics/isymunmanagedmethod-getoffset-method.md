@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515315"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset Metodu
-Bir belge içinde belirli bir konuma karşılık gelen bu yöntem içinde uzaklığını döndürür.  
+Bir belge içindeki belirli bir konuma karşılık gelen bu yöntem içinde uzaklığını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT GetOffset(
   
 #### <a name="parameters"></a>Parametreler  
  `document`  
- [in] Uzaklık istenen belge için bir işaretçi.  
+ [in] Uzaklık istendiği belge işaretçisi.  
   
  `line`  
- [in] Uzaklık istenen belge satırı.  
+ [in] Uzaklık istendiği belge satır.  
   
  `column`  
- [in] Uzaklık istenen belge sütun.  
+ [in] Uzaklık istendiği belge sütun.  
   
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` uzaklıkları alır.  
+ [out] Bir işaretçi bir `ULONG32` , uzaklıkları alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

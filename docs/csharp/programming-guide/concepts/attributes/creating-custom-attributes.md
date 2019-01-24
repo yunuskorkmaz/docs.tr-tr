@@ -2,12 +2,12 @@
 title: Özel öznitelikler (C#) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674641"
 ---
 # <a name="creating-custom-attributes-c"></a>Özel öznitelikler (C#) oluşturma
 Bir öznitelik sınıfı doğrudan veya dolaylı olarak türetildiği bir sınıf tanımlayarak kendi özel öznitelikler oluşturabilir <xref:System.Attribute>, hızlı ve kolay meta veri özniteliği tanımlarını tanımlayan hale getirir. Etiket türlerine türü yazan Programcı adıyla istediğinizi varsayalım. Özel bir tanımlayabilir `Author` öznitelik sınıfı:  
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection>  
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Özel Öznitelikler Yazma](../../../../standard/attributes/writing-custom-attributes.md)  
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- <xref:System.Reflection>
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Özel Öznitelikler Yazma](../../../../standard/attributes/writing-custom-attributes.md)
+- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

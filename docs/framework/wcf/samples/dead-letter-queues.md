@@ -2,12 +2,12 @@
 title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721301"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. Dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.
@@ -30,7 +30,7 @@ Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. D
 
 -   `System`: Sistem eski ileti sırası ölü iletileri depolamak için kullanılır. Sistem eski ileti sırası bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
 
--   `Custom`Kullanarak belirtilen özel eski ileti sırası <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Aynı bilgisayarda çalışan diğer uygulamalarla paylaşmak yerine, uygulamanın kendi geçerliliğini yitirmiş kuyruk kullanmanız gerekir, bu kullanılır.
+-   `Custom`: Kullanarak belirtilen özel bir eski ileti sırası <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Aynı bilgisayarda çalışan diğer uygulamalarla paylaşmak yerine, uygulamanın kendi geçerliliğini yitirmiş kuyruk kullanmanız gerekir, bu kullanılır.
 
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirli bir kuyruğa atılacak kullanmak için express özellik. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  Ayarı `security mode` için `None` ayarlamakla eşdeğerdir `MsmqAuthenticationMode`, `MsmqProtectionLevel` ve `Message` güvenlik `None`.
 
 ## <a name="comments"></a>Açıklamalar
- Varsayılan olarak `netMsmqBinding` bağlama taşıma, güvenlik etkin. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte aktarım güvenliği türünü belirleyin. Varsayılan kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. Kimlik doğrulama ve imzalama özelliği sağlamak MSMQ için bir etki alanının parçası olması gerekir. Bu örnek, bir etki alanının parçası olmayan bir bilgisayar üzerinde çalıştırırsanız, aşağıdaki hatayı alırsınız: "kullanıcının iç message queuing sertifika mevcut değil".
+ Varsayılan olarak `netMsmqBinding` bağlama taşıma, güvenlik etkin. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte aktarım güvenliği türünü belirleyin. Varsayılan kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. Kimlik doğrulama ve imzalama özelliği sağlamak MSMQ için bir etki alanının parçası olması gerekir. Bir etki alanının parçası olmayan bir bilgisayarda bu örneği çalıştırmak, şu hatayı alırsınız: "Kullanıcının iç message queuing sertifikası yok".
 
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
@@ -361,4 +361,4 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

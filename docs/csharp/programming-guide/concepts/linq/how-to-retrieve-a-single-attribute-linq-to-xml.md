@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: tek bir öznitelik (LINQ to XML) alma (C#)'
+title: 'Nasıl yapılır: (LINQ to XML) tek bir öznitelik alma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 7e7da2b63b9b46a23fcdbcbea6a0f499de32cf19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2bf42333d7a0b3e34cc0a636b68659b8c45d1d83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738189"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Nasıl yapılır: tek bir öznitelik (LINQ to XML) alma (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Nasıl yapılır: (LINQ to XML) tek bir öznitelik alma (C#)
 Bu konu nasıl tek bir öznitelik, bir öğenin özniteliği adı verilir alınacağını açıklar. Bu, belirli bir özniteliği olan bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> Yöntemi <xref:System.Xml.Linq.XElement> sınıfı döndürür <xref:System.Xml.Linq.XAttribute> belirtilen ada sahip.  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

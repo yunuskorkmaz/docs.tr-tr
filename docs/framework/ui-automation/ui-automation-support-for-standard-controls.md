@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726591"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Standart Denetimler İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -169,5 +169,5 @@ ms.locfileid: "48037345"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)

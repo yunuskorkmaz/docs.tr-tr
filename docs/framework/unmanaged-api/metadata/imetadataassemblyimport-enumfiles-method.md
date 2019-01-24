@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1995ed0b281978b45b01dbeda54b02094a30412
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43a895446e0070476bde3d15d332f010265176e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515043"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles Yöntemi
-Geçerli derleme bildiriminde başvurulan dosyaları sıralar.  
+Geçerli derleme bildiriminde atıf yapılan dosyaları listeler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT EnumFiles (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu, bu yöntem ilk çağrısı için boş bir değer olmalıdır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için null bir değer olmalıdır.  
   
  `rFiles`  
- [out] Depolamak için kullanılan dizi `mdFile` meta veri belirteçleri.  
+ [out] Depolamak için kullanılan bir dizi `mdFile` meta veri belirteçleri.  
   
  `cMax`  
- [in] En fazla sayısını `mdFile` yerleştirilebilir belirteçleri `rFiles`.  
+ [in] En fazla `mdFile` yerleştirilebilir belirteçleri `rFiles`.  
   
  `pcTokens`  
- [out] Sayısı `mdFile` belirteçleri gerçekten yerleştirilen `rFiles`.  
+ [out] Sayısını `mdFile` belirteçleri gerçekten yerleştirilen `rFiles`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -59,13 +59,13 @@ HRESULT EnumFiles (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

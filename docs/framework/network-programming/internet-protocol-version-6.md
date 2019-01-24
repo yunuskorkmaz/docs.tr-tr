@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 6f956a8dc3e899012144ccf266a7cbe1c5f9dab4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cd35ae50d76ec2276fdd08760d088cf6be1658e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588164"
 ---
 # <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
 Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart protokoller paketidir. IPv6 adres tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri için haklısın ile birçok (IPv4 olarak bilinir) Internet Protokolü paketinin geçerli sürümü, sorunu çözmek için tasarlanmıştır. IPv6, yeni türde uygulamalar, eşler arası ile mobil uygulamalar dahil olmak üzere etkinleştirmek için yeteneklerini genişletir. Geçerli IPv4 protokolünün ana sorunlar şunlardır:  
@@ -57,7 +57,7 @@ Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart p
   
  Üzerinde IPv6 ilgili bilgiler bulabilirsiniz [IP sürüm 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IPv6 yuva örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)  
- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IPv6 yuva örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
+- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Yuvalar](../../../docs/framework/network-programming/sockets.md)

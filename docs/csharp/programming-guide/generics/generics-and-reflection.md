@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742427"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri olduğu gibi genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -45,9 +45,9 @@ Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere er
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Gerekirse true döndürür geçerli <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Geçerli genel yöntem tanımının türleri tür parametreleri için bir dizi öğelerinin yerini alır ve döndürür bir <xref:System.Reflection.MethodInfo> oluşturulmuş yöntemi ortaya çıkan temsil eden nesne.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
-- [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Genel Türler](../../../csharp/programming-guide/generics/index.md)
+- [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Genel Türler](~/docs/standard/generics/index.md)
