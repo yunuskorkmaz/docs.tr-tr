@@ -9,65 +9,65 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: f1e651914530fe847bb411a79ff39e3b15be7784
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 552df5df6bdf8d9cdd8241c3e68cae671a24c6a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577769"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox Stilleri ve Şablonları
-Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.ListBox> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.ListBox> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="listbox-parts"></a>ListBox bölümleri  
- <xref:System.Windows.Controls.ListBox> Denetim adlandırılmış tüm bölümler sahip değil.  
+ <xref:System.Windows.Controls.ListBox> Denetim herhangi bir adlandırılmış bölümü yok.  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.ListBox>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.ListBox>; <xref:System.Windows.Controls.ScrollViewer> içinde denetimin kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, vermeniz gerekir <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
+ Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.ListBox>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.ListBox>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
   
 ## <a name="listbox-states"></a>ListBox durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.ListBox> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.ListBox> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
 |Geçerli|ValidationStates|Denetim geçerli değil.|  
-|InvalidFocused|ValidationStates|Denetim geçerli değil ve odağa sahip.|  
-|InvalidUnfocused|ValidationStates|Denetim geçerli değil ve odağa sahip değil.|  
+|InvalidFocused|ValidationStates|Denetim, geçerli değil ve odağa sahip.|  
+|InvalidUnfocused|ValidationStates|Denetim, geçerli değil ve odak sahip değil.|  
   
 ## <a name="listboxitem-parts"></a>ListBoxItem bölümleri  
- <xref:System.Windows.Controls.ListBoxItem> Denetim adlandırılmış tüm bölümler sahip değil.  
+ <xref:System.Windows.Controls.ListBoxItem> Denetim herhangi bir adlandırılmış bölümü yok.  
   
 ## <a name="listboxitem-states"></a>ListBoxItem durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.ListBox> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.ListBox> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Fare üzerinde|CommonStates|Fare işaretçisini üzerinde denetim konumlandırıldı.|  
-|Devre dışı|CommonStates|Öğesi devre dışı bırakılır.|  
-|Odaklanmış|FocusStates|Öğenin odağa sahip.|  
-|Odaksız|FocusStates|Öğenin odağa sahip değil.|  
-|Seçilmemiş|SelectionStates|Öğe seçilmedi.|  
-|Seçili|SelectionStates|Seçili currentlyplate öğesidir.|  
+|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Devre dışı|CommonStates|Öğe devre dışı bırakıldı.|  
+|Odaklanmış|FocusStates|Öğe, odağa sahip.|  
+|Plana odaklanmadan|FocusStates|Öğe, odağa sahip değil.|  
+|Seçimi kaldırıldı|SelectionStates|Öğe seçilmedi.|  
+|Seçildi|SelectionStates|Seçili currentlyplate öğesidir.|  
 |SelectedUnfocused|SelectionStates|Öğe seçilir, ancak odağa sahip değil.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="listbox-controltemplate-example"></a>ListBox ControlTemplate Örneği  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListBoxItem> kontrol eder.  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListBoxItem> kontrol eder.  
   
  [!code-xaml[ControlTemplateExamples#ListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
- Önceki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

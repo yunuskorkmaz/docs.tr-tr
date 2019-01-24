@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma'
+title: 'Nasıl yapılır: Basit bir Parallel.For döngüsü yazma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b2ebf679816684e68a1c13d660ef9fc54e3a175
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574930"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For döngüsü yazma
 
 Bu konuda gösteren iki örnek içeren <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. İlk kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve ikinci kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemesi, iki basit aşırı yüklemeleri <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. Bu iki aşırı yüklemesini kullanabilirsiniz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngü iptal etmek gerekmediğinde yöntemi sonu dışında döngü yinelemesi veya herhangi bir iş parçacığı-yerel durumu korumak.
 
@@ -70,7 +70,7 @@ Zaman uyumlu çağrılar, konsol veya dosya sistemi gibi paylaşılan kaynaklar 
 
 Kopyalayın ve bu kod bir Visual Studio projesine yapıştırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 480fedc8ae63ffa3222a74e39297cc64b6812e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576163"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap Yöntemi
 Belirtilen belirteç tarafından başvurulan PInvoke imzası özelliklerini ayarlar.  
@@ -40,26 +40,26 @@ HRESULT DefinePinvokeMap (
   
 #### <a name="parameters"></a>Parametreler  
  `tk`  
- [in] Hedef yöntemin için belirteci.  
+ [in] Hedef yöntemin belirteci.  
   
  `dwMappingFlags`  
- [in] Eşleme işlemini gerçekleştirmek için PInvoke tarafından kullanılan bayraklar.  
+ [in] PInvoke tarafından eşleme yapmak için kullanılan bayraklar.  
   
  `szImportName`  
- [in] Yönetilmeyen DLL yönteminde hedef adını verin.  
+ [in] Hedef adı yöntemi yönetilmeyen DLL dışarı aktarın.  
   
  `mrImportDLL`  
- [in] Belirtecin hedefi için yerel DLL'i.  
+ [in] Belirteç hedef için yerel bir DLL.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

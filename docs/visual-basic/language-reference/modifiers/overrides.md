@@ -13,47 +13,47 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582120"
 ---
 # <a name="overrides-visual-basic"></a>Geçersiz Kılmalar (Visual Basic)
-Bir özellik veya yordam aynı adlı bir özellik ya da bir taban sınıftan devralınan yordamı kıldığını belirtir.  
+Bir özelliğin ya da yordamın bir aynı adlı bir özellik ya da bir temel sınıftan devralınan yordamın kıldığını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Overrides` yalnızca bir özellik veya yordam bildirimi deyimi içinde.  
+-   **Bildirim bağlamı.** Kullanabileceğiniz `Overrides` yalnızca bir özellik veya yordamı bildirim deyiminde.  
   
--   **Birleşik değiştirici.** Belirtemeyeceğiniz `Overrides` ile birlikte `Shadows` veya `Shared` aynı bildirimi. Bir geçersiz kılma öğesi örtülü olarak geçersiz kılınabilir olduğundan birleştiremez `Overridable` ile `Overrides`.  
+-   **Birleşik değiştiriciler.** Belirtemezsiniz `Overrides` ile birlikte `Shadows` veya `Shared` aynı bildirimde. Bir geçersiz kılma öğesi örtük olarak geçersiz kılınabilir olduğundan birleştiremezsiniz `Overridable` ile `Overrides`.  
   
--   **Eşleşen imzalar.** Bu bildirim imzası tam olarak eşleşmelidir *imza* özelliği ya da bu geçersiz kılmaları yordamı. Başka bir deyişle, aynı veri türleriyle aynı sırada parametreleri aynı sayıda parametre listeleri olmalıdır.  
+-   **Eşleşen imzalar.** Bu bildirim imzası tam olarak eşleşmelidir *imza* özellik ya da onu geçersiz kılar yordamı. Başka bir deyişle, aynı sırayla, aynı veri türleriyle parametreleri aynı sayıda parametre listeleri olmalıdır.  
   
-     İmza yanı sıra geçersiz kılma bildirimi de tam olarak aşağıdaki eşleşmesi gerekir:  
+     İmza ek olarak, geçersiz kılma bildirimi de tam olarak şu eşleşmelidir:  
   
     -   Erişim düzeyi  
   
     -   Dönüş türü, varsa  
   
--   **Genel imzalar.** Genel bir yordam için imza türü parametre sayısını içerir. Bu nedenle, geçersiz kılma bildirimi de o açısından taban sınıf sürümle aynı olmalıdır.  
+-   **Genel imzalar.** Genel bir yordam için imza türü parametre sayısını içerir. Bu nedenle, geçersiz kılma bildirimi de bu açısından temel sınıftaki sürümün eşleşmesi gerekir.  
   
--   **Ek eşleşen.** Taban sınıfı sürüm imzası eşleştirmeye ek olarak, bu bildirim ayrıca, aşağıdaki yönden eşleşmesi gerekir:  
+-   **Ek eşleştirme.** Temel sınıftaki sürümün imzası eşleşen ek olarak, bu bildirimi Ayrıca, şu açılardan eşleşmesi gerekir:  
   
-    -   Erişim düzeyi değiştiricisi (gibi [ortak](../../../visual-basic/language-reference/modifiers/public.md))  
+    -   Erişim düzeyi değiştirici (gibi [genel](../../../visual-basic/language-reference/modifiers/public.md))  
   
-    -   Her bir parametreyi mekanizması geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
+    -   Her parametre mekanizması geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
-    -   Her bir genel yordam tür parametresinin kısıtlaması listeler  
+    -   Genel bir yordam üzerinde her tür parametresi kısıtlaması listeler  
   
--   **Gölgeleme ve geçersiz kılma.** Hem gölgeleme ve geçersiz kılma devralınan bir öğeyi yeniden tanımlamanız, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için bkz: [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+-   **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Kullanırsanız `Overrides`, derleyici örtük olarak ekler `Overloads` kitaplığınızın API'leri iş böylece C# ile daha kolay.  
+ Kullanırsanız `Overrides`, derleyicinin dolaylı olarak ekler `Overloads` kitaplığınızı API'leri ile çalışmak üzere C# daha kolay.  
   
- `Overrides` Değiştiricisi bu bağlamlarında kullanılabilir:  
+ `Overrides` Bu bağlamda değiştirici kullanılabilir:  
   
  [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -61,11 +61,11 @@ Bir özellik veya yordam aynı adlı bir özellik ya da bir taban sınıftan dev
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)

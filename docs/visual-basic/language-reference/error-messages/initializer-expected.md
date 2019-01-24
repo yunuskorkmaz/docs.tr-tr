@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 9d786fd1e929129c420b7bec62efd0bd445d85eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596000"
 ---
 # <a name="initializer-expected"></a>Başlatıcı bekleniyor
-Başlatma listesi aşağıdaki örnekte gösterildiği gibi boş olduğu nesne Başlatıcı kullanarak bir sınıfın örneğini bildirme denediniz.  
+Başlatma listesi aşağıdaki örnekte gösterildiği gibi boş olduğu bir nesne Başlatıcı kullanarak bir sınıfın örneği bildirin çalıştınız.  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- En az bir alan veya özellik Başlatıcı listesinde, aşağıdaki örnekte gösterildiği gibi başlatılması gerekir.  
+ En az bir alan veya özellik Başlatıcı listesinde, aşağıdaki örnekte gösterildiği gibi başlatılmalıdır.  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
@@ -29,8 +29,8 @@ Başlatma listesi aşağıdaki örnekte gösterildiği gibi boş olduğu nesne B
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  En az bir alan veya Başlatıcı özelliğinde başlatmak veya nesne Başlatıcı kullanmayın.  
+1.  En az bir alan veya özellik başlatıcısında başlatmak veya bir nesne Başlatıcı kullanmayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Nasıl yapılır: Nesne Başlatıcısı Kullanarak Nesne Bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nasıl yapılır: Bir nesne Başlatıcı kullanarak nesne bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: f26de2dbf8ec200a4b53195ae97bbb174e815166
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584694"
 ---
 # <a name="version-tolerant-serialization"></a>Sürüme dayanıklı serileştirme
 Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializable türler oluşturmak sürüm 1.0 ve 1.1 .NET Framework'ün, sorunlu. Bir tür ek alanlar ekleyerek değiştirilmişse, aşağıdaki sorunları ortaya çıkabilecek:  
@@ -282,15 +282,15 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.SerializableAttribute>  
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
-- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
-- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
-- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
-- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
-- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
-- <xref:System.Runtime.Serialization.StreamingContext>  
-- <xref:System.NonSerializedAttribute>  
+- <xref:System.SerializableAttribute>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>
+- <xref:System.Runtime.Serialization.StreamingContext>
+- <xref:System.NonSerializedAttribute>
 - [İkili Serileştirme](binary-serialization.md)

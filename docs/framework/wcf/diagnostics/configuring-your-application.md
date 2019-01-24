@@ -2,12 +2,12 @@
 title: Uygulamanızı Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: e9a5429ef573fdee9478b63b76d2da8005215c93
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584642"
 ---
 # <a name="configuring-your-application"></a>Uygulamanızı Yapılandırma
 Windows Communication Foundation (WCF), .NET yapılandırma sistemini kullanır ve Hizmetleri her iki makine ve uygulama kapsamda yapılandırmanıza olanak tanır.  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF), .NET yapılandırma sistemini kullanır 
 > [!NOTE]
 >  Sağ tıklayarak Visual Studio'da WCF Web hizmeti projesi yapılandırma dosyasını düzenliyorsanız, **Çözüm Gezgini**, dikkat **WCF yapılandırmasını Düzenle** bağlam menüsü öğesi eksik. Geçici çözüm bu sorunu tıklayın **Araçları** menüsünde ve **WCF Hizmeti Yapılandırma Düzenleyicisi**. Bundan sonra bir yapılandırma dosyasına sağ tıklayın ve kullanmak **WCF yapılandırmasını Düzenle** bağlam menüsü öğesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services.md)  
- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services.md)
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

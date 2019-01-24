@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582274"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
 A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine etkiler o öğenin bir parçasıdır. Bildirilen her öğe bir veya daha fazla ilişkili aşağıdaki özelliklere sahiptir:  
@@ -27,9 +27,9 @@ A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine
   
 -   *Yaşam süresi* — süre yürütme sırasında öğe olduğu için kullanılabilir. Daha fazla bilgi için [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Kapsam* — adıyla nitelemeden öğesine başvurabilir tüm kod kümesi. Daha fazla bilgi için [nasıl yapılır: bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Kapsam* — adıyla nitelemeden öğesine başvurabilir tüm kod kümesi. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Erişim düzeyi* — iznini sağlamak için kod öğesi kullanın. Daha fazla bilgi için [nasıl yapılır: bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Erişim düzeyi* — iznini sağlamak için kod öğesi kullanın. Daha fazla bilgi için [nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Öğelerin özellikleri  
  Aşağıdaki tabloda, bildirilen öğeler ve her birine Uygula özellikleri gösterilmektedir.  
@@ -53,12 +53,12 @@ A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine
   
  <sup>1</sup> kapsam bazen olarak adlandırılır *görünürlük*.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

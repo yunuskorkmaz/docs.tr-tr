@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575495"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual Yöntemi
-Belirtilen adresten başlayarak bitişik bellek bloğu alır ve sağlanan arabellek döndürür.  
+Belirtilen adres'ten itibaren bitişik bellek bloğunu alır ve sağlanan arabellek döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,24 +46,24 @@ HRESULT ReadVirtual(
  [out] Bellek depolanacağı arabelleği.  
   
  `bytesRequested`  
- [in] Hedef adres almak için bayt sayısı.  
+ [in] Hedef adres alınacağı bayt sayısı.  
   
  `pBytesRead`  
- [out] Hedef adres gerçekte okunan bayt sayısı. Bu daha az olabilir `bytesRequested`.  
+ [out] Hedef adres gerçekten okunan bayt sayısı. Bu daha az olabilir `bytesRequested`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İlk bayta kalan (belirtilen başlangıç adresindeki) okuyabilir, çağrı (null ile sonlandırılmış dizeler gibi uzunluğu kendiliğinden açıklayıcı ile veri yapılarının verimli okuma desteklemek için) başarı döndürmelidir.  
+ (Belirtilen başlangıç adresindeki) ilk baytı okunabiliyorsa çağrı başarılı (uzunluğu, null ile sonlandırılmış dizeler gibi kendini açıklayan ile veri yapılarının verimli okuma desteklemek için) döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

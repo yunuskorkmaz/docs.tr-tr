@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f87724bda78c1948ae7e1ddfa3d586fe5b7e14e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575742"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken Metodu
 Bu modül için tablo girişi için belirteç alır.  
@@ -37,19 +37,19 @@ HRESULT GetToken(
   
 #### <a name="parameters"></a>Parametreler  
  `pToken`  
- [out] Bir işaretçi `mdModule` modülün meta verileri başvuran belirteci.  
+ [out] Bir işaretçi `mdModule` modülün meta verilerinin başvuran belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirteç için geçirilebilir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [Imetadataımport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), ve [Imetadataassemblyımport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) meta veri alma arabirimleri.  
+ Belirteç geçirilebilir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [Imetadataımport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), ve [Imetadataassemblyımport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) meta veri alma arabirimleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veriler](../../../../docs/framework/unmanaged-api/metadata/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veriler](../../../../docs/framework/unmanaged-api/metadata/index.md)

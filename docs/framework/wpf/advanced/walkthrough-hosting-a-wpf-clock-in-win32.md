@@ -1,19 +1,19 @@
 ---
-title: "İzlenecek yol: Win32'de WPF Saati Barındırma"
+title: "İzlenecek yol: Win32'de WPF saati barındırma"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579777"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32'de WPF Saati Barındırma
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32'de WPF saati barındırma
 Yerleştirmenin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları kullanın <xref:System.Windows.Interop.HwndSource>, içeren HWND sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Oluşturduğunuz ilk <xref:System.Windows.Interop.HwndSource>, parametreler için CreateWindow benzer vererek.  Size daha sonra <xref:System.Windows.Interop.HwndSource> hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik içinde olmasını istediğiniz.  Son olarak, / HWND elde <xref:System.Windows.Interop.HwndSource>. Bu izlenecek yol karma oluşturma işlemini gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işletim sistemi in uygulama **tarih ve saat özellikleri** iletişim.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -48,7 +48,7 @@ Yerleştirmenin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
 ## <a name="clr"></a>/ CLR  
  İlk adım, bu yönetilmeyen olarak [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] çağırana projeye yönetilen kod.  Gerekli DLL'leri kullanma ve ile kullanmak için ana yöntemi ayarlamak istediğiniz bağlanacağı/CLR derleyici seçeneği kullanmanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Yönetilen kod C++ projesi içinde kullanımını etkinleştirmek için: win32clock proje üzerinde sağ tıklayıp **özellikleri**.  Üzerinde **genel** özellik sayfası (varsayılan) değiştirmek için ortak dil çalışma zamanı desteği `/clr`.  
+ Yönetilen kod C++ projesi içinde kullanımını etkinleştirmek için: Win32clock proje üzerinde sağ tıklayıp **özellikleri**.  Üzerinde **genel** özellik sayfası (varsayılan) değiştirmek için ortak dil çalışma zamanı desteği `/clr`.  
   
  Ardından, DLL'ler için gerekli başvuruları eklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll ve UIAutomationTypes.dll. (Yönergeleri izleyerek, C: sürücüsünde işletim sisteminin yüklü varsayılır.)  
   
@@ -58,13 +58,13 @@ Yerleştirmenin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
   
 3.  Tıklayın **Yeni Başvuru Ekle**Gözat sekmesini tıklatın, C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll'e girin ve Tamam'a tıklayın.  
   
-4.  PresentationFramework.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
+4.  PresentationFramework.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
   
-5.  WindowsBase.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll.  
+5.  WindowsBase.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll.  
   
-6.  UIAutomationTypes.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
+6.  UIAutomationTypes.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
   
-7.  UIAutomationProvider.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
+7.  UIAutomationProvider.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
   
 8.  Tıklayın **Yeni Başvuru Ekle**System.dll seçin ve tıklayın **Tamam**.  
   
@@ -225,7 +225,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  Sonuç şu ekran üretilen kod için karşılaştırmak için bkz [Win32 saati birlikte çalışma örneği](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Interop.HwndSource>  
- [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Win32 saati birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=160051)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Interop.HwndSource>
+- [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Win32 saati birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=160051)

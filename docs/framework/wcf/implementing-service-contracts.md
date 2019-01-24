@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: 4e6570291571815781ce543f5991ae40ed57d1e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576505"
 ---
 # <a name="implementing-service-contracts"></a>Hizmet Sözleşmelerini Uygulama
-Bir hizmet bir veya daha fazla uç noktaları istemcilerinde kullanımına işlevselliği kullanıma sunan bir sınıftır. Bir hizmet oluşturmak için bir Windows Communication Foundation (WCF) sözleşme uygulayan bir sınıf yazma. Bunu iki yoldan biriyle yapabilirsiniz. Sözleşme ayrı ayrı bir arabirim tanımlayın ve ardından arabirimi uygulayan bir sınıf oluşturun. Alternatif olarak, sınıf ve sözleşme doğrudan koyarak oluşturabileceğiniz <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği ve <xref:System.ServiceModel.OperationContractAttribute> hizmetinin istemciler için kullanılabilen yöntemler özniteliği.  
+Bir veya daha fazla uç noktası istemcilere kullanılabilir olan işlevsellik sunduğu bir sınıf bir hizmettir. Bir hizmet oluşturmak için bir Windows Communication Foundation (WCF) sözleşmesi uygulayan bir sınıf yazın. İki yoldan biriyle bunu yapabilirsiniz. Sözleşme ayrı ayrı arabirim olarak tanımlayabilir ve ardından bu arabirimi uygulayan bir sınıf oluşturun. Alternatif olarak, sınıf ve sözleşme doğrudan yerleştirerek oluşturabileceğiniz <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği ve <xref:System.ServiceModel.OperationContractAttribute> hizmeti istemcilerine uygun olan yöntemler özniteliği.  
   
-## <a name="creating-a-service-class"></a>Hizmet sınıfı oluşturma  
- Aşağıdaki uygulayan bir hizmetin örneğidir bir `IMath` ayrı olarak tanımlanan sözleşme.  
+## <a name="creating-a-service-class"></a>Bir hizmet sınıfı oluşturma  
+ Uygulayan bir hizmetin bir örneği verilmiştir bir `IMath` ayrı olarak tanımlanan sözleşme.  
   
 ```csharp  
 // Define the IMath contract.  
@@ -36,7 +37,7 @@ public class MathService : IMath
 }  
 ```  
   
- Alternatif olarak, bir hizmet, bir sözleşme doğrudan getirebilir. Aşağıdaki tanımlayan ve uygulayan bir hizmet sınıf örnektir bir `MathService` sözleşme.  
+ Alternatif olarak, bir hizmet sözleşme doğrudan kullanıma sunabilirsiniz. Tanımlar ve uygulayan bir hizmet sınıfın bir örneği verilmiştir bir `MathService` sözleşme.  
   
 ```csharp  
 // Define the MathService contract directly on the service class.  
@@ -50,14 +51,14 @@ class MathService
 }  
 ```  
   
- Önceki hizmetleri sözleşmesi adları farklı olduğundan farklı sözleşmeleri kullanıma unutmayın. İlk durumda gösterilen sözleşme adında "`IMath`"İkinci durumda sözleşme adlı sırada"`MathService`".  
+ Önceki hizmetlerin sözleşmesi adları farklı olduğundan farklı sözleşmeler kullanıma unutmayın. Bu durumda, kullanıma sunulan sözleşme adında "`IMath`"İkinci durumda sözleşme adlandırılırken"`MathService`".  
   
- Birkaç hizmet ve işlem eşzamanlılık ve örnek oluşturma gibi uygulama düzeyleri ayarlayabilirsiniz. Daha fazla bilgi için bkz: [Hizmetleri Tasarlama ve uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md).  
+ Hizmet ve işlem eşzamanlılık ve örnek oluşturma gibi uygulama düzeyleri birkaç şey ayarlayabilirsiniz. Daha fazla bilgi için [Hizmetleri Tasarlama ve uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- Bir hizmet sözleşmesini uyguladıktan sonra hizmet için bir veya daha fazla uç noktalar oluşturmanız gerekir. Daha fazla bilgi için bkz: [uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Bir hizmeti çalıştırma hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bir hizmet sözleşmesini uyguladıktan sonra hizmeti için bir veya daha fazla uç noktası oluşturmanız gerekir. Daha fazla bilgi için [uç nokta oluşturmaya genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Bir hizmet çalıştırma hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Nasıl yapılır: Anlaşma Sınıfı ile Hizmet Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
- [Nasıl yapılır: Anlaşma Arabirimi ile Hizmet Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
- [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Nasıl yapılır: Bir sözleşme sınıfı ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Nasıl yapılır: Bir sözleşme arabirimi ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

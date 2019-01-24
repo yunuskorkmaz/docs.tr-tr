@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595584"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
@@ -59,7 +59,7 @@ Tornavida genel bir araç olarak ayarlayın
   
  Artık `stringQ` özel olarak çalışmak için `String` değerleri. Çünkü `stringQ` yönelik bir programdır `String` için genelleştirilmiş yerine `Object` değerleri geç bağlama veya türü dönüştürme yok. Bu, yürütme zaman tasarrufu sağlar ve çalışma zamanı hataları azaltır.  
   
- Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Genel bir sınıf örneği  
  Aşağıdaki örnek, genel bir sınıf bir çatı tanımı gösterilmektedir.  
@@ -74,7 +74,7 @@ Tornavida genel bir araç olarak ayarlayın
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Daha eksiksiz bir örnek için bkz: [nasıl yapılır: bir sınıf olduğunu olabilir sağlayan aynı işlevselliği farklı veri türlerinde tanımlamak](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Uygun programlama öğeleri  
  Tanımlayabilir ve Genel sınıflar, yapılar, arabirimler, yordamları ve temsilciler kullanın. Unutmayın [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] birkaç genel sınıflar, yapılar ve yaygın olarak kullanılan genel öğelerini temsil eden bir arabirim tanımlar. <xref:System.Collections.Generic?displayProperty=nameWithType> Sözlükleri, listeler, kuyruklar ve Yığınlar ad alanı sağlar. Genel öğeniz tanımlamadan önce bunu zaten kullanılabilir olup olmadığını <xref:System.Collections.Generic?displayProperty=nameWithType>.  
@@ -149,14 +149,14 @@ Tornavida genel bir araç olarak ayarlayın
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
-- [,](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [olarak](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)  
+- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [,](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [olarak](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)
 - [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)

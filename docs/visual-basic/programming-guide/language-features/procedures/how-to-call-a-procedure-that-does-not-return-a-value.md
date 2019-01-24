@@ -1,40 +1,40 @@
 ---
-title: 'Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: cf136f1486645d6e8e4b5856c0b1baf9e99f6c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f85c7a7edf4d05dc50166ad4f30080c2e595cf65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590649"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma (Visual Basic)
-A `Sub` yordamı çağıran kodu için bir değer döndürmez. Siz açıkça tek başına bir arama deyimiyle çağrısından. Bu deyim içinde adı kullanılarak çağrılamaz.  
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma
+A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkça çağıran bir tek başına deyimiyle çağırmanız. Bir ifade içinde adını kullanarak çağrılamıyor.  
   
-### <a name="to-call-a-sub-procedure"></a>Bir alt yordam çağrısı için  
+### <a name="to-call-a-sub-procedure"></a>Bir alt yordam çağırmak için  
   
-1.  Adını belirtin `Sub` yordamı.  
+1.  Adını `Sub` yordamı.  
   
-2.  Bağımsız değişken listesi kapsamak için parantez yordamı adıyla izleyin. Bağımsız değişkenler varsa, isteğe bağlı olarak parantez atlayabilirsiniz. Ancak, parantez kullanarak kodunuzu okumak kolaylaştırır.  
+2.  Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
   
-3.  Bağımsız değişkenler, virgülle ayrılmış parantez içinde bağımsız değişken listesinde yerleştirin. Bağımsız değişkenleri aynı sırada sağladığınız emin olun, `Sub` yordamı ilgili parametreleri tanımlar.  
+3.  Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Sub` yordamı karşılık gelen parametreleri tanımlar.  
   
-     Aşağıdaki örnek Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> bir uygulama penceresi etkinleştirmek için işlevi. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> pencere başlığı tek bağımsız değişken olarak alır. Çağrıyı yapan kod için bir değer döndürmüyor. Not Defteri işlemi çalışmıyor, örnek döndürürse bir <xref:System.ArgumentException>. `Shell` Yordam varsayar uygulamalardır belirtilen yollar.  
+     Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> uygulama penceresini etkinleştirmek için işlevi. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> pencere başlığı tek bağımsız değişken olarak alır. Çağrıldığı koda bir değer döndürmez. Bir not defteri işlemi çalışmıyor, örneği oluşturur. bir <xref:System.ArgumentException>. `Shell` Yordam uygulamalardır belirtilen yolda varsayar.  
   
      [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>  
- <xref:System.ArgumentException>  
- [Yordamlar](./index.md)  
- [Alt Yordamlar](./sub-procedures.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)  
- [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)  
- [Nasıl yapılır: Visual Basic'te bir olay işleyicisi çağırma](./how-to-call-an-event-handler.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
+- <xref:System.ArgumentException>
+- [Yordamlar](./index.md)
+- [Alt Yordamlar](./sub-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Nasıl yapılır: Bir yordam oluşturma](./how-to-create-a-procedure.md)
+- [Nasıl yapılır: Bir değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Nasıl yapılır: Visual Basic olay işleyicisi çağırma](./how-to-call-an-event-handler.md)

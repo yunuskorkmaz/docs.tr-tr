@@ -2,12 +2,12 @@
 title: İç içe geçmiş Entity SQL sorguları oluşturma
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589487"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç içe geçmiş Entity SQL sorguları oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir zengin işlevsel bir dildir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tablosal sonuçtaki kümesine sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş deyimler olabilir karmaşık ifadeleri oluşturmayı destekler. İfade bir değer parametreli veya başka bir ifadenin oluşur.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Aşağıdaki örnek düzgün ifadeleri iç içe gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: UNION, iki sorguları sipariş](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Aşağıdaki örnek düzgün ifadeleri iç içe gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Nasıl yapılır: UNION iki sorgunun sipariş](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>İç içe geçmiş sorgularda projeksiyonu  
  Proje yan tümcesi iç içe geçmiş sorgularda sunucuda Kartezyen ürün sorgulara çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucular bu sunucu performansını olumsuz etkileyebilir, çok büyük almak TempDB tablodaki neden olabilir.  
@@ -75,5 +75,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

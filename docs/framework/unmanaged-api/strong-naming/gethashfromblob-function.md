@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576349"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob İşlevi
-Derleme karmasını belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.  
+Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) yöntemi yerine.  
   
@@ -43,13 +43,13 @@ HRESULT GetHashFromBlob (
   
 #### <a name="parameters"></a>Parametreler  
  `pbBlob`  
- [in] Karma hale getirilmesi için bellek bloğu adresi için bir işaretçi.  
+ [in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.  
   
  `cchBlob`  
  [in] Uzunluğu, bayt cinsinden bellek bloğu.  
   
  `piHashAlg`  
- [içinde out] Karma algoritmasını belirtir sabiti. Varsayılan algoritma için sıfır değerini kullanın.  
+ [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.  
   
  `pbHash`  
  [out] Döndürülen karma arabellek.  
@@ -58,17 +58,17 @@ HRESULT GetHashFromBlob (
  [in] İstenen en büyük boyutunu `pbHash`.  
   
  `pchHash`  
- [out] Dönen bayt cinsinden boyutu `pbHash`.  
+ [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetHashFromBlob Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetHashFromBlob Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

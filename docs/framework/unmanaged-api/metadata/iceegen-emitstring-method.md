@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dccb2a3a3f3aaf0f209c8f3543056ab81c562dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586429"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString Yöntemi
-Belirtilen dize kod temeli yayar.  
+Belirtilen dize kod tabanında yayar.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -40,19 +40,19 @@ HRESULT EmitString (
   
 #### <a name="parameters"></a>Parametreler  
  `lpString`  
- [in] Yayma dize.  
+ [in] Yaymak için dize.  
   
  `RVA`  
- [out] Göreli sanal adres verilmiş dizesi.  
+ [out] Göreli sanal adres yayılan dize.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

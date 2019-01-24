@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583736"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps Metodu
 Belirtilen belirteç tarafından başvurulan üye ile ilişkili meta verileri alır.  
@@ -43,35 +43,35 @@ HRESULT GetMemberRefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mr`  
- [in] İlişkili meta verileri döndürmek için MemberRef belirteci.  
+ [in] İlişkili meta verileri için döndürülecek MemberRef belirteç.  
   
  `ptk`  
- [out] Üye veya üye veya üye temsil eden bir MethodDef bildirir modülü sınıfın temsil ettiği ModuleRef belirteci bildirir sınıfı temsil eden bir TypeDef veya TypeRef veya TypeSpec'te belirteci.  
+ [out] Üye ya da üyeye ya da üye temsil eden bir MethodDef bildirir modül sınıfı temsil eden bir ModuleRef belirteci bildiren sınıfın temsil ettiği bir TypeDef veya TypeRef veya TypeSpec'te belirteci.  
   
  `szMember`  
- [out] Üyenin adı için string buffer.  
+ [out] Üyenin adını bir dize arabelleği.  
   
  `cchMember`  
- [in] Geniş karakterler istenen boyutta `szMember`.  
+ [in] Geniş karakter cinsinden istenen boyuta `szMember`.  
   
  `pchMember`  
- [out] Geniş karakterler döndürülen boyutu `szMember`.  
+ [out] Geniş karakter cinsinden döndürülen boyutu `szMember`.  
   
  `ppvSibBlob`  
- [out] Üye için ikili meta verileri imza için bir işaretçi.  
+ [out] İkili meta veri imzası üyesi için bir işaretçi.  
   
  `pbSig`  
  [out] Bayt cinsinden boyutu `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

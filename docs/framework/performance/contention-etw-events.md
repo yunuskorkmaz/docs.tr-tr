@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575573"
 ---
 # <a name="contention-etw-events"></a>Çekişme ETW Olayları
-Çekişme olayları için Çekişme olduğunda ortaya <xref:System.Threading.Monitor?displayProperty=nameWithType> kilitleri ya da çalışma zamanı tarafından kullanılan yerel kilitler. Çakışma, başka bir iş parçacığı kilidi sahip olduğu sırada bir kilidi için bekleyen bir iş parçacığı oluşur.  
+Çekişme olayları oluştuğunda için Çekişme olduğunda <xref:System.Threading.Monitor?displayProperty=nameWithType> kilitler veya çalışma zamanı tarafından kullanılan yerel kilitler. Başka bir iş parçacığı kilit sahip olduğu sırada bir kilit için bekleyen bir iş parçacığı Çekişme gerçekleşir.  
   
- Aşağıdaki tabloda altında Çekişme olayları yükseltildiği anahtar sözcüğü ve olayları düzeyini gösterir. (Daha fazla bilgi için bkz: [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Çekişme olayları altında oluşturulan anahtar sözcüğü ve olayları düzeyi aşağıdaki tabloda gösterilmektedir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Olay oluşturma için anahtar sözcüğü|Düzey|  
+|Olayı için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
 |`ContentionKeyword` (0x4000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda olay bilgilerini gösterir.  
+ Aşağıdaki tablo, olay bilgilerini gösterir.  
   
-|Olay|Olay Kimliği|Ne zaman oluşturulur|  
+|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
 |-----------|--------------|-----------------|  
-|`ContentionStart_V1`|81|Çekişme başlatır. Bu olay, bir iş parçacığı bir kilidi bekler önce geçen süre dönmesini miktarını içermez; yalnızca bir kilit edinmeye iş parçacığı bekler yapıldığında oluşturulur.|  
+|`ContentionStart_V1`|81|Çekişme başlatır. Bu olay, dönen bir iş parçacığı kilit için bekleyen önceki süre miktarını içermez; yalnızca iş parçacığının bir kilidi bekler olduğunda tetiklenir.|  
 |`ContentionStop`|81|Çekişme sona erer.|  
   
- Aşağıdaki tabloda olay verilerini gösterir.  
+ Aşağıdaki tabloda, olay verilerini gösterir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Bayraklar|Win: UInt8|için 0 yönetilen; Yerel için 1.|  
-|ClrInstanceID|Win: UInt16|CLR örneği için benzersiz kimlik.|  
+|Bayraklar|Kazanma: UInt8|0 için yönetilen; Yerel için 1.|  
+|ClrInstanceID|Kazanma: UInt16|CLR örneği için benzersiz kimliği.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

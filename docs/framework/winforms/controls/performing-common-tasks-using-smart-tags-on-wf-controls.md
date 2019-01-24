@@ -1,19 +1,19 @@
 ---
-title: 'İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme'
+title: 'İzlenecek yol: Üzerinde Windows Forms denetimleri etiketleri akıllı kullanarak ortak görevleri gerçekleştirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579322"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>İzlenecek yol: Üzerinde Windows Forms denetimleri etiketleri akıllı kullanarak ortak görevleri gerçekleştirme
 Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda gerçekleştirir çok sayıda görev vardır. Karşınıza çıkacak sık gerçekleştirilen görevlerin bazıları şunlardır:  
   
 -   Ekleyerek veya bir sekme üzerindeki kaldırarak bir <xref:System.Windows.Forms.TabControl>.  
@@ -65,9 +65,9 @@ Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda
   
 6.  Akıllı etiket karakterini tıklayın. Glif yanında görüntülenen kısayol menüsünden seçin **Yatay bölümlendirici yönlendirmesini** öğesi. Mesajının görüntülendiğini görün <xref:System.Windows.Forms.SplitContainer> denetimin ayırıcıyı, artık yatay odaklıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [İzlenecek yol: Bir Windows Formları bileşenine akıllı etiket ekleme](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [İzlenecek yol: Bir Windows Formları bileşenine akıllı etiket ekleme](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

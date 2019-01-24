@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma'
+title: 'Nasıl yapılır: Temel bir Atom akışı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582506"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma
+# <a name="how-to-create-a-basic-atom-feed"></a>Nasıl yapılır: Temel bir Atom akışı oluşturma
 Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluşturmanıza olanak sağlar. Bu konu, bir Atom dağıtım akışı sunan bir dağıtım hizmetinin nasıl oluşturulduğunu açıklar.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel Sendikasyon hizmeti oluşturmak için  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Geçerli olan tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> HTTP GET isteklerini eşlenir. İşlemi farklı bir HTTP yöntemine eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. Daha fazla bilgi için [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Geçerli olan tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> HTTP GET isteklerini eşlenir. İşlemi farklı bir HTTP yöntemine eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. Daha fazla bilgi için [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Hizmet sözleşmesini uygulama.  
   
@@ -96,6 +96,6 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki kod derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

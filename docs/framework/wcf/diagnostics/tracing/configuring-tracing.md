@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45650004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584918"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeylerini kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak için izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicilerine ayarlama açıklanmaktadır.  
@@ -60,15 +60,15 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
   
 -   System.ServiceModel: WCF işlem, herhangi bir zamanda tüm aşamaları oturum yapılandırmasını okuma, bir ileti aktarım işlenir, kullanıcı kodu ve benzeri güvenlik işleme, bir ileti gönderilir.  
   
--   System.ServiceModel.MessageLogging: sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
+-   System.ServiceModel.MessageLogging: Sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
   
 -   System.IdentityModel.  
   
 -   System.ServiceModel.Activation.  
   
--   System.IO.Log: Ortak günlük File System (CLFS) için .NET Framework arabirimin günlüğe kaydetme.  
+-   System.IO.Log: Ortak günlük File System (CLFS) için .NET Framework arabirimi için günlüğe kaydetme.  
   
--   System.Runtime.Serialization: nesneleri okumak veya yazılan günlükleri.  
+-   System.Runtime.Serialization: Nesneleri okumak veya yazılan günlükleri.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
   
  İzlemeleri Kablodaki, örneğin, uzak bir veritabanına göndermek için bir özel İzleme dinleyicisi yapılandırabilirsiniz. Bir uygulama dağıtıcı izleme günlüklerini uzak makinede uygun erişim denetimini uygulamalıdır.  
   
- İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. Daha fazla bilgi için [nasıl yapılır: oluşturma ve izleme dinleyicilerini başlatma](https://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. Daha fazla bilgi için [nasıl yapılır: İzleme dinleyicileri oluşturma ve başlatma](https://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Çünkü `System.Diagnostics.XmlWriterTraceListener` olduğu değil iş parçacığı açısından güvenli, iz kaynakları yalnızca izlemeleri alırken kilitleyin. Kaynak çakışması ortaya çıkabilir, bu dinleyici kullanacak şekilde yapılandırılmış bir izleme kaynağına izleme birçok iş parçacığı çıkış olduğunda, bir önemli bir performans sorunu oluşur. Bu sorunu gidermek için iş parçacığı açısından güvenlidir özel bir dinleyici uygulamalıdır.  
@@ -180,8 +180,8 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
   
  Kullanamazsınız `propagateActivity` özniteliği kullanıcı tanımlı izleme kaynakları ile. Kullanıcı kodu etkinlik kimliği yayma için ServiceModel ayarlamayın emin `ActivityTracing`, ServiceModel ilgili sorun yaşamaya devam ederken `propagateActivity` özniteliğini `true`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Nasıl yapılır: İzleme Dinleyicileri Oluşturma ve Başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239)

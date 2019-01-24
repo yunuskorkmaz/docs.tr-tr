@@ -2,12 +2,12 @@
 title: Mimari ve tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576336"
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
 SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Uzantı diğer adlar için hem de sütunlar için benzersiz adlar oluşturmak için burada n, henüz kullanılmamış en küçük bir diğer ad, < existing_name > _n kullanın. Genel liste tüm adlar, basamaklı yeniden adlandırmaya gerek artırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

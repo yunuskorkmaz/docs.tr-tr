@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 365bea0bdd32fa1b408ba0bfdf100cc443b5d419
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ae455aeba353cfa66a1253b580e15b280caec8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584106"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule Yöntemi
-Bu yöntem uygulanmadı. Adlı E_NOTIMPL döndürür.  
+Bu yöntem uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,29 +53,29 @@ HRESULT FindAssemblyModule(
  [in] Kullanılmıyor.  
   
  `szAssemblyName`  
- [in] Modül adı.  
+ [in] Modülün adı.  
   
  `szModuleName`  
  [in] Bulunacak derleme.  
   
  `szName`  
- [out] Derleme basit adı.  
+ [out] Derlemenin basit adını.  
   
  `cchName`  
- [in] Bayt olarak boyutu, `szName`.  
+ [in] Bayt cinsinden boyutu, `szName`.  
   
  `pcName`  
  [out] Gerçekte döndürülen karakter sayısını `szName`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

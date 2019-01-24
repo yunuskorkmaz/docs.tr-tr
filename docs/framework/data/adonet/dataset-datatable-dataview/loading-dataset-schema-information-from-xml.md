@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bde264684eb4d36ae59e9ed966c88f379231ac73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596105"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML'den DataSet Schema bilgilerini yükleme
 Şemasını bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkiler ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **dolgu** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklenecek **veri kümesi** şema bilgileri bir XML belgesinden ya da kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **verikümesi**. **ReadXmlSchema** yüklemek veya tanım Çıkarsama sağlar **veri kümesi** belgesinden XML Şeması Tanım Dili (XSD) şemaya veya satır içi XML şeması bir XML belgesi içeren şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor çalışırken XML belgesi şemanın çıkarsandığı olanak tanır.  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Önceki XML belgesindeki öğeler için belirtilen öznitelikleri nedeniyle hem **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi ile bir **XmlReadMode** , **InferSchema** her öğe için tabloları belgede oluşturursunuz: **kategorileri**, **CategoryID**, **CategoryName**, **Açıklama**, **ürünleri**, **ProductID**, **türünde**, ve **kullanımdankaldırıldı**. (Daha fazla bilgi için [DataSet ilişkisel yapısını çıkarma XML'den](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Ancak, yalnızca oluşturmak için daha uygun bir yapı olacaktır **kategorileri** ve **ürünleri** tablolar oluşturmak için sonra da **CategoryID**, **CategoryName** , ve **açıklama** sütunlarında **kategorileri** tablosunu ve **ProductID**, **türünde**, ve **Artık Üretilmiyor** sütunlarında **ürünleri** tablo. Çıkarsanan şema XML öğeleri belirtilen öznitelikleri yoksayılmasını sağlamak için kullanın **InferXmlSchema** yöntemi ve XML ad alanı belirtin **officedata** gösterildiği yoksayılacak Aşağıdaki örnek.  
+ Önceki XML belgesindeki öğeler için belirtilen öznitelikleri nedeniyle hem **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi ile bir **XmlReadMode** , **InferSchema** belgede her öğe için tablolar oluşturur: **Kategorileri**, **CategoryID**, **CategoryName**, **açıklama**, **ürünleri**, **ProductID**, **Türünde**, ve **kullanımdan**. (Daha fazla bilgi için [DataSet ilişkisel yapısını çıkarma XML'den](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Ancak, yalnızca oluşturmak için daha uygun bir yapı olacaktır **kategorileri** ve **ürünleri** tablolar oluşturmak için sonra da **CategoryID**, **CategoryName** , ve **açıklama** sütunlarında **kategorileri** tablosunu ve **ProductID**, **türünde**, ve **Artık Üretilmiyor** sütunlarında **ürünleri** tablo. Çıkarsanan şema XML öğeleri belirtilen öznitelikleri yoksayılmasını sağlamak için kullanın **InferXmlSchema** yöntemi ve XML ad alanı belirtin **officedata** gösterildiği yoksayılacak Aşağıdaki örnek.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -85,10 +85,10 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

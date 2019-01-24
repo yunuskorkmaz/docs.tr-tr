@@ -7,31 +7,31 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d42c3a936114c01eb7b7493a9732597a7d2fab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593946"
 ---
 # <a name="how-to-implement-icommandsource"></a>Nasıl yapılır: ICommandSource Uygulama
-Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir <xref:System.Windows.Input.ICommandSource>.  Komutu bir komut çağrılacak bildiği bir nesne kaynağıdır.  <xref:System.Windows.Input.ICommandSource> Bir arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> çağrılacak komuttur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutu işleyen yönteme geçirilen bir kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komut üzerinde yürütülmekte olan nesnesidir.  
+Bu örnek, bir komut kaynak uygulayarak oluşturma işlemi gösterilmektedir <xref:System.Windows.Input.ICommandSource>.  Komut kaynak komutu çağırmak bildiği bir nesnedir.  <xref:System.Windows.Input.ICommandSource> Arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> Çağrılacak komut olur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutunu yürüten yönteme geçirilen kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komutu üzerinde yürütülmekte olan nesnesidir.  
   
- Bu örnekte, bir sınıf alt oluşturulur <xref:System.Windows.Controls.Slider> denetimi ve uygulayan <xref:System.Windows.Input.ICommandSource>.  
+ Bu örnekte, bir sınıf alt oluşturulur <xref:System.Windows.Controls.Slider> denetimi ve uygular <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] arabirimini uygulayan sınıflar sayısını sağlar <xref:System.Windows.Input.ICommandSource>, gibi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Controls.ListBoxItem>.  Komut kaynak nasıl çalıştırılacağını tanımlar.   <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.MenuItem> bunlar tıklatıldığında bir komut çağırılır.  A <xref:System.Windows.Controls.ListBoxItem> çift tıklatıldığında bir komutu çalıştırır. Bu sınıfların yalnızca bir komut haline kaynağı kendi <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği ayarlanmış.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulayan sınıflar sunar <xref:System.Windows.Input.ICommandSource>, gibi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Controls.ListBoxItem>.  Komut kaynak nasıl çalıştırılacağını tanımlar.   <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.MenuItem> tıklandığında bir komutunu çağırın.  A <xref:System.Windows.Controls.ListBoxItem> çift tıklandığında bir komut çalıştırır. Bu sınıflar yalnızca bir komut haline kaynağı kendi <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği ayarlanmış.  
   
- Kaydırıcı taşındığında komutu çağırılır bu örneğin ya da daha doğru bir şekilde zaman <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliği değiştirildi.  
+ Bu örnekte, kaydırıcıyı taşındığında komutu çağırılır ya da daha doğru bir şekilde zaman <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliği.  
   
  Sınıf tanımı aşağıda verilmiştir.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- Sonraki adım uygulamaktır <xref:System.Windows.Input.ICommandSource> üyeleri.  Bu örnekte, özellikleri olarak uygulanan <xref:System.Windows.DependencyProperty> nesneleri.  Bu veri bağlama kullanmak üzere özelliklerini sağlar.  Hakkında daha fazla bilgi için <xref:System.Windows.DependencyProperty> sınıfı için bkz: [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Veri bağlama hakkında daha fazla bilgi için bkz: [veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Sonraki adım uygulamaktır <xref:System.Windows.Input.ICommandSource> üyeleri.  Bu örnekte, özellikleri olarak uygulanır <xref:System.Windows.DependencyProperty> nesneleri.  Bu, veri bağlama kullanılacak özellikleri sağlar.  Hakkında daha fazla bilgi için <xref:System.Windows.DependencyProperty> sınıfı [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Veri bağlama hakkında daha fazla bilgi için bkz. [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Yalnızca <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği burada gösterilir.  
+ Yalnızca <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği burada gösterilmiştir.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
@@ -41,14 +41,14 @@ Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir 
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- Sonraki adım, komut kaynağı ile ilişkili olan komut ekleyip olmaktır.  <xref:System.Windows.Input.ICommandSource.Command%2A> Özelliği yalnızca yazılamıyor yeni bir komut eklendiğinde, olay işleyicileri önceki komutla ilişkili olduğundan varsa, kaldırılmalıdır.  
+ Sonraki adım, ekleme ve kaldırma komut kaynağı ile ilişkili olan komutunu sağlamaktır.  <xref:System.Windows.Input.ICommandSource.Command%2A> Özelliği yalnızca yazılamıyor yeni bir komut eklendiğinde olay işleyicileri önceki komutla ilişkili olduğundan varsa, kaldırılmalıdır.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- Son adım için mantığı oluşturmaktır <xref:System.Windows.Input.ICommand.CanExecuteChanged> işleyici ve <xref:System.Windows.Input.ICommand.Execute%2A> yöntemi.  
+ Son adım için mantığı oluşturmaktır <xref:System.Windows.Input.ICommand.CanExecuteChanged> işleyicisi ve <xref:System.Windows.Input.ICommand.Execute%2A> yöntemi.  
   
- <xref:System.Windows.Input.ICommand.CanExecuteChanged> Olay geçerli komut hedefinde yürütülecek komut yeteneklerini değişmiş olabilir komut kaynağı bildirir.  Komut kaynak bu olayı aldığında, genellikle çağırır <xref:System.Windows.Input.ICommand.CanExecute%2A> yöntemi komutu.  Komut geçerli komut hedefinde yürütülemezse, komut kaynağı genellikle kendisini devre dışı bırakır.  Komut geçerli komut hedefinde yürütüyorsa komut kaynağı genellikle kendisini etkinleştirir.  
+ <xref:System.Windows.Input.ICommand.CanExecuteChanged> Olay, komutun geçerli komut hedefi üzerinde yürütme yeteneği değişmiş olan komut kaynak bildirir.  Komut kaynak bu olayı aldığında, genellikle çağrıları <xref:System.Windows.Input.ICommand.CanExecute%2A> yöntemi komutu.  Geçerli komut hedefi üzerinde komut yürütülemezse, komut kaynak genellikle kendisini devre dışı bırakır.  Komutun geçerli komut hedefi üzerinde yürütebilir, komut kaynak genellikle kendisini etkinleştirir.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
@@ -58,8 +58,8 @@ Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir 
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Input.ICommandSource>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.Input.RoutedCommand>  
- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Input.ICommandSource>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.Input.RoutedCommand>
+- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: dce345e049a1b89b85a340b8e9078f39882a45fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587667"
 ---
 # <a name="short-data-type-visual-basic"></a>Short veri türü (Visual Basic)
 -32.768 değeri ile 32.767 aralığı 16-bit (2-bayt) tamsayıları tutar imzalanmış.  
@@ -70,10 +70,10 @@ Dim number = &H_3264S
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- <xref:System.Int16?displayProperty=nameWithType>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int16?displayProperty=nameWithType>
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma'
+title: 'Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581995"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma
-Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar. Visual Studio'da bu yordamları için kapsamlı desteği yoktur.  Ayrıca bkz: [izlenecek yol: basit bir Windows formu oluşturma](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma
+Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar. Visual Studio'da bu yordamları için kapsamlı desteği yoktur.  Ayrıca bkz: [izlenecek yol: Basit bir Windows formu oluşturma](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Yordam  
   
@@ -113,9 +113,9 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
 -   Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Windows Forms’un Görünüşünü Değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Windows Forms Uygulamalarını Geliştirme](../../../docs/framework/winforms/advanced/index.md)  
- [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Windows Forms’un Görünüşünü Değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Windows Forms Uygulamalarını Geliştirme](../../../docs/framework/winforms/advanced/index.md)
+- [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

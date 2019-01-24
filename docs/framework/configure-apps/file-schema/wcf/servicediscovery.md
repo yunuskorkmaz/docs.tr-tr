@@ -2,12 +2,12 @@
 title: '&lt;serviceDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587339"
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 Hizmet bitiş noktası bulunabilirliğini belirtir.  
@@ -85,5 +85,5 @@ Hizmet bitiş noktası bulunabilirliğini belirtir.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

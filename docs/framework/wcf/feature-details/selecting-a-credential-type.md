@@ -2,12 +2,12 @@
 title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577119"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* Windows Communication Foundation (WCF) kullanan bir talep kimliği veya özellikleri kurmak için verilerdir. Örneğin, bir passport bir devlet kurumu sorunlarını ülke veya bölgenizde Vatandaşlık kanıtlamak için bir kimlik bilgisi ' dir. WCF'de, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms kimlik bilgilerini alabilir. Bu konuda, kimlik bilgileri, WCF'de nasıl kullanılacağını ve nasıl seçileceğini, uygulamanız için doğru kimlik bilgisi anlatılmaktadır.  
@@ -25,9 +25,9 @@ ms.locfileid: "43503397"
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
-|Temel|Temel kimlik doğrulaması için istemci belirtir. RFC2617 ek bilgi için bkz:[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Özet|Özet kimlik doğrulaması için istemci belirtir. RFC2617 ek bilgi için bkz:[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Hiçbiri|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Temel|Temel kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Özet|Özet kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |NTLM|NT LAN Manager (NTLM) kimlik doğrulaması belirtir. Bu, herhangi bir nedenle Kerberos kimlik doğrulaması kullanamadığınızda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false`, bir NTLM kullanılırsa, bir özel durum için mümkün olan en iyi hale getirmek WCF neden olur. Unutmayın, bu özelliği ayarlamak `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyemeyebilir.|  
 |Windows|Windows kimlik doğrulaması belirtir. Bir Windows etki alanında yalnızca Kerberos protokolü belirtmek için ayarlayın <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false` (varsayılan değer `true`).|  
 |Sertifika|X.509 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
@@ -38,7 +38,7 @@ ms.locfileid: "43503397"
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Yok.|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Hiçbiri|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Windows|SOAP ileti alışverişlerinde bir Windows kimlik bilgileri ile oluşturulan güvenlik bağlamı altında gerçekleşmesini sağlar.|  
 |Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF ile kullanıcı adlarını, imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli sağlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir X.509 sertifikası.|  
@@ -97,20 +97,20 @@ ms.locfileid: "43503397"
   
  Kimlik bilgileri ve güvenli oturumlar hakkında daha fazla bilgi için bkz: [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

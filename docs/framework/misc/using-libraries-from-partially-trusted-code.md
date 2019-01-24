@@ -11,45 +11,45 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b2eaf6ccebed38c778e328e34cb6f53177347b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d32e5ed28153ae3ad54e1f75242a767d2e764a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585282"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Kısmen Güvenilen Koddan Kitaplıkları Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  Bu konuda tanımlayıcı adlı derlemeler davranışını yöneliktir ve yalnızca geçerli [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) derlemeler. [Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md) derlemelerde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veya üzeri tanımlayıcı adlar tarafından etkilenmez. Güvenlik sistemi değişiklikler hakkında daha fazla bilgi için bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+>  Bu konu, tanımlayıcı adlı derlemeler davranışını yöneliktir ve yalnızca geçerli [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) derlemeler. [Güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md) derlemelerde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veya üzeri tanımlayıcı adlar tarafından etkilenmez. Güvenlik sistemine yapılan değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
- Paylaşılan çağırmak için tam güven kendi ana bilgisayardan veya korumalı alan verilmez daha az alan uygulamalar yönetilen kitaplıkları kitaplığı yazan özellikle kullanım yoluyla kendisine izin vermediği sürece <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu nedenle, uygulama yazarları bazı kitaplıklar onlara kısmen güvenilen bağlamından kullanılabilir olmayacağını farkında olmanız gerekir. Varsayılan olarak, tüm kod yürütmelerinin kısmi güvende [korumalı alan](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) ve buna tam güven derleme listesi kısmen güvenilir değil. Kısmen güvenilen bağlamından yürütülecek veya kısmen güvenilen kod tarafından çağrılacak kodunuzu düşünmüyorsanız bu bölümdeki bilgiler hakkında endişelenmeniz gerekmez. Ancak, kısmen güvenilen bağlamından kısmen güvenilen kodla etkileşim veya çalışması gerekir kodu yazarsanız, aşağıdaki etmenleri düşünmeniz gerekir:  
+ Paylaşılan çağırmak için tam güven konak ya da korumalı alan izin verilmez daha az alan uygulamalar yönetilen kitaplıkları kitaplığı yazıcı özellikle kullanımının kendisine izin vermediği sürece <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu nedenle, uygulama yazarları bazı kitaplıklar kendisine kısmen güvenilen bağlamından kullanılabilir olmayacağını farkında olmanız gerekir. Varsayılan olarak, tüm kod, yürütür kısmi güven [korumalı alan](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) ve de tam güven derleme listesini kısmen güvenilir değil. Kısmen güvenilen bir bağlamdan yürütülecek veya kısmen güvenilen kod tarafından çağrılmak için kodunuzu düşünmüyorsanız bu bölümdeki bilgiler hakkında merak gerekmez. Ancak, kısmen güvenilen bir bağlamdan gerekir ya da kısmen güvenilen kod ile etkileşim çalışmasına bir kod yazarsanız, aşağıdaki faktörleri dikkate almanız gerekir:  
   
--   Kitaplıklar, birden çok uygulama tarafından paylaşılması için tanımlayıcı bir ad ile imzalanmalıdır. Tanımlayıcı adlar izin genel derleme önbelleğinde yerleştirilen veya tam güven listesine bir korumalı alan, kodunuzun <xref:System.AppDomain>, ve belirli bir mobil kod gerçekten sizden kaynağının olduğunu doğrulamak tüketicilere izin verin.  
+-   Kitaplıkları birden çok uygulama tarafından paylaşılacak için tanımlayıcı ad ile imzalanması gerekir. Güçlü adlar izin genel bütünleştirilmiş kod önbelleğine yerleştirilen ya da tam güven listesine bir korumalı alana alma, kodunuzu <xref:System.AppDomain>, ve tüketiciler, belirli bir mobil kod parçasını gerçekten sizden kaynağının olduğunu doğrulamak izin verir.  
   
--   Varsayılan olarak, tanımlayıcı adlı [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) paylaşılan kitaplıklar gerçekleştirmek örtülü [LinkDemand](../../../docs/framework/misc/link-demands.md) için tam güven otomatik olarak, herhangi bir şey yapmanıza gerek kalmadan kitaplığı yazan.  
+-   Varsayılan olarak, güçlü adlı [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) paylaşılan kitaplıklar gerçekleştirmek örtük [LinkDemand](../../../docs/framework/misc/link-demands.md) için tam güven otomatik olarak herhangi bir şey yapmanıza gerek kalmadan kitaplığı yazıcı.  
   
--   Çağıran tam güven yok ancak yine de bu tür bir kitaplık çağırmayı dener, çalışma zamanı döndürürse bir <xref:System.Security.SecurityException> ve arayan Kitaplığı'na bağlamak için izin verilmiyor.  
+-   Bir çağıranın tam güven yok ancak yine de bir tür kitaplığı çağırmayı dener, çalışma zamanı oluşturur bir <xref:System.Security.SecurityException> çağıran Kitaplığı'na bağlamak için izin verilmez.  
   
--   Otomatik devre dışı bırakmak için **LinkDemand** ve oluşturulan gelen özel durum önlemek için yerleştireceğiniz **AllowPartiallyTrustedCallersAttribute** paylaşılan derleme kapsamını özniteliği Kitaplığı. Bu öznitelik Kitaplıklarınızı kısmen güvenilen yönetilen koddan çağrılan sağlar.  
+-   Otomatik devre dışı bırakmak için **LinkDemand** ve oluşturulan gelen özel durumu engellersiniz, koyabilirsiniz **AllowPartiallyTrustedCallersAttribute** paylaşılan bir derleme kapsamı özniteliği Kitaplığı. Bu öznitelik, yönetilen kısmen güvenilen koddan çağrılan Kitaplıklarınızı sağlar.  
   
--   Bu öznitelik bir kitaplıkla erişim izni kısmen güvenilen kod tarafından tanımlanan hala sınırlamalar tabidir <xref:System.AppDomain>.  
+-   Bu öznitelik bir kitaplıkla erişim izni kısmen güvenilen kod tarafından tanımlanan yine de sınırlamalar tabidir <xref:System.AppDomain>.  
   
--   Hiçbir programlı şekilde sahip olmayan bir kitaplık çağrılacak kısmen güvenilen kod için **AllowPartiallyTrustedCallersAttribute** özniteliği.  
+-   Sahip olmayan bir kitaplık çağrılacak kısmen güvenilen kod için programlı hiçbir yolu yoktur **AllowPartiallyTrustedCallersAttribute** özniteliği.  
   
- Belirli bir uygulamaya özel kitaplıkları bir güçlü ad gerekli olmadığı veya **AllowPartiallyTrustedCallersAttribute** özniteliği ve uygulama dışında kötü amaçlı kodlar tarafından başvurulamaz. Bu tür kodu kasıtlı olarak veya yanlışlıkla kötüye karşı ek bir şey yapmanıza gerek kalmadan Geliştirici mobil kısmen güvenilen kod tarafından korunur.  
+ Belirli bir uygulamaya özel kitaplıkları, tanımlayıcı ad gerekmez veya **AllowPartiallyTrustedCallersAttribute** özniteliği ve uygulama dışında kötü amaçlı kod tarafından başvurulamaz. Bu kod, ekstra bir şey yapmanıza gerek kalmadan Geliştirici mobil kısmen güvenilen kod tarafından kasıtlı veya kasıtsız kötüye karşı korunur.  
   
- Açıkça kod aşağıdaki türleri için kısmen güvenilen kod tarafından kullanım etkinleştirmeyi düşünebilirsiniz:  
+ Açıkça kod aşağıdaki türde kısmen güvenilen kod tarafından kullanım etkinleştirme dikkate almanız gerekir:  
   
--   Güvenlik açıklarını titizlikle test edilmiştir ve açıklanan yönergeleri uyumlu olan kodu [güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md).  
+-   Güvenlik açıkları için titizlikle test edilmiştir ve nda açıklanan yönergelere uygun olan kod [güvenli kodlama kılavuzları](../../../docs/standard/security/secure-coding-guidelines.md).  
   
--   Kısmen güvenilen senaryoları için özel olarak yazılmış tanımlayıcı adlı kodu kitaplıkları.  
+-   Kısmen güvenilen senaryoları için özel olarak yazılmış kesin adlandırılmış kod kitaplıkları.  
   
--   Tüm bileşenleri (kısmen veya tamamen güvenilir olup olmadığını) Internet'ten indirilen kod tarafından çağrılan bir güçlü ad ile imzalanmış.  
+-   Tüm bileşenleri (kısmen veya tamamen güvenilir olup olmadığını) Internet'ten indirilen kod tarafından çağrılacak bir tanımlayıcı ad ile imzalanmış.  
   
 > [!NOTE]
->  .NET Framework Sınıf Kitaplığı'nda bazı sınıfları olmadığı **AllowPartiallyTrustedCallersAttribute** özniteliği ve kısmen güvenilen kod tarafından çağrılamaz.  
+>  .NET Framework sınıf kitaplığındaki bazı sınıflar olmadığı **AllowPartiallyTrustedCallersAttribute** özniteliği ve kısmen güvenilen kod tarafından çağrılamaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596910"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request Yöntemi
-Uygulama tarafından tanımlandığı şekilde, bir işlem istemek için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
+Uygulama tarafından tanımlanan bir işlemi istemek için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,30 +46,30 @@ HRESULT Request (
  [in] Kullanıcı tanımlı.  
   
  `inBufferSize`  
- [in] Gelen istek için kullanılan giriş arabelleği boyutu.  
+ [in] Gelen istek için kullanılan giriş arabellek boyutu.  
   
  `inBuffer`  
- [in] İsteği içeren bir arabellek.  
+ [in] İstek içeren arabellek.  
   
  `outBufferSize`  
  [in] Yanıt için kullanılan çıkış arabelleği boyutu.  
   
  `outBuffer`  
- [out] Yanıtı içeren bir arabellek.  
+ [out] Yanıtı içeren arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Request` Yöntemi belirtilmeyen özel işlemler eklenmesi kolaylaştırır. Diğer bir deyişle, bu yöntem, arabirim tanımı düzeltilmesi gerek kalmadan genişletilebilirlik sağlar.  
+ `Request` Yöntemi belirtilmeyen özel işlemler eklenmesini kolaylaştırır. Diğer bir deyişle, bu yöntem, arabirim tanımı gözden geçirilmesini gerek kalmadan genişletilebilirlik sağlar.  
   
- Bu yöntem, hata ayıklama uygulama yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

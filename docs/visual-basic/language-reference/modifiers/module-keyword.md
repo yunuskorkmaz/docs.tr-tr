@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: b412655695c49d1e12a02e005fccfd37d2956787
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b4b09469a3f22b5e5c7faa98d5db7b3522ed236
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586481"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Modül &lt;anahtar sözcüğü&gt; (Visual Basic)
-Bir kaynak dosyasının başında bir öznitelik geçerli derleme modülü uygulanacağını belirtir.  
+Bir kaynak dosyasının başında bir öznitelik için geçerli derleme modülü geçerli olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çok sayıda özniteliği bir sınıf veya özellik gibi tek bir programlama öğe ilgilidir. Köşeli parantez içinde öznitelik blok ekleyerek bu tür bir öznitelik geçerli (`< >`), bildirim deyiminin için doğrudan.  
+ Tek programlama öğesine, bir sınıf ya da özellik gibi birçok öznitelikleri ilgilidir. Açılı ayraçlar içinde öznitelik bloğuna ekleyerek bu tür bir öznitelik uygulamak (`< >`), doğrudan bildirim deyiminin için.  
   
- Bir öznitelik değil yalnızca aşağıdaki öğeyi ancak geçerli derleme modülü için ilgiliyse, öznitelik blok kaynak dosyasının başında yerleştirin ve öznitelik tanımlamak `Module` anahtar sözcüğü. Tüm derlemesi için geçerliyse, kullandığınız [derleme](../../../visual-basic/language-reference/modifiers/assembly.md) anahtar sözcüğü.  
+ Bir öznitelik yalnızca şu öğe ancak geçerli derleme modülü ilgiliyse, öznitelik bloğuna kaynak dosyasının başında yerleştirin ve özniteliğiyle tanımlamak `Module` anahtar sözcüğü. Tüm derleme için geçerliyse, kullandığınız [derleme](../../../visual-basic/language-reference/modifiers/assembly.md) anahtar sözcüğü.  
   
- `Module` Değiştiricisi aynı değil [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md).  
+ `Module` Değiştiricisi ile aynı değil [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

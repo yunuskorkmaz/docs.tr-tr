@@ -1,55 +1,56 @@
 ---
-title: İşlevsel Programlama vs. Kesinlik temelli programlama (Visual Basic)
+title: İşlevsel programlama ve Kesin programlama karşılaştırması (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579816"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel Programlama vs. Kesinlik temelli programlama (Visual Basic)
-Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel kesinlik temelli (yordam) programlama ile karşılaştırır.  
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel programlama ve Kesin programlama karşılaştırması (Visual Basic)
+Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel Programlama vs. Kesinlik temelli programlama  
- *İşlevsel programlama* sorunu çözmeye saf bir işlev yaklaşım desteklemek için açıkça kip oluşturuldu. İşlevsel programlama biçimi olan *bildirim temelli programlama*. Buna karşılık, nesne odaklı programlama (OOP) dil C#, Visual Basic, C++ ve Java gibi dahil olmak üzere çoğu temel dil öncelikle desteklemek için tasarlanmış olan *kesinlik temelli* (yordam) programlama.  
+## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel programlama ve Kesin programlama karşılaştırması  
+ *İşlevsel programlama* paradigma sorunu çözmek için saf işlevsel yaklaşım desteklemek için açıkça oluşturuldu. İşlevsel programlama, çeşit *bildirime dayalı programlama*. Buna karşılık, nesne odaklı programlama (OOP) dilleri gibi C#, Visual Basic, C++ ve Java dahil olmak üzere çoğu temel dil öncelikle desteklemek için tasarlanmış *kesinlik temelli* (yordamsal) programlamaya.  
   
- Kesinlik temelli bir yaklaşım ile bir geliştirici açıklayan kod ayrıntı kesin bilgisayarı hedef gerçekleştirmek için uygulamanız gereken adımlar yazar. Bu bazen olarak adlandırılır *algoritmik* programlama. Buna karşılık, işlevsel bir yaklaşım sorun yürütülecek işlevler kümesi olarak oluşturmayı kapsar. Her işlev giriş ve her hangi bir işlev döndürür dikkatle tanımlarsınız. Aşağıdaki tabloda bu iki yaklaşım genel farklarını bazıları açıklanmaktadır.  
+ Kesinlik temelli bir yaklaşım ile bir geliştirici açıklayan kod ayrıntı kesin bilgisayar ve hedefe ulaşmak için gerçekleştirmeniz gereken adımlar yazar. Bu bazen olarak adlandırılır *algoritmik* programlama. Buna karşılık, işlevsel bir yaklaşım sorun yürütülecek işlevler bir dizi oluşturmayı kapsar. Her işlev girişi ve her hangi bir işlevi döndürür dikkatli bir şekilde tanımlarsınız. Aşağıdaki tabloda, bu iki yaklaşımı genel farklılıklardan bazıları açıklanmaktadır.  
   
-|Özelliği|Kesinlik temelli bir yaklaşım|İşlevsel bir yaklaşım|  
+|Özelliği|Kesinlik temelli yaklaşımın|İşlevsel yaklaşım|  
 |--------------------|-------------------------|-------------------------|  
-|Programcı odak|(Algoritmaları) görevlerin nasıl gerçekleştirileceği ve durumunda değişikliklerin nasıl izleneceği.|Hangi bilgilerin istenen ve hangi dönüşümleri gereklidir.|  
+|Programcı odağı|(Algoritmaları) görevlerin nasıl gerçekleştirileceği ve durum değişiklikleri izlemek nasıl.|Hangi bilgilerin istenen ve hangi dönüştürmeleri gereklidir.|  
 |Durum değişiklikleri|Önemli.|Varolmayan.|  
-|Yürütme sırasını|Önemli.|Düşük önem.|  
-|Birincil akış denetimi|Döngüler, koşulları ve işlev (yöntem) çağrıları.|Özyineleme dahil olmak üzere işlevi çağırır.|  
-|Birincil işleme birimi|Yapıları veya sınıfların örnekleri.|İlk sınıf nesneleri ve veri koleksiyonları görür.|  
+|Yürütme sırası|Önemli.|Düşük önem derecesi.|  
+|Birincil akış denetimi|Döngüler, koşullular ve (yöntem) işlev çağrıları.|Özyineleme dahil olmak üzere, işlev çağrıları.|  
+|Birincil işleme birimi|Yapıların veya sınıfların örneklerini.|Birinci sınıf nesneleri ve veri koleksiyonları görür.|  
   
- Çoğu dil belirli bir programlama standardı desteklemek için tasarlanmış olsa da, birçok genel diller birden fazla örneklerinde desteklemek için yeterince esnektir. Örneğin, işlev işaretçileri içeren çoğu dil credibly işlevsel programlama desteklemek için kullanılabilir. Ayrıca, Visual Basic tür çıkarımı ve lambda ifadeleri de dahil olmak üzere işlevsel programlama desteklemek için açık dil uzantıları içerir. LINQ teknolojisi bildirim temelli, işlevsel programlama biçimidir.  
+ Birçok programlama dili, belirli bir programlama modelini desteklemek için tasarlanmış olsa da, birçok genel dil birden çok paradigmalarını destekleme kadar esnektir. Örneğin, işlev işaretçileri içeren çoğu dil credibly işlevsel programlama desteği için kullanılabilir. Ayrıca, Visual Basic tür çıkarımı ve lambda ifadeleri de dahil olmak üzere, işlevsel programlama desteği için açık dil uzantılarına yer verilir. LINQ teknolojisi, bildirim temelli, işlevsel programlama şeklidir.  
   
-## <a name="functional-programming-using-xslt"></a>İşlev XSLT kullanarak programlama  
- Birçok XSLT geliştiricilerine saf işlevsel yaklaşımda biliyorsunuzdur. XSLT stil sayfasını geliştirmek için en etkili her şablon bir yalıtılmış, birleştirilebilir dönüşümü işlemek için bir yoludur. Yürütme tamamen XML'deki vurgulanmış sırasıdır. XSLT yan etkileri (ile yordam kod yürütmek için mekanizmalar kaçış içinde işlev impurity neden yan etkileri yaratabilir özel durum) izin vermiyor. XSLT etkili bir aracı olsa da, ancak bazıları onun özelliklerini en iyi değil. Örneğin, XML programlama yapıları ifade kod görece ayrıntılı ve korumak bu nedenle zor hale getirir. Ayrıca, akış denetimi için özyineleme ağır bağımlılık okunması zor kodda neden olabilir. XSLT hakkında daha fazla bilgi için bkz: [XSLT dönüştürmeleri](../../../../standard/data/xml/xslt-transformations.md).  
+## <a name="functional-programming-using-xslt"></a>İşlevsel programlama XSLT kullanma  
+ Saf işlevsel yaklaşım ile birçok XSLT geliştiricilerine sahibisiniz. Her şablon bir yalıtılmış, birleştirilebilir dönüştürme değerlendirilecek bir XSLT stil sayfası geliştirmek için en etkili yolu var. Tamamen devre dışı bırakmak vurgulanmış yürütme sırasıdır. XSLT yan etkileri (ile yordam kodu yürütmek mekanizmaları kaçış yan etkileri işlevsel impurity neden ortaya çıkarabilir özel durum) izin vermez. XSLT etkili bir araçtır, ancak bazı özelliklerine en uygun değildir. Örneğin, XML programlama yapıları ifade kod oldukça ayrıntılı ve bu nedenle sürdürülmesi zor hale getirir. Ayrıca, akış denetimi için özyineleme ağır güvenme okunması zor olan kodu neden olabilir. XSLT hakkında daha fazla bilgi için bkz: [XSLT dönüşümleri](../../../../standard/data/xml/xslt-transformations.md).  
   
- Ancak, XSLT XML bir şekli'ndan diğerine dönüştürme için saf işlevsel bir yaklaşım kullanarak değerini oluyor uygulamasına yol açıyordu. Saf işlevsel LINQ-XML ile programlama XSLT birçok yönden benzer. Ancak, LINQ to XML ve Visual Basic tarafından sunulan programlama yapıları, daha okunabilir ve sürdürülebilir XSLT daha saf işlevsel dönüşümleri yazmaya izin verin.  
+ Ancak, XSLT XML bir şekilden diğerine dönüştürme için saf işlevsel bir yaklaşım kullanarak değerini kanıtladılar. Saf işlevsel LINQ to XML programlama XSLT birçok açıdan benzer. Ancak LINQ to XML ve Visual Basic tarafından sunulan programlama yapıları daha okunabilir ve XSLT daha sürdürülebilir saf işlevsel dönüşümlere yazmanıza olanak sağlar.  
   
-## <a name="advantages-of-pure-functions"></a>Saf işlevleri avantajları  
- Saf işlev olarak işlev dönüştürmeleri uygulamak için birincil saf işlevleri birleştirilebilir nedeni: başka bir deyişle, kendi içinde bulunan ve durum bilgisiz. Bu özelliklere aşağıdakiler de dahil olmak üzere avantajları getirin:  
+## <a name="advantages-of-pure-functions"></a>Saf işlevler avantajları  
+ Saf işlevler olarak işlevsel dönüşümlere uygulamak için birincil saf işlevler birleştirilebilir nedeni: başka bir deyişle, bağımsızdır ve durum bilgisi olmayan. Bu özelliklere birtakım avantajlar, aşağıdakiler dahil olmak üzere getirin:  
   
--   Artan okunabilirlik ve bakımı. Belirli bir görevi gerçekleştirmek için her işlevi tasarlandığından bu değişkenlerinin verilir. İşlev üzerinde herhangi bir dış durum bağlı değildir.  
+-   Okunurluğu ve sürdürülebilirliği. Bu, her işlevin belirli bir görevi gerçekleştirmek için tasarlandığından bağımsız değişkenlerinden verilir. İşlevi, tüm dış durumuna bağımlı kalmayacak.  
   
--   Daha kolay reiterative geliştirme. Kod düzenleme için daha kolay olduğundan, tasarım değişiklikleri genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüşüm yazma ve bazı kodlar dönüşümünde birkaç kez yinelenen fark varsayalım. Saf bir yöntem yeniden düzenlemeniz varsa, yan etkileri hakkında endişelenmeden gerçekleştirilse, saf yöntemini çağırabilirsiniz.  
+-   Daha kolay reiterative geliştirme. Kod yeniden düzenlenmesi daha kolay olduğundan, değişiklikleri tasarlamak için genellikle uygulamak daha kolaydır. Örneğin, karmaşık bir dönüştürme yazın ve sonra biraz kod dönüşümünde birkaç kez yinelenir fark varsayalım. Saf bir yöntem aracılığıyla yeniden düzenlerseniz, yan etkileri hakkında endişelenmenize gerek kalmadan dilediğiniz zaman saf yönteminizi çağırabilir.  
   
--   Daha kolay test ve hata ayıklama. Saf işlevleri yalıtım modunda daha kolayca sınanabilir çünkü tipik değerleri, geçerli sınır durumları ve geçersiz kenar durumlarda saf işlev çağrıları test kod yazabilirsiniz.  
+-   Daha kolay test ve hata ayıklama. Saf işlevler daha kolay yalıtım modunda test edilebilir olduğundan, normal değerler, geçerli istisnai durumlara ve geçersiz istisnai durumlara saf işlev çağıran test kodu yazabilirsiniz.  
   
-## <a name="transitioning-for-oop-developers"></a>OOP geliştiriciler için geçiş  
- Geleneksel nesne odaklı programlama (OOP), çoğu Geliştirici kesinliği/yordam stili programlamada bilirsiniz. Saf işlevsel stilde geliştirmek için geçiş yapmak için bunlar kendi düşünmeye ve bunların yaklaşımı geliştirme için bir geçiş yapmanız gerekir.  
+## <a name="transitioning-for-oop-developers"></a>Geçiş OOP geliştiricileri için  
+ Geleneksel nesne yönelimli programlama, (OOP) çoğu Geliştirici kesinliği/yordam stili programlamada bilirsiniz. Saf işlevsel stilde geliştirmeye geçiş yapmak için bunlar kendi düşünmek ve yaklaşımları geliştirme için bir geçiş yapmanız gerekir.  
   
- Sorunları çözmek için OOP geliştiriciler sınıfı hiyerarşi tasarımı, üzerinde uygun kapsülleme odaklanmanıza ve sınıf sözleşmeleri açısından düşünün. Nesne türlerinin durumu ve davranış en önemli ve bu sorunları çözmek için sınıflar, arabirimler, devralma ve çok biçimlilik, gibi dil özellikleri sağlanır.  
+ Sorunları çözmek için OOP geliştiriciler sınıf Hiyerarşiler tasarım, uygun kapsülleme üzerinde odaklanın ve sınıf sözleşmeleri açısından düşünebilirsiniz. Nesne türleri durumunu ve davranışını güvenilirliği ve sınıfları, arabirimleri, devralma ve çok biçimlilik, gibi dil özellikleri bu sorunları çözmek için sağlanır.  
   
- Buna karşılık, işlevsel programlama veri koleksiyonları saf işlevsel dönüşümleri değerlendirilmesinde bir alıştırma olarak hesaplama sorunları yaklaşıyor. İşlevsel programlama durumu ve değişebilir veri engeller ve bunun yerine uygulama işlevlerin vurgular.  
+ Buna karşılık, işlevsel programlama, saf işlevsel dönüşümlere veri koleksiyonlarının evrimi bir alıştırma olarak işlem sorunları yaklaşıyor. İşlevsel programlama, durum ve değişebilir veri önler ve bunun yerine uygulama işlevlerin vurgular.  
   
- Neyse ki, kesinlik temelli ve işlevsel programlama yaklaşımlar desteklediğinden, Visual Basic işlevsel programlama için tam artık gerektirmez. Bir geliştirici, hangi yaklaşımın belirli bir senaryo için en uygun olan seçebilirsiniz. Aslında, programlar genellikle her iki yaklaşımı birleştirir.  
+ Neyse ki, hem zorunlu hem de işlevsel programlama yaklaşımları desteklediğinden, Visual Basic için işlevsel programlama, tam artık gerektirmez. Bir geliştirici, hangi yaklaşımın belirli bir senaryo için en uygun seçebilirsiniz. Aslında, programlar genellikle iki yaklaşımı birleştirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)  
- [Saf işlevleri (Visual Basic) yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)
+- [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

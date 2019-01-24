@@ -9,44 +9,44 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577132"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Nasıl yapılır: Bağlama Kaynağı Belirtme
-Veri bağlama bağlama kaynak nesnesi verilerinizden elde ettiğiniz nesneye başvurur. Bu konuda bağlama kaynağını belirterek, farklı yolları açıklanmaktadır.  
+Veri bağlamasında bağlama kaynak nesnesi verilerinizden elde ettiğiniz nesneye başvurur. Bu konu, bağlama kaynağı belirtme farklı yollarını açıklar.  
   
 ## <a name="example"></a>Örnek  
- Ortak bir kaynağa çeşitli özellikler bağlıyorsanız, kullanmak istediğiniz `DataContext` tüm veri bağlama özellikleri devralındığı ortak bir kaynaktan kapsamı oluşturmak için kullanışlı bir yol sağlayan özelliği.  
+ Çeşitli özellikler için ortak bir kaynaktan bağlanıyorsanız, kullanmak istediğiniz `DataContext` tüm veri bağlı özelliklerinin içinde ortak bir kaynaktan devralındığı bir kapsamı'kurmak için kullanışlı bir yol sağlayan bir özellik.  
   
- Aşağıdaki örnekte, veri bağlamı uygulama kök öğe üzerinde oluşturulur. Bu, veri bağlamı devralmak tüm alt öğeleri sağlar. Veri bağlama için gelen bir özel veri sınıftan `NetIncome`, doğrudan bir eşleme aracılığıyla başvurulan ve kaynak anahtarı verilen `incomeDataSource`.  
+ Aşağıdaki örnekte, uygulamanın kök öğe üzerinde veri bağlamı kuruldu. Bu, söz konusu veri bağlamı devralan tüm alt öğeleri sağlar. Veri bağlama için gelen bir özel veri sınıftan `NetIncome`, doğrudan bir eşlemesi aracılığıyla başvurulan ve kaynak anahtarı verilen `incomeDataSource`.  
   
  [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
 [!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
- Aşağıdaki örnek tanımını gösterir `NetIncome` sınıfı.  
+ Aşağıdaki örnek tanımı gösterilmektedir `NetIncome` sınıfı.  
   
  [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
  [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  Yukarıdaki örnek biçimlendirme nesnesinde oluşturur ve bir kaynak olarak kullanır. Kodda bir zaten örneği bir nesneyi bağlamak istiyorsanız, ayarlamanız gerekir `DataContext` özelliği programlı olarak. Bir örnek için bkz: [veri kullanılabilir yap XAML'de bağlama için](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  Yukarıdaki örnek biçimlendirmede nesnesini başlatır ve bir kaynak olarak kullanır. Ayarlamak gereken kodu zaten oluşturulmuş bir nesneyi bağlamak istiyorsanız, `DataContext` özelliğini program aracılığıyla. Bir örnek için bkz. [olun veri kullanılabilir için XAML bağlamasında](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
   
- Alternatif olarak, kaynak belirtmek istiyorsanız, tek tek bağlantılarına açıkça aşağıdaki seçenekleriniz vardır. Bunlar devralınan veri bağlamı üzerinde önceliklidir.  
+ Alternatif olarak, kaynak belirtmek istiyorsanız, ayrı ayrı oturumdaki bağlamalarda açıkça aşağıdaki seçenekleriniz vardır. Bunlar devralınan veri bağlamından önceliklidir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Bir nesnenin örneğine kaynak ayarlamak için bu özelliği kullanın. Bir kapsamda oluşturma işlevselliğini gerekmiyorsa çeşitli özelliklerin aynı veri bağlamından devralınan, kullanabileceğiniz <xref:System.Windows.Data.Binding.Source%2A> özelliği yerine `DataContext` özelliği. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.Source%2A>.|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Bağlamanın hedef olduğu göre kaynak belirtmek istediğinizde kullanışlıdır. Bu özellik burada kullanabilir bazı yaygın senaryolar, öğesinin bir özelliğini aynı öğenin başka bir özelliği Bağla istediğinizde veya bir bağlama stil veya şablonunda tanımlıyorsanız olur. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|Bağlamak istediğiniz öğeyi temsil eden bir dize belirtin. Bu, uygulamanızın üzerinde başka bir öğenin özelliği bağlamak istediğiniz durumunda faydalı olur. Kullanmak istiyorsanız, örneğin, bir <xref:System.Windows.Controls.Slider> , uygulamanızda başka bir denetimin yüksekliğini denetlemek için veya bağlamak istiyorsanız <xref:System.Windows.Controls.ContentControl.Content%2A> için denetiminizin <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> özelliği, <xref:System.Windows.Controls.ListBox> denetim. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.ElementName%2A>.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|Bir nesnenin örneğine kaynağı ayarlamak için bu özelliği kullanın. Bir kapsamda oluşturma işlevselliğini gerekmiyorsa çeşitli özelliklerin aynı veri bağlamını devralır, kullanabileceğiniz <xref:System.Windows.Data.Binding.Source%2A> özelliği yerine `DataContext` özelliği. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.Source%2A>.|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Bu, bağlama hedefi olduğu göre kaynak belirtmek istediğinizde kullanışlıdır. Burada, bu özelliği kullanabilirsiniz bazı yaygın senaryolar öğenizin bir özellik aynı öğenin başka bir özelliğine bağlamak istediğinizde veya bir bağlama bir stil veya şablonun içinde tanımlıyorsanız olur. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|Bağlamak istediğiniz öğeyi temsil eden bir dize belirtin. Uygulamanızdaki başka bir öğenin özelliğe bağlamak istediğinizde bu kullanışlıdır. Örneğin kullanmak istiyorsanız, bir <xref:System.Windows.Controls.Slider> uygulamanızın başka bir denetimin yüksekliği denetlemek için veya bağlamak istiyorsanız <xref:System.Windows.Controls.ContentControl.Content%2A> denetiminizin için <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> özelliği, <xref:System.Windows.Controls.ListBox> denetimi. Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
- [Özellik Değeri Devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
+- [Özellik Değeri Devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

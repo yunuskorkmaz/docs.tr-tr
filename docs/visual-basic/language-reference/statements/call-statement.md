@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e706650ac6da84d9b4e77fc549811e731be61b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594167"
 ---
 # <a name="call-statement-visual-basic"></a>Call Deyimi (Visual Basic)
 Aktarımı denetlemek için bir `Function`, `Sub`, veya dinamik bağlantı kitaplığı (DLL) yordam.  
@@ -43,8 +43,8 @@ Aktarımı denetlemek için bir `Function`, `Sub`, veya dinamik bağlantı kitap
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

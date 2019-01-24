@@ -7,79 +7,79 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 163c551103a68ac320e482b1daa0a0c19b2b8fed
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583200"
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
-Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmetin sözleşme, hangi veri türleri olan yardımcı kullanılan ve diğer tasarım sorunları karşılamak işlemleri Senaryonuz gereksinimleri.  
+Bu konu başlığı altında açıklanır tanımladığınıza göre nasıl tanımlandığını, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmet sözleşmeleri, hangi veri türlerini olan yardımcı kullanılan ve diğer sorunları tasarım karşılayan işlemleri Senaryonuz gereksinimleri.  
   
-## <a name="creating-a-service-contract"></a>Hizmet sözleşmesi oluşturma  
- Hizmetleri işlemleri sayısını kullanıma sunar. Windows Communication Foundation (WCF) uygulamalarında bir yöntem oluşturarak ve onunla işaretleme işlemleri tanımlayan <xref:System.ServiceModel.OperationContractAttribute> özniteliği. Ardından, bir hizmet sözleşmesini oluşturmak için işlemleri, bunları ile işaretli bir arabirim içinde bildirme ya da gruplamak <xref:System.ServiceModel.ServiceContractAttribute> özniteliği ya da göre tanımlama bunları aynı özniteliğiyle işaretlenmiş bir sınıf. (Temel bir örnek için bkz: [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+## <a name="creating-a-service-contract"></a>Bir servis sözleşmesi oluşturma  
+ Hizmetleri işlemlerinin sayısını kullanıma sunar. Windows Communication Foundation (WCF) uygulamalar, bir yöntem oluşturarak ve kendisiyle işaretlemek işlemleri tanımlayan <xref:System.ServiceModel.OperationContractAttribute> özniteliği. Ardından, hizmet sözleşmesini oluşturmak için operations, bunları ile işaretlenen arabirim içinde bildirme ya da gruplamak <xref:System.ServiceModel.ServiceContractAttribute> özniteliği ya da göre tanımlayarak bunları aynı özniteliği ile işaretlenmiş bir sınıf içinde. (Temel bir örnek için bkz: [nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
- Olmayan herhangi bir yöntem bir <xref:System.ServiceModel.OperationContractAttribute> özniteliği hizmet işlemleri değildir ve WCF hizmetleri tarafından açık değildir.  
+ Sahip olmayan herhangi bir yöntem bir <xref:System.ServiceModel.OperationContractAttribute> özniteliği hizmet işlemler ve WCF hizmetleri tarafından açık değildir.  
   
- Bu konuda, bir hizmet sözleşmesini tasarlarken aşağıdaki karar noktalarının açıklanmaktadır:  
+ Bu konu, bir hizmet sözleşmesini tasarlarken aşağıdaki karar noktaları açıklar:  
   
--   Sınıfları veya arabirimleri kullanılıp kullanılmayacağını belirtir.  
+-   Sınıf veya arabirim kullanılıp kullanılmayacağını belirtir.  
   
--   Exchange istediğiniz veri türlerini belirleme.  
+-   Değiştirmek istediğiniz veri türlerini belirleme.  
   
--   Kullanabileceğiniz exchange desenleri türleri.  
+-   Exchange desenleri kullanabilirsiniz türleri.  
   
--   Açık güvenlik gereksinimleri sözleşmesinin bir parçası olup olmadığını yapabilirsiniz.  
+-   Olup açık güvenlik gereksinimleri sözleşmesinin bir parçası olun.  
   
--   İşlem girişleri ve çıkışları kısıtlamaları.  
+-   İşlem giriş ve çıkışları için kısıtlamaları.  
   
-## <a name="classes-or-interfaces"></a>Sınıfları veya arabirimleri  
- Sınıflar ve arabirimler işlevselliği gruplandırması temsil eder ve bu nedenle, her ikisi de bir WCF Hizmeti sözleşmesi tanımlamak için kullanılabilir. Ancak, bunlar doğrudan Hizmet sözleşmeleri model çünkü arabirimleri kullanmanız önerilir. Bir uygulama arabirimler en fazla belirli imzaları yöntemleriyle gruplandırması tanımlar. Bir hizmet sözleşme arabirimi uygulamak ve bir WCF Hizmeti uyguladık.  
+## <a name="classes-or-interfaces"></a>Sınıf veya arabirim  
+ Sınıflar ve arabirimler işlevlerin bir gruplandırma temsil eder ve bu nedenle, her ikisi de bir WCF hizmet sözleşmesini tanımlama için kullanılabilir. Ancak, çünkü bunlar Hizmet sözleşmeleri doğrudan model arabirimleri kullanmanız önerilir. Bir uygulama arabirimler en fazla bir gruplandırma belirli imzalarla yöntemlerin tanımlar. Hizmet sözleşmesi arabirimini uygulayan ve bir WCF Hizmeti uyguladıysanız.  
   
- Yönetilen arabirimleri tüm avantajlarını hizmet sözleşmesi arabirimleri için geçerlidir:  
+ Yönetilen arabirimleri tüm avantajlarını hizmet sözleşme arayüzlere uygulanır:  
   
--   Hizmet sözleşmesi arabirimleri, diğer hizmet sözleşmesi arabirimleri herhangi bir sayıda genişletebilirsiniz.  
+-   Hizmet sözleşmesi arabirimleri, diğer hizmet sözleşme arabirimleri herhangi bir sayıda genişletebilirsiniz.  
   
--   Tek bir sınıf herhangi bir sayıda hizmet sözleşmeleri bu hizmet sözleşmesi arabirimleri uygulayarak uygulayabilirsiniz.  
+-   Tek bir sınıf herhangi bir sayıda hizmet sözleşmeleri, bu hizmet sözleşmesi arabirimleri uygulayarak uygulayabilirsiniz.  
   
--   Bir hizmet sözleşmesini uygulama, hizmet sözleşmesi aynı kalırken arabirim uygulamasına değiştirerek değiştirebilirsiniz.  
+-   Bir hizmet sözleşmesini uygulama, arabirim uygulamasına hizmet sözleşmesi aynı kalırken değiştirerek değiştirebilirsiniz.  
   
--   Eski arabirimi ve yeni bir uygulama tarafından hizmetinizi sürümüyle yapabilirsiniz. Yeni istemciler yeni sürüme bağlanabilirken eski istemciler özgün sürüme bağlanırsınız.  
+-   Hizmetinizin sürümü eski arabirimi ve yeni bir uygulama tarafından kullanabilirsiniz. En yeni sürüme yeni istemcilerden bağlanabilirsiniz buna karşın eski istemciler, özgün sürümüne bağlanır.  
   
 > [!NOTE]
->  Diğer hizmet sözleşmesi arabirimlerinden devralırken adı veya ad alanı gibi işlem özellikleri geçersiz kılamaz. Bunu yapmak çalışırsanız, geçerli hizmet sözleşmesinde yeni işlem oluşturun.  
+>  Diğer hizmet sözleşme arabirimlerden devralınırken adı veya ad alanı gibi işlem özelliklerini geçersiz kılamazsınız. Bunu yapmayı denerseniz, geçerli hizmet sözleşmesi içerisinde yeni bir işlem oluşturun.  
   
- Bir hizmet sözleşmesini oluşturmak için bir arabirimi kullanarak bir örnek için bkz: [nasıl yapılır: sözleşme arabirimi ile bir hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
+ Bir hizmet sözleşmesini oluşturmak için bir arabirim kullanarak bir örnek için bkz: [nasıl yapılır: Bir sözleşme arabirimi ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- Ancak, bir hizmet sözleşmesini tanımlama ve aynı zamanda bu sözleşmeyi uygulamak için bir sınıf kullanabilirsiniz. Hizmetlerinizin uygulayarak oluşturma avantajı <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> doğrudan sınıfı ve sınıfı yöntemleri, sırasıyla hızı ve Basitlik sağlamaktır. Olumsuz yönleri şunlardır: yönetilen sınıflar birden çok devralma desteklemez ve sonuç olarak, yalnızca bir hizmet sözleşmesini aynı anda uygulayabilirsiniz. Ayrıca, sınıf veya yöntemin imzaları kendilerine herhangi bir değişiklik değiştirilmemiş istemcilerin hizmetinizi kullanmalarına engel bu hizmet için ortak sözleşme değiştirir. Daha fazla bilgi için bkz: [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Ancak, bir hizmet sözleşmesini tanımlama ve aynı zamanda bu sözleşmeyi uygulamak için bir sınıf kullanabilirsiniz. Hizmetlerinizi uygulayarak oluşturmanın avantajı <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> doğrudan sınıf ve sınıftaki yöntemleri, sırasıyla, hız ve kolaylık sağlamaktır. Dezavantajları şunlardır: yönetilen sınıflar birden çok devralmayı desteklemez ve sonuç olarak, yalnızca bir hizmet sözleşmesini aynı anda uygulayabilirsiniz. Ayrıca, sınıf veya yöntem imzaları değişiklik değiştirilmemiş istemciler hizmetinizi kullanılmasını önleyebilir aydaki hizmet için genel sözleşme değiştirir. Daha fazla bilgi için [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
- Bir hizmet sözleşmesini oluşturmak için bir sınıf kullanır ve aynı anda uygulayan bir örnek için bkz: [nasıl yapılır: Sözleşme sınıfı ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
+ Bir hizmet sözleşmesini oluşturmak için bir sınıf kullanır ve aynı anda uygulayan bir örnek için bkz. [nasıl yapılır: Bir sözleşme sınıfı ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
- Bu noktada, bir arabirim kullanarak ve bir sınıf kullanarak, hizmet sözleşmesini tanımlama arasındaki farkı anlamanız gerekir. Sonraki adım, hangi verilerin geri ve ileri bir hizmet ve istemcileri arasında geçirilebilir karar vermektir.  
+ Bu noktada, bir arabirim kullanarak ve bir sınıf kullanarak, hizmet sözleşmesini tanımlama arasındaki farkı anlamanız gerekir. Sonraki adım, hangi verilerin sürekli hizmet ve istemcileri arasında geçirilebilir karar vermektir.  
   
 ## <a name="parameters-and-return-values"></a>Parametreler ve dönüş değerleri  
- Bunlar olsa bile, her bir işlemin dönüş değeri ve bir parametre sahip `void`. Ancak, hangi nesnelerin referansları bir nesneden diğerine geçirebilirsiniz yerel bir yöntemini aksine hizmet işlemleri nesnelerin referansları geçmeyin. Bunun yerine, nesnelerin kopyalarını geçirirler.  
+ Bunlar olsa bile, her bir işlemin dönüş değeri ve bir parametre vardır. `void`. Ancak, aksine, nesnelere başvurular bir nesneden diğerine geçirebilirsiniz, yerel bir yöntem hizmet işlemleri nesnelere başvurular kodum'a geçirmez. Bunun yerine, nesneleri kopyalarını geçirin.  
   
- Her tür kullanılan bir parametre veya dönüş değeri seri hale getirilebilir önemli olmasıdır; diğer bir deyişle, bu türdeki bir nesneyi bir akışa bayt ve bir nesne içinde bayt akıştan dönüştürmek olası olmalıdır.  
+ Bu önemlidir, çünkü her türü kullanılan bir parametre veya dönüş değeri seri hale getirilebilir olması gerekir; diğer bir deyişle, bir nesne türü bir nesneye bayt akışı gelen ve Giden bayt akışı dönüştürmek olası olmalıdır.  
   
- İlkel türler, .NET Framework'teki birçok türleri gibi varsayılan olarak, seri hale getirilebilir.  
+ Çoğu .NET Framework türleri gibi ilkel türler varsayılan olarak, seri hale getirilebilir.  
   
 > [!NOTE]
->  İşlemi imza parametre adlarında değerini sözleşmenin parçası olan ve büyük/küçük harfe duyarlıdır. İstiyorsanız, yerel olarak aynı parametre adı kullanın, ancak yayımlanan meta verilerde adını değiştirebilir, bakın <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
+>  Parametre adları işlemi imzasında değerini sözleşmenin bir parçası olan ve büyük/küçük harfe duyarlıdır. İsterseniz aynı parametre adı yerel olarak kullanmak ancak yayımlanan meta veri adı değiştirmek üzere <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Veri Sözleşmeleri  
- Hizmet odaklı uygulamalar Windows Communication Foundation (WCF) uygulamaları gibi istemci uygulamalarını hem Microsoft hem de Microsoft olmayan platformları geniş olası sayısı ile birlikte çalışmak üzere tasarlanmıştır. Geniş olası birlikte çalışabilirlik için türleri ile işaretle önerilir <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> verileri tanımlayan hizmet sözleşmesi kısmı bir veri sözleşmesi oluşturmak için öznitelikleri, hizmet işlemleri Exchange.  
+ Windows Communication Foundation (WCF) uygulamaları gibi hizmet odaklı uygulamalar, hem Microsoft hem de Microsoft dışındaki platformlar üzerinde istemci uygulamalarının geniş olası sayısı ile çalışmak için tasarlanmıştır. Geniş olası birlikte çalışabilirlik için türlerinizi ile işaretle önerilir <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> bölümüdür verileri tanımlar hizmet sözleşmesinin bir veri anlaşması oluşturmak için öznitelikleri, hizmet işlemlerinizi Exchange.  
   
- Veri sözleşmeleri olan katılımı stili sözleşmeleri: açıkça veri sözleşmesi özniteliği uyguladığınız sürece hiçbir tür veya veri üyesi seri değildir. Veri sözleşmeleri yönetilen kod erişim kapsamını ilgisiz: özel veri üyeleri serileştirilmiş ve genel olarak erişilebilmesi için başka bir gönderilir. (Bir veri sözleşmesi temel bir örnek için bkz: [nasıl yapılır: bir sınıf veya yapı için temel veri sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) WCF içine ve dışına ileti gövdesini serileştirme, veri türlerinin yanı sıra, işlem işlevselliğini etkinleştirmek temel alınan SOAP iletilerine tanımını işler. Veri türleri seri hale getirilebilir sürece işlemlerinizin tasarlarken, temel alınan ileti exchange altyapı hakkında düşünmek gerekmez.  
+ Veri sözleşmeleri kabul etme stili sözleşmeleri şunlardır: Veri sözleşmesi öznitelik açıkça uygulamadığınız sürece herhangi bir türü veya veri üyesi seri hale getirilir. Veri sözleşmeleri, yönetilen kod için erişim kapsamı ilgisiz şunlardır: Özel veri üyeleri, serileştirilmiş ve halka açık bir şekilde erişilmesini başka bir yerde gönderilir. (Bir veri anlaşması temel bir örnek için bkz: [nasıl yapılır: Bir sınıf veya yapı için temel veri anlaşması oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) WCF içine ve dışına ileti gövdesi, veri türleri serileştirmek yanı sıra tanımını işlemin işlevselliği sağlayan temel SOAP iletilerini işler. Veri türleri, seri hale getirilebilir olduğu sürece, işlemlerinizin tasarlarken temel alınan ileti exchange altyapı konusunda düşünmek gerekmez.  
   
- Tipik WCF uygulaması kullansa <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> işlemleri için veri sözleşmeleri oluşturmak için öznitelikleri diğer serileştirme mekanizmaları kullanabilirsiniz. Standart <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> ve <xref:System.Xml.Serialization.IXmlSerializable> mekanizmaları tüm iş veri türlerinizi serileştirme bunları bir uygulamadan diğerine taşımak temel alınan SOAP iletilerine işlemek için. Veri türlerinizi özel destek gerekiyorsa daha fazla seri hale getirme stratejileri tercih edebilirsiniz. WCF uygulamalarda veri türlerini serileştirmek için seçenekler hakkında daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+ Genel WCF uygulama kullansa <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> işlemler için veri sözleşmeleri oluşturmak için öznitelikleri diğer serileştirme mekanizmalarını kullanabilirsiniz. Standart <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> ve <xref:System.Xml.Serialization.IXmlSerializable> mekanizmaları tüm iş, veri türleri serileştirmek halinde bunları bir uygulamadan diğerine taşımak temel alınan bir SOAP iletilerini işlemek için. Veri türlerinizi özel destek gerekiyorsa daha fazla seri hale getirme stratejileri tercih edebilirsiniz. WCF uygulamaları veri türleri serileştirmek için seçenekler hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerinde veri aktarımı belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Parametreler ve dönüş değerleri için ileti alışverişlerinde eşleme  
- Hizmet işlemleri belirli standart güvenlik, işlem ve oturum ilgili özellikleri desteklemek için uygulama tarafından gerekli olan veriler yanı sıra uygulama verilerini geri ve İleri aktarım SOAP iletilerinin temel alınan bir exchange tarafından desteklenir. Bu durumda olduğundan, bir bazı temel bir hizmet işlemi imza belirleyen *ileti değişim deseni* (MEP) veri aktarımı ve bir işlem gerektiren özellikleri destekleyebilir. WCF programlama modelinde üç desenleri belirtebilirsiniz: istek/yanıt, tek yönlü ve çift yönlü ileti desenleri.  
+ Hizmet işlemleri uygulama tarafından belirli bir standart güvenlik, işlem ve oturum güvenlikle ilgili özellikler desteklemek için gerekli olan veriler yanı sıra uygulama verilerinin geri ve İleri aktarım SOAP iletilerinin temel alınan bir exchange tarafından desteklenir. Bu durumda olduğundan, bir hizmet işlemi imzası bir belirli temel belirleyen *ileti değişim deseni* (MEP) veri aktarımı ve bir işlem gerektiren özellikleri destekleyebilir. WCF programlama modeli üç desenleri belirtebilirsiniz: istek/yanıt, tek yönlü ve çift yönlü ileti modeller.  
   
 ##### <a name="requestreply"></a>İstek/yanıt  
- Bir istek/yanıt düzeni isteği gönderen (istemci uygulaması) isteği ile ilişkili bir yanıt alır biridir. Bir veya daha fazla parametre çalışması için geçirilen ve çağırana geri dönüş değeri geçirilen bir işlem desteklediğinden, bu MEP varsayılandır. Örneğin, aşağıdaki C# kod örneğinde bir dize alır ve bir dize döndüren bir temel hizmet işlemi gösterilmektedir.  
+ İstek/yanıt düzeni isteği gönderen (bir istemci uygulaması) ile istek bağıntılı yanıt aldığı biridir. İşlem için geçirilen bir veya daha fazla parametre ve dönüş değeri çağırana geri geçirilen bir işlem desteklediğinden MEP varsayılan değer budur. Örneğin, aşağıdaki C# kod örneğinde, bir dize alır ve bir dize döndüren bir temel hizmet işlemi gösterilmektedir.  
   
 ```csharp  
 [OperationContractAttribute]  
@@ -93,9 +93,9 @@ string Hello(string greeting);
 Function Hello (ByVal greeting As String) As String  
 ```  
   
- Bu işlemi imza formun temel alınan ileti değişimi belirler. Hiçbir bağıntı varsa, WCF işlemi için dönüş değerini yöneliktir belirleyemiyor.  
+ Bu işlemi imza formu, temel alınan ileti değişimi belirler. Hiçbir bağıntı var, WCF işlemi için dönüş değeri kullanılmaya belirlenemiyor.  
   
- Bir farklı temel alınan ileti deseni belirtmediğiniz sürece, dönüş hizmet işlemleri bile Not `void` (`Nothing` Visual Basic'te) istek/yanıt ileti alışverişlerinde şunlardır. İşlemi için bir istemci işlemini zaman uyumsuz olarak çağırır sürece, istemci Dönüş iletisinin alınana kadar bu iletiyi normal durumda boş olsa bile işlemeyi durdurur sonucudur. Aşağıdaki C# kod örneği, istemci yanıt olarak boş bir ileti aldı kadar döndürmeyen bir işlem gösterir.  
+ Farklı temel alınan ileti desen, belirtmediğiniz sürece, iade hizmet işlemleri bile Not `void` (`Nothing` Visual Basic'te) istek/yanıt ileti alışverişlerinde olan. İşleminiz için bir istemci işlemi zaman uyumsuz olarak çağırır sürece istemci dönüş iletisi alınana kadar ileti normal durumda boş olsa bile işlemeyi durdurur sonucudur. Aşağıdaki C# kod örneği, istemci yanıt olarak boş bir ileti aldı kadar döndürmeyen bir işlem gösterir.  
   
 ```csharp  
 [OperationContractAttribute]  
@@ -109,16 +109,16 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Önceki örnekte istemci performans ve yanıt verme işlemi gerçekleştirmek için çok uzun sürüyor ancak faydası vardır istek/yanıt işlemleri bile döndürmeleri zaman yavaşlatabilir `void`. SOAP hataları iletişimi veya işlem bazı hizmet ile ilgili hata koşulu oluştuğunu gösterir Yanıt iletisindeki döndürülebilecek en bariz adrestir. Bir hizmet sözleşmesinde belirtilen SOAP hataları, istemci uygulamasına olarak geçirilir bir <xref:System.ServiceModel.FaultException%601> nesnesi, burada hizmet sözleşmesinde belirtilen tür, tür parametresi. Bu hata koşulları hakkında bildirimde bulunan istemciler WCF hizmetlerinde kolaylaştırır. Özel durumlar, SOAP hataları ve hata işleme hakkında daha fazla bilgi için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Bir istek/yanıt hizmet ve istemci bir örnek için bkz [nasıl yapılır: istek-yanıt sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). İstek-yanıt desen ile ilgili sorunlar hakkında daha fazla bilgi için bkz: [istek-yanıt Hizmetleri](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
+ Yukarıdaki örnekte istemci performans ve yanıt verme işlemi gerçekleştirmek için uzun bir süre sürer, ancak avantajları vardır istek/yanıt işlemleri için bile, iade ettiğinizde yavaşlatabilir `void`. SOAP hataları iletişim veya işleme hizmeti ile ilgili hata koşulu oluştuğunu gösterir Yanıt iletisindeki döndürülebilir en belirgin bir bileşendir. Hizmet sözleşmesi içerisinde belirtilen SOAP hataları istemci uygulamasına geçirilir bir <xref:System.ServiceModel.FaultException%601> nesnesi, tür parametresi, hizmet sözleşmesi içerisinde belirtilen tür olduğu. Bu hata durumları hakkında bildirimde bulunan istemciler WCF hizmetlerinde kolaylaştırır. Özel durumlar, SOAP hataları ve hata işleme hakkında daha fazla bilgi için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Bir istek/yanıt hizmeti ve istemcisine bir örneğini görmek için bkz: [nasıl yapılır: İstek-yanıt anlaşması oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). İstek-yanıt desen ile ilgili sorunlar hakkında daha fazla bilgi için bkz. [istek-yanıt Hizmetleri](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Tek yönlü  
- Bir WCF Hizmeti uygulamasının istemci işlemin tamamlanmasını bekleme ve SOAP hataları işlemez işlemi, bir tek yönlü ileti deseni belirtebilirsiniz. Bir tek yönlü işlemi bir istemci bir işlemini çağırır ve WCF ileti ağa yazdırdıktan sonra işleme devam ediyor. Genellikle bu Giden iletiye gönderilen tüm veriler son derece büyük olmadığı sürece istemci hemen çalıştıran devam anlamına gelir (veri gönderilirken bir hata olmadıkça). Bu tür bir ileti değişim deseni bir hizmet uygulaması için bir istemciden olay benzeri davranışını destekler.  
+ Bir WCF hizmeti uygulaması istemci, işlemin tamamlanmasını bekleyin değil ve SOAP hataları işlemez işlemi, tek yönlü mesaj düzeni belirtebilirsiniz. İşlem geri alınamaz bir istemci bir işlem başlatır ve WCF ileti ağa yazdıktan sonra işlemeye devam eder olan biridir. Genellikle bu giden iletide gönderilen tüm veriler son derece büyük olmadığı sürece istemci hemen çalışmaya devam eder, anlamına gelir (veri gönderilirken bir hata olmadıkça). Bu tür bir ileti değişim deseni, bir hizmet uygulaması için bir istemciden olay benzeri davranışını destekler.  
   
- Bir ileti gönderilir ve hiçbir alınan ileti exchange dışındaki bir dönüş değeri belirten bir hizmet işlemi destekleyemiyor `void`; bu durumda bir <xref:System.InvalidOperationException> özel durumu oluşur.  
+ Bir ileti gönderilir ve hiçbiri alınan ileti değişimi dışındaki bir dönüş değeri belirten bir hizmet işlemi destekleyemiyor `void`; bu durumda bir <xref:System.InvalidOperationException> özel durumu oluşturulur.  
   
- Dönüş ileti işleme ya da iletişim hatalarını göstermek için döndürülen bir SOAP hatası olabilir anlamına gelir. (İşlemler tek yönlü işlemler olduğunda hata bilgileri iletişim kurulurken bir çift yönlü ileti değişim deseni gerektirir.)  
+ Dönüş ileti herhangi bir hata işleme ya da iletişim belirtmek için döndürülen bir SOAP hatası olabilir anlamına gelir. (İşlemler tek yönlü işlem olduğunda hata bilgilerini iletişim kurulurken bir çift yönlü ileti değişim deseni gerektirir.)  
   
- Tek yönlü ileti değişimi döndüren bir işlem için belirtmek için `void`ayarlayın <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğine `true`, aşağıdaki C# kod örneğindeki gibi.  
+ Döndüren bir işlem için bir tek yönlü mesaj exchange belirtmek için `void`ayarlayın <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true`, aşağıdaki gibi C# kod örneği.  
   
 ```csharp  
 [OperationContractAttribute(IsOneWay=true)]  
@@ -132,24 +132,24 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Bu yöntem önceki istek/yanıt örnek, ancak ayarı için aynı olan <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğine `true` yöntemi aynı olsa da, hizmet işlemi dönen bir ileti göndermek ve istemcilerin dönüş hemen bir kez anlamına gelir Giden message kanal katmana karmalayan. Bir örnek için bkz: [nasıl yapılır: bir One-Way sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). Tek yönlü desen hakkında daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Bu yöntem, önceki örnek istek/yanıt, ancak ayarı kullanmasıdır <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true` yöntemi aynı olsa da, hizmet işlemi dönen bir ileti göndermek ve istemcilerin dönüş hemen bir kez anlamına gelir Giden ileti için kanal katmanını teslim. Bir örnek için bkz [nasıl yapılır: Tek yönlü anlaşma oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). Tek yönlü düzeni hakkında daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Çift Yönlü  
- Çift yönlü bir desen iletileri birbirlerine bağımsız olarak kullanarak olup olmadığını tek yönlü gönderme olanağı hem hizmet hem de istemci tarafından belirlenir veya istek/yanıt iletileri. İki yönlü iletişim, bu formu, doğrudan istemciye iletişim kurması gereken hizmetleri veya olay benzeri davranışı dahil olmak üzere bir ileti exchange ya da tarafına zaman uyumsuz bir deneyim sağlamak için kullanışlıdır.  
+ Çift yönlü bir desen iletileri birbirine bağımsız olarak olup olmadığını tek yönlü gönderme olanağı hem hizmet hem de istemci tarafından belirlenir veya istek/yanıt mesajlaşması. Bu tür bir iki yönlü iletişim, istemciye doğrudan iletişim kurması gereken hizmetleri veya her iki tarafında olay benzeri davranış da dahil olmak üzere bir ileti değişimi için zaman uyumsuz bir deneyim sağlamak için kullanışlıdır.  
   
- Çift yönlü düzeni istemcisi ile iletişim kurmak için ek mekanizması nedeniyle istek/yanıt ya da tek yönlü desenleri biraz daha karmaşıktır.  
+ Çift yönlü istemci ile iletişim kurmak için ek mekanizması nedeniyle istek/yanıt veya tek yönlü desenleri biraz daha karmaşık modelidir.  
   
- Çift yönlü sözleşme tasarlamak için de bir geri çağırma sözleşme tasarım ve bu geri çağırma sözleşme türü atamanız gerekir <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> özelliği <xref:System.ServiceModel.ServiceContractAttribute> , hizmet sözleşmesini işaretler özniteliği.  
+ Çift yönlü sözleşme tasarlamak için ayrıca bir geri çağırma anlaşması tasarlayın ve için geri çağırma anlaşması türü atamanız gerekir <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> özelliği <xref:System.ServiceModel.ServiceContractAttribute> hizmet sözleşmeniz işaretleyen bir özniteliği.  
   
- Çift yönlü bir desen uygulamak için istemcide adlı yöntem bildirimlerini içeren ikinci bir arabirim oluşturmanız gerekir.  
+ Çift yönlü bir desen uygulamak için istemcide çağrılan yöntem bildirimleri içeren ikinci bir arabirim oluşturmanız gerekir.  
   
- Bir hizmet ve bu hizmete erişen bir istemci oluşturma örneği için bkz: [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) ve [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../docs/framework/wcf/samples/duplex.md). Çift yönlü sözleşmeler kullanarak sorunları hakkında daha fazla bilgi için bkz: [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+ Bir hizmet ve bu hizmete erişen bir istemci oluşturma örneği için bkz: [nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) ve [nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../docs/framework/wcf/samples/duplex.md). Çift yönlü sözleşmeler kullanarak sorunları hakkında daha fazla bilgi için bkz. [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Bir hizmet çift yönlü bir ileti aldığında bakar `ReplyTo` yanıt gönderileceği yeri belirlemek için bu gelen ileti öğesinde. İleti almak için kullanılan kanalını güvenli hale getirilmemiş sonra güvenilmeyen bir istemci bir hedef makinenin ile kötü amaçlı bir ileti gönderebilir `ReplyTo`, bu hedef makinenin (DOS) hizmet reddine başında.  
+>  Bir hizmeti çift yönlü bir ileti aldığında bakar `ReplyTo` gelen bu iletide yanıt göndermesi yerini belirlemek için öğesi. İleti almak için kullanılan kanal güvenli sonra güvenilmeyen bir istemci, bir hedef makine ile bir kötü amaçlı iletisi gönderebilir `ReplyTo`, hizmet (DOS) bu hedef makinenin için önde gelen.  
   
 ##### <a name="out-and-ref-parameters"></a>Out ve Ref parametreleri  
- Çoğu durumda, kullandığınız `in` parametreleri (`ByVal` Visual Basic'te) ve `out` ve `ref` parametreleri (`ByRef` Visual Basic'te). Çünkü her ikisi de `out` ve `ref` parametreleri belirtmek veri döndürülen bir işlemi, aşağıdaki gibi bir işlem imza işlemi imza döndürürolsabilebiristek/yanıtişlemigerekliolduğunubelirtir`void`.  
+ Çoğu durumda, kullandığınız `in` parametreleri (`ByVal` Visual Basic'te) ve `out` ve `ref` parametreleri (`ByRef` Visual Basic'te). Çünkü her ikisi de `out` ve `ref` parametreleri belirtmek veri dönen bir işlemden bir işlemi aşağıdaki gibi signatura işlemi imza döndürürolsabilebiristek/yanıtişlemigereklidir`void`.  
   
 ```csharp  
 [ServiceContractAttribute]  
@@ -170,19 +170,19 @@ Public Interface IMyContract
 End Interface  
 ```  
   
- Yalnızca imzanız özel bir yapı olduğu durumlarda özel durumlardır. Örneğin, kullanabileceğiniz <xref:System.ServiceModel.NetMsmqBinding> bir işlem bildirmek için kullanılan yöntem istemcileri eksikse ile iletişim kurmak için bağlama döndürür `void`; bir dönüş değeri olup hiçbir çıkış değerini olabilir `ref`, veya `out` parametresi.  
+ Yalnızca imzanızı belirli bir yapı olduğu durumlarda özel durumlardır. Örneğin, kullanabileceğiniz <xref:System.ServiceModel.NetMsmqBinding> bir işlem bildirmek için kullanılan yöntemi yalnızca şu durumlarda istemcileri ile iletişim kurmak için bağlama döndürür `void`; bir dönüş değeri olup olmadığını hiç çıkış değeri olabilir `ref`, veya `out` parametresi.  
   
- Ayrıca, kullanarak `out` veya `ref` parametreleri gerektirir işlemi geri değiştirilmiş nesne taşımak için temel bir yanıt iletisi vardır. İşlemi tek yönlü bir işlem ise bir <xref:System.InvalidOperationException> çalışma zamanında özel durum.  
+ Ayrıca, kullanarak `out` veya `ref` parametrelerine gereksinim duyar işlemi değiştirilmiş nesne geri getirmek için temel alınan bir yanıt iletisi vardır. Tek yönlü bir işlem işlemi ise bir <xref:System.InvalidOperationException> çalışma zamanında özel durum harekete geçirilir.  
   
-### <a name="specify-message-protection-level-on-the-contract"></a>Sözleşme ileti koruma düzeyi belirtin  
- Sizin tasarlarken, sözleşmesini uygulama hizmetleri ileti koruma düzeyini karar vermeniz gerekir. İleti güvenliği bağlama sözleşmenin uç noktada yalnızca uygulandıysa, bu gereklidir. Bağlama kapalı güvenlik varsa (diğer bir deyişle, sistem tarafından sağlanan bir bağlamayı ayarlarsa <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> değerine <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>) ileti koruma düzeyi sözleşmesi için karar sahip değil. Çoğu durumda, uygulanan ileti düzeyinde güvenliği olan sistem tarafından sağlanan bağlamalar yeterli bir koruma düzeyi sağlar ve her işlem için veya her ileti için koruma düzeyi göz önünde bulundurmanız gereken değil.  
+### <a name="specify-message-protection-level-on-the-contract"></a>Sözleşme iletisi koruma düzeyini belirtin  
+ Sözleşmeniz tasarlarken, ileti koruma düzeyi sözleşmeniz uygulayan hizmetlerin karar vermeniz gerekir. İleti güvenliği bağlama sözleşmenin uç noktasını yalnızca uygulandıysa, bu gereklidir. Bağlama kapalı güvenlik varsa (diğer bir deyişle, sistem tarafından sağlanan bir bağlamayı ayarlarsa <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> değerine <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>) ileti koruma düzeyi sözleşmesi için karar vermek üzere yerinizden. Çoğu durumda, sistem tarafından sağlanan bağlamaları uygulanan ileti düzeyi güvenlik ile yeterli bir koruma düzeyi sağlar ve her işlem için veya her ileti için koruma düzeyi düşünmek zorunda değildir.  
   
- Koruma düzeyi iletileri (ileti bölümleri) bir hizmet oturumunuz destekleyen imzalanmış ve şifrelenmiş veya imza veya şifreleme gönderilen olup olmadığını belirten bir değerdir. Koruma düzeyi çeşitli kapsamların ayarlanabilir: Bu işlem ya da bir ileti bölümü içindeki bir ileti için belirli bir işlem için hizmet düzeyinde. Bir kapsamda ayarladığınız değerlerini küçük kapsamlar için varsayılan değer açıkça geçersiz kılınmadığı sürece haline gelir. Bağlama yapılandırması sözleşme için gerekli minimum koruma düzeyi sağlayamaz, özel durum oluşur. Ve hiçbir koruma düzeyi değerleri açıkça sözleşme ayarlandığında, ileti güvenliği bağlama varsa, bağlama yapılandırması tüm iletiler için koruma düzeyini denetler. Bu varsayılan davranıştır.  
+ Koruma düzeyi iletileri (ileti bölümlerini) bir hizmet oturumunuz destekleyen imzalanmış ve şifrelenmiş veya imza veya şifreleme gönderilen olup olmadığını belirten bir değerdir. Koruma düzeyi, çeşitli kapsamların ayarlanabilir: Hizmet düzeyinde bu işlemi ya da bir ileti bölümü içinde bir ileti için belirli bir işlem için. Bir kapsamda ayarlanmış değerleri daha küçük kapsam için varsayılan değeri açıkça geçersiz kılınmadığı sürece haline gelir. Bir bağlama yapılandırmasını sözleşme için gerekli en düşük koruma düzeyi sağlayamazsa, bir özel durum oluşturulur. Ve hiçbir koruma düzeyi değerleri sözleşme açıkça ayarlandığında, ileti güvenliği bağlama varsa bağlama yapılandırması tüm iletiler için koruma düzeyini denetler. Bu varsayılan davranıştır.  
   
 > [!IMPORTANT]
->  Açıkça sözleşmenin çeşitli kapsamlar tam koruma düzeyini çok daha az ayarlanıp ayarlanmayacağını karar <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> genellikle, performansı artırmak için güvenlik bazı derecesini trades bir karardır. Bu durumlarda, kararlarınızı işlemlerinizin ve bunlar exchange verilerin değerini etrafında Uzayda Döndür gerekir. Daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
+>  Açıkça çeşitli kapsamı sözleşmenin tam koruma düzeyi çok daha az Ayarla karar <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> genel olarak, bazı daha yüksek performans için güvenlik düzeyi arasında denge kurar bir karardır. Bu gibi durumlarda, işlemlerinizin ve bunlar exchange verinin değerinin etrafında kararlarınızı çalışmalarınızı gerekir. Daha fazla bilgi için [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
- Örneğin, aşağıdaki kod örneğinde ya da ayarlamaz <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> veya <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> sözleşme özelliği.  
+ Örneğin, aşağıdaki kod örneği ya da ayarlamaz <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> veya <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> sözleşme özelliği.  
   
 ```csharp  
 [ServiceContract]  
@@ -211,9 +211,9 @@ Public Interface ISampleService
 End Interface  
 ```  
   
- İle kullanılırken bir `ISampleService` varsayılan bir uç nokta uygulamasında <xref:System.ServiceModel.WSHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, olduğu <xref:System.ServiceModel.SecurityMode.Message>), tüm iletileri şifrelenir ve bu varsayılan koruma düzeyini olduğundan imzalanmış. Ancak, bir `ISampleService` hizmeti varsayılan olarak kullanılan <xref:System.ServiceModel.BasicHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode>, olduğu <xref:System.ServiceModel.SecurityMode.None>), tüm iletileri metin olarak gönderilir, çünkü bu bağlama için güvenlik ve koruma düzeyi göz ardı edilir (diğer bir deyişle, iletileri şifrelenmiş imzalı ne). Varsa <xref:System.ServiceModel.SecurityMode> şekilde değiştirilmiştir <xref:System.ServiceModel.SecurityMode.Message>, bu iletiler şifrelenir ve (, şimdi bağlamanın varsayılan koruma düzeyini olacağından) imzalı sonra.  
+ İle etkileşimde bulunurken bir `ISampleService` varsayılan bir uç nokta uygulamasında <xref:System.ServiceModel.WSHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, olduğu <xref:System.ServiceModel.SecurityMode.Message>), tüm iletileri şifrelenir ve varsayılan koruma düzeyini çünkü imzalanmış. Ancak, bir `ISampleService` hizmeti ile bir varsayılan kullanılan <xref:System.ServiceModel.BasicHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode>, olduğu <xref:System.ServiceModel.SecurityMode.None>), tüm iletileri metin olarak gönderilir, çünkü bu bağlama için güvenlik ve koruma düzeyi göz ardı edilir (diğer bir deyişle, iletileri şifrelenmiş imzalı ne). Varsa <xref:System.ServiceModel.SecurityMode> değiştirilmiştir <xref:System.ServiceModel.SecurityMode.Message>, bu iletileri şifrelenir ve (Bu artık bağlamanın varsayılan koruma düzeyini olacağından) imzalı sonra.  
   
- Açıkça belirtin veya sizin için koruma gereksinimlerini ayarlamak istiyorsanız, <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliği (ya da herhangi bir `ProtectionLevel` özellikleri daha küçük bir kapsamda), hizmet sözleşmesini düzeyini gerektirir. Bu durumda, açık bir ayarı kullanarak bu ayarı en az kullanılan kapsamın desteklemek bağlama gerektirir. Örneğin, aşağıdaki kod örneğinde bir belirtir <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> değeri açıkça için `GetGuid` işlemi.  
+ Açıkça belirtin veya anlaşmanızda koruma gereksinimleri ayarlamak istiyorsanız, <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliği (veya herhangi bir `ProtectionLevel` özellikleri daha küçük bir kapsamda), hizmet sözleşmesini düzeyini gerektirir. Bu durumda, açık bir ayarı kullanmak için bu ayarı en az kullanılan kapsamın desteklemek bağlama gerekir. Örneğin, aşağıdaki kod örneği bir belirtir <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> değeri açıkça için `GetGuid` işlemi.  
   
 ```csharp  
 [ServiceContract]  
@@ -249,33 +249,33 @@ Public Interface IExplicitProtectionLevelSampleService
 End Interface  
 ```  
   
- Bu uygulayan bir hizmet `IExplicitProtectionLevelSampleService` sözleşme ve sahip varsayılan bir uç nokta <xref:System.ServiceModel.WSHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, olduğu <xref:System.ServiceModel.SecurityMode.Message>) şu davranışa sahiptir:  
+ Bu uygulayan bir hizmette `IExplicitProtectionLevelSampleService` sözleşme ve varsayılan bir uç noktaya sahip <xref:System.ServiceModel.WSHttpBinding> (varsayılan <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, olduğu <xref:System.ServiceModel.SecurityMode.Message>) şu davranışa sahiptir:  
   
--   `GetString` İşlemi iletileri şifrelenir ve imzalanmış.  
+-   `GetString` İşlem iletileri şifrelenir ve imzalanmış.  
   
--   `GetInt` Olarak gönderilen iletileri işlemi şifrelenmemiş ve imzalanmamış (diğer bir deyişle, düz) metin.  
+-   `GetInt` İşlemi olarak gönderilen iletileri şifrelenmemiş ve imzalanmamış (diğer bir deyişle, düz) metin.  
   
--   `GetGuid` İşlemi <xref:System.Guid?displayProperty=nameWithType> şifrelenen ve imzalanmış bir ileti döndürdü.  
+-   `GetGuid` İşlemi <xref:System.Guid?displayProperty=nameWithType> şifrelenmiş ve imzalanmış bir ileti döndürdü.  
   
- Koruma düzeyleri ve bunların nasıl kullanılacağını hakkında daha fazla bilgi için bkz: [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md). Güvenlik hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
+ Koruma düzeyleri ve bunların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md). Güvenlik hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Diğer işlem imza gereksinimleri  
- Bazı uygulama özellikleri, belirli bir işlemi imza türünü gerektirir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> bağlama, dayanıklı hizmetler ve bir uygulama ortasında iletişimi yeniden başlatın ve herhangi bir ileti eksik olmadan kaldığı yerden alması istemcileri destekler. (Daha fazla bilgi için bkz: [wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Dayanıklı işlemleri yalnızca bir ancak almalıdır `in` parametre ve dönüş değeri yok.  
+ Bazı uygulama özellikleri, belirli bir işlemi imza türünü gerektirir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> dayanıklı hizmetler ve istemcileri, uygulamanın ortasında iletişim yeniden başlatın ve herhangi bir ileti kaçırmadan kaldığı yerden devam edebiliyorduk bağlamayı destekler. (Daha fazla bilgi için [wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Dayanıklı işlemler tek ancak almalıdır `in` parametre ve dönüş değeri yoktur.  
   
- Başka bir örneği kullanımıdır <xref:System.IO.Stream> işlemlerinde türleri. Çünkü <xref:System.IO.Stream> parametresi içeriyorsa tüm ileti gövdesi bir giriş veya çıkış (diğer bir deyişle, `ref` parametresi `out` parametresi veya dönüş değeri) türü <xref:System.IO.Stream>, yalnızca giriş sonra olmalıdır veya çıkış belirtilen, işlem. Ayrıca, parametre veya dönüş türü ya da olması gerekir <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, veya <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Akışları hakkında daha fazla bilgi için bkz: [büyük veriler ve akış](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Başka bir örnek kullanımıdır <xref:System.IO.Stream> işlemlerinde türleri. Çünkü <xref:System.IO.Stream> bir giriş veya çıkış parametresi içeren tüm ileti gövdesi (diğer bir deyişle, `ref` parametresi `out` parametre veya dönüş değeri) türünde <xref:System.IO.Stream>, ardından yalnızca giriş olmalıdır veya çıkış belirtilmiş, işlem. Ayrıca, parametre veya dönüş türü olmalıdır <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, veya <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Akışlar hakkında daha fazla bilgi için bkz: [büyük veriler ve akış](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
-##### <a name="names-namespaces-and-obfuscation"></a>Adları, ad alanları ve gizleme  
- Ad alanları sözleşmeleri ve işlemlerin tanımında .NET türleri ve adları sözleşmeleri WSDL dönüştürüldüğünde ve sözleşme iletileri oluşturduğunuzda ve gönderilen önemlidir. Bu nedenle, hizmet sözleşmesi adları ve ad alanları açıkça kullanarak ayarlandığını önerilir `Name` ve `Namespace` tüm destekleyici özellikleri sözleşme öznitelikleri gibi <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>,  <xref:System.Runtime.Serialization.DataMemberAttribute>ve diğer sözleşme öznitelikleri.  
+##### <a name="names-namespaces-and-obfuscation"></a>Ad, ad alanları ve gizleme  
+ Ad ve ad alanları sözleşmeler ve işlemler tanımında .NET türleri sözleşmeler WSDL dönüştürülür ve sözleşme iletileri oluşturulan ve gönderilen önemlidir. Bu nedenle, hizmet sözleşmesi adları ve ad alanları açıkça kullanarak ayarlandığını önerilir `Name` ve `Namespace` sözleşme öznitelikleri gibi tüm destekleyici Özellikler <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>,  <xref:System.Runtime.Serialization.DataMemberAttribute>ve diğer sözleşme öznitelikleri.  
   
- Bunun bir sonucu, adları ve ad alanları açıkça ayarlanmazsa, derleme üzerinde IL gizleme kullanımını sözleşme tür adları ad alanlarını ve değiştirilen WSDL ve genellikle başarısız kablo alışverişleri sonuçlarında değiştirir ' dir. Ad alanları ve sözleşme adlarını açıkça ayarlı değil, ancak gizleme kullanmak istiyorsanız, kullanmak <xref:System.Reflection.ObfuscationAttribute> ve <xref:System.Reflection.ObfuscateAssemblyAttribute> sözleşme değiştirilmesini engellemek için öznitelik adları ve ad alanları yazın.  
+ Ad ve ad alanları açıkça ayarlanmazsa, derleme üzerinde IL karartma kullanımını sözleşme türü adları ve ad alanları ve değiştirilen WSDL ve genellikle başarısız bir kablo değişimleri sonuçları değiştirir bunun bir sonucu var. Sözleşme ad ve ad alanları açıkça ayarlamayın ancak karartma kullanmayı planlıyorsanız, kullanmak <xref:System.Reflection.ObfuscationAttribute> ve <xref:System.Reflection.ObfuscateAssemblyAttribute> sözleşme değiştirilmesini önlemek için öznitelik, adları ve ad alanlarını yazın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: İstek-Yanıt Anlaşması Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [Nasıl yapılır: Tek Yönlü Anlaşma Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Oturumları Kullanma](../../../docs/framework/wcf/using-sessions.md)  
- [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [Güvenilir Hizmetler](../../../docs/framework/wcf/reliable-services.md)  
- [Hizmetler ve İşlemler](../../../docs/framework/wcf/services-and-transactions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: İstek-yanıt sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Nasıl yapılır: Tek yönlü anlaşma oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Oturumları Kullanma](../../../docs/framework/wcf/using-sessions.md)
+- [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [Güvenilir Hizmetler](../../../docs/framework/wcf/reliable-services.md)
+- [Hizmetler ve İşlemler](../../../docs/framework/wcf/services-and-transactions.md)

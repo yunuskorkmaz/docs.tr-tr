@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme'
+title: 'Nasıl yapılır: Yetkilendirirken meta veri isteklerine izin verme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,35 +7,35 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 2f855080cf3ba4cee08470af77c52945e47a2ec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591917"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme
-Özel yetkilendirme sırasında işlenmesi için meta veriler için bir istek izin vermek gerekli olabilir. Aşağıdaki konu böyle bir istek doğrulamak için adımlarda size yol gösterir.  
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken meta veri isteklerine izin verme
+Özel yetkilendirme sırasında işlenecek meta veri isteği izin vermek gerekli olabilir. Aşağıdaki konuda bu tür bir istek doğrulamak için adımlarda size yol gösterir.  
   
  Windows Communication Foundation (WCF) yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Yetkilendirme sırasında meta veri isteklerine izin vermek için  
   
-1.  Uzantısı oluşturma <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı.  
+1.  Oluşturma uzantısı <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı.  
   
-2.  Geçersiz kılma <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi. Yöntem `true` veya `false` yetkilendirme verilip verilmediğine bağlı olarak. Geçerli yordam hakkında bilgi içinde bulunan <xref:System.ServiceModel.OperationContext> yönteme parametre olarak geçirilen.  
+2.  Geçersiz kılma <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi. Yöntem döndürür `true` veya `false` yetkilendirme verilip verilmediğine bağlı olarak. Geçerli yordam hakkında bilgi de ulaşabilirsiniz <xref:System.ServiceModel.OperationContext> yönteme parametre olarak.  
   
-3.  Geçersiz sözleşme adı, ad alanı ve aşağıdaki örnekte gösterildiği gibi eylem denetleyin. Koşullar geçerli olduğunda, ardından Döndür `true.`  
+3.  Geçersiz sözleşme adı, ad alanı ve aşağıdaki örnekte gösterildiği gibi bir eylem denetleyin. Koşullar geçerli olduğunda, ardından dönün `true.`  
   
-4.  Sınıf kullanımlar için genişletilebilirlik noktası kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: Özel Yetkilendirme Yöneticisi için bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4.  Sınıf kullanmak istemiyorsunuz genişletilebilirlik noktası kullanın. Daha fazla bilgi için [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir geçersiz kılma gösterir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi.  
+ Aşağıdaki örnek, geçersiz kılma gösterir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi.  
   
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

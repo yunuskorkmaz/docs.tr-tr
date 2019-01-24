@@ -1,38 +1,38 @@
 ---
-title: 'Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) uzantı metodu yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: e220a025c39757b492be033caeb8924523515804
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 019104956b21e527c0498c286d85da27abdc5695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576078"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
-Genişletme yöntemleri, varolan bir sınıfa yöntemleri eklemenize olanak tanır. Bu sınıfın örneğini değilmiş gibi genişletme yöntemi çağrılabilir.  
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: (Visual Basic) uzantı metodu yazma
+Genişletme yöntemleri varolan bir sınıfa yöntemler eklemenize imkan tanır. Bu sınıfın bir örneğini değilmiş gibi uzantı metodu volat pouze jednou.  
   
 ### <a name="to-define-an-extension-method"></a>Bir genişletme yöntemi tanımlamak için  
   
-1.  Yeni veya varolan bir Visual Basic uygulama Visual Studio'da açın.  
+1.  Yeni veya mevcut bir Visual Basic uygulamaları Visual Studio'da açın.  
   
-2.  Bir genişletme yöntemi tanımlamak istediğiniz dosyanın üst kısmında, aşağıdaki içeri aktarma deyimini şunlardır:  
+2.  Bir genişletme yöntemi tanımlamak istediğiniz dosyasının en üstüne aşağıdaki içeri aktarma deyimi içerir:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  Yeni veya var olan uygulamanızı modülde içinde uzantısı özniteliği yöntemi tanımıyla başlayın:  
+3.  İçinde bir modül, yeni veya mevcut uygulamanızda uzantı özniteliğine sahip yöntem tanımını başlayın:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  İlk parametre türü, genişletmek istediğiniz veri türü olmalıdır dışında yönteminizi normal şekilde bildirin.  
+4.  Dışında ilk parametresinin türü genişletmek istediğiniz veri türünde olmalıdır, yöntemi normal şekilde bildirin.  
   
     ```  
     <Extension()>   
@@ -42,7 +42,7 @@ Genişletme yöntemleri, varolan bir sınıfa yöntemleri eklemenize olanak tan�
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir genişletme yöntemi modülünde bildirir `StringExtensions`. İkinci bir modül `Module1`, alır `StringExtensions` ve yöntemini çağırır. Bunu çağrıldığında genişletme yöntemi kapsamında olması gerekir. Genişletme yöntemi `PrintAndPunctuate` genişletir <xref:System.String> noktalama simge parametre olarak gönderilen bir dize arkasından sınıfı string örneği görüntüleyen bir yöntem.  
+ Aşağıdaki örnek, bir genişletme yöntemi modülünde bildirir `StringExtensions`. İkinci bir modül `Module1`, aktarır `StringExtensions` yöntemini çağırır. Genişletme yöntemi, çağrıldığı zaman kapsamda olması gerekir. Genişletme yöntemi `PrintAndPunctuate` genişletir <xref:System.String> sınıfı dize örneğinde görüntüleyen bir yöntem ile ardından noktalama simgeleri parametre olarak gönderilen bir dize.  
   
 ```vb  
 ' Declarations will typically be in a separate module.  
@@ -75,15 +75,15 @@ Module Module1
 End Module  
 ```  
   
- Yöntemi iki parametre ile tanımlanan ve yalnızca biriyle adlı dikkat edin. İlk parametre `aString`, yönteminde tanımı bağlı `example`, örneğinin `String` yöntemini çağırır. Örnek çıktı aşağıdaki gibidir:  
+ Yöntemi iki parametre ile tanımlanmıştır ve yalnızca bir adı olduğuna dikkat edin. İlk parametre `aString`, yöntem tanımını bağlı `example`, örneğini `String` yöntemi çağırır. Örnek çıktısı aşağıdaki gibidir:  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Genişletme Yöntemleri](./extension-methods.md)  
- [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.CompilerServices.ExtensionAttribute>
+- [Genişletme Yöntemleri](./extension-methods.md)
+- [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

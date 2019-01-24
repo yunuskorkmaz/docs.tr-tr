@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589525"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Tek aşamalı ve çok aşamalı bir işlem Sistemi'ne
 Bir işlemde kullanılan her kaynak eylemlerini bir işlem yöneticisi (TM) düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Katılımcı bir işlemde kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konu açıklar bir kaynak (veya birden fazla kaynak) bir işlemde nasıl kaydedilebilir. Bu konu nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabileceğini açıklar.  
@@ -109,6 +109,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>Tek aşaması yürütme en iyi hale getirme  
  Tüm güncelleştirmeleri herhangi bir açık işbirliği yapıldığından tek aşaması yürütme Protokolü çalışma zamanında daha etkilidir. Bu protokol hakkında daha fazla bilgi için bkz. [tek aşamalı işleme ve yükseltilebilir tek aşamalı bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

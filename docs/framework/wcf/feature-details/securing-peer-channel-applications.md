@@ -2,45 +2,45 @@
 title: Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 725e629a187261a5bc50d880f75b942734df960b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dd6d95fb151a4f06dc4f632465b38b07720a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586689"
 ---
 # <a name="securing-peer-channel-applications"></a>Eş Kanalı Uygulamalarını Güvenli Hale Getirme
-Gibi diğer bağlamaları altında [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` sahip güvenlik varsayılan olarak etkindir ve her ikisi de taşıma ve ileti tabanlı güvenlik (veya) sunar. Bu konuda, bu iki güvenlik türleri açıklanmaktadır. Güvenlik türü bağlama belirtimi güvenlik modu etiketinde belirtilir (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Gibi diğer bağlamalar altında [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` güvenlik varsayılan olarak etkin olan ve her ikisi de taşıma ve ileti tabanlı güvenlik (veya) sunar. Bu konuda, bu iki tür güvenlik anlatılmaktadır. Bağlama belirtimi güvenlik modu etiketinde tarafından belirtilen güvenlik türünü (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Aktarım tabanlı güvenlik  
- Eş kanal taşıma, her ikisi de gerektiren ayarını WMI'ya güvenliğini sağlamak için iki tür kimlik doğrulama bilgilerini destekleyen `ClientCredentialSettings.Peer` ilişkili özellikte `ChannelFactory`:  
+ Eş kanal taşıma, ikisi de ayarını WMI'ya gerektiren güvenliğini sağlamak için iki tür kimlik doğrulama bilgilerini destekler `ClientCredentialSettings.Peer` özelliği ilişkili `ChannelFactory`:  
   
--   Parola. İstemciler bir gizli parolası hakkında bilgi sahibi bağlantılarının kimliğini doğrulamak için kullanır. Bu kimlik bilgisi türü kullanıldığında, `ClientCredentialSettings.Peer.MeshPassword` geçerli bir parola taşımalıdır ve isteğe bağlı olarak bir `X509Certificate2` örneği.  
+-   Parola. İstemciler, bağlantıların kimliğini doğrulamak için gizli bir parola bilgisini kullanır. Bu kimlik bilgisi türü kullanıldığında `ClientCredentialSettings.Peer.MeshPassword` geçerli bir parola taşımalıdır ve isteğe bağlı olarak bir `X509Certificate2` örneği.  
   
--   Sertifika. Belirli bir uygulama kimlik doğrulaması kullanılır. Bu kimlik bilgisi türü kullanıldığında, somut bir uygulama kullanması gerekir <xref:System.IdentityModel.Selectors.X509CertificateValidator> içinde `ClientCredentialSettings.Peer.PeerAuthentication`.  
+-   Sertifika. Belirli uygulama kimlik doğrulaması kullanılır. Bu kimlik bilgisi türü kullanıldığında, somut bir uygulama kullanmalısınız <xref:System.IdentityModel.Selectors.X509CertificateValidator> içinde `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>İleti tabanlı güvenlik  
- İleti güvenliği kullanarak, tüm alıcı taraflar tarafından güvenilen bir taraf iletiyi gönderen doğrulayabilir uygulama giden iletiler kaydolabilirsiniz ve ileti olmadığını değiştirilmiş. Şu anda yalnızca X.509 kimlik bilgisi ileti imzalama eş kanalı destekler.  
+ İleti güveliği kullanarak, böylece tüm alıcı taraf tarafından güvenilen bir taraf gönderilen ileti doğrulayabilirsiniz giden iletiler uygulamada oturum ve ileti olmadığını değiştirilmiş. Şu anda yalnızca X.509 kimlik bilgisi ileti imzalama eş kanalı destekler.  
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
   
--   Bu bölüm, eş kanalı uygulamalarını güvenli hale getirmek için en iyi uygulamaları açıklar.  
+-   Bu bölümde, eş kanalı uygulamalarını güvenli hale getirmek için en iyi uygulamalar ele alınmaktadır.  
   
-### <a name="enable-security-with-peer-channel-applications"></a>Eş kanal uygulamalarla güvenliğini etkinleştir  
- Eş kanal protokoller dağıtılmış yapısı nedeniyle, kafes üyeliği, gizlilik ve güvenli bir kafes gizlilik zorlamak zordur. İstemcileri ve çözümleyicisini arasındaki iletişimin güvenliğini sağlamak önemlidir. Eş Adı Çözümleme Protokolü (PNRP) altında kimlik sahtekarlığı önlemek için güvenli adları ve diğer ortak saldırılara kullanın. Özel çözümleyicisini bağlantı istemcilerin kullandığı her iki ileti ve aktarım tabanlı güvenlik dahil olmak üzere çözümleyici hizmetiyle iletişim güvenliği etkinleştirerek güvenli hale getirin.  
+### <a name="enable-security-with-peer-channel-applications"></a>Eş kanalı uygulamalarını ile güvenliği etkinleştirme  
+ Eş kanal protokoller dağıtılmış doğası nedeniyle kafes üyelik, gizlilik ve güvenli olmayan bir ağ gizlilik zorlamak güçtür. İstemcilerle çözümleyicisini arasındaki iletişimin güvenliğini sağlamak unutmamak önemlidir. Eş Adı Çözümleme Protokolü (PNRP) altında kimlik sahtekarlığı önlemek için güvenli adları ve diğer yaygın saldırılardan kullanın. Bir özel Çözücü hizmet bağlantısı istemcilerin kullandığı her iki ileti ve aktarım tabanlı güvenlik dahil olmak üzere çözümleyici hizmetiyle bağlantı güvenliği etkinleştirerek güvenli hale getirin.  
   
-### <a name="use-the-strongest-possible-security-model"></a>En güçlü olası güvenlik modelini kullanın  
- Örneğin, her bir üyesi kafes ayrı olarak tanımlanması gerekirse, sertifika tabanlı kimlik doğrulama modeli kullanır. Bu mümkün değilse, aşağıdaki geçerli önerileri parola tabanlı kimlik doğrulaması güvenli tutmak için kullanın. Bu parolalar yalnızca parolaları güvenli bir ortam kullanarak iletmek güvenilen taraflarla parolaları sık değişen ve parolaları güçlü sağlayarak paylaşımı içerir (en az sekiz karakter uzunluğunda, en az bir harf bir rakam, her iki çalışmalarından içerir ve bir özel karakter).  
+### <a name="use-the-strongest-possible-security-model"></a>En güçlü olası bir güvenlik modeli kullanır  
+ Kafes her üyesi ayrı ayrı tanımlanması gerekir, örneğin, sertifika tabanlı kimlik doğrulama modeli kullanın. Bu mümkün değilse, bunları güvenli tutmak için parola tabanlı kimlik doğrulaması aşağıdaki geçerli önerileri kullanın. Bu parola yalnızca güvenilir kişilere güvenli bir ortam kullanarak parolaları iletmesini durdurabilirsiniz, parolaları sık değişen ve parolaları güçlü olmalarını sağlamaya paylaşım içerir (en az sekiz karakter uzunluğunda olmalı, her iki durumda da bir rakam, en az bir harf içerir ve özel karakter).  
   
-### <a name="never-accept-self-signed-certificates"></a>Hiçbir zaman otomatik olarak imzalanan sertifikalar kabul et  
- Hiçbir zaman konu adlarına göre bir sertifika kimlik bilgileri kabul edin. Herhangi bir sertifika oluşturabilir ve herkesin doğrulama bir ad seçebilirsiniz unutmayın. Kimlik sahtekarlığı olasılığını önlemek için (güvenilir bir veren veya bir kök sertifika yetkilisi) yetkilisi kimlik bilgilerini veren temel alarak sertifikaları doğrulayın.  
+### <a name="never-accept-self-signed-certificates"></a>Hiçbir zaman otomatik olarak imzalanan sertifikaları kabul et  
+ Hiçbir zaman bir sertifika konu adlarına göre kimlik bilgilerini kabul edin. Herhangi bir sertifika oluşturabilir ve herkesin doğrulamakta olduğunuz bir ad seçin unutmayın. Kimlik sahtekarlığı olasılığını önlemek için veren yetkili kimlik bilgileri (güvenilir verene veya bir kök sertifika yetkilisi) üzerinde temel alarak sertifikaları doğrulayın.  
   
-### <a name="use-message-authentication"></a>İleti kimlik doğrulamasını kullan  
- İleti kimlik doğrulama ileti güvenilir bir kaynaktan geldiğini ve hiç kimse iletiyle iletim sırasında değişiklik yaptığını doğrulamak için kullanın. İleti kimlik doğrulaması aldatma veya kafes iletilerinde değiştirmesine kötü amaçlı bir istemci için kolaydır.  
+### <a name="use-message-authentication"></a>İleti kimlik doğrulaması kullan  
+ İleti kimlik doğrulaması, bir ileti güvenilir bir kaynaktan geldiğini ve hiç ileti aktarım sırasında değişiklik yapmadığından doğrulamak için kullanın. İleti kimlik doğrulaması olmadan, sızmasını veya kafes iletilerinde değiştirmesine kötü amaçlı bir istemci için kolaydır.  
   
 ## <a name="peer-channel-code-examples"></a>Eş kanal kod örnekleri  
  [Eş Kanal Senaryoları](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş Kanalı Güvenliği](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Eş Kanalı Güvenliği](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

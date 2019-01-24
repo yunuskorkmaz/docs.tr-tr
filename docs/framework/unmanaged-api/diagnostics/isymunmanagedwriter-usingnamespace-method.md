@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca9f3488c9fb2280d2ceb99c87a54d99c1a33b6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587732"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace Yöntemi
-Verilen tam ad alanı adı şu anda açık sözcük kapsamında kullanılmakta olduğunu belirtir. Ad alanı, açık olan kapsamlardan devralır tüm kapsamlarında kullanılır. Geçerli kapsamdaki kapatma ad alanı kullanımını de durdurulur.  
+Tam ad alanı adı verilen açık sözlü kapsamda kullanılmakta olduğunu belirtir. Ad alanı içinde açık olan kapsamlardan devralır tüm kapsamlar kullanılır. Geçerli kapsamdaki kapatma ad alanı kullanımını durdurur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ HRESULT UsingNamespace(
  [in] Ad alanının tam adı için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

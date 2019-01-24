@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma'
+title: 'Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583492"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)
 Bu örnek daha önce bir XML dosyası kullanmayı yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
   
 ## <a name="example"></a>Örnek  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Dosya adı "c:\temp\SerializationOverview.xml" seri hale getirilmiş veri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: yazma nesne verilerini bir XML dosyasına (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Dosya adı "c:\temp\SerializationOverview.xml" seri hale getirilmiş veri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  Sınıfı, parametresiz bir ortak oluşturucuya sahip olmalıdır.  
   
@@ -61,9 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Her zaman girişleri doğrulayın ve hiçbir zaman güvenilmeyen bir kaynaktan gelen verileri seri durumdan. Yeniden oluşturulan nesne, seri durumdan kodun izinlere sahip bir yerel bilgisayarda çalıştırır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.StreamWriter>  
-- [Nasıl yapılır: nesne verilerini bir XML dosyasına (C#) yazma](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
-- [Seri hale getirme (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- <xref:System.IO.StreamWriter>
+- [Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Seri hale getirme (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

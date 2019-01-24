@@ -2,12 +2,12 @@
 title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586416"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
@@ -37,7 +37,7 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
   
  Aksi takdirde, bir <xref:System.Data.SqlClient.SqlException> özel durumu oluşturulur.  
   
- Daha fazla bilgi için [nasıl yapılır: silme satırları veritabanından](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veritabanından satır silme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>İfade sorgulanabilir değil  
  "[İfade] ifade sorgulanabilir değil; alırsanız bir derleme başvurunuz mu eksik?" hata, aşağıdakilerden emin olun:  
@@ -69,6 +69,6 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
 ## <a name="oncreated-partial-method"></a>OnCreated() kısmi yöntemi  
  Oluşturulan yöntemi `OnCreated()` nesne Oluşturucu çağrılır, senaryo görüntüleneceği dahil olmak üzere her zaman çağrılır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özgün değerler için bir kopya yapmak için bir oluşturucuyu çağırır. Uygularsanız, bu davranışı dikkate alın `OnCreated()` kendi kısmi sınıf yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 63e1c55aa3aad1923ac34070784e8b4de7251a7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592763"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyumsuz işlemi temsil eder. Bazı yönlerden, bir görev bir iş parçacığı benzer veya <xref:System.Threading.ThreadPool> öğesi ancak daha yüksek düzeyde soyutlama çalışır. Terim *görev paralelliği* eşzamanlı olarak çalışan bir veya daha fazla bağımsız görevi ifade eder. Görevler iki adet birincil avantaj sağlar:  
@@ -42,7 +42,7 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
 > [!NOTE]
 >  Sayısını <xref:System.Threading.Tasks.Task> tarafından arka planda oluşturulan örnekleri <xref:System.Threading.Tasks.Parallel.Invoke%2A> mutlaka sağlanan temsilcilerin sayısına eşit değil. TPL, özellikle çok sayıda temsilci bulunduğunda, çeşitli iyileştirmeler uygulayabilir.  
   
- Daha fazla bilgi için [nasıl yapılır: paralel işlemleri yürütmek için Parallel.Invoke kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
+ Daha fazla bilgi için [nasıl yapılır: Paralel işlemleri yürütmek için Parallel.Invoke kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
   
  Görev Yürütme üzerinde ya da görevden bir değer döndürmek için daha fazla denetim ile çalışmak zorunda <xref:System.Threading.Tasks.Task> daha açık nesneleri.  
   
@@ -69,7 +69,7 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
   
- Daha fazla bilgi için [nasıl yapılır: bir görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ Daha fazla bilgi için [nasıl yapılır: Bir görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  Temsilci oluşturmak için lambda ifadesini kullandığınızda, kaynak kodunuzun o noktasında görünür durumda olan tüm değişkenlere erişebilirsiniz. Ancak bazı durumlarda, çoğunlukla da döngülerde, bir lambda değişkeni beklenen şekilde yakalamaz. Her yinelemeden sonra oluşturduğu değeri değil, yalnızca son değeri yakalar. Aşağıdaki örnek, sorunu gösterir. Bu sayaç başlatan bir lambda ifadesine döngü geçirir bir `CustomData` nesnesini ve nesne tanımlayıcısı olarak döngü sayacını kullanır. Olarak örnekteki çıktının gösterdiği gibi her `CustomData` nesnesi özdeş tanımlayıcıya sahiptir.  
   
@@ -181,7 +181,7 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
  Bir görevi beklerken, örtülü olarak söz konusu görevin kullanılarak oluşturulmuş tüm alt beklemeniz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> görev zaten tamamlandıysa, hemen döner. Bir görev nedeniyle ortaya çıkan özel durumlar tarafından oluşturulan bir <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> bile <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görev tamamlandıktan sonra çağrıldı.  
   
 ## <a name="composing-tasks"></a>Görevleri oluşturma  
- <xref:System.Threading.Tasks.Task> Ve <xref:System.Threading.Tasks.Task%601> sınıfları, ortak düzenler uygulamak ve C#, Visual Basic ve F # tarafından sağlanan zaman uyumsuz dil özelliklerini daha iyi kullanmak için birden çok görev oluşturmanıza yardımcı olabilen çeşitli yöntemler sağlar. Bu bölümde açıklanmaktadır <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, ve <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemleri.  
+ <xref:System.Threading.Tasks.Task> Ve <xref:System.Threading.Tasks.Task%601> sınıfları, ortak desenler uygulamak ve tarafından sağlanan zaman uyumsuz dil özelliklerini daha iyi kullanmak için birden çok görev oluşturmanıza yardımcı olabilen çeşitli yöntemler sağlar C#, Visual Basic ve F#. Bu bölümde açıklanmaktadır <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, ve <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemleri.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Yöntemi, birden çok zaman uyumsuz olarak bekler <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> tamamlanmasını. Tek düzen olmayan görevler kümesini beklemenize olanak tanıyan aşırı yüklü sürümler sağlar. Örneğin, birden çok bekleyebilir <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> bir yöntem çağrısından tamamlamak için nesneleri.  
@@ -201,7 +201,7 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> Yöntemi oluşturan bir <xref:System.Threading.Tasks.Task> belirtilen zamandan sonra biten bir nesne. Bazen verileri yoklayan, zaman aşımlarını tanıtan, belirli bir süre boyunca kullanıcı girişinin işlenmesini erteleyen, vb. işlemler yapan döngüler oluşturmak için bu yöntemi kullanabilirsiniz.  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- Kullanarak <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> yöntemi oluşturmak için kullanabileceğiniz bir <xref:System.Threading.Tasks.Task%601> önceden hesaplanmış sonucu tutan nesne. Döndüren zaman uyumsuz bir işlem gerçekleştirdiğinizde bu yöntem kullanışlıdır bir <xref:System.Threading.Tasks.Task%601> nesne ve bu sonucu <xref:System.Threading.Tasks.Task%601> nesne zaten hesaplanmışsa. Kullanan bir örnek için <xref:System.Threading.Tasks.Task.FromResult%2A> zaman uyumsuz indirme işlemlerinin bir ön bellekte tutulan sonuçlarını almak için bkz: [nasıl yapılır: Create Pre-Computed Tasks](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
+ Kullanarak <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> yöntemi oluşturmak için kullanabileceğiniz bir <xref:System.Threading.Tasks.Task%601> önceden hesaplanmış sonucu tutan nesne. Döndüren zaman uyumsuz bir işlem gerçekleştirdiğinizde bu yöntem kullanışlıdır bir <xref:System.Threading.Tasks.Task%601> nesne ve bu sonucu <xref:System.Threading.Tasks.Task%601> nesne zaten hesaplanmışsa. Kullanan bir örnek için <xref:System.Threading.Tasks.Task.FromResult%2A> zaman uyumsuz indirme işlemlerinin bir ön bellekte tutulan sonuçlarını almak için bkz: [nasıl yapılır: Önceden hesaplanan görevler oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
   
 ## <a name="handling-exceptions-in-tasks"></a>Görevlerde özel durumları işleme  
  Bir görev bir veya daha fazla özel durum oluşturduğunda, özel durumlar olarak sarmalanır ve bir <xref:System.AggregateException> özel durum. Özel durum, genellikle görevin sonlanmasını bekleyen iş parçacığı veya erişen iş parçacığı olan görev ile Birleşen iş parçacığına geri yayılır <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği. Bu davranış, tüm işlenmemiş özel durumların varsayılan olarak işlemi sonlandırması gerektiğini belirten .NET Framework ilkesini zorlamaya yarar. Çağıran kod, aşağıdakilerden herhangi birini kullanarak özel durumları işleyebilir bir `try` / `catch` engelle:  
@@ -223,7 +223,7 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
   
  Belirteci oluşturmak ve kullanarak bazı daha sonraki bir zamanda iptal isteğini sorun <xref:System.Threading.CancellationTokenSource> sınıfı. İçin belirtecin geçip <xref:System.Threading.Tasks.Task> olan bir bağımsız değişken ve kullanıcı temsilcinizde aynı belirtece başvuru da, bir iptal isteğine yanıt verme işini yapar.  
   
- Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: bir görevi ve kendi alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: Bir görevi ve alt öğelerini iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ## <a name="the-taskfactory-class"></a>TaskFactory sınıfı  
  <xref:System.Threading.Tasks.TaskFactory> Sınıfı, görevler ve devamlılık görevleri oluşturmak ve başlatmak için bazı ortak desenleri saklayan statik yöntemler sağlar.  
@@ -258,16 +258,16 @@ Görev paralel kitaplığı (TPL) kavramını temel alan bir *görev*, zaman uyu
 |[Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Ekli ve ayrılmış alt görevler arasındaki farkı açıklar.|  
 |[Görev İptali](../../../docs/standard/parallel-programming/task-cancellation.md)|Yerleşik olan iptal desteğini açıklar <xref:System.Threading.Tasks.Task> nesne.|  
 |[Özel Durum İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Eşzamanlı iş parçacıklarındaki özel durumların nasıl işlendiğini açıklar.|  
-|[Nasıl yapılır: Paralel İşlemleri Yürütmek için Parallel.Invoke Kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
-|[Nasıl yapılır: Bir Görevden Değer Döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|  
-|[Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|  
-|[Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> zaman uyumsuz indirme işlemlerinin bir ön bellekte tutulan sonuçlarını almak için yöntemi.|  
-|[Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|İkili ağacı geçirmek için görevlerin nasıl kullanılacağını açıklar.|  
-|[Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Nasıl kullanılacağını gösteren <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemi.|  
+|[Nasıl yapılır: Paralel işlemleri yürütmek için Parallel.Invoke kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
+|[Nasıl yapılır: Bir görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|  
+|[Nasıl yapılır: Bir görevi ve alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|  
+|[Nasıl yapılır: Önceden hesaplanan görevler oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> zaman uyumsuz indirme işlemlerinin bir ön bellekte tutulan sonuçlarını almak için yöntemi.|  
+|[Nasıl yapılır: Paralel Görevler içeren bir ikili ağacı gezme](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|İkili ağacı geçirmek için görevlerin nasıl kullanılacağını açıklar.|  
+|[Nasıl yapılır: İç içe geçmiş bir görevi sarmalamadan çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Nasıl kullanılacağını gösteren <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemi.|  
 |[Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.For%2A> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> veriler üzerinde paralel döngüler oluşturmak için.|  
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET Framework paralel programlama için üst düzey düğüm.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
 - [.NET Framework ile paralel programlama için örnekler](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

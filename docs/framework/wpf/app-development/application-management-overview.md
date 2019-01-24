@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592039"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
@@ -130,7 +130,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
   
 <a name="Splash_Screen"></a>   
-### <a name="splash-screen"></a>Giriş ekranı  
+### <a name="splash-screen"></a>Giriş Ekranı  
  İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../../../../docs/framework/wpf/advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
@@ -365,11 +365,11 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  ![XBAP &#45; uygulama nesnesi olayları](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Application>  
- [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Uygulama modeli: Nasıl Yapılır Konuları](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Application>
+- [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
+- [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Uygulama modeli: Nasıl Yapılır Konuları](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)

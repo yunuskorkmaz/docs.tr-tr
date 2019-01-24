@@ -2,12 +2,12 @@
 title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577640"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
 Bu örnek nesnesinin başvuruları göre sunucu ile istemci arasında nasıl geçirileceğini gösterir. Benzetimli örnek kullandığı *sosyal ağlar*. Bir sosyal ağ oluşan bir `Person` her arkadaş örneği olduğu arkadaş listesi içeren sınıf `Person` sınıfıyla kendi arkadaş listesi. Bu nesne bir grafik oluşturur. Hizmet, bu sosyal ağlarda işlemini kullanıma sunar.  
@@ -113,6 +113,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [Birlikte Çalışabilir Nesne Başvuruları](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- [Birlikte Çalışabilir Nesne Başvuruları](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

@@ -2,15 +2,15 @@
 title: Zincirleme standart sorgu işleçleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582889"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Zincirleme standart sorgu işleçleri (C#)
-Bu, son konu başlığında [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) öğretici.  
+Bu, son konu başlığında [Öğreticisi: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) öğretici.  
   
  Ayrıca standart sorgu işleçlerini birbirine zincirlenebilir. Örneğin, interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> işleci ve ayrıca yavaş bir şekilde çalışır. Hiçbir Ara sonuçlarını tarafından gerçekleştirilmiş.  
   
@@ -19,7 +19,7 @@ Bu, son konu başlığında [Öğreticisi: zincirleme sorguları birlikte (C#)](
   
  Tek fark, bu durumda, <xref:System.Linq.Enumerable.Where%2A> yöntemi, kaynak, tekrarlanan ilk öğeyi koşul geçmez ve ardından geçirmek sonraki öğeyi alır belirler. Ardından, ikinci öğesi verir.  
   
- Ancak, temel aynı olur: olmasını sahip olmadıkları sürece, Ara koleksiyonları gerçekleştirilmiş değil.  
+ Ancak, temel fikir aynıdır: Olmasını sahip olmadıkları sürece Ara koleksiyonları gerçekleştirilmiş değil.  
   
  Sorgu ifadeleri kullanıldığında, standart sorgu işleçleri çağrıları dönüştürülür ve aynı ilkeler geçerlidir.  
   
@@ -86,6 +86,6 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Öğretici: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

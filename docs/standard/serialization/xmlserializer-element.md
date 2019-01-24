@@ -6,18 +6,18 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591961"
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; öğesi
 Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> yapılır.  
   
  \<Yapılandırma >  
-\<System.xml.Serialization >  
+\<system.xml.serialization>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,7 +42,7 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
+|[\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> güvenilmeyen verileri işlenirken bir ek güvenlik olası hizmet reddi saldırılarını karşı katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Bir koşul algılanırsa, aşağıdaki iletisiyle bir özel durum: "İç hata: temel alınan akışta seri kaldırma başarısız oldu."  
@@ -62,6 +62,6 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [\<System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)

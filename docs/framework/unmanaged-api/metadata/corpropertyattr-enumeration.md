@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263981708af2e40bd3690a3cd344156488eed0dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577590"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr Numaralandırması
-Bir özelliğin meta verilerini açıklayan değerlerini içerir.  
+Özellik meta verileri tanımlayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,18 +44,18 @@ typedef enum CorPropertyAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`prSpecialName`|Özellik özeldir ve adını açıklayan belirtir nasıl.|  
+|`prSpecialName`|Özelliği özeldir ve adını açıklayan belirtir nasıl.|  
 |`prReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`prRTSpecialName`|Ortak dil çalışma zamanı meta veri özellik adı kodlama iç API'leri denetleyeceğini belirtir.|  
-|`prHasDefault`|Özelliğin varsayılan değeri olduğunu belirtir.|  
+|`prRTSpecialName`|Ortak dil çalışma zamanı meta veri özellik adı kodlama dahili API'lerde denetleyeceğini belirtir.|  
+|`prHasDefault`|Özelliği varsayılan değerine sahip olduğunu belirtir.|  
 |`prUnused`|Kullanılmayan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

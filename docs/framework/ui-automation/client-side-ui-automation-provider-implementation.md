@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 53773c51aef6b9530ed0b2cfaf0ef08cdb340ec2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 922769d60d0ff8425b68a96d0272ee23c6d083ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579192"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -51,6 +51,6 @@ ms.locfileid: "48842612"
   
  Son iki parametreler isteğe bağlıdır. Farklı uygulamalar için farklı sağlayıcıları kullanmak istediğinde, istemci hedef uygulama görüntü adını belirtebilirsiniz. Örneğin, istemci için bir sağlayıcı kullanabilirsiniz bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] liste görünümü denetimi daha önceden başka bir bilinen uygulamada benzer bir denetim için birden çok görünüm düzeni ve başka destekleyen bilinen bir uygulama.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [UI Otomasyonu Sağlayıcıları Bir İstemci Programında Uygulama](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıları Bir İstemci Programında Uygulama](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

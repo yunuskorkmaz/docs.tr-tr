@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: bir öznitelik üst (XPath-LINQ-XML) bulunamadı (Visual Basic)'
+title: 'Nasıl yapılır: Bir (XPath-LINQ to XML) üst öğenin özniteliğini bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: af2b6fc3aaebe4ba45be405c587c549ea73b3289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15752805f35b145514d25208b6de44a7ed8ade47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580544"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir öznitelik üst (XPath-LINQ-XML) bulunamadı (Visual Basic)
-Bu konuda, üst öğesine gidin ve bunu bir öznitelik bulunamadı gösterilmektedir.  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir (XPath-LINQ to XML) üst öğenin özniteliğini bulma (Visual Basic)
+Bu konuda, üst öğeye gidin ve bir özniteliğin bulmak gösterilmektedir.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `../@id`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek ilk bulur bir `Author` öğesi. Ardından bulduğu `id` üst öğesinin özniteliği.  
+ Bu örnekte ilk bulur bir `Author` öğesi. Ardından bulduğu `id` üst öğesinin özniteliği.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: Books (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,12 +40,12 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

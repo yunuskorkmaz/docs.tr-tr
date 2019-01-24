@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583427"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve genel sanal dizinden çalıştırın. Bu tek seferlik Kurulum yordamı diskte bir klasörü oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.
@@ -40,11 +40,11 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
   
 5.  İzleyin [güvenlik duvarı yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md) örnekleri tarafından kullanılan bağlantı noktaları etkinleştirmek için.  
   
-6.  Denetlemek için aşağıdaki varsayılan dizin: \<Installdrive >:**\WF_WCF_Samples**. Bu, örneklerin daha önce yüklenmişse, varsayılan dizindir.  
+6.  Aşağıdaki varsayılan dizini kontrol edin: \<Installdrive >:**\WF_WCF_Samples**. Bu, örneklerin daha önce yüklenmişse, varsayılan dizindir.  
   
 7.  Örnekleri indirme konumundan için bunları yüklemeniz örnekleri yüklü değilse [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) veya [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Örnekleri yükledikten sonra gidin: \<Installdrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Çalıştırma **Setupvroot.bat** toplu iş dosyası. Aşağıdaki adımları gerçekleştirilir:  
   
@@ -86,4 +86,4 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
 
 15. Bazı örnekler sertifikaları gerektirir. Bkz: [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

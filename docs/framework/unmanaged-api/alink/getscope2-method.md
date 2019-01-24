@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587144"
 ---
 # <a name="getscope2-method"></a>GetScope2 Metodu
-Bir alma kapsamı alır.  
+Bir içeri aktarma kapsamı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,10 +42,10 @@ HRESULT GetScope2(
  Hedef derleme kimliği.  
   
  `FileToken`  
- İçeri aktarılacak dosya kimliği.  
+ Alınacağı dosya kimliği.  
   
  `dwScope`  
- İçeri aktarmak için sıfır tabanlı kapsamı.  
+ İçeri aktarmak için sıfır tabanlı kapsam.  
   
  `ppImportScope`  
  İşaretçi alır [Imetadataımport2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) Belirtilen kapsam için arabirim.  
@@ -56,7 +56,7 @@ HRESULT GetScope2(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

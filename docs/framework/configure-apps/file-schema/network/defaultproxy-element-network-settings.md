@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 54185c7cca734ced166fbe0a52b96214321d4469
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48c5f5a50563cdbea5fa806e7c7524e413ba3712
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596182"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; öğesi (ağ ayarları)
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
@@ -25,13 +25,13 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-      <defaultProxy  
-        enabled="true|false"  
-        useDefaultCredentials="true|false">  
-           <bypasslist> … </bypasslist>  
-           <proxy> … </proxy>  
-           <module> … </module>  
-      </defaultProxy>
+<defaultProxy  
+  enabled="true|false"  
+  useDefaultCredentials="true|false">  
+    <bypasslist>...</bypasslist>  
+    <proxy>...</proxy>  
+    <module>...</module>  
+</defaultProxy>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -86,6 +86,6 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

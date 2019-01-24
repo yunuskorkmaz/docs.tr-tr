@@ -1,18 +1,12 @@
 ---
-title: Derlemeler ve Genel Derleme Önbelleği (C#)
+title: 'Derlemeler ve Genel Derleme Önbelleği (C#)'
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042302"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Derlemeler ve Genel Derleme Önbelleği (C#)
 Derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve güvenlik izinleri için temel birimini oluşturur bir. AĞ tabanlı bir uygulama. Derlemeler, bir yürütülebilir (.exe) dosya veya dinamik bağlantı kitaplığı (.dll) dosyası biçiminde ve .NET Framework'ün yapı taşlarıdır. Bunlar, ortak dil çalışma zamanı tür uygulamalarına dikkat etmeniz gereken bilgileri sağlar. Derleme türleri ve mantıksal bir işlevsellik birimi oluşturacak ve birlikte çalışmak üzere tasarlanan kaynakları koleksiyonu olarak düşünebilirsiniz.  
   
- Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeleri birden fazla bireysel geliştiriciler ayrı modüllerde, tek bir derleme oluşturmak için bir araya tüm gelecek iş şekilde planlı. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: birden fazla dosyadan oluşan bir derleme](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeleri birden fazla bireysel geliştiriciler ayrı modüllerde, tek bir derleme oluşturmak için bir araya tüm gelecek iş şekilde planlı. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: Bir çoklu dosya derlemesi oluşturmak](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Derlemeleri, aşağıdaki özelliklere sahiptir:  
   
@@ -50,14 +44,14 @@ Derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı v
 > [!NOTE]
 >  Visual Studio'da bir derlemeyi derlemek için **derleme** menüsünde **yapı**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Arkadaş derlemeler (C#)](friend-assemblies.md)  
-- [Nasıl yapılır: bir derlemeyi başka uygulamalarla (C#) paylaşma](how-to-share-an-assembly-with-other-applications.md)  
-- [Nasıl yapılır: yük derlemeleri ve yüklemelerini kaldırma (C#)](how-to-load-and-unload-assemblies.md)  
-- [Nasıl yapılır: bir dosyanın bir derleme (C#) olup olmadığını belirleme](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [İzlenecek yol: Visual Studio'da (C#) yönetilen derlemelerden türler katıştırma](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [İzlenecek yol: Visual Studio'da (C#) Microsoft Office derlemelerinden tür bilgilerini katıştırma](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Arkadaş derlemeler (C#)](friend-assemblies.md)
+- [Nasıl yapılır: Bir derlemeyi başka uygulamalarla paylaşma (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Nasıl yapılır: Yükleme ve yüklemelerini kaldırma derlemeleri (C#)](how-to-load-and-unload-assemblies.md)
+- [Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

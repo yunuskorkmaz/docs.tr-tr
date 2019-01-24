@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588580"
 ---
 # <a name="standard-query-operator-translation"></a>Standart sorgu işleci çevirisi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standart sorgu işleçleri SQL komutlara çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantikleri belirler.  
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>Devralma desteği  
   
 ### <a name="inheritance-mapping-restrictions"></a>Devralma eşleme kısıtlamaları  
- Daha fazla bilgi için [nasıl yapılır: devralma hiyerarşilerini eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Daha fazla bilgi için [nasıl yapılır: Devralma hiyerarşilerini eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
 ### <a name="inheritance-in-queries"></a>Sorgularda devralma  
  C# atamalar yalnızca yansıtma içinde desteklenir. Başka bir yerde kullanılan atamaları değil çevrilir ve göz ardı edilir. SQL yanı sıra işlev adlarını, SQL gerçekten yalnızca ortak dil çalışma zamanı (CLR) eşdeğerini gerçekleştirir <xref:System.Convert>. Diğer bir deyişle, SQL, bir tür değeri diğerine değiştirebilirsiniz. Başka bir tür olarak aynı bitleri yeniden yorumlamak güvenli olmayabilecek bir kavram yoktur çünkü cast CLR eşdeğeri yoktur. Bir C# dönüştürme works neden yalnızca yerel olarak olmasıdır. Düğümlerde değil.  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Dizideki Öğeleri Döndürme veya Atlama](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [İki Diziyi Birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [İki Dizi Arasındaki Küme Farkını Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [İki Dizinin Küme Kesişimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [İki Dizinin Küme Birleşimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Dizideki Öğeleri Döndürme veya Atlama](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [İki Diziyi Birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [İki Dizi Arasındaki Küme Farkını Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [İki Dizinin Küme Kesişimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [İki Dizinin Küme Birleşimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

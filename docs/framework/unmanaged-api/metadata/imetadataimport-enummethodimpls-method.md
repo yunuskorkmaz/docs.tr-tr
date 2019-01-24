@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574774"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls Yöntemi
-Belirtilen türdeki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçleri numaralandırır.  
+Belirtilen türün yöntemlerini temsil eden MethodBody ve MethodDeclaration belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,16 +42,16 @@ HRESULT EnumMethodImpls (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu, bu yöntem ilk çağrısı için NULL olmalıdır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
   
  `td`  
- [in] Bir TypeDef numaralandırmak için yöntem uygulamalarını türü için simge.  
+ [in] Numaralandırmak için yöntem uygulamaları simge türü için bir TypeDef.  
   
  `rMethodBody`  
- [out] MethodBody belirteçleri depolama dizisi.  
+ [out] MethodBody simgeleri depolamak için dizi.  
   
  `rMethodDecl`  
- [out] MethodDeclaration belirteçleri depolama dizisi.  
+ [out] MethodDeclaration simgeleri depolamak için dizi.  
   
  `cMax`  
  [in] En büyük boyutunu `rMethodBody` ve `rMethodDecl` dizileri.  
@@ -67,14 +67,14 @@ HRESULT EnumMethodImpls (
 |`S_FALSE`|Numaralandırılacak hiçbir yöntemi belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

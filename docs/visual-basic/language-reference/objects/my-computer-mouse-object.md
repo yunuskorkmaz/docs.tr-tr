@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 7b3914870db6d30eb21c997a39cab4db1511e4ee
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: b748be29d63bcf55810b7901b3c503265bf6998e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596715"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse Nesnesi
 Biçim ve yerel bilgisayarda yüklü fare yapılandırma hakkında bilgi almak için özellikleri sağlar.  
@@ -24,7 +24,7 @@ Biçim ve yerel bilgisayarda yüklü fare yapılandırma hakkında bilgi almak i
   
  **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590139"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION Numaralandırması
-Çöp toplama nesil tanımlar.  
+Bir çöp toplama nesil tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,26 +41,26 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|Nesne oluşturma 0 depolanır.|  
+|`COR_PRF_GC_GEN_0`|Nesne, nesil 0 ' depolanır.|  
 |`COR_PRF_GC_GEN_1`|Nesne, 1. nesil depolanır.|  
-|`COR_PRF_GC_GEN_2`|Nesne, 2. nesil depolanır.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|Nesne büyük nesne yığın depolanır.|  
+|`COR_PRF_GC_GEN_2`|Nesne, nesil 2'olarak depolanır.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|Nesne büyük nesne yığınında depolanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çöp toplayıcı üzerinde yaş tabanlı nesli içine bölme nesneler tarafından bellek yönetimi performansı artırır. Çöp toplayıcı şu anda üç nesil, 0, 1 ve 2 yanı sıra büyük nesneler için kullanılan özel yığın kesimi numaralı kullanır. Büyüklüğü belirli bir değerden büyük nesneler büyük nesne yığın depolanır. Diğer ayrılmış nesneleri oluşturma 0 ait çıkışı başlatın. Çöp toplama kuşak 0 gerçekleştikten sonra mevcut tüm nesneleri 1. nesil için öne çıkar. Çöp toplama nesil 1 gerçekleştikten sonra mevcut nesneleri 2. nesil taşıyın.  
+ Çöp toplayıcı, üzerinde yaş tabanlı nesiller halinde bölme nesneler tarafından bellek yönetim performansını artırır. Çöp toplayıcı, şu anda üç nesil, 0, 1 ve 2 yanı sıra büyük nesneler için kullanılan özel yığının kesimi numaralı kullanır. Nesneleri belirli bir değere boyutu büyüktür büyük nesne yığınında depolanır. Diğer ayrılmış nesneleri nesil 0 ait kullanıma başlatın. Nesil 0 çöp toplama gerçekleştikten sonra mevcut tüm nesneler, kuşak 1 yükseltilir. Nesil 1 çöp toplama gerçekleştikten sonra mevcut nesneleri 2. nesle taşıyın.  
   
- Nesli kullanımını, atık toplayıcı herhangi bir anda yalnızca bir alt kümesini ayrılmış nesneleri ile çalışmak sahip olduğu anlamına gelir.  
+ Nesiller kullanımı, çöp toplayıcı herhangi bir anda yalnızca bir alt kümesi ayrılan nesnelerin ile çalışmak olduğu anlamına gelir.  
   
  `COR_PRF_GC_GENERATION` Numaralandırması tarafından kullanılan [cor_prf_gc_generatıon_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

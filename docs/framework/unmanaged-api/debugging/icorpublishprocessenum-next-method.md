@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19a10a527c37d93d00bec799fdaa12bb0ad3fdbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582421"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next Yöntemi
-Geçerli İmleç konumuna başlangıç koleksiyondan belirtilen işlem sayısını alır.  
+Geçerli imleç konumundan başlayarak koleksiyon belirtilen işlem sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] Alınacak işlemlerin sayısı.  
   
  `objects`  
- [out] Dizi için bir işaretçi alınan [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) nesneleri, her biri bir işlem temsil eder.  
+ [out] Bir işaretçi dizisinin işaretçisi alınan [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) her biri bir işlemi temsil eden nesneleri.  
   
  `pceltFetched`  
- [out] İşaretçi işlemlerin sayısı için gerçekten döndürdü. Bu değer null ise `celt` biridir.  
+ [out] Gerçekte döndürülen işlem sayısı için işaretçi. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub.idl, CorPub.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorPublishProcessEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorPublishProcessEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

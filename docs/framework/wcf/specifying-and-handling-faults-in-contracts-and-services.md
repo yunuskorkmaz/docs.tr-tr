@@ -4,68 +4,68 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: 93ebbf3410dc197982ca617b4e989d07f0e0b454
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594934"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
-Windows Communication Foundation (WCF) uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
+Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve SOAP hatası nesneleri yönetilen özel durum nesnelere yönetilen özel durum nesneleri eşleyerek hata durumları işleyin. Bu bölümdeki konular, hata ortaya çıkarmak için sözleşmeler tasarlamak nasıl özel SOAP hataları olarak koşulları, bu tür hataları hizmeti uygulamasının bir parçası olarak döndürülecek nasıl ve istemciler bu tür hataları nasıl catch tartışın.  
   
 ## <a name="error-handling-overview"></a>Hata işleme genel bakış  
- Tüm yönetilen uygulamalarda işleme hataları tarafından temsil edilen <xref:System.Exception> nesneleri. SOAP tabanlı uygulamalarda WCF uygulamaları gibi hizmet yöntemleri işleme hata bilgileri SOAP hata iletileri kullanarak iletişim kurar. SOAP, bir hizmet işlemi için meta verileri içinde yer alan ve bu nedenle istemciler daha sağlam veya etkileşimli kendi işlemi yapmak için kullanabileceğiniz bir arıza sözleşmesi oluşturma ileti türlerini hatalarıdır. SOAP hataları XML formundaki istemcilere ifade edilir çünkü ek olarak, WCF uygulamanızı ulaşabileceği artırma herhangi bir SOAP platformda istemcilerin kullanabileceği bir yüksek oranda birlikte çalışabilir türü sistemidir.  
+ Tüm yönetilen uygulamalar, işleme hataları tarafından temsil edilen <xref:System.Exception> nesneleri. SOAP tabanlı uygulamalarda WCF uygulamaları gibi hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar. SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin daha sağlam ve etkileşimli kendi işlemi yapmak için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir. XML formundaki istemcilere SOAP hataları gösterilir, ayrıca, istemciler herhangi bir SOAP platformda kullanabilir, WCF uygulamanızı ulaşabileceği artan bir oranda birlikte çalışabilir tür sistemi olmasıdır.  
   
- WCF uygulamaları hata sistemleri her iki tür altında çalıştığından, istemciye gönderilen herhangi bir yönetilen özel durum bilgi gerekir özel durumlardan SOAP hataları Service uygulamasına dönüştürülür, gönderilen ve hataya özel durumlara WCF istemcileri SOAP hataları dönüştürülür. Çift yönlü istemciler söz konusu olduğunda, istemci sözleşmeleri bir hizmete geri SOAP hataları da gönderebilirsiniz. Her iki durumda da, varsayılan hizmet özel durum davranışları kullanabilir veya açıkça denetleyebilirsiniz olup olmadığını — ve nasıl — özel durumlar için hata iletileri eşlendi.  
+ WCF uygulamaları her iki türde hata sistemleri altında çalıştığından, istemciye gönderilen herhangi bir yönetilen özel durum bilgi gerekir özel SOAP hataları hizmet uygulamasına dönüştürülür, gönderilen ve SOAP hata WCF istemcileri özel durumlar hataya dönüştürüldü. Çift yönlü istemciler söz konusu olduğunda, istemci sözleşmeleri de SOAP hatalarının bir hizmete gönderebilirsiniz. Her iki durumda da, varsayılan hizmet özel davranışları kullanabilirsiniz veya açıkça denetleyebilirsiniz olup olmadığını — ve nasıl — özel durumlar için hata iletileri eşlendi.  
   
- İki tür SOAP hataları gönderilebilir: *bildirilen* ve *bildirilmemiş*. SOAP hataları olan bir işlem olduğu bildirildiğinde bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirten özniteliği. *Bildirilmemiş* bir işlem için sözleşmede SOAP hataları belirtilmedi.  
+ İki tür SOAP hataları gönderilebilir: *bildirilen* ve *bildirilmemiş*. SOAP hataları olan bir işlem olan bildirilmiş bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirten özniteliği. *Bildirilmemiş* SOAP hataları bir işlem için bir sözleşmede belirtilen değil.  
   
- Hizmet işlemleri kullanarak bunların hatalarını bildirme kesinlikle önerilir <xref:System.ServiceModel.FaultContractAttribute> resmi olarak bir istemci bir işlemi normal seyri içinde almayı bekleyebileceğiniz tüm SOAP hataları belirtmek için özniteliği. Ayrıca, bir SOAP hatası istemci bilgilerin açığa çıkmasına en aza indirmek için bilmeniz gereken bilgileri döndürmek önerilir.  
+ Hizmet işlemleri kullanarak kendi hata bildirme önemle tavsiye edilir <xref:System.ServiceModel.FaultContractAttribute> resmi bir istemci bir işlemin normal seyrinde içinde almayı bekleyebilirsiniz tüm SOAP hataları belirtmek için özniteliği. Ayrıca, bir SOAP hatası yalnızca bir istemci, bilgilerin açıklanması en aza indirmek için bilmeniz gereken bilgileri döndürmek önerilir.  
   
- Genellikle, hizmetler (ve çift yönlü istemcileri) başarıyla hata uygulamalarına işleme tümleştirmek için aşağıdaki adımları uygulayın:  
+ Genellikle, hizmetler (ve çift yönlü istemciler) başarıyla hata işleme uygulamalarıyla tümleştirmek için aşağıdaki adımları uygulayın:  
   
--   Özel durumları için özel SOAP hataları eşleyin.  
+-   Özel durum koşulları için özel SOAP hataları eşleyin.  
   
--   İstemcileri ve Hizmetleri gönderebilir ve özel durumlar olarak SOAP hataları alabilirsiniz.  
+-   İstemciler ve hizmetler gönderin ve SOAP hataları özel durumlar olarak alın.  
   
- Ayrıca, WCF istemcileri ve Hizmetleri bildirilmemiş soap hataları hata ayıklama amacıyla kullanabilirsiniz ve varsayılan hata davranışı genişletebilirsiniz. Aşağıdaki bölümlerde, bu görevleri ve kavramları açıklanmaktadır.  
+ Ayrıca, WCF istemcileri ve Hizmetleri bildirilmemiş soap hataları, hata ayıklama amacıyla kullanabileceğiniz ve varsayılan hata davranışına genişletebilirsiniz. Aşağıdaki bölümlerde, bu görevler ve kavramlar açıklanmaktadır.  
   
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP hataları için özel durumları eşleme  
- Hata koşullarını işleme bir işlem oluşturmanın ilk adımı, hangi koşullar altında bir istemci uygulama hataları hakkında bilgi sahibi olmak karar vermektir. Hata koşulları işlevselliklerini belirli bazı işlemler vardır. Örneğin, bir `PurchaseOrder` işlemi artık bir satın alma siparişi başlatmak için izin verilen müşterileri için belirli bilgiler döndürebilir. Diğer durumlarda, aşağıdaki gibi bir `Calculator` hizmet, daha genel `MathFault` bir SOAP hatası tüm bir hizmetin tüm hata koşullarını tanımlamak kullanabilirsiniz. Hizmetinizin istemcileri hata koşullarını tanımlandıktan sonra özel bir SOAP hatası oluşturulabilir ve işlem, ilgili hata koşulu duyduğunuzda, bir SOAP hatası döndürerek olarak işaretlenebilir.  
+ Hata koşullarını işleme bir işlem oluşturmanın ilk adımı, hangi koşullar altında bir istemci uygulama hataları hakkında bilgilendirilmesi karar sağlamaktır. Bazı işlemler işlevselliklerini belirli hata koşulları vardır. Örneğin, bir `PurchaseOrder` işlemi, artık satın alma siparişi başlatmasına izin müşteriler belirli bilgiler döndürebilir. Diğer durumlarda, aşağıdaki gibi bir `Calculator` daha genel hizmet `MathFault` SOAP hatası hizmetin tamamı tüm hata koşulları tanımlamak kullanabilirsiniz. İstemcilerin hizmetinizin hata koşulları tanımlandıktan sonra özel bir SOAP hatası oluşturulabilir ve işlemi, karşılık gelen hata koşulu duyduğunuzda, bir SOAP hatası döndüren olarak işaretlenebilir.  
   
- Hizmet veya istemci geliştirme Bu adım hakkında daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ Hizmet veya istemci geliştirme bu adımla ilgili daha fazla bilgi için bkz: [tanımlama ve belirtme hatası](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
-## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>İstemcileri ve Hizmetleri SOAP hataları özel durumları işleme  
- İşlem hata koşullarını tanımlamak, özel SOAP hataları tanımlama ve bu işlemler bu hataları döndürüyor olarak işaretleme ilk başarılı hata WCF uygulamalarda işlemedeki adımlardır. Sonraki adım düzgün bir şekilde gönderme ve alma bu hatalarının uygulamaktır. Genellikle Hizmetleri istemci uygulamaları hata koşulları hakkında bilgilendirmek için hataları gönderme, ancak çift yönlü istemcileri de Hizmetleri SOAP hataları gönderebilirsiniz.  
+## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>İstemcileri ve Hizmetleri özel durumlar olarak SOAP hataları işleme  
+ İşlem hata koşullarını tanımlayan özel SOAP hataları tanımlama ve bu işlemlerin söz konusu hataları döndürüyor olarak işaretleme ilk başarılı hata WCF uygulamaları işlemeyi adımlardır. Sonraki adım düzgün bir şekilde gönderme ve alma bu hataların uygulamaktır. Genellikle istemci uygulamaları hakkında hata koşullarını bildirmek için hataları Hizmetleri gönderir, ancak çift yönlü istemci hizmetlerini SOAP hataları da gönderebilirsiniz.  
   
- Daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Daha fazla bilgi için [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>Bildirilmemiş SOAP hataları ve hata ayıklama  
- Bildirilen SOAP hataları sağlam, birlikte çalışabilen, dağıtılmış uygulamaları oluşturmak için son derece yararlıdır. Ancak, bazı durumlarda bir bildirilmemiş bir SOAP hatası, bu işlem Web Hizmetleri Açıklama Dili (WSDL) belirtilmeyen bir göndermek hizmet (veya çift yönlü istemci) yararlı olur. Örneğin, bir hizmet geliştirirken, beklenmeyen durumları hata ayıklama bilgileri istemciye göndermek amacıyla faydalı olduğu ortaya çıkabilir. Ayrıca, ayarlayabileceğiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğine `true` iç hizmet işlemi özel durumlar hakkında bilgi edinmek için WCF istemcileri izin vermek için. Hem tek tek hataları gönderme ve hata ayıklama davranışı özelliklerini ayarlama bölümünde açıklanmıştır [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Bildirilen SOAP hataları son derece sağlam, birlikte çalışabilir, dağıtılmış uygulamalar oluşturmak için yararlıdır. Ancak, bazı durumlarda bir bildirilmemiş bir SOAP hatası, bu işlem Web Hizmetleri Açıklama Dili (WSDL) belirtilmeyen bir göndermek hizmet (veya çift yönlü istemci) yararlı olur. Örneğin, bir hizmet geliştirirken, beklenmeyen durumları hata ayıklama amacıyla istemciye bilgileri göndermek için faydalı olan ortaya çıkabilir. Ayrıca, ayarlayabileceğiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true` iç hizmet işlemi özel durumları hakkında daha fazla bilgi edinmek için WCF istemcileri izin vermek için. Hem tek hataları gönderme ve hata ayıklama davranışı özelliklerini ayarlamak bölümünde açıklanmıştır [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 > [!IMPORTANT]
->  Yönetilen özel durumlar iç uygulama bilgileri kullanıma sunabileceğinden ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` kişisel dahil olmak üzere iç hizmet işlemi özel durumlar hakkında bilgi edinmek için WCF istemcileri izin verebilirsiniz Kişisel ya da diğer hassas bilgiler.  
+>  Yönetilen özel durumlar iç uygulama bilgileri kullanıma sunabileceğinden, ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` kişisel dahil olmak üzere iç hizmet işlemi özel durumları hakkında daha fazla bilgi edinmek için WCF istemcileri izin verebilirsiniz veya diğer hassas bilgilerin.  
 >   
->  Bu nedenle, ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` geçici olarak bir hizmet uygulaması hata ayıklamak için yalnızca bir yolu olarak önerilir. İşlenmemiş döndüren bir yöntem yönetilen özel durumları bu şekilde ek olarak, WSDL sözleşmesi içermiyor <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler, bilinmeyen bir SOAP hatası olasılığını beklediğiniz gerekir (WCF istemcilere döndürülen <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesneleri) hata ayıklama bilgileri düzgün bir şekilde elde edilir.  
+>  Bu nedenle, ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` geçici olarak bir hizmet uygulaması hata ayıklamak için yalnızca bir yolu olarak önerilir. Bu şekilde özel durum işlenmemiş döndüren bir yöntem yönetilen ek olarak, WSDL sözleşmesini içermiyor <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler, bilinmeyen bir SOAP hatası olasılığını beklemeniz gerekir (WCF istemcileri olarak döndürülen <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesneleri) düzgün bir şekilde hata ayıklama bilgileri edinmek için.  
   
-## <a name="customizing-error-handling-with-ierrorhandler"></a>Hata işleme ile IErrorHandler özelleştirme  
- Uygulama düzeyi özel durum gerçekleştiğinde istemciye yanıt iletisini özelleştirme veya yanıt iletisi döndürüldükten sonra bazı özel işlem yapmak, uygulamak için özel gereksinimleri varsa <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> arabirimi.  
+## <a name="customizing-error-handling-with-ierrorhandler"></a>Hata işleme ile Ierrorhandler özelleştirme  
+ Uygulama düzeyinde özel bir durum gerçekleştiğinde, istemciye yanıt iletisini özelleştirme veya yanıt iletisi döndürüldükten sonra bazı özel işlem yapmak, uygulamak için özel gereksinimleriniz varsa, <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> arabirimi.  
   
-## <a name="fault-serialization-issues"></a>Hataya seri hale getirme konuları  
- Hatalı sözleşme çıkarılırken WCF ilk hataya sözleşme adı SOAP iletisi hataya sözleşme türüyle eşleştirmeye çalışır. Ardından listesi arar tam bir eşleşme bulamazsa, uyumlu bir türü için alfabetik sırada kullanılabilir hata sözleşmeleri. İki arıza durumunda sözleşmeleri (biridir, başka bir alt sınıfı gibi) uyumlu türleridir yanlış türde seri durumundan hata için kullanılabilir. Bu yalnızca, hatalı sözleşme adı, ad alanı ve eylem belirtmiyor oluşur. Bu sorunun oluşmasını önlemek için her zaman tam adı, ad alanı ve eylem özniteliklerinin belirterek hataya sözleşmeleri nitelemek. Paylaşılan bir temel sınıfından türetilen ilgili hata sözleşmeleri sayısı tanımladıysanız, ayrıca tüm yeni üyeleriyle işaretlemek emin olun `[DataMember(IsRequired=true)]`. Bunun hakkında daha fazla bilgi için `IsRequired` özniteliği bakın, <xref:System.Runtime.Serialization.DataMemberAttribute>. Bu, uyumlu bir türde bir taban sınıf engelleyen ve doğru türetilmiş türe seri durumdan çıkarılacak hataya zorlayabilirsiniz.  
+## <a name="fault-serialization-issues"></a>Hata seri hale getirme konuları  
+ Hatalı sözleşme işlenirken WCF ilk SOAP iletisi hata sözleşme adı hataya sözleşme türüyle eşleştirmeye çalışır. Ardından listesini arar tam bir eşleşme bulamazsa, uyumlu bir tür için alfabetik sırayla kullanılabilir hata daraltır. İki arıza durumunda sözleşmelerinin (biridir, başka bir alt örneğin) uyumlu türleridir yanlış türde hata seri için kullanılabilir. Hatalı sözleşme adı, ad alanı ve eylem belirtmezse yalnızca gerçekleşir. Bu sorunun oluşmasını önlemek için her zaman tam adı, ad alanı ve eylem öznitelikleri belirterek hata sözleşmelerine nitelendirin. İlgili hata sözleşmelerine paylaşılan bir temel sınıftan türetilmiş bir dizi tanımladıysanız, ayrıca tüm yeni üyeleri ile işaretlenecek emin olun `[DataMember(IsRequired=true)]`. Bunun hakkında daha fazla bilgi için `IsRequired` özniteliği bakın <xref:System.Runtime.Serialization.DataMemberAttribute>. Uyumlu bir türde bir temel sınıf engellemek ve doğru türetilmiş türe seri durumdan hata zorlayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.ServiceModel.FaultContractAttribute>  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.XmlSerializerFormatAttribute>  
- <xref:System.ServiceModel.FaultContractAttribute>  
- <xref:System.ServiceModel.CommunicationException>  
- <xref:System.ServiceModel.FaultContractAttribute.Action%2A>  
- <xref:System.ServiceModel.FaultException.Code%2A>  
- <xref:System.ServiceModel.FaultException.Reason%2A>  
- <xref:System.ServiceModel.FaultCode.SubCode%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
- [Hataları Tanımlama ve Belirtme](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.ServiceModel.FaultContractAttribute>
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.XmlSerializerFormatAttribute>
+- <xref:System.ServiceModel.FaultContractAttribute>
+- <xref:System.ServiceModel.CommunicationException>
+- <xref:System.ServiceModel.FaultContractAttribute.Action%2A>
+- <xref:System.ServiceModel.FaultException.Code%2A>
+- <xref:System.ServiceModel.FaultException.Reason%2A>
+- <xref:System.ServiceModel.FaultCode.SubCode%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
+- [Hataları Tanımlama ve Belirtme](../../../docs/framework/wcf/defining-and-specifying-faults.md)

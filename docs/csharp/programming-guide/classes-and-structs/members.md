@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592856"
 ---
 # <a name="members-c-programming-guide"></a>Üyeler (C# Programlama Kılavuzu)
 Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyelere sahiptir. Sınıfında, devralma hiyerarşisindeki tüm sınıflarda bildirilen tüm üyeleri (oluşturucular ve sonlandırıcılar dışında) bir sınıfın üyeleri bildirilen tüm üyeleri içerir. Temel sınıflardaki özel üyeler devralınır ancak türetilmiş sınıflardan erişilebilir değildir.  
@@ -31,17 +31,17 @@ Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyel
 |[Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Sonlandırıcılar nadiren C# dilinde kullanılır. Bunlar, nesne bellekten kaldırılmak üzereyken çalışma zamanı yürütme alt yapısı tarafından çağrılan yöntemlerdir. Bu yöntemler, genellikle yayınlanması gereken tüm kaynakların uygun şekilde işlendiğinden emin olmak için kullanılır.|  
 |[İç içe Geçmiş Türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|İç içe olan türler, başka bir türde bildirilen türlerdir. İç içe türler genellikle yalnızca bunları içeren türler tarafından kullanılan nesneleri tanımlamak için kullanılır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
-- [Olaylar](../../../csharp/programming-guide/events/index.md)  
-- [İç içe Geçmiş Türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
+- [Olaylar](../../../csharp/programming-guide/events/index.md)
+- [İç içe Geçmiş Türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [Aşırı Yüklenebilir İşleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

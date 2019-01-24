@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592594"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
@@ -243,7 +243,7 @@ ms.locfileid: "48842794"
 
  İşlemeleri için yanıt nesnelere neden zaman için Eylemsizliği görünür nesne olabilir. Bu, nesnelerinizi fiziksel dünyaya benzetimini yapabilirsiniz. Örneğin, sabit gönderirseniz bir tablo arasında bir kitap gönderdiğinizde bu yayın yeterince kitap devam eder. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcının parmağınızı serbest sonra nesneyi düzenleme olayları yükselterek bu davranışını benzetmekte sağlar.
 
- Taşıma, yeniden boyutlandırma ve nesneyi döndürmek kullanıcının sağlayan bir uygulama oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: uygulamanızın ilk dokunmatik uygulamanızı oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Taşıma, yeniden boyutlandırma ve nesneyi döndürmek kullanıcının sağlayan bir uygulama oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: İlk dokunmatik uygulamanızı oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  <xref:System.Windows.UIElement> Aşağıdaki olayları düzenleme tanımlar.
 
@@ -390,5 +390,9 @@ ms.locfileid: "48842794"
 
  Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework öğeleri ve daha ayrıntılı olarak olay yönlendirme. Daha fazla bilgi için şu genel bakışlara bakın [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md), [odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md), [temel öğelere genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [WPFiçindeağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md), ve [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
- [Odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md) [komut vermeye genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md) [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [temel öğelere genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [özellikleri](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)

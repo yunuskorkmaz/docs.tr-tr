@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: saat dilimlerini katıştırılmış kaynağa kaydetme'
+title: 'Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592880"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Nasıl yapılır: saat dilimlerini katıştırılmış kaynağa kaydetme
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme
 
 Genellikle saat dilimiyle uyumlu bir uygulama belirli bir saat dilimini gerektirir. Ancak, çünkü tek kullanılabilirliğini <xref:System.TimeZoneInfo> yerel sisteminin kayıt defterinde depolanan bilgileri bağımlı nesneler, Alışıldığı bile kullanılabilir saat dilimi yok. Ayrıca, özel saat dilimleri hakkında bilgi örneği kullanarak <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi ile diğer saat dilimi bilgileri kayıt depolanmaz. Gerektiğinde bu saat dilimlerini kullanılabilir olmasını sağlamak için seri hale getirme tarafından kaydedin ve daha sonra seri durumdan çıkarılırken tarafından geri yükleyebilirsiniz.
 
@@ -37,9 +37,9 @@ Uygulama ile derlenmiş olan bir kaynak dosyasına ek olarak, çeşitli veri dep
 
 1. Var olan bir saat dilimi almak veya yeni bir saat dilimi oluşturun.
 
-   Var olan bir saat dilimi almak için bkz: [nasıl yapılır: ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md) ve [nasıl yapılır: bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Var olan bir saat dilimi almak için bkz: [nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md) ve [nasıl yapılır: Bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Yeni bir saat dilimi oluşturmak amacıyla bir aşırı yüklemelerinden birini çağırın <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Yeni bir saat dilimi oluşturmak amacıyla bir aşırı yüklemelerinden birini çağırın <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Çağrı <xref:System.TimeZoneInfo.ToSerializedString%2A> saat diliminin veri içeren bir dize oluşturmak için yöntemi.
 
@@ -85,6 +85,6 @@ Bu örnek gerektirir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-* [Saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
-* [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
+- [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

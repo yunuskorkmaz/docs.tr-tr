@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583541"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) numaralandırma örnekleri
 SQL Server, geçerli ağ içinde SQL Server örneklerini bulmak için uygulamaların izin verir. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayarak uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür olan tüm sunucular hakkında bilgiler içeren. Bu tablo, ağ üzerinde yer alan bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerinde kullanılabilen tüm sunucuları içeren aşağı açılan liste genişletir kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikleri** iletişim kutusu. Görüntülenen sonuçlar her zaman eksiksiz değildir.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**SunucuAdı**|Sunucusunun adı.|  
 |**InstanceName**|Sunucu örneğinin adı. Sunucu varsayılan örnek olarak çalışıyorsa boş.|  
 |**IsClustered**|Sunucu bir kümenin parçası olup olmadığını belirtir.|  
-|**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Sabit listesi sınırlamaları  
  Tüm kullanılabilir sunucular olabilir ya da listelenmez. Liste, zaman aşımları ve ağ trafiği gibi faktörlere bağlı olarak değişebilir. Bu iki ardışık çağrılarda farklı olacak şekilde liste neden olabilir. Yalnızca aynı ağ üzerinde sunucuları listelenir. Yayın paketleri genellikle yönlendiriciler, listelenen bir sunucu göremeyebilirsiniz neden olduğu geçiş olmaz ancak çağrıları arasında tutarlı olur.  
@@ -124,6 +124,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

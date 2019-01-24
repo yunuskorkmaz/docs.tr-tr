@@ -9,30 +9,30 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 8b207ca931d2202f7a35ae3cd16e325ec295ef5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba2f98d262f5c43dbd0c07d356556cdc3ec4b8dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589759"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Nasıl yapılır: Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma
-Bu örnek çağırarak devralınan bir sınıftan gelen varsayılan bağımlılık özelliği meta verileri geçersiz kılmak nasıl gösterir <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi ve türe özgü meta veriler sağlar.  
+Bu örnek, devralınan bir sınıftan çağırarak gelen varsayılan bağımlılık özelliği meta verileri geçersiz kılma işlemi gösterilmektedir <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi ve türe özgü meta veriler sağlar.  
   
 ## <a name="example"></a>Örnek  
- Tanımlayarak kendi <xref:System.Windows.PropertyMetadata>, bir sınıf kendi varsayılan değeri ve özellik sistem geri aramaları gibi bağımlılık özelliği davranışlarını tanımlayabilir. Pek çok bağımlılık özelliği sınıfları kendi kayıt işleminin bir parçası belirlenen varsayılan meta verilere zaten var. Bu parçası olan bağımlılık özellikleri içerir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Böylece meta veriler üzerinden değiştirilebilir özelliği özelliklerini herhangi bir alt kümesi özgü gereksinimler ile eşleşir, sınıf devralma üzerinden bağımlılık özelliğini devralan bir sınıf orijinal meta verileri geçersiz kılabilirsiniz.  
+ Tanımlayarak kendi <xref:System.Windows.PropertyMetadata>, bir sınıf kendi varsayılan değeri ve özellik sistemi geri aramaları gibi bağımlılık özelliği davranışları tanımlayabilirsiniz. Birçok bağımlılık özelliği sınıfları, kullanıcıların kayıt işleminin bir parçası oluşturulan varsayılan meta verileri zaten var. Bu parçası olan bağımlılık özelliklerini içeren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Bağımlılık özelliği, sınıf devralma yoluyla devralınan bir sınıf, meta veriler üzerinden değiştirilebilir özelliği özelliklerini herhangi bir alt sınıf özgü gereksinimler eşleşir, böylece özgün metaverileri gereğince geçersiz kılabilirsiniz.  
   
- Bağımlılık özelliği üzerinde meta verileri geçersiz kılma (özelliği kaydeden nesnelerin belirli örneklerini örneklenen süre karşılık gelir) özellik sistemi tarafından kullanımda yerleştirilmiş o özellik önce yapılmalıdır. Çağrılar <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> olarak kendisini sağlar türü statik oluşturucular içinde gerçekleştirilmelidir `forType` parametresinin <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. Sahibi türünün örneklerini mevcut sonra meta verileri değiştirmeye çalışırsa, bu özel durumları oluşturmaz, ancak özellik sistemi içinde tutarsız davranışlara neden olur. Ayrıca, meta veriler yalnızca bir kez başına türü geçersiz kılınabilir. Aynı türde meta verilerini geçersiz kılmak için sonraki denemeler bir özel durum oluşturacak.  
+ Bağımlılık özelliği meta verileri geçersiz kılma kullanın (Bu özelliği kaydetme nesnelerin belirli örneklerini örneği saati karşılık gelir) özellik sistemi tarafından yerleştirilen bu özelliği önce yapılmalıdır. Çağrılar <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> olarak kendisini sağlayan bir tür statik oluşturucuları içinde gerçekleştirilmelidir `forType` parametresinin <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. Sahip türünün örneği varolduğunda meta verileri değiştirmeye çalışırsanız, bu özel durumları oluşturmaz, ancak özellik sistemindeki tutarsız davranışlara neden olur. Ayrıca, meta veriler yalnızca bir kez başına türü geçersiz kılınabilir. Sonraki denemeler aynı tür meta verileri geçersiz kılma için bir özel durum oluşturacak.  
   
- Aşağıdaki örnekte, özel bir sınıf `MyAdvancedStateControl` için sağlanan meta verileri geçersiz kılar `StateProperty` tarafından `MyAdvancedStateControl` yeni özellik meta verileri ile. Örneği için varsayılan değeri `StateProperty` artık `true` özelliği sorgulanan zaman yeni oluşturulan üzerinde `MyAdvancedStateControl` örneği.  
+ Aşağıdaki örnekte, özel bir sınıf `MyAdvancedStateControl` için sağlanan meta verileri geçersiz kılar `StateProperty` tarafından `MyAdvancedStateControl` ile yeni özellik meta verileri. Örneği için varsayılan değeri `StateProperty` artık `true` özelliği sorgulanan zaman yeni oluşturulmuş üzerinde `MyAdvancedStateControl` örneği.  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
 [!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.DependencyProperty>  
- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.DependencyProperty>
+- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

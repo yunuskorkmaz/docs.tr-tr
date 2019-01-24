@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592438"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic İşlem Desteğini Yapılandırma
 Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTransaction (WS-AT) desteği nasıl yapılandıracağınız açıklanır.  
@@ -54,7 +54,7 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
 ### <a name="creating-and-exporting-certificates"></a>Oluşturma ve sertifika dışarı aktarma  
  Bu yordam sertifikalar MMC ek bileşenini gerektirir. Ek bileşenini başlangıç/çalıştırma menüsünü açarak, "mmc" giriş kutusuna ve Tamam'tuşuna basarak erişilebilir. Ardından **Konsol1** penceresinde gidin **Dosya/Ekle / Kaldır** ek bileşenini Ekle ve seçin **sertifikaları** gelen **kullanılabilir tek başına Ek bileşen** listesi. Son olarak, seçin **bilgisayar hesabı** yönetip tıklayın **Tamam**. **Sertifikaları** düğümü ek bileşenini konsolda görüntülenir.  
   
- Güven oluşturmak için gerekli sertifikaları zaten sahip olması gerekir. Oluşturun ve aşağıdaki adımları önce yeni sertifika yükleme konusunda bilgi almak için bkz: [nasıl yapılır: WCF geliştirme sırasında geçici istemci sertifikalarını yükleme ve oluşturma](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ Güven oluşturmak için gerekli sertifikaları zaten sahip olması gerekir. Oluşturun ve aşağıdaki adımları önce yeni sertifika yükleme konusunda bilgi almak için bkz: [nasıl yapılır: Oluşturma ve yükleme geçici istemci sertifikaları WCF'de geliştirme sırasında](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  Makine A'da sertifikalar MMC ek bileşenini alma LocalMachine\MY (Kişisel düğümü) ve LocalMachine\ROOT deposu (güvenilen kök sertifika yetkilisi düğümü) mevcut sertifikayı (certA) kullanarak. Belirli bir düğüme sertifikayı içeri aktarmak için düğümünü sağ tıklatın ve seçin **tüm görevler/içeri aktarma**.  
   
@@ -118,6 +118,6 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
   
 -   31: ayrıntılı  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

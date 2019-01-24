@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın'
+title: 'Nasıl yapılır: Bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 7d40011e701525912c4406d1ab35712ee21009da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fffc0efaea200a7b0aa26b0f273b3c0d99338bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586559"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuda hizmet işlemleri tanımlanan yöntemler kullanıma sunar. Hizmet işlemleri sunucuda tanımlanmış bir yönteme bir URI üzerinden erişim sağlamak için bir veri hizmeti sağlar. Bir hizmet işlemi tanımlamak için uygulama [`WebGet]` veya `[WebInvoke]` özniteliği yöntemi. Sorgu işleçleri desteklemek için hizmet işlemi döndürmelidir bir <xref:System.Linq.IQueryable%601> örneği. Hizmet işlemleri, altta yatan veri kaynağını aracılığıyla erişebilir <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> özelliği <xref:System.Data.Services.DataService%601>. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: Bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuda hizmet işlemleri tanımlanmış olan yöntemleri kullanıma sunar. Hizmet işlemlerine izin ver sunucuda tanımlı bir yönteme bir URI aracılığıyla erişim sağlamak bir veri hizmeti. Bir hizmet işlemi tanımlamak için uygulama [`WebGet]` veya `[WebInvoke]` özniteliğini yöntemine. Sorgu işleçleri desteklemek için hizmet işlemi döndürmelidir bir <xref:System.Linq.IQueryable%601> örneği. Hizmet işlemleri, temel alınan veri kaynağı aracılığıyla erişebilir <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> özellikte <xref:System.Data.Services.DataService%601>. Daha fazla bilgi için [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
- Bu konudaki örnek adlı bir hizmet işlemi tanımlar `GetOrdersByCity` bir filtre uygulanmış döndüren <xref:System.Linq.IQueryable%601> örneğini `Orders` ve ilgili `Order_Details` nesneleri. Örnek erişen <xref:System.Data.Objects.ObjectContext> Northwind örnek veri hizmeti için veri kaynağı örneği. Bu hizmeti tamamladığınızda oluşturulan [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek adlı bir hizmet işlemi tanımlar `GetOrdersByCity` filtrelenmiş bir döndüren <xref:System.Linq.IQueryable%601> örneğini `Orders` ve ilgili `Order_Details` nesneleri. Erişen örnek <xref:System.Data.Objects.ObjectContext> Northwind örnek veri hizmeti için veri kaynağı örneği. Bu hizmet, tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Northwind veri hizmetinde bir hizmet işlemi tanımlamak için  
   
-1.  Northwind veri hizmeti projesi Northwind.svc dosyasını açın.  
+1.  Northwind verileri hizmeti projesindeki Northwind.svc dosyasını açın.  
   
-2.  İçinde `Northwind` sınıfı, adlı bir hizmet işlemi yöntemi tanımlayın `GetOrdersByCity` gibi:  
+2.  İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `GetOrdersByCity` gibi:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
-3.  İçinde `InitializeService` yöntemi `Northwind` sınıfı, hizmet işlemi erişimi etkinleştirmek için aşağıdaki kodu ekleyin:  
+3.  İçinde `InitializeService` yöntemi `Northwind` sınıf, hizmet işlemi erişimi etkinleştirmek için aşağıdaki kodu ekleyin:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 ### <a name="to-query-the-getordersbycity-service-operation"></a>Sorgu GetOrdersByCity hizmet işlemi  
   
--   Bir Web tarayıcısında aşağıdaki örnekte tanımlanan hizmet işlemini çağırmak için aşağıdaki URI'ler birini girin:  
+-   Bir Web tarayıcısında aşağıdaki örnekte tanımlanan hizmet işlemini çağırmak için aşağıdaki bir URI'leri birini girin:  
   
     -   `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'`  
   
@@ -45,13 +45,13 @@ ms.locfileid: "33360889"
     -   `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek adlı bir hizmet işlemi uygulayan `GetOrderByCity` Northwind veri hizmeti. Bu işlem bir dizi dönmek için ADO.NET Entity Framework kullanan `Orders` ve ilgili `Order_Details` olarak nesneleri bir <xref:System.Linq.IQueryable%601> örnek tabanlı üzerinde sağlanan şehir adı.  
+ Aşağıdaki örnekte adlı bir hizmet işlemlerinizi `GetOrderByCity` Northwind verileri hizmeti üzerinde. Bu işlem, bir dizi döndürmek için ADO.NET varlık çerçevesi kullanır. `Orders` ve ilgili `Order_Details` olarak nesneleri bir <xref:System.Linq.IQueryable%601> örnek tabanlı üzerinde sağlanan şehir adı.  
   
 > [!NOTE]
->  Sorgu işleçleri, bu hizmet işlemi noktadaki desteklenir, yöntem döndürdüğünden bir <xref:System.Linq.IQueryable%601> örneği.  
+>  Sorgu işleçleri, bu hizmet işlemi uç noktasında desteklenir, yöntemin döndürdüğü için bir <xref:System.Linq.IQueryable%601> örneği.  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperation)]
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

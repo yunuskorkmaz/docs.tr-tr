@@ -7,19 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: 6ed1cc33b8b9a694669bb506c81a2c3b4d87fe61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593998"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
-<xref:System.Windows.Controls.FlowDocumentScrollViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> kayan bir kapsayıcısında içerik. İle karşılaştırın <xref:System.Windows.Controls.FlowDocumentPageViewer>, bir sayfa başına temelinde içeriği görüntüler.  
+<xref:System.Windows.Controls.FlowDocumentScrollViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> kaydırma kapsayıcısındaki içerik. İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentPageViewer>, sayfa başına temelinde içeriği görüntüler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Documents.FlowDocument>  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Documents.FlowDocument>
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

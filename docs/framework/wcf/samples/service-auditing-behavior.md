@@ -2,20 +2,20 @@
 title: Hizmet Denetleme Davranışı
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: ae190be48a20af5c108e56c6b0fd7965e39f8b66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574956"
 ---
 # <a name="service-auditing-behavior"></a>Hizmet Denetleme Davranışı
-Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hizmet işlemleri sırasında güvenlik olaylarının denetimini etkinleştirmek için. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İstemci ve hizmet kullanılarak yapılandırılmış [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ayarlandığından `Message` ve `clientCredentialType` ayarlandığından `Windows`. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
+Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştirme. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet ve istemci kullanarak yapılandırılmış [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ayarlanmış `Message` ve `clientCredentialType` ayarlanmış `Windows`. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Hizmet yapılandırma dosyası kullanan `serviceSecurityAudit` denetimi yapılandırmak amacıyla öğesi.  
+ Hizmet yapılandırma dosyasını kullanan `serviceSecurityAudit` denetimini yapılandırmak için öğesi.  
   
 ```xml  
 <behaviors>  
@@ -32,24 +32,24 @@ Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Description.S
 </behaviors>  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Konsol penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Konsol penceresinde istemci kapatmak için ENTER tuşuna basın.  
   
- Sonuçta elde edilen denetim günlüklerini Olay Görüntüleyicisi'ni çalıştırarak görülebilir. Varsayılan olarak, Windows XP Windows Server 2003 ve Windows Vista üzerinde uygulama günlüğünde denetim olaylarını görülebilir denetim olaylarını güvenlik günlüğüne görülebilir. Windows Server 2008 ve Windows 7 üzerinde denetim olayları uygulamaları ve Hizmetleri günlüklerinde görülebilir. Denetim olaylarının konumu ayarlayarak belirtilebilir `auditLogLocation` özniteliği için "Uygulama" veya "Güvenlik". Daha fazla bilgi için bkz: [nasıl yapılır: denetim güvenlik olaylarını](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Nesne erişimi etkinleştir "Başarılı" ve "Başarısız" için ayarlanmalıdır LocalSecurityPolicy -> güvenlik günlüğüne yazılan olaylar durumunda.  
+ Sonuçta elde edilen denetim günlüklerini, Olay Görüntüleyicisi'ni çalıştırarak görülebilir. Varsayılan olarak, Windows XP, Windows Server 2003 ve Windows Vista sırasında uygulama günlüğünde denetim olaylarının görülebilir denetim olayları güvenlik günlüğünde görülebilir. Windows Server 2008 ve Windows 7, denetim olayları uygulamaları ve Hizmetleri günlüklerinde görülebilir. Denetim olayları konumunu ayarlayarak belirtilebilir `auditLogLocation` özniteliği için "Uygulama" veya "Güvenlik". Daha fazla bilgi için [nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Olayları, nesne erişimi etkinleştirmek için "Başarılı" ve "Başarısız" ayarlanmalıdır LocalSecurityPolicy -> güvenlik günlüğüne yazılır  
   
- Olay günlüğü bakarken olaylarını denetle "ServiceModel denetim 3.0.0.0" kaynağıdır. Hizmet yetkilendirme denetim kayıtlarının "ServiceAuthorization" kategorisi bulunurken ileti kimlik doğrulama denetim kayıtlarının "MessageAuthentication" kategorisi vardır.  
+ Olay günlüğüne baktığımda denetim olayları "ServiceModel denetim 3.0.0.0" kaynağıdır. Hizmet yetkilendirme Denetim kayıtlarını "ServiceAuthorization" kategorisi ileti kimlik doğrulama Denetim kayıtlarını "MessageAuthentication" kategorisi bulunur.  
   
- İleti, ileti olup süresi doldu ve istemci hizmete olup doğrulanabilir müdahale olup olmadığını ileti kimlik doğrulama denetim olaylarını kapsar. Kimlik doğrulaması başarılı oldu veya istemci kimlikle birlikte başarısız hakkında bilgi sağlar ve uç nokta ileti ileti ile ilişkili eylem birlikte gönderildi.  
+ İleti, ileti olup süresi doldu ve istemci hizmeti için olup olmadığını doğrulanabilir oynanmış olmadığını ileti kimlik doğrulaması olaylarının kapsar. Bunlar kimlik doğrulaması başarılı oldu veya istemci kimliği ile birlikte başarısız hakkında bilgi sağlar ve uç nokta ileti birlikte iletiyle ilişkili eylemi için gönderildi.  
   
- Hizmet yetkilendirme denetim olaylarını hizmet Yetkilendirme Yöneticisi tarafından yapılan yetkilendirme kararı kapsar. Olup Yetkilendirme başarılı hakkında bilgi sağlamak veya istemci kimlikle birlikte başarısız oldu, uç nokta ileti, ileti, gelen oluşturulan yetkilendirme Bağlam tanıtıcısı ile ilişkili eylem gönderildi gelen ileti ve erişim kararı Yetkilendirme Yöneticisi'ni türü.  
+ Hizmet yetkilendirme denetim olaylarını hizmet Yetkilendirme Yöneticisi tarafından yapılan yetkilendirme kararı kapsar. Yetkilendirme başarılı olup olmadığını hakkında bilgi sağladıkları veya istemci kimliği ile birlikte başarısız oldu, uç nokta ileti, ileti öğesinden oluşturulan yetkilendirme Bağlam tanıtıcısı ile ilişkili eylem gönderildi gelen ileti ve erişim kararı Yetkilendirme Yöneticisi türünü.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

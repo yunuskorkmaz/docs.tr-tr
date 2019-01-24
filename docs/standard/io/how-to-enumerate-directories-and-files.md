@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: Dizinleri ve dosyaları numaralandırma'
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,61 +10,59 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580466"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma
-Dizinleri ve dosyaları numaralandırma bir sıralanabilir koleksiyonun adlarının dizisini döndüren yöntemler kullanarak. Numaralandırılabilir bir koleksiyonunu döndüren yöntemler de kullanabilirsiniz <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, veya <xref:System.IO.FileSystemInfo> nesneleri. Dizin ve dosyaların büyük koleksiyonlarla çalışıyorsanız numaralandırılabilir koleksiyonları diziler daha iyi performans sağlar.  
+# <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: Dizinleri ve dosyaları numaralandırma
+Dizin ve dosyaların büyük koleksiyonlarla çalışıyorsanız numaralandırılabilir koleksiyonları diziler daha iyi performans sağlar. Dizinleri ve dosyaları numaralandırma için numaralandırılabilir bir dizin veya dosya adları topluluğu döndüren yöntemler kullanın veya kendi <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, veya <xref:System.IO.FileSystemInfo> nesneleri.  
   
- Bu yöntemlerden alınan numaralandırılabilir koleksiyonları sağlamak için de kullanabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> parametresi koleksiyonun oluşturucular için sınıflar gibi <xref:System.Collections.Generic.List%601> sınıfı.  
+Arama yapın ve yalnızca dizinleri ve dosyaları adlarını dönmek istiyorsanız, numaralandırma yöntemlerini kullanan <xref:System.IO.Directory> sınıfı. İsterseniz arama ve diğer özelliklerini dizinleri ve dosyaları iade kullanmak <xref:System.IO.DirectoryInfo> ve <xref:System.IO.FileSystemInfo> sınıfları.  
   
- Yalnızca dizinleri ve dosyaları adlarını almak istiyorsanız, numaralandırma yöntemlerini kullanan <xref:System.IO.Directory> sınıfı. Dizinleri ve dosyaları diğer özelliklerini almak istediğiniz kullanırsanız <xref:System.IO.DirectoryInfo> ve <xref:System.IO.FileSystemInfo> sınıfları.  
+Bu yöntemler numaralandırılabilir koleksiyonları kullanabileceğiniz <xref:System.Collections.Generic.IEnumerable%601> parametre koleksiyonu sınıfların oluşturucuları için ister <xref:System.Collections.Generic.List%601>.  
   
- Aşağıdaki tabloda, numaralandırılabilir koleksiyonları döndüren yöntemler için bir kılavuz sağlar.  
+Dosyalar ve dizinler numaralandırılabilir koleksiyonları döndüren yöntemler aşağıdaki tabloda özetlenmiştir:  
   
-|Numaralandırılacak|Döndürülecek bir sıralanabilir koleksiyonun|Kullanılacak yöntemi|  
+|Arama ve döndürmek için|Yöntemi kullanın|  
 |------------------|-------------------------------------|-------------------|  
-|Dizinleri|Dizin adları|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-||Dizin bilgilerini (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-|Dosyalar|Dosya adları|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
-||Dosya bilgileri (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
-|Dosya sistemi bilgileri|Dosya sistemi girişleri|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
-||Dosya sistemi bilgileri (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|Dizin adları|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|Dizin bilgilerini (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|Dosya adları|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|Dosya bilgileri (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|Dosya sistemi giriş adları|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+|Dosya sistemi giriş bilgileri (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|Dizin ve dosya adları |<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+
+> [!NOTE]
+> Kullanarak bir üst dizin dizinlerindeki tüm dosyaları hemen numaralandırabilirsiniz rağmen <xref:System.IO.SearchOption.AllDirectories> seçeneği isteğe bağlı <xref:System.IO.SearchOption> numaralandırma <xref:System.UnauthorizedAccessException> hata yapma sabit listesi eksik. İlk dizinleri numaralandırma ve ardından dosyaları numaralandırma bu özel durumları yakalayabilir.  
   
- Kullanarak bir üst dizin dizinlerindeki tüm dosyaları hemen numaralandırabilirsiniz rağmen <xref:System.IO.SearchOption.AllDirectories> arama seçeneği tarafından sağlanan <xref:System.IO.SearchOption> numaralandırma, yetkisiz erişim özel durumlar (<xref:System.UnauthorizedAccessException>) sabit listesine neden olabilir tamamlanmamış olabilir. Bu özel durumlar olası bunları catch ve ilk dizinleri numaralandırma ve ardından dosyaları numaralandırma devam edin.  
+## <a name="examples-use-the-directory-class"></a>Örnekler: Dizin sınıfı kullanın  
   
-### <a name="to-enumerate-directory-names"></a>Dizin adlarını listelemek için  
+Aşağıdaki örnekte <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> belirtilen yolda gidemez adlarının bir listesini almak için yöntemi.  
+
+[!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
+[!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
+
+Aşağıdaki örnekte <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> yöntemi için yinelemeli olarak bir dizin ve belirli bir desenle eşleşen alt dizinlerdeki tüm dosya adlarını numaralandırır. Her dosyanın her bir satır okur ve dosya adlarını ve yollarını belirtilen bir dizeyi içeren satırları gösterir.
+
+[!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
+[!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
--   Kullanım <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> belirtilen yoldaki gidemez adlarının bir listesini almak için yöntemi.  
+## <a name="examples-use-the-directoryinfo-class"></a>Örnekler: DirectoryInfo sınıfı kullanın  
   
-     [!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
-     [!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
+Aşağıdaki örnekte <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> yöntemi üst düzey dizinler koleksiyonu listelemek için <xref:System.IO.FileSystemInfo.CreationTimeUtc> bazı önceki <xref:System.DateTime> değeri.  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs)]
+[!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb)]  
   
-### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a>Dosya adlarında bir dizin ve alt dizinleri numaralandırma  
-  
--   Kullanım <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> bir dizin ve (isteğe bağlı) alt dizinlerinde arama yapın ve belirli bir arama deseniyle eşleşen dosya adlarının bir listesini almak için yöntemi.  
-  
-     [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
-     [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-directoryinfo-objects"></a>DirectoryInfo nesnelerden oluşan bir koleksiyon numaralandırma  
-  
--   Kullanım <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> en üst düzey dizinler koleksiyonu almak için yöntemi.  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Tüm dizinlerde FileInfo nesnelerden oluşan bir koleksiyon numaralandırma  
-  
--   Kullanım <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> tüm dizinlerde belirtilen arama bir desenle eşleşen dosyaları koleksiyonu almak için yöntemi. Bu örnekte, ilk olası yetkisiz erişim özel durumları yakalamak için üst düzey dizinleri numaralandırır ve ardından dosyaları listeler.  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
+Aşağıdaki örnekte <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> tüm listelemek için yöntemi dosyaları <xref:System.IO.FileInfo.Length> 10 MB'ı aşıyor. Bu örnekte, ilk olası yetkisiz erişim özel durumları yakalamak için üst düzey dizinleri numaralandırır ve ardından dosyaları listeler.  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
+[!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+[Dosya ve akış g/ç](../../../docs/standard/io/index.md)

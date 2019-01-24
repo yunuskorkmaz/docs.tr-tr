@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587521"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation Metodu
-Profili oluşturuluyor ortak dil çalışma zamanı (CLR) sürüm bilgilerini sağlar.  
+Profili oluşturulan ortak dil çalışma zamanı (CLR) sürüm bilgilerini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,25 +45,25 @@ HRESULT GetRuntimeInformation(
   
 #### <a name="parameters"></a>Parametreler  
  `pClrInstanceId`  
- [out] Bir işlemde çalışan bir CLR örneği temsilcisi kimliği. Bu aynı sonucu verir `ClrInstanceID` Windows (ETW) başlangıç olayı için olay izleme raporları.  
+ [out] Bir işlemde çalışan bir CLR örneği temsilcisi kimliği. Bu, aynı `ClrInstanceID` Windows (ETW) başlangıç olayı için olay izleme olduğunu bildirir.  
   
  `pRuntimeType`  
- [out] Çalışma zamanı türü. Bu parametre döndürür `COR_PRF_DESKTOP_CLR` Masaüstü CLR sürümü için veya `COR_PRF_CORE_CLR` Silverlight'ta kullanılan CLR çekirdek sürümü.  
+ [out] Çalışma zamanı türü. Bu parametre döndürür `COR_PRF_DESKTOP_CLR` Masaüstü CLR sürümü için veya `COR_PRF_CORE_CLR` çekirdek Silverlight'ta kullanılan CLR sürümü için.  
   
  `pMajorVersion`  
- [out] CLR ana sürüm numarası.  
+ [out] CLR sürüm sayısı.  
   
  `pMinorVersion`  
- [out] CLR ikincil sürüm numarası.  
+ [out] İkincil sürüm numarası CLR.  
   
  `pBuildVersion`  
- [out] CLR derleme sürüm numarası.  
+ [out] Derleme sürüm numarası CLR.  
   
  `pQFEVersion`  
- [out] Bir yazılım güncelleştirmesiyle ilişkili CLR sürüm numarası.  
+ [out] Bir yazılım güncelleştirmesiyle ilişkili CLR sürüm sayısı.  
   
  `cchVersionString`  
- [in] Arabellek karakter cinsinden uzunluğu, `szVersionString` işaret eder.  
+ [in] Arabelleğin karakter cinsinden uzunluğu, `szVersionString` işaret eder.  
   
  `pcchVersionString`  
  [out] Karakter cinsinden uzunluğu, `szVersionString`.  
@@ -72,18 +72,18 @@ HRESULT GetRuntimeInformation(
  [out] CLR sürüm dizesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her parametre için null iletebilir. Ancak, `pcchVersionString` null olamaz sürece `szVersionString` de NULL'dur.  
+ Her parametre için null değeri geçirmeye. Ancak, `pcchVersionString` null olamaz sürece `szVersionString` de null.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

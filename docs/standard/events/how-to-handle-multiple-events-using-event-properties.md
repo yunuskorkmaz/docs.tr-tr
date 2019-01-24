@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme'
+title: 'Nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592227"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme
 Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özelliklerini tanımlayın ve ardından olayları işleyen sınıflardaki olay özellikleri için temsilcileri ayarlayın. Bir sınıfta birden çok olay özelliğini uygulamak amacıyla sınıfın, her bir olay için tanımlanan temsilciyi dahili olarak depolaması ve koruması gerekir. Bir olay anahtarı tarafından dizinlenen bir temsilci koleksiyonunun uygulanması tipik bir yaklaşımdır.  
   
  Her bir olay için temsilcileri depolamak amacıyla <xref:System.ComponentModel.EventHandlerList> sınıfını kullanabilirsiniz ya da kendi koleksiyonunuzu uygulayabilirsiniz. Koleksiyon sınıfı olay anahtarına bağlı olarak ayarlama, erişme ve olay işleyici temsilcisini almak için yöntemler sağlamak zorundadır. Örneğin, bir <xref:System.Collections.Hashtable> sınıfı kullanabilir veya <xref:System.Collections.DictionaryBase> sınıfından özel bir sınıf türetebilirsiniz. Temsilci koleksiyonuna ait uygulama detaylarının sınıfınızın dışında sunulmasına gerek yoktur.  
@@ -52,7 +52,7 @@ Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özell
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [Olaylar](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
-- [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [Olaylar](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
+- [Nasıl yapılır: Bellekten kazanacak şekilde özel olayları bildirme](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
