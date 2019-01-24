@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdb9e91f5e7dfe8d54fb50c757684117465944df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 759b2a9a419989cfec1020b1a6662bd6f8416739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501197"
 ---
-# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="cb94d-102">IMetaDataImport::EnumPermissionSets Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cb94d-102">IMetaDataImport::EnumPermissionSets Method</span></span>
-<span data-ttu-id="cb94d-103">Belirtilen meta veri kapsamı içindeki nesneler için izinleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="cb94d-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
+# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="311ae-102">IMetaDataImport::EnumPermissionSets Yöntemi</span><span class="sxs-lookup"><span data-stu-id="311ae-102">IMetaDataImport::EnumPermissionSets Method</span></span>
+<span data-ttu-id="311ae-103">Belirtilen meta veri kapsamdaki nesneler için izinleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="311ae-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb94d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cb94d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="311ae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="311ae-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumPermissionSets  
@@ -40,41 +40,41 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb94d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cb94d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="311ae-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="311ae-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="cb94d-106">[içinde out] Numaralayıcı gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cb94d-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="cb94d-107">Bu, bu yöntem ilk çağrısı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cb94d-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="311ae-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="311ae-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="311ae-107">Bu, bu yöntemin ilk çağrı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="311ae-107">This must be NULL for the first call of this method.</span></span>  
   
  `tk`  
- <span data-ttu-id="cb94d-108">[in] Arama veya olası en geniş kapsamında arama yapmak için NULL kapsamını sınırlayan bir meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="cb94d-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
+ <span data-ttu-id="311ae-108">[in] Olası en geniş kapsamı aramak için NULL veya arama kapsamını sınırlayan bir meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="311ae-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
   
  `dwActions`  
- <span data-ttu-id="cb94d-109">[in] Flags temsil eden <xref:System.Security.Permissions.SecurityAction> dahil edilecek değerleri `rPermission`, ya da tüm eylemler döndürmek için sıfır.</span><span class="sxs-lookup"><span data-stu-id="cb94d-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
+ <span data-ttu-id="311ae-109">[in] Bayrakları temsil eden <xref:System.Security.Permissions.SecurityAction> dahil edilecek değerleri `rPermission`, ya da tüm eylemleri döndürmek için sıfır.</span><span class="sxs-lookup"><span data-stu-id="311ae-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
   
  `rPermission`  
- <span data-ttu-id="cb94d-110">[out] İzni belirteçleri depolamak için kullanılan dizisi.</span><span class="sxs-lookup"><span data-stu-id="cb94d-110">[out] The array used to store the Permission tokens.</span></span>  
+ <span data-ttu-id="311ae-110">[out] İzni simgeleri depolamak için kullanılan dizisi.</span><span class="sxs-lookup"><span data-stu-id="311ae-110">[out] The array used to store the Permission tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="cb94d-111">[in] En büyük boyutunu `rPermission` dizi.</span><span class="sxs-lookup"><span data-stu-id="cb94d-111">[in] The maximum size of the `rPermission` array.</span></span>  
+ <span data-ttu-id="311ae-111">[in] En büyük boyutunu `rPermission` dizisi.</span><span class="sxs-lookup"><span data-stu-id="311ae-111">[in] The maximum size of the `rPermission` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="cb94d-112">[out] Döndürülen izni belirteçleri sayısı `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="cb94d-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
+ <span data-ttu-id="311ae-112">[out] Döndürülen izni belirteçleri sayısı `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="311ae-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cb94d-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cb94d-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="311ae-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="311ae-113">Return Value</span></span>  
   
-|<span data-ttu-id="cb94d-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cb94d-114">HRESULT</span></span>|<span data-ttu-id="cb94d-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cb94d-115">Description</span></span>|  
+|<span data-ttu-id="311ae-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="311ae-114">HRESULT</span></span>|<span data-ttu-id="311ae-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="311ae-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="cb94d-116">`EnumPermissionSets` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="cb94d-116">`EnumPermissionSets` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="cb94d-117">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="cb94d-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="cb94d-118">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="cb94d-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="311ae-116">`EnumPermissionSets` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="311ae-116">`EnumPermissionSets` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="311ae-117">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="311ae-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="311ae-118">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="311ae-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cb94d-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cb94d-119">Requirements</span></span>  
- <span data-ttu-id="cb94d-120">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb94d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="311ae-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="311ae-119">Requirements</span></span>  
+ <span data-ttu-id="311ae-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="311ae-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb94d-121">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cb94d-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="311ae-121">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="311ae-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cb94d-122">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="cb94d-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="311ae-122">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="311ae-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cb94d-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb94d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="311ae-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="311ae-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb94d-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cb94d-124">See Also</span></span>  
- [<span data-ttu-id="cb94d-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cb94d-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="cb94d-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cb94d-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="311ae-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="311ae-124">See also</span></span>
+- [<span data-ttu-id="311ae-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="311ae-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="311ae-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="311ae-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

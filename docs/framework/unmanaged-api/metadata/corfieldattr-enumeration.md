@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576021"
 ---
-# <a name="corfieldattr-enumeration"></a><span data-ttu-id="ab725-102">CorFieldAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="ab725-102">CorFieldAttr Enumeration</span></span>
-<span data-ttu-id="ab725-103">Meta veriler hakkında bir alan açıklamak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="ab725-103">Contains values that describe metadata about a field.</span></span>  
+# <a name="corfieldattr-enumeration"></a><span data-ttu-id="6de4d-102">CorFieldAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="6de4d-102">CorFieldAttr Enumeration</span></span>
+<span data-ttu-id="6de4d-103">Bir alan hakkında açıklayan meta verileri değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-103">Contains values that describe metadata about a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab725-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ab725-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6de4d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6de4d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFieldAttr {  
@@ -58,36 +58,36 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ab725-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ab725-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6de4d-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="6de4d-105">Members</span></span>  
   
-|<span data-ttu-id="ab725-106">Üye</span><span class="sxs-lookup"><span data-stu-id="ab725-106">Member</span></span>|<span data-ttu-id="ab725-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ab725-107">Description</span></span>|  
+|<span data-ttu-id="6de4d-106">Üye</span><span class="sxs-lookup"><span data-stu-id="6de4d-106">Member</span></span>|<span data-ttu-id="6de4d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6de4d-107">Description</span></span>|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|<span data-ttu-id="ab725-108">Erişilebilirlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-108">Specifies accessibility information.</span></span>|  
-|`fdPrivateScope`|<span data-ttu-id="ab725-109">Alan başvurulamaz belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-109">Specifies that the field cannot be referenced.</span></span>|  
-|`fdPrivate`|<span data-ttu-id="ab725-110">Alan yalnızca kendi üst türü tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-110">Specifies that the field is accessible only by its parent type.</span></span>|  
-|`fdFamANDAssem`|<span data-ttu-id="ab725-111">Alan, derleme türetilmiş sınıflarda tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
-|`fdAssembly`|<span data-ttu-id="ab725-112">Alan, derleme içindeki tüm türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
-|`fdFamily`|<span data-ttu-id="ab725-113">Alan yalnızca kendi türü tarafından erişilebilir olduğunu ve türetilmiş sınıfları belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
-|`fdFamORAssem`|<span data-ttu-id="ab725-114">Alan, derleme içindeki tüm türler ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
-|`fdPublic`|<span data-ttu-id="ab725-115">Alan tüm türleri bu kapsamı tarafından görünürlük ile erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
-|`fdStatic`|<span data-ttu-id="ab725-116">Alanın türü üyesi yerine örnek üyesine olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
-|`fdInitOnly`|<span data-ttu-id="ab725-117">Alan başlatıldıktan sonra değiştirilemez belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
-|`fdLiteral`|<span data-ttu-id="ab725-118">Alan değeri bir derleme zamanı sabiti olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-118">Specifies that the field value is a compile-time constant.</span></span>|  
-|`fdNotSerialized`|<span data-ttu-id="ab725-119">Türünü uzakta olduğunda alan seri değil belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
-|`fdSpecialName`|<span data-ttu-id="ab725-120">Alan özel ve adını açıklayan belirtir nasıl.</span><span class="sxs-lookup"><span data-stu-id="ab725-120">Specifies that the field is special, and that its name describes how.</span></span>|  
-|`fdPinvokeImpl`|<span data-ttu-id="ab725-121">Alan uygulama PInvoke aracılığıyla iletilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
-|`fdReservedMask`|<span data-ttu-id="ab725-122">İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="ab725-122">Reserved for internal use by the common language runtime.</span></span>|  
-|`fdRTSpecialName`|<span data-ttu-id="ab725-123">Ortak dil çalışma zamanı meta verileri iç API adı kodlama denetleyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
-|`fdHasFieldMarshal`|<span data-ttu-id="ab725-124">Alan sıralama bilgilerini içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-124">Specifies that the field contains marshaling information.</span></span>|  
-|`fdHasDefault`|<span data-ttu-id="ab725-125">Alan varsayılan bir değer olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-125">Specifies that the field has a default value.</span></span>|  
-|`fdHasFieldRVA`|<span data-ttu-id="ab725-126">Göreli sanal adres alanı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ab725-126">Specifies that the field has a relative virtual address.</span></span>|  
+|`fdFieldAccessMask`|<span data-ttu-id="6de4d-108">Erişilebilirlik bilgileri belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-108">Specifies accessibility information.</span></span>|  
+|`fdPrivateScope`|<span data-ttu-id="6de4d-109">Alan başvurulamaz belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-109">Specifies that the field cannot be referenced.</span></span>|  
+|`fdPrivate`|<span data-ttu-id="6de4d-110">Alan yalnızca kendi üst türü tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-110">Specifies that the field is accessible only by its parent type.</span></span>|  
+|`fdFamANDAssem`|<span data-ttu-id="6de4d-111">Alanın kendi derlemedeki türetilmiş sınıflar tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
+|`fdAssembly`|<span data-ttu-id="6de4d-112">Alanın kendi derlemedeki tüm tür tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
+|`fdFamily`|<span data-ttu-id="6de4d-113">Alan yalnızca türü tarafından erişilebilir olduğundan ve türetilmiş sınıfları belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
+|`fdFamORAssem`|<span data-ttu-id="6de4d-114">Alanın kendi derlemesi içindeki tüm türleri ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
+|`fdPublic`|<span data-ttu-id="6de4d-115">Alanın tüm türleri bu kapsamı tarafından görünürlük ile erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
+|`fdStatic`|<span data-ttu-id="6de4d-116">Alan türünü üyesi yerine bir örnek üyesi olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
+|`fdInitOnly`|<span data-ttu-id="6de4d-117">Alan başlatıldıktan sonra değiştirilemeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
+|`fdLiteral`|<span data-ttu-id="6de4d-118">Alan değeri bir derleme zamanı sabiti olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-118">Specifies that the field value is a compile-time constant.</span></span>|  
+|`fdNotSerialized`|<span data-ttu-id="6de4d-119">Alan türünü düğümlerde olduğunda serileştirildiği değil belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
+|`fdSpecialName`|<span data-ttu-id="6de4d-120">Alan özel olduğundan ve adının açıklayan belirtir nasıl.</span><span class="sxs-lookup"><span data-stu-id="6de4d-120">Specifies that the field is special, and that its name describes how.</span></span>|  
+|`fdPinvokeImpl`|<span data-ttu-id="6de4d-121">Alan uygulamasında PInvoke aracılığıyla iletilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
+|`fdReservedMask`|<span data-ttu-id="6de4d-122">İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="6de4d-122">Reserved for internal use by the common language runtime.</span></span>|  
+|`fdRTSpecialName`|<span data-ttu-id="6de4d-123">Ortak dil çalışma zamanı meta veri adı kodlama dahili API'lerde denetleyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
+|`fdHasFieldMarshal`|<span data-ttu-id="6de4d-124">Alan sıralama bilgilerini içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-124">Specifies that the field contains marshaling information.</span></span>|  
+|`fdHasDefault`|<span data-ttu-id="6de4d-125">Alanın bir varsayılan değer olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-125">Specifies that the field has a default value.</span></span>|  
+|`fdHasFieldRVA`|<span data-ttu-id="6de4d-126">Bir göreli sanal adres alanına sahip olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6de4d-126">Specifies that the field has a relative virtual address.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ab725-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ab725-127">Requirements</span></span>  
- <span data-ttu-id="ab725-128">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab725-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6de4d-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6de4d-127">Requirements</span></span>  
+ <span data-ttu-id="6de4d-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6de4d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab725-129">**Başlık:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ab725-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="6de4d-129">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="6de4d-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ab725-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab725-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6de4d-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6de4d-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab725-131">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ab725-131">See Also</span></span>  
- [<span data-ttu-id="ab725-132">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="ab725-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6de4d-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6de4d-131">See also</span></span>
+- [<span data-ttu-id="6de4d-132">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="6de4d-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

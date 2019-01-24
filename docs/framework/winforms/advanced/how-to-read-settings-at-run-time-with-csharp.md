@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma'
+title: 'Nasıl yapılır: Çalışma zamanında ile ayarları okumaC#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], reading
 - application settings [Windows Forms], run time
 - application settings [Windows Forms], C#
 ms.assetid: dbe8bf09-5e1c-49da-9192-154033d7240b
-ms.openlocfilehash: 8259e2f429718793c01868855651d1000620fae5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d798b40e5e337ea7652c8e82cb7fa860a87528b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521757"
 ---
-# <a name="how-to-read-settings-at-run-time-with-c"></a><span data-ttu-id="2898e-102">Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma</span><span class="sxs-lookup"><span data-stu-id="2898e-102">How To: Read Settings at Run Time With C#</span></span> #
-<span data-ttu-id="2898e-103">Özellikleri nesnesi aracılığıyla çalışma zamanında uygulama kapsamlı hem de kullanıcı kapsamlı ayarlarını okuyabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2898e-103">You can read both Application-scoped and User-scoped settings at run time via the Properties object.</span></span> <span data-ttu-id="2898e-104">Özellikleri nesnesi Properties.Settings.Default üye aracılığıyla proje için varsayılan ayarlar kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="2898e-104">The Properties object exposes all of the default settings for the project via the Properties.Settings.Default member.</span></span>  
+# <a name="how-to-read-settings-at-run-time-with-c"></a><span data-ttu-id="bfe4f-102">Nasıl yapılır: Çalışma zamanında ile ayarları okumaC#</span><span class="sxs-lookup"><span data-stu-id="bfe4f-102">How To: Read Settings at Run Time With C#</span></span> #
+<span data-ttu-id="bfe4f-103">Çalışma zamanında özellikleri nesnesi aracılığıyla hem uygulama kapsamlı ve kullanıcı kapsamlı ayarları okuyabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-103">You can read both Application-scoped and User-scoped settings at run time via the Properties object.</span></span> <span data-ttu-id="bfe4f-104">Özellikler nesnesinin tüm Properties.Settings.Default üye aracılığıyla proje için varsayılan ayarları gösterir.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-104">The Properties object exposes all of the default settings for the project via the Properties.Settings.Default member.</span></span>  
   
-### <a name="to-read-settings-at-run-time-with-c"></a><span data-ttu-id="2898e-105">Çalışma zamanında C# ile ayarları okunamıyor</span><span class="sxs-lookup"><span data-stu-id="2898e-105">To Read Settings at Run Time with C#</span></span>  
+### <a name="to-read-settings-at-run-time-with-c"></a><span data-ttu-id="bfe4f-105">Çalışma zamanında ile ayarları okunamadıC#</span><span class="sxs-lookup"><span data-stu-id="bfe4f-105">To Read Settings at Run Time with C#</span></span>  
   
--   <span data-ttu-id="2898e-106">Uygun ayarı Properties.Settings.Default üye üzerinden erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2898e-106">Access the appropriate setting via the Properties.Settings.Default member.</span></span> <span data-ttu-id="2898e-107">Aşağıdaki örnek adlı bir ayarı atama gösterilmiştir `myColor` BackColor özelliği.</span><span class="sxs-lookup"><span data-stu-id="2898e-107">The following example shows how to assign a setting named `myColor` to a BackColor property.</span></span> <span data-ttu-id="2898e-108">Adlı bir ayar içeren ayarlar dosyası önceden oluşturulmuş gerekir `myColor` türü `System.Drawing.Color`.</span><span class="sxs-lookup"><span data-stu-id="2898e-108">It requires you to have previously created a Settings file containing a setting named `myColor` of type `System.Drawing.Color`.</span></span> <span data-ttu-id="2898e-109">Ayarlar dosyası oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: tasarım zamanında yeni ayar oluşturun](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="2898e-109">For information about creating a Settings file, see [How To: Create a New Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span></span>  
+-   <span data-ttu-id="bfe4f-106">Uygun ayarı Properties.Settings.Default üye aracılığıyla erişin.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-106">Access the appropriate setting via the Properties.Settings.Default member.</span></span> <span data-ttu-id="bfe4f-107">Aşağıdaki örnek adlı bir ayar atama gösterir `myColor` BackColor özelliği.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-107">The following example shows how to assign a setting named `myColor` to a BackColor property.</span></span> <span data-ttu-id="bfe4f-108">Adlı bir ayarı içeren bir ayarlar dosyası daha önce oluşturmuş olmanız gerekir `myColor` türü `System.Drawing.Color`.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-108">It requires you to have previously created a Settings file containing a setting named `myColor` of type `System.Drawing.Color`.</span></span> <span data-ttu-id="bfe4f-109">Ayarları dosyası oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Tasarım zamanında yeni ayar oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="bfe4f-109">For information about creating a Settings file, see [How To: Create a New Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md).</span></span>  
   
     ```  
     // C#  
     this.BackColor = Properties.Settings.Default.myColor;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2898e-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2898e-110">See Also</span></span>  
- [<span data-ttu-id="2898e-111">Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="2898e-111">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [<span data-ttu-id="2898e-112">Nasıl Yapılır: Çalışma Zamanında C# ile Kullanıcı Ayarlarını Yazma</span><span class="sxs-lookup"><span data-stu-id="2898e-112">How To: Write User Settings at Run Time with C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
- [<span data-ttu-id="2898e-113">Uygulama Ayarlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2898e-113">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="bfe4f-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bfe4f-110">See also</span></span>
+- [<span data-ttu-id="bfe4f-111">Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="bfe4f-111">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="bfe4f-112">Nasıl yapılır: Çalışma zamanında ile kullanıcı ayarlarını yazmaC#</span><span class="sxs-lookup"><span data-stu-id="bfe4f-112">How To: Write User Settings at Run Time with C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)
+- [<span data-ttu-id="bfe4f-113">Uygulama Ayarlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bfe4f-113">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

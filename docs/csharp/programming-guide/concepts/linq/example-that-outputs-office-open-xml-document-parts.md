@@ -2,20 +2,20 @@
 title: Office Open XML belge kısımları (C#) çıkaran örnek
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbfecf43824249363bf23596c9a148536423f9a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642785"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="6f696-102">Office Open XML belge kısımları (C#) çıkaran örnek</span><span class="sxs-lookup"><span data-stu-id="6f696-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
-<span data-ttu-id="6f696-103">Bu konuda, bir Office Open XML belgesi açın ve erişim bölümleri içindeki gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6f696-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="3767f-102">Office Open XML belge kısımları (C#) çıkaran örnek</span><span class="sxs-lookup"><span data-stu-id="3767f-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="3767f-103">Bu konuda, bir Office Open XML belgesi açın ve erişim bölümleri içindeki gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="3767f-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f696-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="6f696-104">Example</span></span>  
- <span data-ttu-id="6f696-105">Aşağıdaki örnek, bir Office Open XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="6f696-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="3767f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="3767f-104">Example</span></span>  
+ <span data-ttu-id="3767f-105">Aşağıdaki örnek, bir Office Open XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="3767f-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="6f696-106">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="6f696-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="6f696-107">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="6f696-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="3767f-106">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="3767f-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="3767f-107">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="3767f-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -66,6 +66,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6f696-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6f696-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3767f-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3767f-108">See also</span></span>
 
-- [<span data-ttu-id="6f696-109">Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)</span><span class="sxs-lookup"><span data-stu-id="6f696-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="3767f-109">Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)</span><span class="sxs-lookup"><span data-stu-id="3767f-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
