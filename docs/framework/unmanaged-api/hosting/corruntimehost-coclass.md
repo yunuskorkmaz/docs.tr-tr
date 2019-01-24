@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b9b8a728932caa085bba1665dc97faf02be8fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597534"
 ---
-# <a name="corruntimehost-coclass"></a><span data-ttu-id="57eb1-102">CorRuntimeHost Coclass’ı</span><span class="sxs-lookup"><span data-stu-id="57eb1-102">CorRuntimeHost Coclass</span></span>
-<span data-ttu-id="57eb1-103">Ortak dil çalışma zamanı tarafından yürütülen uygulamaları yönetmek için arabirim sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
+# <a name="corruntimehost-coclass"></a><span data-ttu-id="355e5-102">CorRuntimeHost Coclass’ı</span><span class="sxs-lookup"><span data-stu-id="355e5-102">CorRuntimeHost Coclass</span></span>
+<span data-ttu-id="355e5-103">Ortak dil çalışma zamanı tarafından yürütülen uygulamalarını yönetmek için arabirim sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57eb1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="57eb1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="355e5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="355e5-104">Syntax</span></span>  
   
 ```  
 coclass CorRuntimeHost {  
@@ -38,24 +38,24 @@ coclass CorRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="57eb1-105">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="57eb1-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="355e5-105">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="355e5-105">Interfaces</span></span>  
   
-|<span data-ttu-id="57eb1-106">Arabirim</span><span class="sxs-lookup"><span data-stu-id="57eb1-106">Interface</span></span>|<span data-ttu-id="57eb1-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="57eb1-107">Description</span></span>|  
+|<span data-ttu-id="355e5-106">Arabirim</span><span class="sxs-lookup"><span data-stu-id="355e5-106">Interface</span></span>|<span data-ttu-id="355e5-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="355e5-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="57eb1-108">ICorConfiguration Arabirimi</span><span class="sxs-lookup"><span data-stu-id="57eb1-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="57eb1-109">Ortak dil çalışma zamanı (CLR) yapılandırmak için yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
-|[<span data-ttu-id="57eb1-110">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="57eb1-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="57eb1-111">Ortak dil çalışma zamanı oluşturmak ve uygulama etki alanları, varsayılan etki alanı erişmek ve tüm etki alanları işlemde çalışan listeleme için yapılandırmak için açıkça durdurmak ve başlatmak ana bilgisayar sağlayan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
-|[<span data-ttu-id="57eb1-112">IDebuggerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="57eb1-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="57eb1-113">Hata ayıklama hizmetlerinin durumu hakkında bilgi almak için yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
-|[<span data-ttu-id="57eb1-114">IGCHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="57eb1-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="57eb1-115">Çöp toplama sistemi hakkında bilgi edinme ve atık toplama bazı yönlerini denetleme yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
-|<span data-ttu-id="57eb1-116">"IValidator"</span><span class="sxs-lookup"><span data-stu-id="57eb1-116">"IValidator"</span></span>|<span data-ttu-id="57eb1-117">Taşınabilir yürütülebilir görüntüler doğrulanması ve ayrıntılı doğrulama hatalarını raporlama için yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="57eb1-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
+|[<span data-ttu-id="355e5-108">ICorConfiguration Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355e5-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="355e5-109">Ortak dil çalışma zamanı (CLR) yapılandırmak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
+|[<span data-ttu-id="355e5-110">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355e5-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="355e5-111">Ortak dil çalışma zamanı oluşturma ve uygulama etki alanları, varsayılan etki alanına ve işlemde çalışan tüm etki alanları listelemek için yapılandırma açıkça durdurmak ve başlatmak konak olanak tanıyan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
+|[<span data-ttu-id="355e5-112">IDebuggerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355e5-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="355e5-113">Hata Ayıklama Hizmetleri durumuyla ilgili bilgileri almak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
+|[<span data-ttu-id="355e5-114">IGCHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355e5-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="355e5-115">Çöp toplama işleminin bazı yönlerini denetleme ve çöp toplama sistemi hakkında bilgi almak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
+|<span data-ttu-id="355e5-116">"IValidator"</span><span class="sxs-lookup"><span data-stu-id="355e5-116">"IValidator"</span></span>|<span data-ttu-id="355e5-117">Taşınabilir yürütülebilir görüntü doğrulama ve ayrıntılı doğrulama hatalarını raporlama için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="355e5-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="57eb1-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="57eb1-118">Requirements</span></span>  
- <span data-ttu-id="57eb1-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57eb1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="355e5-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="355e5-118">Requirements</span></span>  
+ <span data-ttu-id="355e5-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="355e5-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57eb1-120">**Başlık:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="57eb1-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="355e5-120">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="355e5-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="57eb1-121">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="57eb1-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="355e5-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="355e5-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="57eb1-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57eb1-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="355e5-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="355e5-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57eb1-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="57eb1-123">See Also</span></span>  
- [<span data-ttu-id="57eb1-124">Barındırma Coclassları</span><span class="sxs-lookup"><span data-stu-id="57eb1-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="355e5-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="355e5-123">See also</span></span>
+- [<span data-ttu-id="355e5-124">Barındırma Coclassları</span><span class="sxs-lookup"><span data-stu-id="355e5-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

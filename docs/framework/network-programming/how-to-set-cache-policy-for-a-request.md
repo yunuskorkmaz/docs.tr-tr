@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama'
+title: 'Nasıl yapılır: Bir istek için önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563567"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="f8573-102">Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama</span><span class="sxs-lookup"><span data-stu-id="f8573-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="f8573-103">Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="f8573-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="f8573-104">Örnek Giriş bir URI gibi `http://www.contoso.com/`.</span><span class="sxs-lookup"><span data-stu-id="f8573-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="666b6-102">Nasıl yapılır: Bir istek için önbellek İlkesi ayarlama</span><span class="sxs-lookup"><span data-stu-id="666b6-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="666b6-103">Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="666b6-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="666b6-104">Örnek Giriş bir URI gibi `http://www.contoso.com/`.</span><span class="sxs-lookup"><span data-stu-id="666b6-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8573-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="f8573-105">Example</span></span>  
- <span data-ttu-id="f8573-106">Aşağıdaki kod örneği, bir günden daha uzun süre önbellekte olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f8573-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="f8573-107">Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynağı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f8573-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="f8573-108">Bir istek istemci ve sunucu arasındaki tüm önbelleği tarafından getirilmesi.</span><span class="sxs-lookup"><span data-stu-id="f8573-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="666b6-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="666b6-105">Example</span></span>  
+ <span data-ttu-id="666b6-106">Aşağıdaki kod örneği, bir günden daha uzun süre önbellekte olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="666b6-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="666b6-107">Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynağı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="666b6-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="666b6-108">Bir istek istemci ve sunucu arasındaki tüm önbelleği tarafından getirilmesi.</span><span class="sxs-lookup"><span data-stu-id="666b6-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -105,9 +105,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f8573-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f8573-109">See Also</span></span>  
- [<span data-ttu-id="f8573-110">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="f8573-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="f8573-111">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="f8573-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="f8573-112">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="f8573-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="f8573-113">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="f8573-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [<span data-ttu-id="f8573-114">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="f8573-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="666b6-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="666b6-109">See also</span></span>
+- [<span data-ttu-id="666b6-110">Ağ Uygulamaları için Önbellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="666b6-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [<span data-ttu-id="666b6-111">Önbellek İlkesi</span><span class="sxs-lookup"><span data-stu-id="666b6-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)
+- [<span data-ttu-id="666b6-112">Konum Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="666b6-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [<span data-ttu-id="666b6-113">Saat Temelli Önbellek İlkeleri</span><span class="sxs-lookup"><span data-stu-id="666b6-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [<span data-ttu-id="666b6-114">\<requestCaching > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="666b6-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

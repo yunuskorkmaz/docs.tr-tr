@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568068"
 ---
-# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="63035-102">IHostMemoryManager::VirtualProtect Yöntemi</span><span class="sxs-lookup"><span data-stu-id="63035-102">IHostMemoryManager::VirtualProtect Method</span></span>
-<span data-ttu-id="63035-103">Karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.</span><span class="sxs-lookup"><span data-stu-id="63035-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="63035-104">Win32 uygulaması `VirtualProtect` bir bölge koruma çağırma işleminin sanal adres alanındaki taahhüt sayfaların değiştirir.</span><span class="sxs-lookup"><span data-stu-id="63035-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="3d782-102">IHostMemoryManager::VirtualProtect Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3d782-102">IHostMemoryManager::VirtualProtect Method</span></span>
+<span data-ttu-id="3d782-103">Karşılık gelen Win32 işlevini için mantıksal bir sarmalayıcı olarak görev yapar.</span><span class="sxs-lookup"><span data-stu-id="3d782-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="3d782-104">Win32 uygulaması `VirtualProtect` bölgesindeki korumayı taahhüt edilen sayfa çağırma işleminin sanal adres alanı değiştirir.</span><span class="sxs-lookup"><span data-stu-id="3d782-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63035-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="63035-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d782-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d782-105">Syntax</span></span>  
   
 ```  
 HRESULT VirtualProtect (  
@@ -38,41 +38,41 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="63035-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="63035-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3d782-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d782-106">Parameters</span></span>  
  `lpAddress`  
- <span data-ttu-id="63035-107">[in] Değiştirilecek koruma niteliklerini olan sanal bellek taban adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="63035-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
+ <span data-ttu-id="3d782-107">[in] Taban adresi koruma niteliklerini değiştirilecek olan sanal bellek işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="3d782-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
   
  `dwSize`  
- <span data-ttu-id="63035-108">[in] Değiştirilecek bellek sayfalarının alanının bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="63035-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
+ <span data-ttu-id="3d782-108">[in] Değiştirilecek bellek sayfalarının bölgesi bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="3d782-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
   
  `flNewProtect`  
- <span data-ttu-id="63035-109">[in] Bellek koruması uygulamak için türü.</span><span class="sxs-lookup"><span data-stu-id="63035-109">[in] The type of memory protection to apply.</span></span>  
+ <span data-ttu-id="3d782-109">[in] Bellek koruma uygulamak için türü.</span><span class="sxs-lookup"><span data-stu-id="3d782-109">[in] The type of memory protection to apply.</span></span>  
   
  `pflOldProtect`  
- <span data-ttu-id="63035-110">[out] Önceki bellek koruma değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="63035-110">[out] A pointer to the previous memory protection value.</span></span>  
+ <span data-ttu-id="3d782-110">[out] Önceki bellek koruma değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3d782-110">[out] A pointer to the previous memory protection value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="63035-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="63035-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3d782-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3d782-111">Return Value</span></span>  
   
-|<span data-ttu-id="63035-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="63035-112">HRESULT</span></span>|<span data-ttu-id="63035-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="63035-113">Description</span></span>|  
+|<span data-ttu-id="3d782-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3d782-112">HRESULT</span></span>|<span data-ttu-id="3d782-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3d782-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="63035-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="63035-114">S_OK</span></span>|<span data-ttu-id="63035-115">`VirtualProtect` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="63035-115">`VirtualProtect` returned successfully.</span></span>|  
-|<span data-ttu-id="63035-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="63035-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="63035-117">Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.</span><span class="sxs-lookup"><span data-stu-id="63035-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="63035-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="63035-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="63035-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="63035-119">The call timed out.</span></span>|  
-|<span data-ttu-id="63035-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="63035-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="63035-121">Arayan kilidi kendisine ait değil.</span><span class="sxs-lookup"><span data-stu-id="63035-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="63035-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="63035-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="63035-123">Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.</span><span class="sxs-lookup"><span data-stu-id="63035-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="63035-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="63035-124">E_FAIL</span></span>|<span data-ttu-id="63035-125">Bilinmeyen yıkıcı bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="63035-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="63035-126">Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="63035-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="63035-127">Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="63035-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3d782-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="3d782-114">S_OK</span></span>|<span data-ttu-id="3d782-115">`VirtualProtect` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="3d782-115">`VirtualProtect` returned successfully.</span></span>|  
+|<span data-ttu-id="3d782-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3d782-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3d782-117">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="3d782-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3d782-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3d782-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3d782-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="3d782-119">The call timed out.</span></span>|  
+|<span data-ttu-id="3d782-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3d782-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3d782-121">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="3d782-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3d782-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3d782-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3d782-123">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="3d782-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3d782-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3d782-124">E_FAIL</span></span>|<span data-ttu-id="3d782-125">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="3d782-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3d782-126">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="3d782-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3d782-127">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="3d782-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="63035-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="63035-128">Remarks</span></span>  
- <span data-ttu-id="63035-129">Bu uygulaması, `VirtualProtect` Win32 uygulaması başarılı olduğunu belirtmek için sıfır olmayan bir değer döndürür sırada bir HRESULT değeri ve hatayı belirtmek için sıfır değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="63035-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="63035-130">Daha fazla bilgi için Windows platformu belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="63035-130">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d782-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3d782-128">Remarks</span></span>  
+ <span data-ttu-id="3d782-129">Bu uygulaması `VirtualProtect` HRESULT değerini, Win32 uygulaması başarılı olduğunu belirtmek için sıfır olmayan bir değer döndürür ve hata göstermek için sıfır değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="3d782-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="3d782-130">Daha fazla bilgi için Windows Platform belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="3d782-130">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63035-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="63035-131">Requirements</span></span>  
- <span data-ttu-id="63035-132">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63035-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d782-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d782-131">Requirements</span></span>  
+ <span data-ttu-id="3d782-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d782-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63035-133">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="63035-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3d782-133">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3d782-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="63035-134">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="63035-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3d782-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3d782-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="63035-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63035-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3d782-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d782-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63035-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="63035-136">See Also</span></span>  
- [<span data-ttu-id="63035-137">IHostMemoryManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="63035-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3d782-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d782-136">See also</span></span>
+- [<span data-ttu-id="3d782-137">IHostMemoryManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d782-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
