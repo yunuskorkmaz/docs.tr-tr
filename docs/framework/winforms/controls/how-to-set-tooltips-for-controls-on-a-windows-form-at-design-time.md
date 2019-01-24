@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tasarım Zamanında Windows Formundaki Denetimler için ToolTips Ayarlama'
+title: 'Nasıl yapılır: Tasarım zamanında bir Windows formundaki denetimler için ToolTips ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609414"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="1ca97-102">Nasıl yapılır: Tasarım Zamanında Windows Formundaki Denetimler için ToolTips Ayarlama</span><span class="sxs-lookup"><span data-stu-id="1ca97-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
-<span data-ttu-id="1ca97-103">Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows Forms Tasarımcısı'nda bir dize.</span><span class="sxs-lookup"><span data-stu-id="1ca97-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="1ca97-104">Hakkında daha fazla bilgi için <xref:System.Windows.Forms.ToolTip> bileşeni Bkz [ToolTip bileşenine genel bakış](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="1ca97-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span></span>  
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="17fe6-102">Nasıl yapılır: Tasarım zamanında bir Windows formundaki denetimler için ToolTips ayarlama</span><span class="sxs-lookup"><span data-stu-id="17fe6-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
+<span data-ttu-id="17fe6-103">Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows Forms Tasarımcısı'nda bir dize.</span><span class="sxs-lookup"><span data-stu-id="17fe6-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="17fe6-104">Hakkında daha fazla bilgi için <xref:System.Windows.Forms.ToolTip> bileşeni Bkz [ToolTip bileşenine genel bakış](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="17fe6-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1ca97-105">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="1ca97-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="1ca97-106">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="1ca97-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="1ca97-107">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="1ca97-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="17fe6-105">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="17fe6-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="17fe6-106">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="17fe6-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="17fe6-107">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="17fe6-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="1ca97-108">Bir araç ipucu program üzerinden ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="1ca97-108">To set a ToolTip programmatically</span></span>  
+### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="17fe6-108">Bir araç ipucu program üzerinden ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="17fe6-108">To set a ToolTip programmatically</span></span>  
   
-1.  <span data-ttu-id="1ca97-109">Araç İpucu görüntüleyen denetimi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="1ca97-109">Add the control that will display the ToolTip.</span></span>  
+1.  <span data-ttu-id="17fe6-109">Araç İpucu görüntüleyen denetimi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="17fe6-109">Add the control that will display the ToolTip.</span></span>  
   
-2.  <span data-ttu-id="1ca97-110">Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="1ca97-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
+2.  <span data-ttu-id="17fe6-110">Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="17fe6-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -43,17 +43,17 @@ ms.locfileid: "49087225"
     toolTip1->SetToolTip(button1, "Save changes");  
     ```  
   
-### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="1ca97-111">Tasarımcıda bir araç ipucu ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="1ca97-111">To set a ToolTip in the designer</span></span>  
+### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="17fe6-111">Tasarımcıda bir araç ipucu ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="17fe6-111">To set a ToolTip in the designer</span></span>  
   
-1.  <span data-ttu-id="1ca97-112">Ekleme bir <xref:System.Windows.Forms.ToolTip> forma bileşen.</span><span class="sxs-lookup"><span data-stu-id="1ca97-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
+1.  <span data-ttu-id="17fe6-112">Ekleme bir <xref:System.Windows.Forms.ToolTip> forma bileşen.</span><span class="sxs-lookup"><span data-stu-id="17fe6-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
   
-2.  <span data-ttu-id="1ca97-113">Araç ipucunu görüntülemek veya forma ekler denetimi seçin.</span><span class="sxs-lookup"><span data-stu-id="1ca97-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
+2.  <span data-ttu-id="17fe6-113">Araç ipucunu görüntülemek veya forma ekler denetimi seçin.</span><span class="sxs-lookup"><span data-stu-id="17fe6-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
   
-3.  <span data-ttu-id="1ca97-114">İçinde **özellikleri** penceresinde **ToolTip1 araç ipucu** uygun bir metin dizesi değeri.</span><span class="sxs-lookup"><span data-stu-id="1ca97-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
+3.  <span data-ttu-id="17fe6-114">İçinde **özellikleri** penceresinde **ToolTip1 araç ipucu** uygun bir metin dizesi değeri.</span><span class="sxs-lookup"><span data-stu-id="17fe6-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
 
-### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="1ca97-115">Bir araç ipucu programlı bir şekilde kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="1ca97-115">To remove a ToolTip programmatically</span></span>  
+### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="17fe6-115">Bir araç ipucu programlı bir şekilde kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="17fe6-115">To remove a ToolTip programmatically</span></span>  
   
-1.  <span data-ttu-id="1ca97-116">Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="1ca97-116">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
+1.  <span data-ttu-id="17fe6-116">Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="17fe6-116">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -70,13 +70,13 @@ ms.locfileid: "49087225"
     toolTip1->SetToolTip(button1, NULL);  
     ```  
   
-### <a name="to-remove-a-tooltip-in-the-designer"></a><span data-ttu-id="1ca97-117">Tasarımcıda bir araç ipucu kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="1ca97-117">To remove a ToolTip in the designer</span></span>  
+### <a name="to-remove-a-tooltip-in-the-designer"></a><span data-ttu-id="17fe6-117">Tasarımcıda bir araç ipucu kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="17fe6-117">To remove a ToolTip in the designer</span></span>  
   
-1.  <span data-ttu-id="1ca97-118">Araç İpucu görüntüleyen bir denetimi seçin.</span><span class="sxs-lookup"><span data-stu-id="1ca97-118">Select the control that is displaying the ToolTip.</span></span>  
+1.  <span data-ttu-id="17fe6-118">Araç İpucu görüntüleyen bir denetimi seçin.</span><span class="sxs-lookup"><span data-stu-id="17fe6-118">Select the control that is displaying the ToolTip.</span></span>  
   
-2.  <span data-ttu-id="1ca97-119">İçinde **özellikleri** penceresi, metni silmek **ToolTip1 araç ipucu**.</span><span class="sxs-lookup"><span data-stu-id="1ca97-119">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>  
+2.  <span data-ttu-id="17fe6-119">İçinde **özellikleri** penceresi, metni silmek **ToolTip1 araç ipucu**.</span><span class="sxs-lookup"><span data-stu-id="17fe6-119">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="1ca97-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1ca97-120">See Also</span></span>  
-- [<span data-ttu-id="1ca97-121">ToolTip Bileşenine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1ca97-121">ToolTip Component Overview</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
-- [<span data-ttu-id="1ca97-122">Nasıl yapılır: Windows Forms ToolTip Bileşeninin Gecikmesini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="1ca97-122">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
-- [<span data-ttu-id="1ca97-123">ToolTip Bileşeni</span><span class="sxs-lookup"><span data-stu-id="1ca97-123">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="17fe6-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17fe6-120">See also</span></span>
+- [<span data-ttu-id="17fe6-121">ToolTip Bileşenine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="17fe6-121">ToolTip Component Overview</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
+- [<span data-ttu-id="17fe6-122">Nasıl yapılır: Windows Forms ToolTip bileşeninin gecikmesini değiştirme</span><span class="sxs-lookup"><span data-stu-id="17fe6-122">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [<span data-ttu-id="17fe6-123">ToolTip Bileşeni</span><span class="sxs-lookup"><span data-stu-id="17fe6-123">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

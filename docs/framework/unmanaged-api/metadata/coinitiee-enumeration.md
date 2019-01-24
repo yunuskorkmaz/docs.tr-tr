@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4d0ad0c8651fe10bd2a1c72a8a995846cc80a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f15cc08167baaadc61787b8b1f7167304f0cae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569485"
 ---
-# <a name="coinitiee-enumeration"></a><span data-ttu-id="d3bb4-102">COINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="d3bb4-102">COINITIEE Enumeration</span></span>
-<span data-ttu-id="d3bb4-103">Tarafından kullanılan sabitlerini belirtir [Coınitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) ortak dil çalışma zamanı başlatırken.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="coinitiee-enumeration"></a><span data-ttu-id="82e06-102">COINITIEE Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="82e06-102">COINITIEE Enumeration</span></span>
+<span data-ttu-id="82e06-103">Tarafından kullanılan sabitlerini belirtir [Coınitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) ortak dil çalışma zamanı başlatılırken.</span><span class="sxs-lookup"><span data-stu-id="82e06-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3bb4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d3bb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82e06-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="82e06-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOINITEE {  
@@ -36,22 +36,22 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d3bb4-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="d3bb4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="82e06-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="82e06-105">Members</span></span>  
   
-|<span data-ttu-id="d3bb4-106">Üye</span><span class="sxs-lookup"><span data-stu-id="d3bb4-106">Member</span></span>|<span data-ttu-id="d3bb4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d3bb4-107">Description</span></span>|  
+|<span data-ttu-id="82e06-106">Üye</span><span class="sxs-lookup"><span data-stu-id="82e06-106">Member</span></span>|<span data-ttu-id="82e06-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="82e06-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|<span data-ttu-id="d3bb4-108">Varsayılan başlatma modu.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-108">Default initialization mode.</span></span> <span data-ttu-id="d3bb4-109">Bu çalışma zamanı başlatır ve varsayılan oluşturur <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
-|`COINITEE_DLL`|<span data-ttu-id="d3bb4-110">Yönetilen DLL çalıştırmak için başlatır.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-110">Initializes to run a managed DLL.</span></span>|  
-|`COINITEE_MAIN`|<span data-ttu-id="d3bb4-111">Yönetilen bir EXE çalıştırmak için başlatır.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="d3bb4-112">Bu çalışma zamanı başlatır, ancak varsayılan oluşturmaz <xref:System.AppDomain>, hangi EXE ana yordam girdikten sonra oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
+|`COINITEE_DEFAULT`|<span data-ttu-id="82e06-108">Varsayılan başlatma modu.</span><span class="sxs-lookup"><span data-stu-id="82e06-108">Default initialization mode.</span></span> <span data-ttu-id="82e06-109">Bu çalışma zamanı başlatır ve varsayılan oluşturur <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="82e06-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
+|`COINITEE_DLL`|<span data-ttu-id="82e06-110">Yönetilen bir DLL'yi çalıştırılacak başlatır.</span><span class="sxs-lookup"><span data-stu-id="82e06-110">Initializes to run a managed DLL.</span></span>|  
+|`COINITEE_MAIN`|<span data-ttu-id="82e06-111">Yönetilen bir EXE çalıştırılacak başlatır.</span><span class="sxs-lookup"><span data-stu-id="82e06-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="82e06-112">Bu çalışma zamanı başlatır, ancak varsayılan oluşturmaz <xref:System.AppDomain>, hangi EXE dosyasının ana yordam girdikten sonra oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="82e06-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3bb4-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d3bb4-113">Requirements</span></span>  
- <span data-ttu-id="d3bb4-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3bb4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82e06-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="82e06-113">Requirements</span></span>  
+ <span data-ttu-id="82e06-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82e06-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3bb4-115">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d3bb4-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="82e06-115">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="82e06-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d3bb4-116">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="d3bb4-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="82e06-116">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="82e06-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d3bb4-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3bb4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="82e06-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82e06-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3bb4-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d3bb4-118">See Also</span></span>  
- [<span data-ttu-id="d3bb4-119">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="d3bb4-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="82e06-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="82e06-118">See also</span></span>
+- [<span data-ttu-id="82e06-119">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="82e06-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

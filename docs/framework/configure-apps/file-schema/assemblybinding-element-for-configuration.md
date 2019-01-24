@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599354"
 ---
-# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="1ca5f-102">\<assemblyBinding > öğesi için \<yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="1ca5f-102">\<assemblyBinding> element for \<configuration></span></span>
+# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="58203-102">\<assemblyBinding > öğesi için \<yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="58203-102">\<assemblyBinding> element for \<configuration></span></span>
 
-<span data-ttu-id="1ca5f-103">Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-103">Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="58203-103">Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="58203-103">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="1ca5f-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="1ca5f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="1ca5f-105">&nbsp;&nbsp;**\<assemblyBinding >**</span><span class="sxs-lookup"><span data-stu-id="1ca5f-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
+<span data-ttu-id="58203-104">[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="58203-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="58203-105">&nbsp;&nbsp;**\<assemblyBinding >**</span><span class="sxs-lookup"><span data-stu-id="58203-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1ca5f-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1ca5f-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="58203-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="58203-106">Syntax</span></span>
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -31,34 +31,34 @@ ms.locfileid: "47193362"
 </assemblyBinding>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="1ca5f-107">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="1ca5f-107">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="58203-107">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="58203-107">Attribute</span></span>
 
-|           | <span data-ttu-id="1ca5f-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1ca5f-108">Description</span></span> |
+|           | <span data-ttu-id="58203-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="58203-108">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="1ca5f-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="1ca5f-109">**xmlns**</span></span> | <span data-ttu-id="1ca5f-110">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-110">Required attribute.</span></span><br><br><span data-ttu-id="1ca5f-111">Derleme bağlama için gerekli XML ad alanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="1ca5f-112">Aşağıdaki dizeyi kullanın "urn: schemas-microsoft-com:asm.v1" değeri.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
+| <span data-ttu-id="58203-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="58203-109">**xmlns**</span></span> | <span data-ttu-id="58203-110">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="58203-110">Required attribute.</span></span><br><br><span data-ttu-id="58203-111">Derleme bağlama için gerekli XML ad alanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="58203-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="58203-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span><span class="sxs-lookup"><span data-stu-id="58203-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="1ca5f-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="1ca5f-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="58203-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="58203-113">Parent element</span></span>
 
-|     | <span data-ttu-id="1ca5f-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1ca5f-114">Description</span></span> |
+|     | <span data-ttu-id="58203-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="58203-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="1ca5f-115">**\<Yapılandırma >**</span><span class="sxs-lookup"><span data-stu-id="1ca5f-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="1ca5f-116">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="58203-115">**\<Yapılandırma >**</span><span class="sxs-lookup"><span data-stu-id="58203-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="58203-116">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="58203-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-element"></a><span data-ttu-id="1ca5f-117">Alt öğe</span><span class="sxs-lookup"><span data-stu-id="1ca5f-117">Child element</span></span>
+## <a name="child-element"></a><span data-ttu-id="58203-117">Alt öğe</span><span class="sxs-lookup"><span data-stu-id="58203-117">Child element</span></span>
 
-|     | <span data-ttu-id="1ca5f-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1ca5f-118">Description</span></span> |
+|     | <span data-ttu-id="58203-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="58203-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="1ca5f-119">**\<linkedConfiguration >**</span><span class="sxs-lookup"><span data-stu-id="1ca5f-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="1ca5f-120">Dahil edilecek bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="58203-119">**\<linkedConfiguration >**</span><span class="sxs-lookup"><span data-stu-id="58203-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="58203-120">Dahil edilecek bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="58203-120">Specifies a configuration file to include.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="1ca5f-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1ca5f-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="58203-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="58203-121">Remarks</span></span>
 
-<span data-ttu-id="1ca5f-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) öğesi yapılandırma dosyalarında derlemeyi dahil etmek için uygulama yapılandırma dosyaları vererek bileşen derlemelerini yönetimini basitleştirir iyi bilinen konumları, çoğaltma derleme yapılandırma ayarları yerine.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
+<span data-ttu-id="58203-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) öğesi yapılandırma dosyalarında derlemeyi dahil etmek için uygulama yapılandırma dosyaları vererek bileşen derlemelerini yönetimini basitleştirir iyi bilinen konumları, çoğaltma derleme yapılandırma ayarları yerine.</span><span class="sxs-lookup"><span data-stu-id="58203-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1ca5f-123">**\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="58203-123"> *\*\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="58203-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-## <a name="example"></a><span data-ttu-id="1ca5f-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="1ca5f-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="58203-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="58203-124">Example</span></span>
 
-<span data-ttu-id="1ca5f-125">Aşağıdaki örnek bir yapılandırma dosyasını yerel sabit diskte nasıl ekleyeceğinizi gösterir:</span><span class="sxs-lookup"><span data-stu-id="1ca5f-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
+<span data-ttu-id="58203-125">Aşağıdaki örnek bir yapılandırma dosyasını yerel sabit diskte nasıl ekleyeceğinizi gösterir:</span><span class="sxs-lookup"><span data-stu-id="58203-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -68,6 +68,6 @@ ms.locfileid: "47193362"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1ca5f-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ca5f-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58203-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="58203-126">See also</span></span>
 
-[<span data-ttu-id="1ca5f-127">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="1ca5f-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="58203-127">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="58203-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
