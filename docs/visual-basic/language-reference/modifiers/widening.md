@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703721"
 ---
-# <a name="widening-visual-basic"></a><span data-ttu-id="6e001-102">Genişletme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6e001-102">Widening (Visual Basic)</span></span>
-<span data-ttu-id="6e001-103">Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı özgün sınıf veya yapı tüm olası değerlerini tutan bir türe dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="6e001-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  
+# <a name="widening-visual-basic"></a><span data-ttu-id="c5763-102">Genişletme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5763-102">Widening (Visual Basic)</span></span>
+<span data-ttu-id="c5763-103">Bildiren bir dönüştürme operatörünün (`CType`) bir sınıf ya da yapıyı özgün sınıf veya yapının tüm olası değerlerini tutabilecek bir türe dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c5763-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  
   
-## <a name="converting-with-the-widening-keyword"></a><span data-ttu-id="6e001-104">Genişletme anahtar sözcüğü ile dönüştürme</span><span class="sxs-lookup"><span data-stu-id="6e001-104">Converting with the Widening Keyword</span></span>  
- <span data-ttu-id="6e001-105">Dönüştürme yordamı belirtmelisiniz `Public Shared` ek olarak `Widening`.</span><span class="sxs-lookup"><span data-stu-id="6e001-105">The conversion procedure must specify `Public Shared` in addition to `Widening`.</span></span>  
+## <a name="converting-with-the-widening-keyword"></a><span data-ttu-id="c5763-104">Genişletme anahtar sözcüğü ile dönüştürme</span><span class="sxs-lookup"><span data-stu-id="c5763-104">Converting with the Widening Keyword</span></span>  
+ <span data-ttu-id="c5763-105">Dönüştürme yordamı belirtmelisiniz `Public Shared` ek olarak `Widening`.</span><span class="sxs-lookup"><span data-stu-id="c5763-105">The conversion procedure must specify `Public Shared` in addition to `Widening`.</span></span>  
   
- <span data-ttu-id="6e001-106">Genişletme dönüşümleri çalışma zamanında her zaman başarılı ve hiçbir zaman veri kaybına neden.</span><span class="sxs-lookup"><span data-stu-id="6e001-106">Widening conversions always succeed at run time and never incur data loss.</span></span> <span data-ttu-id="6e001-107">Örnekler `Single` için `Double`, `Char` için `String`ve türetilmiş bir tür için temel türü.</span><span class="sxs-lookup"><span data-stu-id="6e001-107">Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type.</span></span> <span data-ttu-id="6e001-108">Türetilmiş bir tür temel türdeki tüm üyelerin içerir ve bu nedenle temel türü örneği olduğundan bu son dönüştürme genişletme.</span><span class="sxs-lookup"><span data-stu-id="6e001-108">This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.</span></span>  
+ <span data-ttu-id="c5763-106">Genişletme dönüştürmeleri, çalışma zamanında her zaman başarılı ve hiçbir zaman veri kaybına neden.</span><span class="sxs-lookup"><span data-stu-id="c5763-106">Widening conversions always succeed at run time and never incur data loss.</span></span> <span data-ttu-id="c5763-107">Örnekler `Single` için `Double`, `Char` için `String`ve türetilmiş bir tür yerine bunun temel türü.</span><span class="sxs-lookup"><span data-stu-id="c5763-107">Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type.</span></span> <span data-ttu-id="c5763-108">Türetilmiş tür temel türünün tüm üyelerini içerir ve bu nedenle temel türün bir örneği olduğundan, bu son dönüştürme genişletme.</span><span class="sxs-lookup"><span data-stu-id="c5763-108">This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.</span></span>  
   
- <span data-ttu-id="6e001-109">Kullanıcı kodu kullanmak zorunda kalmazsınız `CType` dönüşümleri, için bile `Option Strict` olan `On`.</span><span class="sxs-lookup"><span data-stu-id="6e001-109">The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.</span></span>  
+ <span data-ttu-id="c5763-109">Tüketici kod kullanmak zorunda kalmazsınız `CType` genişletme dönüştürmeleri, için bile `Option Strict` olduğu `On`.</span><span class="sxs-lookup"><span data-stu-id="c5763-109">The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.</span></span>  
   
- <span data-ttu-id="6e001-110">`Widening` Anahtar sözcüğü bu bağlamda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="6e001-110">The `Widening` keyword can be used in this context:</span></span>  
+ <span data-ttu-id="c5763-110">`Widening` Anahtar sözcüğü bu bağlamda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="c5763-110">The `Widening` keyword can be used in this context:</span></span>  
   
- [<span data-ttu-id="6e001-111">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="6e001-111">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="c5763-111">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="c5763-111">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- <span data-ttu-id="6e001-112">Örneğin genişletme ve daraltma dönüşüm işleçleri tanımları bkz [nasıl yapılır: bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span><span class="sxs-lookup"><span data-stu-id="6e001-112">For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
+ <span data-ttu-id="c5763-112">Örneğin genişletme ve daraltma dönüştürme operatörlerini tanımları bkz [nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span><span class="sxs-lookup"><span data-stu-id="c5763-112">For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e001-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6e001-113">See Also</span></span>  
- [<span data-ttu-id="6e001-114">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="6e001-114">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [<span data-ttu-id="6e001-115">Narrowing</span><span class="sxs-lookup"><span data-stu-id="6e001-115">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [<span data-ttu-id="6e001-116">Genişletme ve Daraltma Dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="6e001-116">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [<span data-ttu-id="6e001-117">Nasıl yapılır: İşleç Tanımlama</span><span class="sxs-lookup"><span data-stu-id="6e001-117">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [<span data-ttu-id="6e001-118">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="6e001-118">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [<span data-ttu-id="6e001-119">Option Strict Deyimi</span><span class="sxs-lookup"><span data-stu-id="6e001-119">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [<span data-ttu-id="6e001-120">Nasıl yapılır: Dönüştürme İşleci Tanımlama</span><span class="sxs-lookup"><span data-stu-id="6e001-120">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a><span data-ttu-id="c5763-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5763-113">See also</span></span>
+- [<span data-ttu-id="c5763-114">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="c5763-114">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="c5763-115">Narrowing</span><span class="sxs-lookup"><span data-stu-id="c5763-115">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [<span data-ttu-id="c5763-116">Genişletme ve Daraltma Dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="c5763-116">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="c5763-117">Nasıl yapılır: Bir işleci tanımlama</span><span class="sxs-lookup"><span data-stu-id="c5763-117">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [<span data-ttu-id="c5763-118">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="c5763-118">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [<span data-ttu-id="c5763-119">Option Strict Deyimi</span><span class="sxs-lookup"><span data-stu-id="c5763-119">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="c5763-120">Nasıl yapılır: Bir dönüşüm işleci tanımlama</span><span class="sxs-lookup"><span data-stu-id="c5763-120">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

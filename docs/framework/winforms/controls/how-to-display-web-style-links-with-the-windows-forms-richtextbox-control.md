@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme'
+title: 'Nasıl yapılır: Windows Forms RichTextBox denetimi ile Web stili bağlantılar görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: bd813d479cd4dfb61a08d9a8c4a4e7612084e878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727592"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="807cc-102">Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="807cc-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="807cc-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak.</span><span class="sxs-lookup"><span data-stu-id="807cc-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="807cc-104">Bağlantıyı tıklattığında bağlantı metinde belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="807cc-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="407a8-102">Nasıl yapılır: Windows Forms RichTextBox denetimi ile Web stili bağlantılar görüntüleme</span><span class="sxs-lookup"><span data-stu-id="407a8-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="407a8-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak.</span><span class="sxs-lookup"><span data-stu-id="407a8-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="407a8-104">Bağlantıya tıklandığında bağlantı metni belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="407a8-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="807cc-105">RichTextBox denetimi ile bir Web sayfasına bağlamak için</span><span class="sxs-lookup"><span data-stu-id="807cc-105">To link to a Web page with the RichTextBox control</span></span>  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="407a8-105">RichTextBox denetimi ile bir Web sayfasına bağlantı için</span><span class="sxs-lookup"><span data-stu-id="407a8-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1.  <span data-ttu-id="807cc-106">Ayarlama <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği için geçerli bir URL içeren bir dize (örneğin, "http://www.microsoft.com/").</span><span class="sxs-lookup"><span data-stu-id="807cc-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
+1.  <span data-ttu-id="407a8-106">Ayarlama <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğine geçerli bir URL içeren bir dize (örneğin, "http://www.microsoft.com/").</span><span class="sxs-lookup"><span data-stu-id="407a8-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2.  <span data-ttu-id="807cc-107">Emin olun <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliği ayarlanmış `true` (varsayılan).</span><span class="sxs-lookup"><span data-stu-id="807cc-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
+2.  <span data-ttu-id="407a8-107">Emin <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliği `true` (varsayılan).</span><span class="sxs-lookup"><span data-stu-id="407a8-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3.  <span data-ttu-id="807cc-108">Yeni genel bir örneğini oluşturmak <xref:System.Diagnostics.Process> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="807cc-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
+3.  <span data-ttu-id="407a8-108">Genel yeni bir örneğini oluşturma <xref:System.Diagnostics.Process> nesne.</span><span class="sxs-lookup"><span data-stu-id="407a8-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4.  <span data-ttu-id="807cc-109">Bir olay işleyicisi yazma <xref:System.Windows.Forms.RichTextBox.LinkClicked> istenen metni tarayıcı gönderen olay.</span><span class="sxs-lookup"><span data-stu-id="807cc-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
+4.  <span data-ttu-id="407a8-109">Bir olay işleyicisi için yazma <xref:System.Windows.Forms.RichTextBox.LinkClicked> tarayıcı istediğiniz metni gönderen olay.</span><span class="sxs-lookup"><span data-stu-id="407a8-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     <span data-ttu-id="807cc-110">Aşağıdaki örnekte <xref:System.Windows.Forms.RichTextBox.LinkClicked> olayı açar belirtilen URL'ye Internet Explorer'ın bir örneği <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="807cc-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="807cc-111">Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.RichTextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="807cc-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="407a8-110">Aşağıdaki örnekte <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay bir örneğini belirtilen URL'ye Internet Explorer açılır <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="407a8-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="407a8-111">Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi.</span><span class="sxs-lookup"><span data-stu-id="407a8-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="807cc-112">Arama içinde <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi, karşılaşırsınız bir <xref:System.Security.SecurityException> nedeniyle yeterli ayrıcalığa sahip bir kısmi güven bağlamında kodu çalıştırıyorsanız, özel durum.</span><span class="sxs-lookup"><span data-stu-id="807cc-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="807cc-113">Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="807cc-113">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="407a8-112">İçinde arama <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi karşılaşırsınız bir <xref:System.Security.SecurityException> yetersiz ayrıcalıklar nedeniyle bir kısmi güven bağlamında kod çalıştırıyorsanız, özel durum.</span><span class="sxs-lookup"><span data-stu-id="407a8-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="407a8-113">Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="407a8-113">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -74,13 +74,13 @@ ms.locfileid: "33532613"
        }  
     ```  
   
-     <span data-ttu-id="807cc-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) İşlem başlatmalıdır `p`, formunuz oluşturucuda aşağıdaki ifadeyi ekleyerek yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="807cc-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
+     <span data-ttu-id="407a8-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) İşlemi başlatmalısınız `p`, formunuzu oluşturucuda aşağıdaki deyim ekleyerek yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="407a8-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     <span data-ttu-id="807cc-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="807cc-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="407a8-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="407a8-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -94,7 +94,7 @@ ms.locfileid: "33532613"
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     <span data-ttu-id="807cc-116">Hemen çalışmaya tamamladıktan sonra oluşturduğunuz işlemi durdurmak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="807cc-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="807cc-117">Yukarıdaki sunulan kodu aşağıdakilerle ilgili işlemi durdurmak için kodunuzu şuna benzeyebilir:</span><span class="sxs-lookup"><span data-stu-id="807cc-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
+     <span data-ttu-id="407a8-116">Hemen çalışmaya tamamladıktan sonra oluşturduğunuz işlemi durdurmak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="407a8-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="407a8-117">Yukarıda gösterilen koda başvuran, işlemi durdurmak için kodunuzda şuna benzeyebilir:</span><span class="sxs-lookup"><span data-stu-id="407a8-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
@@ -116,9 +116,9 @@ ms.locfileid: "33532613"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="807cc-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="807cc-118">See Also</span></span>  
- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
- <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
- <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="807cc-119">RichTextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="807cc-119">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="807cc-120">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="807cc-120">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="407a8-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="407a8-118">See also</span></span>
+- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
+- <xref:System.Windows.Forms.RichTextBox.LinkClicked>
+- <xref:System.Windows.Forms.RichTextBox>
+- [<span data-ttu-id="407a8-119">RichTextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="407a8-119">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="407a8-120">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="407a8-120">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730236"
 ---
-# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="e3d0b-102">IMetaDataAssemblyImport::GetAssemblyRefProps Metodu</span><span class="sxs-lookup"><span data-stu-id="e3d0b-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
-<span data-ttu-id="e3d0b-103">Belirtilen meta veri imzayla derleme başvurusu için özellikler kümesini alır.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="e186e-102">IMetaDataAssemblyImport::GetAssemblyRefProps Metodu</span><span class="sxs-lookup"><span data-stu-id="e186e-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
+<span data-ttu-id="e186e-103">Belirtilen meta veri imzası olan derleme başvurusu için özellikler kümesini alır.</span><span class="sxs-lookup"><span data-stu-id="e186e-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3d0b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e3d0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e186e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e186e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyRefProps (  
@@ -44,48 +44,48 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e3d0b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e3d0b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e186e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e186e-105">Parameters</span></span>  
  `mdar`  
- <span data-ttu-id="e3d0b-106">[in] `mdAssemblyRef` Özellikleri almak istediğiniz derleme başvurusunu gösteren meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
+ <span data-ttu-id="e186e-106">[in] `mdAssemblyRef` Derleme başvurusu özellikleri alınacağı temsil eden bir meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="e186e-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
   
  `ppbPublicKeyOrToken`  
- <span data-ttu-id="e3d0b-107">[out] Ortak anahtar veya meta veri simgesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-107">[out] A pointer to the public key or the metadata token.</span></span>  
+ <span data-ttu-id="e186e-107">[out] Ortak anahtarı veya meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e186e-107">[out] A pointer to the public key or the metadata token.</span></span>  
   
  `pcbPublicKeyOrToken`  
- <span data-ttu-id="e3d0b-108">[out] Döndürülen bir ortak anahtar ya da belirteci bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-108">[out] The number of bytes in the returned public key or token.</span></span>  
+ <span data-ttu-id="e186e-108">[out] Döndürülen bir ortak anahtar veya belirteç bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="e186e-108">[out] The number of bytes in the returned public key or token.</span></span>  
   
  `szName`  
- <span data-ttu-id="e3d0b-109">[out] Derleme basit adı.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-109">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="e186e-109">[out] Derlemenin basit adını.</span><span class="sxs-lookup"><span data-stu-id="e186e-109">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="e3d0b-110">[in] Geniş karakter boyutu, `szName`.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-110">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="e186e-110">[in] Geniş karakter, boyutunu, `szName`.</span><span class="sxs-lookup"><span data-stu-id="e186e-110">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="e3d0b-111">[out] Gerçekte döndürülen geniş karakter sayısını gösteren bir işaretçi `szName`.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="e186e-111">[out] Gerçekte döndürülen geniş karakter sayısı için bir işaretçi `szName`.</span><span class="sxs-lookup"><span data-stu-id="e186e-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="e3d0b-112">[out] Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
+ <span data-ttu-id="e186e-112">[out] Derleme meta verileri içeren bir ASSEMBLYMETADATA yapısı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="e186e-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
   
  `ppbHashValue`  
- <span data-ttu-id="e3d0b-113">[out] Karma değer için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="e3d0b-114">SHA-1 algoritmasını kullanan karma budur `PublicKey` arfFullOriginator bayrak sürece, başvurulan derleme özelliğinin [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırma ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
+ <span data-ttu-id="e186e-113">[out] Karma değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e186e-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="e186e-114">Bu, SHA-1 algoritmasını kullanan karma `PublicKey` arfFullOriginator bayrak sürece, başvurulan derleme özelliği [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırma ayarı.</span><span class="sxs-lookup"><span data-stu-id="e186e-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
   
  `pcbHashValue`  
- <span data-ttu-id="e3d0b-115">[out] Döndürülen karma değeri geniş karakter sayısı.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-115">[out] The number of wide chars in the returned hash value.</span></span>  
+ <span data-ttu-id="e186e-115">[out] Döndürülen karma değeri geniş karakter sayısı.</span><span class="sxs-lookup"><span data-stu-id="e186e-115">[out] The number of wide chars in the returned hash value.</span></span>  
   
  `pdwAssemblyRefFlags`  
- <span data-ttu-id="e3d0b-116">[out] Bir derlemeye uygulanan meta verileri açıklayan bayrakları gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="e3d0b-117">Bir veya birden çok bayrak değeri birleşimidir [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="e186e-116">[out] Bir derlemeye uygulanan meta verileri açıklayan bayrakları için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e186e-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="e186e-117">Bir veya daha fazla flags değeri birleşimidir [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerleri.</span><span class="sxs-lookup"><span data-stu-id="e186e-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e3d0b-118">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e3d0b-118">Return Value</span></span>  
- <span data-ttu-id="e3d0b-119">Bu yöntem başarılı olursa S_OK döndürür; Aksi takdirde, bu Winerror.h'de üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e186e-118">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e186e-118">Return Value</span></span>  
+ <span data-ttu-id="e186e-119">Bu yöntem başarılı olursa başarılıysa S_OK döndürür; Aksi takdirde wınerror üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.</span><span class="sxs-lookup"><span data-stu-id="e186e-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3d0b-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e3d0b-120">Requirements</span></span>  
- <span data-ttu-id="e3d0b-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3d0b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e186e-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e186e-120">Requirements</span></span>  
+ <span data-ttu-id="e186e-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e186e-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3d0b-122">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e3d0b-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e186e-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e186e-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e3d0b-123">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="e3d0b-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e186e-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="e186e-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e3d0b-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3d0b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e186e-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e186e-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3d0b-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e3d0b-125">See Also</span></span>  
- [<span data-ttu-id="e3d0b-126">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e3d0b-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e186e-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e186e-125">See also</span></span>
+- [<span data-ttu-id="e186e-126">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e186e-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

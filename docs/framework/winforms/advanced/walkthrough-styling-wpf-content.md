@@ -1,82 +1,82 @@
 ---
-title: 'İzlenecek yol: WPF İçeriği için Stil Oluşturma'
+title: 'İzlenecek yol: WPF içeriği için stil oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 45009f865589d040b0076fe0b115863d475ec488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725408"
 ---
-# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="3b1b0-102">İzlenecek yol: WPF İçeriği için Stil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3b1b0-102">Walkthrough: Styling WPF Content</span></span>
-<span data-ttu-id="3b1b0-103">Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
+# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="a0104-102">İzlenecek yol: WPF içeriği için stil oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0104-102">Walkthrough: Styling WPF Content</span></span>
+<span data-ttu-id="a0104-103">Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="a0104-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
 
- <span data-ttu-id="3b1b0-104">Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:</span><span class="sxs-lookup"><span data-stu-id="3b1b0-104">In this walkthrough, you perform the following tasks:</span></span>
+ <span data-ttu-id="a0104-104">Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:</span><span class="sxs-lookup"><span data-stu-id="a0104-104">In this walkthrough, you perform the following tasks:</span></span>
 
--   <span data-ttu-id="3b1b0-105">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-105">Create the project.</span></span>
+-   <span data-ttu-id="a0104-105">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a0104-105">Create the project.</span></span>
 
--   <span data-ttu-id="3b1b0-106">WPF denetim türü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-106">Create the WPF control type.</span></span>
+-   <span data-ttu-id="a0104-106">WPF denetim türü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a0104-106">Create the WPF control type.</span></span>
 
--   <span data-ttu-id="3b1b0-107">Bir stil WPF denetimi için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-107">Apply a style to the WPF control.</span></span>
+-   <span data-ttu-id="a0104-107">Bir stil WPF denetimi için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="a0104-107">Apply a style to the WPF control.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="3b1b0-108">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3b1b0-109">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3b1b0-110">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="3b1b0-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="a0104-108">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="a0104-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a0104-109">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="a0104-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a0104-110">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="a0104-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="3b1b0-111">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="3b1b0-111">Prerequisites</span></span>  
- <span data-ttu-id="3b1b0-112">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="3b1b0-112">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="a0104-111">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="a0104-111">Prerequisites</span></span>  
+ <span data-ttu-id="a0104-112">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="a0104-112">You need the following components to complete this walkthrough:</span></span>  
   
--   <span data-ttu-id="3b1b0-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-113">Visual Studio 2012.</span></span>  
+-   <span data-ttu-id="a0104-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="a0104-113">Visual Studio 2012.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="3b1b0-114">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3b1b0-114">Creating the Project</span></span>  
- <span data-ttu-id="3b1b0-115">İlk adım Windows Forms projesi oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-115">The first step is to create the Windows Forms project.</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="a0104-114">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0104-114">Creating the Project</span></span>  
+ <span data-ttu-id="a0104-115">İlk adım Windows Forms projesi oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="a0104-115">The first step is to create the Windows Forms project.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3b1b0-116">WPF içeriği barındırma, yalnızca C# ve Visual Basic projelerinde desteklenir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
+>  <span data-ttu-id="a0104-116">WPF içeriği barındırma, yalnızca C# ve Visual Basic projelerinde desteklenir.</span><span class="sxs-lookup"><span data-stu-id="a0104-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-#### <a name="to-create-the-project"></a><span data-ttu-id="3b1b0-117">Proje oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="3b1b0-117">To create the project</span></span>  
+#### <a name="to-create-the-project"></a><span data-ttu-id="a0104-117">Proje oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="a0104-117">To create the project</span></span>  
   
--   <span data-ttu-id="3b1b0-118">Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `StylingWpfContent`.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
+-   <span data-ttu-id="a0104-118">Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `StylingWpfContent`.</span><span class="sxs-lookup"><span data-stu-id="a0104-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
   
-## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="3b1b0-119">WPF denetim türleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="3b1b0-119">Creating the WPF Control Types</span></span>  
- <span data-ttu-id="3b1b0-120">WPF denetim türü projeye ekledikten sonra içinde barındırabilirsiniz bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
+## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="a0104-119">WPF denetim türleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0104-119">Creating the WPF Control Types</span></span>  
+ <span data-ttu-id="a0104-120">WPF denetim türü projeye ekledikten sonra içinde barındırabilirsiniz bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi.</span><span class="sxs-lookup"><span data-stu-id="a0104-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
   
-#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="3b1b0-121">WPF denetim türleri oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="3b1b0-121">To create WPF control types</span></span>  
+#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="a0104-121">WPF denetim türleri oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="a0104-121">To create WPF control types</span></span>  
   
-1.  <span data-ttu-id="3b1b0-122">Yeni bir WPF ekleme <xref:System.Windows.Controls.UserControl> çözüme bir proje.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="3b1b0-123">Denetim türü için varsayılan adı kullanacak `UserControl1.xaml`.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="3b1b0-124">Daha fazla bilgi için [izlenecek yol: oluşturma yeni WPF içeriği Windows Forms'ta tasarım zamanında](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="3b1b0-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
+1.  <span data-ttu-id="a0104-122">Yeni bir WPF ekleme <xref:System.Windows.Controls.UserControl> çözüme bir proje.</span><span class="sxs-lookup"><span data-stu-id="a0104-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="a0104-123">Denetim türü için varsayılan adı kullanacak `UserControl1.xaml`.</span><span class="sxs-lookup"><span data-stu-id="a0104-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="a0104-124">Daha fazla bilgi için [izlenecek yol: Yeni bir WPF içeriği Windows formlarında tasarım zamanında oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="a0104-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-2.  <span data-ttu-id="3b1b0-125">Tasarım görünümünde emin `UserControl1` seçilir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="3b1b0-126">Daha fazla bilgi için [nasıl yapılır: seçin ve tasarım yüzeyinde taşımak öğeleri](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).</span><span class="sxs-lookup"><span data-stu-id="3b1b0-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).</span></span>  
+2.  <span data-ttu-id="a0104-125">Tasarım görünümünde emin `UserControl1` seçilir.</span><span class="sxs-lookup"><span data-stu-id="a0104-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="a0104-126">Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).</span><span class="sxs-lookup"><span data-stu-id="a0104-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).</span></span>  
   
-3.  <span data-ttu-id="3b1b0-127">İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
+3.  <span data-ttu-id="a0104-127">İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.</span><span class="sxs-lookup"><span data-stu-id="a0104-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-4.  <span data-ttu-id="3b1b0-128">Ekleme bir <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **iptal**.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
+4.  <span data-ttu-id="a0104-128">Ekleme bir <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **iptal**.</span><span class="sxs-lookup"><span data-stu-id="a0104-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
   
-5.  <span data-ttu-id="3b1b0-129">İkinci bir ekleme <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
+5.  <span data-ttu-id="a0104-129">İkinci bir ekleme <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="a0104-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
   
-6.  <span data-ttu-id="3b1b0-130">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-130">Build the project.</span></span>  
+6.  <span data-ttu-id="a0104-130">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a0104-130">Build the project.</span></span>  
   
-## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="3b1b0-131">WPF denetime stil uygulama</span><span class="sxs-lookup"><span data-stu-id="3b1b0-131">Applying a Style to a WPF Control</span></span>  
- <span data-ttu-id="3b1b0-132">Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi stil uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
+## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="a0104-131">WPF denetime stil uygulama</span><span class="sxs-lookup"><span data-stu-id="a0104-131">Applying a Style to a WPF Control</span></span>  
+ <span data-ttu-id="a0104-132">Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi stil uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0104-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
   
-#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="3b1b0-133">Bir WPF denetimine stil uygulamak için</span><span class="sxs-lookup"><span data-stu-id="3b1b0-133">To apply a style to a WPF control</span></span>  
+#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="a0104-133">Bir WPF denetimine stil uygulamak için</span><span class="sxs-lookup"><span data-stu-id="a0104-133">To apply a style to a WPF control</span></span>  
   
-1.  <span data-ttu-id="3b1b0-134">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-134">Open `Form1` in the Windows Forms Designer.</span></span>  
+1.  <span data-ttu-id="a0104-134">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="a0104-134">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-2.  <span data-ttu-id="3b1b0-135">İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
+2.  <span data-ttu-id="a0104-135">İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.</span><span class="sxs-lookup"><span data-stu-id="a0104-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-     <span data-ttu-id="3b1b0-136">Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
+     <span data-ttu-id="a0104-136">Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="a0104-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-3.  <span data-ttu-id="3b1b0-137">Akıllı etiket panelinde `elementHost1`, tıklayın **barındırılan içerik Düzenle** aşağı açılan listeden.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
+3.  <span data-ttu-id="a0104-137">Akıllı etiket panelinde `elementHost1`, tıklayın **barındırılan içerik Düzenle** aşağı açılan listeden.</span><span class="sxs-lookup"><span data-stu-id="a0104-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
   
-     <span data-ttu-id="3b1b0-138">`UserControl1` açılır [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3b1b0-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+     <span data-ttu-id="a0104-138">`UserControl1` açılır [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a0104-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="3b1b0-139">XAML Görünümü'nde, aşağıdaki XAML sonra Ekle `<UserControl>` etiketiyle.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
+4.  <span data-ttu-id="a0104-139">XAML Görünümü'nde, aşağıdaki XAML sonra Ekle `<UserControl>` etiketiyle.</span><span class="sxs-lookup"><span data-stu-id="a0104-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
   
-     <span data-ttu-id="3b1b0-140">Bu XAML gradyan karşıt gradyan kenarlıklı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="3b1b0-141">Denetim tıklandığında gradyanlar basılan düğme görünümünü oluşturmak için değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="3b1b0-142">Daha fazla bilgi için [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="3b1b0-142">For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
+     <span data-ttu-id="a0104-140">Bu XAML gradyan karşıt gradyan kenarlıklı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a0104-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="a0104-141">Denetim tıklandığında gradyanlar basılan düğme görünümünü oluşturmak için değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="a0104-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="a0104-142">Daha fazla bilgi için [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="a0104-142">For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
   
 ```xaml  
 <UserControl.Resources>  
@@ -126,34 +126,34 @@ ms.locfileid: "48845560"
 </UserControl.Resources>  
 ```  
   
-1.  <span data-ttu-id="3b1b0-143">Uygulama `SimpleButton` aşağıdaki XAML içinde ekleyerek iptal düğmesi için önceki adımda tanımlanan stil `<Button>` İptal düğmesinin etiketi.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
+1.  <span data-ttu-id="a0104-143">Uygulama `SimpleButton` aşağıdaki XAML içinde ekleyerek iptal düğmesi için önceki adımda tanımlanan stil `<Button>` İptal düğmesinin etiketi.</span><span class="sxs-lookup"><span data-stu-id="a0104-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
   
     ```  
     Style="{StaticResource SimpleButton}  
     ```  
   
-     <span data-ttu-id="3b1b0-144">Düğme bildirimi, aşağıdaki XAML andıracaktır.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-144">Your button declaration will resemble the following XAML.</span></span>  
+     <span data-ttu-id="a0104-144">Düğme bildirimi, aşağıdaki XAML andıracaktır.</span><span class="sxs-lookup"><span data-stu-id="a0104-144">Your button declaration will resemble the following XAML.</span></span>  
   
 ```xaml  
 <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"  
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  <span data-ttu-id="3b1b0-145">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-145">Build the project.</span></span>  
+1.  <span data-ttu-id="a0104-145">Projeyi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a0104-145">Build the project.</span></span>  
   
-2.  <span data-ttu-id="3b1b0-146">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-146">Open `Form1` in the Windows Forms Designer.</span></span>  
+2.  <span data-ttu-id="a0104-146">Açık `Form1` Windows Forms Tasarımcısı'nda.</span><span class="sxs-lookup"><span data-stu-id="a0104-146">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-3.  <span data-ttu-id="3b1b0-147">Düğme denetimine yeni stil uygulanır.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-147">The new style is applied to the button control.</span></span>  
+3.  <span data-ttu-id="a0104-147">Düğme denetimine yeni stil uygulanır.</span><span class="sxs-lookup"><span data-stu-id="a0104-147">The new style is applied to the button control.</span></span>  
   
-4.  <span data-ttu-id="3b1b0-148">Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat** uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
+4.  <span data-ttu-id="a0104-148">Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat** uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="a0104-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
   
-5.  <span data-ttu-id="3b1b0-149">Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-149">Click the OK and Cancel buttons and view the differences.</span></span>  
+5.  <span data-ttu-id="a0104-149">Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="a0104-149">Click the OK and Cancel buttons and view the differences.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b1b0-150">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3b1b0-150">See Also</span></span>  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="3b1b0-151">Geçiş ve Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="3b1b0-151">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [<span data-ttu-id="3b1b0-152">WPF Denetimlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="3b1b0-152">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [<span data-ttu-id="3b1b0-153">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="3b1b0-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [<span data-ttu-id="3b1b0-154">XAML'ye Genel Bakış (WPF)</span><span class="sxs-lookup"><span data-stu-id="3b1b0-154">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [<span data-ttu-id="3b1b0-155">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3b1b0-155">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="a0104-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a0104-150">See also</span></span>
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [<span data-ttu-id="a0104-151">Geçiş ve Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="a0104-151">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [<span data-ttu-id="a0104-152">WPF Denetimlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="a0104-152">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [<span data-ttu-id="a0104-153">Visual Studio’da XAML tasarlama</span><span class="sxs-lookup"><span data-stu-id="a0104-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="a0104-154">XAML'ye Genel Bakış (WPF)</span><span class="sxs-lookup"><span data-stu-id="a0104-154">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [<span data-ttu-id="a0104-155">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0104-155">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
