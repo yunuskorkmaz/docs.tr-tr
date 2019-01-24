@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503020"
 ---
 # <a name="hosting"></a>Barındırma
 Bu bölümdeki konularda, barındırma hizmeti açıklar. Bir hizmeti Internet Information Services (IIS), Windows İşlem Etkinleştirme Hizmeti (WAS), Windows Server AppFabric, bir Windows hizmeti veya yönetilen bir uygulama tarafından barındırılabilir — bu seçenek, genellikle olarak adlandırılır *kendi kendine barındırma*.  
@@ -33,6 +33,6 @@ Bu bölümdeki konularda, barındırma hizmeti açıklar. Bir hizmeti Internet I
  [Birden Fazla IIS Site Bağlamasını Destekleme](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  Tek bir Web sitesindeki aynı URI şeması kullanarak bir hizmet için birden çok taban adresini belirtmek açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

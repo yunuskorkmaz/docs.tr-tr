@@ -2,18 +2,18 @@
 title: Yordam iş akışları
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 5cd97c8ccaae74e4275f809502ac0a4d3c2f042a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29fc6f5ebd6bf1984f287c3d407d2564249c65f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500544"
 ---
 # <a name="procedural-workflows"></a>Yordam iş akışları
-Yordam iş akışları yordam dillerinde bulunan benzer akış denetimi yöntemlerini kullanın. Bu yapıları içermek `While` ve `If`. Bu iş akışları gibi diğer akış denetimi etkinlikleri kullanarak serbestçe birleştirilebilen <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence>.  
+Yordam iş akışları, akış denetimi yöntemleri yordam dillerinde bulunan benzer kullanın. Bu yapılar dahil `While` ve `If`. Bu iş akışları gibi diğer akış denetimi etkinlikleri kullanarak serbestçe oluşturulabildikleri <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence>.  
   
 ## <a name="controlling-execution-flow"></a>Yürütme akışı denetimi  
- İş akışı etkinlik kütüphanesini yordam dillerde kullanılan çoğu akış denetimi yöntemleri modelleme için etkinlikler içeriyor. Bu güncelleştirmeler şunlardır:  
+ İş akışı etkinlik kitaplığı yordam dilde kullanılan çoğu akış denetimi yöntemleri modelleme için etkinlikleri içerir. Bu güncelleştirmeler şunlardır:  
   
 -   <xref:System.Activities.Statements.While>  
   
@@ -31,10 +31,10 @@ Yordam iş akışları yordam dillerinde bulunan benzer akış denetimi yönteml
   
 -   <xref:System.Activities.Statements.Pick>  
   
- Akış denetimi etkinlikleri kullanmak için sürükleyip onlardan **etkinlik** bileşik etkinliği Tasarımcı penceresinin içinde içine araç.  
+ Akış denetimi etkinlikleri kullanmak için sürükleyip bunları **etkinlik** Tasarımcı penceresinin içinde bileşik bir etkinlik araç.  
   
 > [!NOTE]
->  Kullanıyorsanız [!INCLUDE[dublin](../../../includes/dublin-md.md)] ana iş akışları bir Web grubunda AppFabric örnekleri farklı AppFabric sunucular arasında taşınır. Bu kaynaklar tüm düğümler arasında paylaşılan mümkün olmasını gerektirir.  Varsayılan NET 4 iş akışı etkinlikleri hiçbiri yerel kaynaklara erişmek herhangi bir işlem içerir. Bir geliştirici AppFabric iş akışı immovable olarak işaretlemek için herhangi bir mekanizma sunmaz olduğundan, bir iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
+>  Kullanıyorsanız [!INCLUDE[dublin](../../../includes/dublin-md.md)] bir Web grubundaki konak iş akışlarına AppFabric örnekleri farklı AppFabric sunucular arasında taşınır. Bu, kaynakları tüm düğümler arasında paylaşılacak mümkün olmasını gerektirir.  Varsayılan ağ 4 iş akışı etkinlikleri hiçbiri yerel kaynaklara erişen herhangi bir işlem içerir. İş akışı immovable olarak işaretlemek için herhangi bir mekanizma AppFabric sunmaz olduğundan, bir geliştirici iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Akış Çizelgesi İş Akışları](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Akış Çizelgesi İş Akışları](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15f34c55f0ee261c65649e9d431944201c546f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506036"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept Numaralandırması
-Tür (yani içine adım adım olan), geçirilebilir kod gösterir.  
+(Bu, içine girdiğiniz olduğu gibi), geçirilebilir kod türlerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,23 +46,23 @@ typedef enum CorDebugIntercept {
 |------------|-----------------|  
 |`INTERCEPT_NONE`|Kod geçirilebilir.|  
 |`INTERCEPT_CLASS_INIT`|Bir oluşturucu geçirilebilir.|  
-|`INTERCEPT_EXCEPTION_FILTER`|Bir özel durum filtresi geçirilebilir.|  
+|`INTERCEPT_EXCEPTION_FILTER`|Özel Durum Filtresi geçirilebilir.|  
 |`INTERCEPT_SECURITY`|Güvenlik uygulayan kod ele geçirilebilir.|  
-|`INTERCEPT_CONTEXT_POLICY`|Bir bağlam İlkesi geçirilebilir.|  
+|`INTERCEPT_CONTEXT_POLICY`|Bir bağlam ilke geçirilebilir.|  
 |`INTERCEPT_INTERCEPTION`|Kullanılmadı.|  
 |`INTERCEPT_ALL`|Tüm kod geçirilebilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [ICorDebugStepper::setınterceptmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) geçirilebilir kod türlerini kurmaya yöntemi.  
+ Kullanım [ICorDebugStepper::setınterceptmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) geçirilebilir kod türlerini oluşturmak için yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

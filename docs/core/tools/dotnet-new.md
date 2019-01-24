@@ -2,12 +2,12 @@
 title: DotNet yeni komutu
 description: Belirtilen şablonu temel alan yeni .NET Core projeleri dotnet yeni bir komut oluşturur.
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516154"
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169699"
 
 `dotnet new` -Yeni Proje, yapılandırma dosyası veya belirtilen şablonu temel alan bir çözüm oluşturur.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 
@@ -272,7 +272,7 @@ Her proje şablonu, ek seçenekler kullanılabilir olabilir. Çekirdek şablonla
 
   `--no-restore` -Örtük bir geri yükleme proje oluşturma sırasında yürütme değil.
 
-**ClassLib**
+**classlib**
 
 `-f|--framework <FRAMEWORK>` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp2.0` bir .NET Core sınıf kitaplığı oluşturmak için veya `netstandard2.0` .NET standart sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
 
@@ -384,7 +384,7 @@ Her proje şablonu, ek seçenekler kullanılabilir olabilir. Çekirdek şablonla
 
   `--no-restore` -Örtük bir geri yükleme proje oluşturma sırasında yürütme değil.
 
-**ClassLib**
+**classlib**
 
 `-f|--framework <FRAMEWORK>` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp2.0` bir .NET Core sınıf kitaplığı oluşturmak için veya `netstandard2.0` .NET standart sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
 
@@ -490,7 +490,7 @@ Her proje şablonu, ek seçenekler kullanılabilir olabilir. Çekirdek şablonla
 
 `-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
-**ClassLib**
+**classlib**
 
 `-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0`, `netcoreapp1.1`, veya `netstandard1.0` için `netstandard1.6`. Varsayılan değer `netstandard1.4` şeklindedir.
 
@@ -536,7 +536,7 @@ Oluşturma bir *global.json* SDK'sı sürüm 2.0.0 (yalnızca .NET Core SDK 2.0 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Yeni dotnet için özel şablonlar](custom-templates.md)  
-* [Dotnet new için özel şablon oluşturma](~/docs/core/tutorials/create-custom-template.md)  
-* [DotNet/dotnet-şablonu-örnekleri GitHub deposu](https://github.com/dotnet/dotnet-template-samples)  
-* [Yeni dotnet şablonları](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [Yeni dotnet için özel şablonlar](custom-templates.md)
+- [Dotnet new için özel şablon oluşturma](~/docs/core/tutorials/create-custom-template.md)
+- [DotNet/dotnet-şablonu-örnekleri GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
+- [Yeni dotnet şablonları](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

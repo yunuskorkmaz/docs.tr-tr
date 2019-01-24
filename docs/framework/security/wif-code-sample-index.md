@@ -3,12 +3,12 @@ title: WIF kod örneği dizini
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b4c73bac9ddda83d78a4d9c95e3864d8d4e8ec4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a18392b892f9aa81e3ee8e924dd6b29058e486c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493397"
 ---
 # <a name="wif-code-sample-index"></a>WIF kod örneği dizini
 Windows Identity Foundation 4.5 için kod örnekleri şunlardır:  
@@ -29,5 +29,5 @@ Windows Identity Foundation 4.5 için kod örnekleri şunlardır:
   
 -   [CustomToken](https://go.microsoft.com/fwlink/?LinkID=248412) – Bu örnek özel bir basit Web belirteci (SWT) simge türü oluşturmak nasıl gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Identity Foundation](../../../docs/framework/security/index.md)

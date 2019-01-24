@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Basit değeri, bir öğenin (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 228afa6cd4bf0599bf7bd63afff17014799ef1b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a861acafe3b9561b1237e6b6449374374c723805
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505811"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Nasıl yapılır: Basit değeri, bir öğenin (Visual Basic)
-Bu konuda, basit bir öğe değerini almak gösterilmiştir. Basit yalnızca belirli öğesinin değeri tek bir dize halinde birleştirilmiş tüm alt öğelerinin değerlerini içerir derin değeri aksine değerdir.  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Nasıl yapılır: (Visual Basic) öğenin yüzeysel değerini alma
+Bu konuda, bir öğenin yüzeysel değerini alma gösterilmektedir. Basit yalnızca belirli öğenin değeri tek bir dize olarak birleştirilmiş tüm alt öğe değerlerini içeren ayrıntılı değer aksine değerdir.  
   
- Her iki çevrim kullanarak bir öğe değerini aldığınızda veya <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği, derin değeri alacak. Basit değerini almak için kullanabileceğiniz `ShallowValue` genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi. Basit değeri alınırken içeriğine göre öğelerini seçmek istediğinizde kullanışlıdır.  
+ Ya da bir çevrim kullanarak bir öğe değeri aldığınızda veya <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği, derin değeri alın. Yüzeysel değerini almak için kullanabileceğiniz `ShallowValue` genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi. Yüzeysel değerini alma içeriklerine göre öğeleri seçmek istediğinizde yararlıdır.  
   
- Aşağıdaki örnekte basit bir öğenin değerini alır. bir genişletme yöntemi bildirir. Ardından, hesaplanan değeri içeren tüm öğeler listelemek için genişletme yöntemi sorguda kullanır.  
+ Aşağıdaki örnek, bir öğenin yüzeysel değerini alır. bir genişletme yöntemi bildirir. Ardından, hesaplanan değeri içeren tüm öğeleri listelemek için genişletme yöntemi bir sorguda kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki metin dosyası Report.xml, bu örnek kaynağıdır.  
+ Aşağıdaki metin dosyası Report.xml, bu örnekte kaynağıdır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -65,7 +65,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -74,5 +74,5 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

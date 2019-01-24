@@ -2,12 +2,12 @@
 title: '&lt;reliableSession&gt;'
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 56cc48cd93020f37ac73b7f6b89130fdd1a3f7db
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0768cbce237b2d119be719eab1de9da4a551e5ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509811"
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekler-bir kez teslim Güvenceleri.  
@@ -43,7 +43,7 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
 |InactivityTimeout|A <xref:System.TimeSpan> herhangi bir ileti kanalı hatalı önce göndermemeyi diğer tarafın kanalı göndermemesini en uzun süreyi belirtir. Varsayılan değer 00:10:00 ' dir.<br /><br /> Bir kanalda etkinlik, bir uygulama ya da altyapı iletileri alma olarak tanımlanır. Bu özellik, etkin olmayan bir oturum etkin kalması için en uzun süreyi denetler. Daha uzun süre sahip etkinlik geçerse, oturum altyapısı ve kanal hataları tarafından iptal edildi. **Not:**  Uygulamayı düzenli aralıklarla bağlantının etkin kalması için ileti göndermek için gerekli değildir.|  
 |MaxPendingChannels|En fazla bekleyebilen kabul edilecek bekleyebileceği kanal sayısını belirten bir tamsayı. Bu değer 1 için 16384 arasında kapsamlı olmalıdır. Varsayılan 4'tür.<br /><br /> Kanallar, ne zaman bunlar kabul zamanlanmayı bekleyen aşamasındadır. Bu sınıra ulaşıldığında, kanal yok oluşturulur. Bunun yerine, bunlar modu bu numara gelecek kadar aşağı (kanal kabul ederek) yerleştirilir. Bu bir Fabrika içi bir güvenlik sınırıdır.<br /><br /> Ne zaman eşiğine ulaşıldı ve yeni bir güvenilir oturum oluşturmak bir uzaktan uygulama çalıştığında, istek reddedilir ve bu hataların istenir açma işlemi. Bu sınır, giden kanallar bekleyen sayısı için geçerli değildir.|  
 |MaxRetryCount|En fazla kaç kez belirten bir tamsayı güvenilir bir kanal için bir bildirim kendi altındaki bir kanalda Send çağırarak almadı bir ileti yeniden dener.<br /><br /> Bu değer, sıfırdan büyük olmalıdır. Varsayılan değer 8'dir.<br /><br /> Bu değer, sıfırdan büyük bir tamsayı olmalıdır. Bir bildirim son aktarım sonra kanal hataları alınmazsa.<br /><br /> Bir ileti, alıcıya teslim alıcı tarafından onaylanmış, aktarılacak olarak kabul edilir.<br /><br /> Bildirim zaman iletilmiş bir ileti için belirli bir süre içinde alınmadı, altyapı, ileti otomatik olarak geçer. Altyapı, en fazla kaç kez bu özelliği tarafından belirtilen ileti yeniden dener. Bir bildirim son aktarım sonra kanal hataları alınmazsa.<br /><br /> Altyapı üzerinde hesaplanan ortalama gidiş dönüş süresi almadığı ne zaman belirlemek için bir üstel geri alma algoritması kullanır. Süresi 1 saniye aktarım ve yaklaşık 8,5 ilk iletim girişimi ve son aktarım denemesini arasında geçen dakika cinsinden sonuçları her girişimi gecikmeyle Katlama önce başlangıçta başlar. İlk aktarım deneme süresi göre hesaplanan gidiş dönüş süresini ayarlanır ve bu girişimler geçirmesine süre elde edilen esnetme buna göre değişir. Bu aktarım süresini çeşitli ağ koşulları için dinamik olarak uyum sağlar.|  
-|MaxTransferWindowSize|En büyük arabellek boyutunu belirten bir tamsayı. Geçerli değerler 1 ile 4096 kapsamlı olmalı.<br /><br /> Bu öznitelik, istemcide henüz bir alıcı tarafından onaylanır iletileri tutmak için güvenilir bir kanal tarafından kullanılan arabelleğin en büyük boyutunu tanımlar. Bir ileti kotası birimidir. Arabelleği dolu ise, daha fazla gönderme işlemleri engellenir.<br /><br /> Bu öznitelik, bir alıcı ile kanal tarafından henüz uygulamaya gönderilen gelen iletileri depolamak için kullanılan arabelleğin en büyük boyutunu tanımlar. Arabelleği dolu ise, daha ayrıntılı iletiler sessizce alıcı tarafından bırakılır ve istemci tarafından aktarım gerektirir.|  
+|maxTransferWindowSize|En büyük arabellek boyutunu belirten bir tamsayı. Geçerli değerler 1 ile 4096 kapsamlı olmalı.<br /><br /> Bu öznitelik, istemcide henüz bir alıcı tarafından onaylanır iletileri tutmak için güvenilir bir kanal tarafından kullanılan arabelleğin en büyük boyutunu tanımlar. Bir ileti kotası birimidir. Arabelleği dolu ise, daha fazla gönderme işlemleri engellenir.<br /><br /> Bu öznitelik, bir alıcı ile kanal tarafından henüz uygulamaya gönderilen gelen iletileri depolamak için kullanılan arabelleğin en büyük boyutunu tanımlar. Arabelleği dolu ise, daha ayrıntılı iletiler sessizce alıcı tarafından bırakılır ve istemci tarafından aktarım gerektirir.|  
 |ordered|İletilerin gönderildiği sırada ulşamasını garanti edilip edilmediğini belirten Boolean bir değer. Bu ayar `false`, iletileri sıralama dışında gelir. Varsayılan, `true` değeridir.|  
 |ReliableMessagingVersion|Geçerli bir değer <xref:System.ServiceModel.ReliableMessagingVersion> kullanılacak WS-ReliableMessaging sürümünü belirtir.|  
   
@@ -119,12 +119,12 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
 </configuration>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ReliableSessionElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>  
- [Güvenilir Oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ReliableSessionElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+- [Güvenilir Oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

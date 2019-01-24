@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514068"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# Derleyici Seçenekleri)
 **- Appconfig** derleyici seçeneği, derleme bağlama zamanında ortak dil çalışma zamanı (CLR) için bir derlemenin uygulama yapılandırma (app.config) dosyasının konumunu belirtmek bir C# uygulaması sağlar.  
@@ -54,7 +54,7 @@ ms.locfileid: "45698136"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<supportPortability > öğesi](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [\<supportPortability > öğesi](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

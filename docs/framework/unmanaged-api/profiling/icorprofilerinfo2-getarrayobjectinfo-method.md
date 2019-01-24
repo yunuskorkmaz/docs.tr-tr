@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0444b6a5fd1bb286df573b1bba7d35b0d2d14a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498849"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo Metodu
-Bir dizi nesnesi hakkında ayrıntılı bilgi alır.  
+Bir dizi nesnesi hakkında ayrıntılı bilgiler alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,29 +43,29 @@ HRESULT GetArrayObjectInfo(
  [in] Geçerli dizi nesnesinin kimliği.  
   
  `cDimensions`  
- [in] Derecesini (dimensions sayısı) dizisi.  
+ [in] Boyut (boyut sayısı) dizisi.  
   
  `pDimensionSizes`  
- [out] Tamsayı, her bir dizi boyut boyutunu temsil eden içeren bir dizi.  
+ [out] Her bir dizinin boyutu boyutunu gösteren tamsayılar içeren bir dizi.  
   
  `pDimensionLowerBounds`  
- [out] Tamsayı içeren bir dizi, her alt temsil eden bir dizi boyutunun bağlı.  
+ [out] Tamsayı içeren bir dizi, her alt temsil eden bir dizinin boyutu bağlı.  
   
  `ppData`  
- [out] C++ kurala göre yerleştirilmeden dizi ham arabellek adresini gösteren bir işaretçi.  
+ [out] C++ kuralına göre düzenlendiğini dizisi için ham arabelleği adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pDimensionSizes` Ve `pDimensionLowerBounds` paralel dizileri olduğundan, her dizideki aynı dizinde bulunan aynı varlık özelliklerini öğeleridir.  
+ `pDimensionSizes` Ve `pDimensionLowerBounds` aynı dizinde her dizi konumunda bulunan öğeleri aynı varlık özelliklerini şekilde paralel, dizilerdir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

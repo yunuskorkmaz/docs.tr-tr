@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494450"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
-Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri bu konuda ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak message queuing bu belgede ele alınmamaktadır.  
+Bu konuda, Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak message queuing bu belgede ele alınmamaktadır.  
   
  WCF programlama modeli, iki uç nokta bağlanan taşıma düzeneğinden uç nokta işlemleri (bir hizmet sözleşmesi içerisinde ifade edilen) ayırır. Bu, hizmetlerinizi ağa nasıl sunacağınızı öğrenin karar verme esnekliğine sağlar.  
   
@@ -45,14 +45,14 @@ Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasında
  Tek bir bilgisayara farklı WCF uygulamaları arasındaki iletişimi gereklidir ve başka bir makineden hiçbir iletişim önlemek istiyorsanız, adlandırılmış taşıma'ni kullanın. Başka bir kısıtlama yükseltilmiş ayrıcalıklara sahip oldukları sürece Windows Uzak Masaüstü'nden çalışan işlemler aynı Windows Uzak Masaüstü oturumundan sınırlı olmasıdır.  
   
 > [!WARNING]
->  Adlandırılmış kanal taşıma zayıf joker URL ayırmasını IIS'de barındırılan birden çok sitelerde kullanırken, şu hata ortaya çıkabilir: '2' sitesi için dinleme çalışılırken 'Net.pipe' protokol ' NetPipeActivator' etkinleştirme hizmetinde bir hata oluştu Bu nedenle protokolü için site geçici olarak devre dışıdır. Özel durum iletisi daha fazla ayrıntı için bkz. URL: WeakWildcard:net.pipe:/\<makine adı > / durumu: ConflictingRegistration özel durum: işlem adı: SMSvcHost işlem kimliği: 1076\  
+>  Adlandırılmış kanal taşıma zayıf joker URL ayırmasını IIS'de barındırılan birden çok sitelerde kullanırken, şu hata ortaya çıkabilir: '2' sitesi için dinleme çalışılırken 'Net.pipe' protokol ' NetPipeActivator' etkinleştirme hizmetinde bir hata oluştu, bu nedenle protokolü için site geçici olarak devre dışı bırakıldı. Özel durum iletisi daha fazla ayrıntı için bkz. URL: WeakWildcard:net.pipe:/\<makine adı > / durumu: ConflictingRegistration özel durum:  İşlem adı: SMSvcHost işlem kimliği: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Taşıma seçme için karar noktaları  
  Aşağıdaki tabloda, ortak bir aktarım seçmek için kullanılan karar noktalarının açıklanmaktadır. Herhangi bir ek öznitelikler ve uygulamanız için taşımalar düşünmelisiniz. Uygulamanız için önemli olan öznitelikleri tanımlamak, perakendecilerden özniteliklerinizin her biriyle ilişkilendirmek taşımalar tanımlamak ve, öznitelik kümesi ile en iyi şekilde çalıştığı aktarımlar'ı seçin.  
   
 |Öznitelik|Açıklama|Ayrıcalıklı taşımalar|  
 |---------------|-----------------|------------------------|  
-|Tanılamalar|Tanılama Aktarım bağlantısı sorunları otomatik olarak algılamasını sağlar. Tüm aktarımları bağlantı açıklayan geri hata bilgileri göndermeyi destekler. Ancak, WCF, ağ sorunlarını araştırma için tanılama araçları içermez.|Yok.|  
+|Tanılamalar|Tanılama Aktarım bağlantısı sorunları otomatik olarak algılamasını sağlar. Tüm aktarımları bağlantı açıklayan geri hata bilgileri göndermeyi destekler. Ancak, WCF, ağ sorunlarını araştırma için tanılama araçları içermez.|Hiçbiri|  
 |Barındırma|Tüm WCF uç noktaları, bir uygulama içinde barındırılması gerekir. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ve yalnızca HTTP aktarımı kullanan uygulamaları barındırma önceki destekler. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], destek TCP dahil olmak üzere tüm WCF taşımalar barındırmak için eklenir ve adlandırılmış kanallar. Daha fazla bilgi için [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) ve [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |İnceleme|İnceleme, ayıklayın ve iletim sırasında iletileri bilgi işlem yeteneğidir. HTTP protokolü, Yönlendirme ve denetim bilgileri inceleyin ve iletileri analiz araçları yapı kolaylaştıran verilerden ayırır. İncelemek kolay taşımalar daha az işlem gücü, ağ Gereçleri de gerektirebilir. İletileri inceledi olmadığını güvenlik düzeyini etkileri kullanılır.|HTTP|  
 |Gecikme süresi|Gecikme süresi en az bir exchange ileti tamamlamak için gereken süre miktarıdır. Tüm ağ işlemlerini daha fazla veya daha az gecikme süresine aktarım seçimi bağlı olarak sahiptir. İstek-yanıt HTTP gibi ek gecikme nedeniyle ileti zorlamalı bağıntı neden olabilir, yerel ileti değişim deseni olan bir taşıma ile çift yönlü veya tek yönlü iletişimi kullanarak. Bu durumda, yerel ileti değişim deseni TCP gibi çift yönlü bir taşıma kullanarak göz önünde bulundurun.|TCP ve adlandırılmış<br /><br /> Kanal|  
@@ -61,16 +61,16 @@ Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasında
 |Aktarım hızı|Aktarım aktarılan ve belirtilen bir süre içinde işlenen veri miktarını ölçer. Gecikme süresi gibi seçtiğiniz taşıma hizmeti işlemleri için aktarım hızını etkileyebilir. İçerik aktarımı yanı sıra ileti alışverişlerinde tamamlanmasını beklerken geçen süre en aza indirir, her iki yükünü en aza aktarım için en yüksek düzeyde üretilen iş gerektirir. TCP ve adlandırılmış kanal taşıma az ek yük ileti gövdesi ekleyin ve ileti yanıtı bekle azaltır yerel bir çift yönlü şekli destekler.|TCP ve adlandırılmış kanal|  
 |Araç kullanımı|Araçları, geliştirme, tanılama, barındırma ve diğer etkinlikler için bir protokol için üçüncü taraf uygulama desteği temsil eder. Araçlar ve HTTP protokolü ile çalışmak için yazılım geliştirme, özellikle büyük bir yatırım gösterir.|HTTP|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

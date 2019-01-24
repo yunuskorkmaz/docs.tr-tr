@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3a3cc21dbbcfa99ddcecb534bd2e337da005597
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8beb5e64b05f50ba61ced72fcdb7700d4b9f30e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505048"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader İşlevi
-Belirtilen dosya için bir geçmiş okuyucu oluşturur.  
+Belirtilen dosya için geçmiş okuyucu oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ HRESULT CreateHistoryReader (
  [in] Dosya yolu.  
   
  `ppHistoryReader`  
- [out] Başarılı tamamlanma, geçmiş Okuyucu için bir işaretçi içeriyor.  
+ [out] Başarıyla tamamlandığında, geçmiş Okuyucu için bir işaretçi içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, ek olarak aşağıdaki tabloda açıklanan değerleri Winerror.h'de içinde tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki tabloda açıklanan değerlere ek olarak Wınerror içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|S_OK|Yöntem başarıyla tamamlanıp tamamlanmadığını gösterir.|  
-|E_INVALIDARG|Belirten `wzFilePath` veya `ppHistoryReader` null bir başvuru ayarlayın.|  
+|S_OK|Yöntemi başarıyla tamamlandığını gösterir.|  
+|E_INVALIDARG|Bildiren `wzFilePath` veya `ppHistoryReader` null bir başvuru ayarlayın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Kitaplığı:** Fusion.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498248"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Bir veri kümesi üzerinde bir XPath sorgusu gerçekleştirme
 Eşitlenen bir alana arasındaki ilişkiyi <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> XML'sini yararlanması sağlar erişen gibi hizmetleri XML Path Language (XPath) sorgusu, **XmlDataDocument** ve bazı işlevleri gerçekleştirebilirsiniz erişim değerinden daha rahat **veri kümesi** doğrudan. Örneğin kullanmak yerine **seçin** yöntemi bir <xref:System.Data.DataTable> diğer tablolarla ilişki gitmek için bir **veri kümesi**, bir XPath sorgusu gerçekleştirebileceğiniz bir **XmlDataDocument**  ile eşitlenmiş **veri kümesi**biçiminde XML öğelerinin bir listesini almak için bir <xref:System.Xml.XmlNodeList>. Düğümlerin **XmlNodeList**, noktaya yayın olarak <xref:System.Xml.XmlElement> düğümler, ardından geçilebilir **GetRowFromElement** yöntemi **XmlDataDocument**, eşleşen döndürmek için <xref:System.Data.DataRow> eşitlenmiş tablodaki satırları için başvurular **veri kümesi**.  
   
- Örneğin, aşağıdaki kod örneği, bir "en alt" XPath sorgusu gerçekleştirir. **Veri kümesi** üç tablo ile doldurulur: **müşteriler**, **siparişler**, ve **OrderDetails**. Aşağıdaki örnekte, bir üst-alt ilişkisi ilk arasında oluşturulan **müşteriler** ve **siparişler** tablolar ve arasında **siparişler** ve **OrderDetails** tablolar. Bir XPath sorgusu döndürülecek gerçekleştirilir bir **XmlNodeList** , **müşteriler** düğümleri bir en alt burada **OrderDetails** düğüme sahip bir **ProductID**43 değerini düğümle. Esas olarak, örnek XPath sorgusu sahip ürün hangi müşteriler sipariş belirlemek için kullandığı **ProductID** 43.  
+ Örneğin, aşağıdaki kod örneği, bir "en alt" XPath sorgusu gerçekleştirir. **Veri kümesi** üç tablo ile doldurulur: **Müşteriler**, **siparişler**, ve **OrderDetails**. Aşağıdaki örnekte, bir üst-alt ilişkisi ilk arasında oluşturulan **müşteriler** ve **siparişler** tablolar ve arasında **siparişler** ve **OrderDetails** tablolar. Bir XPath sorgusu döndürülecek gerçekleştirilir bir **XmlNodeList** , **müşteriler** düğümleri bir en alt burada **OrderDetails** düğüme sahip bir **ProductID**43 değerini düğümle. Esas olarak, örnek XPath sorgusu sahip ürün hangi müşteriler sipariş belirlemek için kullandığı **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -101,6 +101,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

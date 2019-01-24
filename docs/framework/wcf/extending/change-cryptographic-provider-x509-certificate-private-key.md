@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtar'
+title: 'Nasıl yapılır: X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: bb345b3106895a75c00a0d80b8665a0e9239598f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498979"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtar
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Nasıl yapılır: X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtar
 Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) güvenlik altyapısına sağlayıcı tümleştirmek nasıl gösterir. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- WCF güvenlik çerçevesi açıklandığı gibi yeni güvenlik belirteç türleri tanıtmak için bir yol sağlar [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Var olan sistem tarafından sağlanan belirteç türleri değiştirmek için özel bir belirteç kullanmak da mümkündür.  
+ WCF güvenlik çerçevesi açıklandığı gibi yeni güvenlik belirteç türleri tanıtmak için bir yol sağlar [nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Var olan sistem tarafından sağlanan belirteç türleri değiştirmek için özel bir belirteç kullanmak da mümkündür.  
   
  Bu konu başlığında, sistem tarafından sağlanan X.509 güvenlik belirteci, sertifika özel anahtar için farklı bir uygulama sağlayan özel bir X.509 belirteç değiştirilir. Bu, burada gerçek özel anahtarı varsayılan Windows şifreleme sağlayıcısı değerinden farklı bir şifreleme sağlayıcısı tarafından sağlanan senaryolarda kullanışlıdır. Bir alternatif bir şifreleme sağlayıcısı, tüm özel anahtarı ilgili şifreleme işlemlerini gerçekleştirir ve özel anahtarlar, böylece sistem güvenliğini artırma bellekte depolamaz bir donanım güvenlik modülüne örneğidir.  
   
@@ -50,17 +50,17 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Sistem tarafından sağlanan X.509 güvenlik belirteci özel X.509 asimetrik güvenlik anahtar belirteciyle değiştirilecek  
   
-1.  Özel X.509 asimetrik güvenlik anahtarı yerine sistem tarafından sağlanan güvenlik anahtarı döndüren özel bir X.509 güvenlik belirteci, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel güvenlik belirteçleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+1.  Özel X.509 asimetrik güvenlik anahtarı yerine sistem tarafından sağlanan güvenlik anahtarı döndüren özel bir X.509 güvenlik belirteci, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel güvenlik belirteçleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomX509Token#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#2)]
      [!code-vb[c_CustomX509Token#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#2)]  
   
-2.  Örnekte gösterildiği gibi özel bir X.509 güvenlik belirteci döndüren bir özel güvenlik belirteci sağlayıcı oluşturma. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Örnekte gösterildiği gibi özel bir X.509 güvenlik belirteci döndüren bir özel güvenlik belirteci sağlayıcı oluşturma. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3.  Özel güvenlik anahtarı Başlatıcı tarafında kullanılacak gerekiyorsa özel bir istemci güvenlik belirteci yöneticisi ve özel istemci kimlik bilgileri sınıfları, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel istemci kimlik bilgileri ve istemci güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3.  Özel güvenlik anahtarı Başlatıcı tarafında kullanılacak gerekiyorsa özel bir istemci güvenlik belirteci yöneticisi ve özel istemci kimlik bilgileri sınıfları, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel istemci kimlik bilgileri ve istemci güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4.  Alıcı tarafında kullanılacak özel güvenlik anahtarı gerekiyorsa, bir özel hizmet güvenlik belirteci yöneticisi ve özel hizmet kimlik bilgilerini, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel hizmet kimlik bilgilerini ve hizmeti güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4.  Alıcı tarafında kullanılacak özel güvenlik anahtarı gerekiyorsa, bir özel hizmet güvenlik belirteci yöneticisi ve özel hizmet kimlik bilgilerini, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel hizmet kimlik bilgilerini ve hizmeti güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  
@@ -76,15 +76,15 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
      [!code-csharp[c_CustomX509Token#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#7)]
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>  
- <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.Security.Cryptography.AsymmetricAlgorithm>  
- <xref:System.Security.Cryptography.HashAlgorithm>  
- <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>  
- [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Nasıl yapılır: Özel Belirteç Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- [Güvenlik mimarisi](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>
+- <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.Security.Cryptography.AsymmetricAlgorithm>
+- <xref:System.Security.Cryptography.HashAlgorithm>
+- <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
+- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Güvenlik mimarisi](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

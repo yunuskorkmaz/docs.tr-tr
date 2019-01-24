@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516167"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
@@ -26,7 +26,7 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Kötü amaçlı bir istemci aşırı lisans istekleri hizmetine gönderir.  
  Kötü amaçlı bir istemci aşırı lisans istekleri hizmetiyle bombards, aşırı bellek kullanılacak sunucuyu neden olabilir.  
   
- Azaltma: aşağıdaki özellikleri kullanın <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı:  
+ Azaltma: Aşağıdaki özellikleri kullanın <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı:  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: zaman sınırlı maksimum sayısını kontrol `SecurityContextToken`sonra sunucunun önbelleğe alan s `SPNego` veya `SSL` anlaşması.  
   
@@ -49,7 +49,7 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Geçersiz uygulamaları IAuthorizationPolicy Can nedeni hizmet kilitleniyor  
  Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı bir uygulaması metodunda <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet kilitlenmesine neden olabilir.  
   
- Azaltma: yalnızca güvenilir kod kullanın. Güvenilen bir sağlayıcısından gelen veya diğer bir deyişle, yazılan ve test edilen kodu kullanın. Güvenilmeyen uzantılar, izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzla son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulaması içinde kullanılan tüm uzantılar için geçerlidir. WCF genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı olduğundan yabancı kodu arasında hiçbir ayrım yapmaz.  
+ Azaltma: Yalnızca güvenilen kod kullanın. Güvenilen bir sağlayıcısından gelen veya diğer bir deyişle, yazılan ve test edilen kodu kullanın. Güvenilmeyen uzantılar, izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzla son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulaması içinde kullanılan tüm uzantılar için geçerlidir. WCF genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı olduğundan yabancı kodu arasında hiçbir ayrım yapmaz.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos en büyük simge boyutu yeniden boyutlandırma gerekebilir  
  Bir istemci çok sayıda gruplarına ait olup olmadığını (yaklaşık 900 gerçek sayı gruplara bağlı olarak farklılık gösterir ancak), ileti üst bilginin blok 64 KB'ı aştığında bir sorun ortaya çıkabilir. Bu durumda, Microsoft Support makalesini içinde anlatıldığı gibi Kerberos belirteci boyut sınırını artırabilirsiniz "[Internet Explorer Kerberos kimlik doğrulaması, IIS bağlama bir yetersiz arabellek nedeniyle çalışmıyor](https://go.microsoft.com/fwlink/?LinkId=89176)." Büyük Kerberos belirteci uyum sağlamak için WCF ileti boyutunu artırmanız gerekebilir.  
@@ -69,21 +69,21 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
 ## <a name="protect-configuration-files-with-acls"></a>ACL'ler ile yapılandırma dosyaları koruma  
  Kod ve yapılandırma dosyalarında gerekli ve isteğe bağlı taleplerin belirtebilirsiniz [!INCLUDE[infocard](../../../../includes/infocard-md.md)] verilen belirteçler. İçinde yayılan karşılık gelen öğelerle sonuçlanır `RequestSecurityToken` Security'ye gönderilen iletileri belirteç hizmeti. Bir saldırganın kod veya yapılandırma gerekli veya isteğe bağlı taleplerin kaldırmak için potansiyel olarak hedef hizmete erişmesine izin vermeyen bir belirteç vermek için güvenlik belirteci hizmeti başlama değiştirebilirsiniz.  
   
- Azaltmak için: yapılandırma dosyasını değiştirme bilgisayara erişim gerektirir. Yapılandırma dosyaları güvenli hale getirmek için listeleri (ACL'ler) dosya erişimi denetimi kullan. WCF kodların yapılandırmasından yüklenmesine izin verir önce kod uygulama dizini veya genel derleme önbelleği içinde olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
+ Azaltmak için: Yapılandırma dosyasını değiştirme bilgisayara erişim gerektirir. Yapılandırma dosyaları güvenli hale getirmek için listeleri (ACL'ler) dosya erişimi denetimi kullan. WCF kodların yapılandırmasından yüklenmesine izin verir önce kod uygulama dizini veya genel derleme önbelleği içinde olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Güvenli oturumlar için bir hizmet sayısı üst sınırına  
  Bir istemci bir hizmet tarafından başarıyla doğrulandıktan ve güvenli bir oturum hizmetiyle kurulur, hizmet istemci iptal eder ya da oturum süresinin sona kadar oturum izler. Belirlenen her oturum için en fazla bir hizmetle etkin eşzamanlı oturum sayısını sınırından düşülür. Bu sınıra ulaşıldığında, hizmetle yeni bir oturum oluşturmayı denerseniz istemciler kadar reddedilir veya daha fazla etkin oturumlar sona veya bir istemci tarafından iptal edildi. Bir istemci bir hizmeti ile birden çok oturumu olabilir ve bu oturumları her biri sınırında sayılır.  
   
 > [!NOTE]
->  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. Durum bilgisi olan oturumlar hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. Durum bilgisi olan oturumlar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Bunu azaltmak için etkin oturumlar sayısı sınırı ve en fazla ömrü boyunca oturum ayarlayarak <xref:System.ServiceModel.Channels.SecurityBindingElement> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498079"
 ---
 # <a name="latency-modes"></a>Gecikme Modları
 Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı bir uygulamada durdurmanız gerekir. Uygulamanın ne zaman veri aldığını veya içeriğini görüntüler gibi bazı durumlarda, tam çöp toplama kritik bir zamanda meydana ve performans engelleyebildiğinden. Ne kadar zorlayıcı olduğunu atık toplayıcının ayarlayarak yapabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini birine <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerleri.  
@@ -56,6 +56,6 @@ Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.GC?displayProperty=nameWithType>  
-- [Uyarılmış Koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)  
+- <xref:System.GC?displayProperty=nameWithType>
+- [Uyarılmış Koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)
 - [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

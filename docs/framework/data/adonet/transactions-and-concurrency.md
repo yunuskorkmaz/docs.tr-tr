@@ -2,12 +2,12 @@
 title: İşlemler ve eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494060"
 ---
 # <a name="transactions-and-concurrency"></a>İşlemler ve eşzamanlılık
 Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili bir işlem oluşur. İşlemler, iş birden çok işlem tek bir birim halinde birleştirmek olanak tanır. İşlem bir noktadaki bir hata oluşması durumunda tüm güncelleştirmeleri geri ön işlem durumlarına geri alınabilir.  
@@ -34,10 +34,10 @@ Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili b
  [İyimser Eşzamanlılık](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  İyimser ve kötümser eşzamanlılık ve eşzamanlılık ihlaller için nasıl sınayıp doğrulayabileceğiniz açıklanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

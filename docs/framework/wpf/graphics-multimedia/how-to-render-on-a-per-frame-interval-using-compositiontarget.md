@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511231"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Animasyon altyapısı tabanlı çerçeve animasyon oluşturmak için birçok özellik sağlar. Ancak, uygulama senaryoları daha ayrıntılı işleme çerçeve başına temelinde denetime ihtiyacınız vardır. <xref:System.Windows.Media.CompositionTarget> Nesne üzerinde bir çerçeve başına geri alarak özel animasyon oluşturma olanağı sağlar.  
@@ -40,6 +40,6 @@ ms.locfileid: "43526447"
   
  Ekleyerek veya kaldırarak bir işleme <xref:System.EventHandler> olayı tetiklenmekte olan sırada temsilci ertelenmesini kadar olay bittikten sonra geciktirilir. Bu nasıl ile tutarlıdır <xref:System.MulticastDelegate>-dayalı olayları, ortak dil çalışma zamanı (CLR) işlenir. Ayrıca, işleme olaylarının herhangi belirli bir sırada çağrılacak garanti edilmez unutmayın. Birden fazla varsa <xref:System.EventHandler> belirli bir sıraya üzerinde temsilciler tek bir kayıt işlemi <xref:System.Windows.Media.CompositionTarget.Rendering> olay ve çoğullamalısınız doğru temsilciler kendiniz düzenleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.CompositionTarget>  
- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.CompositionTarget>
+- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

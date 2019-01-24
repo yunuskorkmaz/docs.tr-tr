@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495520"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -186,7 +186,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Araçlar](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (IL Derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
-[Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Ilasm.exe (IL Derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

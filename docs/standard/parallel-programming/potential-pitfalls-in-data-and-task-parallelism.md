@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513431"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngü sağlayabilir. Ancak, döngü paralel işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  
@@ -24,7 +24,7 @@ ms.locfileid: "47087443"
  Bazı durumlarda, paralel bir döngüden sıralı karşılığını göre daha yavaş çalışabilir. Temel birkaç yineleme ve Hızlı Kullanıcı temsilcileri paralel döngüler çok hızlandırmayı için olası udur. Ancak, performansı faktörlerden söz konusu olduğundan her zaman gerçek sonuçlarını ölçün öneririz.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazılmasını kaçının  
- Sıralı kodda, okuma veya yazma statik değişkenler veya sınıf alanlar için yaygın görülen değil. Ancak, birden çok iş parçacığı gibi değişkenleri eriştiği her seferde, büyük bir olası yarış durumlarını yoktur. Değişkene erişimi eşitlemek için kilit kullanabilirsiniz, ancak eşitleme maliyetini performansı olumsuz etkileyebilir. Bu nedenle, öneririz, kaçının, veya en az sınırlamak, paylaşılan erişimi mümkün olduğunca paralel bir döngüden durumda olmadığını. Bunu yapmanın en iyi yolu aşırı kullanmaktır <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanan bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı-yerel durumunu depolamak için değişken. Daha fazla bilgi için [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Sıralı kodda, okuma veya yazma statik değişkenler veya sınıf alanlar için yaygın görülen değil. Ancak, birden çok iş parçacığı gibi değişkenleri eriştiği her seferde, büyük bir olası yarış durumlarını yoktur. Değişkene erişimi eşitlemek için kilit kullanabilirsiniz, ancak eşitleme maliyetini performansı olumsuz etkileyebilir. Bu nedenle, öneririz, kaçının, veya en az sınırlamak, paylaşılan erişimi mümkün olduğunca paralel bir döngüden durumda olmadığını. Bunu yapmanın en iyi yolu aşırı kullanmaktır <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanan bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı-yerel durumunu depolamak için değişken. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Aşırı Paralelleştirme kaçının  
  Paralel döngüler kullanarak kaynak koleksiyonu bölümleme ve çalışan iş parçacığı eşitleme yüksek maliyetleri doğurur. Paralelleştirme avantajlarını daha fazla bilgisayara işlemci sayısı sınırlıdır. Tek bir işlemci üzerinde birden fazla hesaplama bağlantılı iş parçacığı çalıştırarak kazanılacak hiçbir hızlandırmayı yoktur. Bu nedenle, bir döngüyü aşırı paralel hale değil dikkatli olmanız gerekir.  
@@ -52,7 +52,7 @@ ms.locfileid: "47087443"
 >  Bunun için kendiniz bazı çağrıları ekleyerek test edebilirsiniz <xref:System.Console.WriteLine%2A> sorgularınızı içinde. Bu yöntem belgeleri örneklerde tanıtım amacıyla kullanılsa da, paralel Döngülerde sürece kullanmayın gerekli.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>İş parçacığı benzeşimini sorunlarından haberdar olmalı  
- Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Bu, örneğin, yalnızca kullanıcı Arabirimi iş parçacığında iş zamanlamak için iş parçacığı Zamanlayıcısı yapılandırmadığınız sürece, paralel bir döngüden liste denetiminden güncelleştiremezsiniz anlamına gelir. Daha fazla bilgi için [nasıl yapılır: kullanıcı arabirimi (UI) iş parçacığında iş zamanlaması](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Bu, örneğin, yalnızca kullanıcı Arabirimi iş parçacığında iş zamanlamak için iş parçacığı Zamanlayıcısı yapılandırmadığınız sürece, paralel bir döngüden liste denetiminden güncelleştiremezsiniz anlamına gelir. Daha fazla bilgi için [nasıl yapılır: Kullanıcı Arabirimi (UI) iş parçacığında iş](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Varyans Parallel.Invoke tarafından çağrılan bekleyen kullanırken dikkatli olun  
  Bazı durumlarda, görev paralel kitaplığı, o anda yürütülen iş parçacığında görevin üzerinde çalıştığı anlamına gelir. bir görev satır içi olur. (Daha fazla bilgi için [görev planlayıcılar](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Bu performans iyileştirmesi, bazı durumlarda kilitlenme neden olabilir. Örneğin, iki görevi aynı temsilci bir olay meydana geldiğinde, sinyalleri, kod ve sinyal başka bir görev bekler çalıştırabilirsiniz. Satır içine alınmış üzerinde ikinci görev ise ilk ve ilk olarak aynı iş parçacığı bir bekleme durumuna geçtiğinde, ikinci görev hiçbir zaman kendi olay sinyal mümkün olacaktır. Böyle etkinin önlemek için bir zaman aşımı bekleme işlemi belirtebilirsiniz veya kullanımı açık bir iş parçacığı oluşturucular bir görevin sağlamaya yardımcı olmak için diğer engelleyemez.  
@@ -82,6 +82,6 @@ ms.locfileid: "47087443"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
-- [PLINQ'te Olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
-- [Paralel programlama için desenler: anlama ve uygulama ile paralel düzenleri .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
+- [PLINQ'te Olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Desenleri paralel programlama için: Anlama ve .NET Framework 4 ile paralel düzenleri uygulama](https://www.microsoft.com/download/details.aspx?id=19222)

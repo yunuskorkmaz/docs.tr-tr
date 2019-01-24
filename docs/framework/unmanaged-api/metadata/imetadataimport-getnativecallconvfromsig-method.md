@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491073"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig Metodu
-Yerel bir belirtilen imza işaretçiyi tarafından temsil edilen yöntemi çağırma alır.  
+Yerel bir belirtilen imza işaretçi tarafından temsil edilen yöntem için çağırma alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +39,24 @@ HRESULT GetNativeCallConvFromSig (
   
 #### <a name="parameters"></a>Parametreler  
  `pvSig`  
- [in] Meta veri imza için çağırma kuralı döndürmek için yöntemin bir işaretçi.  
+ [in] Çağırma kuralının döndürmek için yöntemin meta veri imzası bir işaretçi.  
   
  `cbSig`  
  [in] Bayt cinsinden boyutu `pvSig`.  
   
  `pCallConv`  
- [out] Yerel arama kuralı için bir işaretçi.  
+ [out] Yerel çağrı kuralı için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.CallingConvention>  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.CallingConvention>
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

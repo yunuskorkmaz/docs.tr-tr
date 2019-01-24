@@ -2,12 +2,12 @@
 title: LINQ to XML güvenliği (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: 0c4ee8df85d6e5c6f84947dcaaeb6875bbd687de
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493099"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML güvenliği (C#)
 Bu konu LINQ to XML ile ilgili güvenlik sorunları açıklar. Ayrıca, güvenlik açığı azaltma için bazı yönergeler sağlar.  
@@ -99,6 +99,6 @@ Bu konu LINQ to XML ile ilgili güvenlik sorunları açıklar. Ayrıca, güvenli
   
  Ortak dil çalışma zamanı tarafından (CLR) bazı güvenlik sağlanır. Örneğin, özel bir sınıf içermeyen bir bileşeni, sınıf tarafından Anahtarlanan ek açıklamaları erişemez. Ancak, ek açıklamalar, bunları okunamıyor bileşenleri tarafından silinebilir. Bu değiştirme bir saldırı olarak kullanılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Programlama Kılavuzu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

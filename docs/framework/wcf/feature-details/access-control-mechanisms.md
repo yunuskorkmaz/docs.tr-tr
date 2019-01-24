@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 1de6731591e524080ac4ae7d5b2ec2a25a27f301
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 78d2bb3e49ae971b54d521585184a9565c4ff105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512621"
 ---
 # <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları
 Windows Communication Foundation (WCF) birkaç yolla erişimi denetleyebilirsiniz. Bu konu, kısa bir süre çeşitli mekanizmalar açıklar ve her zaman hakkında öneriler sağlar; kullanılacak doğru mekanizması seçmenize yardımcı olmak için tasarlanmıştır. Erişim teknolojileri karmaşıklığı sırasına göre listelenir. En basit olan <xref:System.Security.Permissions.PrincipalPermissionAttribute>; en karmaşık kimlik modelidir.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) birkaç yolla erişimi denetleyebilirsini
   
  Kullanım <xref:System.Security.Permissions.PrincipalPermissionAttribute> hizmetin üzerinde çalıştığı bilgisayar üzerindeki kaynaklara erişimi denetlemek için ve hizmet kullanıcılarının her zaman hizmetin üzerinde çalıştığı aynı Windows etki alanının parçası olur. Erişim düzeyleri belirttiğiniz Windows grupları kolayca oluşturabilirsiniz (gibi hiçbiri, salt okunur veya okuma ve yazma).  
   
- Öznitelik kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtla](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Kimlik hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Öznitelik kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Kimlik hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>ASP.NET üyelik sağlayıcısı  
  Bir özellik olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı. Üyelik sağlayıcısı teknik bir erişim denetimi mekanizmasını olmasa bile hizmet uç noktasına erişebildiğinden olası kimlikleri kümesi sınırlayarak hizmetine erişimi denetleme sağlar. Üyelik özelliği site hesaplarını oluşturmak üzere bir Web sitesinin kullanıcıların kullanıcı adı/parola birleşimlerini ile doldurulmuş bir veritabanı içerir. Üyelik sağlayıcısı kullanan bir hizmet erişmek için bir kullanıcı kendi kullanıcı adı ve parolayla oturum açmalısınız.  
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF) birkaç yolla erişimi denetleyebilirsini
   
  AzMan da kullanabilirsiniz ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] zaten var olan bir AzMan yüklemesini erişimi ve AzMan/rol sağlayıcısı birleşimi özelliklerini kullanarak hizmet kullanıcılarınız yetkilendirmek istediğiniz rol sağlayıcısı.  
   
- AzMan hakkında daha fazla bilgi ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı bkz [nasıl yapılır: ASP.NET 2.0 ile kullanım Yetkilendirme Yöneticisi (AzMan)](https://go.microsoft.com/fwlink/?LinkId=88951). AzMan ve rol sağlayıcısı için WCF hizmetleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ AzMan hakkında daha fazla bilgi ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı bkz [nasıl yapılır: Yetkilendirme Yöneticisi'ni (AzMan) ASP.NET 2.0 ile](https://go.microsoft.com/fwlink/?LinkId=88951). AzMan ve rol sağlayıcısı için WCF hizmetleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Kimlik modeli  
  Kimlik modeli istemciler yetkilendirmek için talepler ve ilkeleri yönetmenize olanak tanıyan API'ler kümesidir. Kimlik modeliyle çağıran hizmete kendi kimliğini doğrulamak, hizmeti için ilke kümesini talepleri karşılaştırma ve vermek veya erişimini engellemek için kullanılan karşılaştırma üzerine dayalı kimlik bilgilerinde yer alan her bir talep inceleyebilirsiniz.  
@@ -57,10 +57,10 @@ Windows Communication Foundation (WCF) birkaç yolla erişimi denetleyebilirsini
   
  Kimlik modeli hakkında daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

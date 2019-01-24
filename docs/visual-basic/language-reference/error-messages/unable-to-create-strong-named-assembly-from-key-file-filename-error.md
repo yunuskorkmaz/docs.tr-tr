@@ -1,5 +1,5 @@
 ---
-title: 'Tanımlayıcı adlı derleme anahtar dosyasından oluşturulamadı &#39; &lt;filename&gt;&#39;: &lt;hata&gt;'
+title: 'Anahtar dosyasından tanımlayıcı adlı derleme oluşturulamadı &#39; &lt;filename&gt;&#39;: &lt;hata&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 9b7a585dbe6b1da5e0f3b17e61e6407b52439601
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de0f9fabdb2b64f0d246e2d169e60b35da2a28b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511244"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Tanımlayıcı adlı derleme anahtar dosyasından oluşturulamadı &#39; &lt;filename&gt;&#39;: &lt;hata&gt;
-Tanımlayıcı adlı bir derleme belirtilen anahtar dosyasından oluşturulamadı.  
+# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Anahtar dosyasından tanımlayıcı adlı derleme oluşturulamadı &#39; &lt;filename&gt;&#39;: &lt;hata&gt;
+Belirtilen anahtar dosyasından tanımlayıcı adlı bütünleştirilmiş kod oluşturulamadı.  
   
  **Hata Kimliği:** BC31026  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Doğru anahtar dosyası belirtilmemiş ve başka bir uygulama tarafından kilitlenmediğinden emin olun.  
+1.  Doğru anahtar dosyası belirtilmedi ve başka bir uygulama tarafından kilitlenmediğinden emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))

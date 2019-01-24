@@ -2,91 +2,91 @@
 title: Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 9ec161c3af3c2555e04e479fec85c48f90830a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492201"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
-XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranışı nasıl türü eşlemesi çözümler, derlemeler nasıl yüklenir, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, yazma nesnesi ile nasıl etkileşim kurduğu niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konu, .NET Framework XAML hizmetlerinde ve CLR türü sistemi temelinde ilişkili varsayılan XAML şema içeriği özelliklerini açıklar. Bu konu ayrıca WPF için kullanılan XAML şema içeriği açıklar.  
+XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davranışını nasıl tür eşlemesi çözümler, derlemelerin nasıl yüklü olduğundan, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, nesne ile nasıl etkileştiğini niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konuda, .NET Framework XAML hizmetlerinde CLR tür sistemine dayalı varsayılan XAML şema içeriği ve özellikler açıklanmaktadır. Bu konuda kullanılan WPF XAML şema içeriği anlatılır.  
   
 ## <a name="default-xaml-schema-context"></a>Varsayılan XAML şema içeriği  
- .NET framework XAML hizmetlerinde hem uygular ve varsayılan XAML şema içeriği kullanır. Varsayılan XAML şema içeriği davranışı her zaman API'si, tam olarak görünür değil <xref:System.Xaml.XamlSchemaContext> sınıfı. Bununla birlikte, çoğu durumda varsayılan XAML şema içeriği etkileyen XAML tür sistemi üyeleri gibi ortak API'si aracılığıyla observable davranıştır <xref:System.Xaml.XamlMember> veya <xref:System.Xaml.XamlType>, ya da XAML okuyucuları ve kullanmakta olduğunuz XAML yazıcılarının açık API'ler aracılığıyla Varsayılan XAML şema içeriği.  
+ .NET framework XAML hizmetlerinde hem uygular ve varsayılan XAML şema içeriği kullanır. Varsayılan XAML şema içeriği davranışı her zaman tam olarak API'SİNDE görünür değil <xref:System.Xaml.XamlSchemaContext> sınıfı. Ancak, çoğu durumda varsayılan XAML şema içeriği etkileyen üyeleri gibi XAML tür sistemi, ortak API aracılığıyla gözlemlenebilir bir davranıştır <xref:System.Xaml.XamlMember> veya <xref:System.Xaml.XamlType>, ya da XAML okuyucular ve kullanmakta olduğunuz XAML yazıcılar üzerinde kullanıma sunulan API'ler aracılığıyla Varsayılan XAML şema içeriği.  
   
- Oluşturabileceğiniz bir <xref:System.Xaml.XamlSchemaContext> varsayılan davranışı çağırarak yalıtır <xref:System.Xaml.XamlSchemaContext> Oluşturucusu. Bu varsayılan XAML şema içeriği açıkça oluşturur. XAML okuyucu ya da XAML yazan açıkça yararlanabilir mi API'lerini kullanarak başlatmak, aynı varsayılan XAML şema içeriği örtülü olarak oluşturulan bir <xref:System.Xaml.XamlSchemaContext> giriş parametresi.  
+ Oluşturabileceğiniz bir <xref:System.Xaml.XamlSchemaContext> çağırarak, varsayılan davranışı kapsülleyen <xref:System.Xaml.XamlSchemaContext> Oluşturucusu. Bunu açıkça varsayılan XAML şema içeriği oluşturur. XAML okuyucu veya açıkça almaz API'lerini kullanarak XAML yazıcı başlatmak, aynı varsayılan XAML şema içeriği örtülü olarak oluşturulan bir <xref:System.Xaml.XamlSchemaContext> giriş parametresi.  
   
- Varsayılan XAML şema içeriği CLR yansıma türü eşleme davranışını için kullanır. Bu tanımlama CLR inceleniyor içerir <xref:System.Type>ve ilgili <xref:System.Reflection.PropertyInfo> veya <xref:System.Reflection.MethodInfo>. Ayrıca, CLR attribution türleri veya üyeleri XAML türü veya CLR türü yedekleme kullanan XAML üye bilgi için ayrıntıları doldurun için kullanılır. Varsayılan XAML şema içeriği türü sistem uzantısı teknikleri gibi gerektirmez `Invoker` gerekli bilgileri CLR türü sistemde kullanılabilen olduğundan desen.  
+ Varsayılan XAML şema içeriği türü eşleme davranışını için CLR yansıma kullanır. Bu tanımlama CLR inceleme içerir <xref:System.Type>ve ilgili <xref:System.Reflection.PropertyInfo> veya <xref:System.Reflection.MethodInfo>. Ayrıca, türler ve üyelerle ilgili CLR attribution XAML türü veya tür yedekleme CLR kullanan XAML üye bilgilerini teklifleri hakkındaki ayrıntıları doldurun için kullanılır. Varsayılan XAML şema içeriği türü sistem uzantısı teknikleri gibi gerektirmez `Invoker` CLR türü sistemden gerekli bilgileri kullanılabildiği için desen.  
   
- Mantığı yüklenirken derleme için varsayılan XAML şema içeriği çoğunlukla XAML ad eşleştirmelerinde sağlanan derleme değerleri kullanır. Ayrıca, <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A> iç türleri yükleme gibi senaryolar için yüklemek için bir derleme ipucu.  
+ Varsayılan XAML şema içeriği mantıksal yüklenirken derleme için çoğunlukla XAML ad alanı eşleştirmelerinde sağlanan derleme değerleri kullanır. Ayrıca, <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A> bir derlemenin iç türlerine yükleme gibi senaryolar için yükleme ipucu.  
   
 ## <a name="wpf-xaml-schema-context"></a>WPF XAML şema içeriği  
- WPF uygulaması varsayılan olmayan XAML şema bağlamı uygulama tarafından sunulan özellikler türlerini ilginç bir çizimi sağladığından WPF XAML şema içeriği bu konuda açıklanan. Ayrıca, XAML şema içeriği kavramı çok WPF XAML adresleri WPF belgelerinde ele alınmamıştır; XAML şema içeriği etkinleştiren davranışı yalnızca varsayılan XAML şema içeriği nasıl çalıştığı ile ilgili bir tartışma bütünleştirdiyseniz tam olarak anlaşılabilir olabilir. WPF XAML şema içeriği aşağıdaki davranışı uygular.  
+ WPF uygulaması olmayan varsayılan XAML şema içeriği uygulayarak sunulan özelliklerin türleri ilgi çekici bir resmi sağladığından, WPF XAML şema içeriği bu konuda açıklanmıştır. Ayrıca, XAML şema içeriği kavramı çok WPF XAML ele WPF belgelerinde ele alınmayan; XAML şema içeriği etkinleştiren davranışı, yalnızca varsayılan XAML şema içeriği nasıl çalıştığı ile ilgili bir tartışma bütünleştirdiyseniz tam olarak anlaşılır olabilir. WPF XAML şema içeriği şu davranışı uygular.  
   
- **Arama geçersiz kılar:** WPF XAML için birkaç içerik modelleri sahip olmadan işlev XAML İçerik özellikleri olduğu <xref:System.Windows.Markup.ContentPropertyAttribute> öznitelikli. <xref:System.Xaml.XamlType.LookupContentProperty%2A> WPF için bu davranışı geçersiz kılmalarını.  
+ **Arama geçersiz kılar:** WPF XAML için birkaç içerik modeli vardır olmaksızın işlevini XAML İçerik özellikleri olduğu <xref:System.Windows.Markup.ContentPropertyAttribute> öznitelikli. <xref:System.Xaml.XamlType.LookupContentProperty%2A> WPF için bu davranışı geçersiz kılmalarını.  
   
- **WPF ifadeler için erteleme:** WPF çalışma zamanı bağlam kullanılabilir hale gelene kadar bir değer erteleneceği birkaç ifade sınıfları özellikleri. Ayrıca, şablonu genişletme üzerinde erteleme teknikleri kullanır bir çalışma zamanı davranıştır.  
+ **Erteleme WPF ifadeler için:** WPF bir çalışma zamanı bağlamı kullanılabilir oluncaya kadar değeri erteleme birkaç ifade sınıflar bulunur. Ayrıca, şablon genişletmesi erteleme teknikleri üzerinde dayanan bir çalışma zamanı davranışı vardır.  
   
- **Sistem arama iyileştirmelerini yazın:** WPF devral yüzlerce WPF tanımlı sınıflar için temel sınıf üyesi tanımları dahil olmak üzere bir kapsamlı XAML dağarcığı ve nesne modeli vardır. Ayrıca, WPF kendisini birkaç derlemeler arasında yayılır. WPF arama tabloları ve başka teknikler kullanarak kendi Arama türünde en iyi duruma getirir. Varsayılan XAML şema içeriği ve tür CLR tabanlı arama performans artışı sağlar. Burada türleri arama tablosunda yok durumlarda davranış varsayılan XAML şema içeriği benzer XAML şema içeriği teknikler kullanır.  
+ **Sistem arama iyileştirmeleri yazın:** WPF devral yüzlerce WPF tanımlı sınıflar için temel sınıf üye tanımları dahil olmak üzere bir kapsamlı XAML sözlük ve nesne modeli vardır. Ayrıca, WPF kendisini çeşitli derlemeler geneline yayılır. WPF arama tabloları ve diğer teknikleri kullanarak kendi tür araması iyileştirir. Varsayılan XAML şema içeriği ve onun türü CLR tabanlı arama üzerinde performans geliştirmeleri sunar. Burada türleri bir arama tablosunda bulunmayan durumlarda davranış varsayılan XAML şema içeriği için benzer XAML şema içeriği teknikleri kullanır.  
   
- **Uzantı XamlType ve XamlMember:** WPF özelliği kavramlarını bağımlılık özellikleri ile genişletir ve olay kavramları yönlendirilmiş olayları. Bu kavramları daha fazla görünürlük XAML işlemleri için vermek için WPF genişletir <xref:System.Xaml.XamlType> ve <xref:System.Xaml.XamlMember>ve rapor bağımlılık özelliği ve olay özelliklerini yönlendirilen iç özellikleri ekler.  
+ **XamlType ve XamlMember uzantısı:** Bağımlılık özellikleri ile özellik kavramları ve yönlendirilmiş olaylar ile olay kavramları WPF genişletir. Bu kavramlar XAML işlemleri için daha fazla görünürlük vermek için WPF genişletir <xref:System.Xaml.XamlType> ve <xref:System.Xaml.XamlMember>ve rapor bağımlılık özelliği ve olay özelliklerini yönlendirilen iç özellikleri ekler.  
   
 ### <a name="accessing-the-wpf-xaml-schema-context"></a>WPF XAML şema içeriği erişme  
- WPF tabanlı XAML teknikleri kullanıyorsanız <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> veya <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType>, WPF XAML şema içeriği bu XAML okuyucu ve XAML yazan uygulamaları kullanılıyor.  
+ WPF, temel XAML teknikleri kullanıyorsanız <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> veya <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType>, WPF XAML şema içeriği bu XAML okuyucu ve yazıcı uygulamaları XAML kullanılıyor.  
   
- WPF XAML şema içeriği ile diğer XAML okuyucu veya başlatamadı. XAML yazan uygulamaları kullanıyorsanız, çalışan bir WPF XAML şema bağlamından almak mümkün olabilir <xref:System.Windows.Markup.XamlReader.GetWpfSchemaContext%2A?displayProperty=nameWithType>. Daha sonra bu değeri kullanın diğer API için başlatma olarak kullanabilirsiniz bir <xref:System.Xaml.XamlSchemaContext>. Örneğin, çağırabilirsiniz <xref:System.Xaml.XamlXmlReader.%23ctor%2A> başlatma ve WPF XAML şema içeriği geçişi için. Veya WPF XAML şema içeriği XAML tür sistem işlemleri için kullanabilirsiniz. Bu yapı başlatılması içerebilir bir <xref:System.Xaml.XamlType> veya <xref:System.Xaml.XamlMember>, veya çağırma <xref:System.Xaml.XamlSchemaContext.GetXamlType%2A?displayProperty=nameWithType>.  
+ WPF XAML şema içeriği ile diğer XAML okuyucu veya başlatamadı. XAML yazıcı uygulamaları kullanıyorsanız, çalışan bir WPF XAML şema içeriği'nden almak mümkün olabilir <xref:System.Windows.Markup.XamlReader.GetWpfSchemaContext%2A?displayProperty=nameWithType>. Bu değer daha sonra kullanan diğer API'si için başlatma olarak kullanabilirsiniz bir <xref:System.Xaml.XamlSchemaContext>. Örneğin, çağırabilir <xref:System.Xaml.XamlXmlReader.%23ctor%2A> başlatma ve WPF XAML şema içeriği geçişi için. Ya da WPF XAML şema içeriği XAML türü sistem işlemleri için kullanabilirsiniz. Bu yapı başlatılması içerebilir bir <xref:System.Xaml.XamlType> veya <xref:System.Xaml.XamlMember>, veya çağırma <xref:System.Xaml.XamlSchemaContext.GetXamlType%2A?displayProperty=nameWithType>.  
   
- WPF XAML belirli yönlerini saf bir XAML düğüm akış perspektiften erişirse, WPF framework özelliklerden bazıları henüz işlem değil olduğunu unutmayın. Örneğin, WPF şablonları denetimleri için henüz uygulanmaz. Bu nedenle tam görsel ağaç ile doldurulmuş olabilir, çalışma zamanında bir özellik erişirseniz, yalnızca bir şablon başvuruda bulunan bir özellik değeri görebilirsiniz. WPF biçimlendirme uzantıları için sağlanan hizmet bağlamı aynı zamanda bir çalışma zamanı olmayan durumdan sağladıysanız doğru olmayabilir ve özel durumları bir nesne grafiğinin yazmaya çalışırken neden olabilir.  
+ WPF XAML bazı yönlerini saf bir XAML düğüm akış perspektiften erişirseniz, WPF framework özelliklerden bazıları henüz etkilediği değil olduğunu unutmayın. Örneğin, Denetim WPF şablonları henüz uygulanmaz. Böylece, çalışma zamanında bir tam görsel ağacını ile doldurulmuş bir özellik erişirseniz, yalnızca bir şablon başvuran bir özellik değeri görebilirsiniz. WPF biçimlendirme uzantıları için sağlanan hizmet bağlamı da bir çalışma zamanı olmayan durumdan sağlanırsa, doğru olmayabilir ve özel durumlar, bir nesne grafiğinin yazmaya çalışırken neden olabilir.  
   
 ## <a name="xaml-and-assembly-loading"></a>XAML ve derleme yükleme  
- XAML ve .NET Framework XAML Hizmetleri için yükleme derleme tümleştirir CLR tanımlı kavramıyla <xref:System.AppDomain>. Derlemeleri yükleme veya türlerini çalıştırma veya tasarım zamanı kullanılmasına göre bulmak nasıl bir XAML şema içeriği yorumlar <xref:System.AppDomain> ve diğer etkenlere bağlı. Mantığı XAML gevşek XAML için XAML okuyucu olmasına bağlı olarak biraz daha farklı, uygun bir DLL tarafından içine derlenmiş XAML `XamlBuildTask`, veya BAML WPF tarafından 's üretilen `PresentationBuildTask`.  
+ Derleme yükleme için XAML ve .NET Framework XAML hizmetlerinde CLR tanımlı kavramı ile tümleştirilir <xref:System.AppDomain>. XAML şema içeriği nasıl derlemeler yüklemek ya da kullanıma bağlı çalıştırma veya tasarım zamanı türlerini bulun yorumlar <xref:System.AppDomain> ve diğer etkenlere bağlı. Mantıksal XAML gevşek XAML için XAML okuyucu olmasına bağlı olarak biraz daha farklıdır, DLL tarafından içine derlenmiş XAML olduğu `XamlBuildTask`, veya BAML WPF'nin tarafından oluşturulan `PresentationBuildTask`.  
   
- WPF XAML şema bağlamının sırayla kullanan WPF uygulaması modelle tümleştirir <xref:System.AppDomain> WPF uygulaması ayrıntıları diğer etkenlere yanı sıra.  
+ WPF için XAML şema içeriği sırayla kullanan WPF uygulaması modelle tümleştirir <xref:System.AppDomain> WPF Uygulama Ayrıntıları diğer etkenler yanı sıra.  
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML okuyucu giriş (gevşek XAML)  
   
-1.  XAML şema içeriği dolaşır <xref:System.AppDomain> adı tüm yönlerini eşleşen bir önceden yüklenen derleme için arayan uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o bütünleştirilmiş kod çözümlemesi için kullanılır.  
+1.  XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  CLR üzerinde aşağıdaki teknikler birini alarak Aksi halde, <xref:System.Reflection.Assembly> API, bir derlemeyi yüklemek için kullanılır:  
+2.  CLR aşağıdaki tekniklerden birini temel Aksi takdirde, <xref:System.Reflection.Assembly> API, bir derlemeyi yüklemek için kullanılır:  
   
-    -   Adı eşlemede nitelikleri karşılıyorsa, çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
+    -   Eşlemede tam adı, çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
-    -   Önceki adım başarısız olursa, kısa bir ad (ve ortak anahtar belirteci varsa) kullanmak çağırmak için <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    -   Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-    -   Eşlemede nitelenmemiş ise, çağrı <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+    -   Adı eşlemede nitelenmemiş ise, çağrı <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` Windows Communication Foundation (WCF) ve Windows Workflow Foundation için kullanılır.  
   
- Aracılığıyla bütünleştirilmiş koduna başvuruyor Not `XamlBuildTask` her zaman tam olur.  
+ Aracılığıyla derlemenin başvurduğu Not `XamlBuildTask` her zaman tam yetkilidir.  
   
 1.  Çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
-2.  Önceki adım başarısız olursa, kısa bir ad (ve ortak anahtar belirteci varsa) kullanmak çağırmak için <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2.  Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
- Derleme yükleme BAML için için iki yön vardır: bir bileşen olarak BAML içeren ilk derlemesi yüklenirken ve BAML üretim tarafından başvurulan tüm türlerinin türü destekleyen derlemeleri yükleme.  
+ Derleme yükleme BAML için iki önemli nokta vardır: bir bileşen olarak BAML içeren ilk bütünleştirilmiş kod yükleme ve BAML üretim tarafından başvurulan tüm türler için tür yedekleme derlemeleri yükleniyor.  
   
-##### <a name="assembly-load-for-initial-markup"></a>Derleme yükleme ilk biçimlendirme için:  
- Derleme biçimlendirmeden yüklemek için her zaman nitelenmemiş başvurudur.  
+##### <a name="assembly-load-for-initial-markup"></a>Bütünleştirilmiş kod yüklemesi ilk biçimlendirme için:  
+ Biçimlendirmeden yüklenecek derlemenin her zaman nitelenmemiş başvurudur.  
   
-1.  WPF XAML şema içeriği dolaşır <xref:System.AppDomain> adı tüm yönlerini eşleşen bir önceden yüklenen derleme için arayan WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o bütünleştirilmiş kod çözümlemesi için kullanılır.  
+1.  WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  Önceki adım başarısız olursa, kısa bir ad (ve ortak anahtar belirteci varsa) kullanmak çağırmak için <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2.  Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-##### <a name="assembly-references-by-baml-types"></a>Derleme başvurularını BAML türlerine göre:  
- Derleme başvurularını BAML üretimde kullanılan türleri için her zaman bir derleme görevi çıkış olarak tam olarak nitelenmiş.  
+##### <a name="assembly-references-by-baml-types"></a>Derleme başvuruları BAML türlerine göre:  
+ Derleme başvuruları BAML üretimde kullanılan türleri için her zaman yapı görevinin çıkış olarak tam olarak nitelenmiş.  
   
-1.  WPF XAML şema içeriği dolaşır <xref:System.AppDomain> adı tüm yönlerini eşleşen bir önceden yüklenen derleme için arayan WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o bütünleştirilmiş kod çözümlemesi için kullanılır.  
+1.  WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  Aksi takdirde, aşağıdaki teknikler biri bir derlemeyi yüklemek için kullanılır:  
+2.  Aksi takdirde aşağıdaki tekniklerden birini bir derlemeyi yüklemek için kullanılır:  
   
     -   Çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
-    -   Bir kısa ad + BAML yüklenmesinden derleme eşleşen ortak anahtar belirteci birleşimi, bu derleme kullanın.  
+    -   Kısa ad + BAML öğesinden yüklenmiş derlemeyle eşleşebilmesi ortak anahtar belirteci bileşimi, bu derleme kullanın.  
   
-    -   Çağırmak için kısa ad + ortak anahtar belirteci kullanın <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    -   Çağırmak için kısa ad + ortak anahtar belirteci kullanmanız <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

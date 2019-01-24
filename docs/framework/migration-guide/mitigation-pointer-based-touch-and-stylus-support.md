@@ -1,5 +1,5 @@
 ---
-title: 'Azaltma: İşaretçi tabanlı dokunma ve Kalem desteği'
+title: 'Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501954"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Azaltma: İşaretçi tabanlı dokunma ve Kalem desteği
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği
 
-.NET Framework 4.7 hedefleyen ve Windows 10 oluşturucuları güncelleştirmesi ile başlayarak Windows sistemlerinde çalışan WPF uygulamaları isteğe bağlı bir etkinleştirebilir `WM_POINTER`-WPF dokunma/kalem yığın tabanlı.
+.NET Framework 4.7 hedefleyen ve Windows 10 Creators güncelleştirmesi ile başlayarak Windows sistemleri üzerinde çalışan WPF uygulamalarını isteğe bağlı olarak etkinleştirebilir `WM_POINTER`-WPF dokunma/ekran kalemi yığın tabanlı.
 
 ## <a name="impact"></a>Etki
 
-İşaretçi tabanlı dokunma/kalem desteğini açıkça etkinleştirmeyin geliştiriciler WPF dokunma/kalem davranışında değişiklik görmeniz gerekir.
+Geliştiriciler, işaretçi temelli dokunma/kalemi destek açıkça etkinleştirmeyin WPF dokunma/ekran kalemi davranışında değişiklik görmeniz gerekir.
 
-Aşağıdaki bilinen geçerli sorunlar isteğe bağlı olan `WM_POINTER`-touch/kalem yığın tabanlı:
+İsteğe bağlı bilinen geçerli sorunlar aşağıda verilmiştir `WM_POINTER`-dokunma/ekran kalemi yığın tabanlı:
 
 - Gerçek zamanlı mürekkep desteği yoktur.
 
-   Mürekkep ve Kalem eklentileri çalışmaya devam ederken, düşük performans açabilir kullanıcı Arabirimi iş parçacığı üzerinde işlenir.
+   Mürekkep ve ekran kalemi eklenti hala çalışırken, düşük performansa neden olabilecek UI iş parçacığı üzerinde işlenir.
 
-- Davranış değişiklikleri fare olayları dokunma/kalem olaylardan yükseltmesine değişiklikleri nedeniyle.
+- Davranış değişiklikleri nedeniyle değişiklikler, dokunma/ekran kalemi olaylardan yükseltmede fare olayları.
 
-  - İşleme farklı davranabilir.
+  - İşleme farklı şekilde davranabilir.
 
-  - Sürükle ve bırak dokunma girişi için uygun bildirim göstermez. (Bu kalem giriş etkilemez.)
+  - Sürükle ve bırak, dokunma girişini ilgili geri bildirim göstermez. (Bu iğne girişi etkilemez.)
 
-  - Sürükle ve bırak artık dokunma/kalem olaylarına başlatılabilir.
+  - Sürükle ve bırak, dokunma/ekran kalemi olayları artık başlatılabilir.
 
-      Fare girişi algılandığında kadar bu uygulama potansiyel olarak askıda kalabilir. Bunun yerine, geliştiricilerin Sürükle başlatmak ve bu fare olayları bırakma gerekir.
+      Fare girişi algılandığında kadar bu uygulama potansiyel olarak askıda kalabilir. Bunun yerine, geliştiriciler, sürükle başlatmak ve fare olayları bırakın.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Dokunma/kalem WM_POINTER tabanlı desteklemek için seçim
+## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Dokunma/kalemi WM_POINTER tabanlı desteklemek için seçim
 
-Bu yığın etkinleştirmek istediğiniz geliştiriciler, uygulamanın app.config dosyasına aşağıdaki ekleyebilirsiniz:
+Bu yığın etkinleştirmek isteyen geliştiricilerin aşağıdakileri, uygulamanın app.config dosyasına ekleyebilirsiniz:
 
 ```xml
 <configuration>
@@ -52,8 +52,8 @@ Bu yığın etkinleştirmek istediğiniz geliştiriciler, uygulamanın app.confi
 </configuration>
 ```
 
-Bu girdi kaldırma veya değeri ayarını `false` Bu isteğe bağlı yığını kapatır.
+Bu girişi kaldırılıyor veya ve değerini `false` isteğe bağlı Bu yığın kapatır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework 4.7 yeniden hedefleme değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML sınıflarına genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: d1454909591ff060f9d2a1d2484302e7112be149
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509668"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML sınıflarına genel bakış (C#)
 Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıfları <xref:System.Xml.Linq> ad alanını ve her kısa bir açıklaması.  
@@ -17,7 +17,7 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 ### <a name="xattribute-class"></a>XAttribute sınıfı  
  <xref:System.Xml.Linq.XAttribute> bir XML özniteliği temsil eder. Ayrıntılı bilgi ve örnekler için bkz. [XAttribute sınıfına genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).  
   
-### <a name="xcdata-class"></a>XCData sınıfı  
+### <a name="xcdata-class"></a>XCData Class  
  <xref:System.Xml.Linq.XCData> CDATA metin düğümü temsil eder.  
   
 ### <a name="xcomment-class"></a>XComment sınıfı  
@@ -52,7 +52,7 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 ### <a name="xnamespace-class"></a>XNamespace sınıfı  
  <xref:System.Xml.Linq.XNamespace> için bir ad alanını temsil eden bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute>. Ad alanları'nin bir bileşeni olan bir <xref:System.Xml.Linq.XName>.  
   
-### <a name="xnode-class"></a>XNode sınıfı  
+### <a name="xnode-class"></a>XNode Class  
  <xref:System.Xml.Linq.XNode> bir XML ağacı düğümleri temsil eden bir soyut sınıftır. Aşağıdaki sınıflar türetilen <xref:System.Xml.Linq.XNode> sınıfı:  
   
 -   <xref:System.Xml.Linq.XText>  
@@ -65,10 +65,10 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
   
 -   <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer sınıfı  
+### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> için kendi belge sırayla düğüm karşılaştırmak için işlevsellik sağlar.  
   
-### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer sınıfı  
+### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer Class  
  <xref:System.Xml.Linq.XNodeEqualityComparer> düğümler için değer eşitliği karşılaştırmak için işlevsellik sağlar.  
   
 ### <a name="xobject-class"></a>XObject sınıfı  
@@ -77,15 +77,15 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 ### <a name="xobjectchange-class"></a>XObjectChange sınıfı  
  <xref:System.Xml.Linq.XObjectChange> olay türü için bir olay oluştuğunda belirtir bir <xref:System.Xml.Linq.XObject>.  
   
-### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs sınıfı  
+### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs Class  
  <xref:System.Xml.Linq.XObjectChangeEventArgs> için veri sağlayan <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları.  
   
 ### <a name="xprocessinginstruction-class"></a>XProcessingInstruction sınıfı  
  <xref:System.Xml.Linq.XProcessingInstruction> bir XML işlem yönergesi temsil eder. Bir işlem yönergesi, XML işleme uygulamaya bilgi iletişim kurar.  
   
-### <a name="xtext-class"></a>XText sınıfı  
+### <a name="xtext-class"></a>XText Class  
  <xref:System.Xml.Linq.XText> bir metin düğümü temsil eder. Çoğu durumda, bu sınıfı kullanmanız gerekmez. Bu sınıf, öncelikle karışık içerik için kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

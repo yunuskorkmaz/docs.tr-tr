@@ -16,38 +16,38 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e74e4784d295e46972e10c5b9e1d4cc4bafa944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496773"
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
-Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir, ayrı COM temsil eden bir veya daha fazla birlikte çalışma derlemeleri tür kitaplıkları ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] almak ve birlikte çalışabilirlik bütünleştirilmiş bir tür kitaplığı dönüştürmek için Araçlar'da anlatıldığı gibi sağlamak [tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yol vardır:  
+Birlikte çalışma uygulamasını genellikle bir .NET istemci bütünleştirilmiş kodu içeren bir veya daha fazla birlikte çalışma derlemelerini temsil eden ayrı bir COM tür kitaplığı ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bölümünde açıklandığı gibi içeri aktarma ve birlikte çalışma derlemesine bir tür kitaplığına dönüştürme için araçlar sağlar [bir tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yolu vardır:  
   
--   Katıştırılmış birlikte çalışma türlerini kullanarak: itibaren [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yürütülebilir dosyanın birlikte çalışma derlemeye tür bilgilerini katıştırma görevlendirin. Derleyici, uygulamanızın kullandığı türü bilgilerini katıştırır. Uygulamanız ile birlikte çalışma derlemeyi dağıtmanız gerekmez. Önerilen yöntem budur.  
+-   Gömülü birlikte çalışma türleri kullanarak: İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], derleyicinin tür bilgilerini birlikte çalışma bütünleştirilmiş kod yürütülebilir dosyanın içine gömmek için bildirebilirsiniz. Derleyici, uygulamanızın kullandığı tür bilgilerini katıştırır. Uygulamanızla birlikte çalışma derlemesi dağıtmak gerekmez. Önerilen yöntem budur.  
   
--   Birlikte çalışma derlemeleri dağıtarak: birlikte çalışma derlemesi için standart bir başvuru oluşturabilirsiniz. Bu durumda, uygulamanız ile birlikte çalışma derlemesi dağıtılmalıdır. Bu yöntem uygulamadığınız ve özel bir COM bileşeni kullanmıyorsanız, her zaman yönetilen kodunuzda birleştirmek istiyorsanız COM bileşeni yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+-   Birlikte çalışma derlemelerini dağıtarak: Standart bir birlikte çalışma derlemesine başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesi uygulamanızla dağıtılması gerekir. Bu tekniği kullanır ve özel bir COM bileşeni kullanmıyorsanız, her zaman, yönetilen kodda birleştirmek istiyorsanız COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
- Katıştırılmış birlikte çalışma türlerini kullanın, dağıtım basit ve kolay olur. Yapmanız gereken özel bir şey yoktur. Bu makalenin geri kalanında uygulamanız ile birlikte çalışma derlemeleri dağıtma senaryoları açıklanmıştır.  
+ Gömülü birlikte çalışma türleri kullanıyorsanız, bunları olabildiğince sade ve dağıtım. Yapmanız gereken özel bir şey yoktur. Bu makalenin geri kalanında, uygulamanızla birlikte çalışma derlemelerini dağıtma senaryoları açıklar.  
   
-## <a name="deploying-interop-assemblies"></a>Birlikte çalışma derlemeleri dağıtma  
- Derlemelerin tanımlayıcı adlar sağlayabilirsiniz. Tanımlayıcı adlı bir derleme benzersiz bir kimliği sağlar publisher'ın ortak anahtarı içerir. Tarafından üretilen derlemeleri [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) kullanarak yayımcı tarafından imzalanmış **/keyfile** seçeneği. İmzalı derlemeler genel derleme önbelleğine yükleyebilirsiniz. İmzasız derlemeler kullanıcının makinesinde özel derlemeler yüklenmesi gerekir.  
+## <a name="deploying-interop-assemblies"></a>Birlikte çalışma derlemelerini dağıtma  
+ Derlemelerin tanımlayıcı adları olabilir. Tanımlayıcı adlı bütünleştirilmiş kod benzersiz bir kimlik sağlar yayımcının ortak anahtarı içerir. Tarafından üretilen derlemelerin [tür kitaplığı alma programı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) kullanarak yayımcı tarafından imzalanmış **/keyfile** seçeneği. İmzalı derlemeler genel bütünleştirilmiş kod önbelleğine yükleyebilirsiniz. İmzasız derlemeler kullanıcının makinesine özel derlemeler yüklenmesi gerekir.  
   
 ### <a name="private-assemblies"></a>Özel derlemeler  
- Özel olarak kullanılacak bir derlemeyi yüklemek için hem uygulama yürütülebilir dosyasının hem de içeri aktarılan COM türlerini içeren birlikte çalışma derlemenin aynı dizin yapısını yüklenmelidir. Aşağıdaki çizimde imzalanmamış birlikte çalışma bir derlemeyi ayrı uygulama dizinlerde bulunan Client1.exe ve Client2.exe, tarafından özel olarak kullanılmak üzere gösterir. Bu örnekte LOANLib.dll çağrılır, birlikte çalışma derlemesi iki kez yüklenir.  
+ Özel olarak kullanılacak bir derlemeyi yüklemek için hem uygulama yürütülebilir hem de içeri aktarılan COM türlerini içeren birlikte çalışma bütünleştirilmiş kod aynı dizin yapısında yüklenmelidir. Ayrı uygulama dizinlerde bulunan Client1.exe ve Client2.exe, tarafından özel olarak kullanılmak üzere, işaretsiz bir birlikte çalışma derlemesi aşağıda gösterilmiştir. Bu örnekte LOANLib.dll çağrılır, birlikte çalışma derlemesi iki kez yüklenir.  
   
  ![Dizin yapısını ve Windows kayıt defteri](media/comdeployprivate.gif "comdeployprivate")  
 Özel bir dağıtım için dizin yapısını ve kayıt defteri girdileri  
   
- Uygulama ile ilişkili tüm COM bileşenlerini Windows Kayıt Defteri'nde yüklenmesi gerekir. Client1.exe ve Client2.exe çizimdeki farklı bilgisayarlarda yüklü değilse, her iki bilgisayarda COM bileşenlerini kaydetmeniz gerekir.  
+ Uygulamayla ilişkili tüm COM bileşenlerini Windows kayıt defterinde yüklenmesi gerekir. Client1.exe ve çizimdeki Client2.exe farklı bilgisayarlarda yüklüyse, her iki bilgisayarda COM bileşenlerini kaydetmeniz gerekir.  
   
 ### <a name="shared-assemblies"></a>Paylaşılan derlemeler  
- Birden çok uygulama tarafından paylaşılan derlemeleri genel derleme önbelleğine merkezi bir depoda yüklü olmalıdır. .NET istemcileri imzalanmış ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi'nın aynı kopyasını erişebilir. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+ Birden çok uygulama tarafından paylaşılan derlemeleri genel bütünleştirilmiş kod önbelleğine merkezi bir depoda yüklü olması gerekir. .NET istemcileri imzalanır ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi aynı kopyasını erişebilir. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)  
- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)  
- [Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)

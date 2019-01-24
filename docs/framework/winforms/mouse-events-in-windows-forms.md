@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507583"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms'ta Fare Olayları
 Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu fare konumunu bilmek ister. Bu konu, fare olayları bu bilgiler edinme hakkında ayrıntılı bilgi sağlar ve Windows Forms denetimlerinde tetiklenen hangi fare tıklatın olayları siparişi açıklar. Bir listesi ve açıklamaları tüm fare olayları için bkz. [nasıl Windows Forms'ta fare girdisi çalışır](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -62,7 +62,7 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> olay.  
   
- Tıklama olayları fare düzenini gösteren bir kod örneği için bkz: [nasıl yapılır: Windows Forms denetimlerinde kullanıcı giriş olaylarını işlemek](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Tıklama olayları fare düzenini gösteren bir kod örneği için bkz: [nasıl yapılır: Tanıtıcı kullanıcı girdi olaylarını Windows Forms denetimlerine](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Tek denetimleri  
  Aşağıdaki denetimler için standart fare uymayan olay davranışı:  
@@ -74,11 +74,11 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
   
     -   Sol tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Sağ tıklayın: yükseltilmiş click olayı yok  
+    -   Sağ tıklayın: Yükseltilmiş click olayı yok  
   
     -   Sol çift: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Sağa çift: yükseltilmiş click olayı yok  
+    -   Çift tıklatın doğru: Yükseltilmiş click olayı yok  
   
 -   <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>, ve <xref:System.Windows.Forms.CheckedListBox> denetimleri  
   
@@ -87,11 +87,11 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
   
     -   Sol tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Sağ tıklayın: yükseltilmiş click olayı yok  
+    -   Sağ tıklayın: Yükseltilmiş click olayı yok  
   
     -   Sol çift: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   Sağa çift: yükseltilmiş click olayı yok  
+    -   Çift tıklatın doğru: Yükseltilmiş click olayı yok  
   
 -   <xref:System.Windows.Forms.ListView> Denetimi  
   
@@ -141,5 +141,5 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
     > [!NOTE]
     >  Kullanıcı fare düğmesini basılı durumdayken işaretçiyi iki durumlu denetimin dışına taşınırsa (fareyi hareket gibi <xref:System.Windows.Forms.Button> , basılı durumdayken denetim), iki durumlu denetimin yükseltilmiş boyama durum ve yalnızca <xref:System.Windows.Forms.Control.MouseUp> olayı oluşur. <xref:System.Windows.Forms.Control.Click> Veya <xref:System.Windows.Forms.Control.MouseClick> olayları, bu durumda gerçekleşmez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

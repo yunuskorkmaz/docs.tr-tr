@@ -2,12 +2,12 @@
 title: Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498365"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman gerekli ayarları belirlemek kolay değildir. Yapılandırma dosyalarını WCF hizmetleri esnekliğini artırın, ancak bunlar ayrıca sorunları bulmak sabit bir çoğu için işlemcilerden kaynaklanıyor olabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bu sorunları giderir ve büyüklüğü ve karmaşıklığı ile hizmet yapılandırmasının azaltmak için bir yol sağlar.  
@@ -113,10 +113,10 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 > [!IMPORTANT]
 >  Bu özellik yalnızca WCF Hizmeti Yapılandırması istemci yapılandırmasını ilişkilendirir. Çoğu durumda, WCF istemci yapılandırması svcutil.exe veya Visual Studio'dan bir hizmet başvurusu ekleme gibi bir araç tarafından oluşturulur. Bir WCF istemcisi elle yapılandırıyorsanız eklemeniz gerekecektir bir \<istemci > yapılandırma öğesi ve çağırmak istediğiniz uç nokta belirtin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)
+- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

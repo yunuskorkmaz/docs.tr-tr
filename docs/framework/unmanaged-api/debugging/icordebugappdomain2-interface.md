@@ -1,5 +1,5 @@
 ---
-title: Icordebugappdomain2 Interface1
+title: Icordebugappdomain2 arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4549b0fe6379979a7b9bd6344d65ff465f33f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506140"
 ---
-# <a name="icordebugappdomain2-interface1"></a>Icordebugappdomain2 Interface1
-Diziler, işaretçileri, işlev işaretçileri ve başvuru türleri ile çalışmak için yöntemler sağlar. Bu arabirim, Icordebugappdomain arabirimi uzantısıdır.  
+# <a name="icordebugappdomain2-interface1"></a>Icordebugappdomain2 arabirimi1
+Diziler, işaretçiler, işlev işaretçileri ve başvuru türleri ile çalışmak için yöntemler sağlar. Bu arabirim, Icordebugappdomain arabiriminin bir uzantısıdır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetArrayOrPointerType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Belirtilen türe veya bir işaretçi veya belirtilen tür referansı dizisini alır.|  
-|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Bir işaretçi belirli bir imzaya sahip bir işlevi alır.|  
+|[GetArrayOrPointerType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Belirtilen tür veya işaretçi veya başvuru belirtilen türe dizisini alır.|  
+|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Belirli bir imzaya sahip bir işlev için bir işaretçi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

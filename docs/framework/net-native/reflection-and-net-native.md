@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 351748d0b27fa6ffc2368aacddc6c7aca290cddb
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507232"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
 .NET Framework'te yansıma API'si azaltılarak geliştirme destekleyen yönetilen. Yansıma, uygulama nesneleri incelemek, inceleme bulunan nesneler üzerinde yöntemleri çağırmak, çalışma zamanında yeni türler oluşturmak sağlar ve birçok diğer dinamik kod senaryolarını destekler. Serileştirme ve serisini kaldırma kalıcı yapılabilir ve daha sonra geri bir nesnenin alan değerlerini tanır de destekler. Tüm bu senaryolar için kullanılabilir meta verileri temel alarak yerel kod oluşturmak için .NET Framework just-ın-time (JIT) derleyici gerektirir.  
@@ -33,6 +33,6 @@ ms.locfileid: "49323116"
   
 -   [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Native ile Uygulama Derleme](../../../docs/framework/net-native/index.md)  
- [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Native ile Uygulama Derleme](../../../docs/framework/net-native/index.md)
+- [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)

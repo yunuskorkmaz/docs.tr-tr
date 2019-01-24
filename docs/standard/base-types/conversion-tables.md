@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512352"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET içinde tür dönüştürme tabloları
 Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüştürüldüğünde Genişletme dönüşümü gerçekleşir. Bir türde bir değer daha küçük bir boyut başka bir türün değerine dönüştürüldüğünde bir daraltma dönüşümü gerçekleşir. Bu başlıktaki tablolar, her iki tür dönüştürmeler tarafından sergilenen davranışları gösterir.  
@@ -73,5 +73,5 @@ Bir türde bir değer eşit veya daha fazla boyutunu başka bir türe dönüşt�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.Convert?displayProperty=nameWithType>
 - [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

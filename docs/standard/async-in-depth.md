@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 393d755276e281e923dfe3e52b5d3e9afdae38dd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492839"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
@@ -146,7 +146,7 @@ Bir kez `await` karşılaşılırsa, yürütülmesini `CalculateResult()` sıras
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [C# zaman uyumsuz programlama](~/docs/csharp/async.md)   
-* [Zaman uyumsuz programlama ile async ve await (C#)](../csharp/programming-guide/concepts/async/index.md)  
-* [F # zaman uyumsuz programlama](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-* [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [C# zaman uyumsuz programlama](~/docs/csharp/async.md)
+- [Zaman uyumsuz programlama ile async ve await (C#)](../csharp/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz programlamaF#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

@@ -2,43 +2,37 @@
 title: Visual Basic'de İşleçler ve İfadeler
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805454"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
-Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlemi gerçekleştiren bir kod öğedir. Değer öğeleri dahil değişkenlerinin, sabitleri, değişmez değerleri, özellikler, döndürür `Function` ve `Operator` yordamları ve ifadeler.  
+Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlem gerçekleştiren bir kod öğedir. Değişkenleri, sabitleri, sabit değerleri, özellikleri, değeri öğeleri dahil döndürür `Function` ve `Operator` yordamları ve ifadeler.  
   
- Bir *ifade* yeni bir değer veren bir dizi işleçleri ile birleştirilmiş değer öğeleri. İşleçler hesaplamalar, karşılaştırmaları veya diğer işlemleri gerçekleştirerek değeri öğeleri görür.  
+ Bir *ifade* yeni bir değer veren bir dizi değeri öğeleri işleçleri ile birlikte. İşleçler, değeri öğeleri üzerinde hesaplamalar, karşılaştırmaları veya diğer işlemleri gerçekleştirerek işlevi görür.  
   
-## <a name="types-of-operators"></a>İşleçler türleri  
+## <a name="types-of-operators"></a>Tür işleç  
  Visual Basic işleçleri aşağıdaki türlerini sağlar:  
   
--   [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) bunların bit şekillerine kaydırma dahil olmak üzere sayısal değerleri tanıdık hesaplamalar.  
+-   [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) , bit düzenleri kaydırma gibi sayısal değerleri üzerinde tanıdık hesaplamalar.  
   
--   [Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) iki ifadeye karşılaştırır ve dönüş bir `Boolean` karşılaştırma sonucunu temsil eden değer.  
+-   [Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) iki ifadeden karşılaştırın ve dönüş bir `Boolean` Karşılaştırmanın sonucu temsil eden değer.  
   
--   [Birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) tek bir dize halinde birden çok dizeyi birleştirme.  
+-   [Birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) tek bir dize olarak birden çok dizeyi birleştirme.  
   
 -   [Mantıksal ve bit düzeyinde işleçler Visual Basic'te](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) birleştirmek `Boolean` veya sayısal değerler ve değerlerin aynı veri türünde bir sonuç döndürür.  
   
- Bir operatör ile birleştirilmiş değer öğeleri adlı *işlenenler* bu işleç. İşleçler atama işleci dışında değer öğeleri form ifadeleri hangi formların birlikte bir *deyimi*. Daha fazla bilgi için bkz: [deyimleri](../../../../visual-basic/programming-guide/language-features/statements.md).  
+ Operatör ile birleştirilmiş değer öğeleri adlı *işlenenler* bu işleci. İşleçleri birleşik atama işleci hariç değer öğeleri form ifadeleri ile hangi formların bir *deyimi*. Daha fazla bilgi için [deyimleri](../../../../visual-basic/programming-guide/language-features/statements.md).  
   
 ## <a name="evaluation-of-expressions"></a>İfade değerlendirme  
- Sonuç ifade genellikle tanıdık veri türü gibi bir değeri temsil eder `Boolean`, `String`, veya sayısal bir tür.  
+ Bir ifadenin sonuç genellikle tanıdık veri türünde olduğu gibi bir değeri temsil eder `Boolean`, `String`, veya bir sayısal tür.  
   
- İfadeleri örnekleri verilmiştir.  
+ Örnekleri aşağıda verilmiştir.  
   
  `5 + 4`  
   
@@ -56,15 +50,15 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
   
  `' The preceding expression evaluates to False.`  
   
- Aşağıdaki örnekte gösterildiği gibi çeşitli işleçler bir tek ifadesi veya deyimi, eylemleri gerçekleştirebilirsiniz.  
+ Aşağıdaki örnekte gösterildiği gibi birkaç işleç bir tek ifadesi veya deyimi, eylemler gerçekleştirebilirsiniz.  
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- Önceki örnekte, Visual Basic ifade işlemlerinde atama işlecinin sağ tarafında gerçekleştirir (`=`), ardından sonuç değeri değişkenine atar `x` soldaki. Bir ifade, ancak bir anlayış birleştirilebilir işleçleri sayısına pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığından emin olmak gereklidir.  
+ Önceki örnekte, Visual Basic ifade işlemlerinde atama işlecinin sağ tarafında gerçekleştirir (`=`), ardından sonuç değerini değişkenine atar `x` soldaki. Bir ifade ancak bir anlayış birleştirilebilir işleçleri dizi pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığınızdan emin olmak gereklidir.  
   
- Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
+ Daha fazla bilgi ve örnekler için bkz. [işleci aşırı yüklemesi Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleçler](../../../../visual-basic/language-reference/operators/index.md)  
- [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
- [Deyimler](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşleçler](../../../../visual-basic/language-reference/operators/index.md)
+- [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [Deyimler](../../../../visual-basic/language-reference/statements/index.md)

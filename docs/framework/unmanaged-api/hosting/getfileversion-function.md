@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494814"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion İşlevi
-Belirtilen arabellek kullanarak dosyanın belirtilen ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
+Belirtilen arabelleği kullanarak belirtilen dosya, ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,23 +41,23 @@ HRESULT GetFileVersion (
   
 #### <a name="parameters"></a>Parametreler  
  `szFilename`  
- [in] İncelenmesi için dosyasının yolu.  
+ [in] İncelenecek dosyasının yolu.  
   
  `szBuffer`  
- [içinde out] Döndürülen sürüm bilgilerini ayrılan arabellek.  
+ [out içinde] Döndürülen sürüm bilgilerini ayrılan bir arabellek.  
   
  `cchBuffer`  
- [in] Geniş karakterler boyutu, `szBuffer`.  
+ [in] Geniş karakter cinsinden boyutu, `szBuffer`.  
   
  `dwLength`  
- [out] Dönen bayt cinsinden boyutu `szBuffer`.  
+ [out] Döndürülen bayt cinsinden boyutu `szBuffer`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

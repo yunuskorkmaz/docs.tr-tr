@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513457"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyalarını yüklemek için kullanılır:  
@@ -46,7 +46,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  ![Paket ve bölümleri diyagramı](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Bölümleri tanımlamak için genişletilebilirliği, RFC 2396 OPC belirtimi yararlanır (Tekdüzen Kaynak Tanımlayıcıları (URI): genel sözdizimi) paketi tanımlamak için [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzeni.  
+ Bölümleri tanımlamak için genişletilebilirliği, RFC 2396 OPC belirtimi yararlanır (Tekdüzen Kaynak Tanımlayıcıları (URI): Paketi tanımlamak için genel sözdizimi) [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzeni.  
   
  Tarafından belirtilen düzeni bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] ; kendi ön eke göre tanımlanan http, ftp ve dosya tanınmış örnekler verilmiştir. Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şema "paketi", şema olarak kullanır ve iki bileşenleri içerir: yetkilisi ve yolu. Aşağıdaki bir paketi biçimi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -89,7 +89,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 -   **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: yerel bütünleştirilmiş kod proje klasörü köküne yolunu da dahil olmak üzere kaynak dosyasının adı.  
+-   **Yol**: Yerel derleme proje klasörü köküne yolunu da dahil olmak üzere kaynak dosyanın adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derlemenin yerel proje klasörünün kök dizininde bulunan kaynak dosyası.  
   
@@ -105,9 +105,9 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 -   **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: başvurulan bir bütünleştirilmiş kod içine derlenmiş bir kaynak dosyasının adı. Yol aşağıdaki biçime uymalıdır:  
+-   **Yol**: Başvurulan bir bütünleştirilmiş kod içine derlenmiş bir kaynak dosyasının adıdır. Yol aşağıdaki biçime uymalıdır:  
   
-     *AssemblyShortName*{*; Sürüm*] {*; PublicKey*]; bileşen /*yolu*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **AssemblyShortName**: başvurulan derleme için kısa bir ad.  
   
@@ -141,7 +141,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 -   **Yetkilisi**: uygulama: / / /.  
   
--   **Yol**: dosya sistemi konumu uygulamanın ana yürütülebilir derlemenin göreli yolu da dahil olmak üzere içerik dosyasının adı.  
+-   **Yol**: Dosya sistemi konumu uygulamanın ana yürütülebilir derlemenin göreli yolu da dahil olmak üzere içerik dosyasının adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin aynı klasörde bulunan içerik dosyası.  
   
@@ -160,7 +160,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 -   **Yetkilisi**: siteoforigin: / / /.  
   
--   **Yol**: site içinden çalıştırılabilir derlemesinin başlatıldı konumun göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
+-   **Yol**: Sitenin içinden çalıştırılabilir derlemesinin başlatıldı konumun göreli yolunu da dahil olmak üzere kaynak dosyasının adı.  
   
  Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin başlatıldığı konumda depolanan kaynak dosyasının site.  
   
@@ -281,7 +281,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  Tablo 1 gösterir çeşitli mutlak paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , işaretlemede belirtebilirsiniz.  
   
- Tablo 1: Mutlak paketi URI'ler biçimlendirme  
+ Tablo 1: Biçimlendirme içinde mutlak paketi URI'ler  
   
 |Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  Tablo 2'de çeşitli göreli paketi gösterilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , işaretlemede belirtebilirsiniz.  
   
- Tablo 2: Paketi göreli URI'ler biçimlendirme  
+ Tablo 2: Biçimlendirme paketi göreli URI'ler  
   
 |Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tablo 3'te gösterilir çeşitli göreli paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kullanarak kod içinde belirtebileceğiniz <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tablo 3: Kod içinde mutlak paketi URI'ler  
+ Tablo 3: Kod paketi mutlak URI  
   
 |Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tablo 4 gösterir çeşitli göreli paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kod kullanarak belirtebileceğiniz <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tablo 4: Kod içinde göreli paketi URI'ler  
+ Tablo 4: Kod paketi göreli URI'ler  
   
 |Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Temalar da genel bir bakış için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bkz: [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

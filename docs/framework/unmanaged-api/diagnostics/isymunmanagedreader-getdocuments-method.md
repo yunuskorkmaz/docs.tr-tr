@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bcb0efab3b61f55bd5fdd3405799c7ac78ee521
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68f2cc471a33d2c0ea92ceab59d5ba9ecb86e7f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509595"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments Metodu
-Sembol deposunda tanımlanan tüm belgeleri bir dizi döndürür.  
+Sembol deposu içerisinde tanımlanan tüm belgelerin dizisini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +39,19 @@ HRESULT GetDocuments (
   
 #### <a name="parameters"></a>Parametreler  
  `cDocs`  
- [in] Boyutunu `pDocs` dizi.  
+ [in] Boyutu `pDocs` dizisi.  
   
  `pcDocs`  
- [out] Bir işaretçi bir değişkene dizi uzunluğu alır.  
+ [out] Dizi uzunluğu alır bir değişken için bir işaretçi.  
   
  `pDocs`  
- [out] Bir işaretçi bir değişkene belge dizisi alır.  
+ [out] Belge dizi alan bir değişken için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

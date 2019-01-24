@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502058"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION Yapısı
-Bir iş parçacığının çerçevelere şu an etkin olan işlevler hakkında bilgi içerir. Bu yapı tarafından kullanılan [Icordebugthread2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) yöntemi.  
+Bir iş parçacığının çerçevelerde şu an etkin olan işlevler hakkında bilgiler içerir. Bu yapı tarafından kullanılan [Icordebugthread2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,21 +42,21 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pAppDomain`|Uygulama etki alanı sahibi işaretçi `ilOffset` alan.|  
-|`pModule`|Modül sahibi işaretçi `ilOffset` alan.|  
+|`pAppDomain`|Uygulama etki alanı sahibi işaretçisine `ilOffset` alan.|  
+|`pModule`|İşaretçi modülü sahibine `ilOffset` alan.|  
 |`pFunction`|İşaretçi işlevi sahibine `ilOffset` alan.|  
-|`ilOffset`|Çerçeve Microsoft Ara dili (MSIL) uzaklığı.|  
-|`flags`|Gelecekteki genişletilebilirliği için ayrılmış.|  
+|`ilOffset`|Çerçevenin Microsoft Ara dili (MSIL) uzaklığı.|  
+|`flags`|Sonra genişletilebilmek için ayrılmış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl  
+ **Üst bilgi:** CorDebug.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

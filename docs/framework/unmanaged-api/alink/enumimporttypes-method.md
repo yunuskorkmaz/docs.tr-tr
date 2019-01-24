@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512729"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes Yöntemi
 Her kapsamda her türünü numaralandırır.  
@@ -40,16 +40,16 @@ HRESULT EnumImportTypes(
   
 #### <a name="parameters"></a>Parametreler  
  `hEnum`  
- Numaralandırıcı işleci.  
+ Numaralandırıcı için işler.  
   
  `dwMax`  
- Alınacak türleri maksimum sayısı.  
+ Alınacak türleri sayısı.  
   
  `aTypeDefs`  
- Recieves yazın aşmayan belirteçleri `dwMax`.  
+ Recieves yazın aşmayan belirteçleri, `dwMax`.  
   
  `pdwCount`  
- Türü gerçek sayısını alır `aTypeDefs`.  
+ Türünde gerçek sayısını alır `aTypeDefs`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -57,7 +57,7 @@ HRESULT EnumImportTypes(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494567"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve Açık Kaynak
 Bu konu nedir .NET Core ve daha fazla bilgi nasıl bulabileceğinizi gösterilmektedir, kısa bir genel bakış sağlar. .NET Core için konular tam listesi için bkz [.NET Core Kılavuzu](../../core/index.md).
@@ -22,7 +22,7 @@ Bu konu nedir .NET Core ve daha fazla bilgi nasıl bulabileceğinizi gösterilme
   
  .NET Core temel özellikleri şunlardır:  
   
--   **Platformlar arası:** .NET Core gerekir ve bu kod, platform hedefi bağımsız olarak yeniden uygulama özellikleri uygulamak için temel işlevleri sağlar. Şu anda üç ana işletim sistemlerini (OS) destekler: Windows, Linux ve Macos'ta. Uygulamalar ve desteklenen işletim sistemleri arasında değiştirilmeden çalıştırılmasını kitaplıklar yazabilirsiniz. Desteklenen işletim sistemlerinin listesini görmek için ziyaret [.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   **Platformlar arası:** .NET Core gerekir ve bu kod, platform hedefi bağımsız olarak yeniden uygulama özellikleri uygulamak için temel işlevleri sağlar. Şu anda üç ana işletim sistemlerini (OS) da destekler: Windows, Linux ve Macos'ta. Uygulamalar ve desteklenen işletim sistemleri arasında değiştirilmeden çalıştırılmasını kitaplıklar yazabilirsiniz. Desteklenen işletim sistemlerinin listesini görmek için ziyaret [.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md).
   
 -   **Açık kaynak:** .NET Core Hizmetleri altında çok sayıda proje biridir [.NET Foundation](https://www.dotnetfoundation.org/) ve kullanılabilir [GitHub](https://github.com/).  .NET Core açık kaynaklı proje olarak sahip daha saydam bir geliştirme süreci yükseltir ve etkin ve bağlı bir topluluk yükseltir.  
   
@@ -45,7 +45,7 @@ Bu konu nedir .NET Core ve daha fazla bilgi nasıl bulabileceğinizi gösterilme
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [.NET core giriş sayfası](https://www.microsoft.com/net/core)  
-- [.NET Core Kılavuzu](../../core/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET core giriş sayfası](https://www.microsoft.com/net/core)
+- [.NET Core Kılavuzu](../../core/index.md)
 - [ASP.NET Core belgeleri](/aspnet/core/)

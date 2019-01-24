@@ -10,17 +10,17 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16b3334647922f845645e6eb58db3146f4c9b936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e68c82a04b78a18f51f0a2c9ec712036521368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513548"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded yöntemi
 [.NET Framework 4.7.2 ve sonraki sürümlerinde desteklenen]  
   
-Profil Oluşturucu dinamik yöntemi toplanır ve daha sonra kaldırıldığında çöp olduğunda uyarır.  
+Profil Oluşturucu, dinamik bir yöntem atık toplanan ve daha sonra kaldırıldığında olduğunda size bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,19 +32,19 @@ HRESULT DynamicMethodUnloaded(
   
 #### <a name="parameters"></a>Parametreler  
 [in] `functionId`  
-Çöp bırakıldı bellek içi işlevi tanıtıcısı toplanır ve kaldırıldı.   
+Atık toplanan ve yüklenmemiş olan bellek içi işlev tanımlayıcısı.   
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-[ICorProfilerCallback8.DynamicMethodJITCompilationStarted yöntemi](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)  
-[ICorProfilerCallback8.DynamicMethodJITCompilationFinished yöntemi](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)  
-[ICorProfilerCallback9 arabirimi](icorprofilercallback9-interface.md)   
-[COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted yöntemi](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8.DynamicMethodJITCompilationFinished yöntemi](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback9 Arabirimi](icorprofilercallback9-interface.md)
+- [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

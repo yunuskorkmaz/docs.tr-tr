@@ -5,51 +5,51 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c05ddd68beeffe70e048a439929fb31454812612
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509538"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Forms DataGrid Denetimi için Klavye Kısayolları
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.DataGrid> kontrol; ancak, <xref:System.Windows.Forms.DataGrid> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms içinde gezinme için kullanılan klavye kısayolları aşağıdaki tabloda listelenmiştir <xref:System.Windows.Forms.DataGrid> denetimi:  
+ Windows Forms içinde gezinme için kullanılan klavye kısayolları aşağıdaki tabloda <xref:System.Windows.Forms.DataGrid> denetimi:  
   
 |Eylem|Kısayol|  
 |------------|--------------|  
-|Bir hücre girdisini tamamlamak ve sonraki hücrenin aşağı taşı.<br /><br /> Odağı bir alt tablo bağlantısında ise, bu tabloya gidin.|ENTER|  
-|Hücre düzenleme modunda değilse, hücre düzenleme iptal edin.<br /><br /> Kayan seçimdeki varsa, satırındaki düzenlemeyi iptal et.|ESC|  
+|Hücre girişini tamamlayın ve sonraki hücreye aşağı taşı.<br /><br /> Odak bir alt tabloda bağlantısında ise, bu tabloya gidin.|ENTER|  
+|Hücre düzenleme modunda değilse, hücre düzenlemeyi iptal et.<br /><br /> Kayan seçimi, sıra düzenleme iptal edin.|ESC|  
 |Ekleme noktasını önceki karakteri bir hücre düzenleme yaparken silin.|GERİ AL|  
-|Karakter sonra ekleme noktasını bir hücre düzenleme yaparken silin.|DELETE|  
-|Geçerli satırda ilk hücrenin taşıyın.|GİRİŞ|  
+|Karakter, bir hücre düzenleme ekleme noktasından sonra silin.|DELETE|  
+|Geçerli satırda ilk hücrenin taşıyın.|HOME|  
 |Hücre geçerli satırda son taşıyın.|END|  
-|Geçerli hücreyi karakter vurgulayın ve satırın sonuna ekleme noktasına yerleştirin. Bir hücreyi çift olarak aynı davranışı.|F2|  
-|Odak bir hücre, satır sonraki hücreye taşıyın.<br /><br /> Odağı satırda son hücre açıksa, satırın ilk alt tablo bağlantı taşıyın ve genişletin.<br /><br /> Odağı bir alt bağlantısında ise, sonraki alt bağlantısını taşıyın.<br /><br /> Odağı son alt bağlantıyı ise, sonraki satıra ilk hücreye taşıyın.|TAB|  
-|Odağı bir hücreyi ise, önceki hücrenin satırda taşıyın.<br /><br /> Odağı satırda ilk hücre açıksa, önceki satıra son genişletilmiş alt tablo bağlantı taşıyın veya önceki satıra hücrenin son taşıyın.<br /><br /> Odağı bir alt bağlantısında ise, önceki alt bağlantısını taşıyın.<br /><br /> Odağı ilk alt bağlantıyı ise, önceki satıra hücrenin son taşıyın.|SHIFT+TAB|  
-|Sekme sırasında bir sonraki denetime taşıma.|CTRL + SEKME|  
-|Sekme sırasını önceki denetiminde taşıyın.|CTRL + SHIFT + SEKME|  
-|Üst tablo için bir alt tabloda ise yukarı taşıyın. Geri düğmesine tıklayarak olarak aynı davranışı.|ALT + SOL OK|  
-|Alt tablo bağlantıları genişletin. ALT + AŞAĞI OK tüm bağlantıları, yalnızca seçilen dosyalardan genişletir.|ALT + AŞAĞI OK veya CTRL + artı işareti|  
-|Alt tablo bağlantıları daraltın. ALT + YUKARI OK tüm bağlantıları, yalnızca seçilen dosyalardan daraltır.|ALT + YUKARI OK veya CTRL + eksi işareti|  
-|Ok yönünü sağdan boş hücreye taşıyın.|CTRL + OK|  
-|Seçimi bir satır (alt tablo bağlantıları hariç) ok yönünde genişletir.|SHIFT + YUKARI/AŞAĞI OK|  
-|(Alt tablo bağlantıları hariç) ok yönünde sağdan boş satır seçimi genişletir.|CTRL + SHIFT + YUKARI/AŞAĞI OK|  
-|Sol üst hücrenin taşıyın.|CTRL + HOME|  
-|Sağ alt köşedeki hücreye taşıyın.|CTRL + END|  
-|Üst satır seçimi genişletir.|CTRL + SHIFT + HOME|  
-|Alt satır seçimi genişletir.|CTRL + SHIFT + END|  
-|Geçerli satır (alt tablo bağlantıları hariç) seçin.|SHIFT + ARA ÇUBUĞU|  
-|Tüm kılavuz (alt tablo bağlantıları hariç) seçin.|CTRL + A|  
-|Bir alt tabloda zaman üst satırda görüntüler.|CTRL + PAGE DOWN|  
-|Bir alt tabloda zaman üst satırı gizlemek.|CTRL + PAGE UP|  
-|Seçimi bir ekran (alt tablo bağlantıları hariç) aşağı genişletir.|ÜST KARAKTER + PAGE DOWN|  
-|Seçimi (alt tablo bağlantıları hariç) bir ekran yukarı genişletir.|ÜST KARAKTER + PAGE UP|  
-|Çağrı <xref:System.Windows.Forms.DataGrid.EndEdit%2A> geçerli satır için yöntem.|CTRL + ENTER|  
-|Girin bir <xref:System.DBNull.Value?displayProperty=nameWithType> değerini bir hücre düzenleme modunda dönüştürür.|CTRL + 0|  
+|Karakterleri geçerli hücreyi vurgulayın ve ekleme noktasını satırın sonuna getirin. Bir hücreye çift olarak aynı davranış.|F2|  
+|Odak bir hücre, satır içinde sonraki hücreye taşıyın.<br /><br /> Odak bir satırdaki son hücreye açıksa, satırın ilk alt tablo bağlantısını taşıyın ve genişletin.<br /><br /> Odak bir alt bağlantısında ise, sonraki alt bağlantısını taşıyın.<br /><br /> Odak son alt bağlantıyı ise, sonraki satırdaki ilk hücreye taşıyın.|TAB|  
+|Odak bir hücre, satır önceki hücre taşıyın.<br /><br /> Odak bir satırdaki ilk hücrenin açıksa, önceki satırdaki son genişletilmiş alt tablo bağlantı taşıyın veya son önceki satıra hücrenin taşıyın.<br /><br /> Odak bir alt bağlantısında ise, önceki alt bağlantısını taşıyın.<br /><br /> Odak ilk alt bağlantıyı ise, önceki satıra hücrenin son taşıyın.|SHIFT+TAB|  
+|Sekme sırasında sonraki denetime gider.|CTRL+TAB|  
+|Önceki sekme sırasını denetimi taşıyın.|CTRL+SHIFT+TAB|  
+|Üst tablo için bir alt tabloda Yukarı Taşı. Geri düğmesine tıklayarak olarak aynı davranış.|ALT + SOL OK|  
+|Alt tablo Bağlantıları'nı genişletin. ALT + AŞAĞI OK tüm bağlantıları, yalnızca seçili olanları genişletir.|ALT + AŞAĞI OK veya CTRL + artı işareti|  
+|Alt tablo bağlantıları daraltın. ALT + YUKARI OK tüm bağlantıları, yalnızca seçili olanları daraltır.|ALT + YUKARI OK veya CTRL + eksi işareti|  
+|Yön okun görselinin boş hücreye taşıyın.|CTRL + OK|  
+|Seçimi bir satır (alt tablo bağlantılar dışında) oku yönünde genişletin.|SHIFT + YUKARI/AŞAĞI OK|  
+|(Alt tablo bağlantılar dışında) oku yönünde görselinin boş satır seçimi genişletin.|CTRL + SHIFT + YUKARI/AŞAĞI OK|  
+|Sol üst hücresine taşıyın.|CTRL+HOME|  
+|İçin sağ alt hücresinde taşıyın.|CTRL+END|  
+|En üst satır seçimi genişletin.|CTRL+SHIFT+HOME|  
+|En alttaki seçimi genişletin.|CTRL+SHIFT+END|  
+|Geçerli satırın (alt tablo bağlantılar dışında) seçin.|SHIFT + ARA ÇUBUĞU|  
+|(Alt tablo bağlantılar dışında) tüm ızgara seçin.|CTRL+A|  
+|Üst satır, bir alt tabloda görüntüleyin.|CTRL+PAGE DOWN|  
+|Üst satırı bir alt tabloda zaman gizleyin.|CTRL+PAGE UP|  
+|Seçimi bir ekran (alt tablo bağlantılar dışında) aşağıya genişletin.|SHIFT+PAGE DOWN|  
+|Seçim (alt tablo bağlantılar dışında) bir ekran yukarıya genişletme.|ÜST KARAKTER + PAGE UP|  
+|Çağrı <xref:System.Windows.Forms.DataGrid.EndEdit%2A> geçerli satır için yöntemi.|CTRL+ENTER|  
+|Girin bir <xref:System.DBNull.Value?displayProperty=nameWithType> değerini bir hücre düzenleme modunda dönüştürür.|CTRL+0|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataGrid Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Hangi&#39;s ADO.NET'deki yenilikler
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501601"
 ---
 # <a name="what39s-new-in-adonet"></a>Hangi&#39;s ADO.NET'deki yenilikler
 Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -48,11 +48,11 @@ Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado
 -   Uzamsal veri türleri içeren Microsoft.SqlServer.Types.dll derlemenin sürüm 11.0 10.0 sürümünden yükseltildi. Bu derlemeye başvuran uygulamalar başarısız olabilir. Daha fazla bilgi için [değişiklikler veritabanı altyapısı özellikleri](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Entity Framework 5.0 ile çalışırken yeni senaryolar sağlayan API'leri ekler. Geliştirmeleri ve Entity Framework 5.0 eklenen özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın: [yenilikler](https://go.microsoft.com/fwlink/?LinkID=251106) ve [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Entity Framework 5.0 ile çalışırken yeni senaryolar sağlayan API'leri ekler. Geliştirmeleri ve Entity Framework 5.0 eklenen özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın: [Yenilikler](https://go.microsoft.com/fwlink/?LinkID=251106) ve [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [WCF veri hizmetlerinde yenilikler nelerdir?](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [WCF veri hizmetlerinde yenilikler nelerdir?](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

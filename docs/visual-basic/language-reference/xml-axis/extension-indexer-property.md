@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490836"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Extension Indexer Özelliği (Visual Basic)
 Bir koleksiyondaki öğelere erişim sağlar.  
@@ -55,9 +55,9 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XElement>  
- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML Value Özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XElement>
+- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML Value Özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

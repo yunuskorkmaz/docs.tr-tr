@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513661"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler, iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden fazla iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Çoklu iş parçacığı kullanan programları, karmaşık ve hata ayıklama zor olduğundan, bunlar çözümleri tek iş parçacıklı bulunduğunda kaçınılmalıdır.  
@@ -54,7 +54,7 @@ ms.locfileid: "43512472"
  <xref:System.Windows.Threading.Dispatcher> Öğeleri sırasındaki önceliğe göre sıralar. Öğe eklenirken belirtilen on düzeyi vardır <xref:System.Windows.Threading.Dispatcher> kuyruk. İçinde bu öncelikleri korunur <xref:System.Windows.Threading.DispatcherPriority> sabit listesi. Hakkında ayrıntılı bilgi <xref:System.Windows.Threading.DispatcherPriority> düzeyleri bulunabilir [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] belgeleri.  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>Eylem iş parçacıkları: örnekler  
+## <a name="threads-in-action-the-samples"></a>Eylem iş parçacıkları: Örnekleri  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Uzun süre çalışan hesaplamalar ile tek iş parçacıklı bir uygulama  
@@ -217,5 +217,5 @@ ms.locfileid: "43512472"
   
  Görev için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] biz her yerde yeniden giriş engelleme neden olan bellek sızıntısı yeniden eklenmesiyle olmadan beklenmeyen yeniden giriş önlemek içindir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uzun süre çalışan hesaplama örneğiyle tek iş parçacıklı uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uzun süre çalışan hesaplama örneğiyle tek iş parçacıklı uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)

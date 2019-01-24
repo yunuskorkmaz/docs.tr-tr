@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 690287bf54f98c19298504ee3058a59ef88a87f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c85888e9d29e7b3ae6ad76d1e534e08a4603ed2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499031"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime Yöntemi
-Tüm eski ortak dil çalışma zamanı (CLR) sürüm 2 etkinleştirme ilke kararları için geçerli çalışma zamanı bağlar.  
+Geçerli çalışma zamanının tüm eski ortak dil çalışma zamanı (CLR) sürüm 2 etkinleştirme İlkesi kararları için bağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,27 +34,27 @@ HRESULT BindAsLegacyV2Runtime ();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs döndürür:  
+ Bu yöntem aşağıdaki özel HRESULT'ları döndürür:  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Bağlama başarılı ya da bu çalışma zamanı eski CLR sürüm 2 etkinleştirme İlkesi çalışma zamanı zaten bağlıydı.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı eski CLR sürüm 2 etkinleştirme ilkesi zaten bağlıydı.|  
+|S_OK|Bağlama başarılı ya da bu çalışma zamanı, eski CLR sürüm 2 etkinleştirme İlkesi çalışma zamanı zaten bağlıydı.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı, eski CLR sürüm 2 etkinleştirme ilkesi zaten bağlıydı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçerli çalışma zamanının tüm eski CLR sürüm 2 etkinleştirme ilke kararları için zaten bağlıysa (kullanarak örneğin, `useLegacyV2RuntimeActivationPolicy` özniteliği [ \<başlangıç > öğesi](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) yapılandırma dosyası), bu yöntemi bir hata sonucu döndürmüyor; Bunun yerine, yalnızca bu yöntem eski etkinleştirme ilkesi başarıyla bağlı, olduğu gibi sonuç S_OK, olur.  
+ Geçerli çalışma zamanının tüm eski CLR sürüm 2 etkinleştirme İlkesi kararları için zaten bağlıysa (kullanarak örneğin, `useLegacyV2RuntimeActivationPolicy` özniteliği [ \<başlangıç > öğesi](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) yapılandırma dosyasında), bu yöntemi bir hata sonucu döndürmeyen; Bunun yerine, yalnızca bu yöntem eski etkinleştirme ilkesini başarıyla bağlı olmadığını olduğu gibi sonuç S_OK, olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MetaHost.h  
+ **Üst bilgi:** MetaHost.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [\<Başlangıç > öğesi](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [\<Başlangıç > öğesi](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

@@ -2,12 +2,12 @@
 title: Kapsam ile Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508775"
 ---
 # <a name="discovery-with-scopes-sample"></a>Kapsam ile Keşif Örneği
 Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sınıflandırmak için kapsamları kullanmayı gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktaları için zaman uyumsuz bir arama gerçekleştirmek için. Hizmette her uç nokta için bulma uç noktası bulma davranışını ekleme ve uç noktasına bir kapsamı ekleme işlemi kullanılarak yanı sıra tarafından bitiş noktası bulunabilirliğini denetleme özelleştirme Bu örnek gösterir. İstemcide, örnek istemcileri nasıl oluşturacağınızı üzerinden giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve ince parametreleri kapsamına ekleyerek kapsamları eklemek için arama <xref:System.ServiceModel.Discovery.FindCriteria>. Ayrıca bu örnek bir sonlandırma ölçütüne ekleyerek istemciler yanıtları nasıl kısıtlayabilirsiniz gösterir.  
@@ -37,4 +37,4 @@ Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sı
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

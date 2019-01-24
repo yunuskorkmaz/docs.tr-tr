@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502565"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo yöntemi
 Genel bir sözlük harita alır.  
@@ -24,36 +24,36 @@ HRESULT GetGenericDictionaryInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `ppMemoryBuffer`  
- [out] Adresine bir işaretçi bir [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) genel sözlük eşleme içeren nesne. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+ [out] Adresine bir işaretçi bir [Icordebugmemorybuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) genel bir sözlük harita içeren nesne. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
- Harita en üst düzey iki bölümden oluşur:  
+ Eşleme, üst düzey iki bölümden oluşur:  
   
--   A [directory](#Directory) bu eşlemesinde dahil tüm sözlükleri, göreli sanal adresleri (RAV) içeren.  
+-   A [dizin](#Directory) bu dahil tüm sözlüklerin göreli sanal adreslerine (RVA) içeren.  
   
--   Bayt hizalı [yığın](#Heap) nesne örneğini oluşturmada bilgileri içerir. Son dizin girişinin hemen sonra başlar.  
+-   Bayt hizalı [yığın](#Heap) nesne oluşturmada bilgileri içeren. Son directory girişinin hemen sonra başlar.  
   
 <a name="Directory"></a>   
-## <a name="the-directory"></a>Dizini  
- Her giriş dizininde öbek içinde uzaklığı gösterir; diğer bir deyişle, öbek başlangıç göreli bir uzaklık dayalıdır. Girişler değeri mutlaka benzersiz değil; aynı uzaklık yığınındaki işaret etmek birden çok dizin girdisi mümkündür.  
+## <a name="the-directory"></a>Dizin  
+ Her giriş dizininde yığın içinde bir uzaklık başvuruyor; yani yığın başlangıç göre bir uzaklık değildir. Girişler değerini mutlaka benzersiz değil; birden çok dizin girdisi yığınındaki aynı uzaklık işaret edecek şekilde mümkündür.  
   
- Genel bir sözlük harita dizin bölümü aşağıdaki yapıya sahiptir:  
+ Genel bir sözlük harita öğesinin dizin bölümü aşağıdaki yapıya sahiptir:  
   
--   İlk 4 bayt dictionary girişlerinin (diğer bir deyişle, göreli sanal adresleri sözlükteki sayısı) sayısını içerir. Bu değere başvurur *N*. Yüksek bit ayarlanmışsa girişleri artan düzende göreli sanal adres göre sıralanır.  
+-   İlk 4 baytı dictionary girişlerinin (diğer bir deyişle, sözlükteki göreli sanal adreslerine sayısı) sayısını içerir. Bu değer anılacaktır *N*. Yüksek bit ayarlanmışsa girişleri artan düzende göreli sanal adres göre sıralanır.  
   
--   *N* dizin girişlerini izleyin. Her giriş iki 4 baytlık kesimi 8 bayt oluşur:  
+-   *N* dizin girdisi izleyin. Her girişin iki 4 baytlık Segment 8 baytlık oluşur:  
   
     -   Bayt 0-3: RVA; sözlüğün göreli sanal adres.  
   
-    -   Bayt 4-7: uzaklığı; Öbek başlangıcı göre uzaklığı.  
+    -   4-7 baytlar: Uzaklık; yığın başlangıcını göre bir uzaklık.  
   
 <a name="Heap"></a>   
-## <a name="the-heap"></a>Öbek  
- Yığın 's boyutu dizin boyutu + 4 akış uzunluğu çıkarılmasıyla akış okuyucu tarafından hesaplanabilir. Diğer bir deyişle:  
+## <a name="the-heap"></a>Yığın  
+ Dizin boyutu + 4 akıştan uzunluğunu çıkararak göre bir akış okuyucusunu yığının boyutu hesaplanabilir. Diğer bir deyişle:  
   
 ```  
 Heap Size = Stream.Length – (Directory Size + 4)  
@@ -61,25 +61,25 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  dizin boyutu olduğu `N * 8`.  
   
- Her örneklemesi bilgi öğesi yığında biçimdedir:  
+ Yığındaki her örneklemesi bilgi öğesi için biçimi şu şekildedir:  
   
--   Bu örnek oluşturma bilgi öğesi sıkıştırılmış ECMA meta veri biçimi bayt cinsinden uzunluğu. Değer bu uzunluğu bilgileri dışlar.  
+-   Bu örnek oluşturma bilgi öğesi sıkıştırılmış ECMA meta veri biçimi bayt uzunluğu. Değeri, bu uzunluğu bilgileri içermez.  
   
--   Genel olgu türlerinin sayısı veya *T*, sıkıştırılmış ECMA meta veri biçiminde.  
+-   Genel örnek oluşturma türleri sayısı veya *T*, sıkıştırılmış ECMA meta veri biçiminde.  
   
--   *T* türleri, her temsil ECMA türü imza biçiminde.  
+-   *T* türlerini, her temsil ECMA türü imza biçiminde.  
   
- Her yığın öğesi için uzunluk eklenmesi, Basit Dizin bölümü öbek etkilemeden sıralama sağlar.  
+ Her yığın öğe uzunluğu dahilini Basit Dizin bölümü yığın etkilemeden sıralama sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugSymbolProvider2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugSymbolProvider2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

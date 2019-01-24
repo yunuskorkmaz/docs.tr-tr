@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: UI Olan Eklenti Oluşturma'
+title: 'Nasıl yapılır: UI Olan Eklenti Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 848e1b2064d89607a93f5ac20fede495e0c61c43
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510813"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl Yapılır: UI Olan Eklenti Oluşturma
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama tarafından barındırılan WPF) olan bir eklenti oluşturma işlemi gösterilmektedir.  
   
  Eklentinin bir WPF kullanıcı denetimi bir UI'dir. Tek bir düğme, tıklandığında, kullanıcı denetiminin içeriği olan bir ileti kutusu görüntüler. WPF tek başına uygulama eklenti kullanıcı Arabirimi ana uygulama penceresini içeriğini barındırır.  
@@ -104,6 +104,6 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
  Bu etkinlik ana bilgisayar uygulamasını tamamen yalıtılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

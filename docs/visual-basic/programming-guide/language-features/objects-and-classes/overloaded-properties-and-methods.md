@@ -12,58 +12,58 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: c0aa7c4a13e049045743044a98020a1aab2cf1a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 472cd0dbfc0544477d8e368b553a454b977d633c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498615"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>Aşırı yüklenmiş özellikler ve yöntemler (Visual Basic)
 
-Aşırı yükleme birden fazla yordam, örnek oluşturucusu ya da bir sınıf aynı adlı ancak farklı bağımsız değişken türleri ile özelliğinde oluşturulmasını olur.  
+Aşırı yükleme birden fazla yordam, örnek oluşturucusu veya bir sınıf ile aynı ada ancak farklı bağımsız değişken türleri özelliğinde oluşturulmasını var.  
   
-## <a name="overloading-usage"></a>Kullanım aşırı yüklemesi
+## <a name="overloading-usage"></a>Kullanım aşırı yükleme
 
- Nesne modeli, farklı veri türlerinde çalışmayabilir yordamlar için aynı adları uygulamadığınız belirleyen aşırı özellikle yararlıdır. Örneğin, birkaç farklı veri türlerini görüntülemek için bir sınıf olabilir `Display` şuna yordamları:  
+ Aynı adları için farklı veri türleri üzerinde çalışması yordamları kullanmak istemiyorsunuz, nesne modeli belirler. aşırı yükleme özellikle yararlı olur. Örneğin, birçok farklı veri türlerini görüntülemek için bir sınıf olabilir `Display` şuna yordamları:  
   
  [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
   
- Aşırı yükleme olmadan aynı şeyi sonraki gösterildiği gibi yaparlar olsa bile her bir yordam için farklı adlar oluşturmanız gerekecek:  
+ Bunlar aşağıda gösterildiği aynı şeyi yapmak olsa da aşırı yüklemeden, her bir yordam için farklı adlar oluşturmanız gerekir:  
   
  [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
   
- Aşırı yükleme, kullanılabilir veri türleri seçimine sağladığından özelliklerinin veya yöntemlerin kullanılacağını kolaylaştırır. Örneğin, aşırı yüklenmiş `Display` ele alınan yöntemi daha önce çağrılabilir herhangi bir kod aşağıdaki satırları ile:  
+ Aşırı yükleme özelliklerinin veya yöntemlerin bir seçenek kullanılabilir veri türleri sağladığından kullanmayı kolaylaştırır. Örneğin, aşırı yüklenmiş `Display` yöntemi daha önce çağrılabilir herhangi aşağıdaki kod satırlarını:  
   
  [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
   
- Çalışma zamanında, Visual Basic belirttiğiniz parametreleri veri türlerine göre doğru yordamı çağırır.  
+ Çalışma zamanında, Visual Basic belirttiğiniz parametrelerin veri türlerine göre doğru yordamını çağırır.  
   
-## <a name="overloading-rules"></a>Kuralları aşırı yüklemesi
+## <a name="overloading-rules"></a>Kuralları aşırı yükleme
 
- İki veya daha fazla özelliklerinin veya yöntemlerin aynı ada sahip ekleyerek aşırı yüklenmiş bir üyesi için bir sınıf oluşturun. Aşırı yüklenmiş türetilmiş üyeler dışında aşırı yüklenmiş her üyesinin farklı parametre listeleri sahip olması gerekir ve aşağıdaki öğeleri farklılaştırıcı bir özellik olarak bir özellik veya yordam aşırı yüklemesi kullanılamaz:  
+ Bir sınıf için aşırı yüklenmiş bir üye, iki veya daha fazla özelliklerinin veya yöntemlerin aynı ada sahip ekleyerek oluşturun. Türetilmiş aşırı yüklenmiş üyelerin dışında aşırı yüklenmiş üyelerin farklı parametre listeleri olmalıdır ve bir özellik veya yordamı aşırı yüklerken ayırt edici bir özellik olarak aşağıdaki öğeleri kullanılamaz:  
   
--   Değiştiriciler, gibi `ByVal` veya `ByRef`, üye veya üye parametreleri için geçerli.  
+-   Değiştiriciler, gibi `ByVal` veya `ByRef`, üye veya üyenin parametreleri geçerlidir.  
   
--   Parametrelerinin adları  
+-   Parametre adları  
   
--   Dönüş türleri yordamları  
+-   Yordamları dönüş türleri  
   
- `Overloads` Aşırı yüklendiğinde anahtar sözcüğü isteğe bağlı, ancak varsa aşırı üyeyi kullanan `Overloads` anahtar sözcüğü ve ardından diğer tüm aşırı yüklenmiş üyeler aynı ada sahip de belirtmelisiniz bu anahtar sözcük.  
+ `Overloads` Aşırı yüklerken anahtar sözcüğü isteğe bağlı, ancak varsa aşırı üyeyi kullanan `Overloads` anahtar sözcüğü ve ardından aynı ada sahip diğer tüm aşırı yüklenmiş üyeler de belirtmelisiniz bu anahtar sözcük.  
   
- Türetilen sınıflar devralınan üyeleri aynı parametreleri ve parametre türleri olarak da bilinen bir işlem sahip üyeleriyle aşırı yükleme *ad ve imza tarafından gölgeleme*. Varsa `Overloads` anahtar sözcük ad ve imza tarafından Gölgeleme, üye uyarlamasını türetilen sınıfın temel sınıf uygulamasında yerine kullanılacak ve bu üye için diğer aşırı yüklemeler için örnekleri kullanılabilir olduğunda kullanılır türetilmiş sınıf.  
+ Türetilen sınıfların aynı parametreleri ve parametre türleri olarak da bilinen bir işlem olan üyelere sahip devralınan üyeleri aşırı yükleme *ada ve imzaya göre gölgeleme*. Varsa `Overloads` ada ve imzaya göre Gölgeleme, üyeyi türetilen sınıfın uygulaması temel sınıf uygulaması yerine kullanılır ve bu üye için diğer aşırı yüklemeler için örnekleri kullanılabilir olduğunda anahtar sözcüğü kullanılır türetilmiş sınıf.  
   
- Varsa `Overloads` anahtar sözcüğü, aynı parametreleri ve parametre türleri sahip bir üye devralınan bir üyesiyle aşırı yüklendiğinde atlanırsa, ardından aşırı yüklemesi adlı *adıyla gölgeleme*. Ada göre gölgeleme üyesi devralınan uyarlamasını değiştirir ve, tüm diğer aşırı yüklemeler türetilmiş sınıf ve kendi decedents örnekleri için kullanılamaz hale getirir.  
+ Varsa `Overloads` anahtar sözcüğü devralınan bir üyeyi aynı parametreleri ve parametre türlerine sahip bir üye ile aşırı yüklerken atlanırsa, ardından aşırı yükleme olarak adlandırılır *adıyla gölgeleme*. Üye'nın devralınmış uygulaması adıyla gölgeleme değiştirir ve, diğer tüm aşırı yüklemeler türetilmiş sınıf ve onun decedents örneklerine kullanılamaz hale getirir.  
   
- `Overloads` Ve `Shadows` değiştiricileri hem kullanılamaz aynı özellik veya yöntem.  
+ `Overloads` Ve `Shadows` değiştiriciler hem de kullanılamaz aynı özellik veya yöntem.  
   
 ### <a name="example"></a>Örnek
 
- Aşağıdaki örnek, ya da kabul aşırı yüklenmiş yöntemler oluşturur bir `String` veya `Decimal` dolar tutar ve return vergi içeren bir dize gösterimi.  
+ Aşağıdaki örnek, ya da kabul eden aşırı yüklenmiş yöntemler oluşturur. bir `String` veya `Decimal` dolar tutarını ve dönüş vergi içeren bir dize gösterimi.  
   
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Aşırı yüklenmiş yöntemin oluşturmak için bu örneği kullanmak için
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Aşırı yüklenmiş bir yöntem oluşturmak için bu örneği kullanmak için
   
-1.  Yeni bir proje açın ve adlı bir sınıf ekleyin `TaxClass`.  
+1.  Adlı bir sınıf ekleyin ve yeni bir proje açmayı `TaxClass`.  
   
 2.  Aşağıdaki kodu ekleyin `TaxClass` sınıfı.  
   
@@ -73,20 +73,20 @@ Aşırı yükleme birden fazla yordam, örnek oluşturucusu ya da bir sınıf ay
   
      [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
   
-4.  Arama ve form düğme ekleme `ShowTax` yordamdan `Button1_Click` düğmesinin olayı.  
+4.  Çağrı ve form için bir düğme ekleyin `ShowTax` yordamdan `Button1_Click` düğmesinin olayı.  
   
-5.  Projeyi çalıştırın ve aşırı yüklenmiş sınamak için formu düğmeyi tıklatın `ShowTax` yordamı.  
+5.  Projeyi çalıştırın ve Aşırı yüklenen test etmek için form üzerindeki düğmeye tıklayın `ShowTax` yordamı.  
   
- Çalışma zamanında derleyici kullanılmasını parametrelerini eşleşen uygun aşırı yüklenmiş işlevi seçer. Düğmeye tıkladığınızda, aşırı yüklenmiş yöntemin önce çağrılır bir `Price` bir dize ve "Fiyat bir dizedir. ileti, parametre Vergi is $5,12" görüntülenir. `TaxAmount` ile adlı bir `Decimal` ikinci kez ve iletiyi değer, "Fiyat bir ondalık sayı. Vergi is $5,12" görüntülenir.  
+ Çalışma zamanında derleyici kullanılmakta parametrelerle eşleşen Aşırı yüklenen işlevin uygun seçer. Düğmeye tıkladığınızda, aşırı yüklenmiş yöntem ile ilk çağrılır bir `Price` parametresine bir dize ve iletinin "Fiyat bir dizedir. Vergi is $5,12" görüntülenir. `TaxAmount` ile adlı bir `Decimal` ikinci kez ve ileti değeri, "Fiyat bir ondalık. Vergi is $5,12" görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)  
- [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)
+- [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

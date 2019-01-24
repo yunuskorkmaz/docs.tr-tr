@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504915"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam Yöntemi
-Belirtilen belirteç tarafından başvurulan yöntemi için belirtilen imzalı bir parametrenin tanımını oluşturur ve bu parametre tanımı için bir belirteç alır.  
+Belirtilen belirteç tarafından başvurulan yöntemi için belirtilen imzaya sahip bir parametre tanımında oluşturur ve bu parametre tanımı için bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,16 +44,16 @@ HRESULT DefineParam (
   
 #### <a name="parameters"></a>Parametreler  
  `md`  
- [in] Parametresi tanımlı yöntemi için belirteci.  
+ [in] Parametresi tanımlı yöntem için belirteç.  
   
  `ulParamSeq`  
- [in] Parametre sıra numarası.  
+ [in] Parametre dizisi numarası.  
   
  `szName`  
- [in] Unicode parametresinin adı.  
+ [in] Unicode parametrenin adı.  
   
  `dwParamFlags`  
- [in] Parametresi için işaretler. Bu, bir bit maskesi olan `CorParamAttr` değerleri.  
+ [in] Parametresi için bayrakları. Bu, bir bit maskesi, `CorParamAttr` değerleri.  
   
  `dwCPlusTypeFlag`  
  [in] `ELEMENT_TYPE_` *\** sabit değer.  
@@ -62,23 +62,23 @@ HRESULT DefineParam (
  [in] Parametresi için sabit bir değer.  
   
  `cchValue`  
- [in] Unicode karakterler, boyutunu, `pValue`.  
+ [in] Unicode karakter cinsinden boyutu, `pValue`.  
   
  `ppd`  
  [out] `mdParamDef` Atanan simgesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sıralı değerler `ulParamSeq` parametreleri için 1 ile başlar. Dönüş değeri bir sıra numarası 0 sahiptir.  
+ Sıralı değerleri `ulParamSeq` parametreleri için 1 ile başlar. Dönüş değeri bir sıra numarası 0 sahiptir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

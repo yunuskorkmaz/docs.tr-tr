@@ -2,12 +2,12 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510604"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece tanılama onarın ve WCF hizmet sorunları doğrula izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 >   
 >  / register: dosya uzantıları ".svclog" ve ".stvproj" ilişkisini SvcTraceViewer.exe ile kaydetme  
 >   
->  / unregister: dosya uzantıları ".svclog" ve ".stvproj" SvcTraceViewer.exe ile ilişkisini kaydını sil  
+>  /unregister: unregister the association of file extensions ".svclog" and ".stvproj" with SvcTraceViewer.exe  
   
 1.  Hizmet izleme görüntüleyicisini başladığında tıklayın **dosya** gelin ve ardından **açık**. İzleme dosyalarınızın depolandığı konuma gidin.  
   
@@ -191,7 +191,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 -   Hangi işaretlenmediğinde ileti izlemeleri dışında ayrıntılı düzeyi izlemeleri yoksay olmayan ileti ayrıntılı izleme, gösterir. Çoğu durumda, ayrıntılı düzeyi izlemeleri analiz için küçük büyük/küçük harf önemlidir. Ayrıntılı düzeyi izlemeleri analiz edin ve yalnızca üzerinde daha önemli izlemeler odaklanmayı tercih istemediğinizde bu seçenek yararlı olur.  
   
 ###### <a name="layout-mode"></a>Düzen modu  
- Görüntüleyici iki Düzen modu vardır: **işlem** ve **iş parçacığı**. Bu ayar, en büyük kuruluş birimi tanımlar. Düzen modu varsayılan **işlem**, etkinlik grafiğinde işlemler tarafından gruplandırılır anlamına gelir.  
+ Görüntüleyici iki Düzen modu vardır: **İşlem** ve **iş parçacığı**. Bu ayar, en büyük kuruluş birimi tanımlar. Düzen modu varsayılan **işlem**, etkinlik grafiğinde işlemler tarafından gruplandırılır anlamına gelir.  
   
 ###### <a name="execution-list"></a>Yürütme listesi  
  Hangi işlemin veya iş parçacığı bu aşağı açılan listeden grafikte görüntülenecek seçebilirsiniz. Örneğin, (A ve B) iki istemci izleme dosyaları ve açık bir hizmet ve yalnızca hizmet ve istemci bir grafikte görüntülemek istediğiniz varsa, istemci B listeden kaldırın.  
@@ -227,9 +227,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="using-the-filter-toolbar"></a>Filtre araç çubuğunu kullanma  
  Filtre araç çubuğu araç üst kısmında görünür. Mevcut değilse, bunu etkinleştirebilir **görünümü** menüsü. Çubuğundaki üç bileşenden oluşur:  
   
--   Aranan: **Ara** filtre işlemi aramak için konu tanımlar. Örneğin, yayılan tüm izlemeler X işlem bağlamında bulmak istiyorsanız, bu alanı X ayarlayın ve **arama içinde** 'İşlem adı' alanı. Bir tarih saat seçici denetimi zamana bağlı filtre olduğunda bu alanı değişiklikleri seçilidir.  
+-   Aramak: **Aranacak** filtre işlemi aramak için konu tanımlar. Örneğin, yayılan tüm izlemeler X işlem bağlamında bulmak istiyorsanız, bu alanı X ayarlayın ve **arama içinde** 'İşlem adı' alanı. Bir tarih saat seçici denetimi zamana bağlı filtre olduğunda bu alanı değişiklikleri seçilidir.  
   
--   Aramada: Bu alan uygulanacak filtrenin türünü tanımlar.  
+-   Arama: Bu alan uygulanacak filtrenin türünü tanımlar.  
   
 -   Düzeyi: Düzeyi ayarı filtre tarafından izin verilen minimum izleme düzeyini tanımlar. Örneğin, hata ve düzeyi ayarlama, yalnızca kritik düzey ve hata izlemeleri görüntülenir. Bu filtre, Ara ve arama tarafından belirtilen ölçütleri ile birleştirir.  
   
@@ -286,7 +286,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
 2.  Tıklayın **artık filtre**ve işlemin sonucu inceleyin.  
   
- Filtreniz birden çok parametre kullanıyorsa, bunları girmeniz kullanarak ';' ayırıcı olarak **Aranan** alan. Örneğin, 3 parametre aşağıdaki dizeyi tanımlar: '1; findValue; metin'. Görüntüleyici '1' uygulandığı {0} filtre parametresi. 'findValue' ve 'text' uygulandığı {1} ve {2} sırasıyla.  
+ Filtreniz birden çok parametre kullanıyorsa, bunları girmeniz kullanarak ';' ayırıcı olarak **Aranan** alan. Örneğin, aşağıdaki dize, 3 parametre tanımlar: ‘1;findValue;text’. Görüntüleyici '1' uygulandığı {0} filtre parametresi. 'findValue' ve 'text' uygulandığı {1} ve {2} sırasıyla.  
   
 ###### <a name="sharing-custom-filters"></a>Özel Filtreler paylaşma  
  Özel Filtreler farklı oturumları ve farklı kullanıcılar arasında paylaşılabilir. Filtreler için bir tanım dosyasını dışarı aktarmak ve bu dosyayı başka bir yerde içeri aktarabilirsiniz.  
@@ -321,9 +321,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Bul araç Görüntüleyicisi üst kısmında görünür. Mevcut değilse, bunu etkinleştirebilir **görünümü** menüsü. Çubuk iki bileşenden oluşur:  
   
--   Aranan: arama anahtar sözcüğü girmenizi sağlar.  
+-   Aranan: Arama anahtar sözcüğü girmenizi sağlar.  
   
--   Konum: arama kapsamını girmenizi sağlar. Tüm etkinliklerde veya yalnızca geçerli etkinliği aramak seçebilirsiniz.  
+-   Konum: Arama kapsamı girmenizi sağlar. Tüm etkinliklerde veya yalnızca geçerli etkinliği aramak seçebilirsiniz.  
   
  Bul iletişim kutusu iki ek seçenekler sağlar:  
   
@@ -335,7 +335,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
     -   "İleti günlüğe" seçeneği, anahtar sözcüğü yalnızca iletileri arar.  
   
--   Kök etkinlik yoksay: arama "000000000000" etkinlik izlemelerinde yok sayar. Kök etkinlik aktarımları çoğu, izleme, binlerce sahip olduğunda bu büyük izleme dosyaları performansını artırır.  
+-   Kök etkinlik yoksay: Arama "000000000000" etkinlik izlemelerinde yok sayar. Kök etkinlik aktarımları çoğu, izleme, binlerce sahip olduğunda bu büyük izleme dosyaları performansını artırır.  
   
 ### <a name="navigating-traces"></a>İzlemeleri gezinme  
  Uygulama çalışma zamanı sırasında izlemeleri adım adım kayıtlı olduğundan izlemeleri gezinme, uygulamanızda hata ayıklamak için yardımcı olabilir. Hizmet izleme görüntüleyicisini izlemelerinde gitmek için çeşitli yollar sağlar.  
@@ -343,23 +343,23 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="step-forward-or-backward"></a>İleriye veya geriye doğru adım  
  Her izleme bir programda kod satırı olarak düşünün, İleri Adımlama "Adımlama" içinde Visual Studio tümleşik geliştirme ortamı (IDE) için benzer. Aynı zamanda geri izlemelerinde geçebilirsiniz, farktır. İleri Adımlama, sonraki etkinliği izlemede geçme anlamına gelir.  
   
--   İleri Adım: Kullanma **etkinlik** menüsünden veya "F10" tuşuna basın. Ok tuşu "kapalı" izleme bölmesinde kullanabilirsiniz.  
+-   İleri adım atın: Kullanım **etkinlik** menüsünden veya "F10" tuşuna basın. Ok tuşu "kapalı" izleme bölmesinde kullanabilirsiniz.  
   
--   Adımda geri: Kullanmak **etkinlik** menüsünden veya "F9" tuşuna basın. Ok tuşu "yukarı" izleme bölmesinde kullanabilirsiniz.  
+-   Geriye dönük. adım: Kullanım **etkinlik** menüsünden veya "F9" tuşuna basın. Ok tuşu "yukarı" izleme bölmesinde kullanabilirsiniz.  
   
 > [!NOTE]
 >  WCF iletileri etkinlik makineler span kimlikleri gerçekleştirebilirsiniz çünkü bu, farklı bir işlemde veya hatta farklı bir bilgisayara gerçekleşen bir etkinliğin alabilir.  
   
 #### <a name="follow-transfer"></a>Aktarım izleyin  
- Aktarım izlemeleri özel izlemelerinde izleme dosyası var. Bir etkinlik için başka bir etkinlik tarafından bir aktarım izleme aktarabilir. Örneğin, "Etkinlik A", "Etkinlik B" aktarabilir. Böyle bir durumda, "Etkinlik" ": etkinlik" adını aktarımı içeren simge bir aktarım izleme yoktur. Bu aktarım izleme, iki arasında bir bağlantıdır. "Etkinlik B", ayrıca olabilir bir aktarım izleme geri "etkinlik için" aktarmak için etkinlik sonunda. Bu işlev çağrıları programlarda benzer: A, B, B verir çağırır.  
+ Aktarım izlemeleri özel izlemelerinde izleme dosyası var. Bir etkinlik için başka bir etkinlik tarafından bir aktarım izleme aktarabilir. Örneğin, "Etkinlik A", "Etkinlik B" aktarabilir. Böyle bir durumda olduğu bir aktarım izleme "etkinlik" adlı "için: Etkinlik"ve aktarma simgesi. Bu aktarım izleme, iki arasında bir bağlantıdır. "Etkinlik B", ayrıca olabilir bir aktarım izleme geri "etkinlik için" aktarmak için etkinlik sonunda. Bu işlev çağrıları programlarda benzer: B çağrıları, ardından B döndürür.  
   
  "Aktarımı İzle" bir hata ayıklayıcıda "İçine Adımlama" benzer. Aktarım A'dan B'ye takip eden Diğer izlemeleri üzerinde hiçbir etkisi yok.  
   
  Aktarım izlemek için iki yolu vardır: klavye veya fare tarafından:  
   
--   Fareyle: izleme bölmesinde aktarım izleme çift tıklayın.  
+-   Fare tarafından: İzleme bölmesinde aktarım izleme çift tıklayın.  
   
--   Klavye: Bir aktarım izleme seçin ve "Transfer izleyin" kullanın **etkinlik** menüsünden veya "F11" tuşuna basın.  
+-   Klavye tarafından: Aktarım izleme seçin ve "Transfer izleyin", **etkinlik** menüsünden veya "F11" tuşuna basın.  
   
 > [!NOTE]
 >  Etkinlik B, etkinlik A aktarırken geri etkinlik a etkinlik B aktarır kadar birçok durumda, etkinlik bekler Bu, etkinlik, etkinlik B etkin bir şekilde izleme dönemi boyunca günlüğe bir izleme yok olduğu anlamına gelir. Ancak, aynı zamanda etkinlik beklememeyi ve günlük izlemeleri devam mümkündür. Etkinlik B geri etkinlik a aktarmaz olanağı da sağlar Bu nedenle, etkinlik aktarımları hala işlev çağrıları bu bağlamdaki farklıdır. Aktarımları Etkinlik Grafiği görünümü'nde daha iyi anlayabilirsiniz.  
@@ -367,9 +367,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="jump-to-next-or-previous-transfer"></a>Sonraki veya önceki aktarımı atla  
  Birden çok etkinlik seçildiğinde, geçerli etkinliği ya da seçili etkinlikler çözümlerken, hızlı bir şekilde aktarır, etkinlikleri bulmak isteyebilirsiniz. "Aktarmak sonraki atlama", sonraki aktarım izleme etkinliğini bulundurmanıza olanak tanır. Aktarım izleme bulduktan sonra sonraki etkinliği içine Adımlama için "aktarımı İzle"'ı kullanabilirsiniz.  
   
--   Atlama sonraki aktarmak için: kullanım **etkinlik** menüsünden veya "Ctrl + F10" tuşuna basın.  
+-   Sonraki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F10" tuşuna basın.  
   
--   Atlama önceki aktarmak için: kullanım **etkinlik** menüsünden veya "Ctrl + F9" tuşuna basın.  
+-   Önceki aktarımı atla: Kullanım **etkinlik** menüsünden veya "Ctrl + F9" tuşuna basın.  
   
 #### <a name="navigate-in-graph-view"></a>Graf görünümü içinde gezinme  
  Etkinlik ve izleme bölmesinde gezinme hatalarının ayıklanmasına benzer olsa da, kullanarak **grafik** görünümü çok daha iyi bir deneyim gezinti sağlar. Daha fazla bilgi için "Grafik görünümü" bölümüne bakın.  
@@ -404,41 +404,41 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Uyarı izleme](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Uyarı izleme: uyarı düzeyinde yayılan izleme|  
-|![İzleme hatası](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|İzleme hatası: hata düzeyinde yayılan izleme.|  
-|![Etkinlik Başlangıç izleme:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Etkinlik Başlangıç izleme: etkinlik başlangıcını işaretleyen izleme. Bu etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, bir etkinlik başlangıç izleme etkinlik kimliği işlem veya iş parçacığı başına başına tanımlamanız gerekir.<br /><br /> Etkinlik Kimliği izleme kaynakları için izleme bağıntı arasında yayılır, daha sonra aynı etkinlik kimliği (izleme kaynak başına bir adet) için birden çok başlatır görebilirsiniz. İzleme kaynağı ActivityTracing etkinse başlangıç izleme yayılır.|  
-|![Etkinlik İzlemeyi Durdur](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik İzlemeyi Durdur: Etkinliğin sonunu işaretleyen izleme. biçimindeki telefon numarasıdır. Bu etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, bir etkinliğin etkinlik kimliği başına iz başına İzlemeyi Durdur tanımlamanız gerekir. Hiçbir izlemelerinden belirtilen izleme kaynağına izleme zaman ayrıntı düzeyi yeterince küçük ise bu izleme kaynağı tarafından yayılan dışında durdurma etkinlikten sonra görünür. Bu durum oluştuğunda, bir Dur dahil olmak üzere aynı anda iki izlemeleri görüntülendiğinde aralıklı. Etkinlik Kimliği izleme kaynakları için izleme bağıntı arasında yayılır aynı etkinlik kimliği (izleme kaynak başına bir adet) için birden çok duraklarını görebilirsiniz. İzlemeyi Durdur ActivityTracing izleme kaynağı etkinse yayılır.|  
-|![Etkinlik askıya izleme](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya izleme: etkinlik duraklatıldı zaman işaretleyen izleme. Etkinliği yeniden devam edene dek izleme yok askıya alınmış bir etkinlik içinde gönderilir. Askıya alınmış bir etkinlik, hiçbir işlem, etkinlik izleme kaynağı kapsamında gerçekleşmekte olduğunu gösterir. Askıya alma/sürdürme izlemeleri, profil oluşturma için kullanışlıdır. İzleme kaynağı ActivityTracing etkinse askıya izleme yayılır.|  
-|![İzleme etkinliği sürdürme](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|İzleme etkinliği sürdürme: etkinlik askıya alınmıştı sonra sürdürüldü zaman işaretleyen izleme. Bu etkinlik izlemeleri yeniden yayılan. Askıya alma/sürdürme izlemeleri, profil oluşturma için kullanışlıdır. İzleme kaynağı ActivityTracing etkinse sürdürme izleme yayılır.|  
-|![Aktarım](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan bir izleme. Aktarım kaynaklandığı etkinlik aktarım gider etkinliğine paralel çalışmayı gerçekleştirmek devam edebilir. İzleme kaynağı ActivityTracing etkinse aktarım izleme yayılır.|  
-|![Aktarımı](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Sunucudan aktar: Geçerli etkinlik için başka bir etkinlikten bir aktarım tanımlayan bir izleme.|  
-|![Transfer](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Aktarım için: bir aktarım mantıksal denetim akışı geçerli etkinlikten diğerine geçirmek için tanımlayan izleme.|  
+|![Uyarı izleme](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Uyarı izleme: Uyarı düzeyinde yayılan izleme|  
+|![İzleme hatası](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|İzleme hatası: Hata düzeyinde yayılan izleme.|  
+|![Etkinlik Başlangıç izleme:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Etkinlik Başlangıç izleme: Bir etkinlik başlangıcını işaretleyen izleme. Bu etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, bir etkinlik başlangıç izleme etkinlik kimliği işlem veya iş parçacığı başına başına tanımlamanız gerekir.<br /><br /> Etkinlik Kimliği izleme kaynakları için izleme bağıntı arasında yayılır, daha sonra aynı etkinlik kimliği (izleme kaynak başına bir adet) için birden çok başlatır görebilirsiniz. İzleme kaynağı ActivityTracing etkinse başlangıç izleme yayılır.|  
+|![Etkinlik İzlemeyi Durdur](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik İzlemeyi Durdur: Bir etkinlik sonunu işaretleyen izleme. biçimindeki telefon numarasıdır. Bu etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, bir etkinliğin etkinlik kimliği başına iz başına İzlemeyi Durdur tanımlamanız gerekir. Hiçbir izlemelerinden belirtilen izleme kaynağına izleme zaman ayrıntı düzeyi yeterince küçük ise bu izleme kaynağı tarafından yayılan dışında durdurma etkinlikten sonra görünür. Bu durum oluştuğunda, bir Dur dahil olmak üzere aynı anda iki izlemeleri görüntülendiğinde aralıklı. Etkinlik Kimliği izleme kaynakları için izleme bağıntı arasında yayılır aynı etkinlik kimliği (izleme kaynak başına bir adet) için birden çok duraklarını görebilirsiniz. İzlemeyi Durdur ActivityTracing izleme kaynağı etkinse yayılır.|  
+|![Etkinlik askıya izleme](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya izleme: Etkinlik süresi işaretleyen izleme duraklatıldı. Etkinliği yeniden devam edene dek izleme yok askıya alınmış bir etkinlik içinde gönderilir. Askıya alınmış bir etkinlik, hiçbir işlem, etkinlik izleme kaynağı kapsamında gerçekleşmekte olduğunu gösterir. Askıya alma/sürdürme izlemeleri, profil oluşturma için kullanışlıdır. İzleme kaynağı ActivityTracing etkinse askıya izleme yayılır.|  
+|![İzleme etkinliği sürdürme](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Etkinliği sürdürme izleme: Bir etkinlik askıya alınmıştı sonra sürdürülür zaman işaretleyen izleme. Bu etkinlik izlemeleri yeniden yayılan. Askıya alma/sürdürme izlemeleri, profil oluşturma için kullanışlıdır. İzleme kaynağı ActivityTracing etkinse sürdürme izleme yayılır.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarın: Mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan izleme. Aktarım kaynaklandığı etkinlik aktarım gider etkinliğine paralel çalışmayı gerçekleştirmek devam edebilir. İzleme kaynağı ActivityTracing etkinse aktarım izleme yayılır.|  
+|![Aktarımı](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Aktarımı: Geçerli etkinlik için başka bir etkinlikten bir aktarım tanımlayan bir izleme.|  
+|![Transfer](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Aktarım hedefi: Bir aktarımı mantıksal denetim akışı geçerli etkinliği başka bir etkinliğe tanımlayan bir izleme.|  
   
 ### <a name="wcf-traces"></a>WCF izlemeleri  
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Günlük izleme iletisi: bir WCF ileti ileti günlüğe kaydetme özelliğiyle günlüğe kaydedildiğinde yayılan izleme zaman `System.ServiceModel.MessageLogging` izleme kaynağı etkinleştirilir. Bu izleme tıklayarak iletisi görüntülenir. Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend TransportReceive ve tarafından belirtilebilir ServiceLevelReceiveRequest, `messageSource` ileti günlüğü izleme özniteliği.|  
-|![Alınan izleme iletisi](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Alınan izleme iletisi: bir WCF ileti alındığında, yayılan izleme `System.ServiceModel` izleme kaynağı bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli **grafik** görünümü.|  
-|![Gönderilen izleme iletisi](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Gönderilen izleme iletisi: varsa bir WCF ileti gönderildiğinde yayılan izleme `System.ServiceModel` izleme kaynağı bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli **grafik** görünümü.|  
+|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Günlük izleme iletisi: Bir WCF ileti ileti günlüğe kaydetme özelliğiyle günlüğe kaydedildiğinde yayılan izleme zaman `System.ServiceModel.MessageLogging` izleme kaynağı etkinleştirilir. Bu izleme tıklayarak iletisi görüntülenir. Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend TransportReceive ve, tarafından belirtilebilen ServiceLevelReceiveRequest `messageSource` ileti günlüğü izleme özniteliği.|  
+|![Alınan izleme iletisi](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Alınan izleme iletisi: Bir WCF ileti alındığında, yayılan izleme `System.ServiceModel` izleme kaynağı bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli **grafik** görünümü.|  
+|![Gönderilen izleme iletisi](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Gönderilen izleme iletisi: Varsa bir WCF ileti gönderildiğinde yayılan izleme `System.ServiceModel` izleme kaynağı bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli **grafik** görünümü.|  
   
 ### <a name="activities"></a>Etkinlikler  
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Etkinlik: geçerli etkinliği bir genel etkinlik olduğunu gösterir.|  
-|![Kök etkinlik](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Kök etkinlik: Kök etkinlik, bir işlemin gösterir.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Etkinlik: Geçerli etkinliği bir genel etkinlik olduğunu gösterir.|  
+|![Kök etkinlik](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Kök etkinlik: Bir işlemin Kök etkinlik gösterir.|  
   
 ### <a name="wcf-activities"></a>WCF etkinlikleri  
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Ortamı etkinliğini](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Ortamı etkinliğini: bir etkinlik oluşturur, açar veya bir WCF konak veya istemci kapatır. Bu etkinlik, bu aşamaları sırasında gerçekleşen hataları görünür.|  
-|![Etkinlik dinleme](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Etkinlik dinleme: izlemeleri günlüğe kaydeden bir etkinlik için bir dinleyici ilgili. Bu etkinlik içinde biz dinleyicisi bilgileri ve bağlantı istekleri görüntüleyebilirsiniz.|  
-|![Bayt etkinlik alma](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Bayt etkinlik alır: tüm izlemeleri gruplandıran bir etkinlik gelen bayt sayısı iki uç noktalar arasında bir bağlantı alma ile ilgili. Bu etkinlik, http.sys gibi etkinlik kimliği yayma aktarım etkinliklerle ilişkilendirme gereklidir. Bu etkinlik, bağlantı hataları iptalleri gibi görünür.|  
-|![İleti etkinliği işlem](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İleti etkinliği işlem: izlemeleri gruplandıran bir etkinlik ilgili bir WCF ileti oluşturmak için. Bu etkinlik hataları nedeniyle bir hatalı zarf veya hatalı bir ileti görüntülenir. Bu etkinlik içinde size bir etkinlik kimliği bir çağrıyı yapandan yayıldığı görmek için ileti üst bilgileri inceleyebilirsiniz. Biz işlem eylem etkinliği (sonraki simgesi) aktarırken bu doğruysa, ki bu etkinlik çağıran ve çağrılan'ın izlemeler arasında bağıntı yayılan etkinlik kimliği atayabilirsiniz.|  
-|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Eylem etkinliği işlem: iki uç noktalar genelinde tüm izlemeleri gruplandıran bir etkinlik ilgili WCF istek. Varsa `propagateActivity` ayarlanır `true` yapılandırmasındaki her iki bitiş noktasında bir etkinlik doğrudan bağıntı için tüm izlemeler her iki bitiş noktasında birleştirilir. Bu tür bir etkinlik aktarım veya işlemi, kullanıcı kodu sınırına genişletme güvenlik nedeniyle hataları içeriyor ve (bir yanıt varsa) geri.|  
-|![İleti etkinliği işlem](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Yürütme kullanıcı kodu etkinliği: kullanıcı kodu gruplandıran bir etkinlik bir isteği işlemek için izler.|  
+|![Ortamı etkinliğini](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Ortamı etkinliğini: Oluşturur, bir etkinlik açar veya bir WCF konak veya istemci kapatır. Bu etkinlik, bu aşamaları sırasında gerçekleşen hataları görünür.|  
+|![Etkinlik dinleme](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Dinleme etkinlik: Günlükleri izlemeler için bir dinleyici ilgili bir etkinlik. Bu etkinlik içinde biz dinleyicisi bilgileri ve bağlantı istekleri görüntüleyebilirsiniz.|  
+|![Bayt etkinlik alma](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Bayt etkinlik alırsınız: Gelen bayt sayısı iki uç noktalar arasında bir bağlantı alma ile ilgili tüm izlemeleri grupları bir etkinlik. Bu etkinlik, http.sys gibi etkinlik kimliği yayma aktarım etkinliklerle ilişkilendirme gereklidir. Bu etkinlik, bağlantı hataları iptalleri gibi görünür.|  
+|![İleti etkinliği işlem](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İleti etkinliği İşle: Bir WCF ileti oluşturulmasıyla ilgili izlemeleri grupları bir etkinlik. Bu etkinlik hataları nedeniyle bir hatalı zarf veya hatalı bir ileti görüntülenir. Bu etkinlik içinde size bir etkinlik kimliği bir çağrıyı yapandan yayıldığı görmek için ileti üst bilgileri inceleyebilirsiniz. Biz işlem eylem etkinliği (sonraki simgesi) aktarırken bu doğruysa, ki bu etkinlik çağıran ve çağrılan'ın izlemeler arasında bağıntı yayılan etkinlik kimliği atayabilirsiniz.|  
+|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Eylem etkinliği İşle: İki uç noktalar genelinde bir WCF isteği ile ilgili tüm izlemeleri grupları bir etkinlik. Varsa `propagateActivity` ayarlanır `true` yapılandırmasındaki her iki bitiş noktasında bir etkinlik doğrudan bağıntı için tüm izlemeler her iki bitiş noktasında birleştirilir. Bu tür bir etkinlik aktarım veya işlemi, kullanıcı kodu sınırına genişletme güvenlik nedeniyle hataları içeriyor ve (bir yanıt varsa) geri.|  
+|![İleti etkinliği işlem](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Kullanıcı kod etkinliği yürütün: Bir isteği işlemek için kullanıcı kodu izleri grupları bir etkinlik.|  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
  Kayıt defterine yazma izni yoksa, "Microsoft Service izleme görüntüleyicisini sisteme kaydedilmedi" aşağıdaki hata iletisini almak kullandığınızda, "`svctraceviewer /register`" aracı kaydetmek için komutu. Bu meydana gelirse, kayıt defterine yazma erişimi olan bir hesap kullanarak oturum açmanız gerekir.  
@@ -449,7 +449,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Arapça işletim sistemine kullanılarak oluşturulan bir izleme günlüğü açarsanız, zaman filtresi çalışmıyor fark edebilirsiniz. Örneğin, 2005 yılı Arapça takvim yılında 1427 karşılık gelir. Ancak, hizmet izleme Görüntüleyicisi aracı filtre tarafından desteklenen zaman aralığıyla 1752'den önceki bir tarihi desteklemez. Bu filtrede doğru bir tarih seçmek mümkün olmadığını kapsıyor. Bu sorunu çözmek için özel bir filtresi oluşturabilirsiniz (**görünüm/özel filtreler**) belirli bir zaman aralığı içerecek şekilde bir XPath ifadesi kullanarak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Etkinlik izleme ve yayılma için uçtan uca izleme bağıntı](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Etkinlik izleme ve yayılma için uçtan uca izleme bağıntı](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

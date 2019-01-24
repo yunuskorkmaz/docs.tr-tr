@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d24f379bcfdb494369b84173cad4daa800fb7a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502188"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ to XML kullanarak XML verilerini işleme
 LINQ to XML, .NET Framework sürüm 3.5 XML verilerini işlemek için yeni modelidir. LINQ to XML XML verileri ile beklediği her şeyi yapmak geliştiricilerinin sağlayan: sorgulama, değiştirme, oluşturma, kaydetme ve XML belgeleri seri hale getirme. Gerçek avantajları, sorgu ve oluşturma özellikleri yer.  
@@ -23,7 +23,7 @@ LINQ to XML, .NET Framework sürüm 3.5 XML verilerini işlemek için yeni model
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Linq>  
-- <xref:System.Linq>  
-- [LINQ to XML ile DOM Karşılaştırması](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
+- <xref:System.Xml.Linq>
+- <xref:System.Linq>
+- [LINQ to XML ile DOM Karşılaştırması](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)
 - [LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

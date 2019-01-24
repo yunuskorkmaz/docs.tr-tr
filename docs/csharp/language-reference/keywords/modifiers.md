@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 645fc4bf4a64443c3816dbaec1904e08fd8dde41
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 915e34310b634311c922a6b2c89701e793fbb191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511153"
 ---
 # <a name="modifiers-c-reference"></a>Değiştiriciler (C# Başvurusu)
 Değiştiriciler, tür ve tür üyelerinin bildirimlerini değiştirmek için kullanılır. Bu bölüm C# değiştiricilerini tanıtır.  
@@ -34,8 +34,8 @@ Değiştiriciler, tür ve tür üyelerinin bildirimlerini değiştirmek için ku
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Uygulaması türetilen bir sınıfta geçersiz kılan bir üye tarafından değiştirilebilen bir yöntem veya erişimci bildirir.|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|Bir alanın programda işletim sistem, donanım veya aynı anda çalışan bir iş parçacığı gibi bir şey tarafından değiştirilebileceğini gösterir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cefd47d3c7298f9cc4b15eb2946f3d95aeae759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f34a9aac31fe50974a6f88416d0a00cd72aca8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511936"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator Arabirimi
-Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatalarını raporlama için yöntemleri sağlar.  
+Taşınabilir yürütülebilir (PE) görüntüleri doğrulanıyor ve doğrulama hatalarını raporlama için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[FormatEventInfo Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hata hakkında ayrıntılı bir ileti alır.|  
-|[Validate Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Taşınabilir yürütülebilir dosyayı veya Microsoft Ara dili (MSIL) belirtilen dosyada doğrular.|  
+|[FormatEventInfo Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hatası hakkında ayrıntılı bir ileti alır.|  
+|[Validate Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Taşınabilir yürütülebilir dosyayı veya belirtilen dosyadaki Microsoft Ara dilini (MSIL) doğrular.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator.idl, IValidator.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

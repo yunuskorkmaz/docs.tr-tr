@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 4ca256bf7204cdaad7d49ed19c662ab81bb01bf9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514145"
 ---
 # <a name="float-c-reference"></a>float (C# Başvurusu)
 
@@ -66,12 +66,12 @@ Aşağıdaki örnekte, bir [int](int.md), [kısa](short.md)ve `float` vererek bi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Single>  
-- [C# başvurusu](../index.md)  
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
-- [Tür Değiştirme ve Tür Dönüştürmeler](../../programming-guide/types/casting-and-type-conversions.md)  
-- [C# Anahtar Sözcükleri](index.md)  
-- [Tam Sayı Türleri Tablosu](integral-types-table.md)  
-- [Yerleşik Türler Tablosu](built-in-types-table.md)  
-- [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)  
-- [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [Tür Değiştirme ve Tür Dönüştürmeler](../../programming-guide/types/casting-and-type-conversions.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Tam Sayı Türleri Tablosu](integral-types-table.md)
+- [Yerleşik Türler Tablosu](built-in-types-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514536"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents Yöntemi
-Belirtilen TypeDef belirteci için olay tanımı belirteçleri numaralandırır.  
+Olay tanımı belirteçleri TypeDef belirteç numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT EnumEvents (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `td`  
- [in] Numaralandırılacak, olay tanımları olan TypeDef simgesi.  
+ [in] Numaralandırılacak olan olay tanımlarına olan TypeDef simgesi.  
   
  `rEvents`  
  [out] Döndürülen olaylar dizisi.  
   
  `cMax`  
- [in] En büyük boyutunu `rEvents` dizi.  
+ [in] En büyük boyutunu `rEvents` dizisi.  
   
  `pcEvents`  
- [out] Döndürülen olayları gerçek sayısını `rEvents`.  
+ [out] Döndürülen olaylar gerçek sayısını `rEvents`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -63,14 +63,14 @@ HRESULT EnumEvents (
 |`S_FALSE`|Numaralandırılacak olay yok. Bu durumda, `pcEvents` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496799"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 Windows Communication Foundation (WCF) WCF programlanmış ve ASP.NET Web Hizmetleri gibi yapılandırılmış uygulamaların sağlar ve davranışlarını taklit etmek için ASP.NET uyumluluk modu seçeneği vardır. Aşağıdaki bölümlerde ASP.NET Web hizmetlerini karşılaştırın ve WCF ne hem teknolojiler kullanarak uygulama geliştirmek için gerekli olduğuna bağlı olarak.  
@@ -298,7 +298,7 @@ public class Service : IEcho
 |WSFederationBinding|Bir hizmeti kaynaklarına erişimi denetlenebilir, HTTP iletişimi bir açıkça tanımlanmış kimlik bilgisi sağlayıcısı tarafından verilen kimlik bilgilerini temel.|  
 |NetTcpBinding|Bir ağ üzerinden WCF yazılım varlıklar arasında güvenli, güvenilir ve yüksek performanslı iletişim.|  
 |NetNamedPipeBinding|WCF yazılım varlıkları aynı makinede arasındaki iletişimi güvenli, güvenilir ve yüksek performans.|  
-|netMsmqBinding|MSMQ kullanarak WCF yazılım varlıklar arasındaki iletişim.|  
+|NetMsmqBinding|MSMQ kullanarak WCF yazılım varlıklar arasındaki iletişim.|  
 |MsmqIntegrationBinding|Bir WCF yazılım varlık ve MSMQ kullanarak başka bir yazılım varlığı arasındaki iletişim.|  
 |NetPeerTcpBinding|Windows Eşler arası ağ iletişimi kullanarak WCF yazılım varlıklar arasındaki iletişim.|  
   
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>Genelleştirme  
  ASP.NET yapılandırma dil, tek tek Hizmetleri için kullanılacak kültürü belirtmenize olanak sağlar. WCF ASP.NET uyumluluk modunda, yapılandırma ayarı dışında desteklemez. ASP.NET uyumluluk modunun kullanılmaması bir WCF Hizmeti yerelleştirmek için hizmet türü kültüre özgü derlemeler içine derleyin ve her bir kültüre özgü derleme için ayrı kültüre özgü uç sahip.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

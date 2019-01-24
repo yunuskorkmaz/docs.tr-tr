@@ -1,68 +1,68 @@
 ---
-title: 'Nasıl Yapılır: DataRepeater Denetiminde Öğe Üstbilgilerini Görüntüleme (Visual Studio)'
+title: 'Nasıl yapılır: DataRepeater denetiminde (Visual Studio) öğe üstbilgilerini görüntüleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, item headers
 - DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-ms.openlocfilehash: 07f6a7e06c5b1e91597ab6b6d816407a2c172278
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eccac1b3b02da41a34d47072be267f6c51a7d490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504567"
 ---
-# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Nasıl Yapılır: DataRepeater Denetiminde Öğe Üstbilgilerini Görüntüleme (Visual Studio)
-Öğe üstbilgisinde bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim görsel bir gösterge sağlar, bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> seçilir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği ayarlanmış <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (varsayılan), her bir öğe sola öğesi başlığı görüntülenir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği ayarlanmış <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, öğesi üstbilgisinde her öğenin üst kısmında görüntülenir.  
+# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Nasıl yapılır: DataRepeater denetiminde (Visual Studio) öğe üstbilgilerini görüntüleme
+Öğe üst bilgisinde bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi bir gösterge sağlar, bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> seçilir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (varsayılan), her öğenin solundaki öğesi başlığı görüntülenir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, öğesi üst bilgisini her öğenin üst kısmında görüntülenir.  
   
- İlk seçildiğinde, öğesi üstbilgisi tarafından belirtilen renkte görüntülenir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> özelliği ve beyaz ok simgesi görüntülenir.  
-  
-> [!NOTE]
->  Ayarlarsanız <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> için <xref:System.Drawing.Color.White%2A>, öğe ilk seçildiğinde seçimi simgesi görünür olmaz.  
-  
- Bir alan <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> odaktaki öğeyi üstbilgi değişiklikleri rengini <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> arka plan rengi ve siyah ok simgesine yapılan değişiklikler. Veri değiştirdiyseniz, Kurşun Kalem simgesini öğesi başlığında görüntülenir.  
-  
- Varsayılan genişlikteki (veya yükseklik zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği ayarlanmış <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) öğesi'nin üstbilgi 15 pikseldir. Ayarlayarak genişliğini değiştirebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği.  
+ İlk seçili olduğunda, öğe üst bilgisi tarafından belirtilen rengi görüntülenir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> özelliği ve beyaz ok simgesi görüntülenir.  
   
 > [!NOTE]
->  Varsa <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği 11'den küçük bir değere ayarlamak, gösterge simgeleri öğesi üstbilgisinde görüntülenmeyecek.  
+>  Ayarlarsanız <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> için <xref:System.Drawing.Color.White%2A>, öğe seçildiğinde seçimi simgesi görünür olmaz.  
   
- Öğe üstbilgilerini ayarlayarak gizleyebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> özelliğine **False**. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> ayarlanır **False**, öğe seçildiğinde yalnızca çevresinde noktalı çizgi göstergesidir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+ Bir alana olduğunda <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> odaklı öğesi başlığı değişiklikleri rengini <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> arka plan rengini ve siyah ok simgesi değişiklikler. Veri değiştirilirse, öğe üst bilgisinde bir kalem simgesi görüntülenir.  
+  
+ Varsayılan genişliğini (veya yüksekliği olduğunda <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) öğesinin başlığı 15 pikseldir. Ayarlayarak genişliğini değiştirebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği.  
   
 > [!NOTE]
->  İzleme tarafından kendi seçim göstergesini sağlayabilir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> özelliği <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> içinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> olayı <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+>  Varsa <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği 11'den küçük bir değere ayarlandığında, gösterge simgeleri öğesi üstbilgisinde görüntülenmeyecek.  
   
-### <a name="to-change-the-appearance-of-item-headers"></a>Öğe üstbilgilerini görünümünü değiştirmek için  
+ Öğe üst bilgilerini ayarlayarak gizleyebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> özelliğini **False**. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> ayarlanır **False**, bir öğe seçildiğinde yalnızca noktalı çizgi çevresinde göstergesidir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
   
-1.  Windows Forms Tasarımcısı'nda alt bölgesini seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+> [!NOTE]
+>  İzleyerek kendi seçimi göstergesi sağlayabilir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> özelliği <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> içinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> olayı <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
-    > [!NOTE]
-    >  Denetimin alt bölgeyi seçmeniz gerekir. Öğesi şablonu bölümüne seçerseniz, farklı bir özellikler kümesi Özellikler penceresinde görüntülenir.  
+### <a name="to-change-the-appearance-of-item-headers"></a>Öğe üst bilgilerini görünümünü değiştirmek için  
   
-2.  Özellikler penceresini kullanın <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> öğe üstbilgilerini rengini değiştirmek için özellik.  
-  
-    > [!NOTE]
-    >  Ayarlarsanız <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> için <xref:System.Drawing.Color.White%2A>, öğe ilk seçildiğinde seçimi simgesi görünür olmaz.  
-  
-3.  Kullanım <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> öğe üstbilgilerini genişliğini (veya yükseklik) değiştirmek için özellik.  
+1.  Windows Form Tasarımcısı'nda alt bölgesini seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
     > [!NOTE]
-    >  Varsa <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği 11'den küçük bir değere ayarlamak, gösterge simgeleri öğesi üstbilgisinde görüntülenmeyecek.  
+    >  Denetimin alt bölgeyi seçmeniz gerekir. Öğe şablonu bölümü seçin, farklı bir özellikler kümesini Özellikler penceresinde görünür.  
   
-### <a name="to-hide-item-headers"></a>Öğe üstbilgilerini gizleme  
-  
-1.  Windows Forms Tasarımcısı'nda alt bölgesini seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+2.  Özellikler penceresinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> üstbilgileri rengini değiştirmek için özellik.  
   
     > [!NOTE]
-    >  Denetimin alt bölgeyi seçmeniz gerekir. Öğesi şablonu bölümüne seçerseniz, farklı bir özellikler kümesi Özellikler penceresinde görüntülenir.  
+    >  Ayarlarsanız <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> için <xref:System.Drawing.Color.White%2A>, öğe seçildiğinde seçimi simgesi görünür olmaz.  
   
-2.  Özellikler penceresinde ayarlayın <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> özelliğine **False**.  
+3.  Kullanım <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> üstbilgileri genişliği (veya yüksekliği) değiştirileceğini özelliği.  
   
-     Bir öğe <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> olduğundan, tek belirti çevresinde noktalı çizgi seçilir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+    > [!NOTE]
+    >  Varsa <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> özelliği 11'den küçük bir değere ayarlandığında, gösterge simgeleri öğesi üstbilgisinde görüntülenmeyecek.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
- [DataRepeater Denetimine Giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Nasıl Yapılır: DataRepeater Denetiminin Görünümünü Değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Nasıl Yapılır: DataRepeater Denetimi Düzenini Değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
- [DataRepeater Denetiminde Sorun Giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+### <a name="to-hide-item-headers"></a>Öğe üst bilgilerini gizlemek için  
+  
+1.  Windows Form Tasarımcısı'nda alt bölgesini seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
+  
+    > [!NOTE]
+    >  Denetimin alt bölgeyi seçmeniz gerekir. Öğe şablonu bölümü seçin, farklı bir özellikler kümesini Özellikler penceresinde görünür.  
+  
+2.  Özellikler penceresinde ayarlayın <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> özelliğini **False**.  
+  
+     Bir öğe olduğunda <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> olduğu belirlenirse, tek belirti çevresinde bir noktalı çizgi olacaktır <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>
+- [DataRepeater Denetimine Giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [Nasıl yapılır: DataRepeater denetiminin görünümünü değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+- [Nasıl yapılır: DataRepeater denetimi düzenini değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
+- [DataRepeater Denetiminde Sorun Giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

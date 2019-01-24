@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: c716847c60611a6e8a2911d4b9ae2f1683d2cdd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503748"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL nesne modeli
-İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştirici programlama dilinde ifade nesne modeli ilişkisel veritabanı veri modeline eşlendi. Veriler üzerinde işlemler nesne modeline göre daha sonra yürütülür.  
+İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştiricinin programlama dilinde ifade nesne modeli, ilişkisel veritabanı ve veri modelini eşlendi. Veriler üzerinde işlemler sonra nesne modeline göre yürütülür.  
   
- Bu senaryoda, veritabanı komutları sorun değildir (örneğin, `INSERT`) veritabanı. Bunun yerine, değerleri değiştirin ve nesne modeli içindeki bir yöntem yürütülemez. Veritabanı veya değiştiğinde, gönderme sorgulamak istediğiniz zaman [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] isteklerinizi doğru SQL komutlara çevirir ve bu komutları veritabanına gönderir.  
+ Bu senaryoda, veritabanı komutlarını dağıttığınız değil (örneğin, `INSERT`) veritabanı. Bunun yerine, değerleri değiştirin ve, nesne modeli içinde bir yöntem yürütülemez. Değiştirirse, gönderme ve veritabanını sorgulamak istediğiniz zaman [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] isteklerinizi doğru SQL komutlara çevirir ve söz konusu komutları veritabanına gönderir.  
   
  ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
   
- En temel öğeleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve ilişkilerini ilişkisel veri modeli öğeleri için aşağıdaki tabloda özetlenmiştir:  
+ En temel öğeleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve bunların ilişkisel veri modelindeki öğeler aşağıdaki tabloda özetlenmiştir:  
   
 |LINQ to SQL nesne modeli|İlişkisel veri modeli|  
 |------------------------------|---------------------------|  
 |Varlık sınıfı|Tablo|  
 |Sınıf üyesi|Sütun|  
 |İlişkilendirme|Yabancı anahtar ilişkisi|  
-|Yöntem|Saklı yordam veya işlev|  
+|Yöntem|Saklı yordamı veya işlevi|  
   
 > [!NOTE]
->  Aşağıdaki açıklamaları, kuralları ve ilişkisel veri modelini temel bilgiye sahip olduğunuzu varsayar.  
+>  Aşağıdaki açıklamaları kuralları ve ilişkisel veri modeli temel bilgiye sahip olduğunuzu varsaymaktadır.  
   
-## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ-SQL sınıflar ve veritabanı tabloları  
- İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], bir veritabanı tablosu tarafından temsil edilen bir *varlık sınıfı*. Bir varlık sınıfı sınıfı bir veritabanı tablosu ile ilişkilendirir özel bilgileri kullanarak sınıfı açıklama dışında oluşturacağınız başka bir sınıf gibidir. Özel bir öznitelik ekleyerek bu ek açıklama yapın (<xref:System.Data.Linq.Mapping.TableAttribute>) aşağıdaki örnekteki gibi sınıf bildirimi için:  
+## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ to SQL varlık sınıfları ve veritabanı tabloları  
+ İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], bir veritabanı tablosu tarafından temsil edilen bir *varlık sınıfı*. Bir varlık sınıfı sınıfı bir veritabanı tablosu ile ilişkilendiren özel bilgileri kullanarak sınıf ek açıklama dışında oluşturacağınız başka bir sınıf gibidir. Özel bir öznitelik ekleyerek bu ek açıklama yapın (<xref:System.Data.Linq.Mapping.TableAttribute>) aşağıdaki örnekte olduğu gibi sınıf bildirimi için:  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[DLinqObjectModel#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#1)]
  [!code-vb[DLinqObjectModel#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#1)]  
   
- Tabloları (diğer bir deyişle, varlık sınıflar) veritabanına kaydedilebilir gibi sınıfların yalnızca örneklerini bildirildi.  
+ Veritabanı tabloları (diğer bir deyişle, varlık sınıfları) kaydedilebilir olarak yalnızca sınıfların örneklerini bildirilmiş.  
   
- Daha fazla bilgi için tablo özniteliği bölümüne bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Daha fazla bilgi için tablo özniteliği bölümüne bakın. [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-class-members-and-database-columns"></a>LINQ-SQL sınıf üyeleri ve veritabanı sütunları  
- Sınıfları tablolarla ilişkilendirme yanı sıra, alanlar veya veritabanı sütunlarını göstermek için özellikleri belirtin. Bu amaçla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tanımlar <xref:System.Data.Linq.Mapping.ColumnAttribute> aşağıdaki örnekteki gibi öznitelik:  
+## <a name="linq-to-sql-class-members-and-database-columns"></a>LINQ to SQL sınıf üyeleri ve veritabanı sütunları  
+ Sınıflar içeren tablolar ilişkilendirme ek olarak, alanlar ve Özellikler veritabanı sütunları temsil etmek için belirleyin. Bu amaçla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tanımlar <xref:System.Data.Linq.Mapping.ColumnAttribute> öznitelik, aşağıdaki örnekte olduğu gibi:  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[DLinqObjectModel#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#2)]
  [!code-vb[DLinqObjectModel#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#2)]  
   
- Yalnızca alanlar ve sütunlarla eşlenen özellikler için kalıcı veya veritabanından alınır. Bu sütunları geçici uygulama mantığınızın parçaları olarak kabul edilen olarak bildirilmedi.  
+ Yalnızca alanlar ve Özellikler sütunlarıyla eşlenen kalıcı veya veritabanından alınır. Bu sütunlar geçici uygulama mantığınızın parçaları olarak kabul edilir olarak bildirilmedi.  
   
- <xref:System.Data.Linq.Mapping.ColumnAttribute> Özniteliğine sahip çeşitli sütunlar (örneğin, birincil anahtar sütunu temsil eden olarak bir üye belirleme) temsil eder Bu üyeleri özelleştirmek için kullanabileceğiniz özellikler. Daha fazla bilgi için sütun özniteliği bölümüne bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <xref:System.Data.Linq.Mapping.ColumnAttribute> Özniteliğine sahip çeşitli sütunları (örneğin, bir birincil anahtar sütunu temsil eden olarak bir üye tanımlayarak) temsil eden bu üyeleri özelleştirmek için kullanabileceğiniz özellikler. Daha fazla bilgi için sütun özniteliği bölümüne bakın. [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>LINQ-SQL ilişkileri ve veritabanı yabancı anahtar ilişkileri  
- İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], uygulayarak veritabanı ilişkilendirmeleri (örneğin, yabancı anahtar birincil anahtar ilişkileri) temsil eden <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği. Kod, aşağıdaki kesimdeki `Order` sınıfı içeren bir `Customer` sahip özellik bir <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği. Bu özellik ve onun özniteliğini sağlayın `Order` sınıfı bir ilişkisi olan `Customer` sınıfı.  
+## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>LINQ to SQL ilişkilendirmeleri ve veritabanı yabancı anahtar ilişkileri  
+ İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], uygulayarak veritabanı ilişkileri (örneğin, yabancı anahtar ilişkileri birincil anahtar) temsil eden <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği. Kod, aşağıdaki Segmentte `Order` sınıfı içeren bir `Customer` olan özellik bir <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği. Bu özellik ve onun özniteliğini `Order` ilişkisi olan sınıf `Customer` sınıfı.  
   
  Aşağıdaki örnekte gösterildiği kod `Customer` özelliğinden `Order` sınıfı.  
   
@@ -62,24 +62,24 @@ ms.locfileid: "33365390"
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Daha fazla bilgi için ilişki özniteliğini bölümüne bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Daha fazla bilgi için ilişkilendirme özniteliği bölümüne bakın. [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
-## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ-SQL yöntemleri ve veritabanı saklı yordamları  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamlar ve kullanıcı tanımlı işlevler destekler. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], böylece istemci kodundan kesin türü belirtilmiş bir şekilde erişebilir istemci nesnelere bu veritabanı tanımlanan soyutlamalar eşleyin. Yöntem imzaları mümkün olduğunca yakın yordamları ve işlevleri veritabanı içinde tanımlanan imzalarını benzer. Bu yöntemler bulmak için IntelliSense kullanabilirsiniz.  
+## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL yöntemleri ve veritabanı saklı yordamları  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler saklı yordamlar ve kullanıcı tanımlı işlevler. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], böylece istemci kodundan kesin bir şekilde erişebilir istemci nesneleri için bu veritabanında tanımlı soyutlama eşleyin. Yöntem imzaları mümkün olduğunca yakın yordamları ve işlevleri veritabanında tanımlanan imzalarını benzer. Bu yöntemleri bulmak için IntelliSense'i kullanabilirsiniz.  
   
- Bir sonuç kümesi olan eşlenen bir yordam için bir çağrı tarafından döndürülen bir türü kesin belirlenmiş koleksiyonudur.  
+ Bir sonuç kümesi diğer bir deyişle eşlenmiş bir yordam çağrısı tarafından döndürülen bir türü kesin belirlenmiş koleksiyonudur.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamları ve işlevleri kullanarak yöntemlere eşlemeleri <xref:System.Data.Linq.Mapping.FunctionAttribute> ve <xref:System.Data.Linq.Mapping.ParameterAttribute> öznitelikleri. Saklı yordamlar temsil eden yöntemleri temsil eden kullanıcı tanımlı işlevler tarafından kullanılanlardan ayırt <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> özelliği. Bu özellik ayarlanmışsa `false` (varsayılan), bir saklı yordam yöntemi temsil eder. Bu ayarlanırsa `true`, yöntemi bir veritabanı işlevi temsil eder.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamları ve işlevleri kullanarak yöntemlere eşler <xref:System.Data.Linq.Mapping.FunctionAttribute> ve <xref:System.Data.Linq.Mapping.ParameterAttribute> öznitelikleri. Saklı yordamlar temsil eden yöntemleri temsil eden kullanıcı tanımlı işlevleri tarafından kullanılanlardan ayırt edici <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> özelliği. Bu özellik ayarlanırsa `false` (varsayılan), bir saklı yordam yöntemi temsil eder. Bu ayarlanırsa `true`, bir veritabanı işlevi yöntemi temsil eder.  
   
 > [!NOTE]
->  Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamları ve kullanıcı tanımlı işlevler eşlenen yöntemleri oluşturmak için.  
+>  Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamları ve kullanıcı tanımlı işlevleri için eşlenmiş yöntemleri oluşturma.  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Daha fazla bilgi için işlevi özniteliği, saklı yordam özniteliği ve parametre özniteliği bölümlerine bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) ve [saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ Daha fazla bilgi için işlev özniteliği ve depolanan yordam öznitelik parametre özniteliği bölümlerine bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) ve [saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

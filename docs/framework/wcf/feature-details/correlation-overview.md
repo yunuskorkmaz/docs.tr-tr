@@ -2,12 +2,12 @@
 title: Bağıntı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7128ff531bb81fb6de526092513d5525ca138735
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512781"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı birbirine veya uygulama örneği durumu, bir ilk isteğine yanıt veya belirli sipariş kimliği gibi iş akışı hizmeti iletilerini kalıcı bir sipariş işleme iş akışı durumuna ilişkin yönelik mekanizmadır. Bu konu, bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her türüne ilişkin ek bilgiler sağlayın.  
@@ -27,6 +27,6 @@ Protokol bağıntı hakkında daha fazla bilgi için bkz: [dayanıklı çift yö
 
 İçerik temelli bağıntı bilgi parçası için belirli bir örneğine ilişkilendirmek için iletide kullanır. Protokolüne dayalı bağıntı, ilgili her iletide bu verilerin bulunabileceği açıkça durumuna uygulama yazarı içerik temelli bağıntı gerektirir. İçerik temelli bağıntı kullanan etkinlikleri kullanarak bu ileti verilerini belirtin bir <xref:System.ServiceModel.MessageQuerySet>. İçerik temelli bağıntı, bağlam bağlamaları gibi birini kullanmayın Hizmetleri ile iletişim kurarken yararlıdır <xref:System.ServiceModel.BasicHttpContextBinding>.
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

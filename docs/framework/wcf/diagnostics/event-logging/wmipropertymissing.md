@@ -2,23 +2,23 @@
 title: WmiPropertyMissing
 ms.date: 03/30/2017
 ms.assetid: 109fa6b4-93dc-4785-bec4-5aa02c434a65
-ms.openlocfilehash: 88987b2d954195680f69d4f4f549e715409af6d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f981c62f3d56a9b0c66f784bdcb25df8476c1b65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504580"
 ---
 # <a name="wmipropertymissing"></a>WmiPropertyMissing
 Kimliği: 129  
   
- Önem derecesi: hata  
+ Önem derecesi: Hata  
   
  Kategori: ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir tür uyuşmazlığı oluştuğunu gösterir. Belirtilen CIM sınıfı, belirli türde belirtilen özellik yok. İşlem kimliği ve işlem adı olay listeler  
+ Bu olay, bir tür uyuşmazlığı oluştuğunu gösterir. Belirtilen bir CIM sınıfı, belirli türdeki belirtilen özellik yok. Olay işlem kimliği ve işlem adını listeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

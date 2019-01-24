@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497298"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> denetim düşünülebilir bileşik; taşınabilir bir çubukla ayırarak iki bölme. Çubuğu üzerine fare işaretçisi olduğunda, işaretçi şekli çubuğu taşınabilir olduğunu göstermek için değiştirir.  
@@ -49,7 +49,7 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> denetim düşünülebil
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Olay|Bölümlendirici taşıma olduğunda gerçekleşir.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Olay|Bölümlendirici taşıdığınızda gerçekleşir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer denetimi örneği](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer denetimi örneği](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

@@ -2,12 +2,12 @@
 title: SQL Server ortak dil çalışma zamanı modülü tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7d291e5ab715638217c024302c36188d63b20239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493969"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server ortak dil çalışma zamanı modülü tümleştirmesi
 SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün tümleştirme Microsoft Windows için kullanıma sunuldu. Bu, saklı yordamlar, Tetikleyiciler, kullanıcı tanımlı türler, kullanıcı tarafından tanımlanan İşlevler, kullanıcı tanımlı toplamları ve akış tablo değerli işlevler, Microsoft Visual Basic .NET ve Microsoft da dahil olmak üzere, herhangi bir .NET Framework dili kullanarak yazabildiğinizi anlamına gelir. Visual C#. <xref:Microsoft.SqlServer.Server> Ad alanı, yönetilen kod Microsoft SQL Server ortamı ile etkileşimde bulunmasını yeni uygulama programlama arabirimleri (API) kümesini içerir.  
@@ -42,7 +42,7 @@ SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün
  [SQL Server İşlem İçine Özgü ADO.NET Davranışı](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  ADO.NET ve içerik bağlantısı için SQL Server işlem içi belirli uzantılarını açıklar. Ek konulara bağlantılar sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Yönetilen kodda SQL Server 2005 nesneleri oluşturma](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Yönetilen kodda SQL Server 2005 nesneleri oluşturma](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

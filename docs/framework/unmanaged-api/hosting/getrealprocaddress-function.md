@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b31db6e6a8ecb3fa15f1a8690b007bdb536b97c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506556"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress İşlevi
-Son yüklenen sürümünden ortak dil çalışma zamanı (CLR) dışarı belirtilen işlev adresi alır.  
+En son yüklenen sürümünden ortak dil çalışma zamanı (CLR) dışarı aktarılan belirtilen işlevin adresini alır.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +42,25 @@ HRESULT GetRealProcAddress (
  [in] İşlevin adı.  
   
  `ppv`  
- [out] İşlevin adresini gösteren bir işaretçi aldığı konumu.  
+ [out] İşlevin adresini bir işaretçiye alan konumu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, CorError.h içinde tanımlanan aşağıdaki değerleri yanı sıra Winerror.h'de içinde tanımlandığı şekilde döndürür.  
+ Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları CorError.h içinde tanımlanan aşağıdaki değerlere ek olarak Wınerror içinde tanımlanan döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`ppv` geçerli değil.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|İşlev çalışma zamanını şuradan verilmez.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|İşlev, çalışma zamanını şuradan verilmez.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

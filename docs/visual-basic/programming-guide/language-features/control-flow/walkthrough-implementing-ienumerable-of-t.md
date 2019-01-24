@@ -7,14 +7,14 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499767"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama
 <xref:System.Collections.Generic.IEnumerable%601> Arabirimi, aynı anda bir öğe değerlerini bir dizi döndüren sınıflar tarafından uygulanır. Aynı anda bir öğe ile çalışmak için eksiksiz veri Seti yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Uygulayan sınıflar `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorguları.  
   
  Örneğin, büyük bir metin dosyası okuma ve her satırın belirli arama ölçütleri ile eşleşen dosyasından dönüş bir uygulamayı düşünün. Uygulama, belirtilen ölçütlerle eşleşen dosyanın satırlar döndürülecek LINQ sorgusu kullanır. LINQ sorgusu kullanarak dosya içeriğini sorgulamak için uygulama dosyasının içeriğini bir dizi veya koleksiyon yükleyebilir. Ancak, bir dizi veya koleksiyon tüm dosya yüklenirken gerekenden çok daha fazla bellek kullanılmasına neden olur. LINQ sorgusu, bunun yerine arama ölçütleriyle eşleşen değerler döndüren bir numaralandırılabilir sınıfını kullanarak dosya içeriklerini sorgulayabilir. Yalnızca birkaç döndüren sorgular eşleşen değerler çok daha az bellek tüketen.  
@@ -93,8 +93,8 @@ ms.locfileid: "48837004"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

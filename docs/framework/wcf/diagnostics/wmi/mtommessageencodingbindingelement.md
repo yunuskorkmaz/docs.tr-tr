@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490988"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -30,7 +30,7 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ## <a name="properties"></a>Özellikler  
  MtomMessageEncodingBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="encoding"></a>Kodlama  
+### <a name="encoding"></a>Encoding  
  Veri türü: dize  
   
  Erişim türü: salt okunur  
@@ -44,14 +44,14 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
   
  İleti sayısını tanımlayan bir tamsayı yeni okuyucu ayırmadan aynı anda okuyabilirsiniz.  
   
-### <a name="maxwritepoolsize"></a>maxWritePoolSize  
+### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Veri türü: SINT32  
   
  Erişim türü: salt okunur  
   
  İleti sayısını tanımlayan bir tamsayı, yeni yazıcı ayırmadan aynı anda gönderilebilecek.  
   
-### <a name="readerquotas"></a>readerQuotas  
+### <a name="readerquotas"></a>ReaderQuotas  
  Veri türü: XmlDictionaryReaderQuotas  
   
  Erişim türü: salt okunur  
@@ -64,5 +64,5 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
