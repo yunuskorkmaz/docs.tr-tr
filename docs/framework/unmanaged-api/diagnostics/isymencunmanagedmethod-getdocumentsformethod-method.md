@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562680"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod Metodu
-Bu yöntem satırları cinsinden olan belgeleri alır.  
+Bu yöntem satır var, belgeleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT GetDocumentsForMethod(
   
 #### <a name="parameters"></a>Parametreler  
  `cDocs`  
- [in] Tarafından için arabellek uzunluğu işaret `pcDocs`.  
+ [in] Arabellek uzunluğu tarafından işaret edilen `pcDocs`.  
   
  `pcDocs`  
  [out] Bir işaretçi bir `ULONG32` karakter belgeleri içermesini gerekli arabellek boyutunu alır.  
   
  `documents`  
- [in] Belgeleri içeren bir arabellek.  
+ [in] Belgeleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

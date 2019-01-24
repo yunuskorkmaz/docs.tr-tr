@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama'
+title: 'Nasıl yapılır: Bir istek için önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563567"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl Yapılır: Bir istek için önbellek İlkesi ayarlama
+# <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: Bir istek için önbellek İlkesi ayarlama
 Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek Giriş bir URI gibi `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Örnek  
@@ -105,9 +105,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

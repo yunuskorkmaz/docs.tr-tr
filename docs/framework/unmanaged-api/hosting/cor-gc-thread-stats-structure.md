@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a386fe82bbd004954924a573c090af7f58824a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f453867f6b46265fdbf567b4374ddc64b4efe84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563905"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS Yapısı
 Çöp toplama için ilgili iş parçacığı başına istatistikleri içerir.  
@@ -39,21 +39,21 @@ typedef struct _COR_GC_THREAD_STATS {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Geçerli ilişkili iş parçacığında ayrılan belleği bayt sayısı `COR_GC_THREAD_STATS` örneği. Bu sayı sıfıra nesil sıfır çöp toplama her gerçekleştiğinde temizlenir.|  
-|`Flags`|Bayt sayısı, en son çöp toplama için daha yüksek kuşaklı yükseltildi.|  
+|`PerThreadAllocation`|Geçerli iş parçacığı üzerinde ayrılmış bellek bayt sayısı `COR_GC_THREAD_STATS` örneği. Bu sayı her zaman sıfır nesil atık toplama işlemi gerçekleştiğinde sıfır olarak temizlenir.|  
+|`Flags`|Bayt sayısı, en son çöp toplama daha yüksek bir nesle yükseltilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Iclrtask::getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) bir çıktı parametresi türü alan `COR_GC_THREAD_STATS`.  
+ [Iclrtask::getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) çıkış parametresi türü alan `COR_GC_THREAD_STATS`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** GCHost.idl  
+ **Üst bilgi:** GCHost.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

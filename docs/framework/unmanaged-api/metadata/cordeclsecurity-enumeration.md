@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564017"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity Numaralandırması
-Bildirim temelli güvenlik kullanılarak gerçekleştirilebilir güvenlik eylemleri belirtir.  
+Bildirime dayalı güvenlik kullanarak gerçekleştirilebilir güvenlik eylemleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -63,19 +63,19 @@ typedef enum CorDeclSecurity {
 |`dclActionMask`|Ayrılmış.|  
 |`dclActionNil`|Ayrılmış.|  
 |`dclRequest`|Ayrılmış.|  
-|`dclDemand`|Geçerli izin nesnesi tarafından belirtilen izni verilmiş tüm arayanlar çağrı yığınında yüksek gereklidir.|  
-|`dclAssert`|Arayanlar yığında yüksek kaynağa erişim izni verilmemiş bile çağıran kodu geçerli izin nesnesi tarafından tanımlanan kaynağa erişebilir|  
-|`dclDeny`|Erişim izni verilmiş olsa bile geçerli izni nesnesi tarafından belirlenen kaynak erişim olanağı çağıranlar için reddedildi.|  
-|`dclPermitOnly`|Kod diğer kaynaklara erişim izni verilmiş olsa bile, yalnızca bu izni nesnesi tarafından belirlenen kaynakları erişilebilir.|  
-|`dclLinktimeCheck`|Anında arayanlar belirli bir süre için belirtilmiş izni verilmiş olması gereklidir.|  
-|`dclInheritanceCheck`|Başka bir sınıf ya da bir yöntemini geçersiz kılma türetilmiş sınıf belirtilen izin verilmiş olması gereklidir.|  
-|`dclRequestMinimum`|Çağıran, kodun çalışması için gerekli minimum izinleri isteyebilir. Bu eylem yalnızca derleme kapsamında kullanılabilir.|  
-|`dclRequestOptional`|Çağıran, isteğe bağlı (çalıştırmak için gerekli değildir) için ek izinler isteyebilir. Bu istek, özellikle istenen tüm izinleri örtük olarak reddediyor. Bu eylem yalnızca derleme kapsamında kullanılabilir.|  
-|`dclRequestRefuse`|Arayanın istek kötüye kullanımını izinler için izni yok. Bu eylem yalnızca derleme kapsamında kullanılabilir.|  
+|`dclDemand`|Çağrı yığınında daha yüksek tüm çağıranlar geçerli bir izin nesnesi tarafından belirtilen izin verilen gereklidir.|  
+|`dclAssert`|Çağıranlar yığınında daha yüksek bir kaynağa erişim izni verilmemiş bile, çağırma kodunun geçerli izin nesnesi tarafından tanımlanan kaynağa erişebilir|  
+|`dclDeny`|Erişim izni verilmiş olsa bile geçerli bir izin nesnesi tarafından belirtilen kaynak erişim olanağı arayanlar için reddedildi.|  
+|`dclPermitOnly`|Yalnızca bu izin nesnesi tarafından belirtilen kaynak kodu diğer kaynaklara erişim izni verilmiş olsa bile erişilebilir.|  
+|`dclLinktimeCheck`|Şu anki çağırıcı, belirli bir süre için belirtilen izin verilen gereklidir.|  
+|`dclInheritanceCheck`|Başka bir sınıf ya da bir yöntemini geçersiz kılma türetilen sınıfın belirtilen izin verilen gereklidir.|  
+|`dclRequestMinimum`|Çağıran kodun çalışması için gereken en düşük izinleri isteyebilir. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
+|`dclRequestOptional`|Çağıran, isteğe bağlı (çalıştırmak için gerekli değildir) için ek izinler isteyebilir. Bu istek özel olarak istenen tüm izinlerin dolaylı olarak reddeder. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
+|`dclRequestRefuse`|Çağıranın isteği yanlış izinleri verilmez. Bu eylem, yalnızca derlemenin kapsamında kullanılabilir.|  
 |`dclPrejitGrant`|Ayrılmış.|  
 |`dclPrejitDenied`|Ayrılmış.|  
 |`dclNonCasDemand`|Ayrılmış.|  
-|`dclNonCasLinkDemand`|Anında arayanlar belirtilmiş izni verilmiş olması gereklidir.|  
+|`dclNonCasLinkDemand`|Şu anki çağırıcı belirtilen izin verilen gereklidir.|  
 |`dclNonCasInheritance`|Ayrılmış.|  
 |`dclLinkDemandChoice`|Ayrılmış.|  
 |`dclInheritanceDemandChoice`|Ayrılmış.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Ayrılmış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

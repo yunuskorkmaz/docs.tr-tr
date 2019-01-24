@@ -5,30 +5,30 @@ helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: 7d48fb859ec6d37abd2490bc718d58cbdaa67f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee9c532f8b2eeddb2c798df53e1864e8f543638b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564070"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Nasıl yapılır: BetweenShowDelay Özelliğini Kullanma
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> araç ipuçları hızlı bir şekilde görünmesini sağlayacak şekilde zaman özelliğinin — çok az kayıpla veya hiç gecikmeyle — zaman kullanıcı hareket fare işaretçisini bir araç ipucu doğrudan diğerine.  
+Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> zaman özelliğinin araç ipuçları hızlı bir şekilde görünür: çok az kayıpla veya hiç gecikmeyle — ne zaman bir kullanıcı hareket fare işaretçisi bir araç ipucu doğrudan diğerine.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> özelliği bir saniye (1000 milisaniye cinsinden) ayarlamak ve <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> hem araç ipuçları için iki saniye (2000 milisaniye) olarak ayarlanmış <xref:System.Windows.Shapes.Ellipse> kontrol eder. Üç nokta birinin araç ipucunu görüntüleyebilirsiniz ve ardından fare işaretçisini başka bir elips iki saniye içinde üzerinde getirip bekletin, ikinci elipsin araç ipucuna hemen görüntüler.  
+ Aşağıdaki örnekte, <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> özelliği, bir saniye (1000 milisaniye) için ayarlanır ve <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> araç ipuçları her ikisi için iki saniye (2000 milisaniye cinsinden) olarak ayarlanmış <xref:System.Windows.Shapes.Ellipse> denetimleri. Üç nokta simgesini biri için araç ipucunu görüntülemek ve sonra fare işaretçisi için başka bir elips iki saniye içinde üzerine getirip bekletin, araç ipucu ikinci elipsin hemen görüntüler.  
   
- Aşağıdaki senaryolardan biri, <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> uygular, araç ipucu görünmeden önce bir saniye bekleyin ikinci elipsin neden olur:  
+ Aşağıdaki senaryolardan birini <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> uygular, araç ipucu ikinci bir elipsin görünmeden önce bir saniye beklemeniz neden olur:  
   
 -   İkinci düğme iki saniyeden fazla ise taşımak için geçen süre.  
   
--   Araç İpucu ilk elipsin zaman aralığının başlangıcında görünür değilse.  
+-   Araç İpucu elips ilk zaman aralığının başlangıcında görünür değilse.  
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipService>  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
- [Araç İpucuna Genel Bakış](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipService>
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Araç İpucuna Genel Bakış](../../../../docs/framework/wpf/controls/tooltip-overview.md)

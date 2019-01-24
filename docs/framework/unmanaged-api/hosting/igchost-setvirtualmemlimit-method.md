@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d61c8aeaf458d8cbbd2976fa83aaa0eeb0f834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564285"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit Yöntemi
-En büyük çalışma zamanı'nın sanal bellek boyutunu belirler.  
+Çalışma zamanının sanal bellek en büyük boyutunu ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT SetVirtualMemLimit (
   
 #### <a name="parameters"></a>Parametreler  
  `sztMaxVirtualMemMB`  
- [in] Çalışma zamanı'nın sanal bellek megabayt cinsinden en büyük boyutu.  
+ [in] Çalışma zamanının sanal bellek megabayt cinsinden maksimum boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- En büyük çalışma zamanı'nın sanal bellek boyutunu dinamik olarak değiştirilebilir.  
+ Çalışma zamanının sanal bellek en büyük boyutunu dinamik olarak değiştirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** GCHost.idl, GCHost.h  
+ **Üst bilgi:** GCHost.idl, GCHost.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IGCHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IGCHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

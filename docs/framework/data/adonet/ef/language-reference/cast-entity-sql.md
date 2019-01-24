@@ -1,16 +1,16 @@
 ---
-title: CAST (varlık SQL)
+title: ATAMA (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: b3ebd4a7fe9d9e1324210d9f4d1265115bd8617f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d04347025de53add09f50646f1e2934b7959048
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568549"
 ---
-# <a name="cast-entity-sql"></a>CAST (varlık SQL)
-Bir veri türünde bir ifadenin diğerine dönüştürür.  
+# <a name="cast-entity-sql"></a>ATAMA (varlık SQL)
+Bir veri türündeki bir ifade diğerine dönüştürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,24 +20,24 @@ CAST ( expression AS data_type )
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Parametresinin geçerli bir ifade `data_type`.  
+ Dönüştürülebilen herhangi bir geçerli ifade `data_type`.  
   
  `data_type`  
- Hedef sistem tarafından sağlanan veri türü. Basit (skaler) bir tür olmalıdır. `data_type` Kullanılan sorgu alan bağlıdır. Bir sorgu ile yürütülürse <xref:System.Data.EntityClient.EntityCommand>, kavramsal modelde tanımlanan bir türü veri türüdür. Daha fazla bilgi için bkz: [CSDL belirtimi](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Bir sorgu ile yürütülürse <xref:System.Data.Objects.ObjectQuery%601>, bir ortak dil çalışma zamanı (CLR) türü veri türüdür.  
+ Hedef sistem tarafından sağlanan veri türü. Basit (skaler) türü olmalıdır. `data_type` Kullanılan Sorgu alanı bağlıdır. Bir sorgu ile yürütülürse <xref:System.Data.EntityClient.EntityCommand>, kavramsal modelde tanımlı bir tür veri türüdür. Daha fazla bilgi için [CSDL belirtimi](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Bir sorgu ile yürütülürse <xref:System.Data.Objects.ObjectQuery%601>, ortak dil çalışma zamanı (CLR) tür veri türüdür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aynı değeri döndürür `data_type`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Cast ifadesi benzer bir semantik vardır [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] Çevir ifade. Cast ifadesi, başka bir türdeki bir değere bir türde bir değer dönüştürmek için kullanılır.  
+ Cast ifadesi için benzer semantiğe sahip [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] dönüştürme ifadesi. Cast ifadesi, başka bir türü bir değere bir türün bir değerini dönüştürmek için kullanılır.  
   
 ```  
 CAST( e as T )  
 ```  
   
- E ise S ve S herhangi bir tür için T dönüştürülebilir olup, ardından geçerli cast ifadesi yukarıdaki ifadesidir. T ilkel (skaler) bir tür olmalıdır.  
+ E ise bazı S ve S T için dönüştürülebilir türüdür ve ardından yukarıdaki ifadeyi geçerli atama ifadesidir. T (skaler) basit tür olmalıdır.  
   
- Kesinlik ve ölçek yönü, isteğe bağlı olarak tür atama zaman sağlanabilir değerleri `Edm.Decimal`. Açıkça verdiyse, varsayılan duyarlık ve ölçek 18 ve 0, sırasıyla değerler. Özellikle, aşağıdaki aşırı yüklemeleri için desteklenen `Decimal`:  
+ Kesinlik ve ölçek özellikleri, isteğe bağlı olarak tür atama olduğunda sağlanabilir değerleri `Edm.Decimal`. Açıkça sağlanan, kesinlik ve ölçek için varsayılan değerleri 18 ve 0, sırasıyla. Özellikle, aşağıdaki aşırı yüklemeler için desteklenen `Decimal`:  
   
 -   `CAST( d as Edm.Decimal );`  
   
@@ -45,19 +45,19 @@ CAST( e as T )
   
 -   `CAST( d as Edm.Decimal(precision, scale) );`  
   
- Cast ifadesi kullanımını açık bir dönüştürme olarak kabul edilir. Açık dönüşümler veri kesme veya duyarlık kaybedersiniz.  
+ Cast ifadesi kullanımı açık bir dönüştürme olarak kabul edilir. Açık dönüştürmeler truncate veri veya duyarlık kaybı.  
   
 > [!NOTE]
->  CAST yalnızca ilkel türler ve Numaralandırma üye türleri üzerinde desteklenir.  
+>  ATAMA, yalnızca ilkel türler ve sabit listesi üye türleri üzerinde desteklenir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ATAMA işleci için başka bir veri türünde bir ifadeyi dönüştürmek için kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu için başka bir veri türündeki bir ifadeye dönüştürmek için tür dönüştürme işleci kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür PrimitiveType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#CAST](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#cast)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

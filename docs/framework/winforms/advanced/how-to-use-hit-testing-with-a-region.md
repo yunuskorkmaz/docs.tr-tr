@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma'
+title: 'Nasıl yapılır: Test bir bölgeyle vuruş kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: 40297fada3d042aee8c317eb787de03662f86cfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1866810b875063271e206da1fe5d6fc06f7b5de0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564311"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma
-İsabet testi amacı, imleç üzerinden bir simge veya düğmesi gibi belirli bir nesne olup olmadığını belirlemektir.  
+# <a name="how-to-use-hit-testing-with-a-region"></a>Nasıl yapılır: Test bir bölgeyle vuruş kullanma
+İsabet sınaması amacı, imleci üzerine bir simge veya düğmesi gibi belirli bir nesne olup olmadığını belirlemektir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki dikdörtgen bölgeler birleşimi oluşturan tarafından artı şeklinde bir bölge oluşturur. Varsayımında değişkeni `point` en son tıklatın konumunu tutar. Kod bakar olup olmadığını `point` içinde artı şeklinde bölgedir. Noktanın bölge (isabet) ise, bölge donuk kırmızı fırça ile doldurulur. Aksi takdirde, bölge yarı saydam kırmızı fırça ile doldurulur.  
+ Aşağıdaki örnek, iki dikdörtgen bölge birleşimi oluşturan tarafından artı şeklindeki bir bölge oluşturur. Varsayımında değişkeni `point` en son tıklayarak konumunu içerir. Kod bakar olmadığını `point` artı şeklindeki bölgede. (İsabet) bölgede noktasıysa bölge donuk bir kırmızı fırça ile doldurulur. Aksi takdirde, bölge, yarı saydam fırçalarla kırmızı fırça ile doldurulur.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.MiscLegacyTopics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Region>  
- [GDI+'daki Bölgeler](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- [Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Region>
+- [GDI+'daki Bölgeler](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)
+- [Nasıl yapılır: Bir bölgeyle kırpma kullanma](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)

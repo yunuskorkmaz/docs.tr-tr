@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568926"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem Yapısı
 Hata Raporlama özel bir döküm eklenmesi için bir öğe açıklar.  
@@ -42,19 +42,19 @@ struct {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`itemKind`|Bir [Ecustomdumpıtemkind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) eklenecek öğe türünü belirten değer.|  
-|`pReserved`|Şu anda kullanılmıyor. UNION eklenen tüm öğeler işaretçi boyutundan daha büyük olmalıdır. Varsa bir `struct` olan gerekli, ayrı ayrı ayırın ve gerekir kendisine noktası.|  
+|`pReserved`|Şu anda kullanılmıyor. Birleşime eklenen tüm öğeler işaretçi boyutundan büyük olmalıdır. Varsa bir `struct` olan gerekli, ayrı olarak ayırmak ve kendisine işaret.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  [Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) türünde bir parametre alan `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

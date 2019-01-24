@@ -2,12 +2,12 @@
 title: İş akışı yürütme özellikleri
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 96f5057986e256f485f60221d1c6ad3d2494be55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566733"
 ---
 # <a name="workflow-execution-properties"></a>İş akışı yürütme özellikleri
 İş parçacığı yerel depolama ile (TLS), her iş parçacığı için bir yürütme bağlamı CLR tutar. Bu yürütme bağlamı iş parçacığı kimliği, ortam işlem gibi bilinen iş parçacığı özellikleri yönetir ve geçerli izin ayrıca gibi kullanıcı tanımlı bir iş parçacığı özellikleri kümesine yuvaları adlı.  
@@ -161,7 +161,7 @@ End default text.
   
  İş akışı yürütme özellikleri özel etkinlik yazarları tarafından kullanılabilir ve ayrıca tanıtıcısı yönetimi etkinlikleri için bir mekanizma gibi sağlarlar <xref:System.ServiceModel.Activities.CorrelationScope> ve <xref:System.Activities.Statements.TransactionScope> etkinlikler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Activities.IExecutionProperty>  
- <xref:System.Activities.IPropertyRegistrationCallback>  
- <xref:System.Activities.RegistrationContext>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Activities.IExecutionProperty>
+- <xref:System.Activities.IPropertyRegistrationCallback>
+- <xref:System.Activities.RegistrationContext>

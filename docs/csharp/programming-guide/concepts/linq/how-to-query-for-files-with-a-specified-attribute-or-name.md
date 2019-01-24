@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: belirli bir öznitelik veya ada (C#) sahip dosyaları sorgulama'
+title: 'Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 2b353ec17284235a97135003bc07f7224082cb4a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564165"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: belirli bir öznitelik veya ada (C#) sahip dosyaları sorgulama
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)
 Bu örnek nasıl (örneğin, ".txt") belirtilen dosya adı uzantısına sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterir. Ayrıca oluşturma saatini temel alan ağacında ya da yeni veya eski dosyayı iade işlemini de gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -66,7 +66,7 @@ class FindFileByExtension
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

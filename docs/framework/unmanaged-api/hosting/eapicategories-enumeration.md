@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597573"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories Numaralandırması
-Ana bilgisayar kısmen güvenilen bir kod çalıştırmasını engelleyebilir yeteneklerini kategorileri açıklanmaktadır.  
+Konak, kısmen güvenilen bir kod çalıştırmasını engelleyebilir özellikleri kategorileri açıklanmaktadır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,32 +48,32 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eAll`|Tüm sınıflar ve üyeleri tarafından kapsanan yönetilen belirtir `EApiCategories` alanları, kısmen güvenilen kodu çalıştırma engellenir.|  
-|`eExternalProcessMgmt`|Yönetilen sınıflar ve oluşturma, düzenleme ve dış işlemlere edilmesine izin üye kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eExternalThreading`|Yönetilen sınıflar ve oluşturma, düzenleme ve dış iş parçacıklarını yok etme izin üye kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eMayLeakOnAbort`|Yönetilen türler ve iptal bellek sızıntısı üye kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eNoCategory`|Yönetilen kod kategori yok kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
+|`eAll`|Tüm yönetilen sınıflar ve diğer tarafından kapsanan üyeleri belirtir `EApiCategories` alanlar, kısmen güvenilen bir kod çalıştırmasını engellenir.|  
+|`eExternalProcessMgmt`|Yönetilen sınıflar ve oluşturma, düzenleme ve yok edilmesini dış işlemlere izin üye kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eExternalThreading`|Yönetilen sınıflar ve oluşturma, düzenleme ve dış iş parçacıklarını yok edilmesini sağlayan üyeleri kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eMayLeakOnAbort`|Yönetilen türler ve potansiyel olarak iptal bellek dışarıya sızmasına neden olabilecek bir üye kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eNoCategory`|Yönetilen kod kategori kısmen güvenilen kod çalıştırılmasının engellenmesi belirtir.|  
 |`eSecurityInfrastructure`|Ortak dil çalışma zamanı (CLR) güvenlik altyapısı kısmen güvenilen kod tarafından kullanılan engelleneceğini belirtir.|  
-|`eSelfAffectingProcessMgmt`|Yönetilen sınıflar ve üyeleri olan özellikleri barındırılan işlem etkileyebilir kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eSelfAffectingThreading`|Yönetilen sınıflar ve üyeleri olan özellikleri barındırılan işlemdeki iş parçacıklarının etkileyebilir kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eSharedState`|Yönetilen sınıflar ve paylaşılan durum kullanıma üye kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eSynchronization`|Ortak dil çalışma zamanı sınıflar ve kilitleri tutmak kullanıcı kodu izin üyeleri kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
-|`eUI`|Yönetilen sınıflar ve izin veren veya insan etkileşimi gerektiren üye kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.|  
+|`eSelfAffectingProcessMgmt`|Yönetilen sınıflar ve üyeleri olan yetenekleri barındırılan işlem etkileyebilir kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eSelfAffectingThreading`|Yönetilen sınıflar ve üyeleri olan yetenekleri barındırılan işlemdeki iş parçacıkları etkileyebilir kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eSharedState`|Yönetilen sınıflar ve paylaşılan durum kullanıma üye kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eSynchronization`|Ortak dil çalışma zamanı sınıflar ve kullanıcı kodu için kilitler barındırmıyorsa izin üyeleri kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
+|`eUI`|Yönetilen sınıflar ve izin veren veya insan etkileşimi gerektiren üye kısmen güvenilen bir kod çalıştırmasını engelleneceğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Iclrhostprotectionmanager::setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) yöntemi türünde bir parametre alan `EApiCategories`.  
+ [Iclrhostprotectionmanager::setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) yöntemi türünde bir parametre alır `EApiCategories`.  
   
- `EApiCategories` Numaralandırma ve `SetProtectedCategories` yöntemi doğrudan ilgili yönetilen için <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> sınıfı. Yönetilen sınıf ile kullanılan <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> numaralandırma, karşılık gelen değerleri doğrudan `EApiCategories` işareti yönetilen türler ve özellikleri tarafından açıklanan kategoriye karşılık gelen açığa üyeleri değerleri, `EApiCategories`.  
+ `EApiCategories` Numaralandırma ve `SetProtectedCategories` yöntemi doğrudan ilgili için yönetilen <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> sınıfı. Yönetilen sınıf ile kullanılan <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> numaralandırma değerleri karşılık doğrudan `EApiCategories` yönetilen türleri ve üyeleri tarafından açıklanan kategoriler karşılık gelen özellikleri kullanıma sunan işaretlemek için değerleri `EApiCategories`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRHostProtectionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRHostProtectionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

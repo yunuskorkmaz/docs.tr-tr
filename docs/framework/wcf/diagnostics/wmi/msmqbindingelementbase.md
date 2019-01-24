@@ -2,12 +2,12 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0e2ac250da3837b41134d3a04a21579a2fe923a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569043"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -93,7 +93,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  Anında teslim edilemeyen bir iletiyi teslim etmeye çalışırken deneme arasındaki gecikmeyi belirten bir değer dolaşır.  
   
-### <a name="timetolive"></a>timeToLive  
+### <a name="timetolive"></a>TimeToLive  
  Veri türü: tarih/saat  
   
  Erişim türü: salt okunur  
@@ -120,6 +120,6 @@ class MsmqBindingElementBase : TransportBindingElement
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.MsmqBindingBase>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.MsmqBindingBase>

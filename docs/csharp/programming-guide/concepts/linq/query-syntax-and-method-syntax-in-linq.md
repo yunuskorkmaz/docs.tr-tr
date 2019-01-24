@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564324"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda tanıtım dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ Sorgu bildirim temelli söz dizimini kullanarak yazılır. Ancak, kod yeniden derlendiğinde sorgu söz dizimi yöntem çağrıları için .NET ortak dil çalışma zamanı (CLR) içine çevrilmelidir. Bu yöntem çağrıları gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu söz dizimi yerine doğrudan yöntem sözdizimini kullanarak bunları çağırabilirsiniz.  
@@ -35,13 +35,13 @@ ms.locfileid: "43748242"
  Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [genişletme yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md). Bazı [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları gibi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kendi standart sorgu işleçleri ve yanı sıra diğer türleri için ek genişletme yöntemleri uygulamak <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="lambda-expressions"></a>Lambda İfadeleri  
- Önceki örnekte, dikkat koşullu ifade (`num % 2 == 0`) satır içi bağımsız değişken olarak geçirilen `Where` yöntemi: `Where(num => num % 2 == 0).` bu satır içi ifade bir lambda ifadesi adı verilir. Aksi takdirde bir anonim yöntem veya temsilci veya ifade ağacı olarak daha kullanışsız biçimde yazılmış olması gereken kod yazmak için kullanışlı bir yoldur. C# `=>` "giden" olarak okunur lambda işleci. `num` İşlecin solda karşılık gelen giriş değişkendir `num` sorgu ifadesinde. Derleyici, tür çıkarımını `num` , bildiğinden `numbers` genel <xref:System.Collections.Generic.IEnumerable%601> türü. Lambda gövdesi tıpkı sorgu söz dizimi veya herhangi bir C# ifadesi veya deyimi deyim olur; Yöntem çağrıları ve diğer karmaşık bir mantık içerebilir. "Dönüş değeri" yalnızca ifade sonucudur.  
+ Önceki örnekte, dikkat koşullu ifade (`num % 2 == 0`) satır içi bağımsız değişken olarak geçirilen `Where` yöntemi: `Where(num => num % 2 == 0).` Bu satır içi ifadesi, bir lambda ifadesi adı verilir. Aksi takdirde bir anonim yöntem veya temsilci veya ifade ağacı olarak daha kullanışsız biçimde yazılmış olması gereken kod yazmak için kullanışlı bir yoldur. C# `=>` "giden" olarak okunur lambda işleci. `num` İşlecin solda karşılık gelen giriş değişkendir `num` sorgu ifadesinde. Derleyici, tür çıkarımını `num` , bildiğinden `numbers` genel <xref:System.Collections.Generic.IEnumerable%601> türü. Lambda gövdesi tıpkı sorgu söz dizimi veya herhangi bir C# ifadesi veya deyimi deyim olur; Yöntem çağrıları ve diğer karmaşık bir mantık içerebilir. "Dönüş değeri" yalnızca ifade sonucudur.  
   
  Kullanmaya başlamak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambdalar kapsamlı bir şekilde kullanmak zorunda değilsiniz. Ancak, bazı sorgular yalnızca yöntemi söz diziminde ifade ve bazıları ise lambda ifadeleri gerektirir. Lambda ifadeleri ile daha tanıdık sonra güçlü ve esnek bir aracı olduğunu göreceksiniz, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] araç kutusu. Daha fazla bilgi için [Lambda ifadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Sorgu Oluşturabilirliği  
  Önceki kod örneğinde unutmayın `OrderBy` yöntemi çağrısında dot işleci kullanılarak çağrıldığında `Where`. `Where` filtrelenmiş bir dizi üretir ve ardından `Orderby` sıralama tarafından o dizi üzerinde çalışır. Sorguları döndürdüğünden bir `IEnumerable`, siz bunları yöntemi sözdiziminde birlikte yöntem çağrıları zinciri tarafından oluşturun. Sorgu söz dizimi kullanılarak sorgular yazdığınızda derleyici arka planda ne yaptığını budur. Ve bir sorgu değişkeni sorgu sonuçlarını depolamaz olduğundan, değiştirin veya hatta yürütüldükten sonra istediğiniz zaman yeni bir sorgu için temel olarak kullanmak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

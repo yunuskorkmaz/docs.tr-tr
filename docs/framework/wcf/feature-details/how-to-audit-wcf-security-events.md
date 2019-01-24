@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme'
+title: 'Nasıl yapılır: Windows Communication Foundation güvenlik olaylarını denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566833"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation güvenlik olaylarını denetleme
 Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Windows Olay Görüntüleyicisi'ni kullanarak görüntüleyebileceğiniz, günlüğüne olanak tanır. Bu konu başlığı altında güvenlik olayları kaydeder, böylece uygulama ayarlama açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Kod içindeki güvenlik olaylarını denetleme  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Win
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Ayarı <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true`, güvenlik denetimleri üretmek için herhangi bir hata bastırır (varsa kümesine `false`, bir özel durum). Ancak, aşağıdaki Windows etkinleştirirseniz **yerel güvenlik ayarları** özelliği, denetim olayları oluşturmak için bir hata neden hemen kapatmak Windows:  
   
- **Güvenlik günlüğü için denetimleri denetim: sistemi hemen kapat**  
+ **Denetleme: Güvenlik günlüğü için denetimleri sistemi hemen kapat**  
   
  Özellik ayarlamak için açık **yerel güvenlik ayarları** iletişim kutusu. Altında **güvenlik ayarları**, tıklayın **yerel ilkeler**. Ardından **güvenlik seçenekleri**.  
   
  Varsa <xref:System.ServiceModel.AuditLogLocation> özelliği <xref:System.ServiceModel.AuditLogLocation.Security> ve **Nesne erişimini denetle** ayarlanmadı **yerel güvenlik ilkesi**, denetim olayları güvenlik günlüğüne değil yazılır. Hiçbir hata döndürdü, ancak denetim girişleri güvenlik günlüğüne yazılmaz unutmayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

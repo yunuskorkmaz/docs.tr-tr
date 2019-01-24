@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 78d332c88b45fa9b1204d9d5352a6027409254e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562433"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>(Visual Basic) printform denetimlerine başvuruda bulunan uygulamaları dağıtma
 Başvuran bir uygulama dağıtmak istiyorsanız <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> bileşen, bileşen, hedef bilgisayarda yüklü olması gerekir.  
@@ -30,6 +30,6 @@ Başvuran bir uygulama dağıtmak istiyorsanız <xref:Microsoft.VisualBasic.Powe
   
  Önyükleme için bir alternatif, önceden dağıtabilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> bir elektronik yazılım dağıtım sistemi gibi Microsoft Systems Management Server'ı kullanarak bileşeni.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- [Nasıl yapılır: ClickOnce Uygulamasıyla Önkoşulları Yükleme](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [PrintForm Bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: ClickOnce Uygulamasıyla Önkoşulları Yükleme](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [PrintForm Bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)
