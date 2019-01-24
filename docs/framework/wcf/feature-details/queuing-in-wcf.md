@@ -2,12 +2,12 @@
 title: WCF'de Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559478"
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
 Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim kullanmayı açıklar.  
@@ -40,7 +40,7 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
  MSMQ hakkında daha fazla bilgi için bkz: [yükleme Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
-### <a name="netmsmqbinding"></a>netMsmqBinding  
+### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF sağlar MSMQ kullanarak iletişim kurmak iki WCF uç noktaları için sıraya alınan bağlamadır. Bağlama, bu nedenle, MSMQ için belirli özellikleri sunar. Ancak, tüm MSMQ özellikleri ve özellikleri sunulan `NetMsmqBinding`. Sıkıştırma `NetMsmqBinding` en uygun müşterilerin çoğu yeterli bulmalısınız özellikler kümesini ile tasarlanmıştır.  
   
  `NetMsmqBinding` Şimdiye kadarki özellikleri biçiminde bağlamalarda ele sıraya alma kavramları bildirimleri. Bu özellikler için MSMQ sırayla aktarmak ve iletileri ulaştırmak nasıl iletişim kurar. Aşağıdaki bölümlerde özellik kategorileri hakkında ayrıntılı bilgi var. Daha fazla bilgi için daha eksiksiz özgü özellikleri açıklayan kavramsal konulara bakın.  
@@ -85,11 +85,11 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
 -   `UseSourceJournal`: Bu kaynak günlük kaydı belirtmek için bir özelliği etkinleştirilir. Kaynak günlük kaydı başarıyla iletim sırasından gönderilen iletileri izlemek bir MSMQ özelliğidir.  
   
--   `UseMsmqTracing`: MSMQ izleme açık olduğunu belirtmek için bir özelliği. MSMQ izleme, bir rapor kuyruğa bir ileti ayrıldığında ya da bir MSMQ Kuyruk Yöneticisi'ni barındıran bir makinenin ulaşan her zaman rapor iletileri gönderir.  
+-   `UseMsmqTracing`: MSMQ izleme açık olduğunu belirtmek için bir özellik. MSMQ izleme, bir rapor kuyruğa bir ileti ayrıldığında ya da bir MSMQ Kuyruk Yöneticisi'ni barındıran bir makinenin ulaşan her zaman rapor iletileri gönderir.  
   
--   `QueueTransferProtocol`: Kuyruk kuyruk iletisi aktarımlar için kullanılacak protokolü bir sabit listesi. MSMQ yerel kuyruk sırası Aktarım Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP) adlı bir SOAP tabanlı Protokolü uygular. Kuyruk sırası aktarımları için HTTP aktarımı kullanarak SRMP kullanılır. Kuyruk sırası aktarımları için HTTPS kullanan güvenli SRMP kullanılır.  
+-   `QueueTransferProtocol`: Kuyruk kuyruk iletisi aktarımlar için kullanılacak protokolü numaralandırması. MSMQ yerel kuyruk sırası Aktarım Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP) adlı bir SOAP tabanlı Protokolü uygular. Kuyruk sırası aktarımları için HTTP aktarımı kullanarak SRMP kullanılır. Kuyruk sırası aktarımları için HTTPS kullanan güvenli SRMP kullanılır.  
   
--   `UseActiveDirectory`: Active Directory kuyruk adres çözümlemesi için kullanılıp kullanılmayacağını belirtmek için bir Boole değeri. Varsayılan olarak, bu kapalıdır. Daha fazla bilgi için [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: Active Directory kuyruk adres çözümlemesi için kullanılıp kullanılmayacağını belirten bir Boole değeri. Varsayılan olarak, bu kapalıdır. Daha fazla bilgi için [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding` C, C++, COM veya System.Messaging API'leri ile yazılmış mevcut bir MSMQ uygulamasıyla iletişim kurmak için WCF uç noktasını istediğinizde kullanılır.  
@@ -102,12 +102,12 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
 -   Serileştirme ve seri durumundan çıkarma ileti gövdesi ile yardımcı olmak için seri hale getiricileri genişletme XML ve ActiveX gibi sağlanır.  
   
-### <a name="sample-code"></a>Örnek kod  
+### <a name="sample-code"></a>Örnek Kod  
  WCF yazmaya yönelik adım adım yönergeler için MSMQ kullanan hizmetler aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Wcf'de MSMQ kullanımını gösteren tamamlanmış kod örneği için aşağıdaki konulara bakın:  
   
@@ -125,6 +125,6 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
 -   [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

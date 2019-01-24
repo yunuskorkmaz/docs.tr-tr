@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60a9ba78211cd02300cccc7d150bb08fa68b0604
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556187"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Metodu
-Alır `FunctionID` sınıfı içeren belirtilen meta veri simgesi kullanarak bir işlevin ve `ClassID` değerleri herhangi tür bağımsız değişkenleri.  
+Alır `FunctionID` sınıf içeren belirtilen meta veri belirteci kullanarak bir işlevin ve `ClassID` herhangi bir değer türü bağımsız değişkenler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,36 +44,36 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  [in] İşlev bulunduğu modül kimliği.  
   
  `funcDef`  
- [in] Bir `mdMethodDef` işlevi başvuran meta veri simgesi.  
+ [in] Bir `mdMethodDef` işlevi başvuran meta veri belirteci.  
   
  `classId`  
- [in] İşlevin içeren sınıf kimliği.  
+ [in] Kapsayan işlevin sınıfı kimliği.  
   
  `cTypeArgs`  
  [in] Belirtilen işlev için tür parametreleri sayısı. Bu değer, genel olmayan işlevler için sıfır olmalıdır.  
   
  `typeArgs`  
- [in] Bir dizi `ClassID` her biri olduğunda işlevi bağımsız değişkeninin değerleri. Değeri `typeArgs` NULL olabilir `cTypeArgs` sıfır olarak ayarlanır.  
+ [in] Bir dizi `ClassID` işlevi bağımsız değişkeninin her biri olan değerleri. Değerini `typeArgs` NULL olabilir `cTypeArgs` sıfır olarak ayarlanır.  
   
  `pFunctionID`  
- [out] Bir işaretçi `FunctionID` belirtilen işlev.  
+ [out] Bir işaretçi `FunctionID` belirtilen işlevin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağırma `GetFunctionFromTokenAndTypeArgs` yöntemi ile bir `mdMethodRef` meta verileri yerine bir `mdMethodDef` meta veri simgesi öngörülemeyen sonuçlara sahip olabilir. Arayanlar çözümlemelidir `mdMethodRef` için bir `mdMethodDef` onu geçirilirken.  
+ Çağırma `GetFunctionFromTokenAndTypeArgs` yöntemi ile bir `mdMethodRef` meta verileri yerine bir `mdMethodDef` meta veri belirteci öngörülemeyen sonuçlara sahip olabilir. Çağıranlar çözümlemelidir `mdMethodRef` için bir `mdMethodDef` iletmeden olduğunda.  
   
- İşlevi zaten yüklü değilse, çağırma `GetFunctionFromTokenAndTypeArgs` birçok bağlamlarında tehlikeli olabilecek bir işlemi gerçekleşmesi, yükleme neden olur. Örneğin, çalışma zamanı döngüsel şeyler yükleme girişiminde modülleri veya türlerini yüklemesi sırasında bu yöntemi çağırmadan sonsuz bir döngüye neden olabilir.  
+ İşlev zaten yüklü değilse, çağırma `GetFunctionFromTokenAndTypeArgs` birçok bağlamlarda tehlikeli bir işlemi gerçekleşmesi, yükleme neden olur. Örneğin, çalışma zamanı, döngüsel olarak şeyler yükleme girişiminde türleri veya modüller yükleme sırasında bu yöntemin çağrılması sonsuz bir döngüye neden olabilir.  
   
- Genel olarak, kullanımı `GetFunctionFromTokenAndTypeArgs` önerilmez. Profil oluşturucular belirli bir işlev için olaylarda ilgileniyorsanız depolamanız gerekir `ModuleID` ve `mdMethodDef` ve bu işlevi kullanın [Icorprofilerınfo2::getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) denetlemek için olup olmadığını bir verilen `FunctionID` değil İstenen işlevi.  
+ Genel olarak, kullanım `GetFunctionFromTokenAndTypeArgs` önerilmez. Profil oluşturucular için belirli bir işleve olaylarda ilgileniyorsanız depolamanız gerekir `ModuleID` ve `mdMethodDef` bu işlevi ve kullanım [Icorprofilerınfo2::getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) denetlemek için olup olmadığını bir verilen `FunctionID` olduğu İstenen işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

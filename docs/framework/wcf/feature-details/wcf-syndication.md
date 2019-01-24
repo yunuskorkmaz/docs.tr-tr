@@ -4,42 +4,42 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7fefb49cf70b9f3c55937e7be06eca212af364d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530911"
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
-Windows Communication Foundation (WCF) okuma ve bunları oluşturmak yanı sıra bir hizmet uç noktasında kullanıma olanak tanıyan Atom, RSS veya diğer özel biçimler dağıtım akışlarını kolayca çalışmak için destek sağlar. Bu bölümdeki konularda ayrıntılı dağıtım için bu programlama modeli açıklanmaktadır.  
+Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı sıra bunları bir hizmet uç noktasında kullanıma olanak tanıyan dağıtım akışlarını Atom, RSS veya diğer özel biçimler kolayca çalışmak için destek sağlar. Bu bölümdeki konular bu programlama modeli için dağıtım ayrıntılı açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  WCF tarafından sağlanan dağıtım desteği'ne genel bakış sağlar.  
   
  [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- Nesne modeli ve dağıtım genişletilebilirliği sınıflarda açıklar.  
+ Nesne modeli ve genişletilebilirlik dağıtım sınıfları açıklar.  
   
  [WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- Akışları WCF dağıtım nesnesi modeli içinde nasıl temsil edildiğini ve nasıl RSS'ye dönüştürülür ve Atom akışları açıklar.  
+ WCF dağıtım nesnesi modeli içinde akışları nasıl temsil edildiğini ve bunların RSS akışına dönüştürülür ve Atom akışları açıklanır.  
   
- [Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- Temel bir RSS akışı kullanılabilmesini bir hizmetin nasıl oluşturulacağını gösterir.  
+ [Nasıl yapılır: Temel bir RSS akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ Temel bir RSS akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- Akış temel bir ATOM kullanılabilmesini bir hizmetin nasıl oluşturulacağını gösterir.  
+ [Nasıl yapılır: Temel bir Atom akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ Temel bir ATOM akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
- ATOM ve RSS ile aynı akışın kullanılabilmesini bir hizmetin nasıl oluşturulacağını gösterir.  
+ [Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ Akışın ATOM ve RSS kullanılabilir bir hizmet oluşturma işlemi gösterilmektedir.  
   
  [Dağıtım Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
- Akış bir dağıtım için öznitelikler ve özel öğeleri ekleme yöntemleri açıklanmaktadır.  
+ Özel öğeleri ekleme yöntemleri açıklar ve akış, bir dağıtım için öznitelikler.  
   
 ## <a name="reference"></a>Başvuru  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)

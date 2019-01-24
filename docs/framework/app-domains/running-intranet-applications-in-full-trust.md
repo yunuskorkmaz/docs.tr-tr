@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554536"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>İntranet Uygulamalarını Tam Güvende Çalıştırma
 .NET Framework sürüm 3.5 ile başlayarak Service Pack 1 (SP1), uygulamaları ve bunların kitaplık derlemeleri tam güven derlemeleri bir ağ paylaşımından çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer> Bölge kanıt, intranet üzerindeki paylaşımdan yüklenen derlemeler için otomatik olarak eklenir. Bu bulgu aynı bilgisayarda bulunabilir bütünleştirilmiş (genellikle tam güven olduğu) kümesini vermek bu derlemeler sağlar. Bu işlev, ClickOnce uygulamaları veya bir konak üzerinde çalışmak üzere tasarlanmış uygulamalar için geçerli değildir.  
@@ -34,5 +34,5 @@ ms.locfileid: "50180656"
   
 -   64-bit bilgisayarlarda HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında bir alt anahtar oluşturma\\. Sistem kayıt defteri anahtarında NETFramework. Anahtar adı LegacyMyComputerZone DWORD değerini 1 ile kullanın. Aynı alt anahtarı altında HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft oluşturun\\. NETFramework anahtarı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

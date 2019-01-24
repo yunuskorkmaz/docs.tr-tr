@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9d775d5c386abeb100604250008ebf1bf377e8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550818"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout Metodu
-Bu kutu içinde belirtilen değer türü bulunduğu hakkında bilgi alır.  
+Bunu kutulandığında, belirtilen değer türü bulunduğu hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,23 +37,23 @@ HRESULT GetBoxClassLayout(
   
 #### <a name="parameters"></a>Parametreler  
  `classId`  
- [in] Kutulu değer türü açıklanır sınıfı kimliği.  
+ [in] Kutulanmaz değer türü tanımlayan sınıfı kimliği.  
   
  `pBufferOffset`  
- [out] Değer türü sarmalanmış nesne kimliği işaretçisi göre uzaklığı bir tamsayı.  
+ [out] Değer türünün kutulanmış nesnenin kimliği işaretçi göre uzaklığı bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pBufferOffset` Değer, değer türü kutusu içinde konumdur. Sonra `pBufferOffset` uygulanan bir Kutulu nesnesine değer türünün sınıf düzeni nesnenin değeri yorumlamak için kullanılabilir.  
+ `pBufferOffset` Değer kutusu içinde değer türüne konumudur. Sonra `pBufferOffset` uygulanan paketlenmiş bir nesnesine değer türünün sınıf düzeni nesnenin değeri yorumlamak için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

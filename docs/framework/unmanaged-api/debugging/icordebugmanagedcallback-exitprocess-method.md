@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540552"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess Yöntemi
-Hata ayıklayıcı işlem yaptı bildirir.  
+Hata ayıklayıcı bir işlemden çıkıldı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,23 +37,23 @@ HRESULT ExitProcess (
   
 #### <a name="parameters"></a>Parametreler  
  `pProcess`  
- [in] Bir işaretçi Icordebugprocess nesneye işlemi temsil eder.  
+ [in] Bir işlemi temsil eden bir Icordebugprocess nesne işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Devam edilemiyor bir `ExitProcess` olay. İşlemi durdurulacak görüntülenirken bu olay için diğer olaylar zaman uyumsuz olarak tetikleyin. Bu durum genellikle bazı dış zorla nedeniyle durduruldu sırada işlemi sonlandırır ortaya çıkabilir.  
+ Devam edemiyor bir `ExitProcess` olay. İşlem durdurulacak görüntülenirken bu olay için diğer olayları zaman uyumsuz olarak harekete. Bu işlem genellikle nedeniyle bazı dış zorla durdurulduğu sırada sona ererse ortaya çıkabilir.  
   
- Ortak dil çalışma zamanı (CLR) zaten yönetilen bir geri çağırma gönderiyor, bu geri döndü sonra bu olay kadar geciktirilir.  
+ Ortak dil çalışma zamanı (CLR) zaten yönetilen bir geri gönderme, geri arama tarafından döndürülen sonra bu olay kadar geciktirilecek.  
   
- `ExitProcess` Kapanışında çağrılmadığı garanti yalnızca çıkış/unload olayı bir olaydır.  
+ `ExitProcess` Kapanışında çağrılmadığı kesin yalnızca çıkış/yüklemeyi kaldırma olay etkinliğidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

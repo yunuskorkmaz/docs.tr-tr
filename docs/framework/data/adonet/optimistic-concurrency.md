@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 132a4c72f6abc4b1510c4d28b4ec0de6f80c1261
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539664"
 ---
 # <a name="optimistic-concurrency"></a>İyimser eşzamanlılık
 Çok kullanıcılı bir ortamda, bir veritabanındaki verileri güncelleştirmek için iki modeli vardır: iyimser eşzamanlılık ve kötümser eşzamanlılık. <xref:System.Data.DataSet> Nesne iyimser eşzamanlılık uzak veri ve veriler ile etkileşim kurmanın gibi uzun süre çalışan etkinlikler için kullanılmasını teşvik için tasarlanmıştır.  
@@ -37,7 +37,7 @@ ms.locfileid: "43507611"
 |Sütun adı|Özgün değeri|Geçerli değer|Veritabanında değeri|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|Soyadı|Smith|Smith|Smith|  
+|LastName|Smith|Smith|Smith|  
 |FirstName|Bob|Bob|Bob|  
   
  1: 01'de, aynı satırdaki kullanıcı2 okur.  
@@ -47,7 +47,7 @@ ms.locfileid: "43507611"
 |Sütun adı|Özgün değeri|Geçerli değer|Veritabanında değeri|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|Soyadı|Smith|Smith|Smith|  
+|LastName|Smith|Smith|Smith|  
 |FirstName|Bob|Robert|Bob|  
   
  Veritabanı güncelleştirmesi sırasındaki değerler kullanıcı2 olan orijinal değerleri eşleştiğinden Güncelleştirme başarılı olur.  
@@ -57,7 +57,7 @@ ms.locfileid: "43507611"
 |Sütun adı|Özgün değeri|Geçerli değer|Veritabanında değeri|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|Soyadı|Smith|Smith|Smith|  
+|LastName|Smith|Smith|Smith|  
 |FirstName|Bob|James|Robert|  
   
  Bu noktada, artık User1 ("Kemal") bekliyor özgün değer ("Robert") veritabanındaki değerle eşleştiğinden User1 iyimser eşzamanlılık ihlali karşılaşır. Eşzamanlılık ihlali, yalnızca, güncelleştirmenin başarısız olduğunu bilmenizi sağlar. Kararı artık User1 tarafından sağlanan değişikliklerle kullanıcı2 tarafından sağlanan değişikliklerin üzerine ya da değişiklikleri iptal etmek için User1 tarafından yapılması gerekir.  
@@ -206,9 +206,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Satır Hatası Bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Satır Hatası Bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
+- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

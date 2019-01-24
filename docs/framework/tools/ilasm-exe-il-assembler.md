@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549216"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -54,7 +54,7 @@ ilasm [options] filename [[options]filename...]
 |**/ exe**|Çıktı olarak bir yürütülebilir dosya oluşturur. Bu varsayılandır.|
 |**/ Flags:** `integer`|Bilgisindeki ımageflags değerini tarafından belirtilen değere ayarlar `integer` ortak dil çalışma zamanı üst bilgisindeki. Eğer .corflags IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar. CorHdr.h, comımage_flags bölümüne için geçerli değerlerin bir listesi için bkz. *tamsayı*.|
 |**/fold**|Eşdeğer metot gövdelerini tek bir gövde olarak katlar.|
-|/**hıghentropyva**|Yüksek entropili adres alanı düzenini (ASLR) destekleyen bir çıktı çalıştırılabilir dosyası oluşturur. (İçin varsayılan **/appcontaıner**.)|
+|/**highentropyva**|Yüksek entropili adres alanı düzenini (ASLR) destekleyen bir çıktı çalıştırılabilir dosyası oluşturur. (İçin varsayılan **/appcontaıner**.)|
 |**/ include:** `includePath`|İle eklenen dosyaların aranacağı bir yol ayarlar `#include`.|
 |**/itanium**|Hedef işlemci olarak Intel Itanium belirtir.<br /><br /> Eğer görüntü bit genişliği belirtilmezse, varsayılan değer **/pe64**.|
 |**/Key:** `keyFile`|Derleme `filename` bulunan özel anahtarı kullanarak güçlü bir imzayla `keyFile`.|
@@ -229,7 +229,7 @@ Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Araçlar](../../../docs/framework/tools/index.md)  
-[*Ildasm.exe* (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
-[Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [*Ildasm.exe* (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

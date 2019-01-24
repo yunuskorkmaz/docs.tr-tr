@@ -1,26 +1,26 @@
 ---
-title: 'Azaltma: X509CertificateClaimSet.FindClaims yöntemi'
+title: 'Azaltma: X509CertificateClaimSet.FindClaims Method'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b927ed2e68ddea537f87b692d5c3a949234f81f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccc24cd494866c087860144f1720988ccfc2dfa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536444"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Azaltma: X509CertificateClaimSet.FindClaims yöntemi
-Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi eşleşen deneyecek `claimType` bağımsız değişkeni, SAN alanındaki tüm DNS girişlerini ile.  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Azaltma: X509CertificateClaimSet.FindClaims Method
+Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi eşleştirilecek deneyecek `claimType` bağımsız değişkeni, SAN alanındaki tüm DNS girişi.  
   
 ## <a name="impact"></a>Etki  
  Bu değişiklik, yalnızca .NET Framework başlayarak sürümlerini hedefleyen uygulamaları etkiler [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].  
   
- .NET Framework'ün önceki sürümlerini hedefleyen uygulamalar için <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi çalışır eşleşecek şekilde `claimType` bağımsız değişkeni yalnızca son DNS girişi ile.  
+ .NET Framework'ün önceki sürümlerini hedefleyen uygulamalar için <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi çalışır eşleştirilecek `claimType` son DNS girişi ile yalnızca bağımsız değişken.  
   
 ## <a name="mitigation"></a>Azaltma  
- Bu değişiklik istenmeyen ise, uygulamalar, hedef başlayarak .NET Framework sürümleri [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] onu dışında şu yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın bölümü yapılandırma dosyası:  
+ Bu değişiklik, istenmeyen ise, uygulamalar hedef başlayarak .NET Framework sürümleri [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] dışında aşağıdaki yapılandırma ayarı ekleyerek iyileştirilmiş [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın bir bölümünü yapılandırma dosyası:  
   
 ```xml  
 <runtime>  
@@ -28,7 +28,7 @@ Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v461](../../../includes/net-v
 </runtime>  
 ```  
   
- Buna ek olarak, .NET Framework'ün önceki sürümlerini hedefleyen ancak altında çalışan uygulamalar [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ve sonraki sürümler kabul etme Bu davranışı şu yapılandırma ayarı ekleyerek [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)uygulamanın yapılandırma dosyasının:  
+ Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak altında çalışan uygulamalar [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ve sonraki sürümler kabul etme için bu davranış için şu yapılandırma ayarı ekleyerek [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)uygulamanın yapılandırma dosyası bölümünü:  
   
 ```xml  
 <runtime>  
@@ -36,5 +36,5 @@ Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v461](../../../includes/net-v
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554692"
 ---
 # <a name="handling-null-values"></a>Null değerleri işleme
 Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri için) ya da sıfır değeri (sayısal veri türleri için) olur. Tüm null değerlere tutarlı bir şekilde işlenir böylece ANSI SQL 92 belirtimi boş tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Uygulayarak ad alanı null bir semantik sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` veri türü örneğine atanabilir değer.  
@@ -32,7 +32,7 @@ Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritaban
 ## <a name="nulls-and-sqlboolean"></a>Null değerler ve SqlBoolean  
  Herhangi bir karşılaştırmasını <xref:System.Data.SqlTypes> döndüreceği bir <xref:System.Data.SqlTypes.SqlBoolean>. `IsNull` İşlevi her `SqlType` döndürür bir <xref:System.Data.SqlTypes.SqlBoolean> ve denetlemek için null değerler için kullanılabilir. Aşağıdaki basit programı nasıl tabloları ve, veya ve değil işleçleri işlevi bir null değer saklanacaktır. (T = true, F = false ve U = bilinmeyen ya da null.)  
   
- ![Doğru tablosu](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS seçeneği anlama  
  <xref:System.Data.SqlTypes> ANSI_NULLS seçeneği SQL Server üzerinde ayarlandığında, aynı semantiklere sağlar. Tüm aritmetik işleçler (+, -, *, /, %), bit düzeyinde işleçler (~ &, &#124;), ve çoğu işlev işlenen ya da bağımsız değişkenler hariç özelliği null ise null dönüş `IsNull`.  
@@ -141,6 +141,6 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

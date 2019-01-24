@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556174"
 ---
 # <a name="embedresource-method"></a>EmbedResource Yöntemi
-Katıştırılmış bir kaynağı bildirir. Bu yöntem kaynağın gerçekte katıştırmak değil.  
+Katıştırılmış bir kaynağı bildirir. Bu yöntem kaynağın gerçekten ekleme değil.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,7 +44,7 @@ HRESULT EmbedResource(
  Derleme kimliği.  
   
  `FileToken`  
- Dosya belirteci ya da derleme kaynağı içeren dosyanın kimliği.  
+ Belirteç veya derleme Kimliğini içeren kaynak dosyasının dosya.  
   
  `pszResourceName`  
  Kaynağın adı.  
@@ -53,7 +53,7 @@ HRESULT EmbedResource(
  RVA kaynaktan uzaklığı.  
   
  `dwFlags`  
- Erişilebilirlik bayrakları gibi `mrPublic` ve `mrPrivate`. Bu bayrakların geçirilen [DefineExportedType yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Erişilebilirlik bayrakları gibi `mrPublic` ve `mrPrivate`. Bu bayrak için geçirilebilir [DefineExportedType yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -61,7 +61,7 @@ HRESULT EmbedResource(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma"
+title: 'Nasıl yapılır: Visual Basic başvurusu COM nesneleri'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 293bf76b1520f50e67837942eab2f27a49e330e3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c9d6a2ad6146ebd90be330813a44d092c044348b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534936"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic başvurusu COM nesneleri
 Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve iletilmesi, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama.  
   
  Tür bilgilerini COM nesnesi için bir .NET derlemesine gömerek birlikte çalışma derlemesi kullanmadan bir COM nesnesi başvuruda bulunabilir. Tür bilgilerini katıştırma için ayarlanmış `Embed Interop Types` özelliğini `True` için COM nesnesine başvuru. Komut satırı derleyicisini kullanarak derlemek kullanırsanız `/link` COM kitaplığı başvurmak için seçeneği. Daha fazla bilgi için [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
@@ -54,9 +54,9 @@ Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
-- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
-- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
-- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

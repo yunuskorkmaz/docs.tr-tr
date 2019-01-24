@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: XML Değişmez Değerleri Oluşturma (Visual Basic)'
+title: 'Nasıl yapılır: XML değişmez değerleri (Visual Basic) oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560600"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Nasıl yapılır: XML Değişmez Değerleri Oluşturma (Visual Basic)
+# <a name="how-to-create-xml-literals-visual-basic"></a>Nasıl yapılır: XML değişmez değerleri (Visual Basic) oluşturma
 XML değişmez değeri kullanarak doğrudan kod içinde bir XML belgesi, parça veya öğesi oluşturabilirsiniz. Bu konudaki örnekler, üç alt öğeleri olan bir XML öğesi oluşturma ve bir XML belgesi oluşturma işlemini gösterir.  
   
  Ayrıca [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oluşturmak için API'ler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
@@ -52,8 +52,8 @@ XML değişmez değeri kullanarak doğrudan kod içinde bir XML belgesi, parça 
   
      `</books>`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

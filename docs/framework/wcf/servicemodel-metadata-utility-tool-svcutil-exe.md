@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533214"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -29,10 +29,10 @@ Aşağıdaki tabloda, bu araç ve nasıl kullanıldığı açıklanır ilgili ko
 |Görev|Konu|
 |----------|-----------|
 |Hizmetleri veya statik meta veri belgelerinden çalışmasını kod oluşturur.|[Hizmet Meta Verilerinden WCF İstemcisi Oluşturma](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|
-|Meta veri belgelerini derlenmiş koddan dışa aktarır.|[Nasıl Yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
-|Derlenmiş hizmet kodunu doğrular.|[Nasıl Yapılır: Derlenmiş hizmet kodunu doğrulamak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
-|Meta veri belgelerini Hizmetleri çalışmasını indirir.|[Nasıl Yapılır: Meta veri belgelerini indirmek için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|Serileştirme kod oluşturur.|[Nasıl Yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|Meta veri belgelerini derlenmiş koddan dışa aktarır.|[Nasıl yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
+|Derlenmiş hizmet kodunu doğrular.|[Nasıl yapılır: Derlenmiş hizmet kodunu doğrulamak için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
+|Meta veri belgelerini Hizmetleri çalışmasını indirir.|[Nasıl yapılır: Meta veri belgelerini indirmek için svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
+|Serileştirme kod oluşturur.|[Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
 > Parametre olarak sağlanan adları aynıysa Svcutil bir diskte mevcut dosyaların üzerine yazar. Bu, kod dosyaları, yapılandırma ve meta veri dosyaları içerebilir. Bu kod ve yapılandırma dosyalarını oluştururken önlemek için `/mergeConfig` geçin.
@@ -62,7 +62,7 @@ Aşağıdaki tabloda, bazı yaygın olarak bu araç için kullanılan seçenekle
 |/ directory:\<dizin >|Dosyaların oluşturulacağı dizin.<br /><br /> Varsayılan: Geçerli dizin.<br /><br /> Kısa biçim: `/d`|
 |/help|Araç için komut sözdizimini ve seçenekleri görüntüler.<br /><br /> Kısa biçim: `/?`|
 |/ nologo|Telif hakkı ve başlık iletisini gösterme.|
-|/svcutilConfig:\<configFile >|App.config dosyasında yerine kullanılacak özel yapılandırma dosyasını belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|
+|/svcutilConfig:\<configFile>|App.config dosyasında yerine kullanılacak özel yapılandırma dosyasını belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|
 |/ target:\<çıkış türü >|Araç tarafından oluşturulacak çıkış belirtir.<br /><br /> Kod, meta verileri veya xmlSerializer değerler geçerlidir.<br /><br /> Kısa biçim: `/t`|
 
 ### <a name="code-generation"></a>Kod Üretimi
@@ -276,8 +276,8 @@ Ayrıca, güvenliği tehlikeye olasılığını en aza indirmek için sistemin b
 
 Son olarak, engelleme hizmet geçerli işlem için neden olabileceğinden aracı orta katman içinde uygulamanızın kullanmamalısınız.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Nasıl Yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme'
+title: 'Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9aa8378fb6b4bbfbfca280e1a9fc73adc108d81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558767"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Text.RegularExpressions.Regex> daha karmaşık metin dizelerini eşleştirme için normal bir ifade oluşturmak için sınıf. LINQ Sorgu tam olarak normal ifade ile arama ve sonuçlar şekil için istediğiniz dosyaları filtre kolaylaştırır.  
   
 ## <a name="example"></a>Örnek  
@@ -98,7 +98,7 @@ class QueryWithRegEx
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: iki koleksiyonu (LINQ to XML) birleştirme (C#)'
+title: 'Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: 00db2decfb8595c32e86f76c8aa139d91e75d112
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543662"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Nasıl yapılır: iki koleksiyonu (LINQ to XML) birleştirme (C#)
-Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya öznitelik başvurabilir. Örneğin, [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, müşterilerin listesini ve siparişlerinin listesi içerir. Her `Customer` öğesi içeren bir `CustomerID` özniteliği. Her `Order` öğesi içeren bir `CustomerID` öğesi. `CustomerID` Öğesi her sırada başvurduğu `CustomerID` öznitelik bir müşteri.  
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (C#)
+Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya öznitelik başvurabilir. Örneğin, [örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, müşterilerin listesini ve siparişlerinin listesi içerir. Her `Customer` öğesi içeren bir `CustomerID` özniteliği. Her `Order` öğesi içeren bir `CustomerID` öğesi. `CustomerID` Öğesi her sırada başvurduğu `CustomerID` öznitelik bir müşteri.  
   
- Konu [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  
+ Konu [örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  
   
  İle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bu ilişkinin kullanarak yararlanabilirsiniz `join` yan tümcesi.  
   
@@ -23,13 +23,13 @@ Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya özniteli
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek birleştirmeleri `Customer` öğelerine `Order` öğeleri içeren yeni bir XML belgesi oluşturur `CompanyName` siparişlerin öğesi.  
   
- Örnek Belge şemada uygun doğrular sorguyu çalıştırmadan önce [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md). Bu, JOIN yan tümcesi her zaman çalışmasını sağlar.  
+ Örnek Belge şemada uygun doğrular sorguyu çalıştırmadan önce [örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md). Bu, JOIN yan tümcesi her zaman çalışmasını sağlar.  
   
  Bu sorgu tüm ilk alır `Customer` öğeleri ve bunları birleştirir `Order` öğeleri. Yalnızca müşterilerle siparişler seçen bir `CustomerID` "K" büyüktür. Ardından yeni bir proje `Order` her sipariş içindeki müşteri bilgileri içeren öğe.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Bu örnekte aşağıdaki XSD şeması: [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
+ Bu örnek aşağıdaki XSD şeması kullanır: [Örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
   
  Bu şekilde katılma çok iyi gerçekleştirmez olduğunu unutmayın. Birleşimler, doğrusal bir arama yoluyla gerçekleştirilir. Karma tabloları veya performansa yardımcı olmak için dizinleri yoktur.  
   
@@ -124,6 +124,6 @@ Attempting to validate, custOrdDoc validated
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: ab7e2546ce7267e77e5ea7000e94059e8c162b5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6c4fd2e3d89645a7fff8c70f373e7ad7d70ad39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543740"
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
@@ -83,7 +83,7 @@ ms.locfileid: "48840293"
   
  Olay tanımlayıcıların bir listesi için bkz. [istemciler için UI Otomasyonu olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

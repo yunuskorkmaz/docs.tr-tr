@@ -6,15 +6,15 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540926"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama
-Erişilebilirlik yardımları özelleştirilmiş programlardır ve engelli kişilere yardımcı aygıtları bilgisayarlar daha etkili bir şekilde kullanın. Örnek ekran okuyucular blind ve ses giriş yardımcı programları klavye ve fare kullanmak yerine sözlü komutları sağlayan kişiler için birden çok kişi için verilebilir. Windows Forms denetimleri tarafından kullanıma sunulan erişilebilirlik özelliklerini bu erişilebilirlik yardımları etkileşim. Bu özellikleri şunlardır:  
+Erişilebilirlik yardımları özel programları ve engelli kişilerin yardımcı aygıtları bilgisayarlar daha etkili bir şekilde kullanır. Ekran okuyucuları, klavye ve fare kullanmak yerine sözlü komutları sağlayan kişiler için gizli ve ses giriş yardımcı olan kişilere yönelik olarak verilebilir. Bu erişilebilirlik yardımları Windows Forms denetimleri tarafından kullanıma sunulan erişilebilirlik özellikleri ile etkileşim kurun. Bu özellikler şunlardır:  
   
 -   **AccessibilityObject**  
   
@@ -27,10 +27,10 @@ Erişilebilirlik yardımları özelleştirilmiş programlardır ve engelli kişi
 -   **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>AccessibilityObject özelliği  
- Bu salt okunur özelliği içeren bir <xref:System.Windows.Forms.AccessibleObject> örneği. **AccessibleObject** uygulayan <xref:Accessibility.IAccessible> denetimin açıklaması, ekran konumu, gezinme yeteneklerini ve değer hakkında bilgi sağlayan arabirim. Forma denetim eklendiğinde Tasarımcı bu değeri ayarlar.  
+ Bu salt okunur özelliği içeren bir <xref:System.Windows.Forms.AccessibleObject> örneği. **AccessibleObject** uygulayan <xref:Accessibility.IAccessible> denetimin açıklaması, ekran konumunu, gezinme yeteneklerini ve değeri hakkında bilgi sağlayan bir arabirimi. Tasarımcı, denetimi forma eklendiğinde bu değeri ayarlar.  
   
 ## <a name="accessibledefaultactiondescription-property"></a>AccessibleDefaultActionDescription özelliği  
- Bu dize denetiminin eylemi açıklar. Özellikler penceresinde görüntülenmez ve kodda yalnızca ayarlanabilir. Aşağıdaki örnek, bu özellik bir düğme denetimi için ayarlar:  
+ Bu dize, denetimin eylemi açıklar. Özellikler penceresinde görünmez ve yalnızca kodda ayarlanabilir. Aşağıdaki örnekte, bu özellik bir düğme denetimi için ayarlar:  
   
 ```  
 ' Visual Basic  
@@ -47,7 +47,7 @@ button1->AccessibleDefaultActionDescription =
 ```  
   
 ## <a name="accessibledescription-property"></a>AccessibleDescription özelliği  
- Bu dize denetimi açıklar. Bu özellikler penceresini veya kod aşağıdaki gibi ayarlanabilir:  
+ Bu dize bir denetimi açıklamaktadır. Bu Özellikler penceresinde veya kod aşağıdaki gibi ayarlanabilir:  
   
 ```  
 ' Visual Basic  
@@ -61,7 +61,7 @@ button1->AccessibleDescription = "A button with text 'Exit'";
 ```  
   
 ## <a name="accessiblename-property"></a>AccessibleName özelliği  
- Erişilebilirlik yardımları bildirilen bir denetimin adıdır. Bu özellikler penceresini veya kod aşağıdaki gibi ayarlanabilir:  
+ Erişilebilirlik yardımları bildirilen bir denetimin adıdır. Bu Özellikler penceresinde veya kod aşağıdaki gibi ayarlanabilir:  
   
 ```  
 ' Visual Basic  
@@ -75,7 +75,7 @@ button1->AccessibleName = "Order";
 ```  
   
 ## <a name="accessiblerole-property"></a>AccessibleRole özelliği  
- Bu özellik içeren bir <xref:System.Windows.Forms.AccessibleRole> numaralandırma, denetimi kullanıcı arabirimi rolünü açıklar. Yeni bir denetim ayarlamak değere sahip `Default`. Bu, varsayılan olarak, anlamına gelir bir **düğmesini** denetimi olarak görev yapan bir **düğmesini**. Başka bir rol bir denetim varsa, bu özellik sıfırlamak isteyebilirsiniz. Örneğin, kullanıyor olabileceğiniz bir **PictureBox** olarak kontrol bir **grafik**, ve rol olarak bildirmek için erişilebilirlik yardımları isteyebilirsiniz bir **grafik**, olarak değil bir **PictureBox** . Bu özellik, geliştirdiğiniz özel denetimler için belirtmek isteyebilirsiniz. Bu özelliği Özellikler penceresini veya kod aşağıdaki gibi ayarlanabilir:  
+ Bu özellik içeren bir <xref:System.Windows.Forms.AccessibleRole> numaralandırma denetim kullanıcı arabirimi rolünü açıklar. Yeni bir denetim ayarlanmış değere sahip `Default`. Bu, varsayılan olarak, açardı bir **düğmesi** denetim görür bir **düğmesi**. Bir denetimi başka bir rol varsa bu özelliği sıfırlamak isteyebilirsiniz. Örneğin, kullanmakta olduğunuz bir **PictureBox** olarak denetim bir **grafik**, ve rol olarak bildirmek için erişilebilirlik yardımları isteyebileceğiniz bir **grafik**, olarak değil bir **PictureBox** . Bu özellik, geliştirdiğiniz özel denetimler için belirtmek isteyebilirsiniz. Bu özellik Özellikler penceresinde veya kod aşağıdaki gibi ayarlanabilir:  
   
 ```  
 ' Visual Basic  
@@ -88,11 +88,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.AccessibleObject>  
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.AccessibleRole>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.AccessibleObject>
+- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.AccessibleRole>

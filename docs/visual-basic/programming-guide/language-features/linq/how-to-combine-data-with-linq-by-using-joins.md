@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553704"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme
 Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak koleksiyonları arasında ortak değerlere göre birden fazla koleksiyonun içeriğini birleştirmek. Bu değerler olarak bilinen *anahtar* değerleri. Geliştiricileri ilişkisel veritabanı kavramlarını tanıdık algılayacağı `Join` INNER JOIN as yan tümcesi ve `Group Join` olarak etkili bir şekilde, LEFT OUTER JOIN yan tümcesi.  
   
  Bu konudaki örnekler birkaç yolu kullanarak verileri birleştirme gösterir `Join` ve `Group Join` sorgu yan tümceleri.  
@@ -79,12 +79,12 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 2.  Örnekleri çalıştırmak için F5 tuşuna basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where Yan Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where Yan Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

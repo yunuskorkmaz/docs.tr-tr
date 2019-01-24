@@ -1,5 +1,5 @@
 ---
-title: 'COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu'
+title: 'COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548553"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu
-Bu örnek, birlikte çalışabilirlik gösterir bir [COM istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) ev kredisi hesaplamalar gerçekleştirir. Bu örnekte, istemci oluşturur ve yönetilen örneği çağırır `Loan` sınıfı, dört bağımsız değişkenleri (biri bu dört sıfıra eşit olması) geçirir örneği ve hesaplamaları görüntüler. Bu örnek kod örneklerinden Bu bölümde görünür.  
+# <a name="com-interop-sample-com-client-and-net-server"></a>COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu
+Bu örnek, birlikte çalışabilirlik gösterir bir [COM istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve [.NET sunucu](#cpconcominteropsamplecomclientnetserveranchor2) ipotek hesaplamalar gerçekleştiren. Bu örnekte, istemci oluşturur ve yönetilen örneği çağrıları `Loan` sınıfı, dört bağımsız değişken (Bu dört sıfıra eşit bir) geçirir örneği ve hesaplamalar görüntüler. Bu örnekteki kod örnekleri, bu bölümde görünür.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
 ## <a name="com-client"></a>COM istemcisi  
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>.NET sunucusu  
+## <a name="net-server"></a>.NET sunucu  
   
 ```vb  
 Imports System  
@@ -389,5 +389,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

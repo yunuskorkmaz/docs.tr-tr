@@ -15,36 +15,36 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: 873ee31bf9c2ab195d66337d52e4a1bb7075ac76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552040"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic'de Karşılaştırma İşleçleri
-Karşılaştırma işleçleri iki ifadeye karşılaştırır ve dönüş bir `Boolean` değerlerine ilişkiyi gösteren bir değer. Sayısal değerler, dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri Karşılaştırma işleçleri vardır. Üç tür işleçleri burada açıklanmıştır.  
+Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `Boolean` değerleri arasındaki ilişkiyi gösteren bir değer. Sayısal değerler için dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri karşılaştırmak için işleci vardır. Üç tür işleç tüm burada ele alınmıştır.  
   
 ## <a name="comparing-numeric-values"></a>Sayısal değerleri karşılaştırma  
- Visual Basic altı sayısal Karşılaştırma işleçleri kullanarak sayısal değerleri karşılaştırır. Her işleç sayısal değerlere değerlendirmek iki ifadeye işlenen alır. Aşağıdaki tabloda işleçleri listeler ve her örnekler gösterir.  
+ Visual Basic altı sayısal Karşılaştırma işleçleri kullanarak sayısal değeri karşılaştırır. Her işleç sayısal değerlere dönüşen iki ifade işlenenleri olarak alır. Aşağıdaki tabloda işleçleri listelenir ve her örneklerini gösterir.  
   
-|İşleç|Test durumu|Örnekler|  
+|İşleç|Test koşulu|Örnekler|  
 |--------------|----------------------|--------------|  
 |`=` (Eşitlik)|İlk ifade değerini ikinci değerine mi?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>` (Eşitsizlik)|İlk ifade değeri ikinci değerine eşit mi?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<` (Küçüktür)|İlk ifade değerden daha az saniye değerini mi?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>` (Büyük)|İlk ifade değeri ikinci değerinden büyük mü?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=` (Küçük veya eşittir)|İlk ifade değeri ikinci değerine eşit veya daha az mi?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=` (Büyük veya eşittir)|İlk ifade değeri ikinci değerine eşit veya daha büyük mi?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`<>` (Eşitsizlik)|İlk ifade değeri, ikinci değerine eşit mi?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` (Küçüktür)|İlk ifade değeri değerinden ikinci değeri mi?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` (Büyüktür)|İlk ifade değeri ikinci değerinden büyük mü?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` (Küçüktür veya eşittir)|Değer ilk ifadenin saniye değerini küçüktür veya eşittir mi?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` (Büyüktür veya eşittir)|Büyüktür veya eşittir saniye değerini ilk ifadenin değeri mi?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>Dizeleri Karşılaştırma  
- Visual Basic karşılaştırır kullanarak dizeleri [gibi işleci](../../../../visual-basic/language-reference/operators/like-operator.md) sayısal Karşılaştırma işleçleri yanı sıra. `Like` İşleci bir desen belirtmenize olanak verir. Dize desenini karşı karşılaştırılır ve eşleşirse sonucudur `True`. Aksi takdirde, sonuç değer `False`. Sayısal işleçleri, karşılaştırmanızı sağlar `String` değerler aşağıdaki örnekte gösterildiği gibi sıralama düzeni üzerinde temel.  
+ Visual Basic kullanarak dizeleri karşılaştırır [gibi işleci](../../../../visual-basic/language-reference/operators/like-operator.md) sayısal Karşılaştırma işleçleri yanı sıra. `Like` İşleci, bir desen belirtmenize olanak sağlar. Dize, daha sonra düzeni ile karşılaştırılır ve eşleşirse, sonuç `True`. Aksi halde sonuç, `False`. Sayısal işleçleri, karşılaştırmanızı sağlar `String` değerlerini aşağıdaki örnekte gösterildiği gibi sıralama düzenlerine bağlı.  
   
  `"73" < "9"`  
   
  `' The result of the preceding comparison is True.`  
   
- Önceki örnekte sonuç `True` ikinci dizedeki ilk karakter önce ilk dizedeki ilk karakter sıralar olduğundan. İlk karakteri eşit olsaydı, karşılaştırma iki dize sonraki karakteri devam ve benzeri. Ayrıca aşağıdaki örnekte gösterildiği gibi eşitlik işleci kullanarak dizeleri eşitlik test edebilirsiniz.  
+ Önceki örnekte sonuç `True` olduğundan ikinci dizenin ilk karakteri önce ilk dizenin ilk karakteri sıralar. İlk karakteri eşit ise karşılaştırma iki dize içindeki sonraki karakteri devam ve benzeri. Ayrıca aşağıdaki örnekte gösterildiği gibi eşitlik işlecini kullanarak dize eşitliğini test edebilirsiniz.  
   
  `"734" = "734"`  
   
@@ -56,42 +56,42 @@ Karşılaştırma işleçleri iki ifadeye karşılaştırır ve dönüş bir `Bo
   
  `' The result of the preceding comparison is True.`  
   
- İkili karşılaştırma ya da bir metinsel karşılaştırma ayarını bağlı olarak sıralama düzenini temel `Option Compare`. Daha fazla bilgi için bkz: [Option Compare deyimi](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+ İkili karşılaştırma veya ayarına bağlı olarak metinsel karşılaştırma sıralama düzenini temel `Option Compare`. Daha fazla bilgi için [seçenek karşılaştırma ifadesini](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="comparing-objects"></a>Nesneleri karşılaştırma  
- Visual Basic ile iki nesne başvuru değişkenini karşılaştırır [Is işlecini](../../../../visual-basic/language-reference/operators/is-operator.md) ve [IsNot işleci](../../../../visual-basic/language-reference/operators/isnot-operator.md). Aynı nesne örneğini iki başvuru değişkenleri başvurduğundan belirlemek için bu işleçlere birini kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ Visual Basic ile iki nesne başvurusu değişkenini karşılaştırır [işleci olan](../../../../visual-basic/language-reference/operators/is-operator.md) ve [IsNot işleci](../../../../visual-basic/language-reference/operators/isnot-operator.md). Bu işleçler birini iki başvuru değişkeni aynı nesne örneğine başvuruyorsa belirlemek için kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
- Önceki örnekte `x Is y` değerlendiren `True`, her iki değişken aynı örneğine bakın. Aşağıdaki örnekte bu sonuçla karşılaştırın.  
+ Önceki örnekte `x Is y` değerlendiren `True`, her iki değişken aynı örneğine bakın. Bu sonuç aşağıdaki örnek ile karşılaştırın.  
   
  [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
- Önceki örnekte `x Is y` değerlendiren `False`, değişkenleri aynı türde nesnelere atıfta karşın, bu tür farklı örneklerine başvurduğundan.  
+ Önceki örnekte `x Is y` değerlendiren `False`, değişkenler aynı türde nesnelere atıfta olsa da, bunlar türü farklı örneklere bakın.  
   
- İki nesnenin aynı örneğine işaret değil için test etmek istediğiniz zaman `IsNot` işleci dilbilgisi açısından biçimsiz bileşimini kaçının olanak tanır `Not` ve `Is`. Aşağıdaki örnek bunu göstermektedir.  
+ İki nesnenin aynı örneğine işaret eden değil için test etmek istediğiniz zaman `IsNot` işleci bakımından biçimsiz birleşimi önlemenize olanak tanır `Not` ve `Is`. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  Önceki örnekte `If a IsNot b` eşdeğerdir `If Not a Is b`.  
   
 ### <a name="comparing-object-type"></a>Nesne türü karşılaştırma  
- İle belirli bir türdeki bir nesne olup olmadığını sınayabilirsiniz `TypeOf`... `Is` ifade. Söz dizimi aşağıdaki gibidir:  
+ İle belirli bir türdeki bir nesne olup olmadığını test edebilirsiniz `TypeOf`... `Is` ifade. Söz dizimi aşağıdaki gibidir:  
   
  `TypeOf <objectexpression> Is <typename>`  
   
- Zaman `typename` bir arabirim türü belirtir sonra `TypeOf`... `Is` ifadesi döndürür `True` nesne arabirim türü uyguluyorsa. Zaman `typename` ifade döndürür sonra bir sınıf türü olan `True` nesne örneğini belirtilen sınıf veya belirtilen sınıfından türeyen bir sınıf ise. Aşağıdaki örnek bunu göstermektedir.  
+ Zaman `typename` bir arabirim türü belirtir sonra `TypeOf`... `Is` ifade döndürür `True` nesne arabirimi uyguluyorsa. Zaman `typename` ifade döndürür sonra bir sınıf türüdür `True` nesnenin belirtilen sınıfın veya belirtilen sınıfından türetilen bir sınıfın bir örneği ise. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
- Önceki örnekte `TypeOf x Is Control` ifadeyi hesaplar için `True` çünkü türünü `x` olan `Button`, devralan `Control`.  
+ Önceki örnekte `TypeOf x Is Control` ifadeyi hesaplar için `True` çünkü türünü `x` olduğu `Button`, işlevinden devralan `Control`.  
   
- Daha fazla bilgi için bkz: [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+ Daha fazla bilgi için [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [İşleçler](../../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [İşleçler](../../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

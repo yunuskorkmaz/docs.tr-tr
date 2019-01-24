@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542502"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen İşlevi
-Güçlü ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  
+Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) yöntemi yerine.  
   
@@ -41,12 +41,12 @@ BOOLEAN StrongNameKeyGen (
   
 #### <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
- [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer` gereken boş olmayan bir dize olabilir veya geçici bir ad oluşturmak için null.  
+ [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer` gereken boş olmayan bir dize olması veya geçici bir ad oluşturmak için null.  
   
  `dwFlags`  
- [in] Kayıtlı anahtarı bırakın belirtir. Aşağıdaki değerleri desteklenir:  
+ [in] Kaydedilen anahtar bırakın belirtir. Aşağıdaki değerleri desteklenir:  
   
--   kullanılan 0x00000000 - `wszKeyContainer` bir geçici anahtar kapsayıcı adı oluşturmak için null.  
+-   kullanılan 0x00000000 - `wszKeyContainer` geçici bir anahtar kapsayıcısı adını oluşturmak için null.  
   
 -   0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.  
   
@@ -54,26 +54,26 @@ BOOLEAN StrongNameKeyGen (
  [out] Döndürülen ortak/özel anahtar çifti.  
   
  `pcbKeyBlob`  
- [out] Bayt olarak boyutu, `ppbKeyBlob`.  
+ [out] Bayt cinsinden boyutu, `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameKeyGen` İşlevi 1024 bit anahtar oluşturur. Anahtarı aldıktan sonra çağırmalıdır [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) ayrılmış bellek yayımlamayı işlevi.  
+ `StrongNameKeyGen` İşlevi 1024 bit anahtar oluşturur. Anahtarı aldıktan sonra çağırmalıdır [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) ayrılan belleği serbest bırakmak için işlevi.  
   
- Varsa `StrongNameKeyGen` işlevi yok başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) son oluşturulan hata alınacak işlev.  
+ Varsa `StrongNameKeyGen` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [StrongNameKeyGen Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
- [StrongNameKeyGenEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [StrongNameKeyGen Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [StrongNameKeyGenEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

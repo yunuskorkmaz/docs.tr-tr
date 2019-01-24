@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f22d9d86e2b943a8825e1ec271a401b03f73fb6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91e4967d6820f8f059262e7a18add072332c509d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532795"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum Arabirimi
-Bir listesi için bir numaralandırıcı sağlar [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapıları. Bu arabirim Icordebugenum arabirimi sınıfıdır.  
+Bir listesi için bir numaralandırıcı sağlar [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapıları. Icordebugenum arabirimi öğesinin arabirimidir.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -33,20 +33,20 @@ Bir listesi için bir numaralandırıcı sağlar [CorDebugBlockingObject](../../
 |[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|Bir listesini numaralandırır [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapıları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her `CorDebugBlockingObject` yapısı bir iş parçacığı engelleme nesneyi temsil eder.  
+ Her `CorDebugBlockingObject` yapısı, bir iş parçacığını engelleme nesneyi temsil eder.  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

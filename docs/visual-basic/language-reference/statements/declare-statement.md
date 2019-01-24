@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548956"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 Bir dış dosya içinde uygulanmış yordama başvuru bildirir.  
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Gerekli. Tanıtır bir `Lib` bir dış yordam içeren dış dosyayı (DLL veya kod kaynağı) tanımlayan yan tümcesi.|  
 |`libname`|Gerekli. Bildirilen yordam içeren dosyanın adı.|  
 |`Alias`|İsteğe bağlı. Bildirilen yordamı kendi dosyası içinde belirtilen adla tanımlanamıyor gösterir `name`. Kendi Kimliği'nde belirttiğiniz `aliasname`.|  
-|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> veya<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
+|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> -veya-<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
 |`parameterlist`|Yordamın kullandığı parametreler gereklidir. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Gerekli if `Function` belirtilir ve `Option Strict` olduğu `On`. Yordamın döndürdüğü değerin veri türü.|  
   
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   Windows NT, Windows 2000 veya Windows XP gibi bir Unicode platformunda dış yordam adının herhangi bir değişiklik olmadan önce arayın. Bu başarısız olursa ekleme dış yordamın sonuna "W" olarak adlandırın ve arayın yeniden.  
   
--   **Mekanizması.** Visual Basic .NET Framework kullanan *platform çağırma* gidermek ve dış yordamları erişmek için (PInvoke) mekanizması. `Declare` Deyimi ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı hem de bu mekanizma otomatik olarak kullanın ve bilgisine sahip PInvoke gerekmez. Daha fazla bilgi için [izlenecek yol: Windows API'lerini çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+-   **Mekanizması.** Visual Basic .NET Framework kullanan *platform çağırma* gidermek ve dış yordamları erişmek için (PInvoke) mekanizması. `Declare` Deyimi ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı hem de bu mekanizma otomatik olarak kullanın ve bilgisine sahip PInvoke gerekmez. Daha fazla bilgi için [izlenecek yol: Windows API'larını çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
 >  Dış yordam ortak dil çalışma zamanı dışında (CLR) çalıştırıyorsa olduğu *yönetilmeyen kod*. Bu yordamı, örneğin bir Win32 API işlev veya bir COM yöntemi çağırdığınızda, uygulamanıza güvenlik risklerini doğurabilir. Daha fazla bilgi için [güvenli kodlama kılavuzları yönetilmeyen kod için](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call Deyimi](../../../visual-basic/language-reference/statements/call-statement.md)  
- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call Deyimi](../../../visual-basic/language-reference/statements/call-statement.md)
+- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

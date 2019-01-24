@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530702"
 ---
 # <a name="decrypting-data"></a>Verilerin Şifresini Çözme
 Şifre çözme, şifreleme ters işlemidir. Gizli anahtar şifreleme için anahtar ve IV verileri şifrelemek için kullanılan bilmeniz gerekir. Ortak anahtar şifrelemesi için ortak anahtarı (verileri özel anahtarla şifrelenmiş olan ise) ya da özel anahtarı (veri ortak anahtarı kullanarak şifrelenmişse) bilmeniz gerekir.  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>Asimetrik şifre çözme  
  Genellikle, bir taraf (bir taraf) hem bir genel ve özel anahtarı oluşturur ve bellekte veya şifreleme anahtar kapsayıcısını, anahtarın depolandığı.  Toplu bir ardından ortak anahtarı başka bir tarafa (taraf B) gönderir.  Ortak anahtar kullanarak, B taraf verileri şifreler ve taraf A'ya verileri gönderir  Verileri aldıktan sonra diğer bir karşılık gelen özel anahtar kullanarak şifresini çözer.  Şifre çözme taraf bir taraf B verileri şifrelemek için kullanılan ortak anahtara karşılık gelen özel anahtar kullanıyorsa başarılı olur.  
   
- Depolama hakkında bilgi için bkz: güvenli şifreleme anahtar kapsayıcısı ve daha sonra asimetrik anahtar almak nasıl bir asimetrik anahtar [nasıl yapılır: bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Depolama hakkında bilgi için bkz: güvenli şifreleme anahtar kapsayıcısı ve daha sonra asimetrik anahtar almak nasıl bir asimetrik anahtar [nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Aşağıdaki örnek, bir simetrik anahtar ve IV temsil eden bayt dizilerinin şifrelerinin gösterir.  Asimetrik ortak anahtardan çıkarmayı hakkında bilgi için <xref:System.Security.Cryptography.RSACryptoServiceProvider> kolayca gönderebileceğiniz bir üçüncü taraf görmek için bir biçimde nesne [veri şifreleme](../../../docs/standard/security/encrypting-data.md).  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
+- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)
 - [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

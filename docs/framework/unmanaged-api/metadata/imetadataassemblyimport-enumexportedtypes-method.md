@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555030"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes Yöntemi
-Derleme bildirimi geçerli meta veri kapsamında başvurulan dışarı aktarılan türlerini numaralandırır.  
+Başvurulan derleme bildiriminde geçerli meta veri kapsamda dışarı aktarılan türlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT EnumExportedTypes (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu bir null olmalıdır değeri `EnumExportedTypes` yöntemi ilk kez çağrılır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu boş olmalıdır ne zaman değer `EnumExportedTypes` yöntemi ilk kez çağrılır.  
   
  `rExportedTypes`  
- [out] Numaralandırması `mdExportedType` meta veri belirteçleri.  
+ [out] Numaralandırmasını `mdExportedType` meta veri belirteçleri.  
   
  `cMax`  
- [in] En fazla sayısını `mdExportedType` yerleştirilebilir belirteçleri `rExportedTypes` dizi.  
+ [in] En fazla `mdExportedType` yerleştirilebilir belirteçleri `rExportedTypes` dizisi.  
   
  `pcTokens`  
- [out] Sayısı `mdExportedType` belirteçleri gerçekten yerleştirilen `rExportedTypes`.  
+ [out] Sayısını `mdExportedType` belirteçleri gerçekten yerleştirilen `rExportedTypes`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -59,13 +59,13 @@ HRESULT EnumExportedTypes (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

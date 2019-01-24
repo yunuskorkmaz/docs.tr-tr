@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bağlı Denetimlerin Özelliklerini Açma'
+title: 'Nasıl yapılır: Bağlı denetimlerin özelliklerini kullanıma sunma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532168"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Nasıl yapılır: Bağlı Denetimlerin Özelliklerini Açma
-Bileşik denetimini oluşturan denetimler adlandırılır *bağlı denetimler*. Bu denetimler, normalde özel bildirilir ve böylece geliştirici tarafından erişilemez. Bu denetimlerin özelliklerini gelecekteki kullanıcılar için kullanılabilir hale getirmek istiyorsanız, kullanıcıya ortaya gerekir. Bağlı bir denetimin bir özelliği bir özellik, kullanıcı denetimi oluşturma ve kullanma sunulan `get` ve `set` bağlı denetiminin özel özellik değişikliği etkilemek için o özelliğin erişimciler.  
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Nasıl yapılır: Bağlı denetimlerin özelliklerini kullanıma sunma
+Bir bileşik denetimini oluşturan denetimler olarak adlandırılır *bağlı denetimler*. Bu denetimler normalde özel bildirilir ve böylece geliştirici tarafından erişilemez. Bu denetimin özelliklerini gelecekteki kullanıcılar için kullanılabilir hale getirmek isterseniz, kullanıcıya göstermesi gerekir. Bağlı bir denetimin bir özelliğine bir özelliği kullanıcı denetimi oluşturma ve kullanma kullanıma sunulduğunu `get` ve `set` bağlı denetimin özel özellik değişikliği efekt için bu özelliğin erişimcileri.  
   
- Adlı bir bağlı düğmesi ile bir kuramsal kullanıcı denetimi göz önünde bulundurun `MyButton`. Bu örnekte, kullanıcı istediğinde `ConstituentButtonBackColor` özelliği, depolanan değer <xref:System.Windows.Forms.Control.BackColor%2A> özelliği `MyButton` teslim edilir. Kullanıcı Bu özellik için bir değer atandığında, bu değeri otomatik olarak geçirilir <xref:System.Windows.Forms.Control.BackColor%2A> özelliği `MyButton` ve `set` kod yürütülecek, rengi değiştirme `MyButton`.  
+ Bir kuramsal bir kullanıcı denetimi adlı bağlı bir düğmeyle göz önünde bulundurun `MyButton`. Bu örnekte, kullanıcı istediğinde `ConstituentButtonBackColor` özelliği, içinde depolanan değeri <xref:System.Windows.Forms.Control.BackColor%2A> özelliği `MyButton` teslim edilir. Kullanıcı, bu özellik için bir değer atar, bu değeri otomatik olarak geçirilen <xref:System.Windows.Forms.Control.BackColor%2A> özelliği `MyButton` ve `set` kod yürütülecek, rengini değiştirme `MyButton`.  
   
- Aşağıdaki örnek, kullanıma sunmak gösterilmiştir <xref:System.Windows.Forms.Control.BackColor%2A> bağlı düğmesinin özelliği:  
+ Aşağıdaki örnek nasıl sunacağınızı öğrenin gösterir <xref:System.Windows.Forms.Control.BackColor%2A> bağlı düğmenin özelliği:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -49,15 +49,15 @@ public Color ButtonColor
 }  
 ```  
   
-### <a name="to-expose-a-property-of-a-constituent-control"></a>Bağlı bir denetimin bir özellik kullanıma sunmak için  
+### <a name="to-expose-a-property-of-a-constituent-control"></a>Bağlı bir denetimin bir özelliğine göstermek için  
   
-1.  Kullanıcı denetimi için ortak bir özellik oluşturun.  
+1.  Kullanıcı denetiminiz için bir ortak özellik oluşturun.  
   
-2.  İçinde `get` kullanıma sunmak istediğiniz özelliğin değerini alan kod yazma özelliği bölümü.  
+2.  İçinde `get` bölümünde kullanıma sunmak istediğiniz özelliğin değerini alır. kod yazma özelliği.  
   
-3.  İçinde `set` özelliği, özelliğin değerini bağlı denetiminin gösterilen özelliğine gönderdiği kod yazma bölümü.  
+3.  İçinde `set` bölümünü kullanıma sunulan bağlı denetim özelliğine özelliğinin değerini geçirir kod yazma özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.UserControl>  
- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.UserControl>
+- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74df7ee71fc541c35bc393f637ad1d7b9f7aa2a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549908"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables Metodu
-Kendi üst adı verilen bir yerel olmayan değişkeni döndürür.  
+Kendi üst adı verilen bir yerel olmayan Değişken döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ HRESULT GetVariables (
   
 #### <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Değişkeni üst.  
+ [in] Değişken üst.  
   
  `cVars`  
- [in] Boyutunu `pVars` dizi.  
+ [in] Boyutu `pVars` dizisi.  
   
  `pcVars`  
- [out] Bir işaretçi döndürdü değişkenleri sayısını alır değişken `pVars`.  
+ [out] Döndürülen değişken sayısı alan değişken işaretçisi `pVars`.  
   
  `pVars`  
- [out] Değişkenleri alır değişkeni için bir işaretçi.  
+ [out] Bir işaretçi değişkenine değişkenleri alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

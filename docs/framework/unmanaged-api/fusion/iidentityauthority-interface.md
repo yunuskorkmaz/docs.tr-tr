@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546286"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority Arabirimi
-Kod nesneleri kimlik tuşları yönetir.  
+Kod nesneleri için kimlik anahtarları yönetir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IIdentityAuthority::AreDefinitionsEqual`|İki belirtilen olup olmadığını belirten bir değer alır [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) örnekleri eşit.|  
-|`IIdentityAuthority::AreReferencesEqual`|İki belirtilen olup olmadığını belirten bir değer alır [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) örnekleri eşit.|  
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|İki belirtilen dize tanımı kimliği sunumu eşit olup olmadığını belirten bir değer alır.|  
-|`IIdentityAuthority::AreTextualReferencesEqual`|İki belirtilen dize başvuru kimliği sunumu eşit olup olmadığını belirten bir değer alır.|  
-|`IIdentityAuthority::CreateDefinition`|Bir işaretçi yeni bir alır `IDefinitionIdentity` geçerli kapsamdaki kod nesnesini temsil eden örneği.|  
-|`IIdentityAuthority::CreateReference`|Bir işaretçi yeni bir alır `IReferenceIdentity` geçerli kapsamdaki kod nesnesini temsil eden örneği.|  
-|`IIdentityAuthority::DefinitionToText`|Biçimlendirilmiş dize sürümünü belirtilen alır `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DefinitionToTextBuffer`|Belirtilen dize sürümüyle belirtilen geniş karakter arabellek doldurur `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DoesDefinitionMatchReference`|Gösteren bir değer alır olup belirtilen `IDefinitionIdentity` ve `IReferenceIdentity` örnekleri aynı kodu nesnesine bakın.|  
-|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Belirtilen dizeleri aynı kodu nesnesine başvuru olup olmadığını belirten bir değer alır.|  
-|`IIdentityAuthority::GenerateDefinitionKey`|Yeni oluşturulan dize anahtarı için belirtilen bir işaretçi alır `IDefinitionIdentity`.|  
-|`IIdentityAuthority::GenerateReferenceKey`|Yeni oluşturulan dize anahtarı için belirtilen bir işaretçi alır `IReferenceIdentity`.|  
-|`IIdentityAuthority::HashDefinition`|Bir karma değer için belirtilen alır `IDefinitionIdentity`.|  
-|`IIdentityAuthority::HashReference`|Bir karma değer için belirtilen alır `IreferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToText`|Biçimlendirilmiş dize sürümünü belirtilen alır `IReferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToTextBuffer`|Belirtilen dize sürümüyle belirtilen geniş karakter arabellek doldurur `IReferenceIdentity`.|  
-|`IIdentityAuthority::TextToDefinition`|Bir arabirim işaretçisi alır bir `IDefinitionIdentity` örneği belirtilen oluşturulan biçimlendirilmiş dize.|  
-|`IIdentityAuthority::TextToReference`|Bir arabirim işaretçisi alır bir `IReferenceIdentity` örneği belirtilen oluşturulan biçimlendirilmiş dize.|  
+|`IIdentityAuthority::AreDefinitionsEqual`|İki belirtilen olup olmadığını gösteren bir değer alır [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) örnekleri eşit.|  
+|`IIdentityAuthority::AreReferencesEqual`|İki belirtilen olup olmadığını gösteren bir değer alır [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) örnekleri eşit.|  
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|İki belirtilen dize tanımı kimliği gösterimleri eşit olup olmadığını gösteren bir değer alır.|  
+|`IIdentityAuthority::AreTextualReferencesEqual`|İki belirtilen dize başvuru kimliği gösterimleri eşit olup olmadığını gösteren bir değer alır.|  
+|`IIdentityAuthority::CreateDefinition`|Yeni bir işaretçi alır `IDefinitionIdentity` geçerli kapsamda kod nesnesini temsil eden örneği.|  
+|`IIdentityAuthority::CreateReference`|Yeni bir işaretçi alır `IReferenceIdentity` geçerli kapsamda kod nesnesini temsil eden örneği.|  
+|`IIdentityAuthority::DefinitionToText`|Belirtilen bir biçimlendirilmiş dize sürümünü alır `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DefinitionToTextBuffer`|Belirtilen dize sürümüyle belirtilen geniş karakter arabelleği doldurur `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DoesDefinitionMatchReference`|Belirten bir değer alır olup belirtilen `IDefinitionIdentity` ve `IReferenceIdentity` örnekleri aynı kodu nesnesine başvurun.|  
+|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Belirtilen dizelerin kod aynı nesneye başvurup başvurmadığını gösteren bir değer alır.|  
+|`IIdentityAuthority::GenerateDefinitionKey`|Belirtilen bir yeni oluşturulan bir dize anahtarı için bir işaretçi alır `IDefinitionIdentity`.|  
+|`IIdentityAuthority::GenerateReferenceKey`|Belirtilen bir yeni oluşturulan bir dize anahtarı için bir işaretçi alır `IReferenceIdentity`.|  
+|`IIdentityAuthority::HashDefinition`|Bir karma değer belirtilen alır `IDefinitionIdentity`.|  
+|`IIdentityAuthority::HashReference`|Bir karma değer belirtilen alır `IreferenceIdentity`.|  
+|`IIdentityAuthority::ReferenceToText`|Belirtilen bir biçimlendirilmiş dize sürümünü alır `IReferenceIdentity`.|  
+|`IIdentityAuthority::ReferenceToTextBuffer`|Belirtilen dize sürümüyle belirtilen geniş karakter arabelleği doldurur `IReferenceIdentity`.|  
+|`IIdentityAuthority::TextToDefinition`|Bir arabirim işaretçisi alır bir `IDefinitionIdentity` belirtilen oluşturulan örnek biçimlendirilmiş dize.|  
+|`IIdentityAuthority::TextToReference`|Bir arabirim işaretçisi alır bir `IReferenceIdentity` belirtilen oluşturulan örnek biçimlendirilmiş dize.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

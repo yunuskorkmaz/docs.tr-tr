@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556148"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading İşlevi
-Yönetilen modül görüntüleri kaldırılır, yükleyici size bildirir.  
+Yönetilen modül görüntüleri yüklenmediği zaman yükleyiciye bildirir.  
   
- Bu işlev uygulanmadı. Adlı E_NOTIMPL döndürür.  
+ Bu işlev uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +38,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 #### <a name="parameters"></a>Parametreler  
  `ImageBase`  
- [in] Başlangıç konumu kaldırmak için görüntünün bir işaretçi.  
+ [in] Görüntüyü kaldırmak için başlangıç konumu için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

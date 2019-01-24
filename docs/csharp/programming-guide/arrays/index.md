@@ -1,17 +1,11 @@
 ---
-title: Diziler - C# Programlama Kılavuzu
+title: 'Diziler - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- arrays [C#]
-- C# language, arrays
+  - 'arrays [C#]'
+  - 'C# language, arrays'
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: cf684d2ec7ae7282b1ab68817357773f0f96c9ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245658"
 ---
 # <a name="arrays-c-programming-guide"></a>Diziler (C# Programlama Kılavuzu)
 
@@ -53,7 +47,7 @@ Bir dizi veri yapısında aynı türde birden fazla değişken depolayabilirsini
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Koleksiyonlar](../../../csharp/programming-guide/concepts/collections.md)

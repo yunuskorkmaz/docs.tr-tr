@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak veri bağlama'
+title: 'Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540760"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak veri bağlama
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama
 
 Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel alan veri kaynakları oluşturabilirsiniz. Kullanarak bir veri hizmetine başvuru eklerken **hizmet Başvurusu Ekle** iletişim kutusunda, bir proje veri kaynağı ile birlikte oluşturulan istemci veri sınıfları oluşturulur. Bir veri kaynağı hizmeti kullanıma sunan veriler her bir valık kümesi oluşturulur. Bu veri kaynağı öğe sürükleyerek hizmetten alınan verileri görüntüleyen formları oluşturabilirsiniz **veri kaynakları** tasarımcıya penceresi. Bu öğeler, veri kaynağına bağlı denetimler haline gelir. Yürütme sırasında bu veri kaynağı örneğine bağlı <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfını, ki bu veri hizmetine bir sorgu tarafından döndürülen nesnelerle doldurulur. Daha fazla bilgi için [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Bir WPF penceresinde proje veri kaynağı kullanma
 
-1.  Visual Studio'da bir WPF projesi Northwind verileri hizmeti bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  Visual Studio'da bir WPF projesi Northwind verileri hizmeti bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  İçinde **veri kaynakları** penceresini genişletin `Customers` düğümünde **NorthwindEntities** proje veri kaynağı.
 
@@ -117,7 +117,7 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
 10. Bu kod örneği oluşturur <xref:System.Data.Services.Client.DataServiceCollection%601> için `Customers` türüne göre yürütülmesini bir <xref:System.Data.Services.Client.DataServiceQuery%601> döndüren bir <xref:System.Collections.Generic.IEnumerable%601> , `Customers` Northwind verileri hizmeti ve bağlar `customersBindingSource`.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Nasıl yapılır: Windows Presentation Foundation Öğelerine Veri Bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

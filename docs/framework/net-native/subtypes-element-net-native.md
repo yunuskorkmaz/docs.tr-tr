@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f850ec24530dd9a7d80f826461cacd9c249dd0de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5503e89006411887de9b0def929ac1155df5aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537263"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;Subtypes&gt; Öğesi (.NET Yerel)
-Çalışma zamanı ilkesi içeren türünden devralınan tüm sınıflar için geçerlidir.  
+Çalışma zamanı İlkesi kapsayan türden devralınan tüm sınıflar için geçerlidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ ms.locfileid: "33397994"
   
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
-|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi kontrol eder.|  
+|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi denetler.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi için sorgulama kontrol eder, ancak herhangi bir çalışma zamanı erişim sağlamaz.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemleri, alanları, özellikleri ve olayları dahil tüm tür üyeleri, çalışma zamanı erişimi kontrol eder.|  
-|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve seri hale getirilmiş ve kitaplıklar gibi Newtonsoft JSON seri hale getirici tarafından seri türü örnekleri etkinleştirmek için özellikleri, çalışma zamanı erişimi denetler.|  
-|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan serileştirme için ilke <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
-|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan JSON serileştirmesi için ilke <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
-|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan XML serileştirme için ilke <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Başvuru türleri Windows çalışma zamanı ve COM hazırlama denetimlerini İlkesi|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler.|  
+|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve tür örnekleri sıralanabilir ve kitaplıkları gibi Newtonsoft JSON seri hale getirici tarafından serisi etkinleştirmek için özellikler, çalışma zamanı erişimi denetler.|  
+|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
+|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
+|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
+|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
 |`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Değer türleri yerel koda hazırlama için ilke denetler.|  
+|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için değer türlerini hazırlama için ilke denetler.|  
   
-## <a name="all-attributes"></a>Tüm öznitelikleri  
+## <a name="all-attributes"></a>Tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türü için geçerli ayar. Olası değerler şunlardır: `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için bkz: [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Bu ilke türü için geçerli ayar. Olası değerler `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -60,19 +60,19 @@ ms.locfileid: "33397994"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü ve tüm üyeleri için geçerlidir.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma İlkesi, bir tür ve tüm üyeleri için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<Subtypes>` Öğesi türünü içeren tüm alt ilke uygulanır. Türetilmiş türler ve temel sınıflarına farklı ilkeleri uygulamak istediğinizde kullanın.  
+ `<Subtypes>` Öğesi, kapsayan türündeki tüm subtypes ilke uygulanır. Türetilmiş türler ve temel sınıflarının işaretçilerine farklı ilkeleri uygulamak istediğinizde kullanın.  
   
- En az birinin mevcut olması gereken rağmen yansıma, seri hale getirme ve birlikte çalışma özniteliklerini tüm isteğe bağlıdır.  
+ En az biri mevcut olmalıdır ancak yansıma, seri hale getirme ve birlikte çalışma özniteliklerini tümü isteğe bağlıdır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` ve adlı bir alt sınıfı `Derived1`.  
+ Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` ve adlı bir alt `Derived1`.  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  
   
- Aşağıdaki kodda gösterildiği gibi çalışma zamanı yönergeleri açıkça kümeleri dosya `Dynamic` ve `Activate` ilkelerini `BaseClass` için `Excluded`. Bu, nesne türü nedeniyle `BaseClass` dinamik olarak veya çağrıların ne kadar başlatılamaz `BaseClass` sınıfı oluşturucusu. Ancak, `<Subtypes>` öğesi türetilmiş sınıfları sağlar `BaseClass` dinamik olarak ve kendi sınıf oluşturucular çağrıları aracılığıyla örneğinin oluşturulması için.  
+ Aşağıdaki kodda gösterildiği gibi açıkça dosya ayarlar çalışma zamanı yönergeleri `Dynamic` ve `Activate` ilkelerini `BaseClass` için `Excluded`. Bu, nesne türü nedeniyle `BaseClass` dinamik olarak ya da çağrıların ne kadar başlatılamaz `BaseClass` sınıf oluşturucusu. Ancak, `<Subtypes>` öğesi öğelerinden türetilen sınıfları sağlar `BaseClass` dinamik olarak ve sınıf oluşturucuları yapılan çağrılar aracılığıyla oluşturulacak.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -85,12 +85,12 @@ ms.locfileid: "33397994"
 </Directives>  
 ```  
   
- Nedeniyle `<Subtypes>` yönergesi, başlatır aşağıdaki kod bir `Derived1` çağırarak dinamik olarak örneği <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=nameWithType> yöntemi başarıyla yürütür.  Burada bloğu değişkeni, bir <xref:System.Windows.Controls.TextBlock> boş bir Windows mağazası uygulaması nesne.  
+ Nedeniyle `<Subtypes>` yönergesi, örneğini oluşturan aşağıdaki kodu bir `Derived1` çağırarak dinamik olarak örneği <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=nameWithType> başarıyla yöntemini yürütür.  Bu blok değişken bir <xref:System.Windows.Controls.TextBlock> boş bir Windows Store uygulaması nesnesi.  
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<Tür > öğesi](../../../docs/framework/net-native/type-element-net-native.md)  
- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

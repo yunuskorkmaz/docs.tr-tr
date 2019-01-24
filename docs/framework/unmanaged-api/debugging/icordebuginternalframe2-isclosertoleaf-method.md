@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552170"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf Yöntemi
-Denetler olup olmadığını `this` iç kare belirtilen Icordebugframe nesne yaprak daha yakın olur.  
+Denetler olmadığını `this` iç çerçeve belirtilen Icordebugframe nesneden yaprağa yakın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +36,13 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 #### <a name="parameters"></a>Parametreler  
  `pFrameToCompare`  
- [in] Karşılaştırma için bir işaretçi `ICorDebugFrame` nesnesi.  
+ [in] Karşılaştırma için bir işaretçi `ICorDebugFrame` nesne.  
   
  `pIsCloser`  
- [out] `true` varsa `this` iç çerçeve yaprak tarafından belirtilen çerçeve daha yakından `pFrameToCompare`; Aksi halde, `false`.  
+ [out] `true` varsa `this` iç çerçeve yaprağa tarafından belirtilen çerçeve daha yakından `pFrameToCompare`; Aksi takdirde `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.  
+ Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
@@ -51,18 +51,18 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` veya `pIsCloser` null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsCloserToLeaf` diğer çerçeveler yığında ile iç çerçeveler Interleaving ilkesini uygulamak için kullanılabilir.  
+ `IsCloserToLeaf` İç çerçeveler yığında diğer çerçevelerle Interleaving ilkesini uygulamak için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugInternalFrame2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugInternalFrame2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

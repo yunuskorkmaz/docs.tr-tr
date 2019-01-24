@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: nesne verilerini bir XML dosyasına (C#) yazma'
+title: 'Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554289"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nasıl yapılır: nesne verilerini bir XML dosyasına (C#) yazma
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)
 Bu örnek, bir XML dosyası kullanmayı öğesinden bir sınıf nesnesi Yazar <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
   
 ## <a name="example"></a>Örnek  
@@ -61,8 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu örnek, bir dosya zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturması gerekiyorsa, bu uygulamayı gerekli `Create` klasörü için erişim. Dosya zaten varsa, uygulamanın yalnızca ihtiyacı `Write` erişim, daha az ayrıcalıkla. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca vermek için daha güvenli olan `Read` tek bir dosyaya erişimi yerine `Create` erişim için bir klasör.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.StreamWriter>  
-- [Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- <xref:System.IO.StreamWriter>
+- [Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Seri hale getirme (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d741e8df8f2b8c6d90a1d867c73495a2ffd1304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538273"
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; Öğesi (.NET Yerel)
-Çalışma zamanı yansıma İlkesi oluşturulan genel yöntem için geçerlidir.  
+Çalışma zamanı yansıma ilkesini oluşturulmuş bir genel yöntem için geçerlidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,34 +32,34 @@ ms.locfileid: "33397799"
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Yöntem adını belirtir.|  
-|`Signature`|Genel|İsteğe bağlı öznitelik. Yönteminin adlandırılmış parametreleri belirtir. Birden çok adlandırılmış parametreleri virgülle ayrılır. `Signature` Özniteliği aşırı yüklenmiş yöntemler ayırt etmek için kullanılır.|  
-|`Arguments`|Genel|Gerekli öznitelik. Genel tür bağımsız değişkenleri belirtir. Birden fazla bağımsız değişken varsa, bunların virgülle ayrılır.|  
-|`Browse`|Yansıma|İsteğe bağlı öznitelik. Hakkında bilgi için sorgulama veya bir yöntem numaralandırma kontrol eder, ancak çalışma zamanında dinamik herhangi çağırma etkinleştirmez.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Programlama Oluşturucusu veya dinamik etkinleştirmek için yöntemi çalışma zamanı erişimi kontrol eder. Bu ilke üyesi çalışma zamanında dinamik olarak çağrılabilir sağlar.|  
+|`Signature`|Genel|İsteğe bağlı öznitelik. Yönteminin adlandırılmış parametreleri belirtir. Birden fazla adlandırılmış parametreler virgülle ayrılır. `Signature` Özniteliği, aşırı yüklenmiş yöntemler ayırt etmek için kullanılır.|  
+|`Arguments`|Genel|Gerekli öznitelik. Genel tür bağımsız değişkenlerini belirtir. Birden çok bağımsız değişkeni varsa, bunların virgülle ayrılır.|  
+|`Browse`|Yansıma|İsteğe bağlı öznitelik. Hakkında bilgi için sorgulama veya bir yöntem numaralandırma kontrol eder, ancak herhangi bir dinamik çağrı çalışma zamanında etkinleştirmez.|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Programlama. bir oluşturucu veya dinamik olarak etkinleştirme yöntemi çalışma zamanı erişimi denetler. Bu ilke, çalışma zamanında dinamik olarak çağrılabilir üyesi sağlar.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_name*|Yöntem adı. Yöntem türü üst tarafından tanımlanan [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) veya [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi.|  
+|*method_name*|Yöntem adı. Yöntem türü üst öğe tarafından tanımlanan [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) veya [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi.|  
   
 ## <a name="signature-attribute"></a>İmza özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_signature*|Yöntem adlandırılmış parametreleri belirtir. Birden çok parametre varsa, bunların virgülle ayrılır.|  
+|*method_signature*|Yönteminin adlandırılmış parametreleri belirtir. Birden çok parametre varsa, bunların virgülle ayrılır.|  
   
 ## <a name="arguments-attribute"></a>Bağımsız değişkenler özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_arguments*|Genel tür bağımsız değişkenleri belirtir. Birden fazla bağımsız değişken varsa, bunların virgülle ayrılır. Her bağımsız değişken tam olarak nitelenmiş tür adını oluşmalıdır.|  
+|*method_arguments*|Genel tür bağımsız değişkenlerini belirtir. Birden çok bağımsız değişkeni varsa, bunların virgülle ayrılır. Her bağımsız değişken tam olarak nitelenmiş tür adını oluşmalıdır.|  
   
-## <a name="all-other-attributes"></a>Tüm diğer özniteliklerle  
+## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türü yöntemi için geçerli ayar. Olası değerler şunlardır: `Auto`, `Excluded`, `Included`, ve `Required`. Daha fazla bilgi için bkz: [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Bu ilke türü yöntemi için geçerli ayar. Olası değerler `Auto`, `Excluded`, `Included`, ve `Required`. Daha fazla bilgi için [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -68,14 +68,14 @@ ms.locfileid: "33397799"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü ve tüm üyeleri için geçerlidir.|  
-|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma İlkesi, yapılandırılmış bir genel tür ve tüm üyeleri için geçerlidir.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma İlkesi, bir tür ve tüm üyeleri için geçerlidir.|  
+|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma ilkesini, oluşturulmuş bir genel türü ve tüm üyeleri için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<MethodInstantiation>` Öğesi kendi karşılık gelen açık genel yöntem çalışma zamanı yansıma ilkesini geçersiz kılar.  
+ `<MethodInstantiation>` Öğesini karşılık gelen, açık genel yöntem, çalışma zamanı yansıma ilkesini geçersiz kılar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)

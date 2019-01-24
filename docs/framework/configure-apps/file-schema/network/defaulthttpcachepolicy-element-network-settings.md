@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: d88d99b663b0aaeb0ae432cf02675a45c4c8bc1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b71942380b750cd654c2d4c248bf5c93d82112e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555104"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; öğesi (ağ ayarları)
 HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.  
@@ -47,7 +47,7 @@ HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar 
 |`policyLevel`|Önbellek ilkesi otomatik olup veya önbellek olup atlanır belirtir. Varsayılan değer `BypassCache` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -80,8 +80,8 @@ HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

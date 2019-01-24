@@ -2,12 +2,12 @@
 title: DotNet testi komutu
 description: Dotnet testi komut, belirli bir projede birim testleri yürütmek için kullanılır.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535288"
 ---
 # <a name="dotnet-test"></a>DotNet testi
 
@@ -17,7 +17,7 @@ ms.locfileid: "53170866"
 
 `dotnet test` -.NET birim testleri yürütmek için kullanılan sürücü test edin.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 
@@ -276,8 +276,8 @@ Geçerli dizindeki projedeki testleri çalıştırmak ve trx biçiminde bir test
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>Karşılık gelen fullyqualifiedname öğesi</li><li>Ad</li><li>className</li><li>Öncelik</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>Karşılık gelen fullyqualifiedname öğesi</li><li>displayName</li><li>Nitelikler</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>className</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>displayName</li><li>Nitelikler</li></ul>                                   |
 
 `<operator>` Özellik ve değer arasındaki ilişkiyi açıklar:
 
@@ -304,5 +304,5 @@ Daha fazla bilgi ve seçmeli birim testi filtreleme kullanma hakkında daha fazl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Çerçeveler ve hedefler](../../standard/frameworks.md)  
-* [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+- [Çerçeveler ve hedefler](../../standard/frameworks.md)
+- [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

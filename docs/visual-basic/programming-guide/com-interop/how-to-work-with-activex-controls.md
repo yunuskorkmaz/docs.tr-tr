@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)'
+title: 'Nasıl yapılır: ActiveX denetimleri (Visual Basic) ile çalışma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 400f361f1eaaa78a7b9481e3b876c54847df4cb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557701"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX denetimleri (Visual Basic) ile çalışma
 ActiveX denetimleri COM bileşenlerini veya bir Web sayfası veya başkasının programlanmış paketlenmiş işlevleri yeniden kullanmak için başka bir uygulama ekleyin nesneler var. Visual Basic 6.0 ve önceki sürümleri için geliştirilen ActiveX denetimlerini özellik eklemek için kullanabileceğiniz **araç kutusu** Visual Studio'nun.  
   
 ### <a name="to-add-activex-controls-to-the-toolbox"></a>Araç kutusuna ActiveX denetimleri ekleme  
@@ -32,8 +32,8 @@ ActiveX denetimleri COM bileşenlerini veya bir Web sayfası veya başkasının 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
-- [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
-- [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

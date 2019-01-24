@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl Yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)'
+title: 'Nasıl yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 61ae9b56e983e5ca05c3dd99d4db4797b67b3452
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543048"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl Yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: İki klasör (LINQ) içeriğini karşılaştırma (C#)
 Bu örnek, iki dosya listelerini karşılaştırmak için üç yol gösterir:  
   
 -   İki liste dosyası olup olmadığını belirten bir Boole değeri sorgulayarak aynıdır.  
@@ -128,7 +128,7 @@ namespace QueryCompareTwoDirs
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

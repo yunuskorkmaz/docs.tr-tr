@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536925"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind Numaralandırması
-Taşınabilir yürütülebilir (PE) dosyasını tanımlamak değerleri çağrısından döndürülen içeren [Imetadataımport2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Çağrısından döndürülen bir taşınabilir yürütülebilir (PE) dosya açıklayan değerleri içeren [Imetadataımport2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,21 +46,21 @@ typedef enum CorPEKind {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`peNot`|Bunun bir PE dosyası olmadığını gösterir.|  
-|`peILOnly`|Bu PE dosya yönetilen kodu yalnızca içerdiğini gösterir.|  
-|`pe32BitRequired`|Bu PE dosya Win32 çağrılar olduğunu gösterir.|  
-|`pe32Plus`|Bu PE dosya bir 64-bit platformda çalıştırıldığını gösterir.|  
-|`pe32Unmanaged`|Bu PE dosyanın yerel kod olduğunu gösterir.|  
-|pe32BitPreferred|Bu PE dosya platformdan bağımsız ve 32-bit ortamında yüklenmesini tercih gösterir.|  
+|`peILOnly`|Bu PE dosyası yalnızca yönetilen kod içerdiğini gösterir.|  
+|`pe32BitRequired`|Gösterir. Bu PE dosyası Win32 çağrısı yapar.|  
+|`pe32Plus`|Bu PE dosyası bir 64-bit platformda çalıştırıldığını gösterir.|  
+|`pe32Unmanaged`|Bu PE dosyası yerel kod olduğunu gösterir.|  
+|pe32BitPreferred|Bu PE dosyası platformdan bağımsız ve 32-bit ortamında yüklenmesini tercih gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerlerin Bitsel bileşimlerde kullanılır.  
+ Bu değerleri bit düzeyinde bileşimlerde kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

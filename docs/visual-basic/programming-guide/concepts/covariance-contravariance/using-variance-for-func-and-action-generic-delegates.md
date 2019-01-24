@@ -1,21 +1,21 @@
 ---
-title: İşlev ve eylem genel temsilciler (Visual Basic) için varyans kullanma
+title: İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134b3c0776e100a4bdc7e902bc8b41477a0ee264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549463"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>İşlev ve eylem genel temsilciler (Visual Basic) için varyans kullanma
-Bu örnekler Kovaryans ve kontravaryans nasıl kullanılacağını göstermektedir `Func` ve `Action` yöntemleri kullanılmasını etkinleştirmek ve kodunuzu daha fazla esneklik sağlamak için genel temsilciler.  
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma
+Bu örnekler Kovaryans ve kontravaryans nasıl kazandırabileceğinizi `Func` ve `Action` yöntemleri kullanılmasını etkinleştirin ve kodunuzu daha fazla esneklik sağlamak için genel temsilciler.  
   
  Kovaryans ve kontravaryans hakkında daha fazla bilgi için bkz: [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Eşdeğişken tür parametreleri ile kullanma  
- Aşağıdaki örnek genel türlerde Kovaryans desteği yararları gösterilmektedir `Func` temsilciler. `FindByTitle` Yöntemi alır, bir parametre `String` yazın ve bir nesne döndürür `Employee` türü. Ancak, bu yönteme atayabilirsiniz `Func(Of String, Person)` çünkü temsilci `Employee` devralır `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Birlikte değişken tür parametreleri ile kullanma  
+ Kovaryans genel destek avantajları aşağıdaki örnekte `Func` temsilciler. `FindByTitle` Yöntemi, bir parametre alır `String` yazın ve bir nesne döndürür `Employee` türü. Ancak, bu yönteme atayabilirsiniz `Func(Of String, Person)` çünkü temsilci `Employee` devralan `Person`.  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -52,8 +52,8 @@ Class Finder
 End Class  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Temsilcileri karşıtı tür parametreleri ile kullanma  
- Aşağıdaki örnek genel değişken karşıtı desteği yararları gösterilmektedir `Action` temsilciler. `AddToContacts` Yöntemi alır, bir parametre `Person` türü. Ancak, bu yönteme atayabilirsiniz `Action(Of Employee)` çünkü temsilci `Employee` devralır `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Değişken karşıtı tür parametreleri ile kullanma  
+ Aşağıdaki örnekte genel kontravaryans destek avantajlarını `Action` temsilciler. `AddToContacts` Yöntemi, bir parametre alır `Person` türü. Ancak, bu yönteme atayabilirsiniz `Action(Of Employee)` çünkü temsilci `Employee` devralan `Person`.  
   
 ```vb  
 Public Class Person  
@@ -89,6 +89,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kovaryans ve kontravaryans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
- [Genel Türler](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kovaryans ve kontravaryans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Genel Türler](~/docs/standard/generics/index.md)

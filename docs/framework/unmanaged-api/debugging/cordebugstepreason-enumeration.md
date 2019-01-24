@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552248"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason Numaralandırması
-Tek bir adımı sonucunu gösterir.  
+Bir adımın sonucunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,23 +44,23 @@ typedef enum CorDebugStepReason {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Atlama normal olarak, aynı işlev içinde tamamlandı.|  
-|`STEP_RETURN`|İşlev sonra atlama normal şekilde devam.|  
-|`STEP_CALL`|Atlama normal olarak, yeni çağrılan işlev başında devam eder.|  
-|`STEP_EXCEPTION_FILTER`|Bir özel durum oluşturuldu ve denetim için bir özel durum filtresi geçirildi.|  
-|`STEP_EXCEPTION_HANDLER`|Bir özel durum oluşturuldu ve denetim için bir özel durum işleyici geçirildi.|  
-|`STEP_INTERCEPT`|Denetim bir dinleyiciyi geçirildi.|  
-|`STEP_EXIT`|Adım tamamlanmadan önce iş parçacığı çıkıldı.|  
+|`STEP_NORMAL`|Adımlama, normalde, aynı işlevin içinde tamamlandı.|  
+|`STEP_RETURN`|İşlev sonra Adımlama normal olarak devam.|  
+|`STEP_CALL`|Adımlama normalde, yeni çağrılan bir işlevin başında devam eder.|  
+|`STEP_EXCEPTION_FILTER`|Bir özel durum oluşturuldu ve özel durum filtresi için denetimi geçildi.|  
+|`STEP_EXCEPTION_HANDLER`|Bir özel durum oluşturuldu ve bir özel durum işleyicisine denetimi geçildi.|  
+|`STEP_INTERCEPT`|Denetim için bir dinleyiciyi geçirildi.|  
+|`STEP_EXIT`|İş parçacığı adımı tamamlanmadan önce çıkıldı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [StepComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [StepComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

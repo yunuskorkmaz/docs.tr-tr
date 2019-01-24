@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539759"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak kaynaklar için varsayılan veya bağımsız kültür ile ana derleme paketi ve her bir dil veya uygulamanızın desteklediği kültür için bir ayrı uydu derleme oluşturma gerekir. Ardından <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıf. Kaynaklarınızı ana derlemeyi ve uydu derlemeler içinde değil eklemek isterseniz da ikili .resources dosyalarına doğrudan bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyalarındaki kaynaklar alınıyor](#from_file) daha sonra bu makale.  İçindeki kaynakları almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, [oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'nde.  
@@ -40,7 +40,7 @@ ms.locfileid: "43801560"
   
  Kaynak Yöneticisi, uygulamanın kültüre özgü kaynaklar nasıl alacağını denetlemek için kaynak geri dönüş işlemi kullanır. "Kaynak geri dönüş işlemi" bölümünde daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Örnekleme hakkında bilgi için bir <xref:System.Resources.ResourceManager> nesne, "ResourceManager nesnesini örnekleme" bölümüne bakın <xref:System.Resources.ResourceManager> sınıf konusuna.  
   
-### <a name="retrieving-string-data-an-example"></a>Dize verileri: Örneği  
+### <a name="retrieving-string-data-an-example"></a>Dize verileri alınıyor: Bir Örnek  
  Aşağıdaki örnek çağrıları <xref:System.Resources.ResourceManager.GetString%28System.String%29> geçerli UI kültürünün dize kaynaklarını almak için yöntemi. İngilizce (ABD) kültürü için bir bağımsız dize kaynağını ve yerelleştirilmiş kaynaklar Fransızca (Fransa) ve Rusça (Rusya) kültürleri için içerir. Aşağıdaki İngilizce (ABD) kaynak Strings.txt adlı dosyasıdır:  
   
 ```  
@@ -81,7 +81,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Geçerli UI kültürünün İspanyolca (İspanya) olduğunda, örneğin İngilizce dil kaynakları, İspanyolca dil kaynakları kullanılamaz ve örneğin varsayılan kültürü İngilizce olduğundan görüntüler unutmayın.  
   
-### <a name="retrieving-object-data-two-examples"></a>Nesne verilerini alma: İki örnek  
+### <a name="retrieving-object-data-two-examples"></a>Nesne verileri alınıyor: İki örnek  
  Kullanabileceğiniz <xref:System.Resources.ResourceManager.GetObject%2A> ve <xref:System.Resources.ResourceManager.GetStream%2A> nesne verilerini almak için yöntemler. Bu, basit veri türleri, seri hale getirilebilir nesneleri ve (örneğin, resim) ikili biçimde depolanmış nesneleri içerir.  
   
  Aşağıdaki örnekte <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yönteminin bir uygulamada kullanılan bir bit eşlem almak için giriş penceresini açma. Aşağıdaki kaynak kodu adındaki bir dosyaya CreateResources.cs (C# için) veya CreateResources.vb (Visual Basic için) seri hale getirilmiş görüntüsünü içeren .resx dosyası oluşturur. Bu durumda, görüntünün SplashScreen.jpg adlı bir dosya yüklenir; kendi görüntünüzü yerine dosya adını değiştirebilirsiniz.  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Resources.ResourceManager>  
- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Resources.ResourceManager>
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674)

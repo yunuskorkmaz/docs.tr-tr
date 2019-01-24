@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'de Bir Diziyi Sıralama"
+title: "Nasıl yapılır: Visual Basic'te dizi Sırala"
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: a067c40e1dd0e881516cbc7769cb9afb879d1b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558442"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Bir Diziyi Sıralama
-Bu örnek, bir dizi bildirir `String` adlı nesneleri `zooAnimals`, bunu doldurduğundan ve alfabetik olarak sıralar.  
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dizi Sırala
+Bu örnek, bir dizi bildirir `String` adlı nesneleri `zooAnimals`, onu doldurur ve alfabetik olarak sıralar.  
   
 ## <a name="example"></a>Örnek  
   
@@ -32,20 +32,20 @@ End Sub
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Mscorlib.dll erişimi ve <xref:System> ad alanı.  
+-   Mscorlib.dll için erişim ve <xref:System> ad alanı.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
--   Dizi boşsa (<xref:System.ArgumentNullException> sınıfı)  
+-   Dizi boş (<xref:System.ArgumentNullException> sınıfı)  
   
 -   Dizi çok boyutlu (<xref:System.RankException> sınıfı)  
   
--   Dizinin bir veya daha fazla öğeleri uygulamaz <xref:System.IComparable> arabirimi (<xref:System.InvalidOperationException> sınıfı)  
+-   Bir veya daha fazla öğe dizinin uygulamayın <xref:System.IComparable> arabirimi (<xref:System.InvalidOperationException> sınıfı)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
- [Koleksiyonlar](../../concepts/collections.md)  
- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>
+- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Koleksiyonlar](../../concepts/collections.md)
+- [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

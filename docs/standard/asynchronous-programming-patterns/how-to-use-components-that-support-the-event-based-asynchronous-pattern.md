@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma'
+title: 'Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543256"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma
 Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemenizi ses ve kesinti olmadan çalışan, ana iş parçacığı devam ederken "arka planda" görüntüleri etkinleştirin.  
   
  Destekleyen bir sınıf üzerinde zaman uyumsuz metotlar kullanma [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin bir olay işleyicisi ekleme olarak basit olabilir _MethodName_  **Tamamlanan** olduğu gibi herhangi bir olay için olay. Çağırdığınızda _MethodName_**zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz _MethodName_**Tamamlandı** olayı oluşturulur. Olay işleyicisinde, incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlem başarıyla tamamlanırsa veya iptal edildi belirlemek için parametre.  
@@ -62,5 +62,5 @@ Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

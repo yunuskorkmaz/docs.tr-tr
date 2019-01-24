@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: c4c3214c4998afa23032347e08007f2f1933bba8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547806"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Örnek derleme komut satırları (Visual Basic)
 Visual Studio içinde Visual Basic programlarından derleme alternatif olarak, yürütülebilir (.exe) veya dinamik bağlantı kitaplığı (.dll) dosyaları üretmek için komut satırından derleyebilirsiniz.  
@@ -35,6 +35,6 @@ Visual Studio içinde Visual Basic programlarından derleme alternatif olarak, y
 > [!TIP]
 >  Visual Studio IDE kullanarak bir proje oluşturduğunuzda, ilişkili bilgileri görüntüleyebilir **vbc** çıktı penceresinde, derleyici seçenekleri ile komutu. Bu bilgileri görüntülemek için Aç [Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)ve ardından **MSBuild proje oluşturması çıkış ayrıntısı** için **Normal** veya daha yüksek bir ayrıntı düzeyi.   
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

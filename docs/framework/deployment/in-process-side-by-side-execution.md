@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554562"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [\<Başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<Başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

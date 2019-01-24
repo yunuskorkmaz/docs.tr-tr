@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab16d78b210c2824bf6172f80d1b15e3533a05b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535664"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance İşlevi
-Üç arabirimi birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+Üç arabirimlerinden birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +39,24 @@ HRESULT CLRCreateInstance(
   
 #### <a name="parameters"></a>Parametreler  
  `clsid`  
- [in] Üç sınıf tanımlayıcıları birini: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy veya CLSID_CLRDebugging.  
+ [in] Üç sınıf tanımlayıcıları biri: Clsıd_clrmetahost, CLSID_CLRMetaHostPolicy veya CLSID_CLRDebugging.  
   
  `riid`  
- [in] Üç arabirim tanımlayıcıları (IID'leri) birini: IID_ICLRMetaHost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.  
+ [in] Üç arabirim tanımlayıcıları (IID'leri) biri: Iıd_ıclrmetahost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.  
   
  `ppInterface`  
- [out] Üç arabirimi birini: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ [out] Üç arabirimlerinden birini: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.  
+ Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`ppInterface` null şeklindedir.|  
+|E_POINTER|`ppInterface` NULL olur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki tablo için desteklenen birleşimlerin gösterir `clsid` ve `riid`.  
+ Aşağıdaki tablo için desteklenen kombinasyonlar gösterir `clsid` ve `riid`.  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
@@ -64,7 +64,7 @@ HRESULT CLRCreateInstance(
 |CLSID_CLRMetaHostPolicy|IID_ICLRMetaHostPolicy|  
 |CLSID_CLRDebugging|IID_ICLRDebugging|  
   
- Aşağıdaki kodu nasıl kullanılacağını gösterir `CLRCreateInstance` tüm üç arabirimi almak için:  
+ Aşağıdaki kod nasıl kullanılacağını gösterir `CLRCreateInstance` üç arabirimlerinin almak için:  
   
 ```  
 #include <metahost.h>  
@@ -83,13 +83,13 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MetaHost.h  
+ **Üst bilgi:** MetaHost.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

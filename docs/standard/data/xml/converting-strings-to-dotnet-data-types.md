@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc07779f03784cd32524e1b1189faae343710a05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544607"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework veri türleri için dizeleri dönüştürme
 Bir dizeyi bir .NET Framework veri türüne dönüştürmek istiyorsanız kullanmanız **XmlConvert** uygulama gereksinimlerine en uygun yöntemi. Kullanılabilir tüm dönüştürme yöntemleri listesi **XmlConvert** sınıfı <xref:System.Xml.XmlConvert>.  
@@ -135,5 +135,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

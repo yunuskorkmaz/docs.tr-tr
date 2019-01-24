@@ -2,12 +2,12 @@
 title: ASP.NET Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541098"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Uyumluluğu
 Bu örnek, ASP.NET uyumluluk modunun Windows Communication Foundation (WCF) etkinleştirme gösterir. ASP.NET özellikleri gibi dosya/URL yetkilendirme, oturum durumu ASP.NET modu tam ASP.NET uygulama ardışık düzeninizde katılır ve yapabilirsiniz uyumluluğu çalışan hizmetleri kullanımını ve <xref:System.Web.HttpContext> sınıfı. <xref:System.Web.HttpContext> Sınıfı tanımlama bilgileri, oturumları ve diğer ASP.NET özellikleri erişim sağlar. Bu mod, HTTP aktarımı bağlamaları kullanın ve hizmeti IIS'de barındırılan gerekir gerektirir.  
@@ -19,7 +19,7 @@ Bu örnek, ASP.NET uyumluluk modunun Windows Communication Foundation (WCF) etki
   
 Bu örnek gerektiren bir [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] çalıştırmak için uygulama havuzu. Yeni bir uygulama havuzu oluşturmak veya varsayılan uygulama havuzunu değiştirmek için şu adımları izleyin.  
 
-1.  Açık **Denetim Masası**.  Açık **Yönetimsel Araçlar** uygulaması altında **sistem ve güvenlik** başlığı. Açık **Internet Information Services (IIS) Yöneticisi'ni** uygulaması.  
+1.  **Denetim Masası**'nı açın.  Açık **Yönetimsel Araçlar** uygulaması altında **sistem ve güvenlik** başlığı. Açık **Internet Information Services (IIS) Yöneticisi'ni** uygulaması.  
 
 2.  Ağaç görünümünde genişletin **bağlantıları** bölmesi. Seçin **uygulama havuzları** düğümü.  
 
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

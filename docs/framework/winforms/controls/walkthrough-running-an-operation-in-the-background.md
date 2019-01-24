@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Arka Planda İşlem Çalıştırma'
+title: 'İzlenecek yol: Arka planda işlem çalıştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 24c5a58d0064756b60596907178578f98b557d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540227"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
+# <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka planda işlem çalıştırma
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabiriminizde gecikmelere neden istiyor musunuz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> sınıfı, başka bir iş parçacığı üzerinde işlemi çalıştıramadı.  
   
- Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: Arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -96,13 +96,13 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
   
--   Zaman uyumsuz bir işlem devam ederken, ilerleme durumunu raporlayan bir form uygulama. Daha fazla bilgi için [nasıl yapılır: arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Zaman uyumsuz bir işlem devam ederken, ilerleme durumunu raporlayan bir form uygulama. Daha fazla bilgi için [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 -   Bileşenler için zaman uyumsuz deseni destekleyen bir sınıf uygulamak. Daha fazla bilgi için [olay tabanlı zaman uyumsuz deseni uygulama](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ComponentModel.BackgroundWorker>  
- <xref:System.ComponentModel.DoWorkEventArgs>  
- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ComponentModel.BackgroundWorker>
+- <xref:System.ComponentModel.DoWorkEventArgs>
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

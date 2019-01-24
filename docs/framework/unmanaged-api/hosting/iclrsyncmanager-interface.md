@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549869"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager Arabirimi
 İstenilen görevler hakkında bilgi almak ve kilitlenmeleri eşitleme uygulanması algılamak için konak izin verme yöntemleri tanımlar.  
@@ -44,8 +44,8 @@ ms.locfileid: "53129330"
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.Thread>  
- [IHostSyncManager Arabirimi](ihostsyncmanager-interface.md)  
- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [Barındırma Arabirimleri](hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Threading.Thread>
+- [IHostSyncManager Arabirimi](ihostsyncmanager-interface.md)
+- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Barındırma Arabirimleri](hosting-interfaces.md)

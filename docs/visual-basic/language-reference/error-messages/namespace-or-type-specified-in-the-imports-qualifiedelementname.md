@@ -1,5 +1,5 @@
 ---
-title: Namespace veya türü içeri aktarmalar içinde belirtilen &#39; &lt;qualifiedelementname&gt; &#39; mevcut değil&#39;t ortak üye içermiyor ya da bulunamıyor
+title: Imports belirtilen Namespace veya tür &#39; &lt;qualifiedelementname&gt; &#39; eklenmemişse&#39;t, genel üye içeren veya bulunamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552144"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace veya türü içeri aktarmalar içinde belirtilen &#39; &lt;qualifiedelementname&gt; &#39; mevcut değil&#39;t ortak üye içermiyor ya da bulunamıyor
-Namespace veya türü belirtilen içeri aktarmalar içinde\<qualifiedelementname >' ortak üye içermiyor veya bulunamıyor. Ad alanı veya tür tanımlanır ve en az bir ortak üye içerdiğinden emin olun. Diğer ad başka diğer adlar içermediğinden emin olun.  
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Imports belirtilen Namespace veya tür &#39; &lt;qualifiedelementname&gt; &#39; eklenmemişse&#39;t, genel üye içeren veya bulunamıyor
+Imports belirtilen Namespace veya tür\<qualifiedelementname >', genel üye içermiyor veya bulunamıyor. Ad alanı veya tür tanımlanır ve en az bir ortak üye içerdiğinden emin olun. Diğer ad başka diğer adlar içermediğinden emin olun.  
   
- Bir `Imports` deyimi belirtir bulunamıyor veya herhangi bir tanımlamıyor içeren bir öğeyi `Public` üyeleri.  
+ Bir `Imports` deyimi belirtir bulunamıyor ya da tüm tanımlamıyor içeren bir öğe `Public` üyeleri.  
   
- A *öğeyi içeren* bir ad alanı, sınıf, yapı, modülü, arabirimi veya numaralandırması olabilir. Üye değişkenleri, yordamlar ve içeren diğer öğeler gibi içeren öğe içeriyor.  
+ A *öğeyi içeren* bir ad alanı, sınıf, yapı, modülü, arabirimi veya sabit listesi olabilir. Kapsayıcı öğe üyeleri, değişkenleri, yordamları veya içeren diğer öğeleri içerir.  
   
- İçeri aktarma amacı bunları uygun gerek kalmadan kodunuzu erişim ad alanı veya tür üyeleri için izin vermektir. Projenizi de ad alanı veya türü bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için bkz: "İçeren öğelerini içe aktarma" [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ İçeri aktarma amacı, bunları uygun zorunda kalmadan kodunuzu ad alanı veya tür üyelerine erişmek için izin vermektir. Projenizi de ad alanı veya tür için bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için "İçeren öğeleri içeri aktarma" bölümüne bakın. [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Derleyici belirtilen içeren öğe bulamazsanız, bunu kullanan başvuruları çözümlenemiyor. Öğeyi bulur ancak öğe herhangi kullanıma sunmuyor `Public` üyeleri sonra hiçbir başvurusu olabilir başarılı. Her iki durumda da içeri aktarma öğesi anlamsız hale gelir.  
+ Derleyiciye belirtilen kapsayıcı öğe bulamazsa, kullanılmakta başvuru çözümlenemiyor. Öğeyi bulur ancak öğe herhangi kullanıma sunmuyor `Public` üyeleri, ardından hiçbir başvurusu olabilir başarılı. Her iki durumda da, içeri aktarma öğesi anlamsız.  
   
- İçeren bir öğe içeri aktarma ve içeri aktarma diğer ad atayın, ardından bu içeri aktarma diğer ad başka bir öğe içeri aktarmak için kullanamazsınız olduğunu aklınızda bulundurun. Aşağıdaki kod derleyici hatası oluşturur.  
+ Bir kapsayıcı öğe içeri aktarma ve içeri aktarma diğer ad atayın, ardından bu içeri aktarma diğer ad başka bir öğe almak için kullanamazsınız olduğunu aklınızda bulundurun. Aşağıdaki kod bir derleyici hatası oluşturur.  
   
  `Imports`   `winfrm`   `= System.Windows.Forms`  
   
@@ -37,15 +37,15 @@ Namespace veya türü belirtilen içeri aktarmalar içinde\<qualifiedelementname
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Kapsayan öğe projenizden erişilebilir olduğunu doğrulayın.  
+1.  Kapsayıcı öğe projenizden erişilebilir olduğunu doğrulayın.  
   
-2.  İçeren öğesinin belirtimini herhangi alma diğer başka bir içeri aktarma adından içermez doğrulayın.  
+2.  Kapsayıcı öğe belirtimi başka bir içeri aktarma ad alanından başka bir içeri aktarma içerip içermediğini doğrulayın.  
   
-3.  İçeren öğesi en az bir gösterir doğrulayın `Public` üyesi.  
+3.  Kapsayıcı öğe en az bir sunan doğrulayın `Public` üyesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78fddd65099d5f6bfc4796d5fa353a92171bda5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531008"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
-Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bir derlemeyi ya da bir sınıf bir açık kaynak sözlüğü yerine bir derlemeyi hedef türünü belirtmek bir kaynak arama sağlar.  
+Tanımlar ve dış derlemelerden yüklü olan kaynaklar için anahtarları başvurur. Bu, bir açık kaynak sözlüğü bir derlemede veya bir sınıf yerine bir derleme bir hedef türü belirtmek bir kaynak araması sağlar.  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML öznitelik kullanımı (anahtar ayarlama, kısaltılmış)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML öznitelik kullanımı (anahtar ayarlama, compact)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML öznitelik (anahtar ayarlama, ayrıntılı) kullanımı  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML öznitelik kullanımı (anahtar ayarlama, ayrıntılı)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML öznitelik kullanımı (kaynak isteme, kısaltılmış)  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML öznitelik kullanımı (kaynak isteme, compact)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
@@ -46,37 +46,37 @@ Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bi
   
 |||  
 |-|-|  
-|`targetTypeName`|Ortak ad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kaynak derlemede tanımlanan türü.|  
-|`targetID`|Kaynak anahtarı. Kaynaklar, arandığı zaman `targetID` benzer olacaktır [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md) kaynağının.|  
+|`targetTypeName`|Ortak adını [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kaynak derlemesinde tanımlanan tür.|  
+|`targetID`|Kaynak anahtarı. Kaynakları, arandığı zaman `targetID` benzer olacaktır [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md) kaynak.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yukarıdaki kullanımları görülen bir {`ComponentResourceKey`} biçimlendirme uzantısı kullanımı iki yerde bulundu:  
+ Yukarıdaki kullanımları görüldüğü gibi bir {`ComponentResourceKey`} biçimlendirme uzantısı kullanımı, iki yerde bulunur:  
   
--   Bir anahtar içerisinde bir denetim yazar tarafından sağlanan bir tema kaynak sözlüğü tanımı.  
+-   Denetim yazarı tarafından sağlanan bir tema kaynak sözlüğünün içinde bir anahtar tanımı.  
   
--   Bir tema kaynak derlemeden erişme, ne zaman yeniden şablon oluşturma denetimi olan ancak denetimin temalar tarafından sağlanan kaynaklardan gelen özellik değerleri kullanmak istiyorsunuz.  
+-   Derlemeden bir tema kaynak erişimi ne zaman yeniden şablon oluşturma denetimi olan ancak denetimin temalar tarafından sağlanan kaynaklardan gelen özellik değerlerini kullanmak istiyorsunuz.  
   
- Temalardan gelmesi bileşen kaynakları başvurmak için genellikle kullanmanız önerilir `{DynamicResource}` yerine `{StaticResource}`. Bu kullanımları gösterilir. `{DynamicResource}` kullanıcı tarafından tema değiştirilebildiğinden önerilir. Bir tema desteklemek için denetim yazarının hedefi en yakından eşleşen bileşen kaynak isterseniz, bileşeni kaynak başvuru dinamik de etkinleştirmeniz gerekir.  
+ Temalarından gelen bileşen kaynakları başvurmak için genellikle kullanmanız önerilir `{DynamicResource}` yerine `{StaticResource}`. Bu kullanımları içinde gösterilir. `{DynamicResource}` kullanıcı tarafından tema değiştirilebilmesi için nedeniyle önerilir. Bir tema desteklemek için denetim yazarının hedefi en yakından eşleşen bileşen kaynak isterseniz, bileşeni kaynak başvurusu'de dinamik olarak etkinleştirmeniz gerekir.  
   
- <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Kaynak gerçekte tanımlandığı hedef derlemesinde varolan bir türü tanımlar. A `ComponentResourceKey` tanımlanan ve tam olarak bilmeden bağımsız olarak kullanılan nerede <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> tanımlandı ancak başvurulan derlemeler üzerinden türü çözümlemelidir.  
+ <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Burada kaynak gerçekten tanımlanmış hedef derlemede mevcut bir türü tanımlar. A `ComponentResourceKey` tanımlanabilir ve tam olarak bilerek bağımsız olarak kullanılan burada <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> tanımlandı, ancak başvurulan derlemeler üzerinden türü çözümlemelidir.  
   
- Bir ortak kullanım <xref:System.Windows.ComponentResourceKey> bir sınıf bir üyesi olarak ardından sunulan anahtarları tanımlamaktır. Bu kullanım için kullandığınız <xref:System.Windows.ComponentResourceKey> sınıfı oluşturucusu, biçimlendirme uzantısını değil. Daha fazla bilgi için bkz: <xref:System.Windows.ComponentResourceKey>, veya "Tanımlama ve başvuran anahtarları için tema kaynaklar" bölümüne [denetimine genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Bir ortak kullanım <xref:System.Windows.ComponentResourceKey> sonra sunulan anahtarları bir sınıfın üyeleri olarak tanımlamaktır. Bu kullanım için kullandığınız <xref:System.Windows.ComponentResourceKey> sınıf oluşturucusu, işaretleme uzantısı değil. Daha fazla bilgi için <xref:System.Windows.ComponentResourceKey>, veya "tanımlama ve başvurma anahtarları için tema kaynaklar" bölümünü konunun [denetim yazmaya genel bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
- Hem anahtarları oluşturma ve başvuru kaynakları anahtarlı için öznitelik sözdizimi için yaygın olarak kullanılır `ComponentResourceKey` biçimlendirme uzantısı.  
+ Hem anahtarları oluşturma ve başvuru kaynakları Anahtarlanan için öznitelik sözdizimi için yaygın olarak kullanılır `ComponentResourceKey` işaretleme uzantısı.  
   
- Kısaltılmış sözdizimi dayanan <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Oluşturucusu imza ve biçimlendirme uzantısı konumsal parametre kullanımı. Hangi sırayla `targetTypeName` ve `targetID` verilir önemlidir. Ayrıntılı sözdizimi dayanan <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> varsayılan oluşturucu ve kümelerini <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> nesne öğesindeki doğru öznitelik sözdizimine benzer şekilde. Ayrıntılı sözdizimi, hangi özellikler ayarlanır sırası önemli değildir. İlişkileri ve bu iki alternatifleri (kısaltılmış ve ayrıntılı) mekanizmaları açıklanan konusunda daha fazla ayrıntı [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Kısaltılmış sözdizimi kullanır <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Oluşturucu imzası ve bir işaretleme uzantısı konumsal parametresi kullanımı. Bir sırayı `targetTypeName` ve `targetID` verilen önemlidir. Ayrıntılı sözdizimi kullanır <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> varsayılan oluşturucu ve kümelerini <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> bir nesne öğesi üzerinde doğru öznitelik sözdizimine benzer bir şekilde. Ayrıntılı söz dizimi içinde özelliklerini ayarlamak sırası önemli değildir. İlişkileri ve bu iki alternatifleri (kısa ve ayrıntılı) mekanizmaları konusunda daha ayrıntılı açıklanmıştır [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- Teknik olarak, değeri `targetID` bir dize olması gerekmez, herhangi bir nesne olabilir. Ancak, en yaygın WPF'de hizalamak için kullanımdır `targetID` dizeleri olan ve olduğu gibi dizeleri geçerli forms değerle [XamlName Dilbilgisi](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ Teknik olarak, değeri `targetID` bir dize olması gerekmez, herhangi bir nesne olabilir. Ancak, en yaygın WPF hizalamak için kullanımdır `targetID` dizeleri olan ve burada gibi dizeleri geçerli forms değeriyle [XamlName Dilbilgisi](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey` nesne öğesi sözdiziminde kullanılabilir. Bu durumda, her ikisi de değerini belirten <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> özellikleri uzantıyı düzgün başlatmak için gereklidir.  
+ `ComponentResourceKey` nesne öğesi sözdiziminde kullanılabilir. Bu durumda, her ikisi de değerini belirterek <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> özellikler uzantısı düzgün başlatmak için gereklidir.  
   
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu uygulaması işleme için bu biçimlendirme uzantısı tarafından tanımlanan <xref:System.Windows.ComponentResourceKey> sınıfı.  
+ İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu uygulaması, bu işaretleme uzantısının işlenmesi tarafından tanımlanır <xref:System.Windows.ComponentResourceKey> sınıfı.  
   
- `ComponentResourceKey` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ComponentResourceKey` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.ComponentResourceKey>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.ComponentResourceKey>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

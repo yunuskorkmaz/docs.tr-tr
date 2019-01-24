@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: b81c3c8b25f13ac5791b5d2116b8536575f9ebcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540864"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Bir Grafik Nesnesinin Durumunu Yönetme
-<xref:System.Drawing.Graphics> Sınıftır merkezinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlamak ve yöntemlerini çağırın <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
+<xref:System.Drawing.Graphics> Sınıftır yaklaşımının temelindeki [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlayın ve yöntemlerinin çağrılması <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
   
- Aşağıdaki örnek çağrıları <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Graphics> nesnesi. Geçirilen ilk bağımsız değişken <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Pen> nesnesi.  
+ Aşağıdaki örnek çağrıları <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Geçirilen ilk bağımsız değişken <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Pen> nesne.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,18 +33,18 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>Grafik Durumu  
- A <xref:System.Drawing.Graphics> nesnesi birden fazla sağlayın çizim yöntemleri gibi <xref:System.Drawing.Graphics.DrawLine%2A> ve <xref:System.Drawing.Graphics.DrawRectangle%2A>. A <xref:System.Drawing.Graphics> nesne ayrıca aşağıdaki kategorilere ayrılabilir grafik durumu korur:  
+ A <xref:System.Drawing.Graphics> nesnesi birden fazla sağlayın çizim yöntemleri gibi <xref:System.Drawing.Graphics.DrawLine%2A> ve <xref:System.Drawing.Graphics.DrawRectangle%2A>. A <xref:System.Drawing.Graphics> nesne Ayrıca, aşağıdaki kategorilere ayrılabilir grafik durumu, tutar:  
   
 -   Kalite ayarları  
   
 -   Dönüşümler  
   
--   Kırpma bölgesinin  
+-   Kırpma bölgesini  
   
 ### <a name="quality-settings"></a>Kalite ayarları  
- A <xref:System.Drawing.Graphics> nesnenin çizilir öğeleri kalitesini etkileyen çeşitli özellikler vardır. Örneğin, ayarlayabileceğiniz <xref:System.Drawing.Graphics.TextRenderingHint%2A> özelliği metne uygulanan düzgünleştirme (varsa) türünü belirtin. Kalite etkileyen diğer özellikleri <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, ve <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+ A <xref:System.Drawing.Graphics> nesne çizilir öğeleri kalitesini etkileyen çeşitli özelliklere sahiptir. Örneğin, ayarlayabilirsiniz <xref:System.Drawing.Graphics.TextRenderingHint%2A> özelliği metne uygulanan (varsa) düzgünleştirme türünü belirtin. Kalite etkileyen diğer özellikleri <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, ve <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
   
- Aşağıdaki örnek kümesine yumuşatma mod ile iki elips çizer <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> ve kümesine yumuşatma modu ile <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ Aşağıdaki örnek kümesine yumuşatma modu ile iki elipsler çizer <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> kümesine yumuşatma modu ile diğerini <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Dönüşümler  
- A <xref:System.Drawing.Graphics> nesnesi tarafından çizilmiş tüm öğelerine uygulanan iki Dönüşümleri (world ve sayfa) tutar <xref:System.Drawing.Graphics> nesnesi. Herhangi bir afin dönüştürme world dönüşümünde depolanabilir. Afin dönüşümler ölçeklendirme, döndürme, yansıtma, eğriltme ve çevirme içerir. Sayfa dönüşümü ölçekleme ve birimler (örneğin, piksel inç olarak) değiştirmek için kullanılabilir. Daha fazla bilgi için bkz: [koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ A <xref:System.Drawing.Graphics> nesne tarafından çizilen tüm öğelere uygulanır iki Dönüşümleri (dünya ve sayfa) tutar <xref:System.Drawing.Graphics> nesne. Afin herhangi bir dönüştürme gerçek koordinat dönüştürmesini içinde depolanabilir. Afin dönüşümler ölçeklendirme, döndürme, yansıtma, eğme ve çevirme içerir. Sayfa dönüşümü, ölçekleme ve birimler (örneğin, piksel inç olarak) değiştirmek için kullanılabilir. Daha fazla bilgi için [koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
   
- Aşağıdaki örnek, dünya ve sayfa dönüşümleri ayarlar bir <xref:System.Drawing.Graphics> nesnesi. Dünya dönüşümü için 30 derecelik döndürme ayarlanır. İkinci koordinatları geçirilen şekilde sayfa dönüşümü ayarlayın <xref:System.Drawing.Graphics.DrawEllipse%2A> piksel yerine milimetre olarak kabul edilir. Kod iki özdeş çağrılar <xref:System.Drawing.Graphics.DrawEllipse%2A> yöntemi. Dünya dönüşümü ilk uygulanan <xref:System.Drawing.Graphics.DrawEllipse%2A> çağrısı ve her iki dönüştürmeler (world ve sayfa) ikinci uygulanır <xref:System.Drawing.Graphics.DrawEllipse%2A> çağırın.  
+ Aşağıdaki örnek, dünya ve sayfa dönüşümleri ayarlar bir <xref:System.Drawing.Graphics> nesne. Gerçek koordinat dönüştürmesini bir 30 derece döndürme için ayarlanır. Böylece ikinci koordinatları geçirilen sayfa dönüşümü ayarlanır <xref:System.Drawing.Graphics.DrawEllipse%2A> milimetre yerine piksel olarak kabul edilir. Kod iki özdeş çağrılar <xref:System.Drawing.Graphics.DrawEllipse%2A> yöntemi. Gerçek koordinat dönüştürmesini ilk uygulanan <xref:System.Drawing.Graphics.DrawEllipse%2A> çağrısı ve her iki Dönüşümleri (dünya ve sayfa) ikinci uygulanır <xref:System.Drawing.Graphics.DrawEllipse%2A> çağırın.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -93,14 +93,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- Aşağıdaki çizimde iki elips gösterir. 30 derecelik döndürme (istemci alanının sol üst köşesinde) koordinat sistemi kökeni hakkında elipsleri merkezleri konusunda olmamasından unutmayın. Ayrıca, 1 kalem genişliği için ikinci elips 1 piksel ilk üç nokta ve 1 milimetre anlamına unutmayın.  
+ Aşağıdaki çizimde, iki üç nokta simgesini gösterir. 30 derece döndürme koordinat sisteminde (istemci alanını sol üst köşesinde) kaynağı hakkında üç nokta simgesini merkezleri hakkında değil unutmayın. Ayrıca kalem genişliği 1 için ikinci üç noktanın 1 piksel artımlı ilk üç nokta işaretine ve 1 milimetre anlamına gelir.  
   
- ![Oval](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Elips](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
   
-### <a name="clipping-region"></a>Kırpma bölgesinin  
- A <xref:System.Drawing.Graphics> nesnesi tarafından çizilmiş tüm öğelere uygulanır kırpma bölgesinin tutar <xref:System.Drawing.Graphics> nesnesi. Kırpma bölgesinin çağırarak ayarlayabileceğiniz <xref:System.Drawing.Graphics.SetClip%2A> yöntemi.  
+### <a name="clipping-region"></a>Kırpma bölgesini  
+ A <xref:System.Drawing.Graphics> nesne tarafından çizilen tüm öğelere uygulanır bir kırpma bölgesini tutar <xref:System.Drawing.Graphics> nesne. Kırpma bölgesini çağırarak ayarlayabileceğiniz <xref:System.Drawing.Graphics.SetClip%2A> yöntemi.  
   
- Aşağıdaki örnekte, iki dikdörtgen birleşimi oluşturan tarafından artı şeklinde bir bölge oluşturur. Bu bölge kırpma bölgesinin atanmış bir <xref:System.Drawing.Graphics> nesnesi. Ardından kod kırpma bölgesinin iç için kısıtlı iki satır çizer.  
+ Aşağıdaki örnek, iki dikdörtgenler birleşimi oluşturan tarafından artı şeklindeki bir bölgesi oluşturur. Bu bölge kırpma bölgesini belirlenmiş bir <xref:System.Drawing.Graphics> nesne. Ardından kod, kırpma bölgesini iç için kısıtlı olan iki satır çizer.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -146,10 +146,10 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- Aşağıdaki çizimde kırpılmış satırları gösterir.  
+ Aşağıdaki çizimde, kırpılmış satırları gösterir.  
   
- ![Sınırlı Kırpma bölgesinin](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Kırpma bölgesini sınırlı](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [İç İçe Grafik Kapsayıcılarını Kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [İç İçe Grafik Kapsayıcılarını Kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)

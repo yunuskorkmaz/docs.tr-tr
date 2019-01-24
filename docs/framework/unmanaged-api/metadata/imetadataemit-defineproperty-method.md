@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543087"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty Yöntemi
-Belirtilen türde bir özellik tanımı belirtilen oluşturur `get` ve `set` yöntemi erişimciler ve bu özellik tanımı için bir belirteç alır.  
+Belirtilen tür için bir özellik tanımı belirtilen oluşturur `get` ve `set` yöntemi erişimcileri ve bu özellik tanımı için bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,13 +48,13 @@ HRESULT DefineProperty (
   
 #### <a name="parameters"></a>Parametreler  
  `td`  
- [in] Sınıf veya özellik tanımlanıyorsa arabirim için belirteci.  
+ [in] Sınıf veya arabirim özelliği tanımlanmakta olan belirteci.  
   
  `szProperty`  
  [in] Özelliğin adı.  
   
  `dwPropFlags`  
- [in] Özellik bayraklar.  
+ [in] Özellik bayrakları.  
   
  `pvSig`  
  [in] Özellik imzası.  
@@ -66,32 +66,32 @@ HRESULT DefineProperty (
  [in] Özelliğin varsayılan değeri türü.  
   
  `pValue`  
- [in] Özelliğin varsayılan değeri.  
+ [in] Bir özellik için varsayılan değeri.  
   
  `cchValue`  
  [in] \(Unicode) sayısını karakterleri `pValue`.  
   
  `mdSetter`  
- [in] Özellik değeri ayarlar yöntemi.  
+ [in] Özellik değeri ayarlar yönteminin.  
   
  `mdGetter`  
- [in] Özellik değeri alır yöntemi.  
+ [in] Yöntem özellik değerini alır.  
   
  `rmdOtherMethods[]`  
- [in] Özellik ile ilişkilendirilmiş diğer yöntemleri dizisi. Dizi ile sonlandırmak bir `mdTokenNil`.  
+ [in] Özellikle ilişkili diğer yöntemleri dizisi. Dizi sonlandırmak bir `mdTokenNil`.  
   
  `pmdProp`  
  [out] `mdProperty` Atanan simgesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

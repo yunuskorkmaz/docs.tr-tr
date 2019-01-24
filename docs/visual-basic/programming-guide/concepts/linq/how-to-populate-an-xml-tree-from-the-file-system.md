@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma'
+title: 'Nasıl yapılır: (Visual Basic) dosya sisteminden bir XML ağacı doldurma'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559794"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma
-Bir ortak ve kullanışlı XML ağaçları hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Bir XML ağacı hiyerarşik verilerle doldurmak ve ardından onu sorgulama yapabilir, dönüştürmek ve gerekirse, seri. Bu kullanım senaryosunda ad alanları ve boşluk davranışı gibi XML belirli semantiğini çoğunu önemli değildir. Bunun yerine, bellek, tek bir kullanıcı hiyerarşik veritabanı küçük bir olarak XML ağaç kullanıyor.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Nasıl yapılır: (Visual Basic) dosya sisteminden bir XML ağacı doldurma
+Bir ortak ve kullanışlı XML ağaçlarını hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Hiyerarşik veriler ile XML ağacı doldurma ve ardından, sorgulama yapabilir, dönüştürmek ve gerekirse, seri hale. Bu kullanım senaryosunda, ad alanları ve boşluk davranışını gibi XML belirli semantikler birçok önemli değildir. Bunun yerine, bellek, hiyerarşik veritabanı tek kullanıcı küçük bir olarak XML ağacı kullanıyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yerel dosya sistemi özyineleme kullanılarak XML ağacından doldurur. Ardından, ağacında tüm dosyaların boyutunu toplam hesaplama ağacında sorgular.  
+ Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacı doldurur. Ardından, toplam ağacındaki tüm dosyaların boyutunu hesaplama ağaç sorgular.  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek, aşağıdakine benzer bir çıktı üretir:  
+ Bu örnekte aşağıdakine benzer bir çıktı oluşturulur:  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,5 +114,5 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

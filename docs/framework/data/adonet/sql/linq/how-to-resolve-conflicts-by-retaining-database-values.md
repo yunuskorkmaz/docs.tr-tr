@@ -1,44 +1,44 @@
 ---
-title: 'Nasıl yapılır: çakışmaları veritabanı değerlerini koruyarak'
+title: 'Nasıl yapılır: Veritabanı değerlerini tutarak çakışmaları'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: d0d59c520beaab2d6c8c1594ee81a3eaecf1d03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f647dad951acfbc309257212018db32e655169df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531271"
 ---
-# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Nasıl yapılır: çakışmaları veritabanı değerlerini koruyarak
-Değişikliklerinizi yeniden denemeden önce beklenen ve mevcut veritabanı değerleri arasındaki farkları bağdaştırma için kullanabileceğiniz <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> veritabanında bulunan değerleri korumak için. Nesne modeli geçerli değerleri ardından üzerine yazılır. Daha fazla bilgi için bkz: [iyimser eşzamanlılık: genel bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Nasıl yapılır: Veritabanı değerlerini tutarak çakışmaları
+Değişikliklerinizi yeniden denemeden önce veritabanı beklenen ve gerçek değerler arasındaki farkları bağdaştırma için kullanabileceğiniz <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> veritabanında bulunan değerlerini korumak için. Nesne modelinde geçerli değerlerin üzerine yazılır. Daha fazla bilgi için [iyimser eşzamanlılık: Genel Bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
->  Her durumda, istemci kaydını veritabanından güncelleştirilmiş verileri alarak ilk yenilenir. Bu eylem sonraki güncelleştirme deneyin üzerinde aynı tutarlılık denetimleri başarısız olmayan emin olur.  
+>  Her durumda, istemci kaydını veritabanından güncelleştirilmiş verileri alarak önce yenilenir. Bu eylem, İleri güncelleştirmeyi deneyin üzerinde aynı eşzamanlılık denetimlerinin dönmüyor emin olur.  
   
 ## <a name="example"></a>Örnek  
- Bu senaryoda, bir <xref:System.Data.Linq.ChangeConflictException> kullanıcı2 zarfında Yardımcısı ve bölüm sütunları değiştiği için değişiklikleri göndermek Kullanıcı1 çalıştığında özel durum. Aşağıdaki tabloda durumu gösterir.  
+ Bu senaryoda, bir <xref:System.Data.Linq.ChangeConflictException> kullanıcı2 sırada Yardımcısı ve bölüm sütunları değiştiğinden, değişiklikleri göndermek User1 çalıştığında özel durum harekete geçirilir. Aşağıdaki tablo, durumu gösterir.  
   
 ||Yöneticisi|Yardımcısı|Bölüm|  
 |------|-------------|---------------|----------------|  
-|Kullanıcı1 ve kullanıcı2 tarafından sorgulandığında, orijinal veritabanı durumu.|Alfreds|Maria|Satış|  
-|Bu değişiklikleri göndermek Kullanıcı1 hazırlar.|Alfred||Pazarlama|  
-|Kullanıcı2 zaten bu değişiklikleri gönderdi.||Mary|Hizmet|  
+|User1 ve kullanıcı2 tarafından sorgulandığında, özgün veritabanının durumu.|Alfreds|Maria|Satış|  
+|Kullanıcı1, bu değişiklikleri göndermek hazırlar.|Alfred||Pazarlama|  
+|Kullanıcı2 bu değişiklikleri zaten gönderildi.||Mary|Hizmet|  
   
- Kullanıcı1 nesne modeli geçerli değerleri üzerine daha yeni veritabanı değerlerini sağlayarak bu çakışmayı karar verir.  
+ User1 nesne modelinde geçerli değerlerin üzerine daha yeni veritabanı değerleri sağlayarak bu çakışmayı karar verir.  
   
- Ne zaman Kullanıcı1 çözümler çakışma kullanarak <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, veritabanı sonucunda tabloda aşağıdaki gibidir:  
+ Ne zaman User1 çözümlenen çakışması kullanarak <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, sonuç veritabanındaki tabloda aşağıdaki gibidir:  
   
 ||Yöneticisi|Yardımcısı|Bölüm|  
 |------|-------------|---------------|----------------|  
-|Yeni durum çakışma çözümü sonra.|Alfreds<br /><br /> (orijinal)|Mary<br /><br /> (kullanıcı2)|Hizmet<br /><br /> (kullanıcı2)|  
+|Çakışma çözümü sonra yeni durumu.|Alfreds<br /><br /> (özgün)|Mary<br /><br /> (kullanıcı2)|Hizmet<br /><br /> (kullanıcı2)|  
   
- Aşağıdaki kod örneği, nesne modelinde geçerli değerleri veritabanı değerlerle üzerine gösterilmektedir. (Hiçbir denetleme veya tek tek üye çakışmalarını özel işleme gerçekleşir.)  
+ Aşağıdaki kod örneği, veritabanı değerleri ile nesne modelinde geçerli değerlerin üzerine gösterilmektedir. (Herhangi bir inceleme veya tek tek üye çakışıyor özel işleme gerçekleşir.)  
   
  [!code-csharp[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Değişiklik Çakışmalarını Yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

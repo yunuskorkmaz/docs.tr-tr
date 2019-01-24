@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 380438bbc6e0c93b26d2afb77ff6b04308c61caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547072"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; webRequestModules (ağ ayarları) için
 Özel bir Web isteği modülü uygulamadan kaldırır.  
@@ -77,6 +77,6 @@ Aşağıdaki örnek, HTTP için mevcut Web isteği modülü kaldırır ve ardın
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebRequest>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

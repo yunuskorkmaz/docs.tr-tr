@@ -1,26 +1,26 @@
 ---
-title: 'Görev 3: PropertyGrid bölmeleri ve araç kutusu oluşturma'
+title: '3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558429"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Görev 3: PropertyGrid bölmeleri ve araç kutusu oluşturma
-Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bunları rehosted Ekle [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma
+Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri ve bunları yeniden barındırılan için ekleme [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Başvuru için üç tamamladıktan sonra MainWindow.xaml.cs dosyasında olmalıdır kod görevler de [iş akışı Tasarımcısı yeniden barındırılmasını](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) Konular'a dizi, bu konunun sonunda sağlanır.  
+ Başvuru için üç tamamladıktan sonra MainWindow.xaml.cs dosyasında olmalıdır kodu görevleri de [iş akışı tasarımcısını yeniden barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) konuları dizi, bu konunun sonunda sağlanır.  
   
-### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Araç kutusu oluşturup kılavuza eklemek için  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Araç kutusu oluşturmak ve bu kılavuza eklemek için  
   
-1.  Elde edilen açıklanan yordamı izleyerek HostingApplication projesini açın [görev 2: İş Akışı Tasarımcısı konak](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Elde edilen açıklanan yordamı izleyerek HostingApplication projeyi açın [görev 2: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **görünümü kodu**.  
+2.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
   
-3.  Ekleme bir `GetToolboxControl` yönteme `MainWindow` oluşturur sınıfı bir <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, yeni bir ekler **araç** kategorisine **araç**ve atar <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> Bu kategori için etkinlik türleri.  
+3.  Ekleme bir `GetToolboxControl` yönteme `MainWindow` oluşturan sınıf bir <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, yeni bir ekler **araç kutusu** kategorisine **araç kutusu**ve atar <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlik türleri için kategori.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bun
     }  
     ```  
   
-4.  Özel eklemek `AddToolbox` yönteme `MainWindow` yerleştirir sınıfı **araç** kılavuzundaki sol sütunda.  
+4.  Özel bir ekleme `AddToolbox` yönteme `MainWindow` yerleştirir sınıfı **araç kutusu** kılavuzundaki sol sütunda.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bun
     }  
     ```  
   
-5.  Bir çağrı ekleyin `AddToolBox` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıfı oluşturucusu.  
+5.  Bir çağrı ekleyin `AddToolBox` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bun
     }  
     ```  
   
-6.  Derleme ve çözümünüzü çalıştırmak için F5 tuşuna basın. **Araç** içeren <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlikleri görüntülenmesi.  
+6.  Derleme ve çözümünüzü çalıştırmak için F5 tuşuna basın. **Araç kutusu** içeren <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlikleri görüntülenmesi gerekir.  
   
 ### <a name="to-create-the-propertygrid"></a>PropertyGrid oluşturmak için  
   
-1.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **görünümü kodu**.  
+1.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
   
-2.  Ekleme `AddPropertyInspector` yönteme `MainWindow` yerleştirmek için sınıf **PropertyGrid** kılavuzundaki en sağdaki sütun bölmesinde.  
+2.  Ekleme `AddPropertyInspector` yönteme `MainWindow` yerleştirmek için sınıf **PropertyGrid** en sağdaki sütunda Kılavuz bölmesinde.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bun
     }  
     ```  
   
-3.  Bir çağrı ekleyin `AddPropertyInspector` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıfı oluşturucusu.  
+3.  Bir çağrı ekleyin `AddPropertyInspector` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
   
     ```csharp  
     public MainWindow()  
@@ -103,10 +103,10 @@ Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bun
     }  
     ```  
   
-4.  Derleme ve çözümü çalıştırmak için F5 tuşuna basın. **Araç**, iş akışı tasarım tuvale ve **PropertyGrid** bölmeleri tüm görüntülenmesi ve sürüklediğinizde bir <xref:System.Activities.Statements.Assign> etkinlik veya <xref:System.Activities.Statements.Sequence> tasarım tuvale etkinliği Özellik Kılavuzu vurgulanan etkinlik bağlı olarak güncelleştirmeniz gerekir.  
+4.  Derleme ve çözümü çalıştırmak için F5 tuşuna basın. **Araç kutusu**, iş akışı tasarım tuvali ve **PropertyGrid** bölmeleri tüm görüntülenecek ve sürüklediğinizde bir <xref:System.Activities.Statements.Assign> etkinlik veya <xref:System.Activities.Statements.Sequence> tasarım tuvale etkinliği Özellik Kılavuzu vurgulanan etkinlik bağlı olarak güncelleştirmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
- MainWindow.xaml.cs dosya artık aşağıdaki kodu içermelidir.  
+ MainWindow.xaml.cs dosyası artık şu kodu içermesi gerekir.  
   
 ```  
 using System;  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Görev 2: İş Akışı Tasarımcısını Barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [2. Görev: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

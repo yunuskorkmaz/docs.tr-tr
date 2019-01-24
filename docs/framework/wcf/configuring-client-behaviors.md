@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532207"
 ---
 # <a name="configuring-client-behaviors"></a>İstemci Davranışlarını Yapılandırma
-Windows Communication Foundation (WCF) iki yolla davranışları yapılandırır: tanımlı davranış yapılandırmalara--başvuran ya da `<behavior>` bölüm bir istemci uygulama yapılandırma dosyası – veya program aracılığıyla arama uygulama. Bu konu, her iki yaklaşımın açıklar.  
+Windows Communication Foundation (WCF) iki şekilde davranışları yapılandırır: tarafından tanımlanan davranışı yapılandırmaları--başvuran `<behavior>` bölümü bir istemci uygulama yapılandırma dosyası – veya program aracılığıyla arama uygulama. Bu konuda, her iki yaklaşım açıklanmaktadır.  
   
- Bir yapılandırma dosyası kullanırken davranışını yapılandırma adlandırılmış yapılandırma ayarları koleksiyonudur. Her davranış yapılandırmasının adı benzersiz olmalıdır. Bu dize, kullanılır `behaviorConfiguration` uç nokta için davranış bağlamak için bir uç nokta yapılandırması özniteliğidir.  
+ Bir yapılandırma dosyası kullanırken davranışı yapılandırmasına yapılandırma ayarlarının adlandırılmış bir koleksiyondur. Her davranışı yapılandırmasının adı benzersiz olmalıdır. Bu dize, kullanılır `behaviorConfiguration` uç nokta için davranış bağlamak için bir uç nokta yapılandırması özniteliği.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma kodunu adlı bir davranış tanımlar `myBehavior`. İstemci uç noktası bu davranışı başvuran `behaviorConfiguration` özniteliği.  
+ Aşağıdaki yapılandırmayı kod olarak adlandırılan bir davranış tanımlar `myBehavior`. Bu davranış, istemci uç noktası başvuran `behaviorConfiguration` özniteliği.  
   
 ```xml  
 <configuration>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) iki yolla davranışları yapılandırır
 </configuration>  
 ```  
   
-## <a name="using-behaviors-programmatically"></a>Davranışları program aracılığıyla kullanarak  
- Ayrıca yapılandırma veya uygun bularak davranışları programlı olarak Ekle `Behaviors` özelliği Windows Communication Foundation (WCF) istemci nesnesi ya da istemci açmadan önce istemci kanal fabrikası nesnesi.  
+## <a name="using-behaviors-programmatically"></a>Davranışlar programlı olarak kullanma  
+ Ayrıca yapılandırma veya uygun bularak davranışları program aracılığıyla ekleme `Behaviors` özelliği Windows Communication Foundation (WCF) istemci nesnesi veya istemci açmadan önce istemci kanal fabrikası nesnesi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde nasıl erişerek bir davranış program aracılığıyla ekleneceğini gösterir <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> özelliği <xref:System.ServiceModel.Description.ServiceEndpoint> döndürülen <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> kanal nesnesinin oluşturulmasını önce özelliği.  
+ Aşağıdaki kod örneği, program aracılığıyla erişerek bir davranış eklemek gösterilmektedir <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> özelliği <xref:System.ServiceModel.Description.ServiceEndpoint> döndürüldüğü <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> önce kanal nesnesi oluşturma özelliği.  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<davranışları >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<davranışlar >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

@@ -2,12 +2,12 @@
 title: DataTable şema tanımı
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545390"
 ---
 # <a name="datatable-schema-definition"></a>DataTable şema tanımı
 Şema veya bir tablonun yapısını, sütunları ve kısıtlamaları tarafından temsil edilir. Şemasını tanımlayan bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataColumn> nesneleri olarak <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütunları bir veri kaynağındaki sütun eşleme, ifadeleri hesaplanan değerleri içeren, otomatik olarak değerlerini artırın veya birincil anahtar değerlerini içerir.  
@@ -35,6 +35,6 @@ ms.locfileid: "43748865"
  [DataTable Kısıtlamaları](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Bir tablodaki sütunları benzersiz kısıtlamaları ve yabancı anahtar tanımlamayı açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

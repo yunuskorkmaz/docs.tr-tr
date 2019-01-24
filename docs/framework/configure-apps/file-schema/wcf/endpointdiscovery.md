@@ -2,19 +2,19 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556450"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları gibi çeşitli bulma ayarlarını belirtir.  
   
 \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<davranışı >  
 \<endpointDiscovery >  
   
@@ -104,5 +104,5 @@ Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları g
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
+title: 'Nasıl yapılır: Destekleyici bir kimlik bilgisi oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539811"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
+# <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici bir kimlik bilgisi oluşturma
 Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmetin istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlayan bir kimlik bilgisi 18 yaşın üzerinde olan. İkinci bir kimlik bilgisi bir *kimlik bilgisi destekleyen*. Bu konuda, bu kimlik bilgilerini bir Windows Communication Foundation (WCF) istemcisinde uygulamak açıklanmaktadır.  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümk
 |İmzalanmış ve şifreleme|İmzalanmış ve şifrelenmiş destek belirteçleri, destek görünürler, aynı zamanda şifrelenmiş belirteçleri oturumunuz `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Kimlik bilgilerini destekleyen programlama  
- Destek belirteçleri oluşturmalısınız kullanan bir hizmet oluşturmak için bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Destek belirteçleri oluşturmalısınız kullanan bir hizmet oluşturmak için bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Özel bağlama oluştururken ilk adım, üç tür olabilir bir güvenlik bağlama öğesi oluşturmaktır:  
   
@@ -80,5 +80,5 @@ Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümk
 ### <a name="code"></a>Kod  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

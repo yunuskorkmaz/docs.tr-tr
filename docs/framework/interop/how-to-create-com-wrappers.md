@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: COM Sarmalayıcıları Oluşturma'
+title: 'Nasıl yapılır: COM sarmalayıcıları oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540981"
 ---
-# <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
+# <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM sarmalayıcıları oluşturma
 
 Bileşen Nesne Modeli (COM) sarmalayıcılar Visual Studio 2005 özellikleri veya .NET Framework Araçları, Tlbimp.exe ve RegAsm.exe'yi kullanarak oluşturabilirsiniz. Her iki yöntem de iki tür COM sarmalayıcıları oluşturma:
 
@@ -73,7 +73,7 @@ Bu araç, derleme meta verileri okur ve kayıt defterine gerekli girişleri ekle
   
 Herhangi bir dizinde bulunan bir derlemeyi Regasm.exe çalıştırın ve ardından çalıştırın [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel bütünleştirilmiş kod önbelleğine taşıyın. Derleme başka bir yerde bulunamazsa genel derleme önbelleği her zaman incelenir çünkü derleme taşıma konumu, kayıt defteri girdilerini geçersiz kılmaz.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)
 - [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)

@@ -2,12 +2,12 @@
 title: ADO.NET'te yan yana yürütme
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538641"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET'te yan yana yürütme
 Yan yana yürütme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] birden çok sürümü olan bir bilgisayarda bir uygulama yürüttüklerinde olanağı [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yüklü, uygulamanın derlendiği sürümü özel olarak kullanma. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -64,7 +64,7 @@ SELECT * FROM dbo.Customers;
 SET NOCOUNT OFF;  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

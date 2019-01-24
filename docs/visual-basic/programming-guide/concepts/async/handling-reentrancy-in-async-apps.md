@@ -2,12 +2,12 @@
 title: (Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 3cbdd5ddc6f742846542e508d1dc0165cd6fde22
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6187b3a519da2930136aab8df9451f757079c2a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535625"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Başlat düğmesini devre dışı bırak  
  Engelleyebilirsiniz **Başlat** en üstündeki düğmesini devre dışı bırakarak işlem çalışırken `StartButton_Click` olay işleyicisi. İçinden düğmeyi ardından etkinleştirebileceğiniz bir `Finally` böylece kullanıcılar uygulamayı yeniden çalıştırabilir işlem tamamlandığında engelleyin.  
   
- Aşağıdaki kod, yıldız ile işaretlenmiş bu değişiklikleri gösterir. Bu konunun sonunda kodu değişiklikleri ekleyebilir veya bitmiş uygulamayı indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje adı disablestartbutton.  
+ Aşağıdaki kod, yıldız ile işaretlenmiş bu değişiklikleri gösterir. Bu konunun sonunda kodu değişiklikleri ekleyebilir veya bitmiş uygulamayı indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje adı disablestartbutton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -134,7 +134,7 @@ End Sub
   
  İptal işlemleri hakkında daha fazla bilgi için bkz. [Fine-Tuning Async uygulamanızda (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Bu projenin adı CancelAndRestart'tır.  
+ Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Bu projenin adı CancelAndRestart'tır.  
   
 1.  Bildirme bir <xref:System.Threading.CancellationTokenSource> değişken `cts`, tüm yöntemler için kapsam dahilinde olan.  
   
@@ -535,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Uygulamayı karşıdan yükleme  
   
-1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örneği: .NET Desktop uygulamaları'na yeniden giriş](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
@@ -552,7 +552,7 @@ End Function
   
 ##### <a name="to-build-a-wpf-app"></a>Bir WPF uygulaması derlemek için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
@@ -678,5 +678,5 @@ End Function
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

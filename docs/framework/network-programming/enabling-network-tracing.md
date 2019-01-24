@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: b289aa2a60deb10ebda0ca8efc3e172caf2df8a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29d0f33960534e8a5521b36eb6cc11655ab89c6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540266"
 ---
 # <a name="enabling-network-tracing"></a>Ağ izlemeyi etkinleştirme
 Ağ izleme yöntem çağrıları ve yönetilen bir uygulama tarafından oluşturulan ağ trafiğiyle ilgili bilgilere erişim sağlar. Uygulamanızda ağ izlemeyi etkinleştirmek için aşağıdaki görevleri tamamlamanız gerekir:  
   
--   Kodunuzu izleme etkin derleyin. Bkz: [nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) izlemeyi etkinleştirmek için gerekli derleyici anahtarları hakkında daha fazla bilgi.  
+-   Kodunuzu izleme etkin derleyin. Bkz: [nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) izlemeyi etkinleştirmek için gerekli derleyici anahtarları hakkında daha fazla bilgi.  
   
 -   İzleme çıkışı için bir hedef belirtin.  
   
--   Ağ izleme davranışını yapılandırın. Bkz: [nasıl yapılır: ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) ayrıntılı bilgi için.  
+-   Ağ izleme davranışını yapılandırın. Bkz: [nasıl yapılır: Ağ İzleme Yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) ayrıntılı bilgi için.  
   
  İzleme dinleyicileri da adlandırılan en yaygın izleme hedefleri şunlardır: varsayılan dinleyici ve günlük dosyası.  
   
@@ -45,7 +45,7 @@ Ağ izleme yöntem çağrıları ve yönetilen bir uygulama tarafından oluştur
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)  
- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)
+- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

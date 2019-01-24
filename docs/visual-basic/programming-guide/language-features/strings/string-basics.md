@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552400"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic'de Dize Temelleri
 `String` Veri türünü temsil eden bir karakter dizisi (her sırayla örneğini temsil eden `Char` veri türü). Bu konu Visual Basic'de dizeleri temel kavramları tanıtır.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  Diğer iç veri türleri farklı `String` bir başvuru türüdür. Verilerin depolandığı bellek adresi başvurusu, başvuru türünde bir değişken bağımsız değişken olarak bir işlev veya alt yordamı geçirildiğinde, gerçek dize değerini yerine geçirilir. Önceki örnekte, değişken adı aynı kalır, ancak bir yeni ve farklı örneğine işaret `String` yeni değeri tutan sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char Veri Türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Temel Dize İşlemleri](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Char Veri Türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Temel Dize İşlemleri](../../../../standard/base-types/basic-string-operations.md)

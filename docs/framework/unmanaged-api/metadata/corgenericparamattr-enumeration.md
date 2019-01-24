@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557372"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr Numaralandırması
-Açıklamak değerleri içeren <xref:System.Type> kullanılan çağrıları olarak genel türler için parametreleri [Imetadataemit2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Açıklayan değerleri içeren <xref:System.Type> kullanılan çağrıları olarak genel türler için parametreleri [Imetadataemit2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,22 +49,22 @@ typedef enum CorGenericParamAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parametre değişikliklerinin yalnızca genel parametreler arabirimleri ve temsilciler için uygulanır.|  
-|`gpNonVariant`|Fark yokluğu gösterir.|  
-|`gpCovariant`|Kovaryans gösterir.|  
-|`gpContravariant`|Değişken karşıtı gösterir.|  
+|`gpVarianceMask`|Parametre değişikliklerinin yalnızca arabirimlerde ve temsilcilerde genel parametreleri geçerlidir.|  
+|`gpNonVariant`|Fark olmaması gösterir.|  
+|`gpCovariant`|Birlikte değişkenlik gösterir.|  
+|`gpContravariant`|Kontravaryans gösterir.|  
 |`gpSpecialConstraintMask`|Özel kısıtlamalar için uygulayabileceğiniz <xref:System.Type> parametresi.|  
-|`gpNoSpecialConstraint`|Hiçbir kısıtlama için geçerli olduğunu gösterir <xref:System.Type> parametresi.|  
-|`gpReferenceTypeConstraint`|Belirten <xref:System.Type> parametresi, bir başvuru türü olmalıdır.|  
-|`gpNotNullableValueTypeConstraint`|Belirten <xref:System.Type> parametresi null değer olamaz bir değer türü olmalıdır.|  
-|`gpDefaultConstructorConstraint`|Belirten <xref:System.Type> parametre parametre almayan bir varsayılan ortak oluşturucu olması gerekir.|  
+|`gpNoSpecialConstraint`|Hiçbir kısıtlaması için geçerli olduğunu gösterir <xref:System.Type> parametresi.|  
+|`gpReferenceTypeConstraint`|Bildiren <xref:System.Type> parametresi, bir başvuru türü olmalıdır.|  
+|`gpNotNullableValueTypeConstraint`|Bildiren <xref:System.Type> parametre bir null değer olamaz bir değer türü olması gerekir.|  
+|`gpDefaultConstructorConstraint`|Bildiren <xref:System.Type> parametresi, parametre almayan varsayılan bir public Oluşturucu olması gerekir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

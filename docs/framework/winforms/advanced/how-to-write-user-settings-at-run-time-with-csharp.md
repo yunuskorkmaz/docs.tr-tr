@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl Yapılır: Çalışma Zamanında C# ile Kullanıcı Ayarlarını Yazma'
+title: 'Nasıl yapılır: Çalışma zamanında ile kullanıcı ayarlarını yazmaC#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], run time
 - application settings [Windows Forms], writing user settings
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
-ms.openlocfilehash: f289b6a6a4a726ffa6bb2c9df99c665e2872e8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a62bf540ebdc383f26bd4aed760b2562437047aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560951"
 ---
-# <a name="how-to-write-user-settings-at-run-time-with-c"></a>Nasıl Yapılır: Çalışma Zamanında C# ile Kullanıcı Ayarlarını Yazma #
-Uygulama kapsamlı ayarları salt okunurdur ve yalnızca tasarım zamanında veya uygulama oturumları arasında .config dosyasını değiştirmeden tarafından değiştirilebilir. Herhangi bir özelliğin değerini değiştirmek gibi kullanıcı kapsamlı ayarları ancak, çalışma zamanında yazılabilir. Yeni değer uygulama oturumu boyunca devam ettirir. Save yöntemi çağrılarak uygulama oturumları arasında ayarlarında yapılan değişiklikler devam edebilir.  
+# <a name="how-to-write-user-settings-at-run-time-with-c"></a>Nasıl yapılır: Çalışma zamanında ile kullanıcı ayarlarını yazmaC# #
+Uygulama kapsamlı ayarlar salt okunurdur ve yalnızca tasarım zamanında ya da uygulama oturumları arasında .config dosyasını değiştirerek değiştirilebilir. Herhangi bir özelliğin değerini değiştirmek gibi kullanıcı kapsamlı ayarları ancak çalışma zamanında yazılabilir. Yeni değer, uygulama oturum süresi boyunca devam ettirir. Ayarları kaydetme yöntemini çağırarak uygulama oturumları arasında yapılan değişiklikleri kalıcı hale getirebilirsiniz.  
   
-### <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a>Nasıl yapılır: Yazma ve çalışma zamanında C# ile kullanıcı ayarlarını sürdürmek  
+### <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a>Nasıl yapılır: Yazma ve çalışma zamanında ile kullanıcı ayarlarını kalıcı yapmaC#  
   
 1.  Ayar erişmek ve bu örnekte gösterildiği gibi yeni bir değer atayabilirsiniz:  
   
@@ -25,7 +25,7 @@ Uygulama kapsamlı ayarları salt okunurdur ve yalnızca tasarım zamanında vey
     Properties.Settings.Default.myColor = Color.AliceBlue;  
     ```  
   
-2.  Uygulama oturumları arasında ayarlarında yapılan değişiklikler kalıcı hale getirmek istiyorsanız, bu örnekte gösterildiği gibi kaydetme yöntemini çağırın:  
+2.  Uygulama oturumları arasında ayarlarındaki değişiklikler kalıcı hale getirmek istiyorsanız, bu örnekte gösterildiği gibi Save metoduna çağrı:  
   
     ```  
     // C#  
@@ -34,7 +34,7 @@ Uygulama kapsamlı ayarları salt okunurdur ve yalnızca tasarım zamanında vey
   
      Kullanıcı ayarları kullanıcının yerel gizli uygulama veri klasörünün bir alt dosyasında kaydedilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [Nasıl yapılır: Çalışma zamanında ile ayarları okumaC#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)
+- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ebd4bb1d674a27785ccbe5460a65fed764638ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555576"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo Yöntemi
-Zaman uyumsuz grubu tanımlayın geçerli yöntemi işlemlerinde bekler.  
+Zaman uyumsuz grubu tanımlamanız geçerli yöntemi işlemleri bekler.  
   
- Her verim uzaklığı potansiyel verimini tanımlayan bir bekleme 's dönüş yönerge eşleşir. Her `breakpointMethod` / `breakpointOffset` çifti söyler bize olduğu zaman uyumsuz işlemi, (hangi farklı bir yöntem olabilir. devam edecek  
+ Her yield uzaklığı olası yield tanımlayan bir await'ın dönüş yönergesi, eşleşir. Her `breakpointMethod` / `breakpointOffset` çifti söyler bize nerede zaman uyumsuz işlemi, (Bu, farklı bir yöntem olabilir. devam edecek  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,7 +35,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
  Döndürür `HRESULT`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

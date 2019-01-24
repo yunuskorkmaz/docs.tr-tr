@@ -2,12 +2,12 @@
 title: Zaman uyumsuz işlemler
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538667"
 ---
 # <a name="asynchronous-operations"></a>Zaman uyumsuz işlemler
 Komut yürütme gibi bazı veritabanı işlemleri tamamlamak için önemli zaman alabilir. Böyle bir durumda, tek iş parçacıklı uygulamalar diğer işlemleri engelleyin ve kendi işlemleri devam etmeden önce tamamlanması komutunun bitmesini bekleyin gerekir. Buna karşılık, bir arka plan iş parçacığı uzun süredir çalışan işlem atamak için ön plan iş parçacığı işlemi kalmasına izin verir. Bir Windows uygulamasında, örneğin, bir arka plan iş parçacığı için uzun süredir çalışan işlem için temsilci seçme işlemi yürütülürken yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı sağlar.  
@@ -29,7 +29,7 @@ Komut yürütme gibi bazı veritabanı işlemleri tamamlamak için önemli zaman
  [Konsol Uygulamalarında Yoklama](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Bir konsol uygulamasında zaman uyumsuz komut yürütme işleminin tamamlanmasını beklemek için yoklama kullanımını gösteren bir örnek sağlar. Bu yöntem ayrıca bir sınıf kitaplığı veya başka bir uygulama kullanıcı arabirimi olmadan geçerli değil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

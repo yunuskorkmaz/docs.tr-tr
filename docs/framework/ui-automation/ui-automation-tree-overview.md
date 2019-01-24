@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7fca5d86cf8679e0845a7051b4ace5b91766030
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 651358dd85c5bc5d41bd7a7c1277c185b769b423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546484"
 ---
 # <a name="ui-automation-tree-overview"></a>UI Otomasyon Ağacına Genel Bakış
 > [!NOTE]
@@ -56,6 +56,6 @@ ms.locfileid: "47200314"
   
  Olan öğeler için arama yaparak içerik görünümü elde <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> özelliğini `true`, kullanarak veya <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> ağaç gidin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Automation.AutomationElement>  
- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Automation.AutomationElement>
+- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)

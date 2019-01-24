@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) kaydırılabilir Form yazdırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6cec75eae8046befeb37da39e0b788f045ff4149
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552508"
 ---
-# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)
+# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Nasıl yapılır: (Visual Basic) kaydırılabilir Form yazdırma
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Bileşen kullanmadan bir form görüntüsü hızla yazdırmanızı sağlar bir <xref:System.Drawing.Printing.PrintDocument> bileşeni. Varsayılan olarak, yalnızca şu anda görünür bölüme biçiminde yazdırılır. Kullanıcı formu çalışma zamanında yeniden boyutlandırılmış, görüntü beklendiği gibi yazdırabilir değil. Formu yeniden boyutlandırıldı bile aşağıdaki yordamı kaydırılabilir form, tam istemci alanını yazdırma nasıl gösterir.  
   
  PowerPack denetimleri artık Visual Studio'ya dahil, ancak bunları indirebilirsiniz [İndirme Merkezi](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
@@ -34,9 +34,9 @@ ms.locfileid: "44182043"
     > [!NOTE]
     >  Bazı işletim sistemleri, metin veya grafikleri tarafından çizilen <xref:System.Drawing.Graphics> yöntemleri yazdırma doğru. Bu durumda, yazdırmak mümkün olmayacaktır `Scrollable` parametresi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [PrintForm Bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Nasıl Yapılır: Formun İstemci Alanını Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Nasıl Yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [PrintForm Bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [Nasıl yapılır: Formun İstemci Alanını Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Nasıl yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)

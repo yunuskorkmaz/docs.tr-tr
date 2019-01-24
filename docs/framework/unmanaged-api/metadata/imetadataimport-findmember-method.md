@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 267a36fbbdf48472bc35581ce98af5cd7a9cef9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550376"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember Yöntemi
-Bir işaretçi MemberDef alan veya içine yöntemi için belirteç alır belirtilen tarafından <xref:System.Type> ve belirtilen adı ve meta veri imza sahip.  
+Bir işaretçi için MemberDef alan veya alınmış yöntemi için belirteç alır tarafından belirtilen <xref:System.Type> ve belirtilen adı ve meta verileri imza sahip.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,39 +41,39 @@ HRESULT FindMember (
   
 #### <a name="parameters"></a>Parametreler  
  `td`  
- [in] Sınıf veya aramak için üye barındırır arabirimi için TypeDef belirteci. Bu değer ise `mdTokenNil`, bir genel değişkeni veya genel işlevi için arama yapılır.  
+ [in] Sınıf veya üye aranacak kapsayan arabirimi TypeDef belirteci. Bu değer ise `mdTokenNil`, bir genel değişken veya işlev genel arama yapılır.  
   
  `szName`  
- [in] Aranacak üyenin adı.  
+ [in] Aranacak üyesinin adı.  
   
  `pvSigBlob`  
- [in] Üyenin ikili meta verileri imza için bir işaretçi.  
+ [in] İkili meta veri imzası üyenin bir işaretçisi.  
   
  `cbSigBlob`  
  [in] Bayt cinsinden boyutu `pvSigBlob`.  
   
  `pmb`  
- [out] Eşleşen MemberDef belirteci için bir işaretçi.  
+ [out] Eşleşen MemberDef belirteç için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kapsayan sınıf ya da arabirimi kullanarak üyesi belirtin (`td`), kendi adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`). Bir sınıf ya da arabirimi aynı ada sahip birden çok üye olabilir. Bu durumda, benzersiz bir eşleşme bulmak için üyenin imza geçirin.  
+ Kapsayan sınıfı veya arabirimi kullanılarak üyesi belirtin (`td`), adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`). Sınıfta veya arabirimde aynı ada sahip birden çok üye olabilir. Bu durumda, benzersiz bir eşleşme bulmak için üyenin imzasını geçirin.  
   
- İmza geçirilen `FindMember` imzalar için belirli bir kapsam bağlı olduğundan geçerli kapsamda oluşturulmuş olmalıdır. İmza kapsayan sınıfı veya değer türünü tanımlayan bir belirteç eklenebilir. Belirteç yerel TypeDef tabloya dizinidir. Geçerli kapsam bağlamında dışında bir çalışma zamanı imzası oluşturmak ve bu imza olarak giriş için giriş kullanmasına `FindMember`.  
+ İmza geçirilen `FindMember` imzaları belirli bir kapsama bağlı oldukları için geçerli kapsamda oluşturulan gerekir. İmza kapsayan sınıf veya değer türü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosuna bir dizindir. Geçerli kapsam bağlamında dışında bir çalışma zamanı imza oluşturun ve bu imza olarak giriş için giriş kullanmasına `FindMember`.  
   
- `FindMember` doğrudan sınıfta veya arabirimde tanımlanan üyelerini bulur; devralınan üyeleri bulmaz.  
+ `FindMember` sınıf veya arabirim içinde tanımlanmış üyeler bulur; devralınan üyeleri bulmaz.  
   
 > [!NOTE]
->  `FindMember` bir yardımcı yöntemdir. Çağırır [Imetadataımport::findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); bu çağrı bir eşleşme bulamazsa `FindMember` sonra çağırır [Imetadataımport::findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+>  `FindMember` bir yardımcı yöntemdir. Çağrı [Imetadataımport::findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); bu çağrı bir eşleşme bulamazsa `FindMember` sonra çağıran [Imetadataımport::findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

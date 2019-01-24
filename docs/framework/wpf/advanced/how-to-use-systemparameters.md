@@ -7,33 +7,33 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 07b73d78a022e508f9ed8ca2e80b71bc2ab89910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541670"
 ---
 # <a name="how-to-use-systemparameters"></a>Nasıl yapılır: SystemParameters Kullanma
-Bu örnek erişmek ve özelliklerini kullanmak üzere nasıl gösterir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için.  
+Bu örnek, erişme ve özelliklerini kullanma işlemi gösterilmektedir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için.  
   
 ## <a name="example"></a>Örnek  
- Kaynaklarınızı görselleri oluşturmanıza yardımcı olması için sistem ayarları ile tutarlı olarak sistem kaynaklarını birkaç sistem tabanlı ayarları kullanıma sunar. <xref:System.Windows.SystemParameters> hem sistem parametre değeri özelliklerini hem de değerlere bağlanan kaynak anahtarları içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> olan bir <xref:System.Windows.SystemParameters> özellik değeri ve <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> karşılık gelen kaynak anahtarı.  
+ Kaynaklarınızı oluştumanıza Yardım için sistem ayarları ile tutarlı olarak sistem kaynaklarının birkaç temel sistem ayarları kullanıma sunar. <xref:System.Windows.SystemParameters> hem sistem parametre değeri özelliklerini ve değerlere bağlanan kaynak anahtarlarını içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> olduğu bir <xref:System.Windows.SystemParameters> özellik değeri ve <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> karşılık gelen kaynak anahtarı.  
   
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], üyeleri kullanabilir <xref:System.Windows.SystemParameters> olarak bir statik özellik kullanımı veya dinamik kaynak başvurular (statik özellik değeri ile anahtar olarak). Uygulama çalışırken otomatik olarak güncelleştirmek için temel sistem değeri isterseniz, dinamik kaynak başvurusu kullanmak çalışır; Aksi halde, statik başvuru kullanın. Kaynak anahtarlara sahip soneki `Key` özellik adı eklenir.  
+ İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], üyelerinin kullanabileceği <xref:System.Windows.SystemParameters> statik özellik kullanımı veya bir dinamik kaynak başvuruları (statik özellik değeriyle anahtar olarak). Uygulama çalışırken otomatik olarak güncelleştirmek için temel sistem değeri istiyorsanız bir dinamik kaynak başvurusu kullanmak çalışır; Aksi takdirde, statik başvuru kullanın. Kaynak anahtarlara sahip soneki `Key` özellik adına eklenir.  
   
- Aşağıdaki örnek statik değerlerini erişmek ve nasıl kullanılacağını gösterir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için. Bu biçimlendirme örneği uygulayarak bir düğme boyutları <xref:System.Windows.SystemParameters> değerleri bir düğme.  
+ Aşağıdaki örnekte, erişme ve statik değerlerini kullanma işlemi gösterilmektedir <xref:System.Windows.SystemParameters> stil veya bir düğme özelleştirme. Bu biçimlendirme örneği uygulayarak bir düğme boyutları <xref:System.Windows.SystemParameters> değerleri.  
   
  [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- Değerleri kullanmak için <xref:System.Windows.SystemParameters> kodda, statik referans veya dinamik kaynak başvuruları kullanmak gerekmez. Bunun yerine, değerlerini kullanın <xref:System.Windows.SystemParameters> sınıfı. Anahtar olmayan özellikler görünüşe göre statik özellikler olarak, çalışma zamanı davranışını tanımlanmasına rağmen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistem tarafından barındırılan olarak gerçek zamanlı özelliklerinde yeniden ve hesap sistem değerlerine kullanıcı tarafından yapılan değişiklikleri için düzgün biçimde değiştirilir. Aşağıdaki örnekte, genişlik ve yükseklik düğmesinin kullanarak ayarlamak gösterilmiştir <xref:System.Windows.SystemParameters> değerleri.  
+ Değerlerini kullanılacak <xref:System.Windows.SystemParameters> kod içinde statik başvuruları veya dinamik kaynak başvurularını kullanmanız gerekmez. Bunun yerine, değerlerini kullanmak <xref:System.Windows.SystemParameters> sınıfı. Anahtar olmayan özellikler statik özellik olarak, çalışma zamanı davranışını görünüşe göre tanımlanmasına rağmen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistem tarafından barındırılan olarak özellikleri yeniden değerlendir ve hesap için kullanıcı tarafından yapılan değişiklikleri sistem değerleri için düzgün biçimde değiştirilir. Aşağıdaki örnekte, genişlik ve yükseklik bir düğmeyi kullanarak ayarlamak gösterilmektedir <xref:System.Windows.SystemParameters> değerleri.  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.SystemParameters>  
- [Sistem Fırçası ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [SystemFonts Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Sistem Parametreleri Tuşlarını Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.SystemParameters>
+- [Sistem Fırçası ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
+- [Sistem Parametreleri Tuşlarını Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

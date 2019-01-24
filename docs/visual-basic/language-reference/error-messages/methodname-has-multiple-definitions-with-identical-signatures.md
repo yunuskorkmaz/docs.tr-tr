@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;MethodName&gt; &#39; aynı imzaları ile birden çok tanımlarına sahip'
+title: '&#39;&lt;MethodName&gt; &#39; aynı imzaya sahip birden fazla tanım var'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30269
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 059d152cf9c3fae77ab53a4a9248b36d99614c8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: daa1bc4fcc3ee0fe0279a029f9aac03d4555d582
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536951"
 ---
-# <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;MethodName&gt; &#39; aynı imzaları ile birden çok tanımlarına sahip
-A `Function` veya `Sub` yordamı bildirimini aynı yordamı adı ve bağımsız değişken listesi önceki bildirimi olarak kullanır. Olası bir nedeni özgün yordamı aşırı yükleme girişimi ' dir. Aşırı yüklenmiş yordamları farklı bağımsız değişken listeleri olması gerekir.  
+# <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;MethodName&gt; &#39; aynı imzaya sahip birden fazla tanım var
+A `Function` veya `Sub` yordam bildirimi, bir önceki bildirimi olarak aynı yordamı adı ve bağımsız değişken listesi kullanır. Olası nedenlerinden biri, özgün bir yordamı aşırı yükleme girişiminde olmasıdır. Aşırı yüklenmiş yordamları farklı bağımsız değişken listeleri olması gerekir.  
   
  **Hata Kimliği:** BC30269  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Yordamın adını veya bağımsız değişken listesi değiştirin veya yinelenen bildirimini kaldırın.  
+-   Yordam adı veya bağımsız değişken listesiyle değiştirin veya yinelenen bildirimini kaldırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

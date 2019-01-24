@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530446"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn eşlemeleri
 A **DataAdapter** sıfır veya daha fazla koleksiyonu içeren <xref:System.Data.Common.DataTableMapping> nesneler, **TableMappings** özelliği. A **DataTableMapping** verileri arasındaki ana eşlemeyi döndürülen bir veri kaynağında bir sorgudan sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı yerine geçirilebilir **DataTable** için ad **dolgu** yöntemi **DataAdapter**. Aşağıdaki örnek, oluşturur bir **DataTableMapping** adlı **AuthorsMapping** için **yazarlar** tablo.  
@@ -90,14 +90,14 @@ adapter.Fill(custDS, "Customers");
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- İki tablo oluşturulan **veri kümesi**: **müşteriler** ve **Customers1**. Tablo eşlemeleri ikinci tablo adı emin olmak için kullanabileceğiniz **siparişler** yerine **Customers1**. Bunu yapmak için kaynak tablosu harita **Customers1** için **veri kümesi** tablo **siparişler**, aşağıdaki örnekte gösterildiği gibi.  
+ İki tablo oluşturulan **veri kümesi**: **Müşteriler** ve **Customers1**. Tablo eşlemeleri ikinci tablo adı emin olmak için kullanabileceğiniz **siparişler** yerine **Customers1**. Bunu yapmak için kaynak tablosu harita **Customers1** için **veri kümesi** tablo **siparişler**, aşağıdaki örnekte gösterildiği gibi.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555992"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/language-reference/keywords/base.md) ve türetilmiş sınıfları farklı kitaplıklarında evrim geçiren ve geriye dönük uyumluluk sağlamak. Örneğin, yani yeni üyesi temel sunulmasıyla [sınıfı](../../../csharp/language-reference/keywords/class.md) türetilmiş bir sınıf üyesi olarak aynı ada sahip tamamen C# tarafından desteklenir ve beklenmeyen davranışlara yol değil. Ayrıca, bir sınıf devralınan bir yöntemi geçersiz kılmak için bir yöntem amaçlanmamıştır veya yöntemi devralınan bir yöntemi benzer ada gizler yeni bir yöntem olup olmadığını açıkça belirtmelidir anlamına gelir.  
@@ -79,9 +79,9 @@ C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/lan
   
  Daha fazla örnek için `new` ve `override`, bkz: [bilerek, kullanım geçersiz kılma ve yeni anahtar sözcüklerle](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

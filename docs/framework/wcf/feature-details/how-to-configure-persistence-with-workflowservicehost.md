@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma'
+title: 'Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 628a6b57b2d356aadadd96ebec312ef979aca6df
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b340a46d10ef517d46a6e85fdb2f8e332cd0b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530330"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma
-Bu konu, barındırılan iş akışları için kalıcılığını sağlamak için SQL iş akışı örneği Store özelliği yapılandırmayı açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir yapılandırma dosyası kullanarak. SQL iş akışı örneği Store özelliği kullanmadan önce iş akışı örneği kalıcı hale getirmek için kullanılan bir SQL veritabanı oluşturmanız gerekir. Daha fazla bilgi için [nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma
+Bu konu, barındırılan iş akışları için kalıcılığını sağlamak için SQL iş akışı örneği Store özelliği yapılandırmayı açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir yapılandırma dosyası kullanarak. SQL iş akışı örneği Store özelliği kullanmadan önce iş akışı örneği kalıcı hale getirmek için kullanılan bir SQL veritabanı oluşturmanız gerekir. Daha fazla bilgi için [nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>SQL iş akışı örneği Store yapılandırmasında yapılandırmak için  
   
@@ -31,7 +31,7 @@ Bu konu, barındırılan iş akışları için kalıcılığını sağlamak içi
     </serviceBehaviors>  
     ```  
   
-     SQL iş akışı örnek deposu yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). İçin bireysel ayarlar hakkında daha fazla bilgi için <`sqlWorkflowInstanceStore`> davranış öğesi bkz [SQL iş akışı örneği Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric kendi sürdürme deposundan sağlar. Daha fazla bilgi için [Windows Server App Fabric Kalıcılık](https://go.microsoft.com/fwlink/?LinkId=193121).  
+     SQL iş akışı örnek deposu yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). İçin bireysel ayarlar hakkında daha fazla bilgi için <`sqlWorkflowInstanceStore`> davranış öğesi bkz [SQL iş akışı örneği Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric kendi sürdürme deposundan sağlar. Daha fazla bilgi için [Windows Server App Fabric Kalıcılık](https://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  Basitleştirilmiş yapılandırma önceki yapılandırma örneği kullanır. Daha fazla bilgi için [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)  
@@ -52,14 +52,14 @@ Bu konu, barındırılan iş akışları için kalıcılığını sağlamak içi
     });  
     ```  
   
-     SQL iş akışı örnek deposu yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). İçin bireysel ayarlar hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> davranış öğesi bkz [SQL iş akışı örneği Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric kendi sürdürme deposundan sağlar. Daha fazla bilgi için [Windows Server App Fabric Kalıcılık](https://go.microsoft.com/fwlink/?LinkId=193121).  
+     SQL iş akışı örnek deposu yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). İçin bireysel ayarlar hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> davranış öğesi bkz [SQL iş akışı örneği Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric kendi sürdürme deposundan sağlar. Daha fazla bilgi için [Windows Server App Fabric Kalıcılık](https://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  Basitleştirilmiş yapılandırma önceki yapılandırma örneği kullanır. Daha fazla bilgi için [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)  
   
-     Program aracılığıyla kalıcılığı yapılandırma örneği için bkz. [nasıl yapılır: iş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştirme](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
+     Program aracılığıyla kalıcılığı yapılandırma örneği için bkz. [nasıl yapılır: İş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
- [Windows Server AppFabric kalıcılığı](https://go.microsoft.com/fwlink/?LinkId=193121)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+- [Windows Server AppFabric kalıcılığı](https://go.microsoft.com/fwlink/?LinkId=193121)

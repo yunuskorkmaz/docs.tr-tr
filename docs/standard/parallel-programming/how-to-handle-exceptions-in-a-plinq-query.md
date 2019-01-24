@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme'
+title: 'Nasıl yapılır: PLINQ sorgusunda özel durumları işleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554250"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ sorgusunda özel durumları işleme
 Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> , durum konumundan bir PLINQ sorgusu yürütüldüğünde. İkinci örnek, try-catch bloklarını temsilciler içinde özel durumun olduğu için mümkün olduğunca yakın yerleştirin gösterilmektedir. Oluşur ve büyük olasılıkla sorgu yürütmeye devam et hemen sonra bu şekilde, siz bunları yakalayabilir. Ne zaman bir sorgu özel durum oluştuktan sonra bazı öğeleri işlemeye devam edebilir mümkündür özel durumları ayarlama geri katılan iş parçacığına Kabarcık halinde çıkmasına izin verilmez.  
   
  Bazı durumlarda PLINQ sıralı yürütme için geri döner ve özel bir durum oluştuğunda, özel durum doğrudan yayılır ve sarmalanmış değil bir <xref:System.AggregateException>. Ayrıca, <xref:System.Threading.ThreadAbortException>s her zaman yayılır doğrudan.  
@@ -50,5 +50,5 @@ Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateExc
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

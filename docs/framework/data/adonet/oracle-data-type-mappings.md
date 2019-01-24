@@ -2,12 +2,12 @@
 title: Oracle veri türü Mappings1
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 9057a19abb1abc22924b5542f06e21a57a36ed94
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e8dce0891489b8dbe127e2d327dd2e6f5e9935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544321"
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle veri türü eşlemeleri
 Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:System.Data.OracleClient.OracleDataReader>.  
@@ -22,7 +22,7 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
 |**KAYAN NOKTA**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **numarası** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir kayan nokta değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
 |**TAMSAYI**|**Ondalık**|<xref:System.Data.OracleClient.OracleNumber>|Bu veri türü için bir diğer ad, **NUMBER(38)** veri türü ve böylece <xref:System.Data.OracleClient.OracleDataReader> döndürür bir **System.Decimal** veya <xref:System.Data.OracleClient.OracleNumber> yerine bir tamsayı değeri. .NET Framework veri türü kullanan bir taşma neden olabilir.|  
 |**YIL AY ARALIĞI**|**Int32**|<xref:System.Data.OracleClient.OracleMonthSpan>||  
-|**İKİNCİ GÜN ARALIĞI**|**Zaman aralığı**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
+|**İKİNCİ GÜN ARALIĞI**|**TimeSpan**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
 |**UZUN**|**dize**|<xref:System.Data.OracleClient.OracleString>||  
 |**UZUN HAM**|**Bayt]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**NCHAR**|**dize**|<xref:System.Data.OracleClient.OracleString>||  
@@ -43,7 +43,7 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
 |Oracle veri türü|Bir parametre olarak bağlamak için DbType numaralandırması|Bir parametre olarak bağlamak için OracleType numaralandırması|Açıklamalar|  
 |----------------------|-----------------------------------------------|---------------------------------------------------|-------------|  
 |**BDOSYA**||**BDosya**|Oracle, bağlama yalnızca sağlayan bir **BDOSYA** olarak bir **BDOSYA** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**BDOSYA** gibi değerini **byte []** veya <xref:System.Data.OracleClient.OracleBinary>.|  
-|**BLOB**||**BLOB**|Oracle, bağlama yalnızca sağlayan bir **BLOB** olarak bir **BLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**BLOB** gibi değerini **byte []** veya <xref:System.Data.OracleClient.OracleBinary>.|  
+|**BLOB**||**Blob**|Oracle, bağlama yalnızca sağlayan bir **BLOB** olarak bir **BLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**BLOB** gibi değerini **byte []** veya <xref:System.Data.OracleClient.OracleBinary>.|  
 |**CHAR**|**AnsiStringFixedLength**|**Char**||  
 |**CLOB**||**CLOB**|Oracle, bağlama yalnızca sağlayan bir **CLOB** olarak bir **CLOB** parametresi. Olmayan bir bağlama denerseniz, Oracle için .NET veri sağlayıcısı otomatik olarak sizin için bir tane oluşturmak değil**CLOB** gibi değerini **System.String** veya <xref:System.Data.OracleClient.OracleString>.|  
 |**TARİH**|**Tarih/saat**|**Tarih/saat**||  
@@ -68,6 +68,6 @@ Aşağıdaki tabloda, Oracle veri türleri ve eşleşmeleri listeler <xref:Syste
   
  **Giriş/çıkış**, **çıkış**, ve **ReturnValue** **ParameterDirection** tarafından kullanılan değerleri <xref:System.Data.OracleClient.OracleParameter.Value%2A> özelliği<xref:System.Data.OracleClient.OracleParameter> nesne olan .NET Framework veri türleri, giriş değeri bir Oracle veri türü değilse (örneğin, <xref:System.Data.OracleClient.OracleNumber> veya <xref:System.Data.OracleClient.OracleString>). Bu geçerli değildir **REF CURSOR**, **BDOSYA**, veya **LOB** veri türleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

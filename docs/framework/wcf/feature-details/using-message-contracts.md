@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534426"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunlarına ve veri yapıları Kapat dikkat ve kendilerini hangi verileri taşınan iletileri yapısı ile uğraşmak zorunda değildir. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma oldukça basittir. (Daha fazla bilgi için [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  İleti nesnesi olarak almak istiyorsanız `Result` özelliği ve o nesnenin özellikleri olarak döndürülen değerlerin `/messageContract` seçeneği komutu. Bu yanıt iletisi olarak döndüren bir imza oluşturur `Result` özelliği <xref:System.EventArgs> nesne. Tüm iç dönüş değerleri ardından yanıt iletisi nesnenin özellikleridir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)

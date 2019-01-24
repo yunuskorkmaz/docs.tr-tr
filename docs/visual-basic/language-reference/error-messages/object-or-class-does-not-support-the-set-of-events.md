@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
-ms.openlocfilehash: 4a6f1f59f43cdb351d49fbcbfd18362db888586e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82f3acff1730b4b31b0118a46376825c8807e1da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552157"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>Nesne veya sınıf olay kümesini desteklemiyor
-Kullanmaya çalıştığınız bir `WithEvents` olayları belirtilen kümesi için bir olay kaynağı olarak çalışamaz bir bileşeni ile değişken. Örneğin, bir nesne olaylar indirilir, sonra başka bir nesne oluşturmak istediğiniz `Implements` ilk nesne. Uygulanan nesneden olayları havuzu düşünebilirsiniz karşın, bu her zaman durumda değil. `Implements` yalnızca yöntemleri ve özellikleri için bir arabirimi uygular. `WithEvents` Özel için desteklenmeyen `UserControls`, type Info yükseltmek gereken `ObjectEvent` çalışma zamanında kullanılabilir değil.  
+Kullanmaya çalıştığınız bir `WithEvents` değişken bir bileşeniyle belirlenen olayları için olay kaynağı olarak çalışamaz. Örneğin, bir nesnenin olaylar indirilir ve ardından başka bir nesne oluşturan istediğinizi `Implements` ilk nesne. Uygulanan nesneden olayları havuz düşünebilirsiniz ancak bu her zaman böyle değildir. `Implements` yalnızca yöntemler ve özellikler için bir arabirim uygular. `WithEvents` Özel için desteklenmeyen `UserControls`tür bilgisini yükseltmek gerekli olduğundan `ObjectEvent` çalışma zamanında kullanılabilir değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Olay kaynağı olmayan bir bileşen için olayları kapatamıyor.  
+1.  Olayları olay kaynağı olmayan bir bileşen için havuz olamaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)

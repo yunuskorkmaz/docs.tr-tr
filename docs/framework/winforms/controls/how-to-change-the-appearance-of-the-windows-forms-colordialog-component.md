@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme'
+title: 'Nasıl yapılır: Windows Forms ColorDialog bileşeninin görünüşünü değiştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530304"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme
-Windows formlarının görünüşünü yapılandırabilirsiniz <xref:System.Windows.Forms.ColorDialog> özelliklerini sayısıyla bileşen. İletişim kutusu iki bölümü vardır: bir temel renkleri ve özel renk tanımla kullanıcıya veren gösterir.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Nasıl yapılır: Windows Forms ColorDialog bileşeninin görünüşünü değiştirme
+Windows Forms görünümünü yapılandırabileceğiniz <xref:System.Windows.Forms.ColorDialog> özelliklerini sayıda bileşen. İletişim kutusu iki bölümü vardır: bir temel renkleri ve kullanıcının özel renkler tanımlamasına olanak tanıyan bir gösterir.  
   
- Özelliklerin çoğu kullanıcı iletişim kutusundan seçebilir hangi renkleri kısıtlayın. Varsa <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> özelliği ayarlanmış `true`, kullanıcı özel renkler tanımlamak için izin verilir. <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Özelliği `true` iletişim kutusunda özel renkler; tanımlamak için genişletilmişse Aksi durumda kullanıcı bir "Özel renk tanımla" düğmesini gerekir. Zaman <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> özelliği ayarlanmış `true`, temel renkler kümesinde kullanılabilir olan tüm renkleri iletişim kutusunu görüntüler. Varsa <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> özelliği ayarlanmış `true`, kullanıcı Titremeli renk seçemezsiniz; yalnızca düz renk seçmek kullanılabilir.  
+ Özelliklerin çoğu kullanıcının iletişim kutusundan seçip hangi renkleri kısıtlayın. Varsa <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> özelliği `true`, kullanıcı özel renkler tanımlamak için kullanılabilir. <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Özelliği `true` iletişim kutusuna özel renkler; tanımlamak için genişletilmişse Aksi takdirde kullanıcı bir "Özel renkler tanımlama" düğmesine gerekir. Zaman <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> özelliği `true`, temel renkleri kümesindeki tüm kullanılabilir renklerin iletişim kutusunda görüntülenir. Varsa <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> özelliği `true`, kullanıcı Titremeli renk seçemez; yalnızca düz renk seçmek kullanılabilir.  
   
- Varsa <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> özelliği ayarlanmış `true`, Yardım düğmesi üzerinde iletişim kutusu görüntülenir. Kullanıcı Yardım düğmesine tıkladığında <xref:System.Windows.Forms.ColorDialog> bileşenin <xref:System.Windows.Forms.CommonDialog.HelpRequest> olayı oluşturulur.  
+ Varsa <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> özelliği `true`, iletişim kutusundaki Yardım düğmesini görünür. Kullanıcı Yardım düğmesine tıkladığında <xref:System.Windows.Forms.ColorDialog> bileşenin <xref:System.Windows.Forms.CommonDialog.HelpRequest> olayı oluşturulur.  
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Renk iletişim kutusu görünümünü yapılandırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, ve <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> istenen değerleri özellikleri.  
+1.  Ayarlama <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, ve <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> özellikleri için istenen değerleri.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -49,7 +49,7 @@ Windows formlarının görünüşünü yapılandırabilirsiniz <xref:System.Wind
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ColorDialog>  
- [ColorDialog Bileşeni](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- [ColorDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ColorDialog>
+- [ColorDialog Bileşeni](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+- [ColorDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

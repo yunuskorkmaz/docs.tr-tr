@@ -2,12 +2,12 @@
 title: DotNet yayımlama komutu
 description: Dotnet yayımlama komutu, .NET Core projesi bir dizine yayımlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 40ce31073ee3f6f94e110f3a4e1eeda0c7b2e48d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559326"
 ---
 # <a name="dotnet-publish"></a>DotNet yayımlama
 
@@ -17,7 +17,7 @@ ms.locfileid: "53169787"
 
 `dotnet publish` -Bir klasöre dağıtım barındıran sistemde için uygulama ve onun bağımlılıklarını paketleri.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 ```
@@ -227,5 +227,5 @@ Geçerli uygulama yayımlama ancak projeden projeye (P2P) başvurular, yalnızca
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Hedef çerçeveler](../../standard/frameworks.md)
-* [Çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+- [Hedef çerçeveler](../../standard/frameworks.md)
+- [Çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

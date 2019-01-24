@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547500"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
@@ -167,12 +167,12 @@ Uygulama TextFormatter arasındaki etkileşimi
   
  Özel metin düzenini oluşturma hakkında daha fazla ayrıntı için bkz. [Gelişmiş metin biçimlendirme](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.FormattedText>  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [ClearType Genel Bakışı](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Biçimlendirilmiş Metin Çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Gelişmiş Metin Biçimlendirme](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Microsoft tipografi](https://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.FormattedText>
+- <xref:System.Windows.Media.TextFormatting.TextFormatter>
+- [ClearType Genel Bakışı](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Biçimlendirilmiş Metin Çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [Gelişmiş Metin Biçimlendirme](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
+- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Microsoft tipografi](https://www.microsoft.com/typography/default.mspx)
