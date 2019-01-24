@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)'
+title: 'Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524656"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="fbe70-102">Nasıl yapılır: tüm düğümleri bulmak bir Namespace (C#)</span><span class="sxs-lookup"><span data-stu-id="fbe70-102">How to: Find All Nodes in a Namespace (C#)</span></span>
-<span data-ttu-id="fbe70-103">Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fbe70-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="aadfe-102">Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="aadfe-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="aadfe-103">Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="aadfe-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbe70-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="fbe70-104">Example</span></span>  
- <span data-ttu-id="fbe70-105">Aşağıdaki örnek, bir XML ağacı ile iki ad alanı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fbe70-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="fbe70-106">Ağacı ile yineleme ve tüm öğeleri ve öznitelikleri o ad alanlarından birinde adlarını yazdırır.</span><span class="sxs-lookup"><span data-stu-id="fbe70-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="aadfe-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="aadfe-104">Example</span></span>  
+ <span data-ttu-id="aadfe-105">Aşağıdaki örnek, bir XML ağacı ile iki ad alanı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="aadfe-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="aadfe-106">Ağacı ile yineleme ve tüm öğeleri ve öznitelikleri o ad alanlarından birinde adlarını yazdırır.</span><span class="sxs-lookup"><span data-stu-id="aadfe-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="fbe70-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fbe70-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="aadfe-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="aadfe-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="fbe70-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="fbe70-108">Example</span></span>  
- <span data-ttu-id="fbe70-109">Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir.</span><span class="sxs-lookup"><span data-stu-id="fbe70-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="fbe70-110">Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fbe70-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="aadfe-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="aadfe-108">Example</span></span>  
+ <span data-ttu-id="aadfe-109">Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir.</span><span class="sxs-lookup"><span data-stu-id="aadfe-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="aadfe-110">Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.</span><span class="sxs-lookup"><span data-stu-id="aadfe-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="fbe70-111">Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="fbe70-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="aadfe-111">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="aadfe-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="fbe70-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fbe70-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="aadfe-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="aadfe-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -95,6 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fbe70-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fbe70-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aadfe-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aadfe-113">See also</span></span>
 
-- [<span data-ttu-id="fbe70-114">Temel sorgular (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="fbe70-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="aadfe-114">Temel sorgular (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aadfe-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

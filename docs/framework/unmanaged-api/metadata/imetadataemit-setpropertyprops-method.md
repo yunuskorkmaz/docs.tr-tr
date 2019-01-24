@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 997e43e6a8be1ac2859e7338751272f3074be11d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523136"
 ---
-# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="cae91-102">IMetaDataEmit::SetPropertyProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cae91-102">IMetaDataEmit::SetPropertyProps Method</span></span>
-<span data-ttu-id="cae91-103">Önceki bir çağrı tarafından tanımlanmış bir özellik için meta verilerde depolanan özellikleri ayarlar [DefineProperty yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="cae91-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
+# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="6c06a-102">IMetaDataEmit::SetPropertyProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6c06a-102">IMetaDataEmit::SetPropertyProps Method</span></span>
+<span data-ttu-id="6c06a-103">Önceki bir çağrı tarafından tanımlanan bir özellik için meta verileri içinde depolanan özellikleri ayarlar [DefineProperty yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="6c06a-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cae91-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cae91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c06a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6c06a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPropertyProps (   
@@ -42,40 +42,40 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cae91-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cae91-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6c06a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6c06a-105">Parameters</span></span>  
  `pr`  
- <span data-ttu-id="cae91-106">[in] Değiştirilecek bir özellik için belirteci</span><span class="sxs-lookup"><span data-stu-id="cae91-106">[in] The token for the property to be changed</span></span>  
+ <span data-ttu-id="6c06a-106">[in] Değiştirilecek özellik için belirteç</span><span class="sxs-lookup"><span data-stu-id="6c06a-106">[in] The token for the property to be changed</span></span>  
   
  `dwPropFlags`  
- <span data-ttu-id="cae91-107">[in] Özellik bayraklar.</span><span class="sxs-lookup"><span data-stu-id="cae91-107">[in] Property flags.</span></span>  
+ <span data-ttu-id="6c06a-107">[in] Özellik bayrakları.</span><span class="sxs-lookup"><span data-stu-id="6c06a-107">[in] Property flags.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="cae91-108">[in] Özelliğin varsayılan değeri türü.</span><span class="sxs-lookup"><span data-stu-id="cae91-108">[in] The type of the property's default value.</span></span>  
+ <span data-ttu-id="6c06a-108">[in] Özelliğin varsayılan değeri türü.</span><span class="sxs-lookup"><span data-stu-id="6c06a-108">[in] The type of the property's default value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="cae91-109">[in] Özelliğin varsayılan değeri.</span><span class="sxs-lookup"><span data-stu-id="cae91-109">[in] The default value for the property.</span></span>  
+ <span data-ttu-id="6c06a-109">[in] Bir özellik için varsayılan değeri.</span><span class="sxs-lookup"><span data-stu-id="6c06a-109">[in] The default value for the property.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="cae91-110">[in] \(Unicode) sayısını karakterleri `pValue`.</span><span class="sxs-lookup"><span data-stu-id="cae91-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
+ <span data-ttu-id="6c06a-110">[in] \(Unicode) sayısını karakterleri `pValue`.</span><span class="sxs-lookup"><span data-stu-id="6c06a-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
   
  `mdSetter`  
- <span data-ttu-id="cae91-111">[in] Özellik değeri ayarlar yöntemi.</span><span class="sxs-lookup"><span data-stu-id="cae91-111">[in] The method that sets the property value.</span></span>  
+ <span data-ttu-id="6c06a-111">[in] Özellik değeri ayarlar yönteminin.</span><span class="sxs-lookup"><span data-stu-id="6c06a-111">[in] The method that sets the property value.</span></span>  
   
  `mdGetter`  
- <span data-ttu-id="cae91-112">[in] Özellik değeri alır yöntemi.</span><span class="sxs-lookup"><span data-stu-id="cae91-112">[in] The method that gets the property value.</span></span>  
+ <span data-ttu-id="6c06a-112">[in] Yöntem özellik değerini alır.</span><span class="sxs-lookup"><span data-stu-id="6c06a-112">[in] The method that gets the property value.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="cae91-113">[in] Özellik ile ilişkilendirilmiş diğer yöntemleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="cae91-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="cae91-114">Bu diziyle sonlandırmak bir `mdTokenNil` belirteci.</span><span class="sxs-lookup"><span data-stu-id="cae91-114">Terminate this array with an `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="6c06a-113">[in] Özellikle ilişkili diğer yöntemleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="6c06a-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="6c06a-114">Bu dizi ile sonlandırmak bir `mdTokenNil` belirteci.</span><span class="sxs-lookup"><span data-stu-id="6c06a-114">Terminate this array with an `mdTokenNil` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cae91-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cae91-115">Requirements</span></span>  
- <span data-ttu-id="cae91-116">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cae91-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c06a-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6c06a-115">Requirements</span></span>  
+ <span data-ttu-id="6c06a-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c06a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cae91-117">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cae91-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6c06a-117">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6c06a-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cae91-118">**Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="cae91-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6c06a-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="6c06a-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cae91-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cae91-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6c06a-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c06a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cae91-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cae91-120">See Also</span></span>  
- [<span data-ttu-id="cae91-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cae91-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="cae91-122">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cae91-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6c06a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c06a-120">See also</span></span>
+- [<span data-ttu-id="6c06a-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6c06a-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="6c06a-122">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6c06a-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

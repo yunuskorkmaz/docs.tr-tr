@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bul (XPath-LINQ-XML) alt öğenin alt öğeleri (Visual Basic)'
+title: 'Nasıl yapılır: Bir alt öğesi (XPath-LINQ to XML) alt öğeleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: c29e8badd757b41d765e7d68f7ecd45c8dea8a14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d5ccd46a595a7ec7477246dd9a9cd351614fdf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520964"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="baa33-102">Nasıl yapılır: Bul (XPath-LINQ-XML) alt öğenin alt öğeleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="baa33-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="baa33-103">Bu konuda, belirli bir ada sahip bir alt öğenin alt öğelerini alma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="baa33-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="75793-102">Nasıl yapılır: Bir alt öğesi (XPath-LINQ to XML) alt öğeleri bulma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75793-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="75793-103">Bu konuda, belirli bir ada sahip bir alt öğenin alt öğeleri almak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="75793-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="baa33-104">XPath ifadesi şöyledir:</span><span class="sxs-lookup"><span data-stu-id="baa33-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="75793-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="75793-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="baa33-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="baa33-105">Example</span></span>  
- <span data-ttu-id="baa33-106">Bu örnek bir sözcük işleme belgesini XML gösteriminden metin ayıklama sorunları benzetimini yapar.</span><span class="sxs-lookup"><span data-stu-id="baa33-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="baa33-107">Bu ilk tüm seçer `Paragraph` öğeleri ve ardından seçer tüm `Text` her alt öğeleri `Paragraph` öğesi.</span><span class="sxs-lookup"><span data-stu-id="baa33-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="baa33-108">Bu alt öğesi seçin değil `Text` öğeleri `Comment` öğesi.</span><span class="sxs-lookup"><span data-stu-id="baa33-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="75793-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="75793-105">Example</span></span>  
+ <span data-ttu-id="75793-106">Bu örnek, bir sözcük işleme belgesi bir XML gösteriminden metin ayıklama sorunları benzetimini yapar.</span><span class="sxs-lookup"><span data-stu-id="75793-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="75793-107">Bu ilk tüm seçer `Paragraph` öğeleri ve ardından tüm seçer `Text` her alt öğeleri `Paragraph` öğesi.</span><span class="sxs-lookup"><span data-stu-id="75793-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="75793-108">Bu alt seçemiyorum `Text` öğelerini `Comment` öğesi.</span><span class="sxs-lookup"><span data-stu-id="75793-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -62,12 +62,12 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- <span data-ttu-id="baa33-109">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="baa33-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="75793-109">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="75793-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="baa33-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="baa33-110">See Also</span></span>  
- [<span data-ttu-id="baa33-111">LINQ-XML XPath kullanıcıların (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="baa33-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="75793-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75793-110">See also</span></span>
+- [<span data-ttu-id="75793-111">LINQ to XML için XPath kullanıcıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75793-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

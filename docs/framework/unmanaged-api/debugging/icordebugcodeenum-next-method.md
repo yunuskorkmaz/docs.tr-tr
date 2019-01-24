@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529810"
 ---
-# <a name="icordebugcodeenumnext-method"></a><span data-ttu-id="8519a-102">ICorDebugCodeEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8519a-102">ICorDebugCodeEnum::Next Method</span></span>
-<span data-ttu-id="8519a-103">Geçerli konumdan başlayarak numaralandırma, belirtilen sayıda "ICorDebugCode" örneklerini alır.</span><span class="sxs-lookup"><span data-stu-id="8519a-103">Gets the specified number of "ICorDebugCode" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugcodeenumnext-method"></a><span data-ttu-id="9bf65-102">ICorDebugCodeEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9bf65-102">ICorDebugCodeEnum::Next Method</span></span>
+<span data-ttu-id="9bf65-103">Numaralandırma, geçerli konumdan başlayarak belirtilen "ICorDebugCode" örnek sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="9bf65-103">Gets the specified number of "ICorDebugCode" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8519a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8519a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9bf65-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9bf65-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,25 +38,25 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8519a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8519a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9bf65-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9bf65-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="8519a-106">[in] Sayısı `ICorDebugCode` alınacak örnekleri.</span><span class="sxs-lookup"><span data-stu-id="8519a-106">[in] The number of `ICorDebugCode` instances to be retrieved.</span></span>  
+ <span data-ttu-id="9bf65-106">[in] Sayısını `ICorDebugCode` alınacak örnekleri.</span><span class="sxs-lookup"><span data-stu-id="9bf65-106">[in] The number of `ICorDebugCode` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="8519a-107">[out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugCode` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="8519a-107">[out] An array of pointers, each of which points to an `ICorDebugCode` object.</span></span>  
+ <span data-ttu-id="9bf65-107">[out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugCode` nesne.</span><span class="sxs-lookup"><span data-stu-id="9bf65-107">[out] An array of pointers, each of which points to an `ICorDebugCode` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="8519a-108">[out] Sayısını gösteren bir işaretçi `ICorDebugCode` gerçekte döndürülen örnek.</span><span class="sxs-lookup"><span data-stu-id="8519a-108">[out] A pointer to the number of `ICorDebugCode` instances actually returned.</span></span> <span data-ttu-id="8519a-109">Bu değer null ise `celt` biridir.</span><span class="sxs-lookup"><span data-stu-id="8519a-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="9bf65-108">[out] Bir işaretçi sayısına `ICorDebugCode` gerçekte döndürülen örnekleri.</span><span class="sxs-lookup"><span data-stu-id="9bf65-108">[out] A pointer to the number of `ICorDebugCode` instances actually returned.</span></span> <span data-ttu-id="9bf65-109">Bu değer null olabilir, `celt` biridir.</span><span class="sxs-lookup"><span data-stu-id="9bf65-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8519a-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8519a-110">Requirements</span></span>  
- <span data-ttu-id="8519a-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8519a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9bf65-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9bf65-110">Requirements</span></span>  
+ <span data-ttu-id="9bf65-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9bf65-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8519a-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8519a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9bf65-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9bf65-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8519a-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8519a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9bf65-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9bf65-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8519a-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8519a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9bf65-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9bf65-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8519a-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8519a-115">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="9bf65-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9bf65-115">See also</span></span>
+
+
