@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma'
+title: 'Nasıl yapılır: Çalışma zamanında denetiminizi görünmez yapma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 51e804c7f01b55ed7504837042b6c32bf47d9405
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f352e0b2c0582c45710f7e5a26e68ab7fbd944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597803"
 ---
-# <a name="how-to-make-your-control-invisible-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma
-Ne zaman çalışma zamanında görünmez bir kullanıcı denetimi oluşturmak isteyebilirsiniz zamanlar vardır. Örneğin, bir uyarı saati bir denetim ne zaman uyarı sizi uyarabilir dışında görünmez olabilir. Bu ayar kolayca gerçekleştirilir <xref:System.Windows.Forms.Control.Visible%2A> özelliği. Varsa <xref:System.Windows.Forms.Control.Visible%2A> özelliği `true`, denetiminizi normal olarak görünür. Varsa `false`, denetiminizi gizlenir. Denetim kodu görünmez sırasında hala çalışabilir rağmen kullanıcı arabirimi aracılığıyla denetimi ile etkileşim mümkün olmaz. Kullanıcı girişi (örneğin, fare tıklamaları) hala yanıt görünmeyen bir denetim oluşturmak istiyorsanız, saydam bir denetim oluşturmanız gerekir. Daha fazla bilgi için bkz: [denetiminize saydam arka plan vermiş](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a>Nasıl yapılır: Çalışma zamanında denetiminizi görünmez yapma
+Çalışma zamanında görünmez olan bir kullanıcı denetimi oluşturmak isteyebilirsiniz zamanlar vardır. Örneğin, bir uyarı saati bir denetim ne zaman uyarı sizi uyarabilir dışında görünmez olabilir. Bu ayarlayarak kolayca gerçekleştirilir <xref:System.Windows.Forms.Control.Visible%2A> özelliği. Varsa <xref:System.Windows.Forms.Control.Visible%2A> özelliği `true`, Denetim normal olarak görünür. Varsa `false`, denetiminizin gizlenir. Denetiminiz kodunda görünmez hala çalışabilir ancak kullanıcı arabirimi aracılığıyla denetimi ile etkileşim kurmak mümkün olmayacaktır. Kullanıcı girişi (örneğin, fare tıklamaları) hala yanıt veren görünmeyen bir denetim oluşturmak istiyorsanız, saydam bir denetimi oluşturmanız gerekir. Daha fazla bilgi için [denetiminiz saydam bir arka plan verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  
   
-### <a name="to-make-your-control-invisible-at-run-time"></a>Çalışma zamanında denetiminizi görünmez yapmak için  
+### <a name="to-make-your-control-invisible-at-run-time"></a>İçin çalışma zamanında denetiminizi görünmez yapma  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğine `false`.  
+1.  Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğini `false`.  
   
     ```vb  
     ' To set the Visible property from within your object's own code.  
@@ -39,7 +39,7 @@ Ne zaman çalışma zamanında görünmez bir kullanıcı denetimi oluşturmak i
     myControl1.Visible = false;  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Control.Visible%2A>  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Nasıl yapılır: Denetiminize Saydam Arka Plan Verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Control.Visible%2A>
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Nasıl yapılır: Denetiminize saydam arka plan verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)

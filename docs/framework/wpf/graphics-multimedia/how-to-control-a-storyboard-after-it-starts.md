@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görsel Taslağı Başladıktan Sonra Denetleme'
+title: 'Nasıl yapılır: Görsel taslağı başladıktan sonra denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,41 +7,41 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2407de5029007748de691a3020078b1241b02fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570154"
 ---
-# <a name="how-to-control-a-storyboard-after-it-starts"></a>Nasıl yapılır: Görsel Taslağı Başladıktan Sonra Denetleme
-Bu örnek kodu denetimi için kullanmayı gösterir bir <xref:System.Windows.Media.Animation.Storyboard> başladıktan sonra. Bir film şeridi denetlemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullanın <xref:System.Windows.Trigger> ve <xref:System.Windows.TriggerAction> nesneleri; Örneğin, bakın [bir film şeridi sonra başlar denetlemek için olay tetikleyicileri](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>Nasıl yapılır: Görsel taslağı başladıktan sonra denetleme
+Bu örnek kod denetimine kullanmayı gösterir bir <xref:System.Windows.Media.Animation.Storyboard> başlatıldıktan sonra. İçinde bir film şeridini denetlemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullanın <xref:System.Windows.Trigger> ve <xref:System.Windows.TriggerAction> nesneleri; Örneğin, bkz [bir film şeridini denetlemek için olay tetikleyicilerini](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
- Film şeridi başlatmak için kullandığınız kendi <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> hale getirmeyi ve film şeridi başlatır özellikleri film şeridi'nın animasyonları dağıtır yöntemi.  
+ Görsel taslağı'nı başlatmak için kullandığınız kendi <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi şeridinin animasyonları özelliklerine animasyon ve görsel taslak başlar dağıtır.  
   
- Film şeridi denetlenebilir yapmak için kullandığınız <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi ve belirtin **true** ikinci parametre olarak. Ardından, duraklatma, sürdürme, arama, durdurmak, hızlandırmak, veya film şeridi yavaş veya dolgu süresinin ilerletmek için film şeridi'nın etkileşimli yöntemleri kullanabilirsiniz. Film şeridi'nın etkileşimli yöntemlerin listesi aşağıdadır:  
+ Bir film şeridi denetlenebilir yapmak için kullanmanız <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi belirtin **true** ikinci parametre olarak. Ardından, duraklatma, sürdürme, arama, Durdur, hızlandırmak, veya film şeridini yavaşlatma veya dolgu süresinin ilerleyin şeridinin etkileşimli yöntemleri kullanabilirsiniz. Görsel Taslak'ın etkileşimli yöntemlerin listesi verilmiştir:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Film şeridi duraklatır.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Film duraklatılır.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Duraklatılmış film şeridi sürdürür.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Duraklatılmış bir film şeridini sürdürür.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Film şeridi'nın etkileşimli hızını ayarlar.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Şeridinin etkileşimli hızını ayarlar.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Film şeridini belirtilen konuma götürür.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Görsel taslak belirtilen konumda arar.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Film şeridini belirtilen konuma götürür. Farklı <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi, bu işlem bir sonraki değer çizgilerinin önce işlenir.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Belirtilen konum film şeridini götürür. Farklı <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi, bu işlem, sonraki değer çizgisi önce işlenir.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Varsa, film şeridi dolgu süresinin ilerler.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Varsa film şeridini dolgu süresinin ilerler.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Film şeridi durdurur.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Görsel taslak durdurur.  
   
- Aşağıdaki örnekte, birkaç film şeridi yöntemi etkileşimli olarak film şeridi denetlemek için kullanılır.  
+ Aşağıdaki örnekte, birkaç film şeridi yöntemi, etkileşimli bir film şeridini denetlemek için kullanılır.  
   
- **Not:** olan tetikleyici kullanarak film şeridi denetlemeye yönelik bir örnek görmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [bir film şeridi sonra başlar denetlemek için olay tetikleyicileri kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ **Not:** Tetikleyicilerle kullanma film şeridini denetlemek için bir örnek görmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [bir film şeridini denetlemek için olay tetikleyicileri kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

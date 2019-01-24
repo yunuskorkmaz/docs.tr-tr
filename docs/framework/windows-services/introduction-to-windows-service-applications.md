@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614426"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Windows oturumlarında çalışan uzun süreli yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bu hizmetler, bilgisayar önyükleme yaptığında, otomatik olarak başlatılabilir duraklatılabilir ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla engellemeyen uzun süreli işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Ayrıca, hizmetleri veya varsayılan bilgisayar hesabından oturum açan kullanıcıdan farklı bir belirli kullanıcı hesabının güvenlik bağlamında da çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  
@@ -41,9 +41,9 @@ Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Win
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Hizmet uygulamaları vs. Diğer Visual Studio uygulamalarını  
  Hizmet uygulamaları işlevinden farklı çeşitli şekillerde birçok diğer proje türleri:  
   
--   Projenin anlamlı bir şekilde çalışabilmesi için önce bir hizmet uygulama projesinin oluşturduğu derlenmiş yürütülebilir dosya sunucuya yüklenmelidir. Hata ayıklama yapılamıyor veya F5 veya F11 tuşuna basarak bir hizmet uygulaması çalıştırın; kodunda bir hizmet veya adımı hemen çalıştıramazsınız. Bunun yerine, yüklemeniz gerekir ve hizmetinizi başlatın ve ardından hizmetin işlemine bir hata ayıklayıcı ekleyin. Daha fazla bilgi için [nasıl yapılır: Windows hizmet uygulamaları hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+-   Projenin anlamlı bir şekilde çalışabilmesi için önce bir hizmet uygulama projesinin oluşturduğu derlenmiş yürütülebilir dosya sunucuya yüklenmelidir. Hata ayıklama yapılamıyor veya F5 veya F11 tuşuna basarak bir hizmet uygulaması çalıştırın; kodunda bir hizmet veya adımı hemen çalıştıramazsınız. Bunun yerine, yüklemeniz gerekir ve hizmetinizi başlatın ve ardından hizmetin işlemine bir hata ayıklayıcı ekleyin. Daha fazla bilgi için [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   Bazı proje türlerinden farklı olarak, hizmet uygulamaları için Yükleme bileşenleri oluşturmanız gerekir. Yükleme bileşenleri yüklemek ve sunucunun hizmet kaydı ve Windows ile hizmetiniz için bir giriş oluşturmak **Hizmet Denetim Yöneticisi**. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanız için yükleyicileri ekleyin](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   Bazı proje türlerinden farklı olarak, hizmet uygulamaları için Yükleme bileşenleri oluşturmanız gerekir. Yükleme bileşenleri yüklemek ve sunucunun hizmet kaydı ve Windows ile hizmetiniz için bir giriş oluşturmak **Hizmet Denetim Yöneticisi**. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 -   `Main` Hizmet uygulamanızı, projenize hizmetler için Çalıştır komutunu vermelidir yöntemi içerir. `Run` Metodunun hizmetlerine **Hizmet Denetim Yöneticisi** uygun sunucuda. Kullanırsanız **Windows Hizmetleri** proje şablonu, bu yöntem yazılmış sizin için otomatik olarak. Hizmet yüklemenin hizmet başlatmayla aynı şey olmadığını unutmayın. "Hizmet ömrü" aşağıda daha fazla bilgi için bkz.  
   
@@ -78,14 +78,14 @@ Eski adıyla NT Hizmetleri olarak bilinen Microsoft Windows Hizmetleri kendi Win
   
 -   Hizmetlerini oluşturdunuz, içinde bir **Windows hizmeti** uygulama projesi veya devralındığında .exe dosyası oluşturan ve devralınan bir.NET Framework kullanan başka bir proje <xref:System.ServiceProcess.ServiceBase> sınıfı.  
   
--   Windows Hizmetleri içeren projeler, proje ve Hizmetleri için yükleme bileşenlerine sahip olmalıdır. Bu kolayca gerçekleştirilebilir **özellikleri** penceresi. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanız için yükleyicileri ekleyin](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   Windows Hizmetleri içeren projeler, proje ve Hizmetleri için yükleme bileşenlerine sahip olmalıdır. Bu kolayca gerçekleştirilebilir **özellikleri** penceresi. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)  
- [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Nasıl Yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)
+- [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Nasıl yapılır: Başlangıç Hizmetleri](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [İzlenecek yol: Bileşen tasarımcısında Windows hizmeti uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

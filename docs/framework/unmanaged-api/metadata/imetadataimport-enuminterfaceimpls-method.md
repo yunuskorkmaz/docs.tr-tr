@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 824337a8a87282e59c9fc5df18c71800339e8d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603774"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Arabirim uygulamaları temsil eden MethodDef belirteçleri numaralandırır.  
+Arabirim uygulamalarına temsil eden MethodDef belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT EnumInterfaceImpls (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `td`  
- [in] Numaralandırılacak temsil eden arabirim uygulamaları, MethodDef belirteçler olan TypeDef simgesi.  
+ [in] Arabirim uygulamaları gösteren, MethodDef sıralanması belirteçleridir TypeDef belirteç.  
   
  `rImpls`  
- [out] MethodDef belirteçleri depolamak için kullanılan dizisi.  
+ [out] Dizi MethodDef simgeleri depolamak için kullanılır.  
   
  `cMax`  
- [in] En büyük boyutunu `rImpls` dizi.  
+ [in] En büyük boyutunu `rImpls` dizisi.  
   
  `pcImpls`  
- [out] Döndürülen belirteçleri gerçek sayısını `rImpls`.  
+ [out] Döndürülen belirteç gerçek sayısını `rImpls`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -63,14 +63,14 @@ HRESULT EnumInterfaceImpls (
 |`S_FALSE`|Numaralandırılacak hiçbir MethodDef belirteçleri vardır. Bu durumda, `pcImpls` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

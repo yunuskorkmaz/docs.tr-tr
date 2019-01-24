@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617700"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints Yöntemi
-Belirtilen belirteç tarafından temsil edilen genel parametresi ile ilişkili genel parametresi kısıtlamaları dizisi için bir numaralandırıcı alır.  
+Genel parametre kısıtlama belirtilen belirteci tarafından temsil edilen genel parametre ile ilişkili bir dizi için bir numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,36 +41,36 @@ HRESULT EnumGenericParamConstraints (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `tk`  
- [in]   Numaralandırılacak olan kısıtlamaları olan genel parametresini temsil eden bir belirteci.  
+ [in]   Numaralandırılacak olan kısıtlamaları olan genel parametre temsil eden bir belirteci.  
   
  `rGenericParamConstraints`  
- [out] Numaralandırılacak genel parametresi kısıtlamaları dizisi.  
+ [out] Numaralandırılacak genel parametre kısıtlama dizisi.  
   
  `cMax`  
  [in]   İstenen sayısı yerleştirmek için belirteçleri `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] Belirteçleri sayısını gösteren bir işaretçi yerleştirilen `rGenericParamConstraints`.  
+ [out] Belirteçleri sayısı için bir işaretçi yerleştirilen `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` başarıyla döndürüldü.|  
-|`S_FALSE`|`phEnum` hiç üye öğe yok. Bu durumda, `pcGenericParameterConstraints` 0 (sıfır) olarak ayarlayın.|  
+|`S_FALSE`|`phEnum` üye öğe yok. Bu durumda, `pcGenericParameterConstraints` 0 (sıfır) olarak ayarlayın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -2,19 +2,19 @@
 title: '&lt;netMsmqBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 678f3fd34f368abae11404fcbb1546b2135a75d2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7eac5c7a0da71e2d06929322ac5c702d83a1ea65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597443"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;taşıma&gt;
 Taşıma güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
-\<netMsmqBinding >  
+\<netMsmqBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<taşıma >  
@@ -41,9 +41,9 @@ Taşıma güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|msmqAuthenticationMode|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması yok.<br />-WindowsDomain: İletiyle ilişkili güvenlik kimliği için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, ardından kullanıcı emin olmak için ACL kuyruğun sıra için yazma iznine sahip olmadığını denetlemek için kullanılır.<br />-Sertifikası: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Varsayılan, `WindowsDomain` değeridir.<br /><br /> Bu öznitelik ayarlanırsa `None`, `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|msmqAuthenticationMode|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması yok.<br />-   WindowsDomain: İletiyle ilişkili güvenlik kimliği için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, ardından kullanıcı emin olmak için ACL kuyruğun sıra için yazma iznine sahip olmadığını denetlemek için kullanılır.<br />-Sertifikası: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Varsayılan, `WindowsDomain` değeridir.<br /><br /> Bu öznitelik ayarlanırsa `None`, `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>|  
 |msmqEncryptionAlgorithm|Etkin ileti şifreleme için iletileri ileti sıra yöneticileri arasında transfer ederken kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br />-Varsayılan değer `RC4Stream`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|msmqProtectionLevel|MSMQ taşıma düzeyinde güvenli şekilde iletileri belirtir. İleti bütünlüğü hem takası ileti bütünlüğü çalışırken işaretini ve şifreleme sağlar şifreleme sağlar. Diğer bir deyişle, ileti gönderen gerçekten geldi ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br />-Varsayılan `Sign`.|  
+|msmqProtectionLevel|MSMQ taşıma düzeyinde güvenli şekilde iletileri belirtir. İleti bütünlüğü hem takası ileti bütünlüğü çalışırken işaretini ve şifreleme sağlar şifreleme sağlar. Diğer bir deyişle, ileti gönderen gerçekten geldi ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-   EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br />-Varsayılan `Sign`.|  
 |msmqSecureHashAlgorithm|İleti özeti bilgi işlem için kullanılan karma algoritmasını belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, `SHA1` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -55,14 +55,14 @@ Taşıma güvenlik ayarlarını tanımlar.
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Sıraya alınan taşımalar için taşıma güvenlik ayarlarını tanımlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>  
- <xref:System.ServiceModel.MsmqTransportSecurity>  
- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>
+- <xref:System.ServiceModel.MsmqTransportSecurity>
+- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)

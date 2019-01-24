@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569420"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC Numaralandırması
 Meta veri oluşturma sırasında davranışını etkilemek için kullanılan değerler içeriyor.  
@@ -50,19 +50,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Kullanımdan kalktı.|  
 |`MDSetENCOff`|Kullanımdan kalktı.|  
-|`MDUpdateENC`|Meta verileri güncelleştirildi ancak belirteçleri taşınamaz gösterir.|  
-|`MDUpdateFull`|Belirteçleri güncelleştirmeleri sırasında taşınabilmesi gösterir.|  
-|`MDUpdateExtension`|Yalnızca eklemeler güncelleştirmeler oluşabilir gösterir. Belirteçleri taşınamaz.|  
+|`MDUpdateENC`|Meta veri güncelleştirilebilir gelirken, belirteçleri taşınamaz gösterir.|  
+|`MDUpdateFull`|Güncelleştirmeler sırasında belirteçleri taşınabilir gösterir.|  
+|`MDUpdateExtension`|Güncelleştirmeleri yalnızca yapılan eklemeleri oluşabilir gösterir. Belirteçleri taşınamaz.|  
 |`MDUpdateIncremental`|Derleme artımlı olduğunu gösterir.|  
 |`MDUpdateDelta`|Yalnızca değiştirilen meta verilerin kaydedilmesi gerektiğini gösterir.|  
-|`MDUpdateMask`|İçeren `MDUpdateENC`, `MDUpdateFull` ve `MDUpdateIncremental`.|  
+|`MDUpdateMask`|İçerir `MDUpdateENC`, `MDUpdateFull` ve `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

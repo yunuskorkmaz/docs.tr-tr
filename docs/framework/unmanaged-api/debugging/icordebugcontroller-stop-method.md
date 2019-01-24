@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608332"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop Yöntemi
-Yönetilen kod işlemde çalışan tüm iş parçacıklarının işbirlikçi Dur gerçekleştirir.  
+Yönetilen kod işlemde çalışan tüm iş parçacıkları üzerinde işbirliği yapan Durma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +40,21 @@ HRESULT Stop (
  Kullanılmadı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Stop` üzerinde çalışan tüm iş parçacıklarının işbirlikçi durdurma yönetilen kodu işleminde gerçekleştirir. Bir yalnızca yönetilen hata ayıklama oturumu sırasında yönetilmeyen iş parçacığı çalışmaya devam edebilir (ancak yönetilen koda çağrı çalışılırken engellenir). Hata ayıklama oturumunun bir birlikte çalışma sırasında yönetilmeyen iş parçacığı de durdurulur. `dwTimeoutIgnored` Değeri şu anda yoksayıldı ve SONSUZ (-1) kabul edilir. İşbirlikçi Durdur bir kilitlenme nedeniyle başarısız olursa, tüm iş parçacıklarını askıya alınır ve E_TIMEOUT döndürülür.  
+ `Stop` işlemdeki tüm iş parçacıkları üzerinde işbirliği yapan durdurma yönetilen kodu gerçekleştirir. Yalnızca yönetilen hata ayıklama oturumu sırasında yönetilmeyen iş parçacığı çalışmaya devam edebilir (ancak yönetilen kod çağrılmaya çalışılırken engellenecek). Hata ayıklama oturumu bir birlikte çalışma sırasında yönetilmeyen iş parçacığı da durdurulur. `dwTimeoutIgnored` Değeri şu anda yok sayıldı ve SONSUZ (-1) kabul edilir. İşbirlikçi Durdur kilitlenme nedeniyle başarısız olursa, tüm iş parçacıkları askıya alınır ve E_TIMEOUT döndürülür.  
   
 > [!NOTE]
->  `Stop` yalnızca zaman uyumlu hata ayıklama API'si yöntemidir. Zaman `Stop` döndürür S_OK, işlem durduruldu. Geri arama yok Durdur dinleyicileri bildirmek için verilir. Hata ayıklayıcı çağırmalısınız [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) işleminin devam etmesini izin vermek için.  
+>  `Stop` hata ayıklama API'sindeki yalnızca zaman uyumlu yöntemdir. Zaman `Stop` döndürür: S_OK, işlem durduruldu. Hiçbir geri çağırma duraklarının dinleyicileri bildirmek için verilir. Hata ayıklayıcı çağırmalıdır [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) işleminin devam etmesini sağlayacak.  
   
- Hata ayıklayıcı Dur sayaç tutar. Sayaç sıfıra gittiğinde, denetleyici devam ettirilir. Her çağrı `Stop` veya gönderilen her geri çağırma sayaç artırılır. Her çağrı `ICorDebugController::Continue` azaltır sayacı.  
+ Hata ayıklayıcıyı Durdur sayaç tutar. Sayaç sıfıra gittiğinde, denetleyici sürdürülür. Her çağrı `Stop` veya her gönderilen geri çağırma sayacı artırır. Her çağrı `ICorDebugController::Continue` azaltır sayacı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

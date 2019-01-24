@@ -2,12 +2,12 @@
 title: '&lt;netTcpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: da769e57a44880d5050b06a8e2a3d317daff35d6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0f5e4df5a25062ba6454dfc845ba2999ddcc6ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572272"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 İçin bir bağlam belirtir <xref:System.ServiceModel.NetTcpBinding> koruma düzeyi imzalanması gerektiren. ContextExchangeMechanism NetTcpContextBinding için SOAPHeader ' dir.  
@@ -81,7 +81,7 @@ ms.locfileid: "54146075"
 |receiveTimeout|A <xref:System.TimeSpan> tamamlamak alma işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10:00 ' dir.|  
 |SendTimeout|A <xref:System.TimeSpan> tamamlamak bir gönderme işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |transactionFlow|WS işlem akışı sağlama bağlama destekleyip desteklemediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|transactionProtocol|Bu bağlama ile kullanılacak işlem protokolünü belirler. Geçerli değerler:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Bu bağlama ile kullanılacak işlem protokolünü belirler. Geçerli değerler:<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|A <xref:System.ServiceModel.TransferMode> iletileri olup ara belleğe veya akışa veya istek belirten bir değer veya yanıt.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -98,13 +98,13 @@ ms.locfileid: "54146075"
 |-------------|-----------------|  
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamalar koleksiyonunu tutar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.NetTcpContextBinding>  
- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.NetTcpContextBinding>
+- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)

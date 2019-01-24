@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566352"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Bir derlemeyi belirtme&#39;s konumu
 Derlemenin konumunu belirtmek için iki yolu vardır:  
@@ -45,7 +45,7 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
 </configuration>  
 ```  
   
- **Sürüm** özniteliği için tüm Tanımlayıcı adlı derlemeler gereklidir ancak olmayan tanımlayıcı adlı derlemeler için atlanmış olabilir. **\<CodeBase >** öğesi gerektiriyor **href** özniteliği. Sürüm aralığı belirtemezsiniz  **\<codeBase >** öğesi.  
+ **Sürüm** özniteliği için tüm Tanımlayıcı adlı derlemeler gereklidir ancak olmayan tanımlayıcı adlı derlemeler için atlanmış olabilir.  **\<CodeBase >** öğesi gerektiriyor **href** özniteliği. Sürüm aralığı belirtemezsiniz  **\<codeBase >** öğesi.  
   
 > [!NOTE]
 >  Tanımlayıcı adlı değil bir derleme için bir kod temel ipucu sağlayarak, ipucu uygulama temel ya da uygulama temel dizininin bir alt işaret etmelidir.  
@@ -67,8 +67,8 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
   
  **PrivatePath** özniteliği çalışma zamanı derlemeleri araması gereken dizinleri içerir. Uygulama C:\Program Files\MyApp bulunuyorsa, çalışma zamanı bir kod tabanına C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin ve C:\Program Files\MyApp\Bin3 belirtmeyin derlemeleri arar. İçinde belirtilen dizinler **privatePath** uygulama temel dizininin alt dizinleri olması gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

@@ -1,5 +1,5 @@
 ---
-title: 'Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)'
+title: 'Nesne ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610337"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
   
  Bir nesne kapsam dışına çıktığında sonra ortak dil çalışma zamanı tarafından (CLR) serbest bırakılır. Visual Basic denetimleri yayın adı verilen yordamları kullanarak sistem kaynaklarının *yok ediciler*. Oluşturucular ve Yıkıcılar birlikte, güçlü ve öngörülebilir sınıf kitaplıkları oluşturulmasını destekler.  
@@ -146,9 +146,9 @@ End Sub
   
  Çöp toplama sistemleri arasında başka bir fark kullanımını gerektirir `Nothing`. Atanan bazen programcılar başvuru Visual Basic 6.0 ve önceki sürümlerinde sayımı yararlanmak için `Nothing` değişkenleri başvuruları serbest bırakmak için bu değişkenleri nesnesinin tutulan. Son nesne başvuru değişkenini tutulan, nesnenin kaynaklarını hemen kullanıma sunulmuştur. Olsa da bu yordamı hala değerlidir olduğu durumlarda Visual Basic sonraki sürümlerinde, bunu gerçekleştirmek hiçbir zaman, kaynakları hemen serbest bırakmak başvurulan nesnenin neden olur. Kaynakları hemen serbest bırakmak için nesnenin kullanın <xref:System.IDisposable.Dispose%2A> varsa yöntemi. Yalnızca bir kez bir değişken ayarlamalıdır `Nothing` ömrü atık toplayıcı yalnız bırakılmış nesneleri algılama süresini için uzun göreli olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IDisposable.Dispose%2A>  
- [Başlatma ve sonlandırma bileşenleri](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IDisposable.Dispose%2A>
+- [Başlatma ve sonlandırma bileşenleri](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

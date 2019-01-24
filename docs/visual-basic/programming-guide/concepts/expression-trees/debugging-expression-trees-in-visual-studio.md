@@ -1,33 +1,33 @@
 ---
-title: Visual Studio (Visual Basic) ifade ağaçlarında hata ayıklama
+title: Visual Studio'da (Visual Basic) ifade ağaçlarında hata ayıklama
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b060a65a38c4ab295a54f972678f273ada218d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617362"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic) ifade ağaçlarında hata ayıklama
-Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapısı analiz edebilirsiniz. İfade ağaç yapısı hızlı bir genel bakış almak için kullanabileceğiniz `DebugView` özelliği yalnızca hata ayıklama modunda kullanılabilir. Hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio'da hata ayıklamayı](/visualstudio/debugger/debugging-in-visual-studio).  
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio'da (Visual Basic) ifade ağaçlarında hata ayıklama
+Uygulamalarınızın hata ayıklaması yaparken, yapısı ve içeriği ifade ağaçları analiz edebilirsiniz. İfade ağaç yapısı hızlı bir genel bakış edinmek için kullanabileceğiniz `DebugView` özelliği yalnızca hata ayıklama modunda kullanılabilir. Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
   
- İfade ağaçları içeriğini daha iyi göstermek için `DebugView` özelliği Visual Studio görselleştiriciler kullanır. Daha fazla bilgi için bkz: [oluşturma özel Görselleştiriciler](/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Daha iyi ifade ağaçları içeriğini temsil etmek için `DebugView` özelliği, Visual Studio görselleştiriciler kullanır. Daha fazla bilgi için [oluşturma özel Görselleştiriciler](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Bir ifade ağacına için Görselleştirici açmak için  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>İfade ağacı bir görselleştiriciyi açmak için  
   
-1.  Yanında Büyüteç simgesini tıklatın `DebugView` bir ifade ağacına özelliğinin **DataTips**, **izleme** penceresinde **otomobiller** penceresinde veya **Yereller** penceresi.  
+1.  Yanında görünen Büyüteç simgesine tıklayarak `DebugView` özelliğine bir ifade ağacında **DataTips**, **izleme** penceresinde **Otolar** penceresinde veya **Yereller** penceresi.  
   
      Görselleştiriciler listesi görüntülenir.  
   
-2.  Kullanmak istediğiniz Görselleştirici'ı tıklatın.  
+2.  Kullanmak istediğiniz Görselleştirici'a tıklayın.  
   
- Aşağıdaki bölümlerde açıklandığı gibi her bir ifade türü Görselleştirici görüntülenir.  
+ Aşağıdaki bölümlerde açıklandığı gibi her ifade türü görselleştiricisi içinde görüntülenir.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression> değişken adları başında "$" simgesiyle görüntülenir.  
+ <xref:System.Linq.Expressions.ParameterExpression> Değişken adlarının başında bir "$" simgesi ile görüntülenir.  
   
- Bir parametre bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `$var1` veya `$var2`.  
+ Parametre bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `$var1` veya `$var2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -54,7 +54,7 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
      `$var1`  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- İçin <xref:System.Linq.Expressions.ConstantExpression> dize, tamsayı değerleri temsil eden nesneler ve `null`, sabit değeri görüntülenir.  
+ İçin <xref:System.Linq.Expressions.ConstantExpression> dize, tamsayı değerlerini temsil eden nesneleri ve `null`, sabit değeri görüntülenir.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -81,7 +81,7 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
      10D  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Varsa türü bir <xref:System.Linq.Expressions.BlockExpression> bloğundaki son ifade türü farklıdır nesne, türü görüntülenir `DebugInfo` köşeli özelliğinde (\< ve >). Aksi takdirde türünü <xref:System.Linq.Expressions.BlockExpression> nesnesi görüntülenmez.  
+ Varsa türünü bir <xref:System.Linq.Expressions.BlockExpression> bloğundaki son ifadenin türü nesne farklıdır, türü görüntülenen `DebugInfo` açılı ayraçlar özelliğinde (\< ve >). Aksi halde, türünü <xref:System.Linq.Expressions.BlockExpression> nesne görüntülenmez.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -115,9 +115,9 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
      `}`  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression> nesneler kendi temsilci türleri ile birlikte görüntülenir.  
+ <xref:System.Linq.Expressions.LambdaExpression> nesneler, temsilci türleri ile birlikte görüntülenir.  
   
- Lambda ifadesi bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `#Lambda1` veya `#Lambda2`.  
+ Bir lambda ifadesi bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Lambda1` veya `#Lambda2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -152,11 +152,11 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
      `}`  
   
 ## <a name="labelexpression"></a>LabelExpression  
- İçin varsayılan bir değer belirtirseniz, <xref:System.Linq.Expressions.LabelExpression> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget> nesnesi.  
+ İçin varsayılan bir değer belirtirseniz <xref:System.Linq.Expressions.LabelExpression> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget> nesne.  
   
- `.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedef gösterir.  
+ `.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedefinin gösterir.  
   
- Bir etiket bir adı yoksa, otomatik olarak oluşturulan bir ad gibi atanmış olduğu `#Label1` veya `#Label2`.  
+ Bir etiket bir ad yoksa otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Label1` veya `#Label2`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -203,8 +203,8 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
   
      `}`  
   
-## <a name="checked-operators"></a>Checked işleçleri  
- Checked işleçleri işleci önünde "#" simgesiyle gösterilir. Örneğin, denetlenen Toplama işleci olarak görüntülenir `#+`.  
+## <a name="checked-operators"></a>İşaretli işleçleri  
+ İşaretli işleçler, işlecin önüne "#" sembolü ile görüntülenir. Örneğin, işaretli Toplama işleci olarak görüntülenir `#+`.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -230,7 +230,7 @@ Uygulamalarınızda hata ayıklamak zaman ifade ağaçları içeriği ve yapıs�
   
      `#(System.Int32)10D`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İfade ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)  
- [Özel Görselleştiriciler oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İfade ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
+- [Özel Görselleştirici Oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)

@@ -2,19 +2,19 @@
 title: '&lt;webHttp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b52259af5e05de5bf5dd42a2cd0bf4b01f3e46f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597560"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
 Bu öğeyi belirten <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma yoluyla bir uç noktada. İle birlikte kullanıldığında bu davranışı [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standart bağlama için bir Windows Communication Foundation (WCF) hizmeti Web programlama modeli sağlar.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<davranışı >  
 \<webHttp >  
   
@@ -46,8 +46,8 @@ Bu öğeyi belirten <xref:System.ServiceModel.Description.WebHttpBehavior> yapı
 |-------------|-----------------|  
 |[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Uç nokta davranışları kümesini belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.WebHttpElement>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [AJAX Tümleştirme ve JSON Desteği](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.WebHttpElement>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- [AJAX Tümleştirme ve JSON Desteği](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)

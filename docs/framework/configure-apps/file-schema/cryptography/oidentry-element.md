@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c891b5d67c7f2ef46682233ad555a1276f8e027d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606906"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; öğesi
 ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.  
@@ -23,7 +23,7 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
  \<Yapılandırma >  
 \<mscorlib >  
 \<cryptographySettings >  
-\<oidMap >  
+\<oidMap>  
 \<oidEntry >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -80,9 +80,9 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

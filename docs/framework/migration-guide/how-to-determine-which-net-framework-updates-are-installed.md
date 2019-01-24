@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme'
+title: 'Nasıl yapılır: Hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme'
 description: Hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri bir bilgisayarda yüklü olduğunu belirleme hakkında bilgi edinin.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,42 +11,42 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604193"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Nasıl yapılır: Hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme
 
-Düzeltmeler bir bilgisayarda yüklü olan ve bu makalede hangi .NET Framework güvenlik güncelleştirmeleri çıkışı bulmak nasıl gösterir.
+Bu makalede, hangi .NET Framework güvenlik güncelleştirmeleri kullanıma bulma işlemini göstermektedir ve düzeltmeler bir bilgisayara yüklenir.
 
 > [!NOTE]
-> Bu makalede gösterilen tüm teknikler yönetici ayrıcalıklarına sahip bir hesabı gerektirir.
+> Bu makalede gösterilen teknikleri, yönetici ayrıcalıklarına sahip bir hesabı gerektirir.
 
 ## <a name="to-find-installed-updates-using-the-registry"></a>Bulmak için kayıt defterini kullanarak güncelleştirmeleri yüklü
 
-Yüklü olan güvenlik güncelleştirmeleri ve düzeltmeleri her bir bilgisayarda yüklü .NET Framework sürümü için Windows Kayıt Defteri'nde listelenir. Kayıt Defteri Düzenleyicisi'ni kullanabilirsiniz (*regedit.exe*) bu bilgileri görüntülemek için program.
+Yüklü güvenlik güncelleştirmeleri ve düzeltmeleri her bir bilgisayarda yüklü .NET Framework sürümü için Windows kayıt defterinde listelenir. Kayıt Defteri Düzenleyicisi'ni kullanabilirsiniz (*regedit.exe*) bu bilgileri görüntülemek için program.
 
-1. Programını açın **regedit.exe**. Windows 8 ve sonraki sürümlerinde sağ **Başlat** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")seçeneğini belirleyip **çalıştırmak**. İçinde **açık** kutusuna **regedit** seçip **Tamam**.
+1. Programı açtığınızda **regedit.exe**. Windows 8 ve sonraki sürümlerinde, sağ **Başlat** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), ardından **çalıştırma**. İçinde **açık** kutusuna **regedit** seçip **Tamam**.
 
 2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:
 
      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
 
-     Yüklü güncelleştirmeler için geçerlidir .NET Framework sürümünü tanımlamak alt anahtarları altında listelenir. Her güncelleştirme bir Bilgi Bankası (KB) numarasına göre tanımlanır.
+     Yüklü güncelleştirmeleri uygulandıkları .NET Framework sürümünü tanımlayan alt altında listelenir. Her güncelleştirme bir Bilgi Bankası (KB) numarasıyla tanımlanır.
 
-Kayıt Defteri Düzenleyicisi'nde, .NET Framework sürümleri ve her sürüm için yüklü güncelleştirmeler farklı alt anahtarlarında saklanır. Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Kayıt Defteri Düzenleyicisi'nde, .NET Framework sürümleri ve her sürümü için yüklü güncelleştirmeleri farklı alt anahtarlarında saklanır. Yüklü sürüm numaraları algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Bulunacak kodu kayıt defterinde sorgulayarak yüklü güncelleştirmeleri
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Bulmak için kod içinde kayıt defterini sorgulayarak yüklü güncelleştirmeleri
 
-Aşağıdaki örnek, .NET Framework güvenlik güncelleştirmeleri ve bir bilgisayarda yüklü olan düzeltmelerin programlı olarak belirler:
+Aşağıdaki örnek, bir bilgisayarda yüklü olan düzeltmelerin ve .NET Framework güvenlik güncelleştirmeleri programlı olarak belirler:
 
 [!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
 [!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
 
-Örnek aşağıdakine benzer bir çıktı üretir:
+Örnekte aşağıdakine benzer bir çıktı oluşturulur:
 
 ```console
 Microsoft .NET Framework 4 Client Profile
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Bulmak için PowerShell kayıt defterinde sorgulayarak yüklü güncelleştirmeleri
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Bulmak için PowerShell içinde kayıt defterini sorgulayarak yüklü güncelleştirmeleri
 
 Aşağıdaki örnek .NET Framework güvenlik güncelleştirmeleri ve PowerShell kullanarak bir bilgisayarda yüklü olan düzeltmelerin belirlemek nasıl gösterir:
 
@@ -85,7 +85,7 @@ ForEach($Version in $DotNetVersions){
 }
 ```
 
-Örnek aşağıdakine benzer bir çıktı üretir:
+Örnekte aşağıdakine benzer bir çıktı oluşturulur:
 
 ```console
 Microsoft .NET Framework 4 Client Profile
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
-[Sürümleri ve bağımlılıkları](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)
+- [Sürümler ve bağımlılıklar](../../../docs/framework/migration-guide/versions-and-dependencies.md)

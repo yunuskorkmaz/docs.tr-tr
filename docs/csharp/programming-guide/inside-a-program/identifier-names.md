@@ -2,12 +2,12 @@
 title: Tanımlayıcı adları
 description: C# programlama dilinin geçerli tanımlayıcı adları kurallarını öğrenin.
 ms.date: 08/21/2018
-ms.openlocfilehash: e5ff83661c9a86273760f32a795f7de6dbc7bf1d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606958"
 ---
 # <a name="identifier-names"></a>Tanımlayıcı adları
 
@@ -32,7 +32,7 @@ Kurallarının yanı sıra, kullanılabilen birkaç tanımlayıcısının [adlan
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
 - [C# Programı İçinde](../inside-a-program/index.md)

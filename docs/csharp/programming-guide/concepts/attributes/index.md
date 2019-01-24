@@ -1,12 +1,6 @@
 ---
-title: Öznitelikler (C#)
+title: 'Öznitelikler (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214153"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
@@ -21,7 +15,7 @@ ms.locfileid: "44214153"
 
 ## <a name="using-attributes"></a>Öznitelikleri kullanma
 
-Belirli bir öznitelik bildirimleri, geçerli olduğu türlerini kısıtlamak ancak öznitelikleri pek çok bildiriminde yerleştirilebilir. C# ' ta, bir öznitelik geçerli olduğu varlık bildiriminin üstüne köşeli ayraç ([]) içine öznitelik adı girerek belirtin.
+Belirli bir öznitelik bildirimleri, geçerli olduğu türlerini kısıtlamak ancak öznitelikleri pek çok bildiriminde yerleştirilebilir. İçinde C#, bir öznitelik adı köşeli ayraç ([]) içine özniteliği yerleştirerek, geçerli varlık bildiriminin üstüne belirttiğiniz.
 
 Bu örnekte, <xref:System.SerializableAttribute> özniteliği, belirli bir özellik için bir sınıf uygulamak için kullanılır:
 
@@ -119,13 +113,13 @@ Daha fazla bilgi için bkz.:
 
 - [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)  
 - [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)  
-- [Nasıl yapılır: öznitelikler (C#) kullanarak bir C/C++ birleşimi oluşturma](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Nasıl yapılır: Öznitelikleri kullanarak C/C++ birleşimi oluşturma (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Ortak öznitelikler (C#)](common-attributes.md)  
 - [Arayan bilgileri (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../index.md)  
-- [Yansıma (C#)](../reflection.md)  
-- [Öznitelikler](../../../../standard/attributes/index.md)  
-- [Öznitelikleri kullanarak C#](../../../tutorials/attributes.md)  
+- [C# Programlama Kılavuzu](../../index.md)
+- [Yansıma (C#)](../reflection.md)
+- [Öznitelikler](../../../../standard/attributes/index.md)
+- [Öznitelikleri kullanarak C#](../../../tutorials/attributes.md)

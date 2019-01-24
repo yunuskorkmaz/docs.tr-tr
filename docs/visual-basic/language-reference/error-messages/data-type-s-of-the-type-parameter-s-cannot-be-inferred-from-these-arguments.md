@@ -10,22 +10,22 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ed7541d76c1678f9f308ed2cda8afec1231a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608725"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor
-Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor. Verileri belirten türlerini açıkça bu hatayı düzeltmek.  
+Yöntemindeki tür parametrelerinin veri türleri bu bağımsız değişkenlerden çıkarsanamıyor. Verileri belirleyerek türleri açıkça bu hatayı düzeltebilir.  
   
- Aşırı yükleme çözünürlüğü başarısız olduğunda bu hata oluşur. Neden belirli aşırı aday ortadan kaldırılmıştır bildiren bir alt ileti gerçekleşir. Hata iletisi, veri türleri için tür parametreleri bulmak için derleyici tür çıkarımı kullanamazsınız açıklanmaktadır.  
+ Aşırı yükleme çözümlemesi başarısız olduğunda bu hata oluşur. Belirli bir aşırı yükleme aday neden ortadan kaldırılmıştır bildiren bir alt ileti gerçekleşir. Hata iletisi, tür parametreleri için veri türlerini bulmak için derleyicinin tür çıkarımı kullanamazsınız açıklar.  
   
 > [!NOTE]
->  Bağımsız değişkenleri (örneğin, sorgu işleçleri için sorgu ifadelerinde) bir seçenek olmadığı durumlarda, ikinci cümlesi hata iletisi görüntülenir.  
+>  Bağımsız değişkenleri belirtme (örneğin, sorgu işleçleri için sorgu ifadelerinde) bir seçenek olmadığı durumlarda, ikinci cümlesi hata iletisi görüntülenir.  
   
- Aşağıdaki kod hata gösterir.  
+ Aşağıdaki kod, hatayı gösterir.  
   
 ```vb  
 Module Module1  
@@ -55,9 +55,9 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tür parametresi veya tür çıkarımı kalmak yerine parametreleri için bir veri türü belirtmek mümkün olabilir.  
+-   Tür parametresi veya tür çıkarımı üzerinde kalmak yerine parametreleri için bir veri türü belirtmek mümkün olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Visual Basic'de genel yordamlar](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Visual Basic'de genel yordamlar](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

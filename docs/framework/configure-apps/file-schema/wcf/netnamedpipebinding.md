@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 545148d1f663078b8182029817f0f22d33036200
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606679"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Makinede çapraz proses haberleşmesi için güvenli, güvenilir, bir bağlama tanımlar. Varsayılan olarak, güvenilirlik, aktarım güvenliği ileti teslimi ve ikili ileti kodlama için adlandırılmış kanallar aktarım güvenliği için çalışma zamanı iletişim yığını WS-ReliableMessaging ile oluşturur.  
@@ -63,7 +63,7 @@ Makinede çapraz proses haberleşmesi için güvenli, güvenilir, bir bağlama t
 |receiveTimeout|A <xref:System.TimeSpan> tamamlamak alma işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10:00 ' dir.|  
 |SendTimeout|A <xref:System.TimeSpan> tamamlamak bir gönderme işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |transactionFlow|WS işlem akışı sağlama bağlama destekleyip desteklemediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|transactionProtocol|Bu bağlama ile kullanılacak işlem protokolünü belirler. Geçerli değerler:<br /><br /> -OleTransactions<br />WS-AtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Bu bağlama ile kullanılacak işlem protokolünü belirler. Geçerli değerler:<br /><br /> -OleTransactions<br />-   WS-AtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|A <xref:System.ServiceModel.TransferMode> iletileri olup ara belleğe veya akışa veya istek belirten bir değer veya yanıt.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -143,10 +143,10 @@ Makinede çapraz proses haberleşmesi için güvenli, güvenilir, bir bağlama t
 </configuration>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

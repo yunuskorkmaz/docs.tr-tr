@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19736d177639b00c9563462f10e33e4c122297c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602462"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo Metodu
-Üst sınıf ve meta verileri belirtilen işlevi için belirteç alır.  
+Belirtilen işlev için üst sınıf ve meta veri belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,30 +39,30 @@ HRESULT GetFunctionInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] İşlevi için meta verileri ve üst sınıf belirteci almak istediğiniz kimliği.  
+ [in] Üst sınıf ve meta veri belirteci almak işlev kimliği.  
   
  `pClassId`  
- [out] İşlev üst sınıfı için bir işaretçi.  
+ [out] İşlevin üst sınıfı için bir işaretçi.  
   
  `pModuleId`  
- [out] İşlevin üst sınıf tanımlandığı modül için bir işaretçi.  
+ [out] İşlevin üst sınıfı içinde tanımlandığı modül için bir işaretçi.  
   
  `pToken`  
- [out] İşlev için meta veri simgesi için bir işaretçi.  
+ [out] Meta veri belirteci işlevine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kod çağırabilir [Icorprofilerınfo::getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) belirli bir modül için bir meta veri arabirimi elde edilir. Tarafından başvurulan konuma döndürülen meta veri simgesi `pToken` işlevi için meta verilerine erişmek için kullanılabilir.  
+ Profil Oluşturucu kodu çağırabilir [Icorprofilerınfo::getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) belirli bir modül için bir meta veri arabirimi elde edilir. Tarafından başvurulan konuma döndürülen meta veri belirteci `pToken` işlevi için meta veriler erişmek için kullanılabilir.  
   
- `ClassID` İşlevinin genel bir sınıf üzerinde daha fazla bağlamsal işlevinin kullanımı hakkında bilgi elde edilebilir olmayabilir. Bu durumda, `pClassId` 0 olacaktır. Profil Oluşturucu kodu kullanması gereken [Icorprofilerınfo2::getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) daha fazla içerik sağlamak için COR_PRF_FRAME_INFO değerine sahip.  
+ `ClassID` Genel sınıfta bir işlevin hakkında daha fazla bağlamsal bilgi işlevi kullanımı elde edilebilir olmayabilir. Bu durumda, `pClassId` 0 olur. Profiler kod kullanması gereken [Icorprofilerınfo2::getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) daha fazla bağlam sağlamak için COR_PRF_FRAME_INFO değerine sahip.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

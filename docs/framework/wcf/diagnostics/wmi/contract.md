@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603570"
 ---
 # <a name="contract"></a>Daralma
 Daralma  
@@ -43,7 +43,7 @@ class Contract
  Sözleşme barındıran appdomain kimliği.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: davranışı dizi  
+ Veri türü: Davranış dizi  
   
  Erişim türü: salt okunur  
   
@@ -64,7 +64,7 @@ class Contract
  Ad alanı `portType` WSDL öğesinde.  
   
 ### <a name="operations"></a>İşlemler  
- Veri türü: işlem dizisi  
+ Veri türü: İşlem dizisi  
   
  Erişim türü: salt okunur  
   
@@ -78,7 +78,7 @@ class Contract
  İşlem anlaşması barındıran işlem kimliği.  
   
 ### <a name="ref"></a>ref  
- Veri türü: Sözleşme  
+ Veri türü: Daralma  
   
  Erişim türü: salt okunur  
   
@@ -104,5 +104,5 @@ class Contract
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.ContractDescription>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.ContractDescription>

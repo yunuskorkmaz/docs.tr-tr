@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: ilgili öğeleri (XPath-LINQ to XML) bulma (C#)'
+title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 57cbba6e52feec05ed6381899017f1ce5d1e8ec1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617414"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: ilgili öğeleri (XPath-LINQ to XML) bulma (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)
 Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.  
   
  XPath ifadesidir:  
@@ -21,7 +21,7 @@ Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek
   
  . NET'te listeye dizin 'zero' bağlı olduğunu unutmayın. Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' temel biridir. Bu örnekte, bu fark yansıtır.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -84,6 +84,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

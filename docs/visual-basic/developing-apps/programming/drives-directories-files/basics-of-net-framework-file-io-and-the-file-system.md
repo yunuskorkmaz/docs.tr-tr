@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600771"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile çalışmak için kullanılır.  
@@ -57,11 +57,11 @@ Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile ç
   
 |Bitiş|Bkz. |
 |---|---|   
-|İçin bir veri dosyasını okuma ve yazma|[Nasıl Yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Bir dosyadan metin okuma|[Nasıl Yapılır: Bir dosyadan metin okuma](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|Bir dosyaya metin yazma|[Nasıl Yapılır: Bir dosyaya metin yazma](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|Dizeden karakterleri okuma|[Nasıl Yapılır: Dizeden karakterleri okuma](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|Bir dizeye karakter yazma|[Nasıl Yapılır: Bir dizeye karakter yazma](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|İçin bir veri dosyasını okuma ve yazma|[Nasıl yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Bir dosyadan metin okuma|[Nasıl yapılır: Bir dosyadan metin okuma](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Bir dosyaya metin yazma|[Nasıl yapılır: Bir dosyaya metin yazma](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Dizeden karakterleri okuma|[Nasıl yapılır: Dizeden karakterleri okuma](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Bir dizeye karakter yazma|[Nasıl yapılır: Bir dizeye karakter yazma](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |Verileri şifrele|[Veri Şifreleme](../../../../standard/security/encrypting-data.md)|  
 |Verilerin şifresini|[Verilerin Şifresini Çözme](../../../../standard/security/decrypting-data.md)|  
   
@@ -74,7 +74,7 @@ Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile ç
   
 |Bitiş|Bkz. |  
 |---|---|
-|Açın ve bir günlük dosyasına metin Ekle|[Nasıl Yapılır: Açın ve bir günlük dosyasına Ekle](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Açın ve bir günlük dosyasına metin Ekle|[Nasıl yapılır: Açın ve bir günlük dosyasına Ekle](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Bir dosyanın özniteliklerini belirleme|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dosya izinleri  
@@ -87,19 +87,19 @@ Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile ç
   
 |Bitiş|Bkz. |
 |---|---|  
-|Bir yalıtılmış depolama oluşturma|[Nasıl Yapılır: Yalıtılmış depolama için depoları alma](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Yalıtılmış depoları numaralandırma|[Nasıl Yapılır: Yalıtılmış depolama için depoları numaralandırma](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Bir yalıtılmış depolama Sil|[Nasıl Yapılır: Yalıtılmış depolamadaki depoları silme](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Yalıtılmış depolamada dosya veya dizin oluşturma|[Nasıl Yapılır: Yalıtılmış depolamada dosya ve dizinler oluşturma](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Yalıtılmış depolamada dosya bulma|[Nasıl Yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|İnsolated depolama alanındaki bir dosyaya yazma veya okuma|[Nasıl Yapılır: Okuma ve yalıtılmış depolamadaki dosyaları yazma](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Bir dosya veya dizin yalıtılmış depolamadaki Sil|[Nasıl Yapılır: Dosya ve dizinleri yalıtılmış depolamadaki Sil](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Bir yalıtılmış depolama oluşturma|[Nasıl yapılır: Yalıtılmış depolama için depoları alma](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Yalıtılmış depoları numaralandırma|[Nasıl yapılır: Yalıtılmış depolama için depoları numaralandırma](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Bir yalıtılmış depolama Sil|[Nasıl yapılır: Yalıtılmış depolamadaki depoları silme](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Yalıtılmış depolamada dosya veya dizin oluşturma|[Nasıl yapılır: Yalıtılmış depolamada dosya ve dizinler oluşturma](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Yalıtılmış depolamada dosya bulma|[Nasıl yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|İnsolated depolama alanındaki bir dosyaya yazma veya okuma|[Nasıl yapılır: Okuma ve yalıtılmış depolamadaki dosyaları yazma](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Bir dosya veya dizin yalıtılmış depolamadaki Sil|[Nasıl yapılır: Dosya ve dizinleri yalıtılmış depolamadaki Sil](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Dosya olayları  
  <xref:System.IO.FileSystemWatcher> Bileşen dosya ve dizinleri sisteminize veya ağ erişimi için kullandığınız herhangi bir bilgisayarda yapılan değişiklikleri izlemek üzere sağlar. Örneğin, bir dosya değiştirildiğinde, bir kullanıcı değişiklik gerçekleştikten bir uyarı göndermek isteyebilirsiniz. Değişiklikler olduğunda, bir veya daha fazla olay gerçekleşti, bir arabellek depolanan ve için teslim <xref:System.IO.FileSystemWatcher> işleme için bileşen.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)  
- [Dosya ve Akış G/Ç'si](../../../../standard/io/index.md)  
- [Zaman Uyumsuz Dosya G/Ç](../../../../standard/io/asynchronous-file-i-o.md)  
- [.NET Framework dosyası g/ç ve dosya sistemi (Visual Basic) de kullanılan sınıflar](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)
+- [Dosya ve Akış G/Ç'si](../../../../standard/io/index.md)
+- [Zaman Uyumsuz Dosya G/Ç](../../../../standard/io/asynchronous-file-i-o.md)
+- [.NET Framework dosyası g/ç ve dosya sistemi (Visual Basic) de kullanılan sınıflar](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

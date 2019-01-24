@@ -9,42 +9,42 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e4957bf7d1a8885eae772f3eb8708c06ec45423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614269"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
-Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, hangi nesnelerin/öğelerin bazılarında bulunabilir açıklar. Bu genel bakışta türetilen nesneler için kullanılan içerik modelini özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için bkz: [akış belge genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, diğer hangi nesneleri/öğeleri bulunabilir açıklar. Bu genel bakışta öğesinden türetilen nesneler için kullanılan içerik modeli özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
   
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>İçerik modeli diyagramı  
- Türetilmiş sınıflar için aşağıdaki diyagramda içerik modelini özetler <xref:System.Windows.Documents.TextElement> yanı sıra nasıl diğer olmayan `TextElement` Bu modele uygun sınıfları.  
+ Türetilmiş sınıflar için aşağıdaki diyagramda içerik modeli özetlenmektedir <xref:System.Windows.Documents.TextElement> yanı sıra diğer nasıl olmayan `TextElement` sınıfları Bu modele uyar.  
   
  ![Diyagram: Akış içeriği kapsama şeması](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
   
- Önceki diyagramdan görüldüğü gibi bir öğe için izin verilen alt öğe mutlaka olup bir sınıfın türetildiği tarafından belirlenmiş olmak zorunda değildir <xref:System.Windows.Documents.Block> sınıfı veya bir <xref:System.Windows.Documents.Inline> sınıfı. Örneğin, bir <xref:System.Windows.Documents.Span> (bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca olabilir <xref:System.Windows.Documents.Inline> alt öğeleri, ancak bir <xref:System.Windows.Documents.Figure> (aynı zamanda bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca olabilir <xref:System.Windows.Documents.Block> alt öğeleri. Bu nedenle, bir diyagram hangi öğe başka bir programda bulunabilir hızla belirlemede yararlıdır. Örnek olarak, diyagram oluşturma akış içeriğini belirlemek için kullanalım bir <xref:System.Windows.Controls.RichTextBox>.  
+ Yukarıdaki diyagramdan görüldüğü gibi bir öğe için izin verilen alt öğe mutlaka olup bir sınıf türetilir tarafından belirlenir değil <xref:System.Windows.Documents.Block> sınıfı veya <xref:System.Windows.Documents.Inline> sınıfı. Örneğin, bir <xref:System.Windows.Documents.Span> (bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca <xref:System.Windows.Documents.Inline> alt öğeleri, ancak bir <xref:System.Windows.Documents.Figure> (Ayrıca bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca <xref:System.Windows.Documents.Block> alt öğeleri. Bu nedenle, bir diyagram hızla başka hangi öğe bulunabilir belirlemek için yararlıdır. Örnek olarak, akış içeriği oluşturmak nasıl belirlemek için diyagram şimdi kullanın. bir <xref:System.Windows.Controls.RichTextBox>.  
   
-1.  A <xref:System.Windows.Controls.RichTextBox> içermesi gereken bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermesi gerekir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesne içermelidir. Yukarıdaki diyagramdan karşılık gelen kesim aşağıdadır.  
+1.  A <xref:System.Windows.Controls.RichTextBox> içermelidir bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermelidir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Önceki şemada karşılık gelen bir segmentten verilmiştir.  
   
      ![Diyagram: RichTextBox kapsama kuralları](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
-     Bugüne kadarki biçimlendirmeyi aşağıdaki gibi görünmelidir budur.  
+     Şimdiye kadar biçimlendirmeyi aşağıdaki gibi görünmelidir budur.  
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  Aşağıdaki diyagramda göre birkaç yolu vardır <xref:System.Windows.Documents.Block> dahil olmak üzere seçmek için öğeleri <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (önceki diyagramda blok türetilmiş sınıflara bakın). İstiyoruz diyelim bir <xref:System.Windows.Documents.Table>. Önceki diyagramda göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren öğeleri bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesne içermelidir. İçin karşılık gelen kesim aşağıdadır <xref:System.Windows.Documents.Table> önceki diyagramdan gerçekleştirilecek.  
+2.  Diyagram göre vardır <xref:System.Windows.Documents.Block> öğeleri dahil olmak üzere seçmek için <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (önceki şemada blok türetilmiş sınıflara bakın). İstediğimizi varsayalım bir <xref:System.Windows.Documents.Table>. Önceki şemada göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Karşılık gelen kesim için verilmiştir <xref:System.Windows.Documents.Table> yukarıdaki diyagramdan alınan.  
   
-     ![Diyagram: Üst&#47;alt tablo için şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+     ![Diyagram: Üst&#47;tablosu için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
-     Karşılık gelen biçimlendirme aşağıdadır.  
+     Karşılık gelen biçimlendirme verilmiştir.  
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  Yeniden, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şirketinizdeki bazı metinleri hücresinin içine koyun. Bu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Gösteren diyagramdan karşılık gelen kesim aşağıdadır bir <xref:System.Windows.Documents.Paragraph> gerçekleştirebileceğiniz bir <xref:System.Windows.Documents.Inline> öğesi ve, bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
+3.  Yine, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şimdi metin hücre içine yerleştirin. Bunu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Karşılık gelen gösteren diyagram kesimlerinden verilmiştir bir <xref:System.Windows.Documents.Paragraph> sürebilir bir <xref:System.Windows.Documents.Inline> öğesi ve bu bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
   
      ![Diyagram: Üst&#47;paragraf için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
@@ -55,21 +55,21 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
  [!code-xaml[FlowOvwSnippets_snip#SchemaExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
   
 <a name="Using_the_Content_Property"></a>   
-## <a name="working-with-textelement-content-programmatically"></a>TextElement içerikle program aracılığıyla çalışma  
- İçeriği bir <xref:System.Windows.Documents.TextElement> koleksiyonları ve bunu programlı olarak içeriğini düzenleme oluşur <xref:System.Windows.Documents.TextElement> nesneler, bu koleksiyonlarla çalışarak yapılır. Tarafından kullanılan üç farklı koleksiyon vardır <xref:System.Windows.Documents.TextElement> -türetilmiş sınıfları:  
+## <a name="working-with-textelement-content-programmatically"></a>TextElement içerik ile program aracılığıyla çalışma  
+ İçeriği bir <xref:System.Windows.Documents.TextElement> koleksiyonları ve bunu programlı olarak içeriğini düzenleme oluşur <xref:System.Windows.Documents.TextElement> nesneleri, bu koleksiyonlarla çalışma tarafından gerçekleştirilir. Tarafından kullanılan üç farklı koleksiyon <xref:System.Windows.Documents.TextElement> -türetilmiş sınıflar:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Inline> öğeleri. <xref:System.Windows.Documents.InlineCollection> izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, ve <xref:System.Windows.Controls.TextBlock> öğeleri.  
+-   <xref:System.Windows.Documents.InlineCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Inline> öğeleri. <xref:System.Windows.Documents.InlineCollection> izin verilen alt içeriğini tanımlayan <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, ve <xref:System.Windows.Controls.TextBlock> öğeleri.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Block> öğeleri. <xref:System.Windows.Documents.BlockCollection> izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, ve <xref:System.Windows.Documents.Figure> öğeleri.  
+-   <xref:System.Windows.Documents.BlockCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Block> öğeleri. <xref:System.Windows.Documents.BlockCollection> izin verilen alt içeriğini tanımlayan <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, ve <xref:System.Windows.Documents.Figure> öğeleri.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Sıralı içindeki belirli bir içerik öğesini temsil eder bir akış içerik öğesi veya sırasız <xref:System.Windows.Documents.List>.  
+-   <xref:System.Windows.Documents.ListItemCollection>: Bir sıralı içindeki belirli bir içerik öğesini temsil eden bir akış içerik öğesi veya sıralanmamış <xref:System.Windows.Documents.List>.  
   
- Yönetebilirsiniz (öğeler ekleme veya kaldırma) ilgili özelliklerini kullanarak bu koleksiyonlardan **Inlines**, **blokları**, ve **ListItems**. Aşağıdaki örnekler bir aralık kullanarak içindekiler işlemek nasıl **Inlines** özelliği.  
+ Yönetebilirsiniz (ekler veya öğeleri kaldırma) ilgili özelliklerini kullanarak bu koleksiyonların **satır içleri**, **blokları**, ve **ListItems**. Aşağıdaki örnekler bir aralık kullanmanın içeriğini yönetmek nasıl **satır içleri** özelliği.  
   
 > [!NOTE]
->  Tablo içeriğini işlemek için birkaç koleksiyon kullanır, ancak burada incelenmemiştir. Daha fazla bilgi için bkz: [tablo genel bakışı](../../../../docs/framework/wpf/advanced/table-overview.md).  
+>  Tablo içeriğini işlemek için birden fazla koleksiyon kullanır, ancak burada incelenmemiştir. Daha fazla bilgi için [tabloya genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
- Aşağıdaki örnek yeni bir oluşturur <xref:System.Windows.Documents.Span> nesne ve kullandığı `Add` içerik alt öğeleri olarak çalışan iki metin eklemek için yöntemini <xref:System.Windows.Documents.Span>.  
+ Aşağıdaki örnek yeni bir oluşturur <xref:System.Windows.Documents.Span> nesne ve kullandığı `Add` çalışan içerik alt öğe olarak iki metin eklemek için yöntemini <xref:System.Windows.Documents.Span>.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesadd)]
  [!code-vb[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesadd)]  
@@ -79,31 +79,31 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
  [!code-csharp[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesinsert)]
  [!code-vb[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesinsert)]  
   
- Aşağıdaki örnek, son siler <xref:System.Windows.Documents.Inline> öğesinde <xref:System.Windows.Documents.Span>.  
+ Aşağıdaki örnekte, son silinir <xref:System.Windows.Documents.Inline> öğesinde <xref:System.Windows.Documents.Span>.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
  [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
- Aşağıdaki örnekte tüm içeriği siler (<xref:System.Windows.Documents.Inline> öğeleri) gelen <xref:System.Windows.Documents.Span>.  
+ Aşağıdaki örnek içeriğinin tamamını temizler (<xref:System.Windows.Documents.Inline> öğeleri) öğesinden <xref:System.Windows.Documents.Span>.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 <a name="Types_that_Share_this_Content_Model"></a>   
-## <a name="types-that-share-this-content-model"></a>Bu içerik modeli paylaşmak türleri  
- Aşağıdaki türlerden devralınmalıdır <xref:System.Windows.Documents.TextElement> sınıfı ve bu genel bakışta açıklanan içeriği görüntülemek için kullanılabilir.  
+## <a name="types-that-share-this-content-model"></a>Bu içerik modeli paylaşan türleri  
+ Şu türlerden devralınan <xref:System.Windows.Documents.TextElement> sınıfı ve bu genel bakışta açıklanan içeriği görüntülemek için kullanılabilir.  
   
  <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Figure>, <xref:System.Windows.Documents.Floater>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.InlineUIContainer>, <xref:System.Windows.Documents.Italic>, <xref:System.Windows.Documents.LineBreak>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Run>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Span>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.Underline>.  
   
- Bu liste yalnızca soyut türleri ile dağıtılmış içerdiğine dikkat [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Devralınan diğer türleri kullanabilirsiniz <xref:System.Windows.Documents.TextElement>.  
+ Bu liste yalnızca soyut olmayan türleri ile dağıtılmış içerdiğine dikkat [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Devralınan diğer türleri kullanabilir <xref:System.Windows.Documents.TextElement>.  
   
 <a name="Types_that_Can_Contain_ContentControl_Objects"></a>   
-## <a name="types-that-can-contain-textelement-objects"></a>TextElement nesnelerini içeren türleri  
+## <a name="types-that-can-contain-textelement-objects"></a>TextElement nesneleri içeren türleri  
  Bkz: [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
+- [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+- [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

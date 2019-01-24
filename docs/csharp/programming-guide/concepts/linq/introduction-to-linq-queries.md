@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605139"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  Belirli türde veri kaynaklarını oluşturma hakkında daha fazla bilgi için çeşitli belgelerine bakın [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları. Ancak, temel kural çok basittir: bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] genel destekleyen herhangi bir nesne veri kaynağı, <xref:System.Collections.Generic.IEnumerable%601> arabirimi ya da bundan devralan bir arabirim.  
   
 > [!NOTE]
->  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Daha fazla bilgi için [nasıl yapılır: LINQ (C#) ile ArrayList sorgulama](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Daha fazla bilgi için [nasıl yapılır: LINQ ile ArrayList sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Sorgu  
  Sorgu, hangi bilgilerin veri kaynağından veya kaynaklarından alınacağını belirtir. İsteğe bağlı olarak, bir sorgunun nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtir. Bir sorguyu sorgu değişkeninde depolanır ve sorgu ifadesiyle başlatılır. Sorguları yazmayı kolaylaştırmak için C# yeni sorgu sözdizimi tanıttı.  
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
   
  Koyarak da yürütmeyi zorlayabilirsiniz `foreach` sorgu ifadesinin hemen sonra döngü. Çağırarak ancak `ToList` veya `ToArray` ayrıca tüm veriyi tek koleksiyon nesnesindeki önbelleğe alın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
-- [Sorgu anahtar sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
+- [Query Keywords (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

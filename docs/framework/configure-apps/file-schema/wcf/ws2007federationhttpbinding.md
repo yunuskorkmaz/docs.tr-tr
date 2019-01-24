@@ -2,12 +2,12 @@
 title: '&lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 1006289485ee1509c57ebaffeec2b6a366494470
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7869737f1e3d8c7a9ba569991ead6f7f759e6c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616895"
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Türetilen bir güvenli ve birlikte çalışabilen bağlama [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ve birleşik güvenliği destekler.  
@@ -75,7 +75,7 @@ Türetilen bir güvenli ve birlikte çalışabilen bağlama [ \<wsFederationHttp
 |`proxyAddress`|HTTP proxy adresini belirten bir URI. Varsa `useDefaultWebProxy` olduğu `true`, bu ayar olmalıdır `null`. Varsayılan, `null` değeridir.|  
 |`receiveTimeout`|A <xref:System.TimeSpan> tamamlamak alma işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10:00 ' dir.|  
 |`sendTimeout`|A <xref:System.TimeSpan> tamamlamak bir gönderme işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
-|`textEncoding`|İletileri bağlamadaki yayma için kullanılacak kodlama karakter kümesini ayarlar. Geçerli değerler şunlardır:<br /><br /> -BigEndianUnicode: Unicode büyük Endian kodlaması.<br />-Unicode: 16-bit kodlaması.<br />-UTF8: 8-bit kodlaması.<br /><br /> UTF8 varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
+|`textEncoding`|İletileri bağlamadaki yayma için kullanılacak kodlama karakter kümesini ayarlar. Geçerli değerler şunlardır:<br /><br /> -   BigEndianUnicode: Unicode büyük Endian kodlaması.<br />-Unicode: 16-bit kodlaması.<br />-   UTF8: 8-bit kodlaması.<br /><br /> UTF8 varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
 |`transactionFlow`|WS işlem akışı sağlama bağlama destekleyip desteklemediğini belirten bir değeri. Varsayılan, `false` değeridir.|  
 |`useDefaultWebProxy`|Sistemin otomatik yapılandırılan HTTP Ara sunucusu kullanılıp kullanılmayacağını belirten bir değer. Proxy adresi olmalıdır `null` (diğer bir deyişle, ayarlı değil) Bu öznitelik ise `true`. Varsayılan, `true` değeridir.|  
   
@@ -129,11 +129,11 @@ Türetilen bir güvenli ve birlikte çalışabilen bağlama [ \<wsFederationHttp
 </configuration>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WS2007FederationHttpBinding>  
- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
- [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WS2007FederationHttpBinding>
+- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>
+- [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)

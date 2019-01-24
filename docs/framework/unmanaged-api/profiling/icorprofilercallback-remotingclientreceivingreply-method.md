@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04956fb5519c66141f4bd7330367f6c78b4e7bc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313dd7526478377ca457d165de4b95e7e81d93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599796"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply Yöntemi
-Uzaktan iletişim çağrısı sunucu tarafı kısmı tamamlandı ve istemci şimdi alma profil oluşturucu bildirir ve yanıtı işlemek üzere.  
+Uzaktan iletişim çağrısı sunucu tarafı kısmı tamamlandı ve istemci artık alma profil oluşturucu bildirir ve yanıt işlenecek.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,27 +37,27 @@ HRESULT RemotingClientReceivingReply(
   
 #### <a name="parameters"></a>Parametreler  
  `pCookie`  
- [in] Karşılık gelecek bir değerle sağlanan [Icorprofilercallback::remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) Bu koşullar altında:  
+ [in] Sağlanan değer karşılık gelecek bir değerle [Icorprofilercallback::remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) Bu koşullar altında:  
   
--   Remoting GUID tanımlama bilgilerini etkindir.  
+-   Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
   
 -   Kanal ileti iletilirken başarılı olur.  
   
 -   GUID tanımlama bilgileri sunucu tarafı işlemini üzerinde etkindir.  
   
- Bu, kolay remoting çağrıları eşlemeye izin verir.  
+ Bu, uzak hizmet çağrıları kolay eşlemeye izin verir.  
   
  `fIsAsync`  
- [in] Bir değer `true` çağrısı, zaman uyumsuz Aksi takdirde `false`.  
+ [in] Bir değer `true` çağrısı ise, zaman uyumsuz; Aksi takdirde `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599991"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server'da veritabanı yansıtması
 SQL Server veritabanı yansıtma, bir kopya veya yansıtma, bir yedek sunucu üzerinde bir SQL Server veritabanının tutmanızı sağlar. Yansıtma, verilerin iki ayrı kopyasını süreleri ve yüksek düzeyde kullanılabilirlik sağladığınızdan hiç var ve veri yedekliği tamamlamak sağlar. Geliştirici herhangi bir eylemde bulunmanız veya bir SQL Server veritabanı için yapılandırıldıktan sonra kod yazmaya gerek yoktur, böylece SQL Server için .NET veri sağlayıcısı, veritabanı yansıtması için örtük desteği sağlar. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesne destekleyen bir yük devretme iş ortağı sunucu adını sağlayan sağlayan bir açık bir bağlantı modu <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -63,5 +63,5 @@ string activeServer = connection.DataSource;
 |--------------|-----------------|  
 |[Veritabanı yansıtma](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Ayarlama ve SQL Server yansıtma yapılandırma açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

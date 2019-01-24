@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 610ef2721bef18e1cb1e87500a9dc9cf2729c867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614263"
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
 <a name="introduction"></a> Bu konu, çıkış değerleri oluşturmak için bir geometrik yol kullanmanıza olanak sağlayan yol animasyonları tanıtır. Yol animasyonları, taşıma ve karmaşık yollar üzerindeki nesneler döndürmek için kullanışlıdır.  
@@ -89,9 +89,9 @@ ms.locfileid: "48266838"
   
  Kullanılan yolu sözdizimi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte bkz [yol işaretleme söz dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) genel bakış.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)
+- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

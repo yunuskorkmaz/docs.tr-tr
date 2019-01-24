@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme'
+title: 'Nasıl yapılır: Bir Parallel.For veya ForEach döngüsünü iptal etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db0ff4cbc343cfbc1c81b24aa4401fa00ecf4f4b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7cdb6e059fb1c7001bbe4da60e2936b1ad40cc1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618087"
 ---
-# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme
+# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Nasıl yapılır: Bir Parallel.For veya ForEach döngüsünü iptal etme
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemleri iptal belirteçlerini kullanımıyla iptal etmeyi destekler. Genel olarak, iptal etme hakkında daha fazla bilgi için bkz [iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Paralel bir döngüde sağladığınız <xref:System.Threading.CancellationToken> yöntemine <xref:System.Threading.Tasks.ParallelOptions> parametresi ve ardından paralel çağrıyı bir try-catch bloğu içinde alın.  
   
 ## <a name="example"></a>Örnek  
@@ -31,5 +31,5 @@ ms.locfileid: "44199394"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

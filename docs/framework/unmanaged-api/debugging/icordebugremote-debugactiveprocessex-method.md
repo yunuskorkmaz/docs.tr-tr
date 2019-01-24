@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb085cc486c307a308258709f4c58619597bc202
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608394"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx Yöntemi
-Hata ayıklayıcı altında uzaktaki bir makinede bir işlem başlatır.  
+Hata ayıklayıcısı altında uzak bir makinede bir işlem başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,38 +40,38 @@ HRESULT DebugActiveProcessEx (
   
 #### <a name="parameters"></a>Parametreler  
  `pRemoteTarget`  
- [in] İşaretçi bir [Icordebugremotetarget arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Bu parametre, işlemin çalıştığı makine belirlemek için kullanılır.  
+ [in] İşaretçi bir [Icordebugremotetarget arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Bu parametre, işlem üzerinde çalıştığı makinenin belirlemek için kullanılır.  
   
  `id`  
- [in] Hata ayıklayıcısı ekli olduğu işlemin kimliği.  
+ [in] Hata ayıklayıcı eklenmiş olduğu işlem kimliği.  
   
  `win32Attach`  
- [in] `true` hata ayıklayıcı işlem için Win32 hata ayıklayıcı olarak davranır ve yönetilmeyen geri çağırmaları; gönderme gerekir, aksi takdirde `false`.  
+ [in] `true` hata ayıklayıcı Win32 hata ayıklayıcı işlemi gibi davranır ve gönderme yönetilmeyen geri çağırmaları; Aksi takdirde, `false`.  
   
  `ppProcess`  
- [out] Hata ayıklayıcı eklenmiş olması işlemi temsil eden bir "ICorDebugProcess" nesnesinin adresi için bir işaretçi.  
+ [out] Hata ayıklayıcı eklendikten işlemini temsil eden bir "ICorDebugProcess" nesnenin adresi için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Uzak makinedeki işlemi başarıyla eklendi.  
+ İşlem uzak makinede başarıyla kullanıma açıldı.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Uzak makinedeki işlem eklenemiyor.  
+ Uzak makinede işlemine iliştirilemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Karışık mod hata ayıklaması Silverlight'ta desteklenmez.  
+ Silverlight'ta, karma mod hata ayıklaması desteklenmiyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

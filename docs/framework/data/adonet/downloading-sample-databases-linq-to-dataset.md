@@ -2,12 +2,12 @@
 title: Örnek Veritabanları (LINQ to DataSet) indirme
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573350"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ to DataSet) indirme
 Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri, SQL Server veri deposu olarak kullanın. SQL Server Express ücret kullanılabilir Edition, SQL Server yerine veri deposu olarak da kullanılabilir.  
@@ -67,11 +67,11 @@ ms.locfileid: "53125567"
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition'ı indirip  
   
-1.  Internet Explorer'ı başlatın.  
+1.  Start Internet Explorer.  
   
 2.  Git [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) indirme sayfası.  
   
 3.  Web sitesi yükleme yönergelerini izleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başlarken](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

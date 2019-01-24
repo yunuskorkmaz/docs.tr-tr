@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606302"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veriler içeren dosyaları bağımlıdır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses. Windows Presentation Foundation (WPF), yapılandırma, belirlemekten ve bu tür bir uygulama verileri dosyaları olarak adlandırılan veri dosyalarını kullanarak özel destek sunar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
   
--   **Kaynak dosyaları**: bir yürütülebilir veya kitaplık derlenmiş veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+-   **Kaynak dosyaları**: Bir yürütülebilir veya kitaplık derlenmiş veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
--   **İçerik dosyaları**: yürütülebilir bir dosya ile açık bir ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+-   **İçerik dosyaları**: Yürütülebilir bir dosya ile açık bir ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
--   **Kaynak dosyaları sitesi**: yürütülebilir bir dosya ile ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
+-   **Kaynak dosyaları sitesi**: Yürütülebilir bir dosya ile ilişkisi olmayan tek başına veri dosyalarını [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
  Kaynak dosyalar ve içerik dosyalarını, derleme zamanında bilinen dosyaları bu üç tür arasında olmak için önemli bir ayrım olduğundan; bir derleme, bunların açık bilgisine sahiptir. Kaynak dosyaları sitesi için ancak, bir derleme bunları olanağıyla, olabilir veya bir paketi aracılığıyla örtük bilgiye [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru; İkincisi, durum başvurulan site kaynak dosyasının gerçekten var olduğunu garanti yoktur.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "43855978"
  İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], kaynak dosya yer aldığı bir dosya, bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak bir `Resource` öğesi.  
   
 ```xml  
-<Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
     <Resource Include="ResourceFile.xaml" />  
@@ -238,5 +238,5 @@ ms.locfileid: "43855978"
 ## <a name="rebuilding-after-changing-build-type"></a>Yapı türü değiştirildikten sonra yeniden oluşturma  
  Uygulama veri dosyası derleme türü değiştirdikten sonra bu değişikliklerin uygulandığından emin olmak için uygulamanın tamamını yeniden derlemek gerekir. Yalnızca uygulama oluşturuyorsanız, değişiklikler uygulanmaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

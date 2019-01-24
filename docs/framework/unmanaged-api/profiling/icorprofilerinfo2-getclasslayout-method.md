@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b826e9c30fbf7007ac6b0093608ab7d926cc499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602474"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout Metodu
-Belirtilen sınıf tarafından tanımlanan alanların bellekte düzeni hakkındaki bilgileri alır. Diğer bir deyişle, bu yöntem sınıfın alanları uzaklıklarını alır.  
+Belirtilen sınıf tarafından tanımlanan alanların bellekte Düzen hakkında bilgi alır. Diğer bir deyişle, bu yöntem, sınıfın alanlarının uzaklıkları alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,40 +40,40 @@ HRESULT GetClassLayout(
   
 #### <a name="parameters"></a>Parametreler  
  `classID`  
- [in] Düzen alınır sınıfı kimliği.  
+ [in] Düzen alınacak sınıfın Kimliğidir.  
   
  `rFieldOffset`  
- [içinde out] Bir dizi [cor_fıeld_offset](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapıları, belirteçleri ve uzaklıkları sınıfının alanlarının her biri içerir.  
+ [out içinde] Bir dizi [cor_fıeld_offset](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapıları belirteçleri ve ofsetleri sınıfın alanlarının her biri içerir.  
   
  `cFieldOffset`  
- [in] Boyutunu `rFieldOffset` dizi.  
+ [in] Boyutu `rFieldOffset` dizisi.  
   
  `pcFieldOffset`  
- [out] Kullanılabilir öğeleri toplam sayısı için bir işaretçi. Varsa `cFieldOffset` 0'dır, bu değer gerekli öğe sayısını belirtir.  
+ [out] Kullanılabilir öğeleri toplam sayısı için bir işaretçi. Varsa `cFieldOffset` 0'dır, bu değer gerekli öğelerin sayısını gösterir.  
   
  `pulClassSize`  
- [out] Sınıfının bayt cinsinden boyutu içeren bir konuma bir işaretçi.  
+ [out] Sınıf bayt cinsinden boyutunu içeren bir konum için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetClassLayout` Yöntemi yalnızca sınıf tarafından tanımlanan alanları döndürür. Profil Oluşturucu sınıfın üst sınıfı'de alanları tanımlamış ise çağırmalıdır `GetClassLayout` alanlarla elde etmek için üst sınıfı.  
+ `GetClassLayout` Yöntemi yalnızca sınıfı tarafından tanımlanan alanları döndürür. Sınıfının üst sınıfı alanlar da tanımlanmışsa, profil oluşturucu çağırmanız gerekir `GetClassLayout` alanlarla elde etmek için üst sınıfta.  
   
- Kullanırsanız `GetClassLayout` dize sınıflarıyla yöntemi E_INVALIDARG hata koduyla başarısız olur. Kullanım [Icorprofilerınfo2::getstringlayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) bir dize Düzen hakkında bilgi almak için. `GetClassLayout` Ayrıca bir dizi sınıf çağrıldığında başarısız olur.  
+ Kullanırsanız `GetClassLayout` dize sınıflarıyla yöntemi E_INVALIDARG hata koduyla başarısız olur. Kullanım [Icorprofilerınfo2::getstringlayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) bir dizenin düzeni hakkında bilgi almak için. `GetClassLayout` Ayrıca bir dizi sınıfıyla çağrıldığında başarısız olur.  
   
- Sonra `GetClassLayout` döndürür, doğrulamalısınız `rFieldOffset` arabellek tüm kullanılabilir içerecek şekilde büyük `COR_FIELD_OFFSET` yapıları. Bunu yapmak için değeri karşılaştırın, `pcFieldOffset` işaret boyutu ile `rFieldOffset` boyutu tarafından ayrılmış bir `COR_FIELD_OFFSET` yapısı. Varsa `rFieldOffset` büyük değil yeterince büyük bir ayırma `rFieldOffset` arabellek, güncelleştirme `cFieldOffset` yeni, büyük boyutu ve çağrı `GetClassLayout` yeniden.  
+ Sonra `GetClassLayout` döndürür, doğrulamalısınız `rFieldOffset` arabellek kullanılabilir tüm içerecek şekilde büyük `COR_FIELD_OFFSET` yapıları. Bunu yapmak için değeri ile karşılaştırmak, `pcFieldOffset` işaret boyutu ile `rFieldOffset` boyutu tarafından ayrılmış bir `COR_FIELD_OFFSET` yapısı. Varsa `rFieldOffset` büyük değil yeterince büyük bir ayırma `rFieldOffset` arabellek, güncelleştirme `cFieldOffset` yeni, daha büyük bir boyut ve çağrı `GetClassLayout` yeniden.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetClassLayout` sıfır uzunluklu ile `rFieldOffset` arabellek doğru arabellek boyutu elde edilir. Döndürülen değer için arabellek boyutu ayarlayabilirsiniz `pcFieldOffset` ve arama `GetClassLayout` yeniden.  
+ Alternatif olarak, ilk çağırabilirsiniz `GetClassLayout` sıfır uzunluklu ile `rFieldOffset` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcFieldOffset` ve çağrı `GetClassLayout` yeniden.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

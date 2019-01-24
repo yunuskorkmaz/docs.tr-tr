@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598821"
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 İmzasız 16-bit (2 baytlık) kod noktaları dizisi bu aralık 0 ile 65535 arasında bir değer tutar. Her *kod noktası*, ya da karakter kodunu tek bir Unicode karakterini temsil eder. Bir dize yaklaşık iki milyardan fazla 0'dan içerebilir (2 ^ 31) Unicode karakter.  
@@ -78,11 +78,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.String?displayProperty=nameWithType> sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.String?displayProperty=nameWithType>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.String?displayProperty=nameWithType>
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

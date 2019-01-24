@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607546"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 Yöntemi
-Çöp toplama gerçekleştikten sonra Profil Oluşturucu kök başvurular hakkında uyarır. Bu yöntem uzantısıdır [Icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) yöntemi.  
+Bir çöp toplama işlemi gerçekleştirildikten sonra Profil Oluşturucu kök başvurular hakkında bilgilendirir. Bu yöntem bir uzantısıdır [Icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,40 +40,40 @@ HRESULT RootReferences2(
   
 #### <a name="parameters"></a>Parametreler  
  `cRootRefs`  
- [in] Öğe sayısı `rootRefIds`, `rootKinds`, `rootFlags`, ve `rootIds` dizileri.  
+ [in] İçindeki öğelerin sayısını `rootRefIds`, `rootKinds`, `rootFlags`, ve `rootIds` dizileri.  
   
  `rootRefIds`  
- [in] Nesne kimlikleri, her biri bir statik nesnesinin ya da nesneyi yığında başvuruda bulunan bir dizi. Öğeleri `rootKinds` dizi karşılık gelen öğelerinde sınıflandırmak için bilgiler sağlar `rootRefIds` dizi.  
+ [in] Statik nesne veya bir nesne yığını üzerindeki her biri başvuran nesne kimlikleri, bir dizi. Öğeleri `rootKinds` dizisi karşılık gelen öğeleri sınıflandırmak için bilgi sağlayın `rootRefIds` dizisi.  
   
  `rootKinds`  
- [in] Bir dizi [cor_prf_gc_root_kınd](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) atık toplama kök türünü gösteren değerler.  
+ [in] Bir dizi [cor_prf_gc_root_kınd](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) çöp toplama kök türünü gösteren değerleri.  
   
  `rootFlags`  
- [in] Bir dizi [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) bir atık toplama kök özelliklerini açıklayan değerleri.  
+ [in] Bir dizi [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) bir çöp toplama kök özelliklerini açıklayan değerleri.  
   
  `rootIds`  
- [in] Çöp toplama kök değerine bağlı olarak ilgili ek bilgileri içeren bir tamsayı o noktaya UINT_PTR dizisi değerleri `rootKinds` parametresi.  
+ [in] Bir dizi UINT_PTR o noktaya değerine bağlı olarak, atık toplama kök hakkında ek bilgi içeren bir tamsayı değerleri `rootKinds` parametresi.  
   
- Kök türü bir yığın ise, kök değişkenini içeren işlevi için kimliğidir. Bu kök kimliği 0 ise, CLR iç bir adlandırılmamış işlevi işlevdir. Kök türü bir tanıtıcı ise, kök atık toplama tanıtıcısını kimliğidir. Diğer kök türleri kimliği belirsiz bir değerdir ve yoksayılmalıdır.  
+ Bir yığın kökünün türü ise kök değişken içeren işlevi kimliğidir. Bu kök kimliği 0 ise, CLR iç adlandırılmamış bir işlev işlevdir. Kök türü bir tanıtıcı ise kök çöp toplama tanıtıcılarını kimliğidir. Diğer kök türleri için kimliği belirsiz bir değerdir ve yoksayılacak.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rootRefIds`, `rootKinds`, `rootFlags`, Ve `rootIds` paralel diziler dizidir. Diğer bir deyişle, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, ve `rootIds[i]` tüm aynı kök ilgilendiren.  
+ `rootRefIds`, `rootKinds`, `rootFlags`, Ve `rootIds` paralel diziler dizilerdir. Diğer bir deyişle, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, ve `rootIds[i]` tümü aynı kök ilgilendiriyor.  
   
- Her ikisi de `RootReferences` ve `RootReferences2` profil oluşturucu bildirmek için çağrılır. Profil oluşturucular normalde uygulamak bir yöntemi veya diğer, ancak ikisini birlikte, bilgilerin geçirilen çünkü `RootReferences2` geçirilen bir üst kümesidir `RootReferences`.  
+ Her ikisi de `RootReferences` ve `RootReferences2` profil oluşturucu bildirmek için çağırılır. Profil oluşturucular tarafından normalde uygulanır bir yöntem veya diğer, ikisi, bilgi geçirilen çünkü `RootReferences2` geçirilen bir üst kümesidir `RootReferences`.  
   
- Girdileri mümkündür `rootRefIds` karşılık gelen kök başvurusu null ve yönetilen yığında bir nesneye başvurmuyor anlamına gelir. sıfır olmalıdır.  
+ Girdileri mümkündür `rootRefIds` , karşılık gelen kök başvuru null ve yönetilen yığındaki bir nesneye başvurmuyor anlamına gelir ve sıfır olmalıdır.  
   
- Tarafından döndürülen nesne kimlikleri `RootReferences2` çöp toplama nesneleri eski adreslerinden yeni adreslere taşıma ortasında olabileceği için geri çağırma sırasında kendisini geçerli değildir. Bu nedenle, profil oluşturucular sırasında nesneleri incelemek çalışmamalısınız bir `RootReferences2` çağırın. Zaman [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) olan çağrılır, tüm nesneleri yeni konumlarına taşınır ve güvenli bir şekilde Denetlenmekte.  
+ Tarafından döndürülen nesne kimlikleri `RootReferences2` çöp toplama nesneleri eski adreslerinden yeni adreslerine taşıma ortasında olabileceğinden geri kendisini sırasında geçerli değildir. Bu nedenle, profil oluşturucular sırasında nesneleri incelemek çalışmamalısınız bir `RootReferences2` çağırın. Zaman [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) olan çağrılır, tüm nesnelerin yeni konumlarına taşınır ve güvenli bir şekilde inceledi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

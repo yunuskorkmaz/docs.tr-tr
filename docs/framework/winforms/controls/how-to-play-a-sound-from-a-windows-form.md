@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Formdan Ses Çalma'
+title: 'Nasıl yapılır: Bir Windows formdan ses çalma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607257"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formdan Ses Çalma
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows formdan ses çalma
 Bu örnek, çalışma zamanında verilen yolda bir ses çalar.  
   
 ## <a name="example"></a>Örnek  
@@ -40,9 +40,9 @@ private void playSimpleSound()
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Dosya adı yerine `"c:\Windows\Media\chimes.wav"` geçerli bir dosya adı ile.  
+-   Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
   
--   (C#) Bir başvuru <xref:System.Media?displayProperty=nameWithType> ad alanı.  
+-   (C#) Başvuru <xref:System.Media?displayProperty=nameWithType> ad alanı.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Dosya işlemleri blokları uygun yapılandırılmış özel durum işleme içinde içine alınması.  
@@ -51,7 +51,7 @@ private void playSimpleSound()
   
 -   Yol adı yanlış biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException> sınıfı).  
   
--   Yolun salt okunurdur (<xref:System.IO.IOException> sınıfı).  
+-   Salt okunur yoludur (<xref:System.IO.IOException> sınıfı).  
   
 -   Yol adı `null` (<xref:System.ArgumentNullException> sınıfı).  
   
@@ -62,9 +62,9 @@ private void playSimpleSound()
 -   Yalnızca bir iki nokta üst üste, yoludur ":" (<xref:System.NotSupportedException> sınıfı).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, dosya `Form1.vb` bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
+ Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Media.SoundPlayer>  
- [Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Media.SoundPlayer>
+- [Nasıl yapılır: Bir Windows Form içinde zaman uyumsuz ses yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

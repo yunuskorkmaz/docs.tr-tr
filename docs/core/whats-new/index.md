@@ -1,16 +1,10 @@
 ---
-title: "' De .NET Core yenilikleri"
-description: .NET Core, her bir sürümündeki yeni özellikler hakkında bilgi edinin.
+title: ''' De .NET Core yenilikleri'
+description: '.NET Core, her bir sürümündeki yeni özellikler hakkında bilgi edinin.'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0a61be99cf149985a75205b289a5bd42f70cc5e8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149204"
 ---
 # <a name="whats-new-in-net-core"></a>' De .NET Core yenilikleri
 
@@ -26,4 +20,4 @@ Bu sayfa, .NET Core 2.0 ile başlayarak, yeni özelliklerin her sürümünde .NE
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [ASP.NET Core 2.0 yenilikleri](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2.0 yenilikleri](/aspnet/core/aspnetcore-2.0)

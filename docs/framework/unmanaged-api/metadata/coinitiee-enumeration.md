@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4d0ad0c8651fe10bd2a1c72a8a995846cc80a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f15cc08167baaadc61787b8b1f7167304f0cae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569485"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE Numaralandırması
-Tarafından kullanılan sabitlerini belirtir [Coınitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) ortak dil çalışma zamanı başlatırken.  
+Tarafından kullanılan sabitlerini belirtir [Coınitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) ortak dil çalışma zamanı başlatılırken.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,17 +41,17 @@ typedef enum tagCOINITEE {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|Varsayılan başlatma modu. Bu çalışma zamanı başlatır ve varsayılan oluşturur <xref:System.AppDomain>.|  
-|`COINITEE_DLL`|Yönetilen DLL çalıştırmak için başlatır.|  
-|`COINITEE_MAIN`|Yönetilen bir EXE çalıştırmak için başlatır. Bu çalışma zamanı başlatır, ancak varsayılan oluşturmaz <xref:System.AppDomain>, hangi EXE ana yordam girdikten sonra oluşturulur.|  
+|`COINITEE_DLL`|Yönetilen bir DLL'yi çalıştırılacak başlatır.|  
+|`COINITEE_MAIN`|Yönetilen bir EXE çalıştırılacak başlatır. Bu çalışma zamanı başlatır, ancak varsayılan oluşturmaz <xref:System.AppDomain>, hangi EXE dosyasının ana yordam girdikten sonra oluşturulur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571489"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions Numaralandırması
-Derleme seçenekleri numaralandırır.  
+Derleme seçeneklerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,14 +59,14 @@ typedef enum _AssemblyOptions {
 |Alan|Açıklama|  
 |-----------|-----------------|  
 |optAssemTitle|Dize - derleme başlığı temsil eder.|  
-|optAssemDescription|Dize - derleme açıklaması içerir.|  
+|optAssemDescription|Dize - derleme tanımı içerir.|  
 |optAssemConfig|Dize - derleme yapılandırmasını içerir.|  
 |optAssemOS|Olarak kodlanmış bir dize -: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|Dize - derleme yerel içerir.|  
+|optAssemLocale|Dize - derleme yerel ayar içerir.|  
 |optAssemVersion|Olarak kodlanmış bir dize -: "Major.Minor.Build.Revision".|  
 |optAssemCompany|Dize - şirket içerir.|  
-|optAssemProduct|Dize - ürün adı içeriyor.|  
+|optAssemProduct|Dize - ürün adını içerir.|  
 |optAssemProductVersion|Dize (InformationalVersion olarak da bilinir).|  
 |optAssemCopyright|Dize - telif hakkı bilgileri içerir.|  
 |optAssemTrademark|Dize - ticari marka bilgileri içerir.|  
@@ -75,14 +75,14 @@ typedef enum _AssemblyOptions {
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (DelaySign da bilinir).|  
-|optAssemFileVersion|"Major.Minor.Build.Revision"--ProductVersion aynı olarak kodlanmış bir dize -.|  
-|optAssemSatelliteVer|"Major.Minor.Build.Revision" kodlanmış bir dize -.|  
-|optLastAssemOption|Bir sayaç öğelerin sayısı.|  
+|optAssemFileVersion|Dize - "Major.Minor.Build.Revision"--ProductVersion aynı olarak kodlanmış.|  
+|optAssemSatelliteVer|Dize - "Major.Minor.Build.Revision" olarak kodlanmış.|  
+|optLastAssemOption|Bir sayacı öğelerin sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** alink.h  
   
  **Kitaplık**: alink.dll  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

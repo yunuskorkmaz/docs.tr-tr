@@ -1,17 +1,11 @@
 ---
-title: C# Derleyici Hataları
+title: 'C# Derleyici Hataları'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, compiler errors
-- Visual C# compiler, errors
-- errors [C#]
+  - 'C# language, compiler errors'
+  - 'Visual C# compiler, errors'
+  - 'errors [C#]'
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706404"
 ---
 # <a name="c-compiler-errors"></a>C# Derleyici Hataları
 
@@ -29,10 +23,10 @@ Bazı C# derleyici hataları neden bir hata oluşturulur ve bazı durumlarda, a�
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
-- [Ne yazık ki bu C# hatasıyla ilgili ayrıntı yok](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [/ warn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [Ne yazık ki bu C# hatasıyla ilgili ayrıntı yok](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [/ warn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
 - [/ nowarn (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)

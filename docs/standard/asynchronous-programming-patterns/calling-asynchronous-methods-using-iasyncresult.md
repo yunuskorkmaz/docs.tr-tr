@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23fa927dcdb91fb3905f1cbe845450751de91157
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 01001d68b4bee42453fcb84725507b0cf61184a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610519"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>IAsyncResult Kullanarak Zaman Uyumsuz Yöntemleri Çağırma 
 Üçüncü taraf sınıf kitaplıkları ve .NET Framework türleri bir uygulama ana uygulama iş parçacığı dışında iş parçacıklarında zaman uyumsuz işlemleri gerçekleştirilirken yürütmeye devam izin yöntemleri sağlar. Aşağıdaki bölümlerde açıklanmaktadır ve zaman uyumsuz yöntem çağırabilirsiniz farklı yollarını gösteren kod örnekleri sağlamak <xref:System.IAsyncResult> tasarım deseni.  
@@ -33,5 +33,5 @@ ms.locfileid: "50180081"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

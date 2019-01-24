@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4af4d0a6049c789db371d84b564d261453968b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e3b49654252ad18e9ad4d9e5128b78bd23baee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602864"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum Arabirimi
-Bir dizi için bir numaralandırıcı temsil eden `IAssemblyName` nesneleri.  
+Bir dizi için bir numaralandırıcı temsil `IAssemblyName` nesneleri.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyEnum` nesnesi.|  
-|[GetNextAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Bir işaretçi sonraki alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesnesi.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyEnum` nesne.|  
+|[GetNextAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Sonraki bir işaretçi alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesne.|  
 |[Reset Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Bu sıfırlar `IAssemblyEnum` başlangıç konumuna nesne.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

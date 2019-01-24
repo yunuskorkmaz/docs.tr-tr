@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617544"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 Nesnelere atıfta adresleri tutar. Herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabileceğiniz bir `Object` değişkeni. Bir `Object` değişkeni ayrıca herhangi bir değer türünün veri başvuru (sayısal, `Boolean`, `Char`, `Date`, yapı ya da numaralandırma).  
@@ -66,11 +66,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Object>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Object>
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Nasıl yapılır: İki nesnenin aynı olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

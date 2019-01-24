@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a7ef478fed697f4152a6348931ddf3b4b4b2885
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607442"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange Yöntemi
-Hata ayıklayıcı uygulama etki alanı veya bir iş parçacığı adı değiştiğini bildirir.  
+Hata ayıklayıcı, bir uygulama etki alanı ya da bir iş parçacığı adı değiştiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT NameChange (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Icordebugappdomain nesneye ya da ad değişikliği ya da sahip uygulama etki alanını gösteren bir işaretçi bir ad değişikliği sahip iş parçacığı içerir.  
+ [in] Bir işaretçi ya da bir ad değişikliği ya da sahip uygulama etki alanı temsil eden bir Icordebugappdomain nesne için bir ad değişikliği olan iş parçacığı içerir.  
   
  `pThread`  
- [in] Bir işaretçi Icordebugthread nesneye bir ad değişikliği sahip iş parçacığı temsil eder.  
+ [in] Bir işaretçi Icordebugthread nesneye bir ad değişikliği olan iş parçacığını temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

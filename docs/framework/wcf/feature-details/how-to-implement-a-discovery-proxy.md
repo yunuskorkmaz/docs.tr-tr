@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
+title: "Nasıl yapılır: Keşif proxy'si uygulama"
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 2d76a2df0541dfd64058d61ca687a2749d745e8a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608920"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
+# <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif proxy'si uygulama
 Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Foundation (WCF) bulma özelliği hakkında daha fazla bilgi için bkz. [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. Hakkında daha fazla bilgi için <xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
 
  Keşif proxy'si ekleme Bu konuda üç ana parçalara bölünmüştür:
@@ -548,7 +548,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
               }
     ```
 
- Keşif proxy'si ekleme tamamladınız. Geçin [nasıl yapılır: keşif proxy'sine kayıtlı bir bulunabilir hizmet uygulamak](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
+ Keşif proxy'si ekleme tamamladınız. Geçin [nasıl yapılır: Keşif proxy'sine kayıtlı bir bulunabilir hizmet uygulamak](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
 
 ## <a name="example"></a>Örnek
  Bu konu başlığında kullanılan kod tam listesi budur.
@@ -977,9 +977,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Nasıl yapılır: Keşif Proxy'sini Test Etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Nasıl yapılır: Keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

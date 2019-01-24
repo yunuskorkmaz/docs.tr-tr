@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572035"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo Yapısı
-Taşması nedeniyle atılan özel durum oluştu Taşması ve bilgi türünü saklar.  
+Taşması nedeniyle oluşturulan özel durum oluştu taşma ve bilgi türünü saklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +39,20 @@ typedef struct _StackOverflowInfo {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`soType`|Değerini [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) numaralandırma taşma türünü belirtir.|  
-|`pExceptionInfo`|Bir işaretçi bir Win32 `EXCEPTION_POINTERS` makine bağımsız açıklamasını bir özel durum ile bir özel durum kaydı ve makine bağımlı açıklamasını işlemci bağlamı özel durumu zaman bağlam kaydıyla içeren nesne.|  
+|`soType`|Değerini [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) taşma türünü belirten sabit listesi.|  
+|`pExceptionInfo`|Bir Win32 işaretçisi `EXCEPTION_POINTERS` bir özel durum makine bağımsız açıklamasını içeren bir özel durum kaydını ve özel durumun zaman makine bağımlı bir işlemci bağlamı açıklamasını içeren bir bağlam kaydı içeren nesne.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- A `StackOverflowInfo` nesne iletilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi `Event_StackOverflow` olaylar.  
+ A `StackOverflowInfo` nesnesi [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi `Event_StackOverflow` olayları.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

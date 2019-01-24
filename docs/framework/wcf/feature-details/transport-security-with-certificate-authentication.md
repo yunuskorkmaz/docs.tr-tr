@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 15ead0a99782fcb329767395a316d9287337173a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b31694e41e6e6568feb0cb32364b291657269488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618561"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 Bu konuda, X.509 sertifikaları aktarım güvenliği kullanarak sunucu ve istemci kimlik doğrulaması kullanılarak anlatılmaktadır. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Sertifikaları çoğunlukla sertifika bir üçüncü taraf veren olduğu bir sertifika yetkilisi tarafından verilmiş olması gerekir. Bir Windows Server etki alanı Active Directory Sertifika Hizmetleri, etki alanındaki istemci bilgisayarlar için sertifikaları vermek için kullanılabilir. Daha fazla bilgi için [Windows 2008 R2 Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Bu senaryoda, hizmetin altında Internet Information Services (Güvenli Yuva Katmanı (SSL) ile yapılandırılmış olan IIS) barındırılır. Hizmet, istemcilerin kimliğini doğrulamak bir SSL (X.509) sertifikası ile yapılandırılır. İstemci, istemcinin kimliğini doğrulamak hizmet veren bir X.509 sertifikası ile de yapılandırılır. Sunucu sertifikasının istemci tarafından güvenilir olması gerekir ve istemcinin sertifika sunucusu tarafından güvenilir olması gerekir. Gerçek mekanizması nasıl hizmet ve istemci doğrular birbirlerinin kimliğini, bu konunun kapsamı dışındadır ' dir. Daha fazla bilgi için [wikipedia dijital imza](https://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -137,6 +137,6 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f888280090bfa613acf6ae37bc60ab63c371e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e81ed965fcd5c293378bcffd943eecff35257013
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572675"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile İşlevi
 Belirtilen dosyanın içeriğini bir karma oluşturur.  
@@ -42,33 +42,33 @@ HRESULT GetHashFromFile (
   
 #### <a name="parameters"></a>Parametreler  
  `szFilePath`  
- [in] Karma değerini dosyasının adı.  
+ [in] Karma değeri dosyanın adı.  
   
  `piHashAlg`  
- [içinde out] Karma oluşturulurken kullanılacak algoritması. Geçerli algoritmaları Win32 CryptoAPI tarafından tanımlanmış izinlerdir. Varsa `piHashAlg` CALG_SHA-1 kullanılan varsayılan algoritma 0 olarak ayarlanır.  
+ [out içinde] Karma oluşturulurken kullanılacak algoritma. Geçerli algoritmaları Win32 CryptoAPI tarafından tanımlanmış izinlerdir. Varsa `piHashAlg` CALG_SHA 1 kullanılan varsayılan algoritma 0 olarak ayarlanır.  
   
  `pbHash`  
- [out] Üretilen karma içeren bir bayt dizisi.  
+ [out] Oluşturulan karma içeren bir bayt dizisi.  
   
  `cchHash`  
- [in] Arabelleğin en büyük boyutu, `pbHash` işaret eder.  
+ [in] En büyük arabellek boyutunu, `pbHash` işaret eder.  
   
  `pchHash`  
- [out] Dönen bayt cinsinden boyutu `pbHash`.  
+ [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev aynıdır [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), dosya adı belirtimine Unicode yerine ANSI olması dışında.  
+ Bu işlev aynı şekilde, [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), dosya adı belirtimi Unicode yerine ANSI hariç aynıdırlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetHashFromFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
- [GetHashFromFileW Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetHashFromFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
+- [GetHashFromFileW Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

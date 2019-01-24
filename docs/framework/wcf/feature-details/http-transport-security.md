@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603006"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete istemcinin kimliğini doğrulamak için kullanılır ve kanala gizliliği (şifreleme) sağlamak için. Bu konuda, SSL nasıl çalıştığını ve Windows Communication Foundation (WCF) nasıl uygulandığı açıklanmaktadır.  
@@ -15,7 +15,7 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
 ## <a name="basic-ssl"></a>Temel SSL  
  Tipik bir senaryo nasıl SSL en iyi çalıştığını bank'ın Web sitesi bu durumda, açıklanmıştır. Bir kullanıcı adı ve parola ile oturum açmak bir müşteri sitesi sağlar. Kimlik doğrulaması gerçekleştirilen sonra kullanıcı görünümü hesabını bakiyeleri gibi işlemleri gerçekleştirmek, fatura ödemek ve para bir hesaptan diğerine taşıma.  
   
- Bir kullanıcı ilk sitesini ziyaret ettiğinde, bir dizi olarak adlandırılan anlaşmaları, SSL mekanizması başlar bir *el sıkışması*, kullanıcının istemci (Bu durumda, Internet Explorer). SSL, müşteri banka siteye ilk kimliğini doğrular. Müşteriler ilk gerçek site ve bunları kendi kullanıcı adı ve parolanızı yazmaya içine çekici yöntemlerle çekmeye çalıştığında sızma değil kurduğu olduğunu bilmesi gerektiğinden önemli bir adımdır. SSL, VeriSign gibi güvenilir bir yetkili tarafından sağlanan SSL sertifikası kullanarak bu kimlik doğrulaması yapar. Mantıksal şöyle gider: VeriSign onaylayan banka site kimliği için. Internet Explorer VeriSign güvendiği için güvenilen bir sitedir. VeriSign ile denetlemek istiyorsanız, bu nedenle de VeriSign logolardan birine tıklayarak yapabilirsiniz. Bitiş tarihi ve (banka siteye) verilen bir deyim Orijinallik sunan.  
+ Bir kullanıcı ilk sitesini ziyaret ettiğinde, bir dizi olarak adlandırılan anlaşmaları, SSL mekanizması başlar bir *el sıkışması*, kullanıcının istemci (Bu durumda, Internet Explorer). SSL, müşteri banka siteye ilk kimliğini doğrular. Müşteriler ilk gerçek site ve bunları kendi kullanıcı adı ve parolanızı yazmaya içine çekici yöntemlerle çekmeye çalıştığında sızma değil kurduğu olduğunu bilmesi gerektiğinden önemli bir adımdır. SSL, VeriSign gibi güvenilir bir yetkili tarafından sağlanan SSL sertifikası kullanarak bu kimlik doğrulaması yapar. Mantıksal şöyle geçer: VeriSign, banka sitesinin kimliğini onaylayan. Internet Explorer VeriSign güvendiği için güvenilen bir sitedir. VeriSign ile denetlemek istiyorsanız, bu nedenle de VeriSign logolardan birine tıklayarak yapabilirsiniz. Bitiş tarihi ve (banka siteye) verilen bir deyim Orijinallik sunan.  
   
  Güvenli bir oturum başlatmak için sunucu, oturum, karmaları oluşturmak için kullanın ve şifrelemek ve şifresini ile şifreleme algoritmaları listesi ile birlikte bir "hello" denk istemci gönderir. Yanıt olarak, site geri bildirim ve algoritmaları paketlerinden birini kendi tercih ettiğiniz gönderir. Bu ilk el sıkışması sırasında her iki taraf gönderip nonce öğelerinin. A *nonce* , sitenin ortak anahtarı ile birlikte bir karma değer oluşturmak için kullanılan verileri rastgele oluşturulmuş bir parçasıdır. A *karma* SHA1 gibi standart bir algoritma kullanarak iki sayı türetilen yeni bir sayıdır. (İstemci ve site de kullanmak için hangi karma algoritması kabul etmek için mesaj alışverişi.) Karma benzersiz olan ve yalnızca istemci ve site arasında oturumu için şifreleme ve şifre çözme iletileri için kullanılır. Her iki tarafında da aynı karma oluşturabilmek özgün nonce ve sertifikanın ortak anahtarı, hem istemci hem de hizmet vardır. Bu nedenle, istemci, (a) üzerinde anlaşılan algoritması üzerinde karma verilerden hesaplamak için kullanarak ve (b) Bu hizmet tarafından gönderilen karma değerini karşılaştırmak hizmet tarafından gönderilen karma doğrular; iki eşleşirse, istemci ile karma değiştirilmemiş güvencesi sahiptir. İstemci sonra bu karma bir anahtar olarak başka bir yeni karma içeren bir iletiyi şifrelemek için kullanabilirsiniz. Hizmet, karmayı kullanarak iletinin şifresini çözmek ve bu ikinci son karma kurtarın. (Nonce öğelerinin, ortak anahtar ve diğer verileri) birikmiş bilgileri artık için her iki tarafın adı verilir ve son karma (veya ana anahtarı) oluşturulabilir. Bu son anahtar sonraki son karmayı kullanarak şifrelenmiş gönderilir. Ana anahtarı sonra şifrelemek ve şifresini çözmek için oturum sıfırlama iletileri için kullanılır. Hem istemci hem de hizmet aynı anahtar kullandığından, bu da adlandırılır bir *oturum anahtarı*.  
   
@@ -38,7 +38,7 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
 ### <a name="using-iis-for-transport-security"></a>Aktarım güvenliği için IIS kullanarak  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Ayarlamak için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bakın (SSL kullanarak) güvenli bir konak [IIS 7.0 Beta: IIS 7. 0 Güvenli Yuva Katmanı Yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Ayarlamak için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bakın (SSL kullanarak) güvenli bir konak [IIS 7.0 Beta: Güvenli Yuva Katmanı IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88600).  
   
  Sertifika ile kullanmak için yapılandırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
@@ -50,8 +50,8 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
 ### <a name="using-httpcfg-for-ssl"></a>SSL için HttpCfg kullanma  
  Şirket içinde barındırılan bir WCF uygulaması oluşturuyorsanız, kullanılabilir HttpCfg.exe aracını indirin [Windows XP Service Pack 2 Destek Araçları site](https://go.microsoft.com/fwlink/?LinkId=29002).  
   
- X.509 sertifikası ile bir bağlantı ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ X.509 sertifikası ile bir bağlantı ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

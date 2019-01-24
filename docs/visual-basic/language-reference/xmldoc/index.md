@@ -2,18 +2,12 @@
 title: Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-- vb.XmlDocComment
+  - vb.XmlDocComment
 helpviewer_keywords:
-- tags, XML
-- XML comments, recommended tags [Visual Basic]
-- comments, recommended XML tags
+  - 'tags, XML'
+  - 'XML comments, recommended tags [Visual Basic]'
+  - 'comments, recommended XML tags'
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 3b2dec4224006d35fb9add11e170b9dcbeeafcf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649978"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
 Visual Basic Derleyicisi, bir XML dosyasına kod belge açıklamaları işleyebilir. Belgeleme XML dosyasını işlemek için ek araçları kullanabilirsiniz.  
@@ -39,7 +33,7 @@ Visual Basic Derleyicisi, bir XML dosyasına kod belge açıklamaları işleyebi
 > [!NOTE]
 >  Açılı belgeleri açıklama metninde görünmesini istiyorsanız kullanın `&lt;` ve `&gt;`. Örneğin, dize `"&lt;text in angle brackets&gt;"` olarak görünür `<text in angle brackets>`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

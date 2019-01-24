@@ -2,12 +2,12 @@
 title: '&lt;ServiceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 978439dfeb0c5275e2ec43f9c891b6927e7a7869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610441"
 ---
 # <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
 Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.  
@@ -66,7 +66,7 @@ Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilg
 |-------------|-----------------|  
 |[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

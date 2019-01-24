@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600414"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;Kaynakları&gt; öğesi
 İzleme iletileri başlatmak iz kaynakları belirtir.  
@@ -81,12 +81,12 @@ ms.locfileid: "48033252"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.XmlWriterTraceListener>  
- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.XmlWriterTraceListener>
+- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

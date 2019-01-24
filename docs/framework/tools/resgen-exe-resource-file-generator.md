@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cbb939228791fa36ee64e499a2ba55dc7ce899ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614633"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Kaynak Dosya Oluşturucu)
 Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -329,9 +329,9 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

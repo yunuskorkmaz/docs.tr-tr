@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8609857f142000245aef4326c8ef7490e6d4c95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610545"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType Numaralandırması
-Tarafından temsil edilen görevi türünü belirtmek değerleri içeren bir [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya bir [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi.  
+Tarafından temsil edilen bir görev türünü gösteren değerleri içeren bir [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,26 +48,26 @@ typedef enum ETaskType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|Bir uygulama etki alanı kaldırılırken görev arabirimi temsil eder.|  
-|`TT_DEBUGGERHELPER`|Arabirimi hata ayıklayıcı yardımcı görev temsil eder.|  
-|`TT_FINALIZER`|Arabirimi sonlandırıcıyı görev temsil eder.|  
-|`TT_GC`|Arabirimi bir atık toplama görevi temsil eder.|  
-|`TT_THREADPOOL_GATE`|Bir ağ geçidi iş parçacığının görevi arabirimi temsil eder.|  
-|`TT_THREADPOOL_IOCOMPLETION`|Bir g/ç iş parçacığı görevi veya görev tamamlama bağlantı noktası iş parçacığı görev arabirimi temsil eder.|  
-|`TT_THREADPOOL_TIMER`|Zamanlayıcı iş parçacığı görevi arabirimi temsil eder.|  
-|`TT_THREADPOOL_WAIT`|Arabirimi bir bekleme iş parçacığının görevi temsil eder.|  
-|`TT_THREADPOOL_WORKER`|Bir çalışan iş parçacığının görevi arabirimi temsil eder.|  
+|`TT_ADUNLOAD`|Arabirimi, bir uygulama etki alanı kaldırma görevi temsil eder.|  
+|`TT_DEBUGGERHELPER`|Arabirimi, bir hata ayıklayıcı Yardımcısı görevi temsil eder.|  
+|`TT_FINALIZER`|Arabirimi, bir sonlandırıcı görevi temsil eder.|  
+|`TT_GC`|Arabirimi, bir atık toplama görevi temsil eder.|  
+|`TT_THREADPOOL_GATE`|Arabirimi, bir ağ geçidi iş parçacığı görevi temsil eder.|  
+|`TT_THREADPOOL_IOCOMPLETION`|Arabirimi, bir g/ç iş parçacığı görevi ya da bir tamamlanma bağlantı noktası iş parçacığı görevi temsil eder.|  
+|`TT_THREADPOOL_TIMER`|Arabirimi, bir zamanlayıcı iş parçacığı görevi temsil eder.|  
+|`TT_THREADPOOL_WAIT`|Arabirimi, bir bekleme iş parçacığı görevi temsil eder.|  
+|`TT_THREADPOOL_WORKER`|Arabirimi, bir çalışan iş parçacığı görevi temsil eder.|  
 |`TT_UNKNOWN`|Görev bilinmiyor.|  
-|`TT_USER`|Bir kullanıcı görev arabirimi temsil eder.|  
+|`TT_USER`|Arabirimi, bir kullanıcı görevini temsil eder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

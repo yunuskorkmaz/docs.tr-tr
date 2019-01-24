@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: a4dfd1bab04f32eefe82a6777ce6864d5a162e23
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572974"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
@@ -101,7 +101,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Yayımcı**|Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
+|**Publisher**|Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
 |**Ürün**|Tam ürün adı. Seçtiyseniz **yerel olarak yükleme** için **uygulama türü** öğede **dağıtım seçenekleri** bu ad dağıtım bildirimini sekmesinde görünür ne olur **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|URL, müşterilerin Yardım alabilir ve uygulama için destek.|  
   
@@ -157,7 +157,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Yayımcı**|Gerekli. Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
+|**Publisher**|Gerekli. Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
 |**Ürün**|Gerekli. Tam ürün adı. Seçtiyseniz **yerel olarak yükleme** için **uygulama türü** öğede **dağıtım seçenekleri** sekmesinde, bu adı ne görünür olacaktır **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|İsteğe bağlı. URL, müşterilerin Yardım alabilir ve uygulama için destek.|  
   
@@ -190,7 +190,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |----------------|-----------------|  
 |**Bildirimi seçin**|Uygulama bildirimini seçmenize olanak sağlar. Bir uygulama bildirimi seçtiğinizde sayfadaki diğer alanların tümünü doldurur.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
+- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

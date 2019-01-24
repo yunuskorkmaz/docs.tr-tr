@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme'
+title: 'Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615968"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşen, dosya sistemi ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu iletişim kutusunda kullanıcının seçtiği dosya adını ve yolunu döndürür. Ancak, gerçekte dosyaları diske yazmak için kod yazmanız gerekir.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog bileşenini kullanarak bir dosyayı kaydetmek için  
@@ -177,6 +177,6 @@ ms.locfileid: "43508166"
     > [!NOTE]
     >  Gibi belirli denetimleri <xref:System.Windows.Forms.RichTextBox> denetlemek, dosyaları Kaydet seçeneğine sahipsiniz. Daha fazla bilgi için MSDN çevrimiçi kitaplığındaki teknik makalenin "SaveFileDialog bileşeni" bölümüne bakın. [Windows için temel kod formları iletişim kutularını](https://go.microsoft.com/fwlink/?LinkID=102575).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.SaveFileDialog>  
- [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.SaveFileDialog>
+- [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: WIF izlemeyi etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605190"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Nasıl yapılır: WIF izlemeyi etkinleştirme
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -18,7 +18,7 @@ ms.locfileid: "47207120"
 -   ASP.NET® Web formları  
   
 ## <a name="summary"></a>Özet  
- Bu nasıl yapılır, bir ASP.NET uygulamasında WIF izlemeyi etkinleştirmek için adım adım ayrıntılı yordamları sağlar. Ayrıca İzleme dinleyicisi doğrulamak için uygulamayı test etme yönergeleri sağlar ve günlük düzgün çalışıyor. Bu 'Nasıl Yapılır' konusunda bir Güvenlik Belirteci Hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bunun yerine Kimlik ve Erişim aracı ile birlikte gelen Geliştirme STS'si kullanılır. Geliştirme STS'si gerçek kimlik doğrulaması yapmaz ve yalnızca test amaçlarına yöneliktir. Bu 'Nasıl Yapılır' konusunu tamamlamak için Kimlik ve Erişim aracını yüklemeniz gerekir. Şu konumdan indirilebilir: [kimlik ve erişim aracı](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ Bu nasıl yapılır, bir ASP.NET uygulamasında WIF izlemeyi etkinleştirmek için adım adım ayrıntılı yordamları sağlar. Ayrıca İzleme dinleyicisi doğrulamak için uygulamayı test etme yönergeleri sağlar ve günlük düzgün çalışıyor. Bu 'Nasıl Yapılır' konusunda bir Güvenlik Belirteci Hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bunun yerine Kimlik ve Erişim aracı ile birlikte gelen Geliştirme STS'si kullanılır. Geliştirme STS'si gerçek kimlik doğrulaması yapmaz ve yalnızca test amaçlarına yöneliktir. Bu 'Nasıl Yapılır' konusunu tamamlamak için Kimlik ve Erişim aracını yüklemeniz gerekir. Şu konumdan indirilebilir: [Kimlik ve erişim aracı](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  Pasif uygulamalar için WIF izlemeyi etkinleştirme, diğer bir deyişle, WS-Federasyon protokolünü kullanan uygulamalar potansiyel olarak kullanıma kötü amaçlı bir taraf uygulamaya hizmet (DoS) saldırısı reddi veya bilgilerin açıklanması. Bu, hem pasif RPs hem de edilgen STSes içerir. Bu nedenle, WIF izleme edilgen RPs veya STSes bir üretim ortamında etkinleştirmenizi değil öneririz.  
@@ -65,14 +65,14 @@ ms.locfileid: "47207120"
   
 5.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
-6.  Yeni bir klasör oluşturun, adlı **günlükleri** kökünde **C:** gibi sürücü gösterilen: **C:\logs**  
+6.  Yeni bir klasör oluşturun, adlı **günlükleri** kökünde **C:** gibi sürücü gösterilen: **C:\Logs**  
   
 7.  Aşağıdaki  **\<system.diagnostics >** öğesine *Web.config* kapatma takip yapılandırma dosyası  **\</configSections >** öğesi gibi gösterilir:  
   
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

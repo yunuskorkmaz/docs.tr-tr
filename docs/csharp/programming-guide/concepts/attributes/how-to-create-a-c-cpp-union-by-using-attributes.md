@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: öznitelikleri (C#) kullanarak bir C / C++ birleşimi oluşturma'
+title: 'Nasıl yapılır: Öznitelikleri kullanarak C / C++ birleşimi oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599042"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: öznitelikler (C#) kullanarak bir C/C++ birleşimi oluşturma
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: Öznitelikleri kullanarak C/C++ birleşimi oluşturma (C#)
 Öznitelikleri kullanarak yapı birimleri bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, olarak C/C++'ta bir birleşim kullanarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  
   
 ## <a name="example"></a>Örnek  
@@ -66,13 +66,13 @@ ms.locfileid: "43798515"
   
  İki tamsayı alanları `i1` ve `i2`, aynı bellek konumları olarak paylaşma `lg`. Platform çağırma kullanırken, bu tür bir yapı yerleşimi üzerinde denetim yararlı olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Öznitelikler](../../../../../docs/standard/attributes/index.md)  
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Öznitelikler](../../../../../docs/standard/attributes/index.md)
+- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
 - [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Açılır Yardımı Görüntüleme'
+title: 'Nasıl yapılır: Açılır Yardımı görüntüleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e017e25f140d3dfd260545f28fab73905fe149fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601850"
 ---
-# <a name="how-to-display-pop-up-help"></a>Nasıl yapılır: Açılır Yardımı Görüntüleme
+# <a name="how-to-display-pop-up-help"></a>Nasıl yapılır: Açılır Yardımı görüntüleme
 Windows Forms'ta Yardımı görüntülemek için yöntemlerden biri **yardımcı** erişilebilir başlık çubuğunun sağ tarafında bulunan düğmesini <xref:System.Windows.Forms.Form.HelpButton%2A> özelliği. Bu tür bir Yardım görünen iletişim kutuları ile kullanım için uygundur. Kalıcı olarak gösterilen iletişim kutuları (ile <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi) kalıcı iletişim kutuları için başka bir pencere odağı kaydırabilirsiniz önce kapatılması gerektiğinden dış yardım sistemleri, getirme konusunda sorun vardır. Ayrıca, kullanarak **yardımcı** düğme gerektirir olduğunu hiçbir **simge durumuna küçült** düğmesini veya **Ekranı Kapla** başlık çubuğunda gösterilen düğmesi. Forms genellikle sahip bir standart iletişim kutusu kuralı ise **simge durumuna küçült** ve **Ekranı Kapla** düğmeleri.  
   
  Dikkat edin, ayrıca kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> denetimler açılır Yardımı uyguladıysanız olsa bile bir Yardım sisteminde dosyalarına Bağlama bileşeni. Daha fazla bilgi için [bir Windows uygulamasında Yardım sağlama](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
@@ -42,7 +42,7 @@ Windows Forms'ta Yardımı görüntülemek için yöntemlerden biri **yardımcı
   
 6.  Tuşuna **yardımcı** başlık çubuğunda düğme ve Yardım dizesi ayarladığınız denetimi tıklatın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

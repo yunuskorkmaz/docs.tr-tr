@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599354"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > öğesi için \<yapılandırma >
 
@@ -35,7 +35,7 @@ Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.
 
 |           | Açıklama |
 | --------- | ----------- |
-| **xmlns** | Gerekli öznitelik.<br><br>Derleme bağlama için gerekli XML ad alanı belirtir. Aşağıdaki dizeyi kullanın "urn: schemas-microsoft-com:asm.v1" değeri. |
+| **xmlns** | Gerekli öznitelik.<br><br>Derleme bağlama için gerekli XML ad alanı belirtir. Use the string "urn:schemas-microsoft-com:asm.v1" as the value. |
 
 ## <a name="parent-element"></a>Üst öğe
 
@@ -54,7 +54,7 @@ Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) öğesi yapılandırma dosyalarında derlemeyi dahil etmek için uygulama yapılandırma dosyaları vererek bileşen derlemelerini yönetimini basitleştirir iyi bilinen konumları, çoğaltma derleme yapılandırma ayarları yerine.
 
 > [!NOTE]
-> **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
+>  **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
 ## <a name="example"></a>Örnek
 
@@ -70,4 +70,4 @@ Aşağıdaki örnek bir yapılandırma dosyasını yerel sabit diskte nasıl ekl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

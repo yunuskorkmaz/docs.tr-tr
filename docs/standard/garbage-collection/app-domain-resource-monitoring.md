@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606536"
 ---
 # <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme
 Uygulama etki alanı kaynak izleme (ARM), uygulama etki alanı tarafından CPU ve bellek kullanımını izlemek için ana bilgisayarları etkinleştirir. Bu, ASP.NET gibi bir uzun süre çalışan işlemde birden çok uygulama etki alanı kullanan konaklar için kullanışlıdır. Konak, sorunlu uygulamayı tanımlayabilirsiniz, ancak tüm işlemin performansını olumsuz yönde etkileyen bir uygulamanın uygulama etki alanını boşaltma. ARM gibi kararları vermekte yardımcı olmak için kullanılabilecek bilgiler sağlar.  
@@ -40,35 +40,35 @@ Uygulama etki alanı kaynak izleme (ARM), uygulama etki alanı tarafından CPU v
 ## <a name="using-arm"></a>ARM kullanarak  
  ARM bir uygulama etki alanı ve bellek kullanımı hakkında bilgi üç tür tarafından kullanılan toplam işlemci zamanı sağlar.  
   
--   **Toplam uygulama etki alanı, işlemci süresini saniye cinsinden**: Bu uygulama etki alanında yaşam süresi boyunca yürütme süresi geçen tüm iş parçacıkları için işletim sistemi tarafından bildirilen iş parçacığı kez ekleyerek hesaplanır. Engellenen veya uykudaki iş parçacıkları, işlemci zamanı kullanmayın. Bir iş parçacığı yerel kod içine çağırdığında, yerel kodda iş parçacığı harcadığı zamanı sayısı Çağrının yapıldığı uygulama etki alanı için dahil edilir.  
+-   **Toplam uygulama etki alanı, işlemci süresini saniye cinsinden**: Bu, uygulama etki alanında yaşam süresi boyunca yürütme süresi geçen tüm iş parçacıkları için işletim sistemi tarafından bildirilen iş parçacığı kez ekleyerek hesaplanır. Engellenen veya uykudaki iş parçacıkları, işlemci zamanı kullanmayın. Bir iş parçacığı yerel kod içine çağırdığında, yerel kodda iş parçacığı harcadığı zamanı sayısı Çağrının yapıldığı uygulama etki alanı için dahil edilir.  
   
     -   Yönetilen API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> özelliği.  
   
-    -   API'sini barındıran: [Iclrappdomainresourcemonitor::getcurrentcputime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) yöntemi.  
+    -   Barındırma API'si: [Iclrappdomainresourcemonitor::getcurrentcputime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) yöntemi.  
   
     -   ETW olayları: `ThreadCreated`, `ThreadAppDomainEnter`, ve `ThreadTerminated` olayları. Sağlayıcıları ve anahtar sözcükler hakkında daha fazla bilgi için bkz: "Uygulama etki alanı kaynak izleme olaylarını" [CLR ETW olaylarını](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Toplam bayt ömrü sırasında bir uygulama etki alanına göre yapılan yönetilen ayırmaların**: toplam miktar değil her zaman yansıtacak bir uygulama etki alanına göre bellek kullanımı ayrılan nesneler kısa süreli olabilir çünkü. Ancak, bir uygulama ayırır ve boşaltır büyük sayıda nesne içeren, ayırmaları maliyetini önemli olabilir.  
+-   **Toplam bayt ömrü sırasında bir uygulama etki alanına göre yapılan yönetilen ayırmaların**: Ayrılan nesneler kısa süreli olabilir çünkü her zaman bir uygulama etki alanına göre bellek kullanımı toplam miktar yansıtmaz. Ancak, bir uygulama ayırır ve boşaltır büyük sayıda nesne içeren, ayırmaları maliyetini önemli olabilir.  
   
     -   Yönetilen API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> özelliği.  
   
-    -   API'sini barındıran: [Iclrappdomainresourcemonitor::getcurrentallocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) yöntemi.  
+    -   Barındırma API'si: [Iclrappdomainresourcemonitor::getcurrentallocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) yöntemi.  
   
     -   ETW olayları: `AppDomainMemAllocated` olay `Allocated` alan.  
   
--   **Yönetilen bir uygulama etki alanı tarafından başvurulur ve toplamayı engelleme en son tam kurtulan, bayt cinsinden bellek**: Bu sayı bir tam sonra yalnızca koleksiyon engelleme doğrudur. (Arka planda gerçekleşir ve uygulama engelleme eş zamanlı koleksiyonlar aksine budur.) Örneğin, <xref:System.GC.Collect?displayProperty=nameWithType> yöntemi aşırı yüklemesi, tam toplamayı engelleme, neden olur.  
+-   **Yönetilen bir uygulama etki alanı tarafından başvurulur ve toplamayı engelleme en son tam kurtulan, bayt cinsinden bellek**: Bu sayı toplamayı engelleme, yalnızca tam sonra doğru olur. (Arka planda gerçekleşir ve uygulama engelleme eş zamanlı koleksiyonlar aksine budur.) Örneğin, <xref:System.GC.Collect?displayProperty=nameWithType> yöntemi aşırı yüklemesi, tam toplamayı engelleme, neden olur.  
   
     -   Yönetilen API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> özelliği.  
   
-    -   API'sini barındıran: [Iclrappdomainresourcemonitor::getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) yöntemi `pAppDomainBytesSurvived` parametresi.  
+    -   Barındırma API'si: [Iclrappdomainresourcemonitor::getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) yöntemi `pAppDomainBytesSurvived` parametresi.  
   
     -   ETW olayları: `AppDomainMemSurvived` olay `Survived` alan.  
   
--   **Toplam işlem tarafından başvurulan ve toplamayı engelleme en son tam kurtulan yönetilen, bayt cinsinden bellek**: her bir uygulama etki alanları için kalan bellek bu sayının için karşılaştırılabilir.  
+-   **Toplam işlem tarafından başvurulan ve toplamayı engelleme en son tam kurtulan yönetilen, bayt cinsinden bellek**: Her bir uygulama etki alanları için kalan bellek bu sayının için karşılaştırılabilir.  
   
     -   Yönetilen API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> özelliği.  
   
-    -   API'sini barındıran: [Iclrappdomainresourcemonitor::getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) yöntemi `pTotalBytesSurvived` parametresi.  
+    -   Barındırma API'si: [Iclrappdomainresourcemonitor::getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) yöntemi `pTotalBytesSurvived` parametresi.  
   
     -   ETW olayları: `AppDomainMemSurvived` olay `ProcessSurvived` alan.  
   
@@ -85,7 +85,7 @@ Uygulama etki alanı kaynak izleme (ARM), uygulama etki alanı tarafından CPU v
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor Arabirimi](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor Arabirimi](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme'
+title: 'Nasıl yapılır: Bir kısayol menüsünü Windows Forms Notifyıcon bileşeniyle ilişkilendirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: c0371dfb30c70bd2c4d98362abc7dc06926a5e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573692"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Nasıl yapılır: Bir kısayol menüsünü Windows Forms Notifyıcon bileşeniyle ilişkilendirme
 > [!NOTE]
->  Ancak <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> önceki sürümlerinin denetimleri <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+>  Ancak <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> denetimleri önceki sürümlerinin <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
   
- <xref:System.Windows.Forms.NotifyIcon> Bileşen durumu görev çubuğu bildirim alanında bir simge görüntüler. Yaygın olarak, uygulamaların komutları temsil ettiği uygulamaya göndermek için bu simgeyi sağ sağlar. İlişkilendirerek bir <xref:System.Windows.Forms.ContextMenu> ile bileşen <xref:System.Windows.Forms.NotifyIcon> bileşeni, bu işlev, uygulamalarınızı ekleyebilirsiniz.  
+ <xref:System.Windows.Forms.NotifyIcon> Bileşen durumu görev çubuğu bildirim alanında bir simge görüntüler. Yaygın olarak, uygulamaların komutları temsil ettiği uygulamasına göndermek için bu simgeyi sağ sağlar. İlişkilendirerek bir <xref:System.Windows.Forms.ContextMenu> ile bileşen <xref:System.Windows.Forms.NotifyIcon> bileşeni, bu işlev, uygulamalarınıza ekleyebilirsiniz.  
   
 > [!NOTE]
->  Başlangıçta örneği görüntülenirken küçültülmesine uygulamanıza istiyorsanız <xref:System.Windows.Forms.NotifyIcon> bileşenini görev çubuğunda, ayarlar ana formun <xref:System.Windows.Forms.Form.WindowState%2A> özelliğine <xref:System.Windows.Forms.FormWindowState.Minimized> ve emin <xref:System.Windows.Forms.NotifyIcon> bileşenin <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliği ayarlanmış `true`.  
+>  Uygulamanızın bir örneğini görüntülenirken başlangıçta küçültülmesine istiyorsanız <xref:System.Windows.Forms.NotifyIcon> bileşenini görev çubuğunda, ayarlar ana formun <xref:System.Windows.Forms.Form.WindowState%2A> özelliğini <xref:System.Windows.Forms.FormWindowState.Minimized> ve mutlaka <xref:System.Windows.Forms.NotifyIcon> bileşenin <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliği ayarlanır `true`.  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Bir kısayol menüsü tasarım zamanında Notifyıcon bileşeniyle ilişkilendirme  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Bir kısayol menü tasarım zamanında Notifyıcon bileşeniyle ilişkilendirme  
   
 1.  Ekleme bir <xref:System.Windows.Forms.NotifyIcon> formunuza, bileşen ve önemli özellikleri ayarlamak <xref:System.Windows.Forms.NotifyIcon.Icon%2A> ve <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özellikleri.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms Notifyıcon bileşeniyle görev uygulama simgeleri ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Daha fazla bilgi için [nasıl yapılır: Forms Notifyıcon bileşeniyle taskbar'a Windows uygulama simgeleri ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 2.  Ekleme bir <xref:System.Windows.Forms.ContextMenu> Windows formunuza bileşen.  
   
-     Menü öğeleri, çalışma zamanında kullanılabilir hale getirmek istediğiniz komutları temsil eden kısayol menüsü ekleyin. Erişim tuşları gibi bu menü öğeleri menü geliştirmeleri eklemek için iyi bir zamandır de budur.  
+     Çalışma zamanında kullanılabilir hale getirmek istediğiniz komutları temsil eden kısayol menüsüne menü öğeleri ekleme. Bu da bu menü öğeleri, erişim anahtarları gibi menüsü geliştirmeleri eklemek için iyi bir zamandır.  
   
-3.  Ayarlama <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> özelliği <xref:System.Windows.Forms.NotifyIcon> eklediğiniz kısayol menüsünün bileşeni.  
+3.  Ayarlama <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> özelliği <xref:System.Windows.Forms.NotifyIcon> eklediğiniz kısayol menüsünü bileşeni.  
   
-     Görev çubuğunda simge tıklatıldığında bu özellik kümesiyle kısayol menüsü görüntülenir.  
+     Görev çubuğunda simge tıklandığında bu özellik kümesiyle, kısayol menüsünde görüntülenir.  
   
-### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Bir kısayol menüsü Notifyıcon bileşeniyle programlı olarak ilişkilendirmek için  
+### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Kısayol menüsünü program aracılığıyla Notifyıcon bileşeniyle ilişkilendirme  
   
-1.  Bir örneğini oluşturmak <xref:System.Windows.Forms.NotifyIcon> sınıfı ve bir <xref:System.Windows.Forms.ContextMenu> ne olursa olsun özellik ayarları uygulama için gerekli olan sınıfı (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> ve <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliklerini <xref:System.Windows.Forms.NotifyIcon> bileşeni, menü öğelerinin <xref:System.Windows.Forms.ContextMenu> Bileşen).  
+1.  Bir örneğini oluşturmak <xref:System.Windows.Forms.NotifyIcon> sınıfı ve <xref:System.Windows.Forms.ContextMenu> hangi özellik ayarlarını uygulama için gerekli olan sınıfı (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> ve <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliklerini <xref:System.Windows.Forms.NotifyIcon> bileşeni, menü öğelerinin <xref:System.Windows.Forms.ContextMenu> bileşen için).  
   
-2.  Ayarlama <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> özelliği <xref:System.Windows.Forms.NotifyIcon> eklediğiniz kısayol menüsünün bileşeni.  
+2.  Ayarlama <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> özelliği <xref:System.Windows.Forms.NotifyIcon> eklediğiniz kısayol menüsünü bileşeni.  
   
-     Görev çubuğunda simge tıklatıldığında bu özellik kümesiyle kısayol menüsü görüntülenir.  
+     Görev çubuğunda simge tıklandığında bu özellik kümesiyle, kısayol menüsünde görüntülenir.  
   
     > [!NOTE]
-    >  Aşağıdaki kod örneğinde bir temel menü yapısı oluşturur. Menü seçenekleri, geliştirmekte olduğunuz uygulama sığması için özelleştirme yapmanız gerekir. Ayrıca, işlemek için kod yazma isteyeceksiniz <xref:System.Windows.Forms.MenuItem.Click> bu menü öğeleri için olaylar.  
+    >  Aşağıdaki kod örneği, bir temel menüsü yapısı oluşturur. Menü seçenekleri, geliştirmekte oldukları uygulama sığdırmak için özelleştirme yapmanız gerekir. Ayrıca, işlemek üzere kod yazmak isteyeceksiniz <xref:System.Windows.Forms.MenuItem.Click> bu menü öğeleri için olayları.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -119,16 +119,16 @@ public:
 ```  
   
 > [!NOTE]
->  Başlatması gerekir `notifyIcon1` ve `contextMenu1,` formunuz oluşturucuda aşağıdaki ifadeleri ekleyerek yapabilirsiniz:  
+>  Başlatması gerekir `notifyIcon1` ve `contextMenu1,` formunuza oluşturucuda aşağıdaki ifadeleri ekleyerek yapabilirsiniz:  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
 contextMenu1 = gcnew System::Windows::Forms::ContextMenu();  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.NotifyIcon>  
- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'a Uygulama Simgeleri Ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- [NotifyIcon Bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [NotifyIcon Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.NotifyIcon>
+- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
+- [Nasıl yapılır: Windows Forms Notifyıcon bileşeni taskbar'na uygulama simgeleri ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon Bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+- [NotifyIcon Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

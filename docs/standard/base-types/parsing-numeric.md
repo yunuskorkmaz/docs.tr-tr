@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603618"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>NET sayısal dizeleri ayrıştırma
 İki statik ayrıştırma yöntemlerinin, tüm sayısal türlerin sahip `Parse` ve `TryParse`, bir sayının dize gösterimini bir sayısal türe dönüştürmek için kullanabilirsiniz. Bu yöntemler konusunda belgelenen biçim dizelerini kullanarak üretilmiş olan dizeleri ayrıştırma sağlayan [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md). Varsayılan olarak, `Parse` ve `TryParse` yöntemleri yalnızca tamsayı değerleri için tam sayı ondalık basamak içeren dizeleri başarıyla dönüştürebilirsiniz. Bunlar, entegral ve kesirli ondalık basamak grubu ayırıcıları ve kayan nokta değerleri ondalık ayırıcı içeren dizeleri başarıyla dönüştürebilirsiniz. `Parse` Yöntemi bir özel durum oluşturursa işlem başarısız olursa, oysa `TryParse` yöntemi döndürür `false`.  
@@ -85,6 +85,6 @@ ms.locfileid: "48261465"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Globalization.NumberStyles>  
-- [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
+- <xref:System.Globalization.NumberStyles>
+- [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

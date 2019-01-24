@@ -1,13 +1,13 @@
 ---
-title: 'Örnek XML dosyası: Birden fazla satın alma siparişi bir Namespace2 içinde'
+title: 'Örnek XML dosyası: Bir Namespace2 içinde birden fazla satın alma siparişi'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 2c4812aa1c15223c7d2a65fa21f6c505e21e0bae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d5985fbfae543a6123d523a2caf4ec9ffc99a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600173"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace, birden fazla satın alma siparişi
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, çeşitli satın alma siparişleri içerir. Bir ad alanında XML'dir.  
@@ -109,6 +109,6 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Örnek XML Belgeleri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

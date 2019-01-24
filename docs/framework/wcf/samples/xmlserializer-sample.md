@@ -2,12 +2,12 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 46f3d10305a244d23be19c87566edacfaf7bff46
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d85080ce9aec47b2ffb0d4dc255001901f722ae4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572766"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek ile uyumlu olan türler seri hale getrime ve yapmayı gösteren <xref:System.Xml.Serialization.XmlSerializer>. Windows Communication Foundation (WCF) varsayılan biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı seri hale getirmek ve seri halinden dağıtmak için kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML üzerinde kesin denetim gibi - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçasını olması gerekiyorsa genellikle böyledir. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak olmayan WCF hizmetleri için istemci oluşturulurken seçilir.  
@@ -134,4 +134,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

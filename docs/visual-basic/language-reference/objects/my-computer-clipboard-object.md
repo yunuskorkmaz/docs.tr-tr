@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3ef591844d16daac75abb36b3aa89c91a068fe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616166"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard Nesnesi
 Pano yönlendirmeye yönelik yöntemleri sağlar.  
@@ -30,6 +30,6 @@ Pano yönlendirmeye yönelik yöntemleri sağlar.
   
  **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
+- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

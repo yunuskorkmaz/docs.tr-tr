@@ -2,12 +2,12 @@
 title: WordprocessingML belgesinin Styles3 ile
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603930"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML belgesi
 Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş paragrafları vardır.  
@@ -17,7 +17,7 @@ Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş pa
  Paketleri erişirken, rastgele bir yol kullanmak yerine parçaları arasındaki ilişkileri aracılığıyla yapmanız önemlidir. Bu sorunu, içerik düzenleme kapsamı dışındadır WordprocessingML belgesinin öğreticide olmakla birlikte, bu öğreticide bulunan örnek programların doğru yaklaşımı gösterir.  
   
 ## <a name="a-document-that-uses-styles"></a>Stilleri kullanan bir belge  
- WordML örnek içinde sunulan [şekli, WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) çok basit bir konudur. Aşağıdaki belge daha karmaşıktır: stilleri ile biçimlendirilmiş paragrafları sahiptir. Bir Office Open XML belgesi yapan bir XML olup çalıştırmak için en kolay yolu [örnek bu çıkışları Office Open XML belge kısımları (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ WordML örnek içinde sunulan [şekli, WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) çok basit bir konudur. Aşağıdaki belge daha karmaşık bir işlemdir: Stilleri ile biçimlendirilmiş paragrafları var. Bir Office Open XML belgesi yapan bir XML olup çalıştırmak için en kolay yolu [örnek bu çıkışları Office Open XML belge kısımları (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
  Aşağıdaki belgede, ilk paragrafa stilde `Heading1`. Varsayılan Stil paragraflar vardır. Ayrıca birkaç stil paragraf vardır `Code`. Bu göreli karmaşıklığı nedeniyle, LINQ to XML ile ayrıştırmak için daha çok ilginizi çeken bir belge budur.  
   
@@ -137,6 +137,6 @@ Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş pa
 </w:document>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

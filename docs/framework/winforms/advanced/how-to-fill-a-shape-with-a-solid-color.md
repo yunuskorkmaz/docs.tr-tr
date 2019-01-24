@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma'
+title: 'Nasıl yapılır: Bir şekli düz renk ile doldurma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 7f719417a6a1226d7dc4d600518711ba31920a6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601967"
 ---
-# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma
-Bir şekli düz renk ile doldurma için oluşturun bir <xref:System.Drawing.SolidBrush> nesne ve daha sonra geçirin <xref:System.Drawing.SolidBrush> nesnesi dolgu yöntemlerinden birini bağımsız değişken olarak <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki örnek, bir elips dolgu rengi kırmızı ile gösterilmiştir.  
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Nasıl yapılır: Bir şekli düz renk ile doldurma
+Bir şekli düz renk ile doldurma için oluşturma bir <xref:System.Drawing.SolidBrush> nesnesi ve ardından, geçirin <xref:System.Drawing.SolidBrush> dolgu yöntemlerinden birini bağımsız değişkeni olarak bir nesne <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki örnek, bir elips kırmızı renkle doldurma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodda, <xref:System.Drawing.SolidBrush.%23ctor%2A> Oluşturucusu geçen bir <xref:System.Drawing.Color> nesnesi yalnızca bağımsız değişken olarak. Tarafından kullanılan değerleri <xref:System.Drawing.Color.FromArgb%2A> yöntemi rengi alfa, kırmızı, yeşil ve mavi bileşenlerini temsil eder. Bu değerlerin her birini 0 ile 255 arasında olmalıdır. İlk 255 rengi tamamıyla opak ve ikinci 255 kırmızı bileşenini tam yoğunlukta gösterir gösterir. Yeşil ve mavi bileşenleri bir yoğunluğu 0 olan iki sıfır belirtin.  
+ Aşağıdaki kodda, <xref:System.Drawing.SolidBrush.%23ctor%2A> Oluşturucusu alır bir <xref:System.Drawing.Color> yalnızca bağımsız değişken olarak nesnesi. Tarafından kullanılan değerleri <xref:System.Drawing.Color.FromArgb%2A> yöntemi alfa, kırmızı, yeşil ve mavi renk bileşenleri temsil eder. Bu değerlerin her birini, 0-255 aralığında olmalıdır. İlk 255 rengi ila tamamen opak ve ikinci 255 kırmızı bileşeni tam yoğunlukta gösterir gösterir. İki sıfır, yeşil ve mavi bileşenlerinin bir yoğunluğu 0 olduğunu gösterir.  
   
- Dört rakam (0, 0, 100, 60) geçirilen <xref:System.Drawing.Graphics.FillEllipse%2A> yöntemi elips için sınırlayıcı dikdörtgenini boyutunu ve konumunu belirtin. Dikdörtgen bir sol üst köşesindeki sahip (0, 0), 100 genişliğini bir ve 60 yüksekliğini bir.  
+ Dört rakam (0, 0, 100, 60) geçirilen <xref:System.Drawing.Graphics.FillEllipse%2A> elipsin dikdörtgen boyutunu ve konumunu yöntemini belirtin. Dikdörtgen bir sol üst köşesinde sahiptir (0, 0), bir 100 genişlik ve yükseklik 60'a.  
   
  [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

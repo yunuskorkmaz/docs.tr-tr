@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;FunctionName&gt; &#39; (akıllı aygıt Visual Basic derleyici hatası) bildirilmedi'
+title: '&#39;&lt;FunctionName&gt; &#39; (Akıllı cihaz / Visual Basic derleyici hatası) bildirilmedi'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30766
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: e5de74dfd63bc6246bf7942b305762176a856f14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41d3996e51f00471222caa4b188e53ba8da6c246
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608751"
 ---
-# <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; (akıllı aygıt/Visual Basic derleyici hatası) bildirilmedi
-<`functionname`> bildirilmemiş olan. Dosya g/ç işlevselliği normal olarak kullanılabilir `Microsoft.VisualBasic` ad alanı, ancak hedeflenen .NET Compact Framework sürümü desteklemez.  
+# <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; (Akıllı cihaz/Visual Basic derleyici hatası) bildirilmedi
+<`functionname`> değil olarak bildirilir. Dosya g/ç işlevselliği kullanılabilir normalde `Microsoft.VisualBasic` ad alanı, ancak .NET Compact Framework'ün hedeflenen sürümünü desteklemediğini.  
   
  **Hata Kimliği:** BC30766  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Tanımlanan işlevlerle dosya işlemleri `System.IO` ad alanı.  
+-   İçinde tanımlanan işlevleri ile dosya işlemleri `System.IO` ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO>  
- [Visual Basic ile Dosya Erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IO>
+- [Visual Basic ile Dosya Erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

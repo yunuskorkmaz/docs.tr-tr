@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93c430bb7e4d14c5f6f4e0563adfd387a1900ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16f1c7d4b56da93b2f2f0a91d889bde72ec94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530135"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next Yöntemi
-Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığında nesneler hakkında bilgi içeren örnekleri.  
+Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki nesneler hakkında bilgi içeren örnekleri.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,24 +40,24 @@ HRESULT Next(
  celt  
  [in] Alınacak nesne sayısı.  
   
- nesneleri  
- [out] Her biri işaret işaretçileri, bir dizi bir [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığında bir nesne hakkında bilgi sağlayan nesne.  
+  nesneleri  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki bir nesneyle ilgili bilgileri sağlayan nesne.  
   
  pceltFetched  
- [out] Sayısını gösteren bir işaretçi [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gerçekte döndürülen nesneleri `objects`. Bu değer olabilir `null` varsa `celt` 1'dir.  
+ [out] Bir işaretçi sayısına [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gerçekte döndürülen nesneleri `objects`. Bu değer olabilir `null` varsa `celt` 1'dir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_HEAPOBJECT.type` Alan, iç içe geçmiş başvuruları sayılan COM arabirimi tanımlayıcısıdır. Bu başvuru çağıran tarafından serbest bırakılacak `ICorDebugHeapEnum::Next`.  
+ `COR_HEAPOBJECT.type` Alanı, iç içe geçmiş bir başvuru sayılan COM arabirimi tanımlayıcısıdır. Bu başvuru çağıran tarafından serbest bırakılması `ICorDebugHeapEnum::Next`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugHeapEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugHeapEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

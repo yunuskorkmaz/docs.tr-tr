@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be9b2fa3037dc00bce52d9ff89291d1c02cffc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdee4df6964097f1c333a8fe96756a8898f7c1cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598938"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps Metodu
-İle ilişkili meta verileri alır <xref:System.Security.PermissionSet?displayProperty=nameWithType> belirtilen izni belirteç tarafından temsil edilen.  
+İle ilişkili meta verileri alır <xref:System.Security.PermissionSet?displayProperty=nameWithType> belirtilen izni belirteci tarafından temsil edilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ HRESULT GetPermissionSetProps (
   
 #### <a name="parameters"></a>Parametreler  
  `pm`  
- [in] Meta veri özelliklerini almak için izni temsil eden izni meta veri simgesi.  
+ [in] İzin için meta veri özelliklerini almak için kümesini temsil eden izin meta veri belirteci.  
   
  `pdwAction`  
  [out] İzin kümesi için bir işaretçi.  
   
  `ppvPermission`  
- [out] İkili meta veri imzası izin kümesi için bir işaretçi.  
+ [out] İzin kümesi ikili meta veri imzası bir işaretçi.  
   
  `pcbPermission`  
  [out] Bayt cinsinden boyutu `ppvPermission`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Security.PermissionSet>  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Security.PermissionSet>
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

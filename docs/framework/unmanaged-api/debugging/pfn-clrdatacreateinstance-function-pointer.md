@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597495"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance İşlev İşaretçisi
-Belirtilen hedef öğesi için bir arabirimi nesnesi oluşturan bir işlev noktalarına.  
+Belirtilen hedef öğe için bir arabirimi nesne oluşturan bir işlev işaret eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 #### <a name="parameters"></a>Parametreler  
  `iid`  
- [in] Arabirim örneğinin oluşturulması için tanımlayıcı.  
+ [in] Oluşturulacak arabirimi tanımlayıcısı.  
   
  `target`  
- [in] Kullanıcı uygulanan bir işaretçi [Iclrdatatarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) arabirimi nesnesi oluşturulacağı hedef öğeyi temsil eden nesne.  
+ [in] Bir kullanıcı olarak uygulanan bir işaretçiye [Iclrdatatarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) arabirimi nesnesi oluşturulacağı hedef öğeyi temsil eden nesne.  
   
  `iface`  
- [out] Döndürülen arabirimi nesnesi adresini gösteren bir işaretçi.  
+ [out] Döndürülen arabirim nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICLRDataTarget` Nesnesi, hata ayıklama uygulama yazıcı tarafından gerçekleştirilir. Uygulama temsil ettiği hedef öğesi türüne bağlıdır. Hedef öğesi, bir işlem, bellek dökümü, uzak makine vb. olabilir.  
+ `ICLRDataTarget` Nesne, hata ayıklama uygulamanın yazıcı tarafından uygulanır. Uygulama, temsil ettiği hedef öğesinin türüne bağlıdır. Hedef öğe, bir işlem, bellek dökümü, uzak makine vb. olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl  
+ **Üst bilgi:** ClrData.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

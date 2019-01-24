@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599055"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps Yöntemi
 Belirtilen değiştirir `ManifestResource` meta veri yapısı.  
@@ -40,28 +40,28 @@ HRESULT SetManifestResourceProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mr`  
- [in] Belirtir belirteci `ManifestResource` değiştirilecek meta veri yapısı.  
+ [in] Belirten belirteç `ManifestResource` değiştirilecek meta veri yapısı.  
   
  `tkImplementation`  
- [in] Türünde belirteç `File` veya `AssemblyRef`, kaynak sağlayıcısı eşler.  
+ [in] Türde bir belirteç `File` veya `AssemblyRef`, kaynak sağlayıcıya eşler.  
   
  `dwOffset`  
- [in] Dosyası içinde kaynak başına uzaklığı.  
+ [in] Kaynak dosyası içinde başlangıcına uzaklık.  
   
  `dwResourceFlags`  
- [in] Kaynak özniteliklerini belirtmek bayrağı değerlerin Bitsel bir birleşimi.  
+ [in] Kaynak özniteliklerini belirten bayrağı değerlerinin Bitsel bir birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Oluşturmak için bir `ManifestResource` meta veri yapısı, kullanım [Imetadataassemblyemit::definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fbf9a24c350dd4c33bb50b0add8817c8922925f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b49b63049d33c41757db1abae82ed2a4e266b42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572220"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode Numaralandırması
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
- Bellek içi güncelleştirmeleri meta verilerinin bir hata ayıklayıcısı görünür olup olmadığını belirten değerleri sağlar.  
+ Meta veriler için bellek içi güncelleştirmeler için bir hata ayıklayıcı görünür olup olmadığını belirten değerleri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ typedef enum WriteableMetadataUpdateMode {
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|`LegacyCompatPolicy`|Bellek içi güncelleştirmeleri meta verileri görünür yaparken, .NET Framework'ün önceki sürümleriyle uyumluluğunu korumak. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
-|`AlwaysShowUpdates`|Bellek içi güncelleştirmeleri meta verileri için hata ayıklayıcı görünür kılma.|  
+|`LegacyCompatPolicy`|.NET Framework'ün önceki sürümleriyle uyumluluk için meta veriler bellek içi güncelleştirmeleri görünür yaparken koruyun. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
+|`AlwaysShowUpdates`|Bellek içi güncelleştirmeleri meta verileri için hata ayıklayıcı tarafından görülebilmesi için.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye `WriteableMetadataUpdateMode` numaralandırması için geçirilebilir [SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) bellek içi hedef işleminde meta veri güncelleştirmeleri olup olmadığını denetlemek için yöntemi için hata ayıklayıcı görünür.  
+ Üye `WriteableMetadataUpdateMode` numaralandırma geçilebilir [SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) yöntemi bellek içi hedef işlemde meta veri güncelleştirmeleri olup olmadığını denetlemek için hata ayıklayıcıya görünür.  
   
- `LegacyCompatPolicy` Seçeneği .NET Framework 4.5.2 önce sürümlerindekilerle aynı davranışı zorlar. Genellikle bu meta veri güncelleştirmelerin yani görünür değil. Ancak, bir dizi hata ayıklama yöntem çağrıları, güncelleştirmelerinin görünür olması için hata ayıklayıcı örtük olarak coerce. Örneğin, hata ayıklayıcı geçerse [Icordebugılframe::getlocalvariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) dizini bir değişkenin modülü geçerli durumunu eşleşen bir anlık görüntüye güncelleştirilmiş yöntemin özgün meta verilerde, tüm meta veri bulunamadı işlem. Diğer bir deyişle, ile `LegacyCompatPolicy` seçeneği, hata ayıklayıcı yok, bazı veya tüm diğer bölümleri yönetilmeyen hata ayıklama API'si kullanma bağlı olarak kullanılabilir meta veri güncelleştirmeleri görebilirsiniz.  
+ `LegacyCompatPolicy` Seçeneği, .NET Framework 4.5.2 önce sürümlerindekilerle aynı davranışı uygular. Genellikle bu meta veri güncelleştirmelerin yani görünür değil. Ancak, bir dizi hata ayıklama yöntem çağrısına, örtük olarak güncelleştirmeleri görünür yapmak için hata ayıklayıcı coerce. Örneğin, hata ayıklayıcı geçerse [Icordebugılframe::getlocalvariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) dizini bir değişkenin modülü, geçerli durumunu eşleşen bir anlık görüntü almak için yöntemin özgün meta verilerinde, tüm meta veri bulunamadı işlem. Diğer bir deyişle, ile `LegacyCompatPolicy` seçeneği, hata ayıklayıcı none, bazı veya tüm diğer bölümleri yönetilmeyen hata ayıklama API kullanma bağlı olarak kullanılabilir meta veri güncelleştirmeleri görebilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [SetWriteableMetadataUpdateMode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [SetWriteableMetadataUpdateMode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525215"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel> öğeler öğelerin işlenmesi denetleyen bileşenleri — boyutlarına ve boyutlar, konumlarına ve alt içeriklerinin düzenini. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Sağlayan bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğeleri ve bunun yanı sıra özel oluşturabilme olanağı <xref:System.Windows.Controls.Panel> öğeleri.  
@@ -252,13 +252,13 @@ ms.locfileid: "47196635"
   
  Oluşturma hakkında ek bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s, bkz: [kullanım otomatik düzen genel bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Özel içerik kaydırma paneli örneği oluşturma](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Özel içerik kaydırma paneli örneği oluşturma](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

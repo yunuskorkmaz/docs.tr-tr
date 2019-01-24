@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
-ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616945"
 ---
 # <a name="unsealed-classes"></a>Mühürsüz sınıflar
 Sealed sınıfları devralınamayacağını ve bunlar genişletilebilirlik engeller. Buna karşılık, öğesinden devralınan sınıflar mühürsüz sınıflar olarak adlandırılır.  
@@ -30,6 +30,6 @@ Sealed sınıfları devralınamayacağını ve bunlar genişletilebilirlik engel
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Mühürleme](../../../docs/standard/design-guidelines/sealing.md)

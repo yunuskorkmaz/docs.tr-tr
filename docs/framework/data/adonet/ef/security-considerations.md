@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612833"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli oluşturmaya yönelik önerileri de izlemelidir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -46,7 +46,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
 -   Bağlantı dizesi Oluşturucular, dinamik bir bağlantı oluşturulurken kullanın.  
   
-     Bağlantı dizeleri çalışma zamanında oluşturmalıdır kullanırsanız <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfı. Bu dize builder sınıfı doğrulanıyor ve geçersiz giriş bilgileri kaçış bağlantı dizesi ekleme saldırılarını önlemeye yardımcı olur. Daha fazla bilgi için [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Uygun dize builder sınıfı parçası olan veri kaynağı bağlantı dizesi oluşturmak için de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bağlantı dizesi. ADO.NET sağlayıcıları için bağlantı dizesi oluşturucular hakkında daha fazla bilgi için bkz. [bağlantı dizesi oluşturucular](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Bağlantı dizeleri çalışma zamanında oluşturmalıdır kullanırsanız <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfı. Bu dize builder sınıfı doğrulanıyor ve geçersiz giriş bilgileri kaçış bağlantı dizesi ekleme saldırılarını önlemeye yardımcı olur. Daha fazla bilgi için [nasıl yapılır: Bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Uygun dize builder sınıfı parçası olan veri kaynağı bağlantı dizesi oluşturmak için de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bağlantı dizesi. ADO.NET sağlayıcıları için bağlantı dizesi oluşturucular hakkında daha fazla bilgi için bkz. [bağlantı dizesi oluşturucular](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Daha fazla bilgi için [bağlantı bilgilerini koruma](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -161,7 +161,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Güvenilir olmayan kaynaklardan gelen MetadataWorkspace nesneleri kabul etmez.  
  Uygulamaları kabul örneklerini <xref:System.Data.Metadata.Edm.MetadataWorkspace> güvenilmeyen kaynaklardan sınıfı. Bunun yerine, açıkça oluşturmak ve gerekir bu tür bir kaynaktan bir çalışma alanı doldurun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Geçiş Konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Geçiş Konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

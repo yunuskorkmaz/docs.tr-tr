@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4929d9aaf7de9af72ec5ba93f5d7e35c712ac6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40bbde940538d7b06aa74ab55986da2dca3ec225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599510"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed Yöntemi
-Profil Oluşturucu, bir iş parçacığı yok olduğunu bildirir.  
+Profil Oluşturucu, bir iş parçacığı yok edildi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ HRESULT ThreadDestroyed(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Yok edildi iş parçacığı kimliği.  
+ [in] Yok edilmiş iş parçacığı kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `threadId` Değeri geçerli artık çağrısı zaman.  
+ `threadId` Değeri artık geçerli değil Bu çağrı anda.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ThreadCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ThreadCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

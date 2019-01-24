@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir dosya grupları (LINQ) (Visual Basic) kullanarak birden çok dosyaya bölme'
+title: 'Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 19b542e22aa6e987a21095025a136d7602057b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616985"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Nasıl yapılır: bir dosya grupları (LINQ) (Visual Basic) kullanarak birden çok dosyaya bölme
-Bu örnek iki dosyaların içeriğini birleştirir ve verileri yeni bir biçimde düzenlemek yeni dosyaları kümesini oluşturmak için bir yol gösterir.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme
+Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için  
   
-1.  Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin:  
+1.  Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Bu örnek iki dosyaların içeriğini birleştirir ve verileri yeni bir biçimde
     Garcia, Debra  
     ```  
   
-2.  Bu adları names2.txt adlı bir metin dosyasına ve kaydedin proje klasörünüze kopyalayın: iki dosya bazı sahip unutmayın ortak adları.  
+2.  Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin: İki dosyayı bazı adları ortak gerektiğini unutmayın.  
   
     ```  
     Liu, Jinghao  
@@ -116,8 +116,8 @@ End Class
  Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+ .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597950"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx İşlevi
-Uygun bir hata iletisi belirtilen kültür için HRESULT değerine dönüşür.  
+HRESULT değerini belirtilen kültür için uygun hata iletisine çevirir.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,13 +43,13 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Parametreler  
  `lcid`  
- [in] Bir kültür tanımlayıcısı. -1 geçirmek `lcid` varsayılan kültürü kullanılacak.  
+ [in] Bir kültür tanımlayıcısı. -1 geçirmek `lcid` varsayılan kültür kullanılacak.  
   
  `iResourceID`  
  [in] HRESULT.  
   
  `szBuffer`  
- [out] İşlem başarıyla tamamlandıktan sonra hata iletisini içeren bir arabellek.  
+ [out] Başarılı tamamlandığında hata iletisini içeren bir arabelleği.  
   
  `iMax`  
  [in] Hata iletisi arabellek boyutu.  
@@ -58,29 +58,29 @@ HRESULT LoadStringRCEx (
  [in] Yoksayıldı.  
   
  `pcwchUsed`  
- [out] Hata iletisi uzunluğu için bir işaretçi.  
+ [out] Hata iletisi uzunluğu bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart COM hata kodları, ek olarak aşağıdaki değerleri Winerror.h'de içinde tanımlandığı şekilde döndürür.  
+ Bu yöntem, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|`szBuffer` null, veya `iMax` sıfır (0).|  
+|E_INVALIDARG|`szBuffer` null ise veya `iMax` sıfır (0).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem başarıyla tamamlanmazsa `szBuffer` boş bir dize içeriyor.  
+ Yöntemi başarıyla tamamlanmazsa `szBuffer` boş bir dize içeriyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [LoadStringRC İşlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [LoadStringRC İşlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

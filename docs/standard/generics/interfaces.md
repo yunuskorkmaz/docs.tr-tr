@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613811"
 ---
 # <a name="generic-interfaces"></a>Genel Arabirimler
 Bu konu, genel türlerin aileleri arasında ortak işlevselliği sağlayan genel arabirimler genel bir bakış sağlar.  
@@ -44,9 +44,9 @@ Bu konu, genel türlerin aileleri arasında ortak işlevselliği sağlayan genel
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Genel Türler](../../../docs/standard/generics/index.md)  
-- [.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)  
-- [Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Genel Türler](../../../docs/standard/generics/index.md)
+- [.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)
+- [Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Kovaryans ve Kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)

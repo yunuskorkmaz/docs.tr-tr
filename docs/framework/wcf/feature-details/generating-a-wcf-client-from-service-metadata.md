@@ -2,12 +2,12 @@
 title: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570963"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 Bu konuda, meta veri belgelerinden istemci üretmek için Svcutil.exe içinde çeşitli anahtarları kullanmayı açıklar.  
@@ -20,7 +20,7 @@ Bu konuda, meta veri belgelerinden istemci üretmek için Svcutil.exe içinde ç
   
 -   DISCO isteği (kullanarak [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web hizmetlerinden) için sağlanan adresi.  
   
- Hizmetten alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyasını bağlı olarak istemciye svcutil.exe oluşturur. Kullanıcı asıl adı (UPN) kullanıcı adı ile birleştirerek oluşturulur "\@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracının oluşturduğu UPN Kerberos kimlik doğrulaması şu hata iletisi ile neden olan hata: **oturum açma girişimi başarısız oldu.** Bu sorunu çözmek için el ile aracı oluşturulan istemci dosyasını düzeltin.  
+ Hizmetten alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyasını bağlı olarak istemciye svcutil.exe oluşturur. Kullanıcı asıl adı (UPN) kullanıcı adı ile birleştirerek oluşturulur "\@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracının oluşturduğu UPN Kerberos kimlik doğrulaması şu hata iletisi ile neden olan hata: **Oturum açma girişimi başarısız oldu.** Bu sorunu çözmek için el ile aracı oluşturulan istemci dosyasını düzeltin.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -53,7 +53,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ Namespace:\<string, string >**|Bir WSDL veya XML şema eşlemeyi belirtir `targetNamespace` için ortak dil çalışma zamanı (CLR) ad alanı. Joker karakter (*) kullanarak `targetNamespace` tüm eşler `targetNamespaces` söz konusu CLR ad alanına açık bir eşleme olmaksızın.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için tür referansı çift iki nokta üst üste ile ya da uygun (`::`) veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: için şema belgesinin hedef ad alanından türetilmiş `DataContracts`. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n`|  
+|**/ Namespace:\<string, string >**|Bir WSDL veya XML şema eşlemeyi belirtir `targetNamespace` için ortak dil çalışma zamanı (CLR) ad alanı. Joker karakter (*) kullanarak `targetNamespace` tüm eşler `targetNamespaces` söz konusu CLR ad alanına açık bir eşleme olmaksızın.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için tür referansı çift iki nokta üst üste ile ya da uygun (`::`) veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: İçin şema belgesinin hedef ad alanından türetilir `DataContracts`. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Veri bağlama seçme  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|Varolan dosyanın üzerine yazmak yerine var olan bir dosya, oluşturulan yapılandırma birleştirir.|  
 |**/ noconfig**|Yapılandırma dosyaları oluşturmaz.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

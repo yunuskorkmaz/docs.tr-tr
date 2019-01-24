@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603670"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField Yöntemi
-Yöntemi içinde değil tek bir değişken tanımlar. Bu, kullanılan belirli sınıfları alanları, bit alanları ve benzeri yöntemidir.  
+Bir yöntem içinde değil tek bir değişkeni tanımlar. Bu, kullanılan belirli alanları sınıflarda, bit alanları ve benzeri yöntemidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,7 +44,7 @@ HRESULT DefineField(
   
 #### <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Meta veri türü veya yöntemi belirteci.  
+ [in] Meta veri türünde veya yönteminde ' belirteci.  
   
  `name`  
  [in] Alan adı.  
@@ -53,7 +53,7 @@ HRESULT DefineField(
  [in] Alan öznitelikleri.  
   
  `cSig`  
- [in] A `ULONG32` karakterlerinden alan imzası içermesi gerekir arabellek büyüklüğü diğer bir deyişle.  
+ [in] A `ULONG32` alan imzası içermesi gereken arabelleğin karakter cinsinden boyutu diğer bir deyişle.  
   
  `signature`  
  [in] Alan imzaları dizisi.  
@@ -65,16 +65,16 @@ HRESULT DefineField(
  [in] İlk adres alanı belirtimi için.  
   
  `addr2`  
- [in] İkinci adres alanı belirtimi için.  
+ [in] İkinci bir adres alanı belirtimi için.  
   
  `addr3`  
- [in] Alan belirtimi üçüncü adresi.  
+ [in] Üçüncü adres alanı belirtimi için.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

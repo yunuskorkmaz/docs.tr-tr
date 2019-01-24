@@ -1,17 +1,17 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te Bir Nesneyi Başka Bir Türe Dönüştürme"
+title: "Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611351"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Bir Nesneyi Başka Bir Türe Dönüştürme
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme
 Dönüştürmeniz bir `Object` başka bir veri türüne dönüştürme anahtar sözcüğü gibi kullanarak değişken [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Örnek  
@@ -33,13 +33,13 @@ End Sub
   
 -   Bir başvuru <xref:System?displayProperty=nameWithType> ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Object>  
- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Object>
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603904"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap Yöntemi
-Hata ayıklayıcı CTRL + C ayıklanacak işleminde yakalanır bildirir.  
+Hata ayıklayıcı, CTRL + C ayıklanmakta olan işlemin yakalanır bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,26 +37,26 @@ HRESULT ControlCTrap (
   
 #### <a name="parameters"></a>Parametreler  
  `pProcess`  
- [in] Bir işaretçi Icordebugprocess nesneye CTRL + C yakalanan işlem temsil eder.  
+ [in] CTRL + C ', yakalanan işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Hata ayıklayıcı CTRL + C tuzak işleyecek.|  
-|S_FALSE|Hata ayıklayıcı CTRL + C tuzak işler değil.|  
+|S_OK|Hata ayıklayıcı, CTRL + C yakalama işleyecektir.|  
+|S_FALSE|Hata ayıklayıcı CTRL + C yakalama işlememesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  İşlemdeki tüm uygulama etki alanları için bu geri çağırma durdurulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

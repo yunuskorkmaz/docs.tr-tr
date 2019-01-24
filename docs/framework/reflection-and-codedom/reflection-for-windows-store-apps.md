@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604364"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] başlayarak .NET Framework, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında kullanılmak üzere bir yansıma türü ve üye kümesini içerir. Bu türler ve üyeler de tam .NET Framework'te de mevcuttur [.NET için Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  
@@ -41,6 +41,6 @@ ms.locfileid: "50197060"
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET için Windows Store uygulamaları – desteklenen API'ler](https://go.microsoft.com/fwlink/?LinkID=225700)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [.NET için Windows Store uygulamaları – desteklenen API'ler](https://go.microsoft.com/fwlink/?LinkID=225700)

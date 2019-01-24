@@ -3,12 +3,12 @@ title: Sorgu sonuçlarını gruplandırma (C# üzerinde LINQ)
 description: Grup C# içinde LINQ kullanarak sonuçları öğrenin.
 ms.date: 12/1/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 42f2a483f4ff9a405152250e3961fd267861b20d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606802"
 ---
 # <a name="group-query-results"></a>Sorgu sonuçlarını gruplandırma
 
@@ -76,11 +76,11 @@ Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.IGrouping%602>  
-- [Dil ile Tümleşik Sorgu (LINQ)](index.md)  
-- [group yan tümcesi](../language-reference/keywords/group-clause.md)  
-- [Anonim Tipler](../programming-guide/classes-and-structs/anonymous-types.md)  
-- [Gruplandırma işleminde alt sorgu gerçekleştirme](perform-a-subquery-on-a-grouping-operation.md)  
-- [İç içe geçmiş grup oluşturma](create-a-nested-group.md)  
-- [Verileri Gruplandırma](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.IGrouping%602>
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)
+- [group yan tümcesi](../language-reference/keywords/group-clause.md)
+- [Anonim Tipler](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Gruplandırma işleminde alt sorgu gerçekleştirme](perform-a-subquery-on-a-grouping-operation.md)
+- [İç içe geçmiş grup oluşturma](create-a-nested-group.md)
+- [Verileri Gruplandırma](../programming-guide/concepts/linq/grouping-data.md)

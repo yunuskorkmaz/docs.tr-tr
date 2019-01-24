@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60fd5c29f716aa55f35c520794fbc9a0f673b9f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a3338595e8b541fcda93b091eeddf17919a483c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614399"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
-`failedQI` Yönetilen hata ayıklama Yardımcısı (MDA) çalışma zamanı çağırdığında etkinleştirilirse `QueryInterface` bir çalışma zamanı aranabilir sarmalayıcısı (RCW) adına COM arabirimi işaretçisi üzerinde ve `QueryInterface` çağrısı başarısız olur.  
+`failedQI` Yönetilen hata ayıklama Yardımcısı (MDA), çalışma zamanı çağırdığında etkinleştirilirse `QueryInterface` üzerinde bir COM arabirimi işaretçisini bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) adına ve `QueryInterface` çağrısı başarısız olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir RCW üzerinde bir dönüştürme başarısız veya bir çağrısından com bir RCW beklenmedik şekilde başarısız olur.  
+ Bir yayın üzerinde bir RCW başarısız olursa veya COM çağrısı bir RCW gelen beklenmedik biçimde başarısız olur.  
   
 ## <a name="cause"></a>Sebep  
   
--   Yanlış bağlamdan çağrı yapılır.  
+-   Çağrı yanlış bağlamında yapılır.  
   
--   Kayıtlı proxy başarısız `QueryInterface` çağrısı yanlış bağlamda yapıldığı için çağırın.  
+-   Kayıtlı proxy başarısız `QueryInterface` çağrı yanlış bağlamda yapıldığı çağırın.  
   
--   OLE ait proxy HRESULT hata döndürdü.  
+-   OLE ait bir ara sunucu bir hata HRESULT döndürdü.  
   
 ## <a name="resolution"></a>Çözüm  
- COM kurallarında MSDN belgelerine bakın.  
+ COM kuralları'nda MSDN belgelerine bakın.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Varsa bir `QueryInterface` çağrısı başarısız oldu, bağlam geçti ve `QueryInterface` çağrı denemesi yeniden hatalı bir bağlam hatalı olup olmadığını görmek için.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Varsa bir `QueryInterface` çağrısı başarısız oldu, bağlam geçti ve `QueryInterface` çağrı denenir yeniden hatalı bir bağlam hatalı olup olmadığını görmek için.  
   
 ## <a name="output"></a>Çıkış  
- Arabirimin arabirimi GUID ve HRESULT hata yönetilen adı.  
+ Arabirim, arabirimin GUID ve hatanın HRESULT yönetilen adı.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33387178"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

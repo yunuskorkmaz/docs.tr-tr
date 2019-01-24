@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598400"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken Metodu
-Belirtilen belirteç tarafından temsil edilen tür belirtimi ikili meta verileri imzasını alır.  
+Belirtilen belirteç tarafından temsil edilen tür belirtimi ikili meta veri imzası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +39,26 @@ HRESULT GetTypeSpecFromToken (
   
 #### <a name="parameters"></a>Parametreler  
  `typespec`  
- [in] İstenen meta veri imza ile ilişkili TypeSpec'te belirteci.  
+ [in] İstenen meta verileri imza ile ilişkili TypeSpec'te belirteç.  
   
  `ppvSig`  
- [out] İkili meta verileri imza için bir işaretçi.  
+ [out] İkili meta veri imzası bir işaretçi.  
   
  `pcbSig`  
- [out] Meta veri imza bayt cinsinden boyutu.  
+ [out] Baytlarında meta verileri imza boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarı veya başarısızlık gösterir HRESULT. Hataları ile başarısız makrosu sınanabilir.  
+ Başarı veya başarısızlık gösteren HRESULT. Hata ile başarısız makrosu test edilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600524"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; öğesi
 
@@ -37,13 +37,13 @@ Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini bel
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**version**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Geçerli değerler için `version` özniteliği için bkz: ["çalışma zamanı sürümü" değerleri](#version) bölümü. **Not:**  .NET Framework 3.5 aracılığıyla "*çalışma zamanı sürümü*" değeri alan formun *ana*. *küçük*. *derleme*. İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sadece birincil ve ikincil sürüm numaraları gereklidir (yani, "v4.0.30319" yerine "v4.0"). Kısa dize önerilir.|  
-|**SKU**|İsteğe bağlı öznitelik.<br /><br /> Sırayla bu uygulamanın desteklediği hangi .NET Framework sürüm belirten stok tutma birimini (STB) belirten bir dize değeri.<br /><br /> .NET Framework 4.0 ile kullanımı başlangıç `sku` özniteliği önerilir.  Varsa, .NET Framework sürümünü gösterir. Bu uygulama hedefler.<br /><br /> Geçerli sku öznitelik değerleri için bkz: ["sku kimliği" değerleri](#sku) bölümü.|  
+|**sku**|İsteğe bağlı öznitelik.<br /><br /> Sırayla bu uygulamanın desteklediği hangi .NET Framework sürüm belirten stok tutma birimini (STB) belirten bir dize değeri.<br /><br /> .NET Framework 4.0 ile kullanımı başlangıç `sku` özniteliği önerilir.  Varsa, .NET Framework sürümünü gösterir. Bu uygulama hedefler.<br /><br /> Geçerli sku öznitelik değerleri için bkz: ["sku kimliği" değerleri](#sku) bölümü.|  
   
 ## <a name="remarks"></a>Açıklamalar
 
 Varsa  **\<supportedRuntime >** öğesi uygulama yapılandırma dosyasında yoksa, uygulama oluşturmak için kullanılan çalışma zamanı sürümü kullanılır.  
 
-**\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) öğesi.  
+ **\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) öğesi.  
   
 > [!NOTE]
 >  Kullanırsanız [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyasını belirtmek için işlev, kullanmanız gereken `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesi. `<supportedRuntime>` Öğesi yok sayıldı kullandığınızda [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -66,7 +66,7 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |2,0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>"sku kimliği" değerleri
@@ -75,23 +75,23 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
   
 |.NET Framework sürümü|`sku` Özniteliği|  
 |----------------------------|---------------------|  
-|4.0|". NETFramework, sürüm = v4.0 "|  
-|4.0 istemci profili|". NETFramework, sürüm = v4.0, profil istemci = "|  
-|4.0, platform güncelleştirme 1|". NETFramework, sürüm v4.0.1 = "|  
-|4.0 istemci profili, güncelleştirme 1|". NETFramework, sürüm = v4.0.1, profil istemci = "|  
-|4.0, platform güncelleştirme 2|". NETFramework, sürüm v4.0.2 = "|  
-|4.0 istemci profili, güncelleştirme 2|". NETFramework, sürüm = v4.0.2, profil istemci = "|  
-|4.0, platform güncelleştirmesi 3|". NETFramework, sürüm verze 4.0.3 = "|  
-|4.0 istemci profili, güncelleştirme 3|". NETFramework, sürüm = verze 4.0.3, profil istemci = "|  
-|4,5|". NETFramework, sürümü v4.5 = "|  
-|4.5.1|". NETFramework, sürüm v4.5.1 = "|  
-|4.5.2|". NETFramework, sürüm v4.5.2 = "|  
-|4.6|". NETFramework, sürüm v4.6 = "|  
-|4.6.1|". NETFramework, sürüm = v4.6.1 "|  
-|4.6.2|". NETFramework, sürüm v4.6.2 = "|  
-|4.7|". NETFramework, sürüm v4.7 = "|
-|4.7.1|". NETFramework, sürüm v4.7.1 = "|
-|4.7.2|". NETFramework, sürüm v4.7.2 = "|
+|4.0|".NETFramework,Version=v4.0"|  
+|4.0 istemci profili|".NETFramework,Version=v4.0,Profile=Client"|  
+|4.0, platform güncelleştirme 1|".NETFramework,Version=v4.0.1"|  
+|4.0 istemci profili, güncelleştirme 1|".NETFramework,Version=v4.0.1,Profile=Client"|  
+|4.0, platform güncelleştirme 2|".NETFramework,Version=v4.0.2"|  
+|4.0 istemci profili, güncelleştirme 2|".NETFramework,Version=v4.0.2,Profile=Client"|  
+|4.0, platform güncelleştirmesi 3|".NETFramework,Version=v4.0.3"|  
+|4.0 istemci profili, güncelleştirme 3|".NETFramework,Version=v4.0.3,Profile=Client"|  
+|4,5|".NETFramework,Version=v4.5"|  
+|4.5.1|".NETFramework,Version=v4.5.1"|  
+|4.5.2|".NETFramework,Version=v4.5.2"|  
+|4.6|".NETFramework,Version=v4.6"|  
+|4.6.1|".NETFramework,Version=v4.6.1"|  
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|".NETFramework,Version=v4.7.2"|
 
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir yapılandırma dosyasında desteklenen çalışma zamanı sürümünü belirtmek gösterilmektedir. Yapılandırma dosyası, uygulama .NET Framework 4.7 hedefleyen gösterir.  
@@ -110,6 +110,6 @@ Bu öğe, uygulama yapılandırma dosyasında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [İşlem İçi Yan Yana Yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [İşlem İçi Yan Yana Yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

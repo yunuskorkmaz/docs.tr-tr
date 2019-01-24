@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602890"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID yöntemi
 Alır bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu tür.  
@@ -40,27 +40,27 @@ HRESULT GetTypeID(
  [out] Bir işaretçi [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu Icordebugtype için.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Dönüş değeri `S_OK` başarı veya hata `HRESULT` hata kodu. `HRESULT` Kodları aşağıdakileri içerir:  
+ Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu. `HRESULT` Kodları şunlardır:  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu. Yöntemin geçerli bir aldığı [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).|  
+|`S_OK`|Yöntem başarılı oldu. Yöntem, geçerli bir almıştır [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).|  
 |`CORDBG_E_CLASS_NOT_LOADED`|Türü yüklü değil.|  
 |`CORDBG_E_UNSUPPORTED`|Türü desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, çalışma zamanına kadar yüklenmedi veya bir türü temsil eden Icordebugtype bir eşleme sağlar bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), bir opak gören işleyen çalışma zamanına yüklenen bir türü tanımlar.  
+ Bu yöntem, çalışma zamanına kadar yüklenmiş olabilir değil veya bir türü temsil eden Icordebugtype bir eşleme sağlar. bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), bir opak gören işleyecek yüklenen çalışma zamanına tür tanımlar.  
   
- Ne zaman Icordebugtype temsil eden tür henüz henüz yüklenirken, bu yöntem `CORDBG_E_CLASS_NOT_LOADED`.  Türü varsa desteklenmiyor, döndürür `CORDBG_E_UNSUPPORTED`.  
+ Ne zaman Icordebugtype temsil eden tür sahip değildir ancak yüklenen, bu yöntemi döndürür `CORDBG_E_CLASS_NOT_LOADED`.  Türü desteklenmiyor varsa, döndürür `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugType2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugType2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
