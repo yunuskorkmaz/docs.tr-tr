@@ -1,20 +1,20 @@
 ---
-title: System.Convert'i yöntemleri
+title: System.Convert yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: a16839bf64d5786caa6feb557333fe93c66edc3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3b8c7105578c57547b79bc95b633bcc6449a0ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591727"
 ---
-# <a name="systemconvert-methods"></a><span data-ttu-id="5ef5e-102">System.Convert'i yöntemleri</span><span class="sxs-lookup"><span data-stu-id="5ef5e-102">System.Convert Methods</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="5ef5e-103"> Aşağıdaki desteklemiyor <xref:System.Convert> yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="5ef5e-103"> does not support the following <xref:System.Convert> methods.</span></span>  
+# <a name="systemconvert-methods"></a><span data-ttu-id="ae2f5-102">System.Convert yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ae2f5-102">System.Convert Methods</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="ae2f5-103">şunları desteklemez <xref:System.Convert> yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-103">does not support the following <xref:System.Convert> methods.</span></span>  
   
--   <span data-ttu-id="5ef5e-104">Sürümleriyle bir <xref:System.IFormatProvider> parametresi.</span><span class="sxs-lookup"><span data-stu-id="5ef5e-104">Versions with an <xref:System.IFormatProvider> parameter.</span></span>  
+-   <span data-ttu-id="ae2f5-104">Sürümleriyle bir <xref:System.IFormatProvider> parametresi.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-104">Versions with an <xref:System.IFormatProvider> parameter.</span></span>  
   
--   <span data-ttu-id="5ef5e-105">Karakter dizileri veya bayt dizileri yöntemleri:</span><span class="sxs-lookup"><span data-stu-id="5ef5e-105">Methods that involve char arrays or byte arrays:</span></span>  
+-   <span data-ttu-id="ae2f5-105">Karakter dizileri veya bayt dizileri içeren yöntemler:</span><span class="sxs-lookup"><span data-stu-id="ae2f5-105">Methods that involve char arrays or byte arrays:</span></span>  
   
     -   <xref:System.Convert.FromBase64CharArray%2A>  
   
@@ -24,19 +24,19 @@ ms.locfileid: "33357380"
   
     -   <xref:System.Convert.ToBase64String%2A>  
   
--   <span data-ttu-id="5ef5e-106">Aşağıdaki yöntemleri:</span><span class="sxs-lookup"><span data-stu-id="5ef5e-106">The following methods:</span></span>  
+-   <span data-ttu-id="ae2f5-106">Aşağıdaki yöntemleri:</span><span class="sxs-lookup"><span data-stu-id="ae2f5-106">The following methods:</span></span>  
   
-    -   <span data-ttu-id="5ef5e-107">`public static <Type2> To<Type2>(<Type1> value);` Burada</span><span class="sxs-lookup"><span data-stu-id="5ef5e-107">`public static <Type2> To<Type2>(<Type1> value);` where</span></span>  
+    -   <span data-ttu-id="ae2f5-107">`public static <Type2> To<Type2>(<Type1> value);` Burada</span><span class="sxs-lookup"><span data-stu-id="ae2f5-107">`public static <Type2> To<Type2>(<Type1> value);` where</span></span>  
   
-         <span data-ttu-id="5ef5e-108">`Type1` ve `Type2` her biri olan `sbyte`, `uint`, `ulong`, veya `ushort`.</span><span class="sxs-lookup"><span data-stu-id="5ef5e-108">`Type1` and `Type2` are each one of `sbyte`, `uint`, `ulong`, or `ushort`.</span></span>  
+         <span data-ttu-id="ae2f5-108">`Type1` ve `Type2` her biri için olan `sbyte`, `uint`, `ulong`, veya `ushort`.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-108">`Type1` and `Type2` are each one of `sbyte`, `uint`, `ulong`, or `ushort`.</span></span>  
   
-    -   <span data-ttu-id="5ef5e-109">C# ' TA:</span><span class="sxs-lookup"><span data-stu-id="5ef5e-109">C#:</span></span>  
+    -   <span data-ttu-id="ae2f5-109">C#:</span><span class="sxs-lookup"><span data-stu-id="ae2f5-109">C#:</span></span>  
   
          `int To<int type>(string value, int fromBase),`  
   
          `ToString(... value, int toBase)`  
   
-    -   <span data-ttu-id="5ef5e-110">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="5ef5e-110">Visual Basic:</span></span>  
+    -   <span data-ttu-id="ae2f5-110">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="ae2f5-110">Visual Basic:</span></span>  
   
          `Function To(Of [Numeric])(value as String, fromBase As Integer)`  
   
@@ -48,5 +48,5 @@ ms.locfileid: "33357380"
   
     -   <xref:System.Convert.ChangeType%2A>  
   
-## <a name="see-also"></a><span data-ttu-id="5ef5e-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5ef5e-111">See Also</span></span>  
- [<span data-ttu-id="5ef5e-112">Veri Türleri ve İşlevleri</span><span class="sxs-lookup"><span data-stu-id="5ef5e-112">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ae2f5-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-111">See also</span></span>
+- [<span data-ttu-id="ae2f5-112">Veri Türleri ve İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ae2f5-112">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

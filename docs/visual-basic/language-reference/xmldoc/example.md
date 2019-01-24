@@ -5,35 +5,35 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd5ec21001263d7484500ab7680e6e36270e8768
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670523"
 ---
-# <a name="ltexamplegt-visual-basic"></a><span data-ttu-id="2e123-102">&lt;örnek&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e123-102">&lt;example&gt; (Visual Basic)</span></span>
-<span data-ttu-id="2e123-103">Bir örnek üyesi için belirtir.</span><span class="sxs-lookup"><span data-stu-id="2e123-103">Specifies an example for the member.</span></span>  
+# <a name="ltexamplegt-visual-basic"></a><span data-ttu-id="1c780-102">&lt;örnek&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c780-102">&lt;example&gt; (Visual Basic)</span></span>
+<span data-ttu-id="1c780-103">Bir örnek üyesi için belirtir.</span><span class="sxs-lookup"><span data-stu-id="1c780-103">Specifies an example for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e123-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2e123-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c780-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1c780-104">Syntax</span></span>  
   
 ```xml  
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2e123-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2e123-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1c780-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1c780-105">Parameters</span></span>  
  `description`  
- <span data-ttu-id="2e123-106">Kod örneği açıklaması.</span><span class="sxs-lookup"><span data-stu-id="2e123-106">A description of the code sample.</span></span>  
+ <span data-ttu-id="1c780-106">Kod örneği açıklaması.</span><span class="sxs-lookup"><span data-stu-id="1c780-106">A description of the code sample.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2e123-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2e123-107">Remarks</span></span>  
- <span data-ttu-id="2e123-108">`<example>` Etiketi bir yöntem veya diğer kitaplık üyesini kullanmaya ilişkin bir örnek belirtmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="2e123-108">The `<example>` tag lets you specify an example of how to use a method or other library member.</span></span> <span data-ttu-id="2e123-109">Bu yaygın olarak kullanılmasına [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) etiketi.</span><span class="sxs-lookup"><span data-stu-id="2e123-109">This commonly involves using the [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) tag.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c780-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1c780-107">Remarks</span></span>  
+ <span data-ttu-id="1c780-108">`<example>` Etiketi bir yöntem veya diğer kitaplık üyesini kullanmaya ilişkin bir örnek belirtmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="1c780-108">The `<example>` tag lets you specify an example of how to use a method or other library member.</span></span> <span data-ttu-id="1c780-109">Bu yaygın olarak kullanılmasına [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) etiketi.</span><span class="sxs-lookup"><span data-stu-id="1c780-109">This commonly involves using the [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) tag.</span></span>  
   
- <span data-ttu-id="2e123-110">Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="2e123-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="1c780-110">Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="1c780-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2e123-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="2e123-111">Example</span></span>  
- <span data-ttu-id="2e123-112">Bu örnekte `<example>` kullanmaya yönelik bir örnek eklemek için etiketi `ID` alan.</span><span class="sxs-lookup"><span data-stu-id="2e123-112">This example uses the `<example>` tag to include an example for using the `ID` field.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c780-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="1c780-111">Example</span></span>  
+ <span data-ttu-id="1c780-112">Bu örnekte `<example>` kullanmaya yönelik bir örnek eklemek için etiketi `ID` alan.</span><span class="sxs-lookup"><span data-stu-id="1c780-112">This example uses the `<example>` tag to include an example for using the `ID` field.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="2e123-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2e123-113">See Also</span></span>  
- [<span data-ttu-id="2e123-114">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="2e123-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="1c780-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c780-113">See also</span></span>
+- [<span data-ttu-id="1c780-114">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="1c780-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

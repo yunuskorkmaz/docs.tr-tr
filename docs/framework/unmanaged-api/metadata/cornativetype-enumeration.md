@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612261"
 ---
-# <a name="cornativetype-enumeration"></a><span data-ttu-id="dd117-102">CorNativeType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="dd117-102">CorNativeType Enumeration</span></span>
-<span data-ttu-id="dd117-103">Yerel yönetilmeyen türlerini tanımlamak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="dd117-103">Contains values that describe native unmanaged types.</span></span>  
+# <a name="cornativetype-enumeration"></a><span data-ttu-id="5ab69-102">CorNativeType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="5ab69-102">CorNativeType Enumeration</span></span>
+<span data-ttu-id="5ab69-103">Yönetilmeyen yerel türleri açıklayan değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="5ab69-103">Contains values that describe native unmanaged types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd117-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dd117-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ab69-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5ab69-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNativeType {  
@@ -87,65 +87,65 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dd117-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="dd117-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5ab69-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="5ab69-105">Members</span></span>  
   
-|<span data-ttu-id="dd117-106">Üye</span><span class="sxs-lookup"><span data-stu-id="dd117-106">Member</span></span>|<span data-ttu-id="dd117-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dd117-107">Description</span></span>|  
+|<span data-ttu-id="5ab69-106">Üye</span><span class="sxs-lookup"><span data-stu-id="5ab69-106">Member</span></span>|<span data-ttu-id="5ab69-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5ab69-107">Description</span></span>|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|<span data-ttu-id="dd117-108">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-108">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VOID`|<span data-ttu-id="dd117-109">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-109">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="dd117-110">TRUE sıfır olmayan ve yanlış olduğu bir 4-bayt Boole değeri sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="dd117-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_I1`|<span data-ttu-id="dd117-111">İşaretli 8 bit tam sayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-111">A signed 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U1`|<span data-ttu-id="dd117-112">Bir imzasız 8 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-112">An unsigned 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I2`|<span data-ttu-id="dd117-113">İşaretli 16 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-113">A signed 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U2`|<span data-ttu-id="dd117-114">Bir imzasız 16 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-114">An unsigned 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I4`|<span data-ttu-id="dd117-115">İşaretli 32 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-115">A signed 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U4`|<span data-ttu-id="dd117-116">Bir imzasız 32 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-116">An unsigned 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I8`|<span data-ttu-id="dd117-117">İşaretli 64-bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-117">A signed 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U8`|<span data-ttu-id="dd117-118">Bir İmzasız 64-bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-118">An unsigned 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_R4`|<span data-ttu-id="dd117-119">4-bayt kayan nokta sayısal bir değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-119">A 4-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_R8`|<span data-ttu-id="dd117-120">Bir 8-bayt kayan nokta sayısal değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-120">An 8-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="dd117-121">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-121">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="dd117-122">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-122">Obsolete.</span></span>|  
-|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="dd117-123">Yönetilen karşılık gelen sayısal bir COM türü <xref:System.Decimal> türü.</span><span class="sxs-lookup"><span data-stu-id="dd117-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
-|`NATIVE_TYPE_PTR`|<span data-ttu-id="dd117-124">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-124">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="dd117-125">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-125">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DATE`|<span data-ttu-id="dd117-126">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-126">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BSTR`|<span data-ttu-id="dd117-127">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-127">COM Interop.</span></span>|  
-|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="dd117-128">LPSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-128">An LPSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="dd117-129">LPWSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-129">An LPWSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="dd117-130">LPTSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-130">An LPTSTR string value.</span></span>|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="dd117-131">Bir sabit, sistem tarafından tanımlanan dize değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-131">A fixed, system-defined string value.</span></span>|  
-|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="dd117-132">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-132">Obsolete.</span></span>|  
-|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="dd117-133">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-133">COM Interop.</span></span>|  
-|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="dd117-134">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-134">COM Interop.</span></span>|  
-|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="dd117-135">Bir yerel yapısı değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-135">A native structure value.</span></span>|  
-|`NATIVE_TYPE_INTF`|<span data-ttu-id="dd117-136">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-136">COM Interop.</span></span>|  
-|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="dd117-137">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-137">COM Interop.</span></span>|  
-|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="dd117-138">Bir sabit uzunluk dizisi değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-138">A fixed-length array value.</span></span>|  
-|`NATIVE_TYPE_INT`|<span data-ttu-id="dd117-139">Bir yerel 16 bit işaretli tamsayıyı değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-139">A native 16-bit signed integer value.</span></span>|  
-|`NATIVE_TYPE_UINT`|<span data-ttu-id="dd117-140">Bir yerel 16 bit işaretsiz tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-140">A native 16-bit unsigned integer value.</span></span>|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="dd117-141">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="dd117-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="dd117-142">NATIVE_TYPE_STRUCT kullanın.</span><span class="sxs-lookup"><span data-stu-id="dd117-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
-|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="dd117-143">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-143">COM Interop.</span></span>|  
-|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="dd117-144">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-144">COM Interop.</span></span>|  
-|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="dd117-145">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="dd117-146">BSTR veya ANSIBSTR platformuna bağlı olarak seçin.</span><span class="sxs-lookup"><span data-stu-id="dd117-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
-|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="dd117-147">Burada TRUE -1 ve sıfırsa yanlış bir 2-bayt Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="dd117-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_FUNC`|<span data-ttu-id="dd117-148">Bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="dd117-148">A function pointer.</span></span>|  
-|`NATIVE_TYPE_ASANY`|<span data-ttu-id="dd117-149">Tüm yerel tür referansı.</span><span class="sxs-lookup"><span data-stu-id="dd117-149">A reference to any native type.</span></span>|  
-|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="dd117-150">Belirtilmeyen bir türün üyeleri olan bir dizi referansı.</span><span class="sxs-lookup"><span data-stu-id="dd117-150">A reference to an array with members of an unspecified type.</span></span>|  
-|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="dd117-151">Bir yapı için bir 32 bit tamsayı işaretçi.</span><span class="sxs-lookup"><span data-stu-id="dd117-151">A 32-bit integer pointer to a structure.</span></span>|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="dd117-152">Özel sıralayıcı yerel tür.</span><span class="sxs-lookup"><span data-stu-id="dd117-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="dd117-153">Bu şekilde, aşağıdaki biçimde bir dizeyle izlemelidir: "yerel tür adı/0Custom sıralayıcı türü adı/0Optional tanımlama bilgisi/0" veya "{yerel türü GUID'i} / 0Custom sıralayıcı türü adı/0Optional tanımlama bilgisi/0"</span><span class="sxs-lookup"><span data-stu-id="dd117-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
-|`NATIVE_TYPE_ERROR`|<span data-ttu-id="dd117-154">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="dd117-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="dd117-155">ELEMENT_TYPE_I4 ile bu tür için VT_HRESULT eşler.</span><span class="sxs-lookup"><span data-stu-id="dd117-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
-|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="dd117-156">Yerel `IInspectable` türü.</span><span class="sxs-lookup"><span data-stu-id="dd117-156">A native `IInspectable` type.</span></span>|  
-|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="dd117-157">Yerel `HString`.</span><span class="sxs-lookup"><span data-stu-id="dd117-157">A native `HString`.</span></span>|  
-|`NATIVE_TYPE_MAX`|<span data-ttu-id="dd117-158">Geçersiz bir değer.</span><span class="sxs-lookup"><span data-stu-id="dd117-158">An invalid value.</span></span>|  
+|`NATIVE_TYPE_END`|<span data-ttu-id="5ab69-108">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-108">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VOID`|<span data-ttu-id="5ab69-109">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-109">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="5ab69-110">TRUE sıfır olmayan ve FALSE olduğu bir 4 baytlık Boole değeri sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="5ab69-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_I1`|<span data-ttu-id="5ab69-111">Bir işaretli 8 bit tam sayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-111">A signed 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U1`|<span data-ttu-id="5ab69-112">İmzalanmamış 8 bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-112">An unsigned 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I2`|<span data-ttu-id="5ab69-113">Bir 16 bitlik işaretli tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-113">A signed 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U2`|<span data-ttu-id="5ab69-114">Bir 16 bitlik işaretsiz tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-114">An unsigned 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I4`|<span data-ttu-id="5ab69-115">Bir işaretli 32-bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-115">A signed 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U4`|<span data-ttu-id="5ab69-116">Bir işaretsiz 32-bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-116">An unsigned 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I8`|<span data-ttu-id="5ab69-117">Bir 64-bit işaretli tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-117">A signed 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U8`|<span data-ttu-id="5ab69-118">İşaretsiz 64-bit tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-118">An unsigned 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_R4`|<span data-ttu-id="5ab69-119">4-bayt kayan nokta sayısal bir değer.</span><span class="sxs-lookup"><span data-stu-id="5ab69-119">A 4-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_R8`|<span data-ttu-id="5ab69-120">Bir 8-bayt kayan nokta sayısal değer.</span><span class="sxs-lookup"><span data-stu-id="5ab69-120">An 8-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="5ab69-121">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-121">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="5ab69-122">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-122">Obsolete.</span></span>|  
+|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="5ab69-123">Yönetilen karşılık gelen sayısal bir COM tür <xref:System.Decimal> türü.</span><span class="sxs-lookup"><span data-stu-id="5ab69-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
+|`NATIVE_TYPE_PTR`|<span data-ttu-id="5ab69-124">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-124">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="5ab69-125">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-125">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DATE`|<span data-ttu-id="5ab69-126">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-126">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BSTR`|<span data-ttu-id="5ab69-127">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-127">COM Interop.</span></span>|  
+|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="5ab69-128">LPSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-128">An LPSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="5ab69-129">LPWSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-129">An LPWSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="5ab69-130">LPTSTR dize değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-130">An LPTSTR string value.</span></span>|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="5ab69-131">Sabit, sistem tarafından tanımlanan bir dize değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-131">A fixed, system-defined string value.</span></span>|  
+|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="5ab69-132">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-132">Obsolete.</span></span>|  
+|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="5ab69-133">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-133">COM Interop.</span></span>|  
+|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="5ab69-134">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-134">COM Interop.</span></span>|  
+|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="5ab69-135">Bir yerel yapısı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-135">A native structure value.</span></span>|  
+|`NATIVE_TYPE_INTF`|<span data-ttu-id="5ab69-136">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-136">COM Interop.</span></span>|  
+|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="5ab69-137">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-137">COM Interop.</span></span>|  
+|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="5ab69-138">Bir sabit uzunluklu dizi değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-138">A fixed-length array value.</span></span>|  
+|`NATIVE_TYPE_INT`|<span data-ttu-id="5ab69-139">Bir yerel 16 bitlik işaretli tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-139">A native 16-bit signed integer value.</span></span>|  
+|`NATIVE_TYPE_UINT`|<span data-ttu-id="5ab69-140">Bir yerel 16 bitlik işaretsiz tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-140">A native 16-bit unsigned integer value.</span></span>|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="5ab69-141">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="5ab69-142">NATIVE_TYPE_STRUCT kullanın.</span><span class="sxs-lookup"><span data-stu-id="5ab69-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
+|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="5ab69-143">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-143">COM Interop.</span></span>|  
+|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="5ab69-144">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-144">COM Interop.</span></span>|  
+|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="5ab69-145">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="5ab69-146">BSTR veya ANSIBSTR platforma bağlı olarak seçin.</span><span class="sxs-lookup"><span data-stu-id="5ab69-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
+|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="5ab69-147">Burada doğru -1 ve sıfırsa yanlış bir 2 baytlık Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="5ab69-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_FUNC`|<span data-ttu-id="5ab69-148">Bir işlev işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5ab69-148">A function pointer.</span></span>|  
+|`NATIVE_TYPE_ASANY`|<span data-ttu-id="5ab69-149">Herhangi bir yerel tür referansı.</span><span class="sxs-lookup"><span data-stu-id="5ab69-149">A reference to any native type.</span></span>|  
+|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="5ab69-150">Belirtilmeyen bir türün üyeleri olan bir dizi bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="5ab69-150">A reference to an array with members of an unspecified type.</span></span>|  
+|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="5ab69-151">Yapı bir 32-bit tamsayı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5ab69-151">A 32-bit integer pointer to a structure.</span></span>|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="5ab69-152">Özel bir Sıralayıcı yerel bir tür.</span><span class="sxs-lookup"><span data-stu-id="5ab69-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="5ab69-153">Bu, aşağıdaki biçimde bir dize tarafından izlenen gerekir: "Yerel tür adı/0Custom Sıralayıcı tür adı/0Optional tanımlama bilgisi/0" veya "{yerel türü GUID'i} / 0Custom sıralayıcı türü adı/0Optional tanımlama bilgisi/0"</span><span class="sxs-lookup"><span data-stu-id="5ab69-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
+|`NATIVE_TYPE_ERROR`|<span data-ttu-id="5ab69-154">COM birlikte çalışma.</span><span class="sxs-lookup"><span data-stu-id="5ab69-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="5ab69-155">ELEMENT_TYPE_I4 ile bu tür için VT_HRESULT eşler.</span><span class="sxs-lookup"><span data-stu-id="5ab69-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
+|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="5ab69-156">Yerel `IInspectable` türü.</span><span class="sxs-lookup"><span data-stu-id="5ab69-156">A native `IInspectable` type.</span></span>|  
+|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="5ab69-157">Yerel `HString`.</span><span class="sxs-lookup"><span data-stu-id="5ab69-157">A native `HString`.</span></span>|  
+|`NATIVE_TYPE_MAX`|<span data-ttu-id="5ab69-158">Geçersiz bir değer.</span><span class="sxs-lookup"><span data-stu-id="5ab69-158">An invalid value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dd117-159">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dd117-159">Requirements</span></span>  
- <span data-ttu-id="dd117-160">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd117-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ab69-159">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5ab69-159">Requirements</span></span>  
+ <span data-ttu-id="5ab69-160">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ab69-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd117-161">**Başlık:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="dd117-161">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5ab69-161">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5ab69-161">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="dd117-162">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd117-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5ab69-162">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ab69-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd117-163">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dd117-163">See Also</span></span>  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [<span data-ttu-id="dd117-164">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="dd117-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5ab69-163">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5ab69-163">See also</span></span>
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [<span data-ttu-id="5ab69-164">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="5ab69-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

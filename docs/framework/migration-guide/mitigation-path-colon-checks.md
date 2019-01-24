@@ -1,30 +1,30 @@
 ---
-title: 'Azaltma: Yolu iki nokta üst üste denetimleri'
+title: 'Azaltma: Yol iki nokta üst üste denetimleri'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a54220a90a5120d13c89232d30ab40140c324097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741bb73280d9e81fc1865867152ab1243e9dd53c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494684"
 ---
-# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="e5af4-102">Azaltma: Yolu iki nokta üst üste denetimleri</span><span class="sxs-lookup"><span data-stu-id="e5af4-102">Mitigation: Path Colon Checks</span></span>
-<span data-ttu-id="e5af4-103">Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], daha önce desteklenmeyen yolları (her ikisi de uzunluğu ve biçim açısından) desteklemek için yapılan değişiklik sayısı.</span><span class="sxs-lookup"><span data-stu-id="e5af4-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="e5af4-104">Özellikle, uygun sürücü ayırıcı sözdizimi (iki nokta üst üste) denetler daha doğru yapıldı.</span><span class="sxs-lookup"><span data-stu-id="e5af4-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
+# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="31e45-102">Azaltma: Yol iki nokta üst üste denetimleri</span><span class="sxs-lookup"><span data-stu-id="31e45-102">Mitigation: Path Colon Checks</span></span>
+<span data-ttu-id="31e45-103">Hedefleyen uygulamalar ile başlayan [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], daha önce desteklenmeyen yolları (hem de uzunluğu ve biçim açısından) desteklemek için bir dizi değişiklik yapıldı.</span><span class="sxs-lookup"><span data-stu-id="31e45-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="31e45-104">Özellikle, denetimleri uygun sürücü ayırıcı sözdizimi (iki nokta üst üste) için daha doğru yapıldı.</span><span class="sxs-lookup"><span data-stu-id="31e45-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="e5af4-105">Etki</span><span class="sxs-lookup"><span data-stu-id="e5af4-105">Impact</span></span>  
- <span data-ttu-id="e5af4-106">Bu değişiklikler bazı URI yollarını engellemeye <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> daha önce desteklenen yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="e5af4-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
+## <a name="impact"></a><span data-ttu-id="31e45-105">Etki</span><span class="sxs-lookup"><span data-stu-id="31e45-105">Impact</span></span>  
+ <span data-ttu-id="31e45-106">Bazı URI yollarını bu değişiklikleri engellemeye <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> daha önce desteklenen yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="31e45-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="e5af4-107">Azaltma</span><span class="sxs-lookup"><span data-stu-id="e5af4-107">Mitigation</span></span>  
- <span data-ttu-id="e5af4-108">Artık tarafından desteklenen daha önce kabul edilebilir bir yolu sorunu gidermek için <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemleri, aşağıdakileri yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="e5af4-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="31e45-107">Azaltma</span><span class="sxs-lookup"><span data-stu-id="31e45-107">Mitigation</span></span>  
+ <span data-ttu-id="31e45-108">Tarafından artık desteklenmeyen daha önce kabul edilebilir bir yolu, sorunu gidermek için <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemleri, aşağıdakileri yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="31e45-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
   
--   <span data-ttu-id="e5af4-109">El ile bir URL'den düzeni kaldırın.</span><span class="sxs-lookup"><span data-stu-id="e5af4-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="e5af4-110">Örneğin, kaldırma `file://` bir URL'den.</span><span class="sxs-lookup"><span data-stu-id="e5af4-110">For example, remove `file://` from a URL.</span></span>  
+-   <span data-ttu-id="31e45-109">El ile bir URL'den düzeni kaldırın.</span><span class="sxs-lookup"><span data-stu-id="31e45-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="31e45-110">Örneğin, kaldırma `file://` bir URL'den.</span><span class="sxs-lookup"><span data-stu-id="31e45-110">For example, remove `file://` from a URL.</span></span>  
   
--   <span data-ttu-id="e5af4-111">URI geçirmek bir <xref:System.Uri> oluşturucusu ve değerini almak <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="e5af4-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
+-   <span data-ttu-id="31e45-111">URI başarılı bir <xref:System.Uri> oluşturucusu ve değerini alma <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="31e45-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
   
--   <span data-ttu-id="e5af4-112">Yeni yol normalleştirme dışında ayarlayarak opt `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> geçiş `true`.</span><span class="sxs-lookup"><span data-stu-id="e5af4-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
+-   <span data-ttu-id="31e45-112">Yeni yol normalleştirme dışında ayarlayarak iyileştirilmiş `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> geçin `true`.</span><span class="sxs-lookup"><span data-stu-id="31e45-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
   
     ```xml  
     <runtime>  
@@ -32,5 +32,5 @@ ms.locfileid: "33387386"
     </runtime>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5af4-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e5af4-113">See Also</span></span>  
- [<span data-ttu-id="e5af4-114">Yeniden Hedefleme Değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="e5af4-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="31e45-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="31e45-113">See also</span></span>
+- [<span data-ttu-id="31e45-114">Yeniden Hedefleme Değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="31e45-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

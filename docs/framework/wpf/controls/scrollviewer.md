@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671986"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="ab470-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ab470-102">ScrollViewer</span></span>
-<span data-ttu-id="ab470-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi; burada görüntülerle içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölge oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ab470-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="6eea6-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6eea6-102">ScrollViewer</span></span>
+<span data-ttu-id="6eea6-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6eea6-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ab470-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ab470-104">In This Section</span></span>  
- [<span data-ttu-id="ab470-105">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ab470-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="ab470-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ab470-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6eea6-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6eea6-104">In This Section</span></span>  
+ [<span data-ttu-id="6eea6-105">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6eea6-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [<span data-ttu-id="6eea6-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6eea6-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ab470-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ab470-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6eea6-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6eea6-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="ab470-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ab470-108">See Also</span></span>  
- [<span data-ttu-id="ab470-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ab470-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="ab470-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="ab470-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="6eea6-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6eea6-108">See also</span></span>
+- [<span data-ttu-id="6eea6-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6eea6-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="6eea6-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="6eea6-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

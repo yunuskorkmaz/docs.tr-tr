@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 495089ca33df3b36656da149da45019c30b81d39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618818"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="edfa1-102">ISymUnmanagedWriter::SetScopeRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="edfa1-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="edfa1-103">Belirtilen sözcük kapsamı için uzaklık aralığını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="edfa1-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="edfa1-104">Kapsam yeni geçerli kapsam haline gelir ve kapsamları yığına gönderilir.</span><span class="sxs-lookup"><span data-stu-id="edfa1-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="edfa1-105">Kapsamları bir hiyerarşi oluşturması gerekir.</span><span class="sxs-lookup"><span data-stu-id="edfa1-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="edfa1-106">Eşdüzey çakışma izin verilmiyor.</span><span class="sxs-lookup"><span data-stu-id="edfa1-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="e99cf-102">ISymUnmanagedWriter::SetScopeRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e99cf-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="e99cf-103">Sözcük Belirtilen kapsam için uzaklık aralığı tanımlar.</span><span class="sxs-lookup"><span data-stu-id="e99cf-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="e99cf-104">Kapsam, yeni geçerli kapsam haline gelir ve kapsamlarının bir yığın itilir.</span><span class="sxs-lookup"><span data-stu-id="e99cf-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="e99cf-105">Kapsamları bir hiyerarşi oluşturması gerekir.</span><span class="sxs-lookup"><span data-stu-id="e99cf-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="e99cf-106">Eşdüzey çakıştırmayı izin verilmez.</span><span class="sxs-lookup"><span data-stu-id="e99cf-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edfa1-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="edfa1-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e99cf-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e99cf-107">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope(  
@@ -36,24 +36,24 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="edfa1-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="edfa1-108">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e99cf-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e99cf-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="edfa1-109">[in] Kapsam için kapsam tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="edfa1-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="e99cf-109">[in] Kapsam için kapsam tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="e99cf-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="edfa1-110">[in] Başlangıçtan itibaren sözcük kapsamdaki ilk yönergenin yönteminin bayt uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="edfa1-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="e99cf-110">[in] Yöntemin ilk yönergesinin baştan sözlü kapsamda bayt cinsinden uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="e99cf-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="edfa1-111">[in] Başlangıçtan itibaren sözcük kapsamdaki son yönergenin yönteminin bayt uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="edfa1-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="e99cf-111">[in] Başlangıçtan itibaren sözlü kapsamda son yönergenin yönteminin bayt cinsinden uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="e99cf-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="edfa1-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="edfa1-112">Return Value</span></span>  
- <span data-ttu-id="edfa1-113">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="edfa1-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e99cf-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e99cf-112">Return Value</span></span>  
+ <span data-ttu-id="e99cf-113">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="e99cf-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="edfa1-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="edfa1-114">Remarks</span></span>  
- <span data-ttu-id="edfa1-115">[Isymunmanagedwriter::openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) ile kullanılan donuk kapsam tanımlayıcıyı döndürür `ISymUnmanagedWriter::SetScopeRange` bir kapsamını tanımlamak için başlangıç ve bitiş uzaklığı daha sonra.</span><span class="sxs-lookup"><span data-stu-id="edfa1-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="edfa1-116">Uzaklık bu durumda, geçirilen `ISymUnmanagedWriter::OpenScope` ve [Isymunmanagedwriter::closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="edfa1-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="edfa1-117">Kapsam yalnızca geçerli yönteminde geçerli tanımlayıcılardır.</span><span class="sxs-lookup"><span data-stu-id="edfa1-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e99cf-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e99cf-114">Remarks</span></span>  
+ <span data-ttu-id="e99cf-115">[Isymunmanagedwriter::openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) ile kullanılabilecek donuk kapsam tanımlayıcıyı döndürür `ISymUnmanagedWriter::SetScopeRange` bir kapsamı tanımlamak için başlangıç ve bitiş uzaklığı daha sonra.</span><span class="sxs-lookup"><span data-stu-id="e99cf-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="e99cf-116">Uzaklık bu durumda, geçirilen `ISymUnmanagedWriter::OpenScope` ve [Isymunmanagedwriter::closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="e99cf-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="e99cf-117">Kapsam tanımlayıcıları, yalnızca geçerli yöntemde geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="e99cf-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="edfa1-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="edfa1-118">Requirements</span></span>  
- <span data-ttu-id="edfa1-119">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="edfa1-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e99cf-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e99cf-118">Requirements</span></span>  
+ <span data-ttu-id="e99cf-119">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e99cf-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edfa1-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="edfa1-120">See Also</span></span>  
- [<span data-ttu-id="edfa1-121">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="edfa1-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e99cf-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e99cf-120">See also</span></span>
+- [<span data-ttu-id="e99cf-121">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e99cf-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
