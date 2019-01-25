@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3579020ce268cd59a091e685fae2e97b3191c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b8211e46b1a46d15befba17a52cd626d91f95fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616790"
 ---
-# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="1abca-102">ICorProfilerInfo::GetAssemblyInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="1abca-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
-<span data-ttu-id="1abca-103">Bir derleme kimliği kabul eder ve derlemenin adını ve kendi bildirim modülünden Kimliğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="1abca-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
+# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="32cdb-102">ICorProfilerInfo::GetAssemblyInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="32cdb-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
+<span data-ttu-id="32cdb-103">Bir derleme kimliği kabul eder ve derlemenin adı ve bildirim, modül kimliği döndürür.</span><span class="sxs-lookup"><span data-stu-id="32cdb-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1abca-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1abca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32cdb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="32cdb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyInfo(  
@@ -40,40 +40,40 @@ HRESULT GetAssemblyInfo(
     [out] ModuleID    *pModuleId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1abca-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1abca-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="32cdb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="32cdb-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="1abca-106">[in] Derleme tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="1abca-106">[in] The identifier of the assembly.</span></span>  
+ <span data-ttu-id="32cdb-106">[in] Bütünleştirilmiş kod tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="32cdb-106">[in] The identifier of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="1abca-107">[in] Karakter cinsinden uzunluğu, `szName`.</span><span class="sxs-lookup"><span data-stu-id="1abca-107">[in] The length, in characters, of `szName`.</span></span>  
+ <span data-ttu-id="32cdb-107">[in] Karakter cinsinden uzunluğu, `szName`.</span><span class="sxs-lookup"><span data-stu-id="32cdb-107">[in] The length, in characters, of `szName`.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="1abca-108">[out] Derlemenin adı toplam karakter uzunluğu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1abca-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
+ <span data-ttu-id="32cdb-108">[out] Derleme adının toplam karakter uzunluğu bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="32cdb-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
   
  `szName`  
- <span data-ttu-id="1abca-109">[out] Çağıran tarafından sağlanan geniş karakter arabellek.</span><span class="sxs-lookup"><span data-stu-id="1abca-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="1abca-110">İşlevi döndüğünde, derleme adı içerir.</span><span class="sxs-lookup"><span data-stu-id="1abca-110">When the function returns, it will contain the assembly's name.</span></span>  
+ <span data-ttu-id="32cdb-109">[out] Bir çağıran tarafından sağlanan geniş karakter arabelleği.</span><span class="sxs-lookup"><span data-stu-id="32cdb-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="32cdb-110">İşlevi döndüğünde, derlemenin adını içerir.</span><span class="sxs-lookup"><span data-stu-id="32cdb-110">When the function returns, it will contain the assembly's name.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="1abca-111">[out] Derleme içeren uygulama etki alanı kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1abca-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
+ <span data-ttu-id="32cdb-111">[out] Derlemeyi içeren uygulama etki alanı kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="32cdb-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="1abca-112">[out] Derleme bildirimi modülünün kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1abca-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
+ <span data-ttu-id="32cdb-112">[out] Derlemenin bildirimi modül kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="32cdb-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1abca-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1abca-113">Remarks</span></span>  
- <span data-ttu-id="1abca-114">Bu yöntem döndükten sonra doğrulamanız gerekir `szName` arabellek derlemenin tam adını içerecek kadar büyük.</span><span class="sxs-lookup"><span data-stu-id="1abca-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="1abca-115">Bunu yapmak için değeri karşılaştırın, `pcchName` değeriyle işaret `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="1abca-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="1abca-116">Varsa `pcchName` işaret eden daha büyük bir değere `cchName`, daha geniş bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, büyük boyutu ve çağrı `GetAssemblyInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="1abca-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32cdb-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="32cdb-113">Remarks</span></span>  
+ <span data-ttu-id="32cdb-114">Bu yöntemin dönüşünün ardından doğrulamanız gerekir `szName` arabellek bütünleştirilmiş kodun tam adını içerecek şekilde büyük.</span><span class="sxs-lookup"><span data-stu-id="32cdb-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="32cdb-115">Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="32cdb-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="32cdb-116">Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetAssemblyInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="32cdb-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
   
- <span data-ttu-id="1abca-117">Alternatif olarak, ilk çağırabilirsiniz `GetAssemblyInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="1abca-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="1abca-118">Ardından, döndürülen değer göre arabellek boyutu ayarlayabilirsiniz `pcchName` ve arama `GetAssemblyInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="1abca-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
+ <span data-ttu-id="32cdb-117">Alternatif olarak, ilk çağırabilirsiniz `GetAssemblyInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="32cdb-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="32cdb-118">Ardından döndürülen değere göre arabellek boyutu ayarlayabileceğiniz `pcchName` ve çağrı `GetAssemblyInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="32cdb-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1abca-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1abca-119">Requirements</span></span>  
- <span data-ttu-id="1abca-120">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1abca-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32cdb-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="32cdb-119">Requirements</span></span>  
+ <span data-ttu-id="32cdb-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32cdb-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1abca-121">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1abca-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="32cdb-121">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="32cdb-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1abca-122">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1abca-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32cdb-122">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32cdb-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1abca-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1abca-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32cdb-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32cdb-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1abca-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1abca-124">See Also</span></span>  
- [<span data-ttu-id="1abca-125">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1abca-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="1abca-126">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="1abca-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="1abca-127">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="1abca-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="32cdb-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="32cdb-124">See also</span></span>
+- [<span data-ttu-id="32cdb-125">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32cdb-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="32cdb-126">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="32cdb-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="32cdb-127">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="32cdb-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

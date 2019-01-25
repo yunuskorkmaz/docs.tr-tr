@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Panelinin Arka Planını Ayarlama'
+title: 'Nasıl yapılır: Bir Windows Forms panelinin arka planını ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: ff0c748cfb7b38c41b2ede211aed7bf6e6f68544
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636085"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="b806e-102">Nasıl yapılır: Windows Forms Panelinin Arka Planını Ayarlama</span><span class="sxs-lookup"><span data-stu-id="b806e-102">How to: Set the Background of a Windows Forms Panel</span></span>
-<span data-ttu-id="b806e-103">Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi ve arka plan resmini görüntüleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b806e-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="b806e-104"><xref:System.Windows.Forms.Control.BackColor%2A> Özelliği ayarlar etiketleri ve radyo düğmeleri gibi kapsanan denetimler için arka plan rengi.</span><span class="sxs-lookup"><span data-stu-id="b806e-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="b806e-105">Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçim, tüm panel doldurur.</span><span class="sxs-lookup"><span data-stu-id="b806e-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="b806e-106">Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, görüntünün içerdiği denetimleri görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="b806e-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="c3aab-102">Nasıl yapılır: Bir Windows Forms panelinin arka planını ayarlama</span><span class="sxs-lookup"><span data-stu-id="c3aab-102">How to: Set the Background of a Windows Forms Panel</span></span>
+<span data-ttu-id="c3aab-103">Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem de arka plan görüntüsü görüntüleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c3aab-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="c3aab-104"><xref:System.Windows.Forms.Control.BackColor%2A> Özelliği etiketleri ve radyo düğmeleri gibi içerdiği denetimlerle arka plan rengini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="c3aab-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="c3aab-105">Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi tüm panel doldurur.</span><span class="sxs-lookup"><span data-stu-id="c3aab-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="c3aab-106">Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, görüntünün içerdiği denetimlerle görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c3aab-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
   
-### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="b806e-107">Arka plan program aracılığıyla ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="b806e-107">To set the background programmatically</span></span>  
+### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="c3aab-107">Arka plan program üzerinden ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="c3aab-107">To set the background programmatically</span></span>  
   
-1.  <span data-ttu-id="b806e-108">Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackColor%2A> türünde bir değer özelliğine <xref:System.Drawing.Color?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b806e-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
+1.  <span data-ttu-id="c3aab-108">Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackColor%2A> türünde bir değer özelliğini <xref:System.Drawing.Color?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3aab-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ ms.locfileid: "33534793"
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  <span data-ttu-id="b806e-109">Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b806e-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
+2.  <span data-ttu-id="c3aab-109">Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="c3aab-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
   
     ```vb  
     ' You should replace the bolded image   
@@ -67,8 +67,8 @@ ms.locfileid: "33534793"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b806e-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b806e-110">See Also</span></span>  
- <xref:System.Windows.Forms.Control.BackColor%2A>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [<span data-ttu-id="b806e-111">Panel Denetimi</span><span class="sxs-lookup"><span data-stu-id="b806e-111">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [<span data-ttu-id="b806e-112">Panel Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b806e-112">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c3aab-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3aab-110">See also</span></span>
+- <xref:System.Windows.Forms.Control.BackColor%2A>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [<span data-ttu-id="c3aab-111">Panel Denetimi</span><span class="sxs-lookup"><span data-stu-id="c3aab-111">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [<span data-ttu-id="c3aab-112">Panel Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c3aab-112">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)

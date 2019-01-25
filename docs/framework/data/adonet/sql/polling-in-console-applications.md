@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 008cf6f0bdb6bb4c459ee97f6cc337b6491a5cb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702294"
 ---
-# <a name="polling-in-console-applications"></a><span data-ttu-id="9f54e-102">Konsol uygulamalarında yoklama</span><span class="sxs-lookup"><span data-stu-id="9f54e-102">Polling in Console Applications</span></span>
-<span data-ttu-id="9f54e-103">ADO.NET içinde zaman uyumsuz işlemler, başka bir iş parçacığında başka görevler gerçekleştirilirken bir iş parçacığı üzerinde harcanan zamanı ortadan kaldırır veritabanı işlemleri başlatmak izin verin.</span><span class="sxs-lookup"><span data-stu-id="9f54e-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="9f54e-104">Çoğu senaryoda, ancak veritabanı işlemi tamamlanana kadar burada, uygulamanızın devam etmemelisiniz bir noktası yukarısına.</span><span class="sxs-lookup"><span data-stu-id="9f54e-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="9f54e-105">Bu gibi durumlarda veya işlem tamamlanıp tamamlanmadığını belirlemek için zaman uyumsuz işlem yoklaması kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="9f54e-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="dd568-102">Konsol uygulamalarında yoklama</span><span class="sxs-lookup"><span data-stu-id="dd568-102">Polling in Console Applications</span></span>
+<span data-ttu-id="dd568-103">ADO.NET içinde zaman uyumsuz işlemler, başka bir iş parçacığında başka görevler gerçekleştirilirken bir iş parçacığı üzerinde harcanan zamanı ortadan kaldırır veritabanı işlemleri başlatmak izin verin.</span><span class="sxs-lookup"><span data-stu-id="dd568-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="dd568-104">Çoğu senaryoda, ancak veritabanı işlemi tamamlanana kadar burada, uygulamanızın devam etmemelisiniz bir noktası yukarısına.</span><span class="sxs-lookup"><span data-stu-id="dd568-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="dd568-105">Bu gibi durumlarda veya işlem tamamlanıp tamamlanmadığını belirlemek için zaman uyumsuz işlem yoklaması kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="dd568-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- <span data-ttu-id="9f54e-106">Kullanabileceğiniz <xref:System.IAsyncResult.IsCompleted%2A> işlemi olup olmadığını tamamlandı bulmak için özellik.</span><span class="sxs-lookup"><span data-stu-id="9f54e-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
+ <span data-ttu-id="dd568-106">Kullanabileceğiniz <xref:System.IAsyncResult.IsCompleted%2A> işlemi olup olmadığını tamamlandı bulmak için özellik.</span><span class="sxs-lookup"><span data-stu-id="dd568-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9f54e-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="9f54e-107">Example</span></span>  
- <span data-ttu-id="9f54e-108">Aşağıdaki konsol uygulaması içindeki veri güncelleştirmeleri **AdventureWorks** zaman uyumsuz olarak işini yapmak, örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="9f54e-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="9f54e-109">Uzun süre çalışan işlem öykünmek için bu örnek komut metni WAITFOR deyimi ekler.</span><span class="sxs-lookup"><span data-stu-id="9f54e-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="9f54e-110">Genellikle daha yavaş çalışmasına komutlarınızı yapmak denemek, ancak bunun yapılması, bu durumda, zaman uyumsuz davranışı sergiler kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="9f54e-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="dd568-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd568-107">Example</span></span>  
+ <span data-ttu-id="dd568-108">Aşağıdaki konsol uygulaması içindeki veri güncelleştirmeleri **AdventureWorks** zaman uyumsuz olarak işini yapmak, örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="dd568-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="dd568-109">Uzun süre çalışan işlem öykünmek için bu örnek komut metni WAITFOR deyimi ekler.</span><span class="sxs-lookup"><span data-stu-id="dd568-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="dd568-110">Genellikle daha yavaş çalışmasına komutlarınızı yapmak denemek, ancak bunun yapılması, bu durumda, zaman uyumsuz davranışı sergiler kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="dd568-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
 ```vb  
 Imports System  
@@ -190,6 +190,6 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9f54e-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9f54e-111">See Also</span></span>  
- [<span data-ttu-id="9f54e-112">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="9f54e-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [<span data-ttu-id="9f54e-113">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="9f54e-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="dd568-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd568-111">See also</span></span>
+- [<span data-ttu-id="dd568-112">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="dd568-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [<span data-ttu-id="dd568-113">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="dd568-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
