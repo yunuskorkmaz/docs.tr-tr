@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi Dosyaları Kaydetme'
+title: 'Nasıl yapılır: İle Windows Forms RichTextBox denetimi dosyaları kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c50b2f3309c1f811b29e824327a709e2cc4bd791
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539785"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi Dosyaları Kaydetme
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim birkaç biçimlerinden birinde görüntülediği bilgi yazabilirsiniz:  
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: İle Windows Forms RichTextBox denetimi dosyaları kaydetme
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi olarak bulunan biçimlerden birini görüntüler bilgileri yazabilirsiniz:  
   
 -   Düz metin  
   
@@ -31,21 +31,21 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim birkaç biçimleri
   
 -   Zengin metin biçimi (RTF)  
   
--   OLE nesneleri yerine boşluklu RTF  
+-   OLE nesneleri yerine boşluk RTF  
   
--   OLE nesneleri metinsel gösterimini düz metin  
+-   Düz metin değerinin metinsel bir gösterimini OLE nesneleri ile  
   
- Bir dosyayı kaydetmek için arama <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemi. Aynı zamanda **SaveFile** bir akış için verileri kaydetmek için yöntem. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+ Bir dosyayı kaydetmek için çağrı <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemi. Ayrıca **SaveFile** bir akışa veri kaydetmek için yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Denetimin içeriğini bir dosyaya kaydetmek için  
   
-1.  Kaydedilecek dosyasının yolunu belirler.  
+1.  Kaydedilecek dosyanın yolunu belirleyin.  
   
-     Gerçek dünya uygulamada Bunu yapmak için genellikle kullanırsınız <xref:System.Windows.Forms.SaveFileDialog> bileşeni. Genel bir bakış için bkz: [SaveFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     Bir gerçek yaşam uygulaması içinde bunun için genellikle kullanacağınız <xref:System.Windows.Forms.SaveFileDialog> bileşeni. Genel bakış için bkz. [SaveFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
   
-2.  Çağrı <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemi <xref:System.Windows.Forms.RichTextBox> denetim, kaydedin ve isteğe bağlı olarak bir dosya türünü belirtme. Yalnızca bağımsız değişkeni olarak bir dosya adıyla yöntemini çağırırsanız, dosyayı RTF olarak kaydedilir. Başka bir dosya türü belirtmek için değerini yöntemi çağırma <xref:System.Windows.Forms.RichTextBoxStreamType> numaralandırması ikinci bağımsız değişkeni olarak.  
+2.  Çağrı <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemi <xref:System.Windows.Forms.RichTextBox> kaydedin ve isteğe bağlı olarak bir dosya türünü belirten bir denetim. Bir dosya adı yalnızca bağımsız değişken olarak yöntemi çağırın, dosyanın RTF olarak kaydedilir. Başka bir dosya türü belirtmek için bir değerini yöntemi çağırın <xref:System.Windows.Forms.RichTextBoxStreamType> ikinci bağımsız değişken olarak numaralandırması.  
   
-     Aşağıdaki örnekte yolunu ayarlamak için zengin metin dosyasının konumunu **Belgelerim** klasör. Windows işletim sistemi çalıştıran bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü bu konumu kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri kullanıcılarla sağlar. Aşağıdaki örnek bir formla varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi zaten eklendi.  
+     Aşağıdaki örnekte, yolunu ayarlamak için zengin metin dosyasının konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar sağlar. Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.RichTextBox> denetim zaten eklendi.  
   
     ```vb  
     Public Sub SaveFile()  
@@ -85,10 +85,10 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim birkaç biçimleri
     ```  
   
     > [!IMPORTANT]
-    >  Bu örnek, dosyanın zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturmak gerekirse, bu uygulama için klasör oluşturma erişimi olmalıdır. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın daha düşük ayrıcalık yalnızca yazma erişimi gerekir. Mümkünse, dağıtım sırasında dosyayı oluşturmak ve yalnızca tek bir dosya için okuma yetkisi vermek yerine, erişim için bir klasör oluşturmak için daha güvenlidir. Ayrıca, kök klasöre veya Program dosyaları klasörü kullanıcı klasörleri verileri yazmak amacıyla daha güvenlidir.  
+    >  Bu örnek, bir dosya zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturması gerekiyorsa, bu uygulama için klasör oluşturma erişmesi gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın daha az ayrıcalıkla yalnızca yazma erişimi gerekir. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca tek bir dosyayı okuma yetkisi vermek yerine erişim için bir klasör oluşturmak için daha güvenlidir. Ayrıca, kök klasöre veya Program dosyaları klasörüne kullanıcı klasörleri verileri yazmak amacıyla daha güvenlidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

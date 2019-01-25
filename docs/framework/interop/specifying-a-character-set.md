@@ -12,61 +12,61 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1016a0c63a85919764271e01771ff8192341725c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45810390ced8584ea7b37908a9e4af8d3da73f34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549856"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
-<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alanı denetimleri dize sıralama ve nasıl platform çağırma bulur işlevi DLL adlarında belirler. Bu konuda iki davranışları açıklanmaktadır.  
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan denetimleri dize sıralama ve platform çağırma DLL'de bulur işlev adlarını nasıl belirler. Bu konuda, hem davranışları açıklanmaktadır.  
   
- Bazı API'leri iki sürümü dize bağımsız değişkenler almayan işlevleri dışarı aktarma: dar (ANSI) ve geniş (Unicode). Win32 API örneği için aşağıdaki giriş noktası adları içeren **MessageBox** işlevi:  
+ Bazı API'leri iki dize bağımsız değişkenler almayan işlevleri sürümü dışarı aktar: (ANSI) dar ve geniş (Unicode). Win32 API örneği için aşağıdaki giriş noktası adları içeren **MessageBox** işlevi:  
   
 -   **MessageBoxA**  
   
-     1-bayt karakter ANSI biçimlendirme, giriş noktası adının sonuna bir "A" ayırt edilen sağlar. Çağrılar **MessageBoxA** , Windows 95 ve Windows 98 platformlarında ortak olduğu gibi ANSI dizelerini sıralama her zaman biçimlendirme.  
+     1-bayt karakter ANSI biçimlendirme, "A" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxA** , Windows 95 ve Windows 98 platformlarında yaygın olarak bulunur, ANSI dizelerini sıralama her zaman biçimlendirme.  
   
 -   **MessageBoxW**  
   
-     2-bayt karakter Unicode biçimlendirme, "giriş noktası adına eklenen W" ayırt edilen sağlar. Çağrılar **MessageBoxW** her zaman Unicode biçiminde Windows NT, Windows 2000 ve Windows XP platformlarda ortak olarak dizeleri sıralama.  
+     2-bayt karakter Unicode biçimlendirme, "W" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxW** her zaman Windows NT, Windows 2000 ve Windows XP platformlarında yaygın olduğu gibi Unicode biçiminde dizeleri sıralama.  
   
-## <a name="string-marshaling-and-name-matching"></a>Dize sıralama ve adıyla eşleşen  
+## <a name="string-marshaling-and-name-matching"></a>Dize sıralama ve adı ile eşleşen  
  **CharSet** alan aşağıdaki değerleri kabul eder:  
   
  **CharSet.Ansi** (varsayılan değer)  
   
--   Hazırlama dize  
+-   Dize sıralama  
   
-     Platform çağırma yönetilen biçimlerini (Unicode) sıraladığında dizelerden ANSI biçimine.  
-  
--   Ad eşleştirme  
-  
-     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır **true**, varsayılan olarak olarak [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
-  
-     Zaman **ExactSpelling** alandır **false**, C++ ve C# varsayılan olarak olduğu gibi platform çağırma unmangled arar alias ilk (**MessageBox**), ardından Karıştırılmış Ad ( **MessageBoxA**) unmangled diğer bulunmazsa. ANSI adıyla eşleşen davranış Unicode adıyla eşleşen davranışından farklıdır dikkat edin.  
-  
- **CharSet.Unicode**  
-  
--   Hazırlama dize  
-  
-     Platform çağırma yönetilen biçimlerini (Unicode) kopyaları dizelerden Unicode biçimine.  
+     Platform çağırma sıraladığında dizeleri ANSI biçimine yönetilen biçimlerini (Unicode).  
   
 -   Ad eşleştirme  
   
-     Zaman **ExactSpelling** alandır **true**, varsayılan olarak olarak [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
+     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır **true**, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
   
-     Zaman **ExactSpelling** alandır **false**, C++ ve C# varsayılan olarak olduğu gibi platform çağırma karıştırılmış ad arar ilk (**MessageBoxW**), ardından unmangled diğer adı (**MessageBox**) karıştırılmış adı bulunmazsa. Unicode adıyla eşleşen davranış ANSI adıyla eşleşen davranışından farklıdır dikkat edin.  
+     Zaman **ExactSpelling** alandır **false**, C++'da varsayılan olarak ve C#, platform çağırma unmangled diğer arar ilk (**MessageBox**), sonra Karıştırılmış adı (**MessageBoxA**) unmangled diğer bulunamaması durumunda. ANSI adı eşleştirme davranışı Unicode adıyla eşleşen davranış farklı olduğuna dikkat edin.  
+  
+ **DllImport.charset'i**  
+  
+-   Dize sıralama  
+  
+     Platform çağırma yönetilen biçimlerini (Unicode) kopyaları dizeleri Unicode biçiminde.  
+  
+-   Ad eşleştirme  
+  
+     Zaman **ExactSpelling** alandır **true**, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
+  
+     Zaman **ExactSpelling** alandır **false**, C++'da varsayılan olarak ve C#, platform çağırma karıştırılmış ad arar ilk (**MessageBoxW**), sonra unmangled diğer ad (**MessageBox**) karıştırılmış adı bulunmazsa. Unicode adı eşleştirme davranışı ANSI adıyla eşleşen davranış farklı olduğuna dikkat edin.  
   
  **CharSet.Auto**  
   
--   Platform çağırma hedef platformu temel alarak ANSI veya Unicode biçimleri çalışma zamanında arasında seçer.  
+-   Platform çağırma arasında ANSI ve Unicode biçimlerini hedef platformunu temel alan çalışma zamanında seçer.  
   
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic'te bir karakter kümesi belirtme  
- Aşağıdaki örnek bildirir **MessageBox** işlevi üç kez, her zaman farklı karakter kümesi davranışına sahip. Ekleyerek Visual Basic'te karakter kümesi davranış belirtebilirsiniz **ANSI**, **Unicode**, veya **otomatik** bildirim deyiminin anahtar sözcük.  
+ Aşağıdaki örnek bildirir **MessageBox** işlevi üç kez, her seferinde farklı karakter kümesi davranış. Karakter kümesi davranış ekleyerek Visual Basic'te belirtebilirsiniz **ANSI**, **Unicode**, veya **otomatik** bildirim deyiminin anahtar sözcük.  
   
- Karakter kümesi anahtar sözcüğü ilk bildirimi deyiminde gerçekleştirilir gibi atlarsanız <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan ANSI karakter kümesini varsayılanlara. Örnek ikinci ve üçüncü deyimlerinde açıkça karakter olan bir anahtar sözcük kümesi belirtin.  
+ İlk bildirim deyiminde olduğu gibi karakter kümesi anahtar sözcüğü atlarsanız <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> ANSI karakter kümesi için varsayılan alan. Örnek ikinci ve üçüncü ifadeler karakter kümesi anahtar sözcüğü ile açıkça belirtin.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -86,8 +86,8 @@ Public Class Win32
 End Class  
 ```  
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>C# ve C++ karakter kümesi belirtme  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan temel karakter ANSI veya Unicode olarak kümesini tanımlar. Dize bağımsız değişkeni bir yönteme nasıl sıralanmalıdır denetimleri karakter kümesi. Karakter kümesini belirtmek için aşağıdaki biçimlerden birini kullanın:  
+## <a name="specifying-a-character-set-in-c-and-c"></a>İçinde bir karakter kümesi belirtme C# ve C++  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan temel karakter ANSI veya Unicode olarak kümesini tanımlar. Karakter dizesi bağımsız değişkenleri bir yönteme nasıl sıralanması gerektiğini denetimleri ayarlayın. Karakter kümesi belirtmek için aşağıdaki biçimlerden birini kullanın:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -101,7 +101,7 @@ End Class
 [DllImport("dllname", CharSet=CharSet::Auto)]  
 ```  
   
- Aşağıdaki örnekte, üç yönetilen tanımlarını gösterir **MessageBox** işlevi öznitelikli bir karakter kümesini belirtmek için. Kendi atlandığını tarafından ilk tanımında **CharSet** alan ANSI karakter kümesini varsayılanlara.  
+ Aşağıdaki örnek, üç yönetilen tanımını gösterir **MessageBox** işleve atfedilen karakter kümesi belirtmek için. İlk tanımında, atlama tarafından **CharSet** ANSI karakter kümesi için varsayılan alan.  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -140,8 +140,8 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

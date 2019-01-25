@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)'
+title: 'Nasıl yapılır: Bir Lambda ifadesi (Visual Basic) oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492429"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Bir Lambda ifadesi (Visual Basic) oluşturma
 A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifadesi, bir temsilci türü geçerli olduğu her yerde kullanılabilir.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Tek satırlı lambda ifadesi işlevi oluşturmak için  
@@ -65,7 +65,7 @@ A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifad
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3.  ENTER tuşuna basın. `End Function` Deyimi otomatik olarak eklenir.  
+3.  Press ENTER. `End Function` Deyimi otomatik olarak eklenir.  
   
 4.  İşlev gövdesi içinde bir ifade oluşturun ve değeri döndürmek için aşağıdaki kodu ekleyin. Kullanmadığınız bir `As` dönüş türü belirtmek için yan tümcesi.  
   
@@ -85,7 +85,7 @@ A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifad
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  ENTER tuşuna basın. `End Sub` Deyimi otomatik olarak eklenir.  
+3.  Press ENTER. `End Sub` Deyimi otomatik olarak eklenir.  
   
 4.  İşlev gövdesi içinde alt yordam çağrıldığında yürütmek için aşağıdaki kodu ekleyin.  
   
@@ -104,12 +104,12 @@ A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifad
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq.Enumerable>  
- [Lambda İfadeleri](./lambda-expressions.md)  
- [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Nasıl yapılır: Visual Basic'de başka bir yordama Visual Basic'te](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Linq.Enumerable>
+- [Lambda İfadeleri](./lambda-expressions.md)
+- [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirin](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

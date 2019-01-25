@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543454"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve karşılaştırma gerçekleştirmek için nasıl kullandığını açıklar.  
@@ -36,7 +36,7 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
  Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Conversion.Str%2A> ve <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Belirli bir kültür kullanarak  
- Bir Web hizmeti için (bir dize olarak biçimlendirilmiş) bir tarih gönderen bir uygulama geliştiriyorsanız düşünün. Bu durumda, uygulamanızın belirli bir kültür dize dönüştürme için kullanmanız gerekir. Nedenini anlamak için tarihin kullanmanın sonucu göz önünde bulundurun. <xref:System.DateTime.ToString> yöntemi: 4 Temmuz 2005 tarihi biçimlendirmek için bu yöntem uygulamanızın kullandığı döndürür "4/7/2005 12:00:00 AM" Amerika Birleşik Devletleri İngilizce (en-US) kültür ile çalıştırdığınızda, ancak döndürür " 04.07.2005 00:00:00 "ne Almanca (de-DE) kültür ile çalışır.  
+ Bir Web hizmeti için (bir dize olarak biçimlendirilmiş) bir tarih gönderen bir uygulama geliştiriyorsanız düşünün. Bu durumda, uygulamanızın belirli bir kültür dize dönüştürme için kullanmanız gerekir. Nedenini anlamak için tarihin kullanmanın sonucu göz önünde bulundurun. <xref:System.DateTime.ToString> yöntemi: Uygulamanız 4 Temmuz 2005 tarihi biçimlendirmek için bu yöntem kullanıp kullanmadığını döndürür "4/7/2005 12:00:00 AM" Amerika Birleşik Devletleri İngilizce (en-US) kültür ile çalıştırdığınızda, ancak döndürür "04.07.2005 00:00:00" Almanca (de-DE) kültür ile çalıştırdığınızda.  
   
  Belirli bir kültür biçiminde bir dize dönüştürme yapmak gerektiğinde, kullanmanız gereken `CultureInfo` yerleşiktir sınıfı [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Yeni bir oluşturabilirsiniz `CultureInfo` kültürün adını geçirerek belirli bir kültür için nesne <xref:System.Globalization.CultureInfo.%23ctor%2A> Oluşturucusu. Desteklenen kültürü adların listelenme <xref:System.Globalization.CultureInfo> sınıfı Yardım sayfası.  
   
@@ -78,7 +78,7 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
 ### <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
  Uygulamanız bir karşılaştırma veya harf değiştirme işleminin sonucuna dayalı güvenlik kararları hale getirir. ardından işlemi kullanması gereken <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi ve pass `Ordinal` veya `OrdinalIgnoreCase` için `comparisonType` bağımsız değişken.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Globalization.CultureInfo>  
- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Globalization.CultureInfo>
+- [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

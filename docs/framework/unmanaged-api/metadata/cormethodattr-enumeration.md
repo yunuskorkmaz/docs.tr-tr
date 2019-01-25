@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520544"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr Numaralandırması
 Bir yöntem özelliklerini açıklayan değerlerini içerir.  
@@ -71,34 +71,34 @@ typedef enum CorMethodAttr {
 |`mdMemberAccessMask`|Üye erişimi belirtir.|  
 |`mdPrivateScope`|Üye başvurulamaz belirtir.|  
 |`mdPrivate`|Üye yalnızca üst türü tarafından erişilebilir olduğunu belirtir.|  
-|`mdFamANDAssem`|Üye bu derlemedeki yalnızca alt türler tarafından erişilebilir olduğunu belirtir.|  
-|`mdAssem`|Üye accessibly derlemesindeki herkes tarafından olduğunu belirtir.|  
-|`mdFamily`|Üye yalnızca türü ve alt türler tarafından erişilebilir olduğunu belirtir.|  
-|`mdFamORAssem`|Üye türetilen sınıflar ve diğer türleri kendi derlemesi tarafından erişilebilir olduğunu belirtir.|  
-|`mdPublic`|Üye erişimi olan tüm türleri tarafından kapsama erişilebilir olduğunu belirtir.|  
-|`mdStatic`|Üye türü bir parçası olarak yerine bir örneği bir üyesi olarak tanımlandı belirtir.|  
-|`mdFinal`|Yöntemi geçersiz kılınamaz belirtir.|  
+|`mdFamANDAssem`|Üyenin alt yalnızca bu derlemedeki türleri tarafından erişilebilir olduğunu belirtir.|  
+|`mdAssem`|Üye accessibly derlemedeki hiç kimse tarafından olduğunu belirtir.|  
+|`mdFamily`|Üye yalnızca türü ve alt türleri tarafından erişilebilir olduğunu belirtir.|  
+|`mdFamORAssem`|Üye, diğer türleri ve türetilen sınıflar tarafından erişilebilir olduğunu belirtir.|  
+|`mdPublic`|Üye kapsamına erişimi olan tüm türleri tarafından erişilebilir olduğunu belirtir.|  
+|`mdStatic`|Üye türü bir parçası olarak yerine bir örnek üyesi olarak tanımlandı belirtir.|  
+|`mdFinal`|Yöntem kılınamayacağını belirtir.|  
 |`mdVirtual`|Yöntem geçersiz kılınabilir belirtir.|  
-|`mdHideBySig`|Yöntem adı ve imza yerine yalnızca ada göre gizler belirtir.|  
+|`mdHideBySig`|Yöntemi yalnızca ada göre değil, ada ve imzaya göre gizlediğini belirtir.|  
 |`mdVtableLayoutMask`|Sanal Tablo düzeni belirtir.|  
-|`mdReuseSlot`|Bu yöntemde sanal tablo için kullanılan yuvası yeniden kullanılabilir belirtir. Bu varsayılandır.|  
+|`mdReuseSlot`|Bu yöntem sanal tabloda kullanılan yuva yeniden kullanılabilir belirtir. Bu varsayılandır.|  
 |`mdNewSlot`|Yöntem her zaman sanal tablosunda yeni bir yuva alır belirtir.|  
-|`mdCheckAccessOnOverride`|Yöntem için görülebilir aynı türlerine göre geçersiz kılınabilir belirtir.|  
+|`mdCheckAccessOnOverride`|Yöntemi aynı türleri için görülebilir tarafından geçersiz kılınabilir belirtir.|  
 |`mdAbstract`|Yöntem uygulanmadı belirtir.|  
-|`mdSpecialName`|Yöntemi özeldir ve adını açıklayan belirtir nasıl.|  
+|`mdSpecialName`|Yöntem özeldir ve adını açıklayan belirtir nasıl.|  
 |`mdPinvokeImpl`|Yöntem uygulaması PInvoke kullanarak iletilir belirtir.|  
-|`mdUnmanagedExport`|Yöntem yönetilmeyen koda dışarı yönetilen bir yöntem olduğunu belirtir.|  
+|`mdUnmanagedExport`|Yöntemi yönetilmeyen koda verilen yönetilen bir yöntem olduğunu belirtir.|  
 |`mdReservedMask`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
 |`mdRTSpecialName`|Ortak dil çalışma zamanı yöntemi adı kodlama denetleyeceğini belirtir.|  
-|`mdHasSecurity`|Yöntemi, kendisiyle ilişkilendirilmiş güvenlik olduğunu belirtir.|  
-|`mdRequireSecObject`|Yöntemi güvenlik kodunu içeren başka bir yöntem çağırır belirtir.|  
+|`mdHasSecurity`|Yöntemi, kendisiyle ilişkilendirilmiş güvenlik sahip olduğunu belirtir.|  
+|`mdRequireSecObject`|Yöntemi güvenlik kodu içeren başka bir yöntemi çağıran belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

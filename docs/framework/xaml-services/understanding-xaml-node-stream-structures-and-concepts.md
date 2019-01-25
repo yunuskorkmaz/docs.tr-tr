@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d237aa83a6bd1c6c68f96aa4fa58a88cfa23c2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510149"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 XAML okuyucular ve .NET Framework XAML hizmetlerinde uygulandığı şekilde XAML yazarları XAML düğümü akışı tasarım kavramını temel alır. XAML düğümü akışı XAML düğüm kümesinin bir kavramsallaştırılması ' dir. Bu kavramsallaştırılması XAML işlemci XAML düğümü ilişkileri yapısını teker teker kılavuzluk eder. Herhangi bir zamanda yalnızca tek bir geçerli kayıt ya da geçerli konum bir açık XAML düğümü akışı var ve yalnızca bilgileri kullanılabilir o konumdan API birçok yönden rapor. XAML düğümü akışı geçerli düğüm, bir nesne, bir üyesi veya bir değer olacak şekilde açıklanabilir. XAML düğümü akışı XAML düşünerek XAML okuyucular XAML yazıcıları ile iletişim kurmak ve görüntülemek, etkileşim veya bir yükleme yolu veya kaydetme sırasında bir XAML düğüm akış içeriğini değiştirmek bir programı etkinleştirmek XAML içeren yolu işlemi. XAML okuyucu ve yazıcı API tasarımı ve XAML düğüm akış kavram benzerdir önceki ilgili okuyucu ve yazıcı tasarımları ve kavramlarını gibi [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ve <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Bu konu, XAML düğüm akış kavramları açıklar ve XAML gösterimleri XAML düğüm düzeyinde etkileşim yordamlarını nasıl yazabileceğiniz açıklar.  
@@ -194,17 +194,17 @@ public class GameBoard {
   
  Aşağıdaki liste notları tüm durumlarda bir yönerge XAML üye düğümünü tanıtmak için bir XAML okuyucu burada beklenir ve bu üye düğümünü .NET Framework XAML hizmetlerinde uygulamalarında nasıl tanımlanır.  
   
--   **Bir nesne düğümü için başlatma metin:** bu üye düğümün adı `_Initialization`temsil ettiği bir XAML yönerge ve XAML dil XAML ad alanında tanımlanır. Buradan için statik bir varlığı alabilirsiniz <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
+-   **Bir nesne düğümü başlatma metni:** Bu üye düğümün adı `_Initialization`temsil ettiği bir XAML yönerge ve XAML dil XAML ad alanında tanımlanır. Buradan için statik bir varlığı alabilirsiniz <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
   
--   **İşaretleme uzantısı için konumsal parametreleri:** bu üye düğümün adı `_PositionalParameters`, XAML dili XAML ad alanında tanımlanır. Her zaman her biri üzerinde ayırarak, önceden ayrılmış konumsal bir parametresi olan bir genel liste nesnelerin içerdiği `,` XAML girişinde sağlanan olarak sınırlayıcı karakter. Konumsal parametreler yönergesinden kaynaklandığından için statik bir varlığı alabilirsiniz <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
+-   **İşaretleme uzantısı için konumsal Parametreler:** Bu üye düğümün adı `_PositionalParameters`, XAML dili XAML ad alanında tanımlanır. Her zaman her biri üzerinde ayırarak, önceden ayrılmış konumsal bir parametresi olan bir genel liste nesnelerin içerdiği `,` XAML girişinde sağlanan olarak sınırlayıcı karakter. Konumsal parametreler yönergesinden kaynaklandığından için statik bir varlığı alabilirsiniz <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
   
--   **Bilinmeyen içeriği:** bu üye düğümün adı `_UnknownContent`. NET olarak söylemek gerekirse, olan bir <xref:System.Xaml.XamlDirective>, XAML dili XAML ad alanında tanımlanır. Bu yönerge, burada kaynak XAML İçerik XAML nesne öğesi içeriyor, ancak hiçbir içerik özelliği şu anda kullanılabilir XAML şema içeriği altında belirlenebilir durumlarda bir sentinel kullanılır. XAML düğümü akışı bu durumda adlı üye için kontrol ederek algılayabilir `_UnknownContent`. Bir yükleme yolu XAML düğüm akış varsayılan başka hiçbir işlem yapılmazsa <xref:System.Xaml.XamlObjectWriter> denenen oluşturur `WriteEndObject` karşılaştığında `_UnknownContent` herhangi bir nesne üzerinde üyesi. Varsayılan <xref:System.Xaml.XamlXmlWriter> oluşturmaz ve üyeyi örtük olarak değerlendirir. Statik bir varlık için alabilirsiniz `_UnknownContent` gelen <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
+-   **Bilinmeyen içeriği:** Bu üye düğümün adı `_UnknownContent`. NET olarak söylemek gerekirse, olan bir <xref:System.Xaml.XamlDirective>, XAML dili XAML ad alanında tanımlanır. Bu yönerge, burada kaynak XAML İçerik XAML nesne öğesi içeriyor, ancak hiçbir içerik özelliği şu anda kullanılabilir XAML şema içeriği altında belirlenebilir durumlarda bir sentinel kullanılır. XAML düğümü akışı bu durumda adlı üye için kontrol ederek algılayabilir `_UnknownContent`. Bir yükleme yolu XAML düğüm akış varsayılan başka hiçbir işlem yapılmazsa <xref:System.Xaml.XamlObjectWriter> denenen oluşturur `WriteEndObject` karşılaştığında `_UnknownContent` herhangi bir nesne üzerinde üyesi. Varsayılan <xref:System.Xaml.XamlXmlWriter> oluşturmaz ve üyeyi örtük olarak değerlendirir. Statik bir varlık için alabilirsiniz `_UnknownContent` gelen <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
 -   **Koleksiyon özelliği bir koleksiyonun:** destekleyen CLR türünü XAML için genellikle kullanılan bir koleksiyon sınıfının özel koleksiyon öğelerini tutan adlı olsa da, bu özellik türü yedekleme önce bir XAML tür sistemi bilinen bir durum Çözüm. Bunun yerine, XAML düğümü akışı tanıtır bir `Items` yer tutucu XAML türü koleksiyonunun bir üyesi olarak. Bu yönerge, .NET Framework XAML hizmetlerinde uygulamasında adı / düğüm stream'de üyesidir `_Items`. Bu yönerge için bir sabit örneğinden alınabilen <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      XAML düğümü akışı parseable olmaması kapatma öğeleri içeren bir Items özelliğini içerebilir yedekleme tür çözümlemesi ve XAML şema içeriği göre unutmayın. Örneğin,  
   
--   **XML tanımlanan Üyeler:** XML tanımlı `xml:base`, `xml:lang` ve `xml:space` üyeleri adlı XAML yönergeleri olarak bildirilen `base`, `lang`, ve `space` .NET Framework XAML hizmetlerinde uygulamaları. Bu ad alanı XML ad alanı `http://www.w3.org/XML/1998/namespace`. Bunların her biri için sabitler elde edilebilir gelen <xref:System.Xaml.XamlLanguage>.  
+-   **XML tarafından tanımlanan Üyeler:** XML tanımlı `xml:base`, `xml:lang` ve `xml:space` üyeleri adlı XAML yönergeleri olarak bildirilen `base`, `lang`, ve `space` .NET Framework XAML hizmetlerinde uygulamalarında. Bu ad alanı XML ad alanı `http://www.w3.org/XML/1998/namespace`. Bunların her biri için sabitler elde edilebilir gelen <xref:System.Xaml.XamlLanguage>.  
   
 ## <a name="node-order"></a>Düğüm sırası  
  Bazı durumlarda, <xref:System.Xaml.XamlXmlReader> XAML düğümlerinin düğümleri işaretlemede görüntülerse veya XML olarak işlenen görüntülenme sırasını karşı XAML düğüm akış sırasını değiştirir. Bu düğümler sipariş için gerçekleştirilir gibi bir <xref:System.Xaml.XamlObjectWriter> düğümü akışı yalnızca ileriye doğru bir şekilde işleyebilir.  .NET Framework XAML hizmetlerinde XAML okuyucu düğümleri bu görevi, performans iyileştirme düğümü akışı XAML nesne yazıcı Tüketiciler için XAML yazıcı için bırakmak yerine yeniden sıralar.  
@@ -217,7 +217,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` Yeni bir nesne oluşturmak yerine bir XAML nesne yazıcısı bunun yerine nesnenin içeren özelliğinin değeri nereden bir XAML düğümünü temsil eder. Tipik bir servis talebi burada bir `GetObject` düğüm karşılaşıldığında içeren özellik yedekleme türün nesne modelinde salt okunur kasıtlı olarak bir XAML düğüm akış koleksiyon nesnesi veya bir sözlük nesnesi olur. Bu senaryoda, koleksiyona veya sözlüğe genellikle oluşturulur ve başlatıldı (genellikle boş) sahip olan bir türü başlatma mantığı tarafından.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xaml.XamlObjectReader>  
- [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)  
- [XAML Ad Alanları](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xaml.XamlObjectReader>
+- [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)
+- [XAML Ad Alanları](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

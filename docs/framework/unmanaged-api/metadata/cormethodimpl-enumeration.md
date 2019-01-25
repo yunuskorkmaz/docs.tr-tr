@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491291"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl Numaralandırması
-Yöntem uygulaması özellikleri açıklanmaktadır değerlerini içerir.  
+Yöntem uygulama özellikleri açıklayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -58,29 +58,29 @@ typedef enum CorMethodImpl {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Kod türünü açıklayan bayrakları.|  
-|`miIL`|Yöntem uygulaması Microsoft Ara dili (MSIL) olduğunu belirtir.|  
+|`miCodeTypeMask`|Kod türünü tanımlayan bayraklar.|  
+|`miIL`|Yöntem uygulaması, Microsoft Ara dilini (MSIL) olduğunu belirtir.|  
 |`miNative`|Yöntem uygulaması yerel olduğunu belirtir.|  
 |`miOPTIL`|Yöntem uygulaması OPTIL olduğunu belirtir.|  
 |`miRuntime`|Yöntem uygulaması ortak dil çalışma zamanı tarafından sağlandığını belirtir.|  
 |`miManagedMask`|Kod yönetilen veya yönetilmeyen olup olmadığını belirten bayrak.|  
 |`miUnmanaged`|Yöntem uygulaması yönetilmeyen olduğunu belirtir.|  
-|`miManaged`|Yöntem uygulaması yönetilip yönetilmediğini belirtir.|  
-|`miForwardRef`|Yöntemi tanımlanır belirtir. Bu bayrak, öncelikle birleştirme senaryolarda kullanılır.|  
-|`miPreserveSig`|Yöntem imzası HRESULT dönüştürme için karıştırılmış belirtir.|  
+|`miManaged`|Yöntem uygulaması yönetilir belirtir.|  
+|`miForwardRef`|Yöntemin tanımlandığı belirtir. Bu bayrak öncelikle birleştirme senaryolarda kullanılır.|  
+|`miPreserveSig`|Yöntem imzası bir HRESULT dönüştürme için karıştırılmış belirtir.|  
 |`miInternalCall`|İç kullanım için ortak dil çalışma zamanı tarafından ayrılmış.|  
-|`miSynchronized`|Yöntemi, tek kendi gövde iş parçacıklı olduğunu belirtir.|  
-|`miNoInlining`|Yöntem içermesinden olamaz belirtir.|  
-|`miAggressiveInlining`|Yöntemi, mümkünse içermesinden olması gerektiğini belirtir.|  
+|`miSynchronized`|Yöntemin gövdesinde tek hiper iş parçacıklı olduğunu belirtir.|  
+|`miNoInlining`|Yöntem satır içine alınmış olamaz belirtir.|  
+|`miAggressiveInlining`|Yöntem mümkünse satır içine alınmış olması gerektiğini belirtir.|  
 |`miNoOptimization`|Yöntem getirilmemiş belirtir.|  
 |`miMaxMethodImplVal`|Geçerli değeri en fazla bir `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

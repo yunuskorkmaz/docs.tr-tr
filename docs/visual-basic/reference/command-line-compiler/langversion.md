@@ -6,14 +6,15 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 82a7114027451d1342e6dc0846799933ce44d968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534465"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Derleyicinin yalnızca belirtilen Visual Basic dil sürümü dahil sözdizimini kabul etmesine neden olur.  
+Derleyicinin, belirtilen Visual Basic dil sürümü dahil edilen sözdizimini kabul etmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,23 +24,27 @@ Derleyicinin yalnızca belirtilen Visual Basic dil sürümü dahil sözdizimini 
   
 ## <a name="arguments"></a>Arguments  
  `version`  
- Gerekli. Derleme sırasında kullanılacak dil sürümü. Değerler kabul `9`, `9.0`, `10`, ve `10.0`.  
+ Gerekli. Derleme sırasında kullanılacak dil sürümü. Kabul edilen değerler `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` ve `latest`.
+
+ Tam sayılar da kullanırken belirtilebilir `.0` alt sürümü için olarak `11.0`.
+
+ Tüm olası değerlerin listesi belirterek gördüğünüz `-langversion:?` komut satırında.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-langversion` Seçeneği derleyici kabul hangi sözdizimini belirtir. Örneğin, dil sürümü 9.0 olduğunu belirtirseniz, derleyici geçerli yalnızca sürümünde 10.0 ve sonraki sözdizimi hataları oluşturur.  
+ `-langversion` Seçeneği derleyici kabul hangi sözdizimini belirtir. Örneğin, dil sürüm 9.0 olduğunu belirtirseniz, derleyici geçerli yalnızca sürüm 10.0 ve üstü söz dizimi hataları oluşturur.  
   
- Bu hedef farklı sürümlerini .NET Framework uygulamaları geliştirirken, bu seçeneği kullanabilirsiniz. Örneğin, .NET Framework 3.5 hedefliyorsanız, 10.0 dil sürümünden sözdizimi kullanmayın emin olmak için bu seçeneği kullanabilirsiniz.  
+ Farklı sürümlerini hedefleyen .NET Framework'ün Uygulama geliştirirken, bu seçeneği kullanabilirsiniz. Örneğin, .NET Framework 3.5 hedefliyorsanız, dil sürüm 10.0 sözdizimini kullanmayın emin olmak için bu seçeneği kullanabilirsiniz.  
   
- Ayarlayabileceğiniz `-langversion` doğrudan komut satırını kullanarak yalnızca. Daha fazla bilgi için bkz: [belirli bir .NET Framework sürümü hedefleme](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
+ Ayarlayabileceğiniz `-langversion` doğrudan komut satırını kullanarak yalnızca. Daha fazla bilgi için [belirli bir .NET Framework sürümünü hedefleme](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `sample.vb` Visual Basic 9.0.  
+ Aşağıdaki kod derlenir `sample.vb` Visual Basic 9.0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Belirli Bir .NET Framework Sürümünü Hedefleme](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Belirli Bir .NET Framework Sürümünü Hedefleme](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

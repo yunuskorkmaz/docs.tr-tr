@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541267"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Hangi&#39;s eski .NET Framework sınıf kitaplığı
 .NET Framework, zaman içinde değişir. Her yeni sürümü, yeni türler ve yeni işlevleri sağlayan bir tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değişir. Örneğin, bazı türleri destekledikleri teknoloji tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli olan yeni yöntemlerle olandır.  
@@ -36,7 +36,7 @@ ms.locfileid: "50183483"
   
 -   Türe veya üyeye, kullanımını mümkünse kaldırarak kodunuzu değiştirin.  
   
-     veya  
+     -veya-  
   
 -   Nasıl için kullanımdan kaldırılma yanıtlanacağını belirlemek bu teknoloji alanı için belgeleri gözden geçirin.  
   
@@ -64,8 +64,8 @@ ms.locfileid: "50183483"
 |4|v4.0|  
 |3.5|v2.0.50727|  
 |2,0|v2.0.50727|  
-|1.1|V1.1.4322|  
-|1.0|V1.0.3705|  
+|1.1|v1.1.4322|  
+|1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listeleri .NET Framework 4.5 ve sonraki sürümler için eski  
  [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)  
@@ -81,5 +81,5 @@ ms.locfileid: "50183483"
   
  [.NET framework 2.0 eski listesi](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

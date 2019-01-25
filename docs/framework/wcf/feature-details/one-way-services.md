@@ -6,25 +6,25 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527802"
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
-İstek-yanıt desen bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemini kodu olarak temsil edilir olsa bile bir istek-yanıt desende istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek veya gönderen bir beklediğiniz yapar.  
+İstek-yanıt deseni bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemi kod olarak temsil edilir olsa bile bir istek-yanıt modelinde istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek ya da gönderen bir bekler.  
   
  Tek yönlü tasarım deseni kullanın:  
   
 -   Ne zaman istemci işlemleri çağırmanız gerekir ve işlem düzeyinde işleminin sonucu etkilenmez.  
   
--   Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. (Bu senaryo hakkında daha fazla bilgi için bkz: [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. (Bu senaryo hakkında daha fazla bilgi için bkz. [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
- Tek yönlü bir işlem olduğunda, istemciye hata bilgilerini taşımak için yanıt iletisi yok. Güvenilir oturumlar gibi temel bağlama özelliklerini kullanarak hata koşullarını algılayabilir veya çift yönlü hizmet sözleşmesi tasarlayarak iki yönlü işlem kullanan — ve başka bir hizmet işlemini çağırmak için tek yönlü sözleşme istemci hizmeti tek yönlü sözleşme hizmet ve istemci arasında hizmet istemci uygulayan bir geri çağırma kullanarak bunu istemciye geri hataları gönderebilirsiniz.  
+ Tek yönlü bir işlem olduğunda, hata bilgilerini istemciye geri taşımak için yanıt iletisi yok. Güvenilir oturumlar gibi temel alınan bağlama özelliklerini kullanarak hata durumları algılayabilir veya iki tek yönlü işlem kullanan bir çift yönlü hizmet sözleşmesi tasarlayarak — ve başka bir hizmet işlemi çağırmak için tek yönlü sözleşme istemciden hizmete tek yönlü sözleşme hizmet ve istemci arasında hizmet istemci uygulayan geri aramayı kullanarak istemciye geri hataları gönderebilmesi.  
   
- Tek yönlü hizmet sözleşmesi oluşturmak için hizmet sözleşmesini tanımlama, uygulama <xref:System.ServiceModel.OperationContractAttribute> sınıf her işleme ve ayarlayın <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğine `true`, aşağıdaki örnek kodda gösterildiği gibi.  
+ Tek yönlü hizmet sözleşmesi oluşturmak için hizmet sözleşmesini tanımlama, Uygula <xref:System.ServiceModel.OperationContractAttribute> sınıfı her işleme ve ayarlama <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true`aşağıdaki örnek kodda gösterildiği gibi.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -41,18 +41,18 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Tam bir örnek için bkz: [tek yönlü](../../../../docs/framework/wcf/samples/one-way.md) örnek.  
+ Tam bir örnek için bkz. [tek yönlü](../../../../docs/framework/wcf/samples/one-way.md) örnek.  
   
-## <a name="clients-blocking-with-one-way-operations"></a>Tek yönlü işlemleriyle engelleme istemcileri  
- Giden veri bağlaması veya bir hizmet uygulaması çeşitli senaryolarda ağ bağlantısı için yazılmış hemen tek yönlü bazı uygulamalar döndürürken, tek yönlü işlemleri kullanarak engellemek bir WCF istemcisi neden olabilir hayata geçirmek önemlidir. Giden veri ağ bağlantısı yazılmış kadar WCF istemci uygulamalarında WCF istemci nesnesi döndürmez. Bu, tek yönlü işlemler de dahil olmak üzere tüm ileti exchange düzenleri için geçerlidir; Bu veri taşıma istemci döndürmesini önler yazma herhangi bir sorun anlamına gelir. Sorun bağlı olarak, sonuç bir özel durum veya hizmete gönderme bir gecikme olabilir.  
+## <a name="clients-blocking-with-one-way-operations"></a>İstemcileri ile tek yönlü işlemlerini engelleme  
+ Giden veri bağlama veya bir hizmet uygulaması birkaç senaryoda ağ bağlantısı, yazılan hemen sonra tek yönlü bazı uygulamalar olsa da tek yönlü işlem kullanarak engellemek bir WCF istemcisi neden olabilir bilmeniz önemlidir. WCF istemci uygulamalarının içinde ağ bağlantısı için giden veri yazıldı kadar WCF istemci nesnesi döndürmez. Bu, tek yönlü işlemleri dahil olmak üzere tüm ileti exchange desenleri için geçerlidir; Bu, veri taşıma istemci döndürmesini önler yazma herhangi bir sorun anlamına gelir. Sorun bağlı olarak, sonuç bir özel durum veya hizmete gönderme bir gecikme olabilir.  
   
- Örneğin, taşıma uç noktası bulamazsa, bir <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> özel durumu kadar gecikme olmadan oluşur. Ancak, aynı zamanda hizmet döndürmesini işlemi istemci taşıması önleyen herhangi bir nedenle, kablo verileri gönder okuyamıyor mümkündür. Bu durumda, <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> istemci taşıması üzerinde dönem bağlama aşıldı, bir <xref:System.TimeoutException?displayProperty=nameWithType> atılır — ancak zaman aşımı süresi aşıldı kadar değil. Bir hizmeti çok fazla sayıda iletileri hizmeti bunları belirli bir noktaya işlemi işleyemiyor tetiklenecek mümkündür. Bu durumda, çok, tek yönlü istemci blokları hizmet iletileri işleyebilir kadar veya kadar bir özel durum oluşur.  
+ Örneğin, taşıma uç noktası bulamazsa, bir <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> kadar gecikme olmadan özel durum harekete geçirilir. Ancak, aynı zamanda hizmetin döndürmesini işlemi verileri istemci taşıması engelleyen nedenleri, kablo dışında göndermek okuyamıyor olduğunu mümkündür. Bu gibi durumlarda, varsa <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> dönem istemci taşıması üzerinde bağlama aşıldı, bir <xref:System.TimeoutException?displayProperty=nameWithType> oluşturulur; ancak zaman aşımı süresi aşıldı kadar değil. Bir hizmete çok sayıda iletileri hizmet bunları belirli bir noktaya işleme alınamıyor ateşlenmesine mümkündür. Bu durumda, tek yönlü istemci blokları kadar hizmet iletileri işleyebilir veya kadar bir özel durum oluşturulur.  
   
- Başka bir değişim durumda olan hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliği ayarlanmış <xref:System.ServiceModel.ConcurrencyMode.Single> ve bağlama oturumları kullanır. Bu durumda, gelen iletiler (gereksinimi oturumları), Ağ oturumunu kapatma hizmeti bu oturum için önceki iletiyi işleyene kadar okunmaya karşı sonraki iletiler önleyen sıralama dağıtıcı zorlar. İstemci blokları yeniden, ancak hizmet zaman aşımı ayarları istemcide öncesinde bekleyen verilerin işleyebilmesi olup üzerine bağlıdır olup bir özel durum oluşur.  
+ Bu durumda başka bir çeşitlemedir hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.ConcurrencyMode.Single> ve oturumları bağlama kullanır. Bu durumda, gelen iletiler (oturumlarının bir gereksinim) hizmeti bu oturum için yukarıdaki iletiyi işleyene kadar ağa okunmasını daha sonraki iletileri önleyen sıralama dağıtıcı zorlar. İstemci blokları yeniden ancak olup özel bir durum oluştuğunda olup hizmet zaman aşımı ayarlarını istemcide önce bekleyen verileri işlemek bağlıdır.  
   
- Bu sorunu bazı istemci nesnesini ve istemci taşıması 's gönderme işlemi arasında bir arabellek ekleyerek azaltabilirsiniz. Örneğin, zaman uyumsuz çağrılar veya bir bellek içi ileti sırası kullanarak hızlı bir şekilde geri dönmek istemci nesne etkinleştirebilirsiniz. Her iki yaklaşımın işlevselliği artabilir, ancak iş parçacığı havuzu ve ileti sırası boyutu sınırları hala zorla.  
+ Bu sorunun bazı istemci nesnesini ve istemci taşıması ait gönderme işlemi arasında bir tampon ekleyerek azaltabilirsiniz. Örneğin, zaman uyumsuz çağrıları veya bir bellek içi ileti kuyruğu kullanarak hızlı bir şekilde geri dönmek istemci nesne etkinleştirebilirsiniz. Her iki yaklaşım işlevselliği artırabilir, ancak iş parçacığı havuzu ve mesaj kuyruğu boyutunu sınırları hala zorla.  
   
- Bu, bunun yerine, istemci yanı sıra hizmet çeşitli denetimleri inceleyin ve ardından her iki tarafında en iyi yapılandırma belirlemek için uygulama senaryolarınızı test önerilir. Oturumları kullanımını hizmetinizi üzerinde iletilerinin işlenmesini engelleyen varsa, örneğin, ayarlayabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.InstanceContextMode.PerCall> böylece her ileti farklı hizmet örneği tarafından işlenen ve ayarlama <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> için <xref:System.ServiceModel.ConcurrencyMode.Multiple> aynı anda iletilerinin gönderilmesi birden çok iş parçacığı izin vermek üzere. Başka bir yaklaşım, hizmet ve istemci bağlamaları okuma kotaları artırmaktır.  
+ Bu, bunun yerine, çeşitli denetimleri hem istemcide hem de hizmet inceleyin ve ardından iki tarafındaki en iyi yapılandırma belirlemek için uygulama senaryolarınızı test önerilir. Oturumları kullanımını hizmetinizdeki iletilerinin işlenmesini engelliyorsa, örneğin, ayarlayabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.PerCall> her ileti farklı hizmet örneği tarafından işlenen ve ayarlama böylece <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> için <xref:System.ServiceModel.ConcurrencyMode.Multiple> aynı anda iletilerini dağıtmak birden fazla iş parçacığı izin vermek üzere. Hizmet ve istemci bağlamaları okuma kotaları artırmak başka bir yaklaşımdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek Yönlü](../../../../docs/framework/wcf/samples/one-way.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tek Yönlü](../../../../docs/framework/wcf/samples/one-way.md)

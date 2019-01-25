@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: gruplandırma (Visual Basic) kullanarak hiyerarşi oluşturma'
+title: 'Nasıl yapılır: (Visual Basic) gruplandırma kullanarak hiyerarşi oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: 9df85a52d63c4d7dbffb99a47378d3a1efc10cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521003"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Nasıl yapılır: gruplandırma (Visual Basic) kullanarak hiyerarşi oluşturma
-Bu örnek, verileri gruplandırmak ve XML gruplandırılması tabanlı oluşturmak gösterilmektedir.  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Nasıl yapılır: (Visual Basic) gruplandırma kullanarak hiyerarşi oluşturma
+Bu örnek verileri gruplandırmak ve ardından XML gruplandırma işlemine göre nasıl gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek ilk grupları verileri bir kategoriye göre sonra XML hiyerarşisini gruplandırma yansıtır yeni bir XML dosyası oluşturur.  
+ Bu örnekte ilk grupları verileri bir kategoriye göre ardından gruplandırma içinde XML hiyerarşisini yansıtır yeni bir XML dosyası oluşturur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: sayısal verileri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -79,5 +79,5 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

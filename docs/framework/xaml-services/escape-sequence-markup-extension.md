@@ -1,5 +1,5 @@
 ---
-title: '{} Çıkış sırası - biçimlendirme uzantısı'
+title: '{} Çıkış sırası - işaretleme uzantısı'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: a90f6928d68eddd29762e6206769dd7f07704e4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521276"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} Çıkış dizisi / işaretleme uzantısı
-XAML kaçış sırası öznitelik değerlerini sağlar. Kaçış sırası bundan sonraki değerlere sabit değer olarak yorumlanması için özniteliğini verir.  
+# <a name="-escape-sequence--markup-extension"></a>{} Kaçış dizisi / işaretleme uzantısı
+XAML kaçış dizisi, öznitelik değerleri sağlar. Kaçış sırası bundan sonraki değerlere öznitelik değişmez değer olarak yorumlanmasını sağlar.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -41,23 +41,23 @@ XAML kaçış sırası öznitelik değerlerini sağlar. Kaçış sırası bundan
   
 |||  
 |-|-|  
-|*literalValue*|Kaçış sırası izleyen değişmez değer dize. Genellikle bu dize bir açma veya kapatma parantezi içeriyor ({veya}).|  
+|*literalValue*|Kaçış sırası aşağıdaki değişmez değer dize. Genellikle bu dize bir açma veya kapatma ayracı içeriyor ({veya}).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaçış sırası ({}) XAML'de harf karakter olarak bir açma ayracı ({}) kullanılabilir böylece kullanılır.  
+ Kaçış dizisi ({}) açık küme ayracı ({}) XAML değişmez bir karakter olarak kullanılabilir olacak şekilde kullanılır.  
   
- XAML okuyucuları açma ayracı ({}) genellikle bir işaretleme uzantısı giriş noktasını belirtmek için kullanın; Bununla birlikte, bunlar önce bir kapanış ayracı (}) olup olmadığını belirlemek için sonraki karakteri kontrol edin. Yalnızca zaman iki küme ayraçları ({}) olan bitişik, bunlar bir kaçış sırası kabul şunlardır.  
+ XAML okuyucular açık küme ayracı ({}) genellikle bir işaretleme uzantısı giriş noktasını belirtmek için kullanılır; ancak, bunlar ilk kapanış ayracından (}) olup olmadığını belirlemek için sonraki karakteri kontrol edin. Yalnızca ne zaman iki küme ayraçları ({}) bitişik olan, bunlar bir kaçış dizisi kabul şunlardır.  
   
- Kaçış sırası karşılaşılırsa, XAML okuyucu dizenin geri kalanı bir dize olarak işleme. Ancak, kaçış sırası tür dönüştürücüsünü sahip bir üye uyguladıysanız, XAML yazıcı tarafından değerlendirdiğinde dize türü dönüştürme uygulanabilir.  
+ XAML okuyucu dizenin geri kalanı, kaçış dizisi ile karşılaşırsa, bir dize olarak işlemelisiniz. Ancak kaçış sırası üyesi olan bir tür dönüştürücüsü uygulanırsa, XAML yazıcı tarafından yorumlandığında dize türü dönüşümünü uygulanabilir.  
   
- Kaçış sırası biçimlendirme uzantısı değil ve bir sınıf tarafından yedeklenen değil. Ancak, XAML okuyucuları (özel XAML okuyucuları dahil) saygı bir kural gerekir.  
+ Kaçış dizisi, bir işaretleme uzantısı değil ve bir sınıf tarafından yedeklenmez. Ancak, XAML okuyucular (özel XAML okuyucular dahil) dikkate bir kuralı olur.  
   
- Tırnak işareti ("), bu şekilde bir kaçış sırası olarak kullanılamaz. Tırnak işareti noncontent bir özellik için özellik değeri olarak ayarlamak gerekiyorsa, özellik öğesi sözdizimini kullanın ve özellik öğe içindeki bir dize olarak tırnak işareti koyun veya bir XML karakteri varlık kullanın. İçerik özelliği için tüm içeriği tırnak işareti olabilir.  
+ Tırnak işareti ("), bu şekilde bir kaçış dizisi olarak kullanılamaz. Tırnak işareti noncontent bir özellik için özellik değeri olarak ayarlanacak ihtiyacınız varsa, özellik öğesi sözdizimini kullanın ve özellik öğesi içinde bir dize olarak tırnak işareti girin veya bir XML karakter varlık kullanın. İçerik özelliği için tüm içeriği tırnak işareti olabilir.  
   
- Kaçış sırası ({}), bir ad alanı niteleyicisi XAML biçimlendirme uzantısı göründüğü bir konumda içermesi gereken bir XML türü belirtirken sık gereklidir. Bu başlangıç XAML öznitelik değeri ve bir işaretleme uzantısı hemen bir eşittir işaretinden sonra (=) içerir. Aşağıdaki örnek çıkış sıraları XAML öznitelik değeri başlangıcında görünür bir XML ad alanı için gösterir.  
+ Kaçış dizisi ({}) bir XAML işaretleme uzantısı göründüğü bir konumda bir ad alanı niteleyicisi içermelidir bir XML türü belirtirken sık gereklidir. Bu, hemen bir eşittir işaretinden sonra (=) başlangıç XAML öznitelik değeri ve bir işaretleme uzantısı içerir. Aşağıdaki örnek bir XAML öznitelik değeri başlangıcında görünür bir XML ad alanı için kaçış sıralarını gösterir.  
   
  [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [XML Karakter Varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [XML Karakter Varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)

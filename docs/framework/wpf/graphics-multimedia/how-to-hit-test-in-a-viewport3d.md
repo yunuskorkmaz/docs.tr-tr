@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0906fc0da363f9b4022eea863ec1140c8eeb2da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494251"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Nasıl yapılır: Viewport3D'de Tıklama Testi
 Bu örnek nasıl tıklama testi için 3B Görsellerde gösterir bir <xref:System.Windows.Controls.Viewport3D>.  
@@ -29,5 +29,5 @@ Bu örnek nasıl tıklama testi için 3B Görsellerde gösterir bir <xref:System
  [!code-csharp[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [3B isabet sınaması örneği](https://go.microsoft.com/fwlink/?LinkID=159959)
+## <a name="see-also"></a>Ayrıca bkz.
+- [3B isabet sınaması örneği](https://go.microsoft.com/fwlink/?LinkID=159959)

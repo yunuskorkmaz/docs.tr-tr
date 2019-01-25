@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
+title: 'Nasıl yapılır: .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüştürme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492772"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Nasıl yapılır: .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüştürme
 
 Windows Mağazası için .NET Framework uygulamaları tam .NET Framework'ün bir alt kümesidir. Windows Mağazası uygulamaları için güvenlik ve diğer gereksinimler nedeniyle, .NET Framework API'ların tam kümesini dosyaları açmak ve okumak için kullanamazsınız. Daha fazla bilgi için [.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Ancak, diğer akış işleme işlemlerini için .NET Framework API'ları kullanmak isteyebilirsiniz. Bu akışları işlemek için bunu bir .NET Framework akış türü arasında dönüştürme yapmayı gerekli bulabilirsiniz <xref:System.IO.MemoryStream> veya <xref:System.IO.FileStream>ve bir Windows çalışma zamanı akışına gibi <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream>, veya <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -79,6 +79,6 @@ Bir .NET Framework akışını bir Windows Çalışma Zamanı akışına dönü�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Başlangıç: Okuma ve yazma dosya (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET için Windows Store uygulamaları – desteklenen API'ler](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Hızlı Başlangıç: Okuma ve yazma dosya (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET için Windows Store uygulamaları – desteklenen API'ler](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

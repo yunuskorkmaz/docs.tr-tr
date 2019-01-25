@@ -2,12 +2,12 @@
 title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 333469cecdf2acae72e6d1add8f96829a127dcf8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c0d5f46e6ace71ad4732f8d387b3289b1d4105e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516375"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Foundation (WCF) kullanarak istemci yapılandırma gösterir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
@@ -78,6 +78,6 @@ Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Fou
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric Yönetimi örnekleri](https://go.microsoft.com/fwlink/?LinkId=193960)  
- [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric Yönetimi örnekleri](https://go.microsoft.com/fwlink/?LinkId=193960)
+- [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)

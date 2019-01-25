@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527607"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField Yöntemi
-Bir işaretçi fieldDef simgesi için içine alan için belirteç alır belirtilen tarafından <xref:System.Type> ve belirtilen adı ve meta veri imza sahip.  
+Bir işaretçi için fieldDef simgesi alınmış bir alan için belirteç alır tarafından belirtilen <xref:System.Type> ve belirtilen adı ve meta verileri imza sahip.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,36 +41,36 @@ HRESULT FindField (
   
 #### <a name="parameters"></a>Parametreler  
  `td`  
- [in] Sınıf veya aramak için alan barındırır arabirimi için TypeDef belirteci. Bu değer ise `mdTokenNil`, arama için genel bir değişkendir yapılır.  
+ [in] Sınıf veya aramak için alan kapsayan arabirimi TypeDef belirteci. Bu değer ise `mdTokenNil`, genel bir değişken için arama yapılır.  
   
  `szName`  
  [in] Aranacak alan adı.  
   
  `pvSigBlob`  
- [in] Alanın ikili meta verileri imza için bir işaretçi.  
+ [in] Alan ikili meta veri imzası bir işaretçi.  
   
  `cbSigBlob`  
  [in] Bayt cinsinden boyutu `pvSigBlob`.  
   
  `pmb`  
- [out] Eşleşen fieldDef simgesi belirteci için bir işaretçi.  
+ [out] Eşleşen fieldDef simgesi belirteç için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kapsayan sınıf ya da arabirimi kullanarak alanı belirtin (`td`), kendi adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`).  
+ Kapsayan sınıfı veya arabirimi kullanarak alanı belirtin (`td`), adını (`szName`) ve isteğe bağlı olarak imzası (`pvSigBlob`).  
   
- İmza geçirilen `FindField` imzalar için belirli bir kapsam bağlı olduğundan geçerli kapsamda oluşturulmuş olmalıdır. İmza kapsayan sınıfı veya değer türünü tanımlayan bir belirteç eklenebilir. (Belirteç yerel TypeDef tabloya bir dizin olur). Geçerli kapsam bağlamında dışında bir çalışma zamanı imzası oluşturmak ve girdi olarak bu imza kullanmak `FindField`.  
+ İmza geçirilen `FindField` imzaları belirli bir kapsama bağlı oldukları için geçerli kapsamda oluşturulan gerekir. İmza kapsayan sınıf veya değer türü tanımlayan bir belirteç ekleyebilir. (Belirteç yerel TypeDef tabloya dizinidir). Geçerli kapsam bağlamında dışında bir çalışma zamanı imza oluşturun ve bu imza, giriş olarak kullanmak `FindField`.  
   
- `FindField` doğrudan sınıfta veya arabirimde tanımlanan alanları bulur; devralınan alanları bulmaz.  
+ `FindField` sınıf veya arabirim içinde tanımlanmış olan alanlar bulur; devralınan alanları bulmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

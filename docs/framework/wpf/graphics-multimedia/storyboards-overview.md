@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492691"
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
 Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> animasyonların ve düzenleme nesneleri. Etkileşimli olarak nasıl işleneceğini açıklar <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve söz dizimi hedefleyen dolaylı özelliği tanımlar.  
@@ -63,7 +63,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir özelliği <xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veri değiştiğinde bir animasyonu tetikleme](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: Veriler değiştiğinde bir animasyonu tetikleme](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Aşağıdaki örnekte bir <xref:System.Windows.Media.Animation.Storyboard> animasyon uygulamak için <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Shapes.Rectangle> öğesi ve <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> , boyamak için kullanılan <xref:System.Windows.Shapes.Rectangle>.  
@@ -231,11 +231,11 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
 -   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Şeridinin hızını değiştirir.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Bir görsel taslak dolgu süresinin sonuna varsa ilerler.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Varsa, bir görsel taslak dolgu süresinin sonuna ilerler.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Film şeridi durdurur.  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>: Görsel taslak durdurur.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Film şeridi kaldırır.  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Görsel taslak kaldırır.  
   
  Aşağıdaki örnekte, denetlenebilir bir film şeridi Eylemler, etkileşimli bir film şeridini denetlemek için kullanılır.  
   
@@ -261,7 +261,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Bu yöntemleri kullanarak oluşturmanız gerekmez avantajlarındandır <xref:System.Windows.Trigger> veya <xref:System.Windows.TriggerAction> nesneler; denetlenebilir bir başvuru yeterlidir <xref:System.Windows.Media.Animation.Storyboard> işlemek istediğiniz.  
   
- **Not:** üstlendiği tüm etkileşimli eylemleri bir <xref:System.Windows.Media.Animation.Clock>ve bu nedenle ayrıca bir <xref:System.Windows.Media.Animation.Storyboard> sonraki oluşturmadan önce kısa bir süre sonra gerçekleştirilecek zamanlama altyapısı sonraki değerinde meydana gelir. Örneğin, kullanırsanız <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi özellik değeri bir animasyon başka bir noktaya atlamak için anında değiştirmez, bunun yerine, zamanlama altyapısı sonraki değer çizgisi değeri değiştirir.  
+ **Not:** Alınan tüm etkileşimli eylemleri bir <xref:System.Windows.Media.Animation.Clock>ve bu nedenle ayrıca bir <xref:System.Windows.Media.Animation.Storyboard> sonraki oluşturmadan önce kısa bir süre sonra gerçekleştirilecek zamanlama altyapısı sonraki değerinde meydana gelir. Örneğin, kullanırsanız <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi özellik değeri bir animasyon başka bir noktaya atlamak için anında değiştirmez, bunun yerine, zamanlama altyapısı sonraki değer çizgisi değeri değiştirir.  
   
  Aşağıdaki örnek nasıl uygulanacağını ve etkileşimli yöntemleri kullanılarak animasyonların gösterir <xref:System.Windows.Media.Animation.Storyboard> sınıfı.  
   
@@ -302,7 +302,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
  Özelliği tarafından uygulanan animasyonlar <xref:System.Windows.Trigger> nesneleri davranır daha karmaşık bir biçimde <xref:System.Windows.EventTrigger> animasyonlar veya animasyonları kullanılarak başlatılan <xref:System.Windows.Media.Animation.Storyboard> yöntemleri.  Bunlar animasyonlarla "iletim diğer tarafından tanımlanan" <xref:System.Windows.Trigger> nesneleri, ancak compose ile <xref:System.Windows.EventTrigger> ve animasyonlar yöntemi tetiklendi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

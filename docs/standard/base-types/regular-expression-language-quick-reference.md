@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531427"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 <a name="top"></a> Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi dener bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
@@ -131,14 +131,14 @@ ms.locfileid: "54030405"
 |`*`|Önceki öğeyle sıfır kez veya daha fazla eşleşir.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Önceki öğeyle bir kez veya daha fazla eşleşir.|`"be+"`|"been" içinde "bee", "bent" içinde "be"|  
 |`?`|Önceki öğeyle sıfır veya bir kez eşleşir.|`"rai?n"`|"ran", "rain"|  
-|`{` *N* `}`|Önceki öğeyle tam olarak eşleşir *n* kez.|`",\d{3}"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
-|`{` *N* `,}`|Önceki öğeyle en az eşleşir *n* kez.|`"\d{2,}"`|"166", "29", "1930"|  
+|`{` *n* `}`|Önceki öğeyle tam olarak eşleşir *n* kez.|`",\d{3}"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
+|`{` *n* `,}`|Önceki öğeyle en az eşleşir *n* kez.|`"\d{2,}"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}`|Önceki öğeyle en az eşleşir *n* süreleri, ancak Hayır birden fazla *m* kez.|`"\d{3,5}"`|"166", "17668"<br /><br /> "193024" içinde "19302"|  
 |`*?`|Önceki öğeyle sıfır kez veya daha fazla ancak mümkün olduğunca az eşleşir.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|Önceki öğeyle bir kez veya daha fazla ancak mümkün olduğunca az eşleşir.|`"be+?"`|"been" içinde "be", "bent" içinde "be"|  
 |`??`|Önceki öğeyle sıfır veya bir kez ancak mümkün olduğunca az eşleşir.|`"rai??n"`|"ran", "rain"|  
-|`{` *N* `}?`|Önceki öğeyle tam olarak eşleşen *n* kez.|`",\d{3}?"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
-|`{` *N* `,}?`|Önceki öğeyle en az eşleşir *n* kez ancak mümkün olduğunca.|`"\d{2,}?"`|"166", "29", "1930"|  
+|`{` *n* `}?`|Önceki öğeyle tam olarak eşleşen *n* kez.|`",\d{3}?"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
+|`{` *n* `,}?`|Önceki öğeyle en az eşleşir *n* kez ancak mümkün olduğunca.|`"\d{2,}?"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}?`|Önceki öğeyle eşleşen *n* ve *m* kez ancak mümkün olduğunca.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193024" içinde "193", "024"|  
   
  [Başa dön](#top)  
@@ -217,10 +217,10 @@ ms.locfileid: "54030405"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
-- <xref:System.Text.RegularExpressions.Regex>  
-- [Normal ifadeler](regular-expressions.md)  
-- [Normal ifade sınıfları](the-regular-expression-object-model.md)  
-- [Normal İfade Örnekleri](regular-expression-examples.md)  
-- [Normal ifadeler - hızlı başvuru (indirme, Word biçiminde)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
+- <xref:System.Text.RegularExpressions.Regex>
+- [Normal ifadeler](regular-expressions.md)
+- [Normal ifade sınıfları](the-regular-expression-object-model.md)
+- [Normal İfade Örnekleri](regular-expression-examples.md)
+- [Normal ifadeler - hızlı başvuru (indirme, Word biçiminde)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [Normal ifadeler - hızlı başvuru (PDF biçimindeki indirme)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

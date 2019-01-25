@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama'
+title: 'Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 66093cacea4f76ab65af40658f03c03ce7560f0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1be2bb2c909b8074f1092d4ce138feff5c9607f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496042"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ProgressBar> kontrol; ancak, <xref:System.Windows.Forms.ProgressBar> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+>  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ProgressBar> denetler; ancak, <xref:System.Windows.Forms.ProgressBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İçinde belirli bir değeri görüntülemek için birkaç farklı yöntem sunar <xref:System.Windows.Forms.ProgressBar> denetim. Seçtiğiniz hangi yaklaşımın elinizdeki veya sorun çözme bağlıdır. Aşağıdaki tabloda, seçebileceğiniz yaklaşımlar gösterir.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İçinde belirli bir değeri görüntülemek için çeşitli yollar sunar <xref:System.Windows.Forms.ProgressBar> denetimi. Seçtiğiniz hangi yaklaşımın elinizdeki veya sorun çözme bağlı olacaktır. Aşağıdaki tabloda, seçebileceğiniz yaklaşım gösterilmektedir.  
   
 |Yaklaşım|Açıklama|  
 |--------------|-----------------|  
-|Değerini <xref:System.Windows.Forms.ProgressBar> denetimini doğrudan.|Bu yaklaşım, bir veri kaynağından okuma gibi kayıtları dahil olacaktır toplamı öğesi ölçülen, burada bildiğiniz görevler için yararlıdır. Yalnızca değeri veya iki kez ayarlamak gerekiyorsa, ek olarak, bunu yapmak için kolay bir yoludur. Son olarak, ilerleme çubuğu tarafından görüntülenen değeri azaltmak gerekiyorsa bu işlemi kullanın.|  
-|Artırmak <xref:System.Windows.Forms.ProgressBar> tarafından sabit bir değer görüntüler.|Bu yaklaşım basit sayısı minimum ve maksimum geçen süre veya dışında bilinen toplam işlenen dosya sayısı gibi arasında görüntülenirken yararlıdır.|  
-|Artırmak <xref:System.Windows.Forms.ProgressBar> değişen değere göre görüntüler.|Görüntülenen değer bir dizi farklı tutarlar kez değiştirmeniz gerektiğinde bu yararlı bir yaklaşımdır. Örnek bir dizi dosyası diske yazılırken kullanılan sabit disk alanı miktarını gösteren.|  
+|Değerini <xref:System.Windows.Forms.ProgressBar> doğrudan denetimi.|Bu yaklaşım, bir veri kaynağındaki kayıtları okuma gibi dahil olacaktır, toplam öğe ölçülen bildiğiniz görevler için kullanışlıdır. Yalnızca değeri veya iki kez ayarlamanız gerekir, ayrıca, bunu yapmanın kolay bir yolu budur. Son olarak, ilerleme çubuğu tarafından görüntülenen değeri azaltmak gerekiyorsa bu işlemi kullanın.|  
+|Artırmak <xref:System.Windows.Forms.ProgressBar> sabit bir değere göre görüntüler.|Basit bir sayısı minimum ve maksimum, geçen süre veya bilinen toplam dışında işlenen dosya sayısı gibi arasında görüntülerken bu faydalı bir yaklaşımdır.|  
+|Artırmak <xref:System.Windows.Forms.ProgressBar> değişen bir değer görüntüler.|Bu yaklaşım, görüntülenen değeri birkaç kez farklı tutarları değiştirmeniz gerektiğinde yararlıdır. Bir örnek, bir dizi dosyası diske yazılırken kullanılan sabit disk alanı miktarını gösteren.|  
   
- Bir ilerleme çubuğu tarafından görüntülenen değeri ayarlamak için en doğrudan yolu ayarlanmasıdır <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği. Bu tasarım zamanında veya çalışma zamanında yapılabilir.  
+ Bir ilerleme çubuğu tarafından görüntülenen değeri ayarlama en dolaysız yolu ayardır <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği. Bu tasarım zamanında veya çalışma zamanında yapılabilir.  
   
-### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar değerini doğrudan ayarlamak için  
+### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar değeri doğrudan ayarlamak için  
   
 1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Kodda, denetimin ayarlama <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğine kurulan minimum ve maksimum değerleri arasında bir tamsayı değeri.  
+2.  Kodda, denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğine yerleşik minimum ve maksimum değerleri arasında bir tamsayı değeri.  
   
     > [!NOTE]
-    >  Ayarlarsanız <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği belirlenen sınırlar dışında <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> denetimi özellikleri, yaratır bir <xref:System.ArgumentException> özel durum.  
+    >  Ayarlarsanız <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği tarafından kurulan sınırların dışındaki <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> denetimin özelliklerini oluşturur bir <xref:System.ArgumentException> özel durum.  
   
-     Aşağıdaki kod örneğinde nasıl ayarlanacağını gösterir <xref:System.Windows.Forms.ProgressBar> doğrudan değeri. Kod kayıtları veri kaynağından okur ve veri kaydı okuma her zaman ilerleme çubuğu ve etiket güncelleştirir. Bu örnekte, form olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetimi, bir <xref:System.Windows.Forms.ProgressBar> denetim ve veri tablosu olarak adlandırılan bir satır ile `CustomerRow` ile `FirstName` ve `LastName` alanları.  
+     Aşağıdaki kod örneğinde nasıl ayarlanacağını gösterir <xref:System.Windows.Forms.ProgressBar> doğrudan değeri. Kod, bir veri kaynağındaki kayıtları okur ve veri kaydı okuma her zaman ilerleme çubuğu ve etiket güncelleştirir. Bu örnekte, formunuzu olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetimi, bir <xref:System.Windows.Forms.ProgressBar> denetimi ve bir veri tablosu adı verilen bir satır ile `CustomerRow` ile `FirstName` ve `LastName` alanları.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "33540124"
     }  
     ```  
   
-     Sabit bir aralıkla geçer ilerleme görüntülüyorsanız, değerini ayarlayın ve sonra artırır bir yöntem çağrısı <xref:System.Windows.Forms.ProgressBar> bu aralığa göre denetimin değeri. Bu, zamanlayıcılar ve ilerleme burada bütün bir yüzdesi olarak ölçme olmayan diğer senaryolar için kullanışlıdır.  
+     Sabit bir aralıkla geçer ilerleme görüntülüyorsanız, değerini ayarlayın ve ardından artıran bir yöntem çağrısı <xref:System.Windows.Forms.ProgressBar> bu aralığa göre denetimin değeri. Bu, zamanlayıcılar ve ilerleme durumunu burada bütün bir yüzdesi olarak ölçüm değil diğer senaryolar için kullanışlıdır.  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>İlerleme çubuğu tarafından sabit bir değer artırmak için  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Sabit bir değere göre ilerleme çubuğu artırmak için  
   
 1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Step%2A> özelliğini ilerleme çubuğunun artırmak üzere temsil eden bir tamsayı değeri görüntülenir.  
+2.  Denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Step%2A> ilerleme çubuğunun artırmak için temsil eden tamsayı özellik değeri görüntülenir.  
   
-3.  Çağrı <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> kümesinde tutar tarafından görüntülenen değeri değiştirmek için yöntemi <xref:System.Windows.Forms.ProgressBar.Step%2A> özelliği.  
+3.  Çağrı <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> kümesinde miktarı tarafından görüntülenen değeri değiştirmek için yöntem <xref:System.Windows.Forms.ProgressBar.Step%2A> özelliği.  
   
-     Aşağıdaki kod örneği, bir ilerleme çubuğu bir kopyalama işlemi dosyalarında sayısını nasıl koruyabilirsiniz gösterilmektedir.  
+     Aşağıdaki kod örneği, bir ilerleme çubuğu dosyaları kopyalama işlemi sayısını nasıl koruyabilirsiniz gösterir.  
   
-     Her dosya belleğe, salt okunur olduğundan aşağıdaki örnekte, ilerleme çubuğu ve etiket toplam dosya okuma yansıtacak şekilde güncelleştirilmiştir. Bu örnekte, form olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetim ve <xref:System.Windows.Forms.ProgressBar> denetim.  
+     Her dosya belleğe okurken aşağıdaki örnekte, ilerleme çubuğu ve etiket toplam dosya okuma yansıtmak üzere güncelleştirilmiştir. Bu örnekte, formunuzu olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetimi ve bir <xref:System.Windows.Forms.ProgressBar> denetimi.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,17 +149,17 @@ ms.locfileid: "33540124"
     }  
     ```  
   
-     Son olarak, böylece her artış benzersiz bir miktar bir ilerleme çubuğu tarafından görüntülenen değeri artırabilirsiniz. Bu, bir dizi farklı boyutlarda dosyaları bir sabit diske yazma ya da bütün bir yüzdesi olarak ilerlemesini ölçme gibi benzersiz işlemlerini izleyen olduğunda yararlıdır.  
+     Son olarak, böylece her artış benzersiz bir miktar bir ilerleme çubuğu tarafından görüntülenen değeri artırabilirsiniz. Bu, bir dizi farklı boyutlardaki dosyaları bir sabit diske yazma veya bütün bir yüzdesi olarak ilerlemeyi ölçme gibi benzersiz işlemlerini izleyen olduğunda yararlıdır.  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>İlerleme çubuğu dinamik bir değerle artırmak için  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Dinamik bir değere göre ilerleme çubuğu artırmak için  
   
 1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Çağrı <xref:System.Windows.Forms.ProgressBar.Increment%2A> belirttiğiniz bir tamsayı tarafından görüntülenen değeri değiştirmek için yöntem.  
+2.  Çağrı <xref:System.Windows.Forms.ProgressBar.Increment%2A> belirttiğiniz bir tamsayı tarafından görüntülenen değeri değiştirmek için yöntemi.  
   
-     Aşağıdaki kod örneğinde, ne kadar disk alanı kopyalama işlemi sırasında kullanılan bir ilerleme çubuğu nasıl hesaplayabilirsiniz gösterilmektedir.  
+     Aşağıdaki kod örneği, bir kopyalama işlemi sırasında ne kadar disk alanı kullanılmış bir ilerleme çubuğu nasıl hesaplayabilirsiniz gösterir.  
   
-     Her dosya sabit diske yazılır olarak aşağıdaki örnekte, ilerleme çubuğu ve etiket kullanılabilir sabit disk alanı miktarını yansıtacak şekilde güncelleştirilmiştir. Bu örnekte, form olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetim ve <xref:System.Windows.Forms.ProgressBar> denetim.  
+     Her dosya sabit diske yazılan aşağıdaki örnekte, ilerleme çubuğu ve etiket kullanılabilir sabit disk alanı miktarını yansıtacak şekilde güncelleştirildi. Bu örnekte, formunuzu olmasını gerektirir bir <xref:System.Windows.Forms.Label> denetimi ve bir <xref:System.Windows.Forms.ProgressBar> denetimi.  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -224,8 +224,8 @@ ms.locfileid: "33540124"
     }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ProgressBar>  
- <xref:System.Windows.Forms.ToolStripProgressBar>  
- [ProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
- [ProgressBar Denetimi](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ProgressBar>
+- <xref:System.Windows.Forms.ToolStripProgressBar>
+- [ProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)
+- [ProgressBar Denetimi](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

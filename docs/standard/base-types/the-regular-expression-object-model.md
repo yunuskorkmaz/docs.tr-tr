@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535314"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a> Bu konuda, .NET normal ifadeleriyle çalışan kullanılan nesne modelini açıklar. Aşağıdaki bölümleri içerir:  
@@ -284,7 +284,7 @@ ms.locfileid: "45664741"
 |`:`|Bir iki nokta üst üste eşleştirin.|  
 |`(?<value>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adıdır `value`.|  
   
- Özelliklerini <xref:System.Text.RegularExpressions.Group> sınıfı yakalanan grubu hakkında bilgi sağlar: `Group.Value` özelliği, yakalanan alt dizeyi içerir `Group.Index` özelliği Girişmetnindekiyakalanangrububaşlangıçkonumunugösterir`Group.Length` yakalanan metnin uzunluğunu özelliği içerir ve `Group.Success` özelliği, bir alt dizesi yakalama grubu tarafından tanımlanan örnekle eşleşen olup olmadığını gösterir.  
+ Özelliklerini <xref:System.Text.RegularExpressions.Group> sınıfı yakalanan grubu hakkında bilgi sağlar: `Group.Value` Özelliği, yakalanan alt dizeyi içerir `Group.Index` özelliği gösterir Giriş metnindeki yakalanan grubu başlangıç konumunu `Group.Length` yakalanan metnin uzunluğunu özelliği içerir ve `Group.Success` özelliği, bir alt dizesi yakalama grubu tarafından tanımlanan örnekle eşleşen olup olmadığını gösterir.  
   
  Bir gruba miktar Belirleyicileri uygulamak (daha fazla bilgi için [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) yakalama grubu iki yolla başına bir yakalama arasındaki ilişkiyi değiştirir:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664741"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Nicelik, bir yakalama grubu tarafından tanımlanan bir desenle birden çok defa geçmelerine eşleşebilir. Bu durumda, `Value` ve `Length` özelliklerini bir <xref:System.Text.RegularExpressions.Group> nesne yalnızca son yakalanan alt dizeyi hakkında bilgiler içerir. Örneğin, aşağıdaki normal ifade, nokta ile biten tek bir cümle ile eşleşir. Yapıları gruplandırma iki kullanır: ilk bir boşluk karakteri; birlikte kelimeler yakalar. İkinci kelimeler yakalar. Normal ifadenin tamamını bir cümle yakalanırken başarılı olsa da örnekteki çıktının gösterdiği gibi ikinci yakalama grubu yalnızca son sözcüğü yakalar.  
+-   Nicelik, bir yakalama grubu tarafından tanımlanan bir desenle birden çok defa geçmelerine eşleşebilir. Bu durumda, `Value` ve `Length` özelliklerini bir <xref:System.Text.RegularExpressions.Group> nesne yalnızca son yakalanan alt dizeyi hakkında bilgiler içerir. Örneğin, aşağıdaki normal ifade, nokta ile biten tek bir cümle ile eşleşir. Yapıları gruplandırma iki kullanır: Bir boşluk karakteri ile birlikte kelimeler ilk yakalar; İkinci kelimeler yakalar. Normal ifadenin tamamını bir cümle yakalanırken başarılı olsa da örnekteki çıktının gösterdiği gibi ikinci yakalama grubu yalnızca son sözcüğü yakalar.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -353,6 +353,6 @@ ms.locfileid: "45664741"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Text.RegularExpressions>  
-- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)
 - [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

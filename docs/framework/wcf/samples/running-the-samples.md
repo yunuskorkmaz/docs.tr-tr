@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535888"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz makine yapılandırmada çalıştırabilirsiniz. Sağlanan olarak örnekler tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek 's yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makineye ve çapraz makine yapılandırmaları bir örnek çalıştırmak açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örnekleri barındırılan hizmetler için adımları farklılığı olduğunu unutmayın. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -79,7 +79,7 @@ Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz m
   
 -   Hizmet, güvenlik nedenleriyle IIS'de barındırılıyorsa, sanal dizin tanımını ve örneklerle tamamladığınızda Kurulumu adımları verilen izinler kaldırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Bir çalışma grubunda ve makinelerdeki örneklerini çalıştırma](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Sorun Giderme İpuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Bir çalışma grubunda ve makinelerdeki örneklerini çalıştırma](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
+- [Sorun Giderme İpuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

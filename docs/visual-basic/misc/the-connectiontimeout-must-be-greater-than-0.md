@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: d38b2f154ccea066c52e6a7ae067d319ea599ee7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 86e5486df7e627750e16b61bd8be7bccd28dbc7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534884"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 0'dan büyük olmalıdır
 Karşıya yükleme ve indirme, dosyaları ile [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), belirtmelisiniz bir `connectionTimeout` büyüktür `0`.  
@@ -18,9 +18,9 @@ Karşıya yükleme ve indirme, dosyaları ile [My.Computer.Network](xref:Microso
   
 -   Tedarik bir `connectionTimeout` 'den daha büyük `0`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
- [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
- [Nasıl Yapılır: Karşıya Dosya Yükleme](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [Nasıl Yapılır: Dosya İndirme](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Visual Basic ile .NET Framework'te ağ işlemleri](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
+- [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)
+- [Nasıl yapılır: Bir dosyayı karşıya yükleyin](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Nasıl yapılır: Dosya indirme](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Visual Basic ile .NET Framework'te ağ işlemleri](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

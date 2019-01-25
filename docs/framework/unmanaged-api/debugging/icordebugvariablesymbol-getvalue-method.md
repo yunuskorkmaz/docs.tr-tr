@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5916b1bd89c4f86d76ef4b61afa211b76be94928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14412c11010b94fdc462c5aa29e9bc769b2633cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496760"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue yöntemi
-Bir değişkenin değerini bir bayt dizisi olarak alır.  
+Bir bayt dizisi olarak bir değişkenin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,10 +29,10 @@ HRESULT GetValue(
   
 #### <a name="parameters"></a>Parametreler  
  `offset`  
- [in] Değeri okunacak değişkeninde başlangıç uzaklığı. Bu parametre, bir nesne üyesi alanlarında okunurken kullanılır.  
+ [in] Değer okunacağı değişkeninde başlangıç uzaklığı. Bu parametre, bir nesne üyesi alanlarına okuma sırasında kullanılır.  
   
  `cbContext`  
- [in] Bayt cinsinden boyutu `context` bağımsız değişkeni.  
+ [in] Bayt cinsinden boyutu `context` bağımsız değişken.  
   
  `context`  
  [in] Değeri okumak için kullanılan iş parçacığı bağlamı.  
@@ -49,17 +49,17 @@ HRESULT GetValue(
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugVariableSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugVariableSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 20150326308513325a9f1219de3e3023e6c5192b
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 89645c489cb9f21ffe415fb7c02ae09fca9a7444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505711"
 ---
-# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme (Visual Basic)
+# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek yol: .NET Framework yöntemleri (Visual Basic) kullanarak dosyaları düzenleme
 Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xref:System.IO.StreamReader> sınıfı, bir dosya erişilebilir olmadığını kontrol edin, bir dize örneği ile okuma dosya içindeki arama <xref:System.IO.StreamReader> sınıfı ve kullanarak bir dosyaya yazma <xref:System.IO.StreamWriter> sınıfı.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -147,7 +147,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
   
  Kodunuzu test etmek için uygulamayı derlemek üzere F5 tuşuna basın. Tıklayın **Girişleri Al**bir girişi seçin ve ardından **görünen**. Giriş belirir `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Tıklayın **Düzenle giriş**. Giriş belirir `Entry` <xref:System.Windows.Forms.TextBox>. Girişi düzenlemek `Entry` <xref:System.Windows.Forms.TextBox> tıklatıp **gönderme Düzenle**. Açık `MyDiary.txt` düzeltmenizi onaylamak için dosya. Artık bir girişi seçin ve tıklayın **girdiyi Sil**. Zaman <xref:System.Windows.Forms.MessageBox> onay istekleri tıklayın **Tamam**. Uygulamayı kapatın ve açın `MyDiary.txt` silme işlemini onaylamak için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.StreamWriter>  
- [İzlenecek Yollar](../../../../visual-basic/walkthroughs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamWriter>
+- [İzlenecek Yollar](../../../../visual-basic/walkthroughs.md)

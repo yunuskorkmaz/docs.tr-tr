@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509967"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
-.NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler birbirine bağlı kod kümesidir, bir kullanıcı denetimi oluşturabilirsiniz veya yukarı sıfırdan denetiminizi tasarlayabilirsiniz. Devralma bile varolan denetimden devralan bir denetim oluşturmak ve devralınan işlevselliğini eklemek için de kullanabilirsiniz. Hangi yaklaşımın kullanın, .NET Framework oluşturduğunuz herhangi bir denetim için özel bir grafik arabirim çizmek için işlevsellik sağlar.  
+.NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler kodla birlikte ilişkili bir dizi olan bir kullanıcı denetimi oluşturabilir veya sıfırdan kendi denetiminizi yukarı tasarlayabilirsiniz. Devralma, varolan bir denetimden devralan bir denetim oluşturma ve doğal işlevselliği eklemek için bile kullanabilirsiniz. Hangi yaklaşımı kullanın, .NET Framework özel bir grafik arabirim için oluşturduğunuz herhangi bir denetimi çizmek için işlevsellik sağlar.  
   
- Bir denetimin boyama denetimin kodda yürütülmesi tarafından gerçekleştirilir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Tek bağımsız değişkeni <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> tüm bilgi ve denetim işlemek için gerekli işlevselliği sağlayan nesne. <xref:System.Windows.Forms.PaintEventArgs> Denetiminizi işlemede kullanılan iki asıl nesneler özellikleri sağlar:  
+ Boyama bir denetimin, denetimin içindeki kod yürütmeyi tarafından gerçekleştirilir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Tek bağımsız değişkeni <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> tüm bilgi ve denetim oluşturmak için gereken işlevselliği sağlayan nesne. <xref:System.Windows.Forms.PaintEventArgs> Denetiminizin işlemede kullanılan iki asıl nesneler özellikleri sağlar:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu tüm olabilir denetim ya da Denetim nasıl çizilir bağlı olarak denetim parçası.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu, tüm olabilir denetimi veya denetim, denetimin nasıl çizilmeden bağlı olarak bir parçası.  
   
--   <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizin çizmek gerekli işlevselliği sağlamak yöntemleri yalıtır.  
+-   <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizi çizmek için gereken işlevselliği sağlayan yöntemler kapsüller.  
   
- Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve kullanmak için bkz: nasıl [nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve onu kullanmak üzere nasıl [nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Her denetim çizilmiş veya ekranda yenilenir olay tetiklenir ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesnesi boyama yer alacak dikdörtgen temsil eder. Tüm denetim yenilenmesi, gerekiyorsa <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tüm denetim boyutunu temsil eder. Denetim bir parçası, yenilenmesi ancak gerekiyor yalnızca <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesnesini temsil eden yalnızca çizilmesi gerektiğinde bölgesi. Başka bir denetim veya formun kullanıcı arabiriminde bir denetim kısmen getirilmemeli zaman böyle bir durumda bir örnek olacaktır.  
+ <xref:System.Windows.Forms.Control.OnPaint%2A> Her denetimin çizilmiş veya ekranda yenilenir olay tetiklenir ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesneyi temsil ediyor dikdörtgenin boyama yer alır. Tüm denetim yenilenmesi, gerekiyorsa <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tüm denetiminin boyutunu temsil eder. Yalnızca denetim parçası yenilenmesi, ancak gereken <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesnesini temsil eden çizilmesini gerektiren bölge. Bir denetimi başka bir denetim veya form kullanıcı arabiriminde kısmen engellediği zaman örneği böyle bir durumda olacaktır.  
   
- İçinden devralma zaman <xref:System.Windows.Forms.Control> sınıfı, kılmanız gerekir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi ve grafik işleme kod içinde sağlayın. Bir kullanıcı denetimi veya devralınan bir denetim için özel bir grafik arabirim sağlamak istiyorsanız, ayrıca geçersiz kılarak bunu yapabilirsiniz <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bir örnek aşağıda verilmiştir:  
+ Gelen devralınırken <xref:System.Windows.Forms.Control> sınıfı kılmanız gerekir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi ve içindeki grafik işleme kodunu sağlayın. Bir kullanıcı denetimi veya devralınan bir denetim için özel bir grafik arabirim sağlamak istiyorsanız, bunu da geçersiz kılarak yapabilirsiniz <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bir örnek aşağıda gösterilmiştir:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -60,9 +60,9 @@ protected override void OnPaint(PaintEventArgs e)
 }  
 ```  
   
- Önceki örnekte çok basit bir grafik gösterimi ile denetimi oluşturmak nasıl gösterir. Çağırır <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi temel sınıfın oluşturduğu bir <xref:System.Drawing.Pen> nesne hangi çizmek ve son olarak çizer Dikdörtgen elips bir belirlediği <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Size%2A> denetimi. Çoğu işleme kod bu değerden büyük ölçüde daha karmaşık olsa da, bu örnek kullanımını gösteren <xref:System.Drawing.Graphics> kapsamında yer alan nesne <xref:System.Windows.Forms.PaintEventArgs> nesne. Bir grafik gösterimi gibi zaten bir sınıfından devralan gerçekleştiriyorsanız <xref:System.Windows.Forms.UserControl> veya <xref:System.Windows.Forms.Button>ve bu gösterimi işlemeniz içine dahil etmek istiyor musunuz, temel sınıfın çağırmalıdır değil <xref:System.Windows.Forms.Control.OnPaint%2A> yöntem.  
+ Önceki örnek çok basit bir grafik gösterimi denetimiyle nasıl oluşturulacağını gösterir. Çağrı <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi temel sınıfın oluşturduğu bir <xref:System.Drawing.Pen> çizmek, nesne ve son olarak bir dikdörtgenin içindeki bir elips çizer belirlenir <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Size%2A> denetimi. Çoğu işleme kodunu bundan çok daha karmaşık olsa da, bu örnek, kullanımını gösterir. <xref:System.Drawing.Graphics> nesne içinde yer alan <xref:System.Windows.Forms.PaintEventArgs> nesne. Bir grafik gösterimi gibi zaten bir sınıfından devralan gerçekleştiriyorsanız <xref:System.Windows.Forms.UserControl> veya <xref:System.Windows.Forms.Button>ve bu gösterimi, işleme halinde birleştirmek istemiyorsanız, temel sınıfın çağırmalıdır değil <xref:System.Windows.Forms.Control.OnPaint%2A> yöntem.  
   
- Kodda <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi denetiminizin denetimi ilk çizildiğinde ve yenileniyor her yürütülecek. Yeniden boyutlandırılmış her zaman denetiminiz çizilme emin olmak için Denetim oluşturucuya aşağıdaki satırı ekleyin:  
+ Kodda <xref:System.Windows.Forms.Control.OnPaint%2A> denetiminizin yöntemi denetim çizildiğinde ve onu yenilendiğinde yürütülecek. Denetim yeniden boyutlandırılmış her zaman yeniden çizilir emin olmak için oluşturucuya denetiminizin aşağıdaki satırı ekleyin:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,14 +73,14 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
->  Kullanım <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> dikdörtgen olmayan denetimi için özellik.  
+>  Kullanım <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> dikdörtgen olmayan denetimi uygulamak için özellik.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Control.Region%2A>  
- <xref:System.Windows.Forms.ControlStyles>  
- <xref:System.Drawing.Graphics>  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Windows.Forms.PaintEventArgs>  
- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Bağlı Denetimler](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Control.Region%2A>
+- <xref:System.Windows.Forms.ControlStyles>
+- <xref:System.Drawing.Graphics>
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Windows.Forms.PaintEventArgs>
+- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Bağlı Denetimler](../../../../docs/framework/winforms/controls/constituent-controls.md)
+- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

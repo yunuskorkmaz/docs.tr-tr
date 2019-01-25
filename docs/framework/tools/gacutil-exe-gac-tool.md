@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1dac8aec7f565b82797ba179fc01968e00bf36b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541228"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Genel Derleme Önbelleği Aracı)
 Genel Bütünleştirilmiş Kod Önbelleği aracı genel bütünleştirilmiş kod önbelleğinin ve indirme önbelleğinin içeriğini görüntülemenize ve değiştirmenize olanak sağlar.  
@@ -44,7 +44,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
 |*AssemblyName*|Bir derlemenin adı. Gibi bir kısmen belirtilen derleme adı sağlayabilirsiniz `myAssembly` veya tam olarak belirtilen derleme adı gibi `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
-|*AssemblyPath*|Bir derleme bildirimi içeren dosyanın adı.|  
+|*assemblyPath*|Bir derleme bildirimi içeren dosyanın adı.|  
 |*assemblyListFile*|Yüklenecek veya kaldırılacak derlemeleri listeleyen bir ANSI metin dosyasının yolu. Derlemeleri yüklemek üzere metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda yolu belirtin. Araç göreli yolları konumunu yorumlama *assemblyListFile*. Derlemeleri kaldırmak üzere bir metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda tam derleme adını belirtin. Bkz: *assemblyListFile* içeriği daha sonra bu konudaki örnekler.|  
   
 |Seçenek|Açıklama|  
@@ -165,8 +165,8 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
+- [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

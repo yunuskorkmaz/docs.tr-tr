@@ -1,12 +1,12 @@
 ---
-title: 'İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma'
+title: 'İzlenecek yol: Kullanarak bir nesneyi kalıcı kılmaC#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512456"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma #
 
@@ -99,7 +99,7 @@ Sonraki sınıfı bir dosyaya serileştirmek için kod eklemeniz gerekir. Varola
 
 Bu noktada, yeniden derleyebilir ve uygulamayı çalıştırın. İlk kez çalıştığında, faiz oranları 7.5 başlar ve ardından 7.1 için değişiklikleri dikkat edin. Uygulamayı kapatın ve yeniden çalıştırın. Şimdi uygulamayı kaydedilen dosyayı okudu ve 7.1 bile, değişiklikleri kodundan önce faiz oranını olduğundan ileti yazdırır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Seri hale getirme (C#)](index.md)  
-- [C# Programlama Kılavuzu](../..//index.md)  
+- [Seri hale getirme (C#)](index.md)
+- [C# Programlama Kılavuzu](../..//index.md)

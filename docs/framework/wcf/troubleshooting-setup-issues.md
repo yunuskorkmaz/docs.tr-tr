@@ -2,12 +2,12 @@
 title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532558"
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme açıklar.  
@@ -38,17 +38,17 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
   
 4.  Bir aşağıdaki gibi bir özel durum olay günlüğü veya Kurulum izleme günlük dosyasında listelenen:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: beklenmeyen bir sonuç 3 E:\WINDOWS\system32\wbem\mofcomp.exe "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows iletişim Foundation\ServiceModel.mof" ile çalıştırma  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
      veya:  
   
-     ServiceModelReg [07:19:33:843]: System.typeınitializationexception: türü Başlatıcı 'System.Management.ManagementPath' için bir özel durum oluşturdu. ---> System.Runtime.InteropServices.COMException (0x80040154): COM sınıf üreteci CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} bileşeni için alınırken aşağıdaki hata nedeniyle başarısız oldu: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.typeınitializationexception: Türü Başlatıcı 'System.Management.ManagementPath' için bir özel durum oluşturdu. ---> System.Runtime.InteropServices.COMException (0x80040154): CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} şu hata nedeniyle başarısız oldu. bileşen için COM sınıf üreteci alınıyor: 80040154.  
   
      veya:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: dosya veya derleme 'C:\WINDOWS\system32\wbem\mofcomp.exe' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Dosya veya derleme 'C:\WINDOWS\system32\wbem\mofcomp.exe' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.  
   
-     Dosya adı: ' C:\WINDOWS\system32\wbem\mofcomp.exe  
+     Dosya adı: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  Aşağıdaki adımlar, daha önce açıklanan sorunu gidermek için izlenmesi gerekir.  
   
@@ -73,5 +73,5 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kurulum Yönergeleri](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kurulum Yönergeleri](../../../docs/framework/wcf/samples/set-up-instructions.md)
