@@ -1,39 +1,39 @@
 ---
-title: 'Nasıl Yapılır: -Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4b38271c1aaf582c8c58b7198765b679cdfe4881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499570"
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="d41bf-102">Nasıl Yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="d41bf-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
-<span data-ttu-id="d41bf-103">Bu örnek iki yapıları tanımlar `RomanNumeral` ve `BinaryNumeral`ve bunlar arasında dönüştürmeler gösterir.</span><span class="sxs-lookup"><span data-stu-id="d41bf-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="d565e-102">Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="d565e-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
+<span data-ttu-id="d565e-103">Bu örnek iki yapıları tanımlar `RomanNumeral` ve `BinaryNumeral`ve bunlar arasında dönüştürmeler gösterir.</span><span class="sxs-lookup"><span data-stu-id="d565e-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d41bf-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d41bf-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d565e-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d565e-104">Example</span></span>  
  [!code-csharp[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="d41bf-105">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="d41bf-105">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="d565e-105">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="d565e-105">Robust Programming</span></span>  
   
--   <span data-ttu-id="d41bf-106">Önceki örnekte, deyim:</span><span class="sxs-lookup"><span data-stu-id="d41bf-106">In the previous example, the statement:</span></span>  
+-   <span data-ttu-id="d565e-106">Önceki örnekte, deyim:</span><span class="sxs-lookup"><span data-stu-id="d565e-106">In the previous example, the statement:</span></span>  
   
      [!code-csharp[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
   
-     <span data-ttu-id="d41bf-107">bir dönüştürme gerçekleştiren bir `RomanNumeral` için bir `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d41bf-107">performs a conversion from a `RomanNumeral` to a `BinaryNumeral`.</span></span> <span data-ttu-id="d41bf-108">Doğrudan dönüşüm yok olduğundan `RomanNumeral` için `BinaryNumeral`, bir yayın dönüştürmek için kullanılan bir `RomanNumeral` için bir `int`ve dönüştürmek için başka bir tür dönüştürme bir `int` için bir `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d41bf-108">Because there is no direct conversion from `RomanNumeral` to `BinaryNumeral`, a cast is used to convert from a `RomanNumeral` to an `int`, and another cast to convert from an `int` to a `BinaryNumeral`.</span></span>  
+     <span data-ttu-id="d565e-107">bir dönüştürme gerçekleştiren bir `RomanNumeral` için bir `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d565e-107">performs a conversion from a `RomanNumeral` to a `BinaryNumeral`.</span></span> <span data-ttu-id="d565e-108">Doğrudan dönüşüm yok olduğundan `RomanNumeral` için `BinaryNumeral`, bir yayın dönüştürmek için kullanılan bir `RomanNumeral` için bir `int`ve dönüştürmek için başka bir tür dönüştürme bir `int` için bir `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d565e-108">Because there is no direct conversion from `RomanNumeral` to `BinaryNumeral`, a cast is used to convert from a `RomanNumeral` to an `int`, and another cast to convert from an `int` to a `BinaryNumeral`.</span></span>  
   
--   <span data-ttu-id="d41bf-109">Ayrıca deyimi</span><span class="sxs-lookup"><span data-stu-id="d41bf-109">Also the statement</span></span>  
+-   <span data-ttu-id="d565e-109">Ayrıca deyimi</span><span class="sxs-lookup"><span data-stu-id="d565e-109">Also the statement</span></span>  
   
      [!code-csharp[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
   
-     <span data-ttu-id="d41bf-110">bir dönüştürme gerçekleştiren bir `BinaryNumeral` için bir `RomanNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d41bf-110">performs a conversion from a `BinaryNumeral` to a `RomanNumeral`.</span></span> <span data-ttu-id="d41bf-111">Çünkü `RomanNumeral` örtük bir dönüştürme tanımlar `BinaryNumeral`, atama gereklidir.</span><span class="sxs-lookup"><span data-stu-id="d41bf-111">Because `RomanNumeral` defines an implicit conversion from `BinaryNumeral`, no cast is required.</span></span>  
+     <span data-ttu-id="d565e-110">bir dönüştürme gerçekleştiren bir `BinaryNumeral` için bir `RomanNumeral`.</span><span class="sxs-lookup"><span data-stu-id="d565e-110">performs a conversion from a `BinaryNumeral` to a `RomanNumeral`.</span></span> <span data-ttu-id="d565e-111">Çünkü `RomanNumeral` örtük bir dönüştürme tanımlar `BinaryNumeral`, atama gereklidir.</span><span class="sxs-lookup"><span data-stu-id="d565e-111">Because `RomanNumeral` defines an implicit conversion from `BinaryNumeral`, no cast is required.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d41bf-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d41bf-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d565e-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d565e-112">See also</span></span>
 
-- [<span data-ttu-id="d41bf-113">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="d41bf-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="d41bf-114">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d41bf-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="d41bf-115">Dönüştürme İşleçleri</span><span class="sxs-lookup"><span data-stu-id="d41bf-115">Conversion Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [<span data-ttu-id="d565e-113">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="d565e-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="d565e-114">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="d565e-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="d565e-115">Dönüştürme İşleçleri</span><span class="sxs-lookup"><span data-stu-id="d565e-115">Conversion Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

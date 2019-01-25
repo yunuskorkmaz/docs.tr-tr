@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f37bbe7d9e76d76bfe4c0f80b6f2343a5598bbfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549843"
 ---
-# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="f30d8-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Metodu</span><span class="sxs-lookup"><span data-stu-id="f30d8-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
-<span data-ttu-id="f30d8-103">Geçerli özel durumun çağıran iş parçacığı üzerinde Watson demet alır.</span><span class="sxs-lookup"><span data-stu-id="f30d8-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
+# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="5fc33-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Metodu</span><span class="sxs-lookup"><span data-stu-id="5fc33-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
+<span data-ttu-id="5fc33-103">Watson demet çağıran iş parçacığında geçerli özel durumu alır.</span><span class="sxs-lookup"><span data-stu-id="5fc33-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
   
- <span data-ttu-id="f30d8-104">A *demet* aynı kod hatası için ilgili hata verileri koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="f30d8-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="f30d8-105">*Watson* toplama ve bir özel durum ile ilişkili verileri çözümlemek için teknoloji başvuruyor.</span><span class="sxs-lookup"><span data-stu-id="f30d8-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
+ <span data-ttu-id="5fc33-104">A *demet* aynı kod hatası için ilgili veriler hata oluşan bir koleksiyondur.</span><span class="sxs-lookup"><span data-stu-id="5fc33-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="5fc33-105">*Watson* bir özel durumla ilişkili verileri toplayıp analiz eden için teknoloji kümesi ifade eder.</span><span class="sxs-lookup"><span data-stu-id="5fc33-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f30d8-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f30d8-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fc33-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5fc33-106">Syntax</span></span>  
   
 ```  
 HRESULT GetBucketParametersForCurrentException(  
@@ -37,18 +37,18 @@ HRESULT GetBucketParametersForCurrentException(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f30d8-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f30d8-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5fc33-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5fc33-107">Parameters</span></span>  
  `pParams`  
- <span data-ttu-id="f30d8-108">[out] Bir işaretçi bir [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) özel durum için hata verileri içeren yapısı.</span><span class="sxs-lookup"><span data-stu-id="f30d8-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
+ <span data-ttu-id="5fc33-108">[out] Bir işaretçi bir [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) içeren özel durum için hata veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="5fc33-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f30d8-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f30d8-109">Requirements</span></span>  
- <span data-ttu-id="f30d8-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f30d8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fc33-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5fc33-109">Requirements</span></span>  
+ <span data-ttu-id="5fc33-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5fc33-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f30d8-111">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f30d8-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5fc33-111">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5fc33-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f30d8-112">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f30d8-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5fc33-112">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5fc33-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f30d8-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f30d8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5fc33-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fc33-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f30d8-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f30d8-114">See Also</span></span>  
- [<span data-ttu-id="f30d8-115">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f30d8-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5fc33-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5fc33-114">See also</span></span>
+- [<span data-ttu-id="5fc33-115">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5fc33-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6805b7b49f76b80161aef5051fe3c284192f582
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1baae7d7867b0cbb227af72fcc505a5cadfa4df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511643"
 ---
-# <a name="icordebugexceptionobjectvalue-interface"></a><span data-ttu-id="c7265-102">ICorDebugExceptionObjectValue Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c7265-102">ICorDebugExceptionObjectValue Interface</span></span>
-<span data-ttu-id="c7265-103">Yönetilen özel durum nesnesinden yığın izleme bilgileri sağlamak için "ICorDebugObjectValue" arabirimini genişletir.</span><span class="sxs-lookup"><span data-stu-id="c7265-103">Extends the "ICorDebugObjectValue" interface to provide stack trace information from a managed exception object.</span></span>  
+# <a name="icordebugexceptionobjectvalue-interface"></a><span data-ttu-id="ed0e4-102">ICorDebugExceptionObjectValue Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ed0e4-102">ICorDebugExceptionObjectValue Interface</span></span>
+<span data-ttu-id="ed0e4-103">Yönetilen özel durum nesnesinden yığın izleme bilgisi sağlamak üzere "ICorDebugObjectValue" arabirimini genişletir.</span><span class="sxs-lookup"><span data-stu-id="ed0e4-103">Extends the "ICorDebugObjectValue" interface to provide stack trace information from a managed exception object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c7265-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="c7265-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ed0e4-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="ed0e4-104">Methods</span></span>  
   
-|<span data-ttu-id="c7265-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="c7265-105">Method</span></span>|<span data-ttu-id="c7265-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c7265-106">Description</span></span>|  
+|<span data-ttu-id="ed0e4-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ed0e4-105">Method</span></span>|<span data-ttu-id="ed0e4-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed0e4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c7265-107">EnumerateExceptionCallStack Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c7265-107">EnumerateExceptionCallStack Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|<span data-ttu-id="c7265-108">Bir özel durum nesnesi katıştırılmış çağrı yığını için bir numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="c7265-108">Gets an enumerator to the call stack embedded in an exception object.</span></span>|  
+|[<span data-ttu-id="ed0e4-107">EnumerateExceptionCallStack Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ed0e4-107">EnumerateExceptionCallStack Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|<span data-ttu-id="ed0e4-108">Bir özel durum nesnesine katıştırılmış çağrı yığını için bir numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="ed0e4-108">Gets an enumerator to the call stack embedded in an exception object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c7265-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c7265-109">Remarks</span></span>  
- <span data-ttu-id="c7265-110">Çağrı `QueryInterface` öğesinden türetilen yönetilen nesneler için başarılı olur <xref:System.Exception?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c7265-110">The call to `QueryInterface` will succeed for managed objects that derive from <xref:System.Exception?displayProperty=nameWithType>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed0e4-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ed0e4-109">Remarks</span></span>  
+ <span data-ttu-id="ed0e4-110">Çağrı `QueryInterface` türetilen bir yönetilen nesneler için başarılı olur <xref:System.Exception?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ed0e4-110">The call to `QueryInterface` will succeed for managed objects that derive from <xref:System.Exception?displayProperty=nameWithType>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7265-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c7265-111">Requirements</span></span>  
- <span data-ttu-id="c7265-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7265-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed0e4-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ed0e4-111">Requirements</span></span>  
+ <span data-ttu-id="ed0e4-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed0e4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7265-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7265-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed0e4-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed0e4-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7265-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7265-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed0e4-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed0e4-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7265-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7265-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ed0e4-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed0e4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7265-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c7265-116">See Also</span></span>  
- [<span data-ttu-id="c7265-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c7265-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="c7265-118">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="c7265-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)  
- 
+## <a name="see-also"></a><span data-ttu-id="ed0e4-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed0e4-116">See also</span></span>
+- [<span data-ttu-id="ed0e4-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ed0e4-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ed0e4-118">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="ed0e4-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+

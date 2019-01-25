@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: Bir dosyaya metin yazma'
+ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,86 +13,62 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524201"
 ---
-# <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="5f4fc-102">Nasıl yapılır: Bir Dosyaya Metin Yazma</span><span class="sxs-lookup"><span data-stu-id="5f4fc-102">How to: Write Text to a File</span></span>
-<span data-ttu-id="5f4fc-103">.NET Framework uygulamaları için bir dosyaya metin yazabilirsiniz bu konuda gösterildiği farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-103">This topic shows different ways you can write text to a file for .NET Framework applications or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="5f4fc-104">Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="5f4fc-104">The following classes and methods are typically used to write text to a file:</span></span>  
-  
--   <span data-ttu-id="5f4fc-105"><xref:System.IO.StreamWriter> -bir dosyasına eşzamanlı yazma yöntemleri içeren (<xref:System.IO.StreamWriter.Write%2A> veya <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="5f4fc-105"><xref:System.IO.StreamWriter> - it contains methods to write to a file synchronously (<xref:System.IO.StreamWriter.Write%2A> or <xref:System.IO.TextWriter.WriteLine%2A>) or asynchronously (<xref:System.IO.StreamWriter.WriteAsync%2A> and <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span></span>  
-  
--   <span data-ttu-id="5f4fc-106"><xref:System.IO.File> – .NET Framework uygulamaları ile kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-106"><xref:System.IO.File> – to be used with .NET Framework applications.</span></span> <span data-ttu-id="5f4fc-107">Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya bir dosyaya metin eklemek için (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).</span><span class="sxs-lookup"><span data-stu-id="5f4fc-107">It provides static methods to write text to a file such as <xref:System.IO.File.WriteAllLines%2A> and <xref:System.IO.File.WriteAllText%2A>, or to append text to a file (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> or <xref:System.IO.File.AppendText%2A>).</span></span>  
-  
--   <span data-ttu-id="5f4fc-108"><xref:Windows.Storage.FileIO> -ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-108"><xref:Windows.Storage.FileIO> - to be used with [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="5f4fc-109">Metni bir dosyaya yazmak için zaman uyumsuz yöntemleri içerir (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> veya <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) veya bir dosyaya metin eklemek için (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> veya <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="5f4fc-109">It contains asynchronous methods to write text to a file (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> or <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) or to append text to a file (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> or <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).</span></span>  
+# <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="f1aed-102">Nasıl yapılır: Bir dosyaya metin yazma</span><span class="sxs-lookup"><span data-stu-id="f1aed-102">How to: Write text to a file</span></span>
+<span data-ttu-id="f1aed-103">Bu konu, bir .NET uygulaması için bir dosyaya metin yazma için farklı yollar gösterir.</span><span class="sxs-lookup"><span data-stu-id="f1aed-103">This topic shows different ways to write text to a file for a .NET app.</span></span> 
 
-- <span data-ttu-id="5f4fc-110"><xref:System.IO.Path> -Dosya veya dizin yolu bilgilerini içeren dizeleri kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-110"><xref:System.IO.Path> - to be used on strings that contain file or directory path information.</span></span> <span data-ttu-id="5f4fc-111">İçerdiği <xref:System.IO.Path.Combine%2A> yöntemi bir dosya veya dizin yolu oluşturmak için dizelerin bir birleşimini sağlar.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-111">It contains the <xref:System.IO.Path.Combine%2A> method, which allows concatenation of strings to build a file or directory path.</span></span>
+<span data-ttu-id="f1aed-104">Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="f1aed-104">The following classes and methods are typically used to write text to a file:</span></span>  
+  
+-   <span data-ttu-id="f1aed-105"><xref:System.IO.StreamWriter> zaman uyumlu olarak bir dosyaya yazmak için yöntemleri içerir (<xref:System.IO.StreamWriter.Write%2A> ve <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="f1aed-105"><xref:System.IO.StreamWriter> contains methods to write to a file synchronously (<xref:System.IO.StreamWriter.Write%2A> and <xref:System.IO.TextWriter.WriteLine%2A>) or asynchronously (<xref:System.IO.StreamWriter.WriteAsync%2A> and <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span></span>  
+  
+-   <span data-ttu-id="f1aed-106"><xref:System.IO.File> metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya gibi bir dosyaya metin eklenecek <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, ve <xref:System.IO.File.AppendText%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1aed-106"><xref:System.IO.File> provides static methods to write text to a file, such as <xref:System.IO.File.WriteAllLines%2A> and <xref:System.IO.File.WriteAllText%2A>, or to append text to a file, such as <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, and <xref:System.IO.File.AppendText%2A>.</span></span>  
+  
+- <span data-ttu-id="f1aed-107"><xref:System.IO.Path> için dosya veya dizin yolu bilgileri olan strings olur.</span><span class="sxs-lookup"><span data-stu-id="f1aed-107"><xref:System.IO.Path> is for strings that have file or directory path information.</span></span> <span data-ttu-id="f1aed-108">İçerdiği <xref:System.IO.Path.Combine%2A> yöntemi ve .NET Core 2.1 ve sonraki sürümlerinde, <xref:System.IO.Path.Join%2A> ve <xref:System.IO.Path.TryJoin%2A> izin veren birleştirme dizelerin bir dosya veya dizin yolu oluşturmak için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="f1aed-108">It contains the <xref:System.IO.Path.Combine%2A> method and, in .NET Core 2.1 and later, the <xref:System.IO.Path.Join%2A> and <xref:System.IO.Path.TryJoin%2A> methods, which allow concatenation of strings to build a file or directory path.</span></span>
 
+> [!NOTE]
+> <span data-ttu-id="f1aed-109">Aşağıdaki örnekler yalnızca minimum gereken kod miktarını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f1aed-109">The following examples show only the minimum amount of code needed.</span></span> <span data-ttu-id="f1aed-110">Gerçek uygulama genelde daha sağlam hata denetimi ve özel durum işleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="f1aed-110">A real-world app usually provides more robust error checking and exception handling.</span></span>  
+  
+## <a name="example-synchronously-write-text-with-streamwriter"></a><span data-ttu-id="f1aed-111">Örnek: Zaman uyumlu olarak StreamWriter ile metin yazma</span><span class="sxs-lookup"><span data-stu-id="f1aed-111">Example: Synchronously write text with StreamWriter</span></span>
 
- <span data-ttu-id="5f4fc-112">Örnekler, gerçekleştirilen görevdeki odaklanmak için basit tutulmuştur.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-112">The samples have been kept simple in order to focus on the task being performed.</span></span> <span data-ttu-id="5f4fc-113">Bu nedenle, varsa minimum hata denetimi ve özel durum işleme örnekleri gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-113">For this reason, the samples perform minimal error checking and exception handling, if any.</span></span> <span data-ttu-id="5f4fc-114">Bir gerçek yaşam uygulaması genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-114">A real-world application generally provides more robust error checking and exception handling.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="5f4fc-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f4fc-115">Example</span></span>  
- <span data-ttu-id="5f4fc-116">Aşağıdaki örnek, zaman uyumlu olarak yeni kullanarak bir dosyaya metin yazma işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı, her defasında bir satır.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-116">The following example shows how to synchronously write text to a new file using the <xref:System.IO.StreamWriter> class, one line at a time.</span></span> <span data-ttu-id="5f4fc-117">Yeni metin dosyası, kullanıcının Belgelerim klasörüne kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-117">The new text file is saved to the user's My Documents folder.</span></span> <span data-ttu-id="5f4fc-118">Çünkü <xref:System.IO.StreamWriter> nesne bildirildi ve içinde örneklenen bir `using` deyimi <xref:System.IO.StreamWriter.Dispose%2A> metodunu çağırmak otomatik olarak boşaltır ve akışı kapatır.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-118">Because the <xref:System.IO.StreamWriter> object is declared and instantiated in a `using` statement, the <xref:System.IO.StreamWriter.Dispose%2A> method is invoked which automatically flushes and closes the stream.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
-  
-## <a name="example"></a><span data-ttu-id="5f4fc-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f4fc-119">Example</span></span>  
- <span data-ttu-id="5f4fc-120">Aşağıdaki örnek, var olan bir kullanarak dosyaya metin ekleme işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-120">The following example shows how to append text to an existing file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="5f4fc-121">Önceki örnekte aynı metin dosyası kullanır.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-121">It uses the same text file from the previous example.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
-  
-## <a name="example"></a><span data-ttu-id="5f4fc-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f4fc-122">Example</span></span>  
- <span data-ttu-id="5f4fc-123">Aşağıdaki örnek, zaman uyumsuz olarak yeni kullanarak bir dosyaya metin yazma işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-123">The following example shows how to asynchronously write text to a new file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="5f4fc-124">Çağırmak için <xref:System.IO.StreamWriter.WriteAsync%2A> yöntem, yöntem çağrısının içinde olması gerekir bir `async` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-124">In order to invoke the <xref:System.IO.StreamWriter.WriteAsync%2A> method, the method call needs to be within an `async` method.</span></span> <span data-ttu-id="5f4fc-125">Yeni metin dosyası, kullanıcının Belgelerim klasörüne kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-125">The new text file is saved to the user's My Documents folder.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
-  
-## <a name="example"></a><span data-ttu-id="5f4fc-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f4fc-126">Example</span></span>  
- <span data-ttu-id="5f4fc-127">Aşağıdaki örnek, yeni bir dosyaya metin yazma ve kullanarak aynı dosya için yeni satırlık metin ekleme işlemi gösterilmektedir <xref:System.IO.File> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-127">The following example shows how to write text to a new file and append new lines of text to the same file using the <xref:System.IO.File> class.</span></span> <span data-ttu-id="5f4fc-128"><xref:System.IO.File.WriteAllText%2A> Ve <xref:System.IO.File.AppendAllLines%2A> yöntemleri açın ve dosyayı otomatik olarak kapatın.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-128">The <xref:System.IO.File.WriteAllText%2A> and <xref:System.IO.File.AppendAllLines%2A> methods open and close the file automatically.</span></span> <span data-ttu-id="5f4fc-129">Sağladığınız yolun, <xref:System.IO.File.WriteAllText%2A> yöntemi zaten var, dosyanın üzerine yazılır.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-129">If the path you provide to the <xref:System.IO.File.WriteAllText%2A> method already exists, the file will be overwritten.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
-  
-## <a name="example"></a><span data-ttu-id="5f4fc-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f4fc-130">Example</span></span>  
- <span data-ttu-id="5f4fc-131">Aşağıdaki örnek, zaman uyumsuz olarak kullanıcı girişi için bir metin dosyasına yazma işlemi gösterilmektedir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-131">The following example shows how to asynchronously write user input to a text file in a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="5f4fc-132">Güvenlik konuları nedeniyle bir dosya açma bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama genellikle kullanımını gerektirir bir <xref:Windows.Storage.Pickers.FileOpenPicker> denetimi.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-132">Because of security considerations, opening a file from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app typically requires the use of a <xref:Windows.Storage.Pickers.FileOpenPicker> control.</span></span> <span data-ttu-id="5f4fc-133">Bu örnekte, `FileOpenPicker` metin dosyaları gösterecek şekilde filtrelenir.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-133">In this example, the `FileOpenPicker` is filtered to show text files.</span></span>  
-  
-```xaml  
-<Page  
-    x:Class="OpenFileWindowsStore.MainPage"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-    xmlns:local="using:OpenFileWindowsStore"  
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-    mc:Ignorable="d">  
-  
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">  
-        <Button Content="save text to a file" HorizontalAlignment="Left" Margin="103,417,0,0" VerticalAlignment="Top"   
-                Width="329" Height="86" FontSize="35" Click="Button_Click"/>  
-        <TextBox Name="UserInputTextBox"  FontSize="18" HorizontalAlignment="Left" Margin="106,146,0,0"   
-                 TextWrapping="Wrap" Text="Write some text here, and select a file to write it to." VerticalAlignment="Top"   
-                 Height="201" Width="558" AcceptsReturn="True"/>  
-        <TextBlock Name="StatusTextBox" HorizontalAlignment="Left" Margin="106,570,0,147" TextWrapping="Wrap" Text="Status:"   
-                   VerticalAlignment="Center" Height="51" Width="1074" FontSize="18" />  
-    </Grid>  
-</Page>  
-```  
-  
- [!code-csharp[OpenFileWindowsStore#Code](../../../samples/snippets/csharp/VS_Snippets_CLR/openfilewindowsstore/cs/mainpage.xaml.cs#code)]
- [!code-vb[OpenFileWindowsStore#Code](../../../samples/snippets/visualbasic/VS_Snippets_CLR/openfilewindowsstore/vb/mainpage.xaml.vb#code)]  
-  
-## <a name="see-also"></a><span data-ttu-id="5f4fc-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5f4fc-134">See also</span></span>
+<span data-ttu-id="f1aed-112">Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.IO.StreamWriter> zaman uyumlu olarak metin aynı anda yeni bir dosya bir satıra yazmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="f1aed-112">The following example shows how to use the <xref:System.IO.StreamWriter> class to synchronously write text to a new file one line at a time.</span></span> <span data-ttu-id="f1aed-113">Çünkü <xref:System.IO.StreamWriter> nesne bildirildi ve içinde örneklenen bir `using` deyimi <xref:System.IO.StreamWriter.Dispose%2A> yöntemi çağrılır, otomatik olarak boşaltır ve akışı kapatır.</span><span class="sxs-lookup"><span data-stu-id="f1aed-113">Because the <xref:System.IO.StreamWriter> object is declared and instantiated in a `using` statement, the <xref:System.IO.StreamWriter.Dispose%2A> method is invoked, which automatically flushes and closes the stream.</span></span>  
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.Path>  
-- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="5f4fc-135">Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="5f4fc-135">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [<span data-ttu-id="5f4fc-136">Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma</span><span class="sxs-lookup"><span data-stu-id="5f4fc-136">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [<span data-ttu-id="5f4fc-137">Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme</span><span class="sxs-lookup"><span data-stu-id="5f4fc-137">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [<span data-ttu-id="5f4fc-138">Nasıl yapılır: Dosyadan Metin Okuma</span><span class="sxs-lookup"><span data-stu-id="5f4fc-138">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [<span data-ttu-id="5f4fc-139">Dosya ve Akış G/Ç'si</span><span class="sxs-lookup"><span data-stu-id="5f4fc-139">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
+
+## <a name="example-synchronously-append-text-with-streamwriter"></a><span data-ttu-id="f1aed-114">Örnek: Zaman uyumlu olarak StreamWriter ile metin ekleme</span><span class="sxs-lookup"><span data-stu-id="f1aed-114">Example: Synchronously append text with StreamWriter</span></span>
+
+<span data-ttu-id="f1aed-115">Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.IO.StreamWriter> zaman uyumlu olarak metin ilk örnekte oluşturulan metin dosyasına eklenecek sınıf.</span><span class="sxs-lookup"><span data-stu-id="f1aed-115">The following example shows how to use the <xref:System.IO.StreamWriter> class to synchronously append text to the text file created in the first example.</span></span>   
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
+
+## <a name="example-asynchronously-write-text-with-streamwriter"></a><span data-ttu-id="f1aed-116">Örnek: Zaman uyumsuz olarak StreamWriter ile metin yazma</span><span class="sxs-lookup"><span data-stu-id="f1aed-116">Example: Asynchronously write text with StreamWriter</span></span>
+
+<span data-ttu-id="f1aed-117">Aşağıdaki örnek, zaman uyumsuz olarak yeni kullanarak bir dosyaya metin yazma işlemi gösterilmektedir <xref:System.IO.StreamWriter> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="f1aed-117">The following example shows how to asynchronously write text to a new file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="f1aed-118">Çağrılacak <xref:System.IO.StreamWriter.WriteAsync%2A> yöntem, yöntem çağrısının içinde olmalıdır bir `async` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f1aed-118">To invoke the <xref:System.IO.StreamWriter.WriteAsync%2A> method, the method call must be within an `async` method.</span></span> <span data-ttu-id="f1aed-119">C# Örnek gerektirir C# 7.1 veya sonraki sürümü için destek ekler `async` programın giriş noktası değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f1aed-119">The C# example requires C# 7.1 or later, which adds support for the `async` modifier on the program entry point.</span></span> 
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
+
+## <a name="example-write-and-append-text-with-the-file-class"></a><span data-ttu-id="f1aed-120">Örnek: Yazma ve metin dosyası sınıfı ekleme</span><span class="sxs-lookup"><span data-stu-id="f1aed-120">Example: Write and append text with the File class</span></span>
+
+<span data-ttu-id="f1aed-121">Aşağıdaki örnek, yeni bir dosyaya metin yazma ve kullanarak aynı dosya için yeni satırlık metin ekleme işlemi gösterilmektedir <xref:System.IO.File> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="f1aed-121">The following example shows how to write text to a new file and append new lines of text to the same file using the <xref:System.IO.File> class.</span></span> <span data-ttu-id="f1aed-122"><xref:System.IO.File.WriteAllText%2A> Ve <xref:System.IO.File.AppendAllLines%2A> yöntemleri açın ve dosyayı otomatik olarak kapatın.</span><span class="sxs-lookup"><span data-stu-id="f1aed-122">The <xref:System.IO.File.WriteAllText%2A> and <xref:System.IO.File.AppendAllLines%2A> methods open and close the file automatically.</span></span> <span data-ttu-id="f1aed-123">Sağladığınız yolun, <xref:System.IO.File.WriteAllText%2A> yöntemi zaten var, dosyanın üzerine yazılır.</span><span class="sxs-lookup"><span data-stu-id="f1aed-123">If the path you provide to the <xref:System.IO.File.WriteAllText%2A> method already exists, the file is overwritten.</span></span>  
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
+
+## <a name="see-also"></a><span data-ttu-id="f1aed-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f1aed-124">See also</span></span>
+
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.Path>
+- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="f1aed-125">Nasıl yapılır: Dizinleri ve dosyaları numaralandırma</span><span class="sxs-lookup"><span data-stu-id="f1aed-125">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [<span data-ttu-id="f1aed-126">Nasıl yapılır: İçin bir yeni oluşturulan veri dosyasını okuma ve yazma</span><span class="sxs-lookup"><span data-stu-id="f1aed-126">How to: Read and write to a newly-created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [<span data-ttu-id="f1aed-127">Nasıl yapılır: Açın ve bir günlük dosyasına Ekle</span><span class="sxs-lookup"><span data-stu-id="f1aed-127">How to: Open and append to a log file</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [<span data-ttu-id="f1aed-128">Nasıl yapılır: Bir dosyadan metin okuma</span><span class="sxs-lookup"><span data-stu-id="f1aed-128">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [<span data-ttu-id="f1aed-129">Dosya ve akış g/ç</span><span class="sxs-lookup"><span data-stu-id="f1aed-129">File and stream I/O</span></span>](../../../docs/standard/io/index.md)
