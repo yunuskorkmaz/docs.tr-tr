@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (Visual Basic) yinelemeleri Say'
+title: 'Nasıl yapılır: Bir sözcüğün bir dizede (LINQ) (Visual Basic) oluşum sayısı'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d8349db0a1c5b0cc7b69cbae7d19dd1d9d10b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716810"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Nasıl yapılır: bir sözcüğün bir dizede (LINQ) (Visual Basic) yinelemeleri Say
-Bu örnek bir LINQ Sorgu belirtilen bir sözcüğün bir dizede yinelemelerini saymak için nasıl kullanılacağını gösterir. Count ilk kez gerçekleştirmek için unutmayın <xref:System.String.Split%2A> yöntemi sözcükler dizisi oluşturmak için çağrılır. Bir performans maliyeti yoktur <xref:System.String.Split%2A> yöntemi. Dize yalnızca işlemi sözcükleri saymak için ise, kullanmayı düşünmelisiniz <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemleri yerine. Ancak, performans kritik bir sorun değildir veya diğer sorgu türleri üzerinde gerçekleştirmek için cümle zaten ayırdıktan sonra kelimeler ve ifadeler de saymak için LINQ kullanılacak mantıklıdır.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Nasıl yapılır: Bir sözcüğün bir dizede (LINQ) (Visual Basic) oluşum sayısı
+Bu örnek belirtilen bir sözcüğün bir dizede oluşumları saymak için LINQ sorgusu kullanmayı gösterir. Sayım gerçekleştirmeye unutmayın <xref:System.String.Split%2A> yöntemi bir kelimelerin dizi oluşturmak için çağrılır. Bir performans maliyetine yoktur <xref:System.String.Split%2A> yöntemi. Sözcükleri saymak için dize yalnızca işlemi ise kullanmayı düşünmelisiniz <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemleri yerine. Ancak, performans kritik bir sorunu değil ya da diğer sorgu türleri üzerinde gerçekleştirmek için önceden cümle ayırdıktan sonra sözcükler veya tümcecikler de saymak için LINQ kullanma mantıklıdır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,7 +58,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+ .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

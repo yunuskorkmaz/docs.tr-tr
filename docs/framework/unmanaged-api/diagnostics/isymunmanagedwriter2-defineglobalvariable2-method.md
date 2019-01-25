@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f35e3c9327a3945e6ddce85be52b757294b39aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6e4b323f9e06f2c5dc336af772bdade0db3dea7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657447"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 Yöntemi
-Tek bir genel değişkeni tanımlar.  
+Tek bir genel değişken tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,32 +42,32 @@ HRESULT DefineGlobalVariable2(
   
 #### <a name="parameters"></a>Parametreler  
  `name`  
- [in] Genel değişken adı.  
+ [in] Genel değişkenin adı.  
   
  `attributes`  
  [in] Genel değişken öznitelikleri.  
   
  `sigToken`  
- [in] İmza meta veri simgesi.  
+ [in] Meta veri belirteci imzası.  
   
  `addrKind`  
  [in] Adres türü.  
   
  `addr1`  
- [in] Parametre belirtimini ilk adresi.  
+ [in] Parametre belirtimine ilk adresi.  
   
  `addr2`  
- [in] Parametre belirtimini ikinci adresi.  
+ [in] Parametre belirtimine ikinci adresi.  
   
  `addr3`  
- [in] Parametre belirtimini üçüncü adresi.  
+ [in] Parametre belirtimine üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl  
+ **Üst bilgi:** CorSym.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [DefineGlobalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [DefineGlobalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

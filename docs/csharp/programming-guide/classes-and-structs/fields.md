@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655679"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
 A *alan* doğrudan içinde bildirilmiş herhangi bir türde bir değişken bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md). Alanlar *üyeleri* içeren kendi türü.  
@@ -47,11 +47,11 @@ A *alan* doğrudan içinde bildirilmiş herhangi bir türde bir değişken bir [
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Erişim Değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Erişim Değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

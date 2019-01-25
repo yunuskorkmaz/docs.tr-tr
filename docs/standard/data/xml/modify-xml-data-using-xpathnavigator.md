@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 219327d246416cfb3d76919680aa74a58bae5fb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724453"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini değiştirme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümleri ve bir XML belgesi değerleri değiştirmek için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesne olmalıdır düzenlenemez, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true`.  
@@ -237,7 +237,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="modifying-entity-reference-nodes"></a>Varlık başvurusu düğümleri değiştirme  
  Varlık başvurusu düğümlerin bir <xref:System.Xml.XmlDocument> nesnesi salt okunurdur ve düzenlenemez kullanarak <xref:System.Xml.XPath.XPathNavigator> veya <xref:System.Xml.XmlNode> sınıfları. Bir varlık referans düğümün değiştirmek için her türlü girişim sonuçlanıyor bir <xref:System.InvalidOperationException>.  
   
-## <a name="modifying-xsinil-nodes"></a>Xsi: nil düğümleri değiştirme  
+## <a name="modifying-xsinil-nodes"></a>Modifying xsi:nil Nodes  
  W3C XML Şeması öneri nillable edilen bir öğenin kavram tanıtılmaktadır. Bir öğe nillable, öğenin içeriği olmamasına ve hala geçerli olması mümkündür. Bir nesne olan kavramı nillable edilen bir öğenin kavram benzerdir `null`. Ana fark bir `null` nesne olamaz herhangi bir yolla erişilen, while bir `xsi:nil` öğesi, hala erişilebilir, ancak içerik (alt öğeleri veya metin) yok öznitelikleri gibi özelliklere sahiptir. Varlığını `xsi:nil` değerine sahip öznitelik `true` bir öğedeki bir XML belge bir öğenin içerik sahip olduğunu göstermek için kullanılır.  
   
  Varsa bir <xref:System.Xml.XPath.XPathNavigator> nesnesi ile geçerli bir öğesi için içerik eklemek için kullanılır bir `xsi:nil` değerine sahip öznitelik `true`, değerini kendi `xsi:nil` özniteliği `false`.  
@@ -250,9 +250,9 @@ Console.WriteLine(navigator.OuterXml);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
 - [XPathNavigator Kullanarak XML Verilerini Kaldırma](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

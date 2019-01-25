@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5b3e962bd68d78d9a61e41b1e6049dc35acc50c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623085"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
 `illegalPrepareConstrainedRegion` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> yöntem çağrısı değil hemen önünde `try` özel durum işleyicisinin bildirimi. Çağrı arasında kaynak kodu oluşturma için izin verilen, bu nedenle bu kısıtlama MSIL düzeyini ve `try`, açıklamalar gibi.  
@@ -64,8 +64,8 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

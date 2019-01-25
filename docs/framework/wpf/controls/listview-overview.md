@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701553"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
@@ -81,11 +81,11 @@ ms.locfileid: "53148918"
 ## <a name="creating-a-custom-view-mode"></a>Özel Görünüm modu oluşturma  
  Özelleştirilmiş görünümleri gibi <xref:System.Windows.Controls.GridView> türetilmiştir <xref:System.Windows.Controls.ViewBase> soyut olarak temsil edilen veri öğelerini görüntülemek için araçlar sağlar sınıfını <xref:System.Windows.Controls.ListViewItem> nesneleri.    
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.GridView>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.ListViewItem>  
- <xref:System.Windows.Data.Binding>  
- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.GridView>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListViewItem>
+- <xref:System.Windows.Data.Binding>
+- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

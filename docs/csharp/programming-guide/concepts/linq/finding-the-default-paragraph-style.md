@@ -2,12 +2,12 @@
 title: Varsayılan paragraf stilini (C#) bulma
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674082"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Varsayılan paragraf stilini (C#) bulma
 WordprocessingML belgesinin öğreticide düzenleme bilgileri ilk görevi, belgede varsayılan paragraf stilini bulmaktır.  
@@ -88,6 +88,6 @@ The default style is: Normal
   
 -   [Paragrafları ve stillerini (C#) alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki içeriği düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

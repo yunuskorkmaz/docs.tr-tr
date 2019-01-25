@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çizgi Uçlarıyla Çizgi Çizme'
+title: 'Nasıl yapılır: Çizgi uçlarıyla çizgi çizme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: be492f2317d4677776cc9f89f546c935d271019b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713148"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>Nasıl yapılır: Çizgi Uçlarıyla Çizgi Çizme
-Başlangıç ya da bir satırın sonuna satır caps adlı birkaç şekiller birinde çizebilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] gidiş, kare, Karo ve Ok ucunu gibi birkaç satır caps destekler.  
+# <a name="how-to-draw-a-line-with-line-caps"></a>Nasıl yapılır: Çizgi uçlarıyla çizgi çizme
+Satır caps adlı birkaç şekil birini başlangıç veya satırın çizebilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] hepsini, kare, elmas ve ok ucu gibi birkaç satır caps destekler.  
   
 ## <a name="example"></a>Örnek  
- Satır caps başlangıç satırı (Başlangıç cap), (son cap) satırın sonuna veya kesik çizgi (tire cap) tireler belirtebilirsiniz.  
+ İçin bir satır (Başlangıç cap), bir satır (bitiş ucu) veya tireler (dash cap) kesikli satır başı satır caps belirtebilirsiniz.  
   
- Aşağıdaki örnekte bir ok ucunu bir uçta ve diğer uçtaki yuvarlak bir uç satırıyla çizilmiştir. Sonuçta elde edilen satır çizimde gösterilmektedir:  
+ Aşağıdaki örnek, bir ucunda bir ok ucu ve diğer uçtaki yuvarlak bir uç bir çizgi çizer. Çizim, sonuçta elde edilen satırı gösterir:  
   
  ![Kalemler](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")  
   
@@ -32,10 +32,10 @@ Başlangıç ya da bir satırın sonuna satır caps adlı birkaç şekiller biri
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bir Windows formu oluşturma ve form ele <xref:System.Windows.Forms.Control.Paint> olay. Örnek kod içine yapıştırma <xref:System.Windows.Forms.Control.Paint> geçirme olay işleyicisi `e` olarak <xref:System.Windows.Forms.PaintEventArgs>.  
+-   Bir Windows formu oluşturma ve form ele <xref:System.Windows.Forms.Control.Paint> olay. Örnek kodun içine yapıştırın <xref:System.Windows.Forms.Control.Paint> geçirme olay işleyicisi `e` olarak <xref:System.Windows.Forms.PaintEventArgs>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
+- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53d40c198b53370733009c76fd3d49f14df93e6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10741ef9d329986d869665ef3aae14196946bb22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724427"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses Yöntemi
-Ayıklanacak işlemleri için bir numaralandırıcı alır.  
+Hatası ayıklanmakta işlemler için bir numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT EnumerateProcesses (
   
 #### <a name="parameters"></a>Parametreler  
  `ppProcess`  
- Ayıklanacak işlemleri için Numaralandırıcı bir Icordebugprocessenum nesne adresini gösteren bir işaretçi.  
+ Hataları ayıklanan işlemlerin Numaralandırıcı Icordebugprocessenum nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

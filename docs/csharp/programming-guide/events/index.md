@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: df16b74d7d3ad34850ae9a0e3b7be282e4dfc003
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724297"
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olayları etkinleştirmektedir bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya diğer bildirmek için nesne sınıfları veya nesneleri ilgilendiğiniz bir sorun oluştuğunda. Gönderen sınıfı (veya *başlatır*) olay çağrılır *yayımcı* ve alan sınıfları (veya *işlemek*) olay çağrılır *aboneleri* .  
@@ -58,9 +58,9 @@ Daha fazla bilgi için [olayları](~/_csharplang/spec/classes.md#events) içinde
   
  [Temsilciler ve olaylar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) içinde [öğrenme C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.EventHandler>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
-- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: af608031a661037b89c9783ac2451a6b536f9cd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731393"
 ---
 # <a name="selective-serialization"></a>Seçmeli serileştirme
 Bir sınıf seri hale olmamalıdır alanlar genellikle içerir. Örneğin, bir sınıf bir iş parçacığı kimliği bir üye değişkeni depolar varsayar. Sınıf seri olduğunda, iş parçacığı kimliği depolanan sınıfı zaman seri duruma artık çalışmıyor; Bu nedenle bu değeri serileştirmek mantıklı değildir. Üye değişkenleri ile işaretleyerek serileştirilen öğesinden engelleyebilirsiniz [getirilmemiş](xref:System.NonSerializedAttribute) özniteliğini aşağıdaki gibi.  
@@ -33,6 +33,6 @@ Mümkünse, güvenlik bakımından hassas verileri nonserializable içerebilecek
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İkili Serileştirme](binary-serialization.md)  
-- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
+- [İkili Serileştirme](binary-serialization.md)
+- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)
 - [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

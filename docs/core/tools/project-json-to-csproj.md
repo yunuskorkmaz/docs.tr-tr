@@ -4,12 +4,12 @@ description: Project.json ile csproj öğeleri arasında bir eşleme bakın.
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: 581ff7cd3fe02e22d481c8386776317a5251cc5c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682858"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project.json ile csproj özellikleri arasında bir eşleme
 
@@ -674,6 +674,6 @@ Daha fazla bilgi için [bir içerik paketine](/nuget/schema/msbuild-targets#incl
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-* [CLI değişiklikleri üst düzey genel bakış](../tools/cli-msbuild-architecture.md)
+- [CLI değişiklikleri üst düzey genel bakış](../tools/cli-msbuild-architecture.md)

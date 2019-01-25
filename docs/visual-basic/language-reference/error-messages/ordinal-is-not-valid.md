@@ -4,29 +4,29 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 12d73b33e3c025b40c98d84e3507af7be1e1e91a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 351b7ee7f1cfc5199d878c33965770693227ccc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618970"
 ---
 # <a name="ordinal-is-not-valid"></a>Sıra sayısı geçerli değil
-Aramanız için dinamik bağlantı kitaplığı (DLL) gösterilen bir yordamı adı yerine bir sayı kullanmak üzere kullanarak `#num` sözdizimi. Bu hata, aşağıdaki olası nedenleri vardır:  
+Çağrınız bir dinamik bağlantı kitaplığı (DLL) belirtilen bir sayıyı bir yordam adı yerine kullanılacak kullanarak `#num` söz dizimi. Bu hata, aşağıdaki olası nedenleri vardır:  
   
--   Dönüştürme girişimi `#num` başarısız bir sıra ifadesi.  
+-   Dönüştürülecek girişiminde `#num` başarısız bir sıra ifadesi.  
   
 -   `#num` Belirtilen herhangi bir işlev DLL'de belirtmiyor.  
   
--   Tür kitaplığı geçersiz bir sıra numarası iç kullanımını kaynaklanan geçersiz bir bildirim sahiptir.  
+-   Bir tür kitaplığı içinde geçersiz bir sıra numarası, iç kullanımından kaynaklanan geçersiz bir bildirim var.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Ada göre yordam çağrısı veya geçerli bir sayı ifadeyi temsil emin olun.  
+1.  İfade geçerli bir sayı temsil ettiğinden emin olun veya yordam adına göre arama.  
   
-2.  Emin olun `#num` geçerli bir işlev DLL tanımlar.  
+2.  Emin `#num` DLL içinde geçerli bir işlevi tanımlar.  
   
-3.  Kodu yorum tarafından soruna yordam çağrısı yalıtma. Yazma bir `Declare` yordam ve rapor türü kitaplığı satıcıya sorun bildirimi.  
+3.  Kodu açıklama olarak ekleyerek soruna yordam çağrısı yalıtın. Yazma bir `Declare` yordam ve rapor türü kitaplığı satıcıya sorun için bildirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)

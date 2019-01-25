@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7240692e35c97f3efbc33ca27a0221da1d250149
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4dc09f3e8cb926d31b21f0cc2a6442c7a6b8dec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714791"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
-`invalidOverlappedToPinvoke` Yönetilen hata ayıklama Yardımcısı (MDA) atık toplama yığında oluşturulmayan Çakışan işaretçi belirli Win32 işlevleri geçirildiğinde etkinleştirilir.  
+`invalidOverlappedToPinvoke` Yönetilen hata ayıklama Yardımcısı (MDA) çöp koleksiyonu yığınında oluşturulmamış bir çakışan işaretçi belirli Win32 işlevlerine geçirildiğinde etkinleştirilir.  
   
 > [!NOTE]
->  Varsayılan olarak, bu MDA platform çağırma çağrısı kodunuzda tanımlanır ve hata ayıklayıcısı her yöntemi JustMyCode durumunu raporlar yalnızca etkinleştirilir. (Örneğin, MDbg.exe uzantısız) JustMyCode anlamıyor bir hata ayıklayıcısı bu MDA etkinleştirmemek. Bu MDA etkinleştirilebilir bu hata ayıklayıcıları için bir yapılandırma dosyası ve açıkça ayarlarını kullanarak `justMyCode="false"` içinde. mda.config dosya `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
+>  Varsayılan olarak, bu MDA, yalnızca platform çağırma çağrısı kodunuzda tanımlanır ve hata ayıklayıcı her yöntemin JustMyCode durumunu raporlar etkinleştirilir. JustMyCode (örneğin, MDbg.exe uzantısız) anlamıyor bir hata ayıklayıcı bu mda'nın etkinleştirmez. Bu MDA etkinleştirilebilir bu hata ayıklayıcıları için bir yapılandırma dosyası ve açıkça mda.config kullanarak `justMyCode="false"` içinde. mda.config dosyasından `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
   
 ## <a name="symptoms"></a>Belirtiler  
- Kilitlenme veya unexplainable yığın bozulmaları.  
+ Sistem çökmeleri ya da açıklanamaz yığın bozulmaları.  
   
 ## <a name="cause"></a>Sebep  
- Çöp toplama yığında oluşturulmayan Çakışan işaretçi belirli işletim sistemi işlevleri geçirilir.  
+ Çöp koleksiyonu yığınında oluşturulmamış bir çakışan işaretçi belirli işletim sistemi işlevlerine geçirilir.  
   
- Aşağıdaki tabloda, bu MDA izleyen işlevleri gösterir.  
+ Aşağıdaki tablo bu mda'nın izlediği işlevleri gösterir.  
   
 |Modül|İşlev|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
-|Iphlpapi.dll|`NotifyAddrChange`|  
-|Kernel32.dll|`ReadFile`|  
-|Kernel32.dll|`ReadFileEx`|  
-|Kernel32.dll|`WriteFile`|  
-|Kernel32.dll|`WriteFileEx`|  
-|Kernel32.dll|`ReadDirectoryChangesW`|  
-|Kernel32.dll|`PostQueuedCompletionStatus`|  
+|IpHlpApi.dll|`NotifyAddrChange`|  
+|kernel32.dll|`ReadFile`|  
+|kernel32.dll|`ReadFileEx`|  
+|kernel32.dll|`WriteFile`|  
+|kernel32.dll|`WriteFileEx`|  
+|kernel32.dll|`ReadDirectoryChangesW`|  
+|kernel32.dll|`PostQueuedCompletionStatus`|  
 |MSWSock.dll|`ConnectEx`|  
 |WS2_32.dll|`WSASend`|  
 |WS2_32.dll|`WSASendTo`|  
@@ -49,16 +49,16 @@ ms.locfileid: "33386863"
 |WS2_32.dll|`WSARecvFrom`|  
 |MQRT.dll|`MQReceiveMessage`|  
   
- Bu koşul için olduğundan olası yığın bozulması yüksek <xref:System.AppDomain> çağrı unload yapma. Varsa <xref:System.AppDomain> kaldırır, uygulama kodu ya da ücretsiz işlemi bittikten ya da kod bellek sızıntısı Bozulması neden, daha sonra sorunlarla neden Çakışan işaretçi için bellek.  
+ Çünkü bu koşul için yığın bozulma olasılığı yüksektir <xref:System.AppDomain> yapılıyor çağrısını kaldırın. Varsa <xref:System.AppDomain> kaldırılırsa, uygulama kodu serbest bırakacak ya da işlem bittiğinde ya da kod bellekte sızıntı oluşturacaktır Bozulması neden, daha sonra sorunlarla neden Çakışan işaretçi için bellek.  
   
 ## <a name="resolution"></a>Çözüm  
- Kullanım bir <xref:System.Threading.Overlapped> çağrılırken, nesne <xref:System.Threading.Overlapped.Pack%2A> almak için yöntemi bir <xref:System.Threading.NativeOverlapped> işlevine geçirilen yapısı. Varsa <xref:System.AppDomain> kaldırır, CLR bekler işaretçinin boşaltma önce zaman uyumsuz işlemi tamamlanana kadar.  
+ Kullanım bir <xref:System.Threading.Overlapped> çağrılırken, nesne <xref:System.Threading.Overlapped.Pack%2A> almak için yöntemi bir <xref:System.Threading.NativeOverlapped> işleve geçirilen yapısı. Varsa <xref:System.AppDomain> kaldırılırsa CLR işaretçi serbest bırakılmadan önce zaman uyumsuz işlem tamamlanana kadar bekler.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde hiçbir etkisi vardı.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde hiçbir etkisi vardı.  
   
 ## <a name="output"></a>Çıkış  
- Bu MDA çıktının bir örnek verilmiştir.  
+ Bu mda'nın bir örnek çıktı verilmiştir.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33386863"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

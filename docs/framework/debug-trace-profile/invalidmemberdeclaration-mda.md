@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0caa3add1a35d460527ce665352e5861df7d5d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c276df65497a0d8cafea80959b8193790c19ebba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667355"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
-`invalidMemberDeclaration` Yönetilen hata ayıklama Yardımcısı (MDA) nasıl hazırlanacağını COM'dan çağrılacak üye parametrelerinin belirlenirken oluşan bir hatayı bildirmek için etkinleştirildi  
+`invalidMemberDeclaration` Yönetilen hata ayıklama Yardımcısı (MDA) nasıl hazırlanacağını COM'dan çağrılacak üye parametrelerinin belirlenirken oluşan bir hatayı raporlamak için etkinleştirildi  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir hata, yönetilen yöntemi olarak adlandırılan COM HRESULT döndürülür.  
+ Bir hata HRESULT adlı Yönetilen yöntemi COM döndürülür.  
   
 ## <a name="cause"></a>Sebep  
- Bu uyumsuz nedeniyle büyük olasılıkla <xref:System.Runtime.InteropServices.MarshalAsAttribute> parametrelerden biri özniteliği.  
+ Uyumsuz bir nedeni büyük olasılıkla budur <xref:System.Runtime.InteropServices.MarshalAsAttribute> parametrelerden biri özniteliği.  
   
 ## <a name="resolution"></a>Çözüm  
  Geçerli belirtin <xref:System.Runtime.InteropServices.MarshalAsAttribute> parametreleri öznitelikleri.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Üye adı, türü adı ve hata iletisi içeren bir bilgi iletisidir.  
+ Üye adı, tür adı ve hata iletisi içeren bir bilgi iletisidir.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33386343"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

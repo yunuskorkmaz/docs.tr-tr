@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d23fc48a53ee47aacfc290b52887b800ce37477f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 1bb5c6b46ff0f75082b0b7b631a197dd64156cf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672922"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
 Dijital imzalar, başka bir programdan gönderildiğinde, veri ile müdahaleye uğramadığından emin olun. Genellikle verilerin imzalanmasını karma bir matematiksel işlev uygulayarak dijital imza hesaplanır. İmzalanacak bir karma değer biçimlendirilirken, biçimlendirme işleminin bir parçası olarak ASN.1 nesne tanımlayıcısı (OID) bazı dijital imza algoritmaları ekleyin. OID, karma değeri hesaplamak için kullanılan algoritmayı belirtir. Özel algoritmalar kullanmak için şifreleme mekanizması genişletmek için nesne tanımlayıcılarını algoritmaları eşleyebilirsiniz. Aşağıdaki örnek, bir nesne tanımlayıcı eşlemek için yeni bir karma algoritması gösterilmektedir.  
@@ -42,6 +42,6 @@ Dijital imzalar, başka bir programdan gönderildiğinde, veri ile müdahaleye u
   
  [ \<OidEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) iki öznitelik içeriyor. **OID** nesne tanımlayıcı numarası bir özniteliktir. **Adı** değeri özniteliktir **adı** özniteliğini [ \<nameEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Bir nesne tanımlayıcı basit adına eşlenebilir önce bir algoritma adının bir eşleme bir sınıf olmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

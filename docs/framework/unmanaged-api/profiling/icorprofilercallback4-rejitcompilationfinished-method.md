@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf2e1be735150dfb006e2274c79c25649d0271d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e5d49e46c6b34c6efca5d6819cb4ca341f010bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524734"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished Yöntemi
-Profil Oluşturucu tam zamanında (JIT) derleyici işlevi yeniden derlenmesi tamamlandığını bildirir.  
+Profil Oluşturucu, just-ın-time (JIT) derleyici bir işlevi yeniden derlemeden tamamlandığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,27 +41,27 @@ HRESULT ReJITCompilationFinished(
  [in] Derlendiğini işlevi kimliği.  
   
  `rejitId`  
- [in] JIT yeniden derlenmesi işlevi kimliği.  
+ [in] JIT yeniden derlenen işlevi kimliği.  
   
  `hrStatus`  
- [in] JIT derleme başarılı olup olmadığını belirten bir değer.  
+ [in] JIT yeniden derlemesi başarılı olup olmadığını belirten bir değer.  
   
  `fIsSafeToBlock`  
- [in] `true` engelleme bu geri aramasından; döndürülecek çağıran iş parçacığı beklemek çalışma zamanı yaratabilir belirtmek için `false` engelleme işlemi çalışma zamanının etkilemez belirtmek için.  
+ [in] `true` engelleme bu geri çağrısından; döndürmek çağıran iş parçacığını beklemek çalışma zamanı neden olabileceğini göstermek için `false` engelleme zamanının işlemi etkilemez belirtmek için.  
   
- Değerini `true` çalışma zamanı zarar değil, ancak profil sonuçları etkileyebilir.  
+ Değerini `true` çalışma zamanı zarar değil, ancak profil oluşturma sonuçlarından etkileyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [JITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)  
- [ReJITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [JITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [ReJITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

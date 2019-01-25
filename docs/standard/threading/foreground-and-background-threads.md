@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697510"
 ---
 # <a name="foreground-and-background-threads"></a>Ön Plan ve Arka Plan İş Parçacıklarını Seçme
 Yönetilen iş parçacığı veya bir arka plan iş parçacığı, hem de ön plan iş parçacığı değil. Arka plan iş parçacığı bir özel durumla aynı ön plan iş parçacığı: arka plan iş parçacığı çalıştıran yönetilen yürütme ortamında korumaz. (Burada .exe dosyasını, yönetilen bir derleme adıdır) yönetilen bir işlemde tüm ön plan iş parçacığı üzere durdurduktan sonra sistem tüm arka plan iş parçacığı durdurur ve kapanır.  
@@ -34,6 +34,6 @@ Yönetilen iş parçacığı veya bir arka plan iş parçacığı, hem de ön pl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadAbortException>

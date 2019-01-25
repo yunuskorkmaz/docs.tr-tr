@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9de77f942a1b89b0ab11ef71229e491a5305cafc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e71930460c5db77950efdaaba3cead8c49697a97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696288"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue Metodu
-Bir bağımsız değişken veya bu yerel çerçeve için iki belirtilen kaydeder depolanan yerel değişken değerini alır.  
+Bir bağımsız değişken veya yerel bu çerçeve için iki belirtilen kaydeder depolanan yerel değişken değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT GetLocalDoubleRegisterValue (
   
 #### <a name="parameters"></a>Parametreler  
  `highWordReg`  
- [in] Değerin yüksek sözcüğünü içeren kayıt belirtir "CorDebugRegister" numaralandırma değeri.  
+ [in] "CorDebugRegister" numaralandırma değeri yüksek sözcüğünü içeren kayıt belirten bir değer.  
   
  `lowWordReg`  
- [in] Değerini `CorDebugRegister` değerinin düşük sözcüğünü içeren kayıt belirtir numaralandırması.  
+ [in] Değerini `CorDebugRegister` değerinin düşük sözcüğünü içeren kayıt belirten sabit listesi.  
   
  `cbSigBlob`  
- [in] Tarafından başvurulan ikili meta verileri imza boyutu belirten bir tamsayı `pvSigBlob` parametresi.  
+ [in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` değerinin türü ikili meta verileri imza gösteren değer.  
+ [in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.  
   
  `ppValue`  
- [out] Belirtilen kasalar depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesi adresini gösteren bir işaretçi.  
+ [out] Belirtilen kayıtlara depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetLocalDoubleRegisterValue` Yöntemi kullanılabilir yerel bir çerçeve veya bir tam zamanında (JIT)-çerçeve derlenmiş.  
+ `GetLocalDoubleRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

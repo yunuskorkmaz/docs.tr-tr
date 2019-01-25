@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca206f0da69eddd3e98b599f2813fa7985daf057
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ef262fcae117b27f06d4dba3b2087028b5cfa65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743263"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated Numaralandırması
-Bu listeleme artık kullanılmıyor. Kullanım `CORDEBUG_JIT_DEFAULT` üyesi [Cordebugjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırma yerine.  
+Bu sabit listesi kullanımdan kalkmıştır. Kullanım `CORDEBUG_JIT_DEFAULT` üyesi [Cordebugjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırma yerine.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,13 +41,13 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Bunun yerine `CORDEBUG_JIT_DEFAULT` kullanın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 1.0, 1.1  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

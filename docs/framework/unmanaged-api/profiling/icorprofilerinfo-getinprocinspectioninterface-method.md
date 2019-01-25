@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c4e2a094f018b4f77423b6dbfe990925632edf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683865"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface Metodu
-Sorgulanabilir bir nesne için bir "ICorDebugProcess" arabirimi alır. Bu yöntem .NET Framework 2.0 sürümünde kullanımdan kalkmıştır.  
+Sorgulanabilir bir nesne için bir "ICorDebugProcess" arabirimi alır. Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetInprocInspectionInterface(
   
 #### <a name="parameters"></a>Parametreler  
  `ppicd`  
- [out](/cpp/atl/iunknown) için sorgulanan nesne bir `ICorDebugProcess` arabirimi.  
+ [Çıkış](/cpp/atl/iunknown) için sorgulanan nesne bir `ICorDebugProcess` arabirimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama API'si ortak dil çalışma zamanı (CLR), sınırlı işlem içi .NET Framework sürüm 1.0 debugging desteklenir. İşlem içi hata ayıklama hata ayıklama API'si denetleme bölümlerini kullanmak bir profil oluşturucu etkin. Müşteri geri bildirimi sonucu olarak, işlem içi hata ayıklama algıladı .NET Framework sürüm 2.0 kaldırıldı ve profil oluşturma API uygun olarak daha fazla işlevselliği kümesiyle değiştirildi.  
+ .NET Framework sürüm 1.0 debugging işlemdeki sınırlı hata ayıklama API'si ortak dil çalışma zamanı (CLR) desteklenir. İşlem içi hata ayıklama, hata ayıklama API incelemesi bölümlerini kullanmak bir profil oluşturucu etkin. Müşteri geri bildirim sonucunda, işlemdeki hata ayıklama algıladı .NET Framework sürüm 2. 0'dan kaldırılmadığı ve profil oluşturma API'ayarlarına uygun olarak daha fazla işlevselliği kümesiyle değiştirildi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümü:** 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: f2439bb955f821b58acc818ede308c379d5b68a6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727644"
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 
@@ -98,11 +98,11 @@ Kaldırırsanız `Flags`, örnek aşağıdaki değerleri görüntüler:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)  
-- [Sabit Listesi Türleri](../../programming-guide/enumeration-types.md)  
-- [C# Anahtar Sözcükleri](index.md)  
-- [Tam Sayı Türleri Tablosu](integral-types-table.md)  
-- [Yerleşik Türler Tablosu](built-in-types-table.md)  
-- [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)  
-- [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)  
+- [C# başvurusu](../index.md)
+- [Sabit Listesi Türleri](../../programming-guide/enumeration-types.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Tam Sayı Türleri Tablosu](integral-types-table.md)
+- [Yerleşik Türler Tablosu](built-in-types-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)
 - [Enum adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

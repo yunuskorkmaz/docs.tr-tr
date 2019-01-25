@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 821f524cc8ff7f9983f811f539e2badb2306be26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44716e0c763fe71fe94c8c0ec247cd37379561ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682897"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask Yöntemi
-Ortak dil çalışma zamanı (CLR) kenara görev put isteği, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğini temsil eder ve işlemci zamanı diğer görevler için kullanılabilir hale getirin.  
+Ortak dil çalışma zamanı (CLR) kenara görev put isteği, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğinin temsil ettiği ve işlemci zamanı, diğer görevlerin kullanımına.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT YieldTask ();
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`YieldTask` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir konak çağırır `YieldTask` için diğer görevlerin veya işlemlerin isteği işlemci kaynakları. Bu yöntem, öncelikle CPU süresi vermek uzun süre çalışan kod sağlamak için tasarlanmıştır. Çalışma zamanı görev put dener, geçerli `ICLRTask` örneği burada işleme süresi sağlayabilen, ancak başarı garanti etmez bir durumda temsil eder.  
+ Bir konak çağırır `YieldTask` için diğer görevlerin veya işlemlerin isteği işlemci kaynakları. Bu yöntem, öncelikli olarak süre vermek uzun süre çalışan kod olanak sağlamak için tasarlanmıştır. Çalışma zamanı görevi yerleştirmek çalışır, geçerli `ICLRTask` örneği burada işleme süresi sağlayabilir, ancak başarı garanti etmez durumu temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

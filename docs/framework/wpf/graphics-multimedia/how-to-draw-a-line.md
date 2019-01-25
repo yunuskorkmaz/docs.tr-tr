@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 54152b6b68dd453c565afa2ffb23edfe8132a441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629026"
 ---
 # <a name="how-to-draw-a-line"></a>Nasıl yapılır: Çizgi Çizme
 Bu örnekte kullanarak çizgi çizmek gösterilmektedir <xref:System.Windows.Shapes.Line> öğesi.  
@@ -27,6 +27,6 @@ Bu örnekte kullanarak çizgi çizmek gösterilmektedir <xref:System.Windows.Sha
   
  Bu örnek, daha büyük bir örnek bir parçasıdır; tam bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Shapes.Line>  
- [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Shapes.Line>
+- [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)

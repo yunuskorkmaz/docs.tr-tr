@@ -10,75 +10,75 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: d32639f1c392d53a7e9f6258440b6c0925d27a5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667394"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
-*Ömrü* bir bildirilen süre hangi BT sırasında kullanılabilir durumda öğesidir. Değişkenleri ömürlü yalnızca öğelerdir. Bu amaç için yordam parametreleri derleyici değerlendirir ve değişkenlerin özel durumlar işlevi döndürür. Bir değişken ömrü sırasında değeri barındırabilir süreyi temsil eder. Değerini yaşam süresi boyunca değiştirebilirsiniz, ancak her zaman bir değer içerir.  
+*Ömrü* bir bildirilen süre sırasında hangi BT kullanıma açık öğesidir. Değişkenleri ömürlü yalnızca öğelerdir. Bu amaçla, derleyici parametreler değerlendirir ve değişkenlerin özel durumlar işlevi döndürür. Bir değişkenin ömrü değeri biriken içerebileceği süreyi temsil eder. Yaşam süresi boyunca değerini değiştirebilirsiniz, ancak her zaman belirli bir değeri tutar.  
   
-## <a name="different-lifetimes"></a>Farklı yaşam süresi  
- A *üye değişkeni* (herhangi bir yordam dışında Modül düzeyinde bildirilen) genellikle bu bildirilen öğesi olarak aynı yaşam süresi vardır. Sınıf veya yapı içinde bildirilmiş her örneği için ayrı bir kopya olarak bir sınıf veya yapı bildirilen paylaşılmayan bir değişken mevcut. Her bir değişken kendi örnekle aynı yaşam süresi vardır. Ancak, bir `Shared` değişkeni, uygulamanızı çalıştıran tüm zamanı sürer yalnızca bir tek ömrünü sahiptir.  
+## <a name="different-lifetimes"></a>Farklı bir yaşam süresi yok  
+ A *üye değişkeni* (dışında her türlü yordam, Modül düzeyinde bildirilmiş) genellikle bunu bildirilen öğe olarak aynı kullanım ömrü vardır. Bir sınıf veya yapı içinde bildirilen bir paylaşılmayan değişken sınıf veya yapı içinde bildirildiği her örneği için ayrı bir kopya olarak mevcut. Her bir değişken, örnek olarak aynı kullanım ömrü vardır. Ancak, bir `Shared` değişkeni, uygulamanızı çalıştıran tüm zamanı sürer yalnızca bir tek ömür, sahip.  
   
- A *yerel değişken* (yordam içinde bildirilen) yalnızca onu bildirilen yordamı çalışırken bulunmaktadır. Bu durum bu yordam parametrelerini ve dönüş herhangi bir işlev için de geçerlidir. Ancak, bu yordamı diğer yordamlar çağırırsa, yerel değişkenleri değerlerine çağrılan yordamları çalışırken korur.  
+ A *yerel değişken* (bir yordam içinde bildirilen) yalnızca onu bildirilen yordamı çalışırken mevcut. Bu da bu yordamın parametreleri ve dönüş herhangi bir işlev için de geçerlidir. Ancak, bu yordamı diğer yordamlar çağırırsa, çağrılan yordamları çalışırken yerel değişkenlerin değerlerini korur.  
   
 ## <a name="beginning-of-lifetime"></a>Etkin kalma süresi başlangıcı  
- Denetim içinde bildirilmiş yordamı girdiğinde yerel değişken ömrü başlar. Yordam başlar başlamaz her yerel değişken veri türü için varsayılan değer başlatılmadan çalışıyor. Yordam karşılaştığında bir `Dim` ilk değerleri belirten ifade, bu ayarlar değişkenlere bu değerleri, kodunuzu zaten diğer değerleri atanmış olsa bile.  
+ Yerel değişkenin ömrü içinde bildirildiği yordamı denetime girdiğinde başlar. Yordamı başlar başlamaz her yerel değişken veri türü için varsayılan değer başlatılır çalışıyor. Yordamı karşılaştığında bir `Dim` başlangıç değerleri belirten bir deyimi ayarlar değişkenlere bu değerleri, kodunuzu zaten diğer değerleri atanmış bile.  
   
- Ayrı bir değişken değilmiş gibi her bir yapı değişkeni üyesi başlatıldı. Benzer şekilde, bir dizi değişkeni her öğesinin tek tek başlatılır.  
+ Ayrı bir değişken gibi bir yapı değişken her üyesi başlatıldı. Benzer şekilde, bir dizi değişkeni her öğe ayrı ayrı başlatılır.  
   
- Değişkenleri bildirilen bir yordam bloğunda içinde (gibi bir `For` döngü) girişinde yordama başlatılır. Kodunuzun her zamankinden bloğu yürütür olup olmadığına bakılmaksızın bu başlatmaları etkili olur.  
+ Bir blok içinde bir yordam içinde tanımlanan değişkenleri (gibi bir `For` döngü) girişi yordama başlatılır. Kodunuzu şimdiye kadar bloğun olup olmadığına bakılmaksızın bu başlatmalar geçerli olur.  
   
 ## <a name="end-of-lifetime"></a>Yaşam süresi sonu  
- Bir yordam sonlandırıldığında kendi yerel değişkenlerin değerleri korunmaz ve Visual Basic kendi bellek geri kazanır. Yordam çağrısı başlatıldığında tüm yerel değişkenler afresh oluşturulur ve yeniden başlatıldı.  
+ Bir yordam sonlandığında, kendi yerel değişkenlerin değerleri korunmaz ve Visual Basic kullandığı belleği geri kazanır. Yordamı, bir sonraki çağırışınızda tüm yerel değişkenlerin parçalarından oluşturulur ve yeniden başlatıldı.  
   
- Bir sınıf veya yapı örneği sonlandırıldığında paylaşılmayan değişkenlerini kendi bellek ve bunların değerleri kaybedersiniz. Her bir yeni sınıf veya yapı örneği oluşturur ve paylaşılmayan değişkenlerini yeniden başlatır. Ancak, `Shared` değişkenleri uygulamanızı çalışmadığında kadar korunur.  
+ Bir sınıfın veya yapının örneği sonlandığında, kendi paylaşılmayan değişkenler, bellek ve bunların değerlerini kaybedersiniz. Her yeni bir sınıf veya yapının örneğini oluşturur ve kendi paylaşılmayan değişkenler yeniden başlatır. Ancak, `Shared` değişkenleri uygulamanızın çalışmayı kadar korunur.  
   
-## <a name="extension-of-lifetime"></a>Ömür uzantısı  
- Sahip yerel bir değişken bildirirseniz `Static` anahtar sözcüğü, yaşam süresi, yordam yürütme süreden daha uzun. Aşağıdaki tabloda, nasıl yordamı bildirimi ne kadar belirler gösterilmektedir bir `Static` değişkeni yok.  
+## <a name="extension-of-lifetime"></a>Yaşam süresi uzantısı  
+ Yerel bir değişken bildirirseniz `Static` anahtar sözcüğü, yaşam süresi, kendi yordamı yürütme süreden daha uzun. Aşağıdaki tabloda yordam bildirimi ne kadar süreyle nasıl belirlediğini gösterir bir `Static` değişkeni yok.  
   
 |Yordam konumu ve paylaşma|Statik değişken ömrü başlar|Statik değişken ömrü sona erer|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|Bir modüle (varsayılan olarak paylaşılan)|İlk kez yordamı çağrılır|Uygulamanızı çalışmayı durdurduğunda|  
-|Bir sınıf `Shared` (yordamı örnek üyesine değil)|İlk kez yordamı belirli bir örneğe veya sınıf veya yapı adı kendisini çağrılır|Uygulamanızı çalışmayı durdurduğunda|  
-|Bir sınıf örneği içinde değil `Shared` (yordam, örnek üyesine kullanılır)|İlk kez yordamı belirli örneğinde çağrılır|Çöp toplama (GC) örneği serbest bırakıldığında|  
+|Bir modüle (varsayılan olarak paylaşılan)|İlk kez yordamı çağrılır|Uygulamanızın çalışmayı durdurduğunda|  
+|Bir sınıftaki `Shared` (yordamı bir örnek üyesi değildir)|İlk kez yordamı belirli bir örneğine veya sınıf veya yapı adı kendisi üzerinde çağrılır|Uygulamanızın çalışmayı durdurduğunda|  
+|İçinde bir sınıfın bir örneği değil `Shared` (yordamı, bir örnek üyesi olduğu)|İlk kez yordamı belirli bir örneği üzerinde çağrılır|Çöp toplama (GC) örneği yayınlandığında|  
   
-## <a name="static-variables-of-the-same-name"></a>Aynı ada sahip statik değişkenler  
- Statik değişkenler birden fazla yordam aynı adla bildirebilir. Bunu yaparsanız, Visual Basic derleyici ayrı bir öğe olması gibi her bir değişken olarak değerlendirir. Bu değişkenler birinin başlatma diğer değerlerini etkilemez. Bir yordamı aşırı kümesiyle tanımlayın ve her aşırı alanında aynı ada sahip bir statik değişken bildirme aynı geçerlidir.  
+## <a name="static-variables-of-the-same-name"></a>Statik değişkenler aynı ada sahip  
+ Statik değişkenler aynı adla birden fazla yordam bildirebilirsiniz. Bunu yaparsanız, Visual Basic Derleyicisi ayrı bir öğe gibi her bir değişken olarak değerlendirir. Bu değişkenlerin birinin başlatma diğer değerlerini etkilemez. Bir yordamı aşırı sayıda tanımlayın ve her aşırı yükleme aynı ada sahip bir statik değişken bildirimini durumunda da aynısı geçerlidir.  
   
 ## <a name="containing-elements-for-static-variables"></a>Statik değişkenler için öğeleri içeren  
- Diğer bir deyişle, o sınıfta yordam içindeki bir sınıf içinde statik bir yerel değişken bildirebilirsiniz. Ancak, yapı üyesi veya bir yordam yapıyı içinde yerel bir değişken olarak bir yapı içinde statik bir yerel değişken bildiremezsiniz.  
+ Bu sınıfta bir yordam içinde statik bir yerel değişken bir sınıf içindeki diğer bir deyişle, bildirebilirsiniz. Ancak, yapı üyesi veya bir yordam, yapı içinde yerel bir değişken olarak bir yapı içinde statik bir yerel değişken bildiremezsiniz.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek sahip bir değişken bildirir [statik](../../../../visual-basic/language-reference/modifiers/static.md) anahtar sözcüğü. (İhtiyacınız olmayan Not `Dim` anahtar sözcüğü zaman [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) bir değiştirici gibi kullanan `Static`.)  
+ Aşağıdaki örnek, bir değişken bildirir [statik](../../../../visual-basic/language-reference/modifiers/static.md) anahtar sözcüğü. (Gerekmeyen Not `Dim` anahtar sözcüğü, [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) gibi bir değiştirici kullanan `Static`.)  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### <a name="comments"></a>Açıklamalar  
- Önceki örnekte, değişken `applesSold` yordam sonra var olmaya devam `runningTotal` çağıran kodu döndürür. Sonraki `runningTotal` olarak adlandırılır, `applesSold` önceden hesaplanan değerini korur.  
+ Yukarıdaki örnekte, değişken `applesSold` yordam sonra varolmaya devam eder `runningTotal` çağrıldığı koda döndürür. Sonraki `runningTotal` çağrıldığında `applesSold` önceden hesaplanmış değerini korur.  
   
- Varsa `applesSold` kullanmadan bildirilmiş `Static`, önceki birikmiş değerleri çağrıları arasında korunamadı `runningTotal`. Sonraki `runningTotal` çağrıldı, `applesSold` alınan yeniden ve 0 olarak başlatılır ve `runningTotal` basitçe, onu çağrıldı aynı değeri döndürmüş.  
+ Varsa `applesSold` olmadan bildirilmiş `Static`, önceki birikmiş değerleri çağrılar üzerinden korunamadı `runningTotal`. Sonraki `runningTotal` çağrıldı, `applesSold` alınan yeniden oluşturulması ve 0 olarak başlatılır ve `runningTotal` yalnızca aynı değeri ile bunu çağrıldı döndüğünüzü.  
   
 ### <a name="compiling-the-code"></a>Kod Derleniyor  
- Bildiriminden bir parçası olarak statik yerel bir değişkenin değerini başlatabilirsiniz. Olması için bir dizi bildirirseniz `Static`, başlatabilir, derece (dimensions sayısı), her boyutun uzunluğu ve tek tek öğelerin değerleri.  
+ Bildiriminin bir parçası olarak bir statik yerel değişkenin değerini yeniden başlatabilirsiniz. Bir dizi olarak bildirirseniz `Static`, başlatabilir, rank (boyut sayısı), tek tek öğelerin değerlerinin yanı sıra her boyutun uzunluğu.  
   
 ### <a name="security"></a>Güvenlik  
- Önceki örnekte bildirerek aynı yaşam üretebilir `applesSold` modülü düzeyinde. Ancak, bu şekilde bir değişkenin kapsamını değiştirdiyseniz, yordamı artık özel erişim gerekir. Diğer yordamlar erişmek için `applesSold` ve değerini değiştirmek, toplam güvenilir olabilir ve kod korumak daha zor olabilir.  
+ Önceki örnekte, aynı yaşam bildirerek üretebilir `applesSold` Modül düzeyinde. Ancak, bu şekilde bir değişkenin kapsamını değiştirdiyseniz, yordam artık bu özel kullanım erişimi yoktur. Diğer yordamlar erişemiyor çünkü `applesSold` ve değerini değiştirmek, değişen toplamı güvenilir olabilir ve kod korumak daha zor olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)  
- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)

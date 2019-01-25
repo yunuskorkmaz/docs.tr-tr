@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0bf1bb990f8a4fb798c88db0552bd4583cb5905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee60da0131db37bc4e719965775c33bc0ead279c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706728"
 ---
 # <a name="icorprofilerfunctionenumreset-method"></a>ICorProfilerFunctionEnum::Reset Yöntemi
-Numaralandırıcının imleç dizisi başlangıç konuma taşır.  
+Numaralandırıcının imleç dizisi başlangıç konumuna gider.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,14 +34,14 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerFunctionEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerFunctionEnum Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

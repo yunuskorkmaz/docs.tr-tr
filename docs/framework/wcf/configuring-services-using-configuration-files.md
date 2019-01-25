@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717408"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sunar ve hizmet davranışı veri yerine dağıtım noktasında tasarım. Bu konu, birincil teknikleri açıklar.  
@@ -262,8 +262,8 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
   
  Bir alt davranışı koleksiyon üst davranışı koleksiyonda zaten var. bir davranış içeriyorsa, üst alt davranışı geçersiz kılar. Üst davranışı koleksiyonu varsa bunu `<serviceMetadata httpGetEnabled="False" />` ve alt davranışı koleksiyonunu `<serviceMetadata httpGetEnabled="True" />`, alt davranışı, davranış koleksiyondaki üst öğe davranışı geçersiz kılarsınız ve de "true" olacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<bağlama >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)
+- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<bağlama >](../../../docs/framework/misc/binding.md)

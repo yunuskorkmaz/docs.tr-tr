@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671947"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Nasıl yapılır: PrintTickets'i Doğrulama ve Birleştirme
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Yazdırma şema](https://go.microsoft.com/fwlink/?LinkId=186397) esnek ve Genişletilebilir içerir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğeleri. Yazdırma cihazı yeteneklerini eski maddeler halinde listeler ve cihaz belirli bir sırayla belgeleri, belgenin veya tek tek sayfa göre bu özellikleri nasıl kullanması gereken ikinci belirtir.  
@@ -56,14 +56,14 @@ ms.locfileid: "43485644"
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Şema Yazdırma](https://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Şema Yazdırma](https://go.microsoft.com/fwlink/?LinkId=186397)

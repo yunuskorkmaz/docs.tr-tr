@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727098"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 Metodu
-Belirtilen iş parçacığı ve uygulama etki alanı kapsamında belirtilen statik iş parçacığı alan adresini alır.  
+Belirtilen iş parçacığı ve uygulama etki alanı kapsamı içinde belirtilen statik iş parçacığı alanı adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ HRESULT GetThreadStaticAddress2(
   
 #### <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İstenen iş parçacığı statik alan içeren sınıf kimliği.  
+ [in] İstenen iş parçacığı statik alanı içeren sınıf kimliği.  
   
  `fieldToken`  
  [in] İstenen iş parçacığı statik alan için meta veri belirteci.  
@@ -49,32 +49,32 @@ HRESULT GetThreadStaticAddress2(
  [in] Uygulama etki alanı kimliği.  
   
  `threadId`  
- [in] İstenen statik alanın kapsamı iş parçacığı kimliği.  
+ [in] Kapsamı istenen statik alan için iş parçacığı kimliği.  
   
  `ppAddress`  
- [out] Belirtilen iş parçacığı içinde statik alan adresini gösteren bir işaretçi.  
+ [out] Belirtilen iş parçacığı içinde statik alanı adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetThreadStaticAddress2` Yöntemi döndürebilir şunlardan biri:  
+ `GetThreadStaticAddress2` Yöntemi aşağıdakilerden birini döndürebilir:  
   
--   Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanda belirtilen bağlam bir adres değil atanmışsa HRESULT.  
+-   Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.  
   
--   Çöp toplama yığınında olabilir nesneleri adresleri. Çöp toplama sonra profil oluşturucular geçerli varsayımında bulunmamalıdır şekilde bu adresleri çöp toplama sonra geçersiz hale gelebilir.  
+-   Adresleri nesnelerin çöp koleksiyonu yığınında olabilir. Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.  
   
- Sınıf sınıfı oluşturucusu tamamlanmadan önce `GetThreadStaticAddress2` statik alanları bazıları zaten başlatılmamış olabilir ancak CORPROF_E_DATAINCOMPLETE tüm kendi statik alanları için döndürür ve atık toplama nesneleri kök dizini değiştirme.  
+ Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetThreadStaticAddress2` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.  
   
- [Icorprofilerınfo2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi benzer `GetThreadStaticAddress2` yöntemi, ancak uygulama etki alanı bağımsız değişken kabul etmiyor.  
+ [Icorprofilerınfo2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi benzer `GetThreadStaticAddress2` yöntemi, ancak bir uygulama etki alanı bağımsız değişkeni kabul etmiyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

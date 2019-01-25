@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3809345432b705e4b44700fd6e8231c84bdce6ad
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bcf1afdadf9294981674d7e007a6bbda2268969d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701839"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -52,7 +52,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-Scenario` \<*Komutu*><br /><br /> —veya—<br /><br /> `-Scenario` \<*Paket adı*><br /><br /> -veya-<br /><br /> `-Import` \<*Dizin*>|Masaüstü uygulamaları için kullanmayı `–Scenario` istediğiniz iyileştirmek, herhangi bir komut satırı bağımsız değişkeni de dahil olmak üzere uygulamayı çalıştırmak için komutu belirtmek için. Üç adet çift tırnak işaretleri, *komut* ; boşluk içeren bir yol belirtiyorsa, örneğin: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Çift tırnak işareti kullanmayın; Bunlar düzgün çalışmaz *komut* alanları içerir.<br /><br /> -veya-<br /><br /> İçin [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları, `–Scenario` için profil bilgilerini oluşturmak istediğiniz paketi belirtmek için. Tam paket adı yerine, paketin görünen adını veya paket aile adını belirtirseniz ve yalnızca tek bir eşleşme varsa Mpgo.exe sağladığınız adla eşleşen paketi seçer. Belirtilen adla eşleşen birden çok paket varsa, Mpgo.exe sizden bir paket seçmenizi ister.<br /><br /> —veya—<br /><br /> Kullanım `-Import` getirme belirtmek için daha önce en iyi duruma getirilmiş derlemeleri verilerden derlemelerde iyileştirmek için kullanılması gereken `-AssemblyList`. *Dizin* , daha önce en iyi duruma getirilmiş dosyaları içeren dizini belirtir. İçinde belirtilen derlemeler `–AssemblyList` veya `–AssemblyListFile` içe aktarılan dosyalara ait veriler kullanılarak en iyi duruma getirilecek derlemelerin yeni sürümleridir. Derlemelerin eski sürümlerine ait en iyi duruma getirme verilerini kullanmak, senaryoyu yeniden çalıştırmadan derlemelerin yeni sürümlerini en iyi duruma getirmenizi sağlar.  Ancak, içe aktarılan ve hedef derlemeler önemli ölçüde farklı kodlar içeriyorsa, en iyi duruma getirme verileri etkisiz olur. Belirtilen derleme adları `–AssemblyList` veya `–AssemblyListFile` tarafından belirtilen dizinde bulunmalıdır `–Import` *dizin*. Üç adet çift tırnak işaretleri, *dizin* boşluklar içeren bir yol belirtir.<br /><br /> Belirtmeli `–Scenario` veya `–Import`, ancak parametrelerinin ikisi birden değil.|
 |`-OutDir` \<*Dizin*>|En iyi duruma getirilmiş derlemelerin yerleştirileceği dizin. Çıktı dizini klasöründe bir derleme zaten varsa, yeni bir kopya oluşturulur ve adının bir dizin numarası eklenir; Örneğin: *assemblyname*-1.exe. Çift tırnak işaretleri içine alın *dizin* boşluk içeren bir yol belirtir.|
 |`-AssemblyList` \<*assembly1 assembly2...*><br /><br /> —veya—<br /><br /> `-AssemblyListFile` \<*Dosya*>|Hakkında profil bilgileri toplamak istediğiniz derlemeleri (.exe ve .dll dosyaları gibi) boşluklarla ayrılmış olarak içeren bir liste. Belirtebileceğiniz `C:\Dir\*.dll` veya `*.dll` atanmış veya geçerli çalışma dizininde tüm derlemeleri seçin. Daha fazla bilgi için Açıklamalar bölümüne bakın.<br /><br /> —veya—<br /><br /> Her satırda bir derleme olacak şekilde, hakkında profil bilgileri toplamak istediğiniz derlemelerin listesini içeren bir metin dosyası. Bir derleme adı tire işareti (-) ile başlıyorsa, bir derleme dosyası listesi kullanın veya derlemeyi yeniden adlandırın.|
-|`-AppID` \<*Uygulama Kimliği*>|Belirtilen paketteki uygulamanın kimliği. Joker karakter kullanıyorsanız (\*), Mpgo.exe paketteki uygulama kimliklerini numaralandırmayı deneyecek ve \< *package_family_name*>! Başarısız olursa uygulama. Başında önek olarak ünlem işareti (!) konmuş bir dize belirtirseniz, Mpgo.exe paket aile adını sağlanan bağımsız değişkenle birleştirir.|
+|`-AppID` \<*appId*>|Belirtilen paketteki uygulamanın kimliği. Joker karakter kullanıyorsanız (\*), Mpgo.exe paketteki uygulama kimliklerini numaralandırmayı deneyecek ve \< *package_family_name*>! Başarısız olursa uygulama. Başında önek olarak ünlem işareti (!) konmuş bir dize belirtirseniz, Mpgo.exe paket aile adını sağlanan bağımsız değişkenle birleştirir.|
 |`-Timeout` \<*saniye*>|İzin vermek için süreyi [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının uygulama çıkışından önce çalışmasına.|
 
 |İsteğe bağlı parametre|Açıklama|
@@ -126,8 +126,8 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Masaüstü uygulamaları için başlatma performansını iyileştirme](https://go.microsoft.com/fwlink/p/?LinkId=248943)  
- [.NET 4.5 performans geliştirmeleri genel bakış](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Masaüstü uygulamaları için başlatma performansını iyileştirme](https://go.microsoft.com/fwlink/p/?LinkId=248943)
+- [.NET 4.5 performans geliştirmeleri genel bakış](https://go.microsoft.com/fwlink/p/?LinkId=249131)

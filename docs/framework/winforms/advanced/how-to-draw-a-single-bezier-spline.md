@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: tek bir B çizin&#233;zier eğri'
+title: 'Nasıl yapılır: Tek bir B çizmek&#233;zier eğri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 9e91b63275c37fc0cdde5721fddd114e1bf2264e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32fc09c7525b40daea8c8705c43100cea0c052bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676464"
 ---
-# <a name="how-to-draw-a-single-b233zier-spline"></a>Nasıl yapılır: tek bir B çizin&#233;zier eğri
-Bir Bézier eğrisi dört noktaları tarafından tanımlanır: bir başlangıç noktası, iki denetim noktası ve bir uç nokta.  
+# <a name="how-to-draw-a-single-b233zier-spline"></a>Nasıl yapılır: Tek bir B çizmek&#233;zier eğri
+Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktası, iki denetim noktalarını ve uç nokta.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, başlangıç noktası (10, 100) ve (200, 100) uç noktası olan bir Bézier eğrisi çizer. Denetim noktalarını olan (100, 10) ve (150 150).  
+ Aşağıdaki örnek, başlangıç noktası (10, 100) ve (200, 100) uç noktası olan bir Bézier eğrisi çizer. Denetim olan (100, 10) ve (150, 150) işaret eder.  
   
- Sonuçta elde edilen bir Bézier eğrisi başlangıç noktasını, denetim noktaları ve uç nokta ile birlikte aşağıda gösterilmiştir. Çizimde de düz satırıyla dört noktası bağlanarak biçimlendirilmiş bir Çokgen eğri 's dışbükey hull gösterilmektedir.  
+ Sonuçta elde edilen Bézier eğri, başlangıç noktası, denetim noktalarını ve uç nokta ile birlikte aşağıda gösterilmiştir. Çizimde, dört noktası düz çizgiler ile bağlanarak oluşturulmuş bir Çokgen eğri'nın dışbükey Kabuk da gösterilmektedir.  
   
- ![Bezier eğrisi](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")  
+ ![Bezier Spline](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Graphics.DrawBezier%2A>  
- [GDI+'daki Bézier Eğrileri](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- [Nasıl yapılır: Bir Sıra Bézier Eğrisi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Graphics.DrawBezier%2A>
+- [GDI+'daki Bézier Eğrileri](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)
+- [Nasıl yapılır: Bir dizi Bézier eğrileri çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)

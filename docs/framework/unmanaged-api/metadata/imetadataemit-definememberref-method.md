@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 881c0b1f755e750efcc74ca61a60bbd97bc5dba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722835"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef Yöntemi
-Geçerli kapsam dışında bir modülün bir üyeye başvuru tanımlar ve bu başvuru tanımına bir belirteci alır.  
+Geçerli kapsam dışında bir modül üyesi başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ HRESULT DefineMemberRef (
   
 #### <a name="parameters"></a>Parametreler  
  `tkImport`  
- [in] Belirteç hedef üyenin sınıf veya arabirim için üye genel değilse; Genel üyesiyse `mdModuleRef` diğer bu dosya için belirteç.  
+ [in] Belirteci için hedef üyenin sınıf veya arabirim üyesi genel olmadığından, Genel üyesiyse `mdModuleRef` söz konusu diğer dosya için belirteç.  
   
  `szName`  
- [in] Hedef üye adı.  
+ [in] Hedef üyesinin adı.  
   
  `pvSigBlob`  
  [in] Hedef üye imzası.  
@@ -56,14 +56,14 @@ HRESULT DefineMemberRef (
  [out] `mdMemberRef` Atanan simgesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome arabirimi
+title: Icordebugvariablehome arabirimi
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,30 +18,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae11cdbbdb0fa63d1b903d18aff133344fd17f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722024"
 ---
-# <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome arabirimi
-Yerel bir değişken veya işlev bağımsız değişkeni temsil eder.  
+# <a name="icordebugvariablehome-interface"></a>Icordebugvariablehome arabirimi
+Bir yerel değişken veya işlev bağımsız değişkeni temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetArgumentIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Bir işlev bağımsız değişkeni dizinini alır.|  
-|[GetCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Bu içeren "ICorDebugCode" örneği alır `ICorDebugVariableHome` nesnesi.|  
+|[GetArgumentIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|İşlev bağımsız değişkeni dizinini alır.|  
+|[GetCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Bu içeren "ICorDebugCode" örneğini alır `ICorDebugVariableHome` nesne.|  
 |[GetLiveRange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Bu değişken Canlı yerel aralığı alır.|  
-|[GetLocationType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Değişkenin yerel konum türünü alır.|  
-|[GetOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Uzaklık bir değişken için temel kasadan alır.|  
-|[GetRegister Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Konum türüne sahip bir değişken içeriyor kayıt alır `VLT_REGISTER`ve temel kaydetme konumu türüne sahip bir değişken için `VLT_REGISTER_RELATIVE`.|  
-|[GetSlotIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Yönetilen yuvası dizin yerel değişken alır.|  
+|[GetLocationType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Yerel değişkenin konumun türünü alır.|  
+|[GetOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Uzaklık, bir değişken için temel kasadan alır.|  
+|[GetRegister Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Konum türünde bir değişken içeren bir kayıt alır `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.|  
+|[GetSlotIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Yerel değişken yönetilen yuvası dizinini alır.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod parçası kullanan [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) adlı nesne `pCode4`.  
+ Aşağıdaki kod parçası kullanan [Icordebugcode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) adlı nesne `pCode4`.  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -83,14 +83,14 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ICorDebugVariableHomeEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableHomeEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

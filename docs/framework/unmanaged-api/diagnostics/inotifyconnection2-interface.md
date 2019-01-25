@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c39797c720cdfcab58d64caf05e65c6b623325d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561159"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 Arabirimi
 Kaydetme ve bağlantı bildirim kaynağı kaydını kaldırmak için kullanılan yöntemler bildirir.  
@@ -30,13 +30,13 @@ Kaydetme ve bağlantı bildirim kaynağı kaydını kaldırmak için kullanılan
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Belirtilen bildirim kaynak nesne yükler.|  
-|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Belirtilen bildirim kaynak nesne bağlantıyı kaldırır.|  
+|[RegisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Belirtilen bildirim kaynak nesnesi yükler.|  
+|[UnregisterNotifySource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Belirtilen bildirim kaynak nesnesi bağlantıyı kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

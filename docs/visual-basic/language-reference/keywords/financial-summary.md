@@ -5,26 +5,26 @@ helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: bb1bb4a71199e60bc1b685dc83851af7f25b6e40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea980691c4eb9c6fda91dbfdeeeeaa0cceb7f92b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720359"
 ---
 # <a name="financial-summary-visual-basic"></a>Mali Özet (Visual Basic)
-Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amacına göre düzenlenir ve kullanın.  
+Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Amortismanını hesaplamak.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Gelecekteki değeri hesaplanamıyor.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|Amortisman hesaplayın.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|Gelecek değeri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
 |Faiz oranını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Dahili geri dönüş oranını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|İç verim oranını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
 |Dönem sayısını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Ödemeler hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Mevcut değeri hesaplanamıyor.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|Ödemeleri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|Bugünkü değeri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Mevcut Windows Formları Denetimlerinden Devralma'
+title: 'Nasıl yapılır: Mevcut Windows Formları denetimlerinden devralma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: f19b207c840994ffa3aa364135583b5daeb26827
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dea9b1f870230daff92ac86d00dfda5774309a97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727787"
 ---
-# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Formları Denetimlerinden Devralma
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Formları denetimlerinden devralma
 Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir denetimi devralma yoluyla türetilen bir denetim oluşturabilirsiniz. Varolan bir denetimden devralınırken tüm işlevleri ve denetim görsel özelliklerini devralır. Örneğin, devralınan bir denetim oluşturuyorsanız <xref:System.Windows.Forms.Button>, yeni denetiminizin görünür ve Yasası tam gibi standart <xref:System.Windows.Forms.Button> denetimi. Ardından genişletin veya yeni, denetimin özel yöntemleri ve özellikleri uygulaması aracılığıyla işlevselliğini değiştirmenize. Bazı denetimler, ayrıca, devralınan denetim görsel görünümünü geçersiz kılarak değiştirebilirsiniz, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
   
 > [!NOTE]
@@ -27,7 +27,7 @@ Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir deneti
   
 2.  Gelen **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
-     **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
+     **Yeni Öğe Ekle** iletişim kutusu görünür.  
   
 3.  İçinde **Yeni Öğe Ekle** iletişim kutusunda, çift **özel denetim**.  
   
@@ -83,11 +83,11 @@ Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir deneti
   
 11. Kaydet ve denetim test edin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Nasıl yapılır: Denetim Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Nasıl yapılır: UserControl Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Nasıl yapılır: Windows Forms için Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Nasıl yapılır: Denetim sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
+- [Nasıl yapılır: UserControl sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
+- [Nasıl yapılır: Windows Forms için yazar denetimleri](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

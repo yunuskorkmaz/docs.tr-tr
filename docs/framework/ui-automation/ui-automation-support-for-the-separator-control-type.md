@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: cab684ba9ceea392b245f04a9613832e1e262eab
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a51ed653146421b22d6db4f7b9b2fd2faca1b0b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597989"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Ayırıcı Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -60,13 +60,13 @@ ms.locfileid: "48025590"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Hiçbiri|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Automation.ControlType.Separator>  
- [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Automation.ControlType.Separator>
+- [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)

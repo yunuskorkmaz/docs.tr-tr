@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: bd2ecfb93cfcdb7cf9c115f9a44ac47dd74c4b53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ab9d0bf3feeea70ddbc094183406a6fd646c1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690520"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML Belgesi Değişmez Değeri (Visual Basic)
-Değişmez değer gösteren bir <xref:System.Xml.Linq.XDocument> nesnesi.  
+Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XDocument> nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,36 +33,36 @@ rootElement
 |Terim|Tanım|  
 |---|---|  
 |`encoding`|İsteğe bağlı. Metin kodlama hangi belge bildirme kullanır.|  
-|`standalone`|İsteğe bağlı. Düz metin. "Evet" olması gerekir veya "Hayır".|  
-|`piCommentList`|İsteğe bağlı. XML işleme yönergeleri ve XML açıklamaları listesi. Şu biçimi alır:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Her `piComment` şunlardan biri olabilir:<br /><br /> -   [XML işleme talimatı değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML açıklama değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Gerekli. Belgenin kök öğesi. Aşağıdakilerden birini biçimdedir:<br /><br /> <ul><li>[XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>İfade biçiminde katıştırılmış `<%=` `elementExp` `%>`. `elementExp` Aşağıdakilerden birini döndürür:<br /><br /> <ul><li>Bir <xref:System.Xml.Linq.XElement> nesnesi.</li><li>Birini içeren bir koleksiyon <xref:System.Xml.Linq.XElement> nesne ve herhangi bir sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri.</li></ul></li></ul><br /> Daha fazla bilgi için bkz: [XML'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`standalone`|İsteğe bağlı. Değişmez değer metni. "Evet" olmalıdır veya "Hayır".|  
+|`piCommentList`|İsteğe bağlı. XML işleme yönergeleri ve XML açıklamaları listesi. Aşağıdaki biçimi alır:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Her `piComment` aşağıdakilerden biri olabilir:<br /><br /> -   [XML işleme talimatı değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML açıklama değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|Gerekli. Belgenin kök öğesi. Biçim aşağıdakilerden biridir:<br /><br /> <ul><li>[XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Gömülü deyim `<%=` `elementExp` `%>`. `elementExp` Aşağıdakilerden birini döndürür:<br /><br /> <ul><li>Bir <xref:System.Xml.Linq.XElement> nesne.</li><li>Birini içeren bir koleksiyon <xref:System.Xml.Linq.XElement> nesne ve herhangi bir sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri.</li></ul></li></ul><br /> Daha fazla bilgi için [XML'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir <xref:System.Xml.Linq.XDocument> nesnesi.  
+ Bir <xref:System.Xml.Linq.XDocument> nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değişmez değer bir XML belgesi değişmez değeri başlangıç XML bildirimi tarafından tanımlanır. Her bir XML belgesi değişmez değeri tam olarak bir kök XML öğesi sahip olmanız gerekir, ancak herhangi bir sayıda XML işleme yönergeleri ve XML açıklamaları olabilir.  
+ Bir XML belgesi değişmez değeri, değişmez değerin başında XML bildirimi tarafından tanımlanır. Her bir XML belgesi değişmez değeri tam olarak bir kök XML öğesi var olmalıdır, ancak herhangi bir sayıda XML işleme yönergeleri ve XML açıklamaları sahip olabilir.  
   
- Bir XML belgesi değişmez değeri bir XML öğesi yer alamaz.  
+ Bir XML belgesi değişmez değeri bir XML öğesi bulunamaz.  
   
 > [!NOTE]
->  XML değişmez değer, satır devamlılığı karakterleri kullanmadan birden fazla satır yayılabilir. Bu, bir XML belgesinden içeriği Kopyala ve doğrudan bir Visual Basic programa yapıştırmasını sağlar.  
+>  XML değişmez değer birden fazla satır, satır devamlılığı karakteri kullanmadan yayılabilir. Bu içerik bir XML belgesinden kopyalayıp bir Visual Basic programa doğrudan yapıştırın olanak sağlar.  
   
  Visual Basic derleyici çağrıları XML belgesi değişmez değeri dönüştürür <xref:System.Xml.Linq.XDocument.%23ctor%2A> ve <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> oluşturucular.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir XML bildirimi, bir işleme yönergesi, açıklama ve başka bir öğe içeren bir öğeyi içeren bir XML belgesi oluşturur.  
+ Aşağıdaki örnek, bir XML bildirimi, bir işlem yönergesi, bir açıklama ve başka bir öğe içeren bir öğeyi içeren bir XML belgesi oluşturur.  
   
  [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Xml.Linq.XProcessingInstruction>  
- <xref:System.Xml.Linq.XComment>  
- <xref:System.Xml.Linq.XDocument>  
- [XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)  
- [XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)  
- [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Xml.Linq.XProcessingInstruction>
+- <xref:System.Xml.Linq.XComment>
+- <xref:System.Xml.Linq.XDocument>
+- [XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
+- [XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
+- [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 307cbfa9b41440ebfe2b0d9fd15715a32b8a7cca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b4c53990969916f5c094c1a55a1383a242d884cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719761"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI Otomasyon ExpandCollapse Denetim Düzeni Uygulama
 > [!NOTE]
@@ -52,9 +52,9 @@ ms.locfileid: "47198130"
   
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Yöntem|Hiçbiri|  
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Olay|Bu denetim, ilişkili olay vardır; Bu genel temsilcinin kullanın.|  
   
 <a name="Exceptions"></a>   
@@ -65,10 +65,10 @@ ms.locfileid: "47198130"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|Ya da <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> aldığında çağrılan <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -2,12 +2,12 @@
 title: DiscoveryClient ve DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-ms.openlocfilehash: ff8cc071b13123a8d04162a2c52a8c3fb486d6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6e7b1cf13309ba6fc1da424649c667efe255278e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709994"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient ve DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> istemci tarafında Hizmetleri aramak için kullanılan iki sınıf. <xref:System.ServiceModel.Discovery.DiscoveryClient> belirli bir eşleşen hizmetlerin listesini sizinle ölçütü ayarlayın ve hizmetlere bağlanmasına olanak sağlayan sağlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> aynı işlemi gerçekleştirir ve otomatik olarak bağlanan bulundu hizmetlerden biri için ek olarak. İçinde herhangi bir uç noktaya yapılan bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>, arama ölçütlerini de yapılandırması, bu nedenle eklenebilir <xref:System.ServiceModel.Discovery.DynamicEndpoint> yararlıdır bulma çözümünüzde gerekir, ancak istemci mantığı değiştirmek istiyor musunuz – yalnızca uç noktaları değiştirmeniz gerekir. <xref:System.ServiceModel.Discovery.DiscoveryClient> Öte yandan, arama işlemi üzerinde daha hassas denetim elde etmek için kullanılabilir. Kullanır ve her birinin avantajları aşağıda ayrıntılandırılmıştır.  
@@ -105,6 +105,6 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

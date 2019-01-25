@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Profesyonel Stilde ToolStrip Denetimi Oluşturma'
+title: 'İzlenecek yol: Profesyonel stilde ToolStrip denetimi oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714899"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>İzlenecek yol: Profesyonel Stilde ToolStrip Denetimi Oluşturma
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>İzlenecek yol: Profesyonel stilde ToolStrip denetimi oluşturma
 Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sınıfından türetilen yazarak bir profesyonel görünümünü ve davranışını denetleyen <xref:System.Windows.Forms.ToolStripProfessionalRenderer> türü.  
   
  Bu izlenecek yolda nasıl kullanılacağını gösterir <xref:System.Windows.Forms.ToolStrip> benzeyen bileşik denetim oluşturmak için denetimleri **Gezinti bölmesinde** Microsoft Outlook® tarafından sağlanan. Aşağıdaki görevler bu kılavuzda gösterilen:  
@@ -30,7 +30,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
  İşlemi tamamladığınızda, profesyonel bir Microsoft Office® XP denetiminin görünümünü ile bir yeniden kullanılabilir bir özel istemci denetime sahip olur.  
   
- Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: bir profesyonel stilde ToolStrip denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Profesyonel stilde ToolStrip denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -49,7 +49,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 2.  İçinde **Çözüm Gezgini**, istediğiniz dilde bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosyası silerek projenin varsayılan denetimini silin.  
   
-     Daha fazla bilgi için [NIB: nasıl yapılır: kaldırma, silme ve öğeleri hariç](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Daha fazla bilgi için [NIB: nasıl yapılır: , Silme, kaldırmak ve öğeleri hariç](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Yeni bir <xref:System.Windows.Forms.UserControl> öğesinin **StackViewLibrary** proje. Yeni kaynak dosyanın temel adı verin `StackView`.  
   
@@ -121,7 +121,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 8.  Yeniden adlandırma `mailStackButton_Click` olay işleyicisine `stackButton_Click`.  
   
-     Daha fazla bilgi için [nasıl yapılır: bir tanımlayıcı (Visual Basic) yeniden adlandırmak](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Daha fazla bilgi için [nasıl yapılır: Bir tanımlayıcı (Visual Basic) yeniden adlandırmak](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Aşağıdaki kodu ekleyin `stackButton_Click` olay işleyicisi.  
   
@@ -167,7 +167,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>StackView denetimini test etme  
- `StackView` Denetim türetilir <xref:System.Windows.Forms.UserControl> sınıfı. Bu nedenle, Denetim ile test edebilirsiniz **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ `StackView` Denetim türetilir <xref:System.Windows.Forms.UserControl> sınıfı. Bu nedenle, Denetim ile test edebilirsiniz **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-the-stackview-control"></a>StackView Denetimi'ni sınamak için  
   
@@ -180,13 +180,13 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 -   Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Bir formu otomatik olarak doldurulan bir standart menü ile oluşturun. Daha fazla bilgi için [izlenecek yol: bir forma standart menü öğeleri sağlama](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Bir formu otomatik olarak doldurulan bir standart menü ile oluşturun. Daha fazla bilgi için [izlenecek yol: Bir forma standart menü öğeleri sağlama](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Yerleştirme ile birden çok belge arabirimi (MDI) form oluşturma <xref:System.Windows.Forms.ToolStrip> kontrol eder. Daha fazla bilgi için [nasıl yapılır: menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Yerleştirme ile birden çok belge arabirimi (MDI) form oluşturma <xref:System.Windows.Forms.ToolStrip> kontrol eder. Daha fazla bilgi için [nasıl yapılır: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Nasıl yapılır: Bir forma standart menü öğeleri sağlama](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

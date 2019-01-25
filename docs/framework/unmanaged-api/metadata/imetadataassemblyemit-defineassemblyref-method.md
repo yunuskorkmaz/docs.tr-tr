@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6675d50d3222a43abc8838c3c86cb825d2dad16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493476"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef Yöntemi
-Oluşturur bir `AssemblyRef` Bu bütünleştirilmiş koduna başvuruyor, derleme için meta verileri içeren yapısını ve ilişkili meta veri simgesi döndürür.  
+Oluşturur bir `AssemblyRef` yapısı bu derlemeye başvuran bir derleme için meta verileri içeren ve ilişkili meta veri belirteci döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,42 +44,42 @@ HRESULT DefineAssemblyRef (
   
 #### <a name="parameters"></a>Parametreler  
  `pbPublicKeyOrToken`  
- [in] Başvurulan derlemeyi yayımcısı ortak anahtarı. Yardımcı işlevini [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) Bu parametre olarak geçirmek için ortak anahtar karma almak için kullanılabilir.  
+ [in] Başvurulan derlemenin yayımcı ortak anahtarı. Yardımcı işlevini [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) Bu parametre olarak geçirmek için ortak anahtar karması almak için kullanılabilir.  
   
  `cbPublicKeyOrToken`  
  [in] Bayt cinsinden boyutu `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Derleme okunabilir metni adı. Bu değer 1024 karakterden uzun olamaz.  
+ [in] Derleme kullanıcı tarafından okunabilen metin adı. Bu değer, 1024 karakteri aşmamalıdır.  
   
  `pMetaData`  
- [in] Başvurulan derlemeyi sürümü, platform ve yerel ayar bilgileri içeren bir ASSEMBLYMETADATA örneği.  
+ [in] Başvurulan derlemenin sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA örneği.  
   
  `pbHashValue`  
- [in] Başvurulan derlemesiyle ilişkilendirilmiş veri karması. İsteğe bağlı.  
+ [in] Başvurulan bütünleştirilmiş kod ile ilişkili veri karması. İsteğe bağlı.  
   
  `cbHashValue`  
  [in] Bayt cinsinden boyutu `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bit düzeyinde bileşimini [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) yürütme altyapısı davranışını etkilemek değerleri.  
+ [in] Bitsel bir birleşimi [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) yürütme altyapısı davranışını etkileyen değerleri.  
   
  `pmdar`  
- [out] Bir işaretçi döndürülen `AssemblyRef` meta veri simgesi.  
+ [out] Döndürülen işaretçi `AssemblyRef` meta veri belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `AssemblyRef` meta veri yapısı bu derlemeye başvuran her derlemesi için tanımlanmalıdır.  
+ Bir `AssemblyRef` meta veri yapısı, bu derlemenin başvurduğu her derleme için tanımlanmış olması gerekir.  
   
- Çalışma zamanında "yerleşik haliyle" bilgi temsil ettiğini bir göstergesi ile derleme çözümleyiciye başvurulan bir derleme ayrıntılarını geçirilir. Derleme Çözümleyicisi sonra ilke uygulanır.  
+ Çalışma zamanında derleme çözümleyiciye bilgileri "yerleşik olarak" temsil ettikleri bir gösterge ile başvurulan bir derlemenin ayrıntılarını geçirilir. Derleme Çözücü sonra ilke uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

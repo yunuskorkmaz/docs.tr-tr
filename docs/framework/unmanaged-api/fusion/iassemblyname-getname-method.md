@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c918de10f86442b10b0d85e6554bb1af0a8928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640881"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName Metodu
-Bu tarafından başvurulan derleme basit, şifrelenmemiş adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesnesi.  
+Basit, şifrelenmemiş bu başvurduğu derlemenin adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,17 +38,17 @@ HRESULT GetName (
   
 #### <a name="parameters"></a>Parametreler  
  `lpcwBuffer`  
- [içinde out] Boyutunu `pwzName` null Sonlandırıcı karakteri geniş karakter dahil olmak üzere.  
+ [out içinde] Boyutu `pwzName` null Sonlandırıcı karakter geniş karakterler dahil olmak üzere.  
   
  `pwzName`  
- [out] Başvurulan bütünleştirilmiş kodun adını tutmak için arabellek.  
+ [out] Başvurulan derlemenin adını tutan bir arabellek.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

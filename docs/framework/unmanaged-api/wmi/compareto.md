@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717655"
 ---
 # <a name="compareto-function"></a>CompareTo işlevi
 Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır.  
@@ -89,11 +89,11 @@ Veya tek bir bileşik bayrağı şu şekilde belirtebilirsiniz:
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Karşılaştırma içindeki tüm özelliklerini göz önünde bulundurun. |
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

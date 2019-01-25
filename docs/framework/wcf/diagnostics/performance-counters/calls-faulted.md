@@ -2,18 +2,18 @@
 title: Hatalı Çağrılar
 ms.date: 03/30/2017
 ms.assetid: bb9e8045-6aeb-4b7f-a825-8283c44252a1
-ms.openlocfilehash: 26d79d74980d0bab93acace29bc24df7b473c4f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456dbc924579cd792e746b422b074f19403137ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712541"
 ---
 # <a name="calls-faulted"></a>Hatalı Çağrılar
-Sayaç adı: Hatalı çağrılar  
+Sayaç adı: Hatalı Çağrılar  
   
 ## <a name="description"></a>Açıklama  
- Bu işleme yapılan hata döndürmüş çağrı sayısı. Windows Communication Foundation (WCF) uygulamalarında hizmet yöntemleri işleme hata bilgileri SOAP hata iletileri kullanarak iletişim kurar. SOAP, bir hizmet işlemi için meta verileri içinde yer alan ve bu nedenle istemcilerin kendi yürütme daha sağlam veya etkileşimli yapmak için kullanabileceği bir hataya sözleşmesi oluşturma ileti türlerini hatalarıdır. XML formundaki istemcilere SOAP hataları ifade olduğundan, yüksek oranda birlikte çalışabilir.  
+ Bu işlem döndürmüş yapılan çağrı sayısı. Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar. SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir. SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

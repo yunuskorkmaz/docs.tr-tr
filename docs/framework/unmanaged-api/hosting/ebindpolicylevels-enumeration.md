@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704218"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels Numaralandırması
-Derleme ilkesini uygulamak veya değiştirmek için düzeyinde belirtmek için bayrakları sağlar.  
+Derleme ilkesini uygulamak veya değiştirmek istediğiniz düzeyinde belirtmek için bayrakları sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,27 +45,27 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|İlke Yöneticisi düzeyinde geçerli olduğunu belirtir.|  
+|`ePolicyLevelAdmin`|İlke yönetici düzeyinde uygulanması gerektiğini belirtir.|  
 |`ePolicyLevelApp`|İlke uygulama düzeyinde uygulanması gerektiğini belirtir.|  
-|`ePolicyLevelHost`|İlke ana bilgisayar düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelHost`|İlkenin ana bilgisayar düzeyinde geçerli olduğunu belirtir.|  
 |`ePolicyLevelNone`|Hiçbir ilke düzeyi bayrakları belirtir.|  
-|`ePolicyLevelPublisher`|İlkenin yayımcı düzeyinde geçerli olduğunu belirtir.|  
-|`ePolicyLevelRetargetable`|İlke değişken düzeylerinde uygulanabilir olması gerektiğini belirtir.|  
-|`ePolicyPortability`|İlke .NET Framework derlemesinin uygulamaları arasındaki taşınabilirlik desteklemelidir belirtir. Bkz: [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) yapılandırma dosyası öğesi.|  
+|`ePolicyLevelPublisher`|İlke yayımcı düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelRetargetable`|İlke değişken düzeylerinde uygulanabilir olacağını belirtir.|  
+|`ePolicyPortability`|.NET Framework derlemesinin uygulamaları arasındaki taşınabilir destek ilkesi belirtir. Bkz: [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) yapılandırma dosyası öğesi.|  
 |`ePolicyUnifiedToCLR`|İlke, ortak dil çalışma zamanı (CLR) birleşik olduğunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma yöntemlere iletilen [Iclrhostbindingpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) uygulama ilkesi değişiklikleri belirtmek için arabirim.  
+ Bu numaralandırma yöntemlerini için geçirilen [Iclrhostbindingpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) uygulama ilkesi değişiklikleri belirtmek için arabirim.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

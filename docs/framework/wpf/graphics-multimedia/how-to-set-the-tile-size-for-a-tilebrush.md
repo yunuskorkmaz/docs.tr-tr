@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713570"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Nasıl yapılır: TileBrush için Döşeme Boyutunu Ayarlama
 Bu örnek için döşeme boyutunu ayarlama işlemi gösterilmektedir bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, bir <xref:System.Windows.Media.TileBrush> tamamen boyama yaptığınız alanı dolduran kutucuk üretir. Ayarlayarak bu davranışı geçersiz kılabilirsiniz <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri.  
@@ -38,7 +38,7 @@ Bu örnek için döşeme boyutunu ayarlama işlemi gösterilmektedir bir <xref:S
   
  Bu örnek kullansa <xref:System.Windows.Media.ImageBrush> sınıfı <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri aynı şekilde davranır diğeri için <xref:System.Windows.Media.TileBrush> nesnelerini, diğer bir deyişle, için <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush>. Hakkında daha fazla bilgi için <xref:System.Windows.Media.ImageBrush> ve diğer <xref:System.Windows.Media.TileBrush> nesneleri bkz [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.TileBrush>  
- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush ile Farklı Döşeme Desenleri Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.TileBrush>
+- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [TileBrush ile Farklı Döşeme Desenleri Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

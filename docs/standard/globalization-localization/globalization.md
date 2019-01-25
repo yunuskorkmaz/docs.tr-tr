@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713947"
 ---
 # <a name="globalization"></a>Genelleştirme
 Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yerelleştirilmiş arabirimleri ve bölgesel verileri destekleyen dünya çapında kullanılmaya hazır uygulamasını içerir. Tasarım aşamasına başlamadan önce hangi kültürleri uygulamanızı destekleyeceğini belirlemeniz gerekir. Bir tek bir kültür veya bölgeyi varsayılan olarak bir uygulama hedeflese de, tasarlayın ve böylece diğer kültür ya da bölgelerdeki kullanıcılara kolayca genişletilebilir yazabilirsiniz.  
@@ -99,7 +99,7 @@ Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yer
 > [!TIP]
 >  Kullanabileceğiniz <xref:System.Globalization.StringInfo> bir dizedeki karakterlerin tek tek yerine metin öğeleriyle çalışmak için sınıf.  
   
- Dize aramalarında ve karşılaştırmalarında, sıkça dize karakter, her biri tarafından temsil edilen bir koleksiyon olarak değerlendirilecek olan bir <xref:System.Char> nesne. Tek bir karakter bir, iki veya daha fazla tarafından aslında oluşturulabilir <xref:System.Char> nesneleri. Bu tür karakterler en sık dizelerden karakterleri Unicode temel Latin karakter aralığı (U + 0021 ile U + 007E) dışında olan harfler oluşan kültürler bulunur. Aşağıdaki örnek, bir dizede ile LATIN CAPITAL LETTER A GRAVE karakterinin (U + 00 C 0) dizinini bulmaya çalışır. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek bir kod birimi (U + 00C 0) olarak veya bileşik bir karakter (iki kod birimi: U + 0021 ve U + 007E). Bu durumda, karakter dize örneğinde iki tarafından temsil edilen <xref:System.Char> nesneleri, U + 0021 ve U + 007E. Örnek kod çağrıları <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> dize örneğinde, ancak bunlar bu karakterin konumunu bulmak için aşırı yüklemeler farklı sonuçlar döndürür. İlk yöntem çağrısında sahip bir <xref:System.Char> bağımsız değişkeni; sıralı bir karşılaştırma yapar ve bu nedenle bir eşleşme bulamaz. İkinci çağrıda sahip bir <xref:System.String> bağımsız değişkeni; bir kültüre duyarlı karşılaştırma yapar ve bu nedenle eşleşme bulur.  
+ Dize aramalarında ve karşılaştırmalarında, sıkça dize karakter, her biri tarafından temsil edilen bir koleksiyon olarak değerlendirilecek olan bir <xref:System.Char> nesne. Tek bir karakter bir, iki veya daha fazla tarafından aslında oluşturulabilir <xref:System.Char> nesneleri. Bu tür karakterler en sık dizelerden karakterleri Unicode temel Latin karakter aralığı (U + 0021 ile U + 007E) dışında olan harfler oluşan kültürler bulunur. Aşağıdaki örnek, bir dizede ile LATIN CAPITAL LETTER A GRAVE karakterinin (U + 00 C 0) dizinini bulmaya çalışır. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek bir kod birimi (U + 00C 0) olarak veya bileşik bir karakter (iki kod birimi: U+ 0021 ve U + 007E). Bu durumda, karakter dize örneğinde iki tarafından temsil edilen <xref:System.Char> nesneleri, U + 0021 ve U + 007E. Örnek kod çağrıları <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> dize örneğinde, ancak bunlar bu karakterin konumunu bulmak için aşırı yüklemeler farklı sonuçlar döndürür. İlk yöntem çağrısında sahip bir <xref:System.Char> bağımsız değişkeni; sıralı bir karşılaştırma yapar ve bu nedenle bir eşleşme bulamaz. İkinci çağrıda sahip bir <xref:System.String> bağımsız değişkeni; bir kültüre duyarlı karşılaştırma yapar ve bu nedenle eşleşme bulur.  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
@@ -204,7 +204,7 @@ Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yer
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Seri Hale Getirme ve Saat Dilimini Tanıma  
- Bir tarih ve saat değerini, genel zaman arasında birden çok yorumlaması olabilir ("mağazalar 2 Ocak 2013'te 9: 00'da zaman içinde belirli bir ana Aç") ("Doğum Tarihi: 2 Ocak 2013 6:32: 00'da"). Bir zaman değeri zaman içinde belirli bir ana temsil eder ve onu diziselleştirilmiş bir değerden geri, kullanıcının coğrafi konum veya saat dilimine bakılmaksızın zaman içinde aynı anı temsil ettiğini emin olun.  
+ Bir tarih ve saat değerini, genel zaman arasında birden çok yorumlaması olabilir ("mağazalar 2 Ocak 2013'te 9: 00'da zaman içinde belirli bir ana Aç") ("Doğum Tarihi: 2 Ocak 2013 6:32: 00'da "). Bir zaman değeri zaman içinde belirli bir ana temsil eder ve onu diziselleştirilmiş bir değerden geri, kullanıcının coğrafi konum veya saat dilimine bakılmaksızın zaman içinde aynı anı temsil ettiğini emin olun.  
   
  Aşağıdaki örnek bu sorunu gösterir. Bir dize olarak üç tek yerel tarih ve saat değerini kaydeder [standart biçim](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (genel tarih uzun saat, "s" sıralanabilir tarih/saat, "G" ve "o" Ring tarih/saat) ikili biçimin yanı.  
   
@@ -371,5 +371,5 @@ Genelleştirme, tasarlamaya ve geliştirmeye yönelik birden çok kültürde yer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
 - [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)

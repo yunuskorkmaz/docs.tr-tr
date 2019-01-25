@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709162"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gösterme ve veri olarak kullanmak için bir dizi temel senaryoları destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda, bu senaryolar için ilgili konuları işaret eder.  
@@ -20,12 +20,12 @@ ms.locfileid: "43803336"
   
 -   [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Nasıl yapılır: ADO.NET Entity Framework Veri Kaynağı Kullanarak Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  Rastgele CLR veri sınıfları olarak kullanıma sunma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.  
  -   [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Nasıl yapılır: Yansıma Sağlayıcısını Kullanarak Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43803336"
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Nasıl yapılır: veri hizmeti verilerini (WCF Veri Hizmetleri/Silverlight) denetimlere bağlama](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Nasıl yapılır: Veri hizmeti verilerini (WCF Veri Hizmetleri/Silverlight) denetimlere bağlama](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] AJAX tabanlı istemci uygulamada akış.  
  -   [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "43803336"
 -   [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Kullandığı .NET Framework tabanlı istemci uygulaması oluşturma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa zaman uyumsuz olarak istemci gecikme sorunlarını önlemek için.  
- -   [Nasıl yapılır: Zaman Uyumsuz Veri Hizmeti Sorguları Yürütme](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ -   [Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
@@ -72,20 +72,20 @@ ms.locfileid: "43803336"
  Bağlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] denetimlere bir Windows Presentation Framework (WPF) uygulamasındaki akışları.  
  -   [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
--   [Nasıl yapılır: Windows Presentation Foundation Öğelerine Veri Bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
--   [Nasıl yapılır: Proje Veri Kaynağı Kullanarak Veri Bağlama](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
+-   [Nasıl yapılır: Bir proje veri kaynağı kullanarak veri bağlama](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
  Veri doğrulama ve rol tabanlı filtreleme sorguları gerçekleştirmek için veri hizmetine gelen iletileri uğratabilir.  
- -   [Nasıl yapılır: Veri Hizmeti İletilerini Durdurma](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
+ -   [Nasıl yapılır: Veri hizmeti iletilerini müdahale](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
   
 -   [Durdurucular](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
  Özel hizmet davranışları etkinleştirmek için bir veri Hizmeti uç noktaları oluşturun.  
- -   [Nasıl yapılır: Hizmet İşlemi Tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ -   [Nasıl yapılır: Hizmet işlemi tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
 -   [Hizmet İşlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3a8e11ee8bfbbe87ca5a1c51b815dd21c124a951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712031"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Nasıl yapılır: Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme
 Bu örnekte anahtar çerçeveler içinde bir anahtar çerçeve animasyonu zamanlamasını denetlemek nasıl gösterir. Diğer animasyonlar gibi anahtar-çerçeve animasyonlara sahip bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği. Bir animasyonun süresini belirtmeye ek olarak, hangi parçası bir bu süre her anahtar çerçeveler için ayrılan belirtmeniz gerekir. Zamanı paylaştırmak için belirttiğiniz bir <xref:System.Windows.Media.Animation.KeyTime> her anahtar kare animasyon için.  
@@ -65,7 +65,7 @@ Bu örnekte anahtar çerçeveler içinde bir anahtar çerçeve animasyonu zamanl
   
  Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012). Anahtar çerçeve animasyonları hakkında daha fazla bilgi için bkz. [anahtar-çerçeve animasyonlara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

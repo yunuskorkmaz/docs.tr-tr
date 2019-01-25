@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700214"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
@@ -41,6 +41,6 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
 ### <a name="subqueue-and-system-queue-caveat"></a>Subqueue ve sistem sırası uyarı  
  WAS barındırılan bir uygulama, sistem genelinde atılacak veya zehirli alt kuyruklar gibi alt kuyruk gibi bir sistem kuyruğundaki iletileri göre etkinleştirilemiyor. Ürünün bu sürümü için bir sınırlama budur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

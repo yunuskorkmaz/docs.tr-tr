@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma'
+title: 'Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3db82db502c7404ce235c5824b58046fbd4dbe7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705436"
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma
+# <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)
 Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>İmzalı bir derleme ve arkadaş derleme oluşturmak için  
@@ -88,13 +88,13 @@ Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kulla
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `internal` türler ve üyeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-- [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [Nasıl yapılır: İmzasız arkadaş derlemeleri (C#) oluşturma](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
-- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Sn.exe (Tanımlayıcı Ad Aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

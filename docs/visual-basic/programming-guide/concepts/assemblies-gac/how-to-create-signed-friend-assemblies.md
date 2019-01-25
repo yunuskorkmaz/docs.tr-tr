@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: imzalı arkadaş derlemeleri (Visual Basic) oluşturma'
+title: 'Nasıl yapılır: (Visual Basic) imzalı arkadaş derlemeleri oluşturma'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667309"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Nasıl yapılır: imzalı arkadaş derlemeleri (Visual Basic) oluşturma
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzalı arkadaş derlemeleri oluşturma
 Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>İmzalı bir derleme ve arkadaş derleme oluşturmak için  
@@ -84,12 +84,12 @@ Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kulla
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `Friend` türler ve üyeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Arkadaş derlemeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Nasıl yapılır: İmzasız arkadaş derlemeleri (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Arkadaş derlemeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)

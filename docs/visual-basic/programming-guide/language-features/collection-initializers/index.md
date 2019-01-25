@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4183d974dd39caf0ca8a14ff98ab5652c0375906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691417"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 *Koleksiyon başlatıcıları* bir koleksiyon oluşturun ve başlangıç değer kümesi ile doldurmak sağlayan bir kısaltılmış sözdizimi sağlar. Koleksiyon başlatıcıları, bilinen değerler, örneğin, menü seçeneklerini veya kategoriler, başlangıç bir sayısal değer kümesi, bir statik bir gün veya ay adları veya coğrafi konumları gibi gibi dize listesi listesi koleksiyonundan oluştururken kullanışlı bir doğrulama için kullanılan durumların listesi.  
@@ -54,7 +54,7 @@ ms.locfileid: "45991629"
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- Koleksiyon varsa bir `Add` Oluşturucusu eşleşen parametrelere sahip yöntemi `Customer` nesnesi, parametre değerlerini içe `Add` yöntemi içinde koleksiyon başlatıcıları, sonraki bölümde açıklandığı gibi. Koleksiyon gibi yoksa bir `Add` yöntemi oluşturmak için kullanabileceğiniz bir genişletme yöntemi olarak. Oluşturma örneği için bir `Add` yöntemi bir koleksiyon için bir genişletme yöntemi olarak bkz [nasıl yapılır: bir ekleme uzantısı tarafından kullanılan yöntem bir koleksiyon Başlatıcısı oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Koleksiyon Başlatıcısı ile kullanılabilecek özel bir koleksiyon oluşturma örneği için bkz: [nasıl yapılır: Koleksiyon başlatıcısı tarafından bir kullanılan koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
+ Koleksiyon varsa bir `Add` Oluşturucusu eşleşen parametrelere sahip yöntemi `Customer` nesnesi, parametre değerlerini içe `Add` yöntemi içinde koleksiyon başlatıcıları, sonraki bölümde açıklandığı gibi. Koleksiyon gibi yoksa bir `Add` yöntemi oluşturmak için kullanabileceğiniz bir genişletme yöntemi olarak. Oluşturma örneği için bir `Add` yöntemi bir koleksiyon için bir genişletme yöntemi olarak bkz [nasıl yapılır: Oluşturma bir koleksiyon başlatıcısı tarafından kullanılan uzantı ekleme metodu](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Koleksiyon Başlatıcısı ile kullanılabilecek özel bir koleksiyon oluşturma örneği için bkz: [nasıl yapılır: Koleksiyon başlatıcısı tarafından kullanılan bir koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
 ## <a name="nesting-collection-initializers"></a>Koleksiyon başlatıcıları iç içe geçirme  
  Değerleri belirli bir aşırı yüklemesini tanımlamak için bir koleksiyon Başlatıcısı içinde iç içe bir `Add` oluşturulan koleksiyon için yöntemi. Geçirilen değerlerin `Add` yöntemi virgülle ayırarak ve ayraçlar içinde (`{}`), bir dizi değişmez değeri ya da koleksiyon Başlatıcısı içinde yaptığınız gibi.  
@@ -73,18 +73,18 @@ ms.locfileid: "45991629"
   
 |Başlık|Açıklama|  
 |---|---|  
-|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Adlı bir genişletme yöntemi oluşturma işlemi gösterilmektedir `Add` bir koleksiyon Başlatıcısı değerlerle doldurmak için kullanılabilir.|  
-|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Dahil ederek bir koleksiyon Başlatıcısı kullanımını etkinleştirmek gösterilmiştir bir `Add` yöntemini uygulayan bir koleksiyon sınıfı `IEnumerable`.|  
+|[Nasıl yapılır: Oluşturma bir koleksiyon başlatıcısı tarafından kullanılan uzantı ekleme metodu](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Adlı bir genişletme yöntemi oluşturma işlemi gösterilmektedir `Add` bir koleksiyon Başlatıcısı değerlerle doldurmak için kullanılabilir.|  
+|[Nasıl yapılır: Koleksiyon başlatıcısı tarafından kullanılan bir koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Dahil ederek bir koleksiyon Başlatıcısı kullanımını etkinleştirmek gösterilmiştir bir `Add` yöntemini uygulayan bir koleksiyon sınıfı `IEnumerable`.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Koleksiyonlar](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [Otomatik Uygulanan Özellikler](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Nasıl yapılır: Öğe Listesi Oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Koleksiyonlar](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Otomatik Uygulanan Özellikler](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

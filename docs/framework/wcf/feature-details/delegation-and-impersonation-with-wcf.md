@@ -8,15 +8,15 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663316"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
-*Kimliğe bürünme* Hizmetleri İstemci Erişim hizmeti etki alanının kaynaklarına erişimi kısıtlama kullanmak yaygın bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinedeki bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
+*Kimliğe bürünme* Hizmetleri İstemci Erişim hizmeti etki alanının kaynaklarına erişimi kısıtlama kullanmak yaygın bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinedeki bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
   
 > [!IMPORTANT]
 >  Bir hizmette istemci kimliğine bürünme, hizmet sunucu işlemi daha yüksek ayrıcalıklara sahip olabilecek istemcinin kimlik bilgileriyle çalıştığını unutmayın.  
@@ -57,9 +57,9 @@ ms.locfileid: "43505423"
  Hizmet istemci kimliğine bürünür ölçüde hizmet hesabı kimliğe bürünme, kimliğe bürünme kullanılan tür ve büyük olasılıkla istemci verir kimliğe bürünme kapsamını çalıştığında tutan ayrıcalıklarını bağlıdır.  
   
 > [!NOTE]
->  Ne zaman aynı bilgisayarda çalışan istemci ve hizmet ve istemci bir sistem hesabı altında çalışıyor (örneğin, `Local System` veya `Network Service`), durum bilgisi olan güvenlik bağlamı ile güvenli bir oturum kurulduktan sonra istemci veritabanının özellikleri alınamaz belirteçleri. Böylece hesap varsayılan olarak taklit edilebileceğini bir Windows Form veya konsol uygulaması, genellikle oturum açtığınız hesap altında çalışır. Ancak, istemci olduğunda bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sayfası ve bu sayfayı barındırılan [!INCLUDE[iis601](../../../../includes/iis601-md.md)] veya [!INCLUDE[iisver](../../../../includes/iisver-md.md)], istemci altında çalıştırırsanız `Network Service` varsayılan hesabı. Tüm güvenli oturumlar destekleyen sistem tarafından sağlanan bağlamaları, varsayılan olarak bir durum bilgisi olmayan güvenlik bağlamı belirteci (SCT) kullanın. Ancak, istemci bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sayfası ve durum bilgisi olan SCTs ile güvenli oturumlar kullanılıyorsa, istemci veritabanının özellikleri alınamaz. Durum bilgisi olan SCTs güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Ne zaman aynı bilgisayarda çalışan istemci ve hizmet ve istemci bir sistem hesabı altında çalışıyor (örneğin, `Local System` veya `Network Service`), durum bilgisi olan güvenlik bağlamı ile güvenli bir oturum kurulduktan sonra istemci veritabanının özellikleri alınamaz belirteçleri. Böylece hesap varsayılan olarak taklit edilebileceğini bir Windows Form veya konsol uygulaması, genellikle oturum açtığınız hesap altında çalışır. Ancak, istemci olduğunda bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sayfası ve bu sayfayı barındırılan [!INCLUDE[iis601](../../../../includes/iis601-md.md)] veya [!INCLUDE[iisver](../../../../includes/iisver-md.md)], istemci altında çalıştırırsanız `Network Service` varsayılan hesabı. Tüm güvenli oturumlar destekleyen sistem tarafından sağlanan bağlamaları, varsayılan olarak bir durum bilgisi olmayan güvenlik bağlamı belirteci (SCT) kullanın. Ancak, istemci bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sayfası ve durum bilgisi olan SCTs ile güvenli oturumlar kullanılıyorsa, istemci veritabanının özellikleri alınamaz. Durum bilgisi olan SCTs güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-## <a name="impersonation-in-a-service-method-declarative-model"></a>Bir hizmet yöntemi, kimliğe bürünme: bildirim temelli modeli  
+## <a name="impersonation-in-a-service-method-declarative-model"></a>Kimliğe bürünme hizmet yöntemi içinde: Bildirim temelli modeli  
  Kimliğe bürünme senaryo, hizmet yöntemi arayan bağlamda yürütülmesi gerekebilir. WCF sağlar, bu kimliğe bürünme gereksinimini belirtmesini sağlayarak yapmasını kolaylaştırır bir kimliğe bürünme özelliği <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliği. Örneğin, aşağıdaki kodda, WCF altyapısı çağrıyı yürütmeden önce taklit `Hello` yöntemi. Yapmaya içinde yerel kaynaklara erişmeye `Hello` yöntemi yalnızca kaynak erişim denetimi listesi (ACL) çağıranın izin veriyorsa başarılı erişim ayrıcalıkları. Kimliğe bürünme özelliğini etkinleştirmek için <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliğini birine <xref:System.ServiceModel.ImpersonationOption> ya da sabit listesi değerleri <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> veya <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>aşağıdaki örnekte gösterildiği gibi.  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "43505423"
 > [!NOTE]
 >  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)], kimliğe bürünme başarısız olursa SCT oluşturulur, sonuçta bir durum bilgisi olan bir <xref:System.InvalidOperationException>. Daha fazla bilgi için [desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
-## <a name="impersonation-in-a-service-method-imperative-model"></a>Bir hizmet yöntemi, kimliğe bürünme: kesinlik temelli modeli  
+## <a name="impersonation-in-a-service-method-imperative-model"></a>Kimliğe bürünme hizmet yöntemi içinde: Kesinlik temelli modeli  
  Bazen çağıran işlev, ancak yalnızca bir bölümü için tüm hizmet yöntemi taklit gerekmez. Bu durumda, arayanın hizmet yöntemi içinde Windows kimliğini edinmek ve kesin kimliğe bürünme gerçekleştirin. Kullanarak bunu <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliği <xref:System.ServiceModel.ServiceSecurityContext> örneği döndürülecek <xref:System.Security.Principal.WindowsIdentity> sınıfı ve arama <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> yöntemi örneği kullanmadan önce.  
   
 > [!NOTE]
@@ -93,8 +93,8 @@ ms.locfileid: "43505423"
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Davranış|  
 |---------------------------|------------------------------------------------|--------------|  
 |Gerekli|yok|WCF çağıranın kimliğine bürünür|  
-|İzin verilen|false|WCF çağıranın kimliğine bürünüp değil|  
-|İzin verilen|true|WCF çağıranın kimliğine bürünür|  
+|İzin Verildi|false|WCF çağıranın kimliğine bürünüp değil|  
+|İzin Verildi|true|WCF çağıranın kimliğine bürünür|  
 |Noktayla|false|WCF çağıranın kimliğine bürünüp değil|  
 |Noktayla|true|İzin verilmiyor. (Bir <xref:System.InvalidOperationException> oluşturulur.)|  
   
@@ -205,21 +205,21 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [Kerberos protokol geçişi ve kısıtlanmış temsil](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.OperationBehaviorAttribute>  
- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
- <xref:System.ServiceModel.ImpersonationOption>  
- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>  
- <xref:System.ServiceModel.ServiceSecurityContext>  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ChannelFactory%601>  
- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.OperationBehaviorAttribute>
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
+- <xref:System.ServiceModel.ImpersonationOption>
+- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>
+- <xref:System.ServiceModel.ServiceSecurityContext>
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ChannelFactory%601>
+- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
+- [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

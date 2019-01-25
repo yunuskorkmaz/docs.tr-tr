@@ -2,12 +2,12 @@
 title: Ortak şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700968"
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Desteklenen şema koleksiyonları listesi çağırarak belirlemek için bir .NET Framework yönetilen sağlayıcı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı. Bu koleksiyonlar tüm gerekli sütunlar açıklanmaktadır. Sağlayıcıları istedikleri ek sütunlar eklemek ücretsizdir. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyona ekleyin.  
@@ -19,7 +19,7 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 ## <a name="metadatacollections"></a>MetaDataCollections  
  Bu şema koleksiyonu, tüm veritabanına bağlanmak için kullanılan .NET Framework yönetilen sağlayıcı tarafından desteklenen şema koleksiyonları hakkında bilgiler sunar.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |CollectionName|dize|Geçirilecek koleksiyonun adı **GetSchema** koleksiyon döndürmek için yöntemi.|  
 |NumberOfRestrictions|int|Koleksiyon için belirtilebilir kısıtlama sayısı.|  
@@ -28,7 +28,7 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 ## <a name="datasourceinformation"></a>DataSourceInformation  
  Bu şema koleksiyonu, şu anda yönetilen sağlayıcı olan .NET Framework bağlanmak için veri kaynağı hakkında bilgi gösterir.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |CompositeIdentifierSeparatorPattern|dize|Bileşik bir tanımlayıcıda bileşik ayırıcılar eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "\@&#124;\\." (Oracle için).<br /><br /> Bir bileşik genellikle ne örnek bir veritabanı nesne adı için kullanılan tanımlayıcıdır: pubs.dbo.authors ya da pubs\@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "\@&#124;\\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
 |DataSourceProductName|dize|"Oracle" veya "SQLServer" gibi bir sağlayıcı tarafından erişilen ürünün adı.|  
@@ -51,14 +51,14 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 ## <a name="datatypes"></a>Veri türleri  
  .NET Framework sağlayıcısı yönetilen veritabanı tarafından desteklenen veri türleri hakkındaki bu şema koleksiyonu kullanıma sunan bilgileri şu anda bağlı.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TypeName|dize|Sağlayıcıya özel veri türü adı.|  
 |ProviderDbType|int|Bir parametrenin türünü belirtmek için kullanılması gereken sağlayıcıya özgü türü değeri. Örneğin, SqlDbType.Money veya OracleType.Blob.|  
 |ColumnSize|long|Sayısal olmayan sütun veya parametre uzunluğu üst sınırı veya bu tür için sağlayıcı tarafından tanımlanan uzunluk ifade eder.<br /><br /> Karakter verileri için en büyük veya bu birimleri, veri kaynağı tarafından tanımlanan uzunluk tanımlanan. Oracle belirten bir uzunluk ve bazı karakter veri türleri için gerçek depolama boyutunu belirterek kavramı vardır. Bu yalnızca uzunluğu, Oracle için birimi tanımlar.<br /><br /> Tarih-saat veri türleri için (Kesirli saniye bileşeni izin verilen duyarlık üst sınırını varsayılarak) dize gösteriminin uzunluğu budur.<br /><br /> Veri türü sayısal, bu veri türünün verilen duyarlık üst sınırı ise.|  
 |CreateFormat|dize|Bu sütun bir veri tanımı ifadesi CREATE TABLE gibi ekleme temsil eden bir biçim dizesi. CreateParameter dizideki her öğe Biçim dizesinde "parametre işaretleyici" tarafından temsil edilebilir.<br /><br /> Örneğin, SQL veri türünü ondalık bir kesinlik ve ölçek gerekir. Bu durumda, biçim dizesi olabilir "ondalık ({0},{1})".|  
 |CreateParameters|dize|Bu veri türünde bir sütun oluştururken belirtilmelidir oluşturma parametreleri. Her oluşturma parametresi sağlanacak oldukları sırada bir virgülle ayrılmış bir dize içinde listelenir.<br /><br /> Örneğin, SQL veri türünü ondalık bir kesinlik ve ölçek gerekir. Bu durumda, oluşturma parametreleri "duyarlığı, Ölçek" dize içermesi gerekir.<br /><br /> Bir metin komut 10 kesinliği 2'in bir ölçek ile ondalık bir sütun oluşturmak için CreateFormat sütununun değerini ondalık olabilir ({0},{1}) "ve tam bir tür belirtimi DECIMAL(10,2) olacaktır.|  
-|Veri türü|dize|.NET Framework türü veri türünün adı.|  
+|DataType|dize|.NET Framework türü veri türünün adı.|  
 |IsAutoincrementable|bool|TRUE: otomatik artan değerleri bu veri türünde olabilir.<br /><br /> False-Bu veri türünün değerlerini otomatik olarak artırma olmayabilir.<br /><br /> Bu yalnızca otomatik artan bir sütun bu veri türü olabilir olup olmadığını belirtir, Not Bu türdeki tüm sütunları otomatik artan değil.|  
 |IsBestMatch|bool|TRUE: veri deposunda tüm veri türleri ve veri türü sütunundaki değeri tarafından belirtilen .NET Framework veri türü arasında en iyi eşleşme veri türüdür.<br /><br /> false-veri türü en iyi eşleşmeyi değil.<br /><br /> Her veri türü sütununun değeri olduğu aynı satır kümesi için IsBestMatch sütun kümesi tek bir satırda true.|  
 |IsCaseSensitive|bool|TRUE: veri türü bir karakter türüdür ve büyük küçük harfe duyarlıdır.<br /><br /> false-veri türü bir karakter türü değil ya da büyük küçük harfe duyarlı değildir.|  
@@ -80,7 +80,7 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 ## <a name="restrictions"></a>Kısıtlamalar  
  Veritabanına bağlanmak için kullanılan .NET Framework yönetilen sağlayıcı tarafından desteklenen kısıtlamaları hakkında bilgi için bu şema koleksiyonu ortaya çıkar.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |CollectionName|dize|Bu kısıtlamalar geçerli koleksiyonun adı.|  
 |RestrictionName|dize|Koleksiyondaki kısıtlama adı.|  
@@ -90,11 +90,11 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 ## <a name="reservedwords"></a>ReservedWords  
  Bu şema koleksiyonu, şu anda bağlı sağlayıcı .NET Framework yönetilen veritabanı tarafından ayrılmış sözcükler hakkında bilgi gösterir.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |ReservedWord|dize|Sağlayıcı özel amaçlı sözcük.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

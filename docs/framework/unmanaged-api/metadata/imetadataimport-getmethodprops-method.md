@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740014"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps Metodu
-Belirtilen MethodDef tarafından başvurulan yöntemi ile ilişkili meta veri belirtecini alır.  
+Belirtilen MethodDef tarafından başvurulan yöntemi ile ilişkili meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,28 +46,28 @@ HRESULT GetMethodProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mb`  
- [in] Meta verileri döndürmek için yöntemini temsil eden MethodDef belirteci.  
+ [in] Meta verileri döndürmek için yöntemin temsil eden MethodDef belirteci.  
   
  `pClass`  
- [out] Bir işaretçi yöntemi uygulayan türünü temsil eden TypeDef belirteç.  
+ [out] Yöntemi uygulayan türü temsil eden bir tür tanımı belirteci için bir işaretçi.  
   
  `szMethod`  
- [out] Yöntemin ada sahip bir arabellek için bir işaretçi.  
+ [out] Yöntemin adı olan bir arabellek için bir işaretçi.  
   
  `cchMethod`  
  [in] İstenen boyutu `szMethod`.  
   
  `pchMethod`  
- [out] Geniş karakter cinsinden boyutu gösteren bir işaretçi `szMethod`, veya kesme, yöntem adı geniş karakter gerçek sayısını söz konusu olduğunda.  
+ [out] Geniş karakter cinsinden boyutu işaretçi `szMethod`, ya da söz konusu olduğunda kesilmesi, yöntem adı geniş karakter gerçek sayısı.  
   
  `pdwAttr`  
- [out] Yöntemiyle ilişkili herhangi bir bayrağı için bir işaretçi.  
+ [out] Yöntemiyle ilişkili bayrakları için bir işaretçi.  
   
  `ppvSigBlob`  
- [out] Yönteminin ikili meta verileri imza için bir işaretçi.  
+ [out] İkili meta veri imzası yöntem bir işaretçi.  
   
  `pcbSigBlob`  
- [out] Bayt cinsinden boyutu gösteren bir işaretçi `ppvSigBlob`.  
+ [out] Bayt cinsinden boyutu işaretçi `ppvSigBlob`.  
   
  `pulCodeRVA`  
  [out] Göreli sanal adres yönteminin bir işaretçi.  
@@ -76,14 +76,14 @@ HRESULT GetMethodProps (
  [out] Herhangi bir uygulama bayrağı yöntemi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

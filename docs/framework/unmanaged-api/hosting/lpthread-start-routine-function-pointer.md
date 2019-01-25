@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5025b75106b2cb0853047a09ca263f795d99633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689935"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE İşlev İşaretçisi
-Bir iş parçacığını yürütmek için başlatıldı konak bildiren bir işlev noktalarına.  
+Bir iş parçacığının yürütülmeye başlandığını ana bilgisayara bildiren bir işleve işaret eder.  
   
- Bu işlev işaretçisi kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,16 +41,16 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
  [in] Yürütmeyi başlattı kodu için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşleve `LPTHREAD_START_ROUTINE` noktaları bir geri çağırma işlevidir ve barındırma uygulama yazıcı tarafından uygulanmalıdır.  
+ İşleve `LPTHREAD_START_ROUTINE` noktaları bir geri çağırma işlevidir ve uygulamanın barındırma yazıcı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorWks.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

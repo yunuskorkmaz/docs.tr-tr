@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
+title: 'Nasıl yapılır: Harita HRESULTs ve özel durumları'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729242"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
+# <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: Harita HRESULTs ve özel durumları
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı, ikisi arasındaki geçişi işler. .NET Framework içindeki her bir özel durum sınıfı için HRESULT eşler.  
   
  Kullanıcı tanımlı özel durum sınıfları HRESULT uygun ne olursa olsun belirtebilirsiniz. Bu özel durum sınıfları dinamik olarak ayarlayarak özel durum oluşturulduğunda döndürülecek HRESULT değiştirebilirsiniz **HResult** alanına özel durum nesnesi. Özel durum hakkında ek bilgi istemcisi üzerinden sağlanan **IErrorInfo** yönetilmeyen işleminde .NET nesne üzerinde uygulanan arabirimi.  
@@ -83,8 +83,8 @@ CMyClass::MethodThatThrows
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
 |**COR_E_INVALIDCAST veya e_noınterface**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
-|**COR_E_INVALIDFILTERCRITERIA**|**Invalidfiltercriteriaexception**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
 |**COR_E_IO**|**Ioexception**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  Gibi özel alanları **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Özel Durumlar](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Özel Durumlar](../../standard/exceptions/index.md)

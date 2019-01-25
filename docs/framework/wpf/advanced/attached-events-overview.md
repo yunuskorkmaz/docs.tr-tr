@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682962"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir dil bileşeni ve adlı olayın türünü tanımlayan bir *ekli olay*. Ekli olay kavramını belirli bir olay işleyicisi gerçekten tanımlar veya olay devralan bir öğe yerine rastgele bir öğe eklemenize olanak tanır. Bu durumda, ne potansiyel olarak olayı tetiklenmeden nesnesi veya örneği işleme hedef tanımlar veya aksi takdirde olay "sahip".  
@@ -91,7 +91,7 @@ ms.locfileid: "47196349"
   
  Ancak, temel bir özel ekli olay tanımlıyorsanız, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alma modelini ekli olayları üzerinde <xref:System.Windows.RoutedEvent>, kullanabilirsiniz <xref:System.Windows.UIElement.RaiseEvent%2A> herhangi bir ekli olay oluşturmak için <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>. (Veya ekli) gönderilmiş bir olay oluşturma, belirli bir öğe öğe ağacında olay kaynağı olarak bildirilmesini gerektirir; Bu kaynağı olarak bildirilen <xref:System.Windows.UIElement.RaiseEvent%2A> çağırıcı. Hangi öğe belirleme ağacında kaynak hizmetinizin sorumluluğundadır olarak bildirildi  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

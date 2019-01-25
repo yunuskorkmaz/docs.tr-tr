@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686029"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding Biçimlendirme Uzantısı
 Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açıkça gösterilen başka bir özelliğin değerine bağlar.  
@@ -60,11 +60,11 @@ Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açı
   
  `TemplateBinding` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter olarak bir XAML işlemcisinin bir işaretleme uzantısı özniteliği işlenmesi gerektiğini, kuralına göre kendi öznitelik sözdizimi. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [İşaretleme Uzantısı Bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [İşaretleme Uzantısı Bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

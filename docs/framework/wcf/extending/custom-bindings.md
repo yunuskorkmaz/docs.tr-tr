@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720557"
 ---
 # <a name="custom-bindings"></a>Özel Bağlamalar
 Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı, sistem tarafından sağlanan bağlamalar birini hizmetinizin gereksinimlerini karşılamıyor. Tüm bağlamalar bağlama öğelerinin sıralı bir kümesinden oluşturulur. Özel bağlamalar, sistem tarafından sağlanan bağlama öğeleri kümesinden oluşturulabilir veya kullanıcı tanımlı özel bağlama öğelerini içerebilir. Özel bağlama öğeleri, örneğin, yeni taşıma veya bir hizmet uç noktasında kodlayıcılar kullanımını etkinleştirmek için kullanabilirsiniz. Çalışan örnekler için bkz [özel bağlama örnekleri](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Daha fazla bilgi için [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -67,15 +67,15 @@ Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı,
 |İşlemler|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Hayır|  
 |Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Hayır|  
 |Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Hayır|  
-|Kodlama|İkili, ileti aktarım en iyi duruma getirme mekanizması (MTOM) özel bir metin|Evet|  
+|Encoding|İkili, ileti aktarım en iyi duruma getirme mekanizması (MTOM) özel bir metin|Evet|  
 |Taşıma|TCP, HTTP, HTTPS, adlandırılmış kanallar (IPC olarak da bilinir), eşler arası (P2P), Message Queuing (MSMQ olarak da bilinir), özel|Evet|  
   
  Ayrıca, kendi bağlama öğeleri tanımlayıp bunları herhangi bir önceki tanımlanmış katmanları arasında ekleyebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Özel Bağlama](../../../../docs/framework/wcf/samples/custom-binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Özel Bağlama](../../../../docs/framework/wcf/samples/custom-binding.md)

@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 710ce4c26bf06f7f7a9b1dc633fa55ddb3477dd6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727761"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -192,4 +192,4 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)

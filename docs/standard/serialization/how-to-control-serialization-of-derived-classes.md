@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: türetilen sınıfların serileştirmesini denetleme'
+title: 'Nasıl yapılır: Türetilen sınıfların serileştirmek denetimi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728849"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: türetilen sınıfların serileştirmesini denetleme
+# <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: Türetilen sınıfların serileştirmek denetimi
 Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için özniteliği nesne seri hale getirme özelleştirmek için tek yolu değil. XML akışı varolan bir sınıftan türetme ve söyleyen özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıfı serileştirmek nasıl örneği.  
   
  Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf. Ancak, siz talimat vermelisiniz **XmlSerializer** serileştirmek veya seri durumdan türetilmiş bir tür kabul etmek için. Bu oluşturarak yapılabilir bir <xref:System.Xml.Serialization.XmlElementAttribute> örneği ve ayarı kendi **türü** özelliği türetilmiş sınıf türü. Ekleme **XmlElementAttribute** için bir <xref:System.Xml.Serialization.XmlAttributes> örneği. Ardından Ekle **XmlAttributes öznitelikleri olan üyeler** için bir <xref:System.Xml.Serialization.XmlAttributeOverrides> kılınmasını türü ve türetilen sınıf kabul eden üyenin adını belirten örneği. Bu, aşağıdaki örnekte gösterilir.  
@@ -234,10 +234,10 @@ public class Run
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Nasıl yapılır: Bir nesneyi serileştirmek](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

@@ -2,19 +2,19 @@
 title: '&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cc9ef6c8712ff764240c4c2f0322bd94b1aaccc8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698446"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;
 IIS içinde bir Windows Communication Foundation (WCF) uygulaması uygun Internet Information Services (IIS) bağlamalarını seçmek için bir mekanizma sağlayan doğrudan bir filtre belirtir bir yapılandırma öğesini temsil eder.  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
-\<baseAddressPrefixFilters >  
+\<baseAddressPrefixFilters>  
 \<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -43,7 +43,7 @@ IIS içinde bir Windows Communication Foundation (WCF) uygulaması uygun Interne
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|IIS içinde bir Windows Communication Foundation (WCF) uygulaması uygun IIS bağlamalarını seçmek için bir mekanizma sağlar doğrudan filtreleri belirten yapılandırma öğelerinin koleksiyonu.|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|IIS içinde bir Windows Communication Foundation (WCF) uygulaması uygun IIS bağlamalarını seçmek için bir mekanizma sağlar doğrudan filtreleri belirten yapılandırma öğelerinin koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Önek filtresi, hangi bir URI'leri olan hizmet tarafından kullanılmak üzere belirtmek paylaşılan barındırma sağlayıcıları için bir yol sağlar. Bu, birden çok uygulama ile aynı sitede aynı düzeni için farklı temel adresler barındırmak için paylaşılan ana bilgisayarları etkinleştirir.  
@@ -79,8 +79,8 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  Filtre, herhangi bir joker karakterleri desteklemiyor. Ayrıca, IIS tarafından sağlanan baseAddresses adresleri yok diğer düzenleri bağlı olabilir `baseAddressPrefixFilters` listesi. Bu adresleri filtrelenir değil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)

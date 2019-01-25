@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677647"
 ---
 # <a name="web-and-socket-permissions"></a>Web ve yuva izinleri
 Internet güvenliği kullanan uygulamalar için <xref:System.Net> ad alanı tarafından sağlanır <xref:System.Net.WebPermission> ve <xref:System.Net.SocketPermission> sınıfları. **WebPermission** sınıfı uygulama isteği verilerini Sağdan bir URI veya Internet'e bir URI sunmak için denetler. **SocketPermission** sınıfını kullanmak doğru uygulama denetimleri bir <xref:System.Net.Sockets.Socket> verileri bir yerel bağlantı noktasında kabul etmek için veya başka bir adreste bağlantı noktası numarası, konak temel alınarak bir aktarım protokolünü kullanarak uzak aygıtıyla bağlantı kurmayı ve Yuva Aktarımı Protokolü.  
@@ -33,6 +33,6 @@ Internet güvenliği kullanan uygulamalar için <xref:System.Net> ad alanı tara
   
  İçin **WebPermission** örnekleri, bir uygulama tarafından denetlenen URI verebilirsiniz anlamına gelir kabul **WebPermission** uygulama (olup bu URI'ye erişebileceği anlamına gelir; dünya bağlanma Uzak veya yerel).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik](../../../docs/standard/security/index.md)  
- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik](../../../docs/standard/security/index.md)
+- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

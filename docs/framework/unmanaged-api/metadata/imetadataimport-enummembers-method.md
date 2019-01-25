@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645970"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
-Belirtilen türün üyeleri temsil eden MemberDef belirteçleri numaralandırır.  
+Belirtilen türün üyelerini temsil eden MemberDef belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,16 +41,16 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `cl`  
- [in] Numaralandırılacak üyeleri olan türünü temsil eden bir TypeDef simgesi.  
+ [in] Numaralandırılacak üyeleri olan türü temsil eden bir tür tanımı belirteci.  
   
  `rMembers`  
- [out] MemberDef belirteçleri tutmak için kullanılan dizisi.  
+ [out] Dizi MemberDef belirteçleri tutmak için kullanılır.  
   
  `cMax`  
- [in] En büyük boyutunu `rMembers` dizi.  
+ [in] En büyük boyutunu `rMembers` dizisi.  
   
  `pcTokens`  
  [out] Döndürülen MemberDef belirteçleri gerçek sayısını `rMembers`.  
@@ -63,17 +63,17 @@ HRESULT EnumMembers (
 |`S_FALSE`|Numaralandırılacak hiçbir MemberDef belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koleksiyonlar için bir sınıf üyeleri numaralandırılırken `EnumMembers` yalnızca doğrudan sınıfında tanımlanan üyeleri döndürür. Sınıfı, bu devralınan üyeler için bir uygulama sağlar olsa bile sınıfının devraldığı, herhangi bir üye döndürmez. Devralınan üyeleri Numaralandırılacak çağıran açıkça devralma zincirini yol gerekir. Devralma zincirini kurallarını orijinal meta verileri yayılan derleyici ve dil bağlı olarak değişebilir unutmayın.  
+ Koleksiyonlar bir sınıfın üyelerinin sıralanırken `EnumMembers` doğrudan sınıf üzerinde tanımlanan üyeler döndürür. Bile sınıfı, bu devralınan üyeleri için bir uygulama sağlar sınıfını devralan herhangi bir üye döndürmez. Devralınan üyeleri listeleme için arayan açıkça devralma zincirini yol gerekir. Devralma zincirini kurallarını özgün metaverileri gereğince yayılan derleyici ve dil bağlı olarak farklılık gösterebileceğini unutmayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

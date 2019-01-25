@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma'
+title: 'Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721181"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma
 
 Bir uygulama tarafından istenen kesin saat dilimi bilgilerini, çeşitli nedenlerle belirli bir sistemde mevcut olmayabilir:
 
@@ -34,7 +34,7 @@ Bu gibi durumlarda çağırabilirsiniz <xref:System.TimeZoneInfo.CreateCustomTim
 > [!IMPORTANT]
 > Özel saat dilimi çağrılarak oluşturulan <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi kayıt defterine eklenmedi. Bunun yerine, bunlar tarafından döndürülen nesne başvurusu erişilebilir <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntem çağrısı.
 
-Bu konuda, ayarlama kuralları ile saat dilimi oluşturulacağını gösterir. Gün ışığından yararlanma ayarlama kuralları desteklemeyen bir saat dilimi oluşturmak için bkz [nasıl yapılır: kuralları ayarlama olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+Bu konuda, ayarlama kuralları ile saat dilimi oluşturulacağını gösterir. Gün ışığından yararlanma ayarlama kuralları desteklemeyen bir saat dilimi oluşturmak için bkz [nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Kayan ayarlama kuralları ile saat dilimi oluşturmak için
 
@@ -95,6 +95,6 @@ Bu örnek gerektirir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-* [Saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
-* [Nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)
+- [Nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

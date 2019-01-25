@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: df394a6b71a06edc064fba0925398f87ed1802a8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5d1aa97a53d52e0915c2fbf5f1b296c65b16435
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704897"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Değer Türü Parametrelerini Geçirme (C# Programlama Kılavuzu)
 A [değer türü](../../../csharp/language-reference/keywords/value-types.md) değişkeni doğrudan öğesine verilerini içeren bir [başvuru türü](../../../csharp/language-reference/keywords/reference-types.md) verilerine bir başvuru içeren bir değişkeni. Bir değer türü değişkenine bir yönteme değere göre geçirme yöntemine değişkenin bir kopyasını ileterek anlamına gelir. Yöntem içinde gerçekleşmesi değişiklikleri parametresine bağımsız değişkeninde depolanan özgün veriler herhangi bir etkisi vardır. Çağrılan yöntemi parametresinin değerini değiştirmek istiyorsanız, başvuruya göre geçmelidir kullanarak [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Ayrıca [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md) değeri değiştirilmeyecektir güvence altına almak sırasında kopya önlemek için başvuruya göre bir değer parametresini geçirmek için anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
@@ -39,8 +39,8 @@ A [değer türü](../../../csharp/language-reference/keywords/value-types.md) de
   
  [!code-csharp[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
 - [Başvuru Türü Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)

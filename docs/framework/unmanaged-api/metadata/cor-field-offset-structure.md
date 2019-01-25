@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c4a5c8efc87940b7df0bfd532beaa67931a8c81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98a58c5e686a0650fa62752f6d1d50706d58e8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698667"
 ---
 # <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET Yapısı
-Belirtilen alanın bir sınıf içinde uzaklık depolar.  
+Belirtilen alanın bir sınıf içinde bir uzaklık depolar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +39,20 @@ typedef struct COR_FIELD_OFFSET {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ridOfField`|Bir `mdFieldDef` alanını temsil eden meta veri simgesi.|  
-|`ulOffset`|Alan kendi sınıfı içinde uzaklığı.|  
+|`ridOfField`|Bir `mdFieldDef` alanını temsil eden bir meta veri belirteci.|  
+|`ulOffset`|Alan sınıfıyla içinde uzaklığı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Imetadataımport::getclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) ve [Imetadataemit::setclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) yöntemlerini ele türünde bir parametre `COR_FIELD_OFFSET`.  
+ [Imetadataımport::getclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) ve [Imetadataemit::setclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) yöntemleri türünde bir parametre alır `COR_FIELD_OFFSET`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h, CorProf.idl  
+ **Üst bilgi:** CorHdr.h, CorProf.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

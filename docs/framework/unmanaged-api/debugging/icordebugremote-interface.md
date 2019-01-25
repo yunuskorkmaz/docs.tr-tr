@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553483"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote Arabirimi
 Yönetilen bir hata ayıklayıcıyı uzak hedef işleminde başlatma veya ekleme özelliği sağlar.  
@@ -62,23 +62,23 @@ interface ICorDebugRemote : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Yönetilen hata ayıklama için bir işlemi uzak makinede oluşturur.|  
-|[ICorDebugRemote::DebugActiveProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Hata ayıklayıcı altında uzaktaki bir makinede bir işlem başlatır.|  
+|[ICorDebugRemote::CreateProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Yönetilen hata ayıklama uzak makinede bir işlem oluşturur.|  
+|[ICorDebugRemote::DebugActiveProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Hata ayıklayıcısı altında uzak bir makinede bir işlem başlatır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Şu anda bu işlevsellik yalnızca bir uzak Macintosh makine üzerinde çalışan Silverlight tabanlı uygulamaya hedef hata ayıklama için desteklenir.  
+ Bu işlevsellik şu anda yalnızca hata ayıklama uzak Macintosh makinede çalışan Silverlight tabanlı uygulamanın hedef desteklenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

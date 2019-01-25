@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 144d2ce4b539a5eb4a744f176593b29f920cc528
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a0af1f39a8120e56fe165fc35fc2cc55d1500494
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681137"
 ---
 # <a name="move-a-ui-automation-element"></a>UI Otomasyon Öğesini Taşıma
 > [!NOTE]
@@ -32,5 +32,5 @@ ms.locfileid: "48582089"
 [!code-csharp[WindowMove#1300](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1300)]
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WindowPattern'ı örneği](https://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WindowPattern'ı örneği](https://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)

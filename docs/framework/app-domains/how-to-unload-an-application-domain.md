@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Etki Alanını Boşaltma'
+title: 'Nasıl yapılır: Bir uygulama etki alanını boşaltma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727748"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Boşaltma
+# <a name="how-to-unload-an-application-domain"></a>Nasıl yapılır: Bir uygulama etki alanını boşaltma
 Uygulama etki alanı kullanarak tamamladığınızda kullanarak kaldırma <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi. **Kaldırma** yöntemi düzgün bir şekilde belirtilen uygulama etki alanı kapatır. Kaldırma işlemi sırasında hiçbir yeni iş parçacığı uygulama etki alanı erişebilir ve tüm uygulama etki alanına özgü veri yapıları serbest.  
   
  Uygulama etki alanına yüklenen derlemelerin kaldırılır ve artık kullanılamaz. Uygulama etki alanındaki bir derleme etki alanından bağımsız ise, derleme için veri işlem kapatılana kadar bellekte kalır. Tüm işlemi kapatma dışındaki bir etki alanından bağımsız derleme kaldırmak için bir mekanizma yoktur. Burada, bir uygulama etki alanını boşaltma isteği çalışmıyor ve sonuçlanır durumlar vardır bir <xref:System.CannotUnloadAppDomainException>.  
@@ -31,7 +31,7 @@ Uygulama etki alanı kullanarak tamamladığınızda kullanarak kaldırma <xref:
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)  
-- [Nasıl yapılır: Uygulama Etki Alanı Oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
+- [Nasıl yapılır: Bir uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 9c4b3fa3a706f8dc0ff072520dd91a74bc9d0a2c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0f2e7626cb0526ac897853374b483ad09c20d368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712627"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Özel veri hizmeti sağlayıcıları (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] geç bağlanan veri türlerine göre bir veri modeli tanımlamanızı sağlayan sağlayıcıları kümesini içerir.  
@@ -24,7 +24,7 @@ ms.locfileid: "44251764"
   
  Daha fazla bilgi için bkz [özel veri hizmeti sağlayıcılarını](https://go.microsoft.com/fwlink/?LinkID=186850) ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] sağlayıcısı araç setindeki [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
- [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

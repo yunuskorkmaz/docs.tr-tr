@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1f8acc546c0d96aca079223200b43aec933f729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 931b17858465d4ff380069fc2cf2bb37cb7a7ffc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718188"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope Metodu
-Bir meta veri geçerli meta veri kapsamda başvurulan modül belirteci alır.  
+Bir meta veri geçerli meta veri kapsamda başvuru modülü için belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetModuleFromScope (
   
 #### <a name="parameters"></a>Parametreler  
  `pmd`  
- [out] Geçerli meta veri kapsamda başvurulan modülü temsil eden belirteci için bir işaretçi.  
+ [out] Geçerli meta veri kapsamda başvurulan modülü temsil eden belirteç için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: ToolStripMenuItems'ni Devre Dışı Bırakma"
+title: 'Nasıl yapılır: Toolstripmenuıtems öğelerini devre dışı bırak'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 20d0e13642aac3004a31ff416318cf6723207379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2516080708bba207c3a1d028f2e5a2411974ae5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705342"
 ---
-# <a name="how-to-disable-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems'ni Devre Dışı Bırakma
-Sınırlandırmak veya bir kullanıcı tarafından etkinleştirme ve kullanıcı etkinlikleri yanıtta menü öğelerini devre dışı bırakma hale getirebilir komutları genişletebilir. Menü öğeleri, varsayılan olarak etkinleştirilir, oluşturuldukları, ancak bu aracılığıyla ayarlanabilir <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliği. Tasarım zamanında bu özellik işleyebilir **özellikleri** penceresi veya programlı olarak ayarlayarak bu kodu.  
+# <a name="how-to-disable-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems öğelerini devre dışı bırak
+Sınırlamak veya bir kullanıcı, kullanıcı etkinlikleri için yanıt menü öğelerini devre dışı bırakma ve etkinleştirme yapabilir komutları alanlarını genişletmeniz mümkün değildir. Menü öğeleri, varsayılan olarak etkinleştirilir, bunlar oluşturulur, ancak bu aracılığıyla ayarlanabilir <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliği. Bu özellik tasarım zamanında işleyebileceğiniz **özellikleri** penceresi veya program aracılığıyla kod içinde ayarlama.  
   
-### <a name="to-disable-a-menu-item-programmatically"></a>Menü öğesi program aracılığıyla devre dışı bırakmak için  
+### <a name="to-disable-a-menu-item-programmatically"></a>Program aracılığıyla bir menü öğesi devre dışı bırakmak için  
   
--   Menü öğesi özelliklerini ayarladığınız yöntemi içinde ayarlamak için kod ekleme <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliğine `false`.  
+-   Menü öğesi özelliklerini ayarladığınız yöntemi içinde ayarlamak üzere kod eklemek <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliğini `false`.  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -40,10 +40,10 @@ Sınırlandırmak veya bir kullanıcı tarafından etkinleştirme ve kullanıcı
     ```  
   
     > [!TIP]
-    >  Bir menüdeki ilk ya da üst düzey menü öğesini devre dışı bırakma menüsünün içinde yer alan tüm menü öğelerini gizler, ancak bunları devre dışı bırakmaz. Benzer şekilde, alt öğelerine sahip bir menü öğesini devre dışı bırakma alt öğeleri gizler, ancak bunları devre dışı bırakmaz. Verilen menüsünde tüm komutlar kullanıcıya kullanılabilir durumda değilse, bu bir temiz kullanıcı arabirimi sunar gibi Gizle hem tüm menü devre dışı bırakmak için iyi bir programlama uygulama kabul edilir. Gizleme ve menüsünü devre dışı bırak ve tek başına gizleme erişimi için bir kısayol tuşu aracılığıyla menü komutu engellemez çünkü her öğeyi ve alt öğesi menüde devre dışı bırakmak gerekir. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Visible%2A> bir üst düzey menü öğesine özelliğinin `false` tüm menü gizlemek için.  
+    >  Bir menü ilk veya üst düzey menü öğesi devre dışı bırakma içinde menüyü içeren bütün menü öğelerini gizler, ancak bunları devre dışı bırakmaz. Benzer şekilde, alt öğelerine sahip bir menü öğesi devre dışı bırakma alt öğeleri gizler, ancak bunları devre dışı bırakmaz. Kullanıcıya verilen menüsündeki tüm komutları kullanılamıyorsa, bunu bir temiz kullanıcı arabirimi sunar gibi hem gizlemek ve tüm menü devre dışı bırakmak için iyi bir programlama uygulama kabul edilir. Gizleme ve menüsünü devre dışı bırak ve tek başına gizleme erişim için bir kısayol tuşu ile bir menü komutu engellemez çünkü her öğe ve alt öğesi menüsündeki devre dışı bırakmak gerekir. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Visible%2A> özelliği için bir üst düzey menü öğesinin `false` tüm menü gizlemek için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Nasıl yapılır: ToolStripMenuItems Gizleme](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Nasıl yapılır: Toolstripmenuıtems gizleme](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
+- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Değer türü &#39; &lt;typename1&gt; &#39; dönüştürülemiyor &#39; &lt;typename2&gt; &#39; (birden çok dosya başvurusu)
+title: Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt; &#39; (birden fazla dosya başvurusu)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30961
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 41c18160be9b546f8b525376fa06bc0eca6c117a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691383"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Değer türü &#39; &lt;typename1&gt; &#39; dönüştürülemiyor &#39; &lt;typename2&gt; &#39; (birden çok dosya başvurusu)
-Türündeki değeri '\<typename1 >' şekilde dönüştürülemeyen '\<typename2 >'. Tür uyuşmazlığı dosya başvurusu karıştırma nedeniyle olabilir '\<filepath1 >' projesindeki '\<projectname1 >' dosya başvuru '\<filepath2 >' projesindeki '\<projectname2 >'. Her iki derlemeleri özdeş ise, her iki başvuruları aynı konumdan; bu nedenle bu başvuruları değiştirmeyi deneyin.  
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt; &#39; (birden fazla dosya başvurusu)
+Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Bir dosya başvurusu karışması tür uyuşmazlığı olabilir '\<filepath1 >' projesindeki '\<projectname1 >' için bir dosya başvurusu ile '\<filepath2 >' projesindeki '\<projectname2 >'. İki derleme de aynıysa, bu başvuruları her iki başvuru aynı konumdan olacak şekilde değiştirmeyi deneyin.  
   
- Burada bir proje derleme birden fazla dosya başvuru yapar bir durumda, bir tür için başka bir dönüştürülebileceğinden derleyici garanti edemez.  
+ Burada bir derlemeyi birden fazla dosya başvurusu bir proje yapar bir durumda, derleyici bir türden diğerine dönüştürülüp dönüştürülemeyeceği garanti edemez.  
   
- Her dosya başvurusu, bir dosya yolu ve bir proje (genellikle bir DLL dosyası) çıkış dosyasının adı belirtir. Derleyici çıktı dosyaları aynı kaynaktan geldiği ya da aynı bütünleştirilmiş kodda aynı sürümünü temsil ettiğini garanti edemez. Bu nedenle, onu farklı başvuru türlerinde aynı türde olan veya hatta bir diğerine dönüştürülebilir garanti edemez.  
+ Her dosya başvurusu bir dosya yolu ve adı (genellikle bir DLL dosyası) projenin çıkış dosyasını belirtir. Derleyici çıktı dosyaları aynı kaynaktan gelen veya aynı bütünleştirilmiş kodun aynı sürümü temsil ettiğini garanti edemez. Bu nedenle, farklı başvuruları türleri aynı türdeyse veya hatta bir diğerine dönüştürülebilir belirleyemezsiniz.  
   
- Başvurulan derlemeler aynı derleme kimliğine sahip olduğunu biliyorsanız, tek bir dosya başvuru kullanabilirsiniz. *Derleme kimliği* derlemenin adı, sürüm, ortak anahtar varsa ve kültür içerir. Bu bilgiler, derleme benzersiz olarak tanımlar.  
+ Başvurulan derlemeler aynı derleme kimliğine sahip olduğunu biliyorsanız, tek bir dosya başvurusu kullanabilirsiniz. *Derleme kimliği* derlemenin adı, sürümü, ortak anahtar varsa ve kültür içerir. Bu bilgiler derlemenin benzersiz olarak tanımlar.  
   
  **Hata Kimliği:** BC30961  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Başvurulan derlemeler aynı derleme kimliğine varsa, kaldırın veya yalnızca tek bir dosya başvuru olmasını sağlamak başvurulara birini değiştirin.  
+-   Başvurulan derlemeler aynı derleme kimliği varsa, kaldırın veya yalnızca tek bir dosya başvurusu yani dosya başvurulardan birini değiştirin.  
   
--   Başvurulan derlemeler aynı derleme kimliğine yoksa türü bir diğer türüne dönüştürmek denemez şekilde ardından kodunuzu değiştirin.  
+-   Başvurulan derlemeler aynı derleme kimliği yoksa, diğer bir tür için tür dönüştürme denemez sonra kodunuzu değiştirin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
+

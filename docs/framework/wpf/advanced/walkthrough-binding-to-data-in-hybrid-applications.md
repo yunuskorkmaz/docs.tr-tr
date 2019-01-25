@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Karma Uygulamalarda Veriye Bağlama'
+title: 'İzlenecek yol: Karma uygulamalarda veriye bağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724349"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma Uygulamalarda Veriye Bağlama
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma uygulamalarda veriye bağlama
 Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi olan kullanıcılar sağlamak için gerekli kullanmakta olduğunuz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bu izlenecek yol, veri bağlama iki dahil karma uygulamalarda nasıl kullanabileceğinizi gösterir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
@@ -122,7 +122,7 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 1.  Gelen **veri** menüsünde **yeni veri kaynağı Ekle**.  
   
-2.  İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: bir veritabanındaki verilere bağlanma](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir veritabanındaki verilere bağlanma](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
 3.  Tarafından istendiğinde **veri kaynağı Yapılandırma Sihirbazı**, bağlantı dizesi olarak Kaydet `NorthwindConnectionString`.  
   
@@ -149,7 +149,7 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  MainWindow.xaml açın.
+4.  Open MainWindow.xaml.
 
 5.  Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.
 
@@ -173,10 +173,10 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 10. Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Veri bağlama karma uygulamaları örneği](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Veri bağlama karma uygulamaları örneği](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

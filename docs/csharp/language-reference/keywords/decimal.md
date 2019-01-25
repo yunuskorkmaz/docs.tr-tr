@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600706"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# Başvurusu)
 
@@ -97,12 +97,12 @@ Bu örnekte, çıktı, para birimi biçim dizesi kullanılarak biçimlendirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Decimal>  
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- <xref:System.Decimal>
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
 - [Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)

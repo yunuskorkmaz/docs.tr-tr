@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670322"
 ---
 # <a name="drawings-how-to-topics"></a>Çizimler ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Media.Drawing> nesnelerinin şekil, görüntü veya metin çizmek için.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Media.Drawing> nesnelerini şekil, görüntü veya metin çizmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çizime GuidelineSet Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
@@ -29,8 +29,8 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
   [VideoDrawing Kullanarak Medya Yürütme](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
   [Çizimi Görüntü Kaynağı Olarak Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Drawing>  
- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Drawing>
+- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

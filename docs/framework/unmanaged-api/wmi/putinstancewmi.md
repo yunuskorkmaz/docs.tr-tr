@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719982"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi işlevi
 Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır. 
@@ -96,11 +96,11 @@ Bir sınıf hiyerarşisine ait bir örnek uygulamanın güncelleştirmeniz gerek
 İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

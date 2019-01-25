@@ -2,12 +2,12 @@
 title: '&lt;Parametre&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a68fdecaba6ad4e64e4d3a4161d9fef6c099d60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690741"
 ---
 # <a name="ltparametergt"></a>&lt;Parametre&gt;
 Bildirilen tür genel bir tür olduğunda genel parametre belirler.  
@@ -59,8 +59,8 @@ Bildirilen tür genel bir tür olduğunda genel parametre belirler.
   
  Bu yapılandırma öğesi, her iki öznitelik aynı anda sahip olamaz. Her iki öznitelik ayarlanırsa, bir <xref:System.Configuration.ConfigurationErrorsException> gerçekleşir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

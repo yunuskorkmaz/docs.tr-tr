@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 575c732cf1b1caf4700568a9d168463359d1ad7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f46aeed0a303278fd67265e471bfa13b43cede12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680206"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod Arabirimi
-Düzenle ve devam et özelliği için bilgiler sağlar.  
+Düzenle ve devam et özelliği için bilgi sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetDocumentsForMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Bu yöntem satırları cinsinden olan belgeleri alır.|  
-|[GetDocumentsForMethodCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Bu yöntem satırları cinsinden olan belgeleri sayısını alır.|  
+|[GetDocumentsForMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Bu yöntem satır var, belgeleri alır.|  
+|[GetDocumentsForMethodCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Bu yöntem satır var, belge sayısını alır.|  
 |[GetFileNameFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Bir uzaklık ile ilişkili satırı dosya adını alır.|  
 |[GetLineFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Bir uzaklık ile ilişkili satır bilgilerini alır.|  
-|[GetSourceExtentInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Alır en küçük satırı ve en büyük satır sonu yöntemi için özel bir belgede başlatın.|  
+|[GetSourceExtentInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Alır, özel bir belgede satır, metodu için satır sonu en büyük en küçük başlayın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

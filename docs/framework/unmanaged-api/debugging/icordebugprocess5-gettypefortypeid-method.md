@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13498c58c7625edfa4954b8da8837f1bd60c976d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661106"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID Metodu
 Bir tür tanımlayıcı bir Icordebugtype değerine dönüştürür.  
@@ -41,20 +41,20 @@ HRESULT GetTypeForTypeID(
  [in] Tür tanımlayıcısı.  
   
  `ppType`  
- [out] Icordebugtype nesnenin adresini gösteren bir işaretçi.  
+ [out] Icordebugtype nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı durumlarda, bir tür tanımlayıcı döndüren yöntemler null döndürebilir `COR_TYPEID` değeri. Bu değer olarak aktarılırsa `id` bağımsız değişkeni, `GetTypeForTypeID` yöntemi başarısız olacak ve dönüş `E_FAIL`.  
+ Bazı durumlarda, bir tür tanımlayıcı döndüren yöntemler bir null döndürebilir `COR_TYPEID` değeri. Bu değer olarak iletilmezse `id` bağımsız değişkeni, `GetTypeForTypeID` yöntemi başarısız olur ve dönüş `E_FAIL`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugProcess5 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugProcess5 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

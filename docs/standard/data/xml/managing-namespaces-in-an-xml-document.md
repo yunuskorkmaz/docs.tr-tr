@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676178"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML belgesinde ad alanlarını yönetme
 XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden tanımlanmış bir URI'leri ile ilişkilendirin. Bu ilişkileri oluşturmak için URI ad alanı ön eklerini tanımlayın ve bu ön ekler öğe ve öznitelik adları XML verisindeki nitelemek için kullanın. Ad alanları, öğe ve öznitelik adı çakışmalarını önlemek ve öğeleri ve öznitelikleri aynı ada sahip işlenmesini ve farklı şekilde doğrulanmış etkinleştirin.  
@@ -81,5 +81,5 @@ XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden t
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.XmlNamespaceManager>  
+- <xref:System.Xml.XmlNamespaceManager>
 - [XML Belgeleri ve Verileri](../../../../docs/standard/data/xml/index.md)

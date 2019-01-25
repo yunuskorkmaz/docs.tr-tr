@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fec0f4f31f45847dc092808b2d47c662213e9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61b57d534770c6ab7cacbc2c084ac364dc31863f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717616"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes Numaralandırması
-Cor_debug_ıl_to_natıve_map yapısı bir örneği tarafından temsil edilen yerel yönergeleri, belirli bir dizi özel kod bölgesine karşılık gelen olup olmadığını gösterir.  
+Cor_debug_ıl_to_natıve_map yapısı örneği tarafından temsil edilen yerel yönergeler, belirli bir dizi özel kod bölgesine karşılık gelen olup olmadığını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +40,19 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`NO_MAPPING`|Yerel yönergeleri aralığını herhangi bir özel kod bölgeyi karşılık gelmiyor.|  
-|`PROLOG`|Yerel yönergeleri aralığını giriş karşılık gelir.|  
-|`EPILOG`|Yerel yönergeleri aralığı bitiş karşılık gelir.|  
+|`NO_MAPPING`|Yerel yönergeleri aralığını herhangi bir özel kod bölgesine karşılık gelmiyor.|  
+|`PROLOG`|Yerel yönergeleri aralığı için giriş karşılık gelir.|  
+|`EPILOG`|Yerel yönergeleri aralığı için sonuç karşılık gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 66edb32d24dd1dc543097b98ff3744f0aa0a7145
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7cbd3ec1b2d134106c6c9429341f5603444dac27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693989"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# Derleyici Seçenekleri)
 Bu seçenek, gerekli sayfa sistemi için geçerli varsayılan kod sayfası değilse derleme sırasında kullanılacak hangi kod sayfasını belirtir.  
@@ -37,7 +37,7 @@ Bu seçenek, gerekli sayfa sistemi için geçerli varsayılan kod sayfası deği
   
  Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

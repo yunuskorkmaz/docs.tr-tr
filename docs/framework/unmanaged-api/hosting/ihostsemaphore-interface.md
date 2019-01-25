@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103deb5ec46ba8c1d385c5339bc52a0c220c4c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c2a244622f562c074808a78f7c57134d5a9202
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689071"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore Arabirimi
-İş parçacığı oluşturma için semafor ana bilgisayarın uygulamasını temsil eder.  
+İş parçacığı için semafor konağın uygulamasını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ReleaseSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Geçerli sayısını azaltır `IHostSemaphore` örneği tarafından belirtilen tutar.|  
-|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Geçerli neden `IHostSemaphore` örneği ait kadar bekleyin veya geçtiğinde belirtilen miktarı.|  
+|[ReleaseSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Geçerli sayısını artırır `IHostSemaphore` örneği tarafından belirtilen süre.|  
+|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Geçerli neden `IHostSemaphore` örneğin ait kadar bekleyin veya zaman geçtikçe belirtilen miktarı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

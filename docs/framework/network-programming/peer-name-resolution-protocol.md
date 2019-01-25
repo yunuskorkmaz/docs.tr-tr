@@ -2,12 +2,12 @@
 title: Eş Adı Çözümleme Protokolü
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662667"
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
 Eşler arası ortamlarında eşleri belirli ad çözümleme sistemleri birbirlerinin ağ konumlarını (adresleri, protokoller ve bağlantı noktaları) çözümlemek için adları veya türlerini kullanın. Geçmişte, diğer etki alanı adı sistemi (DNS) içinde eksiklikleri yanı sıra, doğası gereği geçici bir bağlantı tarafından eş adı çözümleme karmaşık.  
@@ -46,8 +46,8 @@ Eş Adı Çözümleme Protokolü'nü aşağıdaki özellikleri göstermektedir:
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözüm için zaman uyumlu ve zaman uyumsuz yöntemleri dahil olmak üzere kendi ağ uç noktası için eş adı çözümleme sürecini tanımlar.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
 - [PeerToPeer teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179571)

@@ -8,35 +8,35 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696314"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Yerleşik Sahip Çizimi Destekli Denetimler
-Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde belirli denetimleri görsel görünümünü değiştirmek için bir tekniktir.  
+Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde belirli denetimlerin görünümünü değiştirmek için kullanılan bir tekniktir.  
   
 > [!NOTE]
->  Bu konudaki "Denetim" word herhangi birinden türetilen sınıflar anlamına kullanılacak <xref:System.Windows.Forms.Control> veya <xref:System.ComponentModel.Component>.  
+>  Öğesinden türetilen sınıfları birlikte kullanıldığı senaryolar için bu konudaki "control" sözcüğü kullanılan <xref:System.Windows.Forms.Control> veya <xref:System.ComponentModel.Component>.  
   
- Genellikle, Windows boyama otomatik olarak özellik ayarları gibi kullanarak işler <xref:System.Windows.Forms.Control.BackColor%2A> denetiminin görünümünü belirlemek için. Sahip çizimi ile özelliklerini kullanarak kullanılabilir olmayan öğeler görünümünü değiştirme boyama işleminin alın. Örneğin, birçok denetimler görüntülenen metnin rengini ayarlamanıza olanak sağlar, ancak tek bir rengi sınırlı olur. Sahip çizimi metnin bir bölümünü siyah ve kırmızı bölümünde görüntülemek gibi şeyler olanak tanır.  
+ Genellikle, Windows boyama otomatik olarak özellik ayarları gibi kullanarak işler <xref:System.Windows.Forms.Control.BackColor%2A> denetiminin görünümünü belirlemek için. Sahip çizim özelliklerini kullanarak mevcut olmayan öğeleri görünümünü değiştirme boyama işleminin yararlanın. Örneğin, çoğu denetim görüntülenen metnin rengini ayarlamanıza olanak tanıyan, ancak tek bir renge sınırlıdır. Sahip çizim, metnin bir bölümünü siyah ve kırmızı bir bölümü görüntüleme gibi işlemler yapmanıza olanak sağlar.  
   
- Uygulamada, grafik bir form üzerinde çizim sahip çizimi benzer. Örneğin, grafik yöntemlerini işleyici formun için kullanabileceğinizi <xref:System.Windows.Forms.Control.Paint> benzetmek için olay bir `ListBox` denetimi, ancak sahip olabilir tüm kullanıcı etkileşimi işlemek için kendi kod yazmak. Çizim sahibi olan denetim içeriğini çizmek için kodunuzu kullanır, ancak Aksi takdirde tüm iç yeteneklerini korur. Her öğe, denetimi çizmek için veya diğer yönlerini her öğe için varsayılan görünümünü kullanırken her öğe bazı yönlerini özelleştirmek için grafik yöntemlerini kullanabilirsiniz.  
+ Uygulamada, sahip çizim grafik bir form üzerinde çizim benzerdir. Örneğin, grafik yöntemlerini işleyici formun için kullanabileceğinizi <xref:System.Windows.Forms.Control.Paint> benzetmek için olay bir `ListBox` denetimidir, ancak sahip tüm kullanıcı etkileşimi işlemek için kendi kodunuzu yazma. Sahip çizim denetimi içeriğini çizmek için kodunuzu kullanır ancak Aksi takdirde tüm iç özellikleri korur. Her öğesi denetiminde çizin veya diğer yönleri her öğe için varsayılan görünümünü kullanırken her öğe bazı yönlerini özelleştirmek için grafik yöntemlerini kullanabilirsiniz.  
   
-## <a name="owner-drawing-in-windows-forms-controls"></a>Sahip çizimi Windows Forms denetimleri  
- Sahip çizimi destekleyen denetimleri gerçekleştirmek için genellikle bir özellik ayarlama ve bir veya daha fazla olayları işlemek.  
+## <a name="owner-drawing-in-windows-forms-controls"></a>Sahip çizim Windows Forms denetimleri  
+ Sahip çizim destekleyen denetimleri gerçekleştirmek için genellikle bir özellik kümesi ve bir veya daha fazla olayları işlemek.  
   
- Çoğu denetim çizim Bu destek sahip bir `OwnerDraw` veya `DrawMode` denetimi çizim ilgili olay veya kendisi boyar olduğunda olayları oluşturup oluşturmayacağını belirten özellik.  
+ Çoğu denetim çizme, destek sahip bir `OwnerDraw` veya `DrawMode` denetimi, çizim ilgili olay veya olay kendisini boyar oluşturup oluşturmayacağını belirten özellik.  
   
- Olmayan denetimleri bir `OwnerDraw` veya `DrawMode` özelliği `DataGridView` otomatik olarak gerçekleşir çizim olayları sağlar, Denetim ve `ToolStrip` kendi olan bir dış işleme sınıfı kullanılarak çizilip denetimi Çizim ilgili olaylar.  
+ Sahip olmayan denetimleri bir `OwnerDraw` veya `DrawMode` özelliği `DataGridView` otomatik olarak gerçekleşen çizim olayları sağlayan bir denetimi ve `ToolStrip` kendi bir dış işleme sınıfı kullanılarak çizilir denetimi Çizim ile ilgili olayları.  
   
- Olayları çizim birçok farklı türdeki vardır, ancak bir denetim içindeki tek bir öğe çizmek için tipik bir çizim olayı oluşur. Olay işleyicisini alır bir `EventArgs` çizilen öğeyle ilgili bilgiler içeren ve kullandığınız araçlara nesne çizmek için kullanabilirsiniz. Örneğin, bu nesne öğesi'nin dizin numarasını kendi üst koleksiyonundaki genellikle içeren bir <xref:System.Drawing.Rectangle> belirten öğesi'nin sınırları, görüntülemek ve bir <xref:System.Drawing.Graphics> boyama yöntemleri çağırmak için nesne. Bazı olaylar için `EventArgs` nesnesi öğesi ve varsayılan olarak, arka plan veya odak dikdörtgeni gibi bazı yönlerini öğesi boyamak için çağırabilirsiniz yöntemleri hakkında ek bilgi sağlar.  
+ Olayları çizim birçok farklı türdeki vardır, ancak tek bir öğe içinde bir denetim çizmek için tipik bir çizim olayı oluşur. Olay işleyicisini alır bir `EventArgs` çizilen öğe hakkında bilgiler içerir ve kullandığınız araçlara nesne çizmek için kullanabilirsiniz. Örneğin, bu nesnenin üst koleksiyon içindeki öğenin dizin numarasını genellikle içerir bir <xref:System.Drawing.Rectangle> belirten öğenin sınırları görüntülemek ve <xref:System.Drawing.Graphics> Boya yöntemleri çağırmak için nesne. Bazı olaylar için `EventArgs` nesne öğesi ve varsayılan olarak arka plan ya da bir odak dikdörtgeni gibi bazı yönlerini öğesi boyamak için çağırabileceğiniz yöntemler hakkında ek bilgi sağlar.  
   
- Sahip tarafından çizilmiş özelleştirmelerinizi içeren yeniden kullanılabilir bir denetim oluşturmak için sahip çizimi destekleyen bir denetim sınıfından türetilen yeni bir sınıf oluşturun. Çizim olayları işleme yerine çizimi kodunuzu geçersiz kılma işlemleri için uygun dahil `On` *EventName* yöntemini veya yöntemlerini Yeni sınıfta. Taban sınıfı çağrı emin olun `On` *EventName* yöntemini veya yöntemlerini bu durumda böylece kullanıcılar denetiminizin çizimi olayları işlemek ve ek özelleştirme sağlar.  
+ Sahip tarafından çizilmiş özelleştirmelerinizi içeren yeniden kullanılabilir bir denetim oluşturmak için sahip çizim destekleyen bir denetim sınıfından türeyen yeni bir sınıf oluşturun. Çizim olayları işleme yerine sahip çizimi kodunuzu geçersiz kılmalar için uygun dahil `On` *EventName* yöntemi veya yeni yöntemler. Temel sınıfı çağırın emin `On` *EventName* yöntemini veya yöntemlerini bu durumda kullanıcı denetiminizin sahip çizimi olayları işlemek ve ek özelleştirme sağlayın.  
   
- .NET Framework'ün tüm sürümlerinde aşağıdaki Windows Forms denetimleri destek sahip çizimi:  
+ Tüm .NET Framework sürümlerinde çizim aşağıdaki Windows Forms denetimleri destek sahibi:  
   
 -   <xref:System.Windows.Forms.ListBox>  
   
@@ -46,7 +46,7 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
   
 -   <xref:System.Windows.Forms.TabControl>  
   
- Sahip çizimi yalnızca aşağıdaki denetimleri Destek [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ Sahip çizim yalnızca aşağıdaki denetimleri desteği [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
   
 -   <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,23 +54,23 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
   
 -   <xref:System.Windows.Forms.TreeView>  
   
- Sahip çizimi ve bu yeni aşağıdaki denetimleri Destek [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ Sahip çizim ve yeni olan aşağıdaki denetimleri desteği [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
   
 -   <xref:System.Windows.Forms.DataGridView>  
   
 -   <xref:System.Windows.Forms.ToolStrip>  
   
- Aşağıdaki bölümlerde her bu denetimleri için ek ayrıntılar sağlanmaktadır.  
+ Aşağıdaki bölümlerde her bu denetimleri için ek ayrıntılar sağlayın.  
   
 ### <a name="listbox-and-combobox-controls"></a>ListBox ve ComboBox denetimleri  
- <xref:System.Windows.Forms.ListBox> Ve <xref:System.Windows.Forms.ComboBox> denetimleri ya da tüm bir boyut veya farklı boyutlarda denetiminde ayrı öğeleri Çiz olanak tanır.  
+ <xref:System.Windows.Forms.ListBox> Ve <xref:System.Windows.Forms.ComboBox> denetimlerini bir boyutu da şirket içinde veya farklı boyutlarda denetimindeki öğeyi çizmek etkinleştirin.  
   
 > [!NOTE]
->  Ancak <xref:System.Windows.Forms.CheckedListBox> denetim türetilir <xref:System.Windows.Forms.ListBox> denetimi, bunu desteklemiyor sahip çizimi.  
+>  Ancak <xref:System.Windows.Forms.CheckedListBox> denetim türetilen <xref:System.Windows.Forms.ListBox> denetimi, bunu desteklemiyor sahip çizimi.  
   
- Her bir öğe aynı boyutta çizmek için ayarlanmış `DrawMode` özelliğine <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> ve işlemek `DrawItem` olay.  
+ Her bir öğe aynı boyutta çizmek için ayarlanmış `DrawMode` özelliğini <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> ve işleme `DrawItem` olay.  
   
- Farklı bir boyut kullanarak her bir öğeyi çizmek için ayarlanmış `DrawMode` özelliğine <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> ve her ikisi de işlemek `MeasureItem` ve `DrawItem` olaylar. `MeasureItem` Olayı sağlar, önce bir öğenin boyutunu belirtmek `DrawItem` olayı, o öğe için oluşur.  
+ Başka bir boyutu kullanarak her bir öğeyi çizmek için ayarlanmış `DrawMode` özelliğini <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> ve her ikisini birden işlemek `MeasureItem` ve `DrawItem` olayları. `MeasureItem` Olayı sağlar, önce bir öğenin boyutunu belirtmek `DrawItem` olayı, o öğe için oluşur.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki konulara bakın:  
   
@@ -86,12 +86,12 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem bileşeni  
- <xref:System.Windows.Forms.MenuItem> Bileşen bir tek menü öğesini temsil eden bir <xref:System.Windows.Forms.MainMenu> veya <xref:System.Windows.Forms.ContextMenu> bileşeni.  
+ <xref:System.Windows.Forms.MenuItem> Bileşenini temsil eder, bir tek menü öğesi bir <xref:System.Windows.Forms.MainMenu> veya <xref:System.Windows.Forms.ContextMenu> bileşeni.  
   
- Çizmek için bir <xref:System.Windows.Forms.MenuItem>ayarlayın, `OwnerDraw` özelliğine `true` ve işlemek kendi `DrawItem` olay. Menü öğesi önce boyutunu özelleştirmek için `DrawItem` olayı oluşur, tanıtıcı öğesi'nin `MeasureItem` olay.  
+ Çizmek için bir <xref:System.Windows.Forms.MenuItem>ayarlayın, `OwnerDraw` özelliğini `true` ve işlemek, `DrawItem` olay. Önce menü öğesinin boyutunu özelleştirmek için `DrawItem` bir olay oluşursa, öğenin işlemek `MeasureItem` olay.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
@@ -102,9 +102,9 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl Denetimi  
- <xref:System.Windows.Forms.TabControl> Denetim tek tek sekmeler denetiminde Çiz olanak sağlar. Sahip çizimi yalnızca sekmeler etkiler; <xref:System.Windows.Forms.TabPage> içeriği etkilenmez.  
+ <xref:System.Windows.Forms.TabControl> Denetim ayrı sekmeler denetimi çizmek sağlar. Sahip çizim yalnızca sekmeler etkiler; <xref:System.Windows.Forms.TabPage> içeriği etkilenmez.  
   
- Her sekme çizmek için bir <xref:System.Windows.Forms.TabControl>ayarlayın `DrawMode` özelliğine <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> ve işlemek `DrawItem` olay. Sekme denetimi görünür olduğunda bu olay her sekme için bir kez oluşur.  
+ Her sekme çizim için bir <xref:System.Windows.Forms.TabControl>ayarlayın `DrawMode` özelliğini <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> ve işleme `DrawItem` olay. Sekme denetimi görünür olduğunda bu olay her sekme için bir kez gerçekleşir.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
@@ -113,9 +113,9 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip Bileşeni  
- <xref:System.Windows.Forms.ToolTip> Bileşen görüntülendiğinde tüm araç ipucu Çiz olanak sağlar.  
+ <xref:System.Windows.Forms.ToolTip> Bileşeni tüm araç ipucu görüntülendiğinde çizmek etkinleştirir.  
   
- Çizmek için bir <xref:System.Windows.Forms.ToolTip>ayarlayın, `OwnerDraw` özelliğine `true` ve işlemek kendi `Draw` olay. Boyutunu özelleştirmek için <xref:System.Windows.Forms.ToolTip> önce `Draw` olayı oluşur, işleme `Popup` olay ve kümesi <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> olay işleyicisi özelliği.  
+ Çizmek için bir <xref:System.Windows.Forms.ToolTip>ayarlayın, `OwnerDraw` özelliğini `true` ve işlemek, `Draw` olay. Boyutunu özelleştirmek için <xref:System.Windows.Forms.ToolTip> önce `Draw` olay geçildikten tanıtıcı `Popup` olay ve kümesi <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> olay işleyicisi özelliği.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
@@ -126,13 +126,13 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView Denetimi  
- <xref:System.Windows.Forms.ListView> Denetimi tek tek öğe, alt öğeler ve sütun üst bilgileri denetiminde çizmek sağlar.  
+ <xref:System.Windows.Forms.ListView> , Tek tek öğeleri, alt öğeler ve sütun üst bilgilerini denetimi çizmek denetim olanağı sağlar.  
   
- Sahip çizimi, denetimi etkinleştirmek için ayarlanmış `OwnerDraw` özelliğine `true`.  
+ Sahip çizim denetiminde etkinleştirmek için `OwnerDraw` özelliğini `true`.  
   
- Her öğe, denetimi çizmek için tanıtıcı `DrawItem` olay.  
+ Her öğesi denetiminde çizmek için tanıtıcı `DrawItem` olay.  
   
- Her alt veya sütun üstbilgisini denetiminde çizmek için zaman <xref:System.Windows.Forms.ListView.View%2A> özelliği ayarlanmış <xref:System.Windows.Forms.View.Details>, tanıtıcı `DrawSubItem` ve `DrawColumnHeader` olaylar.  
+ Her alt veya sütun başlığı denetimi çizmek için zaman <xref:System.Windows.Forms.ListView.View%2A> özelliği <xref:System.Windows.Forms.View.Details>, tanıtıcı `DrawSubItem` ve `DrawColumnHeader` olayları.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
@@ -145,11 +145,11 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView Denetimi  
- <xref:System.Windows.Forms.TreeView> Denetim tek düğümler denetiminde Çiz olanak sağlar.  
+ <xref:System.Windows.Forms.TreeView> , Tek tek düğümlere denetimi çizmek denetim olanağı sağlar.  
   
- Yalnızca her düğümünde görüntülenen metin çizmek için ayarlanmış `DrawMode` özelliğine <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> ve işlemek `DrawNode` metnini çizmek için olay.  
+ Yalnızca her bir düğümünde görüntülenen metni çizmek için ayarlanmış `DrawMode` özelliğini <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> ve işleme `DrawNode` metnini çizmek için olay.  
   
- Her düğümün tüm öğeleri çizmek için ayarlanmış `DrawMode` özelliğine <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> ve işlemek `DrawNode` ihtiyacınız metni, simgeleri denetlemek kutuları, artı ve eksi işaretlerine, gibi ve düğümlerini bağlayan çizgilerin hangi öğeleri çizmek için olay.  
+ Her düğümün tüm öğelerini çizmek için ayarlanmış `DrawMode` özelliğini <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> ve işleme `DrawNode` ihtiyacınız kutuları, artı ve eksi işaretlerine, metni, simgeler denetlemek gibi ve düğümlerini bağlayan satırları hangi öğelerini çizmek için olay.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
@@ -158,11 +158,11 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView Denetimi  
- <xref:System.Windows.Forms.DataGridView> Denetim tek tek hücre ve satırları denetiminde Çiz olanak sağlar.  
+ <xref:System.Windows.Forms.DataGridView> Denetimi denetiminde ayrı hücrelere ve satırları çizmek sağlar.  
   
- Tek tek hücreleri çizmek için tanıtıcı `CellPainting` olay.  
+ Tek tek hücrelere çizmek için tanıtıcı `CellPainting` olay.  
   
- Tek tek satır veya satır öğeleri çizmek için aşağıdakilerden birini veya her ikisini de işlemek `RowPrePaint` ve `RowPostPaint` olaylar. `RowPrePaint` Olay, bir satır hücrelerde boyanır önce gerçekleşir ve `RowPostPaint` olay hücreleri boyanır sonra oluşur. Her iki olayları işlemek ve `CellPainting` satır arka plan, tek tek hücreler ve satır ön plan ayrı olarak boyamak için olay veya burada gereksinim ve satır diğer öğeler için varsayılan görüntü kullanmak belirli özelleştirmelere sağlayabilir.  
+ Tek bir satır veya satır öğelerini çizmek için birini veya ikisini birden işlemek `RowPrePaint` ve `RowPostPaint` olayları. `RowPrePaint` Olayı, bir satır hücrelerde boyanır önce oluşur ve `RowPostPaint` olay hücreleri boyanır sonra oluşur. Her iki olayları işleyebilir ve `CellPainting` satır arka plan, tek tek hücrelere ve satır ön plan ayrı olarak boyamak için olay veya burada ihtiyacınız ve varsayılan görüntüyü satırın diğer öğeleri kullanmak belirli özelleştirmeleri sağlayabilir.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki konulara bakın:  
   
@@ -172,22 +172,22 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Nasıl yapılır: Windows Forms DataGridView Denetiminde Hücrelerin Görünüşünü Özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırların Görünüşünü Özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip Denetimi  
- <xref:System.Windows.Forms.ToolStrip> ve türetilen denetimler herhangi bir değişiklik görünümlerini, özelleştirmenize olanak sağlar.  
+ <xref:System.Windows.Forms.ToolStrip> ve türetilen denetimler görünümlerini herhangi bir özelliği özelleştirmenize olanak sağlar.  
   
- Özel işleme için sağlamak için <xref:System.Windows.Forms.ToolStrip> denetimler, ayarlayın `Renderer` özelliği bir <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, veya <xref:System.Windows.Forms.ToolStripContentPanel> için bir `ToolStripRenderer` nesne ve bir veya daha fazla tarafından sağlanan birçok çizim olay işleme `ToolStripRenderer` sınıfı. Alternatif olarak, kümesinin bir `Renderer` kendi sınıfının bir örneği özelliğine türetilen `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, veya <xref:System.Windows.Forms.ToolStripSystemRenderer> uygulayan veya belirli geçersiz kılmaları `On` *EventName* yöntemleri.  
+ Özel işleme sağlamak için <xref:System.Windows.Forms.ToolStrip> denetimleri ayarlayın `Renderer` özelliği bir <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, veya <xref:System.Windows.Forms.ToolStripContentPanel> için bir `ToolStripRenderer` nesnesi ve bir veya daha çok sayıda çizim olaylarının tarafından sağlanan işleme `ToolStripRenderer` sınıfı. Alternatif olarak ayarlanmış bir `Renderer` kendi sınıfının bir örneğini özelliğini türetilen `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, veya <xref:System.Windows.Forms.ToolStripSystemRenderer> uygulayan veya özel geçersiz kılar `On` *EventName* yöntemleri.  
   
  Kod örnekleri dahil olmak üzere daha fazla bilgi için aşağıdaki konulara bakın:  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Nasıl yapılır: Windows Forms'da ToolStrip Denetimi için Özel Oluşturucu Oluşturma ve Ayarlama](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Nasıl yapılır: Windows Forms'ta ToolStrip denetimi için özel Oluşturucu Oluşturma ve](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Nasıl yapılır: Bir ToolStrip denetimini özel olarak çizme](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

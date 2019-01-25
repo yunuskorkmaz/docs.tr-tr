@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
+title: 'Nasıl yapılır: Bir hizmet rastgele verileri kabul eden WCF REST programlama modeli kullanarak oluşturma'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667004"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma
-Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam denetimi olmalıdır. Bir hizmet işlemi, verileri bir biçimde byWCF desteklenmeyen döndürmesi gerekir bu durumdur. Bu konuda, rasgele verileri alan bir hizmet oluşturmak için WCF REST programlama modeli kullanarak anlatılmaktadır.  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Nasıl yapılır: Bir hizmet rastgele verileri kabul eden WCF REST programlama modeli kullanarak oluşturma
+Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır. Bir hizmet işlemi, verileri bir biçimde byWCF desteklenmiyor döndürmelidir olduğunda bu durum geçerlidir. Bu konuda, rastgele verileri alan bir hizmet oluşturmak için WCF REST programlama modeli kullanarak anlatılmaktadır.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulama  
   
-1.  Hizmet sözleşmesi tanımlayın. Rastgele verileri alan işlem türünün bir parametresi olmalıdır <xref:System.IO.Stream>. Ayrıca, bu parametre istek gövdesinde geçirilen yalnızca parametresi olmalıdır. Bu örnekte açıklanan işlemi aynı zamanda bir filename parametresi alır. Bu parametre istek URL'si içinde geçirilir. Parametre içinde URL belirterek geçirilen belirtebilirsiniz bir <xref:System.UriTemplate> içinde <xref:System.ServiceModel.Web.WebInvokeAttribute>. URI çağırmak için kullanılan bu durumda, "UploadFile/bazı-dosya adı" Bu yöntem sona erer. URI şablonunu "{filename}" bölümünü filename parametresi işlemi için işlem çağırmak için kullanılan URI içinde geçirilir belirtir.  
+1.  Hizmet sözleşmesini tanımlamaktır. Rastgele veri aldığında işlem türünde bir parametresi olmalıdır <xref:System.IO.Stream>. Ayrıca, bu parametre istek gövdesinde geçirilen tek parametresi olması gerekir. Bu örnekte açıklanan işlem, ayrıca bir filename parametresi alır. Bu parametre, istek URL'si içinde iletilir. Parametre URL'sini belirterek geçirilen belirtebileceğiniz bir <xref:System.UriTemplate> içinde <xref:System.ServiceModel.Web.WebInvokeAttribute>. URI çağırmak için kullanılan bu durumda bu yöntem, "UploadFile/bazı-dosya adı" sona erer. URI şablonu "{filename}" kısmı, işlemi için dosya adı parametresi işlemi çağırmak için kullanılan URI içinde geçirildiğini belirtir.  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
     }  
     ```  
   
-2.  Hizmet sözleşmesini uygulama. Yalnızca bir yöntemi, sözleşmenin sahip `UploadFile` , rastgele verilerin dosyasını bir akışa alır. İşlemi okur bayt sayısı sayım akış okuyun ve dosya adını ve okunan bayt sayısını görüntüler.  
+2.  Hizmet sözleşmesini uygulama. Sözleşme yalnızca bir yöntem olan `UploadFile` , rastgele veriler dosyası bir akışa alır. İşlemin bayt sayısını sayma stream okuyun ve ardından dosya adı ve okunan bayt sayısını görüntüler okur.  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -46,7 +46,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
   
 ### <a name="to-host-the-service"></a>Ana bilgisayar hizmeti  
   
-1.  Hizmet barındırmak için bir konsol uygulaması oluşturun.  
+1.  Hizmeti barındırmak için bir konsol uygulaması oluşturun.  
   
     ```csharp  
     class Program  
@@ -57,19 +57,19 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
     }  
     ```  
   
-2.  Temel adres için hizmet içinde tutmak için bir değişken oluşturun `Main` yöntemi.  
+2.  İçinde hizmet için temel adresini tutacak bir değişken oluşturma `Main` yöntemi.  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Oluşturma bir <xref:System.ServiceModel.ServiceHost> hizmet sınıf ve taban adresi belirtir hizmet örneği.  
+3.  Oluşturma bir <xref:System.ServiceModel.ServiceHost> hizmet sınıfı ve taban adresini belirten bir hizmet örneği.  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Sözleşmeyi belirten bir uç nokta ekleyin <xref:System.ServiceModel.WebHttpBinding>, ve <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4.  Sözleşme belirten bir uç nokta ekleyin <xref:System.ServiceModel.WebHttpBinding>, ve <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
@@ -82,22 +82,22 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a>Hizmeti program aracılığıyla çağırmak için  
+### <a name="to-call-the-service-programmatically"></a>Program aracılığıyla hizmeti çağırmak için  
   
-1.  Oluşturma bir <xref:System.Net.HttpWebRequest> hizmetini çağırmak için kullanılan URI ile. Bu kodda taban adresi ile birleştirilir `"/UploadFile/Text"`. `"UploadFile"` URI bölümünü çağırmak için işlemi belirtir. `"Test.txt"` URI bölümünü belirtir geçirilecek filename parametresi `UploadFile` işlemi. Bu öğelerinin her ikisini de Eşle <xref:System.UriTemplate> işlemi sözleşmenin uygulanır.  
+1.  Oluşturma bir <xref:System.Net.HttpWebRequest> hizmeti çağırmak için kullanılan URI ile. Bu kodda, temel adresi ile birleştirilir `"/UploadFile/Text"`. `"UploadFile"` URI kısmı aranacak işlem belirtir. `"Test.txt"` URI kısmı belirtir geçirilecek filename parametresi `UploadFile` işlemi. Bu öğelerinin her ikisini de eşlemek <xref:System.UriTemplate> da işlem anlaşması için uygulanır.  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  Ayarlama <xref:System.Net.HttpWebRequest.Method%2A> özelliği <xref:System.Net.HttpWebRequest> için `POST` ve <xref:System.Net.HttpWebRequest.ContentType%2A> özelliğine `"text/plain"`. Bu hizmet kod veri gönderme ve bu verileri düz metin olarak olduğunu bildirir.  
+2.  Ayarlama <xref:System.Net.HttpWebRequest.Method%2A> özelliği <xref:System.Net.HttpWebRequest> için `POST` ve <xref:System.Net.HttpWebRequest.ContentType%2A> özelliğini `"text/plain"`. Bu kod, veri göndermek ve bu veriler düz metin olarak yapılır hizmet bildirir.  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  Çağrı <xref:System.Net.HttpWebRequest.GetRequestStream%2A> istek akışı almak için verileri göndermek, bu veri isteği akışa yazmak ve akış kapatmak oluşturun.  
+3.  Çağrı <xref:System.Net.HttpWebRequest.GetRequestStream%2A> İstek akışını almak için veri göndermek, bu veri isteği akışa yazmak ve akış Kapat oluşturun.  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,7 +110,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
     reqStream.Close();  
     ```  
   
-4.  Çağırarak hizmetinden yanıt Al <xref:System.Net.HttpWebRequest.GetResponse%2A> ve konsola yanıt verilerini görüntüler.  
+4.  Çağırarak hizmetten yanıt alma <xref:System.Net.HttpWebRequest.GetResponse%2A> ve konsola yanıt verileri görüntüler.  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
@@ -124,7 +124,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
     ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek kodu tam bir listesi verilmiştir.  
+ Bu örnek için kod tam listesi verilmiştir.  
   
 ```csharp  
 using System;  
@@ -191,9 +191,9 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlerken  
+-   Kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

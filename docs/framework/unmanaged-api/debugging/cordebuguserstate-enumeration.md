@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726522"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
-Bir iş parçacığı kullanıcı durumunu gösterir.  
+Kullanıcı durumunu bir iş parçacığının gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,29 +46,29 @@ typedef enum CorDebugUserState {
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|İş parçacığı sonlandırma istendi.|  
-|`USER_SUSPEND_REQUESTED`|İş parçacığı ertelenmesi istendi.|  
+|`USER_STOP_REQUESTED`|İş parçacığının sonlandırılması istendi.|  
+|`USER_SUSPEND_REQUESTED`|İş parçacığının bir askıya alma isteğinde bulundu.|  
 |`USER_BACKGROUND`|İş parçacığı arka planda çalışıyor.|  
 |`USER_UNSTARTED`|Yürütme iş parçacığı başlatılmadı.|  
 |`USER_STOPPED`|İş parçacığı sonlandırıldı.|  
 |`USER_WAIT_SLEEP_JOIN`|İş parçacığı bir görevi tamamlamak başka bir iş parçacığı için bekliyor.|  
-|`USER_SUSPENDED`|İş parçacığı askıya alındı.|  
-|`USER_UNSAFE_POINT`|İş parçacığı güvenli olmayan bir noktada ' dir. Diğer bir deyişle, yürütme içindeki bir noktada burada atık toplama engelleyebilir iş parçacığıdır.<br /><br /> Hata ayıklama olayları güvensiz noktalarından gönderilir, ancak bir iş parçacığı güvenli olmayan bir noktada askıya büyük olasılıkla neden olacak bir kilitlenme iş parçacığı sürdürülene kadar. Güvenli ve güvenli olmayan puanları tam zamanında (JIT) ve atık toplama uygulaması tarafından belirlenir.|  
-|`USER_THREADPOOL`|İş parçacığı iş parçacığı havuzundan değil.|  
+|`USER_SUSPENDED`|İş parçacığını askıya alındı.|  
+|`USER_UNSAFE_POINT`|İş parçacığı güvenli olmayan bir noktada ' dir. Diğer bir deyişle, yürütme noktasında bir çöp toplama burada engelleyebilir iş parçacığıdır.<br /><br /> Hata ayıklama olaylarını güvenli olmayan noktalarından gönderilir, ancak güvenli olmayan bir noktada bir iş parçacığını askıya büyük olasılıkla neden olacak bir kilitlenme iş parçacığı sürdürülene kadar. Güvenli ve güvenli olmayan noktaları, just-in-time (JIT) ve çöp toplama uygulama tarafından belirlenir.|  
+|`USER_THREADPOOL`|İş parçacığı havuzu iş parçacığıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir iş parçacığı kullanıcı durumu iş parçacığı hata ayıklayıcı incelerken olan durumdur. Bir iş parçacığı, kullanıcı durumlarını birleşimi olabilir.  
+ Kullanıcı durumunu bir iş parçacığının iş parçacığı hata ayıklayıcısı incelerken olan durumudur. Bir iş parçacığı, kullanıcı durumlarını bir birleşimi olabilir.  
   
- Kullanım [Icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) bir iş parçacığının kullanıcı durumunu alma yöntemi.  
+ Kullanım [Icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) bir iş parçacığının kullanıcı durumunu almak için yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

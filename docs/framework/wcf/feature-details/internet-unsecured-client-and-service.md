@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643812"
 ---
 # <a name="internet-unsecured-client-and-service"></a>İnternet Güvenli Olmayan Hizmet ve İstemci
 Aşağıdaki çizimde, bir ortak, güvenli olmayan Windows Communication Foundation (WCF) istemci ve hizmet örneği gösterilmektedir.  
@@ -19,13 +19,13 @@ Aşağıdaki çizimde, bir ortak, güvenli olmayan Windows Communication Foundat
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|Yok.|  
+|Güvenlik modu|Hiçbiri|  
 |Taşıma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.BasicHttpBinding> kodda veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırma öğesi.|  
 |Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve Hizmetleri ile|  
-|Kimlik doğrulaması|Yok.|  
-|Bütünlüğü|Yok.|  
-|Gizliliği|Yok.|  
+|Kimlik doğrulaması|Hiçbiri|  
+|Bütünlüğü|Hiçbiri|  
+|Gizliliği|Hiçbiri|  
   
 ## <a name="service"></a>Hizmet  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
@@ -109,7 +109,7 @@ Aşağıdaki çizimde, bir ortak, güvenli olmayan Windows Communication Foundat
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

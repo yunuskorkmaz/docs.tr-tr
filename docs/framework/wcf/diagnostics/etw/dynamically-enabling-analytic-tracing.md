@@ -2,12 +2,12 @@
 title: Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: f03d2ce381be430121a11df95341886a4be667e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719995"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 Windows işletim sistemiyle birlikte sevk araçlarını kullanarak etkinleştirebilir veya dinamik olarak olay izleme için Windows (ETW) kullanarak izlemeyi devre dışı. Tüm [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) Hizmetleri, çözümleme izleme uygulamanın Web.config dosyasında etkin ve devre dışı olmadan dinamik olarak değiştirme veya hizmeti yeniden başlatılıyor olabilir. Bu izleme olaylarının bozulmadan kalmasını yayan uygulama sağlar.  
@@ -40,5 +40,5 @@ Windows işletim sistemiyle birlikte sevk araçlarını kullanarak etkinleştire
 |`ServiceHost`|Hizmet ana bilgisayarı tarafından oluşturulan olaylar.|  
 |`WCFMessageLogging`|WCF ileti günlüğe kaydetme olayları.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Hizmetleri ve Windows için Olay İzleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Hizmetleri ve Windows için Olay İzleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

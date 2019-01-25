@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718669"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -153,12 +153,12 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  <xref:System.Windows.DataTemplate> Ayrıca bir örtülü anahtar vardır. Örtük anahtarı için bir <xref:System.Windows.DataTemplate> olduğu <xref:System.Windows.DataTemplate.DataType%2A> özellik değeri. <xref:System.Windows.DataTemplate.DataType%2A> açıkça kullanmak yerine türü adı olarak da belirtilebilir [{... x: Type} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Ayrıntılar için bkz [veri şablonu oluşturmaya genel bakış](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.ResourceDictionary>  
- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Kaynaklar ve Kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Kaynağı Tanımlama ve Kaynağa Başvurma](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.ResourceDictionary>
+- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Kaynaklar ve Kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [Kaynağı Tanımlama ve Kaynağa Başvurma](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

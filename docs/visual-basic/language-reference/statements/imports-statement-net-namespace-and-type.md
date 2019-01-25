@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699811"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports Deyimi (.NET Ad Alanı ve Türü)
 Etkinleştirir, ad alanı nitelenmeden başvurulmak üzere adlarını yazın.  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  Unutmayın `Imports` deyimi yapmaz öğelerden, diğer projeleri ve derlemeleri projenize kullanılabilir. İçeri aktarma başvuru ayarlama yer almaz. Yalnızca zaten projeniz için kullanılabilir olan adlar nitelemek için ihtiyacını ortadan kaldırır. Daha fazla bilgi için "İçeren öğeleri içeri aktarma" bölümüne bakın. [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
->  Örtük tanımlayabilirsiniz `Imports` deyimleri kullanarak [başvurular sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Daha fazla bilgi için [nasıl yapılır: içeri aktarılan ad alanları (Visual Basic) ekleyip](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+>  Örtük tanımlayabilirsiniz `Imports` deyimleri kullanarak [başvurular sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Daha fazla bilgi için [nasıl yapılır: İçeri aktarılan ad alanlarını (Visual Basic) ekleyip](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>İçeri aktarma diğer adları  
  Bir *diğer içeri aktarma* diğer adı için bir ad alanı veya tür tanımlar. İçeri aktarma diğer adları, bir veya daha fazla ad alanı içinde bildirilen aynı ada sahip öğeleri kullanmanız gerektiğinde kullanışlıdır. Daha fazla bilgi ve örnek için "Uygun bir öğe adı" bölümüne bakın [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Yordamın Parametresini Tanımlama (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: b058f593b8672da449dac250947563c75c8386bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660807"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Parametresini Tanımlama (Visual Basic)
-A *parametresi* onu çağırdığında yordamı için bir değer geçirmek için çağıran kodu sağlar. Bir yordam için her parametre adı ve veri türünü belirten bir değişken bildirin aynı şekilde bildirin. Ayrıca geçirme mekanizması belirtin ve parametre isteğe bağlıdır.  
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama
+A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye izin verir. Her parametre için bir yordam adı ve veri türünü belirten bir değişken bildirmek aynı şekilde bildirin. Ayrıca geçirme mekanizma belirtin ve parametre isteğe bağlıdır.  
   
- Daha fazla bilgi için bkz: [parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md).  
+ Daha fazla bilgi için [parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>Bir yordam parametresini tanımlamak için  
+### <a name="to-define-a-procedure-parameter"></a>Bir yordamın parametresini tanımlama  
   
-1.  Yordam bildiriminde yordam parametre listesi, diğer parametreler virgül ile ayırarak parametre adını ekleyin.  
+1.  Yordam bildiriminde parametre adı, diğer parametreler virgülle ayırarak, yordam parametre listesine ekleyin.  
   
-2.  Parametresinin veri türü karar verin.  
+2.  Parametrenin veri türünü karar verin.  
   
-3.  Parametre adı ile izleyin bir `As` veri türünü belirtmek için yan tümcesi.  
+3.  Parametre adı ile bir `As` yan veri türü belirtin.  
   
-4.  Parametresi için istediğiniz geçirme mekanizması karar verin. Normalde, yordamı çağıran kodu değeriyle değiştirebilmesi istediğiniz sürece değer ile bir parametre geçirin.  
+4.  Parametresi için istediğiniz geçirme mekanizması karar verin. Normalde çağıran koddaki değeri değiştirebilmesi için yordamı istemediğiniz sürece değere göre bir parametre geçirin.  
   
-5.  Parametre adından [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) geçirme düzeneğini belirtmek için. Daha fazla bilgi için bkz: [farklar arasında geçirme bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5.  Parametre adıyla önünde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) geçirme mekanizması belirtmek için. Daha fazla bilgi için [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Parametre isteğe bağlıysa geçirme mekanizmasıyla önünde [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) ve parametre veri türü eşittir işareti ile izleyin (`=`) ve varsayılan bir değer.  
+6.  Parametre isteğe bağlıysa geçirme mekanizmasıyla önünde [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) ve parametre veri türü bir eşittir işareti ile izleyin (`=`) ve varsayılan değeri.  
   
-     Aşağıdaki örnek, bir özeti tanımlar. bir `Sub` yordamı üç parametrelere sahip. İlk iki gereklidir ve üçüncü isteğe bağlıdır. Parametre bildirimleri parametre listesinde virgülle ayrılır.  
+     Aşağıdaki örnek, ana hat tanımlar. bir `Sub` yordamı üç parametrelere sahip. İlk iki gereklidir ve üçüncü isteğe bağlıdır. Parametre bildirimleri parametre listesinde virgülle ayrılır.  
   
      [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
-     İlk parametre kabul eden bir `customer` nesnesi ve `updateCustomer` geçirilen değişken doğrudan güncelleştirebilirsiniz `c` bağımsız değişkeni geçtiğinden [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçirilen olduğundan yordamın son iki bağımsız değişken değerlerini değiştiremezsiniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     İlk parametre kabul eden bir `customer` nesnesi ve `updateCustomer` doğrudan geçirilen değişkeni güncelleştirebilirsiniz `c` geçirilen bağımsız değişken olduğundan [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçirilen çünkü yordamın son iki bağımsız değişken değerlerini değiştiremezsiniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     Çağrıyı yapan kod için bir değer sağlamaz, `level` parametresi, Visual Basic ayarlar, 0 varsayılan değeri.  
+     Çağıran kod için bir değer sağlamıyor varsa `level` parametre, Visual Basic ayarlar, varsayılan değeri 0 olarak.  
   
-     Tür denetleme geçiş yaparsanız ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off`, `As` yan tümcesi olduğunda isteğe bağlı bir parametre tanımlayın. Ancak, herhangi bir parametre kullanıyorsa, bir `As` yan tümcesi, bunların tümünün gerekir kullanır. Anahtar denetimi türü ise `On`, `As` her parametre tanımı yan tümcesi gereklidir.  
+     Tür denetleme geçerseniz ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off`, `As` yan tümcesi olduğunda isteğe bağlı bir parametre tanımlayın. Ancak, herhangi bir parametre kullanıyorsa bir `As` yan tümcesi, bunların tümünün gerekir kullanır. Geçiş denetimi türü ise `On`, `As` yan tümcesi için her bir parametre tanımında gereklidir.  
   
-     Veri türleri için tüm programlama öğeleri belirtme olarak bilinir *güçlü yazarak*. Ayarladığınızda `Option Strict On`, Visual Basic güçlü yazmaya zorlar. Bu, aşağıdaki nedenlerle önerilir:  
+     Tüm programlama öğeleriniz için veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Ayarladığınızda `Option Strict On`, Visual Basic güçlü yazım, yazım zorlar. Bu, aşağıdaki nedenlerden dolayı önerilir:  
   
-    -   Değişkenleri ve parametreleri için IntelliSense desteği sağlar. Bu, kodunuzda yazarken özelliklerini ve diğer üyeleri görmenize olanak sağlar.  
+    -   Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bunu siz kodunuzu yazarken, özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
-    -   Tür denetleme gerçekleştirmek derleyici sağlar. Bu, çalışma zamanında taşma gibi hatalar nedeniyle başarısız olabilir deyimleri catch yardımcı olur. Ayrıca bunları desteklemeyen nesnelerde yöntem çağrıları yakalar.  
+    -   Derleyicinin tür denetimi sağlar. Bu, catch taşma gibi hatalar nedeniyle çalışma zamanında başarısız olabilir deyimleri yardımcı olur. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
   
-    -   Kodunuzu daha hızlı yürütülmesini sonuçlanır. Bunun bir nedeni olan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic derleyici onu atayacağını `Object` türü. Derlenmiş kodunuzu arasında ileri ve geri dönüştürmeniz gerekebilir `Object` ve performansını düşürür diğer veri türleri.  
+    -   Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek zorunda kalabilirsiniz `Object` ve diğer veri türleri, performansı azaltır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [Yordamlar](./index.md)  
- [Alt Yordamlar](./sub-procedures.md)  
- [İşlev Yordamları](./function-procedures.md)  
- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Özyinelemeli Yordamlar](./recursive-procedures.md)  
- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)  
+- [Yordamlar](./index.md)
+- [Alt Yordamlar](./sub-procedures.md)
+- [İşlev Yordamları](./function-procedures.md)
+- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
+- [Özyinelemeli Yordamlar](./recursive-procedures.md)
+- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
+- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)

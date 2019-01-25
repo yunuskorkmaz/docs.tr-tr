@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a4ed21b6f9fd067f3357e07c5fda07d25ce868d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4619d5a1444d42c6f3ac43306fbd979a6a70f12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672181"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps Metodu
-Meta veri simgesi verilen özel öznitelik değerini alır.  
+Kendi meta veri belirteci verilen özel özniteliğinin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,29 +44,29 @@ HRESULT GetCustomAttributeProps (
  [in] Alınacak özel öznitelik temsil eden bir meta veri belirteci.  
   
  `ptkObj`  
- [out, isteğe bağlı] Özel öznitelik değiştirir nesnesini temsil eden bir meta veri simgesi. Bu değer, meta veri simgesi dışında herhangi bir türde olabilir `mdCustomAttribute`.  
+ [out, isteğe bağlı] Özel öznitelik değiştiren nesnesini temsil eden bir meta veri belirteci. Bu değer, meta veri belirteci dışında herhangi bir türde olabilir `mdCustomAttribute`.  
   
  `ptkType`  
- [out, isteğe bağlı] Bir `mdMethodDef` veya `mdMemberRef` meta verisini belirteci temsil eden <xref:System.Type> döndürülen özel özniteliğinin.  
+ [out, isteğe bağlı] Bir `mdMethodDef` veya `mdMemberRef` meta veri belirteci temsil eden <xref:System.Type> döndürülen özel özniteliğinin.  
   
  `ppBlob`  
- [out, isteğe bağlı] Bir özel öznitelik değeri veri dizisi için bir işaretçi.  
+ [out, isteğe bağlı] Özel öznitelik değeri olan verilerin bir dizisine bir işaretçi.  
   
  `pcbSize`  
- [out, isteğe bağlı] Döndürülen verileri bayt cinsinden boyutu *`ppBlob`.  
+ [out, isteğe bağlı] Döndürülen verileri baytlık boyutu *`ppBlob`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel bir öznitelik, bir veri, meta veri altyapısı tarafından anlaşılan biçim dizisi olarak depolanır.  
+ Özel bir öznitelik, bir veri, meta veri altyapısı tarafından anlaşılır biçimi dizisi olarak depolanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

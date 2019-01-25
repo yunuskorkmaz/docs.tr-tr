@@ -2,12 +2,12 @@
 title: Eş adları ve PNRP kimlikleri
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690796"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Eş adları ve PNRP kimlikleri
 Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adresine çözülebilir bir eş ile ilişkili herhangi bir şey olabilir, iletişim için bir uç nokta temsil eder. Eş Adı Çözümleme Protokolü (PNRP), bulut üyelerini tanımlamak için kullanılan bir PNRP kimliği, oluşturulması için istatistiksel olarak benzersiz eş adını alır.  
@@ -20,7 +20,7 @@ Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adre
  Güvenli eş adları, yalnızca bunların sahibi tarafından kaydedilir ve ortak anahtar şifrelemesi ile korunur. Güvenli eş adları karşılık gelen özel anahtarın eş varlığa ait olarak kabul edilir. Sahiplik özel anahtarla imzalanır sertifikalı eş adresi (CPA) kanıtladılar. Kötü niyetli bir kullanıcı bir eş ad karşılık gelen özel anahtar olmadan sahipliğini taklit edilemez.  
   
 ## <a name="pnrp-ids"></a>PNRP kimlikleri  
- ![PNRP kimliği](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP kimlikleri aşağıdakilerden oluşur:  
   
@@ -30,6 +30,6 @@ Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adre
   
  Tek bir bilgisayardan kaydedilmesi birden çok PNRP kimlikleri bu P2P kimliği ve hizmet konumu birleşimini sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

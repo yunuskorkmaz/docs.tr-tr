@@ -3,12 +3,12 @@ title: C# dize ilişkilendirme
 description: Dize ilişkilendirme ile C# dilinde bir sonuç dizesi olarak biçimlendirilmiş bir ifade sonuçları eklemeyi öğrenin.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727865"
 ---
 # <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
 
@@ -108,9 +108,9 @@ Varsayılan olarak, bir aradeğerlendirme dizesinde tarafından tanımlanan geç
 
 Bu öğreticide, dize ilişkilendirme kullanım yaygın senaryolar açıklanmaktadır. Dize ilişkilendirme hakkında daha fazla bilgi için bkz: [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu. . NET'te türleri biçimlendirme hakkında daha fazla bilgi için bkz. [NET'teki biçimlendirme türleri](../../standard/base-types/formatting-types.md) ve [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konuları.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- <xref:System.FormattableString?displayProperty=nameWithType>  
-- <xref:System.IFormattable?displayProperty=nameWithType>  
-- [Dizeler](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Dizeler](../programming-guide/strings/index.md)

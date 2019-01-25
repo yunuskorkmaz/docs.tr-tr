@@ -2,12 +2,12 @@
 title: Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733213"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
 <xref:System.Activities.DynamicActivity> bir somut, korumalı bir public Oluşturucu ile sınıftır. <xref:System.Activities.DynamicActivity> bir etkinlik yerli kullanarak çalışma zamanında etkinlik işlevselliğini bir araya getirmek için kullanılabilir  
@@ -21,7 +21,7 @@ ms.locfileid: "48583884"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Kesin kod kullanarak çalışma zamanında bir etkinlik oluşturmak için  
   
-1.  Visual Studio 2010.  
+1.  OpenVisual Studio 2010.  
   
 2.  Seçin **dosya**, **yeni**, **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **sıralı iş akışı konsol uygulaması** içinde **şablonları** penceresi. Yeni Proje DynamicActivitySample adı.  
   
@@ -96,6 +96,6 @@ ms.locfileid: "48583884"
   
 8.  Workflow1.xaml dosyaya sağ **Çözüm Gezgini** seçip **kodu görüntüle**. Etkinliği sınıf oluşturulur Not `x:Class` ve özelliği ile oluşturulan `x:Property`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

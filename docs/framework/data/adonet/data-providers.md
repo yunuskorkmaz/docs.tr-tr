@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627271"
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırarak ve sonuçları almak için kullanılır. Sonuçları ya da doğrudan yerleştirilen işlenen bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden çok kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katmanda işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -157,7 +157,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>EntityClient sağlayıcısı  
  EntityClient sağlayıcısı, varlık veri modeli (EDM) tabanlı verilere erişmek için kullanılır. Diğer .NET Framework veri sağlayıcıları, bu veri kaynağı ile doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcısı ile iletişim kurmak için varlık SQL kullanır. Daha fazla bilgi için [EntityClient ve varlık SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

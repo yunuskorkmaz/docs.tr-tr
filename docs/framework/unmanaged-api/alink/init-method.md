@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 315ddf89d9c0653f357490dc31986dc302024622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662653"
 ---
 # <a name="init-method"></a>Init Yöntemi
 Uygulama nesneleri hazırlar [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) kullanmak için.  
@@ -37,10 +37,10 @@ HRESULT Init(
   
 #### <a name="parameters"></a>Parametreler  
  `pDispenser`  
- [Imetadatadispenserex arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) meta verileri dağıtıcısının işaretçi.  
+ [Imetadatadispenserex arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) meta verileri dağıtıcısı için işaretçi.  
   
  `pErrorHandler`  
- [Imetadataerror arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) isteğe bağlı bir hata arabirimi işleme işaretçi.  
+ [Imetadataerror arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) işleme arabirimini hatayla isteğe bağlı işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -48,7 +48,7 @@ HRESULT Init(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

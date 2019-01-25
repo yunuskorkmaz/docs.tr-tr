@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569735"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach Yöntemi
-Yeni bir işlem başlatılıyor veya belirtilen varolan işlemine iliştirme geçerli makine ve çalışma zamanı yapılandırma bağlamında mümkün olup olmadığını belirten bir HRESULT döndürür.  
+Yeni bir işlem başlatılıyor veya belirtilen mevcut işleme iliştirdikten geçerli makine ve çalışma zamanı yapılandırma bağlamında mümkün olup olmadığını belirten bir HRESULT döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +38,13 @@ HRESULT CanLaunchOrAttach (
   
 #### <a name="parameters"></a>Parametreler  
  `dwProcessId`  
- [in] Varolan bir işlemin kimliği.  
+ [in] Var olan bir işlem kimliği.  
   
  `win32DebuggingEnabled`  
- [in] Geçirin `true` , Win32 hata ayıklama etkin durumdayken başlatmak plan veya etkin; tersi durumda, Win32 hata ayıklamaya eklemek için geçmesi durumunda `false`.  
+ [in] Geçirin `true` , Win32 ile hata ayıklama etkin oluşturmayı planlıyoruz veya Win32 hata ayıklamaya etkin; Aksi takdirde eklemek için geçirmek `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Hata Ayıklama Hizmetleri yeni bir işlem başlatılıyor veya verilen işlemine iliştirme karar verirseniz S_OK geçerli makine ve çalışma zamanı yapılandırma hakkında bilgi verilir, mümkündür. Olası HRESULT değerleri şunlardır:  
+ Hata Ayıklama Hizmetleri yeni bir işlem başlatılıyor veya belirtilen işleme iliştirdikten belirlerseniz S_OK geçerli makine ve çalışma zamanı yapılandırma hakkında bilgi verilen mümkündür. HRESULT olası değerler şunlardır:  
   
 -   S_OK  
   
@@ -55,18 +55,18 @@ HRESULT CanLaunchOrAttach (
 -   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem yalnızca bilgilendirme amaçlıdır. Arabirim, başlatmasını durdurmaz veya tarafından döndürülen değer bağımsız olarak bir işlem ekleme `CanLaunchOrAttach`.  
+ Bu yöntem, yalnızca bilgilendirme amaçlıdır. Arabirimi, başlatılmasını durdurmaz ya da tarafından döndürülen değerinden bağımsız olarak bir işleme ekleme `CanLaunchOrAttach`.  
   
- Win32 hata ayıklama etkin durumdayken başlatın veya Win32 hata ayıklama etkin durumdayken bağlayın, geçirmek, düşünüyorsanız, `true` için `win32DebuggingEnabled`. Tarafından döndürülen HRESULT `CanLaunchOrAttach` bu seçeneği kullanırsanız, farklı olabilir.  
+ Planlıyorsanız Win32 ile hata ayıklama etkin başlatma veya ekleme Win32 ile hata ayıklamayı etkin geçirmek `true` için `win32DebuggingEnabled`. Tarafından döndürülen HRESULT `CanLaunchOrAttach` bu seçeneği kullanırsanız farklı olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8590b38ace0abcc370f94852a35569b95c4a2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643617"
 ---
 # <a name="creating-assemblies"></a>Derlemeler Oluşturma
 
@@ -46,11 +46,11 @@ Derlemeler, aşağıdaki etkenlere bağlı olarak içine kod modülleri ve kayna
 
 Özel durumlar, ortak dil çalışma zamanı derlemeleri yönetilmeyen COM uygulamalarına yaparken yapılmalıdır. Yönetilmeyen kod ile çalışma hakkında daha fazla bilgi için bkz. [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Bütünleştirilmiş Kod Sürümü Oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Nasıl yapılır: Tek Dosyalı Bütünleştirilmiş Kod Derleme](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Nasıl yapılır: Tek Dosyalı bütünleştirilmiş kod derleme](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)
