@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664596"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>_EFN_GetManagedObjectFieldInfo İşlevi
-Uzaklık, bir alan ve alanın değerini, sağlanan nesne işaretçisi ve alan adını kullanarak bir nesne başından alır.  
+Uzaklık nesnenin başlangıcından bir alan ve sağlanan nesne işaretçisi ve alan adını kullanarak, alanın değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,25 +46,25 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  [in] Bir yönetilen nesne işaretçisi.  
   
  szFieldName  
- [in] Alan adı için bir yönetilen nesne işaretçi.  
+ [in] Alan adı için bir yönetilen nesne işaretçisi.  
   
  `pValue`  
  [out] Alan değeri. Bu parametre null olabilir.  
   
  `pOffset`  
- [out] Uzaklık `objAddr` alanına. Bu parametre null olabilir.  
+ [out] Uzaklığı `objAddr` alan. Bu parametre null olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uzaklığı 0 ise, uzaklık yazılır.  
+ Uzaklık, uzaklık 0 ise, yazılır.  
   
- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlevi HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değeri ve 0x1000 hata kodunu döndürür.  
+ Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değerini ve 0x1000 hata kodu ile döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace.h  
   
- **.NET framework sürüm:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

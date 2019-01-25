@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690715"
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
-Tür bildirimi kısmi tanım türü olduğunu gösterir.  
+Bir tür bildirimi türü kısmi tanımı olduğunu gösterir.  
   
- Kullanarak birkaç bildirimler arasında bir tür tanımını bölebilirsiniz `Partial` anahtar sözcüğü. İstediğiniz sayıda farklı kaynak dosyalar istediğiniz sayıda kısmi bildirimleri kullanabilirsiniz. Ancak, tüm bildirimler aynı bütünleştirilmiş kodda ve aynı ad olmalıdır.  
+ Kullanarak, çeşitli bildirimler arasında bir tür tanımı ayırabilirsiniz `Partial` anahtar sözcüğü. İstediğiniz sayıda farklı kaynak dosyaları istediğiniz sayıda kısmi bildirimleri kullanabilirsiniz. Ancak, tüm bildirimler aynı derleme ve aynı ad olmalıdır.  
   
 > [!NOTE]
->  Visual Basic destekler *kısmi yöntemler*, hangi genellikle uygulanır kısmi sınıflar. Daha fazla bilgi için bkz: [kısmi yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) ve [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md).  
+>  Visual Basic destekler *kısmi yöntemler*, hangi genellikle uygulanır kısmi sınıflar. Daha fazla bilgi için [kısmi yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) ve [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,58 +45,58 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Terim|Tanım|  
 |---|---|  
-|`attrlist`|İsteğe bağlı. Bu türü için geçerli öznitelikler listesi. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç (`< >`).|  
-|`accessmodifier`|İsteğe bağlı. Bu tür hangi kod erişip belirtir. Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|İsteğe bağlı. Bkz: [gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`attrlist`|İsteğe bağlı. Bu türüne uygulanan özniteliklerin listesi. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar içinde (`< >`).|  
+|`accessmodifier`|İsteğe bağlı. Bu tür kod erişip belirtir. Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|İsteğe bağlı. Bkz: [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|İsteğe bağlı. Bkz: [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Gerekli. Bu tür adı. Tüm diğer kısmi bildirimlerinde aynı türde tanımlanan adıyla eşleşmelidir.|  
+|`name`|Gerekli. Bu türün adı. Tanımlanan tüm diğer kısmi bildirimlerinde aynı tür adıyla eşleşmelidir.|  
 |`Of`|İsteğe bağlı. Bu genel bir tür olduğunu belirtir. Bkz: [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Kullanırsanız, gerekli [,](../../../visual-basic/language-reference/statements/of-clause.md). Bkz: [yazın listesi](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`typelist`|İfadesini kullanıyorsanız gereklidir [,](../../../visual-basic/language-reference/statements/of-clause.md). Bkz: [türü listesinde](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|İsteğe bağlı. Bkz: [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Kullanırsanız, gerekli `Inherits`. Sınıf veya bu sınıf türetilen arabirim adı.|  
+|`classname`|İfadesini kullanıyorsanız gereklidir `Inherits`. Sınıf veya bu sınıfın türetildiği arabirimin adı.|  
 |`Implements`|İsteğe bağlı. Bkz: [uygulayan deyimi](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Kullanırsanız, gerekli `Implements`. Bu tür uygulayan arabirimleri adları.|  
-|`variabledeclarations`|İsteğe bağlı. Ek değişkenleri ve tür için olaylar declare deyimlerini.|  
+|`interfacenames`|İfadesini kullanıyorsanız gereklidir `Implements`. Bu türün uyguladığı arayüzlerin adları.|  
+|`variabledeclarations`|İsteğe bağlı. Bir ek değişkeni ve tür için olaylar bildirmek deyimler.|  
 |`proceduredeclarations`|İsteğe bağlı. Bildirme ve türü için ek yordamlar tanımlama deyimleri.|  
-|`End Class` Veya `End Structure`|Bu kısmi sona `Class` veya `Structure` tanımı.|  
+|`End Class` veya `End Structure`|Bu kısmi sona erer `Class` veya `Structure` tanımı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Basic parçalı sınıf tanımları oluşturulan kod kullanıcı tarafından yazılan kodu ayrı kaynak dosyalarında ayırmak için kullanır. Örneğin, **Windows Form Tasarımcısı** denetimleri için kısmi sınıflar gibi tanımlar <xref:System.Windows.Forms.Form>. Bu denetimler oluşturulan kodda değiştirmemeniz gerekir.  
+ Visual Basic, kullanıcı tarafından yazılan kodu ayrı kaynak dosyalarında oluşturulan kod ayırmak için kısmi sınıf tanımları kullanır. Örneğin, **Windows Form Tasarımcısı** denetimleri için kısmi sınıflar gibi tanımlar <xref:System.Windows.Forms.Form>. Bu denetimler oluşturulan kodda değiştirmeniz gerekir.  
   
- Sınıfı, yapısı, arabirim ve değiştirici kullanım ve devralma için olanlar gibi modülü oluşturma için tüm kuralları kısmi türü oluştururken uygulayın.  
+ Kısmi bir tür oluştururken, sınıf, yapı, arabirimi ve değiştiricisinin kullanımı ve devralma için olanlar gibi modülü oluşturma için tüm kuralları geçerlidir.  
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
   
--   Normal koşullar altında tek bir türü geliştirme iki veya daha fazla bildirimler arasında bölmek değil. Bu nedenle, çoğu durumda, gerekmeyen `Partial` anahtar sözcüğü.  
+-   Normal koşullar altında tek bir türde geliştirme arasında iki veya daha fazla bildirimleri bölmeniz gerekir değil. Bu nedenle, çoğu durumda gerekmeyen `Partial` anahtar sözcüğü.  
   
--   Okunabilirlik için bir türün kısmi her bildirimi içermelidir `Partial` anahtar sözcüğü. Derleyici anahtar sözcüğü atlamak en çok bir kısmi bildirimi sağlar; iki veya daha fazla atlarsanız, derleyici bir hata bildirir.  
+-   Okunabilirlik için her bir kısmi bildirimi bir tür içermelidir `Partial` anahtar sözcüğü. Derleyicinin anahtar sözcüğü atlamak en fazla bir kısmi bildirimi sağlar; iki veya daha fazla Bunu atlarsanız, derleyici bir hata bildirir.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bildirimleri birleşimi.** Derleyici türü tüm kısmi bildirimlerinde birleşimi değerlendirir. Her değiştiricisi her kısmi tanımından tüm türü için geçerlidir ve her kısmi tanımından her bir üyenin tüm türü kullanılabilir.  
+-   **Bildirimleri birleşimi.** Derleyicinin tür tüm kısmi bildirimleri birleşimi değerlendirir. Kısmi her tanımındaki her değiştiricisi türün tamamı için geçerlidir ve her kısmi tanımındaki her üye, türün tamamı için kullanılabilir.  
   
--   **Tür promosyonu modüllerinde kısmi türleri için izin verilmiyor.** Kısmi bir tanımı içinde bir modül türü tür yükseltme otomatik olarak engellenmediğinden ise. Böyle bir durumda, kısmi tanımları kümesini beklenmeyen sonuçlara ve hatta derleyici hataları neden olabilir. Daha fazla bilgi için bkz: [tür yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+-   **Tür promosyonu modülleri kısmi türler için izin verilmiyor.** Kısmi bir tanımını modül içinde ise, o türün tür yükseltme otomatik olarak engellenmediğinden olur. Böyle bir durumda, kısmi tanımları kümesini beklenmeyen sonuçlar ve hatta derleyici hataları neden olabilir. Daha fazla bilgi için [tür promosyonu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
-     Yalnızca tam yollarına aynı zaman derleyici kısmi tanımları birleştirir.  
+     Yalnızca tam yollarının aynı olduğunda derleyici kısmi tanımları birleştirir.  
   
- `Partial` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
+ `Partial` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
  [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sınıfının tanımını böler `sampleClass` iki bildirimleri her biri farklı bir tanımlar `Sub` yordamı.  
+ Aşağıdaki örnek, sınıf tanımını böler `sampleClass` alanına iki bildirimler, her biri farklı bir tanımlar `Sub` yordamı.  
   
  [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
   
- Önceki örnekte iki kısmi tanımları, aynı kaynak dosyasında veya iki farklı kaynak dosyalar olabilir.  
+ İki kısmi tanım önceki örnekte, aynı kaynak dosyada veya iki farklı kaynak dosyalarında olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

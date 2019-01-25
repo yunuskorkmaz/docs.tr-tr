@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma'
+title: 'Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d9213e58aaabd0b4001d5c6a7fd6fd375eba2e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 95e85578a4879a9af9f262a933150292a4f58ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668873"
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma
 [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) meta verileri için bir COM tür kitaplığında bulunan arabirimleri ve coclass'ları dönüştürür bir komut satırı aracıdır. Bu araç bir birlikte çalışma derlemesi ve tür bilgisi için ad alanı otomatik olarak oluşturur. Bir sınıfın meta verileri kullanıma sunulduktan sonra yönetilen istemcilerin COM tür örnekleri oluşturma ve bir .NET örneği sanki olarak kendi yöntemlerini çağırmaya. Tlbimp.exe tüm tür kitaplığında tek seferde meta verisine dönüştürür ve tür kitaplığında tanımlanan türlerin bir alt kümesi için tür bilgisi oluşturulamıyor.  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Tür kitaplığından bir birlikte çalışma derlemesi oluşturmak için  
@@ -41,6 +41,6 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+- [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)

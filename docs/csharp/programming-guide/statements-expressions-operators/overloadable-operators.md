@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: b993c7873cdce60ae03e872b842f8265900442fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce346920c301aabf652ea0e141d4a2f66a3e8b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616257"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Fazla yüklenebilir işleçler (C# programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ C# işleçleri kullanarak statik üye işlevleri tanımlayarak aşırı yükleme
 
 | İşleçler | Overloadability |
 | --------- | --------------- |
-|[+](../../language-reference/operators/addition-operator.md), [-](../../language-reference/operators/subtraction-operator.md), [!](../../language-reference/operators/logical-negation-operator.md), [~](../../language-reference/operators/bitwise-complement-operator.md), [++](../../language-reference/operators/increment-operator.md), [--](../../language-reference/operators/decrement-operator.md) , [true](../../language-reference/keywords/true.md), [false](../../language-reference/keywords/false.md)|Bu birli işleçler aşırı yüklenebilir.|
+|[+](../../language-reference/operators/addition-operator.md), [-](../../language-reference/operators/subtraction-operator.md), [!](../../language-reference/operators/logical-negation-operator.md), [~](../../language-reference/operators/bitwise-complement-operator.md), [++](../../language-reference/operators/increment-operator.md), [--](../../language-reference/operators/decrement-operator.md), [true](../../language-reference/keywords/true.md), [false](../../language-reference/keywords/false.md)|Bu birli işleçler aşırı yüklenebilir.|
 |[+](../../language-reference/operators/addition-operator.md), [-](../../language-reference/operators/subtraction-operator.md), [\*](../../language-reference/operators/multiplication-operator.md), [/](../../language-reference/operators/division-operator.md), [%](../../language-reference/operators/modulus-operator.md), [&](../../language-reference/operators/and-operator.md), [&#124;](../../language-reference/operators/or-operator.md), [^](../../language-reference/operators/xor-operator.md), [\<\<](../../language-reference/operators/left-shift-operator.md), [>>](../../language-reference/operators/right-shift-operator.md)|Bu ikili işleçlerde aşırı yüklenebilir.|
 |[==](../../language-reference/operators/equality-comparison-operator.md), [!=](../../language-reference/operators/not-equal-operator.md), [\<](../../language-reference/operators/less-than-operator.md), [>](../../language-reference/operators/greater-than-operator.md), [\<=](../../language-reference/operators/less-than-equal-operator.md), [>=](../../language-reference/operators/greater-than-equal-operator.md)|Karşılaştırma işleçleri aşırı yüklenebilir (ancak bu tablonun altındaki nota bakın).|
 |[&&](../../language-reference/operators/conditional-and-operator.md), [&#124;&#124;](../../language-reference/operators/conditional-or-operator.md)|Koşullu mantıksal işleçler aşırı yüklenemez, ancak bunlar kullanılarak değerlendirilir `&` ve <code>&#124;</code>, hangi aşırı yüklenebilir.|
@@ -33,10 +33,10 @@ C# işleçleri kullanarak statik üye işlevleri tanımlayarak aşırı yükleme
 
 Bir işleç aşırı yüklemesi hakkında daha fazla bilgi için bkz: [işleci](../../language-reference/keywords/operator.md) anahtar sözcüğü makalesi.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Deyimler, İfadeler ve İşleçler](index.md)
 - [İşleçler](operators.md)
-- [C# İşleçleri](../../language-reference/operators/index.md)  
+- [C# İşleçleri](../../language-reference/operators/index.md)
 - [Neden aşırı yüklenmiş işleçler her zaman C# ' de statik misiniz?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

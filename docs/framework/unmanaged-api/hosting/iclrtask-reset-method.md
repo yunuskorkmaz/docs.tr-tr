@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715561"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset Yöntemi
-Konak bir görev tamamlandıktan ve CLR geçerli yeniden kullanmanıza olanak sağlayan ortak dil çalışma zamanı (CLR) bildiren [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği başka bir görev temsil eder.  
+Ortak dil çalışma zamanı (CLR), konak bir görev tamamlandıktan ve geçerli yeniden kullanmak CLR sağlar bildirir [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) temsil eden başka bir görev örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,49 +37,49 @@ HRESULT Reset (
   
 #### <a name="parameters"></a>Parametreler  
  `fFull`  
- [in] `true`, çalışma zamanı iş parçacığı ile ilgili tüm statik değerler geçerli ilgili güvenlik ve yerel bilgilerine ek olarak sıfırlamalıdır `ICLRTask` örnek; Aksi halde, `false`.  
+ [in] `true`, çalışma zamanı iş parçacığı ile ilgili tüm statik değerleri geçerli ilgili güvenlik ve yerel bilgilerine ek olarak sıfırlamalısınız `ICLRTask` örneği; Aksi takdirde, `false`.  
   
- Değer ise `true`, çalışma zamanı kullanılarak depolanmış olan verilerin sıfırlar <xref:System.Threading.Thread.AllocateDataSlot%2A> veya <xref:System.Threading.Thread.AllocateNamedDataSlot%2A>.  
+ Değer ise `true`, çalışma zamanı kullanarak depolanan verileri sıfırlar <xref:System.Threading.Thread.AllocateDataSlot%2A> veya <xref:System.Threading.Thread.AllocateNamedDataSlot%2A>.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`Reset` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrısı bir durumda. başarıyla|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde bunu yapamazsınız yönetilen kodu çalıştırmak veya çağrısı işleme bir durumda. başarıyla|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR daha önce oluşturduğunuz dönüşüm `ICLRTask` , yeni bir görev gerektiği her zaman sürekli yeni örnekleri oluşturma yükünü önlemek için örnekleri. Ana bilgisayar çağırarak bu özellik sağlar `ICLRTask::Reset` yerine [Iclrtask::exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) zaman tamamlanmış bir görevi. Aşağıdaki listede normal yaşam döngüsünü özetlenmektedir bir `ICLRTask` örneği:  
+ CLR daha önce oluşturduğunuz dönüşüm `ICLRTask` yeni bir görev ihtiyaç duyduğu her zaman sürekli olarak yeni örnekleri oluşturma ek yükü önlemek için örnekleri. Konağı çağırarak bu özelliği etkinleştirir `ICLRTask::Reset` yerine [Iclrtask::exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) ne zaman tamamlandığının bir görev. Aşağıdaki listede normal yaşam döngüsü özetlenmektedir bir `ICLRTask` örneği:  
   
 1.  Yeni bir çalışma zamanı oluşturur `ICLRTask` örneği.  
   
-2.  Çalışma zamanı çağrıları [Ihosttaskmanager::getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) geçerli ana bilgisayar görev başvuru alınamıyor.  
+2.  Çalışma zamanı çağrıları [Ihosttaskmanager::getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) geçerli konak göreve bir başvuru almak için.  
   
-3.  Çalışma zamanı çağrıları [Ihosttask::setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) yeni örnek konak görev ile ilişkilendirilecek.  
+3.  Çalışma zamanı çağrıları [Ihosttask::setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) yeni örnek konak göreviyle ilişkilendirilecek.  
   
-4.  Görevi yürütür ve tamamlar.  
+4.  Görev yürütür ve tamamlar.  
   
-5.  Konak çağırarak görev bozar `ICLRTask::ExitTask`.  
+5.  Çağırarak görev ana bilgisayarı yok eder `ICLRTask::ExitTask`.  
   
- `Reset` Bu senaryo iki yolla değiştirir. Konak çağrıları yukarıdaki 5. adımda `Reset` görev temiz bir duruma sıfırlanır ve sonra ayrıştırır `ICLRTask` , ilişkili örneğinden [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği. İsterseniz, konak de önbelleğe alabilir `IHostTask` örneği yeniden kullanım için. Yukarıdaki 1. adımda, çalışma zamanı bir geri çeker `ICLRTask` yeni bir örneğini oluşturmak yerine önbelleğinden.  
+ `Reset` Bu senaryo iki yolla değiştirir. Konak çağrıları yukarıdaki 5. adımda `Reset` görev temiz bir duruma sıfırlanır ve sonra ayırır `ICLRTask` ilişkili örneğinden [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği. İsterseniz, konak de önbelleğe alabilir `IHostTask` yeniden kullanım için örneği. Yukarıdaki 1. adımda, çalışma zamanı bir geri çeker `ICLRTask` yeni bir örneğini oluşturmak yerine önbellekteki.  
   
- Bu yaklaşım, iyi konak yeniden kullanılabilir çalışan görevleri havuzu de sahip olduğunda çalışır. Ne zaman konak bozar birini kendi `IHostTask` örnekleri, karşılık gelen bozar `ICLRTask` çağırarak `ExitTask`.  
+ Bu yaklaşım da ana bilgisayar görevleri yeniden kullanılabilir çalışan havuzu da sahip olduğunda çalışır. Ne zaman konak yok eder birini kendi `IHostTask` örnekleri, karşılık gelen yok eder `ICLRTask` çağırarak `ExitTask`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

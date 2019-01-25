@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3bd526b08e1ba3be856e1e823cf8ef49ea9b6c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3ad63472f6a3f7ae1ec13742185790667c7bcf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699057"
 ---
 # <a name="rem-statement-visual-basic"></a>REM Deyimi (Visual Basic)
 Bir program kaynak kodunda açıklayıcı açıklamalar eklemek için kullanılır.  
@@ -32,21 +32,21 @@ REM comment
   
 ## <a name="parts"></a>Bölümler  
  `comment`  
- İsteğe bağlı. Eklemek istediğiniz her türlü açıklamanın metin. Bir arasında gerekli bir alandır `REM` anahtar sözcüğü ve `comment`.  
+ İsteğe bağlı. Dahil etmek istediğiniz herhangi bir yorum metni. Bir arasında gerekli bir alandır `REM` anahtar sözcüğü ve `comment`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koyabilirsiniz bir `REM` deyimi bir satır veya, tek başına, başka bir deyiminden bir satıra koyabilir. `REM` Deyimi satırındaki son deyim olmalıdır. Başka bir ifade izliyorsa `REM` bu deyim bir boşlukla ayrılmalıdır.  
+ Koyabilirsiniz bir `REM` bir satır veya, tek başına bildirimi, başka bir deyiminin sonrasındaki bir satıra koyabilir. `REM` Deyimi bir satırdaki son deyim olmalıdır. Başka bir ifade izliyorsa `REM` bu deyiminden boşluk tarafından ayrılmış olması gerekir.  
   
- Tek tırnak işareti kullanın (`'`) yerine `REM`. Bu, açıklamanızı aynı satırda başka bir ifade izleyen veya tek başına bir satıra bulunur geçerlidir.  
+ Tek tırnak işareti kullanabilirsiniz (`'`) yerine `REM`. Bu, açıklamanızı aynı satırda başka bir ifade izleyen veya tek başına bir satırda yer alan geçerlidir.  
   
 > [!NOTE]
->  Devam edilemiyor bir `REM` satır devamlılığı sırası kullanarak deyimi (`_`). Bir yorum başladıktan sonra derleyici özel bir anlamı karakter inceleyin değil. Birden çok satırlı açıklaması için başka kullanma `REM` deyimi veya açıklama simgesini (`'`) her satırda.  
+>  Devam edemiyor bir `REM` satır devamlılığı sırası kullanarak deyimi (`_`). Bir yorum başladıktan sonra derleyici karakterler için özel bir anlamı incelemez. İçin birden çok satır yorum, başka kullanma `REM` deyimi veya bir yorum sembolü (`'`) her satırda.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek gösterilmektedir `REM` bir programda açıklayıcı açıklamalar dahil etmek için kullanılan ifade. Ayrıca tek tırnak işareti karakteri kullanmanın alternatif gösterir (`'`) yerine `REM`.  
+ Aşağıdaki örnekte gösterilmiştir `REM` deyimi bir programda açıklayıcı açıklamalar eklemek için kullanılır. Ayrıca, tek tırnak işareti karakteri kullanarak alternatif gösterir (`'`) yerine `REM`.  
   
  [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Code’daki Açıklamalar](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Code’daki Açıklamalar](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

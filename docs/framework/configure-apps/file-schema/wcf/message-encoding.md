@@ -2,27 +2,27 @@
 title: İleti Kodlama
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: cdfa83b722492a8b2a7b118ff70134916ed824fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d797b810af5df5fc1acf31e0ab6338689da9f55c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734019"
 ---
 # <a name="message-encoding"></a>İleti Kodlama
-Kodlama Unicode karakter kümesini bir bayt dizisi dönüştürme işlemidir. Kod çözme ters bir işlemdir. Windows Communication Foundation (WCF) SOAP iletiler için kodlamayı üç türleri içerir: metin ve ikili ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
+Kodlama, Unicode karakter kümesini bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç türlerini içerir: Metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
   
- `binaryMessageEncoding` Yapılandırma bölümü ikili tabanlı XML iletileri için kullanılan karakter kodlama ve ileti sürüm belirtir. İkili ileti Kodlayıcı ikili hat üzerinde Windows Communication Foundation (WCF) iletilerinde kodlar. Bu kodlama ileti çok hızlı aktarımını sonuçları, birlikte çalışabilirlik tabanlı WS - üzerinde * standartları kaybolur.  
+ `binaryMessageEncoding` Yapılandırma bölümü ikili tabanlı XML iletileri için kullanılan karakter kodlamasını ve ileti sürüm oluşturmayı belirtir. İkili ileti Kodlayıcısı Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan. Bu kodlama ileti çok hızlı aktarımını sonuçları karşın, birlikte çalışabilirlik tabanlı WS - üzerinde * standartları kaybolur.  
   
- `mtomMessageEncoding` Yapılandırma bölümünde bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama kullanılarak bir ileti için kullanılan karakter kodlama ve ileti sürüm belirtir. (MTOM), Windows Communication Foundation (WCF) iletilerindeki ikili veri iletmek için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında bir denge dener. MTOM kodlama çoğu XML metin biçiminde aktarır ancak bunları olarak ileterek büyük ikili veri blokları en iyi duruma getirir-metne dönüştürme olmadan, ise.  
+ `mtomMessageEncoding` Yapılandırma bölümü bir ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama kullanılarak bir ileti için kullanılan karakter kodlamasını ve ileti sürüm oluşturmayı belirtir. (MTOM), Windows Communication Foundation (WCF) iletilerinde ikili veri aktarımı için verimli bir teknolojidir. MTOM Kodlayıcısı, verimlilik ve birlikte çalışabilirlik arasında bir denge dener. MTOM kodlama çoğu XML metin biçiminde aktarır, ancak büyük ikili veri blokları olarak ileterek iyileştirir-olan metin dönüştürme olmadan.  
   
- `textMessageEncoding` Yapılandırma bölümü kablo metin tabanlı iletileri oluşturmak için kullanılan bir metin Kodlayıcı belirtir. Bu Kodlayıcı tarafından üretilen iletileri WS - için uygun * birlikte çalışabilirliği tabanlı. Genellikle Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük metin olarak ikili veri blokları iletmek için XML iletileri kodlama az verimli yöntemdir  
+ `textMessageEncoding` Yapılandırma bölümü, kablo metin tabanlı iletileri oluşturmak için kullanılan bir metin Kodlayıcı belirtir. Bu Kodlayıcı tarafından üretilen iletileri, WS - için uygun * Interop bağlı. Web hizmeti veya Web hizmeti istemcisi, metinsel XML genellikle anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme XML iletileri kodlaması için az verimli yöntemdir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728378"
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
 Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Aşağıdaki konularda daha ayrıntılı bilgi verilmiştir:  
@@ -99,10 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Seçme (Tahminler)  
  `select` Yan tümcesi sorgusunun sonuçları üretir ve "şekline" ya da her döndürülen öğe türünü belirtir. Örneğin, sizin sonuçlarınız, tam oluşacağını belirtebilirsiniz `Customer` nesneler, yalnızca bir üye, üyelerin bir alt kümesini veya tamamen farklı sonuç tür dayalı bir hesaplama veya yeni nesne oluşturma. Zaman `select` yan tümcesi bir kopyasını bir kaynak öğesi dışında bir şey üretir, işlem çağrılır bir *projeksiyon*. Projeksiyonlar verileri dönüştürmek için kullanımı, güçlü bir özellik mi [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde. Daha fazla bilgi için [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) ve [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Sorgu anahtar sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Query Keywords (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

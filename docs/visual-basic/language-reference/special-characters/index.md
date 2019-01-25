@@ -1,12 +1,12 @@
 ---
 title: Özel karakterler (Visual Basic Başvurusu)
 ms.date: 10/31/2017
-ms.openlocfilehash: 02e489a7712c740bf5dbd01a980454e43d7bc97a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c179ac69833404f0ad7e36cfcada1643d91d604d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626803"
 ---
 # <a name="special-characters-visual-basic-reference"></a>Özel karakterler (Visual Basic Başvurusu)
 
@@ -14,6 +14,6 @@ ms.locfileid: "50187133"
 
 - [$](interpolated.md), ilişkilendirilmiş dize karakter.
 
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic başvurusu](../../../visual-basic/language-reference/index.md)

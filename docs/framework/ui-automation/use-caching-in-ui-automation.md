@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 12d101b3cd8b7c387cb37b62bc0e777d7294affc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5c238f01d4412f6b7aa5a8f3d54c4043b9babf7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710033"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI Otomasyonda Önbelleğe Almayı Kullanma
 > [!NOTE]
@@ -65,5 +65,5 @@ ms.locfileid: "47236325"
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be6332c76b3dae9c02e1a939286b70438ee14cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff4fe6f73370a28bf4f874b697616c08e7b40a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736672"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 Yöntemi
-Derlemeler ve ilişkisiz modülleri içeri aktarır. Bu yöntem benzer [ImportFile yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ancak içeri aktarılan dosya diskte yok olsa bile çalışır.  
+Derlemeler ve bağlantısız modülleri içeri aktarır. Bu yöntem benzer [ImportFile yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ancak içeri aktarılan dosyanın diskte mevcut değilse bile çalışır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,13 +46,13 @@ HRESULT ImportFileEx2(
  İçeri aktarılacak dosya adı.  
   
  `pszTargetName`  
- Hedef dosya adı isteğe bağlıdır.  
+ Hedef dosya isteğe bağlı adı.  
   
  `pAssemblyScopeIn`  
- İsteğe bağlı alma kapsam [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
+ İsteğe bağlı içeri aktarma kapsamı [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
   
  `fSmartImport`  
- TRUE ise, Importtypes kullanılan, aksi takdirde içeri aktarma el ile yapılmalıdır.  
+ TRUE ise Importtypes kullanılır, aksi takdirde içe aktarma el ile uygulanması gerekir.  
   
  `dwOpenFlags`  
  Boyunca geçirilecek bayrakları [OpenScope yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
@@ -61,10 +61,10 @@ HRESULT ImportFileEx2(
  Derleme veya dosya için benzersiz kimlik alır.  
   
  `ppAssemblyScope`  
- Derleme alma kapsamı alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi. Dosya bir derleme değilse NULL olabilir.  
+ Derleme içeri aktarma kapsamı alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi. Dosyanın bir derleme değilse NULL olabilir.  
   
  `pdwCountOfScopes`  
- Dosyaları ve/veya içeri kapsamları sayısını alır.  
+ Dosyaları ve/veya içe kapsamları sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -72,7 +72,7 @@ HRESULT ImportFileEx2(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

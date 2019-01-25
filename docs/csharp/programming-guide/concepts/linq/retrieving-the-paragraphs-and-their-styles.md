@@ -2,12 +2,12 @@
 title: Paragrafları ve stillerini (C#) alma
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 46ffc13c9808b6186efa402bd46b75c6c1a9bbda
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 693c61e9cbf9e2027864da8d1c26e0a1af66094d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702424"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Paragrafları ve stillerini (C#) alma
 Bu örnekte biz WordprocessingML belgeden paragraf düğümleri alan bir sorgu yazın. Ayrıca, her bir paragraf stilini tanımlar.  
@@ -132,6 +132,6 @@ StyleName:Code
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bir sonraki konu başlığında [(C#) paragrafların metnini alma](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), paragraf metnini almak için bir sorgu oluşturacaksınız.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

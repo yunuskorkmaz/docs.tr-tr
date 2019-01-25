@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658162"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Giriş konuları aşağıdaki konumlarda bulunabilir. Bu konular birçoğu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  
@@ -38,7 +38,7 @@ ms.locfileid: "44177066"
  [OData Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Birincil kaynağı ile ilgili bilgi [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [OData SDK'sı](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
  Örnek Hizmetleri, örnekler ve ile çalışmanıza olanak sağlayan bir programlama kitaplıkları içeren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
  [OData blogu](https://go.microsoft.com/fwlink/?LinkId=185868)  
@@ -56,8 +56,8 @@ ms.locfileid: "44177066"
  [Microsoft WCF veri hizmetlerini kullanma](https://go.microsoft.com/fwlink/?LinkID=131075)  
  Veri Hizmetleri istemci uygulamalarında erişmek ve veri hizmetleri oluşturmak için ek bilgi ve örnekler sağlayan bir teknik incelemesi.  
   
- [Varlık ilişkisi modeli: Verilerinin birleştirilmiş bir görünümünü doğru](https://go.microsoft.com/fwlink/?LinkId=91909) Peter PIN Shan Chen, Massachusetts Enstitüsü Technology tarafından  
+ [Varlık ilişkisi modeli: Verilerin birleştirilmiş bir görünümünü doğru](https://go.microsoft.com/fwlink/?LinkId=91909) Peter PIN Shan Chen, Massachusetts Enstitüsü Technology tarafından  
  Tarafından uygulanan varlık ilişkisel modeli için temel açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. 1976 içinde yazılan, bu bilgisayar alanına en sık alıntı incelemeler biridir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: '&lt;kimlik&gt; için &lt;sertifika&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 0b65157aea84760f3e52bc294f7559967fc308f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 28a1b992a70986652030ad42d4d4a5738350ae1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676165"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;kimlik&gt; için &lt;sertifika&gt;
 Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını belirtir.  
@@ -50,10 +50,10 @@ Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını bel
 </identity>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.EndpointIdentity>  
- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.EndpointIdentity>
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

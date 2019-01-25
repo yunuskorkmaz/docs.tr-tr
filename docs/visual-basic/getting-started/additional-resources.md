@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636241"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
@@ -60,9 +60,9 @@ Aşağıdaki web siteleri, rehberlik ve sık karşılaşılan sorunların yanıt
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Visual Basic, .NET ve diğer tartışmak için bir forum sağlar.|
 |[vbCity](http://vbcity.com/)|Topluluk sitesine insanların öğrenin ve Visual Basic ve .NET hakkında soru sorun.|
-|[Yığın Taşması](https://stackoverflow.com/questions/tagged/vb.net)|Yığın taşması, geliştiriciler için soru ve yanıt bir sitedir.|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Yığın taşması, geliştiriciler için soru ve yanıt bir sitedir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Basic ile çalışmaya başlama](../../visual-basic/getting-started/index.md)  
-[Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  
+- [Visual Basic ile çalışmaya başlama](../../visual-basic/getting-started/index.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

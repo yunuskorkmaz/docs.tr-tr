@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma'
+title: 'Nasıl yapılır: Tıklamalar ve çift tıklamaları birbirinden ayırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8717bde485c475624be6bceae6ce2ab0c6f377bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666542"
 ---
-# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve çift tıklamaları birbirinden ayırma
 Genellikle, tek bir *tıklayın* bir kullanıcı arabirimi (UI) eylemi başlatır ve *çift* eylemi genişletir. Örneğin, tek bir tıklamayla, genellikle bir öğe seçer ve bir öğeye çift düzenler. Ancak, Windows Forms tıklama olayları bağlı bir eylem olduğundan kolayca burada bir tıklayın ve bir çift gerçekleştirmek uyumsuz eylemleri bir senaryo karşılayacak değil <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olay için bağlıeylemindenöncegerçekleştirilir<xref:System.Windows.Forms.Control.DoubleClick>veya <xref:System.Windows.Forms.Control.MouseDoubleClick> olay. Bu konuda, bu sorunun iki çözümü gösterilir. Tek bir çözüm, çift tıklama olayı işlemek ve eylemleri click olay işlemede geri alma oluşturmaktır. Nadir durumlarda, tıklayın benzetimini gerçekleştirmek ve davranışı işleyerek çift gerekebilir <xref:System.Windows.Forms.Control.MouseDown> olay ve kullanarak <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ve <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> özelliklerini <xref:System.Windows.Forms.SystemInformation> sınıfı. Tıklama ve ikinci tıklama önce değerini oluşursa arasındaki süreyi ölçmek <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ulaşıldığında ve tıklayarak tarafından tanımlanan dikdörtgen içindeki <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, çift tıklatma eylemi gerçekleştirir; Aksi takdirde, tıklatma eylemi gerçekleştirin.  
   
 ### <a name="to-roll-back-a-click-action"></a>Bir tıklatma eylemi geri almak için  
@@ -40,7 +40,7 @@ Genellikle, tek bir *tıklayın* bir kullanıcı arabirimi (UI) eylemi başlatı
   
 -   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
- Bu örnekler komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örneklerde Visual Studio kodu yeni projelere yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Bu örnekler komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örneklerde Visual Studio kodu yeni projelere yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

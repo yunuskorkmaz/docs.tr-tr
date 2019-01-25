@@ -2,12 +2,12 @@
 title: Düğümleri (C#) ile programlama
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 060f487e6e92c2ca42a685cc03afbe438106b839
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 0924d7b1d25a33635cc5140ca32622658b10fa0e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730184"
 ---
 # <a name="programming-with-nodes-c"></a>Düğümleri (C#) ile programlama
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğeler ve öznitelikler daha hassas bir düzeyde ayrıntı çalışan programları yazmak bir XML Düzenleyicisi, bir dönüştürme sistemi veya bir rapor yazıcı gibi programlar genellikle yazmanız gereken geliştiriciler gerekir. Bunlar genellikle metin düğümleri, işleme yönergeleri ve açıklamaları düzenleme düğüm düzeyinde çalışması gerekir. Bu konu, düğüm düzeyinde programlama hakkında bazı ayrıntılar sağlar.  
@@ -172,5 +172,6 @@ Console.WriteLine(doc.Nodes().Count());
 1  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

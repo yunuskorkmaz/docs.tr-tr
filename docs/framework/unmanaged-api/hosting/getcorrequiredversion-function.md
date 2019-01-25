@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92ee0570a1a9bcc48cea744d5cc707750742d51a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534088"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion İşlevi
 Gerekli ortak dil çalışma zamanı (CLR) sürüm numarasını alır.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ HRESULT GetCORRequiredVersion (
   
 #### <a name="parameters"></a>Parametreler  
  `pbuffer`  
- [out] Sürüm numarasını belirten bir dize içeren bir arabellek.  
+ [out] Sürüm numarasını belirten bir dize içeren arabellek.  
   
  `cchBuffer`  
  [in] Arabelleğin bayt cinsinden boyutu.  
@@ -49,13 +49,13 @@ HRESULT GetCORRequiredVersion (
  [out] Arabellekte döndürülen bayt sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

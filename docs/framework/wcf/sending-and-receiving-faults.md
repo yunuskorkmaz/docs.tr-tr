@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 0bcab736aad1df84713c7a111d23b82a54ec4334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602539"
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bir istemciden çift yönlü durumda birlikte çalışabilen bir biçimde aktarın. Genellikle hizmet özel hata içeriği tanımlar ve hangi işlemlerin döndürülmeleri belirtir. (Daha fazla bilgi için [tanımlama ve belirtme hatası](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konu nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu olduğunda ve bir istemci nasıl gönderebilir açıklar veya hizmet uygulaması bu hataların işler. Hata işleme Windows Communication Foundation (WCF) uygulamalarında genel bakış için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -104,9 +104,9 @@ SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bi
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.ServiceModel.FaultException%601>  
- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [Beklenen Özel Durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak kullanın](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.ServiceModel.FaultException%601>
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
+- [Beklenen Özel Durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md)
+- [WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak kullanın](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

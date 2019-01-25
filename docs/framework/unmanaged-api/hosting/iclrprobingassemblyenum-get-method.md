@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f5ddd352d027365e02366e9aa779053da3bdc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54d0f4582805b140aafd5825e34c429992e9bbcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707745"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get Metodu
 Belirtilen dizindeki derleme kimliğini alır.  
@@ -39,13 +39,13 @@ HRESULT Get (
   
 #### <a name="parameters"></a>Parametreler  
  `dwIndex`  
- [in] Döndürülecek derleme kimliği sıfır tabanlı dizini.  
+ [in] Derleme kimliği döndürmek için sıfır tabanlı dizini.  
   
  `pwzBuffer`  
- [out] Derleme kimlik verilerini içeren bir arabellek.  
+ [out] Derlemeyi kimlik verilerini içeren arabellek.  
   
  `pcchBufferSize`  
- [içinde out] Boyutunu `pwzBuffer` arabellek.  
+ [out içinde] Boyutu `pwzBuffer` arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -53,27 +53,27 @@ HRESULT Get (
 |-------------|-----------------|  
 |S_OK|`Get` başarıyla döndürüldü.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` çok küçüktür.|  
-|ERROR_NO_MORE_ITEMS|Numaralandırma daha fazla öğe içeriyor.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|ERROR_NO_MORE_ITEMS|Numaralandırma, daha fazla öğe içeriyor.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlemi içinde kullanılamaz. Herhangi bir barındırma yöntem yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz. Herhangi bir barındırma yöntemini yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlemci mimarisi için belirli kimlik dizin 0 konumunda kimliğidir. Dizin 1 Microsoft Ara dili (MSIL) için Mimari Tarafsız derleme kimliğidir. Dizin 2 konumunda kimlik mimari bilgilerini içerir.  
+ İşlemci mimarisi için belirli kimlik dizin 0 konumunda kimliğidir. Microsoft Ara dilini (MSIL) mimarisi nötr bütünleştirilmiş kod dizin 1 kimliğidir. Dizin 2 konumunda kimlik mimarisi bilgi içerir.  
   
- `Get` genellikle iki kez çağrılır. İlk çağrıda null değerini sağlayan `pwzBuffer`ve ayarlar `pcchBufferSize` için uygun bir boyut `pwzBuffer`. İkinci çağrı uygun şekilde boyutlandırılmış sağlayan `pwzBuffer`ve tamamlandıktan sonra kurallı derleme kimlik verilerini içerir.  
+ `Get` genellikle iki kez çağrılır. İlk çağrı için bir null değer sağlayan `pwzBuffer`ve ayarlar `pcchBufferSize` boyuta uygun `pwzBuffer`. İkinci çağrı uygun şekilde boyutlandırılmış sağlayan `pwzBuffer`ve tamamlandıktan sonra derleme kurallı kimlik verilerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRProbingAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRProbingAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
+- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

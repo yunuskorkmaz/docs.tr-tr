@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787ea506c6698925473175cf7fdac340c0c2eca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746006"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize Metodu
-İkili büyük nesne (BLOB) yığın bayt cinsinden boyutu alır.  
+İkili büyük nesne (BLOB) yığını bayt cinsinden boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetBlobHeapSize (
   
 #### <a name="parameters"></a>Parametreler  
  `pcbBlobs`  
- [out] Bir işaretçi BLOB yığın bayt cinsinden boyutu.  
+ [out] BLOB yığın bayt cinsinden boyutu için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

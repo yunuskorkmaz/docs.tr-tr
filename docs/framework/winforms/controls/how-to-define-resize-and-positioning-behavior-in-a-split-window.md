@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama'
+title: 'Nasıl yapılır: Yeniden boyutlandırma ve konumlama davranışını bölünmüş pencerede tanımlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 015e93fb551b8d48b8a57662b8def61c3cb46c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628259"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama
-Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim ödünç kendilerini iyi duruma yeniden boyutlandırılabilir ve kullanıcılar tarafından yönetilebilir. Ancak, olacaktır istediğinizde Bölümlendirici programlı olarak denetlemek için kez — burada yer alır ve ne derece taşınabilmesi.  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Nasıl yapılır: Yeniden boyutlandırma ve konumlama davranışını bölünmüş pencerede tanımlama
+Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim kiralamak kendileri de olmak için yeniden boyutlandırılabilir ve kullanıcılar tarafından yönetilebilir. Ancak, olacaktır istediğinizde Bölümlendirici programlı olarak denetlemek için bir kez — burada yer alır ve ne derece taşınabilir.  
   
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği ve diğer özellikleri <xref:System.Windows.Forms.SplitContainer> denetim gereksinimlerinize uygun olarak, kullanıcı arabiriminizi davranışını üzerinde Tam Denetim verin. Bu özellikler aşağıdaki tabloda listelenmiştir.  
+ <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği ve diğer özellikleri <xref:System.Windows.Forms.SplitContainer> denetim gereksinimlerinize uyacak şekilde, kullanıcı arabiriminin davranışı üzerinde kesin denetim verir. Bu özellikler aşağıdaki tabloda listelenmiştir.  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Özelliği|Bölümlendirici klavye veya fare yoluyla taşınabilir olup olmadığını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Özelliği|Taşınabilir Bölümlendirici çubuğuna sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği|Bölümlendirici kullanıcı tarafından taşınabilmesi piksel cinsinden minimum uzaklığını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Özelliği|Taşınabilir ayırıcıyı için sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği|Bölümlendirici kullanıcı tarafından taşınabilir piksel cinsinden en düşük bir uzaklık belirler.|  
   
- Aşağıdaki örnek değiştirir <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliği bir "Bölümlendirici tutturma" efekti; oluşturmak için kullanıcı Bölümlendirici sürüklendiğinde varsayılan 1 yerine 10 piksel birimlerinde artırır.  
+ Aşağıdaki örnekte değiştirir <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliği bir "Bölücü Yaslama" etkisi; oluşturmak için bir kullanıcı bir ayırıcıyı sürüklediğinde, 1 varsayılan değer yerine 10 piksel birimleri cinsinden artırır.  
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer yeniden boyutlandırma davranışını tanımlamak için  
   
-1.  Bir yordamda ayarladığınız <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> istenen boyuta özelliğine böylece Bölümlendirici 'tutturma' davranışını elde edilir.  
+1.  Bir yordamda <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliğini istenen boyut, böylece ayırıcı 'Yaslama' davranışını elde edilir.  
   
-     Aşağıdaki kod örneğinde, formun içinde <xref:System.Windows.Forms.Form.Load> olay, içinde Bölümlendirici <xref:System.Windows.Forms.SplitContainer> denetim sürüklendiğinde 10 piksel atlamak için ayarlanır.  
+     Aşağıdaki kod örneğinde, formun içinde <xref:System.Windows.Forms.Form.Load> olay, bölümlendirici içinde <xref:System.Windows.Forms.SplitContainer> denetim sürüklendiğinde 10 piksel atlamak için ayarlanır.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -61,8 +61,8 @@ Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim ödünç kendile
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     Bölümlendirici biraz sola veya sağa hareket anlaşılabilir hiçbir etkisi olmaz; Ancak, fare işaretçisini herhangi bir yönde 10 piksel gittiğinde Bölümlendirici yeni konuma Daya.  
+     Bölümlendirici biraz sola veya sağa hareket anlaşılabilir etkisi olmayacak; Ancak, fare işaretçisini herhangi bir yönde 10 piksel gittiğinde, bölümlendirici yeni konumuna yaslanacak.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

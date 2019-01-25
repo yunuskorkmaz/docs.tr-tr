@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 546a26306a1faaeceb1337b79bd2d27970d9f5be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720021"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags Metodu
-Başlangıç bayrakları ve çalışma zamanı başlatmak için kullanılan ana bilgisayar yapılandırma dosyası alır.  
+Başlangıç bayrakları ve çalışma zamanı'nı başlatmak için kullanılacak ana bilgisayar yapılandırma dosyası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,34 +38,34 @@ HRESULT GetDefaultStartupFlags(
   
 #### <a name="parameters"></a>Parametreler  
  `pdwStartupFlags`  
- [out] Şu anda ayarlanmış konak başlangıç bayrakları gösteren bir işaretçi.  
+ [out] Şu anda ayarlanmış ana başlangıç bayrakları için bir işaretçi.  
   
  `pwzHostConfigFile`  
- [out] Geçerli ana bilgisayar yapılandırma dosyası dizin yolu için bir işaretçi.  
+ [out] Dizin yolu geçerli ana bilgisayar yapılandırma dosyasının bir işaretçi.  
   
  `pcchHostConfigFile`  
- [içinde out] Giriş üzerinde boyutunu `pwzHostConfigFile`, arabellek taşmaları önlemek için. Varsa `pwzHostConfigFile` olan null yöntemi gerekli boyutu döndüren `pwzHostConfigFile` öncesi ayırma.  
+ [out içinde] Giriş üzerinde boyutunu `pwzHostConfigFile`, arabellek taşması önlemek için. Varsa `pwzHostConfigFile` olduğu null yöntem gerekli boyutunu döndürür `pwzHostConfigFile` ön ayırması için.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULT döndürür yöntemi hatayı belirtmek HRESULT hata yanı sıra.  
+ Bu yöntem aşağıdaki özel HRESULT döndürür yöntemi hatayı belirtmek HRESULT hata yanı sıra.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem varsayılan bayrak değeri döndürür (`STARTUP_CONCURRENT_GC` ve `NULL`), veya önceki bir çağrı tarafından sağlanan değerler [Iclrruntimeınfo::setdefaultstartupflags yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), veya herhangi biri tarafından ayarlanan değerlerle `CorBind*` Bu çalışma zamanına bağlıysa yöntemleri.  
+ Bu yöntem varsayılan bayrak değerleri döndürür (`STARTUP_CONCURRENT_GC` ve `NULL`), veya önceki bir çağrı tarafından sağlanan değerleri [Iclrruntimeınfo::setdefaultstartupflags yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), veya herhangi biri tarafından ayarlanan değerlerle `CorBind*` Bu çalışma zamanına bağlıysa yöntemleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MetaHost.h  
+ **Üst bilgi:** MetaHost.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,20 +1,20 @@
 ---
-title: -içeri aktarmalar (Visual Basic)
+title: -alır (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 330a5e6821c9c76f3503a35a5a5eabf24c686b42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5adcce85c4ca4863d28784a7d7f61c441a06c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588450"
 ---
-# <a name="-imports-visual-basic"></a>-içeri aktarmalar (Visual Basic)
-Ad alanları belirtilen derlemesinden alır.  
+# <a name="-imports-visual-basic"></a>-alır (Visual Basic)
+Ad alanları, belirtilen bir derlemesinden içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,23 +26,23 @@ Ad alanları belirtilen derlemesinden alır.
   
 |Terim|Tanım|  
 |---|---|  
-|`namespaceList`|Gerekli. İçeri aktarılacak ad alanları virgülle ayrılmış listesi.|  
+|`namespaceList`|Gerekli. İçeri aktarılacak ad alanlarının virgülle ayrılmış listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-imports` Seçeneği geçerli kaynak dosyaları veya başvurulan derlemeler küme içinde tanımlanan tüm ad alanı içe aktarır.  
+ `-imports` Seçeneği geçerli kaynak dosyalarının veya tüm başvurulan bütünleştirilmiş koddan küme içinde tanımlanan herhangi bir ad alanı içeri aktarır.  
   
- İle belirtilen bir ad alanı üyeleri `-imports` derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Kullanmak [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) bir tek kaynak kodu dosyasına bir ad alanını kullanmak için.  
+ Belirtilen bir ad alanı üyelerini `-imports` derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Kullanma [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) tek kaynak kodu dosyasında bir ad alanını kullanacak şekilde.  
   
-|Ayarlanacak/Visual Studio tümleşik geliştirme ortamında alır|  
+|Ayarlamak için/Visual Studio tümleşik geliştirme ortamında içeri aktarır|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **başvuruları** sekmesi.<br />3.  Ad alanı adı kutuya girin **ekleme kullanıcı alma** düğmesi.<br />4.  Tıklatın **ekleme kullanıcı alma** düğmesi.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **başvuruları** sekmesi.<br />3.  Ad alanı adının kutuya girin **kullanıcı içeri aktarma eklemek** düğmesi.<br />4.  Tıklayın **kullanıcı içeri aktarma eklemek** düğmesi.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod ne zaman derler `/imports:system.globalization` belirtilir. Bu olmadan başarılı derleme ya da gerektiren bir `Imports System.Globalization` deyimi dahil kaynak kodu dosyasının başında veya özelliği tam olarak `System.Globalization.CultureInfo.CurrentCulture.Name`. 
+ Aşağıdaki kod zaman derler `/imports:system.globalization` belirtilir. Bu olmadan başarılı derleme ya da gerektiren bir `Imports System.Globalization` deyimi kaynak kodu dosyasının başında eklenir veya özellik tam olarak nitelenmiş `System.Globalization.CultureInfo.CurrentCulture.Name`. 
   
  [!code-vb[imports example](codesnippet/VisualBasic/imports_2.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

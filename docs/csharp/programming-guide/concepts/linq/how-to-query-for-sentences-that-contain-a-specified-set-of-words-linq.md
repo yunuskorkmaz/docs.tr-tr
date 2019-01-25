@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: belirli bir sözcükler (LINQ) (C#) kümesini içeren cümleleri sorgulama'
+title: 'Nasıl yapılır: Belirli bir sözcükler (LINQ) kümesini içeren cümleleri sorgulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: db9c35c0dd8f31541b69877b3ec869b9f4aa9081
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0c91b225527f9c6322da98e3331127652ef52df7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747940"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Nasıl yapılır: belirli bir sözcükler (LINQ) (C#) kümesini içeren cümleleri sorgulama
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Nasıl yapılır: Belirli bir sözcükler (LINQ) kümesini içeren cümleleri sorgulama (C#)
 Bu örnek, eşleşen her biri belirli bir sözcükler kümesini içeren bir metin dosyasındaki cümleler nasıl gösterir. Bu örnekte, sabit kodlanmış arama terimlerini dizi olmasına karşın, dinamik olarak çalışma zamanında doldurulduğunu. Bu örnekte, "Tarihsel olarak," sözcüklerini içeren cümleleri sorguyu döndürür "veri" ve "tümleşik."  
   
 ## <a name="example"></a>Örnek  
@@ -69,6 +69,6 @@ Historically, the world of data and the world of objects have not been well inte
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

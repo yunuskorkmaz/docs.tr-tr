@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme (Visual Basic)'
+title: 'Nasıl yapılır: Sorgu sonuçlarını LINQ (Visual Basic) kullanarak Filtrele'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: f9854650b1f89a2330cfa81910187e3fb01c54b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684177"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu sonuçlarını LINQ (Visual Basic) kullanarak Filtrele
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır.  
   
  Aşağıdaki örnek, bir SQL Server veritabanında sorgu gerçekleştirir ve kullanarak, belirli bir değere göre sonuçları filtreleyen yeni bir uygulamanın nasıl oluşturulacağını gösterir `Where` yan tümcesi. Daha fazla bilgi için [Where yan tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md).  
@@ -41,7 +41,7 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
 2.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
   
-3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) northwind.dbml dosyasını açar.  
+3.  Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) northwind.dbml dosyasını açar.  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R Tasarımcısı için sorgulamak için tablo eklemek için  
   
@@ -77,8 +77,8 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
      [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: c3c40d8e188581f18669a4db7396269056f05349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722098"
 ---
 # <a name="asynchronous-client-socket-example"></a>Zaman uyumsuz istemci yuvası örneği
 Aşağıdaki örnek program bir sunucuya bağlanan bir istemcinin oluşturur. İstemci, sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya şekilde zaman uyumsuz bir yuvası ile oluşturulmuştur. Uygulama sunucusuna bir dize gönderir ve daha sonra konsolda sunucu tarafından döndürülen dize görüntüler.  
@@ -321,7 +321,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)

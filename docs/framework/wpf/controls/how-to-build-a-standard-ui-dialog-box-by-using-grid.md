@@ -8,32 +8,32 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: d0b24e320c2a341b069e1c9c3e8b6d5e93076733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893b3f7fda3314b158f7c67392a0913e30a92c09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650528"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Nasıl yapılır: Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma
-Bu örnek, bir standart oluşturmaya gösterilmiştir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] iletişim kutusunu kullanarak <xref:System.Windows.Controls.Grid> öğesi.  
+Bu örnek, standart bir oluşturma işlemi gösterilmektedir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] iletişim kutusunu kullanarak <xref:System.Windows.Controls.Grid> öğesi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek gibi bir iletişim kutusu oluşturur **çalıştırmak** iletişim kutusunda [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] işletim sistemi.  
+ Aşağıdaki örnek gibi bir iletişim kutusu oluşturur **çalıştırma** iletişim kutusunda [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] işletim sistemi.  
   
- Örnekte bir <xref:System.Windows.Controls.Grid> ve kullandığı <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> beş sütun ve dört satır tanımlamak için sınıflar.  
+ Örnek bir <xref:System.Windows.Controls.Grid> ve kullandığı <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> beş sütun ve dört satır tanımlamak için sınıflar.  
   
- Örnek sonra ekler ve konumlandırır bir <xref:System.Windows.Controls.Image>, `RunIcon.png`, iletişim kutusunda bulunan resmi temsil edecek. Görüntünün ilk sütun ve satır yerleştirilir <xref:System.Windows.Controls.Grid> (sol üst köşesinde).  
+ Bu örnek, ardından ekler ve yerleştirir bir <xref:System.Windows.Controls.Image>, `RunIcon.png`, iletişim kutusunda bulunan resmi temsil edecek. Görüntünün ilk sütun ve satır yerleştirilir <xref:System.Windows.Controls.Grid> (sol üst köşede).  
   
- Ardından, örnek, bir <xref:System.Windows.Controls.TextBlock> ilk satırın kalan sütunlarını kapsayan ilk sütun öğesi. Başka bir ekler <xref:System.Windows.Controls.TextBlock> temsil etmek için ilk sütunun ikinci satırında öğesine **açık** metin kutusu. A <xref:System.Windows.Controls.TextBlock> aşağıdaki gibi veri giriş alanı temsil eder.  
+ Ardından, örnek ekler bir <xref:System.Windows.Controls.TextBlock> kalan sütunlarını ilk satırın kapsayan ilk sütuna öğesi. Başka bir ekler <xref:System.Windows.Controls.TextBlock> temsil etmek için ilk sütunda, ikinci satır öğesi **açık** metin kutusu. A <xref:System.Windows.Controls.TextBlock> aşağıdaki gibi veri giriş alanı temsil eder.  
   
- Son olarak, örnek üç ekler <xref:System.Windows.Controls.Button> temsil eden son satır öğelerine **Tamam**, **iptal**, ve **Gözat** olaylar.  
+ Son olarak, üç örnek ekler <xref:System.Windows.Controls.Button> temsil eden son satırın öğelerine **Tamam**, **iptal**, ve **Gözat** olayları.  
   
  [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.Grid>  
- <xref:System.Windows.GridUnitType>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.Grid>
+- <xref:System.Windows.GridUnitType>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)

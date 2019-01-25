@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c133e46b1adff0c100d49c4bfe5e17db4314a0bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738819"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
 Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>. Bu nesne, HTTP yanıt verilerini istemciye göndermenize olanak sağlar ve bu yanıt hakkında bilgiler içerir.  
@@ -27,6 +27,6 @@ Alır <xref:System.Web.HttpResponse> ilişkili nesne <xref:System.Web.UI.Page>. 
   
  [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Web.HttpResponse>  
- [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Web.HttpResponse>
+- [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)

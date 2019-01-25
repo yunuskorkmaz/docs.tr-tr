@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce462c4e7e9c8fb11ee74a91f3ece2465a44a834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55d35db387d6184f68ff31a74253d3d1610c806f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741271"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset Yöntemi
-Zaman uyumsuz yöntem sarmalar derleyicinin ürettiği catch işleyicisi için uzaklık IL ayarlar.  
+IL uzaklığı bir zaman uyumsuz yöntem sarmalayan derleyicinin ürettiği catch işleyicisi için ayarlar.  
   
- Oluşturulan yakalama IL uzaklığı hata ayıklayıcı tarafından bir kullanıcı kodu yönteminde oluşabilecek olsa bile kullanıcı olmayan kod kabul edildiğinde yakalama işlemek için kullanılır. Özellikle, bu yanıt olarak kullanıldığı bir **CatchHandlerFound** özel durum olayı.  
+ Oluşturulan yakalama IL uzaklığı, hata ayıklayıcı tarafından bir kullanıcı kodu yöntemi ortaya çıkabilecek olsa bile, kullanıcı olmayan kod gibi yakalama işlemek için kullanılır. Özellikle, yanıt olarak kullanılır bir **CatchHandlerFound** özel durum olayı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,7 +32,7 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
  Döndürür `HRESULT`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedAsyncMethodPropertiesWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

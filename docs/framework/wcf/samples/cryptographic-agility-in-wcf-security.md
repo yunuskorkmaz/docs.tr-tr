@@ -2,12 +2,12 @@
 title: WCF Güvenliğinde Şifreleme Çevikliği
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 9f7c1157c9bf4f2e0baf7dcbafbcc9fca4aee89d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a97f0b908d3c4d2e14fb55ec21371322dc740e47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668905"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF Güvenliğinde Şifreleme Çevikliği
 Bu örnek, bir Windows Communication Foundation (WCF) istemci ve hizmet şifreleme ve Çevik bir uygulama sağlamak için bir standart/özel algoritması belirtin gösterilmektedir. Örnek, aşağıdaki projelerin oluşur:
@@ -35,5 +35,5 @@ Bu örnek, bir Windows Communication Foundation (WCF) istemci ve hizmet şifrele
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664531"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue Metodu
-Bir bağımsız değişken veya bu yerel çerçevesi için belirtilen bellek konumda depolanan yerel değişken değerini alır.  
+Bir bağımsız değişken veya yerel değişken bu yerel çerçeve için belirtilen bellek konumunda depolanan değeri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ HRESULT GetLocalMemoryValue (
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` değerini içeren bellek konumunu belirten değer.  
+ [in] A `CORDB_ADDRESS` değerini içeren bellek konumu belirten bir değer.  
   
  `cbSigBlob`  
- [in] Tarafından başvurulan ikili meta verileri imza boyutu belirten bir tamsayı `pvSigBlob` parametresi.  
+ [in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` değerinin türü ikili meta verileri imza gösteren değer.  
+ [in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.  
   
  `ppValue`  
- [out] Belirtilen bellek konumda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesi adresini gösteren bir işaretçi.  
+ [out] Belirtilen bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

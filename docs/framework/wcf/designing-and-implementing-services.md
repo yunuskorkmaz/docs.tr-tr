@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716058"
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde tanımlaması ve WCF sözleşmeleri gösterilmektedir. Ne bir uç nokta için dış dünya iletişim kuran bir hizmet sözleşmesi belirler. Daha somut bir düzeyde istek/yanıt gibi tek yönlü ve çift yönlü bir dizi temel ileti exchange desenleri (MEPs) ile düzenlenmiş belirli ileti hakkında bir deyim olduğu. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi ise, bir hizmet işlemi bir tek ileti alışverişi olur. Örneğin, bir `Hello` işlemi (arayan Karşılama duyurmaktan biçimde) bir ileti açıkça kabul etmelidir ve olabilir veya (işlemin ilgili bağlı olarak) bir ileti döndürmeyebilir.  
@@ -66,6 +66,6 @@ Bu bölümde tanımlaması ve WCF sözleşmeleri gösterilmektedir. Ne bir uç n
   
  Bu ek gereksinim işlem tasarlama, uygulama, yapılandırma ve bir Windows Communication Foundation (WCF) hizmeti uygulamasını barındıran çalışırken göz önünde bulundurmanız önemlidir. Örneğin, sözleşmenin bir oturumu desteklemek gerektiğini belirtebilirsiniz. Bu durumda, sözleşmeye dayalı bu gereksinimi desteklemek için bağlama yapılandırmanız gerekir ya da hizmet uygulamasında çalışmaz. Ya da Hizmetiniz Windows tümleşik kimlik doğrulaması gerektirir ve Internet Information Services (IIS) barındırılan hizmetin içinde bulunduğu Web uygulaması Windows tümleşik kimlik açık ve kapalı anonim destek sahip olmanız gerekir. Farklı hizmet konak uygulama türleri etkisini ve özellikleri hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)

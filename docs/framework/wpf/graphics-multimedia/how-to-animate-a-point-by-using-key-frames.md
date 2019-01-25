@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: c2fd8c6c6fd84bbfd6d56f573588d7204249f31d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9d976bca77629b85226da3d4e018a35cb522afef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738345"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> animasyon uygulamak için sınıfı bir <xref:System.Windows.Point>.  
@@ -36,9 +36,9 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  Diğer animasyon örnekleriyle tutarlılık sağlamak için bu örnek kod sürümleri kullanan bir <xref:System.Windows.Media.Animation.Storyboard> uygulanacak nesne <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Ancak, tek bir animasyonu kod uygularken kullanmak daha basit olduğu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanmak yerine bir <xref:System.Windows.Media.Animation.Storyboard>. Bir örnek için bkz. [özelliği olmadan kullanarak bir görsel taslak animasyon](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Media.EllipseGeometry>  
- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Media.EllipseGeometry>
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

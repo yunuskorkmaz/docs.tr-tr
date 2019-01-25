@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80012d030d0ea51ab3d150a7fd346b78e29dbde5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 709769c336d875ee5ddd00b4e1cf919c61e2c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746628"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext İşlevi
 Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -43,15 +43,15 @@ HRESULT CreateApplicationContext (
  [out] Uygulama bağlamı için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
- **Kitaplığı:** bir kaynak olarak Fusion.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak Fusion.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)

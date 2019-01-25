@@ -2,12 +2,12 @@
 title: -subsystemversion (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738085"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# Derleyici Seçenekleri)
 Böylece Windows yürütülebilir dosyayı çalışabileceği sürümleri belirleme oluşturulan yürütülebilir dosyanın çalıştırılabileceği alt en düşük sürümünü belirtir. En yaygın olarak, bu seçeneği, yürütülebilir dosyanın daha eski Windows sürümleri ile kullanılamayan belirli güvenlik özellikleri yararlanabilir sağlar.  
@@ -58,6 +58,6 @@ Böylece Windows yürütülebilir dosyayı çalışabileceği sürümleri belirl
 ## <a name="setting-this-option"></a>Bu seçeneği ayarlama  
  Ayarlanacak **- subsystemversion** derleyici seçeneğini Visual Studio'da .csproj dosyasını açın ve için bir değer belirtmeniz gerekir `SubsystemVersion` MSBuild XML özelliği. Visual Studio IDE'de bu seçeneği ayarlanamaz. Daha fazla bilgi için bu konuda daha önce "Varsayılan değerler" konusuna bakın veya [yaygın MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)

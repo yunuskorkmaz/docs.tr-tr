@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)'
+title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655419"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)
-Bu konu, bir öğe başka bir öğe değeri tarafından başvurulan bir öznitelik seçme alma gösterir.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)
+Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek 12 bulur `Order` öğesini ve ardından bu sipariş için müşteri bulur.  
+ Bu örnek 12 bulur `Order` öğesini ve sonra müşteri sipariş bulur.  
   
- .Net listesinde içine dizin 'zero' bağlı olduğunu unutmayın. Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' dayalı biridir. Bu örnekte bu farklılık gösterir.  
+ . NET'te listeye dizin 'zero' bağlı olduğunu unutmayın. Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' temel biridir. Bu örnekte, bu fark yansıtır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -53,7 +53,7 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -73,5 +73,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme'
+title: 'Nasıl yapılır: İleti yeniden yürütme algılamayı etkinleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: df56d3f2bfe351c38ca2e64539de13e4cc556d2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653586"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme
+# <a name="how-to-enable-message-replay-detection"></a>Nasıl yapılır: İleti yeniden yürütme algılamayı etkinleştirme
 Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Azaltılabilir sürece, saldırı bilgisayarların stream yasal iletileri, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi bir dizi olarak işler.  
   
  İleti yeniden yürütme algılamayı hakkında daha fazla bilgi için bkz: [ileti yeniden yürütme algılamayı](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -26,7 +26,7 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Kod kullanılarak istemcide yeniden yürütme algılaması denetlemek için  
   
-1.  Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnekte bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile oluşturulan <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> , <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
+1.  Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnekte bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile oluşturulan <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> , <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   
 2.  Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfı ve aşağıdaki özellikleri uygun şekilde ayarlayın:  
   
@@ -80,7 +80,7 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>Yeniden yürütme kapsamını: yalnızca ileti güvenliği  
+## <a name="scope-of-replay-message-security-only"></a>Yeniden yürütme kapsamı: İleti güvenliği  
  Aşağıdaki yordamlar, yalnızca ileti güvenlik modu için geçerli olduğunu unutmayın. Taşıma ve ileti kimlik bilgileri modları ile aktarma için taşıma mekanizmaları olumsuzlukları algılayın.  
   
 ## <a name="secure-conversation-notes"></a>Güvenli konuşma notları  
@@ -102,9 +102,9 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
 -   <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- [Güvenli İletişimler ve Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
- [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- [Güvenli İletişimler ve Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

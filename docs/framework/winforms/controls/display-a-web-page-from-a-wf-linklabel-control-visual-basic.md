@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms LinkLabel Denetiminden Web Sayfası Görüntüleme (Visual Basic)'
+title: 'Nasıl yapılır: Bir Windows Forms LinkLabel denetiminden (Visual Basic) Web sayfası görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: a9964c8d333ea87dd995ec9111acc1a8ac1e79b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698966"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Nasıl yapılır: Bir Windows Forms LinkLabel Denetiminden Web Sayfası Görüntüleme (Visual Basic)
-Bir kullanıcı bir Windows Forms tıkladığında bu örnek bir Web sayfasında varsayılan tarayıcıda görüntüler. <xref:System.Windows.Forms.LinkLabel> denetim.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Nasıl yapılır: Bir Windows Forms LinkLabel denetiminden (Visual Basic) Web sayfası görüntüleme
+Bir kullanıcı bir Windows Forms tıkladığında bu örnek bir Web sayfası varsayılan tarayıcıda görüntülenir. <xref:System.Windows.Forms.LinkLabel> denetimi.  
   
 ## <a name="example"></a>Örnek  
   
@@ -47,8 +47,8 @@ End Sub
 -   Etkin bir Internet bağlantısı.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Çağrı <xref:System.Diagnostics.Process.Start%2A> yöntemi, tam güven gerektirir. Daha fazla bilgi için bkz. <xref:System.Security.SecurityException>.  
+ Çağrı <xref:System.Diagnostics.Process.Start%2A> yöntemi tam güven gerektirir. Daha fazla bilgi için bkz. <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.LinkLabel>  
- [LinkLabel Denetimi](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.LinkLabel>
+- [LinkLabel Denetimi](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

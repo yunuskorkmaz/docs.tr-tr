@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ed815f66e0c542cf20b0a8127f75d10219aea92b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 031569d01e2d83c611791b3359800eda4a59b03c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692512"
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; öğesi (önbellek ayarları)
 Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> Sınıfı tanımlayan bir [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) önbelleğini yapılandırmak için kullanabileceğiniz bir öğesi. Birden çok örneğini <xref:System.Runtime.Caching.MemoryCache> sınıfı tek bir uygulama içinde kullanılabilir. Her `memoryCache` öğesi yapılandırma dosyasında bir adlandırılmış için ayarları içerebilir <xref:System.Runtime.Caching.MemoryCache> örneği.  
   
  \<Yapılandırma >  
 \<System.Runtime.Caching >  
-\<memoryCache >  
+\<memoryCache>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -51,7 +51,7 @@ Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları koleksiyonu içeren `namedCache` örneği.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları koleksiyonu içeren `namedCache` örneği.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -92,7 +92,7 @@ Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Runtime.Caching.MemoryCache>  
-- [\<System.Runtime.Caching > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Caching.MemoryCache>
+- [\<System.Runtime.Caching > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
 - [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

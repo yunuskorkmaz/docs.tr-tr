@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744121"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -171,12 +171,12 @@ ms.locfileid: "48837399"
   
  Bunu gerçekleştirmek için çubuk barınağı parça kök sağlayıcı kümesi bantları temsil eden alt öğeyi kullanıma sunar. Her bant özellikleri ve düzenleri ortaya çıkarabilir, tek bir sağlayıcı sahiptir. Uygulamaya <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, bant sağlayıcı çağırarak alır HWND, denetim için varsayılan pencere sağlayıcıyı döndürür <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, geçen olarak denetim pencere tanıtıcısı. Son olarak, çubuk barınağı parça kök sağlayıcı uygulayan <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> arabirimi ve uygulamaya <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> belirtilen HWND içinde yer alan denetim için uygun bant sağlayıcı döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Gösterme](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Basit bir sağlayıcı örneği](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Parça sağlayıcı örneği](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Gösterme](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Basit bir sağlayıcı örneği](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
+- [Parça sağlayıcı örneği](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

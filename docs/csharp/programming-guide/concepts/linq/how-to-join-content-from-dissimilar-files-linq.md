@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: birleştirme dosyalardan içerik (LINQ) (C#)'
+title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698420"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Nasıl yapılır: birleştirme dosyalardan içerik (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)
 
 Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan iki virgülle ayrılmış dosyalardan alınan veriler nasıl gösterir. Bu teknik, iki elektronik alınan verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir. Örnek yapılandırılmış metin herhangi bir türden ile çalışacak şekilde değiştirebilirsiniz.  
   
@@ -132,7 +132,7 @@ Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir proje derleme:
 - .NET framework sürüm 4.0 veya üzeri.
 - .NET core sürüm 1.0 veya üzeri.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
+title: 'Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613837"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma
 
 Bu konuda, bir Windows hizmeti tarafından barındırılan bir Windows Communication Foundation (WCF) hizmet oluşturma için gerekli temel adımlar açıklanmaktadır. Senaryo, uzun süre çalışan, Internet Information Services (IIS) dışında iletisi etkin olmayan güvenli bir ortamda barındırılan bir WCF Hizmeti seçeneğini barındıran yönetilen Windows hizmeti olarak etkindir. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.
 
@@ -133,7 +133,7 @@ Bu konuda kullanılan kod tam listesi verilmiştir:
 
 Gibi bir "Kendi kendine barındırma" seçeneği, Windows hizmet barındırma ortamını bazı barındırma kodu uygulamanın bir parçası yazılması gerekir. Hizmet, bir konsol uygulaması olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmeti (WAS) barındıran Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak, geliştiriciler için ise gerekli değildir kod barındırma.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Yönetilen Bir Uygulamada Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)

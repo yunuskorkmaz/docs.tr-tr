@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 16b60b2973524c8e600f5efebb3f2b291377ffcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732719"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>DataSet'e DataTable ekleme
 ADO.NET oluşturmanıza olanak sağlar <xref:System.Data.DataTable> nesneleri ve mevcut bir ekleme <xref:System.Data.DataSet>. Kısıtlama bilgi için ayarlayabileceğiniz bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.PrimaryKey%2A> ve <xref:System.Data.DataColumn.Unique%2A> özellikleri.  
@@ -32,6 +32,6 @@ ADO.NET oluşturmanıza olanak sağlar <xref:System.Data.DataTable> nesneleri ve
 ## <a name="namespace-support"></a>Namespace desteği  
  Farklı ad alanlarına olsa bile 2.0 sürümünden öncekileri ADO.NET sürümlerinde aynı adı, iki tablo sahip olamaz. Bu sınırlama, ADO.NET 2. 0'kaldırıldı. A <xref:System.Data.DataSet> aynı olan iki tablo içerebilir <xref:System.Data.DataTable.TableName%2A> özellik değeri farklı ancak <xref:System.Data.DataTable.Namespace%2A> özellik değerleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

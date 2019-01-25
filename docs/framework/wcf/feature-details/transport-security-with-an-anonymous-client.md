@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 858ceb217ce30708a7d24c62ca18f8f59ba49d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0582e40b21a981c5195fed215c2c234847f913f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696964"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Anonim İstemci ile Taşıma Güvenliği
 Windows Communication Foundation (WCF) Bu senaryo, gizliliği ve bütünlüğü sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu bir Güvenli Yuva Katmanı (SSL) sertifikası ile doğrulanması gerekir ve istemcilerin sunucu sertifikasına güvenmelidir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonimdir.  
   
  Örnek bir uygulama için bkz: [WS aktarım güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md). Aktarım güvenliği hakkında daha fazla bilgi için bkz: [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
- Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  ![Anonim istemci ile Aktarım güvenliği kullanarak](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
@@ -114,8 +114,8 @@ Windows Communication Foundation (WCF) Bu senaryo, gizliliği ve bütünlüğü 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [WS Aktarım Güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [WS Aktarım Güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md)
+- [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

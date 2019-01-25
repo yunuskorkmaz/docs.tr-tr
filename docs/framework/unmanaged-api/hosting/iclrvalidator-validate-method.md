@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718734"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate Yöntemi
-Taşınabilir yürütülebilir (PE) ya da Microsoft Ara dili (MSIL) belirtilen dosyada doğrular.  
+Taşınabilir yürütülebilir (PE) veya belirtilen dosyadaki Microsoft Ara dilini (MSIL) doğrular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +44,25 @@ HRESULT Validate (
   
 #### <a name="parameters"></a>Parametreler  
  `veh`  
- [in] Bir işaretçi bir `IVEHandler` doğrulama hataları işleyen örneği.  
+ [in] Bir işaretçi bir `IVEHandler` doğrulama hatalarını işleyen örneği.  
   
  `ulAppDomainId`  
- [in] Geçerli tanımlayıcısını <xref:System.AppDomain>.  
+ [in] Geçerli bir tanımlayıcı <xref:System.AppDomain>.  
   
  `ulFlags`  
- [in] Bir birleşimini [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir doğrulama türünü belirten değer.  
+ [in] Bir birleşimi [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir doğrulama türünü belirten değer.  
   
  `ulMaxError`  
- [in] Doğrulama çıkmadan önce izin vermek için hatası sayısı.  
+ [in] Doğrulama çıkmadan önce izin vermek için hataları sayısı.  
   
  `token`  
  [in] Kullanılmayan.  
   
  `fileName`  
- [in] Doğrulanacak dosyasının adı.  
+ [in] Doğrulanacak olan dosyanın adı.  
   
  `pe`  
- [in] Dosya arabellek için bir işaretçi.  
+ [in] Dosya arabellek için işaretçi.  
   
  `ulSize`  
  [in] Doğrulanacak dosyasının bayt cinsinden boyutu.  
@@ -72,20 +72,20 @@ HRESULT Validate (
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`Validate` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator.idl, IValidator.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRValidator Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRValidator Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

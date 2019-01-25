@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme"
+title: 'İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 31afacd6bb387a4df9eb8d36d2dc224ead63cc68
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5947168fabfe8ec22203029d9ec89b9719728413
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697627"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme
 Bu izlenecek yol size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzenlemek için düzen özelliklerini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] karma uygulamada denetimleri.  
   
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
@@ -258,11 +258,11 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 4.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi doldurur <xref:System.Windows.Controls.DockPanel>, ve <xref:System.Windows.Forms.FlowLayoutPanel> varsayılan, alt denetimlerini düzenler <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

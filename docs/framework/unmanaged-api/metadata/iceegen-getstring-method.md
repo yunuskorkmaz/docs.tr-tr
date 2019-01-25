@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7ac5ef95ca3705b11cfda51d7fd1aca7400abc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716823"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString Metodu
-Belirtilen göreli sanal adresinde depolanan dizesini alır.  
+Belirtilen göreli sanal adresindeki depolanan dizesini alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -40,19 +40,19 @@ HRESULT GetString (
   
 #### <a name="parameters"></a>Parametreler  
  `RVA`  
- [in] Döndürülecek dizesinin göreli sanal adres.  
+ [in] Göreli sanal adres döndürmek için dize.  
   
  `lpString`  
  [out] Döndürülen dize.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 5e948b574e1b4a1c431b9495583e9579502576a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: eb9de4098c5fb9bde74fa93dda6dd5a878ed0339
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697536"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme
 Bu örnekte olduğu bir nesneye animasyon uygulamak gösterilmektedir <xref:System.Windows.Controls.Page.Background%2A> özelliği bir <xref:System.Windows.Controls.Page> anahtar çerçeveler kullanarak denetimi.  
@@ -33,13 +33,13 @@ Bu örnekte olduğu bir nesneye animasyon uygulamak gösterilmektedir <xref:Syst
   
  Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>  
- <xref:System.Windows.Controls.Page.Background%2A>  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>  
- <xref:System.Windows.Media.LinearGradientBrush>  
- <xref:System.Windows.Media.RadialGradientBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
+- <xref:System.Windows.Controls.Page.Background%2A>
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>
+- <xref:System.Windows.Media.LinearGradientBrush>
+- <xref:System.Windows.Media.RadialGradientBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

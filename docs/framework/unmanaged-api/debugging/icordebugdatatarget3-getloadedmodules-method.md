@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c51ce8ff76e0fc1588cdd136de83b77dcab0f10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b961e0a84d199f0acf22dfc0f87b1d35c118adc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651064"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules Metodu
 Şu ana kadar yüklü modüllerin listesini alır.  
@@ -26,28 +26,28 @@ HRESULT GetLoadedModules(
   
 #### <a name="parameters"></a>Parametreler  
  `cRequestedModules`  
- [in] İstenen bilgilerin için modülleri sayısı.  
+ [in] Bilgi istendiği modül sayısı.  
   
  `pcFetchedModules`  
  [out] Modüller hakkında bilgisi döndürülmedi sayısı için bir işaretçi.  
   
  `pLoadedModules`  
- [out] Bir dizi için bir işaretçi [Icordebugloadedmodule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) hakkında bilgi sağlayan nesneleri yüklenen modüller.  
+ [out] Bir dizi işaretçi [Icordebugloadedmodule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) yüklü modülleri hakkında bilgi sağlayan nesneleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugDataTarget3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugDataTarget3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

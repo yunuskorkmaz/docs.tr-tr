@@ -8,28 +8,28 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 9b340c01a9eb4ce4007e93f2b38e292cd6543ba1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 731131d4bc967aa3ae95eca1f9e9cbb2770f8f7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746576"
 ---
 # <a name="custom-credential-and-credential-validation"></a>Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması
-Güvenlik Windows Communication Foundation (WCF) exchange Hizmetleri ve istemciler arasında kimlik bilgilerinin temel alır. Çoğu güvenlik senaryoları Windows (Kerberos), kullanıcı adı ve parolaları ve sertifikaları gibi ortak kimlik bilgisi türlerini kullanarak karşılanabilir. Yeni bir kimlik bilgisi türünü gerekliyse, ancak, bu bölümdeki konular, işlemek ve yeni türleri doğrulamak açıklanmaktadır.  
+Güvenlik Windows Communication Foundation (WCF) hizmet ve istemcileri arasında kimlik bilgilerinin exchange temel alır. Çoğu güvenlik senaryoları Windows (Kerberos), kullanıcı adı ve parolalar ve sertifikalar gibi ortak kimlik bilgisi türlerinin kullanarak karşılanabilir. Ancak, yeni bir kimlik bilgisi türü gerekiyorsa, bu bölümdeki konular, yeni türleri doğrulamak ve işlemek nasıl açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- WCF doğrulama devralarak özelleştirmeyi açıklar <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
+ [Nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ WCF doğrulama devralarak özelleştirmek nasıl açıklar <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
   
- [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- Nasıl genişletileceğini gösterir <xref:System.ServiceModel.Description.ClientCredentials> ve <xref:System.ServiceModel.Description.ServiceCredentials> sınıfları yeni uyum sağlamak için kimlik bilgisi türü. Bu özel kimlik bilgisi türlerinin oluşturulmasını sağlamak konuları serisinde ilktir.  
+ [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ Nasıl genişleteceğinizi gösterir <xref:System.ServiceModel.Description.ClientCredentials> ve <xref:System.ServiceModel.Description.ServiceCredentials> sınıfları yeni uyum sağlamak için kimlik bilgisi türü. Özel kimlik bilgisi türlerinin oluşturulmasını sağlayan konuları bir dizi içinde ilk budur.  
   
- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- Yeni kimlik bilgisi türlerinin işlemek ve kimlik bilgisi için yeni belirteçleri dönmek için bir güvenlik belirteci sağlayıcı oluşturma açıklanmaktadır. Bu serideki ikinci konudur.  
+ [Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ Yeni kimlik bilgisi türlerinin işlemek ve kimlik bilgisi için yeni belirteçleri döndürmek için bir güvenlik belirteci sağlayıcı oluşturma açıklanmaktadır. Serinin ikinci bölümüne budur.  
   
- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- Yeni bir kimlik bilgisi türü kimlik doğrulaması yapmak için özel bir kimlik doğrulayıcı oluşturma açıklanmaktadır. Bu serideki üçüncü konudur.  
+ [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ Yeni bir kimlik bilgisi türü kimlik doğrulaması için özel bir kimlik doğrulayıcı oluşturma açıklanmaktadır. Bu, serideki üçüncü konudur.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Security>  
@@ -55,5 +55,5 @@ Güvenlik Windows Communication Foundation (WCF) exchange Hizmetleri ve istemcil
   
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

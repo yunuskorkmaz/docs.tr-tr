@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir metin dosyasından - okuma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Bir metin dosyasından - okuma C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672246"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl Yapılır: Bir metin dosyasından okuma (C# Programlama Kılavuzu)
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Bir metin dosyasından okuma (C# Programlama Kılavuzu)
 Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> gelen <xref:System.IO.File?displayProperty=nameWithType> sınıfı.  
   
  Kullanan bir örnek için <xref:System.IO.StreamReader>, bkz: [nasıl yapılır: Bir metin dosyası bir satırı okumak](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
@@ -41,8 +41,8 @@ Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosyanın içeriğini belirlemek için bir dosya adına güvenmeyin. Örneğin, dosyayı `myFile.cs` bir C# kaynak dosyası olmayabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: sorgu için en büyük dosya veya dosyalar bir dizin ağacında (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: En büyük dosya veya dizin ağacında (LINQ) (Visual Basic) dosyalar için sorgu'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: fd1ec163685af539e644d9fb4a0845fdcb3e1b5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc41fb29a765e8824526dcd78c9ecab377f06d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724063"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: sorgu için en büyük dosya veya dosyalar bir dizin ağacında (LINQ) (Visual Basic)
-Bu örnek, dosya boyutunu bayt cinsinden ilgili beş sorguları gösterir:  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: En büyük dosya veya dizin ağacında (LINQ) (Visual Basic) dosyalar için sorgu
+Bu örnek dosyanın bayt cinsinden boyutu ile ilgili beş sorguları gösterir:  
   
 -   Bayt cinsinden en büyük dosya boyutu almak nasıl.  
   
--   Bayt cinsinden en küçük dosya boyutu almak nasıl.  
+-   En küçük dosyanın bayt cinsinden boyutunu almak nasıl.  
   
--   Nasıl alınacağını <xref:System.IO.FileInfo> belirtilen kök klasörü altında bir veya daha fazla klasörlerden nesne büyük veya en küçük dosya.  
+-   Nasıl alınacağını <xref:System.IO.FileInfo> belirtilen kök klasörünün altında bir veya daha fazla klasörlerden nesne en büyük veya küçük dosyası.  
   
--   10 büyük dosyaları gibi bir dizi almak nasıl.  
+-   10 en büyük dosyaları gibi bir dizi almak nasıl.  
   
--   Belirtilen bir boyuttan daha küçük olan dosyaları yoksayılıyor kendi dosya boyutunu bayt cinsinden dayanarak gruplara sipariş dosyaları nasıl.  
+-   Nasıl yapılır sırası dosyaları, dosya boyutu bayt cinsinden göre gruplara belirtilen bir boyuttan daha az olan dosyalar yoksayılıyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sorgulama ve grup dosyaları, kendi dosya boyutunu bayt cinsinden bağlı olarak göster beş ayrı sorguları içerir. Bu örnekler diğer bazı özellikte sorguyu temel kolayca değiştirebilirsiniz <xref:System.IO.FileInfo> nesnesi.  
+ Aşağıdaki örnek, sorgulama ve bunların dosya boyutunu bayt cinsinden bağlı olarak, Grup dosyaları göster beş ayrı sorguları içerir. Bu örnekler diğer bazı özellikte sorgu temel kolayca değiştirebilirsiniz <xref:System.IO.FileInfo> nesne.  
   
 ```vb  
 Module QueryBySize  
@@ -113,13 +113,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Bir veya daha fazla tamamlamak döndürülecek <xref:System.IO.FileInfo> nesneleri, sorgu ilk denetleyeceğini her bir veri kaynağı ve ardından bunları kendi uzunluğu özellik değerine göre sıralama. Ardından tek tek veya ile en büyük uzunluk dizisi döndürebilir. Kullanım <xref:System.Linq.Enumerable.First%2A> listedeki ilk öğe dönün. Kullanım <xref:System.Linq.Enumerable.Take%2A> ilk n öğe sayısını döndürmek için. Listenin başında küçük öğeleri yerleştirmek için azalan sıralama düzeni belirtin.  
+ Bir veya daha fazla tamamlamak döndürülecek <xref:System.IO.FileInfo> nesneler, sorguyu ilk denetleyeceğini her bir veri kaynağı ve sonra bunları kendi uzunluğu özelliğinin değeri sıralayın. Ardından tek bir ya da ile en fazla uzunluk dizisi döndürebilir. Kullanım <xref:System.Linq.Enumerable.First%2A> listedeki ilk öğe döndürmek için. Kullanım <xref:System.Linq.Enumerable.Take%2A> ilk n öğe sayısını döndürmek için. Listenin başında en küçük öğeleri yerleştirmek için azalan sıralama düzeni belirtin.  
   
- Sorgu burada bir dosya silindi başka bir iş parçacığında bu yana sürede durumda gerçekleştirilecektir olası özel kullanmak için dosyanın bayt cinsinden boyutu almak için ayrı bir yöntem çağırır <xref:System.IO.FileInfo> nesne çağrısındaoluşturulduğu`GetFiles`. Bile aracılığıyla <xref:System.IO.FileInfo> nesnesi zaten oluşturulmuş, özel durumu oluşabilir çünkü bir <xref:System.IO.FileInfo> nesne Yenile deneyecek kendi <xref:System.IO.FileInfo.Length%2A> özelliği erişildiğinde ilk kez en güncel boyutunu bayt cinsinden kullanarak özelliği. Try-catch bloğunda sorgu dışında bu işlemi koyarak, biz yan etkileri neden olan sorguları işlemlerinde önleme kural izleyin. Genel olarak, çok dikkatli özel durumlar, kullanırken bir uygulama bilinmeyen bir durumda sol değil emin olmak için izlenmelidir.  
+ Burada bir dosya silindi başka bir iş parçacığında bu yana zaman dönemi içindeki durumda gerçekleştirilecektir olası özel kullanmak bayt cinsinden boyutunu almak için ayrı bir yöntem için sorguyu çağırır <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında`GetFiles`. Bile aracılığıyla <xref:System.IO.FileInfo> nesnesi zaten oluşturuldu, özel durum ortaya çıkabilir çünkü bir <xref:System.IO.FileInfo> nesne yenilemek çalışır, <xref:System.IO.FileInfo.Length%2A> erişilen özelliği ilk kez en geçerli boyutunu bayt cinsinden kullanarak özellik. Bu işlem bir try-catch bloğunda sorgu dışında koyarak, biz yan etkilere neden olabilecek sorguları işlemlerinde önleme kural izleyin. Genel olarak, çok dikkatli özel durumlar, tüketildiğinde uygulama bilinmeyen bir durumda kaldı değil emin olmak için özenli olunması gerekir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- .NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
+ .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to nesneler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

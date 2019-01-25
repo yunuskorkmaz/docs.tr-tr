@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bde7c6fae0afc165a4013645f8d8506ccca06da1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744160"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
 
@@ -46,14 +46,14 @@ Ad alanları, aşağıdaki özelliklere sahiptir:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ad Alanlarını Kullanma](using-namespaces.md)
 - [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](how-to-use-the-global-namespace-alias.md)
 - [Nasıl yapılır: Kullanım My Namespace](how-to-use-the-my-namespace.md)
-- [C# Programlama Kılavuzu](../index.md)  
+- [C# Programlama Kılavuzu](../index.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
-- [Ad Alanı Anahtar Sözcükleri](../../language-reference/keywords/namespace-keywords.md)  
-- [using Yönergesi](../../language-reference/keywords/using-directive.md)  
-- [:: İşleç](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [Ad Alanı Anahtar Sözcükleri](../../language-reference/keywords/namespace-keywords.md)
+- [using Yönergesi](../../language-reference/keywords/using-directive.md)
+- [:: İşleç](../../language-reference/operators/namespace-alias-qualifer.md)
 - [. İşleç](../../language-reference/operators/member-access-operator.md)

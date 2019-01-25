@@ -1,5 +1,5 @@
 ---
-title: '&lt;Clear&gt; NameValueSectionHandler ve DictionarySectionHandler öğesi'
+title: '&lt;Temizle&gt; NameValueSectionHandler ve DictionarySectionHandler'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55925ee5e9c5a17f14bd199125dbaacbadb9d928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720947"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Clear > öğesi NameValueSectionHandler ve DictionarySectionHandler için
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Temizle > NameValueSectionHandler ve DictionarySectionHandler
 
-Bir bölümdeki tüm önceden tanımlanmış ayarları temizler.
+Bir bölümdeki tüm önceden tanımlanmış ayarlar temizler.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Clear >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Temizleme >**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,27 +32,27 @@ Bir bölümdeki tüm önceden tanımlanmış ayarları temizler.
 
 ## <a name="attributes"></a>Öznitelikler
 
-Yok.
+Hiçbiri
 
-## <a name="parent-element"></a>Üst öğesi
+## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ------------|
-| [**\<sectionName >** öğesi](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları. |
+| [**\<sectionName >** öğesi](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kullanabileceğiniz  **\<temizleyin >** uygulamanızdan yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanan tüm ayarlar kaldırılacak öğe.
+Kullanabileceğiniz  **\<Temizle >** uygulamanızdan yapılandırma dosyası hiyerarşisindeki daha yüksek bir düzeyinde tanımlanan tüm ayarları kaldırmak için öğesi.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek bir uygulama yapılandırma dosyasını ve makine yapılandırma dosyasını tanımlar ve nasıl kullanılacağını gösterir  **\<temizleyin >** önceden tanımlanmış bir bölümü temizlemek için bir uygulama yapılandırma dosyasında öğesi makine yapılandırma dosyası.
+Bu örnek nasıl kullanılacağını gösterir ve makine yapılandırma dosyası ve bir uygulama yapılandırma dosyasını tanımlar  **\<Temizle >** önceden tanımlanmış bir bölümü temizlemek için bir uygulama yapılandırma dosyasında öğesi makine yapılandırma dosyası.
 
-Bölümü aşağıdaki makine yapılandırma dosyası kodu bildirir  **\<mySection >**:
+Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<mySection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Bölümü aşağıdaki makine yapılandırma dosyası kodu bildirir  **\<mySecti
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu tüm ayarlarından kaldırır  **\<mySection >**. Uygulama içinde bildirilen ayarlardan herhangi birini alınamıyor,  **\<mySection >** makine yapılandırma dosyası bölümünü.
+Aşağıdaki uygulama yapılandırma dosyası kodu, tüm ayarlarını kaldırır  **\<mySection >**. Uygulama içinde bildirilen ayarlardan herhangi birini alınamıyor,  **\<mySection >** makine yapılandırma dosyası bölümünü.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ Aşağıdaki uygulama yapılandırma dosyası kodu tüm ayarlarından kaldırır
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework için yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

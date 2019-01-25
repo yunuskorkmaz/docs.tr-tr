@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738845"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Sınıfları ve üyeleri <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan ad alanı. İçin varsayılan oluşturucular <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı yüklemeler, <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturma <xref:System.Collections.Hashtable> kullanarak `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads biri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> etkilenebilir `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıfları ve yöntemleri kültüre duyarlı olmayan sonuçlar elde etmek için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  
@@ -135,11 +135,11 @@ internal class InvariantComparer : IComparer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.CaseInsensitiveComparer>  
-- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
-- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
-- <xref:System.Collections.SortedList>  
-- <xref:System.Collections.Hashtable>  
-- <xref:System.Collections.IComparer>  
-- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.Collections.CaseInsensitiveComparer>
+- <xref:System.Collections.CaseInsensitiveHashCodeProvider>
+- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>
+- <xref:System.Collections.SortedList>
+- <xref:System.Collections.Hashtable>
+- <xref:System.Collections.IComparer>
+- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

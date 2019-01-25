@@ -2,12 +2,12 @@
 title: SQL Server veri türleri ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: e519dc82fac7b8755155dcf40696030f2a1d266c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741515"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server veri türleri ve ADO.NET
 SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerde temel alır. SQL Server için .NET Framework veri sağlayıcısı veri bütünlüğünü korumak için (<xref:System.Data.SqlClient>) SQL Server verilerle çalışmak için belirlenmiş erişimci yöntemlerini sağlar. Numaralandırmalara kullanabileceğiniz <xref:System.Data.SqlDbType> belirtmek için sınıflar <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -54,9 +54,9 @@ SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerd
  <xref:System.Data.DbType>  
  Açıklar `DbType` numaralandırma ve tüm üyeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Tablo Değerli Parametreler](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Tablo Değerli Parametreler](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
+- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

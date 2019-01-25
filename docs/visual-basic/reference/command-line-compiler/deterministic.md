@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8334691ff5ac09c19287dbc2ec2503dbd5149f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572493"
 ---
 # <a name="-deterministic"></a>-belirleyici
 
@@ -50,6 +50,6 @@ Derleyici, aşağıdaki girişleri gerekircilik amacıyla göz önünde bulundur
 
 Kaynakları genel kullanıma açık olduğunda, belirlenimci derlemeyi güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir ikili değişiklikleri bağımlı derleme adımları yürütülecek gerekip gerekmediğini belirlemek için bir sürekli derleme sistemi de yararlı olabilir. 
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
-[Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

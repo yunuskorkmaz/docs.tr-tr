@@ -2,12 +2,12 @@
 title: Güvenlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699772"
 ---
 # <a name="security-validation"></a>Güvenlik Doğrulaması
 Bu örnek, özel bir davranış Hizmetleri bunlar belirli ölçütlere uyan emin olmak için bir bilgisayar üzerinde doğrulamak için nasıl kullanılacağını gösterir. Bu örnekte, hizmetleri, hizmette her bir uç noktası aracılığıyla tarama ve güvenli bir bağlama öğeleri içeren denetleniyor özel davranış tarafından doğrulanır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Davranış tüm hizmetlere eklerken, herhangi bir değişiklik yapmadan önce Machine.config dosyasına yedeklemek için önerilir.  
   
- Şimdi bu örnek client\bin dizininde sağlanan istemci çalıştırın. Bir özel durum olan şu ileti ile oluşur: "istenen hizmeti 'http://localhost/servicemodelsamples/service.svc' etkinleştirilemedi." Bu, bir uç nokta davranışı doğrulama uç noktası tarafından güvenli olduğu kabul edildiği için beklenen ve hizmetin başlatılmasını önler. Davranışı, ayrıca hangi uç nokta çalınabildiği için güvenli değildir ve "System.ServiceModel 4.0.0.0" kaynağı ve "WebHost" kategorisi altındaki Olay Görüntüleyicisi'ni sistem için bir ileti yazar açıklayan bir iç özel durum oluşturur. Bu örnekte service izlemeyi etkinleştirmek mümkündür. Bu hizmet izleme Görüntüleyicisi aracı kullanılarak elde edilen hizmet izlemeleri açarak doğrulama uç nokta davranışı tarafından oluşturulan özel durumları görüntülemesini sağlar.  
+ Şimdi bu örnek client\bin dizininde sağlanan istemci çalıştırın. Bir özel durum olan şu ileti ile oluşur: "İstenen hizmeti 'http://localhost/servicemodelsamples/service.svc' etkinleştirilemedi." Bu, bir uç nokta davranışı doğrulama uç noktası tarafından güvenli olduğu kabul edildiği için beklenen ve hizmetin başlatılmasını önler. Davranışı, ayrıca hangi uç nokta çalınabildiği için güvenli değildir ve "System.ServiceModel 4.0.0.0" kaynağı ve "WebHost" kategorisi altındaki Olay Görüntüleyicisi'ni sistem için bir ileti yazar açıklayan bir iç özel durum oluşturur. Bu örnekte service izlemeyi etkinleştirmek mümkündür. Bu hizmet izleme Görüntüleyicisi aracı kullanılarak elde edilen hizmet izlemeleri açarak doğrulama uç nokta davranışı tarafından oluşturulan özel durumları görüntülemesini sağlar.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Uç nokta doğrulama özel durum iletilerinin Olay Görüntüleyicisi'nde görüntülemek için başarısız oldu  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

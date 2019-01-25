@@ -7,45 +7,45 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625761"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (Genel Değiştirici) (Visual Basic)
-Genel tür parametreleri için `In` anahtar sözcüğü tür parametre değişken karşıtıdır olduğunu belirtir.  
+Genel tür parametreleri için `In` anahtar sözcüğü, tür parametresi değişken karşıtı olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değişken karşıtı genel parametresi tarafından belirtilenden daha az türetilmiş bir tür kullanmanıza olanak sağlar. Bu değişken arabirimleri uygulayan sınıfların örtük dönüştürme ve temsilci türleri örtük dönüştürme için sağlar.  
+ Kontravaryans, genel parametre olarak belirtilenden daha az türetilmiş bir tür belirtmenize olanak sağlar. Bu değişken arabirimleri uygulayan sınıflar örtük dönüştürülmesi ve temsilci türlerinin örtük dönüştürme için sağlar.  
   
- Daha fazla bilgi için bkz: [Kovaryans ve kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md).  
+ Daha fazla bilgi için [Kovaryans ve kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="rules"></a>Kurallar  
- Kullanabileceğiniz `In` anahtar sözcüğü genel arabirimler ve temsilciler.  
+ Kullanabileceğiniz `In` genel arabirimlerde ve temsilcilerde anahtar sözcük.  
   
- Yalnızca bir tür yöntemi bağımsız değişken olarak kullanılan ve yöntemin dönüş türü olarak kullanılmayan bir tür parametresi bir genel arabirim ya da temsilci karşıtı bildirilebilir. `ByRef` parametreleri eşdeğişken olamaz veya karşıtı.  
+ Yalnızca bir yöntem bağımsız kullanılan türü ise ve bir yöntemin dönüş türü olarak kullanılmayan bir tür parametresi değişken karşıtı genel arabirim veya temsilci olarak bildirilebilir. `ByRef` parametreleri olamaz birlikte değişken veya değişken karşıtı.  
   
  Kovaryans ve kontravaryans başvuru türleri için desteklenir ve değer türleri için desteklenmiyor.  
   
- Visual Basic'te temsilci türü belirtmeden karşıtı Arabirimlerdeki olaylar bildiremezsiniz. Ayrıca karşıtı arabirimleri sınıfları, numaralandırmaları ve yapıları işleminde içe olamaz, ancak bunlar arabirimleri.  
+ Visual Basic'te, temsilci türü belirtmeden değişken karşıtı Arabirimlerdeki olaylar bildiremezsiniz. Ayrıca, değişken karşıtı arabirimleri sınıflar, numaralandırmalar ve yapılar iç içe geçmiş olamaz, ancak bunlar arabirimleri içe.  
   
 ## <a name="behavior"></a>Davranış  
- Yöntemlerinden daha az türetilmiş türler arabirimi tür parametresi tarafından belirtilen'den bağımsız değişkenleri kabul etmek karşıtı türü parametresine sahip bir arabirim sağlar. Örneğin, çünkü .NET Framework 4'te içinde <xref:System.Collections.Generic.IComparer%601> arabirimi, T türü karşıtı, bir nesnenin atayabilirsiniz `IComparer(Of Person)` bir nesne türüne `IComparer(Of Employee)` , herhangi bir özel dönüştürme yöntem kullanmadan türü `Person` devralır `Employee`.  
+ Yöntemlerinden daha az türetilmiş türler arabirim türü parametresi ile belirtilen değerinden bağımsız değişkenleri kabul etmek bir değişken karşıtı tür parametresine sahip bir arabirim sağlar. Örneğin, çünkü .NET Framework 4'te, <xref:System.Collections.Generic.IComparer%601> arabirimi, T türü değişken karşıtı olduğundan, bir nesnenin atayabilirsiniz `IComparer(Of Person)` bir nesne türüne `IComparer(Of Employee)` özel dönüştürme yöntemleri kullanılarak olmadan türü `Person` devralır `Employee`.  
   
- Aynı türde, ancak daha az türetilmiş genel tür parametresi olan başka bir temsilci karşıtı temsilci atanabilir.  
+ Başka bir temsilci aynı türden, ancak daha az türetilmiş bir genel tür parametresi değişken karşıtı temsilci atanabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bildirme, genişletmek ve karşıtı genel arabirimini uygulayan gösterilmektedir. Örtük dönüştürme bu arabirimi uygulayan sınıflar için nasıl kullanabileceğinizi gösterir.  
+ Aşağıdaki örnek, bildirmek, genişletin ve değişken karşıtı genel bir arabirim uygulamak gösterilmektedir. Ayrıca, bu arabirimi uygulayan sınıflar için örtük dönüştürme nasıl kullanabileceğinizi gösterir.  
   
  [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bildirme, oluşturma ve karşıtı genel temsilcisi çağırma gösterilmektedir. Ayrıca, bir temsilci türü örtük olarak nasıl dönüştürebilirsiniz gösterir.  
+ Aşağıdaki örnek, bildirme, oluşturma ve değişken karşıtı Genel temsilci çağırma gösterilmektedir. Ayrıca, bir temsilci türü örtük olarak nasıl dönüştürebilirsiniz gösterir.  
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Çıkış](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

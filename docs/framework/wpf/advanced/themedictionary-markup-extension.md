@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: ea7c630be3f6d208f5c62e8b9e24606ff0df8466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 659af630f697d7f2742bc71006241c4bded842c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718929"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary Biçimlendirme Uzantısı
-Özel denetim yazarlar ya da üçüncü taraf denetimlerinin denetime stil kullanmak için özel tema kaynak sözlüklerindeki yüklemek için tümleştirme uygulamaları için bir yol sağlar.  
+Özel denetim yazarlar veya üçüncü taraf denetimleri temaya özgü kaynak sözlükleri bir denetime stil içinde kullanmak için yüklenecek tümleşen uygulamaları için bir yol sağlar.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -38,33 +38,33 @@ ms.locfileid: "33547413"
   
 |||  
 |-|-|  
-|`assemblyUri`|[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Tema bilgilerini içeren derleme. Genellikle, bir paketi büyük paketindeki bir derlemeye başvurur URI budur. Bütünleştirilmiş kod kaynakları ve paketi URI'ler dağıtım sorunlarını basitleştirir. Daha fazla bilgi için bkz: [Pack URI WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).|  
+|`assemblyUri`|[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Tema bilgileri içeren derleme. Genellikle, bir paketi büyük paketinde bir derlemeye başvuran bir URI budur. Derleme kaynakları ve paketi URI'ler dağıtım sorunlarını basitleştirir. Daha fazla bilgi için [paketi URI ' WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu uzantı yalnızca bir özel özellik değerini doldurmak için tasarlanmıştır: için bir değer <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.  
+ Bu uzantı yalnızca bir özel özellik değerini doldurmak için tasarlanmıştır: bir değer <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.  
   
- Bu uzantıyı kullanarak, yalnızca kullanmak için bazı stilleri içeren tek bir yalnızca kaynak derleme belirtebilirsiniz [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] temayı kullanıcının sisteme Luna teması etkin vb. olduğunda diğer stilleri uygulanır. Bu uzantıyı kullanarak bir özel denetim kaynak sözlüğü içeriğini otomatik olarak geçersiz kılınan ve gerektiğinde başka bir tema için belirli olacak şekilde yeniden.  
+ Bu uzantıyı kullanarak yalnızca kullanmak için bazı stilleri içeren tek bir yalnızca kaynak derleme belirtebilirsiniz [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] temayı kullanıcının sistem, Luna teması etkin vb. olduğunda diğer stil uygulanır. Bu uzantıyı kullanarak bir özel denetim kaynak sözlüğü içeriğini otomatik olarak geçersiz kılınan ve gerektiğinde başka bir tema için belirli olacak şekilde yeniden.  
   
- `assemblyUri` Dize (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özellik değeri) hangi sözlüğün belirli bir temaya uygulandığını tanımlayan bir adlandırma kuralı temelini oluşturur. <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Mantığı `ThemeDictionary` oluşturarak kuralı tamamlar bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] önceden derlenmiş kaynak assembly içinde yer alan gibi belirli tema sözlük değişkenine işaret. Bu kuralı veya genel denetim stil ve sayfa ve uygulama düzeyi stil bir kavram olarak ile tema etkileşimlerini açıklayan burada tam olarak ele alınmamıştır. Kullanmak için temel senaryo `ThemeDictionary` belirtmektir <xref:System.Windows.ResourceDictionary.Source%2A> özelliği bir `ResourceDictionary` uygulama düzeyinde bildirilmedi. Sağladığınız ne zaman bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] derleme için bir `ThemeDictionary` uzantısı yerine doğrudan [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], uzantı mantığı sistem teması değiştiğinde uygulayan geçersiz kılma mantığını sağlar.  
+ `assemblyUri` Dize (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özellik değerinin) belirli bir temaya hangi sözlüğün uygulandığını tanımlayan bir adlandırma kuralı temelini oluşturur. <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Mantığı `ThemeDictionary` oluşturarak kuralı tamamlar bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] işaret eden bir tema belirli sözlük değişkenine önceden derlenmiş kaynak derleme içinde yer alan olarak. Bu kuralı veya tema etkileşim genel denetimi stil ve sayfa/uygulama düzeyi stili oluşturma, kavram olarak açıklayan tam olarak burada kapsamaz. Kullanmak için temel senaryo `ThemeDictionary` belirtmektir <xref:System.Windows.ResourceDictionary.Source%2A> özelliği bir `ResourceDictionary` uygulama düzeyinde bildirilir. Sağladığınız ne zaman bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] derleme için bir `ThemeDictionary` uzantısı yerine doğrudan [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], sistem tema değiştiğinde uygulanan geçersiz kılma mantığını uzantı mantığı sağlar.  
   
- Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Sonra sağlanan dize belirteci `ThemeDictionary` kimlik dizesi olarak atandığı <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> temel değer <xref:System.Windows.ThemeDictionaryExtension> uzantısı sınıfı.  
+ Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Sonra sağlanan dize belirteci `ThemeDictionary` tanımlayıcı dizesi olarak atandığı <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> temel değer <xref:System.Windows.ThemeDictionaryExtension> uzantısı sınıfı.  
   
- `ThemeDictionary` Ayrıca nesne öğesi sözdiziminde kullanılabilir. Bu durumda, değerini belirten <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özelliği gereklidir.  
+ `ThemeDictionary` Ayrıca nesne öğesi sözdiziminde kullanılabilir. Bu durumda, değerini belirterek <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özelliği gereklidir.  
   
- `ThemeDictionary` belirten bir ayrıntılı öznitelik kullanımı da kullanılabilir <xref:System.Windows.Markup.StaticExtension.Member%2A> özelliği bir özellik olarak değer çifti =:  
+ `ThemeDictionary` belirten ayrıntılı öznitelik kullanımında da ayrıca kullanılabilir <xref:System.Windows.Markup.StaticExtension.Member%2A> bir özellik olarak özellik değer eşleştirmesi:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
 ```  
   
- Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. Çünkü `ThemeDictionary` yalnızca gerekli olan bir ayarlanabilir özelliği, bu ayrıntılı kullanım tipik sahiptir.  
+ Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. Çünkü `ThemeDictionary` yalnızca gerekli olan bir ayarlanabilir özelliği, bu ayrıntılı kullanım tipik değildir.  
   
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında, bu biçimlendirme uzantısı işlenmesi tarafından tanımlanan <xref:System.Windows.ThemeDictionaryExtension> sınıfı.  
+ İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanır <xref:System.Windows.ThemeDictionaryExtension> sınıfı.  
   
- `ThemeDictionary` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ThemeDictionary` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315bd78f660e093ecbf65224bd09a9b4f44300b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5d0b92dccceab48fcf0780a29d7bac38d591455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714977"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset Metodu
-Bir işlevin dönüş değeri yalıtan bir "ICorDebugValue" nesneyi alır.  
+Bir işlevin dönüş değeri bir "ICorDebugValue" nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +39,39 @@ HRESULT GetReturnValueForILOffset(
  IL uzaklığı. Açıklamalar bölümüne bakın.  
   
  `ppReturnValue`  
- İşlev çağrısının dönüş değerini hakkında bilgi sağlayan bir "ICorDebugValue" arabirimi nesne adresini gösteren bir işaretçi.  
+ Bir işlev çağrısının döndürme değeri hakkında bilgi sağlayan bir "ICorDebugValue" arabirim nesnesinin adresine bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem ile birlikte kullanılan [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) bir yönteminin dönüş değeri almak için yöntemi. Dönüş değerleri yoksayılır, aşağıdaki iki kod örneklerde olduğu gibi yöntemleri durumunda özellikle yararlı olacaktır. İlk örnek çağrıları <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemi, ancak yöntemin dönüş değeri yok sayıyor.  
+ Bu yöntem ile birlikte kullanılan [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) bir yöntemin dönüş değerini almak için yöntemi. Dönüş değerleri, aşağıdaki iki kod örneği gibi yöntemler özellikle faydalıdır. İlk örneği çağrıları <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemi, ancak yöntemin dönüş değerini yoksayar.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- İkinci örnek hata ayıklama içinde daha yaygın bir sorun gösterilmektedir. Yöntem çağrısı bir bağımsız değişken olarak kullanılan bir yöntem için dönüş değerini yalnızca hata ayıklayıcı çağrılan yöntemin adımları zaman erişilebilir. Özellikle çağrılan yöntemi bir harici kitaplık tanımlandığında çoğu durumda, mümkün değildir.  
+ İkinci örnek hata ayıklamada çok daha yaygın bir sorunu gösterir. Bir yöntem, yöntem çağrısında bağımsız değişken olarak kullanıldığından dönüş değeri, yalnızca hata ayıklayıcı çağrılan yöntem üzerinden adımları olduğunda da erişilebilir. Özellikle çağrılan yöntem bir harici kitaplık olarak tanımlandığında çoğu durumda, mümkün değildir.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- Geçirirseniz [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) bir işlev çağrısı siteye uzaklığı IL bir yöntemi, bir veya daha fazla yerel uzaklıklarını döndürür. Hata ayıklayıcı kesme noktaları bu yerel uzaklıkları işlevinde sonra ayarlayabilirsiniz. Hata ayıklayıcı kesme noktaları geldiğinde dönüş değeri almak için bu yönteme geçirilen aynı IL uzaklığı sonra geçirebilirsiniz. Hata ayıklayıcı sonra ayarlayın kesme noktaları temizlemeniz gerekir.  
+ Geçirirseniz [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) bir işlev çağrısı siteye IL uzaklığı bir yöntemi, bir veya daha fazla yerel uzaklıklar verir. Hata ayıklayıcı, ardından işlevdeki bu yerel uzaklıklarda kesme noktaları ayarlayabilirsiniz. Hata ayıklayıcı kesme noktalarından birine eriştiğinde, dönüş değeri almak için bu yönteme geçilen aynı IL uzaklığını geçirebilirsiniz. Ardından hata ayıklayıcıyı ayarladığı tüm kesme noktalarını temizlemeniz gerekir.  
   
 > [!WARNING]
->  [Icordebugcode3::getreturnvalueliveoffset yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) ve `ICorDebugILFrame3::GetReturnValueForILOffset` yöntemleri yalnızca başvuru türleri dönüş değeri bilgilerini edinin izin verir. Değer türlerinden dönüş değeri bilgileri alınıyor (diğer bir deyişle, türetilen tüm türleri <xref:System.ValueType>) desteklenmiyor.  
+>  [Icordebugcode3::getreturnvalueliveoffset metodu](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) ve `ICorDebugILFrame3::GetReturnValueForILOffset` yöntemleri yalnızca başvuru türleri için dönüş değeri bilgilerini almanıza olanak tanır. Değer türlerinden dönüş değeri bilgilerini alma (diğer bir deyişle, öğesinden türetilen tüm türler <xref:System.ValueType>) desteklenmiyor.  
   
- Tarafından belirtilen IL uzaklığı `ILOffset` parametresi bir işlev çağrısı sitede olmalıdır ve ayıklayıcı tarafından döndürülen yerel uzaklığında bir kesme adresindeki durdurulmalıdır [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) yöntemi aynı IL uzaklığı. Belirtilen IL uzaklığı için doğru konumda ayıklayıcı durdurulmaz API başarısız olur.  
+ Tarafından belirtilen IL uzaklığı `ILOffset` parametresi bir işlev çağrısı sitesinde olmalıdır ve hata ayıklanan adresindeki tarafından döndürülen yerel uzaklıkta ayarlanan bir kesme noktasında durdurulmalıdır [Icordebugcode3::getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) yöntemi aynı IL uzaklığı için. Hata ayıklanan belirtilen IL uzaklığı için doğru konumda durdurulmamışsa API başarısız olur.  
   
- İşlev çağrısı bir değer döndürmüyor API başarısız olur.  
+ İşlev çağrısı bir değer döndürmezse API başarısız olur.  
   
- `ICorDebugILFrame3::GetReturnValueForILOffset` Yöntemi yalnızca x86 tabanlı üzerinde kullanılabilir ve AMD64 sistemleri.  
+ `ICorDebugILFrame3::GetReturnValueForILOffset` Yöntemi yalnızca x86 tabanlı üzerinde kullanılabilir ve AMD64 sistemlerinde.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetReturnValueLiveOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)  
- [ICorDebugILFrame3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetReturnValueLiveOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)

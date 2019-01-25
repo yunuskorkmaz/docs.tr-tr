@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: ff346c5b4241f7ac037088adbe068bab2232d12f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 07c15614f22409f427c6f75cd4ddb8cfa218beba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706961"
 ---
 # <a name="creating-internet-requests"></a>Internet istekleri oluşturma
 Uygulamaları oluşturmak <xref:System.Net.WebRequest> aracılığıyla örnekler <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi. Türetilen bir sınıf oluşturur statik bir yöntem budur **WebRequest** geçirilen URI şeması göre.  
@@ -27,6 +27,6 @@ Uygulamaları oluşturmak <xref:System.Net.WebRequest> aracılığıyla örnekle
   
  Diğer uygulama düzeyi protokolleri kullanan isteklerini işlemek için türetilen protokole özgü sınıfların uygulamanız gereken **WebRequest** ve **WebResponse**. Daha fazla bilgi için [takılabilir protokoller programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl Yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

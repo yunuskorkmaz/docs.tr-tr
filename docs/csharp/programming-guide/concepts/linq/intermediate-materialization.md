@@ -2,15 +2,15 @@
 title: Ara gerçekleştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 56c4bb57a931362b3e14f6a8da917ae6907565d6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 065a7e0ffadaa48d400d4f4e3e045014b3658213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686016"
 ---
 # <a name="intermediate-materialization-c"></a>Ara gerçekleştirme (C#)
-Dikkatli emin değilseniz, bazı durumlarda, önemli ölçüde, uygulamanızın bellek ve performans profili sorgularınızdaki koleksiyonların erken materialization neden olarak değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe oluşturan önce kaynak koleksiyonu materialization neden. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak toplulukta tekrarlanan sonra tüm öğeleri sıralar ve son olarak ilk öğeyi verir. Bu, ilk öğesinde, sıralı bir koleksiyonu almak pahalı olduğunu gösterir; her öğe bundan sonra pahalı değil. Bu mantıklı: yapmak bu sorgu işleci için mümkün olacaktır.  
+Dikkatli emin değilseniz, bazı durumlarda, önemli ölçüde, uygulamanızın bellek ve performans profili sorgularınızdaki koleksiyonların erken materialization neden olarak değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe oluşturan önce kaynak koleksiyonu materialization neden. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak toplulukta tekrarlanan sonra tüm öğeleri sıralar ve son olarak ilk öğeyi verir. Bu, ilk öğesinde, sıralı bir koleksiyonu almak pahalı olduğunu gösterir; her öğe bundan sonra pahalı değil. Bu algılama sağlar: Bunu yapmak bu sorgu işleci için mümkün olacaktır.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek önceki örnekle değiştirir. `AppendString` Yöntem çağrılarını <xref:System.Linq.Enumerable.ToList%2A> kaynağı aracılığıyla yineleme önce. Bu, materialization yol açar.  
@@ -86,6 +86,6 @@ Main: str >GHI!!!<
   
 -   [Zincirleme standart sorgu işleçleri (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Öğretici: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

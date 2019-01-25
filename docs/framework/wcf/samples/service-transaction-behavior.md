@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739290"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımı ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesaplayıcı hizmet uygular, ancak gerçekleştirilen işlemlerin bir veritabanı tablosu ve hesap makinesi işlemleri için toplam çalışan bir durum bilgisi olan bir sunucu günlüğü korumak için genişletilir. Sunucu günlüğü tablosu kalıcı Yazar bağımlı istemci işlemi tamamlanmazsa, bir istemci Eşgüdümlü işlem - sonucunu Web hizmeti işlemi güncelleştirmeleri veritabanına kaydedilmiş olmamasını sağlar.  
@@ -265,4 +265,4 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 840833f2752115cb5f5639a25daf05bcbff3d452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720921"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Temizle&gt; bypasslist (ağ ayarları) için
 Proxy atlama listesi temizler.  
@@ -23,7 +23,7 @@ Proxy atlama listesi temizler.
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist >  
+\<bypasslist>  
 \<Temizleme >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -70,6 +70,6 @@ Proxy atlama listesi temizler.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb63f1e9d2b30ce764521aa68fbafe0407cbe922
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fd0cf4f47781afb397c1fdd4b42715c710982e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580765"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager Yöntemi
-Ana uygulama etki alanı oluşturulduğunu size bildirir.  
+Konak, bir uygulama etki alanı oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT SetAppDomainManager (
  [in] Seçili sayısal tanımlayıcı <xref:System.AppDomain>.  
   
  `pUnkAppDomainManager`  
- [in] Bir işaretçi <xref:System.AppDomainManager> olarak ana bilgisayar uygulayan nesne `IUnknown`.  
+ [in] Bir işaretçi <xref:System.AppDomainManager> konak olarak uygulayan nesne `IUnknown`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`SetAppDomainManager` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.AppDomainManager> Yönetilen koda bootstrap ve oluşturulması ve her birinin ayarlarını denetlemek için bir mekanizma ile ana bilgisayarının sağladığı <xref:System.AppDomain>. <xref:System.AppDomainManager> Her yüklenir <xref:System.AppDomain> olduğunda, <xref:System.AppDomain> oluşturulur. Seçerse, CLR ana uygulama etki alanı değerini ayarlayarak oluşturuldu bildirir `pUnkAppDomainManager` parametresi.  
+ <xref:System.AppDomainManager> Yönetilen koda bootstrap ve oluşturulması ve her birinin ayarlarını denetlemek için bir mekanizma ile ana bilgisayarının sağladığı <xref:System.AppDomain>. <xref:System.AppDomainManager> Her birinde yüklü olduğu <xref:System.AppDomain> olduğunda, <xref:System.AppDomain> oluşturulur. Seçerse, CLR konak uygulama etki alanı değerini ayarlayarak oluşturulduğunu bildirir `pUnkAppDomainManager` parametresi.  
   
- Uygulamaya `SetAppDomainManager` yöntemi, ana bilgisayar ayarlayabilirsiniz derleme adı ve türü için uygulama etki alanı yöneticisi.  
+ Uygulamaya `SetAppDomainManager` yöntemi, konak ayarlayabilir derleme adı ve türü için uygulama etki alanı yöneticisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.AppDomain>  
- <xref:System.AppDomainManager>  
- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.AppDomain>
+- <xref:System.AppDomainManager>
+- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

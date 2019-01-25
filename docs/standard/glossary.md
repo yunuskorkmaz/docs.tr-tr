@@ -3,14 +3,14 @@ title: .NET sözlüğü
 description: Seçili koşulları .NET belgelerde kullanılan anlamını öğrenin.
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3c478083a2bfde1742b114a8254bf07dff01f869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664674"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857985"
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
@@ -21,6 +21,8 @@ Bu sözlük birincil amacı, seçili terimleri ve tanımları olmadan .NET belge
 Derleyici, zaman üretim.
 
 Benzer şekilde [JIT](#jit), ayrıca bu derleyici çevirir [IL](#il) makine kodu. Uygulama çalıştırılır ve genellikle farklı bir makinede gerçekleştirdiği önce JIT derlemesi aksine AOT derlemesi'olmuyor. Çalışma zamanında AOT takımlarına derlenmemesi çünkü derleme harcanan zamanı en aza indirmek yok. Daha fazla iyileştirme zaman harcamak anlamına gelir. AOT bağlamında tüm uygulama olduğundan, AOT derleyici zakazuje optimalizaci bağlama ve tüm başvurular izlenir ve tek bir yürütülebilir dosya oluşturulur ve tüm program analizi de gerçekleştirir.
+
+Bkz: [CoreRT](#corert) ve [.NET yerel](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 

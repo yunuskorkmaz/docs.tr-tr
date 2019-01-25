@@ -5,91 +5,91 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719826"
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
-Bu konu, kuyruğa alınan iletişim Windows Communication Foundation (WCF) için önerilen yöntemler sağlar. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  
+Bu konu, Windows Communication Foundation (WCF) kuyruğa alınan iletişim için önerilen yöntemler sağlar. Aşağıdaki bölümlerde, önerilen uygulamaların bir senaryo açısından ele alınmıştır.  
   
-## <a name="fast-best-effort-queued-messaging"></a>Hızlı ve en yüksek çaba ileti kuyruğa  
- İleti kuyruğa ayrımı sağlar gerektiren senaryolar ve hızlı, yüksek performanslı en yüksek çaba çıkışların ile Mesajlaşma, işlemsel olmayan bir sıraya kullanın ve ayarlayın <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> özelliğine `false`.  
+## <a name="fast-best-effort-queued-messaging"></a>Hızlı, en yüksek çaba ileti kuyruğa alındı  
+ İleti kuyruğa ayrımı sağlar gerektiren senaryolar ve hızlı, yüksek performanslı en yüksek çaba Güvenceleri ile Mesajlaşma için işlem olmayan bir kuyruk kullanın ve ayarlama <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> özelliğini `false`.  
   
- Ayrıca, disk yazma işlemleri maliyetini ayarlayarak tabi değil seçebileceğiniz <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> özelliğine `false`.  
+ Ayrıca, disk yazmalarının ayarlayarak bir ücret değil seçebileceğiniz <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> özelliğini `false`.  
   
- Güvenlik, performans üzerinde etkilere sahiptir. Daha fazla bilgi için bkz: [başarım düşünceleri](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ Güvenlik, performans üzerinde etkilere sahiptir. Daha fazla bilgi için [performansla ilgili önemli noktalar](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Güvenilir uçtan uca ileti kuyruğa alındı  
- Aşağıdaki bölümler, uçtan uca güvenilir Mesajlaşma gerektiren senaryolar için önerilen uygulamaları açıklamaktadır.  
+ Aşağıdaki bölümlerde, uçtan uca güvenilir Mesajlaşma gerektiren senaryolar için önerilen yöntemler açıklanmaktadır.  
   
-### <a name="basic-reliable-transfer"></a>Temel güvenilir aktarımı  
- Uçtan uca güvenilirlik için ayarlanmış <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> özelliğine `true` aktarım sağlamak için. <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> Özelliği ayarlanabilir `true` veya `false` gereksinimlerinize bağlı olarak (varsayılan `true`). Genellikle, <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> özelliği ayarlanmış `true` uçtan uca güvenilirlik bir parçası olarak. Güvenlik aşılması performans maliyeti, ancak sıra yöneticisi çökme gerçekleşirse ileti kayıp olmaması ileti dayanıklı hale getirir.  
+### <a name="basic-reliable-transfer"></a>Temel Güvenilir Aktarım  
+ Uçtan uca güvenilirlik için ayarlanmış <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> özelliğini `true` aktarımı emin olmak için. <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> Özelliği ayarlanabilir `true` veya `false` gereksinimlerinize bağlı olarak (varsayılan değer `true`). Genellikle, <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> özelliği `true` uçtan uca güvenilirlik bir parçası olarak. Güvenlik aşılması bir performans maliyeti, ancak ileti dayanıklı yapar ve böylece bir kuyruk Yöneticisi bir çökme gerçekleşirse ileti kaybolur değil.  
   
-### <a name="use-of-transactions"></a>İşlemleri kullanma  
- İşlemler, uçtan uca güvenilirlik sağlamak için kullanmalısınız. `ExactlyOnce` çıkışların yalnızca iletileri hedef sıraya teslim edilir emin olun. İleti alındığında emin olmak için işlemleri kullanın. Hizmetin çökmesi durumunda işlemler olmadan teslim edilmekte olduğu, ancak gerçekte uygulamaya teslim ileti kaybedersiniz.  
+### <a name="use-of-transactions"></a>İşlem kullanımı  
+ Uçtan uca güvenilirlik sağlamak için işlem kullanmanız gerekir. `ExactlyOnce` Güvenceleri yalnızca iletileri hedef sıraya teslim edilmesini sağlayın. İleti alındığından emin olmak için işlemleri kullanma. Hizmetin kilitlenmesi durumunda işlemler olmadan teslim edilmekte olduğu ancak gerçekten uygulamaya teslim ileti kaybedersiniz.  
   
-### <a name="use-of-dead-letter-queues"></a>Teslim edilemeyen iletiler sırası kullanma  
- Teslim edilemeyen iletiler sırası hedef sıraya teslim edilmesi bir ileti başarısız olursa bildirim aldığından emin olun. Sistem tarafından sağlanan sahipsiz sırayı veya özel bir sahipsiz sırayı kullanabilirsiniz. Tek bir sahipsiz sıraya içine bir uygulamadan teslim edilemeyen iletiler göndermenize olanak sağladığından genel olarak, özel bir sahipsiz sırayı kullanarak en iyisidir. Aksi takdirde, sistem üzerinde çalışan tüm uygulamaları için ortaya çıkan tüm teslim edilemeyen iletiler tek bir sıraya teslim edilir. Ardından, her uygulama yine de bu uygulamayla ilgili teslim edilemeyen iletiler bulmak için sahipsiz sırayı aramanız gerekir. Bazı durumlarda, özel bir sahipsiz sırayı kullanarak MSMQ 3.0 kullanırken gibi uygun değildir.  
+### <a name="use-of-dead-letter-queues"></a>Edilemeyen kullanımı  
+ Edilemeyen bir iletinin hedef sıraya teslim başarısız olursa bildirim aldığından emin olun. Sistem tarafından sağlanan eski ileti sırası veya özel bir eski ileti sırası kullanabilirsiniz. Tek bir eski ileti sırası bir uygulamaya teslim edilemeyen iletiler göndermenize olanak sağladığından genel olarak, özel bir sahipsiz sırayı kullanarak en iyisidir. Aksi takdirde, sistem üzerinde çalışan tüm uygulamalar için ortaya çıkan tüm teslim edilemeyen iletiler tek kuyruğuna teslim edilir. Ardından, her bir uygulama yine de bu uygulamayla ilgili atılacak iletiler bulmak için eski ileti sırası aramanız gerekir. Bazı durumlarda, bir özel sahipsiz sırayı kullanarak MSMQ 3.0 kullanırken olduğu gibi uygun değil.  
   
- Sıralarındaki uçtan uca güvenilir iletişim için kapatma önerilmez.  
+ Geçerliliğini yitirmiş kuyruk uçtan uca güvenilir iletişim için kapatma önerilmez.  
   
- Daha fazla bilgi için bkz: [ileti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Daha fazla bilgi için [kullanarak edilemeyen ileti aktarımı hatalarını işlemek için](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Poison ileti işleme kullanımı  
- Poison ileti işleme işlem iletileri hatasından kurtarma olanağı sağlar.  
+ Poison ileti işleme için işlem iletileri hatadan kurtarmak yeteneği sağlar.  
   
- Poison ileti işleme özelliğini kullanırken emin <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> özelliğini uygun değere ayarlayın. Ayar <xref:System.ServiceModel.ReceiveErrorHandling.Drop> veriler kaybolur anlamına gelir. Diğer taraftan, ayarı <xref:System.ServiceModel.ReceiveErrorHandling.Fault> zararlı bir ileti algıladığında hizmet konağı hataları. MSMQ 3.0 kullanılarak <xref:System.ServiceModel.ReceiveErrorHandling.Fault> veri kaybını önlemek ve zararlı ileti dışına taşımak için en iyi seçenektir. MSMQ 4. 0'da da kullanarak <xref:System.ServiceModel.ReceiveErrorHandling.Move> önerilen yaklaşımdır. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Hizmet yeni iletileri işlemeye devam edebilmek için sıradaki zarar görmüş bir ileti taşır. Poison ileti hizmeti zehir iletisi sonra ayrı olarak işleyebilir.  
+ Poison ileti işleme özelliğini kullanırken, emin <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> özelliği, uygun değere ayarlanır. Bu ayarın <xref:System.ServiceModel.ReceiveErrorHandling.Drop> verilere kaybolmuş anlamına gelir. Öte yandan, ayar <xref:System.ServiceModel.ReceiveErrorHandling.Fault> hizmet ana bilgisayarı, zehirli ileti algıladığında hataları. MSMQ 3.0 kullanan <xref:System.ServiceModel.ReceiveErrorHandling.Fault> zehirli ileti dışına taşımak ve veri kaybını önlemek için en iyi seçenektir. MSMQ 4. 0'da da kullanarak <xref:System.ServiceModel.ReceiveErrorHandling.Move> önerilen yaklaşımdır. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Hizmet yeni iletileri işlemeye devam edebilmesi sıradaki zarar görmüş bir ileti taşır. Poison message hizmeti daha sonra ayrı ayrı zehirli ileti işleyebilir.  
   
- Daha fazla bilgi için bkz: [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Daha fazla bilgi için [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
-## <a name="achieving-high-throughput"></a>Yüksek verimlilik elde  
- Tek bir uç noktada yüksek verimlilik elde etmek için aşağıdakileri kullanın:  
+## <a name="achieving-high-throughput"></a>Yüksek verimlilik elde etmeye  
+ Tek bir uç nokta üzerinde yüksek performans sağlamak için aşağıdakileri kullanın:  
   
--   İşlem yapılan toplu işlem. İşlenen toplu iş çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütme, genel performansı artırma en iyi duruma getirir. Toplu işleme maliyetini bir yığın içindeki tek bir ileti hata oluşuyor sonra toplu işlemin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa olmasıdır. Çoğu durumda, toplu işleme özellikle işlemde diğer kaynak yöneticileri olduğunda sistem performansını artırmak için tercih edilen yöntem olmasını zarar iletileri seyrek, kullanılır. Daha fazla bilgi için bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   İşlem yapılan toplu işlem. İşlenen toplu işleme, çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütmeleri genel performansı artırmak, en iyi duruma getirir. Toplu işleme maliyeti, tek bir iletide bir yığın içindeki bir hata oluşması sonra toplu işin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa. Toplu işlem sırasında katılan diğer kaynak yöneticileri olduğunda özellikle sistem performansını artırmak için tercih edilen yol, bu nedenle çoğu durumda, zehirli iletiler nadir rastlanır. Daha fazla bilgi için [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık paylaşılan kaynakları için Çekişme de etkiler. Daha fazla bilgi için bkz: [eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık çakışması paylaşılan kaynaklar için de etkiler. Daha fazla bilgi için [eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Azaltma. En iyi performans için ileti dağıtıcısı ardışık düzeninde sayısını azaltma. Bunun nasıl yapılacağı örneği için bkz: [azaltma](../../../../docs/framework/wcf/samples/throttling.md).  
+-   Azaltma. En iyi performans için dağıtıcı ardışık düzeninde iletilerin sayısını azaltma. Bunu yapmak nasıl bir örnek için bkz [azaltma](../../../../docs/framework/wcf/samples/throttling.md).  
   
- Toplu işleme kullanırken, eşzamanlılık ve azaltma için eş zamanlı toplu Çevir unutmayın.  
+ Toplu işlem kullanırken, eşzamanlılık ve azaltma için eş zamanlı toplu Çevir dikkat edin.  
   
- Daha yüksek performans ve kullanılabilirlik elde etmek için bir grubu kuyruktan okunmak WCF hizmetleri kullanın. Bu, tüm bu hizmetleri aynı sözleşme aynı uç noktada kullanıma gerektirir. Grup yaklaşım iletileri yüksek üretim oranları tüm hizmetlerin sayısı sağladığından olan uygulamalar için en iyi çalışır aynı kuyruktan okuyun.  
+ Daha yüksek performans ve kullanılabilirlik elde etmek için bir kuyruktan okunur WCF hizmetleri grubu kullanın. Bu, bu hizmetlerin tümü aynı sözleşme aynı uç noktayı kullanıma gerektirir. Grup yaklaşım, bir dizi hizmet tüm sağladığından iletileri oranları yüksek üretim uygulamaları için en iyi çalışır aynı kuyruktan okunur.  
   
- Grupları kullanırken, MSMQ 3.0 uzak işlem temelli okuma desteklemediğini unutmayın. MSMQ 4.0 uzaktan hizmetteki okuma desteklemiyor.  
+ Grupları kullanırken, MSMQ 3.0 uzak işlem temelli okuma desteklemediğini unutmayın. MSMQ 4.0 uzak işlem temelli okuma desteklemiyor.  
   
- Daha fazla bilgi için bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) ve [Queuing özelliği Windows Vista, Windows Server 2003 ve Windows XP arasındaki farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Daha fazla bilgi için [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) ve [Windows Vista, Windows Server 2003 ve Windows XP sıraya alma özelliği arasındaki farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
-## <a name="queuing-with-unit-of-work-semantics"></a>İş semantiği birimle queuing  
- Bazı senaryolarda iletiler bir kuyrukta grubunu ilgili olabilir ve bu nedenle, bu iletilerin sıralama önemlidir. Bu senaryolarda, ilgili iletiler birlikte tek bir birim olarak bir grup işlem: tüm iletileri başarıyla işlendi ya da yok. Bu tür davranış uygulamak için kuyruklarla oturumları kullanın.  
+## <a name="queuing-with-unit-of-work-semantics"></a>İş semantiği birimle sıraya alma  
+ Bazı senaryolarda, kuyruktaki iletiler grubunu ilgili ve bu nedenle, bu iletileri sıralama önemlidir. Böyle senaryolarda, tek bir birim olarak birlikte ilgili iletiler grubunu işlem: yok veya tüm iletileri başarıyla işlendi. Bu davranışı uygulamak kuyruklarla oturumları kullanın.  
   
- Daha fazla bilgi için bkz: [gruplandırma sıraya alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Daha fazla bilgi için [gruplandırma kuyruğa alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>İstek-yanıt iletilerini ilişkilendirme  
- Kuyruklar genellikle tek yönlü olmakla birlikte, bazı senaryolarda daha önce gönderilen bir istek aldı bir Yanıtla ilişkilendirmek isteyebilirsiniz. Bu tür bağıntı gerektiriyorsa, iletinin bağıntı bilgilerle içeren kendi SOAP iletisi üstbilgisi uygulamanız önerilir. Genellikle, bu iletiyi başlığıyla gönderen ekler ve iletiyi işlemeyi ve yanıt sırası üzerinde yeni bir ileti ile geri yanıtlama alıcı, böylece gönderenin bağıntı bilgilerini içeren gönderenin ileti üstbilgisi ekler İstek iletisi yanıt iletisiyle tanımlayın.  
+ Bazı senaryolarda kuyrukları tek yönlü genellikle olsa da, daha önce gönderilen bir istek aldı. bir Yanıtla ilişkilendirmek isteyebilirsiniz. Bu tür bağıntı ihtiyacınız varsa bağıntı bilgi iletisi içeren kendi SOAP ileti üst bilgisi geçerli önerilir. Genellikle, bu üst bilgi iletisi gönderen ekler ve böylece gönderenin bağıntı bilgilerini içeren gönderenin ileti üst bilgisi alıcı iletiyi işlemeyi ve yeniden bir yanıt kuyruğu üzerinde yeni bir ileti ile yanıt ekler İstek iletisi ile yanıt iletisi tanımlayın.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>WCF olmayan uygulamaları ile tümleştirme  
- Kullanım `MsmqIntegrationBinding` WCF hizmetleri veya istemcileri olmayan WCF hizmetleri veya istemcileri ile tümleştirdiğinizde. WCF olmayan uygulama System.Messaging, COM +, Visual Basic ya da C++ kullanılarak yazılmış bir MSMQ uygulama olabilir.  
+ Kullanım `MsmqIntegrationBinding` WCF hizmetleri veya istemciler olmayan WCF hizmetleri veya istemcileri ile tümleştirdiğinizde. WCF olmayan uygulama MSMQ uygulamanın System.Messaging, COM +, Visual Basic veya C++ kullanılarak yazılmış olabilir.  
   
- Kullanırken `MsmqIntegrationBinding`, aşağıdakilere dikkat edin:  
+ Kullanırken `MsmqIntegrationBinding`, şunlara dikkat edin:  
   
--   WCF ileti gövdesi MSMQ İleti gövdesi aynı değil. Sıraya alınan bağlama kullanarak bir WCF ileti gönderirken, WCF ileti gövdesi içinde MSMQ iletisi yerleştirilir. Bu ek bilgiler oblivious MSMQ altyapısıdır; yalnızca MSMQ iletisi görür.  
+-   Bir WCF ileti gövdesi bir MSMQ İleti gövdesi ile aynı değil. Sıraya alınan bir bağlamayı kullanarak bir WCF ileti gönderirken, WCF ileti gövdesi içinde bir MSMQ iletisinin yerleştirilir. Bu ek bilgileri oblivious MSMQ altyapısıdır; Bu, yalnızca MSMQ iletiyi görür.  
   
--   `MsmqIntegrationBinding` popüler serileştirme türlerini destekler. Genel ileti gövdesi türü seri hale getirme türüne göre <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, farklı tür parametreleri alır. Örneğin, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> gerektirir `MsmqMessage\<byte[]>` ve <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> gerektirir `MsmqMessage<Stream>`.  
+-   `MsmqIntegrationBinding` popüler serileştirme türlerini destekler. Genel iletinin gövde türü serileştirme türü temel alarak <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, farklı tür parametreleri alır. Örneğin, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> gerektirir `MsmqMessage\<byte[]>` ve <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> gerektirir `MsmqMessage<Stream>`.  
   
--   XML serileştirilmesi ile bilinen türü kullanılarak belirtebilirsiniz `KnownTypes` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) sonra XML iletisini seri durumdan nasıl belirlemek için kullanılan öğesi.  
+-   XML serileştirme ile bilinen türü kullanarak belirtebilirsiniz `KnownTypes` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi XML ileti seri durumdan nasıl belirlemek için kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Bir İşlemde Toplu İleti İşleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Kuyruğa Alınan İletilerde Sorun Giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
+- [Bir İşlemde Toplu İleti İşleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
+- [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Kuyruğa Alınan İletilerde Sorun Giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

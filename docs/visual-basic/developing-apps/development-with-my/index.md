@@ -9,42 +9,42 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: f13e7348eb1c63e8256a48da7a8f5a8e357c72ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720229"
 ---
 # <a name="development-with-my-visual-basic"></a>My Özelliğiyle Geliştirme (Visual Basic)
-Visual Basic üretkenliği ve güç göndermeye çalışırken kullanım kolaylığı artırmak hızlı uygulama geliştirme için yeni özellikler sağlar. Adlı bu özelliklerden birini `My`, uygulama ve onun çalışma zamanı ortamı ile ilgili nesne örneklerini bilgi ve varsayılan erişim sağlar. Bu bilgiler, IntelliSense aracılığıyla bulunabilir ve kullanım göre mantıksal olarak sonuçları bir biçimde düzenlenmiştir.  
+Visual Basic, verimlilik ve güç göndermeye çalışırken kullanım kolaylığı artırmak hızlı uygulama geliştirmeye yönelik yeni özellikler sağlar. Olarak adlandırılan, bu özelliklerden birini `My`, uygulama ve onun çalışma zamanı ortamı ilgili nesne örneklerini bilgi ve varsayılan erişim sağlar. Bu bilgiler, IntelliSense aracılığıyla bulunabilir ve kullanıma göre sonuçları mantıksal bir biçimde düzenlenmiştir.  
   
- Üst düzey üyeleri `My` nesneleri sunulur. Her nesne için bir ad alanı ya da bir sınıf ile benzer şekilde davranır `Shared` üyeleri ve ilgili üyelerin kümesini kullanıma sunar.  
+ Üst düzey üyeleri `My` nesneleri sunulur. Her nesne bir ad alanı veya bir sınıf ile benzer şekilde davranır `Shared` üyeleri ve ilgili üyelerin kümesini sunar.  
   
- Bu tablo üst düzey gösterir `My` nesneleri ve aralarındaki ilişki.  
+ Bu tabloda, en üst düzey gösterilmektedir `My` nesneleri ve bunların birbirlerine.  
   
- ![İçin nesne modeli My](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![Nesne modeli için benim](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [My.Application, My.Computer ve My.User ile Görev Gerçekleştirme](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- Üç Orta açıklar `My` nesneleri `My.Application`, `My.Computer`, ve `My.User`, bilgi ve işlevsellik erişim sağlar  
+ Üç Orta açıklar `My` nesneleri `My.Application`, `My.Computer`, ve `My.User`, bilgi ve işlevsellik için erişim sağlayın  
   
  [My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- Açıklar `My.Forms` ve `My.WebServices` formlar, veri kaynakları ve uygulamanız tarafından kullanılan XML Web Hizmetleri için erişim sağlayan nesne.  
+ Açıklar `My.Forms` ve `My.WebServices` formlar, veri kaynakları ve uygulamanız tarafından kullanılan XML Web Hizmetleri erişim sağlayan nesne.  
   
  [My.Resources ve My.Settings ile Hızlı Uygulama Geliştirme](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- Açıklar `My.Resources` ve `My.Settings` uygulamanın kaynakları ve ayarları erişim sağlamak nesneleri.  
+ Açıklar `My.Resources` ve `My.Settings` uygulama ayarları ve kaynaklara erişim sağlayan nesne.  
   
  [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Visual Basic uygulama başlatma/kapatma modeli açıklar.  
+ Başlangıç/Shutdown Visual Basic uygulama modelini açıklar.  
   
  [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Üzerinde ayrıntılarını verir `My` özellikleri farklı proje türlerinde kullanılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

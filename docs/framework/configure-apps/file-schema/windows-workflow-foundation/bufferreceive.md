@@ -3,18 +3,18 @@ title: '&lt;bufferReceive&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
-ms.openlocfilehash: 07d5b66b14d9495808f972734cdce4476efaefde
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 507d58f852544c0eadcefaf997b2345d5e123cfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607520"
 ---
 # <a name="ltbufferreceivegt"></a>&lt;bufferReceive&gt;
 Bir hizmet davranışını etkinleştirir hizmeti kullanmak için arabelleğe alınan sırası iletileri işlemek bir iş akışı hizmeti sağlayan işleme alırsınız.  
   
 \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
 \<bufferReceive >  
@@ -49,6 +49,6 @@ Bir hizmet davranışını etkinleştirir hizmeti kullanmak için arabelleğe al
 |-------------|-----------------|  
 |[\<davranış >, \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 <!-- <xref:System.ServiceModel.Activities.Description.BufferReceiveServiceBehavior>  -->
- <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>
+- <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>

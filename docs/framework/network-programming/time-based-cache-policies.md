@@ -17,15 +17,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 650b7e17cc486068ba72436931e8bc96a6d0261c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa99806510bac8102478cc21e0782067f7bdff86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497426"
 ---
 # <a name="time-based-cache-policies"></a>Saat temelli önbellek ilkeleri
-Bir saat temelli önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak alınmadı zaman ve geçerli zamanı kullanarak önbelleğe alınan girişlerin güncellik tanımlar. Saat temelli önbellek İlkesi ayarlanarak, kullanabilir <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı bir ilke veya özelleştirilmiş zamana bağlı ilkesi oluşturun. Köprü Metni Aktarım Protokolü (HTTP) kullanılarak elde edilen kaynaklar için varsayılan saat temelli ilkesini kullanarak, tam önbellek davranışını 13 ve RFC 2616 14 bölümlerinde belirtilen davranışları ve önbelleğe alınan yanıta dahil üstbilgileri tarafından belirlenir, kullanılabilir [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi. HTTP kaynaklar için varsayılan zaman tabanlı ilke ayarı gösteren bir kod örneği için bkz: [nasıl yapılır: uygulama için Default Time-Based önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [ağ uygulamalarında önbelleğe yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+Bir saat temelli önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak alınmadı zaman ve geçerli zamanı kullanarak önbelleğe alınan girişlerin güncellik tanımlar. Saat temelli önbellek İlkesi ayarlanarak, kullanabilir <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı bir ilke veya özelleştirilmiş zamana bağlı ilkesi oluşturun. Köprü Metni Aktarım Protokolü (HTTP) kullanılarak elde edilen kaynaklar için varsayılan saat temelli ilkesini kullanarak, tam önbellek davranışını 13 ve RFC 2616 14 bölümlerinde belirtilen davranışları ve önbelleğe alınan yanıta dahil üstbilgileri tarafından belirlenir, kullanılabilir [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi. HTTP kaynaklar için varsayılan zaman tabanlı ilke ayarı gösteren bir kod örneği için bkz: [nasıl yapılır: Uygulama için varsayılan saat temelli önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [ağ uygulamalarında önbelleğe yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Önbelleğe alınan girişlerin Güncellik belirlemek için ölçütleri  
  Bir saat temelli önbellek İlkesi özelleştirmek için önbelleğe alınan girişlerin güncellik belirlemek için bir veya daha fazla aşağıdaki ölçütleri kullanılabilir belirtebilirsiniz:  
@@ -61,9 +61,9 @@ Bir saat temelli önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak a
   
 -   [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

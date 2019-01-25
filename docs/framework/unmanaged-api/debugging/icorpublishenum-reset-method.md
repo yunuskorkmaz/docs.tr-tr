@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e70bffe5bf895fedbfde559674e161757ee48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6ee287778fba00114a4a8cbdbbf475d0affa18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740440"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset Yöntemi
-İmleç numaralandırması başlangıcına taşır.  
+İmleç numaralandırma başlangıcına taşır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +37,13 @@ HRESULT Reset ();
  `Reset` parametre almaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub.idl, CorPub.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorPublishEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorPublishEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

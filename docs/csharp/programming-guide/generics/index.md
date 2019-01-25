@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 03a5a594db86f5286979dbe22a8841f0e7d4518c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 662b388dd9c279969ed777e443df42784e20d4c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677205"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıfları ve sınıf ya da yöntem bildirildi ve istemci kodu sayesinde örneği kadar bir veya daha fazla tür belirtimi erteleme yöntemlere mümkün hale tür parametrelerinin kavramı tanıtır. Örneğin, bir genel tür parametre T kullanarak diğer istemci kodu çalışma zamanı atamaları veya kutulama işlemleri riskini ve maliyet olmaksızın burada gösterildiği gibi kullanabileceğiniz tek bir sınıf yazabilirsiniz:  
@@ -60,11 +60,11 @@ Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne ekl
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](~/_csharplang/spec/types.md#constructed-types).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Generic>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Türler](../../../csharp/programming-guide/types/index.md)  
-- [\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)  
-- [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
-- [.NET içindeki genel türler](../../../standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Türler](../../../csharp/programming-guide/types/index.md)
+- [\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)
+- [\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [.NET içindeki genel türler](../../../standard/generics/index.md)
