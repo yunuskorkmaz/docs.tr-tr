@@ -1,1 +1,0 @@
-4.5.1 için 4.6, 4.5.2 Kasım 2013 güncelleştirmesi
