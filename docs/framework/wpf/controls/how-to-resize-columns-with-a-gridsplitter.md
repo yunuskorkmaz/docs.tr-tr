@@ -6,34 +6,34 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid columns
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-ms.openlocfilehash: b4652c06cfe6f048f6c75a11b9447d70d6820e4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bf09c41145aca8690fe3e80fd76a7a859713ad6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562147"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Nasıl yapılır: GridSplitter ile Sütunları Yeniden Boyutlandırma
-Bu örnek dikey oluşturulacağını gösterir <xref:System.Windows.Controls.GridSplitter> iki sütun arasındaki boşluğu yeniden dağıtmak için bir <xref:System.Windows.Controls.Grid> boyutlarını değiştirmeden <xref:System.Windows.Controls.Grid>.  
+Bu örnekte, dikey bir oluşturma işlemi gösterilmektedir <xref:System.Windows.Controls.GridSplitter> iki sütunları arasındaki boşluğu yeniden dağıtmak için bir <xref:System.Windows.Controls.Grid> boyutlarını değiştirmeden <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Örnek  
- **Bu yer GridSplitter nasıl sütunun kenarına**  
+ **Bu yer GridSplitter nasıl bir sütun kenarı**  
   
- Belirtmek için bir <xref:System.Windows.Controls.GridSplitter> içinde bitişik sütunları yeniden boyutlandırır bir <xref:System.Windows.Controls.Grid>ayarlayın <xref:System.Windows.Controls.Grid.Column%2A> özelliği yeniden boyutlandırmak istediğiniz sütunlardan biri için eklenmiş. Varsa, <xref:System.Windows.Controls.Grid> birden fazla satır içeriyorsa ayarlamak <xref:System.Windows.Controls.Grid.RowSpan%2A> satır sayısı özelliği eklenmiş. Ardından <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliğine <xref:System.Windows.HorizontalAlignment.Left> veya <xref:System.Windows.HorizontalAlignment.Right> (hangi hizalamayı ayarlayacağınız yeniden boyutlandırmak istediğiniz iki sütuna bağlıdır). Son olarak, ayarlamak <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özelliğine <xref:System.Windows.VerticalAlignment.Stretch>.  
+ Belirtmek için bir <xref:System.Windows.Controls.GridSplitter> bitişik sütunları yeniden boyutlandırır bir <xref:System.Windows.Controls.Grid>ayarlayın <xref:System.Windows.Controls.Grid.Column%2A> yeniden boyutlandırmak istediğiniz sütunlardan birine ekli özellik. Varsa, <xref:System.Windows.Controls.Grid> sahip birden fazla satır kümesi <xref:System.Windows.Controls.Grid.RowSpan%2A> satır sayısını ekli özellik. Ardından <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliğini <xref:System.Windows.HorizontalAlignment.Left> veya <xref:System.Windows.HorizontalAlignment.Right> (ayarladığınız hangi hizalama yeniden boyutlandırmak istediğiniz iki sütuna bağlıdır). Son olarak, ayarlama <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özelliğini <xref:System.Windows.VerticalAlignment.Stretch>.  
   
  [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- A <xref:System.Windows.Controls.GridSplitter> kendi sütun yok'deki diğer denetimler tarafından görünmeyebilir <xref:System.Windows.Controls.Grid>. Bu sorunu önlemek nasıl hakkında daha fazla bilgi için bkz: [GridSplitter görünür olduğundan emin olun](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ A <xref:System.Windows.Controls.GridSplitter> kendi sütun yok diğer denetimleri tarafından görünmeyebilir <xref:System.Windows.Controls.Grid>. Bu sorunu önlemek hakkında daha fazla bilgi için bkz. [bir GridSplitter'ın görünür olduğundan emin olun](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
- **Bir sütun kaplayan GridSplitter nasıl oluşturulur**  
+ **Bir sütun kaplayan bir GridSplitter'ın oluşturma**  
   
- Belirtmek için bir <xref:System.Windows.Controls.GridSplitter> içinde bir sütun kaplayan bir <xref:System.Windows.Controls.Grid>ayarlayın <xref:System.Windows.Controls.Grid.Column%2A> özelliği yeniden boyutlandırmak istediğiniz sütunlardan biri için eklenmiş. Kılavuzunuzun birden fazla satır varsa ayarlamak <xref:System.Windows.Controls.Grid.RowSpan%2A> satır sayısı özelliği eklenmiş. Ardından <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> için <xref:System.Windows.HorizontalAlignment.Center>ayarlayın <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özelliğine <xref:System.Windows.VerticalAlignment.Stretch>ve <xref:System.Windows.Controls.ColumnDefinition.Width%2A> içeren sütunun <xref:System.Windows.Controls.GridSplitter> için <xref:System.Windows.GridLength.Auto%2A>.  
+ Belirtmek için bir <xref:System.Windows.Controls.GridSplitter> içinde bir sütun kaplayan bir <xref:System.Windows.Controls.Grid>ayarlayın <xref:System.Windows.Controls.Grid.Column%2A> yeniden boyutlandırmak istediğiniz sütunlardan birine ekli özellik. Kılavuzunuzun birden fazla satır varsa Ayarla <xref:System.Windows.Controls.Grid.RowSpan%2A> satır sayısını ekli özellik. Ardından <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> için <xref:System.Windows.HorizontalAlignment.Center>ayarlayın <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özelliğini <xref:System.Windows.VerticalAlignment.Stretch>, ayarlayıp <xref:System.Windows.Controls.ColumnDefinition.Width%2A> içeren sütunun <xref:System.Windows.Controls.GridSplitter> için <xref:System.Windows.GridLength.Auto%2A>.  
   
- Aşağıdaki örnek, dikey tanımlamak gösterilmiştir <xref:System.Windows.Controls.GridSplitter> , bir sütun kaplayan ve her iki tarafında sütunları yeniden boyutlandırır.  
+ Aşağıdaki örnek, dikey tanımlamak gösterilmektedir <xref:System.Windows.Controls.GridSplitter> bir sütun kaplayan ve her iki tarafında sütunları yeniden boyutlandırır.  
   
  [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.GridSplitter>  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.GridSplitter>
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

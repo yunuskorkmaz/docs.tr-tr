@@ -2,29 +2,29 @@
 title: Birleştirme işlemleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 44a43b6f3ead494b4ae538e95bc1dacb8662312c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501275"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Birleştirme işlemleri (Visual Basic)
-Birleştirme, bir dizi sonuna ekleme işlemi ifade eder.  
+Birleştirme, bir dizi sonuna ekleme işlemini ifade eder.  
   
- Aşağıdaki çizimde iki sıraları karakterden oluşan bir birleştirme işlemi gösterilmektedir.  
+ Aşağıdaki çizimde, iki sıranın karakterlerin bir birleştirme işlemi gösterilmektedir.  
   
- ![İki dizinin birleştirilmesini gösteren grafik. ] (../../../../csharp/programming-guide/concepts/linq/media/concat.png "Concat")  
+ ![İki diziyi birleştirerek gösteren grafik. ](../../../../csharp/programming-guide/concepts/linq/media/concat.png "Birleştir")  
   
- Birleştirme gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmektedir.  
+ Birleştirme gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümünde listelenir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|concat|Bir dizi oluşturmak için iki sıraları art arda ekler.|Yok.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|concat|Bir dizi oluşturmak için iki diziyi sıralar.|Uygulanamaz.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Linq>  
- [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Nasıl yapılır: dize koleksiyonlarını (LINQ) (Visual Basic) birleştirme ve karşılaştırma](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Linq>
+- [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

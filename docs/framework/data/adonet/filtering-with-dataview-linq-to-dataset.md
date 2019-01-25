@@ -1,97 +1,97 @@
 ---
-title: DataView (LINQ-DataSet) ile filtreleme
+title: (LINQ to DataSet) DataView ile filtreleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b457eb925f636656455ef8f3f02f9d2a78558325
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516739"
 ---
-# <a name="filtering-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) ile filtreleme
-Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
+# <a name="filtering-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile filtreleme
+Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli ölçütleri kullanarak veri filtreleme olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satırları kümelerine döndürmek için birçok yol sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtreleme ölçütlerine. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler, dize tabanlı filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
   
- İki yolla kullanarak filtre veri için bir <xref:System.Data.DataView>:  
+ Kullanarak verilere filtre uygulamak iki yolla bir <xref:System.Data.DataView>:  
   
 -   Oluşturma bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ile bir Where yan tümcesi.  
   
--   Var olan, dize tabanlı filtreleme özelliklerini kullanmak <xref:System.Data.DataView>.  
+-   Var olan ve dize tabanlı filtreleme yeteneklerini kullanın <xref:System.Data.DataView>.  
   
-## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Filtre bilgileri içeren bir sorgu DataView oluşturuluyor  
- A <xref:System.Data.DataView> nesnesi, gelen oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir `Where` yan tümcesi <xref:System.Data.DataView> Sorgu filtreleme bilgilerle oluşturulur. İfade `Where` yan tümcesi, hangi veri satırların dahil edilecek belirlemek için kullanılır <xref:System.Data.DataView>, ve filtre temelini oluşturur.  
+## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Bir sorgunun filtre bilgilerle DataView oluşturma  
+ A <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir `Where` yan tümcesi <xref:System.Data.DataView> sorguyu filtreleme bilgilerle oluşturulur. İfadede `Where` yan tümcesi hangi veri satırları dahil edilecek belirlemek için kullanılan <xref:System.Data.DataView>, ve filtre temelini oluşturur.  
   
- İfade tabanlı filtreler daha güçlü ve karmaşık daha basit dize tabanlı filtreler filtreleme sağlar. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Olduğunda dize tabanlı <xref:System.Data.DataView.RowFilter%2A> sonra ayarlanmış bir <xref:System.Data.DataView> sorgudan çıkarımı yapılan göre filtre temizlendiğinde ifadesi bir sorgudan oluşturulur.  
+ İfade tabanlı filtreler daha basit dize tabanlı filtreler daha güçlü ve karmaşık filtreleme sağlar. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Zaman dize tabanlı <xref:System.Data.DataView.RowFilter%2A> sonra ayarlanmış bir <xref:System.Data.DataView> sorgudan çıkarılan göre filtre temizlendiğinde ifade bir sorgudan oluşturulur.  
   
 > [!NOTE]
->  Çoğu durumda, filtre uygulamak için kullanılan ifadeleri yan etkileri olmamalıdır ve belirleyici olması gerekir. Ayrıca, ifadeleri herhangi içermemelidir filtreleme işlemleri olabilir çünkü yürütmeleri, kümesi sayısına bağlıdır mantığı yürütülen tüm sayısı.  
+>  Çoğu durumda, filtreleme için kullanılan ifadeler yan etkileri olmamalıdır ve belirleyici olmalıdır. Ayrıca, ifadeleri herhangi içermemelidir filtreleme işlemleri olabileceğinden yürütmeleri kümesi sayısına bağlıdır mantığı yürütülen tüm sayısı.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek 2 değerinden 6'dan büyük ve bir miktar siparişleri için satış siparişi ayrıntısını tablosunu sorgular; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>:  
+ Aşağıdaki örnekte, 2. ve 6'değerinden büyük bir sayı siparişleri satış siparişi ayrıntısını tabloyu sorgular; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>:  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhere)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhere)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir <xref:System.Data.DataView> siparişleri için sorgudan yerleştirilen 6 Haziran 2001'den sonra:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> 6 Haziran 2001'den sonra yerleştirilen siparişler sorgusundan:  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhere3](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhere3)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhere3](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhere3)]  
   
 ### <a name="example"></a>Örnek  
- Filtreleme, ayrıca sıralama ile birleştirilebilir. Aşağıdaki örnekte bir <xref:System.Data.DataView> kişiler için sorgudan özelliği adı Başlat "S" ile en son ve Soyadı, ardından ad tarafından sıralanır:  
+ Filtreleme, ayrıca sıralama ile birleştirilebilir. Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> kişiler için bir sorgunun ayarlanmış son adı Başlat "S" ile ve Soyadı, ardından ad tarafından sıralanır:  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereOrderByThenBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhereorderbythenby)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhereorderbythenby)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek SoundEx algoritmasını Soyadı "Zhu" benzer kişiler bulmak için kullanır. SoundEx algoritması SoundEx yöntemine uygulanmıştır.  
+ Aşağıdaki örnek, Soyadı, "Zhu için" benzer kişiler bulmak için SoundEx algoritması kullanır. SoundEx algoritması SoundEx yöntemine uygulanmıştır.  
   
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
   
- SoundEx İngilizce, başlangıçta ABD ticaret geliştirilmiş belirgin olarak adları sesle, dizin oluşturma işlemi için kullanılan bir ses algoritmasıdır Census kuruluşu. SoundEx yöntemi bir İngilizce harfini üç numaralarına göre izleyen oluşan bir ad dört karakter kodunu döndürür. Harfi adının ilk harfi ve sayıları adında kalan ünsüzler kodlayın. Benzer görünen adları aynı SoundEx kodu paylaşır. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulaması burada gösterilir:  
+ İngilizce, başlangıçta ABD geliştirilmiş belirgin olarak adları sesi tarafından dizin oluşturma için kullanılan bir ses algoritması SoundEx olduğu Sayım kuruluşu. SoundEx yöntemi üç sayı tarafından izlenen bir İngilizce harfin oluşan bir ad dört karakter kodunu döndürür. Adının ilk harfi harfi olduğu ve kalan ünsüzler adında sayıları kodlayın. Benzer görünen adları aynı SoundEx kod paylaşın. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulama aşağıda gösterilmiştir:  
   
  [!code-csharp[DP DataView Samples#SoundEx](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#soundex)]
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>RowFilter özelliğini kullanma  
- Varolan dize tabanlı filtreleme işlevselliğini <xref:System.Data.DataView> çalışmaya devam ettiğinden [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.RowFilter%2A> filtreleme, bkz: [sıralama ve filtreleme verilerini](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Var olan dize tabanlı filtreleme işlevselliğini <xref:System.Data.DataView> çalışmaya devam ettiğinden [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.RowFilter%2A> filtreleme, bkz: [sıralama ve filtreleme veri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
- Aşağıdaki örnekte bir <xref:System.Data.DataView> başvurun ve ardından ayarlar <xref:System.Data.DataView.RowFilter%2A> özelliği kişinin soyadını "Zhu" olduğu satırları döndürür:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> kişi tablosunu ve ardından ayarlar <xref:System.Data.DataView.RowFilter%2A> özelliği kişinin soyadı "Zhu" olduğu satırları döndürür:  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Sonra bir <xref:System.Data.DataView> gelen oluşturulan bir <xref:System.Data.DataTable> veya [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanabileceğiniz sorgu <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek üzere özelliğe dayalı sütun değerlerine göre. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Ayarı <xref:System.Data.DataView.RowFilter%2A> özelliğini gelen çıkarımı yapılan filtre ifadesi temizleyin [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ve filtre ifadesi sıfırlanamıyor.  
+ Sonra bir <xref:System.Data.DataView> öğesinden oluşturulan bir <xref:System.Data.DataTable> veya [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanabileceğiniz sorgu <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Ayarı <xref:System.Data.DataView.RowFilter%2A> özelliğini içinden gösterilen filtre ifadesi temizleyin [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ve filtre ifadesi sıfırlanamıyor.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- Bir veri alt kümesini, dinamik bir görünümü, kullandığınız sağlanması karşılıklı için olarak veriler üzerinde belirli bir sorgu sonuçlarını döndürmek istiyorsanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>, ayar yerine <xref:System.Data.DataView.RowFilter%2A> özelliği. <xref:System.Data.DataView.RowFilter%2A> Özelliği en iyi kullanılır verilere bağlı uygulamada burada bağlantılı denetim filtrelenen sonuçları görüntüler. Ayar <xref:System.Data.DataView.RowFilter%2A> özelliği veri yükü uygulamanıza ekleme ve performans azaltmak için dizini yeniden oluşturur. <xref:System.Data.DataView.Find%2A> Ve <xref:System.Data.DataView.FindRows%2A> yöntemleri yeniden oluşturulması için dizin gerek kalmadan geçerli dizini kullanın. Çağrı kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yalnızca bir kez daha sonra varolan kullanmanız gereken <xref:System.Data.DataView>. Çağrı kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez, yeni bir oluşturmalısınız <xref:System.Data.DataView> arayın ve ardından arama yapmak istediğiniz sütunu dizini yeniden oluşturmak için <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemleri. Hakkında daha fazla bilgi için <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerini görmek [bulma satırları](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) ve [DataView performans](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Şirket veriler için karşılıklı verilerin bir alt kümesini, dinamik bir görünüm, kullandığınız sağlayan belirli bir sorgunun sonuçlarını döndürmek isterseniz <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>, ayar yerine <xref:System.Data.DataView.RowFilter%2A> özelliği. <xref:System.Data.DataView.RowFilter%2A> Özelliği en iyi şekilde kullanılır verilere bağlı uygulamada nereye bağlantılı denetim filtrelenmiş sonuçları görüntüler. Ayarı <xref:System.Data.DataView.RowFilter%2A> özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. <xref:System.Data.DataView.Find%2A> Ve <xref:System.Data.DataView.FindRows%2A> yöntemlerini yeniden oluşturulması için dizini gerek kalmadan geçerli dizini kullanın. Çağırmak için kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yalnızca bir kez daha sonra mevcut kullanmalısınız <xref:System.Data.DataView>. Çağırmak için kullanacaksanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez, yeni bir oluşturmanız gerekir <xref:System.Data.DataView> üzerinde arama yapın ve ardından çağırmak için istediğiniz sütunu dizini yeniden <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemleri. Hakkında daha fazla bilgi için <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerini [satırları bulma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) ve [DataView performansı](../../../../docs/framework/data/adonet/dataview-performance.md).  
   
-## <a name="clearing-the-filter"></a>Filtre temizleme  
- Üzerindeki filtre bir <xref:System.Data.DataView> filtreleme kullanarak ayarlandıktan sonra temizlenebilir <xref:System.Data.DataView.RowFilter%2A> özelliği. Üzerindeki filtre bir <xref:System.Data.DataView> iki farklı şekilde temizlenebilir:  
+## <a name="clearing-the-filter"></a>Filtre temizleniyor  
+ Filtre bir <xref:System.Data.DataView> filtreleme kullanarak ayarlandıktan sonra temizlenebilir <xref:System.Data.DataView.RowFilter%2A> özelliği. Filtre bir <xref:System.Data.DataView> iki farklı yolla silinebilir:  
   
--   Ayarlama <xref:System.Data.DataView.RowFilter%2A> özelliğine `null`.  
+-   Ayarlama <xref:System.Data.DataView.RowFilter%2A> özelliğini `null`.  
   
 -   Ayarlama <xref:System.Data.DataView.RowFilter%2A> boş bir dize özelliği.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir <xref:System.Data.DataView> sorgudan ve ardından filtre ayarlayarak temizler <xref:System.Data.DataView.RowFilter%2A> özelliğine `null`:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> sorgudan ve ardından filtre ayarlayarak temizler <xref:System.Data.DataView.RowFilter%2A> özelliğini `null`:  
   
  [!code-csharp[DP DataView Samples#LDVClearRowFilter2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter2)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter2)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir <xref:System.Data.DataView> tablodan ayarlar <xref:System.Data.DataView.RowFilter%2A> özelliği ve ardından filtre ayarlayarak temizler <xref:System.Data.DataView.RowFilter%2A> boş bir dize özelliği:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> tablodan ayarlar <xref:System.Data.DataView.RowFilter%2A> özelliği ve ardından filtre ayarlayarak temizler <xref:System.Data.DataView.RowFilter%2A> boş bir dize özelliğini:  
   
  [!code-csharp[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

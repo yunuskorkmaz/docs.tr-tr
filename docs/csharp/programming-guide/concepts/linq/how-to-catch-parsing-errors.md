@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: ayrıştırma (C#) hatalarını yakalama'
+title: 'Nasıl yapılır: Ayrıştırma hatalarını yakalama (C#)'
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515868"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Nasıl yapılır: ayrıştırma (C#) hatalarını yakalama
+# <a name="how-to-catch-parsing-errors-c"></a>Nasıl yapılır: Ayrıştırma hatalarını yakalama (C#)
 Bu konu, hatalı biçimlendirilmiş veya geçersiz XML nasıl gösterir.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanılarak uygulanan <xref:System.Xml.XmlReader>. Hatalı biçimlendirilmiş veya geçersiz XML iletilmezse [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], arka plandaki <xref:System.Xml.XmlReader> sınıfı bir özel durum oluşturur. XML gibi ayrıştırma çeşitli yöntemleri <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, özel durum yakalamayın; özel durumun daha sonra uygulamanız tarafından yakalanabilir.  
@@ -42,6 +42,6 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  Bekleyebileceğiniz özel durumları hakkında bilgi <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, ve <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> oluşturmak için bkz <xref:System.Xml.XmlReader> belgeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

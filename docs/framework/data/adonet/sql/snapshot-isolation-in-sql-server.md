@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643058"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da anlık görüntü yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir.  
@@ -141,7 +141,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  Uygulamanız çok sayıda çakışma varsa, anlık görüntü yalıtımı en iyi seçim olmayabilir. İpuçları, yalnızca gerçekten gerekli olduğunda kullanılmalıdır. Böylece kendi işlem için kilit ipuçlarına sürekli kullanır, uygulamanızın tasarlanmalıdır değil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)      
- [İşlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [İşlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

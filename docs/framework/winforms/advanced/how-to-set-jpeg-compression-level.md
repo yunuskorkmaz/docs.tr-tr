@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
+title: 'Nasıl yapılır: JPEG sıkıştırma düzeyini ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628126"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
-Dosya boyutu en aza indirmek ve kalitesini iyileştirmek için diske görüntüyü kaydederken bir görüntü parametreleri değiştirmek isteyebilirsiniz. Sıkıştırma düzeyini değiştirerek bir JPEG resim kalitesini ayarlayabilirsiniz. JPEG Resim kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve ona geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Initialize <xref:System.Drawing.Imaging.EncoderParameters> olan birini oluşan bir dizi nedenle nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcı ve istenen sıkıştırma düzeyi.  
+# <a name="how-to-set-jpeg-compression-level"></a>Nasıl yapılır: JPEG sıkıştırma düzeyini ayarlama
+Dosya boyutu en aza indirmek ve yazılımınızın kalitesini iyileştirmek için diske görüntüyü kaydederken görüntü parametrelerini değiştirmek isteyebilirsiniz. Bir JPEG görüntüsünü kalitesini, sıkıştırma düzeyi değiştirerek ayarlayabilirsiniz. Bir JPEG görüntüsünü kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Başlatma <xref:System.Drawing.Imaging.EncoderParameters> BT'nin aşağıdakilerden birini oluşturan bir dizi bu nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcısı ve istenen sıkıştırma düzeyi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği oluşturur bir <xref:System.Drawing.Imaging.EncoderParameter> nesnesi ve üç JPEG görüntüleri kaydeder. Her JPEG Resim farklı kalite düzeyi ile değiştirerek kaydedilir `long` geçirilen değerini <xref:System.Drawing.Imaging.EncoderParameter> Oluşturucusu. En büyük sıkıştırma 0 kalite düzeyini karşılık gelir ve 100 kalite düzeyini en az sıkıştırma karşılık gelir.  
+ Aşağıdaki örnek kod oluşturur bir <xref:System.Drawing.Imaging.EncoderParameter> nesne ve üç JPEG görüntüleri kaydeder. Değiştirerek farklı kalite düzeyiyle, kaydedilen her bir JPEG görüntüsünü `long` geçirilen değer <xref:System.Drawing.Imaging.EncoderParameter> Oluşturucusu. 0 kalite düzeyini, en yüksek sıkıştırma karşılık gelir ve bir kalite düzeyi 100 için en az sıkıştırma karşılık gelir.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -125,11 +125,11 @@ End Function
   
 -   Bir Windows Forms uygulaması.  
   
--   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+-   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   Adlı bir görüntü dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.  
+-   Adlı bir resim dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [Bit Eşlem Türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir kodlayıcı tarafından desteklenen parametreleri belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Bit Eşlem Türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
+- [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

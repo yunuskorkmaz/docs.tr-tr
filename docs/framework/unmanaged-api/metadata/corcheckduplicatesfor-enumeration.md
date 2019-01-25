@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658825"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor Numaralandırması
-Çoğaltmaları denetlenecek meta veri simgesi belirtir.  
+Çoğaltmaları denetlenecek meta veri belirteçleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -70,9 +70,9 @@ typedef enum CorCheckDuplicatesFor {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDDupAll`|Tüm meta veri simgesi çoğaltmaları denetleyin.|  
+|`MDDupAll`|Tüm meta veri belirteçleri çoğaltmaları denetleyin.|  
 |`MDDupENC`|Kullanılmadı.|  
-|`MDNoDupChecks`|Meta veri simgesi çoğaltmaları denetlemez.|  
+|`MDNoDupChecks`|Meta veri belirteçleri çoğaltmaları denetlemez.|  
 |`MDDupTypeDef`|İçin yinelenenleri `mdTypeDef` belirteçleri.|  
 |`MDDupInterfaceImpl`|İçin yinelenenleri `mdInterfaceImpl` belirteçleri.|  
 |`MDDupMethodDef`|İçin yinelenenleri `mdMethodDef` belirteçleri.|  
@@ -99,11 +99,11 @@ typedef enum CorCheckDuplicatesFor {
 |`MDDupDefault`|İçin yinelenenleri `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, ve `mdMethodSpec` belirteçleri.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

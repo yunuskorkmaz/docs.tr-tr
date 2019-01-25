@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504437"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding Arabirimi
 Ortak dil çalışma zamanı tarafından konak uygulamanın uygulama etki alanı oluşturulduğunu bildirmek için (CLR) adlı bir yöntem sağlar.  
@@ -30,16 +30,16 @@ Ortak dil çalışma zamanı tarafından konak uygulamanın uygulama etki alanı
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Ortak dil çalışma zamanı tarafından ana uygulama etki alanı oluşturulduğunu bildirmek için (CLR) olarak adlandırılır.|  
+|[OnAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Ortak dil çalışma zamanı tarafından ana bilgisayara bir uygulama etki alanı oluşturulduğunu bildirmek için (CLR) çağrılır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

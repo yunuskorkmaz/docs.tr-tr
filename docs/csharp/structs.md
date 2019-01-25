@@ -3,12 +3,12 @@ title: Yapılar - C# Kılavuzu
 description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi edinin
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506985"
 ---
 # <a name="structs"></a>Yapılar
 A *yapı* bir değer türüdür. Bir yapı oluşturulduğunda yapının atanmış olduğu değişken yapının gerçek verilerini tutar. Struct için yeni bir değişken atandığında kopyalanır. Bu nedenle yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyaya yapılan değişiklikler diğer kopyayı etkilemez.
@@ -65,7 +65,7 @@ Son iki örnekler C# 7.0 sunulan dil özellikleri gösterir. İlk olarak bir alt
 ## <a name="nullable-types"></a>Boş değer atanabilir tipler  
 Sıradan değer türleri değerine sahip [null](./language-reference/keywords/null.md). Ancak, boş değer atanabilen değer türleri ekleyerek oluşturabileceğiniz bir **?** sonra türü. Örneğin, **int?** olduğu bir **int** değeri de olabilir bir tür [null](./language-reference/keywords/null.md). CTS içinde boş değer atanabilir türler genel yapı türünün örnekleridir <xref:System.Nullable%601>. Boş değer atanabilir türler için ve veritabanlarına sayı değerleri null olabilir veri geçirirken özellikle kullanışlıdır. Daha fazla bilgi için [boş değer atanabilir türler (C# programlama Kılavuzu)](./programming-guide/nullable-types/index.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sınıflar](classes.md)
 - [Temel Türler](basic-types.md)

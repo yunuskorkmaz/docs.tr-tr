@@ -2,12 +2,12 @@
 title: Mesajlaşma Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 839e9225db7b5d76cf05f148811634389e81502a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617635"
 ---
 # <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri
 Mesajlaşma etkinlikleri, WCF iletileri almak ve göndermek için iş akışları sağlar. Mesajlaşma etkinlikleri iş akışı ekleyerek herhangi bir rasgele karmaşık ileti exchange Düzen (MEP) modelleyebilirsiniz.
@@ -103,6 +103,6 @@ Request = rcv
 ## <a name="messaging-activities-and-transactions"></a>Mesajlaşma etkinlikleri ve işlemler
  Bir iş akışı hizmetine çağrı yapıldığında, bir işlem hizmet işlemi için akış isteyebilirsiniz. Burası yapmak için <xref:System.ServiceModel.Activities.Receive> etkinlik içinde bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlik. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinliği içeren bir `Receive` etkinliği ve bir gövdesi. Hizmet kalır gövdesinin yürütülmesini ortam için işlem akışı yapılan işlemler <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Gövdenin yürütülmesi tamamlandığında işlem tamamlandı. İş akışları ve işlemler hakkında daha fazla bilgi için bkz. [iş akışı işlemleri](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [İş akışı hizmetleri hataları alıp göndermek nasıl](https://go.microsoft.com/fwlink/?LinkId=189151)
 - [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

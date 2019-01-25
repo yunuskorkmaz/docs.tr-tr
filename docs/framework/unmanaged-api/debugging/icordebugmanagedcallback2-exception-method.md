@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d46dcd43ffe6963d1177a395b855a287182cdff0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685639"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception Yöntemi
-Hata ayıklayıcı bir özel durum işleyici için bir arama başlatıldı bildirir.  
+Hata ayıklayıcı özel durum işleyicisi için arama başlatıldığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,46 +42,46 @@ HRESULT Exception (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye özel durum oluştu iş parçacığı içeren uygulama etki alanını temsil eder.  
+ [in] Özel durumun oluştuğu iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pThread`  
- [in] Bir işaretçi Icordebugthread nesneye özel durum oluştu iş parçacığı temsil eder.  
+ [in] Özel durumun oluştuğu iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
   
  `pFrame`  
- [in] Tarafından belirlenen şekilde bir çerçeve temsil eden bir Icordebugframe nesnesi için bir işaretçi `dwEventType` parametresi. Daha fazla bilgi için açıklamalar bölümündeki tabloya bakın.  
+ [in] Bir çerçeve tarafından belirlenen şekilde temsil eden bir Icordebugframe nesne işaretçisi `dwEventType` parametresi. Daha fazla bilgi için Açıklamalar bölümü içindeki tabloya bakın.  
   
  `nOffset`  
- [in] Tarafından belirlenen şekilde bir uzaklık belirten bir tamsayı `dwEventType` parametresi. Daha fazla bilgi için açıklamalar bölümündeki tabloya bakın.  
+ [in] Tarafından belirlenen şekilde bir uzaklık belirten bir tamsayı `dwEventType` parametresi. Daha fazla bilgi için Açıklamalar bölümü içindeki tabloya bakın.  
   
  `dwEventType`  
- [in] Bu özel durum geri çağırma türünü belirtir CorDebugExceptionCallbackType numaralandırması değeri.  
+ [in] Bu özel durum geri arama türünü belirten CorDebugExceptionCallbackType sabit listesi değeri.  
   
  `dwFlags`  
- [in] Değerini [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) özel durum hakkında ayrıntılı bilgileri belirtir numaralandırması  
+ [in] Değerini [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) özel durum hakkında ek bilgi belirten sabit listesi  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Exception` Geri çağırma çeşitli noktalarda, özel durum işleme işleminin arama aşamasında çağrılır. Diğer bir deyişle, onu çağrılabilir birden çok kez bir özel durum geriye doğru izleme açıkken.  
+ `Exception` Geri çağırma çeşitli noktalarda özel durum işleme işleminin arama aşamasında çağrılır. Diğer bir deyişle, çağrılabilir birden çok kez bir özel durumu geriye doğru izleme çalışırken.  
   
  İşlenmekte olan özel durum tarafından başvurulan Icordebugthread nesnesinden alınabilir `pThread` parametresi.  
   
- Uzaklık ve belirli çerçevesi tarafından belirlenen `dwEventType` şekilde parametre:  
+ Uzaklık ve belirli çerçeve tarafından belirlenen `dwEventType` parametresini aşağıdaki şekilde:  
   
 |Değeri `dwEventType`|Değeri `pFrame`|Değeri `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Özel durum oluşturdu çerçevesi.|Yönerge işaretçisi çerçevesinde.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Kullanıcı kodu çerçeve oluşturulan özel durum noktasına yakın.|Yönerge işaretçisi çerçevesinde.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch işleyicisini içeren çerçeve.|Catch işleyicisi başlangıcını Microsoft Ara dili (MSIL) uzaklığı.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlanmamış.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Özel durum oluşturdu çerçeve.|Çerçevede yönerge işaretçisi.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Oluşturulan özel durumun noktaya en yakın kullanıcı kodu çerçevesi.|Çerçevede yönerge işaretçisi.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch işleyicisi içeren çerçeve.|Catch işleyicisi başına Microsoft Ara dili (MSIL) uzaklığı.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlı değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

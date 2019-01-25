@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580999"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication İşlevi
-Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolundaki uygulamayı başlatır.  
+Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolunda uygulamayı başlatır.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,34 +45,34 @@ HRESULT CorLaunchApplication (
   
 #### <a name="parameters"></a>Parametreler  
  `dwClickOnceHost`  
- [in] Değerini [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) numaralandırma Uygulama başlatılmadan ana bilgisayar türünü belirtir.  
+ [in] Değerini [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) uygulamayı başlatmadan konak türünü belirten sabit listesi.  
   
  `pwzAppFullName`  
- [in] Başlatılır uygulamanın tam adı.  
+ [in] Başlatılan uygulamanın tam adı.  
   
  `dwManifestPaths`  
  [in] Uygulama için bildirim yolları sayısı.  
   
  `ppwzManifestPaths`  
- [in] Her biri başlatılır uygulama için bir bildirim yolunu belirtir, bir dizi dizeleri.  
+ [in] Her biri bildirim başlatılmayı uygulama için bir yol belirtir bir dizi dizeleri.  
   
  `dwActivationData`  
- [in] Başlatılır uygulama için etkinleştirme veri öğesi sayısı.  
+ [in] Başlatılan uygulama için etkinleştirme veri öğesi sayısı.  
   
  `ppwzActivationData`  
- [in] Her biri başlatılır uygulama için bir etkinleştirme veri öğesi olan bir dize dizisi.  
+ [in] Her biri bir etkinleştirme veri öğesi başlatılmayı uygulama için olan bir dizi dizeleri.  
   
  `lpProcessInformation`  
  [out] Uygulama yüklendi işlemi hakkında bilgi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

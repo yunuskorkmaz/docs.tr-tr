@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e874d593a18be352e7053a15525f3168e7fcc9db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540578"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
@@ -91,10 +91,10 @@ Yalnızca .NET Framework ile ancak diğer altyapıları ve Silverlight ve com gi
 ## <a name="dlr-documentation"></a>DLR belgeleri
  .NET Framework ile dinamik bir dil kullanımını etkinleştirme veya DLR açık kaynak sürümü için dil dinamik davranış eklemek için kullanma hakkında daha fazla bilgi için şirket belgelerine bakın. [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) GitHub Git tarafından oluşturulur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)
 - [İfade Ağaçları](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
-- [İzlenecek yol: Nesneler oluşturma ve dinamik kullanma](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [İzlenecek yol: Dinamik nesneler oluşturma ve kullanma](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

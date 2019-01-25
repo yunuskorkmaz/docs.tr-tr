@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d461f5dc85c7107e36fc1492ac88f37d42ba9f24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64cea7fe9bb426ee9c2e98719d57e2370cab717c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640907"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Metodu
-Modül kimliği derleme ve modül özelliklerini açıklayan bir bit maskesi modül, modülün üst Kimliğini dosya adını döndürür.  
+Derleme ve modül özelliklerini açıklayan bir bit maskesi, bir modül kimliği modül, modülün üst kimliği dosya adını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,45 +43,45 @@ HRESULT GetModuleInfo2(
   
 #### <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] Bilgiler alınır modül kimliği.  
+ [in] Bilgileri alınır modül kimliği.  
   
  `ppBaseLoadAddress`  
- [out] Modül yüklendiği temel adres.  
+ [out] Modülün yüklendiği temel adres.  
   
  `cchName`  
- [in] Karakter cinsinden uzunluğu, `szName` dönüş arabellek.  
+ [in] Karakter cinsinden uzunluğu, `szName` dönüş arabelleği.  
   
  `pcchName`  
- [out] Toplam karakter uzunluğu döndürülen modülün dosya adı için bir işaretçi.  
+ [out] Bir işaretçi döndürülür modülün dosya adının toplam karakter uzunluğu.  
   
  `szName`  
- [out] Çağıran tarafından sağlanan geniş karakter arabellek. Yöntem döndüğünde, bu arabellek modülü dosya adını içerir.  
+ [out] Bir çağıran tarafından sağlanan geniş karakter arabelleği. Yöntem döndürüldüğünde bu arabellek modülü dosya adını içerir.  
   
  `pAssemblyId`  
  [out] Modülün üst derleme kimliği için bir işaretçi.  
   
  `pdwModuleFlags`  
- [out] Bir bit maskesi değerleri [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) modülü özelliklerini belirtin numaralandırması.  
+ [out] Bir bit maskesi değerleri [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) modülü özelliklerini belirten sabit listesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinamik modülleri için `szName` parametresi modülün meta veri adı ve temel adres 0 (sıfır). Meta verileri, meta veri içindeki modül tablosundan adı sütunundaki değeri adıdır. Bu ayrıca olarak sunulan <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> özelliği yönetilen kod için ve olarak `szName` parametresinin [Imetadataımport::getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) yönetilmeyen meta veriler istemci kodu yöntemi.  
+ Dinamik modüller için `szName` modülü meta veri adı bir parametredir ve 0 (sıfır) taban adresidir. Meta veri değeri meta verileri içinde modül tablosundaki Ad sütununda addır. Bu ayrıca olarak gösterilir <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> özelliği yönetilen koda ve olarak `szName` parametresinin [Imetadataımport::getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) yöntemi yönetilmeyen meta veriler istemci kodu.  
   
- Ancak `GetModuleInfo2` modülün kimliği var hemen yöntemi'nin çağrılabilir, profil oluşturucu alıncaya kadar üst derleme Kimliğini kullanılamaz [Icorprofilercallback::moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) geri çağırma.  
+ Ancak `GetModuleInfo2` yöntemi çağrıldığında modülün kimliği var. hemen sonra Profil Oluşturucu alıncaya kadar üst derlemesinin kimliği kullanılabilir olmayacak [Icorprofilercallback::moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) geri çağırma.  
   
- Zaman `GetModuleInfo2` döndürür, doğrulamalısınız `szName` arabellek modülü tam dosya adını içerecek kadar büyük. Bunu yapmak için değeri karşılaştırın, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret eden daha büyük bir değere `cchName`, daha geniş bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, büyük boyutu ve çağrı `GetModuleInfo2` yeniden.  
+ Zaman `GetModuleInfo2` döndürür, doğrulamalısınız `szName` arabellek modülün tam dosya adını içerecek şekilde büyük. Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetModuleInfo2` yeniden.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetModuleInfo2` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Döndürülen değer için arabellek boyutu ayarlayabilirsiniz `pcchName` ve arama `GetModuleInfo2` yeniden.  
+ Alternatif olarak, ilk çağırabilirsiniz `GetModuleInfo2` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcchName` ve çağrı `GetModuleInfo2` yeniden.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

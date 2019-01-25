@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668957"
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
 Uygulama ayarları mimarisi, uygulama ayarlarını sarmalayıcı sınıfı veya bireysel özelliklerini uygulanabilir birçok öznitelikleri sağlar. Bu öznitelikler çalışma zamanında uygulama ayarları altyapısı tarafından genellikle özel ayar sağlayıcısı kendi işlevi için belirtilen özel bir sarmalayıcı gereksinimlerine uyarlamak için incelenir.  
@@ -37,8 +37,8 @@ Uygulama ayarları mimarisi, uygulama ayarlarını sarmalayıcı sınıfı veya 
   
  *Sınıf* özniteliği yalnızca bir uygulama ayarları sarmalayıcı sınıfı için uygulanabilir gösterir. *Özellik* uygulanan ayarları özellikler yalnızca öznitelik olabileceğini gösterir. *Her ikisi de* belirten özniteliği ya da düzeyinde uygulanabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Nasıl yapılır: Uygulama Ayarları Oluşturma](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Nasıl yapılır: Uygulama ayarları oluşturma](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

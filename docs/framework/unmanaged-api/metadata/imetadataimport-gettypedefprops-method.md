@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718617"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Metodu
-Meta veri bilgilerini döndürür <xref:System.Type> belirtilen TypeDef belirteç tarafından temsil edilen.  
+Meta veri bilgilerini döndürür <xref:System.Type> belirtilen TypeDef belirteci tarafından temsil edilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,10 +42,10 @@ HRESULT GetTypeDefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `td`  
- [in] Meta veriler için dönüş türü temsil eder TypeDef simgesi.  
+ [in] TypeDef belirteç meta verileri için dönüş türü temsil eder.  
   
  `szTypeDef`  
- [out] Tür adını içeren bir arabellek.  
+ [out] Tür adı içeren bir arabelleği.  
   
  `cchTypeDef`  
  [in] Geniş karakter cinsinden boyutu `szTypeDef`.  
@@ -54,20 +54,20 @@ HRESULT GetTypeDefProps (
  [out] Döndürülen geniş karakter sayısını `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Tür tanımı değiştirme bayrakları gösteren bir işaretçi. Bu değer gelen bir bit maskesi olan [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırması.  
+ [out] Tür tanımını değiştiren bayrakları için bir işaretçi. Gelen bir bit maskesi değerdir [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) sabit listesi.  
   
  `ptkExtends`  
- [out] İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri simgesi.  
+ [out] İstenen türün temel türünü temsil eden bir tür tanımı veya TypeRef meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

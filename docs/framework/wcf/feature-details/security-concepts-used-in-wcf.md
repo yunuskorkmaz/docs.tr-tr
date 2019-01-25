@@ -2,12 +2,12 @@
 title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541800"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
 Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda üzerine ve çeşitli güvenlik altyapısına içinde dağıtılmış.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda �
  WCF bu altyapılarının gibi Güvenli Yuva Katmanı (SSL) üzerinden HTTP (HTTPS) destekler. Ancak, WCF yeni birlikte çalışabilen güvenlik standartları (örneğin, WS-güvenlik) uygulayarak mevcut güvenlik altyapıları destekleme ötesinde SOAP kodlu iletileri gider. Mekanizmalar veya birlikte çalışabilen yeni standartları kullanarak olsun, hem de güvenlik kavramları aynıdır. Mevcut altyapıyla kavramları ve en yeni standartları anlama, uygulama için en iyi güvenlik modeli uygulamak için taşımaktadır.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web Hizmetleri için güvenliğine giriş  
- Microsoft Patterns and Practices grubu burada indirme için kullanılabilir olan WCF Güvenlik Kılavuzu derinlemesine bir Teknik İnceleme yazdı: [WCF Güvenlik Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=210210). Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulama senaryoları için ilgili olarak bu teknik incelemede, temel güvenlik kavramları açıklar.  
+ Microsoft Patterns and Practices grubu derinlemesine bir Teknik İnceleme burada indirme için kullanılabilir olan WCF Güvenlik Kılavuzu yazdı: [WCF Güvenlik Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=210210). Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulama senaryoları için ilgili olarak bu teknik incelemede, temel güvenlik kavramları açıklar.  
   
 ## <a name="industry-wide-security-specifications"></a>Endüstri genelinde güvenlik belirtimleri  
   
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda �
  X.509 sertifikaları güvenlik uygulamalarında kullanılan birincil kimlik bilgisi bir biçimidir. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](https://go.microsoft.com/fwlink/?LinkId=210213). X.509 sertifikaları bir sertifika deposunda depolanır. Windows çalıştıran bir bilgisayar sertifika depoları, her biri farklı bir amaca sahip çeşitli türlerde sahiptir. Farklı depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Güvenlik belirtimleri Web Hizmetleri  
- Sistem tarafından tanımlanan bağlamaları birçok yaygın olarak kullanılan web Hizmetleri güvenlik özelliklerini destekler. Sistem tarafından sağlanan bağlamalar ve web hizmetleri belirtimleri tam listesi için bkz: destekledikleri: [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Sistem tarafından tanımlanan bağlamaları birçok yaygın olarak kullanılan web Hizmetleri güvenlik özelliklerini destekler. Sistem tarafından sağlanan bağlamalar ve web hizmetleri belirtimleri tam listesi için bkz: destekledikleri: [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları  
  WCF hizmeti veya işlemi erişimi denetlemek için çeşitli yollarla sağlar. Bunlar arasında olan  
@@ -46,6 +46,6 @@ Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda �
   
  Bu konulara bakın hakkında daha fazla bilgi için [erişim denetimi mekanizmaları](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

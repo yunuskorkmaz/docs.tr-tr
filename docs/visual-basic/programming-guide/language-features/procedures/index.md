@@ -8,67 +8,67 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07c6cbae11cb259ac852d33992526c855c231d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513340"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
-A *yordam* bildirimi deyimi tarafından içine Visual Basic deyimleri bloğudur (`Function`, `Sub`, `Operator`, `Get`, `Set`) ve eşleşen bir `End` bildirimi. Visual Basic'te tüm executable deyimleri bazı yordam içinde olmalıdır.  
+A *yordamı* Visual Basic deyimleri tarafından bir bildirim deyiminin içine bloğudur (`Function`, `Sub`, `Operator`, `Get`, `Set`) ile eşleşen bir `End` bildirimi. Visual Basic'te tüm yürütülebilir deyimleri bazı yordam içinde olmalıdır.  
   
-## <a name="calling-a-procedure"></a>Bir yordam çağırma  
- Başka bir yerde kodda bir yordam çağırma. Bu olarak bilinen bir *yordam çağrısı*. Yordam tamamlandığında çalışıyorsa, bu denetimi olarak bilinen, çağrılan kodu döndürür *kodu çağırma*. Çağıran bir deyim veya bir ifade yordamı adıyla belirtir ve denetim aktardığından deyiminde, kodudur.  
+## <a name="calling-a-procedure"></a>Bir yordamı çağırma  
+ Başka bir yerde kodda bir yordam çağırma. Bu olarak bilinen bir *yordam çağrısı*. Yordam tamamlandığında çalışan, denetimi olarak da bilinen, çağrılan kodu üretebiliyorsa *kodu çağırma*. Çağıran bir deyim ya da yordamın adını belirtir ve denetim için aktarımları bir deyimi içindeki bir ifadenin kodudur.  
   
-## <a name="returning-from-a-procedure"></a>Bir yordam döndürme  
- Çalışan tamamlandığında bir yordam çağırma koda denetimini döndürür. Bunu yapmak için onu kullanabilirsiniz bir [dönüş deyimi](../../../../visual-basic/language-reference/statements/return-statement.md), uygun [çıkış deyimi](../../../../visual-basic/language-reference/statements/exit-statement.md) yordamı veya yordam için deyimini [son \<anahtar sözcüğü > deyimi](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)deyimi. Denetim noktası yordam çağrısı aşağıdaki çağıran kodu sonra geçirir.  
+## <a name="returning-from-a-procedure"></a>Döndüren bir yordam  
+ Bir yordam, çalışması tamamlandığında çağrıldığı koda denetimini döndürür. Bunu yapmak için bunu kullanabilirsiniz bir [dönüş deyimi](../../../../visual-basic/language-reference/statements/return-statement.md), uygun [çıkış bildirimi](../../../../visual-basic/language-reference/statements/exit-statement.md) yordamı veya yordam bildirimi [son \<anahtar sözcüğü > deyimi](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)deyimi. Denetim noktasını yordam çağrısının çağrıldığı koda ardından geçer.  
   
--   İle bir `Return` deyimi, Denetim döndürür hemen çağıran kodu. Deyimlerini aşağıdaki `Return` deyimi çalıştırmayın. Birden fazla sahip `Return` aynı yordamı deyiminde.  
+-   İle bir `Return` deyimi, denetimi döndürür hemen çağrıldığı koda. Deyimlerini aşağıdaki `Return` deyimi çalıştırmayın. Birden fazla aboneliğiniz `Return` aynı yordamındaki.  
   
--   İle bir `Exit Sub` veya `Exit Function` deyimi, Denetim döndürür hemen çağıran kodu. Deyimlerini aşağıdaki `Exit` deyimi çalıştırmayın. Birden fazla sahip `Exit` aynı yordamı ve deyiminde karışık `Return` ve `Exit` aynı yordamı deyimlerinde.  
+-   İle bir `Exit Sub` veya `Exit Function` deyimi, denetimi döndürür hemen çağrıldığı koda. Deyimlerini aşağıdaki `Exit` deyimi çalıştırmayın. Birden fazla aboneliğiniz `Exit` aynı yordamı ve deyiminde karıştırmak `Return` ve `Exit` deyimleri aynı yordam içinde.  
   
--   Bir yordam Hayır varsa `Return` veya `Exit` deyimleri varmadan ile bir `End Sub` veya `End Function`, `End Get`, veya `End Set` yordamı gövdesinin son deyiminden deyimi. `End` Deyimi döndürür denetim hemen çağıran kodu. Yalnızca bir bulunabilir `End` bir yordam deyiminde.  
+-   Bir yordam varsa `Return` veya `Exit` deyimleri varmadan ile bir `End Sub` veya `End Function`, `End Get`, veya `End Set` son deyim yordamı gövdesi aşağıdaki deyimi. `End` Deyimi döndürür denetimi hemen çağrıldığı koda. Tek sahip `End` bir yordamındaki.  
   
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler  
- Çoğu durumda, bir yordam her çağırdığında farklı veri üzerinde çalışması gerekir. Bu bilgiler yordama yordam çağrısı bir parçası olarak geçirebilirsiniz. Sıfır veya daha fazla yordamın tanımlar *parametreleri*, her temsil eden bir değer için geçirmeniz bekler. Yordamı tanımı'ndaki her bir parametreyi karşılık gelen olan bir *bağımsız değişkeni* yordam çağrısında. Bir bağımsız değişkeni için verilen yordam çağrısında karşılık gelen bir parametre geçirin değerini temsil eder.  
+ Çoğu durumda, bir yordam her çağırdığında farklı veri çalışması gerekiyor. Bu bilgiler, bir yordama yordam çağrısı bir parçası olarak geçirebilirsiniz. Sıfır veya daha fazla yordamın tanımlar *parametreleri*, her temsil eden bir değer geçirin için bekler. Yordam tanımındaki her parametresine karşılık gelen olduğu bir *bağımsız değişken* yordam çağrısında. Bağımsız değişken, belirli bir yordamı çağrıda karşılık gelen parametresine geçirdiğiniz değerini temsil eder.  
   
-## <a name="types-of-procedures"></a>Yordamlar türleri  
+## <a name="types-of-procedures"></a>Yordamları türleri  
  Visual Basic çeşitli türlerde yordamlar kullanır:  
   
--   [Alt yordamlar](./sub-procedures.md) eylemleri gerçekleştirme ancak çağıran kodu bir değer döndürmüyor.  
+-   [Alt yordamlar](./sub-procedures.md) Eylemler gerçekleştirir ancak çağrıldığı koda bir değer döndürmüyor.  
   
--   Olay işleme yordamlar `Sub` oluşumu bir programı veya bir kullanıcı eylemi tarafından gerçekleştirilen bir olaya yanıt olarak execute yordamlar.  
+-   Olay işleme yordamlar `Sub` kullanıcı eylemi veya bir programda bir örneği tarafından oluşturulan bir olaya yanıt olarak yürütülen yordamları.  
   
--   [İşlev yordamları](./function-procedures.md) çağıran kodu için bir değer döndürür. Döndürmeden önce diğer eylemleri gerçekleştirebilirsiniz.
+-   [İşlev yordamları](./function-procedures.md) çağrıldığı koda bir değer döndürür. Sonuç döndürülmeden önce diğer eylemleri gerçekleştirebilirsiniz.
 
-    C# içinde dönüş yazılan bazı işlevler bir *başvuru dönüş değeri*. İşlev arayanlar dönüş değeri değiştirebilirsiniz ve bu değişikliği adlı nesne durumda yansıtılır. Başvuruya göre bir değer döndüremiyor rağmen Visual Basic 2017 ile başlayarak, başvuru dönüş değerleri, Visual Basic kodu kullanmasını sağlayabilirsiniz. Daha fazla bilgi için bkz: [başvuru dönüş değerleri](ref-return-values.md).
+    Bazı işlevler yazılan C# dönüş bir *başvuru dönüş değeri*. Çağıranlar işlevi dönüş değeri değiştirebilirsiniz ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017'den itibaren bir değer başvuru ile döndürülemez olsa da Visual Basic kodunu başvuru dönüş değerleri kullanabilir. Daha fazla bilgi için [başvuru dönüş değerleri](ref-return-values.md).
   
 -   [Özellik yordamları](./property-procedures.md) dönün ve nesne veya modülleri özelliklerinin değerlerini atayın.  
   
--   [İşleç yordamları](./operator-procedures.md) birini veya her ikisini işlenenler olduğunda yeni tanımlı sınıf veya yapı standart işleci davranışını tanımlayın.  
+-   [İşleç yordamları](./operator-procedures.md) birini veya her ikisini işlenenler olduğunda, bir yeni tanımlı sınıf veya yapı standart işlecinin davranışını tanımlayın.  
   
--   [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) bir veya daha fazla tanımlama *tür parametrelerindeki* çağıran kodu belirli geçirebilirsiniz şekilde normal parametrelerini ek olarak, veri türleri, çağrıda zaman.  
+-   [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) bir veya daha fazla tanımlama *tür parametrelerindeki* çağıran kod belirli geçirebilirsiniz. böylece normal parametrelerinin yanı sıra veri türleri bu çağrıda saat.  
   
 ## <a name="procedures-and-structured-code"></a>Yordamlar ve yapılandırılmış kod  
- Her uygulamanızda yürütülebilir kod satırı bazı yordam içinde gibi olması gerekir `Main`, `calculate`, veya `Button1_Click`. Büyük yordamları küçük parçalara ayırabilir varsa, daha okunabilir bir uygulamadır.  
+ Her uygulamanızdaki yürütülebilir kod satırı gibi bazı yordam içinde olmalıdır `Main`, `calculate`, veya `Button1_Click`. Büyük yordamları küçük parçalara ayırabilir, uygulamanızı daha okunabilir olur.  
   
- Yordamlar, sık kullanılan hesaplamalar, metin ve denetim işleme ve veritabanı işlemleri gibi yinelenen veya paylaşılan görevleri gerçekleştirmek için faydalıdır. Uygulamanız için yapı taşı olarak yordamları kullanabilmeniz için bir yordam, kodunuzda birçok farklı yerlerden çağırabilirsiniz.  
+ Yordamları, sık kullanılan hesaplama, metin ve denetim ve veritabanı işlemleri gibi yinelenen veya paylaşılan görevleri gerçekleştirmek için faydalıdır. Uygulamanız için yapı taşı olarak yordamları kullanabilmeniz için kodunuza, pek çok farklı yerden bir yordam çağırabilir.  
   
- Kodunuzu yordamlarıyla yapılandırılması, aşağıdaki avantajları sunar:  
+ Kodunuzu yordamları ile yapılandırılması size aşağıdaki avantajları sunar:  
   
--   Yordamlar, programlarınızı ayrık mantıksal birimler halinde bölün olanak tanır. Yordamlar olmadan programının tamamını ayıklayabilirsiniz çok daha fazla ayrı birimleri kolayca ayıklayabilirsiniz.  
+-   Yordamları programlarınızın ayrı mantıksal birimler halinde bölmek sağlar. Programın tamamındaki yordamları olmadan hata ayıklama çok daha fazla ayrı birimleri kolayca hata ayıklaması yapabilirsiniz.  
   
--   Bir programda kullanmak için yordamlar geliştirmek sonra diğer programlarla, genellikle az veya hiç değişiklik kullanabilirsiniz. Bu kod yinelemesinden kaçınmak yardımcı olur.  
+-   Bir programda kullanmak için yordamlar geliştirmek sonra diğer programlara, genellikle çok az kayıpla veya hiç değişiklik kullanabilirsiniz. Kod yinelemesinden kaçınmak yardımcı olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)  
- [Alt Yordamlar](./sub-procedures.md)  
- [İşlev Yordamları](./function-procedures.md)  
- [Özellik Yordamları](./property-procedures.md)  
- [İşleç Yordamları](./operator-procedures.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Özyinelemeli Yordamlar](./recursive-procedures.md)  
- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
- [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir yordam oluşturma](./how-to-create-a-procedure.md)
+- [Alt Yordamlar](./sub-procedures.md)
+- [İşlev Yordamları](./function-procedures.md)
+- [Özellik Yordamları](./property-procedures.md)
+- [İşleç Yordamları](./operator-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Özyinelemeli Yordamlar](./recursive-procedures.md)
+- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
+- [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

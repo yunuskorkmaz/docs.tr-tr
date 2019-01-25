@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506049"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;ekleme&gt; öğesi için &lt;namedCaches&gt;
 Ekler bir `namedCache` girişe `namedCaches` koleksiyonu için bir önbellek.  
   
  \<System.Runtime.Caching >  
-\<memoryCache >  
-\<namedCaches >  
+\<memoryCache>  
+\<namedCaches>  
 \<Ekle >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -53,7 +53,7 @@ Ekler bir `namedCache` girişe `namedCaches` koleksiyonu için bir önbellek.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `add` Öğe için bir giriş ekler `namedCaches` koleksiyonu için bir önbellek. Kullanabileceğiniz [Temizle](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) kullanmadan önce öğesi `add` olduğunu başka hiçbir emin olmak için öğesi adlı önbellekler koleksiyondaki. Bu öğe, machine.config dosyasında ve Web.config dosyasında kullanılabilir.  
@@ -78,5 +78,5 @@ Ekler bir `namedCache` girişe `namedCaches` koleksiyonu için bir önbellek.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 - [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

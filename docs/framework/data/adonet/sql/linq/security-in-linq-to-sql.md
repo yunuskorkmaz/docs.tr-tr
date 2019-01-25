@@ -2,12 +2,12 @@
 title: LINQ to SQL'de güvenlik
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: c078d2b19629ed4b99180af85528952548d92045
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625685"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL'de güvenlik
 Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQL SQL Server'daki verilerle çalışmak için bazı yeni yollar içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
@@ -33,6 +33,6 @@ Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQ
   
 -   Yaşam süreleri en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

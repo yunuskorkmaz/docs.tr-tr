@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Filtreleri Kullanma'
+title: 'Nasıl yapılır: Filtreleri kullanma'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530995"
 ---
-# <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
+# <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri kullanma
 Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, iki hesap makinesi hizmeti, regularCalc ve roundingCalc uygulamaları için iletileri yönlendirilir. Hem uygulamalar aynı işlemleri desteği: Ancak bir hizmet, döndürmeden önce tüm hesaplamalar en yakın tamsayı değerine yuvarlanır. Bir istemci uygulaması yuvarlama sürüm hizmetinin kullanılıp kullanılmayacağını belirtmek için bir değer olmalıdır; hiçbir hizmet tercihi ifade, ileti iki hizmet arasında yük dengeli yoktur. Her iki hizmet tarafından sunulan işlemleri şunlardır:  
   
 -   Ekle  
@@ -325,5 +325,5 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)

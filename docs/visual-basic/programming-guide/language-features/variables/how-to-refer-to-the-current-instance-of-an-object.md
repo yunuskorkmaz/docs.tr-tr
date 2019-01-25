@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) bir nesnenin geçerli örneğine başvurma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: c1b79f1b6a9768941d6fe966c5b5886ea742f808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542203"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma (Visual Basic)
-*Geçerli örnek* bir nesne, kod şu anda Yürütülüyor örneğidir.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir nesnenin geçerli örneğine başvurma
+*Geçerli örneğin* nesnenin hangi kod şu anda Yürütülüyor örneğidir.  
   
  Kullandığınız `Me` geçerli örneğine başvurma anahtar sözcüğü.  
   
 ### <a name="to-refer-to-the-current-instance"></a>Geçerli örneğine başvurma  
   
--   Kullanmak `Me` anahtar sözcüğü burada normalde kullandığınız bir nesne değişkeninin adı.  
+-   Kullanma `Me` anahtar sözcüğü nerede normalde kullandığınız bir nesne değişkeninin adı.  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Ancak `Me` bir nesne gibi davranır değişken, edemezsiniz bildirirken veya hiçbir şey atayın. `Me` her zaman geçerli örneğine başvurur.  
+     Olsa da `Me` davranacağını gibi bir nesne değişkeni, bildirmek veya herhangi bir şey atayın. `Me` her zaman geçerli örneğine başvurur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

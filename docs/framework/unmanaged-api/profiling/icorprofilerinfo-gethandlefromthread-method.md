@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612599"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread Metodu
-Bir iş parçacığı kimliği için Win32 iş parçacığı tanıtıcı eşler.  
+Bir iş parçacığının kimliği bir Win32 iş parçacığı tutamacı eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetHandleFromThread(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Eşlenecek iş parçacığı kimliği.  
+ [in] Eşleştirilecek iş parçacığı kimliği.  
   
  `phThread`  
- [out] Win32 iş parçacığı işleyicisi için bir işaretçi.  
+ [out] Bir Win32 iş parçacığı tutamacı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu Win32 çağırmalısınız `DuplicateHandle` kullanmadan önce tutamacı işlevi.  
+ Profil Oluşturucu Win32 çağırmalıdır `DuplicateHandle` kullanmadan önce tutamacı işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

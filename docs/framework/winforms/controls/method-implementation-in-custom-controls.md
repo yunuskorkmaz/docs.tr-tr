@@ -11,17 +11,17 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 9df2bc9257c3f697f30cbe8c679ffc88ec34517b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f65c34c965ddf19c7a287eeeaafe2583c97583ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506076"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Özel Denetimlerde Yöntem Uygulama
-Bir yöntem bir denetimde bir yöntem içindeki herhangi bir bileşen uygulanması aynı şekilde uygulanır.  
+Bir yöntem bir denetimde bir yöntem içinde başka bir bileşen uygulanması aynı şekilde uygulanır.  
   
- Bir yöntem için bir değer döndürmek için gerekliyse, Visual Basic'te şu olarak uygulanan bir `Public Function`. Herhangi bir değer döndürürse, olarak uygulandığı bir `Public Sub`. Yöntemleri aşağıdaki sözdizimini kullanarak bildirilir:  
+ Bir yöntem bir değer döndürmesi gerekiyorsa Visual Basic'te olarak uygulandığı bir `Public Function`. Herhangi bir değer döndürülürse, olarak uygulandığı bir `Public Sub`. Yöntemleri, aşağıdaki sözdizimini kullanarak bildirilir:  
   
 ```vb  
 Public Function ConvertMatterToEnergy(Matter as Integer) As Integer  
@@ -29,9 +29,9 @@ Public Function ConvertMatterToEnergy(Matter as Integer) As Integer
 End Function  
 ```  
   
- İşlevler bir değer döndürür olduğundan, tamsayı, dize, nesne vb. gibi bir dönüş türü belirtmeniz gerekir. Bağımsız değişkenler `Function` veya `Sub` herhangi biri, aynı zamanda belirtilmesi gerekir, yordamları gerçekleştirin.  
+ İşlevler bir değer döndürdüğünden, tamsayı, dize, nesne ve benzeri gibi bir dönüş türü belirtmeniz gerekir. Bağımsız değişkenler `Function` veya `Sub` herhangi biri, ayrıca belirtilmesi gerekir, yordamları Al.  
   
- Visual Basic yaptığı gibi C# işlevleri ve yordamlar arasında ayrım sağlar. Bir yöntemi bir değer döndürür veya verir `void`. Bir C# genel yöntem bildirmek için sözdizimi aşağıdaki gibidir:  
+ C#Visual Basic gibi işlevleri ve yordamları arasında bir ayrım yapar. Bir yöntem bir değer döndürür veya döndürür `void`. Bildirmek için söz dizimi bir C# genel yöntemdir:  
   
 ```csharp  
 public int ConvertMatterToEnergy(int matter)  
@@ -40,17 +40,17 @@ public int ConvertMatterToEnergy(int matter)
 }  
 ```  
   
- Bir yöntem bildirin, tüm bağımsız değişkenlerinin açık veri türleri olarak mümkün olduğunca bildirin. Nesne başvuruları ele bağımsız değişkenleri belirli bir sınıf türü olarak bildirilmiş — Örneğin, `As Widget` yerine `As Object`. Visual Basic'de varsayılan ayar `Option Strict` otomatik olarak bu kural zorlar.  
+ Tüm bağımsız değişkenleri, bir yöntem bildirdiğinizde, mümkün olduğunda açık veri türleri olarak bildirin. Nesne başvurularını alan bağımsız değişkenleri belirli sınıf türleri bildirilmelidir — Örneğin, `As Widget` yerine `As Object`. Visual Basic'te, varsayılan ayarı `Option Strict` otomatik olarak bu kural uygular.  
   
- Yazılı bağımsız değişkenler derleyici yerine çalışma zamanında Yakalanacak birçok geliştirici hata izin verir. Çalışma zamanı test yalnızca test paketi kadar iyi iken derleyici hataları, her zaman yakalar.  
+ Yazılı bağımsız değişkenler, birçok geliştirici hataları çalışma zamanında değil, derleyici tarafından yakalanan izin verin. Çalışma zamanı sınaması yalnızca test paketi iyidir ancak derleyici her zaman hataları yakalar.  
   
 ## <a name="overloaded-methods"></a>Aşırı yüklenmiş yöntemler  
- Farklı bir yöntem için parametre birleşimleri sağlamak kullanıcıların denetiminizin izin vermek istiyorsanız, birden çok aşırı açık veri türlerini kullanma yöntem sağlar. Bildirilen parametreleri oluşturmamak `As Object` , içerebilir herhangi bir veri türü olarak bu testinde yakalandı hatalara yol açabilir.  
+ Bir yöntem için parametrelerin farklı birleşimlerini sağlamak üzere kullanıcı denetiminizin izin vermek istiyorsanız, birden çok aşırı yükleme açık veri türleri kullanılarak yöntemi sağlar. Olarak bildirilen parametreleri oluşturmaktan kaçının `As Object` dahil olabilir herhangi bir veri türü olarak bu sınamada Yakalanacak değil hatalara neden olabilir.  
   
 > [!NOTE]
->  Ortak dil çalışma zamanında evrensel veri türü `Object` yerine `Variant`. `Variant` dilden kaldırılmıştır.  
+>  Evrensel veri türü ortak dil çalışma zamanı `Object` yerine `Variant`. `Variant` dili kaldırıldı.  
   
- Örneğin, `Spin` bir kuramsal yöntemi `Widget` denetimi izin döndürme yön ve hız doğrudan belirtimi ya da başka bir belirtim `Widget` hangi angular satışlarının nesnesinden olduğu absorbed olmalıdır:  
+ Örneğin, `Spin` bir kuramsal yöntemi `Widget` denetimi izin döndürme yön ve hız doğrudan belirtimi veya başka bir belirtim `Widget` hangi angular İtici Güç nesnesinden olan absorbed olacak:  
   
 ```vb  
 Overloads Public Sub Spin( _  
@@ -75,6 +75,6 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Olaylar](../../../../docs/standard/events/index.md)  
- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Olaylar](../../../../docs/standard/events/index.md)
+- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bf7e1b0c3ef3c1e1c26e4dd308ae2326777b38da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625863"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
 Yan yana yürütme için tasarlanmış bileşen ya da yönetilen uygulamalar oluşturmak için aşağıdaki genel yönergeleri izleyin:  
@@ -62,6 +62,6 @@ Yan yana yürütme için tasarlanmış bileşen ya da yönetilen uygulamalar olu
   
  [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) yalnızca dosyanın sürüm numarası yeni olduğunda bir derlemeyi çoğaltmanıza imkan tanır. Derleme sürüm numarasının büyük olmadığı sürece yükleyici bütünleştirilmiş genel olarak yüklemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Yan Yana Yürütme](../../../docs/framework/deployment/side-by-side-execution.md)  
-- [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yan Yana Yürütme](../../../docs/framework/deployment/side-by-side-execution.md)
+- [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

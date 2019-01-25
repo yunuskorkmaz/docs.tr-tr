@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma'
+title: 'Nasıl yapılır: Çizim için grafik nesneleri oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497038"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için grafik nesneleri oluşturma
 Çizgiler ve şekiller çizmek önce metin işlemek veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesnesini temsil eder bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
   
  Grafiklerle çalışma iki adımı vardır:  
@@ -33,11 +33,11 @@ ms.locfileid: "50185202"
   
 -   Bir parçası olarak bir grafik nesnesine bir başvuru alma <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> bir form veya denetim olayı. Bu, genellikle bir denetim boyama kodu oluştururken bir grafik nesnesine başvuru nasıl elde olur. Benzer şekilde, ayrıca bir grafik nesnesinin bir özelliği olarak alabilirsiniz <xref:System.Drawing.Printing.PrintPageEventArgs> işlerken <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay için bir <xref:System.Drawing.Printing.PrintDocument>.  
   
-     veya  
+     -veya-  
   
 -   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> denetim veya formun bir başvuru almak için yöntemi bir <xref:System.Drawing.Graphics> çizim yüzeyi bu denetim veya formun temsil eden nesne. Bir form veya zaten bir denetim çizmek istiyorsanız bu yöntemi kullanın.  
   
-     veya  
+     -veya-  
   
 -   Oluşturma bir <xref:System.Drawing.Graphics> nesne öğesinden devralınan herhangi bir nesneden <xref:System.Drawing.Image>. Bu yaklaşım, zaten mevcut bir görüntüyü değiştirmek istediğinizde yararlıdır.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "50185202"
   
     |İşlemek için|Bkz. |  
     |---------------|---------|  
-    |satırları|[Nasıl yapılır: Bir Windows Formunda Çizgi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Şekiller|[Nasıl yapılır: Ana Hatlı Şekil Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Metin|[Nasıl yapılır: Bir Windows Formunda Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Görüntüler|[Nasıl yapılır: GDI+ ile Görüntü İşleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |satırları|[Nasıl yapılır: Bir Windows formunda çizgi çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |Şekiller|[Nasıl yapılır: Anahatlı şekil çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |Metin|[Nasıl yapılır: Bir Windows formunda metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |Görüntüler|[Nasıl yapılır: GDI + ile görüntü işleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: GDI+ ile Görüntü İşleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Nasıl yapılır: GDI + ile görüntü işleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

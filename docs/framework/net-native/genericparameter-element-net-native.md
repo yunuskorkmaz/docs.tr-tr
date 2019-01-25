@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 002addf0f020365f87e239b7b8707f3a6031003f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519456"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;GenericParameter&gt; Öğesi (.NET Yerel)
 İlke bir genel tür veya yöntemin parametre türü için geçerlidir.  
@@ -21,7 +21,7 @@ ms.locfileid: "49347857"
                   Activate="policy_type"  
                   Browse="policy_type"  
                   Dynamic="policy_type"  
-                  Serialize="policy_type" />  
+                  Serialize="policy_type"  
                   DataContractSerializer="policy_type"  
                   DataContractJsonSerializer="policy_type"  
                   XmlSerializer="policy_type"  
@@ -86,9 +86,9 @@ ms.locfileid: "49347857"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)  
- [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)  
- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

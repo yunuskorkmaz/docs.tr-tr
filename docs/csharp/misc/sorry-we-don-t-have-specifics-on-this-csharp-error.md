@@ -882,12 +882,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: fa2afebdffb47e7c55ea17a485d43ee648775534
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f172d9579e18bffdde98756bd3acf471a80e6211
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576024"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
@@ -901,14 +901,14 @@ ms.locfileid: "49453144"
  [Visual C# genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Hakkında sorular için bir forum sağlar ve sorunları ile Visual C, diğer forumlarda ele alınmamaktadır #.  
   
- [Yığın Taşması](https://stackoverflow.com/questions/tagged/c%23)  
+ [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
  Hakkında sorular için bir forum sağlar ve Visual C# ile verir.  
   
  Ayrıca bkz:  
  [Visual C# programcıları için ek kaynaklar](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)  
-- [C# başvurusu](../../csharp/language-reference/index.md)  
-- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  
+- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
+- [C# başvurusu](../../csharp/language-reference/index.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

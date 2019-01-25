@@ -2,12 +2,12 @@
 title: ADO.NET'e genel bakış
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714392"
 ---
 # <a name="adonet-overview"></a>ADO.NET'e genel bakış
 ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML gibi veri kaynaklarına tutarlı erişimi sağlar. Veri paylaşımı tüketici uygulamaları, ADO.NET, bu veri kaynağına bağlanın ve almak, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.  
@@ -20,7 +20,7 @@ ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML 
   
  ADO.NET, .NET Framework içindeki veri erişiminin en dolaysız yöntem sağlar. Temel alınan depolama modelinin yerine kavramsal bir modeli karşı çalışmaya uygulamalarına izin veren bir daha yüksek düzeyde soyutlama için bkz. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Gizlilik bildirimi**: System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll'ye ve System.Data.DataSetExtensions.dll derlemeleri yapın bir kullanıcının özel veriler ve özel olmayan veriler arasında ayrım.  Bu derlemeler değil toplamak, depolamak veya herhangi bir kullanıcının özel veri taşıma. Ancak, üçüncü taraf uygulamalar toplamak, depolamak veya bu bütünleştirilmiş kodları kullanan bir kullanıcının özel veri taşıma.  
+ **Gizlilik bildirimi**: Bir kullanıcının arasında System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll'ye ve System.Data.DataSetExtensions.dll derlemeleri ayırt etmez özel veriler ve özel olmayan veri.  Bu derlemeler değil toplamak, depolamak veya herhangi bir kullanıcının özel veri taşıma. Ancak, üçüncü taraf uygulamalar toplamak, depolamak veya bu bütünleştirilmiş kodları kullanan bir kullanıcının özel veri taşıma.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ADO.NET Mimarisi](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML 
  [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Bir veri kaynağına bağlanmak, verileri almak ve verileri değiştirme işlemini açıklamaktadır. Bu içerir `DataReaders` ve `DataAdapters`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
