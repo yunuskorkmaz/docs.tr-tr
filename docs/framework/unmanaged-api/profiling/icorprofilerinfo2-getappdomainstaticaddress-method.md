@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8e1886a3e33b533eb525f5b35480a8a7d326da0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3c5e89057ef4c88d7c5e78120aca9841d731eda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524721"
 ---
-# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="7f932-102">ICorProfilerInfo2::GetAppDomainStaticAddress Metodu</span><span class="sxs-lookup"><span data-stu-id="7f932-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
-<span data-ttu-id="7f932-103">Belirtilen uygulama etki alanı kapsamında belirtilen uygulama etki alanı statik alan adresini alır.</span><span class="sxs-lookup"><span data-stu-id="7f932-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
+# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="a2f37-102">ICorProfilerInfo2::GetAppDomainStaticAddress Metodu</span><span class="sxs-lookup"><span data-stu-id="a2f37-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
+<span data-ttu-id="a2f37-103">Belirtilen uygulama etki alanı kapsamı içinde belirtilen uygulama etki alanı statik alanı adresini alır.</span><span class="sxs-lookup"><span data-stu-id="a2f37-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f932-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7f932-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2f37-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a2f37-104">Syntax</span></span>  
   
 ```  
 RESULT GetAppDomainStaticAddress(  
@@ -37,37 +37,37 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7f932-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7f932-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a2f37-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a2f37-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="7f932-106">[in] İstenen uygulama etki alanı statik alan içeren sınıf sınıfı kimliği.</span><span class="sxs-lookup"><span data-stu-id="7f932-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
+ <span data-ttu-id="a2f37-106">[in] İstenen uygulama etki alanı statik alanı içeren sınıf sınıf kimliği.</span><span class="sxs-lookup"><span data-stu-id="a2f37-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="7f932-107">[in] İstenen uygulama etki alanı statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="7f932-107">[in] The metadata token for the requested application domain-static field.</span></span>  
+ <span data-ttu-id="a2f37-107">[in] İstenen uygulama etki alanı statik alanı için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="a2f37-107">[in] The metadata token for the requested application domain-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="7f932-108">[in] İstenen statik alanın kapsamı uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="7f932-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="a2f37-108">[in] İstenen statik alan için kapsamı uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="a2f37-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="7f932-109">[out] Belirtilen uygulama etki alanı içinde statik alanındaki adresini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7f932-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
+ <span data-ttu-id="a2f37-109">[out] Belirtilen uygulama etki alanı içinde statik alanı adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a2f37-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f932-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7f932-110">Remarks</span></span>  
- <span data-ttu-id="7f932-111">`GetAppDomainStaticAddress` Yöntemi döndürebilir şunlardan biri:</span><span class="sxs-lookup"><span data-stu-id="7f932-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a2f37-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a2f37-110">Remarks</span></span>  
+ <span data-ttu-id="a2f37-111">`GetAppDomainStaticAddress` Yöntemi aşağıdakilerden birini döndürebilir:</span><span class="sxs-lookup"><span data-stu-id="a2f37-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="7f932-112">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanda belirtilen bağlam bir adres değil atanmışsa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="7f932-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+-   <span data-ttu-id="a2f37-112">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="a2f37-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="7f932-113">Çöp toplama yığınında olabilir nesneleri adresleri.</span><span class="sxs-lookup"><span data-stu-id="7f932-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="7f932-114">Çöp toplama sonra profil oluşturucular geçerli varsayımında bulunmamalıdır şekilde bu adresleri çöp toplama sonra geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="7f932-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+-   <span data-ttu-id="a2f37-113">Adresleri nesnelerin çöp koleksiyonu yığınında olabilir.</span><span class="sxs-lookup"><span data-stu-id="a2f37-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="a2f37-114">Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="a2f37-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="7f932-115">Sınıf sınıfı oluşturucusu tamamlanmadan önce `GetAppDomainStaticAddress` statik alanları bazıları zaten başlatılmamış olabilir ancak CORPROF_E_DATAINCOMPLETE tüm kendi statik alanları için döndürür ve atık toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="7f932-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="a2f37-115">Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetAppDomainStaticAddress` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="a2f37-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f932-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7f932-116">Requirements</span></span>  
- <span data-ttu-id="7f932-117">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f932-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2f37-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a2f37-116">Requirements</span></span>  
+ <span data-ttu-id="a2f37-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2f37-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f932-118">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7f932-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a2f37-118">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a2f37-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7f932-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7f932-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a2f37-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2f37-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7f932-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f932-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a2f37-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2f37-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f932-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7f932-121">See Also</span></span>  
- [<span data-ttu-id="7f932-122">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f932-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="7f932-123">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f932-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a2f37-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a2f37-121">See also</span></span>
+- [<span data-ttu-id="a2f37-122">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a2f37-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a2f37-123">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a2f37-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

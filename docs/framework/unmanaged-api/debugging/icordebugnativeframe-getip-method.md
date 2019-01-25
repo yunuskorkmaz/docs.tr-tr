@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600459"
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="ec869-102">ICorDebugNativeFrame::GetIP Metodu</span><span class="sxs-lookup"><span data-stu-id="ec869-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="ec869-103">Yerel kod alır yönerge işaretçisi şu anda ayarlanmış konumu uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="ec869-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="5f953-102">ICorDebugNativeFrame::GetIP Metodu</span><span class="sxs-lookup"><span data-stu-id="5f953-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="5f953-103">Alır yerel kod, yönerge işaretçisini şu anda ayarlanmış konumu uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="5f953-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec869-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ec869-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f953-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5f953-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIP (  
@@ -35,21 +35,21 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ec869-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ec869-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5f953-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5f953-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="ec869-106">[out] Uzaklık konumu yerel kodda bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ec869-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="5f953-106">[out] Yerel kod uzaklık konumunda bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5f953-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ec869-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ec869-107">Remarks</span></span>  
- <span data-ttu-id="ec869-108">Bu "Icordebugnativeframe" tarafından temsil edilen yığın çerçevesi etkin değilse, uzaklık yürütülecek sonraki yönerge adresidir.</span><span class="sxs-lookup"><span data-stu-id="ec869-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="ec869-109">Bu yığın çerçevesi etkin değilse, uzaklık yığın çerçevesi etkinleştirildiğinde yürütülecek sonraki yönerge adresidir.</span><span class="sxs-lookup"><span data-stu-id="ec869-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f953-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5f953-107">Remarks</span></span>  
+ <span data-ttu-id="5f953-108">Bu "Icordebugnativeframe" tarafından temsil edilen yığın çerçevesini etkin olursa, uzaklık yürütülmesi gereken sonraki yönergeyi adresidir.</span><span class="sxs-lookup"><span data-stu-id="5f953-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="5f953-109">Bu yığın çerçevesi etkin değilse, uzaklık yığın çerçevesinin yeniden etkinleştirildiğinde yürütülecek sonraki yönergeyi adresidir.</span><span class="sxs-lookup"><span data-stu-id="5f953-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec869-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ec869-110">Requirements</span></span>  
- <span data-ttu-id="ec869-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec869-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f953-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5f953-110">Requirements</span></span>  
+ <span data-ttu-id="5f953-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f953-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec869-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec869-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5f953-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f953-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec869-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec869-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f953-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f953-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ec869-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec869-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5f953-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f953-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec869-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ec869-115">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="5f953-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5f953-115">See also</span></span>
+
