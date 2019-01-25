@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4c8494b1ffc80fc49acce01c5de0b3fd18c0f5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574696"
 ---
-# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="ac41e-102">ICorDebugManagedCallback::LogMessage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac41e-102">ICorDebugManagedCallback::LogMessage Method</span></span>
-<span data-ttu-id="ac41e-103">Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.EventLog> sınıfı bir olayı günlüğe kaydedin.</span><span class="sxs-lookup"><span data-stu-id="ac41e-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
+# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="4ec72-102">ICorDebugManagedCallback::LogMessage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4ec72-102">ICorDebugManagedCallback::LogMessage Method</span></span>
+<span data-ttu-id="4ec72-103">Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.EventLog> günlüğe bir olay için sınıf.</span><span class="sxs-lookup"><span data-stu-id="4ec72-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac41e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac41e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ec72-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4ec72-104">Syntax</span></span>  
   
 ```  
 HRESULT LogMessage (  
@@ -39,30 +39,30 @@ HRESULT LogMessage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ac41e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac41e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4ec72-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4ec72-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="ac41e-106">[in] Bir işaretçi Icordebugappdomain nesneye olayı günlüğe kaydeden yönetilen iş parçacığı içeren uygulama etki alanını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ac41e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
+ <span data-ttu-id="4ec72-106">[in] Olayın günlüğe yönetilen iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="4ec72-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
   
  `pThread`  
- <span data-ttu-id="ac41e-107">[in] Yönetilen iş parçacığı temsil eden bir Icordebugthread nesnesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac41e-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="4ec72-107">[in] Yönetilen iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="4ec72-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="ac41e-108">[in] Değerini [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) olay günlüğüne yazılan açıklayıcı ileti önem derecesi gösterir numaralandırması.</span><span class="sxs-lookup"><span data-stu-id="ac41e-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="4ec72-108">[in] Değerini [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) olay günlüğüne yazılmış açıklayıcı bir ileti önem derecesi belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="4ec72-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="ac41e-109">[in] İzleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac41e-109">[in] A pointer to the name of the tracing switch.</span></span>  
+ <span data-ttu-id="4ec72-109">[in] İzleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4ec72-109">[in] A pointer to the name of the tracing switch.</span></span>  
   
  `pMessage`  
- <span data-ttu-id="ac41e-110">[in] Olay günlüğüne yazılan iletisi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac41e-110">[in] A pointer to the message that was written to the event log.</span></span>  
+ <span data-ttu-id="4ec72-110">[in] Olay günlüğüne yazılmış iletisi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4ec72-110">[in] A pointer to the message that was written to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac41e-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac41e-111">Requirements</span></span>  
- <span data-ttu-id="ac41e-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac41e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ec72-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4ec72-111">Requirements</span></span>  
+ <span data-ttu-id="4ec72-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ec72-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac41e-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac41e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4ec72-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4ec72-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ac41e-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac41e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ec72-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ec72-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac41e-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac41e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4ec72-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ec72-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac41e-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ac41e-116">See Also</span></span>  
- [<span data-ttu-id="ac41e-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac41e-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4ec72-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ec72-116">See also</span></span>
+- [<span data-ttu-id="4ec72-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4ec72-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

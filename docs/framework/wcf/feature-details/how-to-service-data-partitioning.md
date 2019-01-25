@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
+title: 'Nasıl yapılır: Hizmet verilerini bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590636"
 ---
-# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="cabb2-102">Nasıl yapılır: Hizmet Verilerini Bölümlendirme</span><span class="sxs-lookup"><span data-stu-id="cabb2-102">How To: Service Data Partitioning</span></span>
-<span data-ttu-id="cabb2-103">Bu konu, birden çok örneğini aynı hedef hizmeti arasında bölüm iletileri için gereken temel adımlarda özetler.</span><span class="sxs-lookup"><span data-stu-id="cabb2-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="cabb2-104">Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesi sağlamak amacıyla bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cabb2-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="cabb2-105">Örneğin, yüksek bir değer veya "Altın" müşterilerden iletileri standart müşteri iletilerden daha yüksek bir öncelik işlenecek gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="cabb2-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
+# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="431cf-102">Nasıl yapılır: Hizmet verilerini bölümlendirme</span><span class="sxs-lookup"><span data-stu-id="431cf-102">How To: Service Data Partitioning</span></span>
+<span data-ttu-id="431cf-103">Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için gerekli temel adımlar açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="431cf-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="431cf-104">Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesini sağlamak için bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="431cf-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="431cf-105">Örneğin, yüksek bir değer veya "Altın" müşteriler gelen iletileri, standart bir müşteri iletilerden daha yüksek bir önceliğe işlenecek gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="431cf-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
   
- <span data-ttu-id="cabb2-106">Bu örnekte, iletilerin regularCalc hizmetin iki örneğini birine yönlendirilir.</span><span class="sxs-lookup"><span data-stu-id="cabb2-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="cabb2-107">Her iki hizmet örneklerini aynıdır; ancak calculator1 uç nokta işlemleri iletiler tarafından temsil edilen hizmet yüksek değerli müşterilerden hesaplayıcı 2 bitiş noktası diğer müşterilerden gelen iletileri işleme alınan</span><span class="sxs-lookup"><span data-stu-id="cabb2-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
+ <span data-ttu-id="431cf-106">Bu örnekte, iletilerin regularCalc hizmetin iki örneği birine yönlendirilir.</span><span class="sxs-lookup"><span data-stu-id="431cf-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="431cf-107">Her iki hizmetin örneklerini aynıdır; ancak yüksek değerli müşterilerden hesaplayıcı 2 uç nokta calculator1 uç nokta işlemleri iletiler tarafından temsil edilen hizmet diğer müşterilerden gelen iletileri işleme alınan</span><span class="sxs-lookup"><span data-stu-id="431cf-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
   
- <span data-ttu-id="cabb2-108">İstemciden gönderilen ileti için ileti yönlendirileceğini hangi hizmet örneğine tanımlamak için kullanılan herhangi bir benzersiz veri yok.</span><span class="sxs-lookup"><span data-stu-id="cabb2-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="cabb2-109">Belirli bir hedef hizmet için rota verilerini her bir istemciye izin vermek için iletileri almak için kullanılan iki hizmet uç noktaları gerçekleştireceksiniz.</span><span class="sxs-lookup"><span data-stu-id="cabb2-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
+ <span data-ttu-id="431cf-108">İstemciden gönderilen ileti için ileti yönlendirileceğini hangi hizmet örneğini tanımlamak için kullanılan herhangi bir benzersiz veri yok.</span><span class="sxs-lookup"><span data-stu-id="431cf-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="431cf-109">Her bir istemciye belirli hedef hizmet için rota verilerini izin vermek için ileti almak için kullanılacak olan iki hizmet uç noktaları uygular.</span><span class="sxs-lookup"><span data-stu-id="431cf-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cabb2-110">Bu örnek bölüm verilere özel uç noktaları kullanırken, bu da üstbilgi veya gövde verileri gibi ileti kendi içinde yer alan bilgileri kullanarak bunu sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cabb2-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
+>  <span data-ttu-id="431cf-110">Bu örnek verileri bölümlemek için özel uç noktaları kullanırken, bu da üst bilgi veya gövdesinde veri gibi ileti kendisi içinde yer alan bilgileri kullanarak sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="431cf-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
   
-### <a name="implement-service-data-partitioning"></a><span data-ttu-id="cabb2-111">Uygulama hizmet verilerini bölümlendirme</span><span class="sxs-lookup"><span data-stu-id="cabb2-111">Implement Service Data Partitioning</span></span>  
+### <a name="implement-service-data-partitioning"></a><span data-ttu-id="431cf-111">Uygulama hizmeti veri bölümleme</span><span class="sxs-lookup"><span data-stu-id="431cf-111">Implement Service Data Partitioning</span></span>  
   
-1.  <span data-ttu-id="cabb2-112">Temel yönlendirme hizmeti yapılandırma hizmeti tarafından sunulan hizmet uç noktalarına belirterek oluşturun.</span><span class="sxs-lookup"><span data-stu-id="cabb2-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="cabb2-113">Aşağıdaki örnek, iletileri almak için kullanılan iki uç nokta tanımlar.</span><span class="sxs-lookup"><span data-stu-id="cabb2-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="cabb2-114">Ayrıca, regularCalc hizmet örneklerine ileti göndermek için kullanılan istemci uç noktalarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="cabb2-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
+1.  <span data-ttu-id="431cf-112">Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun.</span><span class="sxs-lookup"><span data-stu-id="431cf-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="431cf-113">Aşağıdaki örnek, iletileri almak için kullanılan iki uç nokta tanımlar.</span><span class="sxs-lookup"><span data-stu-id="431cf-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="431cf-114">Ayrıca, regularCalc hizmet örnekleri için ileti göndermek için kullanılan istemci uç noktalarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="431cf-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ ms.locfileid: "33491811"
      </client>  
     ```  
   
-2.  <span data-ttu-id="cabb2-115">Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtrelerini tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="cabb2-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="cabb2-116">Bu örnekte, EndpointName filtresi, hangi hizmet uç noktası iletisi aldı belirlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cabb2-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="cabb2-117">Aşağıdaki örnek, filtreleri ve gerekli yönlendirme bölüm tanımlar.</span><span class="sxs-lookup"><span data-stu-id="cabb2-117">The following example defines the necessary routing section and filters.</span></span>  
+2.  <span data-ttu-id="431cf-115">Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.</span><span class="sxs-lookup"><span data-stu-id="431cf-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="431cf-116">Bu örnekte, Uçnoktaadı filtre, hangi hizmet uç noktası iletisi aldı belirlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="431cf-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="431cf-117">Aşağıdaki örnek, gerekli yönlendirme bölüm ve filtreleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="431cf-117">The following example defines the necessary routing section and filters.</span></span>  
   
     ```xml  
     <filters>  
@@ -71,9 +71,9 @@ ms.locfileid: "33491811"
     </filters>  
     ```  
   
-3.  <span data-ttu-id="cabb2-118">Her filtre bir istemci uç noktası ile ilişkilendirir Filtresi tablosu tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="cabb2-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="cabb2-119">Bu örnekte, ileti üzerinden alındı belirli bir uç göre yönlendirilir.</span><span class="sxs-lookup"><span data-stu-id="cabb2-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="cabb2-120">İletinin yalnızca iki olası filtrelerden birini eşleştirebilirsiniz olduğundan, hangi filtreleri değerlendirilir siparişe denetlemek için filtre öncelik kullanma gerek yoktur.</span><span class="sxs-lookup"><span data-stu-id="cabb2-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
+3.  <span data-ttu-id="431cf-118">Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="431cf-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="431cf-119">Bu örnekte, ileti üzerinde alındı belirli bir uç göre yönlendirilir.</span><span class="sxs-lookup"><span data-stu-id="431cf-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="431cf-120">İletinin yalnızca iki olası filtrelerden birini eşleşebilir olduğundan, hangi filtrelerde değerlendirilir sırasını denetlemek için filtre önceliği kullanma gerek yoktur.</span><span class="sxs-lookup"><span data-stu-id="431cf-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
   
-     <span data-ttu-id="cabb2-121">Aşağıdaki filtre tablosunda tanımlar ve daha önce tanımlanan filtreler ekler.</span><span class="sxs-lookup"><span data-stu-id="cabb2-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
+     <span data-ttu-id="431cf-121">Aşağıdaki filtre tabloyu tanımlayan ve daha önce tanımlanan filtreler ekler.</span><span class="sxs-lookup"><span data-stu-id="431cf-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -85,7 +85,7 @@ ms.locfileid: "33491811"
     </filterTables>  
     ```  
   
-4.  <span data-ttu-id="cabb2-122">Tabloda bulunan filtreleriyle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile Filtresi tablosu ilişkilendirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="cabb2-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="cabb2-123">Aşağıdaki örnek, hizmet uç noktaları ile özellikle görüntüyle "filterTable1" gösterir:</span><span class="sxs-lookup"><span data-stu-id="cabb2-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
+4.  <span data-ttu-id="431cf-122">Tabloda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="431cf-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="431cf-123">Aşağıdaki örnek, hizmet uç noktaları ile ilişkilendirmeyi "filterTable1" gösterir:</span><span class="sxs-lookup"><span data-stu-id="431cf-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -98,8 +98,8 @@ ms.locfileid: "33491811"
     </behaviors>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="cabb2-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="cabb2-124">Example</span></span>  
- <span data-ttu-id="cabb2-125">Yapılandırma dosyası tam bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="cabb2-125">The following is a complete listing of the configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="431cf-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="431cf-124">Example</span></span>  
+ <span data-ttu-id="431cf-125">Yapılandırma dosyasının tam bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="431cf-125">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -173,5 +173,5 @@ ms.locfileid: "33491811"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cabb2-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cabb2-126">See Also</span></span>  
- [<span data-ttu-id="cabb2-127">Yönlendirme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="cabb2-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="431cf-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="431cf-126">See also</span></span>
+- [<span data-ttu-id="431cf-127">Yönlendirme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="431cf-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

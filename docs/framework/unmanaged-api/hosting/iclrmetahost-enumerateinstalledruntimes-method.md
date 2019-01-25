@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed4c09d910db6fa2e61d44e4ac777f9b6095a20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 312db617f185467eda7a9ffa0e8db919e2e94566
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702645"
 ---
-# <a name="iclrmetahostenumerateinstalledruntimes-method"></a><span data-ttu-id="86a5c-102">ICLRMetaHost::EnumerateInstalledRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86a5c-102">ICLRMetaHost::EnumerateInstalledRuntimes Method</span></span>
-<span data-ttu-id="86a5c-103">Geçerli bir içeren bir numaralandırmayı döndüren [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) her bir bilgisayarda yüklü olan ortak dil çalışma zamanı (CLR) sürümü için arabirim.</span><span class="sxs-lookup"><span data-stu-id="86a5c-103">Returns an enumeration that contains a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface for each version of the common language runtime (CLR) that is installed on a computer.</span></span>  
+# <a name="iclrmetahostenumerateinstalledruntimes-method"></a><span data-ttu-id="1ebfc-102">ICLRMetaHost::EnumerateInstalledRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1ebfc-102">ICLRMetaHost::EnumerateInstalledRuntimes Method</span></span>
+<span data-ttu-id="1ebfc-103">İçeren geçerli bir sabit listesini döndürür [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) her bir bilgisayarda yüklü olan ortak dil çalışma zamanı (CLR) sürümü için arabirim.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-103">Returns an enumeration that contains a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface for each version of the common language runtime (CLR) that is installed on a computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86a5c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86a5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ebfc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1ebfc-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateInstalledRuntimes (  
     [out, retval] IEnumUnknown **ppEnumerator);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="86a5c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="86a5c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1ebfc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1ebfc-105">Parameters</span></span>  
  `ppEnumerator`  
- <span data-ttu-id="86a5c-106">[out] Sabit listesi [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) her bilgisayarda yüklü CLR sürümü ile eşleşen arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="86a5c-106">[out] An enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each version of the CLR that is installed on the computer.</span></span>  
+ <span data-ttu-id="1ebfc-106">[out] Sabit listesi [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) her bilgisayarda yüklü CLR sürümüne karşılık gelen arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-106">[out] An enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each version of the CLR that is installed on the computer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="86a5c-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="86a5c-107">Return Value</span></span>  
- <span data-ttu-id="86a5c-108">Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="86a5c-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1ebfc-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="1ebfc-107">Return Value</span></span>  
+ <span data-ttu-id="1ebfc-108">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="86a5c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="86a5c-109">HRESULT</span></span>|<span data-ttu-id="86a5c-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="86a5c-110">Description</span></span>|  
+|<span data-ttu-id="1ebfc-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1ebfc-109">HRESULT</span></span>|<span data-ttu-id="1ebfc-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1ebfc-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="86a5c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="86a5c-111">S_OK</span></span>|<span data-ttu-id="86a5c-112">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="86a5c-112">The method completed successfully.</span></span>|  
-|<span data-ttu-id="86a5c-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="86a5c-113">E_POINTER</span></span>|<span data-ttu-id="86a5c-114">`ppEnumerator` null şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="86a5c-114">`ppEnumerator` is null.</span></span>|  
+|<span data-ttu-id="1ebfc-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="1ebfc-111">S_OK</span></span>|<span data-ttu-id="1ebfc-112">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-112">The method completed successfully.</span></span>|  
+|<span data-ttu-id="1ebfc-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1ebfc-113">E_POINTER</span></span>|<span data-ttu-id="1ebfc-114">`ppEnumerator` NULL olur.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-114">`ppEnumerator` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="86a5c-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="86a5c-115">Requirements</span></span>  
- <span data-ttu-id="86a5c-116">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86a5c-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ebfc-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1ebfc-115">Requirements</span></span>  
+ <span data-ttu-id="1ebfc-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1ebfc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86a5c-117">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="86a5c-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1ebfc-117">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1ebfc-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="86a5c-118">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="86a5c-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1ebfc-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="1ebfc-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="86a5c-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86a5c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1ebfc-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ebfc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86a5c-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="86a5c-120">See Also</span></span>  
- [<span data-ttu-id="86a5c-121">ICLRMetaHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="86a5c-121">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [<span data-ttu-id="86a5c-122">Barındırma</span><span class="sxs-lookup"><span data-stu-id="86a5c-122">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="1ebfc-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ebfc-120">See also</span></span>
+- [<span data-ttu-id="1ebfc-121">ICLRMetaHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1ebfc-121">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="1ebfc-122">Barındırma</span><span class="sxs-lookup"><span data-stu-id="1ebfc-122">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

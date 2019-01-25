@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)'
+title: 'Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603800"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="99db0-102">Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)</span><span class="sxs-lookup"><span data-stu-id="99db0-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="99db0-103">Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="99db0-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="e9fb7-102">Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)</span><span class="sxs-lookup"><span data-stu-id="e9fb7-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="e9fb7-103">Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="e9fb7-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="99db0-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="99db0-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="e9fb7-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="e9fb7-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="99db0-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="99db0-105">Example</span></span>  
- <span data-ttu-id="99db0-106">Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.</span><span class="sxs-lookup"><span data-stu-id="99db0-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="e9fb7-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="e9fb7-105">Example</span></span>  
+ <span data-ttu-id="e9fb7-106">Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.</span><span class="sxs-lookup"><span data-stu-id="e9fb7-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="99db0-107">Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="99db0-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="e9fb7-107">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e9fb7-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="99db0-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="99db0-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="e9fb7-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e9fb7-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -72,6 +72,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="99db0-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="99db0-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9fb7-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e9fb7-109">See also</span></span>
 
-- [<span data-ttu-id="99db0-110">LINQ to XML için XPath kullanıcıları (C#)</span><span class="sxs-lookup"><span data-stu-id="99db0-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="e9fb7-110">LINQ to XML için XPath kullanıcıları (C#)</span><span class="sxs-lookup"><span data-stu-id="e9fb7-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
