@@ -6,47 +6,47 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6977410a596a943a23c3841e80edf4cfed1bf6b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644943"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Nasıl yapılır: Sistem Fırçası ile bir Alanı Boyama
-<xref:System.Windows.SystemColors> Sınıfı sistem fırçaları ve renkler, erişim gibi sağlar <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, ve <xref:System.Windows.SystemColors.DesktopBrush%2A>. Sistem Fırçası olan bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk ile alanı boyar nesnesi. Sistem Fırçası her zaman bir düz dolgu üretir; gradyan oluşturmak için kullanılamaz.  
+<xref:System.Windows.SystemColors> Sınıfı sağlar sistem fırçaları ve renkler, erişim gibi <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, ve <xref:System.Windows.SystemColors.DesktopBrush%2A>. Sistem Fırçası olduğu bir <xref:System.Windows.Media.SolidColorBrush> nesnesini belirtilen sistem renk ile bir alanı boyar. Sistem Fırçası her zaman bir tek renk dolgu üretir; gradyan oluşturmak için kullanılamaz.  
   
- Sistem fırçaları statik veya dinamik bir kaynak kullanabilirsiniz. Uygulama çalışırken kullanıcı sistem fırçası değiştirirse otomatik olarak güncelleştirmek için fırça istiyorsanız, dinamik kaynak kullanın; Aksi halde, bir statik kaynak kullanın. SystemColors sınıfı çeşitli sıkı bir adlandırma kuralı izleyin statik özellikler içerir:  
+ Sistem fırçaları statik veya dinamik bir kaynak kullanabilirsiniz. Kullanıcı sistem fırçası değiştirirse uygulama çalışırken otomatik olarak güncelleştirilecek fırça istiyorsanız bir dinamik kaynak kullanın. Aksi takdirde, bir statik kaynak kullanın. SystemColors sınıfı çeşitli katı bir adlandırma kuralını uyguladığınızdan statik özellikler içerir:  
   
--   *\<SystemColor >* fırça  
+-   *\<SystemColor>* Brush  
   
-     Statik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renginin.  
+     Statik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk.  
   
 -   *\<SystemColor >* BrushKey  
   
-     Dinamik bir başvuru edinir bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renginin.  
+     Dinamik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk.  
   
 -   *\<SystemColor >* rengi  
   
-     Statik başvuru alır bir <xref:System.Windows.Media.Color> belirtilen sistem renginin yapısını.  
+     Statik başvuru alır bir <xref:System.Windows.Media.Color> belirtilen sistem renk yapısı.  
   
 -   *\<SystemColor >* ColorKey  
   
-     Dinamik bir başvuru edinir <xref:System.Windows.Media.Color> belirtilen sistem renginin yapısını.  
+     Dinamik bir başvuru edinir <xref:System.Windows.Media.Color> belirtilen sistem renk yapısı.  
   
- Sistem rengi bir <xref:System.Windows.Media.Color> fırça yapılandırmak için kullanılan yapısı. Örneğin, sistem renkleri ayarlayarak kullanan bir gradyan oluşturabilirsiniz <xref:System.Windows.Media.GradientStop.Color%2A> özelliklerini bir <xref:System.Windows.Media.LinearGradientBrush> nesnesi gradyan duraklarının sistem renklerle. Bir örnek için bkz: [gradyan Sistem renklerini kullan](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Sistem rengi bir <xref:System.Windows.Media.Color> fırça yapılandırmak için kullanılan yapısı. Örneğin, bir gradyan ayarlayarak Sistem renkleri kullanarak oluşturabilirsiniz <xref:System.Windows.Media.GradientStop.Color%2A> özelliklerini bir <xref:System.Windows.Media.LinearGradientBrush> nesnesi gradyan duraklarının sistem renkleri. Bir örnek için bkz. [gradyan içinde kullanımı sistem renkleri](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir düğmenin arka planını ayarlamak için dinamik sistem fırçası başvurusunu kullanır.  
+ Aşağıdaki örnek, bir düğme arka planını ayarlama için dinamik sistem fırçası başvurusu kullanır.  
   
  [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
   
- Sonraki örnek bir düğmenin arka planını ayarlamak için bir statik sistem fırçası başvurusunu kullanır.  
+ Sonraki örnek, bir düğme arka planını ayarlama için statik sistem fırçası başvurusu kullanır.  
   
  [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
   
- Bir sistem renginin bir gradyan içerisinde nasıl kullanılacağını gösteren bir örnek için bkz: [Sistem renklerini kullan gradyan](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Bir sistem renginin gradyan içinde nasıl kullanılacağını gösteren bir örnek için bkz: [Sistem renklerini kullan gradyan](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sistem Renklerinin Gradyan İçinde Kullanımı](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sistem Renklerinin Gradyan İçinde Kullanımı](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711804"
 ---
 # <a name="collect-ink"></a>Mürekkep toplama
 
@@ -26,7 +26,7 @@ ms.locfileid: "46004291"
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki örnekleri kullanmak için önce Visual Studio yüklemeniz gerekir ve [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. WPF uygulamaları yazmak nasıl de anlamanız gerekir. WPF ile çalışmaya başlama hakkında daha fazla bilgi için bkz. [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örnekleri kullanmak için önce Visual Studio yüklemeniz gerekir ve [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. WPF uygulamaları yazmak nasıl de anlamanız gerekir. WPF ile çalışmaya başlama hakkında daha fazla bilgi için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>InkCanvas öğesi kullanma
 
@@ -88,7 +88,7 @@ Bu kodu kopyaladıktan sonra basın **F5** hata ayıklayıcıda programı çalı
 
 Bildirim nasıl <xref:System.Windows.Controls.StackPanel> düğmeleri üstüne yerleştirir <xref:System.Windows.Controls.InkCanvas>. Mürekkep düğmelerinin üst çalışırsanız <xref:System.Windows.Controls.InkCanvas> düğmelerin arkasında mürekkebi işler ve toplar. Eşdüzey düğmelerdir olmasıdır <xref:System.Windows.Controls.InkCanvas> aksine alt öğeleri. Ayrıca, mürekkep arkasına işlenebilmesi düğmeleri z düzeninde daha yüksektir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

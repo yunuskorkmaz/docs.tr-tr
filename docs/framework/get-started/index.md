@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 1074924ebb430953df8cee30351e72ec42c736a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712804"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -69,7 +69,7 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 1. İşletim sisteminize göre önceden değil, uygulamanızı hedefleyen .NET Framework sürümünü yükleyin. En son üretim sürümü, .NET Framework 4.7.2 ' dir. Windows üzerinde önceden yüklenmiş olarak 10 Nisan 2018 güncelleştirmesi ve Windows 10 Ekim 2018 güncelleştirmesi ve Windows işletim sisteminin önceki sürümlerinde indirme için kullanılabilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md). .NET Framework'ın diğer sürümlerinin yüklenmesi hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md). Ek .NET Framework paketleri, sıralı olarak dışında tüm normal veya zamanlanmış sürüm döngüsü yayımlandıktan, yani bant dışı bırakılır. Bu paketler hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
-2. Uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen diller ve dil seçin. Çok sayıda dil kullanılabilir dahil olmak üzere [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)ve C + +/ CLI Microsoft gelen. (Aynılarını .NET Framework için uygulamalar geliştirmenizi sağlayan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](https://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen diller ve dil seçin. Çok sayıda dil kullanılabilir dahil olmak üzere [Visual Basic](../../visual-basic/index.md), [ C# ](../../csharp/index.md), [ F# ](../../fsharp/index.md)ve C + +/ CLI Microsoft gelen. (Aynılarını .NET Framework için uygulamalar geliştirmenizi sağlayan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
 3. Seçin ve yükleyin geliştirme ortamı, uygulamalarınızı ve, oluşturmak üzere kullanmak için seçtiğiniz programlama dilini veya dillerini destekler. .NET Framework uygulamaları için Microsoft tümleşik geliştirme ortamıdır (IDE) [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Sürümleri bir süre içinde kullanılabilir.
 
@@ -89,7 +89,7 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework Kılavuzu](../../../docs/framework/index.md)   
-- [Yenilikler](../../../docs/framework/whats-new/index.md)   
-- [.NET API tarayıcısı](/dotnet/api/)   
+- [.NET Framework Kılavuzu](../../../docs/framework/index.md)
+- [Yenilikler](../../../docs/framework/whats-new/index.md)
+- [.NET API tarayıcısı](/dotnet/api/)
 - [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

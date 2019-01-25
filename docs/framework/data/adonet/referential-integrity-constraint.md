@@ -2,37 +2,37 @@
 title: başvuru bütünlüğü kısıtlaması
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: a4d63e07da0c75b8a0369933fccfc0cc66fcc40b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b6c5bb6e04b72f32f8c905526176a649257abeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637260"
 ---
 # <a name="referential-integrity-constraint"></a>başvuru bütünlüğü kısıtlaması
-A *başvuru bütünlüğü kısıtlaması* varlık veri modeli (EDM) ilişkisel bir veritabanındaki bir başvuru bütünlüğü kısıtlaması benzer. Bir veritabanı tablodaki bir sütuna (veya sütun) başka bir tablonun birincil anahtarı başvurabilir aynı şekilde bir [özelliği](../../../../docs/framework/data/adonet/property.md) (veya Özellikler), bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) başvurabilir [Varlık anahtarı ](../../../../docs/framework/data/adonet/entity-key.md) başka bir varlık türü. Başvurulan varlık türü olarak adlandırılan *asıl ucu* kısıtlaması. Asıl ucu başvuruda bulunan varlık türü olarak adlandırılan *bağımlı uç* kısıtlaması.  
+A *başvuru bütünlüğü kısıtlaması* varlık veri modeli (EDM) ilişkisel bir veritabanındaki bir başvuru bütünlüğü kısıtlaması benzer. Bir veritabanı tablosundan bir sütuna (veya sütun) başka bir tablonun birincil anahtarı başvurabilirsiniz aynı şekilde bir [özelliği](../../../../docs/framework/data/adonet/property.md) (veya Özellikler), bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) başvurabilirsiniz [Varlık anahtarı ](../../../../docs/framework/data/adonet/entity-key.md) başka bir varlık türü. Başvurulan varlık türü olarak adlandırılır *birincil ucu* kısıtlaması. Birincil ucu başvuran varlık türü olarak adlandırılan *bağımlı son* kısıtlaması.  
   
- Bir başvuru bütünlüğü kısıtlamasının bir parçası olarak tanımlanan bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) iki varlık türleri arasındaki. Tanımı bir başvuru bütünlüğü kısıtlaması için aşağıdaki bilgileri belirtir:  
+ Başvuru bütünlük kısıtlamasının bir parçası olarak tanımlanan bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) iki varlık türleri arasında. Aşağıdaki bilgiler bir başvuru bütünlüğü kısıtlaması tanımını belirtir:  
   
--   Kısıtlamasının asıl uç. (Yalnızca Varlık anahtarı bağımlı uç tarafından başvurulan bir varlık türü.)  
+-   Kısıtlamasının birincil ucu. (Varlık anahtarı bağımlı uç tarafından başvuruda bulunulan bir varlık türü.)  
   
--   Asıl ucu Varlık anahtarı.  
+-   Asıl son varlık anahtarı.  
   
--   Kısıtlamasının bağımlı uç. (Bir özellik veya asıl ucu Varlık anahtarı başvuran özellikleri olan bir varlık türü.)  
+-   Kısıtlamasının bağımlı bitiş olayı. (Bir özellik veya varlık anahtarı asıl bitiş başvurusu özellikleri içeren bir varlık türü.)  
   
--   Başvuruda bulunan özellik veya bağımlı uç özellikleri.  
+-   Başvuruda bulunan özellik veya bağımlı bitiş özellikleri.  
   
- EDM başvuru bütünlüğü kısıtlamalarını amacı geçerli ilişkilendirmeleri her zaman var olduğundan emin olmaktır. Daha fazla bilgi için bkz: [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ EDM başvuru bütünlüğü kısıtlamalarını amacı, geçerli bir ilişki her zaman var sağlamaktır. Daha fazla bilgi için [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal modelle gösterir: `WrittenBy` ve `PublishedBy`. `Book` Varlık türüne sahip bir özellik `PublisherId`, varlık anahtarı başvuran `Publisher` bir başvuru bütünlüğü kısıtlaması tanımlarken varlık türü `PublishedBy` ilişkilendirme.  
+ Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `WrittenBy` ve `PublishedBy`. `Book` Varlık türüne sahip bir özellik `PublisherId`, varlık anahtarı başvuran `Publisher` varlık türü bir başvuru bütünlüğü kısıtlaması tanımlarken `PublishedBy` ilişkilendirme.  
   
  ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili adlı bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL üzerindeki bir başvuru bütünlüğü kısıtlaması tanımlar `PublishedBy` yukarıdaki kavramsal modelde gösterilen ilişkilendirme.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Üzerinde bir başvuru bütünlüğü kısıtlaması aşağıdaki CSDL tanımlayan `PublishedBy` yukarıdaki kavramsal modelde gösterilen bir ilişkilendirme.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

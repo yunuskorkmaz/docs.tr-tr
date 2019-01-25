@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653869"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo Yöntemi
-Belirtilen doğrulama hatası karşılık gelen hata iletisi alır.  
+Belirtilen doğrulama hatası için karşılık gelen hata iletisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +41,28 @@ HRESULT FormatEventInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `hVECode`  
- [in] Doğrulama hata işleyicisine geçirilen HRESULT değeri.  
+ [in] Doğrulama hata işleyicisine geçirilen HRESULT değerini.  
   
  `Context`  
- [in] A `VEContext` doğrulama hatası hakkında bağlam bilgisi içeren örneği.  
+ [in] A `VEContext` doğrulama hatası ile ilgili bağlam bilgilerini içeren bir örneği.  
   
  `msg`  
- [içinde out] Döndürülen hata iletisi içeren bir dize.  
+ [out içinde] Döndürülen hata iletisi içeren bir dize.  
   
  `ulMaxLength`  
- [in] Hata iletisinin en büyük uzunluğu.  
+ [in] Hata iletisi en fazla uzunluğu.  
   
  `psa`  
- [in] Hatayı açıklayan ek parametreleri içeren güvenli bir dizi.  
+ [in] Hatayı açıklayan ek parametreler içeren güvenli bir dizi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator.idl, IValidator.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

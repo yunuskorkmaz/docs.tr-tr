@@ -2,12 +2,12 @@
 title: ADO.NET teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2550c286485025a394cf3f8afe6c43a0472b2cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566287"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı programlamak için sağlayarak geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu sürüm stratejisidir. Bu platform, ADO.NET varlık çerçevesi ve ilgili teknolojileri içerir.  
@@ -39,7 +39,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı prog
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web veya intranet dağıtır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlere göre olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

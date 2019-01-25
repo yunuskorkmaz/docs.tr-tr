@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: (LINQ) (Visual Basic) farklı dosyalardan içerik birleştirme'
+title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655471"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: (LINQ) (Visual Basic) farklı dosyalardan içerik birleştirme
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın
 
-Bu örnek, eşleşen bir anahtarı olarak kullanılan bir ortak değer paylaşmak, virgülle ayrılmış iki dosya verileri nasıl gösterir. Bu teknik iki elektronik tablolar verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir. Yapılandırılmış metin herhangi bir tür ile çalışmak için örnek değiştirebilirsiniz.  
+Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan iki virgülle ayrılmış dosyalardan alınan veriler nasıl gösterir. Bu teknik, iki elektronik alınan verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir. Örnek yapılandırılmış metin herhangi bir türden ile çalışacak şekilde değiştirebilirsiniz.  
   
 ## <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için
   
-1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin. Dosya, elektronik tablo verilerini temsil eder. Sütun 1 öğrencinin kimliği olduğunu ve sütun 2'den 5 test puanları.  
+1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. Öğrenci Kimliği sütun 1 ve 2'den 5 test puanlarını sütunlardır.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ Bu örnek, eşleşen bir anahtarı olarak kullanılan bir ortak değer paylaşma
     122, 94, 92, 91, 91  
     ```  
   
-2.  Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin. Öğrencinin Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyayı temsil eder  
+2.  Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Öğrenci Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyasını temsil eder  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kod derleme
 
-Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir projeyi derleyin:
+Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir proje derleme:
 
-- .NET framework sürüm 3.5 System.Core.dll başvuru.
-- .NET framework sürüm 4.0 veya üstü.
-- .NET core sürüm 1.0 veya üstü.
+- .NET framework sürüm 3.5 System.Core.dll öğesine başvuru ile.
+- .NET framework sürüm 4.0 veya üzeri.
+- .NET core sürüm 1.0 veya üzeri.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

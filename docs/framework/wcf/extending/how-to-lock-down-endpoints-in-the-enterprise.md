@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
+title: 'Nasıl yapılır: Enterprise uç noktalarını kilitleme'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663102"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise uç noktalarını kilitleme
 Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun olarak geliştirilen gerektirir. Aşağıdaki konuda geliştirme ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç noktası Doğrulayıcı yüklemek nasıl ele alınmaktadır.  
   
  Bu uç nokta davranışı istemciye eklendiğinden bu durumda, bir istemci Doğrulayıcı doğrulayıcıdır [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config dosyasının bir bölümünde. WCF istemci uygulamaları için yalnızca ortak uç nokta davranışları yükler ve yalnızca hizmet uygulamaları için ortak bir hizmet davranışı yükler. Hizmet uygulamaları için aynı bu Doğrulayıcı yüklemek için bir hizmet davranışını Doğrulayıcı olmalıdır. Daha fazla bilgi için [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümü.  
@@ -63,6 +63,6 @@ Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Yapılandırma dosyası öğelerini şifreleme isteyebilirsiniz. Daha fazla bilgi için Ayrıca bakınız bölümüne bakın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyası öğeleri DPAPI kullanılarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Yapılandırma dosyası öğeleri RSA kullanarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma dosyası öğeleri DPAPI kullanılarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Yapılandırma dosyası öğeleri RSA kullanarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94955)

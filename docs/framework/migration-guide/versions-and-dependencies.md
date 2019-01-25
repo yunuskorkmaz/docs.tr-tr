@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582185"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET framework sürümleri ve bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -24,7 +24,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
  .NET Framework'ün her yeni sürümü önceki sürümlerdeki özellikleri korur ve yeni özellikler ekler. CLR kendi sürüm numarası ile tanımlanır. CLR sürümü her zaman artırılmamasına rağmen her sürümde, .NET Framework sürüm numarası artırılır. Örneğin, .NET Framework 4, 4.5 ve sonraki sürümleri .NET Framework 2.0, ancak CLR 4 içerir, 3.0 ve 3.5 CLR 2.0 içerir. (CLR'nin sürüm 3'ü yoktur.)  
   
- Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) için desteklenen işletim sistemlerinin tam bir listesi. İndirmeler için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md). Hangi .NET Framework sürümleri bir bilgisayarda yüklü belirlemek için bkz: [nasıl yapılır: Determine Which .NET Framework sürümleri Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+ Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) için desteklenen işletim sistemlerinin tam bir listesi. İndirmeler için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md). Hangi .NET Framework sürümleri bir bilgisayarda yüklü belirlemek için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
  Tabloda, işletim sistemi sürümleri yüklü .NET Framework sürümlerini ✓ ile işaretlenen **dahil / Windows üzerinde yüklü** ve **dahil /WindowsServer'dayüklü**sütunları olmalıdır [Denetim Masası'nda etkin](../../../docs/framework/install/dotnet-35-windows-10.md) (Windows için) veya Sunucu Yöneticisi üzerinden (Windows Server'de) etkin.  
   
@@ -35,9 +35,9 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 |4.7<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-47)|4| | ✓ 10 Creators Update (sürüm 1703) <br/> <br/> + 10 Yıldönümü Güncelleştirmesi (sürüm 1607) <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |Kullanım `Release` DWORD:<br/><br/> -460798 (Windows 10 Creators Update) <br/> -460805 (tüm diğer işletim sistemi sürümleri) <br/><br/> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)) |  
 |4.6.2<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-462)|4||✓ 10 Yıldönümü Güncelleştirmesi (sürüm 1607) <br /><br /> + 10 Kasım Güncelleştirmesi (sürüm 1511) <br/> + 10 <br/> + 8.1<br />+ 7|✓ 2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|Kullanım `Release` DWORD:<br /><br /> -394802 (Windows 10 Yıldönümü güncelleştirmesi ve Windows Server 2016) <br />-394806 (tüm diğer işletim sistemi sürümleri)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.6.1<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-461)|4||✓ 10 Kasım Güncelleştirmesi (sürüm 1511) <br /><br /> + 10<br />+ 8.1<br />+ 8<br />+ 7|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|Kullanım `Release` DWORD:<br /><br /> -394254 (Windows 10 Kasım güncelleştirmesi)<br />-394271 (tüm diğer işletim sistemi sürümleri)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
-|4.6<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-net-2015)|4|2015|✓ 10<br />+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> -393295 (Windows 10)<br />-393297 (tüm diğer işletim sistemi sürümleri)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
+|4.6<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-net-2015)|4|2015|✓ 10<br />+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> - 393295 (Windows 10)<br />-393297 (tüm diğer işletim sistemi sürümleri)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.5.2<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-452)|4|-|+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> 379893<br /><br />(bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
-|4.5.1<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> -378675 (Windows 8.1)<br />-378758 (diğer)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
+|4.5.1<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> - 378675 (Windows 8.1)<br />-378758 (diğer)<br /><br /> (bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4,5<br/><br/>[Yeni Özellikler](../whats-new/index.md#whats-new-in-the-net-framework-45)|4|2012|✓ 8<br />+ 7<br />+ Vista|✓ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Kullanım `Release` DWORD:<br /><br /> 378389<br /><br />(bkz [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4<br/><br/>[Yeni Özellikler](../whats-new/index.md)|4|2010|+ 7<br />+ Vista|+ 2008 R2 SP1<br />+ 2008 SP2<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |3.5<br/><br/>[Yeni Özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2,0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|  + Windows Server sürüm 1803\* <br/> + Windows Server 1709 sürümü\* <br/> + 2016\* <br/>+ 2012 R2\*<br />+ 2012\*<br />✓2008 R2 SP1\*<br />+ 2008 SP2<br />+ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
@@ -76,10 +76,10 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
 -   Uygulamanızı .NET Framework 4'e geçiş hakkında bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve nokta sürümlerini için bkz [Geçiş Kılavuzu](../../../docs/framework/migration-guide/index.md).  
   
--   Bir bilgisayarda hangi sürümlerin veya güncelleştirmelerin yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Determine Which .NET Framework sürümleri Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) ve [nasıl yapılır: belirlemek, .NET Framework güncelleştirmelerin Yüklü](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
+-   Bir bilgisayarda hangi sürümlerin veya güncelleştirmelerin yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) ve [nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sürüm uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

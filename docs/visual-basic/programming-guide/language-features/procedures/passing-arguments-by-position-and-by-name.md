@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587469"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme (Visual Basic)
 Çağırdığınızda bir `Sub` veya `Function` yordamı, bağımsız değişkenleri iletebilir *konuma göre* — yordam tanımında göründükleri sırayla — veya geçirebileceğiniz gibi *ada göre*, olmadan konuma haklısın.  
@@ -94,12 +94,12 @@ Gerekli bağımsız değişkenler girmekten kaçınmak için ada göre bağıms�
   
 Ada göre bir parametre dizisi geçiremezsiniz. Bu yordamı çağırdığınızda, belirsiz sayıda parametre dizisi virgülle ayrılmış bağımsız değişkenleri sağlayın ve derleyicinin tek bir ada sahip birden fazla bağımsız değişken ilişkilendirilemiyor olmasıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamlar](./index.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Nasıl Yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [İsteğe Bağlı Parametreler](./optional-parameters.md)  
- [Parametre Dizileri](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yordamlar](./index.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
+- [İsteğe Bağlı Parametreler](./optional-parameters.md)
+- [Parametre Dizileri](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

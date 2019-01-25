@@ -2,12 +2,12 @@
 title: (C#) XML işlevsel dönüşümü
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 2747ee98bd8df1261388270166b353755282ca96
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643048"
 ---
 # <a name="functional-transformation-of-xml-c"></a>(C#) XML işlevsel dönüşümü
 Bu konu, XML belgelerinin sınırlandırması saf işlevsel dönüşüm yaklaşımını ele alır ve yordam yaklaşımından ile karşılaştırır.  
@@ -26,14 +26,14 @@ Bu konu, XML belgelerinin sınırlandırması saf işlevsel dönüşüm yaklaş�
 ### <a name="xml-functional-transformational-technologies"></a>XML işlevsel Dönüşümsel teknolojiler  
  Microsoft XML belgeleri kullanmak için iki işlevsel dönüşüm teknolojileri sunar: XSLT ve LINQ to XML. XSLT içerisinde desteklendiği <xref:System.Xml.Xsl> ad alanı yönetilen ve yerel MSXML COM uygulama. XSLT XML belgeleri yönetmek için güçlü bir teknoloji olsa da, bir özel etki alanı, XSLT dili ve destekleyici API'lerini uzmanlığı gerektirir.  
   
- LINQ to XML, C# veya Visual Basic kodu içinde bir ifadesel ve güçlü şekilde kod saf işlevsel dönüşümlere için gerekli araçları sağlar. Örneğin, birçok LINQ örnek XML belgeleri için saf işlevsel bir yaklaşım kullanın. Ayrıca, [öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğreticide kullanıyoruz LINQ to XML işlevsel bir yaklaşım bir Microsoft Word belgesi bilgilerini işlemek için.  
+ LINQ to XML, C# veya Visual Basic kodu içinde bir ifadesel ve güçlü şekilde kod saf işlevsel dönüşümlere için gerekli araçları sağlar. Örneğin, birçok LINQ örnek XML belgeleri için saf işlevsel bir yaklaşım kullanın. Ayrıca, [Öğreticisi: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğreticide kullanıyoruz LINQ to XML işlevsel bir yaklaşım bir Microsoft Word belgesi bilgilerini işlemek için.  
   
  Bir daha kapsamlı bir karşılaştırması LINQ to XML için diğer Microsoft XML teknolojileriyle bkz [LINQ to XML ile. Diğer XML teknolojileri](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).  
   
- Kaynak belge düzensiz bir yapısı varsa XSLT belge odaklı dönüştürmeleri için önerilen araçtır. Ancak LINQ to XML belge odaklı dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: dönüştürme LINQ to XML ağaçlarını XSLT stilindeki (C#) kullanma ek açıklamalar](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+ Kaynak belge düzensiz bir yapısı varsa XSLT belge odaklı dönüştürmeleri için önerilen araçtır. Ancak LINQ to XML belge odaklı dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: LINQ to XML ağaçlarını XSLT stilindeki dönüştürmek için ek açıklamalarını kullanma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [Öğretici: WordprocessingML belgesindeki (C#) içerik düzenleme](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Öğretici: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

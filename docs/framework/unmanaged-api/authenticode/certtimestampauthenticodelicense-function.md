@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9987640f988f2239a01d2dfdbcd6b1684579d8bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601514"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense İşlevi
 Zaman damgaları Authenticode XrML bir lisans.  
@@ -46,5 +46,5 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>Dönüş Değeri  
  `S_OK` işlev başarılı olursa. Aksi takdirde bir hata kodu döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

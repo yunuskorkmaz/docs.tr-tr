@@ -2,12 +2,12 @@
 title: Desteklenen Dağıtım Senaryoları
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614490"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen Dağıtım Senaryoları
 Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF karşıladığını Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları barındırma sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izni güvenlik nedenleriyle ayarlayın. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.  
@@ -32,15 +32,15 @@ Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communicat
   
  İş akışı Hizmetleri, tam güven izinleri gerektirir ve kısmen güvenilen uygulamalarda kullanılamaz.  
   
- Daha fazla bilgi için [nasıl yapılır: ASP.NET 2.0 kullanım Orta güven](https://go.microsoft.com/fwlink/?LinkId=84603).  
+ Daha fazla bilgi için [nasıl yapılır: Orta güven ASP.NET 2.0 kullanan](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>İstemci üzerinde kısmi güven  
  Belirli güvenlik önlemleri indiriliyor ve güvenilmeyen Internet siteleriyle kod çalıştırırken alınması gerekir. Her ikisi de [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) ve [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]kullanıcının teknoloji olun XAML tarayıcı uygulaması (XBAP) kullanın kısmi güven güvenilmeyen kod (Internet bölgesi) sınırlı izinler vermek için.  
   
  WCF tarafından dağıtılan kısmen güvenilir uygulamaların içinde uzak sunuculardan ile iletişim kurmak için kullanılabilir [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) veya XBAP. Internet bölgesi izin kümesi içeren <xref:System.Net.WebPermission> kaynak konağını sağlayan açıklanan desteklenen WCF bağlamaları birini kullanarak, kaynak sunucu ile iletişim kurmak bu uygulamaları [kısmi güven özelliği uyumluluğu ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kod erişimi güvenliği](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Windows Presentation Foundation tarayıcıda tutulan uygulamalar genel bakış](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [ASP.Net Orta güven](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kod erişimi güvenliği](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Windows Presentation Foundation tarayıcıda tutulan uygulamalar genel bakış](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [ASP.Net Orta güven](https://go.microsoft.com/fwlink/?LinkId=69328)

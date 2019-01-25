@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570596"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>İkili verileri (WCF Veri Hizmetleri) ile çalışma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, almak ve ikili verileri güncelleştirmek bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aşağıdaki yollardan biriyle akış:  
@@ -25,7 +25,7 @@ ms.locfileid: "43515561"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sınıfında tanımlandığı gibi HTTP kullanarak ikili verilerin akış uygulayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bu mekanizma ikili veri hesaplarından ayrı bir medya kaynağı olarak işlem görür ancak medya bağlantısı girişinin çağrılan bir varlıkla ilgili. Daha fazla bilgi için [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  İkili resim dosyaları indirir bir Windows Presentation Foundation (WPF) istemci uygulaması oluşturmak adım adım bir örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğraf depolayan hizmet gönderisine bakın [Veri Hizmetleri Akış sağlayıcısı serisi-bölüm 2: bir medya kaynağı Stream istemciden erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Öne çıkan blog gönderisinde stream fotoğraf veri hizmeti için örnek kodu indirmek için bkz [akış fotoğraf veri hizmeti örneği](https://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'ndeki.  
+>  İkili resim dosyaları indirir bir Windows Presentation Foundation (WPF) istemci uygulaması oluşturmak adım adım bir örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğraf depolayan hizmet gönderisine bakın [Veri Hizmetleri Akış sağlayıcısı serisi-bölüm 2: İstemciden bir medya kaynağı Stream erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Öne çıkan blog gönderisinde stream fotoğraf veri hizmeti için örnek kodu indirmek için bkz [akış fotoğraf veri hizmeti örneği](https://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'ndeki.  
   
 ## <a name="entity-metadata"></a>Varlık meta verileri  
  İlgili medya kaynak akışı olan bir varlık veri hizmeti meta verileri tarafından belirtilen `HasStream` özniteliği uygulandı, medya bağlantısı girişinin bir varlık türü. Aşağıdaki örnekte, `PhotoInfo` varlıktır tarafından belirtilen ilgili medya kaynağına sahip bir medya bağlantısı girişinin `HasStream` özniteliği.  
@@ -38,7 +38,7 @@ ms.locfileid: "43515561"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı ikili kaynak akışlardan erişmek için yöntemler sağlar bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-temel veri hizmeti. Ne zaman bir medya kaynağı indirirken, medya kaynağın URI'sini ya da kullanabilirsiniz veya ikili akışa alabilirsiniz, medya kaynak verileri kendisini içerir. Bir ikili akış olarak da medya kaynak verileri karşıya yükleyebilirsiniz.  
   
 > [!TIP]
->  İkili resim dosyaları indirir bir Windows Presentation Foundation (WPF) istemci uygulaması oluşturmak adım adım bir örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğraf depolayan hizmet gönderisine bakın [Veri Hizmetleri Akış sağlayıcısı serisi-bölüm 2: bir medya kaynağı Stream istemciden erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Öne çıkan blog gönderisinde stream fotoğraf veri hizmeti için örnek kodu indirmek için bkz [akış fotoğraf veri hizmeti örneği](https://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'ndeki.  
+>  İkili resim dosyaları indirir bir Windows Presentation Foundation (WPF) istemci uygulaması oluşturmak adım adım bir örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğraf depolayan hizmet gönderisine bakın [Veri Hizmetleri Akış sağlayıcısı serisi-bölüm 2: İstemciden bir medya kaynağı Stream erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Öne çıkan blog gönderisinde stream fotoğraf veri hizmeti için örnek kodu indirmek için bkz [akış fotoğraf veri hizmeti örneği](https://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'ndeki.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>İkili Stream URI'sini alma  
  Belirli türdeki resimler ve diğer medya dosyaları gibi medya kaynağı alınırken genellikle ikili veri akışı işleme daha uygulamanızdaki medya kaynağın URI'sini kullanımı daha kolay olur. Bir medya bağlantısı girişle ile ilişkili bir kaynak akışı URI'sini almak için çağırmalıdır <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> varlık izleme örneği. Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> istemcide yeni bir görüntü oluşturmak için kullanılan bir medya kaynak akışı URI'sini almak için yöntemi:  
@@ -66,6 +66,6 @@ ms.locfileid: "43515561"
 > [!NOTE]
 >  Çağırdığınızda <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, akış kadar veri hizmetine gönderilmez <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> çağrılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

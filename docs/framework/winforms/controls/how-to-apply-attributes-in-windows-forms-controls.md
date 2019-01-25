@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama'
+title: 'Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735162"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama
 Bileşen ve Denetim doğru tasarım ortamı ile etkileşimli ve düzgün çalışma zamanında yürüten geliştirmek için öznitelikleri doğru sınıflar ve üyeler uygulama gerekir.  
   
 ## <a name="example"></a>Örnek  
@@ -77,9 +77,9 @@ Bileşen ve Denetim doğru tasarım ortamı ile etkileşimli ve düzgün çalı�
   
 -   Barındıran formun `AttributesDemoControl` başvurusu gerektirir `AttributesDemoControl` oluşturmak için derleme.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [Nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

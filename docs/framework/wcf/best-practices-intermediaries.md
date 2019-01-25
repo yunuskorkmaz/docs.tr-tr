@@ -2,12 +2,12 @@
 title: 'En iyi uygulamalar: Aracılar'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8a95bd555e6c1acf896daa77e93d7c735d1f091c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663628"
 ---
 # <a name="best-practices-intermediaries"></a>En iyi uygulamalar: Aracılar
 Doğru hizmet tarafı kanalları aracı düzgün şekilde kapatıldığından emin olmak için aracılar çağrılırken arızları dikkatli olunması gerekir.  
@@ -32,6 +32,6 @@ catch (Exception e)
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Hata İşleme](../../../docs/framework/wcf/wcf-error-handling.md)  
- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Hata İşleme](../../../docs/framework/wcf/wcf-error-handling.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

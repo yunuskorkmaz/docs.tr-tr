@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme'
+title: 'Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639191"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
-Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmetine erişmek için tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlayan ve çift yönlü iletişim düzeni kullanmaz açıklar.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle
+Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine erişmek için tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlayan ve çift yönlü iletişim deseni kullanmaz nasıl açıklar.  
   
 ### <a name="to-define-the-service"></a>Hizmet tanımlama  
   
-1.  Hizmet sözleşmesi bildirin. Tek yönlü olarak işlemlerini olmalıdır `IsOneWay` kümesine `true` içinde <xref:System.ServiceModel.OperationContractAttribute>. Aşağıdaki kod bildirir `IOneWayCalculator` tek yönlü işlemleri için sahip sözleşme `Add`, `Subtract`, `Multiply`, ve `Divide`. Adlı bir istek yanıt işlemi ayrıca tanımlar `SayHello`.  
+1.  Hizmet sözleşmesi bildirin. Tek yönlü olarak işlemleri olmalıdır `IsOneWay` kümesine `true` içinde <xref:System.ServiceModel.OperationContractAttribute>. Aşağıdaki kod bildirir `IOneWayCalculator` için tek yönlü işlem var sözleşme `Add`, `Subtract`, `Multiply`, ve `Divide`. Ayrıca adlı bir istek yanıt işlem tanımlar `SayHello`.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
     }  
     ```  
   
-3.  Hizmeti bir konsol uygulamasında barındırır. Aşağıdaki kod, hizmet ana bilgisayar gösterilmektedir.  
+3.  Hizmeti bir konsol uygulamasında barındırır. Aşağıdaki kod, hizmeti barındırmak nasıl gösterir.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
   
 ### <a name="to-access-the-service"></a>Hizmete erişmek için  
   
-1.  Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki komut satırını kullanarak hizmeti istemci sınıf oluşturmak için meta verileri exchange uç noktası adresi kullanma: `Svcutil http://localhost:8000/Service` [ServiceModel Meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirimleri ve sınıfları oluşturur.  
+1.  Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) şu komut satırını kullanarak hizmeti istemci sınıf oluşturmak için meta veri değişimi uç nokta adresini kullanarak: `Svcutil http://localhost:8000/Service` [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi arabirimler ve sınıflar, bir dizi oluşturur.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -194,7 +194,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
     }  
     ```  
   
-     Fark `IOneWayCalculator` tek yönlü hizmet işlemleri sahip arabirimi <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özniteliğini `true` ve istek-yanıt hizmeti işlemi, varsayılan değere ayarlanmış özelliğine sahip `false`. Ayrıca fark `OneWayCalculatorClient` sınıfı. Bu hizmeti çağırmak için kullanacağınız sınıftır.  
+     İçinde fark `IOneWayCalculator` tek yönlü hizmet işlemleri sahip arabirimi <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özniteliğini `true` ve istek-yanıt hizmeti işlemi varsayılan değere ayarlanmış özniteliğine sahip `false`. Ayrıca `OneWayCalculatorClient` sınıfı. Bu hizmeti çağırmak için kullanacağınız sınıftır.  
   
 2.  İstemci nesnesi oluşturun.  
   
@@ -205,7 +205,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  Hizmet işlemlerini çağırma.  
+3.  Hizmet işlemleri çağırın.  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  İstemci bağlantıları kapatın ve kaynakları temizlemek için kapatın.  
+4.  Bağlantıları kapatın ve kaynakları temizlemek için istemciyi kapatın.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -247,7 +247,7 @@ Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmet
     ```  
   
 ## <a name="example"></a>Örnek  
- Bu konuda kullanılan kodu tam bir listesi verilmiştir.  
+ Bu konu başlığında kullanılan kod tam listesi verilmiştir.  
   
 ```csharp  
 // Service.cs  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)

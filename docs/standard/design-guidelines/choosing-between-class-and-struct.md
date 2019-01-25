@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565871"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile yapı arasında seçim yapma
 Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak bir tür tasarlamak biridir. Başvuru türleri ve değer türlerinin davranış farklılıkları iyi anlaşılmasını, bu seçim yaparken önemlidir.  
@@ -55,5 +55,5 @@ Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir ba�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

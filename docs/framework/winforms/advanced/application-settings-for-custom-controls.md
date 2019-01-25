@@ -5,33 +5,33 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 46300f679471874ac5046d0a1077d8abca57f2c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526749"
 ---
 # <a name="application-settings-for-custom-controls"></a>Özel Denetimler için Uygulama Ayarları
-Özel denetimler denetimleri üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını sürdürmek vermek için belirli görevleri tamamlamanız gerekir.  
+Özel denetimlerinizi denetimleri üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için belirli görevleri tamamlamanız gerekir.  
   
- Uygulama ayarları özelliği ilgili belgelere çoğunu bağımsız uygulama oluşturmakta olduğunuz varsayılır altında yazılır. Diğer geliştiriciler barındıracak bir denetim uygulamalarında oluşturuyorsanız, ancak denetim ayarlarını kalıcı hale getirmek için bazı ek adımlar uygulamanız ihtiyacınız düzgün.  
+ Uygulama ayarları özelliğiyle ilgili belgelerin çoğu, bir tek başına uygulama oluşturma varsayım altında yazılır. Uygulamalarında diğer geliştiriciler barındıracak bir denetim oluşturma, ancak denetim ayarlarını kalıcı hale getirmek için bazı ek adımlar uygulamanız gerekiyorsa, doğru.  
   
 ## <a name="application-settings-and-custom-controls"></a>Uygulama ayarları ve özel denetimler  
- Denetiminizi düzgün ayarlarını kalıcı hale getirmek, bu işlem türetilen ayarları sarmalayıcı sınıfı, kendi özel uygulamaları oluşturarak sarmalamalıdır <xref:System.Configuration.ApplicationSettingsBase>. Ayrıca, ana denetim sınıfı uygulamalıdır <xref:System.Configuration.IPersistComponentSettings>. Arabirim iki yöntem yanı sıra çeşitli özellikler içerir <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> ve <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. Kullanarak bir form denetiminizi eklerseniz **Windows Form Tasarımcısı** Visual Studio'da Windows Forms çağıracak <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> otomatik olarak zaman denetim başlatılır; çağırmalısınız <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> kendiniz `Dispose` Denetim yöntemi.  
+ Denetiminiz düzgün ayarlarını kalıcı hale getirmek, bu işlem ayarları sarmalayıcı sınıfından türetilen kendi özel uygulamalar oluşturarak yalıtmanız gerekir <xref:System.Configuration.ApplicationSettingsBase>. Ayrıca, ana denetim sınıf uygulamalıdır <xref:System.Configuration.IPersistComponentSettings>. Çeşitli özelliklerin yanı sıra, iki yöntem arabirimi içeren <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> ve <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. Kullanarak bir formu, denetimi eklerseniz **Windows Form Tasarımcısı** Visual Studio'da, Windows Forms çağıracak <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> otomatik olarak ne zaman denetimi başlatılır; çağırmalısınız <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> kendiniz `Dispose` Denetiminizin yöntemi.  
   
- Ayrıca, Visual Studio tasarım-zamanı ortamlarda düzgün çalışması özel denetimler için uygulama ayarları için sırayla aşağıdakileri uygulamanız gerekir:  
+ Ayrıca, aşağıdaki gibi Visual Studio tasarım zamanı ortamlarda düzgün çalışması özel denetimler için uygulama ayarları için sırayla uygulamalıdır:  
   
-1.  Özel uygulama ayarlarını sınıf alan Oluşturucu ile bir <xref:System.ComponentModel.IComponent> tek bir parametre olarak. Bu sınıf, kaydetme ve uygulama ayarlarının tümünü yükleme kullanın. Bu sınıfın yeni bir örneğini oluştururken Oluşturucusu kullanarak özel denetim geçirin.  
+1.  Bir özel uygulama ayarları sınıf alan bir Oluşturucu ile bir <xref:System.ComponentModel.IComponent> tek bir parametre olarak. Bu sınıfı kaydedin ve tüm uygulama ayarlarınızı yüklemek için kullanın. Bu sınıfın yeni bir örneğini oluşturduğunuzda, oluşturucu kullanılarak özel denetiminizi geçirin.  
   
-2.  Denetim oluşturulur ve bir form üzerinde gibi formun yerleştirilen sonra bu özel ayarları sınıfı oluşturmak <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
+2.  Denetim oluşturulan ve bir form üzerinde olduğu gibi formun yerleştirilir. sonra bu özel ayarları sınıfı oluşturma <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
- Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Ayarları anahtarları ve paylaşılan ayarları  
- Bazı denetimler aynı form içindeki birden çok kez kullanılabilir. Çoğu zaman, tek tek kendi ayarlarını sürdürmek için bu denetimleri isteyeceksiniz. İle <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> özelliği <xref:System.Configuration.IPersistComponentSettings>, formdaki bir denetime birden fazla sürümünü belirsizliğini ortadan kaldırmak için davranır benzersiz bir dize sağlayabilirsiniz.  
+ Bazı denetimler, birden çok kez aynı form içinde kullanılabilir. Çoğu zaman, kullanıcıların kendi tek tek ayarların kalıcı olması için bu denetimleri isteyeceksiniz. İle <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> özelliği <xref:System.Configuration.IPersistComponentSettings>, bir form denetiminde birden fazla sürümünü ayırt etmek için görevi gören benzersiz bir dize sağlayabilirsiniz.  
   
- Uygulamak için en basit yolu <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> kullanmaktır <xref:System.Windows.Forms.Control.Name%2A> özelliği için bir denetim <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. Yük ya da denetim ayarlarını Kaydet değerini geçirin <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> oturum <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> özelliği <xref:System.Configuration.ApplicationSettingsBase> sınıfı. Uygulama ayarları, kullanıcının ayarlarını XML ediyorsa bu benzersiz anahtar kullanır. Aşağıdaki örnekte gösterildiği nasıl kod bir `<userSettings>` bölümüne adlı özel bir denetim örneği için bakın `CustomControl1` için bir ayar kaydeder, `Text` özelliği.  
+ Uygulamak için en basit yolu <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> kullanmaktır <xref:System.Windows.Forms.Control.Name%2A> özelliği için denetimin <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. Yük ya da denetim ayarlarını Kaydet değerini geçirmelidir <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> oturum <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> özelliği <xref:System.Configuration.ApplicationSettingsBase> sınıfı. Uygulama ayarları, XML'e kullanıcı ayarlarını kalıcı olduğunda bu benzersiz anahtar kullanır. Aşağıdaki örnekte gösterildiği nasıl kod bir `<userSettings>` bölümü adlı bir özel denetim örneği için görünebileceğini `CustomControl1` için bir ayar kaydeder, `Text` özelliği.  
   
 ```xml  
 <userSettings>  
@@ -43,9 +43,9 @@ ms.locfileid: "33518570"
 </userSettings>  
 ```  
   
- Tüm örnekleri için bir değer sağlamazsanız bir denetimin <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> aynı ayarları paylaşır.  
+ Tüm örnekleri için bir değer belirtmediğiniz bir denetimin <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> aynı ayarları paylaşır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

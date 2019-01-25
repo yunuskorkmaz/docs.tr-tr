@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d5d6ee0b5153c734249e64a4d29f6621edcc61bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8700d58ff9b07c286c713544777205e043da40a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643123"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; öğesi (Web Ayarları)
 Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yönetmesi için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirten [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
@@ -96,5 +96,5 @@ Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yön
 |Doğrulama dosyası||  
 |Boş olabilir.||  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<System.Web > öğesi (Web Ayarları)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<System.Web > öğesi (Web Ayarları)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586319"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity Metodu
 Bu yönetilen nesne kimliğini alır.  
@@ -39,25 +39,25 @@ HRESULT GetObjectIdentity (
   
 #### <a name="parameters"></a>Parametreler  
  `pBSTRGUID`  
- [out] Bir işaretçi nesne bulunduğu işlem GUID.  
+ [out] Nesnenin bulunduğu işlem GUİD'si işaretçisi.  
   
  `AppDomainID`  
  [out] Nesnenin uygulama etki alanı kimliği için bir işaretçi.  
   
  `pCCW`  
- [out] COM Klasik v tablosunda nesnenin dizin için bir işaretçi.  
+ [out] Nesnenin dizinde COM Klasik v tablo için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilen bir nesnenin kimliğini işlemi GUID, uygulama etki alanı kimliği ve nesnenin dizin COM Klasik v tabloda içerir.  
+ Yönetilen bir nesnenin kimliğini COM Klasik v tablosunda işlem GUID'si, uygulama etki alanı kimliği ve nesnenin dizin içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IManagedObject Arabirimi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IManagedObject Arabirimi](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

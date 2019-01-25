@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591464"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Nasıl yapılır: Parmak Kullanarak Tuvali Yeniden Boyutlandırma
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Primitives.Thumb> yeniden boyutlandırmak için denetimi bir <xref:System.Windows.Controls.Canvas> denetimi.  
@@ -46,8 +46,8 @@ Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Control
   
  Tam bir örnek için bkz. [Thumb Sürükle işlevselliği örnek](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.Primitives.Thumb>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.Primitives.Thumb>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>

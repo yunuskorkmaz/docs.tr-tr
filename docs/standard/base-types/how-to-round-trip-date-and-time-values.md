@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri'
+title: 'Nasıl yapılır: Gidiş dönüş tarih ve saat değerleri'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628194"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
+# <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş dönüş tarih ve saat değerleri
 Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kesin bir şekilde tanımlamak için tasarlanmıştır. Bu konuda, kaydetme ve geri yükleme işlemi gösterilmektedir bir <xref:System.DateTime> değeri bir <xref:System.DateTimeOffset> değer ve bir tarih ve saat değeri zaman ile kaydedilen değer aynı zamanda geri yüklenen değeri tanımlar, böylece bilgi bölge.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Bir DateTime değerini gidiş dönüşlü hale getirmek için  
@@ -101,6 +101,6 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçim](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçim](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

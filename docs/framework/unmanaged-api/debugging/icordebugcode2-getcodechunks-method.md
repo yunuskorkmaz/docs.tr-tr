@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572506"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks Metodu
-Bu kod nesnesi oluşan kod parçalarını alır.  
+Bu kod nesnesi oluşan kod öbekleriyle alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ HRESULT GetCodeChunks (
   
 #### <a name="parameters"></a>Parametreler  
  `cbufSize`  
- [in] Boyutunu `chunks` dizi.  
+ [in] Boyutu `chunks` dizisi.  
   
  `pcnumChunks`  
- [out] Döndürülen öbeği sayısı `chunks` dizi.  
+ [out] Döndürülen öbeği sayısı `chunks` dizisi.  
   
  `chunks`  
- [out] Her biri tek bir öbek kodunun temsil eden bir dizi "Codechunkınfo" yapıları. Varsa değerini `cbufSize` 0'dır, bu parametre null olabilir.  
+ [out] Her biri tek bir öbek kodunu temsil eden bir dizi "Codechunkınfo" yapıları. Varsa değerini `cbufSize` 0'dır, bu parametre null olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kod öbekleri hiçbir zaman çakışır ve, bunlar birleştirilmiş tarafından sipariş izleyeceği [Icordebugcode::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). .NET Framework sürüm 2.0 Microsoft Ara dili (MSIL) kod nesnesinde bir tek bir kod öbek oluşturan.  
+ Kod öbekleri hiçbir zaman çakışır ve bunlar, bunlar birleştirilmiş tarafından sırasını takip [Icordebugcode::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). .NET Framework sürüm 2.0 Microsoft Ara dili (MSIL) kodu nesnesinde tek kod öbek oluşur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

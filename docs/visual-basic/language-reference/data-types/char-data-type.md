@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f641f3dbcba32c77bcf73b14a9ac890d1ade5a2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611923"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 Değer 0 ile 65535 arasında değişen ayrı tutma imzasız 16-bit (2 baytlık) kod işaret eder. Her *kod noktası*, ya da karakter kodunu tek bir Unicode karakterini temsil eder.  
@@ -57,15 +57,15 @@ charVar = "Z"C
   
 -   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Char?displayProperty=nameWithType> yapısı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Char?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [String Veri Türü](../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [String Veri Türü](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

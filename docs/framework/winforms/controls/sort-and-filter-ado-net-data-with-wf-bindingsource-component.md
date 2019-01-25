@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme'
+title: 'Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584785"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni
 Sıralama ve filtreleme özelliğini kullanıma sunabileceğiniz <xref:System.Windows.Forms.BindingSource> aracılığıyla denetim <xref:System.Windows.Forms.BindingSource.Sort%2A> ve <xref:System.Windows.Forms.BindingSource.Filter%2A> özellikleri. Temel alınan veri kaynağı olduğunda basit sıralama uygulayabileceğiniz bir <xref:System.ComponentModel.IBindingList>, ve gelişmiş veri kaynağı olduğunda sıralama ve filtreleme uygulayabilirsiniz bir <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Özelliği gerektiren standart [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] söz dizimi: bir veri kaynağındaki veri sütununun adını temsil eden bir dize tarafından izlenen `ASC` veya `DESC` listesini artan veya azalan olarak sıralanması gerektiğini belirtmek için. Gelişmiş sıralama veya bir virgül ayırıcısına ile her bir sütunun ayrılarak birden çok sütun sıralama ayarlayabilirsiniz. <xref:System.Windows.Forms.BindingSource.Filter%2A> Özelliği bir dize ifadesi alır.  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ Sıralama ve filtreleme özelliğini kullanıma sunabileceğiniz <xref:System.Wi
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örneği çalıştırmak için kodu içeren bir biçime yapıştırın bir <xref:System.Windows.Forms.BindingSource> adlı `BindingSource1` ve <xref:System.Windows.Forms.DataGridView> adlı `dataGridView1`. Tanıtıcı <xref:System.Windows.Forms.Form.Load> olay formu ve çağrı `InitializeSortedFilteredBindingSource` yük olay işleyicisi yönteminde.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>  
- <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [Nasıl yapılır: örnek veritabanları yükleme](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.BindingSource.Sort%2A>
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>
+- [Nasıl yapılır: Örnek veritabanlarını yüklemek](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)

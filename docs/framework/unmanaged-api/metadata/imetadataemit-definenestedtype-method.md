@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603917"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
-Tür tanımı meta verileri imza oluşturur, döndürür bir `mdTypeDef` belirteci bu tür için ve tanımlanmış türü tarafından başvurulan türünün bir üyesi olduğunu belirtir `tdEncloser` parametresi.  
+Meta veri imzası bir tür tanımı oluşturur, döndürür bir `mdTypeDef` bu tür için belirteç ve tanımlanan bir tür tarafından başvurulan tür üyesi olduğunu belirtir `tdEncloser` parametresi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,29 +45,29 @@ HRESULT DefineNestedType (
  [in] Unicode türünün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` öznitelikleri. Bu, bir bit maskesi olan `CorTypeAttr` değerleri.  
+ [in] `TypeDef` öznitelikleri. Bu, bir bit maskesi, `CorTypeAttr` değerleri.  
   
  `tkExtends`  
- [in] Belirtecin temel sınıf. Bu olan bir `mdTypeDef` veya `mdTypeRef` belirteci.  
+ [in] Belirteç temel sınıf. Bu bir `mdTypeDef` veya `mdTypeRef` belirteci.  
   
  `rtkImplements`[]  
- [in] Bu sınıf veya arabirimi uygulayan arabirimler belirtin belirteçleri dizisi.  
+ [in] Bu sınıf veya arabirim uyguladığı arabirimlerin belirtin belirteçleri dizisi.  
   
  `tdEncloser`  
- [in] Kendilerini kapsayan türle belirteç. Dizinin son öğesi olmalı `mdTokenNil`.  
+ [in] Kapsayan türdeki belirteç. Dizinin son öğesi olmalı `mdTokenNil`.  
   
  `ptd`  
  [out] `mdTypeDef` Atanan simgesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

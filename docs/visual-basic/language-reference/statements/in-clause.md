@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567236"
 ---
 # <a name="in-clause-visual-basic"></a>In Tümcesi (Visual Basic)
-Döngü değişkeni içinde geçiş yapmak için grubu belirtir bir `For Each` döngü veya sorguda koleksiyona belirtir bir `From`, `Join`, veya `Group Join` yan tümcesi.  
+Döngü değişkeninin içinde gezeceği grubu belirtir bir `For Each` döngü veya sorguda koleksiyona belirtir bir `From`, `Join`, veya `Group Join` yan tümcesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `In` Anahtar sözcüğünü aşağıdaki bağlamlarında kullanılabilir:  
+ `In` Anahtar sözcüğü aşağıdaki bağlamlarında kullanılabilir:  
   
  [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
@@ -27,5 +27,5 @@ Döngü değişkeni içinde geçiş yapmak için grubu belirtir bir `For Each` d
   
  [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

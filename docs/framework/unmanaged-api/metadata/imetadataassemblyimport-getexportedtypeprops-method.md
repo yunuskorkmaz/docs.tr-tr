@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544646"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps Metodu
-Belirtilen meta veri imzayla verilen türünün özelliklerini alır.  
+Belirtilen meta veri imzası ile verilen tür özelliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,34 +43,34 @@ HRESULT GetExportedTypeProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mdct`  
- [in] Bir `mdExportedType` dışarı aktarılan türünü temsil eden meta veri simgesi.  
+ [in] Bir `mdExportedType` dışarı aktarılan tür temsil eden bir meta veri belirteci.  
   
  `szName`  
- [out] Dışarı aktarılan türünün adı.  
+ [out] Dışarı aktarılan tür adı.  
   
  `cchName`  
- [in] Geniş karakterler boyutu, `szName`.  
+ [in] Geniş karakter cinsinden boyutu, `szName`.  
   
  `pchName`  
  [out] Gerçekte döndürülen geniş karakter sayısı `szName`  
   
  `ptkImplementation`  
- [out] Bir `mdFile`, `mdAssemblyRef`, veya `mdExportedType` içeren veya erişime izin verilen türünün özelliklerini meta veri simgesi.  
+ [out] Bir `mdFile`, `mdAssemblyRef`, veya `mdExportedType` içeren veya erişime izin verilen tür özelliklerini meta veri belirteci.  
   
  `ptkTypeDef`  
- [out] Bir işaretçi bir `mdTypeDef` dosyasındaki bir türü temsil eden belirteci.  
+ [out] Bir işaretçi bir `mdTypeDef` dosyasındaki türünü temsil eden belirteç.  
   
  `pdwExportedTypeFlags`  
- [out] Dışarı aktarılan türüne uygulanacağını meta verileri açıklayan bayrakları gösteren bir işaretçi. Bayrak değeri bir veya daha fazla olabilir [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değerleri.  
+ [out] Dışarı aktarılan türe uygulandı meta verileri açıklayan bayrakları için bir işaretçi. Flags değeri bir veya daha fazla [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değerleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

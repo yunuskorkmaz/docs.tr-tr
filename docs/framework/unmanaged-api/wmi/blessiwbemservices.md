@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716084"
 ---
 # <a name="blessiwbemservices-function"></a>Blessıwbemservices işlevi
 Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfı.   
@@ -71,11 +71,11 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Wınerr
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

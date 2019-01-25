@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfdc2d434b61d1c1e16ebfdcc2ea423f96254be5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fcad683ace327caf06a4a9a6ef5b7cf1d9a9334f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596442"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;Alwaysflowımpersonationpolicy&gt; öğesi
 Windows kimlik her zaman arasında nasıl kimliğe bürünme gerçekleştirilip gerçekleştirilmediğine bakılmaksızın zaman uyumsuz noktalar, akışları olduğunu belirtir.  
@@ -108,7 +108,7 @@ Windows kimlik her zaman arasında nasıl kimliğe bürünme gerçekleştirilip 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<Legacyımpersonationpolicy > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma'
+title: 'Nasıl yapılır: Küçük döngü gövdelerini hızlandırma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5cb872acbe496f1f27ee9065dd3b276bbed349b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 06af0e10080977800479ed5aa444c63bde2d371e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726461"
 ---
-# <a name="how-to-speed-up-small-loop-bodies"></a>Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma
+# <a name="how-to-speed-up-small-loop-bodies"></a>Nasıl yapılır: Küçük döngü gövdelerini hızlandırma
 Olduğunda bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngüye sahip küçük bir gövde, eşdeğer sıralı döngü daha yavaş, gibi gerçekleştirebileceğiniz [için](~/docs/csharp/language-reference/keywords/for.md) döngüde C# ve [için](https://msdn.microsoft.com/library/c470a263-9b49-4308-8fd6-8592b84a7980) Visual Basic'te döngü. Yavaş performans verileri ve her döngü yinelemesinin bir Temsilcide çağırma maliyeti Bölümlemede yükü nedeniyle oluşur. Bu tür senaryolara <xref:System.Collections.Concurrent.Partitioner> sağlar sınıfını <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> yöntemi temsilci gövdesi için sıralı döngü girmenize olanak tanır ve böylece temsilci yineleme başına bir kez yerine bir bölüm başına yalnızca bir kez çağrılır. Daha fazla bilgi için [PLINQ ve TPL için özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Örnek  
@@ -28,7 +28,7 @@ Olduğunda bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [PLINQ ve TPL için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
-- [Yineleyiciler](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [PLINQ ve TPL için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
+- [Yineleyiciler](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
 - [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

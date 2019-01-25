@@ -2,12 +2,12 @@
 title: DataAdapters ve DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583515"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReaders
 ADO.NET kullanarak **DataReader** bir veritabanından veri salt okunur, salt iletme akışını almak için. Sonuçları döndüren sorguyu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabellekteki depolanır kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir duruma geldiği veri alarak ve (varsayılan) uygulama performansını artırabilir sistem yükünü azaltarak bellekte bir anda yalnızca bir satır depolama.  
@@ -44,9 +44,9 @@ ADO.NET kullanarak **DataReader** bir veritabanından veri salt okunur, salt ile
  [DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Güncelleştirmeleri uygularken SQL Server gidiş dönüş sayısını azaltarak geliştirerek uygulama performansını açıklar `DataSet`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

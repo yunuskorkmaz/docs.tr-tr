@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b0ac45c9d2c5b7ff9630bbeaed4bfcee5ec46fcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609999"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;ekleme&gt; öğesi için &lt;anahtarları&gt;
 Bir izleme anahtarı ayarlandığı düzeyini belirtir.  
@@ -69,8 +69,8 @@ Bir izleme anahtarı ayarlandığı düzeyini belirtir.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698248"
 ---
 # <a name="of-clause-visual-basic"></a>Of Tümcesi (Visual Basic)
-Tanıtır bir `Of` tanımlayan yan tümcesi bir *tür parametresi* üzerinde bir *genel* sınıfı, yapısı, arabirim, temsilci veya yordam. Genel türler hakkında daha fazla bilgi için bkz: [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Tanıtır bir `Of` tanımlayan yan tümcesi bir *tür parametresi* üzerinde bir *genel* sınıfı, yapı, arabirim, temsilci veya yordam. Genel türler hakkında daha fazla bilgi için bkz: [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>Kullanarak anahtar sözcüğü  
- Aşağıdaki kod örneğinde `Of` iki tür parametre alan bir sınıfın anahat tanımlamak için anahtar sözcüğü. Bu *kısıtlar* `keyType` parametresiyle <xref:System.IComparable> kullanıcı kodu uygulayan bir tür bağımsız değişkeni sağlamanız gerekir anlamına gelir arabirimi <xref:System.IComparable>. Bu işlem gereklidir böylece `add` yordam çağırabilir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemi. Kısıtlamaları hakkında daha fazla bilgi için bkz: [türü listesinde](../../../visual-basic/language-reference/statements/type-list.md).  
+ Aşağıdaki kod örneğinde `Of` iki tür parametreleri alan sınıfının ana hattı tanımlamak için anahtar sözcüğü. Bunu *kısıtlar* `keyType` parametresiyle <xref:System.IComparable> kullanan kodu uygulayan bir tür bağımsız değişkeni sağlaması gerekir yani arabirimi <xref:System.IComparable>. Bunun gerekli olmasının böylece `add` yordam çağırabilir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemi. Kısıtlamaları hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Önceki sınıf tanımını tamamlarsanız, çeşitli oluşturabileceğiniz `dictionary` bu sınıflardan. Sağladığınız için türleri `entryType` ve `keyType` sınıf ne tür bir giriş içerir ve isteğe bağlı olarak anahtar türüne sahip her girişi ilişkilendirir belirler. İçin sağlamalısınız kısıtlama nedeniyle `keyType` uygulayan bir tür <xref:System.IComparable>.  
+ Önceki bir sınıf tanımı tamamlarsanız, çeşitli oluşturabilirsiniz `dictionary` bu sınıflardan. Sağladığınız için türleri `entryType` ve `keyType` sınıf giriş türünü içerir ve her bir girdi ilişkilendirir anahtar türünü belirler. Kısıtlama nedeniyle, için sağlamalısınız `keyType` uygulayan bir tür <xref:System.IComparable>.  
   
- Aşağıdaki kod örneğinde tutan bir nesne oluşturur `String` girişleri ve ilişkilendirilmiş bir `Integer` her bir anahtar. `Integer` uygulayan <xref:System.IComparable> ve bu nedenle üzerinde kısıtlamasına `keyType`.  
+ Aşağıdaki kod örneği içeren bir nesne oluşturur `String` girişleri ve associates bir `Integer` her bir anahtar. `Integer` uygulayan <xref:System.IComparable> ve bu nedenle üzerinde kısıtlamasına `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- `Of` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
+ `Of` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -64,9 +64,9 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IComparable>  
- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IComparable>
+- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Çıkış](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: bbe9bed5a32e463424b98f4066e95374401931e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cfee16ad1cdc1e019a4133259c1603f5a0a09ac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536561"
 ---
 # <a name="lttypeparamrefgt-c-programming-guide"></a>&lt;typeparamref&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ ms.locfileid: "53243926"
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

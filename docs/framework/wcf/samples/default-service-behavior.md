@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7d58154858cd5f2aef21cc6ceeb93d1ee2f2d1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619590"
 ---
 # <a name="default-service-behavior"></a>Varsayılan Hizmet Davranışı
 Bu örnek, hizmet davranışı ayarları nasıl yapılandırılabileceğini göstermektedir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek hizmet davranışları ve işlem davranışları kullanarak açıkça tanımlar <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> öznitelikleri. (Bu örnekte gösterildiği gibi), yapılandırma dosyalarında veya kesin kod davranışlarını yapılandırabilirsiniz.  
@@ -94,4 +94,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

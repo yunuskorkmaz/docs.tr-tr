@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 4ee58b02965bef680731f6911d8b5121fd890eb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368484d9138d1ae10efb8c63f6cfaa6bcefa6ed8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528972"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>Sınıfının bilgileri yüklenemiyor &#39; &lt;classname&gt;&#39;
-Bir başvuru kullanılabilir olmayan bir sınıfa yapıldı.  
+Kullanılabilir olmayan bir sınıfa bir başvuru yapıldı.  
   
  **Hata Kimliği:** BC30712  
   
@@ -23,7 +23,7 @@ Bir başvuru kullanılabilir olmayan bir sınıfa yapıldı.
   
 1.  Sınıf tanımlanır ve adının doğru yazıldığından emin olun.  
   
-2.  Modülde tanımlanmış üyelerinden erişmeyi deneyin. Bazı durumlarda, burada bildirilen modülleri henüz yüklenmedi olmadığından üyeleri hata ayıklama ortamı bulunamıyor.  
+2.  Modülde tanımlanmış üyelerinden erişmeyi deneyin. Bazı durumlarda, burada bildirildikleri modülleri henüz yüklenmedi çünkü hata ayıklama ortamında üyeleri bulamıyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)

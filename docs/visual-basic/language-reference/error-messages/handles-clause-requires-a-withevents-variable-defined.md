@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 99901432375c02e6a0e500cb772f8fd029276b2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e018f4babd3ec6b212673494c6ae30f13c49737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608855"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
-Değil sağladığınız bir `WithEvents` değişkeni, `Handles` yan tümcesi. `Handles` Bir yordam bildiriminin sonundaki anahtar sözcüğü kullanılarak bildirilen bir nesne değişkeni tarafından başlatılan olayları işlemek için neden `WithEvents` anahtar sözcüğü.  
+Değil sağladığınız bir `WithEvents` değişkenini, `Handles` yan tümcesi. `Handles` Sonunda bir yordam bildirimi, anahtar sözcüğü kullanılarak bildirilen bir nesne değişkeni tarafından başlatılan olayları işlemek neden `WithEvents` anahtar sözcüğü.  
   
  **Hata Kimliği:** BC30506  
   
@@ -23,5 +23,5 @@ Değil sağladığınız bir `WithEvents` değişkeni, `Handles` yan tümcesi. `
   
 -   Gerekli tedarik `WithEvents` değişkeni.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: sıralama'
+title: 'Sorgu ifadesi söz dizimi örnekleri: Sıralama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 88a1b8a8698c6de51b4fcfcbfdbc75b5b53c11ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657993"
 ---
-# <a name="query-expression-syntax-examples-ordering"></a>Sorgu ifadesi söz dizimi örnekleri: sıralama
+# <a name="query-expression-syntax-examples-ordering"></a>Sorgu ifadesi söz dizimi örnekleri: Sıralama
 Bu konudaki örnekler nasıl kullanılacağını gösteren `OrderBy` ve `OrderByDescending` sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
@@ -58,5 +58,5 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren `OrderBy` ve `OrderBy
  [!code-csharp[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescendingsimple)]
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3909b9cd012ef47f5a191dbc1e7978a5852e62fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef916b0950e179f6782ce8d4d6fa380fd3804aa0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577173"
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt; öğesi
 Sınıf için kolay adlar eşlemeleri içerir.  
@@ -76,8 +76,8 @@ Sınıf için kolay adlar eşlemeleri içerir.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

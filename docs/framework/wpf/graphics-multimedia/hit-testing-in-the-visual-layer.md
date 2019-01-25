@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692421"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Görsel Katmanda Tıklama Testi
 Bu konu, isabet testi işlevi görsel katman tarafından sağlanan genel bir bakış sağlar. İsabet sınaması desteği sayesinde geometri veya nokta değerinin işlenmiş içeriği içinde olup olmadığını belirlemek bir <xref:System.Windows.Media.Visual>, birden çok nesne seçmek için seçim dikdörtgeninin gibi kullanıcı arabirimi davranışı uygulamak etmenize imkan sağlar.  
@@ -24,13 +24,13 @@ Bu konu, isabet testi işlevi görsel katman tarafından sağlanan genel bir bak
 ## <a name="hit-testing-scenarios"></a>İsabet sınaması senaryoları  
  <xref:System.Windows.UIElement> Sağlar sınıfını <xref:System.Windows.UIElement.InputHitTest%2A> isabet sınaması bir belirtilen koordinat değeri kullanarak bir öğe olanak tanıyan yöntemi. Çoğu durumda, <xref:System.Windows.UIElement.InputHitTest%2A> yöntemi uygulamak için isabet sınaması öğeleri istenen işlevselliği sağlar. Ancak, görsel katmanda isabet sınaması uygulamak gerekebilir çeşitli senaryolar vardır.  
   
--   İsabet sınaması olmayan<xref:System.Windows.UIElement> nesneleri: Test olmayan isabet durumunda geçerlidir<xref:System.Windows.UIElement> gibi nesneleri <xref:System.Windows.Media.DrawingVisual> veya grafik nesneleri.  
+-   İsabet sınaması olmayan<xref:System.Windows.UIElement> nesneler: Test olmayan isabet durumunda geçerlidir<xref:System.Windows.UIElement> gibi nesneleri <xref:System.Windows.Media.DrawingVisual> veya grafik nesneleri.  
   
--   Geometri kullanılarak isabet sınaması: isabet sınaması bir noktanın koordinat değeri yerine geometri nesnesi gerekiyorsa bu geçerlidir.  
+-   İsabet sınaması bir geometri kullanarak: İsabet sınaması bir noktanın koordinat değeri yerine geometri nesnesi gerekiyorsa bu geçerlidir.  
   
--   Birden çok nesne için isabet sınaması: isabet sınaması Çakışan nesneler gibi birden çok nesne için gerektiğinde bu geçerlidir. Geometri veya noktası, yalnızca ilki kesişen tüm görseller için sonuçlar alabilirsiniz.  
+-   Birden çok nesne için isabet sınaması: İsabet testi nesneleri çakışan gibi birden çok nesneyi karşı gerektiğinde bu geçerlidir. Geometri veya noktası, yalnızca ilki kesişen tüm görseller için sonuçlar alabilirsiniz.  
   
--   Yoksayma <xref:System.Windows.UIElement> ilkesini test etme isabet: yok saymak gerektiğinde bu geçerlidir <xref:System.Windows.UIElement> isabet sınaması bir öğe devre dışı olup olmadığını veya görünmez gibi Etkenler dikkate alan ilkesi.  
+-   Yoksayma <xref:System.Windows.UIElement> isabet sınaması İlkesi: Yok saymak gerektiğinde bu geçerlidir <xref:System.Windows.UIElement> isabet sınaması bir öğe devre dışı olup olmadığını veya görünmez gibi Etkenler dikkate alan ilkesi.  
   
 > [!NOTE]
 >  Görsel katmanda test isabet gösteren tam bir kod örneği için bkz: [isabet sınaması örneği kullanarak Test isabet](https://go.microsoft.com/fwlink/?LinkID=159994) ve [Win32 birlikte çalışması örnek ile isabet sınaması](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -138,13 +138,13 @@ Görsel ağacı temizleme
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [İsabet sınaması örneği kullanan tıklama testi](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [İsabet testi ile Win32 birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [Görselde Tıklama Testi Geometrisi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [İsabet sınaması örneği kullanan tıklama testi](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [İsabet testi ile Win32 birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Görselde Tıklama Testi Geometrisi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

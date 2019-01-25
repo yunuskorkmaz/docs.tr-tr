@@ -1,5 +1,5 @@
 ---
-title: 'Performansı İyileştirme: Diğer Öneriler'
+title: 'Performansı iyileştirme: Diğer öneriler'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,74 +11,74 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 3ea776dcb1b8633922aafca31821d367a11260f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703685"
 ---
-# <a name="optimizing-performance-other-recommendations"></a>Performansı İyileştirme: Diğer Öneriler
-<a name="introduction"></a> Bu konu, konular tarafından kapsanan olanları yanı sıra performans önerileri sağlar [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) bölümü.  
+# <a name="optimizing-performance-other-recommendations"></a>Performansı iyileştirme: Diğer öneriler
+<a name="introduction"></a> Bu konu başlığı altında ek olarak konularındaki tarafından kapsanan performans önerileri sağlar [WPF uygulama performansını en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) bölümü.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Opaklık karşı öğeler üzerinde Fırçalar üzerinde](#Opacity)  
+-   [Opaklık karşı öğeler üzerinde Fırçalar hakkında](#Opacity)  
   
--   [Nesneye Gezinti](#Navigation_Objects)  
+-   [Nesne gitme](#Navigation_Objects)  
   
--   [İsabet üzerinde büyük 3B yüzeyleri sınaması](#Hit_Testing)  
+-   [İsabet sınaması 3B yüzeyler üzerinde](#Hit_Testing)  
   
 -   [CompositionTarget.işleme olayı](#CompositionTarget_Rendering_Event)  
   
 -   [ScrollBarVisibility kullanmaktan kaçının otomatik =](#Avoid_Using_ScrollBarVisibility)  
   
--   [Başlatma süresini azaltmak için yazı tipi önbelleği hizmetini yapılandırma](#FontCache)  
+-   [Başlatma süresini azaltmak için yazı tipi önbellek hizmetini yapılandırma](#FontCache)  
   
 <a name="Opacity"></a>   
-## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opaklık karşı öğeler üzerinde Fırçalar üzerinde  
- Kullandığınızda, bir <xref:System.Windows.Media.Brush> ayarlamak için <xref:System.Windows.Shapes.Shape.Fill%2A> veya <xref:System.Windows.Shapes.Shape.Stroke%2A> bir öğenin ayarlamak daha iyi <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> yerine ayarı değeri öğenin <xref:System.Windows.UIElement.Opacity%2A> özelliği. Bir öğenin değiştirme <xref:System.Windows.UIElement.Opacity%2A> özelliği neden olabilecek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geçici yüzey oluşturmak için.  
+## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opaklık karşı öğeler üzerinde Fırçalar hakkında  
+ Kullandığınızda, bir <xref:System.Windows.Media.Brush> ayarlanacak <xref:System.Windows.Shapes.Shape.Fill%2A> veya <xref:System.Windows.Shapes.Shape.Stroke%2A> bir öğenin ayarlamak daha iyi <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> değeri ayarı yerine öğenin <xref:System.Windows.UIElement.Opacity%2A> özelliği. Bir öğenin değiştirme <xref:System.Windows.UIElement.Opacity%2A> özelliği neden olabilecek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geçici bir yüzey oluşturmak için.  
   
 <a name="Navigation_Objects"></a>   
-## <a name="navigation-to-object"></a>Nesneye Gezinti  
- <xref:System.Windows.Navigation.NavigationWindow> Nesne türer <xref:System.Windows.Window> ve öncelikle toplayarak içerik gezinti desteği ile genişletir <xref:System.Windows.Navigation.NavigationService> ve günlük. İstemci alanını güncelleştirebilirsiniz <xref:System.Windows.Navigation.NavigationWindow> ya da belirterek bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] veya bir nesne. Aşağıdaki örnek, her iki yöntem gösterir:  
+## <a name="navigation-to-object"></a>Nesne gitme  
+ <xref:System.Windows.Navigation.NavigationWindow> Nesne türetilir <xref:System.Windows.Window> ve içerik gezinti desteği ile öncelikli olarak toplayarak genişletir <xref:System.Windows.Navigation.NavigationService> ve günlük. İstemci alanının güncelleştirebilirsiniz <xref:System.Windows.Navigation.NavigationWindow> ya da belirterek bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] veya bir nesne. Aşağıdaki örnek, her iki yöntem de gösterir:  
   
  [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
- Her <xref:System.Windows.Navigation.NavigationWindow> nesnesi bu penceresinde kullanıcının Gezinti geçmişini kaydeden bir günlük sahiptir. Günlük amacı kullanıcıların kendi adımları yeniden izlemesine izin vermek için biridir.  
+ Her <xref:System.Windows.Navigation.NavigationWindow> nesnesi, pencerede kullanıcının Gezinti geçmişini kaydeden bir günlük sahiptir. Günlük amaçlarından kullanıcılar kendi adımları yeniden izlemesine izin vermektir.  
   
- Kullanarak gittiğinizde bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], günlük yalnızca depolar [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru. Bunun anlamı her sayfanın yeniden ziyaret, bunu dinamik olarak, zaman alıcıdır ve sayfa karmaşıklığına bağlı olarak olabilecek yeniden düzenlenir. Bu durumda, günlüğün depolama maliyeti düşüktür, ancak sayfa yeniden oluşturma zamanı olasılığı yüksektir.  
+ Kullanarak gittiğinizde bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], günlüğü yalnızca depolar [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru. Bu her zaman sayfayı yeniden ziyaret, bunu dinamik olarak, zaman alıcı sayfanın karmaşıklığına bağlı olarak olabilecek oluşturulduğunu gösterir. Bu durumda, günlük depolama maliyeti düşük ancak sayfayı yeniden oluşturmak için zaman olasılığı yüksektir.  
   
- Bir nesne kullanarak gittiğinizde günlük görsel nesne ağacının tümünü depolar. Bu sayfa yeniden ziyaret her seferinde onu hemen oluşturulmadan gerek kalmadan anlamına gelir. Bu durumda, günlüğün depolama maliyeti yüksek, ancak sayfa yeniden oluşturma zamanı düşüktür.  
+ Bir nesneyi kullanmayı gittiğinizde günlük visual nesne ağacının tümünü depolar. Bu sayfayı yeniden ziyaret her seferinde, hemen oluşturulmadan gerek kalmadan anlamına gelir. Bu durumda, günlük depolama maliyeti yüksektir, ancak sayfa yeniden oluşturmak için zaman düşüktür.  
   
- Kullandığınızda <xref:System.Windows.Navigation.NavigationWindow> nesnesi, günlük kaydı desteğinin uygulamanızın performansını nasıl etkilediğini göz önünde bulundurmanız gerekir. Daha fazla bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Kullanırken <xref:System.Windows.Navigation.NavigationWindow> nesnesi, günlüğe kaydetme desteği, uygulamanızın performansını nasıl etkilediğini göz önünde bulundurmanız gerekir. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
-## <a name="hit-testing-on-large-3d-surfaces"></a>İsabet üzerinde büyük 3B yüzeyleri sınaması  
- İsabet testi büyük 3B Yüzey üzerinde bir çok performansı yoğun CPU tüketimi açısından işlemdir. Bu, özellikle 3B Yüzey hareketli olduğunda geçerlidir. Ardından bu yüzey üzerinde isabet testi gerektirmiyorsa isabet testi devre dışı. Öğesinden türetilen nesneler <xref:System.Windows.UIElement> devre dışı bırak isabet ayarlayarak sınaması <xref:System.Windows.UIElement.IsHitTestVisible%2A> özelliğine `false`.  
+## <a name="hit-testing-on-large-3d-surfaces"></a>İsabet sınaması 3B yüzeyler üzerinde  
+ 3B yüzeyler üzerinde isabet sınaması bir çok performansı yoğun CPU tüketimi açısından işlemdir. Bu, özellikle 3B yüzeyi hareketli olduğunda geçerlidir. İsabet testi üzerinde bu yüzeyleri gerektirmeyen isabet sınaması devre dışı. Öğesinden türetilen nesneler <xref:System.Windows.UIElement> devre dışı bırakma isabet ayarlayarak test <xref:System.Windows.UIElement.IsHitTestVisible%2A> özelliğini `false`.  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
 ## <a name="compositiontargetrendering-event"></a>CompositionTarget.işleme olayı  
- <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> Olaya neden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sürekli olarak hareketli için. Bu olayı kullanırsanız, her fırsatta kullanımdan çıkarın.  
+ <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> Olayına neden olmadan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sürekli animasyon uygulamak için. Bu olayı kullanın, her fırsatta çıkarın.  
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility kullanmaktan kaçının otomatik =  
- Mümkün olduğunda, kullanmaktan kaçının <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> değerini `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri. Bu özellikler için tanımlanan <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>, ve <xref:System.Windows.Controls.TextBox> nesneleri ve için eklenen bir özellik olarak <xref:System.Windows.Controls.ListBox> nesnesi. Bunun yerine, ayarlamak <xref:System.Windows.Controls.ScrollBarVisibility> için <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>, veya <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
+ Mümkün olduğunda, kullanmaktan kaçının <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> değerini `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri. Bu özellikler için tanımlanan <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>, ve <xref:System.Windows.Controls.TextBox> nesneler için eklenen bir özellik olarak <xref:System.Windows.Controls.ListBox> nesne. Bunun yerine, <xref:System.Windows.Controls.ScrollBarVisibility> için <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>, veya <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
   
- <xref:System.Windows.Controls.ScrollBarVisibility.Auto> Alanı sınırlıdır ve kaydırma çubukları, yalnızca gerekli olduğunda görüntülenecek değer durumlar için amaçlanmıştır. Örneğin, bunu kullanmak yararlı olabilir <xref:System.Windows.Controls.ScrollBarVisibility> değerini bir <xref:System.Windows.Controls.ListBox> tersine 30 öğelerinin bir <xref:System.Windows.Controls.TextBox> satırlık metin yüzlerce.  
+ <xref:System.Windows.Controls.ScrollBarVisibility.Auto> Sınırlı sayıda yer olduğu ve kaydırma çubukları, yalnızca gerekli olduğunda görüntülenecek değer durumlar için tasarlanmıştır. Örneğin, bunu kullanmak kullanışlı olabilir <xref:System.Windows.Controls.ScrollBarVisibility> değerini bir <xref:System.Windows.Controls.ListBox> 30 öğe olarak bir <xref:System.Windows.Controls.TextBox> satırlık metin yüzlerce.  
   
 <a name="FontCache"></a>   
-## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Başlatma süresini azaltmak için yazı tipi önbelleği hizmetini yapılandırma  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yazı tipi önbellek hizmeti arasında yazı tipi veri paylaşır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. İlk [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çalıştırdığınız uygulama hizmet zaten çalışmıyorsa bu hizmetini başlatır. Kullanıyorsanız [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], "Windows Presentation Foundation (WPF) yazı tipi önbelleği 3.0.0.0" Hizmet 'Elle"(varsayılan)'"Otomatik (Gecikmeli Başlatma)"için ilk başlangıç zamanını azaltmak için ayarlayabileceğiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
+## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Başlatma süresini azaltmak için yazı tipi önbellek hizmetini yapılandırma  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yazı tipi önbellek hizmeti, yazı tipi verileri arasında paylaştığı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. İlk [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çalıştırdığınız uygulaması, hizmet zaten çalışmıyorsa bu hizmetini başlatır. Kullanıyorsanız [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], "Windows Presentation Foundation (WPF) yazı tipi önbellek 3.0.0.0" hizmet "El ile" (varsayılan) "Otomatik (Gecikmeli Başlatma)", ilk başlatma süresini azaltmak için ayarlayabileceğiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634444"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete Yöntemi
-Hata ayıklayıcı bir adım tamamlandığını bildirir.  
+Hata ayıklayıcı, bir adım tamamlandığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT StepComplete (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye. adımını tamamlamış iş parçacığı içeren uygulama etki alanını temsil eder.  
+ [in] Hangi adımın tamamlanması iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pThread`  
- [in] Bir işaretçi Icordebugthread nesneye. adımını tamamlamış iş parçacığı temsil eder.  
+ [in] Hangi adımın tamamlanması iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
   
  `pStepper`  
- [in] Kod yürütmeyi adımda temsil eden bir ICorDebugStepper nesnesi için bir işaretçi.  
+ [in] Kod yürütmeyi adımda temsil eden bir ICorDebugStepper nesne işaretçisi.  
   
  `reason`  
- [in] Tek bir adımı sonucunu gösteren CorDebugStepReason numaralandırması değeri.  
+ [in] CorDebugStepReason sabit bir adımın sonucunu gösteren bir değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Adımlayıcı hata ayıklama sonlandırılır sürece atlama isterseniz, devam etmek için kullanılabilir.  
+ Adımlayıcı, hata ayıklama sonlandırıldı sürece Adımlama istenirse, devam etmek için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

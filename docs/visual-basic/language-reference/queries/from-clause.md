@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678791"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
 Bir veya daha fazla aralık değişkenleri ve bir sorgu koleksiyonu belirtir.  
@@ -69,20 +69,20 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Distinct Yan Tümcesi](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Join Yan Tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Let Yan Tümcesi](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Skip Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take Yan Tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take While Yan Tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Distinct Yan Tümcesi](../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Join Yan Tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Let Yan Tümcesi](../../../visual-basic/language-reference/queries/let-clause.md)
+- [Skip Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Take Yan Tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take While Yan Tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md)

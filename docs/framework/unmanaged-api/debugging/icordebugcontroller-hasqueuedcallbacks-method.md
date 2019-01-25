@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630846"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks Yöntemi
-Tüm yönetilen geri aramalar için belirtilen iş parçacığı sıraya alınmış olup olmadığını belirten bir değer alır.  
+Tüm yönetilen geri çağırmaları belirtilen iş parçacığı için sıraya alınmış olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT HasQueuedCallbacks (
   
 #### <a name="parameters"></a>Parametreler  
  `pThread`  
- [in] İş parçacığı temsil eden bir "ICorDebugThread" nesnesi için bir işaretçi.  
+ [in] İş parçacığını temsil eden bir "ICorDebugThread" nesne işaretçisi.  
   
  `pbQueued`  
- [out] Bir değer için bir işaretçi `true` tüm yönetilen geri aramalar şu anda, belirtilen iş parçacığı için sıraya alınan Aksi takdirde `false`.  
+ [out] Bir değer için bir işaretçi `true` tüm yönetilen geri çağırmaları şu anda, belirtilen iş parçacığı için kuyruğa alınan; Aksi takdirde `false`.  
   
- İçin NULL belirtilirse `pThread` parametresi `HasQueuedCallbacks` döndürülecek `true` şu anda yönetilen geri aramalar için herhangi bir iş parçacığı sıraya alındı.  
+ Null için belirtilirse `pThread` parametresi `HasQueuedCallbacks` döndürür `true` şu anda yönetilen geri çağırmaları herhangi bir iş parçacığı için kuyruğa alındı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geri aramalar gönderilen birer birer, her zaman olacaktır [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) olarak adlandırılır. Hata ayıklayıcı, aynı anda gerçekleşen birden çok hata ayıklama olaylara rapor isterse Bu bayrak kontrol edebilirsiniz.  
+ Geri çağırmaları gönderilen birer birer, her zaman olacaktır [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağrılır. Aynı anda birden çok hata ayıklama olayları bildirmek istiyorsa, hata ayıklayıcı bu bayrağı kontrol edebilirsiniz.  
   
- Hata ayıklama olayları sıralandığında hata ayıklayıcı ayıklayıcı durumunu emin olmak için tüm kuyruk boşaltma gerekir böylece bunlar zaten, oluştu. (Çağrı `ICorDebugController::Continue` sıranın boşaltmak için.) Örneğin, sıranın iş parçacığı üzerinde iki hata ayıklama olayları içeriyorsa *X*, ve iş parçacığı hata ayıklayıcı bekletir *X* ilk hata ayıklama olayı ve ardından çağrıları sonra `ICorDebugController::Continue`, ikinci hata ayıklama olayı için iş parçacığı *X* iş parçacığı askıya alındı ancak gönderilir.  
+ Hata ayıklama olaylarını sıralandığında, hata ayıklayıcı hata ayıklanan durumunu emin olmak için tüm kuyruk boşaltma gerekir böylece bunlar zaten, oluştu. (Çağrı `ICorDebugController::Continue` boşaltma kuyruğu için.) Örneğin, sıranın iş parçacığı üzerinde iki hata ayıklama olaylarını içeriyorsa *X*, ve hata ayıklayıcı iş parçacığını askıya alır *X* ilk hata ayıklama olayı ve ardından aramaları `ICorDebugController::Continue`, ikinci hata ayıklama olayı için iş parçacığı *X* iş parçacığını askıya alındı ancak gönderilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

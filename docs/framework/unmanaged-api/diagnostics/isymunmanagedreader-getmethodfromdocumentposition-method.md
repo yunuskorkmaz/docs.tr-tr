@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f756a6e80eee0998398b4955d1d091d97b2ad73f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebb1a13848b1c1336287413cdd7246da748ec864
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503965"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition Metodu
-Belgede verilen konumunda kesme noktası içerdiğinden yöntemi döndürür.  
+Bir belge belirtilen konumda bir kesme noktası içeren yöntemi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,19 +42,19 @@ HRESULT GetMethodFromDocumentPosition (
  [in] Belirtilen belge.  
   
  `line`  
- [in] Belirtilen belge satırı.  
+ [in] Belirtilen belge satır.  
   
  `column`  
- [in] Belirtilen belge sütun.  
+ [in] Belirtilen belgeyi içeren sütun.  
   
  `pRetVal`  
- [out] Adresine bir işaretçi bir [Isymunmanagedmethod arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) kesme içeren yöntemi temsil eden nesne.  
+ [out] Adresine bir işaretçi bir [Isymunmanagedmethod arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) içerdiği kesme noktası yöntemi temsil eden nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

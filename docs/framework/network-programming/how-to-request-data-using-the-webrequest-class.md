@@ -11,12 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 8a740d2eecd4d866fd3042985f1f6f3194a12ec5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ac7f9fc4a3c7a376d96d7cf820d2051bf2103e51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623072"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
 Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullanılan adımlarla, bir Web sayfası veya dosya açıklanmaktadır. Kaynak URI tarafından tanımlanması gerekir.  
@@ -172,9 +172,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)  
- [Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri Gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

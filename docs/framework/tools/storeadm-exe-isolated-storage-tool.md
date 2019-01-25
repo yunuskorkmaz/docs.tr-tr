@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 80923d32bfefb53c41b6588b87bac679bb380811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713420"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Yalıtılmış Depolama Aracı)
 Yalıtılmış Depolama aracı, geçerli kullanıcı için varolan tüm depoları listeler veya kaldırır.  
@@ -60,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Dolaşımın kullanıcı için etkinleştirilip etkinleştirilmediği Storeadm.exe'nin yönetimini etkilemez. Aracı hiçbir seçenek olmadan çalıştırmak yerel depoya tüm işlemleri uygular. Aracı ile çalışan **/ roaming** seçeneği, Dolaşımda olabilen depoya tüm işlemleri uygular. Aracı ile çalışan **/makine** seçeneği makine deposuna tüm işlemleri uygular.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

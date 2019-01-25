@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630924"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString Metodu
-Derleme oluşturma için kullanılan çalışma zamanı sürüm numarasını alır.  
+Derlemesi oluşturmak için kullanılan çalışma zamanı sürüm numarasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +39,26 @@ HRESULT GetVersionString (
   
 #### <a name="parameters"></a>Parametreler  
  `pwzBuf`  
- [out] Sürüm belirten bir dize depolamak için bir dizi.  
+ [out] Sürümünü belirten bir dize depolamak için bir dizi.  
   
  `ccBufSize`  
- [in] Geniş karakterler boyutu, `pwzBuf` dizi.  
+ [in] Geniş karakter cinsinden boyutu, `pwzBuf` dizisi.  
   
  `pccBufSize`  
- [out] Null Sonlandırıcı dahil olmak üzere geniş karakter sayısını döndürülen `pwzBuf` dizi.  
+ [out] Null sonlandırıcıyı da dahil olmak üzere geniş karakter sayısına göre döndürülen `pwzBuf` dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetVersionString` Yöntemi geçerli meta veri kapsamı yerleşik için sürümünü alır. Kapsam hiçbir zaman kaydedilmişse, bir yerleşik için sürümüne sahip değil ve boş bir dize döndürdü.  
+ `GetVersionString` Yöntemi geçerli meta veri kapsamı için yerleşik sürümünü alır. Kapsamı hiç kaydedilmemişse, yerleşik bir sürüm olmaz ve boş bir dize döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

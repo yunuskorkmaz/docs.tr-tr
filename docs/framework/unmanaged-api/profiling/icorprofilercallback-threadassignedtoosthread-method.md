@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e577413ea6807ea5ff8be4d668aa82f0acbb007d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651987"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread Yöntemi
-Profil Oluşturucu, belirli bir işletim sistemi iş parçacığı kullanan bir yönetilen iş parçacığı uygulanan olduğunu bildirir.  
+Profil Oluşturucu, belirli bir işletim sistemi iş parçacığı kullanarak bir yönetilen iş parçacığı uygulanan olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT ThreadAssignedToOSThread(
   
 #### <a name="parameters"></a>Parametreler  
  `managedThreadId`  
- [in] Yönetilen iş parçacığı tanımlayıcısı.  
+ [in] Yönetilen iş parçacığı tanıtıcısı.  
   
  `osThreadId`  
- [in] İşletim sistemi iş parçacığı tanımlayıcısı.  
+ [in] İşletim sistemi iş parçacığı tanıtıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ThreadAssignedToOSThread` Geri çağırma var. böylece profil oluşturucu lifleri yönetilen iş parçacığı için işletim sistemi iş parçacıkları arasında doğru bir eşleme koruyabilirsiniz.  
+ `ThreadAssignedToOSThread` Geri çağırma profil oluşturucu iyileştirmesini işletim sistemi iş parçacığı yönetilen iş parçacıkları arasında doğru bir eşleme tutmak bulunmaktadır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

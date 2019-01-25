@@ -2,19 +2,19 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: a024ca89bd766681f25b992f1d2c66a92e3b31b7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539850"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<davranışı >  
 \<dataContractSerializer >  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54150207"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |IgnoreExtensionDataObject|Bunu edilirken uç noktası tarafından sağlanan veri yoksay belirten bir Boole değeri serileştirilecek veya serisi.|  
-|MaxItemsInObjectGraph|Serileştirmek veya seri durumdan çıkarılacak öğeleri maksimum sayısını belirten bir tamsayı.|  
+|maxItemsInObjectGraph|Serileştirmek veya seri durumdan çıkarılacak öğeleri maksimum sayısını belirten bir tamsayı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,9 +50,9 @@ ms.locfileid: "54150207"
 > [!CAUTION]
 >  `<dataContractSerializer>` Davranış öğesi (varsa) önce her zaman görünmelidir `<enableWebScript>` yapılandırma dosyasındaki davranış öğesi. Aksi takdirde, sonuçta ortaya çıkan davranış tanımsızdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
+- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
+- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493904"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET içinde büyük değerli (Maks) verileri değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) maksimum satır boyutu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` veri türleri değerlerinin depolama 2 büyüklüğünde izin vermek için ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtin `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve iki giriş ve çıkış parametresi değerleri olmadan herhangi bir özel işleme olarak belirtilebilir. İçin büyük `varchar` veri türleri, veriler alınır ve artımlı olarak güncelleştirildi.  
@@ -249,8 +249,8 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Kenarlık ve Kılavuz Çizgi Stillerini Değiştirme'
+title: 'Nasıl yapılır: Kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde değiştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 94e5ae11d7fb2b67e028f368183246f8d8543a08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 052538f22c1da9836a61f66e3230e5e3e3cc72cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590896"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Kenarlık ve Kılavuz Çizgi Stillerini Değiştirme
-İle <xref:System.Windows.Forms.DataGridView> denetim, denetimin kenarlık ve kullanıcı deneyimini geliştirmek için kılavuz çizgilerini görünümünü özelleştirebilirsiniz. Kılavuz çizgisi rengi ve denetim hücrelerde kenarlık stilleri yanı sıra Denetim kenarlık stili değiştirebilirsiniz. Ayrıca, farklı bir hücre kenarlık stilleri sıradan hücre, Satır üstbilgisi hücreleri ve sütun başlığı hücreleri uygulayabilirsiniz.  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Kenarlık ve kılavuz çizgi stillerini Windows Forms DataGridView denetiminde değiştirme
+İle <xref:System.Windows.Forms.DataGridView> denetim, denetimin kenarlık ve kılavuz çizgileri, kullanıcı deneyimini iyileştirmek üzere görünümünü özelleştirebilirsiniz. Kılavuz çizgisi renk ve kenarlık tarzları denetiminde hücrelerin yanı sıra Denetim kenarlık stilini değiştirebilirsiniz. Sıradan bir hücre, satır üst bilgisi hücreleri ve sütun üst bilgisi hücreleri için farklı bir hücre kenarlık stillerini de uygulayabilirsiniz.  
   
 > [!NOTE]
->  Kılavuz çizgisi rengi yalnızca kullanılan <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, ve <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> değerlerini <xref:System.Windows.Forms.DataGridViewCellBorderStyle> numaralandırma ve <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> değerini <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> numaralandırması. Bu numaralandırma, diğer değerler işletim sistemi tarafından belirtilen renkleri kullanın. Ayrıca, ne zaman görsel stiller Windows XP ve Windows Server 2003 ailesinde aracılığıyla etkinleştirilir <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi, <xref:System.Windows.Forms.DataGridView.GridColor%2A> özellik değeri kullanılmaz.  
+>  Kılavuz çizgisi rengi yalnızca kullanılan <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, ve <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> değerlerini <xref:System.Windows.Forms.DataGridViewCellBorderStyle> numaralandırma ve <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> değerini <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> sabit listesi. Bu numaralandırma, diğer değerleri, işletim sistemi tarafından belirtilen renkleri kullanın. Ayrıca, görsel stilleri Windows XP ve Windows Server 2003 ailesinde aracılığıyla etkin olduğunda <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi <xref:System.Windows.Forms.DataGridView.GridColor%2A> özellik değeri kullanılmaz.  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>Kılavuz çizgisi rengi programlı olarak değiştirmek için  
+### <a name="to-change-the-gridline-color-programmatically"></a>Program aracılığıyla kılavuz çizgisi rengini değiştirmek için  
   
 -   Ayarlama <xref:System.Windows.Forms.DataGridView.GridColor%2A> özelliği.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Tüm DataGridView denetiminin kenarlık stili programlı olarak değiştirmek için  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Program aracılığıyla tüm DataGridView denetiminde kenarlık stilini değiştirmek için  
   
--   Ayarlama <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> özelliğini birine <xref:System.Windows.Forms.BorderStyle> numaralandırma değerleri.  
+-   Ayarlama <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> özelliğini birine <xref:System.Windows.Forms.BorderStyle> sabit listesi değerleri.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>DataGridView hücrelerinde kenarlık stilleri programlı olarak değiştirmek için  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>DataGridView hücrelerinin kenarlık stillerini programlı olarak değiştirmek için  
   
 -   Ayarlama <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, ve <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> özellikleri.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "33528755"
   
 -   Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Drawing?displayProperty=nameWithType> derlemeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.BorderStyle>  
- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
- [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.BorderStyle>
+- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>
+- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>
+- [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

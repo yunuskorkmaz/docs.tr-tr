@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582114"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms için ClickOnce Dağıtımı
 Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], istemci bilgisayarlara Windows Forms uygulamaları kolayca dağıtmak için kullanılan bir teknolojisidir.  
@@ -62,10 +62,10 @@ Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includ
  [Nasıl yapılır: ClickOnce Uygulamasına bir Veri Dosyası Dahil Etme](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Kullanılabilir, böylece bir dosyayı işaretler gösterilmektedir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] veri dizini.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)  
- [Komut Satırından ClickOnce Uygulamalarını Derleme](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [System.Deployment.Application Kullanan ClickOnce Uygulamalarında Hata Ayıklama](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [ClickOnce ile COM Bileşenleri Dağıtma](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)
+- [Komut Satırından ClickOnce Uygulamalarını Derleme](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [System.Deployment.Application Kullanan ClickOnce Uygulamalarında Hata Ayıklama](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [ClickOnce ile COM Bileşenleri Dağıtma](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

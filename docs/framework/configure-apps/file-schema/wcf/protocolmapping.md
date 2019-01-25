@@ -2,17 +2,17 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644266"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 Taşıma protokol şemaları (örn., http, net.tcp, net.pipe, vb.) ve WCF bağlamaları arasında varsayılan protokol eşleşmelerinin bir kümesini tanımlayan bir yapılandırma bölümünü temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, Windows Communication Foundation (WCF) yapılandırılmış eşlemelerin arar ve hangi belirli bir için kullanılacak bağlama adresine göre karar verir.  
   
-[**\<system.serviceModel >**](system-servicemodel.md)  
+[**\<system.serviceModel>**](system-servicemodel.md)  
 &nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -59,6 +59,6 @@ Taşıma protokol şemaları (örn., http, net.tcp, net.pipe, vb.) ve WCF bağla
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

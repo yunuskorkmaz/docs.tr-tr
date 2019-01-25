@@ -2,12 +2,12 @@
 title: Sunucu ve SQL Server veritabanı rolleri
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643084"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Sunucu ve SQL Server veritabanı rolleri
 Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya kullanıcı grubu için izinler atamak izin veren rol tabanlı güvenliği kullanın. Sabit sunucu ve sabit veritabanı rollerine atanmış izinler sabit kümesine sahiptir.  
@@ -61,10 +61,10 @@ Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya ku
 |[Kimlik ve erişim denetimi](https://msdn.microsoft.com/library/bb510418.aspx) SQL Server Çevrimiçi Kitapları'nda|Sorumluları, rol, kimlik bilgileri, güvenliği sağlanabilir öğeler ve izinleri açıklayan konulara bağlantılar içerir.|  
 |[İlkeleri](/sql/relational-databases/security/authentication-access/principals-database-engine) SQL Server Çevrimiçi Kitapları'nda|İlkeleri açıklanır ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

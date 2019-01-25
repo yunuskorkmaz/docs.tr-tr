@@ -2,35 +2,35 @@
 title: İşlev aşırı yükleme çözümü (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 517bdb682213deff90a37eafcf32946fef63921f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625181"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>İşlev aşırı yükleme çözümü (varlık SQL)
-Bu konuda açıklanmaktadır nasıl [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işlevleri giderilmiştir.  
+Bu konu açıklar nasıl [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işlevleri giderilmiştir.  
   
- Benzersiz imzaları işlevleri olduğu sürece aynı ada sahip birden fazla işlev tanımlanabilir.  
+ Benzersiz imzaları işlevleri olduğu sürece, aynı ada sahip birden fazla işlev tanımlanabilir.  
   
- Bu durumda, hangi işlevi, belirtilen ifade tarafından başvurulan belirlemek için aşağıdaki ölçütleri uygulanmış olması gerekir. Bu ölçütler sırayla uygulanır. Yalnızca tek bir işleve uygulayan ilk ölçütü çözümlenen bir işlevdir.  
+ Bu durumda, hangi işlevi, belirtilen bir ifade tarafından başvurulan belirlemek için aşağıdaki ölçütleri uygulanması gerekir. Bu ölçütler sırayla uygulanır. Yalnızca tek bir işleve uygulayan bir ilk ölçütü çözümlenen bir işlevdir.  
   
-1.  **Numaralı parametre**. Aynı deyimde parametre sayısı belirtilmiş işlevi içeriyor.  
+1.  **Parametre numarası**. Aynı deyimde parametre sayısı belirtilmiş işlevi vardır.  
   
-2.  **Tam eşleşme türündeki**. Her bağımsız değişken türü işlevinin tam olarak parametre türüyle eşleşen veya null sabit değer olmalıdır.  
+2.  **Tam eşleşme türü**. Her işlevin bağımsız değişken türü tam olarak parametre türüyle eşleşen veya null bir sabit değer olmalıdır.  
   
-3.  **Alt eşleşme**. Her bağımsız değişken türü işlevinin tam olarak eşleşen veya parametre türü bir alt türü ya da bağımsız değişkeni null sabit değer olmalıdır. Çeşitli işlevler yalnızca farklı gerektiğinde, alt türü dönüştürme sayısı gerekli, en az işlev çözümlenmiş işlevi alt türü dönüşümleri sayısıdır.  
+3.  **Alt eşleşme**. İşlev bağımsız değişken türlerinin tam olarak eşleşen veya parametre türü bir alt tür ya da bağımsız değişken null bir sabit değer olmalıdır. Çeşitli işlevler yalnızca farklı olay, alt tür dönüştürmeleri sayısı gerekli, en az işlev çözümlenen işlevi alt tür dönüştürmeleri sayısıdır.  
   
-4.  **Alt türü veya türü yükseltme eşleşme**. Her bağımsız değişken türü işlevinin tam olarak eşleşir, bir alt türü veya parametre türüne yükseltilebilir ya da bağımsız değişkeni null sabit değer olmalıdır. Tekrar sayısı alt tür dönüştürmeleri ve promosyonlar, en az işlev içinde yalnızca bazı işlevler farklı olay alt tür dönüştürmeleri ve promosyonlar sayısıdır çözümlenmiş işlevi.  
+4.  **Alt tür veya tür promosyonu eşleşmeye**. İşlev bağımsız değişken türlerinin tam olarak eşleşir, bir alt tür veya parametre türüne yükseltilebilir veya bağımsız değişken null bir sabit değer olmalıdır. Yeniden çeşitli işlevler yalnızca alt tür dönüştürmeleri ve promosyonlar, en az işlev sayısı, farklı olay alt tür dönüştürmeleri ve promosyonlar sayısıdır çözümlenen işlevi.  
   
- Bu ölçütler hiçbiri seçilmesini tek bir işlevinde sağlamazsa, işlev çağırma ifadesi belirsiz.  
+ İşlev çağrısı ifadesi, bu ölçütlerin hiçbiri seçili tek bir işlevde yol açarsa belirsiz.  
   
- Bu kurallar kullanarak tek bir işlev ayıklanabilir olsa bile, bağımsız değişkenler parametreleri hala eşleşmeyebilir. Bu durumda bir hata ortaya çıkar.  
+ Bu kuralları kullanarak tek bir işlev ayıklanabileceği olsa bile, bağımsız değişkenler parametrelerini hala eşleşmeyebilir. Bu durumda bir hata ortaya çıkar.  
   
- Bile, kullanıcı tanımlı işlev için daha iyi bir eşleşme imzayla modeli tanımlı bir işlev mevcut olduğunda kullanıcı tanımlı işlevler, satır içi bir sorgu işlev tanımı önceliklidir.  
+ Daha iyi bir eşleşme için kullanıcı tanımlı işlev imzası ile model tanımlı bir işlev mevcut olduğunda kullanıcı tanımlı işlevler için bir satır içi sorgu işlev tanımı önceliklidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

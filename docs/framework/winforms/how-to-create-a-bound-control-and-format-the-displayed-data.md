@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme'
+title: 'Nasıl yapılır: Bağlantılı denetim oluşturma ve görüntülenen verileri biçimlendirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689737"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı denetim oluşturma ve görüntülenen verileri biçimlendirme
 Windows Forms veri bağlama ile kullanarak bir veri bağlı denetim içinde görüntülenen verileri biçimlendirebilirsiniz **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Windows Forms veri bağlama ile kullanarak bir veri bağlı denetim içinde gör
     |Para Birimi|Ondalık basamak sayısını kullanarak belirtin **ondalık** yukarı-aşağı denetimi.|  
     |Tarih saat|Nasıl tarih ve saat öğelerden birini seçerek görüntüleneceğini seçin **türü** seçim kutusu.|  
     |Bilimsel|Ondalık basamak sayısını kullanarak belirtin **ondalık** yukarı-aşağı denetimi.|  
-    |Özel|Kullanarak bir özel biçim dizesi belirtin.<br /><br /> Daha fazla bilgi için [biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md). **Not:** özel biçim dizeleri başarıyla ilişkili denetim ve veri kaynağı arasında gidiş dönüş için garanti edilmez. Bunun yerine işlemek <xref:System.Windows.Forms.Binding.Parse> veya <xref:System.Windows.Forms.Binding.Format> bağlama için olay ve olay işleme kodda özel biçimlendirme uygulayın.|  
+    |Özel|Kullanarak bir özel biçim dizesi belirtin.<br /><br /> Daha fazla bilgi için [biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md). **Not:**  Özel biçim dizeleri başarıyla ilişkili denetim ve veri kaynağı arasında gidiş dönüş garanti edilmez. Bunun yerine işlemek <xref:System.Windows.Forms.Binding.Parse> veya <xref:System.Windows.Forms.Binding.Format> bağlama için olay ve olay işleme kodda özel biçimlendirme uygulayın.|  
   
 8.  Tıklayın **Tamam** kapatmak için **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu ve Özellikler penceresinin başı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma"
+title: "Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,49 +10,49 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 7805ee4dcd4bad0d0624c97ccc25232e9bc31ba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640972"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma
-A *varsayılan özellik* kodunuzu belirtme olmadan erişebileceği bir sınıf veya yapı özelliğidir. Kod adları çağrılırken bir sınıf veya yapı ancak değil bir özellik ve bağlam erişim özelliği sayesinde, varsa, Visual Basic erişim o sınıfın veya yapısı varsayılan özellik giderir.  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın
+A *varsayılan özellik* kodunuzun bu belirtmeden erişeceği sınıfın veya yapının bir özelliktir. Kodu adları çağrılırken bir sınıf veya yapı ancak değil bir özellik ve bağlamı bir özellik erişim sağlar, varsa, Visual Basic erişim o sınıfın veya yapının varsayılan özellik giderir.  
   
- En çok bir sınıf veya yapı bir varsayılan özelliğine sahip olabilir. Ancak, varsayılan bir özellik aşırı yükleme ve birden fazla sürümüne sahip olmalıdır.  
+ Bir sınıf veya yapı, en fazla bir varsayılan özelliğine sahip olabilir. Ancak, varsayılan bir özelliği aşırı yükleme ve birden fazla sürümüne sahip.  
   
- Daha fazla bilgi için bkz: [varsayılan](../../../../visual-basic/language-reference/modifiers/default.md).  
+ Daha fazla bilgi için [varsayılan](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### <a name="to-declare-a-default-property"></a>Varsayılan bir özellik bildirmek için  
+### <a name="to-declare-a-default-property"></a>Varsayılan bir özelliği bildirme  
   
-1.  Özellik normal şekilde bildirin. Belirtmeyin `Shared` veya `Private` anahtar sözcüğü.  
+1.  Özelliği, normal bir şekilde bildirin. Belirtmeyin `Shared` veya `Private` anahtar sözcüğü.  
   
-2.  Dahil `Default` özellik bildirimi anahtar sözcük.  
+2.  Dahil `Default` özelliği bildirimindeki anahtar sözcüğü.  
   
-3.  Özelliği için en az bir parametre belirtin. En az bir bağımsız değişken almaz ve varsayılan bir özellik tanımlanamaz.  
+3.  Bir özellik için en az bir parametre belirtin. En az bir bağımsız değişken almaz ve varsayılan bir özellik tanımlanamaz.  
   
      [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
-### <a name="to-call-a-default-property"></a>Varsayılan bir özellik çağırmak için  
+### <a name="to-call-a-default-property"></a>Varsayılan özellik çağırmak için  
   
-1.  İçeren sınıf veya yapı türünde bir değişken bildirin.  
+1.  Bir değişken içeren bir sınıf veya yapı türü bildirin.  
   
      [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
-2.  Burada normal olarak özellik adını içerir bir ifadede tek başına değişken adını kullanın.  
+2.  Değişken adı bir ifadede tek başına, özellik adı burada normalde verilebilir kullanın.  
   
      [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
-3.  Bir bağımsız değişken listesi parantez içinde değişken adıyla izleyin. Varsayılan bir özellik en az bir değişken almanız gerekir.  
+3.  Değişken adı parantez içinde bir bağımsız değişken listesiyle izleyin. Varsayılan özellik en az bir bağımsız değişken almalıdır.  
   
      [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
-4.  Varsayılan özellik değerini almak için bir bağımsız değişken listesiyle bir ifadede ya da eşit aşağıdaki değişken adını kullanın (`=`) bir atama deyiminde oturum açın.  
+4.  Varsayılan özellik değerini almak için bir bağımsız değişken listesiyle bir ifadede veya eşittir değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
      [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
-5.  Varsayılan özellik değerini ayarlamak için bir atama deyimi sol tarafındaki bir bağımsız değişken listesiyle değişken adını kullanın.  
+5.  Varsayılan özellik değerini ayarlamak için değişken adı, atama deyiminin sol tarafında bir bağımsız değişken listesiyle kullanın.  
   
      [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
@@ -61,34 +61,34 @@ A *varsayılan özellik* kodunuzu belirtme olmadan erişebileceği bir sınıf v
      [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sınıf üzerinde varsayılan bir özellik bildirir.  
+ Aşağıdaki örnek, bir sınıf üzerinde varsayılan bir özelliği bildirir.  
   
  [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek varsayılan özellik nasıl çağırılacağını `myProperty` sınıfındaki `class1`. Üç atama deyimleri değerlerini depolamak `myProperty`ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> çağrısı değerleri okur.  
+ Aşağıdaki örnek, varsayılan özellik nasıl çağırılacağını `myProperty` sınıfında `class1`. Üç atama deyimleri değerleri depolamak `myProperty`ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> çağrı değerlerini okur.  
   
  [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
- Varsayılan bir özellik en yaygın kullanımı <xref:Microsoft.VisualBasic.Collection.Item%2A> çeşitli koleksiyon sınıfları özelliği.  
+ Varsayılan özellik en yaygın kullanımı <xref:Microsoft.VisualBasic.Collection.Item%2A> çeşitli koleksiyon sınıflarını özelliği.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Varsayılan Özellikler kaynak kod-karakterlerini küçük azalmasına neden olabilir, ancak bunlar kodunuzu okumak daha zor hale getirebilir. Sınıf veya yapı adı için bir başvuru yaptığında, çağrıyı yapan kod, sınıf veya yapı, bilinen değilse, bu başvuru sınıf veya yapı kendisini veya varsayılan bir özellik mi erişen belirli olamaz. Bu derleyici hataları veya Zarif çalışma zamanı mantık hataları neden olabilir.  
+ Varsayılan Özellikler kaynak kod-harfler küçük azalmasına neden olabilir, ancak bunlar kodunuzu okunacak daha zor hale getirebilir. Bir sınıf veya yapı adı başvuru yaptığında çağıran kod, sınıf veya yapı, birlikte bilinen değilse, bu başvuruyu sınıf veya yapının kendisi veya varsayılan bir özellik olup erişen belirli olamaz. Bu, derleyici hataları veya Zarif çalışma zamanı mantık hataları neden olabilir.  
   
- Her zaman kullanarak varsayılan özellik hataları olasılığını biraz azaltabilir [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) denetlemesini derleyici türünü ayarlamak için `On`.  
+ Her zaman kullanarak biraz varsayılan özellik hata olasılığını azaltabilirsiniz [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) derleyici tür denetlemesini ayarlanacak `On`.  
   
- Önceden tanımlanmış sınıf veya yapı kodunuzda belirlemeniz gerekir varsayılan bir özellik olup olmadığını ve bu durumda kullanmayı planlıyorsanız, ne adıdır.  
+ Bir önceden tanımlanmış sınıf veya yapı kodunuzda belirlemeniz gerekir, varsayılan bir özellik sahip olup olmadığını ve bu durumda kullanmayı planlıyorsanız, onun adı nedir?  
   
- Bu olumsuzlukları nedeniyle varsayılan özellikleri tanımlamaya değil göz önünde bulundurmalısınız. Kod okunabilirlik için ayrıca her zaman tüm özelliklerini açıkça başvuran göz önünde bulundurun, hatta özellikleri varsayılan.  
+ Bu dezavantajların nedeniyle varsayılan özellikleri tanımlamaya değil dikkate almalısınız. Kod okunabilirlik açısından, ayrıca her zaman tüm özelliklere açıkça başvuran göz önünde bulundurun, hatta özellikleri varsayılan.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik Yordamları](./property-procedures.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Default](../../../../visual-basic/language-reference/modifiers/default.md)  
- [Visual Basic'de özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)  
- [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
- [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)  
- [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özellik Yordamları](./property-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Nasıl yapılır: Özellik oluşturma](./how-to-create-a-property.md)
+- [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Nasıl yapılır: Bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)
+- [Nasıl yapılır: Bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)
+- [Nasıl yapılır: Bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)

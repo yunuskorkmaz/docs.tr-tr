@@ -8,52 +8,52 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496955"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
-Herhangi bir veri türünün varsayılan değerini temsil eder. Referans türleri için varsayılan değerdir `null` başvuru. Değer türleri için varsayılan değer, değer türü boş değer atanabilir olmasına bağlıdır.  
+Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türleri için varsayılan değerdir `null` başvuru. Değer türleri için varsayılan değer, değer türü null olmasına göre değişir.  
   
 > [!NOTE]
->  Null değer türleri için `Nothing` Visual Basic'te farklı `null` C#. Visual Basic'te bir null değer türü bir değişkeni ayarlandıysa, `Nothing`, değişken bildirilen türü için varsayılan değere ayarlanır. C# ' de bir null değer türü için bir değişken atarsanız, `null`, derleme zamanı hata oluşur.  
+>  NULL olmayan değer türleri için `Nothing` Visual Basic'te farklıdır `null` içinde C#. Visual Basic'te, bir NULL olmayan değer türünde bir değişken ayarlarsanız `Nothing`, bildirilen tür için varsayılan değerine ayarlanır. İçinde C#, bir NULL olmayan değer türünde bir değişkene atarsanız `null`, bir derleme zamanı hatası oluşur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Nothing` bir veri türü varsayılan değerini temsil eder. Varsayılan değer, değişken değer türü veya başvuru türünde olduğuna bağlıdır.  
+ `Nothing` bir veri türünün varsayılan değerini temsil eder. Varsayılan değer, değişkeni bir değer türü veya başvuru türü olmasına göre değişir.  
   
- Bir değişken bir *değer türü* doğrudan değerini içerir. Değer türleri dahil tüm sayısal veri türleri, `Boolean`, `Char`, `Date`, tüm yapılar ve tüm numaralandırma. Bir değişken bir *başvuru türüne* nesnesinin örneği başvuru bellekte depolar. Başvuru türleri sınıfları, dizileri, temsilciler ve dizeleri içerir. Daha fazla bilgi için bkz: [değer türleri ve başvuru türleri](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ Bir değişken bir *değer türü* doğrudan değeri içeriyor. Değer türleri, tüm sayısal veri türleri dahil `Boolean`, `Char`, `Date`, tüm yapıları ve tüm numaralandırma. Bir değişken bir *başvuru türüne* bir nesnenin örneğine başvuru bellekte depolar. Başvuru türleri sınıflar, diziler, temsilciler ve dizeleri içerir. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
- Bir değişken değerini ise yazın, davranışını `Nothing` değişkeni boş değer atanabilir veri türü olmasına bağlıdır. Bir boş değer atanabilen değer türü göstermek için ekleme bir `?` değiştiricisi türü adı. Atama `Nothing` değeri için boş değer atanabilir bir değişken ayarlar `null`. Daha fazla bilgi ve örnekler için bkz: [boş değer atanabilir değer türlerinin](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ Bir değişken değerini ise türü, davranışını `Nothing` değişken bir boş değer atanabilir bir veri türü olmasına göre değişir. Null bir değer türü temsil etmek için ekleme bir `?` tür adının değiştiricisi. Atama `Nothing` boş değer atanabilir bir değişken için değeri ayarlar `null`. Daha fazla bilgi ve örnekler için bkz. [boş değer atanabilir değer türleri](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
   
- Bir değişken NULL olmayan bir değer türü ise atama `Nothing` için onu varsayılan değer olarak bildirilen türü için ayarlar. Bu tür değişken üyeleri içeriyorsa, bunlar tüm varsayılan değerlerine kümesidir. Aşağıdaki örnekte bu skaler türleri için gösterilmektedir.  
+ Boş değer atanamayan bir değer türünde bir değişken ise atama `Nothing` için varsayılan değer olarak bildirilen tür için ayarlar. Bu tür değişken bir üye içeriyorsa, bunlar varsayılan değerlerine demektir. Aşağıdaki örnekte, skaler türleri için bunu göstermektedir.  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- Bir değişkeni bir başvuru türü ise atama `Nothing` değişkenine ayarlar bir `null` başvuru değişkenin türü. Ayarlanmış bir değişken bir `null` başvurusu herhangi bir nesne ile ilişkili değil. Aşağıdaki örnekte bu gösterir.  
+ Bir değişken bir başvuru türü ise, atama `Nothing` değişkene ayarlar bir `null` değişkenin türüne başvuru. Ayarlanmış bir değişken bir `null` başvurusu herhangi bir nesne ile ilişkili değil. Aşağıdaki örnekte bu gösterir.  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- Bir başvuru (veya boş değer atanabilen değer türü olup olmadığını) değişken denetlerken `null`, kullanmayın `= Nothing` veya `<> Nothing`. Her zaman kullanmak `Is Nothing` veya `IsNot Nothing`.  
+ Bir başvuru (veya boş değer atanabilen değer türü olup olmadığını) değişken denetlenirken `null`, kullanmayın `= Nothing` veya `<> Nothing`. Her zaman `Is Nothing` veya `IsNot Nothing`.  
   
- Visual Basic'de dizeleri için boş dize eşittir `Nothing`. Bu nedenle, `"" = Nothing` doğrudur.  
+ Visual Basic'de dizeleri için boş bir dize değerine eşittir `Nothing`. Bu nedenle, `"" = Nothing` geçerlidir.  
   
- Aşağıdaki örnek, kullanma karşılaştırmaları gösterir `Is` ve `IsNot` işleçler.  
+ Aşağıdaki örnekte kullanan karşılaştırmalar `Is` ve `IsNot` işleçleri.  
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- Kullanmadan bir değişken bildirirseniz bir `As` yan tümcesi ve ayarlamak `Nothing`, bir değişken türü `Object`. Bunun bir örneği `Dim something = Nothing`. Bu durumda bir derleme zamanı hatası meydana zaman `Option Strict` açıktır ve `Option Infer` kapalıdır.  
+ Kullanmadan bir değişken bildirirseniz bir `As` yan tümcesi ve `Nothing`, değişkeni bir tür olan `Object`. Bunun bir örneği `Dim something = Nothing`. Bu durumda bir derleme zamanı hatası oluşur, `Option Strict` açıktır ve `Option Infer` kapalıdır.  
   
- Atadığınızda `Nothing` bir nesne değişkeni için artık herhangi bir nesnenin örneğine başvuruyor. Değişkeni daha önce bir örneğine başvurulan değilse, bunu ayarını `Nothing` örneği sonlandırılacak değil. Örnek sonlandırılır ve yalnızca kalan etkin başvuru olduğunu (GC) atık toplayıcı algılandıktan sonra ilişkili bellek ve sistem kaynaklarını serbest bırakılır.  
+ Atadığınızda `Nothing` bir nesne değişkenine, artık herhangi bir nesne örneğine başvurur. Değişken, önceden bir örneğine adı, bu ayarın `Nothing` örneği sonlanmamasına. Örneği sonlandırıldı ve yalnızca kalan başvuru active olduğunu atık toplayıcı (GC) algıladıktan sonra ilişkili bellek ve sistem kaynaklarını serbest bırakılır.  
   
- `Nothing` farklı <xref:System.DBNull> başlatılmamış bir değişken veya var olmayan veritabanı sütunu temsil eden nesne.  
+ `Nothing` farklıdır <xref:System.DBNull> başlatılmayan bir değişken veya var olmayan bir veritabanı sütunu temsil eden nesne.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dim Deyimi](../../visual-basic/language-reference/statements/dim-statement.md)  
- [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
- [Visual Basic'de ömür](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Is İşleci](../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot İşleci](../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Boş Değer Atanabilen Değer Türleri](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dim Deyimi](../../visual-basic/language-reference/statements/dim-statement.md)
+- [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Visual Basic'de ömür](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Is İşleci](../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot İşleci](../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Boş Değer Atanabilen Değer Türleri](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

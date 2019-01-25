@@ -2,53 +2,53 @@
 title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661831"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
-A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı değil. *Örnek oluşturma* kullanıcı tanımlı bir hizmet nesneleri ve bunların ilgili ömrü denetlenmesi için başvuruyor <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* olan içinde çalışan iş parçacıklarının sayısını denetlemek için belirtilen terimin bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
+A *oturumu* iki uç nokta arasında gönderilen tüm iletilerin bir ilişki olduğunu. *Örnek oluşturma* hizmeti kullanıcı tanımlı nesneler ve onların ilgili ömrünü denetlemek için başvuran <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* içinde çalışan iş parçacıklarının sayısını denetlemek için verilen bir terimdir bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
   
- Bu konuda, bu ayarları açıklanmaktadır bunları ve bunların arasındaki çeşitli etkileşimleri kullanma.  
+ Bu konuda, bu ayarlar açıklanmaktadır. bunları ve bunların arasında çeşitli etkileşimleri kullanma.  
   
 ## <a name="sessions"></a>Oturumlar  
- Ne zaman bir hizmet sözleşmesini ayarlar <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, bu sözleşme tüm çağrıları (çağrıları destekleyen başka bir deyişle, temel alınan ileti alışverişlerinde) aynı konuşmada bir parçası olması gerektiğini söyleyen. Bir sözleşme oturumları sağlar ancak bir gerektirmez, istemcilerin bağlanabileceği ya da bir veya oturumu belirtirse. Sona ererse ve bir ileti aynı oturum tabanlı kanal bir özel durum atılır gönderilir.  
+ Ne zaman bir hizmet sözleşmesini ayarlar <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, bu sözleşme tüm çağrıları (çağrıları destekleyen diğer bir deyişle, temel alınan ileti alışverişlerinde) aynı konuşmada bir parçası olması gerektiğini belirten. Bir sözleşme oturumları sağlar ancak bir gerektirmez, istemcilerin bağlanabileceği ya da bir veya oturumu belirtirse. Sona ererse ve ileti üzerinde aynı oturum tabanlı kanal bir özel durum gönderilir.  
   
  WCF oturumları aşağıdaki ana kavramsal özelliklere sahiptir:  
   
 -   Bunlar açıkça başlatılan ve çağıran uygulama tarafından sonlandırıldı.  
   
--   Bir oturumda teslim edilen ileti bunlar alındığı sırada işlenir.  
+-   Mesajlar oturumu sırasında bunlar alındığı sırayla işlenir.  
   
--   Oturumları iletileri bir grup konuşma bağıntısını. Bu bağıntı anlamını bir soyutlamadır. Örneğin, bir oturum tabanlı kanalı başka bir oturum tabanlı kanal ileti gövdesinde paylaşılan bir etiket dayanan iletilerin ilişkilendirilebilir bir paylaşılan ağ bağlantısı üzerinde tabanlı iletileri ilişkilendirilebilir. Oturumdan elde edilebilir özelliklerine bağıntı yapısına bağlıdır.  
+-   Oturumlarının iletiler grubunu bir sohbete ilişkilendirin. Bu bağıntı anlamı bir soyutlamadır. Örneğin, oturum tabanlı bir kanalı oturum tabanlı başka bir kanal iletileri ileti gövdesinde paylaşılan bir etiketi temel bağıntısını ancak bir paylaşılan ağ bağlantısının dayalı iletiler ilişkilendirilebilir. Oturumdan elde edilebilir özellikleri bağıntı niteliğine bağlı.  
   
--   Bir WCF oturum ile ilişkili bir genel veri depo yok.  
+-   Bir WCF oturum ile ilişkili hiçbir genel veri deposu bulunmaktadır.  
   
- Hakkında bilginiz varsa <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamaları ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
+ Alışkın olduğunuz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar ve işlevselliği sağlar, bu tür bir oturum ve WCF oturumları arasında aşağıdaki değişiklikler fark edebilirsiniz:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları her zaman sunucu-başlatılır.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının her zaman sunucu-başlatılır.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları örtük olarak sıralanmamış.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumlarının örtük olarak sırasız.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizması sağlar.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizmasını sağlar.  
   
- İstemci uygulamaları ve hizmet uygulamaları oturumlarıyla farklı şekillerde etkileşim. İstemci uygulamaları oturumlarını başlatmak ve ardından almak ve oturum içinde gönderilen iletileri işleme. Hizmet uygulamaları oturumları ek davranış eklemek için bir genişletilebilirlik noktası olarak kullanın. Bu doğrudan ile çalışarak yapılır <xref:System.ServiceModel.InstanceContext> veya özel örnek bağlamı sağlayıcıyı uygulama.  
+ Oturumları, istemci uygulamaları ve hizmet uygulamaları farklı şekillerde etkileşim kurun. İstemci uygulamaları oturumlarını başlatmak ve ardından almak ve oturumunda gönderilen iletileri işlemek. Hizmet uygulamaları oturumlarını ek davranış eklemek için bir genişletilebilirlik noktası olarak kullanabilirsiniz. Bu doğrudan birlikte çalışarak yapılır <xref:System.ServiceModel.InstanceContext> veya özel örnek içerik sağlayıcısı uygulaması.  
   
 ## <a name="instancing"></a>Örnek Oluşturma  
- Örneklemesini davranış (kullanarak ayarlamak <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği) denetimleri nasıl <xref:System.ServiceModel.InstanceContext> gelen iletilere yanıt olarak oluşturulur. Varsayılan olarak, her <xref:System.ServiceModel.InstanceContext> bir kullanıcı tanımlı bir hizmet nesnesiyle ilişkili bunu (varsayılan durumda) ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği de denetler depolamasına kullanıcı tanımlı hizmet nesneleri. <xref:System.ServiceModel.InstanceContextMode> Numaralandırma örneklemesini modlarını tanımlar.  
+ Örneklemesini davranışı (kullanarak <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği) denetimleri nasıl <xref:System.ServiceModel.InstanceContext> gelen iletiye yanıt olarak oluşturulur. Varsayılan olarak, her <xref:System.ServiceModel.InstanceContext> bir kullanıcı tanımlı bir hizmet nesneyle ilişkili (varsayılan durumda) bunu ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği de denetler örneği kullanıcı tarafından tanımlanan hizmet nesneleri oluşturma. <xref:System.ServiceModel.InstanceContextMode> Örneklemesini modları sabit listesi tanımlar.  
   
  Aşağıdaki örneklemesini modları kullanılabilir:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne servis) her istemci isteği için oluşturulur.  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) her istemci isteği için oluşturulur.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne servis) her yeni istemci oturumu için oluşturulur ve bu oturuma (Bu gerektirir oturumları destekleyen bir bağlama) ömrü boyunca saklanır.  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Yeni bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmeti) için yeni her istemci oturumu oluşturulur ve bu oturuma (Bu gerektirir oturumları destekleyen bir bağlama) ömrü boyunca saklanır.  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Bir tek <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne servis) uygulama ömrü boyunca tüm istemci isteklerini işler.  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>: Tek bir <xref:System.ServiceModel.InstanceContext> (ve bu nedenle nesne hizmet) uygulama ömrü boyunca tüm istemci isteklerini işler.  
   
- Aşağıdaki kod örneğinde varsayılan gösterir <xref:System.ServiceModel.InstanceContextMode> değeri <xref:System.ServiceModel.InstanceContextMode.PerSession> açıkça bir hizmet sınıfında ayarlanan.  
+ Aşağıdaki kod örneği varsayılan gösterir <xref:System.ServiceModel.InstanceContextMode> değeri <xref:System.ServiceModel.InstanceContextMode.PerSession> üzerinde bir hizmet sınıfı açıkça ayarlanıyor.  
   
 ```  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]   
@@ -58,35 +58,35 @@ public class CalculatorService : ICalculatorInstance
 }  
 ```  
   
- Ve while <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği denetler ne sıklıkta <xref:System.ServiceModel.InstanceContext> yayımlandığı <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> denetim özelliklerini hizmet nesnesi serbest bırakıldığında.  
+ Ve while <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özellik denetler ne sıklıkta <xref:System.ServiceModel.InstanceContext> yayımlandığı <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> denetim özelliklerini hizmet nesnesi yayınlandığında.  
   
-### <a name="well-known-singleton-services"></a>İyi bilinen Singleton Hizmetleri  
- Tek örnek hizmet nesneler üzerinde bir değişim bazen faydalıdır: bir hizmet nesnesi kendiniz oluşturmanız ve bu nesneyi kullanarak hizmet ana bilgisayarını oluşturun. Bunu yapmak için de ayarlamalısınız <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.InstanceContextMode.Single> ya da hizmet konağı açıldığında bir özel durum oluşur.  
+### <a name="well-known-singleton-services"></a>İyi bilinen tekil hizmetin  
+ Tek Örnekli hizmet nesneleri bir versiyonu, bazen kullanışlıdır: bir hizmet nesnesi kendiniz oluşturmanız ve bu nesneyi kullanarak hizmet ana bilgisayarını oluşturun. Bunu yapmak için de ayarlamalısınız <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.Single> veya hizmet ana bilgisayarı açıldığında bir özel durum oluşturulur.  
   
- Kullanım <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> gibi bir hizmet oluşturmak için Oluşturucusu. Özel bir uygulama için bir alternatif sağlayan <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> belirli nesne örneği bir singleton hizmeti tarafından kullanım için sağlamak istediğiniz zaman. Hizmet uygulama türü (örneğin, onu varsayılan parametresiz ortak oluşturucu uygulamadığında) oluşturmak zor olduğu durumlarda, bu aşırı yüklemesini kullanabilirsiniz.  
+ Kullanım <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> böyle bir hizmet oluşturmak için oluşturucu. Özel bir uygulama için bir alternatif sağlayan <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> belirli nesne örneği, tek bir hizmet tarafından kullanılmak üzere sağlamak istediğiniz zaman. Hizmet uygulama türünüzü (örneğin, varsayılan bir parametresiz public Oluşturucu uygulamıyorsa) oluşturmak zor olduğunda, bu aşırı yüklemesini kullanabilirsiniz.  
   
- Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (davranışı depolamasına WCF için) ilgili bazı özellikler farklı şekilde çalıştığını unutmayın. Örneğin, arama <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> singleton nesne örneği sağlandığında hiçbir etkisi olmaz. Benzer şekilde, başka bir örneğinin yayın mekanizma göz ardı edilir. <xref:System.ServiceModel.ServiceHost> Her zaman davranır gibi <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği ayarlanmış <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> tüm işlemleri için.  
+ Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (davranışı depolamasına WCF için) ilgili bazı özellikler farklı iş unutmayın. Örneğin, çağırma <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> tek bir nesne örneği sağlandığında hiçbir etkisi olmaz. Benzer şekilde, başka bir örneği yayın mekanizması göz ardı edilir. <xref:System.ServiceModel.ServiceHost> Her zaman davranacağını gibi <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> tüm işlemler için.  
   
-### <a name="sharing-instancecontext-objects"></a>InstanceContext nesneleri paylaşımı  
- Hangi süre sonuyla kanalı kontrol edebilirsiniz veya çağrı, kendisiyle ilişkilendirilmiş <xref:System.ServiceModel.InstanceContext> kendiniz bu ilişkiyi gerçekleştirerek nesnesi.  
+### <a name="sharing-instancecontext-objects"></a>InstanceContext nesneleri paylaşma  
+ Hangi oturum kanalı de denetleyebilirsiniz veya çağrı ile ilişkili <xref:System.ServiceModel.InstanceContext> kendinizi bu ilişkiyi gerçekleştirerek nesne.  
   
 ## <a name="concurrency"></a>Eşzamanlılık  
- Eşzamanlılık denetimi etkin iş parçacığı sayısı olan bir <xref:System.ServiceModel.InstanceContext> herhangi bir zamanda. Bu kullanılarak denetlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> ile <xref:System.ServiceModel.ConcurrencyMode> numaralandırması.  
+ Eşzamanlılık denetimi etkin iş parçacığı sayısı, bir <xref:System.ServiceModel.InstanceContext> herhangi bir zamanda. Bu kullanılarak denetlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> ile <xref:System.ServiceModel.ConcurrencyMode> sabit listesi.  
   
  Aşağıdaki üç eşzamanlılık modu kullanılabilir:  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: Her örnek bağlamı en fazla bir iş parçacığı aynı anda örneği bağlamında iletileri işleme izin verilmez. Örnek bağlamı özgün iş parçacığı çıkar kadar aynı örnek bağlamı kullanmak isteyen başka bir iş parçacığı engellemelidir.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Single>: Her örnek bağlamı, en fazla bir iş parçacığının aynı anda örnek bağlamı iletileri işleme izin verilmez. Örnek bağlamı özgün iş parçacığı çıkana kadar aynı örnek bağlamı kullanmak isteyen diğer iş parçacıklarını engellemeniz gerekir.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Her hizmet örneği birden çok iş parçacığı iletileri aynı anda işleme sahip olabilir. Hizmet uygulaması bu eşzamanlılık modunu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Her hizmet örneği birden çok iş parçacığı iletileri eşzamanlı olarak işleme sahip olabilir. Hizmet uygulaması bu eşzamanlılık modu kullanmak için iş parçacığı açısından güvenli olması gerekir.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Her hizmet örneği aynı anda tek bir ileti işler, ancak içe işlemi çağrılarını kabul eder. WCF istemci nesnesi çağırma, hizmet yalnızca bu çağrıları kabul eder.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Her hizmet örneği, tek bir ileti işler, ancak a işlem çağrıları kabul eder. WCF istemci nesnesi okunamayabilir bu hizmet yalnızca bu çağrıları kabul eder.  
   
 > [!NOTE]
->  Anlama ve güvenli bir şekilde birden çok iş parçacığı kullanan kodu geliştirme başarıyla yazmak zor olabilir. Kullanmadan önce <xref:System.ServiceModel.ConcurrencyMode.Multiple> veya <xref:System.ServiceModel.ConcurrencyMode.Reentrant> değerleri emin olun, hizmeti bu modları için düzgün şekilde tasarlanmıştır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Anlama ve güvenli bir şekilde birden fazla iş parçacığı kullanan kod geliştirme başarıyla yazmak zor olabilir. Kullanmadan önce <xref:System.ServiceModel.ConcurrencyMode.Multiple> veya <xref:System.ServiceModel.ConcurrencyMode.Reentrant> değerleri emin olmak için hizmetinizin bu modları için düzgün şekilde tasarlanmıştır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
- Eşzamanlılık kullanımını örnekleme modunu ilişkilidir. İçinde <xref:System.ServiceModel.InstanceContextMode.PerCall> her ileti yeni tarafından işlenir depolamasına, eşzamanlılık ilgili, olmadığından <xref:System.ServiceModel.InstanceContext> ve bu nedenle, hiçbir zaman birden fazla iş parçacığının etkin olduğu <xref:System.ServiceModel.InstanceContext>.  
+ Eşzamanlılık kullanımını örneklemesini moduna ilişkilidir. İçinde <xref:System.ServiceModel.InstanceContextMode.PerCall> her ileti yeni tarafından işlenir depolamasına, eşzamanlılık ilgili değildir, çünkü <xref:System.ServiceModel.InstanceContext> ve bu nedenle, hiçbir zaman birden çok iş parçacığı etkin olduğu <xref:System.ServiceModel.InstanceContext>.  
   
- Aşağıdaki kod örneğinde ayarı gösterilmektedir <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> özelliğine <xref:System.ServiceModel.ConcurrencyMode.Multiple>.  
+ Aşağıdaki kod örneği ayarı gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> özelliğini <xref:System.ServiceModel.ConcurrencyMode.Multiple>.  
   
 ```  
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]   
@@ -96,21 +96,21 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
-## <a name="sessions-interact-with-instancecontext-settings"></a>Oturumları InstanceContext ayarlarla etkileşim  
- Oturumlar ve <xref:System.ServiceModel.InstanceContext> değerini birleşimi bağlı olarak etkileşim <xref:System.ServiceModel.SessionMode> bir sözleşme numaralandırmada ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> kanalları özel arasındaki ilişkiyi denetimleri hizmet uygulaması özelliği Hizmet nesneleri.  
+## <a name="sessions-interact-with-instancecontext-settings"></a>Oturumlarının InstanceContext ayarlarla etkileşim  
+ Oturumlar ve <xref:System.ServiceModel.InstanceContext> değerini birleşimi bağlı olarak etkileşimde <xref:System.ServiceModel.SessionMode> sözleşme numaralandırmada ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Kanallar ve özel arasındaki ilişkiyi denetleyen hizmet uygulaması özelliği Hizmet nesneleri.  
   
- Aşağıdaki tabloda oturumları destekleme ya da bir hizmetin değerlerini birleşimi verilen oturumları desteklemediğinden gelen kanal sonucunu gösterir <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliği ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği.  
+ Aşağıdaki tabloda bir gelen kanal oturumları destekleyen veya değerleri birleşimi bir hizmet verilen oturumları desteklemediğinden sonucunu gösterir <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliği ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği.  
   
 |InstanceContextMode değeri|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> her çağrı için.<br />-Oturumsuz kanal davranışa: özel durum oluşur.|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> her çağrı için.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|-Süre sonuyla kanal davranışa: özel durum oluşur.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|  
-|Değeri PerSession|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> her kanalı.<br />-Oturumsuz kanal davranışa: özel durum oluşur.|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> her kanalı.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|-Süre sonuyla kanal davranışa: özel durum oluşur.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|  
-|Tek|-Süre sonuyla kanal davranışa: bir oturum ve bir <xref:System.ServiceModel.InstanceContext> tüm çağrıları için.<br />-Oturumsuz kanal davranışa: özel durum oluşur.|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> oluşturulan ya da kullanıcı tarafından belirtilen tekli için.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> oluşturulan ya da kullanıcı tarafından belirtilen tekli için.|-Süre sonuyla kanal davranışa: özel durum oluşur.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> oluşturulan her singleton veya kullanıcı tarafından belirtilen tekli için.|  
+|PerCall|-Oturum kanalı ile davranışı: Bir oturum ve <xref:System.ServiceModel.InstanceContext> her çağrı için.<br />-Oturumsuz kanal davranışı: Bir özel durum oluşturulur.|-Oturum kanalı ile davranışı: Bir oturum ve <xref:System.ServiceModel.InstanceContext> her çağrı için.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|-Oturum kanalı ile davranışı: Bir özel durum oluşturulur.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|  
+|Değeri PerSession|-Oturum kanalı ile davranışı: Bir oturum ve <xref:System.ServiceModel.InstanceContext> her kanal için.<br />-Oturumsuz kanal davranışı: Bir özel durum oluşturulur.|-Oturum kanalı ile davranışı: Bir oturum ve <xref:System.ServiceModel.InstanceContext> her kanal için.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|-Oturum kanalı ile davranışı: Bir özel durum oluşturulur.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> her çağrı için.|  
+|Tek|-Oturum kanalı ile davranışı: Bir oturum ve bir <xref:System.ServiceModel.InstanceContext> tüm çağrıları için.<br />-Oturumsuz kanal davranışı: Bir özel durum oluşturulur.|-Oturum kanalı ile davranışı: Bir oturum ve <xref:System.ServiceModel.InstanceContext> oluşturulan veya kullanıcı tarafından belirtilen tekli için.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> oluşturulan veya kullanıcı tarafından belirtilen tekli için.|-Oturum kanalı ile davranışı: Bir özel durum oluşturulur.<br />-Oturumsuz kanal davranışı: Bir <xref:System.ServiceModel.InstanceContext> oluşturulan her tekil veya kullanıcı tarafından belirtilen tekli için.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oturumları Kullanma](../../../../docs/framework/wcf/using-sessions.md)  
- [Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
- [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md)  
- [Örnek Oluşturma](../../../../docs/framework/wcf/samples/instancing.md)  
- [Oturum](../../../../docs/framework/wcf/samples/session.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oturumları Kullanma](../../../../docs/framework/wcf/using-sessions.md)
+- [Nasıl yapılır: Oturumlarının gerektiren bir hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Nasıl yapılır: Hizmet örneği oluşturmayı denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md)
+- [Örnek Oluşturma](../../../../docs/framework/wcf/samples/instancing.md)
+- [Oturum](../../../../docs/framework/wcf/samples/session.md)

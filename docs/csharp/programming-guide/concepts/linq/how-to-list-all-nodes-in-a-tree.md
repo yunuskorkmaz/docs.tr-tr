@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir ağaç (C#) tüm düğümler listesi'
+title: 'Nasıl yapılır: Tüm düğümlerin bir ağaç listesinde (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90c92e8390f75e7b7e2c63d809d8a0aca34e2fd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744485"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: bir ağaç (C#) tüm düğümler listesi
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: Tüm düğümlerin bir ağaç listesinde (C#)
 Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  
   
  XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri daha düşük performansa sahip [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çok daha güçlü sorgular. Ancak, XPath düğümleri XML ağacındaki tanımlamak için bir yol işe yarar.  
@@ -348,6 +348,6 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

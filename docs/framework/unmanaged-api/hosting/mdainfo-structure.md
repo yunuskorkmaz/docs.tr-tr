@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d48c3d701b0369ab00150625c26d94f4111b2d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607218"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo Yapısı
-Hakkında ayrıntılar sağlar `Event_MDAFired` yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikleyen olayı.  
+Hakkında ayrıntılar sağlar `Event_MDAFired` olayı yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,29 +39,29 @@ typedef struct _MDAInfo {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`lpMDACaption`|Geçerli MDA başlığı. Başlık tetiklenen hatası türünü açıklar `Event_MDAFired` olay.|  
-|`lpMDAMessage`|Geçerli mda'sı tarafından sağlanan çıkış ileti.|  
+|`lpMDACaption`|Geçerli MDA'ın başlığı. Başlık tetiklenen hata türünü açıklar `Event_MDAFired` olay.|  
+|`lpMDAMessage`|Geçerli bir MDA tarafından sağlanan çıkış iletisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilen hata ayıklama Yardımcıları (Mda'lar) çalışma zamanı yürütme altyapısı ortak dil çalışma zamanı (CLR) geçersiz koşulları tanımlama gibi görevleri gerçekleştirmek için birlikte çalışmak yardımları hata ayıklama veya durumuyla ilgili ek bilgi döküm alma altyapısı. Mda'lar, aksi takdirde tuzak zor olan olaylar hakkında XML iletileri oluşturur. Bunlar yönetilen ve yönetilmeyen kodu arasında geçişler hata ayıklama için özellikle yararlı olur.  
+ Yönetilen hata ayıklama Yardımcıları (MDAs) çalışma zamanı yürütme altyapısı, ortak dil çalışma zamanı (CLR) geçersiz koşulları belirleme gibi görevleri gerçekleştirmek için birlikte çalışan yardımlarda hata veya durumu hakkında ek bilgi dökümü alma altyapısı. Mda'leri, aksi takdirde tuzak zor olan olaylar hakkında XML iletileri oluşturur. Bunlar, yönetilen ve yönetilmeyen kod arasındaki geçişleri hata ayıklama için özellikle yararlı olur.  
   
- Bir MDA oluşturulmasını tetikleyen bir olay başlatıldığında çalışma zamanı aşağıdaki adımları gerçekleştirir:  
+ Bir MDA oluşturulmasını tetikleyen bir olay harekete çalışma zamanı, aşağıdaki adımları gerçekleştirir:  
   
--   Konak değil kaydedildiyse bir [Iactiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) çağırarak örneği [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) , bildirim almak için bir `Event_MDAFired` olay, çalışma zamanı geçer ile kendi Varsayılan, barındırılan dışı davranış.  
+-   Konak kayıtlı değil, bir [Iactiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) çağırarak örneği [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) haberdar için bir `Event_MDAFired` çalışma zamanı olayı geçer ile kendi Varsayılan, barındırılan olmayan davranış.  
   
--   Bu olay işleyicisi konağı kaydedildiyse, çalışma zamanı işleme bir hata ayıklayıcısı ekli olup olmadığını denetler. İse, çalışma zamanı ayıklayıcıya keser. Hata ayıklayıcı devam ettiğinde, ana bilgisayar çağırır. Hiçbir hata ayıklayıcısı ekli, çalışma zamanı çağırır `IActionOnCLREvent::OnEvent` ve bir işaretçi geçirir bir `MDAInfo` örneği `data` parametresi.  
+-   Bu olay işleyicisi ana bilgisayarı kaydedildiyse, çalışma zamanı hata ayıklayıcı işleme ekli olup olmadığını denetler. Bu durumda, çalışma zamanı hata ayıklayıcıya keser. Hata ayıklayıcının devam ettiğinde, ana bilgisayar çağırır. Hata ayıklayıcı bağlıysa, çalışma zamanı çağırır `IActionOnCLREvent::OnEvent` ve işaretçi bir `MDAInfo` örneği `data` parametresi.  
   
- Ana bilgisayar Mda'lar etkinleştirmek için ve bir MDA etkinleştirildiğinde uyarılmayı seçebilirsiniz. Bu konak varsayılan davranışı geçersiz kılma ve işlem durumunda bozulmasını önlemek için, olayı yönetilen iş parçacığı iptal etmek için bir fırsat sağlar. Mda'lar kullanma hakkında daha fazla bilgi için bkz: [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Mda'leri etkinleştirme ve bir MDA etkinleştirildiğinde bildirim almak için konağı seçebilirsiniz. Bu konak varsayılan davranışı geçersiz kılabilir ve işlem durumu bozan gelen önlemek için olayı tetikleyen yönetilen iş parçacığını durdurmak için bir fırsat sağlar. Mda'leri kullanma hakkında daha fazla bilgi için bkz. [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

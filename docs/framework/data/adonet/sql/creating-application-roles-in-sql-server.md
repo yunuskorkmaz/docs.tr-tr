@@ -2,12 +2,12 @@
 title: SQL Server'da uygulama rolleri oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638138"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server'da uygulama rolleri oluşturma
 Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama için izinler atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanmak, uygulama rolü etkinleştirmek ve uygulamaya verilen izinler varsayılır. Uygulama rolü için verilen izinler bağlantı süresi boyunca yürürlükte değil.  
@@ -58,8 +58,8 @@ Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama i�
 |--------------|-----------------|  
 |[Uygulama rolleri](/sql/relational-databases/security/authentication-access/application-roles)|SQL Server 2008'de uygulama rolleri oluşturma ve açıklar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

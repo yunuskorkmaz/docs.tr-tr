@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3249ad76c428752c91540e135bc978d3fe835de1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574020"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Metodu
 Belirtilen MethodSpec tarafından başvurulan meta veri imzası belirtecini alır.  
@@ -40,26 +40,26 @@ HRESULT GetMethodSpecProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mi`  
- [in] Örnek oluşturma yönteminin temsil eden bir MethodSpec belirteci.  
+ [in] Örnekleme yönteminin temsil eden bir MethodSpec Neobsahuje belirteci.  
   
  `tkParent`  
  [out] Yöntem tanımını temsil eden MethodDef veya MethodRef belirteci için bir işaretçi.  
   
  `ppvSigBlob`  
- [out] Yönteminin ikili meta verileri imza için bir işaretçi.  
+ [out] İkili meta veri imzası yöntem bir işaretçi.  
   
  `pcbSigBlob`  
- [out] Bayt olarak boyutu, `ppvSigBlob`.  
+ [out] Bayt cinsinden boyutu, `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

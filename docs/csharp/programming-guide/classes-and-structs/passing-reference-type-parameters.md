@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: faf9222d7850b9859f4bc61eb2a0bbe8f4b5bbc1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 84ac75ef35e42f50d0540ab362220117e00e02e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496224"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verilerini içermiyor doğrudan; verilerine bir başvuru içeriyor. Değere göre bir başvuru türü parametresi geçirdiğinizde, bir sınıf üyesinin değerini gibi başvurulan nesnenin ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştiremezsiniz; Örneğin, aynı başvuru için yeni bir sınıf bellek ayırmak ve sahip yöntemi dışında kalıcı hale getirmek için kullanamazsınız. Parametresini kullanarak bunu yapmak için geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
@@ -39,11 +39,11 @@ Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywor
   
  Dizeleri hakkında daha fazla bilgi için bkz. [dize](../../../csharp/language-reference/keywords/string.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
-- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
 - [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)

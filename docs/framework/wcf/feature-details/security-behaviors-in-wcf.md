@@ -2,12 +2,12 @@
 title: WCF'de Güvenlik Davranışları
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592815"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulaması, yetkilendirme denetime izin vermek ve günlüklerini denetleme. Programlama veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konu, aşağıdaki davranışları güvenlik işlevleri için ilgili yapılandırma üzerinde durulmaktadır:  
@@ -126,7 +126,7 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
  Varsayılan bir güvenlik belirteci hizmeti adresi belirtir. Bu zaman <xref:System.ServiceModel.WSFederationHttpBinding> URL veya güvenlik belirteci hizmeti için bir federe bağlama veren adresini olduğunda sağlamaz `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` veya `null`. Bu gibi durumlarda <xref:System.ServiceModel.Description.ClientCredentials> yerel dağıtımcının ve bağlama bu veren ile iletişim kurmak için kullanılacak adresi ile yapılandırılmalıdır.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  Kullanım [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) güvenlik belirteci hizmeti ile iletişim kurarken kullanılan WCF istemci davranışlarını eklemek için. İstemci davranışlarını tanımlayan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) bölümü. Tanımlı bir davranışı kullanmak için ekleme bir <`add`> öğesine `<issuerChannelBehaviors>` iki öznitelik sahip öğe. Ayarlama `issuerAddress` ayarlama ve güvenlik belirteci hizmeti URL'sini `behaviorConfiguration` aşağıdaki örnekte gösterildiği gibi öznitelik için tanımlanmış uç nokta davranışı adı.  
   
 ```xml  
@@ -217,6 +217,6 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

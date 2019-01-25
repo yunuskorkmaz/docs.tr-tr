@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3579020ce268cd59a091e685fae2e97b3191c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b8211e46b1a46d15befba17a52cd626d91f95fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616790"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo Metodu
-Bir derleme kimliği kabul eder ve derlemenin adını ve kendi bildirim modülünden Kimliğini döndürür.  
+Bir derleme kimliği kabul eder ve derlemenin adı ve bildirim, modül kimliği döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,38 +42,38 @@ HRESULT GetAssemblyInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `assemblyId`  
- [in] Derleme tanımlayıcısı.  
+ [in] Bütünleştirilmiş kod tanımlayıcısı.  
   
  `cchName`  
  [in] Karakter cinsinden uzunluğu, `szName`.  
   
  `pcchName`  
- [out] Derlemenin adı toplam karakter uzunluğu için bir işaretçi.  
+ [out] Derleme adının toplam karakter uzunluğu bir işaretçi.  
   
  `szName`  
- [out] Çağıran tarafından sağlanan geniş karakter arabellek. İşlevi döndüğünde, derleme adı içerir.  
+ [out] Bir çağıran tarafından sağlanan geniş karakter arabelleği. İşlevi döndüğünde, derlemenin adını içerir.  
   
  `pAppDomainId`  
- [out] Derleme içeren uygulama etki alanı kimliği için bir işaretçi.  
+ [out] Derlemeyi içeren uygulama etki alanı kimliği için bir işaretçi.  
   
  `pModuleId`  
- [out] Derleme bildirimi modülünün kimliği için bir işaretçi.  
+ [out] Derlemenin bildirimi modül kimliği için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem döndükten sonra doğrulamanız gerekir `szName` arabellek derlemenin tam adını içerecek kadar büyük. Bunu yapmak için değeri karşılaştırın, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret eden daha büyük bir değere `cchName`, daha geniş bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, büyük boyutu ve çağrı `GetAssemblyInfo` yeniden.  
+ Bu yöntemin dönüşünün ardından doğrulamanız gerekir `szName` arabellek bütünleştirilmiş kodun tam adını içerecek şekilde büyük. Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi. Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetAssemblyInfo` yeniden.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetAssemblyInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Ardından, döndürülen değer göre arabellek boyutu ayarlayabilirsiniz `pcchName` ve arama `GetAssemblyInfo` yeniden.  
+ Alternatif olarak, ilk çağırabilirsiniz `GetAssemblyInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir. Ardından döndürülen değere göre arabellek boyutu ayarlayabileceğiniz `pcchName` ve çağrı `GetAssemblyInfo` yeniden.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

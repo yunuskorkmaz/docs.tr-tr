@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: bir iş akışı çalıştırma'
+title: 'Nasıl yapılır: İş akışı çalıştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530408"
 ---
-# <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışı çalıştırma
-Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı niteliğindedir ve bir iş akışı ana bilgisayarı oluşturun ve önceki tanımlanan iş akışı çalıştırma anlatılmaktadır [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.
+# <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş akışı çalıştırma
+Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı niteliğindedir ve bir iş akışı ana bilgisayarı oluşturun ve önceki tanımlanan iş akışı çalıştırma anlatılmaktadır [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.
 
 > [!NOTE]
->  Önceki konularıyla ilgili her konuda Başlarken Öğreticisi bağlıdır. Önce tamamlamanız için bu konuyu tamamlamak için [nasıl yapılır: bir etkinliği oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) ve [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+>  Önceki konularıyla ilgili her konuda Başlarken Öğreticisi bağlıdır. Önce tamamlamanız için bu konuyu tamamlamak için [nasıl yapılır: Bir etkinlik oluşturursunuz](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) ve [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
 
 > [!NOTE]
 >  Öğreticinin tamamlanmış bir sürümünü indirmek için bkz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow-host-project"></a>İş akışı ana projeyi oluşturmak için  
   
-1.  Çözüm önceki açın [nasıl yapılır: bir etkinlik oluşturursunuz](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Visual Studio 2012 kullanarak konu.  
+1.  Çözüm önceki açın [nasıl yapılır: Bir etkinlik oluşturursunuz](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Visual Studio 2012 kullanarak konu.  
   
 2.  Sağ **WF45GettingStartedTutorial** çözümde **Çözüm Gezgini** seçip **Ekle**, **yeni proje**.  
   
@@ -77,7 +77,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
      Kullanan kod satırlarını değiştirin <xref:System.Activities.WorkflowInvoker> aşağıdaki temel ile <xref:System.Activities.WorkflowApplication> kod barındırma. Bu örnek kodu barındıran barındırma ve bir iş akışı çağırırken temel adımları gösterir, ancak henüz başarıyla bu konudan iş akışı çalıştırmak için işlevsellik içermiyor. Aşağıdaki adımlarda, bu temel kod değiştirilir ve uygulama tamamlanana kadar ek özellikler eklenir.
 
     > [!NOTE]
-    >  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
+    >  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 2.  Yeni oluşturan kod satırına değiştirin <xref:System.Activities.WorkflowApplication> aşağıdaki kodla oluşturur ve oluşturulduğu sırada iş akışına parametreleri sözlüğü geçirir.
 
     > [!NOTE]
-    >  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
+    >  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,24 +148,24 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Kalıcılık bir iş akışı uygulamaya ekleme hakkında yönergeler görmek için bir sonraki konu [nasıl yapılır: oluşturma ve uzun çalışan iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
+     Kalıcılık bir iş akışı uygulamaya ekleme hakkında yönergeler görmek için bir sonraki konu [nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek için tam kodu, `Main` yöntemi.
 
 > [!NOTE]
->  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
+>  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)
 - [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Nasıl yapılır: İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
+- [Nasıl yapılır: Bir iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
+- [Nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
 - [Bir iş akışında giriş bekleme](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)
 - [İş Akışları Barındırma](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

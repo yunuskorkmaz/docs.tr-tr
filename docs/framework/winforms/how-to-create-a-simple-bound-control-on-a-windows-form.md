@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma'
+title: 'Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643578"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma
 İle *basit bağlama*, tek bir veri öğesi, bir veri kümesi tablodaki bir sütun değeri gibi bir denetimi görüntüleme. Basit bir denetimin herhangi bir özelliği bir veri değerine bağlamak.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ ms.locfileid: "46321359"
     > [!NOTE]
     >  Basit veriye bağlı denetimler yalnızca bir tek veri öğesi göstermek için bir Windows formunda basit bağlantılı denetim ile gezinti mantığı içeren çok normaldir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Binding>  
- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Binding>
+- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

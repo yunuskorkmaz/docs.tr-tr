@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd553430e56bbc5c21c9bdb25fc6b67eea530739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595402"
 ---
 # <a name="using-statement-visual-basic"></a>Using Deyimi (Visual Basic)
-Başlangıcı bildiren bir `Using` engelleme ve isteğe bağlı olarak blok denetimleri sistem kaynakları alır.  
+Başlangıcı bildiren bir `Using` engelleyin ve isteğe bağlı olarak blok denetleyen sistem kaynaklarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,12 +31,12 @@ End Using
   
 |Terim|Tanım|  
 |---|---|  
-|`resourcelist`|Değil sağladığınız varsa gerekli `resourceexpression`. Listesinde bir veya daha fazla sistem kaynaklarının bu `Using` engellemek denetimleri, virgülle ayrılmış.|  
-|`resourceexpression`|Değil sağladığınız varsa gerekli `resourcelist`. Başvuru değişkenini veya ifadesi bu tarafından denetlenmesi için bir sistem kaynağa başvuran `Using` bloğu.|  
-|`statements`|İsteğe bağlı. İfadeler bloğu, `Using` engelleme çalıştırır.|  
-|`End Using`|Gerekli. Tanımını sonlandırır `Using` bloğu ve denetlediği tüm kaynakları siler.|  
+|`resourcelist`|Gerekli değil sağladığınız varsa `resourceexpression`. Listesinde bir veya daha fazla sistem kaynakları bu `Using` block denetimleri, virgülle ayrılmış.|  
+|`resourceexpression`|Gerekli değil sağladığınız varsa `resourcelist`. Başvuru değişkenin veya ifadenin bu tarafından denetlenmesi için bir sistem kaynağını başvuran `Using` blok.|  
+|`statements`|İsteğe bağlı. Deyimler bloğunu, `Using` bloğu çalışır.|  
+|`End Using`|Gerekli. Tanımını sonlandırır `Using` bloğu hem de denetlediğini tüm kaynakları siler.|  
   
- Her bir kaynağın `resourcelist` bölümü aşağıdaki söz dizimini ve bölümleri sahiptir:  
+ Her kaynağın `resourcelist` bölümü aşağıdaki söz dizimini ve bölümleri sahiptir:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
@@ -48,39 +48,39 @@ End Using
   
 |Terim|Tanım|  
 |---|---|  
-|`resourcename`|Gerekli. Bir sistem kaynağı başvuruyor başvuru değişkeni, `Using` engelleme kontrol eder.|  
-|`New`|Gerekli olursa `Using` deyimi kaynak edinir. Kaynak zaten aldıysanız, ikinci sözdizimi alternatif kullanın.|  
+|`resourcename`|Gerekli. Bir sistem kaynağa başvuruda bulunan bir başvuru değişkenini, `Using` denetimleri engelleyin.|  
+|`New`|Gerekli if `Using` deyimi kaynak alır. Kaynak aldıysanız, ikinci sözdizimi alternatifi kullanın.|  
 |`resourcetype`|Gerekli. Kaynak sınıfı. Sınıf uygulamalıdır <xref:System.IDisposable> arabirimi.|  
-|`arglist`|İsteğe bağlı. Örneği oluşturmak için oluşturucusuna geçirerek bağımsız değişkenler listesi `resourcetype`. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Gerekli. Değişken veya başvuran gereksinimlerini karşılayan bir sistem kaynağı deyim `resourcetype`. İkinci sözdizimi alternatif kullanırsanız, denetimine geçirmeden önce kaynak almalıdır `Using` deyimi.|  
+|`arglist`|İsteğe bağlı. Oluşturucuya bir örneğini oluşturmak için kaçı bağımsız değişkenlerinin listesi `resourcetype`. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`resourceexpression`|Gerekli. Değişkenin veya ifadenin gereksinimlerini karşılayan bir sistem kaynağa başvuran `resourcetype`. İkinci sözdizimi alternatif kullanırsanız, kaynak denetimine geçirmeden önce almalıdır `Using` deyimi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazen bir dosya tanıtıcısı, COM sarmalayıcı veya bir SQL bağlantısı gibi yönetilmeyen bir kaynak kodunuzu gerektirir. A `Using` blok kodunuzu bunlarla tamamlandığında, bir veya daha fazla gibi kaynakların elden garanti eder. Bu bunları kullanmak başka bir kod için kullanılabilir hale getirir.  
+ Bazen bir dosya tanıtıcısı, COM sarmalayıcı veya bir SQL bağlantı gibi yönetilmeyen bir kaynağı kodunuzu gerektirir. A `Using` blok kodunuz ile bunları tamamlandığında bir veya daha fazla gibi kaynakların elden garanti eder. Bu bunları kullanmak başka bir kod için kullanılabilir yapar.  
   
- Yönetilen kaynaklar için .NET Framework Atık toplayıcısının (GC) tarafından hiçbir ek kodlama yapmanız olmadan elden. İhtiyacınız olmayan bir `Using` yönetilen kaynaklar için bloğu. Ancak, kullanmaya devam edebilirsiniz bir `Using` için atık toplayıcısını beklemek yerine yönetilen bir kaynağın elden zorlamak için blok.  
+ Yönetilen kaynaklar, .NET Framework atık toplayıcı (GC) tarafından ek kodlamaya bulunmanıza gerek kalmadan kaldırıldıklarından. Gereksinim duymadığınız bir `Using` yönetilen kaynaklar için blok. Ancak, yine de kullanabileceğiniz bir `Using` çöp toplayıcının beklemek yerine bir yönetilen kaynak elden zorlamak için blok.  
   
- A `Using` blok sahip üç bölümden: edinme, kullanım ve elden.  
+ A `Using` bloğu üç bölümü vardır: alım, kullanım ve silinecek.  
   
--   *Alım* bir değişken oluşturma ve bu sistem kaynağı başvurmak için başlatma anlamına gelir. `Using` Deyimi bir veya daha fazla kaynak elde veya blok girmeden önce tam olarak bir kaynak almak ve ona tedarik `Using` deyimi. Sağladığınız varsa `resourceexpression`, kaynak denetimine geçirmeden önce almalıdır `Using` deyimi.  
+-   *Alım* bir değişken oluşturma ve sistem kaynağına başvurmak için başlatma anlamına gelir. `Using` Deyimi bir veya daha fazla kaynak elde veya tam olarak bir kaynak blok girmeden önce almak ve sağlamak için `Using` deyimi. Sağlarsanız, `resourceexpression`, kaynak denetimine geçirmeden önce almalıdır `Using` deyimi.  
   
--   *Kullanım* kaynaklara erişme ve bunlarla gerçekleştirme anlamına gelir. Arasında deyimleri `Using` ve `End Using` kaynak kullanımını temsil eder.  
+-   *Kullanım* kaynaklara erişirken ve bunları eylemleri gerçekleştirme anlamına gelir. Deyimleri arasında `Using` ve `End Using` kaynak kullanımını gösterir.  
   
--   *Elden* çağırma anlamına gelir <xref:System.IDisposable.Dispose%2A> yöntemi nesnedeki `resourcename`. Bu, düzgün bir şekilde kaynaklarını sonlandırmak nesne sağlar. `End Using` Deyimi siler altında kaynakların `Using` bloğun denetim.  
+-   *Çıkarma* çağırma anlamına gelir <xref:System.IDisposable.Dispose%2A> nesneye yöntemi `resourcename`. Bu nesne kaynaklarını düzgün bir şekilde sonlandırmak sağlar. `End Using` Deyimi siler altında kaynakların `Using` bloğun denetimi.  
   
 ## <a name="behavior"></a>Davranış  
- A `Using` engelleme davranacağını gibi bir `Try`... `Finally` hangi yapısında `Try` bloğu kaynakları kullanır ve `Finally` blok bunları siler. Bu nedenle, `Using` blok blok çıkmak nasıl olsun bu kaynakların elden güvence altına alır. Bu bile işlenmeyen bir özel durum söz konusu olduğunda, geçerlidir dışında bir <xref:System.StackOverflowException>.  
+ A `Using` blok davranacağını gibi bir `Try`... `Finally` , yapım `Try` blok kaynakları kullanır ve `Finally` blok onları siler. Bu nedenle, `Using` blok blok çıkış ne olursa olsun, kaynakların elden garanti eder. Hatta işlenmeyen bir özel durum söz konusu olduğunda, bu doğrudur dışında bir <xref:System.StackOverflowException>.  
   
- Tarafından alınan her kaynak değişkenin kapsamını `Using` deyimi sınırlıdır `Using` bloğu.  
+ Tarafından alınan her kaynak değişkenin kapsamını `Using` deyimdir sınırlı `Using` blok.  
   
- Birden fazla sistem kaynağında belirtirseniz `Using` deyimi, etkisi ise aynı iç içe gibi `Using` bir diğeri içindeki engeller.  
+ Birden fazla sistem kaynağında belirtirseniz `Using` deyimi, etkin olduğu aynı iç içe kabul `Using` içindeki başka bir engeller.  
   
- Varsa `resourcename` olan `Nothing`, hiçbir çağrısına <xref:System.IDisposable.Dispose%2A> yapılmış ve hiçbir özel durum.  
+ Varsa `resourcename` olduğu `Nothing`, hiçbir <xref:System.IDisposable.Dispose%2A> yapılmış ve hiçbir özel durum.  
   
-## <a name="structured-exception-handling-within-a-using-block"></a>Yapılandırılmış özel durum işleme kullanan bir blokta  
- İçinde oluşabilecek bir özel durum işleme gerekiyorsa `Using` bloğu, bir tam ekleyebilirsiniz `Try`... `Finally` ona oluşturma. Servis talebi işlemek gerekirse burada `Using` deyimi bir kaynak alınırken başarılı değil, olup olmadığını sınayabilirsiniz `resourcename` olan `Nothing`.  
+## <a name="structured-exception-handling-within-a-using-block"></a>Yapılandırılmış özel durum işleme kullanan bir blok içinde  
+ İçinde oluşabilecek bir özel durumu işlemek gereken `Using` bloğu tam ekleyebilirsiniz `Try`... `Finally` ona oluşturma. Durumu işlemek gerekirse burada `Using` deyimi, bir kaynak edinilirken başarılı değil, olmadığını sınayabilirsiniz `resourcename` olduğu `Nothing`.  
   
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Yapılandırılmış özel durum işleme kullanan bir blok yerine  
- Kaynakları alımını üzerinde daha hassas denetim gerekir veya ek kod, ihtiyacınız varsa `Finally` bloğu yeniden yazana `Using` olarak engelleme bir `Try`... `Finally` oluşturma. Aşağıdaki örnek, iskelet gösterir `Try` ve `Using` edinme ve elden eşdeğer kurulumlarını `resource`.  
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Yapılandırılmış özel durum işleme kullanan bir bloğu yerine  
+ Edinme kaynakları üzerinde daha hassas bir denetime ihtiyacınız varsa veya ek kod, ihtiyaç duyarsanız `Finally` bloğu, yeniden `Using` olarak engelleyecek bir `Try`... `Finally` oluşturma. Aşağıdaki örnek, çatı gösterir `Try` ve `Using` edinme ve elden yapılarını `resource`.  
   
 ```vb  
 Using resource As New resourceType   
@@ -100,16 +100,16 @@ End Try
 ```  
   
 > [!NOTE]
->  Kod içinde `Using` blok nesnesinde değil atamanız `resourcename` başka bir değişkene. Çıktığınızda `Using` bloğu, kaynak kapatılır ve diğer değişkenin işaret ettiği kaynağına erişemiyor.  
+>  İçinde kod `Using` blok atama nesnesinde `resourcename` başka bir değişkene. Çıktığınızda `Using` blok, kaynak bırakıldı ve diğer değişkenin işaret ettiği kaynağa erişemiyor.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek log.txt adlı ve iki satırlık bir metin dosyasına yazan bir dosya oluşturur. Örnek ayrıca, aynı dosyasını okur ve metin satırlarını görüntüler.  
+ Aşağıdaki örnek, iki satırlık bir metin dosyasına yazar ve log.txt adlı bir dosya oluşturur. Örnek ayrıca, aynı dosyasını okur ve metin satırlarını görüntüler.  
   
- Çünkü <xref:System.IO.TextWriter> ve <xref:System.IO.TextReader> sınıfları uygulama <xref:System.IDisposable> arabirimi kodu kullanabilirsiniz `Using` deyimleri dosyanın doğru sonra yazma kapalı ve okuma işlemlerini emin olun.  
+ Çünkü <xref:System.IO.TextWriter> ve <xref:System.IO.TextReader> sınıfları uygulama <xref:System.IDisposable> arabirimi, kod kullanabileceğiniz `Using` deyimlerini dosyanın doğru kapalı sonra yazma ve okuma işlemleri sağlamak için.  
   
  [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IDisposable>  
- [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Nasıl yapılır: Bir Sistem Kaynağını Atma](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IDisposable>
+- [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Nasıl yapılır: Bir sistem kaynağını atma](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

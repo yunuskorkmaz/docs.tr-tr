@@ -1,24 +1,24 @@
 ---
-title: Kaynak Office Açık XML belge (Visual Basic) oluşturma
+title: Kaynak Office Open XML belgesi (Visual Basic) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617453"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Kaynak Office Açık XML belge (Visual Basic) oluşturma
-Bu konu diğer örnekleri Bu öğreticide kullanmak Office Açık XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, her örnekte sağlanan çıkış, çıktı eşleşir.  
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Kaynak Office Open XML belgesi (Visual Basic) oluşturma
+Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.  
   
- Ancak, Bu öğretici örneklerde sahip herhangi bir geçerli WordprocessingML belgeyi çalışır.  
+ Ancak, bu öğreticideki örneklerde, geçerli bir WordprocessingML belgesi ile çalışır.  
   
- Bu öğretici kullanır belge oluşturmak için Microsoft Office 2007 ya da sahip olmalıdır veya sonraki bir sürümünün yüklü veya Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.  
+ Bu öğreticide bir belge oluşturmak için ya da Microsoft Office 2007 yüklü olmalıdır veya sonraki bir sürümünün yüklü veya Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.  
   
-## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML belge oluşturma  
+## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturma  
   
-#### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belge oluşturmak için  
+#### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturmak için  
   
 1.  Yeni bir Microsoft Word belgesi oluşturun.  
   
@@ -42,16 +42,16 @@ Bu konu diğer örnekleri Bu öğreticide kullanmak Office Açık XML Wordproces
     Hello World  
     ```  
   
-3.  İlk satırı "Başlık 1" stili ile biçimlendirin.  
+3.  İlk satır stili "Başlık 1" ile biçimlendirin.  
   
-4.  Visual Basic kodu içeren satırları seçin. İlk satırı ile başlayan `Imports` anahtar sözcüğü. Son satırı "Bitiş" sınıftır. Courier yazı tipi içeren satırları biçimlendirin. İle yeni bir stil biçimlendirmek ve yeni stil "Code" olarak adlandırın.  
+4.  Visual Basic kodunu içeren satırları seçin. İlk satırı ile başlayan `Imports` anahtar sözcüğü. Son satırı "End Class" dir. Satırları courier yazı biçimi. İle yeni bir stil biçimlendirir ve yeni stil "Code" olarak adlandırın.  
   
-5.  Son olarak, çıktı içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.  
+5.  Son olarak, çıktısını içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.  
   
-6.  Belgeyi kaydedin ve SampleDoc.docx olarak adlandırın.  
+6.  Belgeyi kaydedin ve SampleDoc.docx adlandırın.  
   
     > [!NOTE]
-    >  Microsoft Word 2003 kullanıyorsanız seçin **Word 2007 belgesi** içinde **farklı türde Kaydet** aşağı açılan liste.  
+    >  Microsoft Word 2003 kullanıyorsanız **Word 2007 belgesi** içinde **farklı kaydetme türü** aşağı açılan listesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

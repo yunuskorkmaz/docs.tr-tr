@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
+title: 'Nasıl yapılır: Bir iş akışı uygulamasından bir hizmete erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653703"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir iş akışı uygulamasından bir hizmete erişme
 Bu konu, bir iş akışı hizmeti, bir iş akışı konsol uygulamasından çağırmak açıklar. Tamamlanmasına bağlıdır [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Bu konu, bir iş akışı uygulamasından bir iş akışı hizmeti çağırmak amacıyla açıklar ancak aynı yöntemleri herhangi bir Windows Communication Foundation (WCF) hizmeti bir iş akışı uygulamasından çağırmak için kullanılabilir.
 
 ### <a name="create-a-workflow-console-application-project"></a>Bir iş akışı konsol uygulaması projesi oluşturma
@@ -62,8 +62,8 @@ Bu konu, bir iş akışı hizmeti, bir iş akışı konsol uygulamasından çağ
 
 12. Hem hizmet hem de istemci başlatmak için Ctrl + F5 tuşlarına basın. ASP.NET Geliştirme Sunucusu hizmeti barındıran, Internet Explorer'ı WCF Yardım sayfasını görüntüler ve istemci iş akışı uygulama konsol penceresinde başlatılır ve ("Hello, world") hizmetten döndürülen dizeyi gösterir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [Web projesinde bir iş akışından bir WCF hizmetini kullanma](https://go.microsoft.com/fwlink/?LinkId=207725)

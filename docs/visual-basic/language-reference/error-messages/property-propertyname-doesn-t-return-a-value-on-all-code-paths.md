@@ -1,5 +1,5 @@
 ---
-title: Özellik &#39; &lt;propertyname&gt; &#39; mevcut değil&#39;t tüm kod yolları bir değer döndürür
+title: Özellik &#39; &lt;propertyname&gt; &#39; eklenmemişse&#39;t, tüm kod yollarında bir değer döndürür
 ms.date: 07/20/2015
 f1_keywords:
 - bc42107
@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8059ebc9b6c1de685f2f04c3ee362ab8cf6d05e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611260"
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Özellik &#39; &lt;propertyname&gt; &#39; mevcut değil&#39;t tüm kod yolları bir değer döndürür
-Özellik '\<propertyname >' tüm kod yolları bir değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında bir null başvuru özel durumu oluşabilir.  
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Özellik &#39; &lt;propertyname&gt; &#39; eklenmemişse&#39;t, tüm kod yollarında bir değer döndürür
+Özellik '\<propertyname >' bütün kod yollarında değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında null başvurusu özel durumu oluşabilir.  
   
- Bir özellik `Get` yordamının bir değer döndürmüyor kendi kod aracılığıyla en az bir olası yolu vardır.  
+ Bir özellik `Get` yordamının bir değer döndürmeyen kendi kod aracılığıyla en az bir olası yol vardır.  
   
- Bir özellikten değer döndürme `Get` aşağıdaki yollardan birini yordamda:  
+ Bir özelliği bir değer döndürebilir `Get` aşağıdaki yollardan biriyle yordamda:  
   
--   Özellik adı değeri atayın ve ardından gerçekleştirmek bir `Exit Property` deyimi.  
+-   Özellik adlarının değer atamak ve ardından gerçekleştirin bir `Exit Property` deyimi.  
   
--   Özellik adı değeri atayın ve ardından gerçekleştirmek `End Get` deyimi.  
+-   Özellik adlarının değer atamak ve ardından gerçekleştirin `End Get` deyimi.  
   
--   Değer içeren bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+-   Değer bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- Denetim geçirir, `Exit Property` veya `End Get` ve özellik adı için herhangi bir değer atamadığınız `Get` yordamı özelliğin veri türünün varsayılan değeri döndürür. Daha fazla bilgi için bkz: "Davranışı" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Denetim için geçerse `Exit Property` veya `End Get` ve özellik adı için herhangi bir değer atamadınız `Get` yordamı özelliğinin veri türünün varsayılan değerini döndürür. Daha fazla bilgi için "Davranışı" bölümüne bakın. [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak davranma daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC42107  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Denetim akışı mantığınızı denetleyin ve satır başı neden olan her deyimi önce bir değer atadığınız emin olun.  
+-   Denetim akışı mantığınızı denetleyin ve bir dönüş neden her deyiminden önce bir değer atadığınız emin olun.  
   
-     Her zaman kullanıyorsanız her return yordamdan bir değer döndürür güvence altına almak daha kolay `Return` deyimi. Bu, son deyim önce yaparsanız `End Get` olması gereken bir `Return` deyimi.  
+     Her zaman kullanırsanız her iade yordamdan gelen bir değer döndürür garanti daha kolaydır `Return` deyimi. Bu, son deyim önce yaparsanız `End Get` olmalıdır bir `Return` deyimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)

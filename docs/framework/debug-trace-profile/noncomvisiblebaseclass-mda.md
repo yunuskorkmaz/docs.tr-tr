@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707dad3c5286fc9c8d5aa3735418607fb0a769a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a26863f2a1880cffba5eb3ea51573f45323be72d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700864"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
-`nonComVisibleBaseClass` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir `QueryInterface` çağrısı yapıldığında COM aranabilir sarmalayıcısı (saat) yerel veya yönetilmeyen kodla COM görünür olmayan bir taban sınıftan türeyen bir COM-yönetilen görünür sınıfının.  `QueryInterface` Çağrısı neden yalnızca çağrı burada istekleri sınıf arabirimi veya varsayılan durumlarda etkinleştirmeyi MDA `IDispatch` COM görünür yönetilen sınıf.  MDA değil ne zaman etkin `QueryInterface` olan açık bir arabirim için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği uygulanan ve COM görünür sınıfı tarafından açıkça uygulanır.  
+`nonComVisibleBaseClass` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir `QueryInterface` Çağrının yapıldığı COM çağrılabilir sarmalayıcı (CCW) yerel veya yönetilmeyen kodla COM görünür olmayan bir taban sınıftan türetilen bir COM yönetilen görünür sınıfı.  `QueryInterface` Çağrının sebep olur yalnızca çağrı burada istekleri sınıf arabirimi veya varsayılan durumda etkinleştirmek MDA `IDispatch` sınıfı için Yönetilen COM-görünür.  MDA değil etkinleştirildiği zaman `QueryInterface` olan açık bir arabirim için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği uygulanan ve açıkça COM görünür bir sınıf tarafından uygulanır.  
   
 ## <a name="symptoms"></a>Belirtiler  
- A `QueryInterface` COR_E_INVALIDOPERATION HRESULT başarısız olduğu yerel koddan yapılan çağrı.  Çalışma zamanı vermemek nedeniyle HRESULT olabilir `QueryInterface` çağrıları bu MDA etkinleştirme neden olur.  
+ A `QueryInterface` yapılan bir COR_E_INVALIDOPERATION HRESULT başarısız olduğu yerel koddan çağrı.  HRESULT engelleyerek runtime nedeniyle olabilir `QueryInterface` bu mda'nın etkinleştirilmesinden neden çağırır.  
   
 ## <a name="cause"></a>Sebep  
- Çalışma zamanı izin veremez `QueryInterface` çağırır ve sınıf arabirimi veya varsayılan için `IDispatch` COM görünür olası sürüm oluşturma sorunları nedeniyle olmayan bir sınıftan türeyen bir COM görünür sınıf arabirimi.  COM görünür değil taban sınıfı için herhangi bir ortak üye eklendiyse, taban sınıfı üyeleri içeren, türetilmiş sınıf vtable gibi tarafından değiştirilmesi çünkü Örneğin, türetilmiş sınıf kullanarak var olan COM istemcileri olası uğratabilir bir değiştirin.  Vtable arabirimleri temel üyeleri içermediği için açık arabirimler com'a Bu sorun yok.  
+ Çalışma zamanı izin veremez `QueryInterface` çağırır sınıf arabirimi veya varsayılan için `IDispatch` COM-görünür olası sürüm oluşturma sorunları nedeniyle değil bir sınıftan türetilen bir COM görünür bir sınıfın arabirim.  COM görünür olmayan taban sınıfa herhangi bir ortak üye eklendiyse, türetilen sınıfın temel sınıf üyelerini içeren vtable gibi tarafından değiştirilmesi çünkü gibi türetilmiş bir sınıf kullanarak mevcut COM istemcileri olası uğratabilir bir değiştirin.  Açık arabirimler com'a vtable içinde arabirimin temel üyelerini içermediği için bu sorun yok.  
   
 ## <a name="resolution"></a>Çözüm  
- Sınıf arabirimi gösterme. Açık bir arabirim tanımlayın ve uygulayın <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği için.  
+ Sınıf arabirimi gösterme. Açık bir arabirim tanımlayın ve uygulayın <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> için özniteliği.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Bir örnek iletisidir aşağıdaki bir `QueryInterface` çağrısı COM görünür bir sınıf üzerinde `Derived` COM görünür olmayan bir sınıftan türetilen `Base`.  
+ Bir örnek iletisidir aşağıdaki bir `QueryInterface` COM görünür bir sınıf üzerinde çağrı `Derived` COM görünür olmayan bir sınıftan türetilen `Base`.  
   
 ```  
 A QueryInterface call was made requesting the class interface of COM   
@@ -54,7 +54,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

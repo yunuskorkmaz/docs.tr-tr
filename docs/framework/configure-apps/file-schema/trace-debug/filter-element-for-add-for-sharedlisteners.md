@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3de58fa9df1f856a6612d01d3ec9748c37e4a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501327"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;Filtre&gt; öğesi için &lt;ekleme&gt; için &lt;sharedListeners&gt;
 Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.  
@@ -42,7 +42,7 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Türü**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dizesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -87,8 +87,8 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.TraceFilter>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceSource>  
- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.TraceFilter>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceSource>
+- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

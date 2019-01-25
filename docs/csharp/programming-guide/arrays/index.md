@@ -1,11 +1,17 @@
 ---
-title: 'Diziler - C# Programlama Kılavuzu'
+title: Diziler - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'arrays [C#]'
-  - 'C# language, arrays'
+- arrays [C#]
+- C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
+ms.openlocfilehash: 1b1a3d2e61507a497349deeb857e4333356f66a5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857807"
 ---
 # <a name="arrays-c-programming-guide"></a>Diziler (C# Programlama Kılavuzu)
 
@@ -13,9 +19,9 @@ Bir dizi veri yapısında aynı türde birden fazla değişken depolayabilirsini
   
  `type[] arrayName;`  
   
- Aşağıdaki örnekler tek boyutlu, çok boyutlu ve düzensiz diziler oluşturur:  
+ Aşağıdaki örnek, tek boyutlu, çok boyutlu ve düzensiz diziler oluşturur:  
   
- [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]  
   
 ## <a name="array-overview"></a>Diziye genel bakış
 

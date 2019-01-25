@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 7bf45a701b10372d8cc4061db13f347eb0ddae91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709526"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` değiştiricisi belirtmek için bir yöntemin [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntem](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuzdur. Bu değiştiriciyi bir yöntem veya ifadede kullanırsanız, şeklinde adlandırılan bir *zaman uyumsuz yöntem*. Aşağıdaki örnek adlı bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
@@ -83,9 +83,9 @@ Kullandığınız `void` dönüş ilgili dönüş türünü gerektiren olay işl
 
 Daha fazla bilgi ve örnekler için bkz. [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
-- [await](../../../csharp/language-reference/keywords/await.md)  
-- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [await](../../../csharp/language-reference/keywords/await.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)

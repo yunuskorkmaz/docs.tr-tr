@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500527"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Kullanıcı için Mesajlaşma yığını üzerinde tam denetim sağlar.  
@@ -192,8 +192,8 @@ Kullanıcı için Mesajlaşma yığını üzerinde tam denetim sağlar.
 |[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Bir Eş Adı Çözümleme Protokolü (PNRP) eş ad çözümleyici belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
 |[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Mesajlaşma için ayarını belirtir. Bu öğe için özel bir bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekler-bir kez teslim Güvenceleri. Bu öğe türünde <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama güvenliği için seçenekleri belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SecurityElement>.|  
-|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL akışı bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL akışı bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
 |[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Özel bağlama güvenliği akış seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -290,16 +290,16 @@ Kullanıcı için Mesajlaşma yığını üzerinde tam denetim sağlar.
  Bir özel sistem tarafından sağlanan bir bağlamayı değiştirmek için bağlama kullanma hakkında bir tartışma için bkz. [nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
     
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [customBinding öğesi](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [customBinding öğesi](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

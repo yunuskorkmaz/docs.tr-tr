@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7a2391527a7912c5def593438a71ed006955e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620951"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter Yöntemi
-Bu kaynak ile kullanmak için bir bildirim filtre atar.  
+Bu kaynağı ile kullanmak için bir bildirim filtresi atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,18 +39,18 @@ HRESULT SetNotifyFilter
   
 #### <a name="parameters"></a>Parametreler  
  `in_NotifyFilter`  
- [in] Bit düzeyinde bileşimini [notıfy_fılter](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) geri aramalar için hata ayıklayıcı API tanımlamak numaralandırma değerleri.  
+ [in] Bitsel bir birleşimi [notıfy_fılter](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) API hata ayıklayıcı geri çağırmaları tanımlayan sabit listesi değerleri.  
   
  `in_pUserThreadFilter`  
- [in] Bir işaretçi bir [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) API hata ayıklayıcı için iş parçacığı tanımlayan yapısı.  
+ [in] Bir işaretçi bir [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) iş parçacığı hata ayıklayıcısı API tanımlayan yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

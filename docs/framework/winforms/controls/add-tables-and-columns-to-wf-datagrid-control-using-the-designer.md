@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimine Tablolar ve Sütunlar Ekleme'
+title: "Nasıl yapılır: Windows Forms DataGrid Tasarımcısı'nı kullanarak denetimine tablolar ve sütunlar ekleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: b2e8f962ed7fb9d205a9061bdc1b32c3a2f8b0bd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c130dac068ee4866f44fd12398202e21d91fcf48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536235"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimine Tablolar ve Sütunlar Ekleme
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Windows Forms DataGrid Tasarımcısı'nı kullanarak denetimine tablolar ve sütunlar ekleme
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Windows Forms'ta verileri görüntüleyebilirsiniz <xref:System.Windows.Forms.DataGrid> tablolar ve sütunlar oluşturarak denetiminde <xref:System.Windows.Forms.DataGridTableStyle> nesneleri ve bunlara ekleme <xref:System.Windows.Forms.GridTableStylesCollection> aracılığıyla erişilen nesne <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği. Hangi veri tablosu belirtilen İçindekiler her tablo stili görüntüler <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Varsayılan olarak, belirtilen sütun stillerini olmadan bir tablo stili veri tablosunun tüm sütunları görüntüler. Tablodaki hangi sütunların ekleyerek görünür kısıtlayabilirsiniz <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için <xref:System.Windows.Forms.GridColumnStylesCollection>, aracılığıyla erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> her özellik <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir form bir <xref:System.Windows.Forms.DataGrid> denetimi. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te varsayılan olarak <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu**. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir form bir <xref:System.Windows.Forms.DataGrid> denetimi. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te varsayılan olarak <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu**. Bu ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Tablo Tasarımcısı'nda DataGrid denetimi eklemek için  
   
-1.  Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini kullanarak bir veri kaynağı için tasarımcı bağlama](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1.  Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimi Tasarımcısı'nı kullanarak bir veri kaynağına bağlama](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
 2.  Seçin <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği, Özellikler penceresinde ve ardından üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki görüntülenecek özelliği **DataGridTableStyle Koleksiyonu Düzenleyicisi**.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "48873420"
   
 5.  İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> görüntülemek istediğiniz sütun için değer.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

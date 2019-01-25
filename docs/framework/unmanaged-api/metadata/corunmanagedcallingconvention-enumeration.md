@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555563"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention Numaralandırması
-Yönetilmeyen kodu çağırma kurallarını belirtir.  
+Yönetilmeyen kod için çağırma kuralları belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,8 +49,8 @@ typedef enum CorUnmanagedCallingConvention {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C dili çağırma kuralı.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Standart arama kuralı.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"Bu" çağırma.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Standart çağırma kuralı.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"Bu" çağırma kuralı.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"Hızlı" çağırma kuralı.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Kullanılmadı.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Kullanılmadı.|  
@@ -58,14 +58,14 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Kullanılmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, .NET Framework sürüm 1.0 "Hızlı" çağırma desteklemez.  
+ CLR, .NET Framework sürüm 1.0 "Hızlı" çağırma kuralı desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

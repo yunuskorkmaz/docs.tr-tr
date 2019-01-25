@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524890"
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
 Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil gereksinimlerini oluşur: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim, güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, aktarım güvenliği (hem hizmet hem de istemci kimlik doğrulama) kimlik gizliliği (ileti şifreleme) ve bütünlüğü (dijital oynama algılamak imzalama) içerir. Yetkilendirme, kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimidir. WCF özelliklerini kullanarak, iki birincil gereksinimlerini kolayca uygulanır.  
@@ -41,10 +41,10 @@ Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil ger
  Özel bir Windows etki alanında çalışan bir uygulamayı güvenli hale getirmek için ya da varsayılan güvenlik ayarlarını kullanabilirsiniz <xref:System.ServiceModel.WSHttpBinding> veya <xref:System.ServiceModel.NetTcpBinding> bağlama. Varsayılan olarak, WCF hizmetleri aynı Windows etki alanı'teki herkes erişebilir. Bu kullanıcılar ağa oturum olduğundan, bunlar güvenilirdir. Bir hizmet ve istemci arasında iletileri için gizlilik şifrelenir ve bütünlük için imzalanır. Windows Güvenlik kullanan bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>PrincipalPermissionAttribute sınıfı kullanarak Yetkilendirme  
- Bir bilgisayardaki kaynaklara erişimini kısıtlamak gerekiyorsa, en kolay yolu kullanmaktır <xref:System.Security.Permissions.PrincipalPermissionAttribute> sınıfı. Bu öznitelik, kullanıcı bir belirtilen bir Windows grubu veya rolü yoğun hizmet işlemlerini çağırmayı kısıtlamak için ya da belirli bir kullanıcı olmasını sağlar. Daha fazla bilgi için [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtla](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Bir bilgisayardaki kaynaklara erişimini kısıtlamak gerekiyorsa, en kolay yolu kullanmaktır <xref:System.Security.Permissions.PrincipalPermissionAttribute> sınıfı. Bu öznitelik, kullanıcı bir belirtilen bir Windows grubu veya rolü yoğun hizmet işlemlerini çağırmayı kısıtlamak için ya da belirli bir kullanıcı olmasını sağlar. Daha fazla bilgi için [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ### <a name="impersonation"></a>Kimliğe bürünme  
- Kimliğe bürünme, kaynaklara erişimi denetlemek için kullanabileceğiniz başka bir mekanizmadır. Varsayılan olarak, IIS tarafından barındırılan bir hizmet hesabından kimliği altında çalışır. ASP.NET hesabından yalnızca iznine sahip kaynaklara erişebilirsiniz. Ancak, bir klasör için ACL ASPNET hizmet hesabı hariç, ancak bazı diğer kimlikleri klasöre erişmek izin ayarlamak mümkündür. Sorunun sonra bunu yapmak için ASP.NET hesabından izin verilmiyorsa klasöre erişmek bu kullanıcılara izin verecek şekilde nasıl olur. Yanıt, kimliğe bürünme, hizmet belirli bir kaynağa erişmek için istemci kimlik bilgilerini kullanmak için izin verebileceğiniz kullanmaktır. Yalnızca belirli kullanıcılara izni olan bir SQL Server veritabanına erişirken bunun başka bir örnektir. Kimliğe bürünme kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir hizmette istemci kimliğine bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) ve [temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Kimliğe bürünme, kaynaklara erişimi denetlemek için kullanabileceğiniz başka bir mekanizmadır. Varsayılan olarak, IIS tarafından barındırılan bir hizmet hesabından kimliği altında çalışır. ASP.NET hesabından yalnızca iznine sahip kaynaklara erişebilirsiniz. Ancak, bir klasör için ACL ASPNET hizmet hesabı hariç, ancak bazı diğer kimlikleri klasöre erişmek izin ayarlamak mümkündür. Sorunun sonra bunu yapmak için ASP.NET hesabından izin verilmiyorsa klasöre erişmek bu kullanıcılara izin verecek şekilde nasıl olur. Yanıt, kimliğe bürünme, hizmet belirli bir kaynağa erişmek için istemci kimlik bilgilerini kullanmak için izin verebileceğiniz kullanmaktır. Yalnızca belirli kullanıcılara izni olan bir SQL Server veritabanına erişirken bunun başka bir örnektir. Kimliğe bürünme kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) ve [temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Internet güvenliği  
  Internet üzerindeki güvenlik intranet güvenlik gereksinimleri aynıdır oluşur. Hizmet gerçekliği kanıtlamak için kimlik bilgilerini sunmak gereken ve istemcileri için hizmet kimliklerini kanıtlamak gerekir. Bir istemcinin kimliği kanıtlanmış sonra hizmet istemci ne kadar kaynaklarına erişimi denetleyebilirsiniz. Ancak, Internet heterojen yapısı nedeniyle, sunulan kimlik bilgilerinin bir Windows etki alanında kullanılanlardan farklı. Bilet kimlik bilgileri, İnternet'e sahip bir etki alanı kullanıcı kimlik doğrulaması bir Kerberos denetleyicisi işleme ise hizmet ve istemcileri kimlik sunmak için çeşitli yollar birini kullanır. Bu konunun amacı, ancak Internet üzerinden erişilebilir bir WCF hizmeti oluşturma olanak tanıyan ortak bir yaklaşım sunmak için olabilir.  
@@ -65,7 +65,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil ger
   
  Her iki ana mod semantiği birleştiren, üçüncü bir moddur *aktarım ileti kimlik bilgilerini modunda*.  
   
- İleti güvenliği nasıl güvenlik modunu belirler ve her seçeneği avantajları ve dezavantajları, aşağıda açıklandığı gibi vardır. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+ İleti güvenliği nasıl güvenlik modunu belirler ve her seçeneği avantajları ve dezavantajları, aşağıda açıklandığı gibi vardır. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 #### <a name="transport-mode"></a>Aktarım modu  
  Ağ ve uygulama arasında birden fazla katman vardır. Bunlardan biri *aktarım* katman *,* uç noktalar arasında ileti aktarımını yönetir. Mevcut bir amaç için ise yalnızca WCF her biri güvenli aktarım ileti çeşitli aktarım protokolünü kullanan anlamanız gerekir. (Aktarımları hakkında daha fazla bilgi için bkz: [taşımalar](../../../docs/framework/wcf/feature-details/transports.md).)  
@@ -85,34 +85,34 @@ Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil ger
   
  İstemcinin kimliğinin doğrulanmasını gerektiren bir hizmeti oluşturuyorsanız, tercih ettiğiniz bir istemci kimlik bilgisi türü taşıma ve seçili modu bağlıdır. Örneğin, HTTP aktarımı kullanarak ve aktarım modunu seçme temel, Özet ve diğerleri gibi çeşitli seçenekler sunar. (Bunlar hakkında daha fazla bilgi için kimlik bilgisi türleri, bkz: [anlama HTTP kimlik doğrulaması](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).)  
   
- Bir hizmet ağın diğer kullanıcıların kullanıma sunulacak bir Windows etki alanı oluşturuyorsanız, kullanılacak Windows istemcisi kimlik bilgisi türü kolayıdır. Ancak, ayrıca bir sertifika ile hizmet sağlamanız gerekebilir. Bu gösterilen [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Bir hizmet ağın diğer kullanıcıların kullanıma sunulacak bir Windows etki alanı oluşturuyorsanız, kullanılacak Windows istemcisi kimlik bilgisi türü kolayıdır. Ancak, ayrıca bir sertifika ile hizmet sağlamanız gerekebilir. Bu gösterilen [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="credential-values"></a>Kimlik bilgileri değerlerini  
  A *kimlik bilgisi değeri* olan gerçek kimlik bilgisi hizmeti kullanır. Bir kimlik bilgisi türünü belirttikten sonra gerçek kimlik bilgileri ile hizmetinizi yapılandırma gerekebilir. Ardından Windows seçtiğiniz (ve hizmet, bir Windows etki alanı üzerinde çalışır varsa), gerçek kimlik değeri belirtmeyin.  
   
 ## <a name="identity"></a>Kimlik  
- Wcf'de, terim *kimlik* sunucu ve istemci için farklı bir anlama sahiptir. Kısaca, hizmet çalışırken, bir kimlik için güvenlik bağlamı kimlik doğrulamasından sonra atanır. Gerçek kimlik görüntülemek için <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> ve <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> özelliklerini <xref:System.ServiceModel.ServiceSecurityContext> sınıfı. Daha fazla bilgi için [nasıl yapılır: güvenlik bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
+ Wcf'de, terim *kimlik* sunucu ve istemci için farklı bir anlama sahiptir. Kısaca, hizmet çalışırken, bir kimlik için güvenlik bağlamı kimlik doğrulamasından sonra atanır. Gerçek kimlik görüntülemek için <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> ve <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> özelliklerini <xref:System.ServiceModel.ServiceSecurityContext> sınıfı. Daha fazla bilgi için [nasıl yapılır: Güvenlik bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
   
  Buna karşılık, istemcide kimlik hizmeti doğrulamak için kullanılır. Tasarım zamanında, bir istemci geliştiricisinin ayarlayabilirsiniz [ \<kimlik >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğesine hizmetten alınan bir değer. Çalışma zamanında istemci gerçek hizmetin kimliğini karşı öğenin değerini denetler. İstemci denetimi başarısız olursa iletişimi sona erer. Hizmet bir makine hesabı altında çalışıyorsa, hizmeti belirli bir kullanıcının kimliğine veya hizmet asıl adı (SPN) altında çalışıyorsa, değer kullanıcı asıl adı (UPN) olabilir. Daha fazla bilgi için [kimlik doğrulama ile hizmet kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). Kimlik bilgileri, ayrıca bir sertifika veya sertifika tanımlayan bir sertifika bulundu. bir alan olabilir.  
   
 ## <a name="protection-levels"></a>Koruma düzeyleri  
  `ProtectionLevel` Özellik üzerinde birkaç öznitelik sınıfları gerçekleşir (aşağıdaki gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları). Koruma düzeyi iletileri (ileti bölümlerini) bir hizmet oturumunuz destekleyen imzalanmış ve şifrelenmiş veya imza veya şifreleme gönderilen olup olmadığını belirten bir değerdir. Özelliği hakkında daha fazla bilgi için bkz. [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md)ve programlama örnekleri için bkz. [nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Bir servis sözleşmesi ile tasarlama hakkında daha fazla bilgi için `ProtectionLevel` bağlam içinde görebilir [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Koruma Düzeylerini Anlama](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Temsilcilik ve Kimliğe Bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)  
- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Nasıl Yapılır: Güvenlik Bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Koruma Düzeylerini Anlama](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Temsilcilik ve Kimliğe Bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)
+- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Nasıl yapılır: İstemci kimlik bilgileri türünü belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Nasıl yapılır: Güvenlik bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

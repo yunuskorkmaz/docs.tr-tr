@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4fc691637c049e0374416cb92a2056555ad11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50c38c5a9e1799a460c5be1f7234b36968dc3da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706897"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable Arabirimi
-Bir parametre, yerel bir değişken ya da bir alan gibi bir değişkeni temsil eder.  
+Bir parametre, yerel bir değişken veya bir alan gibi bir değişkeni temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetAddressField1 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)|İlk adres alanı için bu değişkeni alır. Bunun anlamı adres türüne bağlıdır.|  
-|[GetAddressField2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)|İkinci adres alanı için bu değişkeni alır. Bunun anlamı adres türüne bağlıdır.|  
-|[GetAddressField3 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)|Üçüncü adres alanı için bu değişkeni alır. Bunun anlamı adres türüne bağlıdır.|  
-|[GetAddressKind Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)|Bu değişkenin adres türünü alır.|  
-|[GetAttributes Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getattributes-method.md)|Öznitelik bayrakları için bu değişkeni alır.|  
-|[GetEndOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)|Bu değişken, üst içinde son uzaklığını alır.|  
+|[GetAddressField1 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)|Bu değişken için ilk adres alanı alır. Anlamını adresi türüne bağlıdır.|  
+|[GetAddressField2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)|Bu değişken için ikinci bir adres alanı alır. Anlamını adresi türüne bağlıdır.|  
+|[GetAddressField3 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)|Üçüncü adres alanı, bu değişken için alır. Anlamını adresi türüne bağlıdır.|  
+|[GetAddressKind Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)|Bu değişkenin adresi türünü alır.|  
+|[GetAttributes Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getattributes-method.md)|Bu değişken için öznitelik bayrakları alır.|  
+|[GetEndOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)|Bu değişkenin içinde üst bitiş uzaklığı alır.|  
 |[GetName Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getname-method.md)|Bu değişken adını alır.|  
 |[GetSignature Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getsignature-method.md)|Bu değişken imzasını alır.|  
-|[GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)|Bu değişken, üst içinde başlangıç uzaklığını alır.|  
+|[GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)|Bu değişkenin içinde üst başlangıç uzaklığını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

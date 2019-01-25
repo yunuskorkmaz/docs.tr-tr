@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631509"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML Özniteliği Axis Özelliği (Visual Basic)
 İçin bir öznitelik değeri erişim sağlayan bir <xref:System.Xml.Linq.XElement> nesne veya koleksiyonu içindeki ilk öğeye <xref:System.Xml.Linq.XElement> nesneleri.  
@@ -106,9 +106,9 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XElement>  
- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XElement>
+- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589577"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a> Bir derleme oluşturduğunuzda, derlemenin çalışması için gerekli izinler kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
@@ -62,7 +62,7 @@ ms.locfileid: "50088799"
   
  Strong adlandırma ve kullanarak imzalama çünkü [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bütünlüğü bu iki derleme kanıtı üzerinde kod erişim güvenlik ilkesini temel alabilir. Tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) dijital imzalar ve sertifikalar aracılığıyla bütünlüğü garanti. Bahsedilen tüm teknolojiler — karma doğrulama, tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)— birlikte derlemenin hiçbir şekilde değiştirilmediğinden emin olmak için iş.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)

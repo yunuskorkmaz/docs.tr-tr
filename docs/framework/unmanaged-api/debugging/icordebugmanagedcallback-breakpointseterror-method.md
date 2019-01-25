@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc437f63621c451c0af796513d4646fe0668c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586379"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError Yöntemi
-Hata ayıklayıcı ortak dil çalışma zamanı doğru sadece derlenmiş zamanında (JIT) bir işlevi olan önce bu ayarlanan bir kesme noktası bağlayamadı olduğunu bildirir.  
+Hata ayıklayıcı ortak dil çalışma zamanı öncesinde bir işlev yalnızca derlenmiş zamanında (JIT) ayarlanan bir kesme noktası doğru şekilde bağlanamıyor olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT BreakpointSetError (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye ilişkisiz kesme noktası içeren uygulama etki alanını temsil eder.  
+ [in] İlişkisiz bir kesme noktası içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pThread`  
- [in] Bir işaretçi Icordebugthread nesneye ilişkisiz kesme noktası içerdiğinden iş parçacığı temsil eder.  
+ [in] İlişkisiz bir kesme noktası içeren iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
   
  `pBreakpoint`  
- [in] Bir işaretçi Icordebugbreakpoint nesneye ilişkisiz kesme noktası temsil eder.  
+ [in] İlişkisiz kesme noktasını temsil eden bir Icordebugbreakpoint nesne işaretçisi.  
   
  `dwError`  
- [in] Hata gösteren tamsayı.  
+ [in] Hata gösteren bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Verilen kesme noktası hiçbir zaman karşılaşır. Hata ayıklayıcı devre dışı bırakın ve onu yeniden bağlayın.  
+ Belirtilen kesme noktası hiçbir zaman ulaşırsınız. Hata ayıklayıcı, devre dışı bırakma ve onu yeniden bağlayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

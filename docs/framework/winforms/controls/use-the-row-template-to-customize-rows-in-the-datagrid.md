@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Windows Forms DataGridView Denetimindeki Satırları Özelleştirmek için Satır Şablonunu Kullanma'
+title: 'Nasıl yapılır: Windows Forms DataGridView denetimindeki satırları özelleştirmek için satır şablonunu kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 2bde9b3f6934833804866e29c18f3636c65ba069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215b04ce47a393a0ec3ad01957a311bc5508d24f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580245"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Nasıl Yapılır: Windows Forms DataGridView Denetimindeki Satırları Özelleştirmek için Satır Şablonunu Kullanma
-<xref:System.Windows.Forms.DataGridView> Denetimi denetimine veri bağlama aracılığıyla ya da çağırdığınızda ekler tüm satırlar için temel olarak satır şablonunu kullanır <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> kullanmak için var olan bir satır belirtmeden yöntemi.  
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView denetimindeki satırları özelleştirmek için satır şablonunu kullanma
+<xref:System.Windows.Forms.DataGridView> Denetimi denetimine veri bağlama aracılığıyla ya da çağırdığınızda ekler tüm satırlar için temel olarak satır şablonunu kullanır <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> kullanmak için mevcut bir satırı belirtmeden yöntemi.  
   
- Satır şablonunu görünümünü ve davranışını satır üzerinde daha fazla denetim sağlar <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> özelliği sağlar. Herhangi bir ayarla Satır şablonuyla <xref:System.Windows.Forms.DataGridViewRow> gibi özelliklerini <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ Satır şablonunu görünümünü ve davranışını satır üzerinde daha fazla denetim verir <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> özelliği sağlar. Satır şablonla herhangi ayarlayabilirsiniz <xref:System.Windows.Forms.DataGridViewRow> özellikleri dahil olmak üzere, <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
   
- Belirli bir efekt elde etmek için satır şablonunu burada kullanmalısınız bazı durumlar vardır. Örneğin, satır yüksekliği bilgi içinde depolanamaz bir <xref:System.Windows.Forms.DataGridViewCellStyle>, tüm satırları tarafından kullanılan varsayılan yüksekliği değiştirmek için satır şablonunu kullanmanız gerekir. Satır şablonunu de türetilmiş kendi sınıflarınızı oluşturduğunuzda yararlıdır <xref:System.Windows.Forms.DataGridViewRow> ve yeni satırlar için denetim eklendiğinde kullanılan özel türünüz istiyor.  
+ Burada belirli etkiyi elde etmek için satır şablonunu kullanma gerekir bazı durumlar vardır. Örneğin, satır yüksekliğini bilgi içinde depolanamaz bir <xref:System.Windows.Forms.DataGridViewCellStyle>, tüm satırları tarafından kullanılan varsayılan yükseklik değiştirmek için satır şablonunu kullanmanız gerekir. Satır şablonunu de kendi sınıflar türetilmiş oluşturduğunuzda yararlıdır <xref:System.Windows.Forms.DataGridViewRow> ve denetime yeni satır eklendiğinde kullanılan özel türünüzü istediğiniz.  
   
 > [!NOTE]
->  Yalnızca satır eklendiğinde satır şablonunu kullanılır. Varolan satırları satır şablonunu değiştirerek değiştiremezsiniz.  
+>  Yalnızca satır eklendiğinde satır şablonunu kullanılır. Var olan satır satır şablonunu değiştirerek değiştiremezsiniz.  
   
-### <a name="to-use-the-row-template"></a>Satır şablonunu kullanmak için  
+### <a name="to-use-the-row-template"></a>İçin satır şablonunu kullanma  
   
--   Kaynağından alınan nesne üzerindeki özellikleri ayarlama <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> özelliği.  
+-   Alınan nesne üzerindeki özellikleri ayarlamak <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> özelliği.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
@@ -41,10 +41,10 @@ ms.locfileid: "33539184"
   
 -   Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCellStyle>  
- <xref:System.Windows.Forms.DataGridViewRow>  
- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>  
- [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView Denetimindeki Hücre Stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCellStyle>
+- <xref:System.Windows.Forms.DataGridViewRow>
+- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>
+- [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Hücre Stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)

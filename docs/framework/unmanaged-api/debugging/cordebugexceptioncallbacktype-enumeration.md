@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585555"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType Numaralandırması
-Gelen yaptığınız geri çağırma türünü gösteren bir [Icordebugmanagedcallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olay.  
+Gelen yapılan bir geri çağırma türünü gösteren bir [Icordebugmanagedcallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olay.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +42,18 @@ typedef enum CorDebugExceptionCallbackType {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Bir özel durum oluştu.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Özel durum windup işlemi kullanıcı kodu girildi.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Özel durum windup işlemi, kullanıcı kodu girildi.|  
 |`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Bulunan özel durum windup işleme bir `catch` kullanıcı kodunda engelleyin.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Özel durum işlenmedi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

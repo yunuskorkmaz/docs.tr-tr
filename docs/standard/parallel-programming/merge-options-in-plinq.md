@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714743"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
 Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikle ayrı iş parçacıklarına çalışabilmek ne zaman bir sorgu paralel, PLINQ bölümler kaynak sırası yürütüyor. Sonuçları bir iş parçacığı üzerinde kullanılması, örneğin, bir `foreach` (`For Each` Visual Basic'te) döngü sonra her iş parçacığı sonuçlardan bir dizisi olarak birleştirilmesi gerekir. PLINQ gerçekleştiren bir birleştirme türü, sorguda bulunan işleçleri bağlıdır. Örneğin, yeni bir sipariş sonuçlarına dayatır işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) kullanan bir iş parçacığı açısından bir belirgin süre ilk sonucunu üreten önce tamamen arabelleğe alınan sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen ara belleğe alınır; Bunlar, toplu sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
@@ -25,7 +25,7 @@ Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikl
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Tam bir örnek için bkz. [nasıl yapılır: plınq'te birleştirme seçeneklerini belirtin](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Tam bir örnek için bkz [nasıl yapılır: PLINQ'te birleştirme seçeneklerini belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Belirli bir sorgu istenen seçeneği destekleyemiyorsa seçeneği yalnızca yoksayılacak. Çoğu durumda, bir PLINQ sorgusu için bir birleştirme seçeneği belirtmeniz gerekmez. Ancak, bazı durumlarda, test etme ve bir sorgu en iyi bir varsayılan olmayan modda yürütülür ölçüm bulabilirsiniz. Bir ortak bu seçenek, sonuçları daha hızlı yanıt veren bir kullanıcı arabirimi sağlamak amacıyla akış için bir öbek birleştirme işleci zorlamak için kullanılır.  
   
@@ -49,17 +49,17 @@ Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikl
   
 |İşleç|Kısıtlamalar|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Yok.|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Yok.|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Hiçbiri|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Hiçbiri|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Bir dizi ya da liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Yok.|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Yok.|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Hiçbiri|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Hiçbiri|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Bir dizi ya da liste kaynağı yalnızca sahip olmayan sıralı sorgular.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Yok.|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Hiçbiri|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|Yok.|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Yok.|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Yok.|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Hiçbiri|  
   
  Diğer tüm PLINQ sorgu işleçleri, kullanıcı tarafından sağlanan birleştirme seçeneklerini yoksay. Bazı sorgu işleçleri, örneğin, <xref:System.Linq.ParallelEnumerable.Reverse%2A> ve <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, tüm üretilen yeniden ve kadar herhangi bir öğe döndürülemez. Bu nedenle, <xref:System.Linq.ParallelMergeOptions> da operatörün gibi içeren bir sorguda kullanılan <xref:System.Linq.ParallelEnumerable.Reverse%2A>, işleç sonuçlarını üretmiştir sonra birleştirme davranışı sorgu kadar uygulanmaz.  
   
@@ -67,5 +67,5 @@ Birden çok iş parçacığı üzerinde farklı bölümleri aynı anda genellikl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
-- [Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Nasıl yapılır: PLINQ'te birleştirme seçeneklerini belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

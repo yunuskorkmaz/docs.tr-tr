@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606789"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında kullanmak için bir animasyonlu düğme oluşturma öğrenmektir. Bu izlenecek yol, stil ve şablon kod yeniden kullanımını ve düğme mantığının ayrımı düğme bildiriminden imkan tanıyan özelleştirilmiş bir düğme kaynak oluşturmak için kullanır. Bu izlenecek yolda tamamen yazılır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
      Düğmelerden birine tıklayın ve uygulamayı çalıştırmak için F5 tuşuna basın. Odak hala olduğundan tıkladıktan sonra düğme vurgulanmış kaldığına dikkat edin. Başka bir düğme tıklarsanız, sonuncu kaybeder sırada yeni düğme odak kazanır.  
   
-4.  **Animasyonlar ekleyin** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:**  Sonraki bazı animasyonlar tetikleyicilere ekleriz. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` blok.  
+4.  **Animasyonlar ekleyin** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** Sonraki bazı animasyonlar tetikleyicilere ekleriz. Herhangi bir yeri içinde aşağıdaki işaretlemeyi ekleyin `ControlTemplate.Triggers` blok.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
   
 -   Özelleştirilmiş kullanıcı eylemlerine düğme davranışı (gibi <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) animasyon efektleri dahil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Microsoft Expression Blend Kullanarak Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Bit Eşlem Etkilerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Microsoft Expression Blend Kullanarak Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Bit Eşlem Etkilerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

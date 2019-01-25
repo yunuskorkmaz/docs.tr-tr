@@ -2,12 +2,12 @@
 title: Güvenli veri erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494645"
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenlik mekanizmalarını anlamaları gerekir. Ayrıca, diğer özellikler veya uygulamanızı içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
@@ -87,10 +87,10 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
 |[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te nasıl sunacağınızı öğrenin ve .NET Framework bileşenlerini vystavit kullanıma sunmak nasıl eklendiğini açıklayan konulara içerir|
 |[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

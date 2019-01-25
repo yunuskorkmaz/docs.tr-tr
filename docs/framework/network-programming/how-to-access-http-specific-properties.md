@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: c883321d74bb4309f483604d51057390d00189e6
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619733"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: HTTP'ye özgü özelliklere erişim
 Bu örnek HTTP devre dışı bırakma gösterir **tutma** davranışı ve get protokol sürümü, Web sunucusu vm'sinden sayı.  
@@ -49,7 +49,7 @@ HttpWResp.Close();
   
 -   Başvurular **System.Net** ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)  
- [HTTP](../../../docs/framework/network-programming/http.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
+- [HTTP](../../../docs/framework/network-programming/http.md)

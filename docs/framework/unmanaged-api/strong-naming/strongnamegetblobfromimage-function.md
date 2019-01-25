@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d058c1ad070e2ffacdf2129c6d9657d0fc1d01e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737289"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage İşlevi
-Belirtilen bellek adresinde derleme görüntü ikili bir gösterimini alır.  
+Belirtilen bellek adresinde derleme yansıma ikili gösterimini alır.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamegetblobfromımage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) yöntemi yerine.  
   
@@ -44,30 +44,30 @@ BOOLEAN StrongNameGetBlobFromImage (
  [in] Eşlenen derleme bildirimi bellek adresi.  
   
  `dwLength`  
- [in] Yansımayı bayt cinsinden boyutu `pbBase`.  
+ [in] Bayt cinsinden görüntü boyutu `pbBase`.  
   
  `pbBlob`  
- [in] Görüntü ikili gösterimini içeren bir arabellek.  
+ [in] Görüntü ikili gösterimini içeren arabellek.  
   
  `pcbBlob`  
- [içinde out] Bayt cinsinden en büyük boyutu, istenen `pbBlob`. Return, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.  
+ [out içinde] Bayt cinsinden en büyük boyutu, istenen `pbBlob`. İade, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `StrongNameGetBlobFromImage` işlevi yok başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) son oluşturulan hata alınacak işlev.  
+ Varsa `StrongNameGetBlobFromImage` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [StrongNameGetBlobFromImage Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [StrongNameGetBlob Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [StrongNameGetBlobFromImage Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [StrongNameGetBlob Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

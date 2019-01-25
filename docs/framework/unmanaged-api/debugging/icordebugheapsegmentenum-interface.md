@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac4ddc33bcaf07d615fd186a63d96b1f4f6464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e5c29952fd300da1d7fb6b87a3287b34e76f863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716260"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum Arabirimi
-Yönetilen yığının bellek bölgeleri için bir numaralandırıcı sağlar. Bu arabirim Icordebugenum arabirimi sınıfıdır.  
+Yönetilen yığının bellek bölgeleri için bir numaralandırıcı sağlar. Icordebugenum arabirimi öğesinin arabirimidir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Yönetilen yığın bölgeler hakkında bilgiler içeren örnekleri.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığının bölgeler hakkında bilgi içeren örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugHeapSegmentEnum` Arabirimini uygulayan Icordebugenum arabirimi.  
+ `ICorDebugHeapSegmentEnum` Arabirimi uygulayan Icordebugenum arabirimi.  
   
  Bir `ICorDebugHeapSegmentEnum` örneği ile doldurulur [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) çağırarak örnekleri [Icordebugprocess5::enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) yöntemi. [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) koleksiyonundaki nesneleri numaralandırılan çağırarak [Icordebugheapsegmentenum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md) yöntemi.  
   
- Bir `ICorDebugHeapSegmentEnum` koleksiyon nesnesi numaralandırır yönetilen nesneleri içerebilir tüm bellek bölgeler, ancak bunu yönetilen nesneler gerçekte bu bölgede bulunan garanti etmez. Boş veya ayrılmış bellek bölgeler hakkında bilgi içerebilir.  
+ Bir `ICorDebugHeapSegmentEnum` koleksiyon nesnesini numaralandırır yönetilen nesneleri içerebilir tüm bellek bölgeler, ancak yönetilen nesneleri aslında bu bölgelerde bulunan garantilemez. Bu işlem, boş veya ayrılmış bellek bölgeleri hakkında bilgi içerebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: XML ad alanları (Visual Basic) içinde sorguları yazma'
+title: 'Nasıl yapılır: (Visual Basic) ad alanlarında XML üzerinde sorgu yazma'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609937"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Nasıl yapılır: XML ad alanları (Visual Basic) içinde sorguları yazma
-İçinde bir ad alanı XML bir sorgu yazmak için kullanmanız gerekir <xref:System.Xml.Linq.XName> doğru ad alanına sahip nesneleri.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Nasıl yapılır: (Visual Basic) ad alanlarında XML üzerinde sorgu yazma
+Bir ad alanındaki XML üzerinde sorgu yazmak için kullanmalısınız <xref:System.Xml.Linq.XName> doğru ad alanı olan nesne.  
   
- Visual Basic'te en yaygın genel ad alanı tanımlamak ve XML değişmez değerleri ve genel ad alanı kullanmak XML özellikleri kullanmak için bir yaklaşımdır. Genel varsayılan ad alanı, varsayılan olarak ad alanında XML değişmez değerleri öğelerinde; Bu durumda olacaktır tanımlayabilirsiniz. Alternatif olarak, genel ad alanı öneki tanımlamak ve XML değişmez değerleri ve XML özellikleri gerektiği gibi ön ekini kullanın. Formlarla diğer XML gibi her zaman varsayılan olarak hiçbir ad alanındaki öznitelikleridir.  
+ Visual Basic'te, en yaygın bir genel ad alanı tanımlayın ve ardından XML sabit değerleri ve XML özellikleri, genel ad kullanmak yaklaşımdır. XML değişmez değerlerinde bir öğe ad varsayılan olarak, bu durumda olacaktır, bir genel varsayılan ad alanı tanımlayabilirsiniz. Alternatif olarak, genel bir ad alanı öneki ile tanımlayabilir ve ardından XML sabit değerleri ve XML özellikleri gerektiği gibi ön ekini kullanın. Formlarla diğer XML olarak, öznitelikleri her zaman varsayılan olarak hiçbir ad alanı olur.  
   
- Bu konudaki örnekler ilk kümesi varsayılan ad alanında bir XML ağacı oluşturulacağını gösterir. İkinci küme öneki bir ad alanındaki bir XML ağacı oluşturulacağını gösterir.  
+ Bu konudaki örnekler ilk kümesi, varsayılan ad alanında bir XML ağacı oluşturma işlemi gösterilmektedir. İkinci küme, önekli ad alanında bir XML ağacı oluşturma işlemi gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir varsayılan ad alanı içinde bir XML ağacı oluşturur. Ardından, öğe koleksiyonunu alır.  
+ Aşağıdaki örnek, bir varsayılan ad alanı içinde bir XML ağacı oluşturur. Ardından, öğelerinin bir koleksiyonunu alır.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -43,7 +43,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 1  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- Visual Basic'te, ancak, bir ad alanı öneki ile kullanan bir XML ağaç sorguları yazma bir varsayılan ad alanı XML ağacında sorgulama oldukça farklıdır. Tipik olarak kullandığınız `Imports` ad alanı öneki almak için deyimi. XML ağaç yapısı oluştururken öğe ve öznitelik adları ön ekini kullanın. XML özellikleri kullanılarak bir XML ağacı sorgulanırken de ön ekini kullanın.  
+ Visual Basic'te, ancak bir ad alanı öneki ile kullanan bir XML ağacının üzerinde sorgu yazma bir XML ağacı varsayılan ad alanı içinde sorgulamaktan oldukça farklıdır. Tipik olarak kullandığınız `Imports` ad alanı öneki ile içeri aktarma deyimi. XML ağacı oluştururken öğe ve öznitelik adları önekini kullanın. XML özelliklerini kullanarak bir XML ağacı sorgulanırken de ön ekini kullanın.  
   
- Aşağıdaki örnek, bir ad alanı öneki bulunduğu bir XML ağacı oluşturur. Ardından, öğe koleksiyonunu alır.  
+ Aşağıdaki örnek, bir ad alanı öneki olan bir XML ağacı oluşturur. Ardından, öğelerinin bir koleksiyonunu alır.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -80,7 +80,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 1  
@@ -88,5 +88,5 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -2,17 +2,17 @@
 title: Temsilcilerde varyans (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 350f8d6b317f6a82d5b5a718a3d49a4b9ee3e4b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631548"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Temsilcilerde varyans (Visual Basic)
-.NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# ve Visual Basic temsilci türleriyle eşleşen farkı desteği sunmuştur. Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler . Bu, hem genel hem de genel olmayan temsilciler içerir.  
+.NET framework 3.5 sunulan tüm temsilcileri içindeki temsilci türleriyle yöntem imzalarının eşleştirilmesi için varyans Destek C# ve Visual Basic. Yalnızca imzalarının eşleştirilmesi içeren yöntemlerin yanı sıra temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip bir parametre kabul eden ya da daha fazla türetilmiş türler (kovaryans) döndüren yöntemler için atayabileceğiniz anlamına gelir temsilciler . Bu, hem genel hem de genel olmayan temsilcileri içerir.  
   
- Örneğin, iki sınıf ve iki temsilciler aşağıdaki kodu göz önünde bulundurun: Genel ve genel olmayan.  
+ Örneğin, iki sınıf ve iki temsilci olduğunda sahip aşağıdaki kodu düşünün: Genel ve genel olmayan.  
   
 ```vb  
 Public Class First  
@@ -26,7 +26,7 @@ Public Delegate Function SampleDelegate(ByVal a As Second) As First
 Public Delegate Function SampleGenericDelegate(Of A, R)(ByVal a As A) As R  
 ```  
   
- Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleDelegate(Of A, R)` türleri, aşağıdaki yöntemlerden birini bu temsilcileri atayabilirsiniz.  
+ Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleDelegate(Of A, R)` türleri, bu temsilcileri için aşağıdaki yöntemlerden herhangi birini atayabilirsiniz.  
   
 ```vb  
 ' Matching signature.  
@@ -55,7 +55,7 @@ Public Shared Function AFirstRSecond(
 End Function  
 ```  
   
- Aşağıdaki kod örneğinde yöntem imzası ve temsilci türü arasında örtük dönüşüm gösterilmektedir.  
+ Aşağıdaki kod örneği, yöntem imzası ve temsilci türü arasında örtülü dönüştürme gösterilmektedir.  
   
 ```vb  
 ' Assigning a method with a matching signature   
@@ -75,14 +75,14 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond  
 ```  
   
- Daha fazla örnek için bkz: [kullanarak Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilciler (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Daha fazla örnek için bkz. [kullanarak Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilcileri (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Genel tür parametreleri varyans  
- Böylece türlerini birbirinden gerektirdiği şekilde devralınırsa, genel tür parametresi tarafından belirtilen farklı türlerine sahip genel temsilciler birbirine atanabilir .NET Framework 4 ve üzeri temsilciler arasında örtük dönüştürmeye etkinleştirebilirsiniz sapması.  
+ Böylece türlerini birbirinden gerektirdiği devralınırsa, genel tür parametrelerle belirtilen farklı türlere sahip genel temsilciler birbiriyle atanabilir .NET Framework 4 ve üzeri temsilciler arasında örtük dönüştürme etkinleştirebilirsiniz farkı.  
   
- Örtük dönüştürme etkinleştirmek için açıkça bir temsilci eşdeğişken olarak genel parametreleri bildirmeniz gerekir veya kullanarak karşıtı `in` veya `out` anahtar sözcüğü.  
+ Örtük dönüştürme etkinleştirmek için açıkça genel parametreler birlikte değişken olarak bir temsilci bildirmeniz gerekir veya kullanarak, değişken karşıtı `in` veya `out` anahtar sözcüğü.  
   
- Aşağıdaki kod örneğinde eşdeğişken genel tür parametresi var. bir temsilci nasıl oluşturabileceğinizi gösterir.  
+ Aşağıdaki kod örneği, bir genel birlikte değişen türde parametresi olan bir temsilci nasıl oluşturabileceğinizi gösterir.  
   
 ```vb  
 ' Type T is declared covariant by using the out keyword.  
@@ -95,9 +95,9 @@ Sub Test()
 End Sub  
 ```  
   
- Eşleştirilecek tek farkı destek kullanırsanız, yöntemi imzalarla temsilci türleri'yı ve kullanmayın `in` ve `out` anahtar sözcüklerini bulduğunuz bazen aynı lambda ifadeleri veya yöntemleri ile temsilciler örneğini oluşturabilirsiniz, ancak yapamazsınız bir temsilci diğerine atayın.  
+ Tek farkı destek eşleştirilecek kullanırsanız birlikte yöntem imzaları temsilci türleri ve kullanmaz `in` ve `out` anahtar bulduğunuz bazen aynı lambda ifadeleri veya yöntemler ile temsilciler örneği oluşturabilir, ancak bunu yapamazsınız bir temsilci diğerine atayın.  
   
- Aşağıdaki kod örneğinde, `SampleGenericDelegate(Of String)` açıkça dönüştürülemiyor `SampleGenericDelegate(Of Object)`, ancak `String` devralır `Object`. Genel parametresini işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.  
+ Aşağıdaki kod örneğinde, `SampleGenericDelegate(Of String)` açıkça dönüştürülemez `SampleGenericDelegate(Of Object)`, ancak `String` devralan `Object`. Genel parametre olarak işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.  
   
 ```vb  
 Public Delegate Function SampleGenericDelegate(Of T)() As T  
@@ -117,12 +117,12 @@ Sub Test()
 End Sub  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework değişken sahip genel temsilciler tür parametreleri  
- .NET framework 4 birkaç mevcut genel temsilciler genel tür parametreleri sapma desteği sunulur:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework tür parametreleri varyant sahip genel temsilciler  
+ .NET framework 4, varolan birçok genel temsilciler genel tür parametrelerinde varyansı başlanmıştır:  
   
--   `Action` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602>  
+-   `Action` gelen temsilci <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602>  
   
--   `Func` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602>  
+-   `Func` gelen temsilci <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602>  
   
 -   <xref:System.Predicate%601> Temsilci seçme  
   
@@ -130,34 +130,34 @@ End Sub
   
 -   <xref:System.Converter%602> Temsilci seçme  
   
- Daha fazla bilgi ve örnekler için bkz: [işlev ve eylem genel temsilciler (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Daha fazla bilgi ve örnekler için bkz. [işlev ve eylem genel temsilcileri (Visual Basic) kullanarak varyansını](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Genel temsilciler değişken türü parametrelerinde bildirme  
- Genel temsilci eşdeğişken varsa veya karşıtı genel tür parametreleri, onu başvurulabilir için farklı bir *değişken Genel temsilci*.  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Değişken türünde parametreler genel temsilciler bildirme  
+ Genel temsilci birlikte değişken veya değişken karşıtı genel tür parametreleri, başvurulabilir olarak varsa bir *değişken Genel temsilci*.  
   
- Genel tür parametresi bir genel temsilci eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Eşdeğişken türü yöntem bağımsız değişkenleri bir tür değil de, yalnızca bir yöntemin dönüş türü olarak kullanılabilir. Aşağıdaki kod örneğinde eşdeğişken Genel temsilci bildirme gösterilmektedir.  
+ Genel tür parametresi birlikte değişken Genel temsilci kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Birlikte değişken türünde yöntem bağımsız bir tür değil de, yalnızca bir yöntem dönüş türü olarak kullanılabilir. Aşağıdaki kod örneği, birlikte değişken genel bir temsilcinin nasıl belirtileceğini gösterir.  
   
 ```vb  
 Public Delegate Function DCovariant(Of Out R)() As R  
 ```  
   
- Kullanarak bir genel tür parametresi karşıtı genel temsilcisi de bildirebilirsiniz `in` anahtar sözcüğü. Karşıtı türü yönteminin dönüş türü olarak değil de yalnızca yöntem bağımsız değişkenleri bir tür olarak kullanılabilir. Aşağıdaki kod örneğinde karşıtı Genel temsilci bildirme gösterilmektedir.  
+ Genel tür parametresi değişken karşıtı Genel temsilci kullanarak bildirebilirsiniz `in` anahtar sözcüğü. Değişken karşıtı türü, yöntemin dönüş türü değil de, yalnızca bir tür yöntem bağımsız olarak kullanılabilir. Aşağıdaki kod örneği, bir değişken karşıtı genel temsilcinin nasıl belirtileceğini gösterir.  
   
 ```vb  
 Public Delegate Sub DContravariant(Of In A)(ByVal a As A)  
 ```  
   
 > [!IMPORTANT]
->  `ByRef` Visual Basic'te parametreleri değişken işaretlenemez.  
+>  `ByRef` Visual Basic'te parametreleri varyant olarak işaretlenemez.  
   
- Aynı temsilci, ancak farklı tür parametreleri için sapması ve Kovaryans desteklemek mümkündür. Bu, aşağıdaki örnekte gösterilir.  
+ Farkı hem Kovaryans aynı temsilci, ancak farklı tür parametreleri için destek de mümkündür. Bu, aşağıdaki örnekte gösterilir.  
   
 ```vb  
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R  
 ```  
   
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Örnek oluşturma ve değişken genel temsilciler çağırma  
- Örneği ve yalnızca örneği ve sabit temsilciler çağırma değişken temsilciler çağırma. Aşağıdaki örnekte, temsilci bir lambda ifadesi tarafından başlatılmış.  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Örnekleme ve bunları çağırırken değişken genel temsilciler  
+ Örneği oluşturun ve yalnızca örneklemek ve sabit temsilciler çağırmak değişken temsilciler çağır. Aşağıdaki örnekte, temsilci bir lambda ifadesiyle başlatılır.  
   
 ```vb  
 Dim dvariant As DVariant(Of String, String) = Function(str) str + " "  
@@ -165,7 +165,7 @@ dvariant("test")
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Değişken genel temsilciler birleştirme  
- Değişken temsilciler birleştirmelisiniz değil. <xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüşümü desteklemez ve temsilciler tam olarak aynı türünde olmasını bekler. Ya da kullanarak temsilcileri birleştirme olduğunda bu bir çalışma zamanı özel yol açabilir <xref:System.Delegate.Combine%2A> yöntemi (C# ve Visual Basic) kullanarak veya `+` işleci (C#), aşağıdaki kod örneğinde gösterildiği gibi.  
+ Değişken temsilciler birleştirmemelisiniz değil. <xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüştürmeyi desteklemez ve temsilciler tam olarak aynı veri türünde olmasını bekliyor. Temsilcileri kullanarak ya da birleştirdiğinizde bu için bir çalışma zamanı özel durumuna neden olabilir <xref:System.Delegate.Combine%2A> yöntemi (içinde C# ve Visual Basic) veya kullanarak `+` işleci (içinde C#), aşağıdaki kod örneğinde gösterildiği gibi.  
   
 ```vb  
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)  
@@ -175,10 +175,10 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 ' Dim actCombine = [Delegate].Combine(actStr, actObj)  
 ```  
   
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Genel tür parametreleri varyans değer ve başvuru türleri  
- Genel tür parametreleri için varyansı yalnızca başvuru türleri için desteklenir. Örneğin, `DVariant(Of Int)`örtük olarak dönüştürülemiyor `DVariant(Of Object)` veya `DVariant(Of Long)`, çünkü tamsayı değer türü.  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Değer ve başvuru türleri için genel tür parametrelerindeki varyansı  
+ Varyans genel tür parametreleri için yalnızca başvuru türleri için desteklenir. Örneğin, `DVariant(Of Int)`için örtük olarak dönüştürülemez `DVariant(Of Object)` veya `DVariant(Of Long)`tamsayı değer türü olduğundan.  
   
- Aşağıdaki örnek, bu farkı gösterir genel tür parametreleri değer türleri için desteklenmiyor.  
+ Aşağıdaki örnek, bu farkı göstermektedir genel tür parametreleri değer türleri için desteklenmiyor.  
   
 ```vb  
 ' The type T is covariant.  
@@ -201,8 +201,8 @@ End Sub
 ```  
   
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic'te gevşek temsilci dönüşümü  
- Gevşek temsilci dönüşümü yöntem imzaları temsilci türleri ile eşleşen daha fazla esneklik sağlar. Örneğin, bir temsilci için bir yöntem atadığınızda işlevi dönüş değerleri atlayın ve parametre belirtimleri atlarsanız olanak sağlar. Daha fazla bilgi için bkz: [gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Gevşek temsilci dönüşümü temsilci türleriyle yöntem imzalarının eşleştirilmesi daha fazla esneklik sağlar. Örneğin, parametre belirtimleri çıkarın ve bir yöntem temsilciye atadığınızda işlevi dönüş değerleri çıkarın olanak tanır. Daha fazla bilgi için [gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel Türler](~/docs/standard/generics/index.md)  
- [İşlev ve eylem genel temsilciler (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Genel Türler](~/docs/standard/generics/index.md)
+- [İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

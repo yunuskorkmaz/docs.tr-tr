@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613668"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür tanıtır. Bu uygulamaları dokunmatik ekran arabirimi geçici bir çözüm olarak tasarlanmıştır. .NET framework 4.5, WCF hizmetlerini çağırmak Windows Store uygulamaları etkinleştirir.  
@@ -120,7 +120,7 @@ Aşağıdaki güvenlik modu Windows Store uygulamalarında desteklenir:
   
 Aşağıdaki istemci kimlik bilgisi türlerinin Windows Store uygulamalarında desteklenir:
   
-1.  Yok.  
+1.  Hiçbiri  
   
 2.  Temel  
   
@@ -174,10 +174,10 @@ void async SomeMethod()
   
  Async anahtar sözcüğü zaman uyumsuz yöntemini çağıran, zaman uyumsuz çağrı ve await anahtar sözcüğü yapmadan yöntemi kullanımına dikkat edin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'de Windows Store Apps blogu](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [WCF Windows Store istemcileri ve güvenlik](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Windows Store uygulamaları ve çapraz makine çağrıları](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Azure'da Windows Store uygulamasında dağıtılan bir WCF Hizmeti çağırma](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Bağlamalar](../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF'de Windows Store Apps blogu](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [WCF Windows Store istemcileri ve güvenlik](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Windows Store uygulamaları ve çapraz makine çağrıları](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Azure'da Windows Store uygulamasında dağıtılan bir WCF Hizmeti çağırma](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Bağlamalar](../../../../docs/framework/wcf/bindings.md)

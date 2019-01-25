@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: 47ab3dad8dc206acb0ef272ee86fe25365d2ac83
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a5e4f5f5127322f4160ea73f627f59436bc83a3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652351"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Satır &lt;numarası&gt; geçerli sınırlayıcıları ayrıştırılamıyor
 Belirtilen satır sınırlayıcı belirtilenlerin dışındaki kullandığından ayrıştırılamıyor.  
@@ -20,9 +20,9 @@ Belirtilen satır sınırlayıcı belirtilenlerin dışındaki kullandığından
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl Yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
-- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
-- [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
-- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+- [Nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
+- [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)
 - [TextFieldParser.Delimiters özelliği](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)
 - [TextFieldParser.SetDelimiters yöntemi](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)

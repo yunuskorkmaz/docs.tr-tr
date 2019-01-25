@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma'
+title: 'Nasıl yapılır: Çalışma zamanında bir bit eşlem oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 24c24e8e9b91e1977911b8e98391971d1f371108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf24f4fe7c54ae38e201fc4ed0a004985a266d8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632419"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma
-Bu örnek oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var olan bir Windows Forms'ta görüntüler <xref:System.Windows.Forms.PictureBox> denetim.  
+# <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma zamanında bir bit eşlem oluşturma
+Bu örneği oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var olan bir Windows Formları içinde görüntüler <xref:System.Windows.Forms.PictureBox> denetimi.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
@@ -25,8 +25,8 @@ Bu örnek oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var ola
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Drawing ve System.Windows.Forms derlemelerine içe aktaran bir Windows formu.  
+-   Sistem, System.Drawing ve System.Windows.Forms derlemeleri alır bir Windows formu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Bitmap>  
- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Bitmap>
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
