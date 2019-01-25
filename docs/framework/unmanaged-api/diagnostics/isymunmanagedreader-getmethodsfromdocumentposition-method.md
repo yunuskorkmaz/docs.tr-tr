@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c84aceb0faabd879911e9595a7f3154065e2191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55c8986d2efc78b6fcd2840bad588af84228017
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561784"
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="4827f-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Metodu</span><span class="sxs-lookup"><span data-stu-id="4827f-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="4827f-103">Her biri bir belgede verilen konumunda kesme noktası içeren bir dizi yöntemleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="4827f-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="6e60a-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Metodu</span><span class="sxs-lookup"><span data-stu-id="6e60a-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="6e60a-103">Yöntemler, her biri bir belge belirtilen konumda bir kesme noktası içeren bir dizisini döndürür.</span><span class="sxs-lookup"><span data-stu-id="6e60a-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4827f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4827f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e60a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6e60a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -40,30 +40,30 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4827f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4827f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6e60a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6e60a-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="4827f-106">[in] Belirtilen belge.</span><span class="sxs-lookup"><span data-stu-id="4827f-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="6e60a-106">[in] Belirtilen belge.</span><span class="sxs-lookup"><span data-stu-id="6e60a-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="4827f-107">[in] Belirtilen belge satırı.</span><span class="sxs-lookup"><span data-stu-id="4827f-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="6e60a-107">[in] Belirtilen belge satır.</span><span class="sxs-lookup"><span data-stu-id="6e60a-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="4827f-108">[in] Belirtilen belge sütun.</span><span class="sxs-lookup"><span data-stu-id="4827f-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="6e60a-108">[in] Belirtilen belgeyi içeren sütun.</span><span class="sxs-lookup"><span data-stu-id="6e60a-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="4827f-109">[in] Boyutunu `pRetVal` dizi.</span><span class="sxs-lookup"><span data-stu-id="4827f-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="6e60a-109">[in] Boyutu `pRetVal` dizisi.</span><span class="sxs-lookup"><span data-stu-id="6e60a-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="4827f-110">[out] Döndürülen öğe sayısını alır bir değişken için bir işaretçi `pRetVal` dizi.</span><span class="sxs-lookup"><span data-stu-id="4827f-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="6e60a-110">[out] Döndürülen öğe sayısını alır bir değişken işaretçisi `pRetVal` dizisi.</span><span class="sxs-lookup"><span data-stu-id="6e60a-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="4827f-111">[out] Her biri işaret işaretçileri, bir dizi bir [Isymunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) kesme noktası içeren bir yöntemi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="4827f-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="6e60a-111">[out] Bir dizi işaretçileri, her biri için işaret eden bir [Isymunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) kesme noktası içeren bir yöntemi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="6e60a-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4827f-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4827f-112">Return Value</span></span>  
- <span data-ttu-id="4827f-113">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="4827f-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6e60a-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6e60a-112">Return Value</span></span>  
+ <span data-ttu-id="6e60a-113">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="6e60a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4827f-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4827f-114">Requirements</span></span>  
- <span data-ttu-id="4827f-115">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4827f-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e60a-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6e60a-114">Requirements</span></span>  
+ <span data-ttu-id="6e60a-115">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6e60a-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4827f-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4827f-116">See Also</span></span>  
- [<span data-ttu-id="4827f-117">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4827f-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6e60a-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6e60a-116">See also</span></span>
+- [<span data-ttu-id="6e60a-117">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6e60a-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

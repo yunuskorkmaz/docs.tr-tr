@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580830"
 ---
-# <a name="shapes"></a><span data-ttu-id="15e8e-102">Şekiller</span><span class="sxs-lookup"><span data-stu-id="15e8e-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="15e8e-103"> kullanarak temel şekiller çizmek için destek sağlar <xref:System.Windows.Shapes.Shape> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="15e8e-103"> provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="15e8e-104">Şekil nesneleri türetilen <xref:System.Windows.FrameworkElement> ve bu nedenle, Düzen sistemine katılır ve basitçe kullanarak çizilebilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="15e8e-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="58c02-102">Şekiller</span><span class="sxs-lookup"><span data-stu-id="58c02-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="58c02-103">kullanarak temel şekiller çizmek için destek sağlayan <xref:System.Windows.Shapes.Shape> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="58c02-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="58c02-104">Şekil nesneleri türetilen <xref:System.Windows.FrameworkElement> ve bu nedenle, Düzen sisteme katılan ve yalnızca kullanılarak kurulabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="58c02-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="15e8e-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="15e8e-105">In This Section</span></span>  
- [<span data-ttu-id="15e8e-106">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="15e8e-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="15e8e-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="15e8e-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="58c02-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="58c02-105">In This Section</span></span>  
+ [<span data-ttu-id="58c02-106">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="58c02-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="58c02-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="58c02-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="15e8e-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="15e8e-108">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="15e8e-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="15e8e-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="15e8e-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="15e8e-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="58c02-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="58c02-108">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="58c02-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="58c02-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="58c02-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="58c02-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

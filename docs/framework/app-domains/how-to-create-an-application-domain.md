@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Etki Alanı Oluşturma'
+title: 'Nasıl yapılır: Bir uygulama etki alanı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39cc38f56b6f9fb1735bcca64bf0f77ec29a1c43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597833"
 ---
-# <a name="how-to-create-an-application-domain"></a><span data-ttu-id="ddecc-102">Nasıl yapılır: Uygulama Etki Alanı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="ddecc-102">How to: Create an Application Domain</span></span>
-<span data-ttu-id="ddecc-103">Gerektiğinde, bir ortak dil çalışma zamanı ana uygulama etki alanları otomatik olarak oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ddecc-103">A common language runtime host creates application domains automatically when they are needed.</span></span> <span data-ttu-id="ddecc-104">Ancak, kendi uygulama etki alanları oluşturmak ve bunlara kişisel yönetmek istediğiniz bu derlemeleri yükleyin.</span><span class="sxs-lookup"><span data-stu-id="ddecc-104">However, you can create your own application domains and load into them those assemblies that you want to manage personally.</span></span> <span data-ttu-id="ddecc-105">Ayrıca, kod yürütme uygulama etki alanları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ddecc-105">You can also create application domains from which you execute code.</span></span>  
+# <a name="how-to-create-an-application-domain"></a><span data-ttu-id="98cd2-102">Nasıl yapılır: Bir uygulama etki alanı oluşturma</span><span class="sxs-lookup"><span data-stu-id="98cd2-102">How to: Create an Application Domain</span></span>
+<span data-ttu-id="98cd2-103">Gerektiğinde, bir ortak dil çalışma zamanı ana uygulama etki alanları otomatik olarak oluşturur.</span><span class="sxs-lookup"><span data-stu-id="98cd2-103">A common language runtime host creates application domains automatically when they are needed.</span></span> <span data-ttu-id="98cd2-104">Ancak, kendi uygulama etki alanları oluşturmak ve bunlara kişisel yönetmek istediğiniz bu derlemeleri yükleyin.</span><span class="sxs-lookup"><span data-stu-id="98cd2-104">However, you can create your own application domains and load into them those assemblies that you want to manage personally.</span></span> <span data-ttu-id="98cd2-105">Ayrıca, kod yürütme uygulama etki alanları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="98cd2-105">You can also create application domains from which you execute code.</span></span>  
   
- <span data-ttu-id="ddecc-106">Aşırı yüklenen birini kullanarak yeni bir uygulama etki alanı oluşturma **CreateDomain** yöntemleri <xref:System.AppDomain?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="ddecc-106">You create a new application domain using one of the overloaded **CreateDomain** methods in the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="ddecc-107">Uygulama etki alanına bir ad verin ve bu adla başvurun.</span><span class="sxs-lookup"><span data-stu-id="ddecc-107">You can give the application domain a name and reference it by that name.</span></span>  
+ <span data-ttu-id="98cd2-106">Aşırı yüklenen birini kullanarak yeni bir uygulama etki alanı oluşturma **CreateDomain** yöntemleri <xref:System.AppDomain?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="98cd2-106">You create a new application domain using one of the overloaded **CreateDomain** methods in the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="98cd2-107">Uygulama etki alanına bir ad verin ve bu adla başvurun.</span><span class="sxs-lookup"><span data-stu-id="98cd2-107">You can give the application domain a name and reference it by that name.</span></span>  
   
- <span data-ttu-id="ddecc-108">Aşağıdaki örnek yeni bir uygulama etki alanı oluşturur, ad atar `MyDomain`ve ardından adını ana etki alanı ve yeni oluşturulan alt uygulama etki alanı konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="ddecc-108">The following example creates a new application domain, assigns it the name `MyDomain`, and then prints the name of the host domain and the newly created child application domain to the console.</span></span>  
+ <span data-ttu-id="98cd2-108">Aşağıdaki örnek yeni bir uygulama etki alanı oluşturur, ad atar `MyDomain`ve ardından adını ana etki alanı ve yeni oluşturulan alt uygulama etki alanı konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="98cd2-108">The following example creates a new application domain, assigns it the name `MyDomain`, and then prints the name of the host domain and the newly created child application domain to the console.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ddecc-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="ddecc-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="98cd2-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="98cd2-109">Example</span></span>  
  [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]
  [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="ddecc-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ddecc-110">See Also</span></span>  
-- [<span data-ttu-id="ddecc-111">Uygulama etki alanlarıyla programlama</span><span class="sxs-lookup"><span data-stu-id="ddecc-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)  
-- [<span data-ttu-id="ddecc-112">Uygulama Etki Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="ddecc-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
+## <a name="see-also"></a><span data-ttu-id="98cd2-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98cd2-110">See also</span></span>
+- [<span data-ttu-id="98cd2-111">Uygulama etki alanlarıyla programlama</span><span class="sxs-lookup"><span data-stu-id="98cd2-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="98cd2-112">Uygulama Etki Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="98cd2-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
