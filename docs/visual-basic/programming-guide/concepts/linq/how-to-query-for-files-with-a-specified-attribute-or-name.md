@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: belirli bir öznitelik veya ad (Visual Basic) sahip dosyaları sorgulama'
+title: 'Nasıl yapılır: Belirli bir öznitelik veya ada (Visual Basic) sahip dosyaları sorgulama'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733161"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="68bd2-102">Nasıl yapılır: belirli bir öznitelik veya ad (Visual Basic) sahip dosyaları sorgulama</span><span class="sxs-lookup"><span data-stu-id="68bd2-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="68bd2-103">Bu örnek belirtilen dosya adı uzantısını (örneğin, ".txt") sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="68bd2-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="68bd2-104">Ayrıca oluşturma zamanı temel alınarak ağacında da en yeni veya eski dosya döndürmek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="68bd2-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="c7814-102">Nasıl yapılır: Belirli bir öznitelik veya ada (Visual Basic) sahip dosyaları sorgulama</span><span class="sxs-lookup"><span data-stu-id="c7814-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="c7814-103">Bu örnek nasıl (örneğin, ".txt") belirtilen dosya adı uzantısına sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7814-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="c7814-104">Ayrıca oluşturma saatini temel alan ağacında ya da yeni veya eski dosyayı iade işlemini de gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7814-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68bd2-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="68bd2-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c7814-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="c7814-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,9 +60,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="68bd2-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="68bd2-106">Compiling the Code</span></span>  
- <span data-ttu-id="68bd2-107">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="68bd2-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c7814-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="c7814-106">Compiling the Code</span></span>  
+ <span data-ttu-id="c7814-107">.NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="c7814-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68bd2-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="68bd2-108">See Also</span></span>  
- [<span data-ttu-id="68bd2-109">LINQ to nesneler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68bd2-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [<span data-ttu-id="68bd2-110">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68bd2-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="c7814-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c7814-108">See also</span></span>
+- [<span data-ttu-id="c7814-109">LINQ to Objects'in (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7814-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="c7814-110">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7814-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
