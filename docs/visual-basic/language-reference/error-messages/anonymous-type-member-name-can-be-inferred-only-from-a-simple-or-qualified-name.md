@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f4f62a9ac97c6dbd8d2426f8bfd17afa66c4001a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d91b7a3c57db38fde3cf371773e8d64834a8f72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715276"
 ---
-# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="a6a93-102">Anonim türdeki üye adı yalnızca bağımsız değişken içermeyen basit veya tam bir addan gösterilebilir</span><span class="sxs-lookup"><span data-stu-id="a6a93-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
-<span data-ttu-id="a6a93-103">Bir anonim türdeki üye adı karmaşık ifadesinden gösterilemiyor.</span><span class="sxs-lookup"><span data-stu-id="a6a93-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
+# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="65f8a-102">Anonim türdeki üye adı yalnızca bağımsız değişken içermeyen basit veya tam bir addan gösterilebilir</span><span class="sxs-lookup"><span data-stu-id="65f8a-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
+<span data-ttu-id="65f8a-103">Bir anonim türdeki üye adı karmaşık bir ifadeden çıkarsanamaz.</span><span class="sxs-lookup"><span data-stu-id="65f8a-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,18 +23,18 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- <span data-ttu-id="a6a93-104">Anonim türler içinden olabilir ve üye adlarını ve türlerini gösterilemez kaynakları hakkında daha fazla bilgi için bkz: [nasıl yapılır: Infer özellik adları ve türlerini anonim türde bildirimlerden](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span><span class="sxs-lookup"><span data-stu-id="a6a93-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
+ <span data-ttu-id="65f8a-104">Anonim türler içinden olabilir ve üye adlarını ve türlerini çıkarsanamıyor kaynakları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span><span class="sxs-lookup"><span data-stu-id="65f8a-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
   
- <span data-ttu-id="a6a93-105">**Hata Kimliği:** BC36556</span><span class="sxs-lookup"><span data-stu-id="a6a93-105">**Error ID:** BC36556</span></span>  
+ <span data-ttu-id="65f8a-105">**Hata Kimliği:** BC36556</span><span class="sxs-lookup"><span data-stu-id="65f8a-105">**Error ID:** BC36556</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a6a93-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="a6a93-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="65f8a-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="65f8a-106">To correct this error</span></span>  
   
--   <span data-ttu-id="a6a93-107">İfade üye adı için aşağıdaki kodda gösterildiği gibi atayın:</span><span class="sxs-lookup"><span data-stu-id="a6a93-107">Assign the expression to a member name, as shown in the following code:</span></span>  
+-   <span data-ttu-id="65f8a-107">İfade, aşağıdaki kodda gösterildiği gibi bir üye adına atayın:</span><span class="sxs-lookup"><span data-stu-id="65f8a-107">Assign the expression to a member name, as shown in the following code:</span></span>  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a6a93-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a6a93-108">See Also</span></span>  
- [<span data-ttu-id="a6a93-109">Anonim Tipler</span><span class="sxs-lookup"><span data-stu-id="a6a93-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [<span data-ttu-id="a6a93-110">Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma</span><span class="sxs-lookup"><span data-stu-id="a6a93-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a><span data-ttu-id="65f8a-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="65f8a-108">See also</span></span>
+- [<span data-ttu-id="65f8a-109">Anonim Tipler</span><span class="sxs-lookup"><span data-stu-id="65f8a-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [<span data-ttu-id="65f8a-110">Nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma</span><span class="sxs-lookup"><span data-stu-id="65f8a-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

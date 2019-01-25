@@ -8,27 +8,27 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9dd67d3ea14b02ae9638f3b13d6bca0a84e4b71b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691521"
 ---
-# <a name="-utf8output-c-compiler-options"></a><span data-ttu-id="e720b-102">-utf8output (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="e720b-102">-utf8output (C# Compiler Options)</span></span>
-<span data-ttu-id="e720b-103">**-Utf8output** seçeneği derleyici UTF-8 kodlaması kullanarak çıkışı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="e720b-103">The **-utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
+# <a name="-utf8output-c-compiler-options"></a><span data-ttu-id="6f418-102">-utf8output (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="6f418-102">-utf8output (C# Compiler Options)</span></span>
+<span data-ttu-id="6f418-103">**-Utf8output** seçeneği derleyici UTF-8 kodlaması kullanarak çıkışı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6f418-103">The **-utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e720b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e720b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f418-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f418-104">Syntax</span></span>  
   
 ```console  
 -utf8output  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e720b-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e720b-105">Remarks</span></span>  
- <span data-ttu-id="e720b-106">Bazı uluslararası yapılandırmalarında, derleyici çıkışını konsolunda doğru şekilde görüntülenemiyor.</span><span class="sxs-lookup"><span data-stu-id="e720b-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="e720b-107">Bu yapılandırmada kullanmak **-utf8output** ve derleyici çıkışı bir dosyaya yönlendirin.</span><span class="sxs-lookup"><span data-stu-id="e720b-107">In these configurations, use **-utf8output** and redirect compiler output to a file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f418-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6f418-105">Remarks</span></span>  
+ <span data-ttu-id="6f418-106">Bazı uluslararası yapılandırmalarında, derleyici çıkışını konsolunda doğru şekilde görüntülenemiyor.</span><span class="sxs-lookup"><span data-stu-id="6f418-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="6f418-107">Bu yapılandırmada kullanmak **-utf8output** ve derleyici çıkışı bir dosyaya yönlendirin.</span><span class="sxs-lookup"><span data-stu-id="6f418-107">In these configurations, use **-utf8output** and redirect compiler output to a file.</span></span>  
   
- <span data-ttu-id="e720b-108">Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="e720b-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="6f418-108">Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="6f418-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e720b-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e720b-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6f418-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f418-109">See also</span></span>
 
-- [<span data-ttu-id="e720b-110">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="e720b-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="6f418-110">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="6f418-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

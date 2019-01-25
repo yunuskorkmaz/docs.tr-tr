@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: protokole özgü özelliklere erişim WebRequest türü atayarak'
+title: 'Nasıl yapılır: Protokole özgü özelliklere erişim WebRequest türü atayarak'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: ec5b9f1db17cf1c90484b0a44063efef9fa16cf9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6202b0b02d334c076dbe41a785195344dd2d7efe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564519"
 ---
-# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="7e736-102">Nasıl yapılır: protokole özgü özelliklere erişim WebRequest türü atayarak</span><span class="sxs-lookup"><span data-stu-id="7e736-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
-<span data-ttu-id="7e736-103">Bu örnekte, böylece protokole özgü özelliklere erişebilir WebRequest türü atayarak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="7e736-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
+# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="4e09b-102">Nasıl yapılır: Protokole özgü özelliklere erişim WebRequest türü atayarak</span><span class="sxs-lookup"><span data-stu-id="4e09b-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
+<span data-ttu-id="4e09b-103">Bu örnekte, böylece protokole özgü özelliklere erişebilir WebRequest türü atayarak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4e09b-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7e736-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="7e736-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4e09b-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4e09b-104">Example</span></span>  
   
 ```csharp  
 HttpWebRequest httpreq =   
@@ -27,5 +27,5 @@ Dim httpreq As HttpWebRequest = _
    CType(WebRequest.Create("http://www.contoso.com/"), HttpWebRequest)  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7e736-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7e736-105">See Also</span></span>  
- [<span data-ttu-id="7e736-106">Takılabilir Protokoller Programlama</span><span class="sxs-lookup"><span data-stu-id="7e736-106">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+## <a name="see-also"></a><span data-ttu-id="4e09b-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4e09b-105">See also</span></span>
+- [<span data-ttu-id="4e09b-106">Takılabilir Protokoller Programlama</span><span class="sxs-lookup"><span data-stu-id="4e09b-106">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)

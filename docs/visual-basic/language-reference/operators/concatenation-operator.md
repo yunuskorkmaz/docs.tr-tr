@@ -10,51 +10,51 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eac99ba38841f6972b5bdc8a01f816519af06288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684677"
 ---
-# <a name="amp-operator-visual-basic"></a><span data-ttu-id="af145-102">&amp; İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af145-102">&amp; Operator (Visual Basic)</span></span>
-<span data-ttu-id="af145-103">İki ifadenin dize birleştirmesini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="af145-103">Generates a string concatenation of two expressions.</span></span>  
+# <a name="amp-operator-visual-basic"></a><span data-ttu-id="31647-102">&amp; İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31647-102">&amp; Operator (Visual Basic)</span></span>
+<span data-ttu-id="31647-103">İki ifadenin dize birleştirmesini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="31647-103">Generates a string concatenation of two expressions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af145-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="af145-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31647-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="31647-104">Syntax</span></span>  
   
 ```  
 result = expression1 & expression2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="af145-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="af145-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="31647-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="31647-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="af145-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="af145-106">Required.</span></span> <span data-ttu-id="af145-107">Tüm `String` veya `Object` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="af145-107">Any `String` or `Object` variable.</span></span>  
+ <span data-ttu-id="31647-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="31647-106">Required.</span></span> <span data-ttu-id="31647-107">Tüm `String` veya `Object` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="31647-107">Any `String` or `Object` variable.</span></span>  
   
  `expression1`  
- <span data-ttu-id="af145-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="af145-108">Required.</span></span> <span data-ttu-id="af145-109">İçin widens bir veri türüne sahip herhangi bir ifade `String`.</span><span class="sxs-lookup"><span data-stu-id="af145-109">Any expression with a data type that widens to `String`.</span></span>  
+ <span data-ttu-id="31647-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="31647-108">Required.</span></span> <span data-ttu-id="31647-109">Herhangi bir ifade bir veri türüyle için widens `String`.</span><span class="sxs-lookup"><span data-stu-id="31647-109">Any expression with a data type that widens to `String`.</span></span>  
   
  `expression2`  
- <span data-ttu-id="af145-110">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="af145-110">Required.</span></span> <span data-ttu-id="af145-111">İçin widens bir veri türüne sahip herhangi bir ifade `String`.</span><span class="sxs-lookup"><span data-stu-id="af145-111">Any expression with a data type that widens to `String`.</span></span>  
+ <span data-ttu-id="31647-110">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="31647-110">Required.</span></span> <span data-ttu-id="31647-111">Herhangi bir ifade bir veri türüyle için widens `String`.</span><span class="sxs-lookup"><span data-stu-id="31647-111">Any expression with a data type that widens to `String`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af145-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="af145-112">Remarks</span></span>  
- <span data-ttu-id="af145-113">Veri türü `expression1` veya `expression2` değil `String` ancak için widens `String`, dönüştürülmeden `String`.</span><span class="sxs-lookup"><span data-stu-id="af145-113">If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`.</span></span> <span data-ttu-id="af145-114">Veri türlerinden birini değil genişletmek için `String`, derleyici bir hata oluşturur.</span><span class="sxs-lookup"><span data-stu-id="af145-114">If either of the data types does not widen to `String`, the compiler generates an error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="31647-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="31647-112">Remarks</span></span>  
+ <span data-ttu-id="31647-113">Veri türü `expression1` veya `expression2` değil `String` ancak için widens `String`, dönüştürülür `String`.</span><span class="sxs-lookup"><span data-stu-id="31647-113">If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`.</span></span> <span data-ttu-id="31647-114">Veri türlerinden birini değil genişletmek için `String`, derleyici bir hata oluşturur.</span><span class="sxs-lookup"><span data-stu-id="31647-114">If either of the data types does not widen to `String`, the compiler generates an error.</span></span>  
   
- <span data-ttu-id="af145-115">Veri türü `result` olan `String`.</span><span class="sxs-lookup"><span data-stu-id="af145-115">The data type of `result` is `String`.</span></span> <span data-ttu-id="af145-116">İçin bir veya iki ifade değerlendirin varsa [hiçbir şey](../../../visual-basic/language-reference/nothing.md) veya değerine sahip <xref:System.DBNull.Value?displayProperty=nameWithType>, değerini bir dize olarak kabul edilir "".</span><span class="sxs-lookup"><span data-stu-id="af145-116">If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="af145-117">`&` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="af145-117">The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="af145-118">Bu tür bir sınıf veya yapı üzerinde kodunuzu bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="af145-118">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="af145-119">Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="af145-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+ <span data-ttu-id="31647-115">Veri türü `result` olduğu `String`.</span><span class="sxs-lookup"><span data-stu-id="31647-115">The data type of `result` is `String`.</span></span> <span data-ttu-id="31647-116">Bir veya iki ifadeleri sonucunu verirse [hiçbir şey](../../../visual-basic/language-reference/nothing.md) veya bir değere sahip <xref:System.DBNull.Value?displayProperty=nameWithType>, değerini içeren bir dize olarak kabul edilir "".</span><span class="sxs-lookup"><span data-stu-id="31647-116">If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="af145-120">(&) Karakteri de değişkenleri türü olarak tanımlamak için kullanılabilir `Long`.</span><span class="sxs-lookup"><span data-stu-id="af145-120">The ampersand (&) character can also be used to identify variables as type `Long`.</span></span> <span data-ttu-id="af145-121">Daha fazla bilgi için bkz: [türü karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span><span class="sxs-lookup"><span data-stu-id="af145-121">For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
+>  <span data-ttu-id="31647-117">`&` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="31647-117">The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="31647-118">Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="31647-118">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="31647-119">Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="31647-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af145-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="af145-122">Example</span></span>  
- <span data-ttu-id="af145-123">Bu örnekte `&` dize birleştirme zorlamak için işleci.</span><span class="sxs-lookup"><span data-stu-id="af145-123">This example uses the `&` operator to force string concatenation.</span></span> <span data-ttu-id="af145-124">Sonuç, iki dize işlenenleri birleşimini temsil eden bir dize değeridir.</span><span class="sxs-lookup"><span data-stu-id="af145-124">The result is a string value representing the concatenation of the two string operands.</span></span>  
+> [!NOTE]
+>  <span data-ttu-id="31647-120">(&) Karakteri de değişken türü olarak tanımlamak için kullanılabilir `Long`.</span><span class="sxs-lookup"><span data-stu-id="31647-120">The ampersand (&) character can also be used to identify variables as type `Long`.</span></span> <span data-ttu-id="31647-121">Daha fazla bilgi için [tür karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span><span class="sxs-lookup"><span data-stu-id="31647-121">For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="31647-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="31647-122">Example</span></span>  
+ <span data-ttu-id="31647-123">Bu örnekte `&` dize birleştirme zorlamak için işleci.</span><span class="sxs-lookup"><span data-stu-id="31647-123">This example uses the `&` operator to force string concatenation.</span></span> <span data-ttu-id="31647-124">Sonucu, iki dizeyi işlenenlere birleşimi temsil eden bir dize değeridir.</span><span class="sxs-lookup"><span data-stu-id="31647-124">The result is a string value representing the concatenation of the two string operands.</span></span>  
   
  [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="af145-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="af145-125">See Also</span></span>  
- [<span data-ttu-id="af145-126">&= İşleci</span><span class="sxs-lookup"><span data-stu-id="af145-126">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
- [<span data-ttu-id="af145-127">Birleştirme İşleçleri</span><span class="sxs-lookup"><span data-stu-id="af145-127">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [<span data-ttu-id="af145-128">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="af145-128">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [<span data-ttu-id="af145-129">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="af145-129">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [<span data-ttu-id="af145-130">Visual Basic'de birleştirme işleçleri</span><span class="sxs-lookup"><span data-stu-id="af145-130">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+## <a name="see-also"></a><span data-ttu-id="31647-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="31647-125">See also</span></span>
+- [<span data-ttu-id="31647-126">&= İşleci</span><span class="sxs-lookup"><span data-stu-id="31647-126">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
+- [<span data-ttu-id="31647-127">Birleştirme İşleçleri</span><span class="sxs-lookup"><span data-stu-id="31647-127">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [<span data-ttu-id="31647-128">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="31647-128">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="31647-129">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="31647-129">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="31647-130">Visual Basic'de birleştirme işleçleri</span><span class="sxs-lookup"><span data-stu-id="31647-130">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5803f958c9340c068d6ce6e7fc0b1d6846d67876
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fa71b15a5e4852bc87ad2088edb343704df6ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734331"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="e8dd3-102">CorArgType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="e8dd3-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="e8dd3-103">Bir çalışma zamanı tanıtıcı yerel türünü tanımlayan değerler içeriyor.</span><span class="sxs-lookup"><span data-stu-id="e8dd3-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="700ed-102">CorArgType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="700ed-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="700ed-103">Yerel bir çalışma zamanı tanıtıcısı türünü açıklayan değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="700ed-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8dd3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e8dd3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="700ed-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="700ed-104">Syntax</span></span>  
   
 ```  
 typedef enum CorArgType {  
@@ -46,12 +46,12 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e8dd3-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e8dd3-105">Requirements</span></span>  
- <span data-ttu-id="e8dd3-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e8dd3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="700ed-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="700ed-105">Requirements</span></span>  
+ <span data-ttu-id="700ed-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="700ed-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e8dd3-107">**Başlık:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e8dd3-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="700ed-107">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="700ed-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e8dd3-108">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8dd3-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="700ed-108">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="700ed-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8dd3-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e8dd3-109">See Also</span></span>  
- [<span data-ttu-id="e8dd3-110">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="e8dd3-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="700ed-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="700ed-109">See also</span></span>
+- [<span data-ttu-id="700ed-110">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="700ed-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
