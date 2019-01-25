@@ -2,12 +2,12 @@
 title: C# dilinde koleksiyonlar üzerinden yineleme yapma
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720804"
 ---
 # <a name="iterators-c"></a>Yineleyiciler (C#)
 
@@ -354,7 +354,7 @@ Yineleyiciler basitliğinin korumak etkinleştirme bir `foreach` döngü listesi
 
 - Yineleyici listesinde oluşturmaya kapsüller. Yineleyici yöntem içinde listesi oluşturmak ve ardından her bir döngü sonucu verecek.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

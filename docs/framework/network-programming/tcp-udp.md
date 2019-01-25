@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 987a8aa789d8c4585a58a031c9d920ee5cab45aa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692551"
 ---
 # <a name="tcp-udp"></a>TCP UDP
 Uygulamalar, İletim Denetimi Protokolü (TCP) ve kullanıcı veri birimi Protokolü (UDP) Hizmetleri ile kullanabileceğiniz <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, ve <xref:System.Net.Sockets.UdpClient> sınıfları. Bu protokol sınıfların üstünde oluşturulan <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sınıfı ve veri aktarımı işlemlerinin ayrıntılarını ele ilgileniriz.  
@@ -32,10 +32,10 @@ Uygulamalar, İletim Denetimi Protokolü (TCP) ve kullanıcı veri birimi Protok
   
  **UdpClient** sınıfı UDP veri birimi tutmak için bayt dizisini kullanır. Kullandığınız <xref:System.Net.Sockets.UdpClient.Send%2A> yöntemi ağa veri göndermek ve <xref:System.Net.Sockets.UdpClient.Receive%2A> gelen bir veri birimi almak için yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-tcp-services.md)  
- [UDP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-udp-services.md)  
- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [TCP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-tcp-services.md)
+- [UDP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-udp-services.md)
+- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)

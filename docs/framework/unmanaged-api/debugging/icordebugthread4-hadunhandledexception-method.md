@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704309"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException Yöntemi
-İş parçacığı işlenmeyen bir özel durum şimdiye kadar süredir sahip olup olmadığını belirtir.  
+İş parçacığı işlenmeyen bir özel durum sahipti olup olmadığını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,29 +37,29 @@ HRESULT GetBlockingObjects (
   
 #### <a name="parameters"></a>Parametreler  
  `ppBlockingObjectEnum`  
- [out] Sıralanmış numaralandırması adresini gösteren bir işaretçi [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapıları.  
+ [out] Sıralı sabit listesi adresini bir işaretçiye [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapıları.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki belirli HRESULTs yanı sıra HRESULT yöntem hatası olduğunu gösteren hatalar.  
+ Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|İş parçacığı oluşturulmasından bu yana işlenmeyen bir özel durum oluşturdu.|  
-|S_FALSE|İş parçacığı hiçbir zaman işlenmeyen bir özel durum oluşturdu.|  
+|S_FALSE|İş parçacığı, hiçbir zaman işlenmeyen bir özel durum oluşturdu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem iş parçacığı işlenmeyen bir özel durum şimdiye kadar süredir sahip olup olmadığını belirtir. İşlenmeyen özel durum geri çağırma saatle tetiklenen veya yerel JIT-ekleme başlatıldığında, bu yöntem S_OK döndürmek için sağlanır. Garantisi yoktur, [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) yöntemi işlenmeyen bir özel durum döndürür; ancak işlem henüz işlenmeyen bir özel durum geri alma sonra veya sonra devam ettirildi değil, olur Yerel JIT-ekleme. Ayrıca, birden çok iş parçacığı işlenmeyen bir özel durum yerel JIT-ekleme tetiklenir zaman ile sağlamak için (olası rağmen) mümkündür. Böyle bir durumda JIT-ekleme hangi özel durum tetikledi belirlemenin bir yolu yoktur.  
+ Bu yöntem, iş parçacığı işlenmeyen bir özel durum sahipti olup olmadığını gösterir. İşlenmeyen özel durum geri çağırma saatle tetiklenen veya yerel JIT-ekleme başlatıldığında, bu yöntem S_OK dönmesi garanti edilir. Garanti yoktur, [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) yöntemi işlenmeyen bir özel durum döndürür; ancak işlem henüz işlenmemiş özel durum geri alma veya üzerine devam ettirildi değil durumunda olur Yerel JIT-ekleme. Ayrıca, birden fazla iş parçacığı yerel JIT-ekleme tetiklenir zaman işlenmeyen bir özel durum ile sağlamak için (olasılığı karşın) mümkündür. Böyle bir durumda, JIT-ekleme hangi özel durum harekete belirlemek için hiçbir yolu yoktur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugThread4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugThread4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

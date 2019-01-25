@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: hata ayıklama boş sorgu sonuç kümeleri (Visual Basic)'
+title: 'Nasıl yapılır: Boş sorgu sonucu kümelerinin (Visual Basic) hata ayıklama'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715458"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Nasıl yapılır: hata ayıklama boş sorgu sonuç kümeleri (Visual Basic)
-XML ağaçları sorgulanırken en yaygın sorunları XML ağacında bir varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanındaki Geliştirici bazen sorgu yazdığını biridir.  
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Nasıl yapılır: Boş sorgu sonucu kümelerinin (Visual Basic) hata ayıklama
+XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  
   
- Bu konudaki örnekler ilk kümesi, bir varsayılan ad alanı XML yüklenir ve yanlış sorgulanan tipik bir yolunu gösterir.  
+ Bu konudaki örnekler ilk kümesi, varsayılan ad alanı XML yüklenir ve hatalı sorgulanır normal bir şekilde gösterir.  
   
  XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.  
   
- Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanındaki XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
+ Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.  
   
 ```vb  
 Dim root As XElement = _  
@@ -41,7 +41,7 @@ Next
 Console.WriteLine("End of result set")  
 ```  
   
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -49,9 +49,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu XML oluşturulmasını gösterir.  
+ Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.  
   
- Bildirme ve bir genel varsayılan ad alanı başlatmak için kullanılan çözümüdür. Bu, varsayılan ad alanını tüm XML özellikleri yerleştirir. Başka bir değişiklikler örneği düzgün çalışması için gereklidir.  
+ Bildirmek ve bir genel varsayılan ad alanı başlatmak için kullanılan çözümüdür. Bu, varsayılan ad alanındaki tüm XML özellikleri yerleştirir. Herhangi bir değişiklik örneği düzgün çalışması için gereklidir.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -79,7 +79,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnekte aşağıdaki sonucu üretir:  
+ Bu örnek aşağıdaki sonucu üretir:  
   
 ```  
 Result set follows:  
@@ -89,5 +89,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

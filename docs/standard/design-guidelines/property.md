@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
-ms.openlocfilehash: 1d119b48f0524b3e997aa2cb9ea2cbbd855afdf0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708993"
 ---
 # <a name="property-design"></a>Özellik tasarımı
 Özellikleri teknik yöntemlere benzer olsa da, bunlar kendi kullanım senaryoları açısından oldukça farklıdır. Bunlar, akıllı alanları olarak başlatmasında gösterilmelidir. Alanları arama söz dizimi ve yöntemleri esnekliğini sahiptirler.  
@@ -89,5 +89,5 @@ ms.locfileid: "53131462"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

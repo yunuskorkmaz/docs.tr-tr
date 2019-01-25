@@ -3,12 +3,12 @@ title: WSFederation kimlik doğrulama modülüne genel bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703672"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation kimlik doğrulama modülüne genel bakış
 Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla şirket dışı kimlik doğrulaması için destek içerir. Bu konu nasıl Federasyon kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
   
  STS doğrulanmamış istekleri yönlendirilmesi gerektiğini belirtmek için WS FAM yapılandırırsınız. WIF iki yolla bir kullanıcının kimliğini sağlar:  
   
-1.  Pasif yeniden yönlendirme: ne zaman kimliği doğrulanmamış bir kullanıcı korunan bir kaynağa erişmeye çalışır ve yalnızca bunları bir STS'ye bir oturum açma sayfası gerek kalmadan yönlendirmek istiyorsanız sonra aldığı doğru yaklaşım budur. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci verir. Bu seçenek, HTTP modülleri işlem hattında eklenecek WS FAM gerektirir. WS-FAM kullanın ve bir STS ile federasyona eklemek için uygulamanızın yapılandırma dosyasını değiştirmek için kimlik ve erişim aracı Visual Studio 2012 için kullanabilirsiniz. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1.  Pasif yeniden yönlendirme: Kimliği doğrulanmamış bir kullanıcı, korunan bir kaynağa erişmeye ve yalnızca bunları bir STS'ye bir oturum açma sayfası gerek kalmadan yönlendirmek istiyorsanız, ardından aldığı doğru yaklaşım budur. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci verir. Bu seçenek, HTTP modülleri işlem hattında eklenecek WS FAM gerektirir. WS-FAM kullanın ve bir STS ile federasyona eklemek için uygulamanızın yapılandırma dosyasını değiştirmek için kimlik ve erişim aracı Visual Studio 2012 için kullanabilirsiniz. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2.  Çağırabilirsiniz <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> yöntemi veya <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> RP uygulamanızın oturum açma sayfası için arka plan kod yöntemi.  
   
@@ -139,7 +139,7 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<Federationconfiguration'a >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<Federationconfiguration'a >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
