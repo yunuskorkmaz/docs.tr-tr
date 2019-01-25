@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: e21cf160d10f308990894d1a85c4f5d05b90f68d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9201aa4b2aa9280b9b3a4e0a2badf25ea819088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684755"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace İşleci (Visual Basic)
 Alır <xref:System.Xml.Linq.XNamespace> belirtilen XML ad alanı öneki için karşılık gelen nesne.  
@@ -45,6 +45,6 @@ GetXmlNamespace(xmlNamespacePrefix)
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Visual Basic'de XML'e erişme](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Visual Basic'de XML'e erişme](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

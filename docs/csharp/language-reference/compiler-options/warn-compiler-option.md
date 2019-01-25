@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499875"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# Derleyici Seçenekleri)
 **-Warn** seçeneği, derleyicinin görüntülenecek uyarı düzeyini belirtir.  
@@ -30,7 +30,7 @@ ms.locfileid: "43865614"
   
 ## <a name="arguments"></a>Arguments  
  `option`  
- Derleme için görüntülenmesini istediğiniz uyarı düzeyini: yalnızca yüksek önem düzeyindeki uyarılar; düşük numaralarını göster daha yüksek numaralar daha fazla uyarıyı gösterir. Geçerli değerler 0-4:  
+ Derleme için görüntülenmesini istediğiniz uyarı düzeyi: Daha düşük bir sayı yalnızca yüksek önem düzeyindeki uyarılar Göster; daha yüksek numaralar daha fazla uyarıyı gösterir. Geçerli değerler 0-4:  
   
 |Uyarı düzeyi|Açıklama|  
 |-------------------|-------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "43865614"
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

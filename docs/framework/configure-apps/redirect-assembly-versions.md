@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc193402120780c605f6139feac6f0d60a34118e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674173"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 
@@ -154,7 +154,7 @@ Uygulamanızı .NET Framework'ün eski sürümlerini hedefliyorsa, otomatik bağ
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)

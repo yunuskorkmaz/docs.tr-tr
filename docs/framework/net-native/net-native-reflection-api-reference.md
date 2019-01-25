@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13dfdfd89bf91510146ce388620d3e51c2aa1f02
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531190"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türleri içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [ System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türlerini içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
   
  Bu tür, yalnızca dahili kullanım içindir.  
  Bu üç özel durum türleri için kullanımını olan [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri. Ne zaman özel durumlar [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, program yürütme işleminin devam etmesini izin vermeyen eksik veri algılar.  
@@ -46,8 +46,8 @@ ms.locfileid: "49347539"
   
  Bu ad alanındaki diğer türleri hakkında daha fazla bilgi için bkz <xref:System.Runtime.CompilerServices> .NET Framework dokümantasyon setinde sayfalarında başvuru.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [MissingInteropDataException Sınıfı](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [MissingMetadataException Sınıfı](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [MissingRuntimeArtifactException Sınıfı](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [MissingInteropDataException Sınıfı](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [MissingMetadataException Sınıfı](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [MissingRuntimeArtifactException Sınıfı](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)

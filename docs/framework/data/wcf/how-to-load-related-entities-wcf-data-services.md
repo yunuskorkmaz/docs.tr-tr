@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ilgili varlıklar (WCF Veri Hizmetleri) yükleme'
+title: 'Nasıl yapılır: İlgili varlıkları (WCF Veri Hizmetleri) yükleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: f7aa13ac217d86be23d0957ddb6c069831cacd2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616972"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Nasıl yapılır: ilgili varlıklar (WCF Veri Hizmetleri) yükleme
-İlişkili varlıklarda yüklemek gerektiğinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Aynı zamanda <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi <xref:System.Data.Services.Client.DataServiceQuery%601> ilgili varlıklar aynı sorgu yanıtında isteğini önleyebiliriz yüklenmesi gerektirecek şekilde.  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Nasıl yapılır: İlgili varlıkları (WCF Veri Hizmetleri) yükleme
+İlişkili varlıklar yüklemek gerektiğinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Ayrıca <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601> ilgili varlıkları aynı sorgu yanıtına eagerly yüklenmesini zorunlu tutmak için.  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, açıkça yüklemek gösterilmiştir `Customer` , ilgili döndürülen her `Orders` örneği.  
+ Aşağıdaki örnek, açıkça yüklemek gösterilmektedir `Customer` , ilgili her döndürülen `Orders` örneği.  
   
  [!code-csharp[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedordercustomer)]
  [!code-vb[Astoria Northwind Client#LoadRelatedOrderCustomer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedordercustomer)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> döndürülecek yöntemi `Order Details` , ait `Orders` sorgu tarafından döndürülen.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> döndürülecek yöntemi `Order Details` için ait olan `Orders` sorgu tarafından döndürülen.  
   
  [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetails)]
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6c6f5f277689ba43590b106f3c78826e07911e87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602669"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable'daki verileri görüntüleme
 İçeriğini erişebileceğiniz bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Ayrıca <xref:System.Data.DataTable.Select%2A> verilerin alt kümelerine döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama düzeni ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** birincil bir anahtar değeri kullanarak belirli bir satır için arama yaparken.  
@@ -29,7 +29,7 @@ ms.locfileid: "46710715"
 |**ModifiedCurrent**|Özgün veri değiştirilmiş bir sürümü olan bir geçerli sürümü. (Bkz **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Tüm değiştirilmiş satırları orijinal sürümü. Geçerli sürüm kullanılarak kullanılabilir **ModifiedCurrent**.|  
 |**Eklendi**|Yeni bir satır.|  
-|**Yok**|Yok.|  
+|**Yok.**|Yok.|  
 |**OriginalRows**|Özgün satır, değişmez ve silinen satırları dahil etme.|  
 |**değişmedi**|Değişmeyen bir satır.|  
   
@@ -106,11 +106,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataViewRowState>  
- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataViewRowState>
+- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

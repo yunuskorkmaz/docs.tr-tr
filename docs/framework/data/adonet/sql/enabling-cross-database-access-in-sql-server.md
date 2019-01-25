@@ -2,12 +2,12 @@
 title: SQL Server'da veritabanları arası erişimi etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 7018a500f777935d35bac0010c07258a313b08fe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596884"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server'da veritabanları arası erişimi etkinleştirme
 Veritabanları arası sahiplik zinciri, başka bir veritabanındaki nesneleri bir yordamda bir veritabanına bağlı olduğunda gerçekleşir. Tüm nesne sahipleri için aynı oturum açma hesabı eşlenmiş bir kesintisiz sahiplik zinciri gerektirir veritabanları arası sahiplik zinciri tek bir veritabanı içinde sahiplik zinciri olarak aynı şekilde çalışır. Kaynak nesne kaynak veritabanında ve hedef nesnelerin hedef veritabanları aynı oturum açma hesabı sahip olur, SQL Server hedef nesneleri izinlerini kontrol etmez.  
@@ -50,10 +50,10 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 |--------------|-----------------|  
 |[EXECUTE AS kullanarak veritabanı kimliğe bürünme genişletme](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) ve [çapraz seçeneği zincirleme DB sahipliği](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)SQL Server Kitapları Çevrimiçi.|Veritabanları arası sahiplik zinciri için bir SQL Server örneğini yapılandırma konuları açıklanmaktadır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,21 +2,21 @@
 title: Devralma desteği
 ms.date: 03/30/2017
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
-ms.openlocfilehash: 3d396632902b178eee34801a9716d8aa222a08d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 791cc68ce89ad8e56b8feeebe6bf84434c3e89c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692684"
 ---
 # <a name="inheritance-support"></a>Devralma desteği
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *tek tablo eşlemesi*. Diğer bir deyişle, bir tam devralma hiyerarşisi tek veritabanı tablosunda depolanır. Tablo tüm hiyerarşinin tüm olası veri sütunlarını düzleştirilmiş birleşimini içerir. (Bir birleşimi olan özgün tablolardan birini mevcut satırlar bir tabloya iki tablo birleştirme sonucudur.) Her satır satır tarafından temsil edilen örnek türü için geçerli olmayan sütun null değerlere sahiptir.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *tek tablo eşleme*. Diğer bir deyişle, tam devralma hiyerarşisinde bir tek veritabanı tablosunda depolanır. Tablo, hiyerarşinin tamamı için tüm olası veri sütunları düzleştirilmiş birleşimini içerir. (Bir birleşim özgün tablolardan birini mevcut satırları içeren bir tabloya iki tabloyu birleştirerek sonucudur.) Her satır, satır tarafından temsil edilen örneği türü için geçerli olmayan sütunlardaki null değerlere sahiptir.  
   
- Tek tablo eşleme stratejisi devralma basit gösterimini ve birçok farklı türdeki sorgular için iyi performans özellikleri sağlar.  
+ Tek tablo eşleme stratejisi basit devralma gösterimi ve birçok farklı türdeki sorgular için iyi bir performans özellikleri sağlar.  
   
- Bu eşleme uygulamak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], öznitelikleri ve öznitelik özellikleri Devralma Hiyerarşisi kök sınıfının belirtmeniz gerekir. Daha fazla bilgi için bkz: [nasıl yapılır: eşleme devralma hiyerarşileri](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Bu eşleme içinde uygulamak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], devralma hiyerarşisi kök sınıfında öznitelik özellikleri ve öznitelikler belirtmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Devralma hiyerarşilerini eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
- Geliştiriciler Visual Studio kullanarak da kullanabilirsiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] devralma hiyerarşileri eşlemek için.  
+ Visual Studio kullanan geliştiricilerin de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] devralma hiyerarşilerini eşleme için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

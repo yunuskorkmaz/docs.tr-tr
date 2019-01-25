@@ -2,12 +2,12 @@
 title: Klavye Başvurusu
 description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579851"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -20,7 +20,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |Anahtar sözcüğü|Bağlantı|Açıklama|
 |-------|----|-----------|
 |`abstract`|[Üyeler](members/index.md)<br /><br />[Soyut Sınıflar](abstract-classes.md)|Ya da tür içinde bildirildiği veya sanal olduğu ve varsayılan bir uygulama olan hiçbir uygulama sahip bir yöntemi gösterir.|
-|`and`|[`let` Bağlamaları](functions/let-bindings.md)<br /><br />[Üyeler](members/index.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Karşılıklı özyinelemeli bağlamaları, özellik bildirimlerini ve genel parametreler üzerinde birden fazla kısıtlama ile kullanılır.|
+|`and`|[`let` Bağlamaları](functions/let-bindings.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Üyeler](members/index.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Karşılıklı özyinelemeli bağlamaları ve kayıtları, özellik bildirimlerini ve genel parametreler üzerinde birden fazla kısıtlama ile kullanılır.|
 |`as`|[Sınıflar](classes.md)<br /><br />[Desen Eşleştirme](Pattern-Matching.md)|Geçerli sınıf nesnesini bir nesne adı vermek için kullanılır. Desen eşleşmesi içindeki tüm desen için bir ad vermek için de kullanılır.|
 |`assert`|[Onaylamalar](assertions.md)|Hata ayıklama sırasında kodu doğrulamak için kullanılır.|
 |`base`|[Sınıflar](classes.md)<br /><br />[Devralma](inheritance.md)|Temel sınıf nesnesi adı olarak kullanılır.|
@@ -41,8 +41,8 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`finally`|[Özel durumlar: `try...finally` İfadesi](exception-handling/the-try-finally-expression.md)|İle birlikte kullanılan `try` olup özel bir durum oluştuğunda bağımsız olarak yürüten bir kod bloğunu dağıtır.|
 |`fixed`|[düzeltildi](fixed.md)|"Yığındaki çöp olarak toplanacak olmasını engellemek için bir işaretçi sabitlemek için" kullanılır.|
 |`for`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)<br /><br />[Döngüler: for...in İfadesi](loops-for-in-expression.md)|Döngü yapıları kullanılır.|
-|`fun`|[Lambda ifadeleri: `fun` Anahtar Sözcüğü](functions/lambda-expressions-the-fun-keyword.md)|Olarak da bilinen anonim İşlevler, lambda ifadeleri kullanılır.|
-|`function`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Lambda ifadeleri: Fun anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md)|Daha kısa bir alternatif olarak kullanılan `fun` anahtar sözcüğü ve `match` ifade bir lambda ifadesinde tek bir bağımsız değişken desen vardır.|
+|`fun`|[Lambda Expressions: `fun` Anahtar Sözcüğü](functions/lambda-expressions-the-fun-keyword.md)|Olarak da bilinen anonim İşlevler, lambda ifadeleri kullanılır.|
+|`function`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Lambda Expressions: Fun anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md)|Daha kısa bir alternatif olarak kullanılan `fun` anahtar sözcüğü ve `match` ifade bir lambda ifadesinde tek bir bağımsız değişken desen vardır.|
 |`global`|[Ad Alanları](namespaces.md)|Üst düzey .NET ad alanı başvurmak için kullanılır.|
 |`if`|[Koşullu ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallanma yapılarında kullanılır.|
 |`in`|[Döngüler: for...in İfadesi](loops-for-in-expression.md)<br /><br />[Ayrıntılı Söz Dizimi](verbose-syntax.md)|Sequence ifadeleri için ve ayrıntılı sözdizimi bağlamaları gelen ifadeleri ayırmak için kullanılır.|
