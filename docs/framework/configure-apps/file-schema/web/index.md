@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 461043dbb57043c5c18ea703d45f8b3ae487d271
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf461049aef20268bcdb514073b4e3cb392f2b4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579934"
 ---
 # <a name="web-settings-schema"></a>Web Ayarları Şeması
 Web ayarları, CPU ve katman barındırma ASP.NET tarafından yönetilen işlem genelinde davranışı uygulamak yürütme düzeyinde ASP.NET ayarlarını belirtin. Bu ayarlar, ASP.NET uygulamasının Web.config dosyasında belirtilen uygulama etki alanı türü ayarları farklıdır.  
@@ -38,5 +38,5 @@ Web ayarları, CPU ve katman barındırma ASP.NET tarafından yönetilen işlem 
 |[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET barındırma katman kullandığı bilgileri içerir.|  
 |[\<ApplicationPool >](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|CPU ve katman barındırma ASP.NET tarafından yönetilen işlem genelinde davranışı uygulamak yürütme düzeyinde ASP.NET ayarlarını belirtir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

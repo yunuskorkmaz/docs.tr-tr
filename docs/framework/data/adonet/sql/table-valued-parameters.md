@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527776"
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli Parametreler
 Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak işletilebilir bir tablo değişkeninde depolanan [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -272,9 +272,9 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Komutlar ve Parametreler](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Komutlar ve Parametreler](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

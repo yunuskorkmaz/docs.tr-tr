@@ -1,16 +1,16 @@
 ---
-title: İçerik ML.NET Kılavuzu
+title: ML.NET Content Guide
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları ML.NET kullanarak .NET uygulamalarınızla tümleştirin öğrenin.
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550467"
 ---
-# <a name="mlnet-content-guide"></a>İçerik ML.NET Kılavuzu
+# <a name="mlnet-content-guide"></a>ML.NET Content Guide
 
 Bu kılavuzu temel kavramları açıklar ve öğreticileri ve API Başvurusu ML.NET ile çalışmak için sağlar.
 
@@ -28,6 +28,8 @@ Temel bilgileri anlamak için bkz: [ML.NET eğitim modeli için temel kavramlar]
 ## <a name="tutorials"></a>Öğreticiler
 
 [İkili sınıflandırma modelinde düşüncelerini çözümleme](tutorials/sentiment-analysis.md) yaklaşım pozitif veya negatif olup olmadığını belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
+
+[Sınıflandırma bir çok sınıflı sınıflandırma modeli kullanarak GitHub sorunları](tutorials/github-issue-classification.md) bir GitHub sorunu alan etiketini belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
 [Taksi taksi bir regresyon modeli kullanarak tahmin](tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565650"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Komut dosyası blokları msxsl: Script kullanan
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış betikleri destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, herhangi bir tanımlı işlevlere kod belge nesne modeli (CodeDOM) tarafından derlenmiş Microsoft Ara dili (MSIL) ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemesinden ayrıdır.  
@@ -150,5 +150,5 @@ ms.locfileid: "45970636"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Dinamik Kaynak Kodu Oluşturma ve Derleme](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

@@ -2,41 +2,41 @@
 title: Varlık veri modeli temel kavramları
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: d92d2a99562c7eac6fef0ba76cd00241d600c265
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574332"
 ---
 # <a name="entity-data-model-key-concepts"></a>Varlık veri modeli temel kavramları
-Varlık veri modeli (EDM) verilerin yapısını tanımlamak için üç temel kavramları kullanır: *varlık türü*, *ilişkilendirme türü*, ve *özelliği*. EDM herhangi bir uygulamada verilerin yapısını açıklayan en önemli kavramlar bunlar.  
+Verilerin yapısını tanımlamak için üç temel kavramları varlık veri modeli (EDM) kullanır: *varlık türü*, *ilişkilendirme türü*, ve *özelliği*. Bu EDM herhangi bir uygulamada verilerin yapısını açıklayan en önemli kavramlar ücretlerdir.  
   
 ## <a name="entity-type"></a>Varlık türü  
- [Varlık türü](../../../../docs/framework/data/adonet/entity-type.md) varlık veri modeli ile verilerin yapısını açıklayan için temel yapı bloğu. Kavramsal modelde, varlık türleri gelen oluşturulan [özellikleri](../../../../docs/framework/data/adonet/property.md) ve bir müşteriler gibi üst düzey kavramlarını yapısını açıklar ve bir iş uygulaması siparişler. Aynı şekilde, bilgisayar programı bir sınıf tanımı için bir şablon olduğunu örnekleri sınıfı, bir varlıklar için bir şablon varlık türüdür. Bir varlığı temsil eder (örneğin, belirli bir müşteri veya sipariş) belirli bir nesnesi. Her varlığın benzersiz olmalıdır [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) içinde bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md).  Bir varlık kümesini, belirli bir varlık türünün örneklerini koleksiyonudur. Varlık kümeleri (ve [ilişki kümeleri](../../../../docs/framework/data/adonet/association-set.md)) mantıksal olarak gruplandırılmıştır bir [varlık kapsayıcısının](../../../../docs/framework/data/adonet/entity-container.md).  
+ [Varlık türü](../../../../docs/framework/data/adonet/entity-type.md) varlık veri modeli ile verilerin yapısını tanımlamak için temel yapı taşı. Bir kavramsal modelde varlık türleri oluşturulan [özellikleri](../../../../docs/framework/data/adonet/property.md) ve müşteri gibi üst düzey kavramlar yapısını açıklayan ve siparişler bir iş uygulaması içinde. Bir bilgisayar programı, bir sınıf tanımı için bir şablonu olarak aynı şekilde örnekler, bir varlık türünün varlık için bir şablon sınıfıdır. Bir varlığa (örneğin, belirli müşteri veya sipariş) belirli bir nesneyi temsil eder. Her varlığın benzersiz olmalıdır [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) içinde bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md).  Bir varlık kümesi, bir varlığa türün örneklerinin koleksiyonudur. Varlık kümeleri (ve [ilişki Setleri](../../../../docs/framework/data/adonet/association-set.md)) mantıksal olarak gruplanmış bir [varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md).  
   
- Devralma ile varlık türleri desteklenir: başka bir deyişle, bir varlık türü diğerinden elde edilebilir. Daha fazla bilgi için bkz: [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+ Devralma ile varlık türleri desteklenir: diğer bir deyişle, bir varlık türü başka bir uygulamadan elde edilebilir. Daha fazla bilgi için [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
   
 ## <a name="association-type"></a>İlişki türü  
- Bir [ilişkilendirme türü](../../../../docs/framework/data/adonet/association-type.md) (bir ilişki olarak da bilinir) varlık veri modeli ilişkilerde açıklamak için temel yapı bloğu. Kavramsal modelde, iki varlık türleri (örneğin, müşteri ve sırası) arasında bir ilişki bir ilişkiyi temsil eder. Her iki bir ilişkiye [ilişki uçları](../../../../docs/framework/data/adonet/association-end.md) ilişkiye katılan varlık türlerini belirtin. Ayrıca her ilişki ucu belirtir bir [ilişkilendirme son Çokluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md) bu ilişkilendirmeyi sonunda olabilir varlıkların sayısını gösterir. Bir ilişkilendirme end Çokluk bir değer (0.. 1 çokluğa) bir (1), sıfır veya bir veya birçok (*) olabilir. Bir ilişkilendirme end varlık üzerinden erişilebilir [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md), veya bir varlık türü gösteriliyorsa yabancı anahtarlar üzerinden. Daha fazla bilgi için bkz: [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ Bir [ilişkilendirme türü](../../../../docs/framework/data/adonet/association-type.md) (ilişkilendirme olarak da bilinir) ilişkilerini, varlık veri modeli tanımlamak için temel yapı taşı. Kavramsal bir modeli içinde iki varlık türleri (örneğin, müşteri ile sipariş) arasında bir ilişki bir ilişkiyi temsil eder. Her iki ilişkisi [ilişkilendirme ucu](../../../../docs/framework/data/adonet/association-end.md) ilişkilendirmesine katılan varlık türlerini belirtin. Ayrıca, her bir ilişkilendirme end belirtir bir [ilişkilendirme end çoğulluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md) ilişkilendirme sonunda olabilir bir varlık sayısını gösterir. Bir ilişkilendirme end çoğulluk değeri (0..1) bir (1) sıfır veya bir veya birçok (*) olabilir. Bir ilişkilendirmenin bir ucunda varlıkları üzerinden erişilebilir [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md), veya bir varlık türünde gösteriliyorsa yabancı anahtarlar aracılığıyla. Daha fazla bilgi için [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   
- Bir uygulamada bir ilişki örneği (örneğin, müşteri örneği ve sipariş örnekleri arasında bir ilişki) belirli bir ilişkiyi temsil eder. İlişkilendirme örnekleri mantıksal olarak gruplandırılmış bir [ilişkilendirme kümesi](../../../../docs/framework/data/adonet/association-set.md). İlişki kümeleri (ve [varlık kümeleri](../../../../docs/framework/data/adonet/entity-set.md)) mantıksal olarak gruplandırılmıştır bir [varlık kapsayıcısının](../../../../docs/framework/data/adonet/entity-container.md).  
+ Bir uygulamada belirli bir ilişkilendirme (örneğin, müşteri örneği siparişi örnekleri arasındaki ilişkiyi) bir ilişki örneğini temsil eder. İlişkilendirme örnekleri mantıksal olarak gruplandırılır bir [ilişki kümesi](../../../../docs/framework/data/adonet/association-set.md). İlişki setleri (ve [varlık kümeleri](../../../../docs/framework/data/adonet/entity-set.md)) mantıksal olarak gruplanmış bir [varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md).  
   
 ## <a name="property"></a>Özellik  
- [Varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) içeren [özellikleri](../../../../docs/framework/data/adonet/property.md) kendi yapısını ve özellikleri tanımlayın. Örneğin, bir müşteri varlık türü CustomerID, ad ve adres gibi özelliklere sahip olabilir.  
+ [Varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) içeren [özellikleri](../../../../docs/framework/data/adonet/property.md) kendi yapısını ve özellikleri tanımlar. Örneğin, bir müşteri varlığı türü CustomerID, ad ve adres gibi özelliklere sahip olabilir.  
   
- Kavramsal model özelliklerinde, bilgisayar programı sınıfında tanımlanan özelliklere benzer. Aynı şekilde bir sınıfındaki özellikleri şekil sınıfının tanımlamak ve nesneler hakkındaki bilgileri taşımak, kavramsal model özelliklerinde bir varlık türü şeklini tanımlayın ve varlık türü örnekleri hakkında bilgi taşımak.  
+ Kavramsal modelde özellikleri, bilgisayar programı bir sınıfta tanımlanan özelliklere benzer. Bir sınıfındaki özellikleri sınıfı şeklini tanımlamak ve nesneler hakkında bilgi taşımak aynı şekilde, kavramsal model özelliklerinde bir varlık türü şeklini tanımlamak ve varlık türü örnekleri hakkında bilgi taşımak.  
   
- Bir özellik, temel verileri (örneğin, bir dize, tamsayı veya Boolean değeri) veya yapılandırılmış verileri (örneğin, bir karmaşık tür) içerebilir. Daha fazla bilgi için bkz: [varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+ Bir özellik, temel veri (örneğin, bir dize, tamsayı veya Boolean değeri) veya yapılandırılmış veriler (örneğin, bir karmaşık tür) içerebilir. Daha fazla bilgi için [varlık veri modeli: Temel veri türlerinin](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
-## <a name="representations-of-a-conceptual-model"></a>Kavramsal Model gösterimlerini  
- A *kavramsal model* bir belirli bazı verilerin yapısını varlıkları ve ilişkileri olarak gösterimidir. Kavramsal model temsil etmek için bir diyagram ile yoludur. Aşağıdaki diyagramda bir kavramsal model üç varlık türü ile temsil eder (`Book`, `Publisher`, ve `Author`) ve iki ilişkilendirmelerini (`PublishedBy` ve `WrittenBy`):  
+## <a name="representations-of-a-conceptual-model"></a>Kavramsal Model gösterimleri  
+ A *kavramsal model* belirli bir gösterimiyse bazı verilerin yapısını, varlıkları ve ilişkileri. Kavramsal bir modeli temsil eden bir diyagram ile yoludur. Aşağıdaki diyagramda üç varlık türleri ile kavramsal bir modeli temsil eder (`Book`, `Publisher`, ve `Author`) ve iki ilişkilendirmelerini (`PublishedBy` ve `WrittenBy`):  
   
- ![Model Gezinti özellikleri ile](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Gezinti özellikleri ile model](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
   
- Modelle ilgili bazı ayrıntılar iletmek için geldiğinde bu gösterim ancak, bazı eksiklikleri vardır. Örneğin, özellik türü ve varlık kümesi bilgilerini değil ilettiği diyagramı. Kavramsal model zenginliğinin daha net bir şekilde bir etki alanına özgü dil (DSL) iletilmesi. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) adlı bir XML tabanlı DSL kullanan *kavramsal şema tanım dili* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Yukarıdaki diyagramda kavramsal modelde CSDL tanımı aşağıda verilmiştir:  
+ Modelle ilgili bazı ayrıntılar iletmek için söz konusu olduğunda bu gösterim, ancak bazı eksiklikleri vardır. Örneğin, özellik türü ve varlık kümesi bilgileri değil ilettiği diyagramda. Kavramsal model zenginliğine daha net bir şekilde bir etki alanına özgü dil (DSL) iletilmesi. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) adlı bir XML tabanlı DSL kullanan *kavramsal şema tanım dili* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Yukarıdaki diyagramda kavramsal modelde CSDL tanımı aşağıda verilmiştir:  
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

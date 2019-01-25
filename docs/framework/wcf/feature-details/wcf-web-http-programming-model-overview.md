@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577743"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları dahil olmak üzere, olası istemcileri tarafından erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimleri vardır:  
@@ -143,7 +143,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP programlama modeli sorunlarını giderme  
  Ne zaman çağırma WCF WEB HTTP Hizmetleri kullanarak bir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> bir kanal oluşturmak için <xref:System.ServiceModel.Description.WebHttpBehavior> kullanan <xref:System.ServiceModel.EndpointAddress> yapılandırma dosyasını çift ise farklı bir kümesi <xref:System.ServiceModel.EndpointAddress> geçirilir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

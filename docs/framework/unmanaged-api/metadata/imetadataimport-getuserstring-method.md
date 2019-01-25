@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 474338ff1780ce9b442208cd06f8b14bc411be5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491160"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString Metodu
-Belirtilen meta veri simgesi tarafından temsil edilen sabit değerli bir dize alır.  
+Belirtilen meta veri belirteci tarafından temsil edilen sabit dizesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT GetUserString (
   
 #### <a name="parameters"></a>Parametreler  
  `stk`  
- [in] İlişkili dizesi döndürülecek dize belirteci.  
+ [in] İlişkili dize için döndürülecek dize belirteci.  
   
  `szString`  
- [out] İstenen dize bir kopyası.  
+ [out] İstenen dizenin bir kopyası.  
   
  `cchString`  
- [in] Geniş karakterler istenen en büyük boyutu `szString`.  
+ [in] Geniş karakter istenen cinsinden en büyük boyutu `szString`.  
   
  `pchString`  
- [out] Geniş karakterler dönen boyutu `szString`.  
+ [out] Geniş karakterler döndürülen boyutu `szString`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

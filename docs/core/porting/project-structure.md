@@ -4,12 +4,12 @@ description: .NET Framework ve .NET Core yan yana karşı çözüm derlemek iste
 author: conniey
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498667"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Hem .NET Framework ve .NET Core desteklemek için proje düzenleme
 
@@ -67,7 +67,7 @@ Dikkat edilecek değişiklikler şunlardır:
 * .NET Core ve mevcut projeleri ayrı klasörlerde tutulur.
   * Projeleri ayrı klasörlerde tutmak için Visual Studio 2017 için zorlama önler. Yalnızca eski projelerdeki açılır ayrı bir çözüm oluşturabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 * Lütfen [.NET Core belgeleri taşıma] [ porting-doc] .NET Core ile geçirme hakkında daha fazla yardım almak için.
 

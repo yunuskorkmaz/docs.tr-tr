@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513496"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Olay Tabanlı Zaman Uyumsuz Desen (EAP)
 
@@ -37,13 +37,13 @@ ms.locfileid: "47207462"
  [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  Ne zaman yerine olay tabanlı zaman uyumsuz desen uygulamak seçmelidir olmadığının nasıl belireneceğini açıklar <xref:System.IAsyncResult> düzeni temsil ettiği [zaman uyumsuz programlama modeli (APM)](asynchronous-programming-model-apm.md)
   
- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)  
  Olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturma işlemini açıklar. Yardımcı sınıflarından kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı bileşen herhangi bir uygulama modeli altında düzgün şekilde çalışmasını sağlar.  
 
- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Desenin İstemcisini Uygulama](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [Nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  Olay tabanlı zaman uyumsuz desen uygulayan bir bileşen kullanan bir istemci oluşturmayı açıklar.
   
- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni kullanmayı açıklar.  
   
 ## <a name="reference"></a>Başvuru
@@ -67,6 +67,6 @@ ms.locfileid: "47207462"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../threading/managed-threading-best-practices.md)  
-- [Olaylar](../events/index.md)  
+- [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../threading/managed-threading-best-practices.md)
+- [Olaylar](../events/index.md)
 - [Zaman uyumsuz programlama desenleri](index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595246"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Çok sayıda performans sayaçları, uygulamanızın performansını ölçmek amacıyla Windows Communication Foundation (WCF) içerir.  
@@ -27,7 +27,7 @@ ms.locfileid: "48846226"
   
  `performanceCounters` Özniteliği, belirli türde bir performans sayaçlarını etkinleştirmek için ayarlanabilir. Geçerli değerler:  
   
--   Tümü: Tüm kategori sayaçları (ServiceModelService, ServiceModelEndpoint ve ServiceModelOperation) etkinleştirilir.  
+-   Tüm: Tüm kategori sayaçları (ServiceModelService, ServiceModelEndpoint ve ServiceModelOperation) etkinleştirilir.  
   
 -   ServiceOnly: Yalnızca ServiceModelService kategori sayaçları etkinleştirildi. Varsayılan değer budur.  
   
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Performans sayaçları için artan bellek boyutu  
  WCF kendi performans sayacı kategorileri için ayrı bir paylaşılan bellek kullanır.  
   
- Varsayılan olarak, ayrı bir paylaşılan bellek, üç aylık dönem için genel performans sayacı bellek boyutunu ayarlanır. Varsayılan genel performans sayacı bellek 524.288 bayttır. Bu nedenle, varsayılan boyutu yaklaşık 128 KB her üç WCF performans sayacı kategorileri gerekir. Bir makinede WCF uygulamaları çalışma zamanı özelliklerine bağlı olarak, performans sayacı bellek tükenmiş olabilir. Bu durumda, WCF hata uygulama olay günlüğüne yazar. Bir performans sayacı yüklenmedi ve özel durum girişini içeren hata içeriğini durumları "System.InvalidOperationException: özel sayaç dosya görünümdür, bellek yetersiz." Hata düzeyinde izleme etkinleştirilirse, bu hata Ayrıca izlenen. Performans sayacı bellek biterse, etkin performans sayaçlarını kullanarak, WCF uygulamaları çalıştırmaya devam içinde performans düşüşüne neden olabilir. Makinenin yöneticisiyseniz, herhangi bir zamanda bulunabilir performans sayaçları sayısı desteklemek için yeterli bellek ayırmak için yapılandırmanız gerekir.  
+ Varsayılan olarak, ayrı bir paylaşılan bellek, üç aylık dönem için genel performans sayacı bellek boyutunu ayarlanır. Varsayılan genel performans sayacı bellek 524.288 bayttır. Bu nedenle, varsayılan boyutu yaklaşık 128 KB her üç WCF performans sayacı kategorileri gerekir. Bir makinede WCF uygulamaları çalışma zamanı özelliklerine bağlı olarak, performans sayacı bellek tükenmiş olabilir. Bu durumda, WCF hata uygulama olay günlüğüne yazar. Bir performans sayacı yüklenmedi ve özel durum girişini içeren hata içeriğini durumları "System.InvalidOperationException: Özel sayaç dosya görünümü bellek yetersiz olduğundan." Hata düzeyinde izleme etkinleştirilirse, bu hata Ayrıca izlenen. Performans sayacı bellek biterse, etkin performans sayaçlarını kullanarak, WCF uygulamaları çalıştırmaya devam içinde performans düşüşüne neden olabilir. Makinenin yöneticisiyseniz, herhangi bir zamanda bulunabilir performans sayaçları sayısı desteklemek için yeterli bellek ayırmak için yapılandırmanız gerekir.  
   
  Kayıt defterinde WCF kategorileri için performans sayacı bellek miktarını değiştirebilirsiniz. Bunu yapmak için yeni bir DWORD değeri adlı eklemeniz gerekir `FileMappingSize` için üç aşağıdaki konumlardan ve bayt cinsinden istenen değere ayarlayın. Bu değişikliklerin devreye alınır böylece, makineyi yeniden başlatın.  
   
@@ -72,7 +72,7 @@ config.Save();
  Ne zaman nesneleri (örneğin, ServiceHost) çok sayıda kaldırıldıklarından atık olarak toplanmış olması bekleniyor, ancak `PrivateBytes` performans sayacı kayıt olağandışı ölçüde yüksek bir sayı. Bu sorunu çözmek için kendi uygulamaya özgü sayaçları ekleyin veya kullanın `performanceCounters` yalnızca hizmet düzeyi sayaçları etkinleştirmek için özniteliği.  
   
 ## <a name="types-of-performance-counters"></a>Performans sayaçları türleri  
- Performans sayaçları için üç farklı düzeyde kapsamlı: hizmet uç noktası ve işlem.  
+ Performans sayaçları, üç farklı düzeylere belirlenir: Hizmet, uç noktayı ve işlem.  
   
  WMI Performans sayacı örneğinin adını almak için kullanabilirsiniz. Örneğin,  
   
@@ -138,5 +138,5 @@ ServiceName@ServiceBaseAddress
   
  Sayaçları programlama yoluyla erişim hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

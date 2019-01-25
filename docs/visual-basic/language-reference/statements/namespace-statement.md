@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612157"
 ---
 # <a name="namespace-statement"></a>Namespace Deyimi
 Bir ad alanının adını bildirir ve bu ad alanı içinde derlenecek bildirimi takip eden kaynak koda neden olur.  
@@ -102,7 +102,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)

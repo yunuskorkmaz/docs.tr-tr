@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c80a4a34d5315dbc5a22d3953fee437ebe2e938f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573458"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; &lt;güvenliği&gt;
 Özel bağlama için güvenlik seçeneklerini belirtir.  
@@ -53,7 +53,7 @@ ms.locfileid: "54146257"
 |includeTimestamp|Her iletiye zaman damgalarının dahil edilip edilmeyeceğini belirten bir Boole değeri. Varsayılan, `true` değeridir.|  
 |keyEntropyMode|Güvenliğini sağlanmış iletiler için anahtarların hesaplanma yolunu belirtir. Anahtarları istemci anahtar malzemesi üzerinde yalnızca, yalnızca hizmet anahtar malzemesi veya her ikisinin bir birleşiminde temel alabilir. Geçerli değerler:<br /><br /> -   `ClientEntropy`: Oturum anahtarı istemci tarafından sağlanan anahtar verileri temel alır.<br />-   `ServerEntropy`: Oturum anahtarı sunucu tarafından sağlanan anahtar verileri temel alır.<br />-   `CombinedEntropy`: Oturum anahtarı istemci ve hizmet tarafından sağlanan anahtar verileri temel alır.<br /><br /> Varsayılan, `CombinedEntropy` değeridir.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |messageProtectionOrder|Sıranın içinde hangi ileti düzeyi güvenlik algoritmasının uygulanacağı ayarlar. Geçerli değerler şunlardır:<br /><br /> -   `SignBeforeEncrypt`: Önce imzalamak ve şifrelemek.<br />-   `SignBeforeEncryptAndEncryptSignature`: İlk kez oturum, şifreleme ve imza şifreleme.<br />-   `EncryptBeforeSign`: İlk olarak, oturum şifreleyin.<br /><br /> Varsayılan değer kullanılan WS-güvenlik sürümüne bağlıdır. Varsayılan değer `SignBeforeEncryptAndEncryptSignature` WS-güvenlik 1.1 kullanırken. Varsayılan değer `SignBeforeEncrypt` WS-güvenlik 1.0 kullanırken.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|messageSecurityVersion|İsteğe bağlı. Kullanılan WS-güvenlik sürümünü ayarlar. Geçerli değerler şunlardır:<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Varsayılan WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 olduğu ve XML olarak ifade edilebilir `Default`. Bu öznitelik türünde <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|messageSecurityVersion|İsteğe bağlı. Kullanılan WS-güvenlik sürümünü ayarlar. Geçerli değerler şunlardır:<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Varsayılan WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 olduğu ve XML olarak ifade edilebilir `Default`. Bu öznitelik türünde <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Anahtarları kanıt anahtarlarından türetilip varsa belirten bir Boole değeri. Varsayılan, `true` değeridir.|  
 |requireSecurityContextCancellation|İsteğe bağlı. Güvenlik bağlamı verilecek iptal edildi ve artık gerekli olmadığında sonlandırıldı, belirten bir Boole değeri. Varsayılan, `true` değeridir.|  
 |requireSignatureConfirmation|İsteğe bağlı. WS-güvenlik imza doğrulamasının etkin olup olmadığını belirten bir Boole değeri. Ayarlandığında `true`, ileti imzaları Yanıtlayıcı tarafından onaylanır.  Ne zaman özel bağlama için karşılıklı sertifikalar yapılandırılmamış veya kullanım verilen belirteçleri (WSS 1.1 bağlamaları) Bu öznitelik varsayılan olarak yapılandırılmış `true`. Aksi takdirde, varsayılan değer `false`.<br /><br /> İmza onayı isteği tam tanıma hizmet yanıt verdiğini doğrulamak için kullanılır.|  
@@ -93,7 +93,7 @@ ms.locfileid: "54146257"
 |[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Geçerli bir verilen belirtecin belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -166,13 +166,13 @@ ms.locfileid: "54146257"
 </configuration>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.SecurityElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.SecurityElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

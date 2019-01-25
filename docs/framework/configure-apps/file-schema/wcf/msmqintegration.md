@@ -2,12 +2,12 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 6b1449ec385af2478ee278e9823a005c69ca8dc2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 42197706a0c3f0f1940f8815fe0e41bb609a457a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603059"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Özel bağlama için MSMQ aktarımı belirtir.  
@@ -62,7 +62,7 @@ ms.locfileid: "54147856"
 |maxRetryCycles|Alıcı uygulamasına iletileri teslim girişiminde yeniden deneme döngüsü sayısını belirten bir tamsayı. Varsayılan, <xref:System.Int32.MaxValue> değeridir.<br /><br /> Tek bir yeniden deneme döngüsü, belirtilen sayıda uygulamaya bir iletiyi teslim etmeye çalışır. Yapılan deneme sayısı belirlediği `maxImmediateRetries` özniteliği. İletiyi teslim girişimleri tüketmiş sonra kullanmak uygulama başarısız olursa, bir yeniden deneme kuyruğa ileti gönderilir. Sonraki yeniden deneme döngüsü tarafından belirtilen bir gecikmeden sonra uygulamaya tekrar teslim girişiminde yeniden deneme kuyruktan uygulama kuyruğa döndürülmesi ileti oluşur `retryCycleDelay` özniteliği. `maxRetryCycles` Özniteliği uygulamanın kullandığı iletiyi teslim denemek için yeniden deneme döngüsü sayısını belirtir.|  
 |rejectAfterLastRetry|Yeniden deneme sayısı denemelerinden sonra teslim başarısız bir ileti için gerçekleştirilecek eylemi belirten bir Boole değeri.<br /><br /> `true` olumsuz bildirim gönderene döndürülür ve ileti bırakılan anlamına gelir; `false` zehirli ileti kuyruğuna gönderilen ileti anlamına gelir. Varsayılan, `false` değeridir.<br /><br /> Değer ise `false`, zehirli iletiler (diğer bir deyişle, teslimat başarısız olan iletiler) işlemek için zehirli ileti kuyruğa alma uygulaması okuyabilirsiniz.<br /><br /> MSMQ 3.0, MSMQ 3. 0'bu öznitelik yoksayılır bu nedenle negatif bildirim gönderene döndürmeyi desteklemiyor.|  
 |retryCycleDelay|A <xref:System.TimeSpan> yeniden deneme döngüleri arasındaki gecikmeyi belirten anında teslim edilemeyen bir iletiyi teslim etmeye çalışırken. Varsayılan değer 00:10:00 ' dir.<br /><br /> Tek bir yeniden deneme döngüsü, belirtilen sayıda alan bir uygulamaya bir iletiyi teslim etmeye çalışır. Yapılan deneme sayısı tarafından belirtilen `maxImmediateRetries` özniteliği. Belirtilen sayıda hemen yeniden deneme iletiyi kullanmak uygulama başarısız olursa, bir yeniden deneme kuyruğa ileti gönderilir. Sonraki yeniden deneme döngüsü tarafından belirtilen bir gecikmeden sonra uygulamaya tekrar teslim girişiminde yeniden deneme kuyruktan uygulama kuyruğa döndürülmesi ileti oluşur `retryCycleDelay` özniteliği. Yeniden deneme döngüsü sayısını tarafından belirtilen `maxRetryCycles` özniteliği.|  
-|serializationFormat|Bir MSMQ iletisinin bir parçası olarak gönderilen nesneleri serileştirmek için kullanılan biçimlendiriciyi belirtir. Geçerli değerler:<br /><br /> -ActiveX: COM nesneleri serileştirmek ActiveX biçimlendirici kullanılır.<br />-İkili:  İkili bir paket nesneyi serileştirir.<br />-ByteArray:  Bir bayt dizisi nesneyi serileştirir.<br />-Stream:  Nesneyi bir akışa serileştirir.<br />-Xml:  Bir XML paket nesneyi serileştirir. XML varsayılandır.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
+|serializationFormat|Bir MSMQ iletisinin bir parçası olarak gönderilen nesneleri serileştirmek için kullanılan biçimlendiriciyi belirtir. Geçerli değerler:<br /><br /> -ActiveX: COM nesneleri serileştirmek ActiveX biçimlendirici kullanılır.<br />-İkili:  İkili bir paket nesneyi serileştirir.<br />-ByteArray:  Bir bayt dizisi nesneyi serileştirir.<br />-Stream:  Nesneyi bir akışa serileştirir.<br />-   Xml:  Bir XML paket nesneyi serileştirir. XML varsayılandır.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
 |timeToLive|A <xref:System.TimeSpan> iletilerin süreleri dolmadan ve teslim edilemeyen sırasına konmadan önce ne kadar süreyle geçerlidir belirtir. 1 gün yani 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, bunlar alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki bir iletiyi süresi dolmuş kabul edilir. Süresi dolan iletileri geçerliliğini yitirmiş kuyruk adı verilen özel kuyruğa gönderilir. Geçerliliğini yitirmiş kuyruk konumu ile ayarlanır `customDeadLetterQueue` özniteliği veya uygun varsayılana dayalı Güvenceleri üzerinde.|  
 |useMsmqTracing|İletileri bu bağlama tarafından işlenen olup olmadığını belirten bir Boole değeri izlenip izlenmemesini gerektiğini. Varsayılan, `false` değeridir.<br /><br /> İzleme etkin olduğunda, rapor iletileri oluşturulur ve rapor kuyruğa gönderilen ileti ayrıldığında ya da bir Message Queuing bilgisayar ulaştığında her zaman.|  
 |useSourceJournal|Bu bağlama tarafından işlenen iletilerin kopyalarını kaynak günlük sırasındaki depolanması gerekip gerekmediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Bilgisayarın giden sırasının bıraktıysanız iletileri kaydını tutmak istediğiniz sıraya alınmış uygulamalar iletilerin günlük kuyruğuna kopyalayabilirsiniz. Giden sırasının bir iletiyi bırakır ve ileti hedef bilgisayarda alındı bir bildirim alındıktan sonra iletinin bir kopyasını gönderen bilgisayarın sistem günlüğü kuyrukta tutulur.|  
@@ -79,14 +79,14 @@ ms.locfileid: "54147856"
 |-------------|-----------------|  
 |[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

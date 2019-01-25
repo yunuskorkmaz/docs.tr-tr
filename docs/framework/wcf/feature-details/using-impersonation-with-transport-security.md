@@ -2,12 +2,12 @@
 title: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 41670f36d459af49359cfc4add57cb59a49940d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532714"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 *Kimliğe bürünme* istemci kimliğini almak için bir sunucu uygulaması özelliğidir. Kimliğe bürünme, kaynaklara erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır ancak server istemci bağlantısı kabul ettiğinde, istemcinin kimlik bilgilerini kullanarak erişim denetimleri gerçekleştirilmesi, istemci kimliğine bürünür. Aktarım güvenliği hem de kimlik bilgilerini geçirerek ve bu kimlik bilgilerini kullanarak güvenli hale getirmek için bir mekanizma ' dir. Aktarım güvenliği ile kimliğe bürünme özelliğini Windows Communication Foundation (WCF) kullanarak bu konuda açıklanmaktadır. İleti güveliği kullanarak kimliğe bürünme hakkında daha fazla bilgi için bkz. [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -17,7 +17,7 @@ ms.locfileid: "50187916"
   
 |Kimliğe bürünme düzeyi|Açıklama|  
 |-------------------------|-----------------|  
-|Yok.|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
+|Hiçbiri|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
 |Anonim|Sunucu uygulaması istemci kimlik bilgilerine yönelik erişim denetimleri gerçekleştirebilirsiniz, ancak istemcinin kimliği hakkında hiçbir bilgi almaz. Bu kimliğe bürünme düzeyi yalnızca adlandırılmış kanallar gibi makinede iletişim için anlamlıdır. Kullanarak `Anonymous` ile bir uzak bağlantı tanımlayın kimliğe bürünme düzeyini yükseltir.|  
 |Tanımlayın|Sunucu uygulaması istemci kimliğini bilir ve istemcinin kimlik bilgilerine yönelik erişim doğrulama yapabilirsiniz, ancak istemci kimliğine bürünülemedi. Tanımlamak WCF SSPI kimlik bilgileri ile farklı kimliğe bürünme düzeyi belirteç sağlayıcısı sağlamadığı sürece kullanılan varsayılan kimliğe bürünme düzeyi.|  
 |Impersonate|Sunucu uygulaması istemci erişim denetimlerini biçimlendirebilir server makinesinde kaynaklarına erişim sağlayabilir. Sunucu uygulaması başkasının kimliğine bürünülerek gerçekleştirilen belirteç ağ kimlik bilgilerine sahip olmadığından, istemcinin kimliğini kullanarak uzak makinelerde kaynaklarına erişemiyor|  
@@ -54,8 +54,8 @@ ms.locfileid: "50187916"
   
  HTTP taşıma hakkında daha fazla bilgi için bkz. [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

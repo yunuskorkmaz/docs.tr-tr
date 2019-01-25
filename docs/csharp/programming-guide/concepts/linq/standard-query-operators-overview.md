@@ -2,12 +2,12 @@
 title: Standart sorgu işleçlerine genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 397d1368a3c4e0b20a0bc9c694421ed60119d1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537965"
 ---
 # <a name="standard-query-operators-overview-c"></a>Standart sorgu işleçlerine genel bakış (C#)
 *Standart sorgu işleçleri* LINQ desen form yöntemlerdir. Bu yöntemlerin çoğu bir dizi türü uygulayan bir nesne olduğu dizileri üzerinde çalışması <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri, filtreleme, projeksiyon, toplama, sıralama ve daha fazlası dahil olmak üzere sorgu işlevleri sağlayın.  
@@ -103,11 +103,11 @@ foreach (var obj in query)
   
  [Toplama işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Linq.Enumerable>  
-- <xref:System.Linq.Queryable>  
-- [LINQ sorguları (C#) giriş](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
-- [Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
-- [Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [LINQ sorguları (C#) giriş](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+- [Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

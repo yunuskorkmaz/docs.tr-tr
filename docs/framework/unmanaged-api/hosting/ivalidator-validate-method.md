@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594063"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate Yöntemi
-Belirtilen taşınabilir yürütülebilir (PE) ya da Microsoft Ara dili (MSIL) dosya doğrular.  
+Belirtilen taşınabilir yürütülebilir (PE) veya Microsoft Ara dili (MSIL) dosyası doğrular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,16 +44,16 @@ HRESULT Validate (
   
 #### <a name="parameters"></a>Parametreler  
  `veh`  
- [in] Bir işaretçi bir `IVEHandler` doğrulama hataları işleyen örneği.  
+ [in] Bir işaretçi bir `IVEHandler` doğrulama hatalarını işleyen örneği.  
   
  `pAppDomain`  
- [in] Dosyayı yüklendiği uygulama etki alanı için bir işaretçi.  
+ [in] Dosya yüklendiği uygulama etki alanı için bir işaretçi.  
   
  `ulFlags`  
- [in] Bit düzeyinde bileşimini [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir doğrulamaları belirten değer.  
+ [in] Bitsel bir birleşimi [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir Doğrulamalar gösteren değer.  
   
  `ulMaxError`  
- [in] Doğrulama çıkmadan önce izin vermek için hatası sayısı.  
+ [in] Doğrulama çıkmadan önce izin vermek için hataları sayısı.  
   
  `token`  
  [in] Kullanılmıyor.  
@@ -62,19 +62,19 @@ HRESULT Validate (
  [in] Doğrulanacak dosyasının adını belirten dize.  
   
  `pe`  
- [in] Dosyanın depolandığı bellek arabellek için bir işaretçi.  
+ [in] Dosyanın depolandığı ara belleğe yönelik işaretçi.  
   
  `ulSize`  
  [in] Doğrulanacak dosyasının bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator.idl, IValidator.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

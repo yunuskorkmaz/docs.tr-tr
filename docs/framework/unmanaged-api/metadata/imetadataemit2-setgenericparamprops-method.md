@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d74ee7512f640ab906f1119f61e4998b5e882eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574631"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps Yöntemi
-Belirtilen belirteç tarafından başvurulan genel parametresini tanımı için özellik değerlerini ayarlar.  
+Belirtilen belirteç tarafından başvurulan genel parametre tanımı için özellik değerlerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +41,29 @@ HRESULT SetGenericParamProps (
   
 #### <a name="parameters"></a>Parametreler  
  `gp`  
- [in] Hangi değerlerini ayarlamak genel parametresini tanımı için belirteci.  
+ [in] Genel parametre tanımı için olan değerleri ayarlamak belirteç.  
   
  `dwParamFlags`  
- [in] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) türünü genel parametresi için açıklayan numaralandırması.  
+ [in] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) türünü genel parametresi için açıklayan sabit listesi.  
   
  `szName`  
- [in] İsteğe bağlı. Değerleri ayarlanacak parametresinin adı.  
+ [in] İsteğe bağlı. Değerleri ayarlamak istediğiniz parametrenin adı.  
   
  `reserved`  
- [in] Gelecekteki genişletilebilirliği için ayrılmış.  
+ [in] Sonra genişletilebilmek için ayrılmış.  
   
  `rtkConstraints`  
- [in] İsteğe bağlı. Tür kısıtlamaları sıfır sonlandırılan dizisi. Dizi üyeleri olmalıdır bir `mdTypeDef`, `mdTypeRef`, veya `mdTypeSpec` meta veri simgesi.  
+ [in] İsteğe bağlı. Tür kısıtlamaları Sıfırla sonlandırılmış dizisi. Dizi üyeleri olmalıdır bir `mdTypeDef`, `mdTypeRef`, veya `mdTypeSpec` meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

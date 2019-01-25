@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53774595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548265"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleri (C#)
 Zaman uyumsuz yöntemler, aşağıdaki dönüş türlerine sahip olabilir:
@@ -77,10 +77,10 @@ C# 7.0 ile başlayarak, bir zaman uyumsuz yöntem bir erişilebilir olan herhang
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-- [Denetim akışı zaman uyumsuz programlarda (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-- [async](../../../../csharp/language-reference/keywords/async.md)   
+- <xref:System.Threading.Tasks.Task.FromResult%2A>
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Denetim akışı zaman uyumsuz programlarda (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)

@@ -2,18 +2,18 @@
 title: Birlikte Çalışabilir Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582431"
 ---
 # <a name="interoperable-object-references"></a>Birlikte Çalışabilir Nesne Başvuruları
-Varsayılan olarak <xref:System.Runtime.Serialization.DataContractSerializer> değeriyle nesneleri serileştirir. Kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> nesne başvuruları türündeki nesneleri serileştirirken korumak için veri sözleşmesi seri hale getirici istemek üzere özelliği.  
+Varsayılan olarak <xref:System.Runtime.Serialization.DataContractSerializer> nesneleri değerine göre serileştirir. Kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> türe ait nesneleri serileştirilirken nesne başvuruları korumak için veri sözleşmesi serileştiricisi istemek için özellik.  
   
 ## <a name="generated-xml"></a>Oluşturulan XML  
- Örnek olarak, aşağıdaki nesne göz önünde bulundurun:  
+ Örneğin, şu nesne göz önünde bulundurun:  
   
 ```  
 [DataContract]  
@@ -49,10 +49,10 @@ public class SomeClass
 </X>  
 ```  
   
- Ancak, <xref:System.Runtime.Serialization.XsdDataContractExporter> açıklanmayan `id` ve `ref` ve şeması öznitelikleri bile `preserveObjectReferences` özelliği ayarlanmış `true`.  
+ Ancak, <xref:System.Runtime.Serialization.XsdDataContractExporter> açıklanmayan `id` ve `ref` ve şeması özniteliklerinde bile `preserveObjectReferences` özelliği `true`.  
   
 ## <a name="using-isreference"></a>IsReference kullanma  
- Açıklayan şemaya göre geçerli nesne başvuru bilgileri oluşturmak için geçerli <xref:System.Runtime.Serialization.DataContractAttribute> bir türüne ve ayarlayın <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> bayrağını `true`. Kullanarak `IsReference` önceki örnek sınıfında `X`:  
+ Tanımladığı şemaya göre geçerli nesne başvuru bilgisi oluşturmak için uygulama <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe ve ayarlama <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> bayrak `true`. Kullanarak `IsReference` önceki örnek sınıfında `X`:  
   
  `[DataContract(IsReference=true)] public class X`  
   
@@ -92,10 +92,10 @@ public class SomeClass
   
  `</X>`  
   
- Kullanarak `IsReference` ileti gidiş uyumluluk sağlar. Bir türü şemadan oluşturulduğunda bu olmadan ne için XML olarak geri türü mutlaka ilk olarak kabul şemasıyla uyumlu değil gönderilir. Diğer bir deyişle, ancak `id` ve `ref` öznitelikleri seri, özgün şema bu öznitelikleri (veya tüm) XML'de oluşmasını barred. İle `IsReference` veri üyesi uygulanan, üye "önerilebilir" olduğunda kabul edilecek devam roundtripped.  
+ Kullanarak `IsReference` ileti gidiş dönüşü üzerinde uyumluluğu güvence altına alır. Bir türü şemadan oluşturulduğunda bu olmadan ne için XML olarak geri türü mutlaka başlangıçta kabul şemasıyla uyumlu değil gönderilir. Diğer bir deyişle, ancak `id` ve `ref` öznitelikleri seri hale getirilmiş, özgün şema bu öznitelikler (veya tüm öznitelikler) XML'de oluşmasını barred. İle `IsReference` veri üyesi uygulanan, üye "başvurulabilir" olduğunda tanınması devam roundtripped.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>

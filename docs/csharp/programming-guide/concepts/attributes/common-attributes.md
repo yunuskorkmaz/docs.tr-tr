@@ -2,12 +2,12 @@
 title: Ortak öznitelikler (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558598"
 ---
 # <a name="common-attributes-c"></a>Ortak öznitelikler (C#)
 Bu konuda, C# programlarında en çok kullanılan öznitelikler açıklanmaktadır.  
@@ -229,11 +229,11 @@ class SampleClass
   
  Arayan bilgisi öznitelikleri hakkında daha fazla bilgi için bkz: [arayan bilgileri (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Öznitelikler](../../../../../docs/standard/attributes/index.md)  
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Öznitelikler](../../../../../docs/standard/attributes/index.md)
+- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

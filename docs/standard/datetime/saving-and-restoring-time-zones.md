@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569472"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Saat dilimlerini geri yükleme ve kaydetme
 
@@ -72,8 +72,8 @@ Aşağıdaki örnek, oluşturur ve özel bir merkezi standart saat dilimi serile
 
 Bu şekilde bir seri hale getirilmiş saat dilimi dize depolamak de saat dilimi oluşturma yordamı uygulamadan ayırır. Örneğin, bir saat dilimi oluşturma yordamını yürütün ve kullanılabilir geçmiş saat dilimi bilgilerini içeren bir veri dosyası oluşturun. Veri dosyası olabilir daha sonra uygulama ile birlikte yüklü olması ve açılmadan ve uygulama bunları gerektirdiğinde bir veya daha fazla zaman bölgelerinden seri durumdan çıkarılabiliyorsa.
 
-Seri hale getirilmiş saat dilimi veri depolamak için katıştırılmış bir kaynağı kullanan bir örnek için bkz: [nasıl yapılır: saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Seri hale getirilmiş saat dilimi veri depolamak için katıştırılmış bir kaynağı kullanan bir örnek için bkz: [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)

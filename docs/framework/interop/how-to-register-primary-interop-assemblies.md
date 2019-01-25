@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme'
+title: 'Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9017e8dc50914bbffbcea52192e6ec10fbc7a6df
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 08d10e0c1a38201a68d0a043b9f52d5f3eaf2ece
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596130"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
+# <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme
 
 Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve her zaman arabirimleri olarak sıralanmış. Bazı durumlarda, sınıf hazırlamak için kullanılan arabirimi sınıf arabirimi bilinir. Tercih ettiğiniz bir arabirime sahip sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [COM çağrılabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md).
 
@@ -49,7 +49,7 @@ Kullanım [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/reg
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Birincil birlikte çalışma derlemeleriyle programlama](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))
 - [Birincil birlikte çalışma derlemelerini konumlandırma](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))

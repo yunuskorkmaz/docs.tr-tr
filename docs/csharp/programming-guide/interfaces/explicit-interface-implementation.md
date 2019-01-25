@@ -6,12 +6,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: e985da878ca4160938f29911d4313ee6cd731aeb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c57ba732c5139d7ead85372323f9433bd3137622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570219"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Açık Arabirim Uygulaması (C# Programlama Kılavuzu)
 Varsa bir [sınıfı](../../../csharp/language-reference/keywords/class.md) üyenin sınıf üzerinde uygulama, bu üye, geliştirdikleri kullanılacak iki arabirim neden olmaz ve aynı imzaya sahip bir üye içeren iki arabirimlerini uygular. Aşağıdaki örnekte, tüm çağrıları `Paint` aynı yöntemini çağırır.  
@@ -34,9 +34,9 @@ Varsa bir [sınıfı](../../../csharp/language-reference/keywords/class.md) üye
   
  [!code-csharp[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
 - [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

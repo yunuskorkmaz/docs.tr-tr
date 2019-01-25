@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560041"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı oluşturma en iyi yöntemleri
 Çoklu iş parçacığı kullanımı dikkatli programlama gerektirir. Çoğu görevler için istediğiniz karmaşıklık yürütme için sıraya alma istekleri tarafından iş parçacığı havuzu iş parçacıkları tarafından azaltabilirsiniz. Birden çok iş parçacığı çalışması koordine veya işleme iş parçacıkları bu blok gibi durumlarda daha zor, bu konuda ele alır.  
@@ -179,5 +179,5 @@ Kullanım <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
+- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)
 - [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)

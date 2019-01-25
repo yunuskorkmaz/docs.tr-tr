@@ -2,12 +2,12 @@
 title: Entity Framework için sqlclient'ta bilinen sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497254"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için sqlclient'ta bilinen sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
@@ -59,6 +59,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>Sunucu oluşturulan GUID kimlik değerleri  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen sunucu tarafından oluşturulan GUID türü kimlik değerleri, ancak sağlayıcı desteklemelidir bir satır takıldıktan sonra sunucu tarafından oluşturulan kimlik değeri döndürüyor. SQL Server 2005 ile başlayarak, bir SQL Server veritabanında sunucu tarafından oluşturulan GUID türü döndürebilir [OUTPUT yan tümcesi](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

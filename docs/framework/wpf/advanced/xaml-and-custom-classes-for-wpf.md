@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606588"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçevelerini destekleyen özel bir sınıf veya yapı, tüm tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim kullanarak XAML biçimlendirmesi. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlanan türleri ve aynı biçimlendirme dosyasında özel türlerinizi genellikle XAML ad alanı öneki özel türleri eşleyerek. Bu konuda, özel bir sınıf bir XAML öğesi olarak kullanılabilir olması için karşılaması gereken gereksinimleri anlatılmaktadır.  
@@ -79,7 +79,7 @@ XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes
   
 -   Koleksiyon nesnesi nesnesini nesne öğesi sözdiziminde belirtilmesi gerekmez. Bu koleksiyon türünün varolup olmadığını örtük olarak, her bir koleksiyon türü alan XAML içinde bir özellik belirtin.  
   
--   Koleksiyon özelliği biçimlendirme içinde alt öğeleri koleksiyon üyelerinin olacak işlenir. Normalde, bir koleksiyonun üyelerini kod erişimi listesi/sözlük yöntemleri gibi gerçekleştirilir `Add`, veya bir dizin oluşturucu. Ancak XAML söz dizimi, yöntemler veya dizin oluşturucular desteklemez (özel durum: XAML 2009 desteklediği yöntemler, ancak XAML 2009 kullanarak olası WPF kullanımları kısıtlar; bkz [XAML 2009 dil özellikleri](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Koleksiyonlar açıkça öğe ağacındaki oluşturmaya yönelik yaygın bir gereksinim olan ve bu bildirim temelli XAML koleksiyonlarında doldurmak için bir yönteme gerekir. Bu nedenle, bir koleksiyon özelliği alt öğelerinin koleksiyonunu özellik türü değeri koleksiyona ekleyerek işlenir.  
+-   Koleksiyon özelliği biçimlendirme içinde alt öğeleri koleksiyon üyelerinin olacak işlenir. Normalde, bir koleksiyonun üyelerini kod erişimi listesi/sözlük yöntemleri gibi gerçekleştirilir `Add`, veya bir dizin oluşturucu. Ancak XAML söz dizimi, yöntemler veya dizin oluşturucular desteklemez (özel durum: XAML 2009 yöntemleri destekler, ancak XAML 2009 kullanarak olası WPF kullanımları kısıtlar; bkz: [XAML 2009 dil özellikleri](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Koleksiyonlar açıkça öğe ağacındaki oluşturmaya yönelik yaygın bir gereksinim olan ve bu bildirim temelli XAML koleksiyonlarında doldurmak için bir yönteme gerekir. Bu nedenle, bir koleksiyon özelliği alt öğelerinin koleksiyonunu özellik türü değeri koleksiyona ekleyerek işlenir.  
   
  .NET Framework XAML hizmetlerinde uygulama ve bu nedenle WPF XAML işlemcisi bir koleksiyon özelliği nelerden için aşağıdaki tanımını kullanır. Özelliğin özellik türü, aşağıdakilerden birini uygulamalıdır:  
   
@@ -112,9 +112,9 @@ XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes
 ## <a name="serializing-xaml"></a>XAML seri hale getirme  
  IF gibi belirli senaryolarda, bir denetim yazarı, XAML içinde oluşturulabilir herhangi bir nesne temsili de geri denk XAML biçimlendirmesi serileştirilecek sağlamak isteyebilirsiniz. Serileştirme gereksinimleri, bu konuda açıklanan değil. Bkz: [denetim yazmaya genel bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md) ve [öğe ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

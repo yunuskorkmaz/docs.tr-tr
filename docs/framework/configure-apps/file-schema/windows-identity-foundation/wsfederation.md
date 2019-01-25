@@ -3,12 +3,12 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521912"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 İçin yapılandırma sağlar <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -51,7 +51,7 @@ ms.locfileid: "48838552"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |authenticationType|Kimlik doğrulaması türünü belirten bir URI. WS-Federasyon oturum açma isteği wauth parametre ayarlar. İsteğe bağlı. Varsayılan istekte wauth parametresi dahil edilmediğinden belirtir. boş bir dizedir.|  
-|yenilik|İstenen yaş üst sınırını kimlik doğrulama isteklerini, dakikalar içinde. WS-Federasyon oturum açma isteği wfresh parametre ayarlar. İsteğe bağlı. Varsayılan değer sıfırdır. İsteğe bağlı. **Uyarı:** sonraki .NET Framework 4.5 sürümünde `freshness` özniteliği, türü olacaktır `xs:string` ve varsayılan değerine `null`.|  
+|yenilik|İstenen yaş üst sınırını kimlik doğrulama isteklerini, dakikalar içinde. WS-Federasyon oturum açma isteği wfresh parametre ayarlar. İsteğe bağlı. Varsayılan değer sıfırdır. İsteğe bağlı. **Uyarı:**  Sonraki .NET Framework 4.5 sürümünde `freshness` özniteliği, türü olacaktır `xs:string` ve varsayılan değerine `null`.|  
 |homeRealm|Ana Bölge kimlik doğrulaması için kullanılacak kimlik sağlayıcısının (IP). WS-Federasyon oturum açma isteği whr parametre ayarlar. İsteğe bağlı. Varsayılan istekte whr parametresi dahil edilmediğinden belirtir. boş bir dizedir.|  
 |yayınlayan|Hedeflenen belirteç vericisinin URI. Temel URL, WS-Federasyon oturum açma istekleri ve oturum kapatma istekleri gerekli ayarlar.|  
 |persistentCookiesOnPassiveRedirects|Kalıcı tanımlama bilgileri kimlik doğrulaması verilen olup olmadığını belirtir. İsteğe bağlı. Varsayılan "false", tanımlama bilgileri verilmedi.|  
@@ -63,12 +63,12 @@ ms.locfileid: "48838552"
 |requestPtr|Belirteç verme isteği konumunu belirten bir URL. İstek wreqptr parametresi ayarlar. İsteğe bağlı. Varsayılan istekte wreqptr parametresi dahil edilmediğinden belirtir. boş bir dizedir. Wreq veya wreqptr parametresi istekte içermeden, STS belirteci vermek için hangi tür bilir anlamına gelir.|  
 |requireHttps|Güvenlik belirteci hizmeti (STS) ile iletişim HTTPS protokolünü kullanıp kullanmadığını belirtir. İsteğe bağlı. Varsayılan değer "true" ise, HTTPS kullanılması gerekir.|  
 |kaynak|Erişilen, bağlı olan taraf (RP) kaynak olarak tanımlayan bir URI için güvenlik belirteci hizmeti (STS). İsteğe bağlı. WS-Federasyon oturum açma isteği wres parametre ayarlar. İsteğe bağlı. Varsayılan istekte wres parametresi dahil edilmediğinden belirtir. boş bir dizedir. **Not:** wres eski bir parametredir. Belirtin `realm` wtrealm parametresi kullanmayı özniteliği.|  
-|signInQueryString|WS-Federasyon oturum açma istek URL'SİNDE uygulama tanımlı sorgu parametreleri belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir. Aşağıdaki biçimi kullanarak bir sorgu dizesi parçası belirtilen parametreler: `"param1=value1&param2=value2&param3=value3"` ve benzeri. **Not:** yapılandırma dosyasında ' & ", varlık başvurusu kullanarak sorgu dizesindeki karakter belirtilmelidir `&`.|  
-|signOutQueryString|WS-Federasyon oturum açma istek URL'SİNDE uygulama tanımlı sorgu parametreleri belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir. Aşağıdaki biçimi kullanarak bir sorgu dizesi parçası belirtilen parametreler: `"param1=value1&param2=value2&param3=value3"` ve benzeri. **Not:** yapılandırma dosyasında ' & ", varlık başvurusu kullanarak sorgu dizesindeki karakter belirtilmelidir `&`.|  
+|signInQueryString|WS-Federasyon oturum açma istek URL'SİNDE uygulama tanımlı sorgu parametreleri belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir. Aşağıdaki biçimi kullanarak bir sorgu dizesi parçası belirtilen parametreler: `"param1=value1&param2=value2&param3=value3"` ve benzeri. **Not:**  Bir yapılandırma dosyasında ' & ", varlık başvurusu kullanarak sorgu dizesindeki karakter belirtilmelidir `&`.|  
+|signOutQueryString|WS-Federasyon oturum açma istek URL'SİNDE uygulama tanımlı sorgu parametreleri belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir. Aşağıdaki biçimi kullanarak bir sorgu dizesi parçası belirtilen parametreler: `"param1=value1&param2=value2&param3=value3"` ve benzeri. **Not:**  Bir yapılandırma dosyasında ' & ", varlık başvurusu kullanarak sorgu dizesindeki karakter belirtilmelidir `&`.|  
 |signOutReply|Pasif WS-Federation protokolü ile oturum kapatma sırasında istemci güvenlik belirteci hizmeti (STS) tarafından yönlendirilmelidir URL'sini belirtir. Wreply parametresi bir WS-Federasyon oturum kapatma isteği ayarlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -98,6 +98,6 @@ ms.locfileid: "48838552"
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f892a371ed23a810f71ef5a51393de4145478c10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573250"
 ---
 # <a name="modifying-dataviews"></a>DataView değiştirme
 Kullanabileceğiniz <xref:System.Data.DataView> eklemek, silmek veya temel tablodaki veri satırlarının değiştirin. Kullanabilme **DataView** temel tablodaki verileri değiştirmek için üç Boole özelliklerinden birini ayarlayarak denetlenir **DataView**. Bu özellikleri <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, ve <xref:System.Data.DataView.AllowDelete%2A>. Bunlar ayarlandığından **true** varsayılan olarak.  
@@ -51,9 +51,9 @@ newDRV["CompanyName"] = "ABC Products";
 newDRV.EndEdit();  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataView>  
- <xref:System.Data.DataRowView>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataView>
+- <xref:System.Data.DataRowView>
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

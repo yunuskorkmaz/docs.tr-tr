@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: KrzysztofCwalina
-ms.openlocfilehash: dbf54f602fbe4ace01b60bb57e1106d3f19ba7df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543912"
 ---
 # <a name="using-standard-exception-types"></a>Standart özel durum türlerini kullanma
 Bu bölümde, Framework ve bunların kullanım ayrıntılarını tarafından sağlanan standart özel durumlar açıklanmaktadır. Listede olmadığı göre Hayır hepsine yer. Lütfen .NET Framework başvuru diğer Framework özel durum türlerinin kullanımı için belgelerine bakın.  
@@ -65,5 +65,5 @@ Bu bölümde, Framework ve bunların kullanım ayrıntılarını tarafından sa�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
 - [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)

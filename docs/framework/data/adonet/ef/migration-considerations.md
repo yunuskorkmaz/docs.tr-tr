@@ -2,12 +2,12 @@
 title: Geçiş konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575625"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -37,20 +37,20 @@ ms.locfileid: "48837501"
   
 2.  Eşleme ve modelleri tanımlar.  
   
-     Model ve eşleme dosyalarını kavramsal modeldeki varlıklar tanımlayın. yapıları tablolar gibi veri kaynağı, saklı yordamlar ve görünümleri; ve varlıkları ve veri kaynağı Yapılar arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını el ile tanımlamak](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     Model ve eşleme dosyalarını kavramsal modeldeki varlıklar tanımlayın. yapıları tablolar gibi veri kaynağı, saklı yordamlar ve görünümleri; ve varlıkları ve veri kaynağı Yapılar arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: El ile bir modeli tanımlamak ve dosyaları eşleme](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
   
-     Depolama modelde tanımlı türleri nesne veri kaynağı adı eşleşmelidir. Var olan uygulama veri nesneleri olarak sunarsa, kavramsal modelde tanımlı özellikleri ve varlıkları adlarını bu var olan veri sınıfları ve özellikleri ile eşleştiğinden emin olun. Daha fazla bilgi için [nasıl yapılır: özelleştirme modelleme ve eşleme dosyaları için özel nesneler ile çalışma](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Depolama modelde tanımlı türleri nesne veri kaynağı adı eşleşmelidir. Var olan uygulama veri nesneleri olarak sunarsa, kavramsal modelde tanımlı özellikleri ve varlıkları adlarını bu var olan veri sınıfları ve özellikleri ile eşleştiğinden emin olun. Daha fazla bilgi için [nasıl yapılır: Modelleme ve özel nesneler ile çalışma dosyaları eşleme özelleştirme](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
   
     > [!NOTE]
     >  Varlık veri modeli Tasarımcısı, varolan nesneleri eşleştirmek için kavramsal modeldeki varlıklar yeniden adlandırmak için kullanılabilir. Daha fazla bilgi için [varlık veri modeli Tasarımcısı](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
   
 3.  Bağlantı dizesini tanımlar.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal modeline karşı sorgular yürütülürken bir özel olarak biçimlendirilmiş bağlantı dizesini kullanır. Bu bağlantı dizesi, model ve eşleme dosyalarını ve veri kaynağı bağlantısı ile ilgili bilgileri yalıtır. Daha fazla bilgi için [nasıl yapılır: bağlantı dizesi tanımlama](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal modeline karşı sorgular yürütülürken bir özel olarak biçimlendirilmiş bağlantı dizesini kullanır. Bu bağlantı dizesi, model ve eşleme dosyalarını ve veri kaynağı bağlantısı ile ilgili bilgileri yalıtır. Daha fazla bilgi için [nasıl yapılır: Bağlantı dizesi tanımlama](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
 4.  Visual Studio projesini yapılandırın.  
   
-     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeleri ve model ve eşleme dosyalarını Visual Studio projeye eklenmesi gerekiyor. Bu eşleme dosyaları, bunlar bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: el ile bir Entity Framework projesinin yapılandırma](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeleri ve model ve eşleme dosyalarını Visual Studio projeye eklenmesi gerekiyor. Bu eşleme dosyaları, bunlar bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: El ile bir Entity Framework projesinin yapılandırma](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Varolan nesneleri olan uygulamalar için dikkat edilmesi gerekenler  
  İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "düz eski" destekleyen CLR nesnelerine (POCO), Kalıcılık ignorant nesneleri olarak da bilinir. Çoğu durumda, var olan nesne ile çalışabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] küçük değişiklikler yaparak. Daha fazla bilgi için [Working with Entities POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Ayrıca bir uygulamaya geçirebileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanın. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
@@ -95,6 +95,6 @@ ms.locfileid: "48837501"
  Durumunu korumak uygulamalar.  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları bir Web sayfasının veya bir kullanıcı oturumunun durumunu sık sürdürmeniz gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği istemci görünüm durumu veya sunucu üzerinde oturum durumunu depolanan ve daha sonra alınabilir ve yeni bir nesne bağlamına eklenemeyeceği. Daha fazla bilgi için [iliştirme ve nesneleri ayırmaya](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Entity Framework Terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Entity Framework Terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md)

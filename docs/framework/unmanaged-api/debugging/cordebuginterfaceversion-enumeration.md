@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556122"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion Numaralandırması
-Arabirim, .NET Framework sürümü veya arabirim kullanılmaya başlanan .NET Framework sürümünü belirtir.  
+Bir arabirim, .NET Framework sürümünü veya bir arabirim içinde tanıtılan .NET Framework sürümünü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -133,16 +133,16 @@ typedef enum CorDebugInterfaceVersion {
 ```  
   
 ## <a name="members"></a>Üyeler  
- Aşağıdaki tabloda her numaralandırma değeri bağlanan karşılık gelen arabirimi sağlar. Ayrıca, tablo ilk arabirimi desteklenen .NET Framework sürümünü gösterir.  
+ Aşağıdaki tabloda, her bir değerden numaralandırma karşılık gelen arabirimi bağlantılar sağlar. Ayrıca, tablo arabirimi içinde desteklenen .NET Framework'ün ilk sürümü gösterir.  
   
 |Üye|Belirler|.NET Framework sürümü|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework sürümü geçersiz.|-|  
-|`CorDebugVersion_1_0`|Kendi hizmet paketleri de dahil olmak üzere, .NET Framework 1.0 sürümüdür.|1.0|  
-|`CorDebugVersion_1_1`|Tüm hizmet paketlerini de dahil olmak üzere, .NET Framework 1.1 sürümüdür.|1.1|  
-|`CorDebugVersion_2_0`|Tüm hizmet paketlerini de dahil olmak üzere, .NET Framework 2.0 sürümüdür.|2,0|  
-|`CorDebugVersion_4_0`|Tüm hizmet paketlerini de dahil olmak üzere, .NET Framework sürüm 4'tür.|4|  
-|`CorDebugVersion_4_5`|Tüm hizmet paketlerini de dahil olmak üzere, .NET Framework 4.5 sürümüdür.|4,5|  
+|`CorDebugVersion_1_0`|Hizmet paketleri de dahil olmak üzere .NET Framework 1.0 sürümüdür.|1.0|  
+|`CorDebugVersion_1_1`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework 1.1 sürümüdür.|1.1|  
+|`CorDebugVersion_2_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework 2.0 sürümüdür.|2,0|  
+|`CorDebugVersion_4_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürüm 4'tür.|4|  
+|`CorDebugVersion_4_5`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework 4.5 sürümüdür.|4,5|  
 |`ver_ICorDebugManagedCallback`|[Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[Icordebugunmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebug`|[Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)|1.0|  
@@ -151,7 +151,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAssembly`|[Icordebugassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)|1.0|  
 |`ver_ICorDebugProcess`|[Icordebugprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)|1.0|  
 |`ver_ICorDebugBreakpoint`|[Icordebugbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)|1.0|  
-|`ver_ICorDebugFunctionBreakpoint`|[Icordebugfunctionbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugModuleBreakpoint`|[Icordebugmodulebreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugValueBreakpoint`|[Icordebugvaluebreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugStepper`|[ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)|1.0|  
@@ -191,7 +191,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAppDomainEnum`|[Icordebugappdomainenum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)|1.0|  
 |`ver_ICorDebugAssemblyEnum`|[Icordebugassemblyenum](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)|1.0|  
 |`ver_ICorDebugEditAndContinueErrorInfo`|[Icordebugeditandcontinueerrorınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)|1.0|  
-|`ver_ICorDebugEditAndContinueSnapshot`|[Icordebugeditandcontinuesnapshot](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)|1.0|  
+|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)|1.0|  
 |`ver_ICorDebugManagedCallback2`|[Icordebugmanagedcallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)|2,0|  
 |`ver_ICorDebugAppDomain2`|[Icordebugappdomain2](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-interface.md)|2,0|  
 |`ver_ICorDebugProcess2`|[Icordebugprocess2](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-interface1.md)|2,0|  
@@ -219,32 +219,32 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAppDomain3`|[Icordebugappdomain3](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)|4,5|  
 |`ver_ICorDebugCode3`|[Icordebugcode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)|4,5|  
 |`ver_ICorDebugILFrame3`|[Icordebugılframe3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)|4,5|  
-|`CorDebugLatestVersion`|En son sürümü tüm kendi hizmet paketleri de dahil olmak üzere, .NET Framework sürümüdür.|-|  
+|`CorDebugLatestVersion`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework'ün en son sürümü sürümüdür.|-|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata ayıklayıcısı kullanabilirsiniz `CorDebugInterfaceVersion` numaralandırmada [Createdebuggingınterfacefromversion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) işlevi yüksek hata ayıklayıcı destekleyen .NET Framework sürümünü belirtin.  
+ Bir hata ayıklayıcı kullanabilirsiniz `CorDebugInterfaceVersion` numaralandırmada [Createdebuggingınterfacefromversion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) hata ayıklayıcısının desteklediği .NET Framework'ün en yüksek sürümü belirtmek için işlev.  
   
-## <a name="interface-names"></a>Arabirim adları  
- Hata ayıklama API'si arabirimi adlarında sonunda görünür numarası (örneğin, "3" olarak `ICorDebugThread3`) değil, .NET Framework sürümünü arabirimi sürümünü belirtir. Tüm arabirimi adlarının hata ayıklama API'si .NET Framework sürüm 1 sunulan arabirimleri dışında sürüm numaralarını içerir. Arabirim sürüm numaralarını and.NET Framework sürüm numaralarını arasındaki bir ilişkiyi içerik olarak farklı.  
+## <a name="interface-names"></a>Arabirim adı  
+ Hata ayıklama API Arabirimi adların sonuna sayı (örneğin, "3" `ICorDebugThread3`) arabirimi, .NET Framework'ün sürümü olmayan sürümünü belirtir. Hata ayıklama API'sindeki tüm arabirimi adları, .NET Framework sürüm 1 sunulan arabirimler dışında sürüm numaralarını içerir. Arabirimi sürüm numaralarını and.NET Framework sürüm numaraları arasındaki bir ilişkiyi içerik olarak farklı.  
   
--   Tüm örtük olarak sürüm 1 olduğundan .NET Framework sürüm 1.0 sunulan arabirimleri sayılar dahil etmeyin.  
+-   Tüm örtük olarak sürüm 1 olduğundan, .NET Framework sürüm 1.0 sunulan arabirimler numaralarını dahil değildir.  
   
--   .NET Framework sürüm 1.1 sürüm 1.0 arayüzleri kullanır ve tüm yeni hata ayıklama arabirimleri sunmaz.  
+-   .NET Framework sürüm 1.1, 1.0 sürümü arabirimleri kullanır ve herhangi bir yeni hata ayıklama arabirimleri sunmaz.  
   
--   .NET Framework 2.0 sürümünde sunulan 14 hata ayıklama arabirimleri kendi sürümünün mantıksal uzantıları 1 ortaklarınıza ve adlarında "2" sayısını içerir.  
+-   .NET Framework 2.0 sürümünde sunulan 14 hata ayıklama arabirimleri mantıksal uzantıları kendi sürüm 1 ortaklarınıza ve "2" sayısı adlarını içerir.  
   
--   .NET Framework sürüm 3.0 ve 3.5 var olan .NET Framework 2.0 arabirimleri kullanın ve yeni arabirimlerden tanıtmak değil.  
+-   .NET Framework 3.0 ve 3.5 sürümlerini mevcut .NET Framework 2.0 arabirimleri kullanır ve hiçbir yeni arabirim ekleme.  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Arabirimi sürümleri bir karışımını sunar. Örneğin, her ikisi de `ICorDebugThread3` ve `ICorDebugThread4` üçüncü ve dördüncü sürümleri görünen `ICorDebugThread` arabirimi. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Ayrıca ilk sürümünü getirmektedir `ICorDebugStackWalk` arabirimi ve ikinci sürümü `ICorDebugNativeFrame` arabirimi (`ICorDebugNativeFrame2`).  
+-   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Arabirimi sürümleri bir karışımını sunar. Örneğin, her ikisi de `ICorDebugThread3` ve `ICorDebugThread4` üçüncü ve dördüncü sürümlerini görünen `ICorDebugThread` arabirimi. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] İlk sürümü de tanıtır `ICorDebugStackWalk` arabirimi ve ikinci sürümü `ICorDebugNativeFrame` arabirimi (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

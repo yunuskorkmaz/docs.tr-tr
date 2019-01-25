@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma'
+title: 'Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536340"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl Yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma
-<xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevlerini ekler <xref:System.Threading> ad alanı; ancak, <xref:System.Threading> ad alanı tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [BackgroundWorker bileşenine genel bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma
+<xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı; ancak <xref:System.Threading> ad alanı korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
   
- Windows Forms kendiliğinden boş iş parçacıklı olan yerel Win32 windows tabanlı olduğundan Windows Forms tek iş parçacıklı (STA) modeli kullanır. STA modeli bir pencere hiçbir iş parçacığı üzerinde oluşturulabilir ancak oluşturulduktan sonra iş parçacığı geçemezsiniz, ve ona tüm işlev çağrıları kendi oluşturma iş parçacığı üzerinde gerçekleşmesi anlamına gelir. Windows Forms dışında .NET Framework sınıfları boş iş parçacığı modelini kullanın. .NET Framework iş parçacığı oluşturma hakkında daha fazla bilgi için bkz: [parçacıkları](../../../../docs/standard/threading/index.md).  
+ Windows Forms kendiliğinden boş iş parçacıklı yerel Win32 windows üzerinde bağlı olduğu Windows Forms tek iş parçacıklı grup (STA) modeli kullanır. STA modelini bir pencere bir iş parçacığı üzerinde oluşturulabilir ancak iş parçacığı oluşturulduktan sonra geçiş yapamazsınız, ve onu tüm işlev çağrılarını kendi oluşturma iş parçacığı üzerinde gerçekleşmesi gerektiğini anlamına gelir. Windows Forms dışında ücretsiz iş parçacıklı model .NET Framework sınıflarını kullanın. .NET Framework'teki iş parçacığı oluşturma hakkında daha fazla bilgi için bkz: [parçacıkları](../../../../docs/standard/threading/index.md).  
   
- Denetimin oluşturma iş parçacığı dışında öğesinden çağrılması gereken denetim üzerinde herhangi bir yöntem için (üzerinde yürütülen) sıralanması gerekir, STA modeli gerektiriyor denetimin oluşturma iş parçacığı. Taban sınıfı <xref:System.Windows.Forms.Control> çeşitli yöntemler sağlar (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, ve <xref:System.Windows.Forms.Control.EndInvoke%2A>) bu amaç için. <xref:System.Windows.Forms.Control.Invoke%2A> zaman uyumlu yöntemi çağrılar; <xref:System.Windows.Forms.Control.BeginInvoke%2A> zaman uyumsuz yöntem çağrısı yapmaz.  
+ Denetimin oluşturma iş parçacığı dışında öğesinden çağrılması gereken denetim üzerinde herhangi bir yöntem için (üzerinde yürütülen) sıralanması gerekir, STA modelini gerektirir denetimin oluşturma iş parçacığı. Temel sınıf <xref:System.Windows.Forms.Control> çeşitli yöntemler sunar (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, ve <xref:System.Windows.Forms.Control.EndInvoke%2A>) bu amaç için. <xref:System.Windows.Forms.Control.Invoke%2A> zaman uyumlu yöntem çağrısı yapar; <xref:System.Windows.Forms.Control.BeginInvoke%2A> zaman uyumsuz yöntem çağrısı yapar.  
   
- Kullanırsanız, çoklu iş parçacığı kullanımı yoğun bir kaynak hesaplama bir arka plan iş parçacığı üzerinde çalışırken yoğun bir kaynak görevler için denetim kullanıcı arabirimi yanıt verebilir durumda kalabilir.  
+ Kullanırsanız, çoklu iş parçacığı kaynak kullanımı yoğun bir hesaplama bir arka plan iş parçacığı üzerinde çalışırken sizin denetiminizdedir kaynak kullanımlı görevler için kullanıcı arabirimi yanıt vermeye devam edebilir.  
   
- Aşağıdaki örnek (`DirectorySearcher`) belirtilen arama dizesine uyan dosyaları için bir arka plan iş parçacığı özyinelemeli olarak aramak bir dizin kullanır ve ardından arama sonucu içeren bir liste kutusu doldurur birden çok iş parçacıklı bir Windows Forms denetimini gösterir. Örnek tarafından gösterilen anahtar kavramları aşağıdaki gibidir:  
+ Aşağıdaki örnek (`DirectorySearcher`) belirtilen arama dizesi ile eşleşen dosyaları için bir arka plan iş parçacığı yinelemeli olarak ara bir dizin kullanır ve ardından arama sonucu içeren bir liste kutusu doldurur birden çok iş parçacıklı bir Windows Forms denetimi gösterir. Örnek tarafından gösterilen anahtar kavramları aşağıdaki gibidir:  
   
--   `DirectorySearcher` arama yapmak için yeni bir iş parçacığı başlatır. İş parçacığı yürütür `ThreadProcedure` sırayla yardımcı çağıran yöntemi `RecurseDirectory` gerçek arama yapmak ve liste kutusunu doldurmak için yöntemi. Ancak, liste kutusunu doldurma iş parçacıkları arası çağrı, sonraki iki madde işaretli öğeleri açıklandığı gibi'gerektirir.  
+-   `DirectorySearcher` arama yapmak için yeni bir iş parçacığı başlatılır. İş parçacığını yürüten `ThreadProcedure` sırayla yardımcı çağıran yöntemi `RecurseDirectory` gerçek arama yapın ve liste kutusunu doldurmak için yöntemi. Ancak, liste kutusunu doldurma iş parçacıkları arası çağrı, sonraki iki madde işaretli öğeleri açıklandığı gibi'gerektirir.  
   
--   `DirectorySearcher` tanımlar `AddFiles` dosyaları için bir liste kutusu; ekleme yöntemi ancak `RecurseDirectory` doğrudan çağrılamaz `AddFiles` çünkü `AddFiles` yalnızca oluşturulan STA parçacığında yürütebilir `DirectorySearcher`.  
+-   `DirectorySearcher` tanımlar `AddFiles` bir liste kutusuna; dosyaları ekleme yöntemi ancak `RecurseDirectory` doğrudan çağrılamaz `AddFiles` çünkü `AddFiles` oluşturulan yalnızca STA iş parçacığında yürütebilir `DirectorySearcher`.  
   
--   Tek yolu `RecurseDirectory` çağırabilirsiniz `AddFiles` iş parçacıkları arası çağrı — diğer bir deyişle, göre çağırma <xref:System.Windows.Forms.Control.Invoke%2A> veya <xref:System.Windows.Forms.Control.BeginInvoke%2A> sıralamakta `AddFiles` oluşturma iş parçacığı için `DirectorySearcher`. `RecurseDirectory` kullanan <xref:System.Windows.Forms.Control.BeginInvoke%2A> böylece çağrısı zaman uyumsuz olarak yapılabilir.  
+-   Tek yolu `RecurseDirectory` çağırabilirsiniz `AddFiles` bir iş parçacıkları arası çağrı — diğer bir deyişle, çağırarak <xref:System.Windows.Forms.Control.Invoke%2A> veya <xref:System.Windows.Forms.Control.BeginInvoke%2A> sıralamakta `AddFiles` oluşturma iş parçacığı için `DirectorySearcher`. `RecurseDirectory` kullanan <xref:System.Windows.Forms.Control.BeginInvoke%2A> böylece çağrı zaman uyumsuz olarak yapılabilir.  
   
--   Bir yöntem hazırlama bir işlev işaretçisi veya geri çağırma denk gerektirir. Bu, .NET Framework'teki temsilcileri kullanılarak gerçekleştirilir. <xref:System.Windows.Forms.Control.BeginInvoke%2A> bağımsız değişken olarak bir temsilciyi alır. `DirectorySearcher` Bu nedenle bir temsilci tanımlar (`FileListDelegate`), bağlar `AddFiles` örneğine `FileListDelegate` kendi oluşturucusu ve bu temsilci örneği için geçişleri <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Ayrıca arama tamamlandığında, sıralanmış olduğundan bir olayı temsilci tanımlar.  
+-   Bir yöntem hazırlama eşdeğer bir işlev işaretçisine veya geri çağırma gerektirir. Bu, .NET Framework'teki temsilcileri kullanma gerçekleştirilir. <xref:System.Windows.Forms.Control.BeginInvoke%2A> bir temsilci, bir bağımsız değişken olarak alır. `DirectorySearcher` Bu nedenle bir temsilci tanımlar (`FileListDelegate`), bağlar `AddFiles` örneğine `FileListDelegate` , kurucu ve bu temsilci örneğini geçişleri <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Ayrıca, arama tamamlandığında sıralanmış bir olay temsilci tanımlar.  
   
 ```vb  
 Option Strict  
@@ -569,8 +569,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## <a name="using-the-multithreaded-control-on-a-form"></a>Bir Form üzerinde birden çok iş parçacıklı Denetimi'ni kullanma  
- Aşağıdaki örnekte gösterildiği nasıl birden çok iş parçacıklı `DirectorySearcher` denetimi bir form üzerinde kullanılabilir.  
+## <a name="using-the-multithreaded-control-on-a-form"></a>Form üzerindeki birden çok iş parçacıklı denetimi kullanma  
+ Aşağıdaki örnekte gösterildiği nasıl çok iş parçacıklı `DirectorySearcher` denetimi form üzerinde kullanılabilir.  
   
 ```vb  
 Option Explicit  
@@ -762,7 +762,7 @@ namespace SampleUsage
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ComponentModel.BackgroundWorker>  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ComponentModel.BackgroundWorker>
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

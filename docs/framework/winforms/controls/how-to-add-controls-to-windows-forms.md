@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarına Denetimler Ekleme'
+title: "Nasıl yapılır: Windows Forms'a denetimler ekleme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611364"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Formlarına Denetimler Ekleme
+# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a denetimler ekleme
 Çoğu forms formunun yüzeyine denetimler ekleyerek, bir kullanıcı arabirimi (UI) tanımlamak için tasarlanmıştır. A *denetimi* bilgilerini görüntülemek veya kullanıcı girişi kabul etmek için kullanılan bir form üzerinde bir bileşendir. Denetimleri hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "44213098"
   
 ### <a name="to-draw-a-control-on-a-form"></a>Formda bir denetim çizmek için  
   
-1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: görüntü Windows Forms Tasarımcısı'nda](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  İçinde **araç kutusu**, formunuza eklemek istediğiniz denetim tıklayın.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44213098"
   
 ### <a name="to-drag-a-control-to-a-form"></a>Bir forma bir denetimi sürükleyin  
   
-1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: görüntü Windows Forms Tasarımcısı'nda](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  İçinde **araç kutusu**, formunuza sürükleyin ve istediğiniz denetim tıklayın.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "44213098"
     > [!IMPORTANT]
     >  Yerel bir güvenlik riski ağ üzerinden bilgisayarınıza bir kötü amaçlı başvurarak sunabileceğinize `UserControl`. Bu, yalnızca, yanlışlıkla bunu projenize ekleyerek ardından zararlı olabilecek özel bir denetim oluşturulamaz kötü amaçlı bir kişinin söz konusu olduğunda önemli hale gelir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
+- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'da denetimleri yeniden boyutlandırma](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

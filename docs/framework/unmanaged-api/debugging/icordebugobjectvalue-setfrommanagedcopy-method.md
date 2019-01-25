@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612612"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a>ICorDebugObjectValue::SetFromManagedCopy Yöntemi
-`SetFromManagedCopy` Kullanımdan kalktı. Bu yöntemi çağırmanız gerekmez.  
+`SetFromManagedCopy` artık kullanılmıyor. Bu yöntemi çağırmanız gerekmez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,8 +36,8 @@ HRESULT SetFromManagedCopy (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-    
- 
+## <a name="see-also"></a>Ayrıca bkz.
+
+

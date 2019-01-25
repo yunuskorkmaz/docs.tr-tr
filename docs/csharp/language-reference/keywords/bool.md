@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a274083ad2e518f8f29384e51d692bcf9a9cb61e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590492"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
@@ -52,10 +52,10 @@ Bu örnekte, bir karakter klavyeden girmeniz ve program, girdi karakteri bir har
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

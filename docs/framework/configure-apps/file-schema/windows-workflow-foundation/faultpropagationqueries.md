@@ -3,15 +3,15 @@ title: '&lt;faultPropagationQueries&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 5fd6ffc9560247089c7fbb60b0e5a7d3a417ea6f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 546b37279c8ba58f9dd9f07dabacb7af602ff232
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610064"
 ---
 # <a name="ltfaultpropagationqueriesgt"></a>&lt;faultPropagationQueries&gt;
-İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan sorgu koleksiyonunu temsil eder.  Bu olay bir FaultHandler bir arıza her işlediğinde oluşur. İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bu tür sorgu kullanmanız gerekir. Sorgu Hatası yayma kayıtlara abone olmak izleme katılımcı gereklidir.  
+Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorguları koleksiyonunu temsil eder.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur. Bir etkinlik içinde oluşan hataların işlenmesi izlemek için böyle bir sorgu kullanmanız gerekir. Sorgu hata yayma kayıtlara abone olmak izleme Katılımcısı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
@@ -46,16 +46,16 @@ ms.locfileid: "32755155"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan bir sorgu.  Bu olay bir FaultHandler bir arıza her işlediğinde oluşur.|  
+|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorgu.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Tüm sorgular tarafından tanımlanan belirli bir iş akışı için içeren bir yapılandırma öğesi **activityDefinitionId** özelliği.|  
+|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi **activityDefinitionId** özelliği.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>       
- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

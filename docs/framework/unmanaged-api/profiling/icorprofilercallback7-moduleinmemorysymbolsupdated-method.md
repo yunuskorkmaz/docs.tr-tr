@@ -11,17 +11,17 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa690378a32ffee2def672f02dc8b5582647a5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6183f33b784a0ff79d11310b952949cf13bf58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556200"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated yöntemi
 [.NET Framework 4.6.1 ve sonraki sürümlerinde desteklenen]  
   
- Bellek içi modülü ile ilişkili simgesi akış güncelleştirildiğinde profil oluşturucu bildirir.  
+ Her bir bellek içi modül ile ilişkili simge akışı güncelleştirildiğinde, profil oluşturucu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,26 +33,26 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 #### <a name="parameters"></a>Parametreler  
  [in] `moduleId`  
- Simge akış güncelleştirilmiş bellek içi modülü tanımlayıcısı.  
+ Bellek içi modülü, sembol stream güncelleştirilir tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu geri çağırma ayarlanmasıyla denetlenir [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) çağrılırken olay maskesi bayrağı [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemi.  
+ Bu geri çağırma ayarlanmasıyla denetlenir [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) çağırırken olay maskesini bayrağı [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemi.  
   
 > [!NOTE]
 >  Bu olay şu anda örtük olarak oluşturulmuş veya aracılığıyla değiştirilmiş sembolleri oluşmaz <xref:System.Reflection.Emit> API'leri.  
   
- Hatta zaman simgeleri Önden yönetilen aşırı birine çağrıda sağlanan <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> içerir yöntemleri bir `rawSymbolStore` çalışma zamanı derlemesi için simgeler belirtmek için bağımsız değişken değil gerçekte ilişkilendirmek simgesel veri modülüyle kadar sonra [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırma oluştu. Bu olay, bu tür modülleri simgelerini toplamak için bir sonraki fırsatı sağlar.  
+ Bile ne zaman sembolleri Önden yönetilen aşırı çağrısında sağlanan <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> içeren yöntemleri bir `rawSymbolStore` çalışma zamanı derleme için sembolleri belirtmek için bağımsız değişken değil gerçekten ilişkilendirmek sembolik veri modülü ile kadar sonra [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırma oluştu. Bu olay, bu modüller için semboller toplamak için daha yeni bir fırsat sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ModuleLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)  
- [SetEventMask2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)  
- [ICorProfilerCallback7 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ModuleLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
+- [SetEventMask2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+- [ICorProfilerCallback7 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)

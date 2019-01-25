@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603124"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
 WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmeti aşağıdaki çizimde gösterilmektedir. Güvenlik, verileri düşük önem derecesi olduğundan, ağ doğası gereği güvenli olması beklenir veya WCF altyapısı aşağıdaki katman tarafından sağlanan güvenlik gerekli değildir.  
@@ -23,9 +23,9 @@ WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için ge
 |Taşıma|TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
-|Kimlik doğrulaması|Yok.|  
+|Kimlik doğrulaması|Hiçbiri|  
 |Bütünlüğü|Hiçbiri|  
-|Gizliliği|Yok.|  
+|Gizliliği|Hiçbiri|  
   
 ## <a name="service"></a>Hizmet  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
@@ -112,7 +112,7 @@ WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için ge
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.NetTcpBinding>  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.NetTcpBinding>
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

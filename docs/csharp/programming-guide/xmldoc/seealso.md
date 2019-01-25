@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: eec4a0c2041d7d10b5887950bfec03ec8847c82b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e75480db9aebdeb2199694168abf4f774773b9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543558"
 ---
 # <a name="ltseealsogt-c-programming-guide"></a>&lt;SeeAlso&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,7 +41,7 @@ ms.locfileid: "53244797"
 ## <a name="example"></a>Örnek  
  Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<seealso >.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

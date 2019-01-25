@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529167"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlaması ve kullanılan aktarım bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı taşıma HTTP ve taşıma güvenliğini sağlamak için birincil mekanizma Güvenli Yuva Katmanı (SSL) yaygın olarak HTTPS adlı HTTP üzerinden. Bu konu, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmalarını açıklar.  
@@ -47,13 +47,13 @@ Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlam
  Aşağıdaki bölümlerde, diğer istemci kimlik bilgisi türleri açıklanmaktadır.  
   
 #### <a name="basic"></a>Temel  
- IIS temel kimlik doğrulaması yöntemine karşılık gelir. Bu modu kullanırken, IIS sunucusunun Windows kullanıcı hesapları ve uygun NTFS dosya sistemi izinleri ile yapılandırılması gerekir. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [temel kimlik doğrulamasını etkinleştirme ve bölge adını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88592). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: temel kimlik doğrulamasını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88593).  
+ IIS temel kimlik doğrulaması yöntemine karşılık gelir. Bu modu kullanırken, IIS sunucusunun Windows kullanıcı hesapları ve uygun NTFS dosya sistemi izinleri ile yapılandırılması gerekir. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [temel kimlik doğrulamasını etkinleştirme ve bölge adını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88592). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: Temel kimlik doğrulamasını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Sertifika  
  IIS gerektiren bir sertifika ile oturum açmak istemcileri seçeneği vardır. Özelliği, bir Windows hesabı için bir istemci sertifikası eşlemek IIS de sağlar. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [istemci sertifikalarını etkinleştirme IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Özet  
- Özet kimlik doğrulaması temel kimlik doğrulaması için benzer, ancak kimlik bilgileri gönderme düz metin olarak bir karma yerine avantajı sunar. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [Özet kimlik doğrulaması IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: Özet kimlik doğrulamasını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88596).  
+ Özet kimlik doğrulaması temel kimlik doğrulaması için benzer, ancak kimlik bilgileri gönderme düz metin olarak bir karma yerine avantajı sunar. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [Özet kimlik doğrulaması IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: Özet kimlik doğrulaması yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>Windows  
  Bu IIS tümleşik Windows kimlik doğrulaması karşılık gelir. Bu değer ayarlandığında, sunucunun da kendi etki alanı denetleyicisi olarak Kerberos protokolünü kullanan bir Windows etki alanında mevcut bekleniyor. Sunucu, Kerberos tarafından desteklenen bir etki alanı üzerinde değil veya Kerberos sistem başarısız olursa, sonraki bölümde açıklanan NT LAN Manager (NTLM) değeri kullanabilirsiniz. Hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [IIS 6. 0'tümleşik Windows kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=88597). Hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88595).  
@@ -120,5 +120,5 @@ Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlam
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding ve NetMsmqBinding  
  Taşıma tam bir açıklaması için bkz: ileti sıraya alma (daha önce MSMQ olarak da bilinir) ile güvenlik [aktarım güvenliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

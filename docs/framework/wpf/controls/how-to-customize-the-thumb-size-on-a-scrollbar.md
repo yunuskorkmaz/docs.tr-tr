@@ -6,29 +6,29 @@ helpviewer_keywords:
 - customizing thumb size [WPF]
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
-ms.openlocfilehash: 689b73eb58cdfceb2ce5d4e76cbbc3d6c5af8967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c77eb23c1a42051a7c2d81f3454eb51425fa034
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590870"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Nasıl yapılır: ScrollBar Üzerinde Parmak Boyutunu Özelleştirme
-Bu konuda nasıl ayarlanacağını açıklar <xref:System.Windows.Controls.Primitives.Thumb> , bir <xref:System.Windows.Controls.Primitives.ScrollBar> sabit bir boyuta ve için en az bir boyut belirlemek nasıl <xref:System.Windows.Controls.Primitives.Thumb> , bir <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+Bu konu nasıl ayarlanacağını açıklar <xref:System.Windows.Controls.Primitives.Thumb> , bir <xref:System.Windows.Controls.Primitives.ScrollBar> sabit bir boyuta ve için en az bir boyut belirlemek nasıl <xref:System.Windows.Controls.Primitives.Thumb> , bir <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
 ## <a name="example"></a>Örnek  
   
 ## <a name="description"></a>Açıklama  
- Aşağıdaki örnekte bir <xref:System.Windows.Controls.Primitives.ScrollBar> olan bir <xref:System.Windows.Controls.Primitives.Thumb> sabit bir boyuta sahip. Örnek <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> özelliği <xref:System.Windows.Controls.Primitives.Thumb> için <xref:System.Double.NaN> ve yüksekliğini ayarlar <xref:System.Windows.Controls.Primitives.Thumb>.  Yatay oluşturmak için <xref:System.Windows.Controls.Primitives.ScrollBar> ile bir <xref:System.Windows.Controls.Primitives.Thumb> sabit genişliği olan, genişliğini ayarla <xref:System.Windows.Controls.Primitives.Thumb>.  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Primitives.ScrollBar> olan bir <xref:System.Windows.Controls.Primitives.Thumb> sabit bir boyuta sahip. Örnek <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> özelliği <xref:System.Windows.Controls.Primitives.Thumb> için <xref:System.Double.NaN> ve yüksekliğini ayarlar <xref:System.Windows.Controls.Primitives.Thumb>.  Yatay oluşturmak için <xref:System.Windows.Controls.Primitives.ScrollBar> ile bir <xref:System.Windows.Controls.Primitives.Thumb> genişliğini ayarlamak, sabit genişlik olan <xref:System.Windows.Controls.Primitives.Thumb>.  
   
 ## <a name="code"></a>Kod  
  [!code-xaml[ScrollBarCustomThumbSize#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#1)]  
   
 ## <a name="description"></a>Açıklama  
- Aşağıdaki örnekte bir <xref:System.Windows.Controls.Primitives.ScrollBar> olan bir <xref:System.Windows.Controls.Primitives.Thumb> minimum boyutu. Örnek değerini ayarlar <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeightKey%2A>. Yatay oluşturmak için <xref:System.Windows.Controls.Primitives.ScrollBar> ile bir <xref:System.Windows.Controls.Primitives.Thumb> en küçük genişliği olan, Ayarla <xref:System.Windows.SystemParameters.HorizontalScrollBarButtonWidthKey%2A>.  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Primitives.ScrollBar> olan bir <xref:System.Windows.Controls.Primitives.Thumb> en küçük boyutu. Örnek ayarlar <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeightKey%2A>. Yatay oluşturmak için <xref:System.Windows.Controls.Primitives.ScrollBar> ile bir <xref:System.Windows.Controls.Primitives.Thumb> ayarlayın, en küçük genişliği olan <xref:System.Windows.SystemParameters.HorizontalScrollBarButtonWidthKey%2A>.  
   
 ## <a name="code"></a>Kod  
  [!code-xaml[ScrollBarCustomThumbSize#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)

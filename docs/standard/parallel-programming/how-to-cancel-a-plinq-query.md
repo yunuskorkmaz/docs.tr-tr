@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PLINQ Sorgusunu İptal Etme'
+title: 'Nasıl yapılır: PLINQ sorgusunu iptal etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45973098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604307"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
+# <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ sorgusunu iptal etme
 Aşağıdaki örnekler, PLINQ sorgusunu iptal etme için iki yol gösterir. İlk örnek, çoğunlukla veri geçişini oluşan bir sorguyu iptal gösterilmektedir. İkinci örnek, hesaplama açısından pahalıdır bir kullanıcı işlevi içeren bir sorguyu iptal gösterilmektedir.  
   
 > [!NOTE]
@@ -52,6 +52,6 @@ Aşağıdaki örnekler, PLINQ sorgusunu iptal etme için iki yol gösterir. İlk
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- <xref:System.Linq.ParallelEnumerable>
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

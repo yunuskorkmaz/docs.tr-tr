@@ -2,12 +2,12 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582441"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 Bu yapılandırma öğesi, bir UDP bağlama üzerinden Duyurunun ileti göndermek için hizmetler tarafından kullanılan standart bir uç nokta tanımlar. Bu, sabit bir sözleşme içeriyor ve iki bulma sürümlerini destekler. Buna ek olarak sabit bir UDP bağlama ve WS-bulma (WS-bulma Nisan 2005 veya WS-bulma sürüm 1.1) belirtimleri belirtilen varsayılan adresi değeri vardır. Duyurunun ileti alma ve gönderme için kullanmak üzere çok noktaya yayın adresini belirtebilirsiniz.  
@@ -46,7 +46,7 @@ Bu yapılandırma öğesi, bir UDP bağlama üzerinden Duyurunun ileti gönderme
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Udpannouncementendpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|UDP taşıma için UDP uç nokta yapılandırmanıza olanak tanıyan ayarların koleksiyonudur.|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|UDP taşıma için UDP uç nokta yapılandırmanıza olanak tanıyan ayarların koleksiyonudur.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -79,5 +79,5 @@ Bu yapılandırma öğesi, bir UDP bağlama üzerinden Duyurunun ileti gönderme
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1055366576f45a7ca137b6d8170d1786c2ba4492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cb3a2235325533d5bd943a530a0a8e5b77100e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519950"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs Metodu
-Hala ayrılan tüm JIT yeniden derlenmesi sürümlerini belirtilen işlev tanımlamak kimlikleri bir dizi döndürür. Bu, daha sonra geri döndürüldü, ancak (örneğin, geri döndürülen işlevi içeren uygulama etki alanı hala kullanımda olduğunda) henüz serbest işlevleri JIT yeniden derlenmesi sürümlerini içerir.  
+Yine de atanan tüm JIT yeniden derlenen sürümlerini belirtilen işlev tanımlamak kimlikleri dizisi döndürür. Bu, daha sonra geri döndürüldü, ancak (örneğin, geri döndürülen işlevi içeren uygulama etki alanı hala kullanımda olduğunda) henüz serbest işlevlerin JIT yeniden derlenen sürümleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,30 +39,30 @@ HRESULT GetReJITIDs (
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] `FunctionID` Olan sürümler Numaralandırılacak işlevi örneğinin.  
+ [in] `FunctionID` Hangi sürümleri Numaralandırılacak işlevi örneği.  
   
  `cReJitIds`  
- [in] JIT yeniden derlenmesi kimlikleri ayrılan sayısı `reJitIds` dizi.  
+ [in] JIT yeniden derlenen kimlikleri ayrıldığı sayısı `reJitIds` dizisi.  
   
  `pcReJitIds`  
- [out] JIT yeniden derlenmesi kimlikleri gerçek sayısı.  
+ [out] JIT yeniden derlenen kimlikleri gerçek sayısı.  
   
  `reJitIds`  
- [out] Belirtilen işlev için JIT yeniden derlenmesi kimlikleri içerecek bir çağıran tarafından ayrılmış bir dizi.  
+ [out] Belirtilen işlev için JIT yeniden derlenen kimlikleri içeren bir arayan tarafından ayrılmış dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetReJITIDs` verilen işlevin örneği için etkin JIT yeniden derlenmesi kimlikleri numaralandırır. Diğer aynı kullanım deseni takip `ICorProfilerInfo` arayana ayrılan arabellekleri kabul işlevleri.  
+ `GetReJITIDs` verilen işlevin örneği için etkin JIT yeniden derlenen kimlikleri numaralandırır. Diğer olarak aynı kullanım deseni izler `ICorProfilerInfo` arayana ayrılan arabellekler kabul işlevleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

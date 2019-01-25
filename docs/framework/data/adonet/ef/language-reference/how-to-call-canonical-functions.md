@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: kurallı işlevler çağırma'
+title: 'Nasıl yapılır: Kurallı işlevler çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 1a936c5374137dbe25e16ababfa8a4f0c86edbbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75cbb08950675ef53770a288bbf7b6d0ef3a5ece
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613262"
 ---
-# <a name="how-to-call-canonical-functions"></a>Nasıl yapılır: kurallı işlevler çağırma
+# <a name="how-to-call-canonical-functions"></a>Nasıl yapılır: Kurallı işlevler çağırma
 <xref:System.Data.Objects.EntityFunctions> Sınıfı LINQ to Entities sorgularında kullanmak için kurallı işlevler sunan yöntemlerini içerir. Kurallı işlevler hakkında daha fazla bilgi için bkz: [kurallı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
 > [!NOTE]
@@ -34,6 +34,6 @@ ms.locfileid: "43521776"
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#2)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

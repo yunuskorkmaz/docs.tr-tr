@@ -2,12 +2,12 @@
 title: XML şemasından (XSD) DataSet ilişkileri oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b74c992c4569512a8692b70663002fd609d3501e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546146"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML şemasından (XSD) DataSet ilişkileri oluşturma
 İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütunu arasında bir ilişki oluşturur. Göstermek için üç yol vardır bir **veri kümesi** ilişkisi içinde bir XML Şeması Tanım Dili (XSD) şeması:  
@@ -97,5 +97,5 @@ msdata:childkey="" />
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Benzersiz ve yabancı anahtar kısıtlamalarını oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,30 +2,30 @@
 title: (Visual Basic) dosya erişimi için Async kullanma
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: e12eaa57d0f7186e9d281b89ec3abd26280e12ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76abb5460bbadd234d761a0cce2f0082bb5894a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587508"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>(Visual Basic) dosya erişimi için Async kullanma
-Async özelliği dosyalara erişmek için kullanabilirsiniz. Async özelliği kullanarak, geri çağrılar kullanarak veya birden çok yöntem veya lambda ifadeleri kodunuzu bölme olmadan zaman uyumsuz yöntemleri çağırabilirsiniz. Zaman uyumlu bir kod zaman uyumsuz hale getirmek için yalnızca zaman uyumlu yöntemi yerine zaman uyumsuz bir yöntem çağrısı ve birkaç anahtar sözcükleri kodu ekleyin.  
+Async özelliği dosyalara erişmek için kullanabilirsiniz. Async özelliği'ni kullanarak geri çağırmaları kullanarak veya birden çok yöntemlerde veya lambda ifadelerinde kodunuzu bölme olmadan zaman uyumsuz yöntemleri çağırabilir. Eş zamanlı kod zaman uyumsuz hale getirmek için yalnızca zaman uyumlu bir yöntem yerine zaman uyumsuz yöntemini çağırın ve birkaç anahtar sözcükler için kodu ekleyin.  
   
- Dosya erişim çağrıları asynchrony eklemek için aşağıdaki nedenlerden düşünebilirsiniz:  
+ Dosya erişim çağrıları zaman uyumsuzluğu eklemek için aşağıdaki nedenlerden düşünebilirsiniz:  
   
--   İşlemi başlatan kullanıcı Arabirimi iş parçacığı diğer işlemleri gerçekleştirmesi çünkü asynchrony UI uygulamaları daha esnek hale getirir. Kullanıcı Arabirimi iş parçacığı kod yürütülmelidir, (örneğin, 50'den fazla milisaniye) daha uzun bir zaman alır, UI g/ç tamamlanana ve kullanıcı Arabirimi iş parçacığı, yeniden klavye işlemek ve giriş ve diğer olayları fare kadar donabilir.  
+-   İşlemi başlatan kullanıcı Arabirimi iş parçacığı başka işleri gerçekleştirebilirsiniz çünkü faaliyetler UI uygulamaları daha hızlı sağlar. UI iş parçacığı kod yürütülmesi gerekiyorsa (örneğin, 50'den fazla milisaniye) uzun zaman alan, UI ve UI iş parçacığı yeniden klavye işleyebilir ve giriş ve diğer olayları fare g/ç işlemi tamamlanana kadar donabilir.  
   
--   İş parçacığı gereksinimini azaltarak ASP.NET ölçeklenebilirliğini ve diğer sunucu tabanlı uygulamalar asynchrony artırır. Uygulama yanıt başına adanmış bir iş parçacığı kullanır ve bir bin istekleri aynı anda işlenmekte, binlerce iş parçacığı gereklidir. Zaman uyumsuz işlemleri genellikle bir iş parçacığı bekleme sırasında kullanmanız gerekmez. Varolan g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanırlar.  
+-   İş parçacıkları gereksinimini azaltarak ASP.NET ölçeklenebilirliğini ve diğer sunucu tabanlı uygulamalar faaliyetler artırır. Binlerce iş parçacıkları, adanmış bir iş parçacığı başına yanıt uygulama kullanıyorsa ve binlerce istekleri aynı anda işlenmekte gereklidir. Zaman uyumsuz işlemler genellikle bir iş parçacığı bekleme sırasında kullanmanız gerekmez. Mevcut g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanırlar.  
   
--   Dosya erişim işlemi gecikme geçerli koşullar altında çok düşük olabilir, ancak gecikme gelecekte önemli ölçüde artırabilir. Örneğin, bir dosya dünya genelindeki bir sunucuya taşınması.  
+-   Bir dosya erişim işlemi gecikme süresini geçerli koşullar altında çok düşük olabilir ancak gecikme süresi gelecekte büyük ölçüde artırabilir. Örneğin, bir dosya dünya genelindeki bir sunucuya taşınabilir.  
   
--   Eklenen Async özelliği kullanılarak yükünü küçük.  
+-   Ek yükü zaman uyumsuz özelliğini kullanarak küçük.  
   
 -   Zaman uyumsuz görevleri kolayca paralel olarak çalıştırılabilir.  
   
 ## <a name="running-the-examples"></a>Örnekleri çalıştırma  
- Bu konudaki örnekler çalıştırmak için oluşturabileceğiniz bir **WPF uygulaması** veya **Windows Forms uygulaması** ve ardından ekleyin bir **düğmesini**. Düğmenin içinde `Click` olay, her örnekte ilk yöntemine bir çağrı ekleyin.  
+ Bu konudaki örnekleri çalıştırmak için oluşturabileceğiniz bir **WPF uygulaması** veya **Windows Forms uygulaması** ve ardından eklemek bir **düğmesi**. Düğmenin içinde `Click` olay, her örnekte ilk yönteme bir çağrı ekleyin.  
   
  Aşağıdaki örneklerde, aşağıdakiler dahil `Imports` deyimleri.  
   
@@ -38,13 +38,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>FILESTREAM sınıfının kullanın  
- Bu konuda kullanım örnekleri <xref:System.IO.FileStream> işletim sistemi düzeyinde gerçekleşmesi zaman uyumsuz g/ç neden olan bir seçenek olan sınıf. Bu seçeneği kullanarak, bir iş parçacığı havuzu iş parçacığı birçok durumda engelleme önleyebilirsiniz. Bu seçeneği etkinleştirmek için belirttiğiniz `useAsync=true` veya `options=FileOptions.Asynchronous` oluşturucu çağrısı bağımsız değişkeni.  
+## <a name="use-of-the-filestream-class"></a>FILESTREAM sınıfının kullanımı  
+ Bu konuda kullanım örnekleri <xref:System.IO.FileStream> işletim sistemi düzeyinde gerçekleşmesi zaman uyumsuz g/ç neden olan bir seçenek olduğu sınıf. Bu seçeneği kullanarak, çoğu durumda bir iş parçacığı havuzu iş parçacığını engelleme önleyebilirsiniz. Bu seçeneği etkinleştirmek için belirttiğiniz `useAsync=true` veya `options=FileOptions.Asynchronous` Oluşturucusu çağrısında bağımsız değişken.  
   
- Bu seçenek ile kullanamazsınız <xref:System.IO.StreamReader> ve <xref:System.IO.StreamWriter> doğrudan bir dosya yolu belirterek açarsanız. Ancak, bunları sağlarsanız, bu seçeneği kullanabilirsiniz bir <xref:System.IO.Stream> , <xref:System.IO.FileStream> açılan sınıfı. İş parçacığı havuzu iş parçacığı engellendi olsa bile, kullanıcı Arabirimi iş parçacığı bekleme sırasında engellenmiş değil çünkü zaman uyumsuz çağrılar UI uygulamalarında daha hızlı olduğunu unutmayın.  
+ Bu seçeneği kullanamazsınız <xref:System.IO.StreamReader> ve <xref:System.IO.StreamWriter> doğrudan bir dosya yolu belirterek açarsanız. Ancak, bunları sağlarsanız, bu seçeneği kullanabilirsiniz bir <xref:System.IO.Stream> , <xref:System.IO.FileStream> sınıfı açılır. Bir iş parçacığı havuzu iş parçacığı engellenir bile, UI iş parçacığı, bekleme sırasında bloke değildir çünkü zaman uyumsuz çağrıları UI uygulamaları daha hızlı olduğunu unutmayın.  
   
 ## <a name="writing-text"></a>Metin yazma  
- Aşağıdaki örnek metin bir dosyaya yazar. Her deyimi await, yöntem hemen çıkar. Dosya g/ç tamamlandığında yöntemi bekleme deyimi aşağıdaki ifadesine sürdürür. Zaman uyumsuz değiştiricisi bekleme deyimini yöntemleri tanımında olduğuna dikkat edin.  
+ Aşağıdaki örnek, bir dosyaya metin yazar. Her deyim await, yöntem hemen çıkar. Dosya g/ç işlemi tamamlandığında, yöntem bekleme ifadesinin izleyen deyime sürdürür. Zaman uyumsuz değiştirici bekleme ifadesinin yöntem tanımında olduğuna dikkat edin.  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -66,17 +66,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- Deyim özgün örnek sahip `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, aşağıdaki iki deyimlerinin daraltmaya olduğu:  
+ Deyimi özgün örneğe sahip `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, aşağıdaki iki deyimi, bir kısaltma olduğundan:  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- İlk ifade bir görev döndürür ve başlatmak dosya işleme neden olur. Bekleme ikinci deyimiyle hemen çıkmak ve farklı bir görev dönmek yöntem neden olur. Dosya daha sonra işleme tamamlandıktan sonra yürütme bekleme aşağıdaki deyim döndürür. Daha fazla bilgi için bkz: [akış denetimi zaman uyumsuz programlarda (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ İlk deyim, bir görev döndürür ve başlatmak, dosya işleme neden olur. Await ile ikinci deyim, yöntem hemen çıkın ve farklı bir görev döndürür neden olur. Dosya daha sonra işleme tamamlandıktan sonra yürütme bekleme takip eden deyime döndürür. Daha fazla bilgi için [zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Metin okuma  
- Aşağıdaki örnek, bir dosyadan metin okur. Metin arabelleğe ve, bu durumda, içine yerleştirilen bir <xref:System.Text.StringBuilder>. Farklı olarak önceki örnekte bekleme değerlendirmesi bir değer oluşturur. <xref:System.IO.Stream.ReadAsync%2A> Yöntemi döndürür bir <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, bekleme değerlendirmesi üreten bir `Int32` değeri (`numRead`) işlemi tamamlandıktan sonra. Daha fazla bilgi için bkz: [zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Aşağıdaki örnek, bir dosyadan metin okur. Metin arabelleğe alınır ve bu durumda, içine yerleştirilen bir <xref:System.Text.StringBuilder>. Önceki örnekte, farklı bir değer await değerlendirilmesiyle üretir. <xref:System.IO.Stream.ReadAsync%2A> Yöntemi döndürür bir <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, await değerlendirilmesiyle üreten bir `Int32` değeri (`numRead`) işlemi tamamlandıktan sonra. Daha fazla bilgi için [zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -118,11 +118,11 @@ End Function
 ```  
   
 ## <a name="parallel-asynchronous-io"></a>Paralel zaman uyumsuz g/ç  
- Aşağıdaki örnek, 10 metin dosyaları yazarak paralel işleme gösterir. Her bir dosyanın <xref:System.IO.Stream.WriteAsync%2A> yöntemi görevlerin bir listesi için daha sonra eklenen bir görev döndürür. `Await Task.WhenAll(tasks)` Deyimi yöntemi çıkar ve sürdürür dosyası işleme yöntemi içinde tüm görevleri tamamlayın.  
+ Aşağıdaki örnek, 10 metin dosyaları yazma tarafından paralel işleme gösterir. Her dosya için <xref:System.IO.Stream.WriteAsync%2A> yöntemi görevlerinin listesi için daha sonra eklenen bir görev döndürür. `Await Task.WhenAll(tasks)` Deyimi yöntemin çıkar ve sürdürür dosya işleme olduğunda yöntemi içindeki tüm görevlerin tamamlayın.  
   
- Tüm örnek kapatır <xref:System.IO.FileStream> içinde örnekler bir `Finally` görevler tamamlandıktan sonra engelleyin. Her varsa `FileStream` yerine oluşturulan bir `Imports` deyimi, `FileStream` görev tamamlanmadan önce elden.  
+ Tüm örnek kapatır <xref:System.IO.FileStream> içinde örnekler bir `Finally` görevler tamamlandıktan sonra engelleyin. Her varsa `FileStream` yerine içinde oluşturulmuş bir `Imports` deyimi `FileStream` görev tamamlanmadan önce elden.  
   
- Tüm performans artırma neredeyse tamamen paralel işleme ve zaman uyumsuz işleme olduğuna dikkat edin. Asynchrony avantajları şunlardır: birden çok iş parçacıklarını tie değil ve kullanıcı arabirimi iş parçacığını tie değil.  
+ Herhangi bir performans artışının neredeyse tamamen paralel işleme ve olmayan uyumsuz olduğuna dikkat edin. Faaliyetler avantajları şunlardır: birden çok iş parçacıklarını tie değil ve kullanıcı arabirimi iş parçacığı ' tie değil.  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -158,9 +158,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Kullanırken <xref:System.IO.Stream.WriteAsync%2A> ve <xref:System.IO.Stream.ReadAsync%2A> yöntemleri belirtebilirsiniz bir <xref:System.Threading.CancellationToken>, hangi işlemi Orta akışı iptal etmek için kullanabilirsiniz. Daha fazla bilgi için bkz: [Fine-Tuning zaman uyumsuz uygulamanız (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) ve [yönetilen iş parçacıklarında iptal](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Kullanırken <xref:System.IO.Stream.WriteAsync%2A> ve <xref:System.IO.Stream.ReadAsync%2A> yöntemleri belirtebilirsiniz bir <xref:System.Threading.CancellationToken>, hangi işlemin ortasında akış iptal etmek için kullanabilirsiniz. Daha fazla bilgi için [Fine-Tuning Async uygulamanızda (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) ve [yönetilen iş parçacıklarında iptal](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [(Visual Basic) zaman uyumsuz programlarda denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: Toplu işleçler'
+title: 'Sorgu ifadesi söz dizimi örnekleri: Toplama işleçleri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 4717f7fe438f67a0d40c64724700f7ea78c4c887
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 120dec2511d9a17422c3db83bb0981b74f9eebdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616114"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators"></a>Sorgu ifadesi söz dizimi örnekleri: Toplu işleçler
+# <a name="query-expression-syntax-examples-aggregate-operators"></a>Sorgu ifadesi söz dizimi örnekleri: Toplama işleçleri
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, ve <xref:System.Linq.Enumerable.Sum%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
@@ -40,7 +40,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-csharp[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a>Sayısı  
+## <a name="count"></a>Sayı  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnekte <xref:System.Linq.Enumerable.Count%2A> kişi kimlikleri listesini ve kaç her siparişleri döndürmek için vardır.  
@@ -82,7 +82,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-csharp[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a>TOPLA  
+## <a name="sum"></a>Toplam  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnekte <xref:System.Linq.Enumerable.Sum%2A> toplam süre almak için yöntemi her biri için bağlantı kimliği.  
@@ -90,5 +90,5 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

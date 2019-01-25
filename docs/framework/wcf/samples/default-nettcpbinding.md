@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589993"
 ---
 # <a name="default-nettcpbinding"></a>Varsayılan NetTcpBinding
 Bu örnek, kullanımını gösterir. <xref:System.ServiceModel.NetTcpBinding> bağlama. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu uygulamalardır.  
@@ -122,4 +122,4 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

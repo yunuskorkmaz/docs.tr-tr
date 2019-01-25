@@ -2,12 +2,12 @@
 title: '&lt;filterTables&gt;'
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: 2b537619a276f32c50576561aea03b5fbbb58e7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573065"
 ---
 # <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
 Filtreler eşleştiğinde ileti göndermek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içeren yönlendirme tablosunun tanımı için bir yapılandırma bölümünü temsil eder.  
@@ -51,6 +51,6 @@ Filtreler eşleştiğinde ileti göndermek için hedef uç noktalar ile yönlend
 |-------------|-----------------|  
 |[\<Yönlendirme >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Yönlendirme filtreleri ve yönlendirme tablolarını içeren bir yapılandırma bölümü.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574319"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
 A *genel yordam*ayrıca adlı bir *genel yöntem*, en az bir tür parametreyle tanımlanan bir yordam olduğunu. Bu, çağıran kodu yordam çağrıları her zaman veri türleri, gereksinimleri ile uyumlu hale getirmenizi sağlar.  
@@ -64,11 +64,11 @@ End Sub
   
  Önceki çağrılar `MsgBox` sırasıyla "0", "1" ve "-1" görüntüler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Yordamlar](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Parametre Listesi](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Yordamlar](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Parametre Listesi](../../../../visual-basic/language-reference/statements/parameter-list.md)

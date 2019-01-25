@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma"
+title: 'Nasıl yapılır: Ekleme ve bir ConcurrentDictionary öğeleri kaldırma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543428"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Ekleme ve bir ConcurrentDictionary öğeleri kaldırma
 Bu örnek, ekleyin, alma, güncelleştirme ve öğelerden Kaldır gösterir. bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Bir iş parçacığı açısından güvenli uygulaması bu koleksiyon sınıfıdır. Birden çok iş parçacığı öğeleri aynı anda erişmeye çalışıyor olabilir her bunu kullanmanızı öneririz.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ilk veri ekleme veya kaldırma çalışmadan önce bir anahtar var olup olmadığını denetlemek kod için gereksiz hale getiren çeşitli kullanışlı yöntemler sunar. Aşağıdaki tabloda bu yöntemler listeler ve bunların ne zaman kullanılacağı açıklanır.  
@@ -50,5 +50,5 @@ Bu örnek, ekleyin, alma, güncelleştirme ve öğelerden Kaldır gösterir. bir
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

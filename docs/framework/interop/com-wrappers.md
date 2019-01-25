@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607205"
 ---
 # <a name="com-wrappers"></a>COM Sarmalayıcıları
 COM, .NET Framework nesne modeli birkaç önemli şekilde farklıdır:  
@@ -34,9 +34,9 @@ COM sarmalayıcı genel bakış
   
  Çoğu durumda standart RCW veya çalışma zamanı tarafından oluşturulan CCW sınır COM ve .NET Framework arasında çapraz aramalar için yeterli hazırlama sağlar. Özel öznitelikler kullanarak, çalışma zamanı temsil eden yönetilen ve yönetilmeyen kod yolu isteğe bağlı olarak ayarlayabilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)  
- [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)  
- [Standart sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Nasıl yapılır: çalışma zamanı aranabilir sarmalayıcılarını özelleştirme](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)
+- [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)
+- [Standart sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [Nasıl yapılır: Çalışma zamanı aranabilir sarmalayıcılarını özelleştirme](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

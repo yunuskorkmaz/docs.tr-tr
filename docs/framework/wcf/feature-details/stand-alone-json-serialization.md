@@ -2,19 +2,19 @@
 title: Bağımsız JSON Seri Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618428"
 ---
 # <a name="stand-alone-json-serialization"></a>Bağımsız JSON Seri Hale Getirme
 JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı içinde çalışan JavaScript kodu tarafından kullanılmak üzere tasarlanmış bir veri biçimidir. Bu, Windows Communication Foundation (WCF) oluşturan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimidir.  
   
  Bu biçim, bu durumda, ASP.NET ile - tümleştirme olmadan AJAX hizmetleri oluşturma XML varsayılan ancak JSON seçilebilir kullanılabilir.  
   
- Son olarak, JSON desteğine ihtiyaç duyar, ancak bir AJAX hizmeti oluşturmadığınızı <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> doğrudan JSON verilerinin .NET nesneleri serileştirmek için ve bu tür veriler geri .NET türleri örneğine seri durumdan çıkarılacak mümkün kılar. Bunun nasıl yapılacağı ile ilgili açıklama için bkz: [nasıl yapılır: seri hale getirmek ve JSON verilerini seri durumdan](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Son olarak, JSON desteğine ihtiyaç duyar, ancak bir AJAX hizmeti oluşturmadığınızı <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> doğrudan JSON verilerinin .NET nesneleri serileştirmek için ve bu tür veriler geri .NET türleri örneğine seri durumdan çıkarılacak mümkün kılar. Bunun nasıl yapılacağı ile ilgili açıklama için bkz: [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  JSON ile çalışırken aynı .NET türleri, bazı istisnalar tarafından desteklenen desteklenir <xref:System.Runtime.Serialization.DataContractSerializer>. Desteklenen türleri listesi için bkz. [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). En basit türler, çoğu dizi bu içerir ve koleksiyon türleri de gibi karmaşık türler kullanan <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Geçerli bir JSON anahtar adları  
  Geçerli XML adları seri hale getirici XML kodlar anahtar adları. Örneğin, bir veri üyesi "123" adı ile kodlanmış bir adı gibi gerekir "\_x0031\_\_x0032\_\_x0033\_" "123" geçersiz bir XML öğesi adı olduğundan (ile başlayan bir basamak). Geçersiz XML adlarında bazı uluslararası karakter kümeleriyle benzer bir durum ortaya çıkabilir. Bu JSON işleme XML etkisini açıklaması için bkz: [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [JSON ve Diğer Veri Aktarma Biçimleri için Destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

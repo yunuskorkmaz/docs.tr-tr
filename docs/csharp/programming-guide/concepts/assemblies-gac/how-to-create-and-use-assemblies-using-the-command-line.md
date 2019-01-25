@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma'
+title: 'Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623852"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)
 Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
   
--   `MathLibrary.DLL`: Çalışma zamanında çağrılacak yöntem içerir kitaplık dosyası. Bu örnekte, iki yöntem, DLL içeren `Add` ve `Multiply`.  
+-   `MathLibrary.DLL`: Çalışma zamanında çağrılabilir yöntemleri içeren kitaplık dosyası. Bu örnekte, iki yöntem, DLL içeren `Add` ve `Multiply`.  
   
--   `Add`: Yöntem içerir kaynak dosyası `Add`. Parametrelerini toplamını döndürür. Sınıf `AddClass` yöntemi içeren `Add` ad alanının bir üyesidir `UtilityMethods`.  
+-   `Add`: Yöntemi içeren kaynak dosyayı `Add`. Parametrelerini toplamını döndürür. Sınıf `AddClass` yöntemi içeren `Add` ad alanının bir üyesidir `UtilityMethods`.  
   
--   `Mult`: Yöntem içerir kaynak kodu `Multiply`. Parametrelerini çarpımını döndürür. Sınıf `MultiplyClass` yöntemi içeren `Multiply` ayrıca ad alanının bir üyesidir `UtilityMethods`.  
+-   `Mult`: Yöntemi içeren kaynak kodu `Multiply`. Parametrelerini çarpımını döndürür. Sınıf `MultiplyClass` yöntemi içeren `Multiply` ayrıca ad alanının bir üyesidir `UtilityMethods`.  
   
--   `TestCode`: Dosyayı içeren `Main` yöntemi. Yöntemleri, toplam ve çalışma zamanı bağımsız değişken ürününü hesaplar için DLL dosyası içinde kullanır.  
+-   `TestCode`: İçeren dosyayı `Main` yöntemi. Yöntemleri, toplam ve çalışma zamanı bağımsız değişken ürününü hesaplar için DLL dosyası içinde kullanır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -122,8 +122,8 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
  Komut satırından oluşturma hakkında daha fazla bilgi için bkz. [oluşturma ile komut satırı csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

@@ -2,19 +2,19 @@
 title: 'Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 01bb9e71b494faa3e0fa0db0779227a4ec114c91
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617037"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, müşteriler ve siparişler içerir.  
   
- Konu [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  
+ Konu [örnek XSD dosyası: Müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  
   
- Bir örneği kullanarak bu ilişkiyi avantajlarından yararlanmak LINQ sorguları yazma `Join` yan tümcesi bkz [nasıl yapılır: iki koleksiyonu birleştirme (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Bir örneği kullanarak bu ilişkiyi avantajlarından yararlanmak LINQ sorguları yazma `Join` yan tümcesi bkz [nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -434,6 +434,6 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Örnek XML Belgeleri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

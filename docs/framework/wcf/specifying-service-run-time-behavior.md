@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566751"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmeniz ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz. Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nereye açıklar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya programlama yoluyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz. [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -120,6 +120,6 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Bir hizmet işlemi bir işlem üst bilgisi kabul eden düzeyini belirtir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- [Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)
+- [Nasıl yapılır: Hizmet örneği oluşturmayı denetleme](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

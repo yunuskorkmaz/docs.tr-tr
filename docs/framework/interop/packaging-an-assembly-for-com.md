@@ -18,37 +18,37 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531518"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
-COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı:  
+COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı olabilir:  
   
--   COM uygulamaları tüketebileceği türlerinin listesi  
+-   COM uygulamaları tüketebileceği türlerinin bir listesi  
   
-     Bazı yönetilen türler COM görünmez; Bazı görünür ancak değil creatable; ve görünür ve creatable bazılarıdır. Bir derlemeyi görünmez, görünür, değil creatable ve creatable türleri herhangi bir birleşimini kapsayabilir. Eksiksiz olması için özellikle bu türleri için .NET Framework sunulan türlerinin bir alt olduğunda, COM kullanıma sunmak istediğiniz bir derlemesi türlerini tanımlar.  
+     Bazı yönetilen türlerin, COM görünmez; Bazı görünür ancak değil; ve bazı görünür ve oluşturulabilir. Derleme türleri görünmez, görünür değil ve oluşturulabilir herhangi bir birleşimini içerebilir. Eksiksiz olması için özellikle bu türleri .NET Framework için kullanıma türlerin bir alt kümesi olduğunda, COM kullanıma sunmak istediğiniz derleme türlerini tanımlayın.  
   
      Ek bilgi için bkz: [birlikte çalışma için .NET türlerini niteleme](qualifying-net-types-for-interoperation.md).  
   
 -   Sürüm oluşturma yönergeleri  
   
-     Sınıf arabirimini (COM birlikte çalışma oluşturulan arabirimi) yönetilen sınıflar sürüm kısıtlamalar geçerlidir.  
+     (Bir COM birlikte çalışma tarafından üretilen arabirimi) sınıf arabirimi uygulayan yönetilen sınıflar, sürüm oluşturma kısıtlamalar geçerlidir.  
   
-     Sınıf arabirimi kullanma ile ilgili yönergeler için bkz: [sınıf arabirimi Tanıtımı](com-callable-wrapper.md#introducing-the-class-interface).  
+     Sınıf arabirimi kullanma ile ilgili yönergeler için bkz: [sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface).  
   
 -   Dağıtım yönergeleri  
   
-     Bir yayımcı tarafından imzalanan tanımlayıcı adlı derlemeler genel derleme önbelleğine yüklenebilir. İmzasız derlemeler kullanıcının makinesinde özel derlemeler yüklenmesi gerekir.  
+     Bir yayımcı tarafından imzalanmış tanımlayıcı adlandırılmış derlemeler genel derleme önbelleğine yüklenebilir. İmzasız derlemeler kullanıcının makinesine özel derlemeler yüklenmesi gerekir.  
   
-     Ek bilgi için bkz: [derleme güvenliği konuları](../app-domains/assembly-security-considerations.md).  
+     Ek bilgi için bkz: [derleme güvenlik konuları](../app-domains/assembly-security-considerations.md).  
   
 -   Tür kitaplığı ekleme  
   
-     Çoğu türleri COM uygulama tarafından tüketilen olduğunda bir tür kitaplığı gerektirir. Bu görevi gerçekleştirmek COM geliştiriciler veya bir tür kitaplığı oluşturabilirsiniz. [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:  
+     Çoğu türleri COM uygulama tarafından kullanılan, bir tür kitaplığı gerektirir. Bir tür kitaplığı oluşturabilir veya bu görevi gerçekleştirmek COM geliştiriciler. [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:  
   
     -   [Tür kitaplığı dışarı Aktarıcı](#cpconpackagingassemblyforcomanchor1)  
   
@@ -58,35 +58,35 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
   
     -   [.NET Hizmetleri Yükleme aracı](#cpconpackagingassemblyforcomanchor4)  
   
-     Seçtiğiniz mekanizması bağımsız olarak, yalnızca genel türleri sağladığınız derlemede tanımlanan oluşturulan tür kitaplığı'nda bulunur.  
+     Seçtiğiniz mekanizması bağımsız olarak, oluşturulan tür kitaplığı'nda yalnızca sağladığınız derlemede tanımlanan ortak türler dahil edilir.  
   
-     Tür kitaplığı ayrı bir dosya olarak paketini veya içinde Win32 kaynak dosyası olarak katıştırmak bir. NET tabanlı bir uygulama. Microsoft Visual Basic 6.0 Bu görev sizin için otomatik olarak gerçekleştirilebilir; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile ekleme. Yönergeler için bkz [nasıl yapılır: tür kitaplıklarını Win32 kaynak olarak ekleme. NET tabanlı uygulamalar](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Ayrı bir dosya olarak bir tür kitaplığı paketi veya Win32 kaynak dosyası içinde olarak ekleme bir. AĞ tabanlı bir uygulama. Microsoft Visual Basic 6.0 bu işi sizin için otomatik olarak yapılır; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile eklemeniz gerekir. Yönergeler için [nasıl yapılır: Tür kitaplıkları Win32 kaynakları olarak ekleyin. AĞ tabanlı uygulamalar](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Tür Kitaplığı Dışarı Aktarıcı  
- [Tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) sınıflar ve arabirimler COM tür kitaplığının derlemedeki bulunan dönüştüren bir komut satırı aracıdır. Sınıf türü bilgileri kullanılabilir olduğunda, COM istemcileri .NET sınıfının bir örneği oluşturun ve yeni bir COM nesnesi kabul edildiğinde örneğinin yöntemlerini çağırın. Tlbexp.exe aynı anda tüm bütünleştirilmiş dönüştürür. Derlemede tanımlanan türlerin bir alt kümesi için tür bilgisi üretmek üzere Tlbexp.exe'yi kullanamazsınız.  
+ [Tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) sınıflar ve arabirimler COM türü kitaplık bir derlemede yer alan dönüştürür bir komut satırı aracıdır. Sınıf türü bilgileri kullanılabilir olduğunda, COM istemcilerinin .NET sınıfının bir örneğini oluşturabilir ve bir COM nesnesi sanki olarak örnek yöntemlerini çağırmaya. Tlbexp.exe, tek seferde tüm bütünleştirilmiş dönüştürür. Derlemede tanımlanan türlerin bir alt kümesi için tür bilgisi üretmek üzere Tlbexp.exe'yi kullanamazsınız.  
   
 <a name="cpconpackagingassemblyforcomanchor2"></a>   
 ## <a name="typelibconverter-class"></a>TypeLibConverter sınıfı  
- <xref:System.Runtime.InteropServices.TypeLibConverter> Bulunan sınıfı **System.Runtime.Interop** ad alanı, sınıflar ve arabirimler COM tür kitaplığının derlemedeki bulunan dönüştürür. Bu API önceki bölümde açıklanan tür kitaplığı verici aynı tür bilgileri üretir.  
+ <xref:System.Runtime.InteropServices.TypeLibConverter> Bulunan sınıf **System.Runtime.Interop** ad alanı, sınıflar ve arabirimler COM türü kitaplık bir derlemede yer alan dönüştürür. Bu API önceki bölümde açıklanan tür kitaplığı verici aynı tür bilgileri üretir.  
   
  **TypeLibConverter sınıfı** uygulayan <xref:System.Runtime.InteropServices.ITypeLibConverter>.  
   
 <a name="cpconpackagingassemblyforcomanchor3"></a>   
 ## <a name="assembly-registration-tool"></a>Derleme kayıt aracı  
- [Derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) oluşturabilir ve, uyguladığınızda tür kitaplığının kaydı **TLB:** seçeneği. COM istemcileri tür kitaplıklarının Windows Kayıt Defteri'nde yüklü olmasını gerektirir. Bu seçenek olmadan Regasm.exe türleri yalnızca bir derleme, tür kitaplığı kaydeder. Bir derlemede türlerini kaydetme ve tür kitaplığını kaydetmede ayrı etkinliklerdir.  
+ [Derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) oluşturabilir ve uyguladığınızda, tür kitaplığını kaydetmek **/TLB:** seçeneği. COM istemcileri Windows kayıt defterinde tür kitaplıkları yüklü olmasını gerektirir. Bu seçenek olmadan, Regasm.exe türleri yalnızca bir derleme, tür kitaplığını kaydeder. Bir derlemede türlerini kaydetme ve tür kitaplığı kaydı ayrı etkinliklerdir.  
   
 <a name="cpconpackagingassemblyforcomanchor4"></a>   
 ## <a name="net-services-installation-tool"></a>.NET Hizmetleri Yükleme aracı  
- [.NET Hizmetleri Yükleme aracı (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) yönetilen sınıflar Windows 2000 Bileşen Hizmetleri'ne ekler ve tek bir aracı içindeki çeşitli görevleri birleştirir. Yükleme ve bir derlemeyi kaydetme ek olarak, Regsvcs.exe oluşturmak, kaydetme ve var olan bir COM + 1.0 uygulamasına tür kitaplığı yükleyin.  
+ [.NET Hizmetleri Yükleme aracı (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) yönetilen sınıflar için Windows 2000 Bileşen Hizmetleri ekler ve tek bir araçla içindeki çeşitli görevleri birleştirir. Yükleme ve derlemeyi kaydettirdikten ek olarak, Regsvcs.exe oluşturmak, kaydedin ve var olan bir COM + 1.0 uygulamasına tür kitaplığını yükleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)  
- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)  
- [Sınıf arabirimi Tanıtımı](com-callable-wrapper.md#introducing-the-class-interface)  
- [Bütünleştirilmiş Kod Güvenliği Konuları](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)  
- [Nasıl yapılır: tür kitaplıklarını uygulamalarında Win32 kaynaklar olarak ekleme](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
+- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)
+- [Sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface)
+- [Bütünleştirilmiş Kod Güvenliği Konuları](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
+- [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak katıştırma](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

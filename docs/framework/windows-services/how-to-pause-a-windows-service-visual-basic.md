@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Windows Hizmetini Duraklatma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612729"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Nasıl Yapılır: Windows Hizmetini Duraklatma (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma
 Bu örnekte <xref:System.ServiceProcess.ServiceController> yerel bilgisayarda IIS Yönetici Hizmeti duraklatma bileşeni.  
   
 ## <a name="example"></a>Örnek  
@@ -47,8 +47,8 @@ Bu örnekte <xref:System.ServiceProcess.ServiceController> yerel bilgisayarda II
   
  Kullanarak hizmet bilgilere erişimi kısıtlanabilir <xref:System.Security.Permissions.PermissionState> izinleri ayarlamak için <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Nasıl Yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
+- [Nasıl yapılır: Bir Windows hizmeti (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

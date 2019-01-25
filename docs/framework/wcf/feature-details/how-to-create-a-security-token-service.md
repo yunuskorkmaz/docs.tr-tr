@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir güvenlik belirteci hizmeti oluşturma'
+title: 'Nasıl yapılır: Bir güvenlik belirteci hizmeti oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577264"
 ---
-# <a name="how-to-create-a-security-token-service"></a>Nasıl Yapılır: Bir güvenlik belirteci hizmeti oluşturma
+# <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Bir güvenlik belirteci hizmeti oluşturma
 Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular. Bu protokol, ileti biçimleri ve ileti verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için exchange desenleri tanımlar. Belirli bir güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en sık karşılaşılan bir senaryodur arar: uygulama belirteci verme.  
   
 ## <a name="issuing-tokens"></a>Belirteç  
@@ -123,12 +123,12 @@ Güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan Protokolü uygular
 ## <a name="example"></a>Örnek  
  Güvenlik belirteci hizmeti için tam kod için bkz: [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.SigningCredentials>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>  
- <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
- <xref:System.IdentityModel.Tokens.SamlAssertion>  
- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.SigningCredentials>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
+- <xref:System.IdentityModel.Tokens.SamlSecurityToken>
+- <xref:System.IdentityModel.Tokens.SamlAssertion>
+- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
+- [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)

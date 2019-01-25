@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: bir değişiklik kümesini görüntüleme'
+title: 'Nasıl yapılır: Değişiklik kümesini görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596806"
 ---
-# <a name="how-to-display-a-changeset"></a>Nasıl yapılır: bir değişiklik kümesini görüntüleme
-Tarafından izlenen değişiklikleri görüntüleyebilirsiniz bir <xref:System.Data.Linq.DataContext> kullanarak <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
+# <a name="how-to-display-a-changeset"></a>Nasıl yapılır: Değişiklik kümesini görüntüleme
+Tarafından izlenen değişiklikleri görüntüleyebileceğiniz bir <xref:System.Data.Linq.DataContext> kullanarak <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, şehir Londra olduğundan, Paris için Şehir değiştirir ve değişiklikleri veritabanına geri gönderir müşteriler alır.  
+ Aşağıdaki örnek, müşterilerin, şehir Londra olduğundan, Paris için Şehir değiştirir ve değişiklikleri veritabanına geri gönderir alır.  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- Bu kod çıktısı aşağıdakine benzer görünür. Sonunda Özet sekiz değişikliklerin yapıldığı gösterdiğine dikkat edin.  
+ Bu kodun çıktısı aşağıdakine benzer görünür. Son Özet sekiz değişiklikler yapıldı gösterdiğine dikkat edin.  
   
  `CustomerID: AROUT`  
   
@@ -75,5 +75,5 @@ Tarafından izlenen değişiklikleri görüntüleyebilirsiniz bir <xref:System.D
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

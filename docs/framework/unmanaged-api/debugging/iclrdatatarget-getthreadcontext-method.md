@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604450"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext Metodu
-Hedef işlemdeki verilen iş parçacığı için geçerli yürütme bağlamı alır. Bu yöntem ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.  
+Hedef işlemde verilen iş parçacığı için geçerli yürütme bağlamı alır. Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,27 +44,27 @@ HRESULT GetThreadContext (
  [in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.  
   
  `contextFlags`  
- [in] Döndürülecek bağlam hangi kısımlarının belirtin bayraklar. Uygulama bağlamı en az bu bölümlerini döndürür.  
+ [in] Hangi parçalarının dönmek bağlamının belirten bayraklar. Uygulama bağlamı en az bu bölümlerini döndürür.  
   
  `contextSize`  
  [in] İçerik boyutu.  
   
  `context`  
- [out] Bağlam yerleştirileceği bir arabellek işaretçi.  
+ [out] Bağlam yerleştirileceği bir arabellek için işaretçi.  
   
- Verileri `context` arabellek Win32 biçiminde olmalıdır `CONTEXT` yapısı. Bağlam işlemciye özgü kayıt verilerini, bu nedenle belirtir Win32 tanımını `CONTEXT` yapısı işlemci mimarisine bağlıdır. Win32 tanımını WinNT.h üstbilgi dosyasına `CONTEXT` yapısı.  
+ Verileri `context` arabellek Win32 biçiminde olmalıdır `CONTEXT` yapısı. Bağlam nedenle işlemciye özel kayıt veri belirtir Win32 tanımını `CONTEXT` yapısı işlemci mimarisine bağlıdır. Win32 tanımını WinNT.h üstbilgi dosyasına `CONTEXT` yapısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklama uygulama yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

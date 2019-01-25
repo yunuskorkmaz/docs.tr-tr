@@ -2,12 +2,12 @@
 title: '-target: winmdobj (C# Derleyici Seçenekleri)'
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608972"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target: winmdobj (C# Derleyici Seçenekleri)
 Kullanırsanız **-target: winmdobj** derleyici seçeneği, derleyicinin bir Windows çalışma zamanı (.winmd) ikili dosyasına dönüştürebileceğiniz bir ara .winmdobj dosyası oluşturur. .Winmd dosyası yönetilen dil programlarının yanı sıra, JavaScript ve C++ programları tarafından ardından tarafından kullanılabilir.  
@@ -46,7 +46,7 @@ Kullanırsanız **-target: winmdobj** derleyici seçeneği, derleyicinin bir Win
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [-target (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)

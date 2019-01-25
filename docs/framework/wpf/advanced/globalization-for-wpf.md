@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d2bb4c9a00f31cb87ad8890591aa190fac6384f9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543821"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu yazarken farkında olmanız gereken sorunların tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamalar. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.
@@ -38,7 +38,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Kodlama
+### <a name="encoding"></a>Encoding
  Tarafından desteklenen kodlama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olan [!INCLUDE[TLA#tla_ascii](../../../../includes/tlasharptla-ascii-md.md)], [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 ve UTF-8. Kodlama bildirimi başlangıcında olup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belge. Kodlama özniteliği var ve bayt sırası varsa, ayrıştırıcının UTF-8 olarak varsayar. UTF-8 ve UTF-16 tercih edilen Kodlamalar var. UTF-7 desteklenmiyor. Aşağıdaki örnek, bir UTF-8 kodlamasını belirtmek gösterilmiştir bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya.
 
 ```
@@ -107,7 +107,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
 -   Telugu dili
 
--   Thaana alfabesi
+-   Thaana
 
 -   Tay dili *
 
@@ -117,13 +117,13 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
  Aşağıdaki komut, şu anda desteklenmemektedir:
 
--   Khmer dili
+-   Khmer
 
 -   Eski Hangul Kore dili
 
 -   Myanmar
 
--   Sinhali dili
+-   Sinhala
 
  Tüm yazı sistemi destek altyapıları [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipleri içerebilir [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] daha iyi uluslararası ve yüksek kaliteli tipografik yazı tipleri tasarlamak için yazı tipi oluşturucularını etkinleştiren Düzen tabloları. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Yazı tipi düzeni tablolar, metin düzenini iyileştirmek metin işleme uygulamalarını etkinleştirme glif değişimler, karakter konumlandırması, yaslama ve temel konumlandırma, ilgili bilgiler içerir.
 
@@ -180,5 +180,5 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

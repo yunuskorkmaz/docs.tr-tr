@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 40c0ab5f18d5aae2c99dd66747d3435f0826af8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a81e422c2e6d8c2d342821163f860c5cb54c083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583330"
 ---
 # <a name="configuration-element"></a>\<Yapılandırma > öğesi
 
@@ -33,11 +33,11 @@ Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET 
 
 ## <a name="attributes"></a>Öznitelikler
 
-Yok.
+Hiçbiri
 
 ## <a name="parent-element"></a>Üst öğe
 
-Yok.
+Hiçbiri
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -61,4 +61,4 @@ Her bir yapılandırma dosyası tam olarak bir içermelidir  **\<yapılandırma 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

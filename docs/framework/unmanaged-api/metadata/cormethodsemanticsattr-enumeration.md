@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564087"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr Numaralandırması
-Bir yöntem ve bir ilişkili özelliğin veya olay arasındaki ilişkiyi tanımlayan değerler içeriyor.  
+Bir yöntem ve özellik veya olay arasındaki ilişkiyi tanımlayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,19 +45,19 @@ typedef enum CorMethodSemanticsAttr {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`msSetter`|Yöntemi gerektiğini belirten bir `set` bir özellik için erişimcisi.|  
-|`msGetter`|Yöntemi gerektiğini belirten bir `get` bir özellik için erişimcisi.|  
-|`msOther`|Yöntemin bir özellik veya burada tanımlanan dışında bir olay için bir ilişki olduğunu belirtir.|  
-|`msAddOn`|Yöntemi, bir olay işleyicisi yöntemlerini ekler belirtir.|  
-|`msRemoveOn`|Yöntemi, bir olay işleyicisi yöntemlerini kaldırır belirtir.|  
+|`msSetter`|Yöntem olduğunu belirten bir `set` özellik erişimcisi.|  
+|`msGetter`|Yöntem olduğunu belirten bir `get` özellik erişimcisi.|  
+|`msOther`|Yöntemi, bir özellik veya olay burada tanımlanan dışındaki bir ilişki olduğunu belirtir.|  
+|`msAddOn`|Yöntem için bir olay işleyicisi yöntemleri ekler belirtir.|  
+|`msRemoveOn`|Yöntemi, bir olay işleyicisi yöntemleri kaldırır belirtir.|  
 |`msFire`|Yöntemin bir olay başlatır belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

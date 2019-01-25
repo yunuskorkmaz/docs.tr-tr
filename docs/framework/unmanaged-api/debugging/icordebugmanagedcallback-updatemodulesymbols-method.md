@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b66cc09eda1fe5ea46a55b6239e05b5acec851c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566911"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols Yöntemi
-Hata ayıklayıcı bir ortak dil çalışma zamanı modülü simgelerini değişmiş bildirir.  
+Hata ayıklayıcı ortak dil çalışma zamanı modülü için Sembol değiştiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,29 +39,29 @@ HRESULT UpdateModuleSymbols (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye simgeleri değiştirilmesi modülü içeren uygulama etki alanını temsil eder.  
+ [in] Hangi simgelerin değişmiş modülü içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pModule`  
- [in] Bir işaretçi Icordebugmodule nesneye simgeleri değiştirilmesi modülü temsil eder.  
+ [in] Modül, semboller değiştirildi temsil eden bir Icordebugmodule nesne işaretçisi.  
   
  `pSymbolStream`  
- [in] Bir işaretçi bir Win32 COM `IStream` değiştirilmiş sembolleri içeren nesne.  
+ [in] Bir Win32 COM işaretçisi `IStream` değiştirilmiş simgeleri içeren nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağırarak bir modülün simgelerin Hata Ayıklayıcı'nın Görünümü güncelleştirmek için bir fırsat sunar [Isymunmanagedreader::updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) veya [Isymunmanagedreader::replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+ Bu yöntem, hata ayıklayıcı'nın bir modülün sembolleri görünümünü çağırarak güncelleştirmek için bir fırsat sağlar. [Isymunmanagedreader::updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) veya [Isymunmanagedreader::replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
- Bu geri çağırma birden çok kez aynı modülü için oluşabilir.  
+ Bu geri çağırma aynı modülü için birden çok kez gerçekleşebilir.  
   
- Bir hata ayıklayıcısı ilişkisiz kaynak düzeyi kesme noktaları bağlamak denemelisiniz.  
+ Bir hata ayıklayıcı ilişkisiz kaynak düzeyinde kesme noktaları bağlama çalışmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

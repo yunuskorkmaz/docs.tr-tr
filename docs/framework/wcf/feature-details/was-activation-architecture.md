@@ -2,12 +2,12 @@
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557113"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
 Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) bileşenlerinin açıklar.  
@@ -37,8 +37,8 @@ Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (W
 |W3SVC|http|IIS 7.0 hem de WCF için HTTP etkinleştirme sağlayan ortak bileşeni.|  
 |NetTcpActivator|net.tcp|NetTcpPortSharing hizmete bağlıdır.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET.MSMQ|Message Queuing WCF tabanlı uygulamaları ile kullanmak için.|  
-|NetMsmqActivator|MSMQ.FormatName|Geriye dönük uyumluluk Message Queuing var olan uygulamalarla birlikte sağlar.|  
+|NetMsmqActivator|net.msmq|Message Queuing WCF tabanlı uygulamaları ile kullanmak için.|  
+|NetMsmqActivator|msmq.formatname|Geriye dönük uyumluluk Message Queuing var olan uygulamalarla birlikte sağlar.|  
   
  Dinleyici bağdaştırıcıları belirli protokoller için XML aşağıda gösterildiği gibi applicationHost.config dosyasında, yükleme sırasında kaydedilir.  
   
@@ -85,6 +85,6 @@ Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (W
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

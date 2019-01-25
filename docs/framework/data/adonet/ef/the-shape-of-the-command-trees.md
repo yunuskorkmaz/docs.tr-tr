@@ -1,45 +1,45 @@
 ---
-title: Komut ağaçlarını şekli
+title: Komut ağaçlarının şekli
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573039"
 ---
-# <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarını şekli
-SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikleri ve sorgu komut ağaçlarını yapısını anlatılmaktadır.  
+# <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarının şekli
+SQL üretimi modülü, belirli bir giriş sorgu komut ağacı ifadeye göre bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikler ve sorgu komut ağaçlarının yapısını açıklar.  
   
 ## <a name="query-command-trees-overview"></a>Sorgu komut ağaçlarını genel bakış  
- Bir sorgu komut ağacındaki bir sorguda nesne modeli gösterimidir. Sorgu komut ağaçlarını iki amaca hizmet eder:  
+ Bir sorgu komut ağacı bir sorgu nesne modeli gösterimidir. Sorgu komut ağaçlarını iki amaca hizmet eder:  
   
--   Karşı belirtilen bir giriş sorgu ifade etmek için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+-   Giriş sorgusu karşı belirtilen ifade [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Bir sağlayıcıya verilen ve arka uç yönelik bir sorgu açıklayan bir çıktı sorgu ifade etmek için.  
+-   Bir sağlayıcıya verilen ve arka uç yönelik bir sorgu açıklayan bir çıkış sorgu ifade etmek için.  
   
- Query ağaçları SQL:1999 uyumlu sorgular, iç içe geçmiş koleksiyonlar ve türü işlemleri, bir varlığın belirli bir tür olup olmadığını denetleme veya kümeleri türüne göre filtreleme gibi ile çalışmak için destek dahil olmak üzere daha zengin semantiğini desteklemek komutu.  
+ Komut ağaçlarını destekleyen SQL:1999 uyumlu sorguları, iç içe geçmiş koleksiyonlar ve bir varlığın belirli bir tür olup olmadığını denetlemeye veya kümeleri bir türüne göre filtreleme gibi tür işlemleri ile çalışmak için destek dahil olmak üzere daha zengin bir semantik sorgu.  
   
- Sorgu mantığını tanımlayan ifade ağacına kökündeki DBQueryCommandTree.Query özelliğidir. DBQueryCommandTree.Parameters özelliği sorguda kullanılan parametrelerin listesini içerir. İfade ağacına DbExpression nesnelerin oluşur.  
+ Sorgu mantığı tanımlayan bir ifade ağacı kök DBQueryCommandTree.Query özelliğidir. DBQueryCommandTree.Parameters özelliği sorguda kullanılan parametrelerin listesini içerir. İfade ağacı Dbexpression'dan nesnelerden oluşur.  
   
- DbExpression nesnesi bazı hesaplama temsil eder. Çeşitli türlerde ifadeleri tarafından sağlanan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sabitleri dahil olmak üzere sorgu ifadeleri oluşturmak için değişkenler, İşlevler, Oluşturucular ve standart ilişkisel işleçler gibi filtre ve birleştirme. Her DbExpression nesnesi bu deyim tarafından üretilen sonuç türü gösteren bir ResultType özelliğine sahiptir. Bu tür bir TypeUsage ifade edilir.  
+ Dbexpression'dan nesne bazı hesaplama temsil eder. Çeşitli türlerde ifadeler tarafından sağlanan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sabitleri dahil olmak üzere, sorgu ifadeleri oluşturmak için değişkenler, İşlevler, Oluşturucular ve standart ilişkisel işleçler gibi filtre ve birleştirme. Her Dbexpression'dan nesnesi bu ifade tarafından üretilen sonuç türü temsil eden bir resulttype'ı özelliğine sahiptir. Bu tür bir typeusage değeri ifade edilir.  
   
-## <a name="shapes-of-the-output-query-command-tree"></a>Çıktı sorgu komut ağacı şekilleri  
- Çıktı sorgu komut ağaçlarını yakından ilişkili (SQL) sorguları temsil eder ve sorgu komut ağaçlarını geçerli olandan çok daha sıkı kurallar uygun. Bunlar genellikle SQL kolayca çevrilir yapılar içerir.  
+## <a name="shapes-of-the-output-query-command-tree"></a>Çıkış sorgu komut ağacı şekilleri  
+ Çıkış sorgu komut ağaçlarını yakından ilişkisel (SQL) sorguları ve sorgu komutu ağaçlarına geçerli olandan çok daha sıkı kurallarına bağlı kalmanızı. Bunlar genellikle SQL'e kolayca çevrilir yapıları içerir.  
   
- Giriş komut ağaçlarını Gezinti özellikleri, varlıkların ve devralma arasındaki ilişkileri destekler kavramsal model karşı ifade edilir. Çıkış komut ağaçlarını depolama modeline göre belirtilmiştir. Giriş komut ağaçlarını proje iç içe geçmiş koleksiyonları olanak sağlar, ancak çıktı komut ağaçlarını desteklemez.  
+ Gezinti özellikleri, devralma ve varlıklar arasındaki ilişkileri destekler kavramsal modeline karşı giriş komut ağaçlarını cinsinden ifade edilir. Çıkış komut ağaçlarını depolama modelinde ifade edilir. Giriş komut ağaçlarını iç içe geçmiş koleksiyonlar proje olanak sağlar, ancak çıkış komut ağaçlarını yapın.  
   
- Çıktı sorgu komut ağaçlarını kullanılabilir DbExpression nesneler kümesini kullanılarak oluşturulur ve bu alt bile bazı ifadelerinde sınırlı kullanımı.  
+ Çıkış sorgu komut ağaçlarını kullanılabilir Dbexpression'dan nesneler kümesini kullanarak oluşturulur ve bu alt bile bazı ifadeler sınırlı kullanımı.  
   
- Verilen ifade belirli bir tür olup olmadığını denetleme veya kümeleri türüne göre filtreleme gibi türü işlemler, çıktı komut ağaçlarında yok.  
+ Verilen ifade belirli bir tür olup olmadığını denetlemeye veya kümeleri bir türüne göre filtreleme gibi işlemleri türü, çıkış komut ağaçlarında mevcut değildir.  
   
- Çıkış komutu ağaçlarında Boole değerleri döndüren ifadeler tahminleri ve yalnızca bir filtre veya case deyimi gibi bir koşul gerektiren ifadeleri koşullarında için kullanılır.  
+ Çıkış komut ağaçlarında Boolean değerleri döndüren ifadeler projeksiyonlar ve yalnızca gerektiren bir filtre veya case ifadesi gibi bir koşul ifadeleri koşullarında kullanılır.  
   
- Bir çıkış sorgu komut ağaçlarını kökündeki DbProjectExpression nesnesidir.  
+ Bir çıkış sorgu komut ağaçlarını DbProjectExpression nesne köküdür.  
   
 ### <a name="expression-types-not-present-in-output-query-command-trees"></a>İfade türleri çıkış sorgu komutu ağaçlarında yok  
- Aşağıdaki ifade türleri bir çıktı sorgu komutu ağacında geçerli değildir ve sağlayıcıları tarafından yapılması gerekmez:  
+ Aşağıdaki ifade türleri içinde bir çıkış sorgu komut ağacı geçerli değil ve sağlayıcıları tarafından ele alınması gerekmez:  
   
  DbDerefExpression  
   
@@ -57,53 +57,53 @@ SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde
   
  DbTreatExpression  
   
-### <a name="expression-restrictions-and-notes"></a>İfade kısıtlamaları ve notlar  
+### <a name="expression-restrictions-and-notes"></a>İfade kısıtlamalar ve notlar  
  Birçok ifadeleri yalnızca çıktı sorgu komut ağaçlarını sınırlı bir şekilde kullanılabilir:  
   
 #### <a name="dbfunctionexpression"></a>DbFunctionExpression  
  Aşağıdaki işlev türleri geçirilebilir:  
   
--   Edm ad alanı tarafından tanınan kurallı işlevleri.  
+-   Edm ad alanı tarafından tanınan kurallı işlevler.  
   
--   BuiltInAttribute tarafından tanınan yerleşik (Depolama) çalışır.  
+-   Yerleşik (Depolama) işlevler BuiltInAttribute tarafından tanınır.  
   
 -   Kullanıcı tanımlı işlevler.  
   
- Kurallı işlevleri (bkz [kurallı işlevleri](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) daha fazla bilgi için) parçası olarak belirtilen [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], ve sağlayıcıları bu belirtimlerle uyarlanan kurallı işlevleri için uygulamaları sağlamanız. Depo işlevleri karşılık gelen sağlayıcı bildiriminde belirtimlerini temel alır. Kullanıcı tanımlı işlevler SSDL belirtimlerini temel alır.  
+ Kurallı işlevler (bkz [kurallı işlevler](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) daha fazla bilgi için) parçası olarak belirtilen [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], ve sağlayıcıları bu belirtimlerle uyarlanan kurallı işlevler için uygulamaları sağlamanız. Store işlevleri ilgili sağlayıcı bildirimi özelliklere dayanır. Kullanıcı tanımlı işlevleri SSDL teknik özelliklerine bağlıdır.  
   
- Ayrıca, işlevleri NiladicFunction özniteliğine sahip bağımsız değişken yoktur ve sonunda parantez olmadan çevrilmesi gerekir.  Diğer bir deyişle,  *\<functionName >* yerine  *\<functionName > ()*.  
+ Ayrıca, NiladicFunction özniteliğine sahip işlevleri bağımsız değişken yoktur ve sonunda parantez olmadan çevrilmesi gerekir.  Diğer bir deyişle,  *\<functionName >* yerine  *\<functionName > ()*.  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Dbnewınstanceexpression, yalnızca aşağıdaki iki durumlarda oluşabilir:  
   
--   DbProjectExpression projeksiyon özelliği olarak.  Bu nedenle kullanıldığında aşağıdaki kısıtlamalar geçerlidir:  
+-   Projeksiyon DbProjectExpression özelliği.  Bu şekilde kullanıldığında aşağıdaki kısıtlamalar uygulanır:  
   
-    -   Sonuç türü bir satır türü olmalıdır.  
+    -   Sonuç türü satır türünde olmalıdır.  
   
-    -   Bağımsız değişkenlerinin her birini bir ilkel tür bir sonuçla üreten bir ifadedir. Genellikle, her bir bağımsız değişkeni bir DbVariableReferenceExpression veya bir işlev çağrısını bir DbVariableReferenceExpression, bir işlev çağrısını ya da bir aritmetik hesaplaması DbPropertyExpression üzerinden PropertyExpression gibi skaler bir ifade. . Ancak, skaler bir alt sorgu temsil eden bir ifade da bir Dbnewınstanceexpression için bağımsız değişkenlerin listesini ortaya çıkabilir. Tam olarak bir satır ve DbElementExperession nesne kök ile temel bir türünde bir sütun döndüren bir alt sorgu temsil eden bir ifade ağacına skaler bir alt sorgu temsil eden bir ifade değil  
+    -   Her bağımsız değişkenlerinden biri, bir basit türü ile bir sonuç üretir bir ifadedir. Genellikle, her bağımsız değişken bir DbVariableReferenceExpression veya bir işlev çağrısını bir DbVariableReferenceExpression, bir işlev çağırma veya bir aritmetik hesaplaması DbPropertyExpression üzerinden bir PropertyExpression gibi skaler bir ifade. . Ancak, skaler bir sorgu temsil eden bir ifade bir Dbnewınstanceexpression için bağımsız değişken listesinde de oluşabilir. Skaler bir sorgu temsil eden bir ifade olan tam olarak bir satır ve tek sütunlu bir DbElementExperession nesne kök ile temel bir tür döndüren sorgu temsil eden bir ifade ağacı  
   
 -   Bir koleksiyon dönüş türüyle bu durumda, yeni bir bağımsız değişken olarak sağlanan ifadeleri koleksiyonunu tanımlar.  
   
 #### <a name="dbvariablereferenceexpression"></a>DbVariableReferenceExpression  
- Bir DbVariableReferenceExpression DbPropertyExpression düğümün alt öğesi olması gerekir.  
+ Bir DbVariableReferenceExpression DbPropertyExpression düğümün alt öğesi bulunmalıdır.  
   
 #### <a name="dbgroupbyexpression"></a>DbGroupByExpression  
- Bir dbgroupbyexpression toplamalar özelliği yalnızca DbFunctionAggregate türündeki öğeler olabilir. Başka bir toplama türü vardır.  
+ Bir DbGroupByExpression'ın toplamalar özelliği yalnızca DbFunctionAggregate türünde öğelere sahip olabilir. Başka bir toplama türü vardır.  
   
 #### <a name="dblimitexpression"></a>DbLimitExpression  
- Sınır özelliği yalnızca bir DbConstantExpression veya DbParameterReferenceExpression olabilir. Ayrıca WithTies her zaman, .NET Framework 3.5 sürümünü itibariyle false özelliğidir.  
+ Sınır özelliği yalnızca bir DbConstantExpression veya bir DbParameterReferenceExpression olabilir. Ayrıca WithTies her zaman false .NET Framework 3.5 sürümü itibarıyla özelliğidir.  
   
 #### <a name="dbscanexpression"></a>DbScanExpression  
- Çıkış komutu ağaçlarında kullanıldığında, DbScanExpression etkili bir şekilde bir tarama bir tablo, bir görünüm veya EnitySetBase::Target tarafından temsil edilen bir deposu sorgusu üzerinden temsil eder.  
+ Çıkış komut ağaçlarında kullanıldığında DbScanExpression etkili bir şekilde bir tarama bir tablo, görünüm veya EnitySetBase::Target tarafından temsil edilen bir depo sorgu temsil eder.  
   
- Bir sorgu temsil eden hedef "sorgu tanımlama" meta veri özelliği boş ise, hangi sorgu metnini depo şeması tanım belirtildiği gibi sağlayıcının belirli bir dil (veya dialect) bu meta veri özelliği sağlanmalıdır.  
+ Bir sorgu temsil eder hedefinin "sorgu tanımlama" meta veri özelliği null olmayan, ise, hangi sorgu metni meta veri deposu şeması tanımında belirtilen sağlayıcının belirli bir dil (veya diyalekti) özelliğinde sağlanır.  
   
- Aksi takdirde, hedef bir tablo veya Görünüm temsil eder. Kendi şema önekini ya da "Şema" meta veri özelliği, olmasa bile kapsayıcı adı boş, aksi takdirde.  Tablo veya Görünüm adı ya da "Tablo" meta veri özelliği değilse varlığı adını temel ayarlayın, aksi halde null ' dir.  
+ Aksi takdirde, hedef, bir tablo veya Görünüm temsil eder. Ya da "Şema" meta veri özelliği, şema ön ekidir değilse varlık kapsayıcı adı null; Aksi takdirde.  Tablo veya Görünüm adı ya da "Tablo" meta veri özelliği değilse varlık adı özniteliğinin temel ayarlayın, aksi halde null şeklindedir.  
   
- Bu özellikleri depo şeması tanım dosyasındaki (SSDL) karşılık gelen EntitySet tanımını kaynaklanır.  
+ Tüm bu özellikler, depo şeması tanım dosyasında (SSDL) karşılık gelen Entityset'i tanımını kaynaklanan.  
   
 ### <a name="using-primitive-types"></a>İlkel türler kullanma  
- İlkel türler çıkış komut ağaçlarında başvurulduğunda genellikle kavramsal modelin ilkel türlerinde başvurulur. Ancak, belirli ifadeleri için karşılık gelen deposu ilkel tür sağlayıcıları gerekir. Sağlayıcı null değerine karşılık gelen tür cast gerekiyorsa, bu tür örnekleri DbCastExpression ve büyük olasılıkla DbNullExpression, içerir. Bu durumlarda, sağlayıcıları, ilkel türü türü ve onun modelleri göre sağlayıcı türü için eşleme yapmanız gerekir.  
+ İlkel türler çıkış komut ağaçlarında başvurulduğunda, bunlar genellikle kavramsal modelin ilkel türlerinde başvurulur. Ancak, belirli ifadeler için karşılık gelen depolama ilkel tür sağlayıcıları gerekir. Sağlayıcı null karşılık gelen türe dönüştürme gerekiyorsa DbCastExpression ve büyük olasılıkla DbNullExpression, bu tür ifadeleri örnekleri içerir. Bu gibi durumlarda sağlayıcıları, ilkel tür türü ve kendi modelleri göre sağlayıcı türü için eşleme yapmanız gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: a564d214e933cb91e834191eb5dc5297c733664f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614365"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabileceğiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışları verileri çeşitli veri kaynaklarından gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu veriler olarak kullanıma sunmak için veri sağlayıcıları kullanan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içerir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı, yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti için veri modelini tanımlar. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -34,8 +34,8 @@ ms.locfileid: "50202282"
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|Bir veri türü kullanılarak tanımlanmış bir dinamik meta veri sağlayıcısı için meta verilerde ortaya çıkmasını sağlar <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> arabirimi.|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|Veri Hizmeti çalışma zamanı istekte belirtilen gerçek özellik türü için yükü bulunan tür dönüştürme olup olmadığını belirlemenizi sağlar.|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|İki varlık arasında ilişki bağlantı silindiğinde ilgili varlıklar üzerinde değişiklik dinleyicileri çağrılan kayıtlı olup olmadığını belirlemenizi sağlar.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Değişiklik kümesi sayısı sınırlandırmak ve tek bir toplu iş izin verilen işlemler sorgulamanızı sağlar. Daha fazla bilgi için [OData: Batch](https://go.microsoft.com/fwlink/?LinkId=185602) ve [toplu işleme işlemlerini](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Bir tek bir değişiklik kümesine dahil değişiklikleri sayısını sınırlamak sağlar. Daha fazla bilgi için [nasıl yapılır: etkinleştirme sayfalama veri hizmeti sonuçlarını](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Değişiklik kümesi sayısı sınırlandırmak ve tek bir toplu iş izin verilen işlemler sorgulamanızı sağlar. Daha fazla bilgi için [OData: Batch](https://go.microsoft.com/fwlink/?LinkId=185602) ve [toplu işlemler](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Bir tek bir değişiklik kümesine dahil değişiklikleri sayısını sınırlamak sağlar. Daha fazla bilgi için [nasıl yapılır: Veri Hizmeti sonuçlarını sayfalamayı etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Bir yanıt boyutu kullanarak tek bir istekte eklenebilir ilgili varlıkları sayısını sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Bir yanıt boyutu kullanarak tek bir istekte dahil edilebilecek olan ilgili varlıkların grafik derinliği sınırlayarak sınırlamanıza olanak tanır `$expand` sorgu işleci. Daha fazla bilgi için [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Tek bir POST isteğinde bulunabilir eklenecek varlıklar sayısını sınırlamak sağlar.|  
@@ -43,13 +43,13 @@ ms.locfileid: "50202282"
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Bir veri akışı olarak döndürülen her varlık kümesindeki varlıkların sayısını sınırlayarak yanıt boyutunu sınırlamak sağlar.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|Bir veri türü, veri hizmeti tarafından tanınan türlerinin listesi ekler.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|Veri Hizmeti üzerinde kullanılabilir olan kaynakların set varlık için erişim haklarını ayarlar. Bir yıldız işareti (`*`) erişim için tüm kalan varlık kümeleri aynı düzeyini ayarlamak adı parametresi için değer sağlanabilir. İstemci uygulamaları tarafından gerekli veri hizmeti kaynaklarına en az ayrıcalıklı erişim sağlamak için varlık kümelerine erişim ayarlamanızı öneririz. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Belirli bir URI ve HTTP eylemi için gereken en düşük erişim haklarını örnekleri için bölümündeki tabloya bakın [en düşük kaynak erişim gereksinimlerini](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements) bölümü.|  
-|<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize%2A>|Bir varlık için en fazla sayfa boyutu kaynak ayarlar. Daha fazla bilgi için [nasıl yapılır: etkinleştirme sayfalama veri hizmeti sonuçlarını](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize%2A>|Bir varlık için en fazla sayfa boyutu kaynak ayarlar. Daha fazla bilgi için [nasıl yapılır: Veri Hizmeti sonuçlarını sayfalamayı etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetServiceOperationAccessRule%2A>|Veri Hizmeti üzerinde tanımlanan hizmet işlemleri için erişim haklarını ayarlar. Daha fazla bilgi için [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md). Bir yıldız işareti (`*`) için tüm hizmet işlemlerine erişimi aynı düzeyini ayarlamak adı parametresi için değer sağlanabilir. İstemci uygulamaları tarafından gerekli veri hizmeti kaynaklarına en az ayrıcalıklı erişim sağlamak için hizmet işlemlerine erişimi ayarlamanızı öneririz. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Bu yapılandırma özelliği hata yanıt iletisinde daha fazla bilgi döndürerek bir veri hizmeti daha kolay gidermenize olanak tanır. Bu seçenek, bir üretim ortamında kullanılmak üzere tasarlanmamıştır. Daha fazla bilgi için [geliştirme ve dağıtma WCF Veri Hizmetleri](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md).|  
   
 <a name="accessRequirements"></a>   
 ## <a name="minimum-resource-access-requirements"></a>En düşük kaynak erişim gereksinimleri  
- Aşağıdaki tabloda Ayrıntılar, belirli bir işlemi yürütmek için verilmelidir hakları minimum varlık kümesi. Yolu örnekleri tamamladığınızda oluşturduğunuz Northwind verileri hizmeti dayalı [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Çünkü hem <xref:System.Data.Services.EntitySetRights> numaralandırma ve <xref:System.Data.Services.ServiceOperationRights> numaralandırması kullanarak tanımlanmış <xref:System.FlagsAttribute>, mantıksal OR işleci, tek bir varlık kümesi veya işlem birden fazla izinleri belirlemek için kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: veri hizmetine erişimi etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).  
+ Aşağıdaki tabloda Ayrıntılar, belirli bir işlemi yürütmek için verilmelidir hakları minimum varlık kümesi. Yolu örnekleri tamamladığınızda oluşturduğunuz Northwind verileri hizmeti dayalı [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Çünkü hem <xref:System.Data.Services.EntitySetRights> numaralandırma ve <xref:System.Data.Services.ServiceOperationRights> numaralandırması kullanarak tanımlanmış <xref:System.FlagsAttribute>, mantıksal OR işleci, tek bir varlık kümesi veya işlem birden fazla izinleri belirlemek için kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine erişmesini](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).  
   
 |Yol/eylem|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "50202282"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - ve -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Desteklenmez|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - ve -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|Desteklenmez|Desteklenmez|  
   
- <sup>1</sup> Bu örnekte, `Address` temsil eden bir karmaşık tür özelliği `Customers` adlı bir özellik olan varlık `StreetAddress`. Northwind veri hizmetleri tarafından kullanılan model, bu karmaşık türü açıkça tanımlamıyor. Ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] kullanabileceğiniz sağlayıcısı [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] karmaşık bir tür tanımlamak için Araçlar. Daha fazla bilgi için bkz [nasıl yapılır: oluşturma ve değiştirme karmaşık türler](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> Bu örnekte, `Address` temsil eden bir karmaşık tür özelliği `Customers` adlı bir özellik olan varlık `StreetAddress`. Northwind veri hizmetleri tarafından kullanılan model, bu karmaşık türü açıkça tanımlamıyor. Ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] kullanabileceğiniz sağlayıcısı [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] karmaşık bir tür tanımlamak için Araçlar. Daha fazla bilgi için [nasıl yapılır: Karmaşık türler oluşturup](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
   
  <sup>2</sup> bu URI, bu durumda, bir medya bağlantısı girişinin olan bir varlığa ait medya kaynağı olarak ikili büyük nesne (BLOB) döndüren bir özellik tanımlandığında desteklenir `Customers`. Daha fazla bilgi için [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
@@ -83,6 +83,6 @@ ms.locfileid: "50202282"
   
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

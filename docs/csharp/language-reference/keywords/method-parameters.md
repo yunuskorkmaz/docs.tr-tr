@@ -7,12 +7,12 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: f6d0309a91c426123be13a4302d711c92d4ea0f7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 72917d356ed0fce96502faeef68494c7fdcb214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564766"
 ---
 # <a name="method-parameters-c-reference"></a>Yöntem Parametreleri (C# Başvurusu)
 
@@ -28,8 +28,8 @@ Olarak bildirilen parametreleri olmayan bir yöntem için [içinde](../../../csh
   
 -   [Çıkış](../../../csharp/language-reference/keywords/out-parameter-modifier.md) Bu parametre, başvuruyla geçirildi ve çağrılan yöntem tarafından yazılan belirtir.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

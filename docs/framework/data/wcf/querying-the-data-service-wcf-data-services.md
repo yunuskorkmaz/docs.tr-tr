@@ -1,5 +1,5 @@
 ---
-title: Veri Hizmeti (WCF Veri Hizmetleri) sorgulama
+title: Veri hizmetini (WCF Veri Hizmetleri) sorgulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,119 +9,119 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: bcdeb4f9755f526827045a9cc63bc8bdad4b28d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620415"
 ---
-# <a name="querying-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) sorgulama
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak bir veri hizmeti tanıdık sorgu yürütebilir olanak tanır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere düzenleri programlama. İstemcide bir örneği olarak tanımlanan bir sorgu istemci kitaplığı çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplık yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıf tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.  
+# <a name="querying-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) sorgulama
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, tanıdık karşı kullanarak bir veri hizmeti sorguları yürütmek [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] programlama desenleri, dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere. İstemci Kitaplığı istemcide bir örneği olarak tanımlanan bir sorgu çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplığı yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıflar tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.  
   
-## <a name="data-service-queries"></a>Veri hizmeti sorgular  
- <xref:System.Data.Services.Client.DataServiceQuery%601> Genel sınıfı, sıfır veya daha fazla varlık türü örneklerinin bir koleksiyonunu döndüren bir sorgu temsil eder. Veri Hizmeti sorgusu her zaman varolan bir veri hizmeti bağlamına ait. Bu bağlamda oluşturabilir ve sorguyu yürütmek için gerekli olan hizmet URI ve meta veri bilgilerini korur.  
+## <a name="data-service-queries"></a>Veri Hizmeti sorguları  
+ <xref:System.Data.Services.Client.DataServiceQuery%601> Genel bir sınıf, sıfır veya daha fazla varlık türü örneklerinin bir koleksiyonunu döndüren bir sorgu temsil eder. Veri Hizmeti sorgusuna her zaman var olan bir veri hizmeti bağlamına ait. Bu bağlam oluşturma ve sorgu yürütmek için gerekli olan hizmet URI'si ve meta veri bilgilerini korur.  
   
- Kullandığınızda **hizmet Başvurusu Ekle** bir veri hizmetine eklemek için iletişim bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-tabanlı istemci uygulaması, bir varlık kapsayıcı sınıfı öğesinden devralınan oluşturulur <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Bu sınıf yazılan döndüren özellikleri içeren <xref:System.Data.Services.Client.DataServiceQuery%601> örnekleri. Veri çıkarır hizmeti her bir varlık kümesi için bir özellik yok. Bu özellikleri yazılmış bir örneği oluşturmak daha kolay <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+ Kullanırken **hizmet Başvurusu Ekle** bir veri hizmetine eklemek için iletişim bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-tabanlı bir istemci uygulaması, bir varlık kapsayıcı sınıfı devralınan oluşturulur <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Bu sınıf döndüren türü belirlenmiş özellikler içeren <xref:System.Data.Services.Client.DataServiceQuery%601> örnekleri. Verileri kullanıma sunan hizmet her varlık kümesi için bir özellik yoktur. Bu özellikler bir türü belirtilmiş bir örneğini oluşturmak kolaylaştırır <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
- Bir sorgu aşağıdaki senaryolarda çalıştırılır:  
+ Bir sorgu, aşağıdaki senaryolarda çalıştırılır:  
   
--   Sonuçları dolaylı olarak numaralandırılır zaman gibi:  
+-   Sonuçları örtülü olarak numaralandırılır olduğunda gibi:  
   
-    -   Bir özellik zaman <xref:System.Data.Services.Client.DataServiceContext> temsil eden ve varlık kümesi numaralandırılan, gibi sırasında bir `foreach` (C#) veya `For Each` (Visual Basic) döngü.  
+    -   Bir özellikte olduğunda <xref:System.Data.Services.Client.DataServiceContext> temsil eden ve varlık kümesi numaralandırılan, gibi sırasında bir `foreach` (C#) veya `For Each` döngüsü (Visual Basic).  
   
-    -   Ne zaman sorgu atanması bir `List` koleksiyonu.  
+    -   Ne zaman sorgu atandığı bir `List` koleksiyonu.  
   
--   Zaman <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi açıkça çağrılır.  
+-   Zaman <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi açıkça çağrılmaz.  
   
--   Ne zaman bir LINQ Sorgu yürütme işleci gibi <xref:System.Linq.Enumerable.First%2A> veya <xref:System.Linq.Enumerable.Single%2A> olarak adlandırılır.  
+-   Ne zaman bir LINQ Sorgu yürütme işleci gibi <xref:System.Linq.Enumerable.First%2A> veya <xref:System.Linq.Enumerable.Single%2A> çağrılır.  
   
- Yürütüldüğünde, aşağıdaki sorgu tüm döndürür `Customers` Northwind veri hizmeti varlıklarda:  
+ Aşağıdaki sorgu yürütüldüğünde, tüm döndürür `Customers` Northwind verileri hizmeti varlıklarda:  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersspecific)]  
  [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersspecific)]  
   
- Daha fazla bilgi için bkz: [nasıl yapılır: veri hizmeti sorguları yürütmek](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemcisi kullandığınızda gibi geç bağlama nesneler için sorguları destekler *dinamik* C# türü. Ancak, performansı artırmak için her zaman kesin türü belirtilmiş veri hizmeti sorguları oluşturma. <xref:System.Tuple> Türü ve dinamik nesneler istemci tarafından desteklenmez.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kullandığınızda gibi geç bağlanan nesneler için sorguları destekleyen *dinamik* yazın C#. Ancak, performansla ilgili nedenlerden dolayı her zaman kesin türü belirtilmiş veri hizmeti sorguları oluşturmak. <xref:System.Tuple> Türü ve dinamik nesneler, istemci tarafından desteklenmez.  
   
 ## <a name="linq-queries"></a>LINQ Sorguları  
- Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> uygulayan sınıf <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı veri hizmeti karşı hesaplanan bir sorgu ifadesi gösteren bir URI varlık kümesi verilerinin LINQ sorguları dönüştürmek için Kaynak. Önceki denk bir LINQ Sorgu aşağıdaki örnekte olduğu <xref:System.Data.Services.Client.DataServiceQuery%601> döndüren `Orders` maliyet nakliye tarafından bir nakliye maliyetini birden fazla $30 ve siparişleri sonuçları vardır:  
+ Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfının Implements <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] karşı bir veri hizmeti değerlendirilen bir sorgu ifadesini gösteren bir URI LINQ sorguları varlık kümesi verileri dönüştürmek için İstemci Kitaplığı Kaynak. Aşağıdaki örnek, önceki denk bir LINQ sorgusu <xref:System.Data.Services.Client.DataServiceQuery%601> döndüren `Orders` maliyet freight tarafından birden fazla 30 ABD Doları ve siparişler sonuçları freight maliyetini sahip:  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]  
   
- Aşağıdaki sorgu Northwind tabanlı karşı yürütülen URI içine bu LINQ sorgusu çevrilen [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti:  
+ Aşağıdaki sorgu Northwind tabanlı karşı yürütülen URI bu LINQ sorgusu çevrilir [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
 > [!NOTE]
->  Sorgu LINQ sözdiziminde ifade kümesini temsili durum aktarımı (REST) etkin olandan daha geniş-veri hizmetleri tarafından kullanılan URI sözdizimi tabanlı. A <xref:System.NotSupportedException> hedef veri hizmetindeki bir URI sorgu eşlenemiyor tetiklenir.  
+>  Sorgu LINQ söz diziminde ifade kümesi temsili durum aktarımı (REST) etkin daha geniştir-Veri Hizmetleri tarafından kullanılan URI'si söz dizimi bağlı. A <xref:System.NotSupportedException> hedef data Service'teki bir URI sorgu eşlenemediğinde ortaya çıkar.  
   
- Daha fazla bilgi için bkz: [LINQ konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
+ Daha fazla bilgi için [LINQ konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
-## <a name="adding-query-options"></a>Sorgu seçeneklerini ekleme  
- Veri Hizmeti sorguları desteği tüm sorgu seçeneklerini [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]s sağlar. Çağırmanız <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> sorgu seçeneklerini eklenecek yöntemi bir <xref:System.Data.Services.Client.DataServiceQuery%601> örneği. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Yeni bir döndürür <xref:System.Data.Services.Client.DataServiceQuery%601> özgün sorguya eşdeğer olan örneği ancak yeni sorgu seçenek kümesi. Çalıştırıldığında, aşağıdaki sorguyu döndürür `Orders` göre filtrelenmiş `Freight` değer ve göre sıralanmış `OrderID`, azalan:  
+## <a name="adding-query-options"></a>Sorgu seçenekleri ekleme  
+ Veri Hizmeti sorguları desteği tüm sorgu seçeneklerini [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]s sağlar. Çağırmanızı <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> sorgu seçeneklerini eklenecek yöntemi bir <xref:System.Data.Services.Client.DataServiceQuery%601> örneği. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Yeni bir <xref:System.Data.Services.Client.DataServiceQuery%601> özgün sorguya eşdeğer olan örneği ancak yeni bir sorgu ile bir seçenek kümesi. Aşağıdaki sorgu çalıştırıldığında, döndürür `Orders` göre filtrelenmiş `Freight` değeri ve göre sıralanmış `OrderID`, azalan:  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
   
- Kullanabileceğiniz `$orderby` sorgu seçeneği hem de sipariş ve filtreler ve döndürülen siparişleri aşağıdaki örnekteki gibi tek bir özelliğe dayalı bir sorgu filtre `Orders` nesneleri değeri temel alarak `Freight` özelliği:  
+ Kullanabileceğiniz `$orderby` döndürülen sıralar ve filtreler aşağıdaki örnekte olduğu gibi tek bir özelliğe dayalı bir sorguya filtre uygulamak ve sorgu seçeneği için hem `Orders` nesneleri değerini temel alarak `Freight` özelliği:  
   
  [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
- Çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> art arda karmaşık sorgu ifadeleri oluşturmak için yöntem. Daha fazla bilgi için bkz: [nasıl yapılır: bir veri hizmeti sorgusu sorgu seçeneklerini eklemek](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).  
+ Çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> art arda karmaşık sorgu ifadeleri oluşturmak için yöntemi. Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti sorgusuna sorgu seçenekleri ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).  
   
- Sorgu seçeneklerini LINQ sorgusu sözdizimsel bileşenlerini ifade etmek için başka bir yol sağlar. Daha fazla bilgi için bkz: [LINQ konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
+ Sorgu seçenekleri size bir LINQ Sorgu söz dizimi bileşenleri ifade etmek için başka bir yol sağlar. Daha fazla bilgi için [LINQ konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
 > [!NOTE]
->  `$select` Sorgu seçeneği eklenemez bir sorgu URI kullanılarak <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi. LINQ kullanmanızı öneririz <xref:System.Linq.Enumerable.Select%2A> yöntemi oluşturmak istemcinin `$select` seçeneği URI isteğinde sorgu.  
+>  `$select` Sorgu seçeneği eklenemez bir URI sorgu kullanarak <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi. LINQ kullanmanızı öneririz <xref:System.Linq.Enumerable.Select%2A> oluşturmak ve istemciye yöntemi `$select` seçeneği istek URI'SİNDE sorgu.  
   
 <a name="executingQueries"></a>   
-## <a name="client-versus-server-execution"></a>İstemci sunucusu yürütme karşılaştırması  
- İstemci bir sorgu iki parça halinde yürütür. Mümkün olduğunda, bir sorgu ifadelerinde, ilk olarak istemci üzerinde değerlendirilir ve ardından URI tabanlı bir sorgunun oluşturulur ve veri hizmeti için hizmet veri karşı değerlendirme için gönderilir. Aşağıdaki LINQ sorgusu göz önünde bulundurun:  
+## <a name="client-versus-server-execution"></a>İstemci sunucunun yürütme karşılaştırması  
+ İstemci, bir sorgu içindeki iki parça yürütür. Mümkün olduğunda, bir sorgu ifadelerinde istemcide önce değerlendirilir ve ardından URI tabanlı bir sorgu oluşturulur ve hizmetteki verilere karşı değerlendirme için veri hizmetine gönderilen. Aşağıdaki LINQ sorgusu göz önünde bulundurun:  
   
  [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryclientevalspecific)]  
  [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryclientevalspecific)]  
   
- Bu örnekte, ifade `(basePrice – (basePrice * discount))` istemcide değerlendirilir. Bu nedenle, gerçek sorgu URI `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` , gönderilen verileri hizmeti zaten hesaplanan ondalık değeri içeren `90` filtre yan tümcesi içinde. Filtre ifadesinin substring ifade dahil olmak üzere diğer bölümleri veri hizmeti tarafından değerlendirilir. İstemci üzerinde değerlendirilir ifadeleri izleyin ortak dil çalışma zamanı (CLR) semantiği, veri hizmeti uygulaması üzerinde veri hizmetine gönderilen ifadeler kullanan sırada [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü. Ayrıca bu ayrı değerlendirme hem istemci hem de hizmet zamana dayalı değerlendirmeleri farklı saat dilimlerinde yapılırken gibi beklenmeyen sonuçlara neden olduğu senaryolar haberdar olmanız gerekir.  
+ Bu örnekte, ifade `(basePrice – (basePrice * discount))` istemcide değerlendirilir. Bu nedenle, URI asıl sorguyu `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` , gönderilir verileri, hizmet zaten hesaplanan ondalık değeri içeren `90` filtre yan tümcesi içinde. Filtre ifadesinin alt ifade de dahil olmak üzere diğer bölümleri, veri hizmeti tarafından değerlendirilir. Veri hizmeti uygulaması üzerinde veri hizmetine gönderilen ifadeler kullanan ancak istemcide değerlendirilen ifadeleri izleyin ortak dil çalışma zamanı (CLR) semantiğini [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü. Senaryoları burada bu ayrı değerlendirme hem istemci hem de hizmet değerlendirmeleri zamana dayalı farklı saat dilimlerinde gerçekleştirirken gibi beklenmeyen sonuçlara neden olabilir farkında olmalıdır.  
   
 ## <a name="query-responses"></a>Sorgu yanıtları  
- Çalıştırıldığında, <xref:System.Data.Services.Client.DataServiceQuery%601> döndüren bir <xref:System.Collections.Generic.IEnumerable%601> istenen varlık türü. Bu sorgu sonucu atanabilecek bir <xref:System.Data.Services.Client.QueryOperationResponse%601> nesnesi, aşağıdaki örnekteki gibi:  
+ Yürütüldüğünde, <xref:System.Data.Services.Client.DataServiceQuery%601> döndürür bir <xref:System.Collections.Generic.IEnumerable%601> istenen varlık türü. Bu sorgu sonucu atanabilecek bir <xref:System.Data.Services.Client.QueryOperationResponse%601> aşağıdaki örnekteki gibi bir nesne:  
   
  [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getresponsespecific)]
  [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getresponsespecific)]  
   
- Veri Hizmeti varlıklarda temsil eden varlık türü örnekleri istemcide nesne materialization adlı bir işlem tarafından oluşturulur. Daha fazla bilgi için bkz: [nesne Materialization](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). <xref:System.Data.Services.Client.QueryOperationResponse%601> Uygulayan nesne <xref:System.Collections.Generic.IEnumerable%601> sorgu sonuçlarını erişim sağlamak için.  
+ Data Service'teki varlıkları temsil eden varlık türü örnekleri istemci üzerinde nesne gerçekleştirme olarak adlandırılan bir işlem tarafından oluşturulur. Daha fazla bilgi için [nesne gerçekleştirme](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). <xref:System.Data.Services.Client.QueryOperationResponse%601> Uygulayan nesne <xref:System.Collections.Generic.IEnumerable%601> sorgunun sonuçlarını erişim sağlamak için.  
   
- <xref:System.Data.Services.Client.QueryOperationResponse%601> Sorgu sonucu hakkında ek bilgi erişmenize olanak sağlayan aşağıdaki üyeleri de vardır:  
+ <xref:System.Data.Services.Client.QueryOperationResponse%601> Da bir sorgu sonucu ile ilgili ek bilgiler erişmenize olanak sağlayan aşağıdaki üyeleri içerir:  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -herhangi bir oluştu varsa işlemi tarafından oluşturulan bir hata alır.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -Tüm oluştu varsa işlemi tarafından oluşturulan bir hata alır.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -sorgu yanıtı ile ilişkili HTTP yanıt üstbilgilerinin koleksiyonunu içerir.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -Sorgu Yanıtla ilişkili HTTP yanıt üstbilgilerinin koleksiyonunu içerir.  
   
 -   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -özgün alır <xref:System.Data.Services.Client.DataServiceQuery%601> oluşturulan <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -HTTP yanıt kodunu sorgu yanıtı alır.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -sorgu yanıtı HTTP yanıt kodunu alır.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -alır varlıklar varlıktaki toplam sayısına ayarlanan ne zaman <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> yöntemi çağrıldı <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -alır varlıkları varlıktaki toplam sayısına ayarlanan zaman <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> yöntemi çağrıldı <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -döndüren bir <xref:System.Data.Services.Client.DataServiceQueryContinuation> sonraki sonuç sayfasını URI'sini içeren nesne.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -döndürür bir <xref:System.Data.Services.Client.DataServiceQueryContinuation> sonraki sonuç sayfasını URI'sini içeren nesne.  
   
- Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yalnızca açıkça URI sorgu tarafından seçilen verileri döndürür. Bu dosyayı gerektiğinde ek veriler veri hizmetinden açıkça yüklemek için seçeneği sunar. Bir istek veri hizmetinden veri açıkça yükleyen her zaman veri hizmetine gönderilir. Açıkça yüklenen veriler ilgili varlıklar, disk belleğine alınan yanıt verilerini ve ikili veri akışlarını içerir.  
+ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yalnızca URI sorgu tarafından açıkça seçilen verileri döndürür. Bu, gerektiğinde ek veriler veri hizmetinden açıkça yüklemek için seçeneği sunar. Bir istek, veri hizmetinden veriyi açıkça yüklemek her zaman veri hizmetine gönderilir. İlgili varlıklar, disk belleğine alınan yanıt verileri ve ikili veri akışlarını açıkça yüklenen verileri içerir.  
   
 > [!NOTE]
->  Veri Hizmeti disk belleğine alınan yanıt döndürebileceği için uygulamanızı bir disk belleğine alınan veri hizmeti yanıtı işlemek için programlama düzeni kullanmanızı öneririz. Daha fazla bilgi için bkz: [ertelenmiş içerik yüklenirken](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+>  Bir veri hizmeti disk belleğine alınan yanıtı döndürebilir olduğundan, uygulamanızı bir disk belleğine alınan veri hizmeti yanıtı işlemek için programlama deseni kullanmanızı öneririz. Daha fazla bilgi için [ertelenmiş içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
- Bir sorgu tarafından döndürülen veri miktarını da yalnızca belirli özellikleri bir varlığın yanıtta döndürüldüğünü belirterek azaltılabilir. Daha fazla bilgi için bkz: [sorgu tahminleri](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
+ Bir sorgu tarafından döndürülen veri miktarını da yalnızca belirli özellikleri bir varlığın içinde yanıt döndürüldüğünü belirterek azaltılabilir. Daha fazla bilgi için [sorgu projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
-## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>Kümesindeki varlıkların sayısı toplam sayısını alma  
- Bazı senaryolarda, bir varlık kümesindeki varlıkların toplam sayısı ve kesmenin sorgu tarafından döndürülen sayı bilmek yararlıdır. Çağrı <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> yöntemi <xref:System.Data.Services.Client.DataServiceQuery%601> bu toplam sayı kümesindeki varlıkların sorgu sonucu ile gelen istemek için. Bu durumda, <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> özelliği döndürülen <xref:System.Data.Services.Client.QueryOperationResponse%601> kümesindeki varlıkların toplam sayısını döndürür.  
+## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>Kümesindeki varlıkların toplam sayısı sayısı alınıyor  
+ Bazı senaryolarda, bir varlık kümesindeki varlıkların toplam sayısı ve değil yalnızca sorgu tarafından döndürülen sayı faydalıdır. Çağrı <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601> bu varlık kümesindeki toplam sayı sorgu sonucu ile gelen istemek için. Bu durumda, <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> özelliği döndürülen <xref:System.Data.Services.Client.QueryOperationResponse%601> kümesindeki varlıkların toplam sayısını döndürür.  
   
- Varlıklar yalnızca toplam hata sayısı kümesinde alabilir ya da farklı bir <xref:System.Int32> veya as bir <xref:System.Int64> çağırarak değeri <xref:System.Linq.Enumerable.Count%2A> veya <xref:System.Linq.Enumerable.LongCount%2A> yöntemleri sırasıyla. Bu yöntem çağrıldığında, bir <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülmez; yalnızca sayısı değeri döndürülür. Daha fazla bilgi için bkz: [nasıl yapılır: sayı, varlıklar tarafından döndürülen bir sorgu belirlemek](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).  
+ Yalnızca toplam sayısını, varlık kümesinde alabilirsiniz ya da farklı bir <xref:System.Int32> veya farklı bir <xref:System.Int64> çağırarak değeri <xref:System.Linq.Enumerable.Count%2A> veya <xref:System.Linq.Enumerable.LongCount%2A> yöntemleri sırasıyla. Bu yöntemler çağrıldığında bir <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülen değil; yalnızca sayı değeri döndürülür. Daha fazla bilgi için [nasıl yapılır: Bir sorgu tarafından döndürülen varlık sayısını belirleme](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sorgu Projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
@@ -130,17 +130,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [LINQ Konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
- [Nasıl yapılır: Veri Hizmeti Sorguları Yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [Nasıl yapılır: Veri Hizmeti Sorgusuna Sorgu Seçenekleri Ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [Nasıl yapılır: Bir veri hizmeti sorgusuna sorgu seçenekleri ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Nasıl yapılır: Sorgu Tarafından Döndürülen Varlık Sayısını Belirleme](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Nasıl yapılır: Bir sorgu tarafından döndürülen varlık sayısını belirleme](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Nasıl yapılır: Veri Hizmeti İsteği için İstemci Kimlik Bilgileri Belirtme](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Nasıl yapılır: İstek veri hizmeti için istemci kimlik bilgilerini belirtin](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [Nasıl yapılır: İstemci İsteğinde Üst Bilgileri Ayarlama](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [Nasıl yapılır: İstemci isteğinde üst bilgileri Ayarla](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [Nasıl Yapılır: Sorgu Sonuçlarını Yansıtma](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [Nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

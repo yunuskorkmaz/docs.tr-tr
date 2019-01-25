@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604411"
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 Yönetilen kod kimliği veya sorumlu rolünü bulabilir bir <xref:System.Security.Principal.IPrincipal> başvuru içeren bir nesne bir <xref:System.Security.Principal.IIdentity> nesne. Kullanıcı ve grup hesapları gibi tanıdık kavramları kimlik ve asıl nesneleri karşılaştırmak yararlı olabilir. Grup hesapları belirli kullanıcıları ve bunların sahip hakları kategorilerini temsil ederken çoğu ağ ortamlarında, kullanıcı hesaplarını kişiler veya programları temsil eder. Benzer şekilde, rol üyeliğini ve güvenlik kapsamlarını temsil ederken kullanıcılar, .NET Framework kimlik nesneleri temsil eder. .NET Framework'teki asıl nesne bir rolü ve bir kimlik nesne kapsüller. .NET framework uygulamaları kimliğini veya daha çok rolü üyeliğine göre sorumlu hakları vermek mümkündür.  
@@ -44,9 +44,9 @@ Yönetilen kod kimliği veya sorumlu rolünü bulabilir bir <xref:System.Securit
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Sorumlu Nesnesini Değiştirme](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Kimliğe Bürünme ve Geri Dönme](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Rol Tabanlı Güvenlik](../../../docs/standard/security/role-based-security.md)  
+- [Nasıl yapılır: WindowsPrincipal nesnesi oluşturma](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Nasıl yapılır: GenericPrincipal ve Genericıdentity nesneleri oluşturma](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Sorumlu Nesnesini Değiştirme](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Kimliğe Bürünme ve Geri Dönme](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Rol Tabanlı Güvenlik](../../../docs/standard/security/role-based-security.md)
 - [Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)
