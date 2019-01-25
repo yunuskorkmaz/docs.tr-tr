@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745421"
 ---
 # <a name="xuid-directive"></a>x:Uid Yönergesi
 Biçimlendirme öğesi için benzersiz bir tanımlayıcı sağlar. Birçok senaryoda bu benzersiz tanımlayıcı XAML yerelleştirme işlemleri ve araçları tarafından kullanılır.  
@@ -41,7 +41,7 @@ Biçimlendirme öğesi için benzersiz bir tanımlayıcı sağlar. Birçok senar
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  Rolü hakkında daha fazla bilgi için `x:Uid` WPF yerelleştirme işleminde ve XAML BAML biçiminde görmek [WPF için genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) veya <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

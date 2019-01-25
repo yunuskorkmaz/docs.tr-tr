@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508685"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM programlı olarak okuma, işleme ve XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış yalnızca iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğeyi veya özelliği ekleyin ve düğümleri kaldırma içeriği düzenlemek için hiçbir özellikleri olduğu anlamına gelir **XmlReader**. DOM sunucunun birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış biçimde XML verilerini bellek içinde temsil edilen adıdır. XML veri verilmiştir.  
@@ -78,5 +78,5 @@ XML belge yapısı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Düğüm Türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [XML Düğüm Türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [XML Verilerine Nesne Hiyerarşisi Eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

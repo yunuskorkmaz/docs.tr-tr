@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693616"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -52,12 +52,12 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 -   Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
- Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: kullanım sırasında geliştirme için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, bir hiyerarşideki her bir sertifika sertifikayı veren CA'ya burada bağlı oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın ardından bağlantıları özgün CA'ın sertifika veren CA sertifikası. Kök CA sertifikasını ulaşılana kadar bu işlem tekrarlanır. Kök CA sertifikasını kendiliğinden güveniliyor.  
   
- Varlık olarak da adlandırılan bu hiyerarşide bağlı olarak kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift tıklayıp tıklayarak MMC ek bileşenini kullanarak görüntüleyebileceğiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sertifika yetkilisi sertifika zinciri kullanılan imzaları doğrulamak için belirtin](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Varlık olarak da adlandırılan bu hiyerarşide bağlı olarak kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift tıklayıp tıklayarak MMC ek bileşenini kullanarak görüntüleyebileceğiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İmzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Verenin sertifika güvenilir kök yetkilisi sertifika deposuna yerleştirerek veren herhangi bir güvenilir kök yetkilisi belirlenebilir.  
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
 3.  Kök yetkilisi sertifikası güvenilen kök sertifika yetkilileri deposuna aktarın.  
   
-4.  Adım adım yönergeler için bkz: [nasıl yapılır: kullanım sırasında geliştirme için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4.  Adım adım yönergeler için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Hangi sertifikanın kullanılacağını?  
  Sertifikaları hakkında sık sorulan sorular, hangi sertifikanın kullanılacağını, olan ve neden. Yanıt, istemci veya hizmet programlama üzerinde bağlıdır. Aşağıdaki bilgileri, genel bir kılavuz sağlar ve bu soruların kapsamlı bir çözüm değildir.  
@@ -170,9 +170,9 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
  WCF ilk sürümde, etki alanı ilkesi danışmadan eşleme gerçekleştirilir. Bu nedenle ilk sürüm altında çalışırken çalışmak için kullanılan eski uygulamaları eşleme etkinleştirilmişse ve X.509 Sertifika, etki alanı ilkesini karşılamadığı başarısız mümkündür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

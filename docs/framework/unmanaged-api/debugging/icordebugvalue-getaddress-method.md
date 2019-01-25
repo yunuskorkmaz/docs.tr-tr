@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559851"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress Metodu
-Ayıklanacak sürecinde olduğundan "ICorDebugValue" nesnesinin adresini alır.  
+Ayıklanan sürecinde olan "ICorDebugValue" nesnenin adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Parametreler  
  `pAddress`  
- [out] İşaretçi bir `CORDB_ADDRESS` nesne bu değer nesnesi adresini belirtir.  
+ [out] İşaretçi bir `CORDB_ADDRESS` bu değeri nesnenin adresini belirten bir nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değer kullanılamıyorsa, 0 (sıfır) döndürülür. Bu değer en az kısmen Yazmaçları ise meydana gelmiş olabilir veya bir atık toplayıcı tanıtıcı depolanan (`GCHandle`).  
+ Değer kullanılamıyor, 0 (sıfır) döndürülür. Bu değer, en azından kısmen kayıtlara ise meydana gelmiş olabilir ya da bir çöp toplayıcı tanıtıcısı depolanan (`GCHandle`).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

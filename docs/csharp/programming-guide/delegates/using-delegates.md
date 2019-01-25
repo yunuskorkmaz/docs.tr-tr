@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570141"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli bir şekilde C ve C++ içindeki işlev işaretçisine benzer bir yöntem kapsülleyen bir türdür. C işlev işaretçilerinden farklı nesne yönelimli Temsilciler, korunmasına ve güvende yazın. Bir temsilci türü, temsilcinin adına göre tanımlanır. Aşağıdaki örnek bildirir adlandırılmış bir temsilci `Del` alan bir metodu kapsüllemek bir [dize](../../../csharp/language-reference/keywords/string.md) bağımsız değişken ve döndürür olarak [void](../../../csharp/language-reference/keywords/void.md):  
@@ -65,7 +65,7 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli b
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)

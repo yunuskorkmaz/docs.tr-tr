@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671869"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
-Belirtilen fieldDef simgesi tarafından başvurulan alanıyla ilişkili meta verileri belirtecini alır.  
+Belirteç belirtilen fieldDef simgesi tarafından başvurulan alanı ile ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,10 +47,10 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mb`  
- [in] İlişkili meta verileri almak için alanını temsil eden bir fieldDef simgesi belirteci.  
+ [in] İlgili meta verilerini almak için alan temsil eden bir fieldDef simgesi belirteci.  
   
  `pClass`  
- [out] Alanın ait sınıf türünü temsil eden bir TypeDef belirteci için bir işaretçi.  
+ [out] Alanın ait sınıf türünü temsil eden bir tür tanımı belirteci için bir işaretçi.  
   
  `szField`  
  [out] Alanın adı.  
@@ -65,13 +65,13 @@ HRESULT GetFieldProps (
  [out] Alanın meta verileriyle ilişkili bayraklar.  
   
  `ppvSigBlob`  
- [in] Alan açıklar ikili meta veri değeri için bir işaretçi.  
+ [in] Alan açıklayan ikili meta veri değeri için bir işaretçi.  
   
  `pcbSigBlob`  
  [out] Bayt cinsinden boyutu `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Alan değeri türünü belirten bir bayrak.  
+ [out] Alanın değeri türünü belirten bir bayrak.  
   
  `ppValue`  
  [out] Alan için sabit bir değer.  
@@ -80,14 +80,14 @@ HRESULT GetFieldProps (
  [out] Karakter boyutu `ppValue`, veya dize varsa sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

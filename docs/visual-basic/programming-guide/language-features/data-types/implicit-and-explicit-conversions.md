@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596013"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Örtük ve Açık Dönüştürmeler (Visual Basic)
 Bir *örtük dönüştürme* kaynak kodunda özel bir sözdizimi gerektirmez. Aşağıdaki örnekte, Visual Basic değeri örtük olarak dönüştürür `k` giderek önce bir tek duyarlıklı kayan nokta değerine `q`.  
@@ -117,7 +117,7 @@ End If
  Daha fazla bilgi ve örnek için bkz. [dizi dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
   
 ### <a name="types-defining-ctype"></a>CType tanımlama türleri  
- Tanımlayabileceğiniz `CType` bir sınıf veya yapı tanımladığınız üzerinde. Bu sınıf veya yapı türünü gelen ve değerleri dönüştürmenize olanak sağlar. Daha fazla bilgi ve örnek için bkz. [nasıl yapılır: bir dönüşüm işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Tanımlayabileceğiniz `CType` bir sınıf veya yapı tanımladığınız üzerinde. Bu sınıf veya yapı türünü gelen ve değerleri dönüştürmenize olanak sağlar. Daha fazla bilgi ve örnek için bkz. [nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
 >  Bir hata meydana gelir veya bir dönüştürme anahtar sözcüğü ile kullanılan değerleri hedef veri türü için geçerli olmalıdır. Örneğin, dönüştürmeyi denediğinizde bir `Long` için bir `Integer`, değerini `Long` geçerli aralığında olmalıdır `Integer` veri türü.  
@@ -125,15 +125,15 @@ End If
 > [!CAUTION]
 >  Belirtme `CType` kaynak türü hedef türünden türetilmemiş bir sınıf türünden başka bir başarısız çalışma zamanında için dönüştürülecek. Böyle bir hata oluşturur bir <xref:System.InvalidCastException> özel durum.  
   
- Ancak, türlerinden bir yapı ya da tanımladığınız sınıf varsa ve tanımladığınız `CType` gereksinimlerini karşılıyorsa, yapı veya sınıf üzerinde bir dönüştürme başarılı olabilmesi için `CType`. Bkz: [nasıl yapılır: bir dönüşüm işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Ancak, türlerinden bir yapı ya da tanımladığınız sınıf varsa ve tanımladığınız `CType` gereksinimlerini karşılıyorsa, yapı veya sınıf üzerinde bir dönüştürme başarılı olabilmesi için `CType`. Bkz: [nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
  Açık bir dönüştürme gerçekleştirmek olan olarak da bilinen *atama* belirtilen veri türü veya nesne sınıfı için bir ifade.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Nasıl yapılır: bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

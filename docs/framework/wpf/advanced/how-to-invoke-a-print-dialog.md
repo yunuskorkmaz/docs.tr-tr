@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 92a4cd6e29e37478981aad32286c181a412a6bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735837"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Nasıl yapılır: Yazdır İletişim Kutusu Çağırma
 Uygulamanızdan yazdırma olanağı sağlamak için basitçe oluşturabilir açın ve bir <xref:System.Windows.Controls.PrintDialog> nesne.  
@@ -31,8 +31,8 @@ Uygulamanızdan yazdırma olanağı sağlamak için basitçe oluşturabilir aç�
   
  NET olarak söylemek gerekirse, kullanabileceğiniz <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> hiç iletişim kutusunu açmadan yöntemi. Bu anlamda denetimi görünmeyen bir yazdırma bileşeni olarak kullanılabilir. Ancak performansla ilgili nedenlerden dolayı ya da kullanılacak daha iyi olurdu <xref:System.Printing.PrintQueue.AddJob%2A> yöntemi veya çok biri <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter>. Bu konu hakkında daha fazla bilgi için bkz. [program aracılığıyla XPS dosyalarını yazdırma](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md) ve.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.PrintDialog>  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Belge Yazıcısı](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.PrintDialog>
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Microsoft XPS Belge Yazıcısı](https://go.microsoft.com/fwlink/?LinkId=147319)

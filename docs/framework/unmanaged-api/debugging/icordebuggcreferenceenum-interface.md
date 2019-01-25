@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa8c3160dc779b2475dec63be896af5283cf5346
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d228e548255cd70f34f6609aff613789f94fe5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507531"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum Arabirimi
 Çöp toplama işlemi yapılacak nesneler için bir numaralandırıcı sağlar.  
@@ -30,29 +30,29 @@ ms.locfileid: "33418171"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|Belirtilen sayıda alır [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) çöpünün toplanma olacak nesneleri hakkında bilgi içeren örnekleri.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|Belirtilen sayıda alır [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) atık olarak toplanmış olan nesneler hakkında bilgi içeren örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugGCReferenceEnum` Arabirimini uygulayan "ICorDebugEnum" arabirimi.  
+ `ICorDebugGCReferenceEnum` Arabirimi uygulayan "ICorDebugEnum" arabirimi.  
   
  Bir `ICorDebugGCReferenceEnum` örneği ile doldurulur [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) çağırarak örnekleri [Icordebugprocess5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) yöntemi. [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) nesneleri numaralandırılan çağırarak [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) yöntemi.  
   
- [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) bu yöntem tarafından doldurulmuş koleksiyonundaki nesneleri temsil eden nesneler üç tür:  
+ [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) bu yöntem tarafından doldurulan koleksiyonundaki nesneleri temsil eden üç nesne türleri:  
   
--   Tüm yönetilen yığınları nesneleri. Bu ortak dil çalışma zamanı tarafından oluşturulan nesnelerin yanı sıra, yönetilen kod Canlı başvurular içerir.  
+-   Tüm yönetilen yığında nesneleri. Bu, ortak dil çalışma zamanı tarafından oluşturulan nesnelerin yanı sıra, yönetilen kod kullanarak canlı başvurular içerir.  
   
--   Tanıtıcı tablosunu nesneleri. Bu güçlü başvurular içerir (`HNDTYPE_STRONG` ve `HNDTYPE_REFCOUNT`) ve bir modüldeki statik değişkenler.  
+-   Nesne işleyicisi tablosundan. Bu güçlü atıflar içerir (`HNDTYPE_STRONG` ve `HNDTYPE_REFCOUNT`) ve Modül içindeki statik değişkenler.  
   
--   Nesneleri sonlandırıcıyı sırasından. Sonlandırıcıyı çalıştırılana dek sonlandırıcıyı sıranın nesneleri kökleri.  
+-   Sonlandırma sırasından nesneleri. Sonlandırıcı çalıştırılana dek Sonlandırıcı kuyruğunda nesneleri kökleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

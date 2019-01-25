@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550662"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach Arabirimi
-Sunucu çağrılan hata ayıklayıcı otomatik eklemek için arabirimi tanımlar.  
+Hata ayıklayıcı sunucu çağrılan otomatik iliştirme için arabirimi tanımlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -33,7 +33,7 @@ Sunucu çağrılan hata ayıklayıcı otomatik eklemek için arabirimi tanımlar
 |[AutoAttach Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Hata ayıklayıcı sunucu çağrılan otomatik gerçekleştirir ekleyin.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** DbgAutoAttach.idl  
+ **Üst bilgi:** DbgAutoAttach.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

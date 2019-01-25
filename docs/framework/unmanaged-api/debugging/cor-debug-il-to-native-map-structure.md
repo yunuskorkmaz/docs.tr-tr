@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ea9a75ae9316c18439f6c2b728b47deacef9228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56d4255b06f1317c87685737e4ee4021c37a77f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555017"
 ---
 # <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP Yapısı
-Yerel kod Microsoft Ara dili (MSIL) kodunu eşleştirmek için kullanılan uzaklıkları içerir.  
+Yerel kod için Microsoft Ara dil (MSIL) kodu eşlemek için kullanılan uzaklıkları içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +40,21 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ilOffset`|MSIL kod uzaklığı.|  
+|`ilOffset`|MSIL kodunun uzaklığı.|  
 |`nativeStartOffset`|Yerel kod başlangıç uzaklığı.|  
 |`nativeEndOffset`|Yerel kod sonuna uzaklığı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorDebug.idl  
+ **Üst bilgi:** CorProf.idl, CorDebug.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

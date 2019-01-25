@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654587"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -151,5 +151,5 @@ Erişim türü: salt okunur
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>

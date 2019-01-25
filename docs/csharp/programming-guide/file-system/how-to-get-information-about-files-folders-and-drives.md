@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Dosyalar, klasörler ve sürücüler - hakkında bilgi almak C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Dosyalar, klasörler ve sürücüler - hakkında bilgi almak C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e3b0834f27fd0673687dc00b861e80752a585737
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c122f0d342acb3708072be89e08c7465a654815
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660391"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Nasıl Yapılır: Dosyalar, klasörler ve sürücüler hakkında bilgi edinin (C# Programlama Kılavuzu)
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Nasıl yapılır: Dosyalar, klasörler ve sürücüler hakkında bilgi edinin (C# Programlama Kılavuzu)
 .NET Framework, dosya sistemi bilgileri aşağıdaki sınıfları kullanarak erişebilirsiniz:  
   
 -   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -53,8 +53,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  Uygulama belirtilen dosyayı okumak için yeterli izinlere sahip değilse `Exists` yöntemi döndürür `false` bağımsız olarak, bir yolu var olup; yöntemi bir özel durum oluşturmaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

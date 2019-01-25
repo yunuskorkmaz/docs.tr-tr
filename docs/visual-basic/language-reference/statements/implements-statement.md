@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681072"
 ---
 # <a name="implements-statement"></a>Implements Deyimi
 Bir veya daha fazla arabirimleri veya sınıfta uygulanması gereken arabirim üyeleri veya yapı tanımı göründüğü belirtir.  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulayan](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulayan](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

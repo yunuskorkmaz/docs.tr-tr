@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a368048f83540bf5bb9cd43a0a88c40641eb7e94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621712"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
 Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuvası uygulama programı askıya alır. Eşzamanlı yuva kendi işlemleri için ağ ağır olarak kullanan uygulamalar için uygun değildir, ancak bunlar diğer uygulamalar için Ağ Hizmetleri için basit erişim sağlar.  
@@ -70,7 +70,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

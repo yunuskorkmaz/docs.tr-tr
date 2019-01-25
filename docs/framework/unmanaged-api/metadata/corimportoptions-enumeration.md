@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744618"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions Numaralandırması
-Geçerli kapsam dışında bir derlemeyi içe aktarılmasını sırasında davranışını denetleyen bayrak değerleri içerir.  
+Geçerli kapsam dışında bir derleme içeri aktarma sırasında davranışını denetleyen bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,21 +49,21 @@ typedef enum CorImportOptions {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Silinmiş kayıtlar atlamak için varsayılan davranış gösterir.|  
-|`MDImportOptionAll`|Tüm meta veriler numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllTypeDefs`|Silinen olanlar da dahil olmak üzere tüm tür tanımları numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllMethodDefs`|Silinen olanlar da dahil olmak üzere tüm MethodDefs numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllFieldDefs`|Silinen olanlar da dahil olmak üzere tüm FieldDefs numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllProperties`|Silinen olanlar da dahil olmak üzere tüm PropertyDefs numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllEvents`|Silinen olanlar da dahil olmak üzere tüm EventDefs numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllCustomAttributes`|Silinen olanlar da dahil olmak üzere tüm özel öznitelikleri numaralandırılan olduğunu gösterir.|  
-|`MDImportOptionAllExportedTypes`|Silinen olanlar da dahil olmak üzere tüm dışarı aktarılan türleri numaralandırılan olduğunu gösterir.|  
+|`MDImportOptionAll`|Tüm meta veriler listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllTypeDefs`|Silinmiş olanlar da dahil olmak üzere tüm tür tanımları, listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllMethodDefs`|Silinmiş olanlar da dahil olmak üzere tüm MethodDefs listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllFieldDefs`|Silinmiş olanlar da dahil olmak üzere tüm FieldDefs listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllProperties`|Silinmiş olanlar da dahil olmak üzere tüm PropertyDefs listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllEvents`|Silinmiş olanlar da dahil olmak üzere tüm EventDefs listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllCustomAttributes`|Silinmiş olanlar da dahil olmak üzere tüm özel öznitelikleri listelenmiş olduğunu gösterir.|  
+|`MDImportOptionAllExportedTypes`|Silinmiş olanlar da dahil olmak üzere dışarı aktarılan tüm türler listelenmiş olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

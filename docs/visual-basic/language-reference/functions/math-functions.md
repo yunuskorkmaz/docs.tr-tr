@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a644183f0af7a10672acc62e39ac174b88a47b90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731822"
 ---
 # <a name="math-functions-visual-basic"></a>Matematik İşlevleri (Visual Basic)
 Yöntemlerinin <xref:System.Math?displayProperty=nameWithType> sınıfı trigonometrik Logaritmik ve diğer yaygın matematiksel işlevler sağlar.  
@@ -166,9 +166,9 @@ End Function
   
  **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [Türetilen Matematik İşlevleri](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [Türetilen Matematik İşlevleri](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

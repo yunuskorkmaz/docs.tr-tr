@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: f15490417d54121c750e2ea918820c5cb717002e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1401885db6faeec1d493e0279d8a5472e3128245
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594076"
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 
@@ -169,7 +169,7 @@ Bağımlılık özellikleri ortak özellik olarak bildirilmelidir. Bağımlılı
 
 Genel bir sınıf oluşturucuları (genellikle FxCop gibi kod çözümleme araçları tarafından zorunlu tutulur) yönetilen kod programlama İlkesi sanal yöntemleri çağırmamalıdır yoktur. Bu temel bir türetilen sınıf oluşturucusu başlatma oluşturucular çağrılabilir ve Oluşturucusu aracılığıyla sanal yöntemin girilmesinin yapılandırılmakta nesne örneğinin bir tam başlatma durumunda oluşabilecek olmasıdır. Zaten türetilen herhangi bir sınıftan türetilen zaman <xref:System.Windows.DependencyObject>, özellik sistemi çağırır ve sanal yöntemleri dahili olarak sunan farkında olmalıdır. Bu sanal yöntemler parçası olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği Sistem Hizmetleri. Yöntemleri geçersiz kılma değeri belirleme katılmak türetilmiş sınıfları sağlar. Belirli bir oluşturucu desenler izleyen sürece çalışma zamanı başlatma ile ilgili olası sorunları önlemek için bağımlılık özellik değerleri, sınıfların oluşturuculardan ayarlanmamalıdır. Ayrıntılar için bkz [DependencyObjects için güvenli Oluşturucu desenleri](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
 - [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

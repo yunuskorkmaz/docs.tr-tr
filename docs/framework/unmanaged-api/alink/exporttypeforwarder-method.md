@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574621"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Metodu
-Tür iletici verilen derleme türü tablosuna ekler.  
+Bir tür ileticisi verilen derleme türü tabloya ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +39,16 @@ HRESULT ExportTypeForwarder(
   
 #### <a name="parameters"></a>Parametreler  
  `tkAssemblyRef`  
- Tür iletici başvurduğu derlemesine başvuru.  
+ Tür ileticisi başvurduğu derlemesine başvuru.  
   
  `pszTypename`  
- Dışarı aktarmak için tam olarak nitelenmiş tür adı.  
+ Dışarı aktarmak için tam nitelikli tür adı.  
   
  `dwFlags`  
  `ComType` gibi bayrakları `tdPublic` veya `tdNested`. Bu değer için geçirilebilir [DefineExportedType yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Dışarı aktarılan tür belirtecini alır. Bu, yalnızca iç içe geçmiş türler yayma için gereklidir.  
+ Verilen türde bir belirteç alır. Bu, iç içe geçmiş türler yalnızca yayma için gereklidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -56,7 +56,7 @@ HRESULT ExportTypeForwarder(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

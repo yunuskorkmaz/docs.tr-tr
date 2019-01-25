@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d124ce5dd38bed7eb439a055ff9e30a75efe5891
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f7ffef0af68bee3e7184fe8bde9264f570230be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573645"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob Yöntemi
 Win32 kaynak blob ve ilişkili kaynakları serbest bırakır.  
@@ -36,7 +36,7 @@ HRESULT FreeWin32ResBlob(
   
 #### <a name="parameters"></a>Parametreler  
  `ppResBlob`  
- Serbest bırakılacak kaynak blob. Bu yöntem blob işaretçisi NULL olarak atar.  
+ Kaynak blob'yayımlanacak. Bu yöntem, blob işaretçiyi NULL olarak atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -44,7 +44,7 @@ HRESULT FreeWin32ResBlob(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

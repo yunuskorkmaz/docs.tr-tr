@@ -1,15 +1,15 @@
 ---
-title: "İzlenecek yol: Visual Studio'da (C#) Microsoft Office derlemelerinden tür bilgilerini katıştırma"
+title: "İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)"
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 20ed45b1796062973a1d4a9bcaa86782655d3867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732706"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da (C#) Microsoft Office derlemelerinden tür bilgilerini katıştırma
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)
 Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil birlikte çalışma derlemesi (PIA) gereksinimini ortadan kaldırabilir. Ek olarak, gömülü tür bilgileri, uygulamanız için sürüm bağımsızlığı elde etmenizi sağlar. Diğer bir deyişle, programınız her sürüm için belirli bir PIA'ya gerek kalmadan bir COM kitaplığının birden çok sürümünden türler kullanmak üzere yazılabilir. Bu, Microsoft Office kitaplıklarından nesne kullanan uygulamalar için yaygın bir senaryodur. Tür bilgilerini katıştırma farklı Microsoft Office sürümleri program ya da her sürümü Microsoft Office PIA'yı tekrar dağıtma gereği olmaksızın farklı bilgisayarlarda çalışmak için bir programı'nın aynı derlemesini etkinleştirir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -124,7 +124,7 @@ Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil b
   
 5.  Örnek kodda belirtilen konumda bir Excel çalışma kitabının oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Visual Studio'da (C#) yönetilen derlemelerden türler katıştırma](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [/ Link (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

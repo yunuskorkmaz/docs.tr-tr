@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: ToolStripMenuItems'ne Geliştirmeler Ekleme"
+title: "Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685095"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems'ne Geliştirmeler Ekleme
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme
 Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> aşağıdaki yollarla denetimler:  
   
 -   Cetvel bir kelime işleme uygulaması kenar boşluğu görüntülenip görüntülenmeyeceğini gibi bir özellik üzerinde açık olup olmadığını belirlemek için ya da hangi dosyaların listesini dosyasında itibariyle gösterilen, bu tür belirtmek için onay işaretleri ekleme bir **penceresi** menüsü.  
@@ -113,7 +113,7 @@ Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.F
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

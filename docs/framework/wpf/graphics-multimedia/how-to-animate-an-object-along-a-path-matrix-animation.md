@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738306"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Nasıl yapılır: Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> sınıfının bir nesnenin tarafından tanımlanan bir yol üzerinde animasyonunu bir <xref:System.Windows.Media.PathGeometry>.  
@@ -34,7 +34,7 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028). Geometrik yollar hakkında daha fazla bilgi için bkz. [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

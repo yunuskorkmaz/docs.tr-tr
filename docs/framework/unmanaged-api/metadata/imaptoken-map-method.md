@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557483"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map Yöntemi
-Meta veri imzaları kullanarak derlemeler arasında bir ilişki eşler.  
+Meta verileri imza kullanma derlemeler arasında bir ilişki eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT Map (
   
 #### <a name="parameters"></a>Parametreler  
  `tkImp`  
- [in] İçeri aktarılan kod nesnesini temsil eden meta veri simgesi.  
+ [in] Alınan kod nesnesini temsil eden meta veri belirteci.  
   
  `tkEmit`  
- [in] Verilmiş kod nesnesini temsil eden meta veri simgesi.  
+ [in] Gösterilen kod nesneyi temsil eden meta veri belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirteç eşleme yeniden birleştirme sırasında ortaya çıktığında, özgün belirteç alınan (kaynak) meta veri kapsamda kapsamlıdır ve yeni belirteci verilmiş (hedef) meta veri kapsamda kapsamlıdır.  
+ Belirteci yeniden eşlemeniz birleştirme sırasında ortaya çıktığında, özgün belirteç içeri aktarılan (kaynak) meta verileri kapsamda kapsama alınır ve yeni belirteç yayılan (hedef) meta verileri kapsamda kapsamlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMapToken Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMapToken Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

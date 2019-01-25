@@ -2,12 +2,12 @@
 title: WCF'de İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731354"
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 Windows Communication Foundation (WCF) güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`), iki birleştirir. Bu konu, ileti güvenliği ve nedenleri kullanılacağını açıklar.  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) güvenlik sağlamak için iki ana modu va
   
 -   Uygulama, XML düzeyinde güvenlik mekanizmalar ve destek için WS-Security belirtimi gerektirir. Bu, birlikte çalışabilirlik etkileyebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Nasıl yapılır: Aktarım Güvenliği ve İleti Kimlik Bilgilerini Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft desenler ve uygulamalar, Bölüm 3: uygulama taşıma ve ileti güvenlik katmanı](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft desenler ve uygulamalar, Bölüm 3: Uygulama aktarım ve ileti Katmanı Güvenliği](https://go.microsoft.com/fwlink/?LinkId=88897)

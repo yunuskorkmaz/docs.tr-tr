@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f1769e2c1534e259c09db01f4263d6cfabdc21db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00fb179cb95e764089b6427f41aefd0367fec836
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672259"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "47208220"
   
 -   İlerleme çubukları veya kaydırıcıları, gibi belirsiz aralık değerleri denetimleri normalleştirilmiş bu değerlere sahip olmalıdır.  
   
- ![İlerleme çubuğu. ](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Progress bar.](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bir ilerleme çubuğu örneği normalleştirilmiş 0 ile 100 için sırasıyla  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
@@ -39,13 +39,13 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Hiçbiri|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
   
@@ -57,9 +57,9 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
 |--------------------|---------------|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> Geçerli bir değerle çağrılır büyüktür <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> veya küçüktür <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

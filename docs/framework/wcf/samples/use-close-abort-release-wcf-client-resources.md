@@ -3,12 +3,12 @@ title: WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak k
 description: Dispose, başarısız ve ağ başarısız olduğunda özel durumlar. Bu, istenmeyen davranışlara neden olabilir. Bunun yerine, yakın kullanın ve ağ başarısız olduğunda istemci kaynakları serbest bırakmak için İptal.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736435"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Kapat ve ağ bağlantıları güvenli bir şekilde bırakılan iptal yayın kaynakları
 Bu örnek, kullanarak gösterir `Close` ve `Abort` türü belirlenmiş istemci kullanırken kaynakları temizlemek için yöntemleri. `using` Deyimi ağ bağlantısı sağlam olmadığında özel durumlara neden olur. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
@@ -119,4 +119,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

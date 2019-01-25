@@ -2,12 +2,12 @@
 title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743012"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
@@ -58,7 +58,7 @@ Yerel IIS uygulamanızı dağıtmayı tercih ederseniz, IIS kurulumuyla ilgili h
 ### <a name="svc-file"></a>. SVC dosyası
  Veya, bir sürüm doğruluğundan emin olmak için dosyanın var olup olmadığını yayımlama işlemi her bir WCF hizmeti için bir *.svc dosyası oluşturur. Svc dosyaları farklı iki çeşit vardır: bir WCF hizmet kitaplığı ve dağıtım hizmeti kitaplığı ve başka bir sıralı ve Durum makinesi iş akışı hizmet kitaplığı. Oluşturulan \*.svc dosyasını, hedef konum kök klasörüne kopyalanır.
 
-### <a name="webconfig-file"></a>Web.config dosyası
+### <a name="webconfig-file"></a>Web.config File
  Belirli hedef konuma, her bir hizmet projesi yayımlandığında bir Web.config dosyası oluşturulur.
 
  Oluşturulan Web.config dosyası Web barındırma ve App.config içeriğini aşağıdaki değişikliklerle birlikte WCF hizmet kitaplığı için faydalı olan Web bölümleri içerir:
@@ -73,7 +73,7 @@ Yerel IIS uygulamanızı dağıtmayı tercih ederseniz, IIS kurulumuyla ilgili h
 ## <a name="security"></a>Güvenlik
  IIS Yönetici hesabında çalıştırılmasına gerektirdiğinden yayımlama yerel IIS Yöneticisi ayrıcalığı gerektirir. IIS Yöneticisi ayrıcalığı olmayan bir kullanıcı WCF hizmet yayımlama açılırsa, bir hedef konum olarak kullanılabilir değil. Dosya sistemi veya FTP sitesi yayımlama yönetici ayrıcalığı çalışır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

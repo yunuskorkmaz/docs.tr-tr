@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (C# Kılavuzu) birden çok dizeyi birleştirme'
+title: 'Nasıl yapılır: Birden çok dizeyi birleştirme (C# Kılavuzu)'
 description: C# dizeyi birleştirmek için birden çok yolu vardır. Seçenekleri ve farklı seçenekler ardındaki nedenler öğrenin.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710423"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Nasıl yapılır: (C# Kılavuzu) birden çok dizeyi birleştirme
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Nasıl yapılır: Birden çok dizeyi birleştirme (C# Kılavuzu)
 
 *Birleştirme* bir dizenin başka bir dizenin sonuna ekleme işlemidir. Kullanarak dizeleri birleştirme `+` işleci. Dize değişmez değerleri ve dize sabitleri için derleme zamanında birleştirme oluşur; hiçbir çalışma zamanı birleştirme gerçekleşir. Dize değişkenleri için yalnızca çalışma zamanında birleştirme gerçekleşir.
 
@@ -53,9 +53,9 @@ En son olarak, kullanabileceğiniz [LINQ](../programming-guide/concepts/linq/ind
 
 Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [C# Programlama Kılavuzu](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [C# Programlama Kılavuzu](../programming-guide/index.md)
 - [Dizeler](../programming-guide/strings/index.md)

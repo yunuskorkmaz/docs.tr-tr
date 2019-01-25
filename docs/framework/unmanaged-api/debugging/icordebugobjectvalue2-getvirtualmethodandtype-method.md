@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af07df53c094654ab86f5e6531fd78124aded988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630898"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType Metodu
 Bu yöntem henüz uygulanmadı.  
@@ -38,8 +38,8 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alır en çok türetilen yöntemi ve belirtilen üye başvuru türünü temsil eden "ICorDebugFunction" ve "ICorDebugType" örneklerine işaretçileri arabirim.  
+ Alır, işaretçiler en çok türetilen yöntemi ve belirtilen üyenin başvurusu için türünü temsil eden "ICorDebugFunction" ve "ICorDebugType" örnekleri için arabirim.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-    
- 
+## <a name="see-also"></a>Ayrıca bkz.
+
+

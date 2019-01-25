@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e08a486089a5697b9b3bb4b52c69fda3b661a6ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654756"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType Sabit Listesi
-Çöp toplayıcı bir iş istasyonunda veya sunucuda çalışıp çalışmadığını gösterir.  
+Atık toplayıcı bir iş istasyonunda veya sunucuda çalışıp çalışmadığını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ typedef enum CorDebugGCType {
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|Çöp toplayıcı bir iş istasyonunda çalışıyor.|  
-|`CorDebugServerGC`|Çöp toplayıcı bir sunucu üzerinde çalışıyor.|  
+|`CorDebugWorkstationGC`|Çöp toplayıcı, bir iş istasyonunda çalışıyor.|  
+|`CorDebugServerGC`|Çöp toplayıcı, bir sunucu üzerinde çalışıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

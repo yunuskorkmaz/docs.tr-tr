@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: sorgu klasörleri (LINQ) (C#) bir dizi bayt toplam sayısı'
+title: 'Nasıl yapılır: Sorgu (LINQ) klasör kümesi bayt toplam sayısı (C#)'
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 7a11e30a41ce171d516d3ea00a0e8664efe33520
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52f428bcf427065b80e91c4d299c5d8fd9f32972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607559"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Nasıl yapılır: sorgu klasörleri (LINQ) (C#) bir dizi bayt toplam sayısı
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Nasıl yapılır: Sorgu (LINQ) klasör kümesi bayt toplam sayısı (C#)
 Bu örnek belirtilen bir klasördeki tüm dosyaları ve tüm alt klasörleri tarafından kullanılan bayt toplam sayısını almak nasıl gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -76,7 +76,7 @@ class QuerySize
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

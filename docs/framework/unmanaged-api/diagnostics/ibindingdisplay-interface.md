@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e5f36e10fffebe89b805cee3cb57e88afd4df35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745329"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay Arabirimi
-Çalışan uygulama geçerli bağlama bilgilerini görüntüleme yöntemleri sağlar.  
+Çalışan uygulamayı geçerli bağlama bilgilerini görüntülemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCurrentDisplay Metodu](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Geçerli bağlama görüntü bilgileri döndürür.|  
-|[InitializeForProcess Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Başlatır `IBindingDisplay` nesnesi.|  
+|[GetCurrentDisplay Metodu](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Geçerli bağlama görüntü bilgilerini döndürür.|  
+|[InitializeForProcess Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Başlatır `IBindingDisplay` nesne.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** BindingDisplay.h  
+ **Üst bilgi:** BindingDisplay.h  
   
  **Kitaplığı:** BindingDisplay.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 5d948817d4bc71aa31c5890f6740248f4c309588
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638762"
 ---
 # <a name="-highentropyva-visual-basic"></a>-hıghentropyva (Visual Basic)
 Belirten bir 64-bit yürütülebilir dosya ya da tarafından işaretlenen bir yürütülebilir dosya [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) derleyici seçeneği yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekler.  
@@ -30,6 +30,6 @@ Belirten bir 64-bit yürütülebilir dosya ya da tarafından işaretlenen bir y�
   
  Seçeneği, hedef çalıştırılabilir ve modüllerin açık olduğunda, bağımlı modüller 64-bit işlem çalışırken, 4 gigabayt (GB) büyük bir işaretçi değerleri işleyebilir olması gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

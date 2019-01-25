@@ -2,12 +2,12 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748005"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleLob> Oracle ile çalışmak için kullanılan sınıfı **LOB** veri türleri.  
@@ -16,7 +16,7 @@ Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.Oracl
   
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
-|**BLOB**|Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
+|**Blob**|Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
 |**CLOB**|Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
 |**NClob**|Oracle **NCLOB** Ulusal karakter boyut sınırı 4 gigabayt sunucusu üzerinde kümesini temel karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
   
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

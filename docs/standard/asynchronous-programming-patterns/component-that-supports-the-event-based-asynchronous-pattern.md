@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama'
+title: 'Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745473"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  Bu izlenecek yol, olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturma işlemini gösterir. Yardımcı sınıflarından kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> bileşen herhangi bir uygulama modeli altında düzgün çalıştığını sağlar, ad alanı dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsol uygulamaları ve Windows Forms uygulamaları. Bu bileşen ayrıca designable ile bir <xref:System.Windows.Forms.PropertyGrid> denetimi ve kendi özel tasarımcılar.  
@@ -48,7 +48,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 -   Uygulama başlatma ve iptal yöntemi  
   
- Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Bileşeni oluşturma  
  İlk adım, olay tabanlı zaman uyumsuz desen uygulayan bileşeni oluşturmaktır.  
@@ -82,7 +82,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
   
-## <a name="checkpoint"></a>Denetim noktası  
+## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
@@ -153,7 +153,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
   
-## <a name="checkpoint"></a>Denetim noktası  
+## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
@@ -176,7 +176,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
  `CalculateWorker` Yöntemi bir Temsilcide paketlenir ve zaman uyumsuz olarak çağrısı ile çağrılan `BeginInvoke`.  
   
 > [!NOTE]
->  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu davranışı asılı elde edilen iletilerle yayılmamış ve, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu davranışı asılı elde edilen iletilerle yayılmamış ve, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asal numarası hesaplamayı zaman uyumsuz olarak çalıştırmak için:  
   
@@ -207,7 +207,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
   
-## <a name="checkpoint"></a>Denetim noktası  
+## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
@@ -233,7 +233,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
   
-## <a name="checkpoint"></a>Denetim noktası  
+## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
 #### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
@@ -242,7 +242,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  `PrimeNumberCalculator` Bileşendir artık tamamlandı ve kullanıma hazır.  
   
- Kullanan bir örnek istemci için `PrimeNumberCalculator` bileşeni Bkz [nasıl yapılır: olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Kullanan bir örnek istemci için `PrimeNumberCalculator` bileşeni Bkz [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu örnek yazarak doldurabilirsiniz `CalculatePrime`, zaman uyumlu karşılığı `CalculatePrimeAsync` yöntemi. Bunu yapmak `PrimeNumberCalculator` bileşeni olay tabanlı zaman uyumsuz desen ile tamamen uyumlu.  
@@ -253,6 +253,6 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

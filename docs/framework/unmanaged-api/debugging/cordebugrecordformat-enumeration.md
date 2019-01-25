@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a27c96a7be9b5d868e07da11f1a239b9dd5fe2f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45278b116ce1ea1a910d806df408c8692338d9a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634382"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat Numaralandırması
-Yerel özel durum hata ayıklama olay hakkında bilgi içeren bir bayt dizisi verilerin biçimini tanımlar.  
+Yerel özel durum hata ayıklama olayla ilgili bilgileri içeren bir bayt dizisi verilerinin biçimini tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ typedef enum CorDebugRecordFormat {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|Verileri bir 32 bit Windows özel durum kaydıdır.|  
-|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Verileri bir 64-bit Windows özel durum kaydıdır.|  
+|`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Verileri bir 64 bit Windows özel durum kaydıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye `CorDebugRecordFormat` numaralandırma iletilir [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) bayt dizisi biçimini belirtmek için yöntemi kendi `pRecord` bağımsız değişkeni.  
+ Üye `CorDebugRecordFormat` numaralandırma geçirilen [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) bayt dizisindeki biçimini belirtmek için yöntemi kendi `pRecord` bağımsız değişken.  
   
 > [!NOTE]
->  Bu numaralandırma .NET senaryoları yalnızca hata ayıklama yerel olarak kullanıma yöneliktir.  
+>  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama'
+title: "Nasıl yapılır: Windows Forms'da birden çok denetimi hizalama"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 003d45f9384caa6a5b63187d20fe3e3e040e3e5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519807"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms'da birden çok denetimi hizalama
 Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını konumlandırabilirsiniz.  
   
 > [!NOTE]
@@ -28,13 +28,13 @@ Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart
   
 3.  Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
+- [Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Nasıl yapılır: Mevcut denetimleri farklı bir üst öğeye yeniden atama](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

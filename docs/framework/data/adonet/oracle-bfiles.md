@@ -2,12 +2,12 @@
 title: Oracle Bfıle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 683b4a9be826e1d0d4ee354fada10168d833e3d7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 825cb9eb4bdb54509c8ca3c20db4dade8b3ece73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677244"
 ---
 # <a name="oracle-bfiles"></a>Oracle Bfıle
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıfı <xref:System.Data.OracleClient.OracleType.BFile> veri türü.  
@@ -86,6 +86,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

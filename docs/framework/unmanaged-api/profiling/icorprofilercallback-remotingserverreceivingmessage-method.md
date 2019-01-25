@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572259"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage Yöntemi
-Profil Oluşturucu işlemi bir uzak yöntem çağırma veya etkinleştirme isteği aldı bildirir.  
+Profil Oluşturucu işlemin bir uzak yöntem çağırma veya etkinleştirme isteği aldı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,30 +37,30 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>Parametreler  
  `pCookie`  
- [in] Karşılık gelecek bir değerle sağlanan [Icorprofilercallback::remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) Bu koşullar altında:  
+ [in] Sağlanan değer karşılık gelecek bir değerle [Icorprofilercallback::remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) Bu koşullar altında:  
   
--   Remoting GUID tanımlama bilgilerini etkindir.  
+-   Uzaktan iletişim GUID tanımlama bilgilerinin etkin olur.  
   
 -   Kanal ileti iletilirken başarılı olur.  
   
--   GUID tanımlama bilgileri için istemci tarafı işlemi üzerinde etkindir.  
+-   GUID tanımlama bilgileri istemci tarafı işlemini üzerinde etkindir.  
   
- Bu, uzak çağrıları ve bir mantıksal çağrı yığını oluşturulmasını kolay eşlemeye izin verir.  
+ Bu, uzak hizmet çağrıları ve bir mantıksal çağrı yığını oluşturulmasını kolay eşlemeye izin verir.  
   
  `fIsAsync`  
- [in] Bir değer `true` çağrısı, zaman uyumsuz Aksi takdirde `false`.  
+ [in] Bir değer `true` çağrısı ise, zaman uyumsuz; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İleti isteği zaman uyumsuz ise, istek rasgele bir iş parçacığı tarafından hizmet verebilir.  
+ İleti isteği zaman uyumsuz olması durumunda, isteği herhangi bir rastgele iş parçacığı tarafından hizmet verebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

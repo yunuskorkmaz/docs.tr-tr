@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746550"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize Metodu
-Derleme ve meta verilerini tahmini ikili boyutunu geçerli kapsamda alır.  
+Derleme meta verilerini ve ikili tahmini boyutu geçerli kapsamda alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,33 +38,33 @@ HRESULT GetSaveSize (
   
 #### <a name="parameters"></a>Parametreler  
  `fSave`  
- [in] Değerini [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) doğru veya yaklaşık boyutu almak belirtir numaralandırması. Yalnızca üç değerler geçerlidir: cssAccurate, cssQuick ve cssDiscardTransientCAs:  
+ [in] Değerini [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) bir doğru ya da yaklaşık boyutunu almak belirten sabit listesi. Yalnızca üç değerler geçerlidir: cssAccurate, cssQuick ve cssDiscardTransientCAs:  
   
--   cssAccurate tam boyutu kaydetme verir ancak hesaplamak için daha uzun sürer.  
+-   cssAccurate tam boyutu kaydetme döndürür ancak hesaplamak için uzun sürer.  
   
--   cssQuick güvenliğiniz için doldurulan bir boyutu döndüren ancak hesaplamak için daha az zaman alır.  
+-   cssQuick güvenliği için doldurulan bir boyutunu döndürür ancak hesaplamak için daha kısa sürer.  
   
--   cssDiscardTransientCAs söyler `GetSaveSize` discardable özel öznitelikler hemen atabilirsiniz.  
+-   cssDiscardTransientCAs söyler `GetSaveSize` discardable özel öznitelikler yerine atabilirsiniz.  
   
  `pdwSaveSize`  
- [out] Dosyayı kaydetmek için gereken boyutu için bir işaretçi.  
+ [out] Dosyayı kaydetmek için gereken boyut için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetSaveSize` , derleme ve tüm meta veriler geçerli kapsamda kaydetmek için bayt cinsinden gerekli alanı hesaplar. (Çağrı [Imetadataemit::savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) yöntemi bu bayt sayısını yayması.)  
+ `GetSaveSize` , derleme ve tüm meta veriler geçerli kapsamda kaydetmek için bayt cinsinden gereken alanı hesaplar. (Bir çağrı [Imetadataemit::savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) yöntemi bu bayt sayısını yayması.)  
   
- Arayan uyguluyorsa [Imaptoken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) arabirimi (aracılığıyla [Imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) veya [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` iki geçişleri gerçekleştirecek en iyi duruma getirme ve onu sıkıştırmak için meta veriler üzerinde. Aksi takdirde, herhangi bir iyileştirme gerçekleştirilir.  
+ Çağıranın uyguluyorsa [Imaptoken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) arabirimi (aracılığıyla [Imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) veya [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` iki geçiş yapar en iyi duruma getirmek ve bunu sıkıştırmak için meta verileri. Aksi takdirde, hiçbir iyileştirmeleri gerçekleştirilir.  
   
- En iyi duruma getirme gerçekleştirilirse, ilk geçişi yalnızca alma zamanı aramaları performansı ayarlamak için meta veri yapılarını sıralar. Bu adım genellikle ileride kullanılmak üzere aracı tarafından korunduğunu belirteçleri geçersiz kılınır yan etkisi, geçici kayıtlarıyla taşıma sonuçlanır. Meta veriler bu belirteci değişinceye kadar arayan ikinci geçişinden sonra ancak bildirin değil. İkinci geçişinde koyma (erken bağlama) en iyi duruma getirme gibi meta veriler, toplam boyutunu azaltmak için yönelik çeşitli iyileştirmeler gerçekleştirilen `mdTypeRef` ve `mdMemberRef` belirteçler: başvuru türü veya içinde bildirilen üyesi olduğunda geçerli meta veri kapsamı. Bu geçişte belirteci eşleme başka bir gidiş oluşur. Bu aşamadan sonra meta veri altyapısı aracılığıyla arayan bildirir, `IMapToken` herhangi arabirimi simge değerlerini değiştirildi.  
+ İlk geçişinde, yalnızca en iyi duruma getirme gerçekleştirilirse, alma zamanı Arama performansını ayarlamak için meta veri yapıları sıralar. Bu adım, genellikle etrafında, kayıtları ileride kullanılmak üzere aracı tarafından korunan belirteçleri geçersiz kılınır yan etkisi olan taşıma sonuçlanır. Meta veri belirteci değişikliklerin kadar çağıran ikinci aşamadan sonra ancak bildirin değil. İkinci geçişinde çeşitli en iyi duruma getirme koyma (erken bağlama) en iyi duruma getirme gibi meta veriler, toplam boyutunu azaltmak için hedeflenen gerçekleştirilir `mdTypeRef` ve `mdMemberRef` belirteçler başvuru sağlayan bir tür veya içinde bildirilen üye olduğunda geçerli meta veri kapsamı. Bu geçişte belirteci eşleme başka bir gidiş gerçekleşir. Bu aşamadan sonra meta veri altyapısı aracılığıyla arayan bildirir, `IMapToken` belirteci değerleri herhangi bir arabirim değişti.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

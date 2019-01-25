@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b5281b90605f14b75b4537333378903d5f67817
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740157"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
 
@@ -27,13 +27,13 @@ Tarafından oluşturulan olayları providerID GUID EVENT_HEADER yapısında <xre
 
 ### <a name="parallel-loop-begin"></a>Paralel döngü başla
 
-EVENT_DESCRIPTOR. Görev 1 =
+EVENT_DESCRIPTOR.Task = 1
 
-EVENT_DESCRIPTOR. ID = 1
+EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
@@ -43,13 +43,13 @@ EVENT_DESCRIPTOR. ID = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|Döngü sayacı bitiş değeri|
 
 ### <a name="parallel-loop-end"></a>Paralel döngü son
- EVENT_DESCRIPTOR. Görev 2 =
+ EVENT_DESCRIPTOR.Task = 2
 
- EVENT_DESCRIPTOR. ID = 2
+ EVENT_DESCRIPTOR.Id = 2
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
@@ -57,13 +57,13 @@ EVENT_DESCRIPTOR. ID = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|Yineleme toplam sayısı|
 
 ### <a name="parallel-invoke-begin"></a>Başlangıç paralel çağırma
- EVENT_DESCRIPTOR. Görev 3 =
+ EVENT_DESCRIPTOR.Task = 3
 
- EVENT_DESCRIPTOR. Kimlik = 3
+ EVENT_DESCRIPTOR.Id = 3
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
@@ -73,19 +73,19 @@ EVENT_DESCRIPTOR. ID = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|Paralel Invoke içinde yürütülen eylem sayısı.|
 
 ### <a name="parallel-invoke-end"></a>Son paralel çağırma
- EVENT_DESCRIPTOR. Görev 4 =
+ EVENT_DESCRIPTOR.Task = 4
 
- EVENT_DESCRIPTOR. ID = 4
+ EVENT_DESCRIPTOR.Id = 4
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|İç içe geçirme ve çatal/birleştir semantiğine sahip olaylar için çiftleri göstermek için kullanılan benzersiz tanımlayıcısı.|
 
-## <a name="plinq-etw-events"></a>PLINQ ETW olayları
+## <a name="plinq-etw-events"></a>PLINQ ETW Events
  EVENT_HEADER. PLINQ providerID GUID değeridir:
 
 ```
@@ -93,32 +93,32 @@ EVENT_DESCRIPTOR. ID = 1
 ```
 
 ### <a name="parallel-query-begin"></a>Paralel sorgu başlangıç
- EVENT_DESCRIPTOR. Görev 1 =
+ EVENT_DESCRIPTOR.Task = 1
 
- EVENT_DESCRIPTOR. ID = 1
+ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
 |QueryId|<xref:System.Int32?displayProperty=nameWithType>|Bir sorgu benzersiz tanımlayıcısı.|
 
 ### <a name="parallel-query-end"></a>Paralel sorgu bitiş olayı
- EVENT_DESCRIPTOR. Görev 2 =
+ EVENT_DESCRIPTOR.Task = 2
 
- EVENT_DESCRIPTOR. ID = 2
+ EVENT_DESCRIPTOR.Id = 2
 
 #### <a name="user-data"></a>Kullanıcı Verileri
 
-|**Ad**|**Türü**|**Açıklama**|
+|**Ad**|**Tür**|**Açıklama**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Döngü çalışmaya TaskScheduler kimliği.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Döngü başlatılan görev kimliği.|
 |QueryId|<xref:System.Int32?displayProperty=nameWithType>|Bir sorgu benzersiz tanımlayıcısı.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework'te ETW Olayları](../../../docs/framework/performance/etw-events.md)
 - [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

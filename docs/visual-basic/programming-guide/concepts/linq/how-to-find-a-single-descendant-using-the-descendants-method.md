@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor'
+title: 'Nasıl yapılır: (Visual Basic) Descendants yöntemini kullanarak tek bir alt öğeyi bulma'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 5c4e857d28ab4660638198c054cf93bf94a621a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552456"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor
-Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> hızlı bir şekilde tek bir benzersiz olarak bulmak için kod yazma eksen yöntemi adlı öğesi. Belirli bir ada sahip belirli bir alt öğesi bulmak istediğiniz durumlarda bu kullanışlı bir tekniktir. İstenen öğesine gitmek için kod yazma, ancak daha hızlı ve kolay kullanılarak kod yazmaya görülür <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Nasıl yapılır: (Visual Basic) Descendants yöntemini kullanarak tek bir alt öğeyi bulma
+Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> adlı öğesi hızlı bir şekilde tek bir benzersiz bir şekilde bulmak için kod yazma eksen yöntemi. Belirli bir ada sahip belirli bir alt öğesi bulmak istediğinizde bu özellikle yararlı bir tekniktir. İstenen öğesine gitmek için kod yazabilirsiniz, ancak genellikle daha hızlı ve kolay kullanarak kod yazmak <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte <xref:System.Linq.Enumerable.First%2A> standart sorgu işleci.  
@@ -44,7 +44,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -80,5 +80,5 @@ End Module
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

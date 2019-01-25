@@ -2,12 +2,12 @@
 title: '&lt;baseAddressPrefixFilters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 04579980201b397e7ed92f55ffcb19e54de18aaa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 21a926d07aa818ce4ff5c2b85a04167fdd531047
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667251"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 IIS'de Windows Communication Foundation (WCF) uygulama uygun Internet Information Services (IIS) bağlamalarını seçmek için bir mekanizma sağlar filtreleri belirten geçişine yapılandırma koleksiyonunu temsil eder.  
@@ -80,8 +80,8 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  Filtre, herhangi bir joker karakterleri desteklemiyor. Ayrıca, IIS tarafından sağlanan baseAddresses adresleri yok diğer düzenleri bağlı olabilir `baseAddressPrefixFilters` listesi. Bu adresleri filtrelenir değil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)

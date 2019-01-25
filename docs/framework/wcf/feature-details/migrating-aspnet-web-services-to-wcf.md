@@ -2,42 +2,42 @@
 title: ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 7d43c66952d17a91e38ae1b086478b9416321b8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fb96dc431008936658bb941f16373037e712f51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736214"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web Hizmetlerini WCF'ye Taşıma
-ASP.NET Web Hizmetleri gibi Hizmetleri Internet Information Services (IIS) içinde barındırmak için tesis oluşturmak için .NET Framework sınıf kitaplıkları ve araçlar sağlar. Windows Communication Foundation (WCF) .NET Framework sınıf kitaplıkları, araçları ve Web Hizmetleri tarafından kullanılan dahil olmak üzere herhangi bir protokol kullanarak iletişim kurmak için yazılım varlıkları etkinleştirme barındırma olanakları sağlar.  Geçirme ASP.NET Web hizmetlerini wcf'ye yeni özellikleri ve WCF için benzersiz geliştirmeleri avantajlarından yararlanmak, uygulamalarınızın sağlar.  
+ASP.NET barındırma Hizmetleri Internet Information Services (IIS) içinde olanakları yanı sıra Web hizmetleri oluşturmak için .NET Framework sınıf kitaplıkları ve araçları sağlar. .NET Framework sınıf kitaplıkları, araçları ve Web Hizmetleri tarafından kullanılan dahil olmak üzere herhangi bir protokol kullanarak iletişim kurmak için barındırma özellikleri yazılım varlıkları etkinleştirmek için Windows Communication Foundation (WCF) sağlar.  ASP.NET Web hizmetlerini WCF'ye taşıma, yeni özellikler ve geliştirmeler için WCF özgü avantajlarından yararlanmak uygulamalarınızı sağlar.  
   
- WCF ASP.NET Web Hizmetleri göre birkaç önemli avantajı vardır. Yalnızca Web hizmetleri oluşturmak için ASP.NET Web Hizmetleri Araçları olmakla birlikte, WCF birbirleriyle iletişim kurmak için yazılım varlıkları yapılmalıdır zaman kullanılabilen araçlar sağlar. Bu geliştiriciler sırayla yazılım tamamlamak için geçen süre yanı sıra yazılım geliştirme kaynaklarını maliyetini azaltır farklı yazılım iletişimi senaryolara yer vermek için bilmesi için gerekli olan teknolojileri sayısını azaltır. geliştirme projelerini.  
+ WCF, ASP.NET Web hizmetlerini göre çeşitli önemli avantajları vardır. Yalnızca Web hizmetleri oluşturmak için ASP.NET Web Hizmetleri Araçları olmakla birlikte, WCF yazılım varlıkların birbirleriyle iletişim kurması için yapılması gerekir, kullanılabilen araçlar sağlar. Bu teknolojiler geliştiriciler sırayla yazılım tamamlanma süresi yanı sıra, yazılım geliştirme kaynakları maliyeti azaltır farklı yazılım iletişim senaryolara uyum sağlamak için yerinizi bilmesi gereken sayısını azaltır geliştirme projeleri.  
   
- WCF Web hizmeti geliştirme projeler için bile, ASP.NET Web Hizmetleri desteği'den daha fazla Web hizmeti protokolleri destekler. Bu ek protokoller, ilgili, daha karmaşık çözümleri için sağlar diğer şeyleri, güvenilir oturumlar ve işlemler arasında.  
+ Web hizmeti geliştirme projeler için bile, WCF, ASP.NET Web Hizmetleri desteği değerinden daha fazla Web hizmeti protokolleri destekler. Bu ek protokoller, ilgili, daha karmaşık çözümleri sağlar. diğer bir şey, güvenilir oturumlar ve işlemleri arasında.  
   
- WCF, ASP.NET Web Hizmetleri daha iletileri taşıma için daha fazla protokollerini destekler. ASP.NET Web hizmetlerini yalnızca Köprü Metni Aktarım Protokolü (HTTP) kullanarak iletileri göndermeyi destekler. WCF İletim Denetimi Protokolü (Adlandırılmış Kanallar ve Microsoft Message Queuing (MSMQ) TCP), yanı sıra, HTTP kullanarak iletileri göndermeyi destekler. Daha da önemlisi, WCF ek aktarım protokolleri desteklemek için genişletilebilir. Bu nedenle, yazılım WCF kullanılarak geliştirilen çok çeşitli olası yatırım getirisi böylece artırma diğer yazılım ile birlikte çalışmak için uyarlanabilir.  
+ WCF, ASP.NET Web Hizmetleri daha iletileri taşıma için daha fazla protokollerini destekler. ASP.NET Web hizmetlerini Köprü Metni Aktarım Protokolü (HTTP) kullanarak ileti gönderme yalnızca destekler. WCF İletim Denetimi Protokolü (Adlandırılmış Kanallar ve Microsoft Message Queuing (MSMQ) TCP), yanı sıra, HTTP kullanarak ileti gönderme destekler. Daha da önemlisi, WCF ek aktarım protokolleri destekleyecek şekilde genişletilebilir. Bu nedenle, yazılım WCF kullanılarak geliştirilen çok çeşitli böylece olası yatırım getirisini artırılması, diğer yazılım birlikte çalışmak üzere uyarlanabilir.  
   
- WCF dağıtımı için çok daha zengin özellikleri ve uygulamaları ASP.NET Web Hizmetleri daha yönetme sağlar. ASP.NET de vardır, yapılandırma sistemi yanı sıra WCF yapılandırma Düzenleyicisi sunar alıcıları ve aracılar, bir izleme Görüntüleyici, ileti günlüğe kaydetme, performans sayaçları, büyük bir dizi herhangi bir sayıda aracılığıyla geriye etkinlik izlemeyi gönderenlerin ve Windows Yönetim Araçları için destek.  
+ WCF dağıtımı için çok daha zengin özellikleri ve uygulamaları ASP.NET Web Hizmetleri daha yönetme sağlar. ASP.NET ayrıca sahip bir yapılandırma sistemi yanı sıra WCF yapılandırma Düzenleyicisi sunar. alıcılar ve herhangi bir sayıda aracılar, bir izleme görüntüleyicisinde, ileti günlüğe kaydetme, performans sayaçları, geniş bir dizi aracılığıyla geri gönderenlerden Etkinlik izleme ve Windows Yönetim Araçları desteği.  
   
- Kullanıyorsanız veya ASP.NET Web Hizmetleri, birkaç seçeneğiniz vardır kullanarak dikkate alarak bu olası faydaları ASP.NET Web göre WCF hizmetleri, verilen:  
+ Veya ASP.NET Web hizmetlerini birkaç seçeneğiniz vardır kullanmayı düşündüğünü kullanıyorsanız bu olası faydaları WCF göre ASP.NET Web Hizmetleri, verilen:  
   
 -   ASP.NET Web Hizmetleri ve WCF tarafından proffered avantajları forego devam edin.  
   
--   Gelecekte bir zamanda WCF benimsenmesi amacıyla ASP.NET Web hizmetlerini kullanmaya devam. Bu bölümdeki konular, yeni ASP.NET Web hizmeti uygulama ileride WCF uygulamaları ile birlikte kullanabilmek için için aday en üst düzeye çıkarmak açıklanmaktadır. Bu bölümdeki konular, ayrıca yeni ASP.NET Web hizmetlerini WCF'ye geçirme kolaylaştırmak amacıyla yapı açıklamaktadır. Ancak, hizmetleri güvenli hale getirme önemlidir ya da güvenilirlik veya işlem çıkışların gerekli ya da özel yönetim olanakları oluşturulması gerekecek sonra WCF benimsemek için daha iyi bir seçenektir. WCF tam olarak bu tür senaryoları için tasarlanmıştır.  
+-   Gelecekte bir zamanda WCF benimseme amacıyla yapılıyorsa, ASP.NET Web hizmetlerini kullanmaya devam edin. Bu bölümdeki konular, yeni ASP.NET Web hizmeti uygulama ileride WCF uygulamaları ile birlikte kullanabilmek için için aday en üst düzeye çıkarmak açıklanmaktadır. Bu bölümdeki konular, ayrıca yeni ASP.NET Web hizmetlerini WCF'ye taşıma bunları daha kolay hale getirmek için yapı işlemleri açıklanmaktadır. Ancak, önemli olan hizmetleri güvenli hale getirme veya güvenilirlik veya işlem Güvenceleri gereklidir veya özel yönetim olanakları oluşturulması gerekir, ardından WCF benimsemek için daha iyi bir seçenektir. WCF tam olarak bu tür senaryolar için tasarlanmıştır.  
   
--   Mevcut ASP.NET Web hizmeti uygulamalarınızı sürdürmek devam ederken yeni geliştirme için WCF benimser. Bu büyük olasılıkla en iyi bir seçimdir. WCF, avantajları kullanmak için var olan uygulamaları değiştirmeyi maliyetini sparing sırasında verir. Bu senaryoda yeni WCF uygulamaları mevcut ASP.NET uygulamaları ile birlikte bulunabilir. Yeni WCF uygulamaları mevcut ASP.NET Web hizmetlerini kullanmak mümkün olacaktır ve WCF WCF ASP.NET uyumluluk modu, mevcut ASP.NET uygulamalarına yeni işlemsel özellikleri programlamak için kullanılabilir.  
+-   Mevcut ASP.NET Web hizmeti uygulamalarınızı korumak devam edebilirsiniz. yeni geliştirme için WCF benimseyin. Bu büyük olasılıkla en iyi bir seçimdir. WCF, avantajlarını kullanmak üzere var olan uygulamaları değiştirmeyi maliyeti sparing sırasında verir. Bu senaryoda yeni WCF uygulamaları mevcut ASP.NET uygulamaları ile birlikte bulunabilir. Yeni WCF uygulamaları mevcut ASP.NET Web hizmetlerini kullanma olanağına ve WCF WCF ASP.NET uyumluluk modunun da mevcut ASP.NET uygulamalarına yeni işletimsel özelliklerine program için kullanılabilir.  
   
--   WCF benimsemeye ve ASP.NET Web hizmeti uygulamalarınız için WCF geçirilir. WCF tarafından sağlanan özellikleri ile mevcut uygulamaları geliştirmek için veya mevcut bir ASP.NET Web Hizmetleri içinde yeni işlevselliği, daha güçlü WCF uygulamaları yeniden oluşturmak için bu seçeneği tercih edebilirsiniz.  
+-   WCF benimseyin ve varolan ASP.NET Web hizmeti uygulamalarını wcf'ye TAŞIMA geçirin. WCF tarafından sağlanan özellikleri ile mevcut uygulamaları geliştirmek için veya mevcut bir ASP.NET Web Hizmetleri içinde yeni işlevselliği, daha güçlü WCF uygulamaları yeniden oluşturmak için bu seçeneği tercih edebilirsiniz.  
   
 > [!NOTE]
->  Bir WCF Hizmeti barındırılıyorsa dikkatli'nin alınması gereken IIS tarafından 5.x ve ASP.NET kaldırılır. Bir WCF Hizmeti IIS tarafından barındırılan zaman ASP.NET kaldırılırsa 5.x, hizmet için kod istenebilir. ASP.NET IIS çalıştıran bir işletim sisteminde kaldırılması zaman 5.x ve WCF kaldırılır, .svc uzantılı bir dosya bir metin dosyası olarak kabul edilir ve tüm kaynak kodu da dahil olmak üzere içeriği, istemciye döndürülür.  
+>  Bir WCF Hizmeti barındırılıyorsa dikkatli'nin alınması gereken IIS tarafından 5.x ve ASP.NET kaldırılır. Bir WCF Hizmeti IIS tarafından barındırılan zaman ASP.NET kaldırdıysanız 5.x, hizmet kodunu istenebilir. ASP.NET, IIS çalıştıran bir işletim sisteminde kaldırılması zaman 5.x ve WCF kaldırılır, .svc uzantılı bir dosya bir metin dosyası olarak kabul edilir ve herhangi bir kaynak kod dahil olmak üzere içeriği istemciye döndürülür.  
   
- Bu bölümde bu seçenekler ayrıntılı açıklanmaktadır, ASP.NET Web hizmetlerini wcf'ye karşılaştırır ve ASP.NET Web Hizmetleri kodunuz için WCF geçirmek yönergeler sağlar.  
+ Bu bölümde ayrıntılı Bu seçenekler anlatılmakta, ASP.NET Web hizmetlerini WCF'ye karşılaştırır ve kodunuzu ASP.NET Web hizmetlerini WCF'ye geçirme hakkında yönergeler açıklanmaktadır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
- [Windows Communication Foundation'ı Benimseme](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
- [ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki tümleştirmeyi kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Windows Communication Foundation'ı Benimseme](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
+- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

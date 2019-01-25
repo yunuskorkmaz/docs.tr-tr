@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-ms.openlocfilehash: 1d3b74ede9cde1928138d4d8625e8625354f5748
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5e619de8b90737136559db134a131fdc1833fb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640101"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Nasıl yapılır: Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Sapma Birikmesi ile Matris Animasyonu)
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> uzaklığı accumulate animasyonun bir nesnenin yol üzerinde animasyonunu oluşturma ve sınıf yinelenecek şekilde değerleri.  
@@ -33,6 +33,6 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028). Nasıl yapıldığını gösteren bir örnek için bir <xref:System.Windows.Media.Matrix> sapma birikmesi olmadan yol değeri için bkz: [bir nesne boyunca bir yolu (Matris Animasyonu) animasyon](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

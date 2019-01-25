@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566794"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook Yöntemi
-Ortak dil çalışma zamanı (CLR) olup olmadığını satır içi belirtilen yönetilmeyen işlev çağrısı belirtebileceğiniz konağı etkinleştirir.  
+Ortak dil çalışma zamanı (CLR) satır içi belirtilen yönetilmeyen bir işlev çağrısı için olup olmadığını belirlemek konak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,38 +38,38 @@ HRESULT CallNeedsHostHook (
   
 #### <a name="parameters"></a>Parametreler  
  `target`  
- [in] Çağrılacak olan yönetilmeyen işlevinin eşlenen taşınabilir yürütülebilir (PE) dosyasındaki adresi.  
+ [in] Çağrılacak olan yönetilmeyen işlev eşlenen taşınabilir yürütülebilir (PE) dosyanın dahilindeki adres.  
   
  `pbCallNeedsHostHook`  
- [out] Ana sayfaya için çağrı gerekli olup olmadığını gösteren bir Boole değeri için bir işaretçi.  
+ [out] Konak çağrısı yayılmış gerekip gerekmediğini belirten bir Boole değeri için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`CallNeedsHostHook` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kod yürütmeyi en iyi duruma getirmek için her platform için bir çözümleme CLR yapar çağrı içermesinden izin verilip verilmeyeceğini belirlemek için derleme sırasında çağrısı başlatılacak. `CallNeedsHostHook` yönetilmeyen işlev çağrısı sayfaya gerektirerek kararı geçersiz kılmak ana bilgisayarı sağlar. Konak bir kanca gerektiriyorsa, çalışma zamanı hizalı değil çağrı yapar.  
+ CLR kod yürütme en iyi duruma getirmek için her platform için analiz gerçekleştirir çağrı satır içine alınmış olup olmadığını belirlemek için derleme sırasında çağrısı başlatılacak. `CallNeedsHostHook` yönetilmeyen bir işlev çağrısı kancalandı gerektirerek kararı geçersiz kılmak konak sağlar. Konak bir kanca gerektiriyorsa, çalışma zamanı satır çağrı yapar.  
   
- Konak, genellikle bir kayan nokta durumu ayarlamanız gerekir veya bir çağrı ana bellek veya gerçekleştirilecek kilitleri için zamanının istekleri burada izleyemez durumu giriyor bildirim alma sırasında bir kanca gerekir. Konak çağrı sayfaya gerektirdiğinde, çalışma zamanı ve yönetilen kod gelen geçişleri ana çağrıları kullanarak bildirir [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), ve [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Konak, genellikle bir kayan nokta durumu ayarlamanız gerekir veya çağrı ana bilgisayar bellek ya da kilitleri alınan çalışma zamanının istekleri nereye izleyemez bir duruma giriyor bildirim alma sırasında bir kanca gerekir. Konak çağrı yayılmış gerektirdiğinde, çalışma zamanı ana bilgisayarı geçişleri için ve yönetilen koddan çağrıları kullanarak bildirir [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), ve [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

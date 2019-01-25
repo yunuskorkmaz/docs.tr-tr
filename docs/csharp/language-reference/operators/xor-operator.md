@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: 152be2d81d1bf340b839d74f169d63d7260f7ca5
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 16419342fec9d6c9845e19e434787c5e4f5a5b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632262"
 ---
 # <a name="-operator-c-reference"></a>^ işleci (C# Başvurusu)
 
@@ -35,7 +35,7 @@ Hesaplama `0xf8 ^ 0x3f` önceki örnekte bir bit düzeyinde gerçekleştirir har
 
 Özel veya sonucu `1100 0111`, onaltılık C7 olduğu.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664089"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express kullanıcı örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) .NET Framework veri sağlayıcısı için SQL Server kullanırken yalnızca kullanılabilir kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri eklemek ve SQL Server Express veritabanlarına bağlanmak için kendi yerel bilgisayarlarında yönetici olmayan kullanıcılar izin verin. Her örneği, tek kullanıcı, kullanıcı başına tek örnek güvenlik bağlamı altında çalışır.  
@@ -41,7 +41,7 @@ sp_configure 'user instances enabled','0'
   
  Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri unutmayın:  
   
--   `Data Source` Anahtar sözcüğü üst SQL Server'ın kullanıcı örneği oluşturan Express örneğine başvurur. Varsayılan örnek. \sqlexpress.  
+-   `Data Source` Anahtar sözcüğü üst SQL Server'ın kullanıcı örneği oluşturan Express örneğine başvurur. The default instance is .\sqlexpress.  
   
 -   `Integrated Security` ayarlanır `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
   
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   Özel ASP.NET, Windows kimlik doğrulaması kullanarak barındırma. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulamayı, kimliğe bürünme kullanılmadığında ASPNET Windows hesabı kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaşımında yapabileceği ve artık birbirinden yalıtılmış kalır senaryoları için kullanılmamalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616205"
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
-Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütünleştirilmiş kodun içinde yalnızca üzerinden erişilebilir olduğunu belirtir.  
+Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlemede yalnızca erişilebileceğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çoğu durumda, sınıflar ve yapılar tüm derlemesi tarafından değil yalnızca bunları bildiren bileşen tarafından kullanılmak üzere gibi programlama istiyor. Ancak, siz bunları (örneğin, uygulama özel ise) derleme dışına kodu tarafından erişilebilmesi için istemeyebilirsiniz. Bu şekilde bir öğeyi erişimi sınırlamak istiyorsanız, bunu kullanarak bildirebilirsiniz `Friend` değiştiricisi.  
+ Çoğu durumda, sınıflar ve yapılar yalnızca bunları bildiren bileşen tarafından tüm derleme tarafından kullanılacak gibi öğeleri programlama istersiniz. Ancak, bunları (örneğin, uygulama özel ise) derleme dışındaki kod tarafından erişilebilmesi için istemeyebilirsiniz. Bu şekilde bir öğe erişimi sınırlandırmak istiyorsanız, bunu kullanarak bildirebilirsiniz `Friend` değiştiricisi.  
   
- Diğer sınıflar, yapılar ve aynı derlenmiş modüller kodda derleme tüm erişebilir `Friend` bu derleme öğeleri.  
+ Diğer sınıflar, yapılar ve aynı derlenmiş modüller kodda derleme tüm erişebilir `Friend` derlemeye öğeleri.  
   
- `Friend` erişim, genellikle bir uygulama programlama öğeleri için tercih edilen düzeyi ve `Friend` varsayılan erişim bir arabirim, bir modül, bir sınıf veya bir yapı düzeyinde gerçekleşir.  
+ `Friend` erişim, genellikle uygulamanın programlama öğeleri için tercih edilen düzeyi ve `Friend` varsayılan bir arabirim, bir modül, bir sınıf veya yapı düzeyi erişimdir.  
   
- Kullanabileceğiniz `Friend` modül, arabirim veya ad alanı düzeyinde yalnızca. Bu nedenle, bildirimi bağlamı için bir `Friend` kaynak dosyasını, bir ad alanı, bir arabirim, bir modül, bir sınıf veya bir yapı öğesi olması gerekir; bir yordam olamaz.  
+ Kullanabileceğiniz `Friend` modülü, arabirim veya ad alanı düzeyinde yalnızca. Bu nedenle, bildirimi bağlamı bir `Friend` öğesi bir kaynak dosyası, bir ad alanı, bir arabirim, bir modül, bir sınıf veya yapı olmalıdır; bir yordam olamaz.  
 
 > [!NOTE]
-> Aynı zamanda [Protected Friend](protected-friend.md) sınıf üyesine bir sınıftaki, türetilen sınıflar ve sınıf tanımlanır aynı bütünleştirilmiş erişilebilir hale getirir erişim değiştiricisi. Kendi sınıfı içinde ve aynı bütünleştirilmiş kodda türetilmiş sınıflardan üyeden erişimi kısıtlamak için kullandığınız [özel korumalı](private-protected.md) erişim değiştiricisi.
+> Ayrıca [Protected Friend](protected-friend.md) erişim değiştiricisi, bir sınıf üyesinin Bu sınıf, türetilen sınıflar ve sınıf tanımlanır aynı derleme içinde erişilebilir hale getirir. Sınıfı içinde ve türetilen sınıfların aynı derlemedeki bir üye erişimi kısıtlamak için kullandığınız [Protected Private](private-protected.md) erişim değiştiricisi.
 
- Bir karşılaştırması `Friend` ve diğer değiştiricileri erişmek için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Bir karşılaştırması `Friend` ve diğer erişim değiştiricilerine bkz [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Başka bir derleme tüm türleri ve olarak işaretlenmiş üyeleri erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`. Daha fazla bilgi için bkz: [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+>  Başka bir derlemenin tüm türleri ve üyeleri olarak işaretlenmiş erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`. Daha fazla bilgi için [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sınıf kullanır `Friend` diğer programlama öğeleri belirli üyeleri erişmek için aynı bütünleştirilmiş kod içinde izin vermek için değiştiricisi.  
+ Aşağıdaki sınıf kullandığı `Friend` diğer programlama öğelerinin belirli üyelere erişmek için aynı bütünleştirilmiş kod içinde değiştiricisi.  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## <a name="usage"></a>Kullanım  
- Kullanabileceğiniz `Friend` bu bağlamlarında değiştiricisi:  
+ Kullanabileceğiniz `Friend` şu bağlamlarda değiştiricisi:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -71,14 +71,14 @@ Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütü
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Özel korumalı](./private-protected.md)   
- [Korumalı Friend](./protected-friend.md)   
- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)
+- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

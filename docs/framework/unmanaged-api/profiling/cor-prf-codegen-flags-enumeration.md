@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab5612a2bb48b2cc93e0150f45107e474a4e6217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e2f194d252baa2e2ca185d905c945d26a177a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590097"
 ---
 # <a name="corprfcodegenflags-enumeration"></a>COR_PRF_CODEGEN_FLAGS Sabit Listesi
-İle ayarlayabilirsiniz kod oluşturma bayrakları tanımlar [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) yöntemi.  
+Ayarlanabilir kod oluşturma bayraklarını tanımlayan [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +39,20 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|Hiçbir işlevler bu işlevin gövdesi içermesinden olacaktır. Ancak, işlevi kendi arayanlar içermesinden olabilir.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Tüm iyileştirmeler bu işlevin gövdesi için devre dışı bırakılacak. Ancak, işlevi hala kendi arayanlar içermesinden olabilir.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|Hiçbir işlev gövdesine bu işlevin satır içine alınmış olacaktır. Bununla birlikte, işlev çağıranlarını satır içine alınmış olabilir.|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Bu işlev gövdesi için tüm iyileştirmeler devre dışı bırakılır. Bununla birlikte, işlev hala çağıranlarını satır içine alınmış olabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_PRF_CODEGEN_FLAGS` Numaralandırması tarafından kullanılan [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) JIT yeniden derlenmesi işlevi için kod oluşturmanın denetlemek profil oluşturucu etkinleştirmek için yöntemi.  
+ `COR_PRF_CODEGEN_FLAGS` Numaralandırması tarafından kullanılan [Icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) kod oluşturma için JIT yeniden derlenen işlevi denetlemek profil oluşturucuyu etkinleştirme yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

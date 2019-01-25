@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama'
+title: 'Nasıl yapılır: Bir alt tabloda seçilen satırın doğru konumda kalmasını sağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547637"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir alt tabloda seçilen satırın doğru konumda kalmasını sağlama
 Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, verilerin ne üst/alt adlı veya ana/Ayrıntılar görünümü görüntülenir. Bu iki denetimlerinde aynı kaynaktan verilerin görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçimini değiştirmeden değiştirmek için ikinci denetimde görüntülenen veri neden olur. Örneğin, ilk denetim müşteriler ve siparişler listesi ilk denetiminde ise seçili müşterilerle ilgili ikinci bir listesini içerebilir.  
   
  Alt tabloda seçilen olan satır tablonun ilk satırına sıfırlanmaz emin olmak için ek adımlar gerekebilir üst/alt görünüm verileri görüntülerken .NET Framework sürüm 2.0 ile başlatılıyor. Bunu yapmak için önbelleğe alma alt tablo konum ve üst tablo değiştikten sonra sıfırlamak alması gerekir. Genellikle alt sıfırlama bir alanda bir üst tablosu değişiklikleri satırının ilk kez gerçekleşir.  
@@ -81,9 +81,9 @@ Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, v
   
 -   Sistem, System.Data System.Drawing, System.Windows.Forms ve System.XML derlemesine ilişkin başvurular.  
   
- Bu örnek komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Bu örnek komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource Bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource Bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

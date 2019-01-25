@@ -2,22 +2,22 @@
 title: (Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7265fc208b7538a2ab63822afbe63b09b0f34135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735415"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>(Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma
-Eşdeğişken arabirimi arabiriminde belirtilenlerden daha türetilmiş türler döndürülecek yöntemlerini sağlar. Karşıtı arabirimi belirtilenlerden daha az türetilmiş türler arabiriminde parametrelerinin kabul etmek yöntemlerini sağlar.  
+Birlikte değişen bir arabirimin yöntemlerinin dönüş arabiriminde belirtilenlerden daha türetilmiş türleri sağlar. Bir değişken karşıtı arabirimi belirtilenlerden daha az türetilmiş türler arabiriminde parametrelerini kabul edecek şekilde yöntemlerini sağlar.  
   
- .NET Framework 4'te birkaç varolan arabirimleri eşdeğişken hale geldi ve karşıtı. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601>. Genel koleksiyonlar türetilen türler için temel türleri çalışır yöntemleri yeniden kullanmanıza olanak sağlar.  
+ .NET Framework 4'te çeşitli mevcut arabirimlerin birlikte değişen hale geldi ve değişken karşıtı. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601>. Bu, türetilmiş türler için temel türleri genel koleksiyonlar ile çalışan yöntemlerini kullanmayı sağlar.  
   
- .NET Framework'teki değişken arabirimler listesi için bkz: [genel arabirimler (Visual Basic) varyans](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ .NET Framework'teki değişken arabirimler listesi için bkz. [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Genel koleksiyonlar dönüştürme  
- Aşağıdaki örnek Kovaryans desteği yararları gösterilmektedir <xref:System.Collections.Generic.IEnumerable%601> arabirimi. `PrintFullName` Yöntemi kabul koleksiyonu `IEnumerable(Of Person)` türünü bir parametre olarak. Ancak, onu bir koleksiyonu için tekrar kullanabilirsiniz `IEnumerable(Of Person)` yazın, çünkü `Employee` devralır `Person`.  
+ Kovaryans destek avantajları aşağıdaki örnekte <xref:System.Collections.Generic.IEnumerable%601> arabirimi. `PrintFullName` Yöntemi koleksiyonunu kabul `IEnumerable(Of Person)` türü bir parametre olarak. Ancak, bir koleksiyonu için kullanabilirsiniz `IEnumerable(Of Person)` türü için `Employee` devralan `Person`.  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -50,7 +50,7 @@ End Sub
 ```  
   
 ## <a name="comparing-generic-collections"></a>Genel koleksiyonları karşılaştırma  
- Aşağıdaki örnekte, değişken karşıtı desteği yararları gösterilmektedir <xref:System.Collections.Generic.IComparer%601> arabirimi. `PersonComparer` Uygulayan sınıf `IComparer(Of Person)` arabirimi. Ancak, bir dizi nesnelerin karşılaştırmak için bu sınıfı yeniden kullanabilirsiniz `Employee` yazın, çünkü `Employee` devralır `Person`.  
+ Aşağıdaki örnekte kontravaryans destek avantajlarını <xref:System.Collections.Generic.IComparer%601> arabirimi. `PersonComparer` Sınıfının Implements `IComparer(Of Person)` arabirimi. Ancak, bir dizi nesnelerini karşılaştırmak için bu sınıfı yeniden kullanabilirsiniz `Employee` türü için `Employee` devralan `Person`.  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -109,5 +109,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel arabirimler (Visual Basic) varyans](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

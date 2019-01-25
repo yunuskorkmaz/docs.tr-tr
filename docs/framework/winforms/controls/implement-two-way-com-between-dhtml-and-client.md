@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: DHTML Koduyla İstemci Uygulaması Kodu Arasında İki Yönlü İletişim Gerçekleştirme'
+title: 'Nasıl yapılır: DHTML koduyla istemci uygulaması kodu arasında iki yönlü iletişim uygulamak'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3acc4fd200b547fc754c4151aedc8d70fd1fa0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502162"
 ---
-# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Nasıl yapılır: DHTML Koduyla İstemci Uygulaması Kodu Arasında İki Yönlü İletişim Gerçekleştirme
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Nasıl yapılır: DHTML koduyla istemci uygulaması kodu arasında iki yönlü iletişim uygulamak
 Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> denetimi mevcut dinamik HTML (DHTML) Web uygulama kodu Windows Forms istemci uygulamalarınıza ekleyin. Bu, önemli geliştirme süresini DHTML tabanlı denetimler oluşturma yatırım yapmış ve mevcut kodu yeniden yazmak zorunda kalmadan Windows formlarının zengin kullanıcı arabirimi özelliklerinden yararlanan istediğinizde kullanışlıdır.  
   
  <xref:System.Windows.Forms.WebBrowser> Denetimi Web sayfasına komut dosyası kodunuzda, istemci uygulaması kodu arasında iki yönlü iletişim uygulamanıza olanak tanır <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> ve <xref:System.Windows.Forms.WebBrowser.Document%2A> özellikleri. Buna ek olarak, yapılandırabileceğiniz <xref:System.Windows.Forms.WebBrowser> Web denetimleri, diğer denetimleri, uygulamanın formunuzda, DHTML geliştirdikleri gizleme ile sorunsuz bir şekilde blend göstermelerini sağlayın. Sorunsuz bir şekilde denetimleri karıştırmak için görsel stil ve arka plan rengi formun kalanını eşleşen ve kullanmak görüntülenen sayfa biçimlendirme <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, ve <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> standart tarayıcı özellikleri devre dışı bırakmak için özellikleri.  
@@ -105,10 +105,10 @@ Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> denetimi mevcut dinam
   
 -   Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>  
- [WebBrowser Denetimi](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
+- [WebBrowser Denetimi](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

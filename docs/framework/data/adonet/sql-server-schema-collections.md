@@ -2,19 +2,19 @@
 title: SQL Server şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635045"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server şema koleksiyonları
 SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları yanı sıra ek şema koleksiyonları destekler. Şema koleksiyonları kullanmakta olduğunuz SQL Server sürümüne göre biraz farklılık gösterir. Desteklenen şema koleksiyonları listesi belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı.  
   
 ## <a name="databases"></a>Veritabanları  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |database_name|Dize|Veritabanının adı.|  
 |DBID|Int16|Veritabanı kimliği|  
@@ -22,21 +22,21 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="foreign-keys"></a>Yabancı anahtarlar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|Dize|Kısıtlama Kataloğu aittir.|  
 |CONSTRAINT_SCHEMA|Dize|Kısıtlama içeren şema.|  
 |CONSTRAINT_NAME|Dize|Adı.|  
 |TABLE_CATALOG|Dize|Tablo adı kısıtlaması, bir parçasıdır.|  
 |TABLE_SCHEMA|Dize|Tablo içeren şema.|  
-|TABLE_NAME|Dize|Tablo adı|  
+|TABLE_NAME|Dize|Tablo Adı|  
 |CONSTRAINT_TYPE|Dize|Kısıtlama türü. Yalnızca "yabancı anahtarı" izin verilir.|  
 |IS_DEFERRABLE|Dize|Kısıtlama deferrable olup olmadığını belirtir. Hayır döndürür|  
 |INITIALLY_DEFERRED|Dize|Kısıtlama başlangıçta deferrable olup olmadığını belirtir. Hayır döndürür|  
   
 ## <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |constraint_catalog|Dize|Katalog, dizine ait.|  
 |constraint_schema|Dize|Dizin içeren şema.|  
@@ -46,16 +46,16 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
 |TABLE_NAME|Dize|Tablo adı.|  
 |index_name|Dize|Dizin adı.|  
   
-### <a name="indexes-sql-server-2008"></a>Dizinler (SQL Server 2008)  
+### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunlar yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için dizinleri şema koleksiyonu eklendi. Bu sütunlar, .NET Framework ve SQL Server'ın önceki sürümlerinde desteklenmez.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |type_desc|Dize|Dizin türü, aşağıdakilerden birini olacaktır:<br /><br /> -HEAP<br />-KÜMELENMİŞ<br />-KÜMELENMEMİŞ<br />-   XML<br />-UZAMSAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |constraint_catalog|Dize|Katalog, dizine ait.|  
 |constraint_schema|Dize|Dizin içeren şema.|  
@@ -70,7 +70,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|Dize|Katalog için belirli ad.|  
 |SPECIFIC_SCHEMA|Dize|Belirli şemasının adı.|  
@@ -84,7 +84,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="procedure-parameters"></a>Yordam parametreleri  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|Dize|Bu parametre olduğu yordamın adını katalog.|  
 |SPECIFIC_SCHEMA|Dize|Bu parametre bir parçası olduğu yordam içeren şema.|  
@@ -112,7 +112,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="tables"></a>Tabloları  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
 |TABLE_SCHEMA|Dize|Tablo içeren şema.|  
@@ -121,7 +121,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
 |TABLE_SCHEMA|Dize|Tablo içeren şema.|  
@@ -145,7 +145,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
 ### <a name="columns-sql-server-2008"></a>Sütunlar (SQL Server 2008)  
  SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları sütunlar şema koleksiyonuna yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için eklendi. Bu sütunlar, .NET Framework ve SQL Server'ın önceki sürümlerinde desteklenmez.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |IS_FILESTREAM|Dize|Sütun FILESTREAM özniteliğine sahipse, Evet.<br /><br /> Sütun FILESTREAM özniteliğine sahip değilse yok.|  
 |IS_SPARSE|Dize|Sütunu bir seyrek sütun ise, Evet.<br /><br /> Hayır sütunu bir seyrek sütun değil.|  
@@ -156,7 +156,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
  AllColumns sütunları şema koleksiyonu elde edilen DataTable şema ve aynı kısıtlamalara sahiptir. Tek fark, AllColumns sütunları şema koleksiyonunda bulunmayan sütun kümesi sütunları içerir. Aşağıdaki tabloda, bu sütunların açıklanmaktadır.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
 |TABLE_SCHEMA|Dize|Tablo içeren şema.|  
@@ -183,7 +183,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, seyrek sütun desteklemek için ColumnSetColumns şema koleksiyonu eklendi. .NET Framework ve SQL Server'ın önceki sürümlerinde ColumnSetColumns desteklenmiyor. ColumnSetColumns şema koleksiyonu, bir sütun kümesinde tüm sütunlar için şemayı döndürür. Aşağıdaki tabloda, bu sütunların açıklanmaktadır.  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Tablo Kataloğu.|  
 |TABLE_SCHEMA|Dize|Tablo içeren şema.|  
@@ -209,7 +209,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="users"></a>Kullanıcılar  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |Kullanıcı Kimliği|Int16|Kullanıcı kimliği, bu veritabanında benzersiz. 1 veritabanı sahibi değil.|  
 |User_name|Dize|Kullanıcı adı veya grup adı, bu veritabanında benzersiz.|  
@@ -218,7 +218,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="views"></a>Görünümler  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|Dize|Katalog görünümün.|  
 |TABLE_SCHEMA|Dize|Şema görünümü içerir.|  
@@ -228,7 +228,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|Dize|Katalog görünümün.|  
 |VIEW_SCHEMA|Dize|Şema görünümü içerir.|  
@@ -240,7 +240,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|ColumnName|Veri türü|Açıklama|  
+|ColumnName|DataType|Açıklama|  
 |----------------|--------------|-----------------|  
 |assembly_name|Dize|Derleme için dosya adı.|  
 |udt_name|Dize|Derleme için sınıf adı.|  
@@ -255,6 +255,6 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
 |Create_Date|DateTime|Oluşturulan ve kayıtlı derleme tarihi.|  
 |Permission_set_desc|Dize|İzni-Ayarla/güvenlik düzeyi derleme için bir kolay ad.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

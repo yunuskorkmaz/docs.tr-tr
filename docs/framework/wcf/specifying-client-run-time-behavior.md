@@ -7,41 +7,41 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587183"
 ---
 # <a name="specifying-client-run-time-behavior"></a>İstemci Çalışma Zamanı Davranışını Belirtme
-Windows Communication Foundation (WCF) hizmetlerini gibi Windows Communication Foundation (WCF) istemcileri, istemci uygulaması uyacak şekilde çalışma zamanı davranışını değiştirmek için yapılandırılabilir. Üç öznitelikler, istemci çalışma zamanı davranışını belirtmek için kullanılabilir. Çift yönlü istemci geri araması nesneleri kullanabileceğiniz <xref:System.ServiceModel.CallbackBehaviorAttribute> ve <xref:System.ServiceModel.Description.CallbackDebugBehavior> kendi çalışma zamanı davranışını değiştirmek için öznitelikler. Başka bir öznitelik <xref:System.ServiceModel.Description.ClientViaBehavior>, hemen ağ hedef mantıksal hedef ayırmak için kullanılır. Ayrıca, çift yönlü istemci geri araması türlerine bazı hizmet tarafı davranışları kullanabilirsiniz. Daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Windows Communication Foundation (WCF) Hizmetleri gibi Windows Communication Foundation (WCF) istemciler, istemci uygulaması uyacak şekilde çalışma zamanı davranışını değiştirmek için yapılandırılabilir. Üç öznitelikler, istemci çalışma zamanı davranışını belirtmek için kullanılabilir. Çift yönlü istemci geri çağırma nesnelerinin kullanabileceğiniz <xref:System.ServiceModel.CallbackBehaviorAttribute> ve <xref:System.ServiceModel.Description.CallbackDebugBehavior> kendi çalışma zamanı davranışını değiştirmek için öznitelikler. Başka bir öznitelik <xref:System.ServiceModel.Description.ClientViaBehavior>, hemen bir ağ hedef mantıksal hedef ayırmak için kullanılabilir. Ayrıca, çift yönlü istemci geri çağırma türlerini bazı hizmet tarafı davranışları kullanabilirsiniz. Daha fazla bilgi için [hizmet çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>CallbackBehaviorAttribute kullanma  
- Yapılandırma veya bir istemci uygulaması bir geri çağırma sözleşme uygulamasında yürütme davranışını kullanarak genişletme <xref:System.ServiceModel.CallbackBehaviorAttribute> sınıfı. Bu öznitelik geri çağırma sınıfı için benzer bir işlevi gerçekleştiren <xref:System.ServiceModel.ServiceBehaviorAttribute> davranışı ve işlem ayarları depolamasına dışında sınıfı.  
+ Yapılandırma veya bir istemci uygulamasındaki bir geri çağırma anlaşması uygulaması yürütme davranışını kullanarak genişletme <xref:System.ServiceModel.CallbackBehaviorAttribute> sınıfı. Bu öznitelik geri çağırma sınıfı için benzer bir işlev gerçekleştirir <xref:System.ServiceModel.ServiceBehaviorAttribute> davranışı ve işlem ayarları depolamasına dışında sınıfı.  
   
- <xref:System.ServiceModel.CallbackBehaviorAttribute> Sınıfı geri çağırma sözleşme uygulayan sınıfa uygulanması gerekir. Bir nonduplex sözleşmesi uygulama uyguladıysanız bir <xref:System.InvalidOperationException> çalışma zamanında özel durum. Aşağıdaki örnekte gösterildiği kod bir <xref:System.ServiceModel.CallbackBehaviorAttribute> kullanan bir geri çağırma nesnesi üzerinde sınıf <xref:System.Threading.SynchronizationContext> için hazırlamak için iş parçacığı belirlemek için nesne <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> ileti doğrulama zorlamak için özellik ve <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> döndürülecek özelliği özel durumlar olarak <xref:System.ServiceModel.FaultException> hata ayıklama amacıyla hizmet nesneleri.  
+ <xref:System.ServiceModel.CallbackBehaviorAttribute> Sınıfı geri çağırma anlaşması uygulayan bir sınıf için uygulanması gerekir. Nonduplex sözleşme uygulamasına uygulandığında bir <xref:System.InvalidOperationException> çalışma zamanında özel durum harekete geçirilir. Aşağıdaki kod örnekte gösterildiği bir <xref:System.ServiceModel.CallbackBehaviorAttribute> kullanan bir geri çağırma nesnesi üzerindeki sınıf <xref:System.Threading.SynchronizationContext> belirlemek için hazırlamak için iş parçacığı nesnesine <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> ileti doğrulama zorlamak için özellik ve <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> döndürülecek özelliği özel durumlar olarak <xref:System.ServiceModel.FaultException> hata ayıklama amacıyla hizmet nesneleri.  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
   
-## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Yönetilen özel durum bilgi akışını etkinleştirmek için CallbackDebugBehavior kullanma  
- Bir istemci geri çağırma nesnesindeki tekrar ayarlayarak hata ayıklama amacıyla hizmet yönetilen özel durum bilgi akışını etkinleştirebilirsiniz <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğine `true` program aracılığıyla ya da bir uygulama yapılandırma dosyası.  
+## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Yönetilen özel durum bilgilerinin akışını etkinleştirmek için CallbackDebugBehavior kullanma  
+ İstemci geri çağırma nesnesi ayarlayarak hata ayıklama amacıyla yeniden hizmetine yönetilen özel durum bilgilerinin akışını etkinleştirebilirsiniz <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true` programlı olarak veya bir uygulama yapılandırma dosyası.  
   
- Yönetilen özel durum bilgilerini hizmetlerine, bir güvenlik riski olabilir, özel durum ayrıntıları bilgilerini kullanıma sunmak için döndürme hakkında iç İstemci Hizmetleri yetkisiz uygulamasını kullanabilirsiniz. Ayrıca, ancak <xref:System.ServiceModel.Description.CallbackDebugBehavior> özellikleri de ayarlanabilir program aracılığıyla, devre dışı bırakmak unuttunuz kolay olabilir <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> dağıtırken.  
+ Yönetilen özel durum bilgilerini Hizmetleri için bir güvenlik riski olabilir, çünkü özel durum ayrıntıları bilgilerin açığa çıkmasına neden döndüren iç İstemci Hizmetleri yetkisiz uygulamasını kullanabilirsiniz. Buna karşın <xref:System.ServiceModel.Description.CallbackDebugBehavior> özellikleri de ayarlanabilir programlı olarak, devre dışı bırakmak unutmak çok kolaydır olabilir <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> dağıtırken.  
   
  İlgili güvenlik sorunları nedeniyle, kesinlikle önerilir:  
   
--   Uygulama yapılandırma dosyası değerini ayarlamak için kullandığınız <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğine `true`.  
+-   Değerini ayarlamak için kullandığınız bir uygulama yapılandırma dosyası <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true`.  
   
--   Denetimli senaryolar hata ayıklama yaptığınız yalnızca.  
+-   Hata ayıklama senaryoları denetlenen durumlarında yalnızca.  
   
- Aşağıdaki kod örneği, bir istemci yönetilen özel durum bilgileri bir istemciden geri çağırma nesnesi SOAP iletilerini döndürmek için WCF bildirir yapılandırma dosyası gösterir.  
+ Aşağıdaki kod örneği, bir istemci yönetilen özel durum bilgilerini bir istemciden geri çağırma nesnesi SOAP iletileri döndürmek için WCF yönlendiren yapılandırma dosyası gösterir.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
-## <a name="using-the-clientviabehavior-behavior"></a>ClientViaBehavior davranışı kullanma  
- Kullanabileceğiniz <xref:System.ServiceModel.Description.ClientViaBehavior> davranışı taşıma kanalı oluşturulmalıdır Tekdüzen Kaynak Tanımlayıcısı belirtin. Bu davranış, hemen Ağ hedefi iletinin hedeflenen işlemci olmadığında kullanın. Bu çoklu atlamalı görüşmeleri veya çağrı yapan uygulamanın ultimate hedef emin değilseniz zaman sağlar hedef `Via` üstbilgi bir adresi değil.  
+## <a name="using-the-clientviabehavior-behavior"></a>ClientViaBehavior davranışını kullanarak  
+ Kullanabileceğiniz <xref:System.ServiceModel.Description.ClientViaBehavior> davranışını taşıma kanalının oluşturulmalıdır Tekdüzen Kaynak tanımlayıcısını belirtin. Anlık ağ hedef iletinin hedeflenen işlemci olmadığında bu davranışı kullanın. Bu çoklu atlamalı yapılan görüşmeler arama uygulaması ultimate hedef emin değilseniz ne zaman veya zaman sağlar hedef `Via` üst bilgisi bir adres değil.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

@@ -1,46 +1,46 @@
 ---
-title: "Nasıl Yapılır: Visual Basic'te İkili Dosyalara Yazma"
+title: "Nasıl yapılır: Visual Basic'te ikili dosyalara yazma"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 59edf84c1addd287eb1d1615c46258f329b1c7e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283c1c59d4bfa73f12ee0c9b772bf71c15a3b541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676711"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyalara Yazma
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Yöntemi için ikili dosya verileri yazar. Varsa `append` parametresi `True`, veri dosyasına eklenir; Aksi takdirde dosyasındaki verilerin üzerine yazılır.  
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te ikili dosyalara yazma
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Yöntemi veri bir ikili dosyaya yazar. Varsa `append` parametresi `True`, dosyaya veri ekler; Aksi takdirde dosyasındaki verilerin üzerine yazılır.  
   
- Dosya adı hariç belirtilen yol geçerli değilse bir <xref:System.IO.DirectoryNotFoundException> özel durum. Yolun geçerli olduğundan, ancak dosya mevcut değil, dosya oluşturulur.  
+ Dosya adı hariç belirtilen yol geçerli değilse bir <xref:System.IO.DirectoryNotFoundException> özel durumu oluşturulur. Yolun geçerli olduğundan, ancak dosya yok, dosya oluşturulur.  
   
-### <a name="to-write-to-a-binary-file"></a>İkili bir dosyaya yazmak için  
+### <a name="to-write-to-a-binary-file"></a>Bir ikili dosyaya yazmak için  
   
--   Kullanım `WriteAllBytes` yöntemi, dosya yolu ve adı ve yazılacak bayt sağlama. Bu örnek veri dizisi ekler `CustomerData` adlı dosyaya `CollectedData.dat`.  
+-   Kullanım `WriteAllBytes` dosya yolu ve adı ile yazılacak baytları sağlama yöntemi. Bu örnek veri dizisi ekler `CustomerData` adlı dosyaya `CollectedData.dat`.  
   
      [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Aşağıdaki koşullar, bir özel durum oluşturabilirsiniz:  
+ Aşağıdaki koşullar özel bir durum oluşturabilir:  
   
--   Yolu şu nedenlerden biri için geçerli değil: sıfır uzunlukta bir dize; olduğu yalnızca boşluk içeriyor; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).  
+-   Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize; olan Bu, yalnızca boşluk içermektedir; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).  
   
--   Çünkü yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+-   Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` var olmayan bir yola işaret eden (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` mevcut olmayan bir yola işaret (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
   
--   Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştuğunda (<xref:System.IO.IOException>).  
+-   Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluşuyor (<xref:System.IO.IOException>).  
   
--   Yolu sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+-   Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
--   Yolda bir dosya veya dizin adı biçimi geçersiz veya iki nokta üst üste (:) içerir (<xref:System.NotSupportedException>).  
+-   Yolda bir dosya veya dizin adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
   
--   Kullanıcı yolunu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+-   Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- [Nasıl Yapılır: Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
+- [Nasıl yapılır: Dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

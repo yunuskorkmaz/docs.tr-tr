@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625633"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -98,10 +98,10 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
   
 -   Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha küçük bir boyuttan döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri döndürür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

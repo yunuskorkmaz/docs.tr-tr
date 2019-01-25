@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672064"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
 Belirtilen belirteç tarafından temsil edilen bir özellik için meta verileri alır.  
@@ -55,10 +55,10 @@ HRESULT GetPropertyProps (
  [in] Özellik için meta verileri döndürmek için temsil eden bir belirteci.  
   
  `pClass`  
- [out] Özellik uygulayan türünü temsil eden TypeDef belirteci için bir işaretçi.  
+ [out] Özelliği uygulayan türü temsil eden TypeDef belirteci için bir işaretçi.  
   
  `szProperty`  
- [out] Özellik adı tutacak bir arabellek.  
+ [out] Özellik adını tutan bir arabellek.  
   
  `cchProperty`  
  [in] Geniş karakter cinsinden boyutu `szProperty`.  
@@ -67,47 +67,47 @@ HRESULT GetPropertyProps (
  [out] Döndürülen geniş karakter sayısını `szProperty`.  
   
  `pdwPropFlags`  
- [out] Özelliğine uygulanan herhangi bir öznitelik bayrağı için bir işaretçi. Bu değer gelen bir bit maskesi olan [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) numaralandırması.  
+ [out] Özelliğine uygulanan herhangi bir öznitelik bayrakları için bir işaretçi. Gelen bir bit maskesi değerdir [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) sabit listesi.  
   
  `ppvSig`  
- [out] Meta veri imza özelliği için bir işaretçi.  
+ [out] Özelliğin meta veri imzası bir işaretçi.  
   
  `pbSig`  
  [out] Döndürülen bayt sayısı `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Özelliğin varsayılan değeri sabiti türünü belirleyen bir bayrak. CorElementType numaralandırması değerdir.  
+ [out] Özelliğin varsayılan değeri sabiti türünü belirten bir bayrak. CorElementType numaralandırması değerdir.  
   
  `ppDefaultValue`  
- [out] Bu özellik için varsayılan değer depolamak bayt gösteren bir işaretçi.  
+ [out] Bu özellik için varsayılan değeri depolamak bayt için bir işaretçi.  
   
  `pcchDefaultValue`  
- [out] Geniş karakter cinsinden boyutu `ppDefaultValue`, `pdwCPlusTypeFlag` olan ELEMENT_TYPE_STRING; Aksi takdirde, bu değer ilgili değildir. Bu durumda, uzunluğu `ppDefaultValue` tarafından belirtilen türden olayla `pdwCPlusTypeFlag`.  
+ [out] Geniş karakter cinsinden boyutu `ppDefaultValue`, `pdwCPlusTypeFlag` olduğu ELEMENT_TYPE_STRING; Aksi takdirde, bu değeri uygun değil. Bu durumda, uzunluğunu `ppDefaultValue` tarafından belirtilen türden çıkarılan `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
  [out] Özelliği için set erişimcisi yöntemi temsil eden MethodDef belirteci için bir işaretçi.  
   
  `pmdGetter`  
- [out] Özellik get erişimcisi yöntemi temsil eden MethodDef belirteci için bir işaretçi.  
+ [out] Özellik get erişimci yöntemi temsil eden MethodDef belirteci için bir işaretçi.  
   
  `rmdOtherMethod`  
- [out] Özellik ile ilişkilendirilmiş diğer yöntemleri gösteren MethodDef belirteçleri dizisi.  
+ [out] Özellikle ilişkili diğer yöntemleri temsil eden MethodDef belirteçleri dizisi.  
   
  `cMax`  
- [in] En büyük boyutunu `rmdOtherMethod` dizi. Tüm yöntemleri tutabilecek kadar büyük bir dizi belirtmezseniz, bunlar uyarmadan atlanır.  
+ [in] En büyük boyutunu `rmdOtherMethod` dizisi. Tüm yöntemleri tutabilecek kadar büyük bir dizi belirtmezseniz, bunlar uyarı vermeden atlanır.  
   
  `pcOtherMethod`  
  [out] Döndürülen MethodDef belirteçleri sayısı `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

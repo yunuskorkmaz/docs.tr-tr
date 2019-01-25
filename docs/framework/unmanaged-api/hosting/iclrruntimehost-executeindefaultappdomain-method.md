@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498261"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain Yöntemi
-Belirtilen türe ait belirtilen yöntem belirtilen yönetilen derlemedeki çağırır.  
+Belirtilen yönetilen derlemede belirtilen türdeki belirtilen yöntemi çağırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,13 +44,13 @@ HRESULT ExecuteInDefaultAppDomain (
  [in] Yolu <xref:System.Reflection.Assembly> tanımlayan <xref:System.Type> olan yöntemdir çağrılacak.  
   
  `pwzTypeName`  
- [in] Adını <xref:System.Type> çağrılacak yöntemi tanımlar.  
+ [in] Adını <xref:System.Type> çağrılacak yöntem tanımlar.  
   
  `pwzMethodName`  
  [in] Çağrılacak yöntemin adı.  
   
  `pwzArgument`  
- [in] Yönteme dizesi parametresi.  
+ [in] Yönteme dize parametresi.  
   
  `pReturnValue`  
  [out] Çağrılan yöntem tarafından döndürülen tamsayı değeri.  
@@ -60,29 +60,29 @@ HRESULT ExecuteInDefaultAppDomain (
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInDefaultAppDomain` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndürürse, CRL artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndürürse, CRL artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrılan yöntem aşağıdaki imzaya sahip olmalıdır:  
+ Çağrılan yöntemi aşağıdaki imzası sahip olmanız gerekir:  
   
 ```  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- Burada `pwzMethodName` çağrılan yöntem adını temsil eder ve `pwzArgument` bu yönteme geçirilen parametre olarak dize değeri temsil eder. HRESULT değer S_OK için ayarlanırsa `pReturnValue` çağrılan yöntemi tarafından döndürülen tamsayı değerine ayarlanır. Aksi takdirde, `pReturnValue` ayarlı değil.  
+ Burada `pwzMethodName` çağrılan yöntemin adını temsil eder ve `pwzArgument` dize değeri, yöntem için parametre olarak geçen temsil eder. S_OK için HRESULT değerini ayarlarsanız `pReturnValue` çağrılan yöntem tarafından döndürülen tamsayı değerine ayarlanır. Aksi takdirde, `pReturnValue` ayarlı değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

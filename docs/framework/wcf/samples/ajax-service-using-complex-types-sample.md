@@ -2,12 +2,12 @@
 title: Karmaşık Türler Kullanan AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: ef44dc0eddb165c93b912da4fed994074668a250
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 338d7105180df94f85647da413fc682451b7c9d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676672"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Karmaşık Türler Kullanan AJAX Hizmeti Örneği
 Bu örnek, Windows Communication Foundation (WCF) karmaşık türler örneklerini oluşturur ve bunları arasındaki hizmet ve istemci JavaScript nesne gösterimi (JSON) olarak gönderir, bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturma için nasıl kullanılacağını gösterir. JavaScript kodu bir Web tarayıcısı istemcisini kullanarak bir AJAX hizmete erişebilir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
@@ -66,5 +66,5 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel AJAX Hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel AJAX Hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 43497d3680917917894f1d904852d787fce0888c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 325be8851b63a252c381d943943937332ec91e6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638047"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` Değiştiricisi değiştirilmekte olan bir şey yok veya eksik bir uygulama olduğunu gösterir. Soyut değiştiricisi sınıflar, yöntemler, özellikler, dizin oluşturucular ve olaylar ile kullanılabilir. Kullanım `abstract` değiştiricisi bir sınıf yalnızca diğer sınıfların temel sınıf olarak düşünüldüğünü göstermek için bir sınıf bildiriminde. Özet olarak işaretlenmiş veya soyut bir sınıf, dahil edilen üyeleri soyut sınıftan türeyen sınıflar tarafından uygulanmalıdır.  
@@ -81,11 +81,11 @@ Derleyici 'BaseClass' soyut sınıfının bir örneğini oluşturamazsınız bel
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
-- [override](../../../csharp/language-reference/keywords/override.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [override](../../../csharp/language-reference/keywords/override.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

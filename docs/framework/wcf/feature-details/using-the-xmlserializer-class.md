@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732862"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme adlı bir işlem arasında aktarılır XML içinde uygulamanızda veri kapatmak için iki farklı bir seri hale getirme teknolojilerini kullanabilirsiniz.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme a
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> Kullanırken özniteliği desteklenmiyor <xref:System.Xml.Serialization.XmlSerializer>.  
   
 > [!NOTE]
->  Bu durumda, <xref:System.Xml.Serialization.XmlSerializer> WCF önce yayımlanmış aşağıdaki Exception'a: "şemanın en üst düzeyinde tanımlaman bir öğe olamaz `maxOccurs` > 1. İçin bir sarmalayıcı öğe sağlayın 'daha fazla' kullanarak `XmlArray` veya `XmlArrayItem` yerine `XmlElementAttribute`, ya da Wrapped parametre stili kullanarak. "  
+>  Bu durumda, <xref:System.Xml.Serialization.XmlSerializer> WCF önce yayımlanan aşağıdaki durum oluşturur: "Şemanın en üst düzeyinde tanımlaman bir öğe olamaz `maxOccurs` > 1. İçin bir sarmalayıcı öğe sağlayın 'daha fazla' kullanarak `XmlArray` veya `XmlArrayItem` yerine `XmlElementAttribute`, ya da Wrapped parametre stili kullanarak. "  
 >   
 >  Böyle bir özel durum alırsanız, bu durum geçerli olup olmadığını araştırın.  
   
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme a
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>` Anahtarı yalnızca .NET Framework 4.5 veya sonraki sürümünü çalıştıran bir makinede çalışır. Yukarıdaki `appSettings` yaklaşım tüm .NET Framework sürümlerinde çalışır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

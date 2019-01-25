@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: özel veritabanı işlevleri çağırma'
+title: 'Nasıl yapılır: Özel veritabanı işlevleri çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ea558e23b6b0c191244031560c0fcf4738604e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731107"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: özel veritabanı işlevleri çağırma
+# <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: Özel veritabanı işlevleri çağırma
 Bu konu, veritabanı içinde LINQ to Entities sorgularında tanımlanan özel işlevleri çağırmak açıklar.  
   
  Entities sorgularında LINQ çağrılan veritabanı işlevleri veritabanında yürütülür. İşlevler veritabanında yürütmek, uygulama performansını iyileştirebilir.  
@@ -60,6 +60,6 @@ Bu konu, veritabanı içinde LINQ to Entities sorgularında tanımlanan özel i�
  [!code-csharp[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

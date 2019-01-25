@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569985"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Nasıl yapılır: Akış Çizelgesi iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Flowchart> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
@@ -150,11 +150,11 @@ ms.locfileid: "54415253"
   
      Lütfen iş akışının nasıl çalıştırılacağını yönergeleri görmek için bir sonraki konu [nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) adım iş akışı farklı bir stil ve çalıştırmak bu adımdaki akış çizelgesi iş akışı kullanarak istediğiniz, atlayın [uygulaması derleme ve çalıştırma için](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) bölümünü [nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [İş Akışları Tasarlama](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Nasıl yapılır: Bir etkinlik oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [İş Akışları Tasarlama](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Nasıl yapılır: Bir etkinlik oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [Nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

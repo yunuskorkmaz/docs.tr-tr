@@ -9,77 +9,77 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: b50716cc83114fea5120b12659668437ac9bd6da
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c8adab452fdb8c5de364fc80f13db780b7a067fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591488"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker stilleri ve şablonları
-Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.DatePicker> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.DatePicker> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datepicker-parts"></a>DatePicker bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda listelenmektedir <xref:System.Windows.Controls.DatePicker> denetim.  
+ Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.DatePicker> denetimi.  
   
 |Bölümü|Tür|Açıklama|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|Denetim kökü.|  
-|PART_Button|<xref:System.Windows.Controls.Button>|Açar ve kapatır düğmesi <xref:System.Windows.Controls.Calendar>.|  
-|PART_TextBox|<xref:System.Windows.Controls.Primitives.DatePickerTextBox>|Tarih girişi sayesinde metin kutusu.|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|İçin açılan <xref:System.Windows.Controls.DatePicker> denetim.|  
+|PART_Button|<xref:System.Windows.Controls.Button>|Açılır ve kapatır düğme <xref:System.Windows.Controls.Calendar>.|  
+|PART_TextBox|<xref:System.Windows.Controls.Primitives.DatePickerTextBox>|Bir tarih girmenizi sağlayan metin kutusu.|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Popup için <xref:System.Windows.Controls.DatePicker> denetimi.|  
   
 ## <a name="datepicker-states"></a>DatePicker durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.DatePicker> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.DatePicker> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|<xref:System.Windows.Controls.DatePicker> Devre dışı bırakılır.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Devre dışı|CommonStates|<xref:System.Windows.Controls.DatePicker> Devre dışı bırakıldı.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda listelenmektedir <xref:System.Windows.Controls.Primitives.DatePickerTextBox> denetim.  
+ Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DatePickerTextBox> denetimi.  
   
 |Bölümü|Tür|Açıklama|  
 |-|-|-|  
-|PART_Watermark|<xref:System.Windows.Controls.ContentControl>|İlk metin içeren öğeyi <xref:System.Windows.Controls.DatePicker>.|  
-|PART_ContentElement|<xref:System.Windows.FrameworkElement>|İçerebilir bir görsel öğe bir <xref:System.Windows.FrameworkElement>. Metnin <xref:System.Windows.Controls.TextBox> bu öğesinde görüntülenir.|  
+|PART_Watermark|<xref:System.Windows.Controls.ContentControl>|İlk metin içeren öğe <xref:System.Windows.Controls.DatePicker>.|  
+|PART_ContentElement|<xref:System.Windows.FrameworkElement>|İçeren bir görsel öğe bir <xref:System.Windows.FrameworkElement>. Metnin <xref:System.Windows.Controls.TextBox> bu öğe görüntülenir.|  
   
 ## <a name="datepickertextbox-states"></a>DatePickerTextBox durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.Primitives.DatePickerTextBox> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.DatePickerTextBox> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Devre dışı|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> Devre dışı bırakılır.|  
-|Fare üzerinde|CommonStates|Fare işaretçisini üzerine getirildiği <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
-|ReadOnly|CommonStates|Kullanıcı metni değiştiremez <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
-|Odaklanmış|FocusStates|Denetimi odağa sahip.|  
-|Odaksız|FocusStates|Denetim odağı yok.|  
-|Filigran|WatermarkStates|Denetim ilk metin görüntüler.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> Durumda kullanıcı olmayan metin girildiğinde veya bir tarih seçtiniz.|  
-|Unwatermarked|WatermarkStates|Metne kullanıcının girdiği <xref:System.Windows.Controls.Primitives.DatePickerTextBox> veya bir tarih olarak seçilen <xref:System.Windows.Controls.DatePicker>.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|Devre dışı|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> Devre dışı bırakıldı.|  
+|Fareyi üzerine getirme|CommonStates|Fareyi üzerine getirildiği <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
+|ReadOnly|CommonStates|Kullanıcının metni değiştiremezsiniz <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
+|Odaklanmış|FocusStates|Denetim odağa sahip.|  
+|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
+|Filigran|WatermarkStates|Denetimin ilk metnini görüntüler.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> Kullanıcıya olmayan metin girildiğinde veya bir tarih seçtiğini durumdadır.|  
+|Unwatermarked|WatermarkStates|Metne kullanıcının girdiği <xref:System.Windows.Controls.Primitives.DatePickerTextBox> veya içinde bir tarih seçtiğini <xref:System.Windows.Controls.DatePicker>.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="datepicker-controltemplate-example"></a>DatePicker ControlTemplate Örneği  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.DatePicker> denetim.  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.DatePicker> denetimi.  
   
  [!code-xaml[ControlTemplateExamples#DatePicker](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
   
- Önceki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575560"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Boş değer atanabilir türler (C# programlama Kılavuzu)
 
@@ -55,12 +55,12 @@ Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:
 
 Daha fazla bilgi için [boş değer atanabilir türleri kullanma](using-nullable-types.md) ve [nasıl yapılır: Boş değer atanabilir bir tür belirleme](how-to-identify-a-nullable-type.md) konuları.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [?? İşleç](../../language-reference/operators/null-coalescing-operator.md)  
-- [C# Programlama Kılavuzu](../index.md)  
-- [C# Kılavuzu](../../index.md)  
-- [C# başvurusu](../../language-reference/index.md)  
-- [Boş değer atanabilen değer türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [?? İşleç](../../language-reference/operators/null-coalescing-operator.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [C# Kılavuzu](../../index.md)
+- [C# başvurusu](../../language-reference/index.md)
+- [Boş değer atanabilen değer türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

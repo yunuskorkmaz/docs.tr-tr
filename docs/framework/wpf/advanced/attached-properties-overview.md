@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706238"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -141,7 +141,7 @@ WPF tanımlar birkaç [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../incl
 
 -   Ayrıca bir özelliği ekli özelliği ve bağımlılık özelliği olarak kaydedebilirsiniz, ancak hala "sarmalayıcı" uygulamaları sunarsınız. Bu durumda, özellik, bu öğe üzerinde ayarlanabilir veya XAML aracılığıyla herhangi bir öğe üzerinde özellik sözdizimi bağlı. Bir özellik hem standart hem de bağlı kullanımlar için uygun bir senaryoyla örneğidir <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.DependencyProperty>
 - [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

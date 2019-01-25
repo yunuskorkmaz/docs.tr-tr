@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742467"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
-Çalışma zamanı askıya alınmış nedenini gösterir.  
+Çalışma zamanı askıya alındığından nedenini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,25 +45,25 @@ typedef enum {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Çalışma zamanı belirlenemeyen bir nedenden dolayı askıya alınır.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Çalışma zamanı bir atık toplama isteğine hizmet askıya alınır.<br /><br /> Çöp toplama ile ilgili geri aramalar arasında ortaya [Icorprofilercallback::runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) ve [Icorprofilercallback::runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) geri aramalar.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı askıya böylece bir `AppDomain` kapatılabilir.<br /><br /> Çalışma zamanı askıya alınmış durumdayken, çalışma zamanı hangi iş parçacığı bulunan belirleyecek `AppDomain` diğer bir deyişle kapatılır ve bunlar sürdürdüğünüzde iptal etmek için bunları ayarlayın. Var olan hiçbir `AppDomain`-bu askıya alma sırasında belirli geri aramalar.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Böylece kodu pitching oluşabilir çalışma zamanı askıya alındı.<br /><br /> Kod pitching yalnızca tam zamanında (JIT) derleyici etkin kodu pitching ile etkin olduğunda ensues. Kod pitching geri aramalar ortaya arasında `ICorProfilerCallback::RuntimeSuspendFinished` ve `ICorProfilerCallback::RuntimeResumeStarted` geri aramalar. **Not:** bu değer 2. 0'kullanılmaması CLR JIT işlevlerini .NET Framework sürüm 2.0, aralık değil.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Böylece kapatmak, çalışma zamanı'askıya alındı. İşlemi tamamlamak için tüm iş parçacıklarını askıya alma gerekir.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Çalışma zamanı işlemde hata ayıklamak için askıya alındı.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Çöp toplama için hazırlamak için çalışma zamanı askıya alındı.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Çalışma zamanı JIT yeniden derlenmek üzere askıya alınır.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Çalışma zamanı, çöp toplama isteğine hizmet askıya alınır.<br /><br /> Çöp toplama ile ilgili geri çağırmalar arasında oluşan [Icorprofilercallback::runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) ve [Icorprofilercallback::runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) geri çağırmalar.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı askıya böylece bir `AppDomain` kapatılabilir.<br /><br /> Çalışma zamanı askıya alındı, ancak çalışma zamanının hangi iş parçacığı bulunan belirleyecek `AppDomain` diğer bir deyişle kapatmalı ve bunlar devam edince iptal etmek için bunları ayarlayın. Var olan hiçbir `AppDomain`-bu askıya alma sırasında belirli geri çağırmalar.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Kod pitching gerçekleştirilmesi, çalışma zamanı askıya alınır.<br /><br /> Kod pitching yalnızca just-ın-time (JIT) derleyici etkin kod pitching ile etkin olduğunda ensues. Pitching geri çağırmaları ortaya arasında kod `ICorProfilerCallback::RuntimeSuspendFinished` ve `ICorProfilerCallback::RuntimeResumeStarted` geri çağırmalar. **Not:**  Bu değer, 2. 0'kullanılmaması CLR JIT işlevleri .NET Framework sürüm 2.0, aralık değil.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Böylece kapanabilir çalışma zamanı askıya alınır. İşlemi tamamlamak için tüm iş parçacıkları askıya gerekir.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Çalışma zamanı, işlemdeki hata ayıklama için askıya alındı.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Çalışma zamanı, çöp toplama işlemi için hazırlamak üzere askıya alınır.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Çalışma zamanı JIT yeniden derlemesi için askıya alındı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilmeyen kodunda tüm çalışma zamanı iş parçacıklarının bunlar çalışma zamanı yeniden devam edene dek bu noktada bunlar da askıya alınacak çalışma zamanı yeniden girmeyi deneyin kadar çalışmaya devam etmesine izin verilir. Bu durum, çalışma zamanı girin yeni iş parçacığı için de geçerlidir. Çalışma Zamanı Modülü içindeki tüm iş parçacıklarının kesilebilir kodda olmaları durumunda hemen askıya, ya da bunlar kesilebilir kod ulaştığında askıya istenir.  
+ Yönetilmeyen kodda olan tüm çalışma zamanı iş parçacığı, çalışma zamanı yeniden devam edene dek bu noktada, ayrıca askıya alınır ve çalışma zamanının yeniden girmeyi deneyin kadar çalışmaya devam etmesine izin verilir. Bu, çalışma zamanı girin yeni iş parçacıkları için de geçerlidir. Çalışma zamanı içinde tüm iş parçacıkları kesilebilir kodda olmaları durumunda hemen askıya veya kesilebilir kod ulaşmadan zaman askıya istenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

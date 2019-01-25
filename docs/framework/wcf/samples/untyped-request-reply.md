@@ -2,12 +2,12 @@
 title: Yazılmamış istek-yanıt
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2eb6a46d339c9277c1622c0cc16d057b186f1d79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612755"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
 Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak nasıl gösterir.  
@@ -89,4 +89,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

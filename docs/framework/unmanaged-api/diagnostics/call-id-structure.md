@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d6b16f3eeb32e41f3568e0b237f18c945a8cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503709"
 ---
 # <a name="callid-structure"></a>CALL_ID Yapısı
-Hata ayıklayıcı çağrıldığından işlevi hakkında bilgi sağlar. Bkz: [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) daha fazla bilgi için arabirim.  
+Bir hata ayıklayıcı çağrılan bir işlev hakkında bilgi sağlar. Bkz: [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) daha fazla bilgi için arabirim.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,14 +46,14 @@ typedef struct tagCALL_ID
 |------------|-----------------|  
 |`szMachine`|Çağrıyı yapan makineyi tanımlar.|  
 |`dwPid`|Makine işlemci tanımlar.|  
-|`pUserThread`|Çağrı yürütme iş parçacığı tanımlar.|  
-|`addrStackPointer`|Çağrı yığını adresini belirtir.|  
+|`pUserThread`|Çağrıyı yürütmeden iş parçacığını tanımlar.|  
+|`addrStackPointer`|Çağrı yığınının adresini belirtir.|  
 |`szEntryPoint`|Çağrı adresini belirtir.|  
 |`szDestinationMachine`|Çağrı yürütecek makineyi tanımlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

@@ -2,12 +2,12 @@
 title: İş Akışı Hizmeti Konağı Dahili Bileşenleri
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: dd03508397b77f4446a5b708c69333336d97193c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c3293fe7f835ed0d5b3b62404a1f3f2e20b73fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708499"
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Konağı Dahili Bileşenleri
 <xref:System.ServiceModel.WorkflowServiceHost> bir konak için iş akışı hizmetleri sağlar. Gelen iletileri dinlemek üzere sorumludur ve bunları uygun iş akışı hizmet örneği için yönlendirme, kaldırma ve boşta iş akışları ve daha pek çok kalıcı denetlediğini. Bu konuda, WorkflowServiceHost gelen iletilerin nasıl işlediği açıklanmıştır.  
@@ -26,7 +26,7 @@ ms.locfileid: "48036045"
   
  ![İş akışı hizmeti konağı ileti akışı](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- Bu diyagram, üç farklı uç noktalar, bir uygulama uç noktası, bir iş akışı denetim uç noktası ve bir iş akışı barındırma uç noktası gösterir. Uygulama uç noktası, belirli bir iş akışı örneği için bağlı olan iletileri alır. İş akışı denetim uç noktası denetimi işlemleri için dinler. Uç noktayı barındıran iş akışı için neden olan iletileri dinler <xref:System.ServiceModel.WorkflowServiceHost> yüklemek ve hizmet olmayan iş akışlarını yürütmek için. Diyagramda gösterildiği gibi tüm iletileri WCF çalışma zamanı işlenir.  İş akışı hizmeti örneği azaltma kullanılarak gerçekleştirilir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> özelliği. Bu özellik, eş zamanlı iş akışı hizmeti örnek sayısını sınırlar. Bu kısıtlama diğer aşıldığında, yeni iş akışı hizmet örneklerine yönelik istekler ya kalıcı iş akışı örnekleri etkinleştirmek için istekler kuyruğa alınır. Kuyruğa alınan istekler, yeni bir örneği veya bir çalışan, kalıcı örnek istekleri olup olmadıkları bakılmaksızın FIFO sırayla işlenir. Ana bilgisayar ilke bilgilerini nasıl işlenmeyen özel durumları ile dağıtılır ve nasıl belirleyen yüklendiği boş iş akışı hizmetleri kaldırıldı ve kalıcı. Bu konular hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma iş akışı işlenmeyen özel durum davranışını WorkflowServiceHost ile](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) ve [nasıl yapılır: WorkflowServiceHost ile boşta davranışı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). İş akışı örnekleri, konak ilkelerine göre kalıcı ve gerektiğinde yeniden yükleniyor. İş akışı kalıcılığı hakkında daha fazla bilgi için bkz: [nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), ve [iş akışı kalıcılığı ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ Bu diyagram, üç farklı uç noktalar, bir uygulama uç noktası, bir iş akışı denetim uç noktası ve bir iş akışı barındırma uç noktası gösterir. Uygulama uç noktası, belirli bir iş akışı örneği için bağlı olan iletileri alır. İş akışı denetim uç noktası denetimi işlemleri için dinler. Uç noktayı barındıran iş akışı için neden olan iletileri dinler <xref:System.ServiceModel.WorkflowServiceHost> yüklemek ve hizmet olmayan iş akışlarını yürütmek için. Diyagramda gösterildiği gibi tüm iletileri WCF çalışma zamanı işlenir.  İş akışı hizmeti örneği azaltma kullanılarak gerçekleştirilir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> özelliği. Bu özellik, eş zamanlı iş akışı hizmeti örnek sayısını sınırlar. Bu kısıtlama diğer aşıldığında, yeni iş akışı hizmet örneklerine yönelik istekler ya kalıcı iş akışı örnekleri etkinleştirmek için istekler kuyruğa alınır. Kuyruğa alınan istekler, yeni bir örneği veya bir çalışan, kalıcı örnek istekleri olup olmadıkları bakılmaksızın FIFO sırayla işlenir. Ana bilgisayar ilke bilgilerini nasıl işlenmeyen özel durumları ile dağıtılır ve nasıl belirleyen yüklendiği boş iş akışı hizmetleri kaldırıldı ve kalıcı. Bu konular hakkında daha fazla bilgi için bkz: [nasıl yapılır: İş akışı yapılandırma işlenmeyen özel durum davranışını WorkflowServiceHost ile](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) ve [nasıl yapılır: WorkflowServiceHost ile boşta davranışı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). İş akışı örnekleri, konak ilkelerine göre kalıcı ve gerektiğinde yeniden yükleniyor. İş akışı kalıcılığı bakın hakkında daha fazla bilgi için: [Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), ve [iş akışı kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  Aşağıdaki çizim WorkflowServiceHost.Open olarak adlandırılan gösterir.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "48036045"
 > [!WARNING]
 > İş akışı hizmeti konağı, SQL Server yalnızca NamedPipe protokolünde dinleyecek şekilde yapılandırıldıysa açmak başarısız olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
-- [İş Akışı Hizmetlerini Barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
-- [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
-- [Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
-- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [İş Akışı Hizmetlerini Barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
+- [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
+- [Nasıl yapılır: İş akışı yapılandırma işlenmeyen özel durum davranışını WorkflowServiceHost ile](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
+- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

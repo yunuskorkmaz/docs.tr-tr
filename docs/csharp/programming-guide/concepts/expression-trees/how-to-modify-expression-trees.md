@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: ifade ağaçlarını (C#) değiştirme'
+title: 'Nasıl yapılır: İfade ağaçlarını değiştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 97a8ea0d66edf5d084c442deae32e04bdeb63c32
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1cdc6eb4017495fc7486025dd868352eb9d04892
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735616"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>Nasıl yapılır: ifade ağaçlarını (C#) değiştirme
+# <a name="how-to-modify-expression-trees-c"></a>Nasıl yapılır: İfade ağaçlarını değiştirme (C#)
 Bu konu nasıl bir ifade ağacı değiştirileceğini gösterir. İfade ağaçları değişmezse, yani bunlar doğrudan değiştirilemez. İfade ağacı değiştirmek için var olan bir ifade ağacı bir kopyasını oluşturun ve bir kopya oluşturduğunuzda gerekli değişiklikleri yapın. Kullanabileceğiniz <xref:System.Linq.Expressions.ExpressionVisitor> var olan bir ifade ağacı gezme ve onu ziyaret her düğüm kopyalamak için bir sınıf.  
   
 ### <a name="to-modify-an-expression-tree"></a>İfade ağacı değiştirmek için  
@@ -70,7 +70,7 @@ Bu konu nasıl bir ifade ağacı değiştirileceğini gösterir. İfade ağaçla
   
 6.  Derleme ve uygulamayı çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Nasıl yapılır: İfade ağaçlarını yürütme (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

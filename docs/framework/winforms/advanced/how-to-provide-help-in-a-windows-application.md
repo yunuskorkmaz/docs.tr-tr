@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama'
+title: 'Nasıl yapılır: Bir Windows uygulamasında Yardım sağlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738608"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
+# <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows uygulamasında Yardım sağlama
 Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları için bir Yardım dosyası içinde Windows Forms özel denetimlerinde eklemeye bileşeni. Yardım dosyasında, HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
   
 > [!NOTE]
@@ -53,10 +53,10 @@ Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları i
 > [!IMPORTANT]
 >  Uygulamanızda kullanmadan önce bir istemciden gönderilen herhangi bir bilgi denetlemek dikkatli olun. Kötü amaçlı kullanıcılara veya yürütülebilir komut dosyası, SQL deyimleri ya da diğer kod ekleme göndermeye. Bir kullanıcının giriş görüntülemek, bir veritabanında saklamak veya onunla çalışan önce olmayabilecek bilgi içermiyor denetleyin. Bir normal bir şekilde denetlemek için anahtar sözcükler "BETİK" gibi bir kullanıcıdan giriş aldığınızda aramak için normal bir ifade kullanmaktır.  
   
- Ayrıca <xref:System.Windows.Forms.HelpProvider> açılır Yardım, Yardım dosyaları, Windows Forms'da denetimleri için görüntüleyecek şekilde yapılandırılmış olsa bile göstermek için bileşeni. Daha fazla bilgi için [nasıl yapılır: Görüntü açılır Yardım](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Ayrıca <xref:System.Windows.Forms.HelpProvider> açılır Yardım, Yardım dosyaları, Windows Forms'da denetimleri için görüntüleyecek şekilde yapılandırılmış olsa bile göstermek için bileşeni. Daha fazla bilgi için [nasıl yapılır: Açılır Yardımı görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Açılır Yardımı Görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Açılır Yardımı görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
+- [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

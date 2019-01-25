@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656225"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
 Herhangi bir uygulama ile etkileşim kurabilir bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış, bir veri hizmeti döndürür. Bu bir birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-tabanlı bir çok çeşitli Web özellikli uygulamalardan hizmetler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullandığınız zaman, daha zengin bir programlama deneyimi sağlayan istemci kütüphaneleri içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework veya Silverlight tabanlı uygulamalardan akışları.  
@@ -51,6 +51,6 @@ Herhangi bir uygulama ile etkileşim kurabilir bir [!INCLUDE[ssODataFull](../../
  [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Erişim ve veri akışı olarak veri hizmeti tarafından döndürülen ikili veri değişim açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2bc4dc831e87d72c6147e0f42ae3c4d1c79e113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563580"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRwDataRVA Metodu
-`GetRwDataRVA` Kullanımdan kalktı. Bu yöntemi çağırmanız gerekmez.  
+`GetRwDataRVA` artık kullanılmıyor. Bu yöntemi çağırmanız gerekmez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

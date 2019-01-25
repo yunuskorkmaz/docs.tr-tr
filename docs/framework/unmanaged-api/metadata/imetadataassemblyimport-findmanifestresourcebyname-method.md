@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9afc2ecc34131f62f1f8e8e86ca73f8b8b0126b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b05c9a75bf870dd3b2316d2df7c50932b26894f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702749"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName Yöntemi
-Bir işaretçi bildirim kaynağı için belirtilen adla alır.  
+Bir işaretçi, belirtilen ada sahip bildirim kaynağı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,23 +38,23 @@ HRESULT FindManifestResourceByName (
   
 #### <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Kaynağın adı.  
+ [in] Kaynak adı.  
   
  `ptkManifestResource`  
- [out] Depolamak için kullanılan dizi `mdManifestResource` meta veri simgesi, her biri bir bildirim kaynağı temsil eder.  
+ [out] Depolamak için kullanılan bir dizi `mdManifestResource` meta veri belirteçleri, her biri bildirim kaynağını temsil eder.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `FindManifestResourceByName` Yöntemi başvurularını çözümlemek için ortak dil çalışma zamanı tarafından kullanılan standart kurallar kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

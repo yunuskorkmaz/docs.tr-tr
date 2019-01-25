@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcf97f9fffabb9ae9579016517cfc335e6f783a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c195e61b5929acdb0aec7d9043ce6122b0a80739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643279"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler Yöntemi
-Yönetilen olayları için olay işleyici nesnesi belirtir.  
+Yönetilen olaylar için olay işleyicisi nesnesini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,21 +37,21 @@ HRESULT SetManagedHandler (
   
 #### <a name="parameters"></a>Parametreler  
  `pCallback`  
- [in] Bir işaretçi bir [Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) olay işleyici nesnesi nesne.  
+ [in] Bir işaretçi bir [Icordebugmanagedcallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) olay işleyici nesnesi olan bir nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetManagedHandler` oluşturma sırasında çağrılması gerekir.  
+ `SetManagedHandler` oluşturma zamanında çağrılmalıdır.  
   
- Varsa `ICorDebugManagedCallback` uygulaması ayıklanacak, uygulama için hata ayıklama olayları işlemek için yeterli arabirimleri içermiyor `SetManagedHandler` , bir HRESULT E_NOINTERFACE döndürür.  
+ Varsa `ICorDebugManagedCallback` uygulama ayıklanmakta olan, uygulama için hata ayıklama olaylarını işlemek için yeterli arabirimleri içermiyor `SetManagedHandler` , bir HRESULT e_noınterface döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: herhangi bir sözcük veya alana (LINQ) (C#) göre filtre metin verilerini sıralama veya'
+title: 'Nasıl yapılır: Herhangi bir sözcük veya alana (LINQ) göre filtre metin verilerini sıralama veya (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 46a6c81a2f6e937bbd567dd4ce1b1e448ca073db
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747979"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Nasıl yapılır: herhangi bir sözcük veya alana (LINQ) (C#) göre filtre metin verilerini sıralama veya
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Nasıl yapılır: Herhangi bir sözcük veya alana (LINQ) göre filtre metin verilerini sıralama veya (C#)
 Aşağıdaki örnek nasıl satırında herhangi bir alan olarak virgülle ayrılmış değerler gibi yapılandırılmış metin satırlarını sıralanacağını gösterir. Alanın, çalışma zamanında dinamik olarak belirtilebilir. Scores.csv alanlarında dört test puanlarını bir dizi tarafından izlenen bir öğrenci kimlik numarasını temsil ettiğini varsayar.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için  
   
-1.  Konu başlığından scores.csv veri kopyalama [nasıl yapılır: içerik katılın gelen benzer olmayan dosyaları (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) ve Çözüm klasörünüz olarak kaydedin.  
+1.  Konu başlığından scores.csv veri kopyalama [nasıl yapılır: İçerik gelen benzer olmayan dosyaları (LINQ) katılın (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) ve Çözüm klasörünüz olarak kaydedin.  
   
 ## <a name="example"></a>Örnek  
   
@@ -78,6 +78,6 @@ public class SortLines
 
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

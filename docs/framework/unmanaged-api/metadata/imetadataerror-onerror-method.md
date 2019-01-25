@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ebb7fdbcf8c17991928df2dc621ec651b9cd4f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678726"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError Yöntemi
-Meta veri birleştirme sırasında oluşan hataları bildirim sağlar.  
+Meta veri birleştirme sırasında oluşan hataları bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT OnError (
   
 #### <a name="parameters"></a>Parametreler  
  `hrError`  
- [in] Çağıran yönteme döndürülen HRESULT hata değeri.  
+ [in] Çağıran Metoda döndürülen HRESULT hata değer.  
   
  `token`  
- [in] Hata oluştuğunda, birleştirilen kod nesnesinin meta veri simgesi.  
+ [in] Hata oluştuğunda, birleştirilen kod nesnesinin meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataError Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataError Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

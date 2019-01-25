@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma'
+title: 'Nasıl yapılır: Dinamik olarak meta verilerini almak için MetadataResolver kullanma'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: cffe47f301c1943a0d97e3a95a5b7c24979b4f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9887f74902a1f324f57e39a61a48b5826127cba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735980"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma
-Bu konuda nasıl kullanılacağını gösterir <xref:System.ServiceModel.Description.MetadataResolver> dinamik olarak bağlama meta verilerini almak için sınıf.  
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Nasıl yapılır: Dinamik olarak meta verilerini almak için MetadataResolver kullanma
+Bu konu nasıl kullanılacağını gösterir <xref:System.ServiceModel.Description.MetadataResolver> dinamik olarak bağlama meta verilerini almak için sınıf.  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>Dinamik olarak bağlama meta verilerini almak için  
   
-1.  Oluşturma bir <xref:System.ServiceModel.EndpointAddress> meta veri uç noktasının adresine sahip nesne.  
+1.  Oluşturma bir <xref:System.ServiceModel.EndpointAddress> meta veri uç noktasının adresini içeren nesne.  
   
     ```  
     EndpointAddress metaAddress  
       = new EndpointAddress(new   Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
-2.  Çağrı <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>, hizmet türü ve meta veri uç noktası adresi geçirir. Belirtilen sözleşmesini uygulama uç noktaları koleksiyonunu döndürür. Yalnızca bağlama bilgileri meta verileri içe aktarılır; Sözleşme bilgilerini içe aktarılmaz. Sağlanan sözleşme yerine kullanılır.  
+2.  Çağrı <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>, hizmet türü ve meta veri uç noktası adresi geçirir. Bu, belirtilen sözleşmesini uygulama uç noktaları koleksiyonunu döndürür. Bağlama bilgileri meta verilerinden alınır; Sözleşme bilgi aktarılmaz. Sağlanan sözleşmeyi yerine kullanılır.  
   
     ```  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
     ```  
   
-3.  Gereksinim duyduğunuz bağlama bilgileri ayıklamak için hizmet uç noktaları toplulukta sonra yineleyebilirsiniz. Aşağıdaki kod uç noktaları yoluyla tekrarlanan, bağlama ve geçerli uç noktasıyla ilişkili adresi aktardığı hizmeti istemci nesnesi oluşturur ve ardından hizmette bir yöntemi çağırır.  
+3.  Ardından, ihtiyacınız olan bağlama bilgileri ayıklamak için hizmet uç noktaları koleksiyonu yineleyebilirsiniz. Aşağıdaki kod, uç noktalar üzerinden yinelenir, bağlama ve geçerli uç nokta ile ilişkili adres geçen hizmet istemci nesnesi oluşturur ve ardından hizmet üzerinde bir yöntemi çağırır.  
   
     ```  
     foreach (ServiceEndpoint point in endpoints)  
@@ -45,5 +45,5 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.ServiceModel.Descrip
     }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b4aad1cf1d3eb2dec249686f2897e6f393ab7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578832"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName Yöntemi
-Bir işaretçi TypeDef meta verileri için belirteç alır <xref:System.Type> belirtilen ada sahip.  
+TypeDef meta veriler için bir işaretçi için belirteç alır <xref:System.Type> belirtilen ada sahip.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT FindTypeDefByName
   
 #### <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [in] TypeDef belirtecini almak tür adı.  
+ [in] TypeDef belirteci almak üzere tür adı.  
   
  `tkEnclosingClass`  
- [in] Kapsayan sınıfı temsil eden bir TypeDef veya TypeRef belirteci. Bulunacak tür iç içe geçmiş sınıf değilse, bu değeri NULL olarak ayarlayın.  
+ [in] Kapsayan sınıfı temsil eden bir tür tanımı veya TypeRef belirteci. Bulunacak tür, iç içe geçmiş bir sınıf değil, bu değeri NULL olarak ayarlayın.  
   
  `ptd`  
- [out] Eşleşen TypeDef belirteci için bir işaretçi.  
+ [out] Eşleşen TypeDef belirteç için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

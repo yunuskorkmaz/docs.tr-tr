@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738072"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C# Derleyici Seçenekleri)
 
@@ -41,10 +41,10 @@ Yok.
 1. Açık **özellikleri** proje sayfası.
 1. Değiştirme **gecikme yalnızca oturum** özelliği.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici - delaysıgn seçeneği](delaysign-compiler-option.md)  
-- [C# derleyicisi - keyfıle seçeneği](keyfile-compiler-option.md)  
-- [C# Derleyici - keycontaıner seçeneği](keycontainer-compiler-option.md)  
-- [C# Derleyici Seçenekleri](index.md)  
+- [C# Derleyici - delaysıgn seçeneği](delaysign-compiler-option.md)
+- [C# derleyicisi - keyfıle seçeneği](keyfile-compiler-option.md)
+- [C# Derleyici - keycontaıner seçeneği](keycontainer-compiler-option.md)
+- [C# Derleyici Seçenekleri](index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

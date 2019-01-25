@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f2f5af86e210493cd8ba0eb8afe10d22b84b18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a45929c3eef5e9127e89dd88346c6207f3f1bc65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559504"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind Numaralandırması
-, Bilgileri kodunu çözdü olay türünü gösterir [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi.  
+, Bilgileri kodu çözülen olay türünü gösteren [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +39,27 @@ typedef enum CorDebugDebugEventKind {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`DEBUG_EVENT_KIND_MODULE_LOADED`|Bir modül yük olayı.|  
-|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Bir modül unload olayı.|  
+|`DEBUG_EVENT_KIND_MODULE_LOADED`|Modül yükleme olayı.|  
+|`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Modül kaldırma olayı.|  
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|İlk fırsat özel durum.|  
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|Bir kullanıcı ilk fırsat özel durum.|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|Bir özel durum olan bir `catch` işleyici yok.|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|Kendisi için bir özel durum bir `catch` işleyici yok.|  
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|İşlenmeyen bir özel durum.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Üye `CorDebugDebugEventKind` numaralandırma çağırarak döndürülür [Icordebugdebugevent::geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) yöntemi.  
   
 > [!NOTE]
->  Bu numaralandırma .NET senaryoları yalnızca hata ayıklama yerel olarak kullanıma yöneliktir.  
+>  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

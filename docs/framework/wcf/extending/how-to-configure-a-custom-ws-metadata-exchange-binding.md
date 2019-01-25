@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma'
+title: 'Nasıl yapılır: Yapılandırma özel bir WS-Metadata değişimi bağlaması'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 3d6f74d88dc9db775718c0098eccced4750d3b75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642470"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Yapılandırma özel bir WS-Metadata değişimi bağlaması
 Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlaması. Windows Communication Foundation (WCF) dört sistem tarafından tanımlanan meta veri bağlamaları içerir, ancak meta veriler, istediğiniz herhangi bir bağlamayı kullanarak yayımlayabilirsiniz. Bu konuda, meta verileri kullanarak yayımlamak nasıl gösterilecektir `wsHttpBinding`. Bu bağlama, güvenli bir şekilde meta verileri kullanıma sunduğundan seçeneği sunar. Bu makalede kod dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Yapılandırma dosyası kullanma  
@@ -113,9 +113,9 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Yayımlama Davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [Meta Verileri Alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Meta Veri Uç Noktalarını Yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Yayımlama Davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+- [Meta Verileri Alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
+- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [Meta Veri Uç Noktalarını Yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

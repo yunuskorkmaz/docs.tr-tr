@@ -2,12 +2,12 @@
 title: Değişken genel arabirimler oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: d8e7e8a59aeff27531187e5171a76651440ffc4c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ae3b309282712e3441b53ea4cfc316be3ca92d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614686"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Değişken genel arabirimler oluşturma (C#)
 Genel Tür parametrelerine birlikte değişken olarak arabirimleri bildirebilir veya değişken karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan değerinden daha fazla türetilmiş arabirim yöntemleri sağlar. *Kontravaryans* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Birlikte değişken olan genel bir arabirim veya değişken karşıtı genel tür parametreleri çağrılır *değişken*.  
@@ -185,7 +185,7 @@ class Program
   
  Bu örnekte, belirtilmeyen nasıl `pets.GetEnumerator` ücretlerinin arasında `Cat` ve `Dog`. Kodunuzda bu sorunlara neden olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+- [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

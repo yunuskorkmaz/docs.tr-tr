@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)'
+title: 'Nasıl yapılır: İşleçler (Visual Basic) tanımlayan bir sınıf kullanma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,42 +11,42 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 7e1d5698c1e83f0adf1be67245e0726aecaabdac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640695"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)
-Bir sınıf veya kendi işleçleri tanımlayan yapı kullanıyorsanız, bu işleçler Visual Basic'ten erişebilir.  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Nasıl yapılır: İşleçler (Visual Basic) tanımlayan bir sınıf kullanma
+Bir sınıf veya kendi işleçleri tanımlayan bir yapı kullanıyorsanız, bu işleçler Visual Basic'ten erişebilirsiniz.  
   
- Bir sınıf veya yapı bir işleci tanımlama olarak da adlandırılır *aşırı* işleci.  
+ Bir sınıf ya da yapı üzerinde operatör tanımlama olarak da adlandırılır *aşırı yükleme* işleci.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek SQL yapısı erişen <xref:System.Data.SqlTypes.SqlString>, dönüşüm işleçleri tanımlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) bir SQL dizesi ve Visual Basic dize arasında iki yönlü. Kullanım `CType(` *SQL dizesi ifadesini*, `String)` SQL dizesi bir Visual Basic dizeye dönüştürmek için ve `CType(` *Visual Basic dize ifadesi*, <xref:System.Data.SqlTypes.SqlString> `)` ters yönde dönüştürülemiyor.  
+ Aşağıdaki örnek SQL yapısı erişen <xref:System.Data.SqlTypes.SqlString>, dönüştürme işleçlerini tanımlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) SQL dizesi ve bir Visual Basic dize arasında iki yönlü. Kullanım `CType(` *SQL dize ifadesi*, `String)` SQL dizesi bir Visual Basic dizeye dönüştürmek için ve `CType(` *Visual Basic dize ifadesinin*, <xref:System.Data.SqlTypes.SqlString> `)` diğer yönde dönüştürülecek.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- <xref:System.Data.SqlTypes.SqlString> Yapısını tanımlayan bir dönüşüm işleci ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) gelen `String` için <xref:System.Data.SqlTypes.SqlString> ve başka bir <xref:System.Data.SqlTypes.SqlString> için `String`. Atayan deyimi `title` için `jobTitle` ilk işleci kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlev çağrısı kullanır ikinci.  
+ <xref:System.Data.SqlTypes.SqlString> Yapısını tanımlayan bir dönüştürme operatörünün ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) öğesinden `String` için <xref:System.Data.SqlTypes.SqlString> ve başka bir uygulamadan <xref:System.Data.SqlTypes.SqlString> için `String`. Atayan deyimi `title` için `jobTitle` ilk işlecini kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> ikinci işlev çağrısı kullanır.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Sınıf veya yapı kullanmakta olduğunuz kullanmak istediğiniz işleci tanımlar emin olun. Sınıf veya yapı her işleci aşırı yükleme için kullanılabilir tanımlanmış varsayalım değil. Kullanılabilir operatörler listesi için bkz: [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Kullanmak istediğiniz işleci tanımlar, sınıfın veya yapının kullanmakta olduğunuz emin olun. Sınıfın veya yapının her işleci aşırı yükleme için kullanılabilir tanımladığı varsaymayın. Kullanılabilir işleçlerin bir listesi için bkz. [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Uygun dahil `Imports` başında SQL dizesi bildirimi kaynak dosyasının (Bu durumda <xref:System.Data.SqlTypes>).  
+ Uygun dahil `Imports` kaynak dosyasının başında SQL dizesi deyimi (Bu durumda <xref:System.Data.SqlTypes>).  
   
- Projenizi System.Data ve System.XML başvuruları olması gerekir.  
+ Proje başvuruları System.Data ve System.XML olması gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleç Yordamları](./operator-procedures.md)  
- [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)  
- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)  
- [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)  
- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşleç Yordamları](./operator-procedures.md)
+- [Nasıl yapılır: Bir işleci tanımlama](./how-to-define-an-operator.md)
+- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

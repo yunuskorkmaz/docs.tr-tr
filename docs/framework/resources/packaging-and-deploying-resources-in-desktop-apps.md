@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad74b9e23c65209c8084588d09670e3c64e44213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493735"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Paketleme ve dağıtma kaynakları .NET uygulamaları
 Uygulamaları üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi kullanan <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynakları almak için sınıf. Resource Manager, paketleme ve dağıtma kaynakları için bir merkez ve ışınsal modelini kullanıldığını varsayar. Yerelleştirilemez yürütülebilir kod ve nötr olarak adlandırılan tek bir kültürü için kaynaklar içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; yerelleştirilmiş kaynaklar bulunamazsa kullanılan kültürdür. Her bir uçtaki tek bir kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır.  
@@ -180,19 +180,19 @@ Greeting=Добрый день
   
  Bu iki dosyayı çalıştırarak .resources dosyalarına derlenir [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) komut satırından.  Fransızca Dil kaynağı için komut şöyledir:  
   
- **Resgen.exe resources.fr.txt**  
+ **resgen.exe resources.fr.txt**  
   
  Rusça Dil kaynağı için komut şöyledir:  
   
- **Resgen.exe resources.ru.txt**  
+ **resgen.exe resources.ru.txt**  
   
  Çalıştırarak dinamik bağlantı kitaplıkları içinde gömülü .resources dosyaları [derleme Bağlayıcısı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) komuttan satır için Fransızca Dil kaynağı şu şekilde:  
   
- **Al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
+ **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
   
  ve aşağıdaki gibi Rusça Dil kaynağı için:  
   
- **Al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
+ **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
   
  Uygulama kaynak kodunu Example1.cs veya Example1.vb adındaki bir dosyada yer alıyor. İçerdiği <xref:System.Resources.NeutralResourcesLanguageAttribute> varsayılan uygulama kaynağı fr alt dizinde olduğunu belirtmek için özniteliği. Kaynak Yöneticisi'ni başlatır, değerini alır `Greeting` kaynak ve konsolda görüntüler.  
   
@@ -221,8 +221,8 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>Önerilen Paketleme Alternatifi  
  Zaman ve bütçe kısıtlamaları bir kaynak için uygulamanızın desteklediği her bir alt kümesini oluşturmasını engelleyebilir. Bunun yerine, tüm subcultures ilgili bir üst kültür kullanabilir, tek bir uydu derlemesi oluşturabilirsiniz. Örneğin, bölgeye özgü İngilizce kaynakları isteği kullanıcılar tarafından alınan tek bir İngilizce uydu derlemesi (TR) ve bölgeye özgü Almanca kaynakları isteyen kullanıcılar için tek Almanca uydu derlemesi (de) sağlayabilirsiniz. Örneğin, Almanca için (de-DE), Almanya'da konuşulan gibi Avusturya (de-AT) ve İsviçre (de-CH) Alman uydu derlemeye (de) dönmesi ister. Varsayılan kaynakları son geri dönüş olan ve bu nedenle, uygulamanızın kullanıcılarının çoğunluğu tarafından istenen kaynakları olmalıdır böylece bu kaynaklara dikkatle seçin. Bu yaklaşım, daha az duyarlıymış özgüdür, ancak uygulamanızın yerelleştirme maliyetlerini önemli ölçüde azaltabilirsiniz kaynakları dağıtır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
+- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

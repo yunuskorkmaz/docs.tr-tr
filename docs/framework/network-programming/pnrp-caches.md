@@ -1,15 +1,15 @@
 ---
-title: PNRP önbellekleri
+title: PNRP Caches
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736955"
 ---
-# <a name="pnrp-caches"></a>PNRP önbellekleri
+# <a name="pnrp-caches"></a>PNRP Caches
 Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş uç noktaları eş tutulan yerel koleksiyonlarıdır.  
   
 ## <a name="pnrp-cache-initialization"></a>PNRP önbellek başlatma  
@@ -35,5 +35,5 @@ Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş
   
  Eş diğer eşlerden nesneler alınıyor ilgi azalmasını kaydedebilirsiniz. Bir nesne güncelleştirildiğinde işbirliği uygulaması bildirilir ve uygulamanın tüm abonelerine yeni bir nesne geçirilir. Örneğin, bir grup sohbet uygulaması bir eş sohbet kayıtları tüm uygulama verileri olarak gönderir, uygulama bilgilerini alma ilgi kaydedebilirsiniz.  Bu bulut içinde sohbet etkinliğini izlemesine izin verir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.PeerToPeer>

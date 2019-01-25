@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2484fa61c03b95e7cbdb452b92a68a2049701374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2289a9a75311c9642a764844ee466adcc5838655
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744355"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId Arabirimi
-Geçerli kapsamdaki uygulama için benzersiz tanımlayıcı başvuru temsil eder.  
+Geçerli kapsam içinde bir uygulama için benzersiz tanımlayıcı bir başvuruyu temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|Bu tarafından başvurulan uygulaması için kod tanımlayıcı bir dize gösterimini bir işaretçi alır `IReferenceAppId`.|  
-|`IReferenceAppId::put_CodeBase`|Bu tarafından başvurulan uygulama için kod tanımlayıcı ayarlar `IReferenceAppId`.|  
-|`IReferenceAppId::EnumAppPath`|Bir arabirim işaretçisi alır bir `IEnumReferenceIdentity` örneğini içeren `IReferenceIdentity` bu üyeleri temsil örnekleri `IReferenceAppId`.|  
-|`IReferenceAppId::get_SubscriptionId`|Bu abonelik için bir işaretçi belirteç tanımlayıcı bir dize gösterimini alır `IReferenceAppId`.|  
-|`IReferenceAppId::put_SubscriptionId`|Bir abonelik için belirteç tanımlayıcı için ayarlar `IReferenceAppId` belirtilen dize değeri.|  
+|`IReferenceAppId::get_CodeBase`|Bu başvuru uygulaması için kod tanımlayıcısı için bir dize gösterimini bir işaretçi alır `IReferenceAppId`.|  
+|`IReferenceAppId::put_CodeBase`|Bu başvuru uygulaması için kod tanımlayıcısı ayarlar `IReferenceAppId`.|  
+|`IReferenceAppId::EnumAppPath`|Bir arabirim işaretçisi alır bir `IEnumReferenceIdentity` örneği içeren `IReferenceIdentity` bu üyeleri temsil eden örnekleri `IReferenceAppId`.|  
+|`IReferenceAppId::get_SubscriptionId`|Abonelik için bu belirteci tanımlayıcı bir dize gösterimini bir işaretçi alır `IReferenceAppId`.|  
+|`IReferenceAppId::put_SubscriptionId`|Bir abonelik için belirteç tanımlayıcısı için ayarlar `IReferenceAppId` belirtilen dize değeri.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IEnumReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
- [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IEnumReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
+- [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

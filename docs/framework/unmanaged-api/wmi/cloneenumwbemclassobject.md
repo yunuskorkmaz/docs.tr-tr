@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35bd458eb6046f57d37764e0a8e58616f2c2c3a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 52edc72e3714ceaf8cc92f272da6a374eb324dad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661652"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject işlevi
 Numaralandırma içindeki geçerli konumu koruma Numaralandırıcı mantıksal bir kopyasını oluşturur.  
@@ -89,11 +89,11 @@ Bu yöntem yalnızca bir "en iyi çaba" kopya oluşturur. Birçok CIM Nesne dina
 Bir örnek için bkz. [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

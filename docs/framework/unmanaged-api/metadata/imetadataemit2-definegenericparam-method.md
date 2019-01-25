@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66b2b9d6fb3f6379abb92fe081f36b487f9df234
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b54f5bb47135bcf56c91cd07b916c959e75b9fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745333"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam Yöntemi
 Genel tür parametresi için bir tanım oluşturur ve o genel tür parametresi için bir belirteç alır.  
@@ -43,35 +43,35 @@ HRESULT DefineGenericParam (
   
 #### <a name="parameters"></a>Parametreler  
  `tk`  
- [in] Bir `mdTypeDef` veya `mdMethodDef` yöntemi veya genel bir parametreye tanımlanacağı Oluşturucusu temsil eden belirteci.  
+ [in] Bir `mdTypeDef` veya `mdMethodDef` yöntem veya Oluşturucu genel parametre tanımlanacağı temsil eden belirteci.  
   
  `ulParamSeq`  
- [in] Genel parametresini dizini.  
+ [in] Genel parametre dizini.  
   
  `dwParamFlags`  
- [in] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) türünü genel parametresi için açıklayan numaralandırması.  
+ [in] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) türünü genel parametresi için açıklayan sabit listesi.  
   
  `szname`  
  [in] Parametrenin adı.  
   
  `reserved`  
- [in] Bu parametre, gelecekteki genişletilebilirliği için ayrılmıştır.  
+ [in] Bu parametre sonra genişletilebilmek için ayrılmış.  
   
  `rtkConstraints`  
- [in] Tür kısıtlamaları sıfır sonlandırılan dizisi. Dizi üyeleri olmalıdır bir `mdTypeDef`, `mdTypeRef`, veya `mdTypeSpec` meta veri simgesi.  
+ [in] Tür kısıtlamaları Sıfırla sonlandırılmış dizisi. Dizi üyeleri olmalıdır bir `mdTypeDef`, `mdTypeRef`, veya `mdTypeSpec` meta veri belirteci.  
   
  `pgp`  
- [out] Genel parametresini temsil eden bir belirteci.  
+ [out] Genel parametre temsil eden bir belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

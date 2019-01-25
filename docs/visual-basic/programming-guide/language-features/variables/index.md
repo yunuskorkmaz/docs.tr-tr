@@ -5,38 +5,38 @@ helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 79cd5629d4de6279eb370c18db617a5ad532108d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50b82285d31d40adfce07a61cd7902cdb2809a52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672233"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic'de Değişkenler
-Genellikle, Visual Basic ile hesaplamalar gerçekleştirdiğinizde değerlerini depolamak sahiptir. Örneğin, birkaç değerleri hesaplamak, bunları karşılaştırın ve üzerlerinde, karşılaştırma sonucuna bağlı olarak farklı işlemler gerçekleştirmek isteyebilirsiniz. Bunları karşılaştırma yapmak isterseniz değerleri tutmak zorunda.  
+Genellikle hesaplamalar Visual Basic ile zaman değerlerini depolamak sahiptir. Örneğin, çeşitli değerleri hesaplama, aralarında karşılaştırma ve üzerinde karşılaştırmanın sonucuna bağlı olarak farklı işlemler gerçekleştirmek isteyebilirsiniz. Bunları karşılaştırmak istiyorsanız değerlerini korumak sahip.  
   
 ## <a name="usage"></a>Kullanım  
- Visual Basic, yalnızca çoğu programlama dilleri gibi değişkenleri değerlerini depolamak için kullanır. A *değişkeni* (değişkenini içeren değere başvurmak için kullanacağınız word) olan bir ada sahip. Bir değişken de (hangi değişkeni depolayabilir veri türünü belirler) bir veri türüne sahip. Dizini oluşturulmuş bir yakından ilgili veri öğeleri kümesi depolamak varsa bir değişken dizisini temsil edebilir.  
+ Visual Basic, yalnızca çoğu programlama dilinden gibi değerleri depolamak için değişkenleri kullanır. A *değişkeni* (değişkenini içeren değere başvurmak için kullandığınız word) bir adı vardır. Bir değişken, ayrıca (değişkenin saklayabildiği veri türünü belirleyen) bir veri türüne sahip. Bir dizini oluşturulmuş yakından ilgili veri öğeleri kümesi depolamak varsa, bir değişken bir dizi temsil edebilir.  
   
- Yerel türü çıkarımı açıkça bir veri türü bildirmeden değişkenleri bildirin sağlar. Bunun yerine, derleyici başlatma ifade türü değişkeninden türü oluşturur. Daha fazla bilgi için bkz: [yerel türü çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) ve [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Yerel çıkarım açıkça bir veri türü bildirmeden değişkenler bildirmek sağlar. Bunun yerine, derleyicinin başlatma ifadesinin türünden değişkeninin türü çıkarır. Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) ve [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
 ## <a name="assigning-values"></a>Değerler atama  
- Atama deyimleri sonucu aşağıdaki örnekte gösterildiği gibi bir değişkene atayın ve hesaplamalar gerçekleştirmek için kullanın.  
+ Atama deyimleri, sonucu aşağıdaki örnekte gösterildiği gibi bir değişkene atayın ve hesaplamalar gerçekleştirmek için kullanın.  
   
  [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
->  Eşittir işaretinden (`=`) bir eşitlik işleci bir atama işleci Bu örnekte dosyasıdır. Değişkenine atanan değeri `applesSold`.  
+>  Eşittir işareti (`=`) bir atama işleci, eşitlik işleci Bu örnekte olduğu. Değişkene atanan değer `applesSold`.  
   
- Daha fazla bilgi için bkz: [nasıl yapılır: veri içine taşıyın ve bir değişkeni dışı](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veri ekleme çıkarma bir değişken taşıma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
   
 ## <a name="variables-and-properties"></a>Değişkenleri ve özellikleri  
- Gibi bir değişken bir *özelliği* erişebileceğiniz bir değeri temsil eder. Ancak, bir değişken karmaşık olur. Bir özellik ayarlama ve değerini almak nasıl denetim kod blokları kullanır. Daha fazla bilgi için bkz: [özellikleri arasındaki farklar ve Visual Basic değişken](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
+ Bir değişken gibi bir *özelliği* erişebileceğiniz bir değeri temsil eder. Ancak, bir değişken daha karmaşık olur. Bir özelliğin değerini almak ve ayarlamak biçimini denetleyen kod blokları kullanır. Daha fazla bilgi için [arasındaki farklar özelliklerini ve Visual Basic'te değişkenler](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Değişkenlerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)  
- [Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Visual Basic'de özellikler ve değişkenler arasındaki farklar](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)  
- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Değişkenlerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
+- [Nasıl yapılır: İçine ve dışına bir değişken veri taşıma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

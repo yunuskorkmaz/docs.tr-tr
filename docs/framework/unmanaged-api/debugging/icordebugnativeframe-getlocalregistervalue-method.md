@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b408654f367bc846dc878fb8412eb3e896dd192a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9794a44bfb0bd1b4739689359832ba8500c6e2ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539616"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue Metodu
-Bir bağımsız değişken veya bu yerel çerçeve belirtilen kaydolun depolanan yerel değişken değerini alır.  
+Bir bağımsız değişken veya yerel bu çerçeve için belirtilen kayıt defterinde depolanan yerel değişken değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT GetLocalRegisterValue (
   
 #### <a name="parameters"></a>Parametreler  
  `reg`  
- [in] Değerini içeren kayıt belirtir "CorDebugRegister" numaralandırma değeri.  
+ [in] "CorDebugRegister" numaralandırma değerini içeren kayıt belirten bir değer.  
   
  `cbSigBlob`  
- [in] Tarafından başvurulan ikili meta verileri imza boyutu belirten bir tamsayı `pvSigBlob` parametresi.  
+ [in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` değerinin türü ikili meta verileri imza gösteren değer.  
+ [in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.  
   
  `ppValue`  
- [out] Belirtilen kayıt defterinde depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesi adresini gösteren bir işaretçi.  
+ [out] Belirtilen kayıt defterinde depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetLocalRegisterValue` Yöntemi kullanılabilir yerel bir çerçeve veya bir tam zamanında (JIT)-çerçeve derlenmiş.  
+ `GetLocalRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

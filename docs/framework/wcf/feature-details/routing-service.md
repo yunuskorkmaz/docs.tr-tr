@@ -2,12 +2,12 @@
 title: Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495311"
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP aracıdır. Yönlendirme hizmeti temel işlevlerini iletisini üst bilgi veya ileti gövdesi içindeki bir değere göre bir istemci uç noktası iletilmesi bir ileti veren ileti içeriği temel iletileri yönlendirmek yeteneğidir.  
@@ -105,7 +105,7 @@ Yönlendirme hizmeti bir ileti yönlendirici işlevi gören genel bir SOAP arac�
   
 -   Dinamik yapılandırma  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)

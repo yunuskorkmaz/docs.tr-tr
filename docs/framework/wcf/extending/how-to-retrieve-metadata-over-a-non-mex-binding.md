@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
+title: 'Nasıl yapılır: Bağlama üzerinden meta verileri bir olmayan - MEX alma'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689561"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma
-Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta verilerini almak açıklar. Bu örnek kodda dayanır [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: Bağlama üzerinden meta verileri bir olmayan - MEX alma
+Bu konu, bir MEX uç noktasından bir MEX olmayan bağlama üzerinden meta verileri alınacak açıklar. Bu örnek kodda dayanır [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX olmayan bağlama üzerinden meta verilerini almak için  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Bir MEX olmayan bağlama üzerinden meta verilerini almak için  
   
-1.  MEX bitiş noktası tarafından kullanılan bağlama belirler. Windows Communication Foundation (WCF) hizmetlerini için hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilirsiniz. Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.  
+1.  MEX uç noktası tarafından kullanılan bağlama belirleyin. Windows Communication Foundation (WCF) Hizmetleri, hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilirsiniz. Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta veriler
      </bindings>  
     ```  
   
-2.  İstemci yapılandırma dosyası, aynı özel bağlama yapılandırın. Burada istemci de tanımlayan bir `clientCredentials` meta verileri MEX uç noktasından isterken hizmete kimlik doğrulaması için kullanılacak bir sertifika sağlamak için davranış. Özel bağlama üzerinden meta veri istemek için svcutil.exe kullanırken Svcutil.exe (Svcutil.exe.config) MEX uç nokta yapılandırması yapılandırma dosyasına eklemelisiniz ve uç nokta yapılandırması adresinin URI şeması adıyla aynı olmalıdır Aşağıdaki kodda gösterildiği gibi MEX endpoint.  
+2.  İstemci yapılandırma dosyasında aynı özel bağlama yapılandırın. Burada ayrıca istemci tanımlar bir `clientCredentials` MEX uç noktasından metadata isteğinde bulunurken hizmetinde kimlik doğrulaması için kullanılacak bir sertifika sağlamak için davranış. Özel bağlama üzerinden meta veri isteği için svcutil.exe kullanma, MEX uç nokta yapılandırması için yapılandırma dosyası için Svcutil.exe (Svcutil.exe.config) eklemelisiniz ve uç nokta yapılandırması adını, adresini URI düzeni eşleşmelidir Aşağıdaki kodda gösterildiği gibi MEX endpoint.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta veriler
     </system.serviceModel>  
     ```  
   
-3.  Oluşturma bir `MetadataExchangeClient` ve arama `GetMetadata`. Bunu yapmanın iki yolu vardır: Yapılandırması'nda özel bağlama belirtin veya özel bağlama aşağıdaki örnekte gösterildiği gibi kodda belirtebilirsiniz.  
+3.  Oluşturma bir `MetadataExchangeClient` ve çağrı `GetMetadata`. Bunu yapmanın iki yolu vardır: özel bağlama yapılandırmasında belirtebilir veya aşağıdaki örnekte gösterildiği gibi kodda özel bağlama belirtebilirsiniz.  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta veriler
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Oluşturma bir `WsdlImporter` ve arama `ImportAllEndpoints`aşağıdaki kodda gösterildiği gibi.  
+4.  Oluşturma bir `WsdlImporter` ve çağrı `ImportAllEndpoints`aşağıdaki kodda gösterildiği gibi.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  Bu noktada, hizmet uç noktaları koleksiyonu vardır. Meta verileri içe aktarma hakkında daha fazla bilgi için bkz: [nasıl yapılır: hizmet uç noktaları içine meta verileri içeri aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  Bu noktada, hizmet uç noktaları koleksiyonu vardır. Meta verileri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmet uç noktalarına meta verileri alma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

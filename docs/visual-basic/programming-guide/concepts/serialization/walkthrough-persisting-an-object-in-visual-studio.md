@@ -2,14 +2,14 @@
 title: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690442"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) nesneyi kalıcı kılma
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasarım zamanında olsa da, çalışma zamanında girilen değerleri kaybedilir. Seri hale getirme, bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan tanıyan örnekler arasında kalıcı hale getirmek için kullanabilirsiniz.  
   
 > [!NOTE]
@@ -215,6 +215,6 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
  Bu noktada, yeniden derleyebilir ve uygulamayı çalıştırın. Başlangıçta, varsayılan değerleri metin kutularında görüntülenir. Deneyin değerleri değiştirmek ve dördüncü metin kutusuna bir ad girin. Uygulamayı kapatın ve yeniden çalıştırın. Yeni değerler artık metin kutularına göründüğüne dikkat edin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)

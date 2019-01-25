@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abdfdd4393609bb7821cfc44c0e46574d8724cfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730072"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass’ı
-Tür adı deconstruction yönetmek için bir arabirim sağlar.  
+Ayrıştırma deyiminin türü adı yönetmek için bir arabirim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,13 +41,13 @@ coclass TypeNameFactory {
 |[ITypeNameFactory Arabirimi](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE.idl  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

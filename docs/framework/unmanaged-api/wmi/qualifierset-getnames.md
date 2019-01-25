@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555108"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames işlevi
+# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames function
 Tüm niteleyicileri veya geçerli nesne ya da özellik mevcut olan bazı niteleyicileri adlarını alır. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -53,8 +53,8 @@ HRESULT QualifierSet_GetNames (
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |  | 0 | Tüm niteleyicileri adlarını döndürür. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür. <br/> Bir özellik için: yalnızca niteleyicileri (geçersiz kılmaları dahil) özelliğine belirli dönün ve bu niteleyicileri, sınıf tanımından yayılır. <br/> Bir örneği için: yalnızca örnek özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: türetilmiş sınıf beiong yalnızca niteleyicileri belirli döndürür.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır. <br/> Bir özellik için: Bu özellik sınıf tanımı ve özelliğinden olanlar yalnızca niteleyicileri yayılan dönün. <br/> Bir örneği için: sınıf tanımının dönüş niteleyicileri yalnızca yayılır. <br/> Bir sınıf için: Bu niteleyici adları yalnızca üst sınıflardan devralınır Return. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür. <br/> Bir özellik için: Yalnızca (geçersiz kılmaları dahil) özelliğine belirli niteleyicileri ve olmayan sınıf tanımından yayılan niteleyicileri döndürür. <br/> Bir örneği için: Yalnızca örnek özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: Yalnızca niteleyicileri, türetilmiş sınıf beiong belirli döndürür.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır. <br/> Bir özellik için: Bu özellik yalnızca niteleyicileri yayılan dön sınıf tanımı ve özelliğinden olanlar. <br/> Bir örneği için: Sınıf tanımı dönüş niteleyicileri yalnızca yayılır. <br/> Bir sınıf için: Return bu niteleyici adları yalnızca üst sınıflardan devralınır. |
 
 `pstrNames` [out] Yeni bir `SAFEARRAY` , istenen adlarını içerir. Dizi öğeleri 0 olabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
 
@@ -77,11 +77,11 @@ Siz niteleyicisi adları aldıktan sonra her niteleyicisi adına göre çağıra
 Sıfır niteleyicileri olması belirli bir nesne için bir hata değil dizelerde sayısını `pstrNames` işlevi döndürür olsa bile getirisini 0 olabilir `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

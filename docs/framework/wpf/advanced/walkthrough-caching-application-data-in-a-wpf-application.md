@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
+title: 'İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513730"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamalar yerine özgün kaynaktan alınması önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Önbelleğe almayı kullanmanızı sağlar sınıfını sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
@@ -56,7 +56,7 @@ ms.locfileid: "49087355"
 
 #### <a name="to-create-a-wpf-application"></a>Bir WPF uygulaması oluşturmak için
 
-1.  Visual Studio'yu başlatın.
+1.  Visual Studio’yu çalıştırın.
 
 2.  İçinde **dosya** menüsünde tıklatın **yeni**ve ardından **yeni proje**.
 
@@ -325,7 +325,7 @@ ms.locfileid: "49087355"
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

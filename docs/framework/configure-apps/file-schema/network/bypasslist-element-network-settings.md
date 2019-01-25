@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: c696017c153b63ba6f2d485855c969b2b45ba0ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 82a9a3e6362538fc62b4afdb010ca784590b9db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746344"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; öğesi (ağ ayarları)
 Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.  
@@ -21,7 +21,7 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist >  
+\<bypasslist>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -76,6 +76,6 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

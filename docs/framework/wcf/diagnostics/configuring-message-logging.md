@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636020"
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
 Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.  
@@ -85,7 +85,7 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
   
 -   Tüm ileti (`logEntireMessage` öznitelik): Bu değer, iletinin tamamı (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirtir. Varsayılan değer `false`, yani yalnızca üstbilgisi günlüğe kaydedilir. Bu ayar, hizmet ve aktarım ileti günlüğe kaydetme düzeylerini etkiler...  
   
--   Günlüğe kaydedilecek en yüksek ileti (`maxMessagesToLog` öznitelik): günlüğe kaydedilecek ileti sayısı bu değeri belirtir. Bu kota hesaplamanıza dahil tüm iletileri (hizmet, taşıma ve yanlış biçimlendirilmiş iletiler) sayılır. Kotasına ulaşıldığında izleme yayılır ve hiçbir ek ileti günlüğe kaydedilir. Varsayılan değer 10000'dir.  
+-   Günlüğe kaydedilecek en yüksek ileti (`maxMessagesToLog` öznitelik): Günlüğe kaydedilecek ileti sayısı bu değeri belirtir. Bu kota hesaplamanıza dahil tüm iletileri (hizmet, taşıma ve yanlış biçimlendirilmiş iletiler) sayılır. Kotasına ulaşıldığında izleme yayılır ve hiçbir ek ileti günlüğe kaydedilir. Varsayılan değer 10000'dir.  
   
 -   Günlüğe kaydedilecek ileti en büyük boyutunu (`maxSizeOfMessageToLog` öznitelik): Bu değer, bayt cinsinden günlüğe kaydedilecek ileti en büyük boyutunu belirtir. Boyut sınırını aşan iletiler günlüğe ve başka bir etkinliği o ileti için gerçekleştirilir. Bu ayar, tüm izleme düzeylerini etkiler. ServiceModel izleme açıksa, bir uyarı düzeyi izleme ilk günlüğe kaydetme (ServiceModelSend * veya TransportReceive) kullanıcıya bildirmek için noktada yayılır. Yanlış biçimlendirilmiş iletiler için varsayılan değer 4 K olsa da hizmet düzeyi ve aktarım düzeyi iletiler için varsayılan değer 256 K ' dir.  
   
@@ -163,7 +163,7 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
   
  Bilmeniz gereken, `type` öznitelik türü için bir koşullu derleme adı ayarlanmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733704"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError Yöntemi
-Profil Oluşturucu tam zamanında (JIT) derleyici derleme işlemindeki bir hata ile karşılaştı bildirir.  
+Profil Oluşturucu, just-ın-time (JIT) derleyici yeniden derleme işleminde bir hata ile karşılaştı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,40 +39,40 @@ HRESULT ReJITError(
   
 #### <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] `ModuleID` İçinde hangi başarısız yeniden derlenmek girişiminde bulunuldu.  
+ [in] `ModuleID` İçinde başarısız bir yeniden derleme girişiminde bulunuldu.  
   
  `methodId`  
- [in] `MethodDef` Yönteminin başarısız yeniden derlenmek girişiminde bulunuldu.  
+ [in] `MethodDef` Yönteminin başarısız güncellemelerden denemesi yapıldı.  
   
  `functionId`  
- [in] Derlenmiş veya için işaretlendi yeniden derlenmek yapılıyor işlevi örneği. Bu değer olabilir `NULL` (örneğin, profil oluşturucu yöntemi derlenmesi için bir geçersiz meta veriler belirteci belirtilmişse) başına oluşturmada temel yerine yöntemi başına temelinde hatası durumunda.  
+ [in] Znovu veya için işaretlendi yeniden derleme yapılıyor işlevi örneği. Bu değer olabilir `NULL` (örneğin, profil oluşturucu yöntemi derlenmesi için bir geçersiz meta veri belirteci belirtilmişse) örnekleme başına temel yerine yöntemi başına temelinde hatası durumunda.  
   
  `hrStatus`  
- [in] Hatanın yapısını gösteren bir HRESULT. Değerlerin listesi için durumu HRESULTS bölümüne bakın.  
+ [in] Hatanın yapısını gösteren HRESULT. Değerlerin bir listesi için durumu HRESULTS bölümüne bakın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu geri dönüş değerleri yoksayılır.  
+ Bu geri arama dönüş değerleri yok sayılır.  
   
 ## <a name="status-hresults"></a>Durum HRESULTS  
   
 |Durum dizi HRESULT|Açıklama|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID` Veya `methodDef` belirteci `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|Modül henüz tam olarak yüklü değil veya kaldırıldığında sürecinde olduğundan.|  
+|E_INVALIDARG|`moduleID` Veya `methodDef` belirteç `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|Modül henüz tam yüklü değil veya yüklenmemiş sürecinde olduğundan.|  
 |CORPROF_E_MODULE_IS_DYNAMIC|Belirtilen modül dinamik olarak oluşturulan (örneğin, `Reflection.Emit`) ve bu nedenle bu yöntem tarafından desteklenmiyor.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Yöntemi, collectible derlemeye örneği ve bu nedenle derlenmesi mümkün değildir. Türleri Not ve yansıma olmayan bağlamında tanımlanan işlevleri (örneğin, `List<MyCollectibleStruct>`) collectible derlemeye oluşturulabilir.|  
-|E_OUTOFMEMORY|CLR JIT yeniden derlenmek belirtilen yöntemini işaretlemek çalışırken yetersiz bellek tükendi.|  
-|Diğer|İşletim sistemi CLR denetimi dışında kalan bir hata döndürdü. Örneğin, belleğin bir sayfası erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hatası görüntülenir.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Yöntem bir toplanabilir bütünleştirilmiş koda örneği ve derlenmesi mümkün değildir. Türleri unutmayın ve yansıma olmayan bağlamda tanımlı işlevler (örneğin, `List<MyCollectibleStruct>`) toplanabilir derlemeye oluşturulabilir.|  
+|E_OUTOFMEMORY|CLR JIT yeniden derlemesi için belirtilen yöntemi işaretlemek çalışırken belleği yetersiz kaldı.|  
+|Diğer|İşletim sistemi CLR denetimin dışında kalan bir hata döndürdü. Örneğin, belleğin bir sayfası erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hata görüntülenir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

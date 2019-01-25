@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML Bağımlı Öğelerine Erişme (Visual Basic)'
+title: 'Nasıl yapılır: Erişim XML bağımlı öğelerine (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML descendent axis property [Visual Basic]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 6d41844b540631df96740ce56818c125cf85e928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1248109dfcc853f701ea2ab61edc67d768e9663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666182"
 ---
-# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Nasıl yapılır: XML Bağımlı Öğelerine Erişme (Visual Basic)
-Bu örnek descendant axis özelliği, belirtilen ada sahip ve bir XML öğesi altında bulunan tüm XML öğeleri erişmek için nasıl kullanılacağını gösterir. Özellikle, kullanan `Value` özelliğine koleksiyonda ilk öğenin değerini almak `name` descendant axis özelliği döndürür. `name` Descendant axis özelliği alır adlı tüm öğeleri `name` içerdiği `contacts` nesnesi. Bu örnek ayrıca kullanır `phone` adlı tüm bağımlı öğelerini erişmek için descendant axis özelliği `phone` içerdiği `contacts` nesnesi.  
+# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Nasıl yapılır: Erişim XML bağımlı öğelerine (Visual Basic)
+Bu örnek, bir descendant axis özelliği bir XML öğesi altında yer alır ve belirtilen ada sahip olan tüm XML öğelerine erişmek için nasıl kullanılacağını gösterir. Özellikle, kullandığı `Value` özelliğini koleksiyondaki ilk öğenin değerini alma `name` descendant axis özelliği döndürür. `name` Descendant axis özelliği adlı tüm öğeleri alır `name` içerdiği `contacts` nesne. Bu örnekte ayrıca `phone` adlı tüm alt öğeleri erişmeye descendant axis özelliği `phone` içerdiği `contacts` nesne.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
@@ -25,9 +25,9 @@ Bu örnek descendant axis özelliği, belirtilen ada sahip ve bir XML öğesi al
   
 -   Bir başvuru <xref:System.Xml.Linq> ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>  
- [XML Descendant Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)  
- [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [Visual Basic'de XML'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
+- [XML Descendant Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
+- [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [Visual Basic'de XML'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

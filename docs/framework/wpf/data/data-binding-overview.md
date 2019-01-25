@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503215"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>s gibi <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> esnek tek veri öğelerini stilini veya koleksiyonları etkinleştirmek için yerleşik bir işlevselliğe sahiptir. Sıralama, filtreleme ve Grup görünümleri, veri üzerinde oluşturulabilir.  
@@ -230,7 +230,7 @@ ms.locfileid: "45990082"
  Kendi koleksiyon uygulamadan önce kullanmayı <xref:System.Collections.ObjectModel.ObservableCollection%601> veya gibi bir mevcut koleksiyon sınıfları <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, ve <xref:System.ComponentModel.BindingList%601>, birçok diğerlerinin yanı sıra. Gelişmiş bir senaryo varsa ve kendi koleksiyon uygulamak istiyorsanız kullanmayı <xref:System.Collections.IList>, ayrı ayrı dizin ve bu nedenle en iyi performansı tarafından erişilebilir nesneleri genel olmayan koleksiyonu sağlar.  
   
 <a name="collection_views"></a>   
-### <a name="collection-views"></a>Koleksiyon görünümleri  
+### <a name="collection-views"></a>Koleksiyon Görünümleri  
  Bir kez, <xref:System.Windows.Controls.ItemsControl> veri toplama için sıralama, filtreleme veya grup verileri isteyebileceğiniz bağlıdır. Bunu yapmak için uygulayan sınıflar olan koleksiyon görünümlerini kullanın. <xref:System.ComponentModel.ICollectionView> arabirimi.  
   
   
@@ -259,7 +259,7 @@ ms.locfileid: "45990082"
 |Kaynak koleksiyon türü|Koleksiyon görünüm türü|Notlar|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|Temel bir iç türü <xref:System.Windows.Data.CollectionView>|Öğeleri gruplandıramazsınız.|  
-|<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Hızlı.|  
+|<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Fastest.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
 ##### <a name="using-a-default-view"></a>Varsayılan görünüm kullanma  
@@ -429,11 +429,11 @@ ms.locfileid: "45990082"
 ## <a name="debugging-mechanism"></a>Hata ayıklama mekanizması  
  Ekli özellik ayarlayabilirsiniz <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> belirli bir bağlama durumu hakkında bilgi almak için bağlama ile ilgili bir nesne üzerinde.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [WPF Sürüm 4.5'teki Yenilikler](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [LINQ Sorgusunun Sonuçlarına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Veri bağlama Tanıtımı](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [ADO.NET Veri Kaynağına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [WPF Sürüm 4.5'teki Yenilikler](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [LINQ Sorgusunun Sonuçlarına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Veri bağlama Tanıtımı](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [ADO.NET Veri Kaynağına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

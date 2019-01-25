@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme'
+title: 'İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745889"
 ---
-# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme
+# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> Ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetler; ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri korunur geriye dönük uyumluluk ve gelecekte kullanım için varsa, ' ı seçin.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "45746044"
   
 1.  Yeni bir Windows formu oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms denetimlerine ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
-3.  Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  İçin <xref:System.Windows.Forms.StatusBar> formunuza, eklediğiniz denetimi ayarlama <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğini `true`.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "45746044"
     > [!NOTE]
     >  Yaklaşık olarak 30 durum çubuğunda görüntülenecek saniye saat sürer. Olası en doğru zamanı elde etmek için budur. Buna karşılık, daha kısa süre içinde görünen saati hale getirmek için değerini azaltabilirsiniz <xref:System.Windows.Forms.Timer.Interval%2A> ayarlanan önceki yordamdaki adım 7'deki özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Nasıl yapılır: Bir StatusBar Denetimine Panel Ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [Nasıl yapılır: Bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

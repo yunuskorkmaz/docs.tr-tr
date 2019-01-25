@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 825df88f4e8ee79f7159307d3f22416ddc27ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734348"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 Barındırma Genel Statik İşlevleri
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll içinde dışarı aktarılan bir iki yöntem sunar: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll, dışarı aktarılan bir yeni yöntem sunar: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CLRCreateInstance İşlevi](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- Üç arabirimi birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ Üç arabirimlerinden birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

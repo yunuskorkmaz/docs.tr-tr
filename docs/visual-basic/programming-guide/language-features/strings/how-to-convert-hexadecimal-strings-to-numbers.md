@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme (Visual Basic)'
+title: 'Nasıl yapılır: Onaltılık dizeleri sayılara (Visual Basic) dönüştürme'
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633832"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Nasıl yapılır: Onaltılık dizeleri sayılara (Visual Basic) dönüştürme
 Bu örnek, bir tamsayı kullanarak bir onaltılık dize dönüştürür <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Bir sayıyı bir onaltılık dize dönüştürmek için  
@@ -33,6 +33,6 @@ Bu örnek, bir tamsayı kullanarak bir onaltılık dize dönüştürür <xref:Sy
 
    Ön ek veya bir basamak ayıracı mevcutsa, çağrı <xref:System.Convert.ToInt32(System.String,System.Int32)> yöntem bir <xref:System.FormatException>.
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

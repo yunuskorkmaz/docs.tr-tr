@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633858"
 ---
 # <a name="ipv6-addressing"></a>IPv6 adresleme
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullanılabilir adresler Internet'in topolojisini yansıtmak Yönlendirme etki alanları bir hiyerarşiye alt bölümlere ayırmak için bu tür bir geniş adres alanı bir neden olmasıdır. Başka bir nedeni, cihazları ağa bağlanan adreslerini ağ bağdaştırıcıları (veya arabirimleri) eşlemektir. IPv6 adresleri ağ arabirimi düzeyinde olduğunu ve ayrıca otomatik yapılandırma özellikleri, düşük düzeyinde gidermek için doğal bir özellik sunar.  
@@ -60,7 +60,7 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullan�
   
 -   **Tek noktaya yayın adresi**. Tek bir arabirim için bir tanımlayıcı. Bu adrese gönderilen bir paket için tanımlanan arabirimi teslim edilir. Tek noktaya yayın adresi çok noktaya yayın adreslerini yüksek düzeyli sekizli değerini ayırt edilir. Çok noktaya yayın adreslerini yüksek düzeyli sekizli FF onaltılı değerine sahiptir. Bir tek noktaya yayın adresi bu sekizli için başka bir değer tanımlar. Tek noktaya yayın adreslerini farklı türleri şunlardır:  
   
-    -   **Bağlantı-yerel adresleri**. Bu adresler üzerinde tek bir bağlantı kullanılır ve aşağıdaki biçime sahiptir: FE80::*InterfaceId*. Bağlantı-yerel adresleri hiçbir yönlendiricilerdir sunmak veya adres otomatik yapılandırması, komşu bulma için bir bağlantı üzerindeki düğümler arasında kullanılır. Bağlantı-yerel adresi, başlangıç derecede ve sistem henüz adresleri, geniş kapsam almadığında kullanılır.  
+    -   **Bağlantı-yerel adresleri**. Bu adresler, tek bir bağlantıyı kullanılır ve aşağıdaki biçime sahiptir: FE80::*InterfaceId*. Bağlantı-yerel adresleri hiçbir yönlendiricilerdir sunmak veya adres otomatik yapılandırması, komşu bulma için bir bağlantı üzerindeki düğümler arasında kullanılır. Bağlantı-yerel adresi, başlangıç derecede ve sistem henüz adresleri, geniş kapsam almadığında kullanılır.  
   
     -   **Site-yerel adresleri**. Bu adresler, tek bir sitede kullanılan ve aşağıdaki biçime sahiptir: FEC0::*Subnetıd*:*InterfaceId*. Site-yerel adresleri, genel bir önek gerek kalmadan bir site içinde ele almak için kullanılır.  
   
@@ -72,6 +72,6 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullan�
   
  Genel olarak, bir düğüm her zaman bir bağlantı-yerel adresi vardır. Site-yerel adresi ve bir veya daha fazla genel adresi olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Yuvalar](../../../docs/framework/network-programming/sockets.md)

@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 5443c409bd3c73e91969db6424a4f86f1a16ed72
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4dd0a78fafe63197987938021195723e3eed0885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741002"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** veri türü. Oracle REF CURSOR ile çalışmak için veri sağlayıcısı'nı kullanarak, aşağıdaki davranışları düşünmelisiniz.  
@@ -42,6 +42,6 @@ Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** 
  [Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  İki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir <xref:System.Data.DataSet> satırlarla döndürülür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

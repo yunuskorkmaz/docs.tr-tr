@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654847"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>Son &lt;anahtar sözcüğü&gt; deyimi (Visual Basic)
 
@@ -101,4 +101,4 @@ Sayı işareti önlerine (`#`), `End` anahtar sözcüğü karşılık gelen yön
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[End Deyimi](end-statement.md)
+- [End Deyimi](end-statement.md)

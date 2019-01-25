@@ -2,12 +2,12 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9dde928beb348dcb41c6b908c8e5d2a04243172c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671479"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
@@ -198,4 +198,4 @@ ms.locfileid: "54221251"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

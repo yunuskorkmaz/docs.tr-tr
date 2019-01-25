@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e133333d735ca53d194bbb535710bc62bde6bb0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 17d027f7308d5f512b443dc69be815c5402f0c13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648907"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 Metodu
 Meta veri arayüzü ve bir dosya adı, doğru döndürür [Isymunmanagedreader](isymunmanagedreader-interface.md) modülle ilişkili hata ayıklama sembolleri okuyacaksa arabirimi.  
@@ -60,11 +60,11 @@ HRESULT GetReaderForFile2(
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="remarks"></a>Açıklamalar  
  Yöntemi bu sürümü, modül yanındaki sağ dışındaki alanlarda PDB dosyası için arama yapabilirsiniz. Arama ilke birleştirerek denetlenebilir [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). Örneğin, `AllowReferencePathAccess | AllowSymbolServerAccess` pdb yürütülebilir dosyanın yanındaki ve bir sembol sunucusu üzerinde görünür ancak kayıt defterini sorgulayın veya yürütülebilir dosyanın yolunu kullanın. Varsa `searchPath` parametresi sağlanır, bu dizinlerin her zaman aranır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedBinder2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- [GetReaderForFile Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedBinder2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [GetReaderForFile Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

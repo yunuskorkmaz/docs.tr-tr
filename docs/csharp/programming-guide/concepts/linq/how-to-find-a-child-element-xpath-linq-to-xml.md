@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir alt öğesi (XPath-LINQ to XML) bulun (C#)'
+title: 'Nasıl yapılır: (XPath-LINQ to XML) bir alt öğe bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 3027914d87b8245af16b4864c0f558158ab253a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ce31c803e1f0877a6029bda9de73e4bf8e79279
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737487"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: bir alt öğesi (XPath-LINQ to XML) bulun (C#)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) bir alt öğe bulma (C#)
 Bu konu XPath alt öğe eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.  
   
  XPath ifadesi `DeliveryNotes`.  
@@ -17,7 +17,7 @@ Bu konu XPath alt öğe eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/inclu
 ## <a name="example"></a>Örnek  
  Bu örnekte alt öğesi bulur `DeliveryNotes`.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -45,6 +45,6 @@ Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

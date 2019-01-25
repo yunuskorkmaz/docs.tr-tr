@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e02f44e4f581170a842a1c103ed069cb90cde79c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e5a706b3e60bb9460434425ab82125811862ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740586"
 ---
 # <a name="icordebugilcode2getlocalvarsigtoken-method"></a>ICorDebugILCode2::GetLocalVarSigToken Metodu
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
- Meta veriler bu örneği tarafından temsil edilen işlevi için yerel değişken İmza belirteci alır.  
+ Meta veriler için bu örneği tarafından temsil edilen işlev için yerel değişken imzası belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetLocalVarSigToken(
   
 #### <a name="parameters"></a>Parametreler  
  `pmdSig`  
- [out] Bir işaretçi `mdSignature` bu işlev için yerel değişken imza için belirteç veya `mdSignatureNil` olup olmadığını hiç imza (diğer bir deyişle, işlev yerel değişkenlerin yoksa).  
+ [out] Bir işaretçi `mdSignature` bu işlev için yerel değişken imzası için belirteç veya `mdSignatureNil` olup olmadığını hiç imza (diğer bir deyişle, işlev herhangi bir yerel değişkeni yoksa).  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugILCode2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugILCode2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

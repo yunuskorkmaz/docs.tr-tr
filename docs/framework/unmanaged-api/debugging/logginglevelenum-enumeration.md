@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675288"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum Numaralandırması
-Yönetilen iş parçacığı bir olayı günlüğe kaydettiğinde, olay günlüğüne yazılır açıklayıcı bir ileti önem düzeyini gösterir.  
+Yönetilen iş parçacığı bir olayı günlüğe kaydettiğinde, olay günlüğüne yazılan açıklayıcı bir iletisi önem derecesi düzeyini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,29 +53,29 @@ typedef enum LoggingLevelEnum {
 |`LTraceLevel0`|İleti izleme düzeyi 0 ' dir.|  
 |`LTraceLevel1`|İleti izleme düzeyini 1 ' dir.|  
 |`LTraceLevel2`|İleti izleme düzeyini 2 ' dir.|  
-|`LTraceLevel3`|İleti izleme düzeyi 3 ' dir.|  
+|`LTraceLevel3`|İleti izleme düzeyini 3 ' dir.|  
 |`LTraceLevel4`|İzleme düzeyi 4 iletisidir.|  
 |`LStatusLevel0`|İleti durumu düzeyi 0 ' dir.|  
 |`LStatusLevel1`|İleti durumu düzeyi 1 ' dir.|  
-|`LStatusLevel2`|Durum Düzey 2 iletisidir.|  
+|`LStatusLevel2`|İleti durumu düzeyi 2 ' dir.|  
 |`LStatusLevel3`|İleti durumu düzeyi 3 ' dir.|  
-|`LStatusLevel4`|İleti bir durum 4 düzeydir.|  
-|`LWarningLevel`|Uyarı düzeyi iletisidir.|  
-|`LErrorLevel`|Bir hata düzeyi iletisidir.|  
-|`LPanicLevel`|İleti bir Panik düzeydir.|  
+|`LStatusLevel4`|İleti durumu düzeyi 4 ' dir.|  
+|`LWarningLevel`|İleti bir uyarı düzeyidir.|  
+|`LErrorLevel`|İleti bir hata düzeyidir.|  
+|`LPanicLevel`|İleti Panik düzeyidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı (CLR) çağırır [Icordebugmanagedcallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) hata ayıklayıcı yönetilen iş parçacığı günlüğe bir olay olduğunu bildirmek için yöntem. CLR değerini iletir `LoggingLevelEnum` yönetilen iş parçacığı olay günlüğüne yazan ileti önem düzeyini belirtmek için numaralandırması.  
+ Ortak dil çalışma zamanı (CLR) çağıran [Icordebugmanagedcallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) yönetilen iş parçacığı günlüğe bir olay, hata ayıklayıcı bildirmek için yöntemi. CLR değerini geçirir `LoggingLevelEnum` yönetilen iş parçacığı olay günlüğüne yazdığı ileti önem düzeyini belirtmek için sabit listesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.EventLog>  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.EventLog>
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

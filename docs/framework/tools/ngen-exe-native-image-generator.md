@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592633"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -584,10 +584,10 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>İstemcilerin hizmet etkileşim  
  .NET Framework sürüm 2. 0'da, yerel görüntü hizmeti ilgili tek etkileşim komut satırı Ngen.exe aracıdır. Komut satırı aracı kuyruğu eylemlerini yükleme betikleri yerel görüntü hizmeti ve hizmetiyle etkileşim kurmak için kullanın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 
 [Native Image Service]: #native-image-service

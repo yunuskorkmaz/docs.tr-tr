@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 918b4f8c42b21878fa7eae5c79ae1171ef3e6b29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739452"
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
-Hazırlandı [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) gibi daha yeni meta veri arabirimleri üzerinde çalışan yöntemleri bildirme tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Ayrıca, özgün Ialink arabirimi ek kullanım esnekliği sağlama yöntemleri Ialink2 bildirir.  
+Destekleyici [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) bildirme gibi yeni meta veri arabirimleri üzerinde çalışan yöntemleri tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Buna ek olarak, özgün Ialink arabirimler üzerinden ek kullanım esneklik sağlayan yöntemler Ialink2 bildirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [AddFile2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
@@ -41,7 +41,7 @@ Hazırlandı [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/i
   
  [SetPEKind Yöntemi](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

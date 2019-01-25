@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f52d20b9cb717d72d660bb19a0474c3e5b293ab4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 487b376b2c8e4738ac4bc4d3c21b07eed62036a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635994"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps yöntemi
-Bu yönteme göreli sanal adres (RVA) verilen yöntemin meta veri simgesi ve kendi genel parametreleri hakkında bilgi gibi yöntemi özellikleri hakkında bilgi döndürür.  
+Bu yönteme göreli sanal adres (RVA) verilen yöntemin meta veri belirteci ve kendi genel parametreler hakkında bilgi gibi yöntemi özellikleri hakkında bilgi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,39 +29,39 @@ HRESULT GetMethodProps(
   
 #### <a name="parameters"></a>Parametreler  
  `codeRVA`  
- [in] Hakkında bilgi alınabilecek olduğu yönteminde göreli bir sanal adres.  
+ [in] Göreli sanal adres hakkında bilgi alınacak yöntemi içinde.  
   
  `pMethodToken`  
- [out] Yöntemin meta veri simgesi için bir işaretçi.  
+ [out] Yöntemin meta veri belirteci için bir işaretçi.  
   
  `pcGenericParams`  
- [out] Bu yöntem ile ilgili genel parametreleri sayısı için bir işaretçi.  
+ [out] Bu yöntemle ilişkili genel parametre sayısı için bir işaretçi.  
   
  `cbSignature`  
- [in] Boyutunu `signature` dizi. Açıklamalar bölümüne bakın.  
+ [in] Boyutu `signature` dizisi. Açıklamalar bölümüne bakın.  
   
  `pcbSignature`  
- [out] Döndürülen boyutu gösteren bir işaretçi `signature` dizi.  
+ [out] Boyut döndürülen işaretçi `signature` dizisi.  
   
  `signature`  
- [out] Tüm genel parametreler TypeSpec'te imzalarını tutan bir arabellek.  
+ [out] Tüm genel parametreler TypeSpec'te imzalarını tutan arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemin gerekli boyutunu almak için `signature` dizisindeki, ayarlamak `cbSignature` bağımsız değişkeni 0 ve `signature` için **null**. Yöntem döndüğünde `pcbSignature` için gereken bayt sayısını içerecektir `signature` dizi.  
+ Yöntemin gerekli boyutunu almak için `signature` ayarlayın, dizi `cbSignature` bağımsız değişkeni 0 ve `signature` için **null**. Yöntem döndürüldüğünde `pcbSignature` için gereken bayt sayısını içerir `signature` dizisi.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetTypeProps Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)  
- [ICorDebugSymbolProvider Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetTypeProps Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
+- [ICorDebugSymbolProvider Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 7144a5fd4a197fddaf1ac4132df0ff70995ad067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 358c7a988ae95c2326a26bc048f5436e11acb340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641596"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir
-Lambda ifadesinde yineleme değişkeni kullanılması olabilir beklenmeyen sonuçlar. Bunun yerine, döngü içinde yerel bir değişken oluşturun ve yineleme değişkenin değerini atayın.  
+Sahip bir lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden. Bunun yerine, döngü içinde yerel bir değişken oluşturun ve yineleme değişkeninin değerini atayın.  
   
- Döngünün içinde bildirilen bir lambda ifadesinde bir döngü yineleme değişkeni kullandığınızda, bu uyarı görüntülenir. Örneğin, aşağıdaki örnekte, görüntülenecek uyarı neden olur.  
+ Döngünün içinde bildirilen bir lambda ifadesinde bir döngü yineleme değişkeni kullandığınızda, bu uyarı görüntülenir. Örneğin, aşağıdaki örnekte görünecek uyarısına neden olur.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -26,7 +26,7 @@ For i As Integer = 1 To 10
 Next  
 ```  
   
- Aşağıdaki örnek, ortaya çıkabilecek beklenmeyen sonuçları gösterir.  
+ Aşağıdaki örnek, oluşabilecek beklenmeyen sonuçları gösterilmektedir.  
   
 ```vb  
 Module Module1  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- `For` Döngü oluşturuyor döngü yineleme değişkenin değerini döndürür, her biri bir dizi lambda ifadeleri `i`. Ne zaman lambda ifadeleri değerlendirilir içinde `For Each` döngüsü 0, 1, 2, 3 ve 4 görüntülenen, art arda değerlerini görmeyi beklediğiniz `i` içinde `For` döngü. Bunun yerine, son değerini görmek `i` beş kez görüntülenir:  
+ `For` Döngü oluşturuyor döngüsünün yineleme değişkeni değerini döndürür, her biri bir dizi lambda ifadeleri `i`. Ne zaman lambda ifadeleri değerlendirilir `For Each` döngü beklediğiniz 0, 1, 2, 3 ve 4 görüntülenen art arda gelen değerlerini görmek `i` içinde `For` döngü. Bunun yerine, son değeri gördüğünüz `i` beş kez görüntülenir:  
   
  `5`  
   
@@ -57,13 +57,13 @@ End Module
   
  `5`  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak davranma hakkında daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC42324  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Yineleme değişkeninin değeri yerel bir değişkene atayın ve yerel değişken lambda ifadesinde kullanın.  
+-   Yineleme değişkeninin değeri yerel bir değişkene atayın ve lambda ifadesinde yerel değişkenini kullanın.  
   
 ```vb  
 Module Module1  
@@ -83,5 +83,5 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

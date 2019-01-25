@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme'
+title: 'Nasıl yapılır: Bir Windows Form içinde zaman uyumsuz ses yükleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 2de2be478e81183201cc85e1a6dfd6f1a1833af6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed1257a942eb990c9b0c6427d264013e3324326b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523681"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Nasıl yapılır: Bir Windows Form içinde zaman uyumsuz ses yükleme
 Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve ardından yeni bir iş parçacığında yürütülür.  
   
 ## <a name="example"></a>Örnek  
@@ -30,7 +30,7 @@ Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve a
   
 -   Dosya adı yerine `"http://www.tailspintoys.com/sounds/stop.wav"` ile geçerli bir dosya adı.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Dosya işlemleri uygun özel durum işleme bloğu alınmalıdır.  
@@ -52,8 +52,8 @@ Aşağıdaki kod örneği, zaman uyumsuz olarak bir ses bir URL'den yükler ve a
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- <xref:System.Media.SoundPlayer.LoadCompleted>  
- <xref:System.Media.SoundPlayer.Play%2A>  
- [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Media.SoundPlayer.LoadAsync%2A>
+- <xref:System.Media.SoundPlayer.LoadCompleted>
+- <xref:System.Media.SoundPlayer.Play%2A>
+- [Nasıl yapılır: Bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

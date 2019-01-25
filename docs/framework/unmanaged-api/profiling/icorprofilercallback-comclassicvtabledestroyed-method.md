@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d1e80d05344448c19c9f8f2d261442e4041487
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f60c4373410c46c5d1ea284b2cacd4b5c070ed9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682829"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed Yöntemi
-Profil Oluşturucu COM birlikte çalışma vtable yok olduğunu bildirir.  
+Profil Oluşturucu, COM birlikte çalışma vtable edildiğini bildirir.  
   
 > [!NOTE]
->  Vtable edilmesine çok yakın kapatma oluştuğundan bu geri çağırma asla meydana olasılığı yüksektir.  
+>  Vtable yok edilmesini çok yakın bir kapatma işlemi gerçekleşmesi için bu geri çağırma hiçbir zaman oluşma olasılığı yüksektir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +44,25 @@ HRESULT COMClassicVTableDestroyed(
  [in] Bu vtable oluşturulduğu sınıf kimliği.  
   
  `implementedIID`  
- [in] Sınıfı tarafından uygulanan arabirimi kimliği. Arabirimi yalnızca iç ise bu değeri NULL olabilir.  
+ [in] Sınıfı tarafından uygulanan arabirim kimliği. Arabirimi yalnızca iç ise bu değer NULL olabilir.  
   
  `pVTable`  
- [in] Bir işaretçi vtable başlangıcı.  
+ [in] Vtable başlangıcı için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın çöp toplama izin veren bir durumda olmayabileceğinden profil oluşturucu, bu yöntem uygulamasında engelleyebilir miyim değil ve bu nedenle PreEmptive tarafından çöp toplama etkinleştirilemez. Profil Oluşturucu burada engelliyorsa ve atık toplama denemesi, bu geri çağırma dönene kadar çalışma zamanı engeller.  
+ Yığın atık toplama izin veren bir durumda olmayabilir çünkü profil oluşturucu bu yöntemin uygulanması Engellemesi gereken değil ve bu nedenle preemptive çöp toplama etkinleştirilemez. Burada profil oluşturucu engellerse ve çöp toplama denenir, çalışma zamanı, bu geri dönene kadar engeller.  
   
- Bu yöntemin kullanımı Profil Oluşturucu'nın yönetilen koda veya herhangi bir yönetilen bellek ayırma şekilde neden çağırmalıdır değil.  
+ Bu yöntemin uygulanmasını profil oluşturucunun yönetilen koda veya herhangi bir yönetilen bellek ayırma yol neden çağırmalıdır değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [COMClassicVTableCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [COMClassicVTableCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

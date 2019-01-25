@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506257"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir özel sorgu dilinde ifade edilir. Zaman içinde farklı dillerde farklı türde veri kaynakları için örneğin, ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu, uygulama geliştiricisi, her veri kaynağı veya desteklenmeyen veri biçimi türü için yeni bir sorgu dili öğrenmek için gerekli kılar.  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'te lınq'e Başlarken](getting-started-with-linq.md)  
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)  
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Visual Basic'te lınq'e Başlarken](getting-started-with-linq.md)
+- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)

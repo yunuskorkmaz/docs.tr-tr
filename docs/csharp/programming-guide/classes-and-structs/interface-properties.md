@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652195"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
 Özellikleri bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Bir arabirim özellik erişimcisi örneği verilmiştir:  
@@ -51,11 +51,11 @@ ms.locfileid: "53241593"
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
 - [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)

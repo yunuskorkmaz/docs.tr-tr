@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744927"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
 MSMQ yönlendirme iletileri tarafından sıraya alma desteği sağlayan bir bağlama tanımlar.  
@@ -129,12 +129,12 @@ msmqIntegrationBinding
 </configuration>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3bae07f8b72225ccb502a32fbc03fb4651c80d63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654288"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir (.exe) kütüphaneler (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ve anahtar derleme işlemindeki adımları açıklar.  
@@ -166,8 +166,8 @@ End Sub
   
 -   (Projede olmadıysa) hiçbir şey derlenir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [WPF MSBuild Başvurusu](/visualstudio/msbuild/wpf-msbuild-reference)  
- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [WPF MSBuild Başvurusu](/visualstudio/msbuild/wpf-msbuild-reference)
+- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

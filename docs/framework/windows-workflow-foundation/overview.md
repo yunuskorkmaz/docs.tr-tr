@@ -2,12 +2,12 @@
 title: Windows Workflow'a genel bakış
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665168"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow'a genel bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek hayattaki bir işleme açıklayan model olarak depolanır. İş akışları yürütme düzenini ve kısa veya uzun süren iş parçaları arasındaki bağımlı ilişkileri açıklamak için bir yol sağlar. Bu iş modeliyle baştan geçirir ve etkinlikleri sistem işlevlerini veya kişiler tarafından yürütülmesi gerekir.  
@@ -41,5 +41,5 @@ Ana bilgisayar işlemdeki iş akışı bileşenleri
   
 -   Öğesinden türetilen özel bir etkinlik <xref:System.Activities.CodeActivity> soyut sınıf. <xref:System.Activities.CodeActivity> Çalışma zamanı özelliklerine (örneğin, izleme ve Özellikler) erişebilirsiniz kullanarak <xref:System.Activities.CodeActivityContext> bir parametresi olarak kullanılabilen <xref:System.Activities.CodeActivity.Execute%2A> yöntemi. Bu çalışma zamanı özellikleri hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [iş akışı yürütme özellikleri](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [BizTalk Server 2006 veya WF? Projeniz için doğru iş akışı aracı seçme](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>Ayrıca bkz.
+- [BizTalk Server 2006 veya WF? Projeniz için doğru iş akışı aracı seçme](https://go.microsoft.com/fwlink/?LinkId=154901)

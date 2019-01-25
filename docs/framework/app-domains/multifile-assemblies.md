@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f319ef94a5a0f1a5239a2f506386dbc15f0505ef
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599185"
 ---
 # <a name="multifile-assemblies"></a>Birden Çok Dosya Derlemeleri
 
@@ -41,7 +41,7 @@ Bir çoklu dosya derlemesi oluşturmak isteyebileceğiniz birkaç neden vardır:
 
 Derleme oluşturduktan sonra derleme bildirimini içeren dosyayı imzalayabilirsiniz (ve bu nedenle derleme), dosya (ve derleme) güçlü bir ad verin ve genel derleme önbelleğinde yerleştirin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

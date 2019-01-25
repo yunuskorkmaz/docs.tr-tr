@@ -7,30 +7,30 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 53c3172e8518115d001c23be2430fbc87ae1b60f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d52df42b00abfa364762d97c162eb143e511f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649498"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Kodda Öğe Adları Olarak Anahtar Sözcükler (Visual Basic)
-Herhangi bir program öğesi — bir değişkeni, sınıf veya üye gibi — sınırlı anahtar sözcüğü ile aynı ada sahip olabilir. Örneğin, adında bir değişken oluşturabilirsiniz `Loop`. Ancak, bunu sürümünüz için başvurmak için — kısıtlanmış aynı ada sahip `Loop` anahtar sözcüğü — tam nitelenmiş dizesiyle önünde veya köşeli parantez içine almanız (`[ ]`), aşağıdaki örnekte gösterildiği gibi.  
+Herhangi bir program öğesi — bir değişkeni, sınıf veya üye gibi — kısıtlı bir anahtar sözcüğü ile aynı ada sahip olabilir. Örneğin, adında bir değişken oluşturabilirsiniz `Loop`. Ancak, sürümü için başvuruda bulunmak için — kısıtlı aynı ada sahip `Loop` anahtar sözcüğü — tam nitelenmiş dizesiyle önünde veya köşeli parantez içine (`[ ]`), aşağıdaki örnekte gösterildiği gibi.  
   
  [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
- Bunlardan birini yapmak sonra Visual Basic varsayar iç kullanımını `Loop` anahtar sözcüğü ve aşağıdaki örnekteki gibi bir hata üretir:  
+ Bunlardan birini yapmak sonra Visual Basic varsayar iç kullanımı `Loop` anahtar sözcüğü ve aşağıdaki örnekte olduğu gibi bir hata oluşturur:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Formlar ve denetimler için söz konusu olduğunda ve ne zaman köşeli kullanabileceğiniz bir değişken bildirme veya aynı ada sahip bir yordamı kısıtlanmış bir anahtar sözcük olarak tanımlama. Adları nitelemeniz veya köşeli içerir ve bu nedenle kodunuza hatalara ve okumak daha zor hale unuttunuz kolay olabilir. Bu nedenle, sınırlı anahtar sözcükleri program öğe adları olarak kullanmamanızı öneririz. Visual Basic gelecek bir sürümünde yeni bir anahtar sözcük varolan form veya denetim adı ile çakışan tanımlıyorsa, ancak daha sonra bu teknik kodunuzu güncelleştirilirken yeni sürümle çalışmak için kullanabilirsiniz.  
+ Formlar ve denetimler için söz konusu olduğunda ve ne zaman köşeli ayraç kullanabileceğiniz bir değişken bildirme veya kısıtlanmış bir anahtar aynı ada sahip bir yordam tanımlama. Adları uygun veya köşeli ayraçlar dahil olan ve bu nedenle kodunuza hatalara ve okumak daha zor hale unutmak çok kolaydır olabilir. Bu nedenle, sınırlı anahtar sözcükleri program öğelerinin adlarını kullanmamanızı öneririz. Visual Basic gelecek bir sürümünde yeni bir anahtar sözcüğü bir var olan form veya denetim adı ile çakışan tanımlar, ancak daha sonra bu tekniği kodunuzu güncelleştirirken yeni sürümle çalışmak için kullanabilirsiniz.  
   
 > [!NOTE]
->  Programınızı diğer başvurulan derlemeler tarafından sağlanan öğe adları de içerebilir. Bu adları sınırlı anahtar sözcükleriyle çakışma varsa, bunları köşeli ayraç yerleştirme tanımlanan öğelerinizi yorumlamak Visual Basic neden olur.  
+>  Programınız, ayrıca diğer başvurulan derlemelerde tarafından sağlanan öğe adları içerebilir. Bu adlar sınırlı anahtar sözcüklerle arasında çakışma varsa, daha sonra bunları köşeli ayraç yerleştirme tanımlanmış, öğelerin yorumlamaya Visual Basic neden olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Icordebugheapvalue Interface1
+title: Icordebugheapvalue arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c510912412f2344dfd92d6ab2c41c35c1f237ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622864"
 ---
-# <a name="icordebugheapvalue-interface1"></a>Icordebugheapvalue Interface1
-"Ortak dil çalışma zamanı (CLR) atık toplayıcısı tarafından toplanan nesneyi temsil eden Icordebugvalue" sınıfıdır.  
+# <a name="icordebugheapvalue-interface1"></a>Icordebugheapvalue arabirimi1
+"Ortak dil çalışma zamanı (CLR) çöp toplayıcısı tarafından toplanmış bir nesneyi temsil eden Icordebugvalue" öğesinin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[CreateRelocBreakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Henüz uygulanmadı.|  
-|[IsValid Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Nesne bu tarafından temsil edilen olup olmadığını belirten bir değer alır `ICorDebugHeapValue` geçerli değil ya da atık toplayıcısı tarafından iadesi. Bu yöntem .NET Framework sürüm 2.0 kullanım dışıdır.|  
+|[IsValid Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Nesnenin bu temsil olup olmadığını gösteren bir değer alır `ICorDebugHeapValue` geçerli veya çöp toplayıcısı tarafından iadesi. Bu yöntem .NET Framework 2.0 sürümünde kullanım dışı bırakıldı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-    
-    
-    
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+
+
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

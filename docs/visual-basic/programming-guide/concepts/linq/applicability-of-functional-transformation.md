@@ -1,38 +1,38 @@
 ---
-title: Uygulanabilirlik işlev dönüştürme (Visual Basic)
+title: (Visual Basic) işlev dönüşümün uygulanabilirliği
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: bdb487ce0de986a1dba36908352a8270cfde2700
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699408"
 ---
-# <a name="applicability-of-functional-transformation-visual-basic"></a>Uygulanabilirlik işlev dönüştürme (Visual Basic)
-Saf işlevsel dönüşümleri çok çeşitli durumlarda uygulanabilir.  
+# <a name="applicability-of-functional-transformation-visual-basic"></a>(Visual Basic) işlev dönüşümün uygulanabilirliği
+Saf işlevsel dönüşümlere çok çeşitli durumlarda geçerlidir.  
   
- İşlev dönüştürme yaklaşım, ideal olarak sorgulama ve yapılandırılmış veri işleme için uygundur; Bu nedenle de LINQ teknolojileriyle sığar. Ancak, işlev dönüştürme LINQ ile kullanmak üzere daha çok daha geniş bir Uygulanabilirlik vardır. Verileri bir biçimden diğerine dönüştürme ana odak olduğu herhangi bir işlem büyük olasılıkla işlev dönüştürme adayı olarak düşünülmelidir.  
+ İşlevsel dönüşüm yaklaşım, ideal olarak sorgulama ve düzenleme yapılandırılmış veriler için uygundur; Bu nedenle de LINQ teknolojileriyle uyar. Ancak LINQ ile kullanmak daha çok geniş bir Uygulanabilirlik işlevsel dönüşümü yoktur. Verileri bir biçimden diğerine dönüştürme üzerinde odaklandığı olduğu herhangi bir işlem büyük olasılıkla işlevsel dönüşüm adayı olarak kabul edilmelidir.  
   
- Bu yaklaşım bir aday olarak ilk bakışta görünmeyebilir birçok sorunu için geçerli olur. İle birlikte veya ayrı ayrı LINQ gelen kullanıldığında, işlev dönüştürme için aşağıdaki alanlarda bulundurulmalıdır:  
+ Bu yaklaşım, ilk bakışta bir aday olarak görünmeyebilir karşılaşılan birçok sorun için geçerlidir. Birlikte veya ayrı olarak LINQ birlikte kullanıldığında, işlevsel dönüşümü için aşağıdaki alanları bulundurulmalıdır:  
   
--   XML tabanlı belgeler. Doğru biçimlendirilmiş XML dialect verileri kolayca işlevsel dönüştürme yönetilebilir. Daha fazla bilgi için bkz: [işlev dönüştürme XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+-   XML-tabanlı belge. Tüm XML diyalekti doğru biçimlendirilmiş verilerin işlevsel dönüşüm kolayca işlenebilir. Daha fazla bilgi için [işlevsel XML Dönüşümü (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
   
--   Diğer yapılandırılmış dosya biçimleri. Düz metin belgelere Windows.ini dosyalarından çoğu dosyaları kendisini çözümleme ve dönüştürme için uygundur bazı yapıya sahip.  
+-   Diğer yapılandırılmış dosya biçimleri. Düz metin belgelere Windows.ini dosyalarından çoğu dosya kendisini çözümleme ve dönüştürme için uygundur bazı yapıdadır.  
   
--   Veri akış protokolleri. İçine veri kodlama ve kod çözme verilerini iletişim protokolleri genellikle basit işlevsel bir dönüşüm tarafından temsil edilebilir.  
+-   Veri akış protokolleri. Veri kodlama ve kod çözme verilerden iletişim protokolleri genellikle basit bir işlev dönüştürme işlemi tarafından temsil edilebilir.  
   
--   RDBMS ve OODBMS verileri. İlişkisel ve nesne yönelimli veritabanları, XML gibi yaygın olarak kullanılan yapılandırılmış veri kaynaklarıdır.  
+-   RDBMS ve OODBMS verileri. İlişkisel ve nesne yönelimli veritabanları, XML, olduğu gibi yaygın olarak kullanılan yapılandırılmış veri kaynağıdır.  
   
--   Mathematic, istatistik ve Bilim çözümleri. Kullanıcı görselleştirme, tahmin veya gerçekten Önemsiz olmayan sorunları çözmeye yardımcı olmak üzere büyük veri kümeleri işlemek için bu alanlar eğilimlidir.  
+-   Matematik istatistik ve Bilim çözümler. Bu alanlar, kullanıcının görselleştirme, tahmin etme veya gerçekten Önemsiz sorunları çözmeye yardımcı olmak için büyük veri kümelerini işleme eğilimindedir.  
   
- Bölümünde açıklandığı gibi [yeniden düzenleme içine saf işlevleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), saf işlevler kullanılarak işlevsel programlama örneği verilmiştir. Hemen faydaları ek saf işlevler kullanılarak değerli bir işlev dönüştürme açısından sorunlar hakkında düşünmeye deneyimi sağlar. Bu yaklaşım da program ve sınıf tasarımı hakkında önemli etkisi olabilir. Bir sorun kendisini yukarıda açıklandığı gibi bir veri dönüştürme çözüme uygundur durumlarda özellikle geçerlidir.  
+ Bölümünde anlatıldığı gibi [yeniden düzenleme içine saf işlevleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), saf işlevler kullanarak, işlevsel programlama örneği verilmiştir. Ek anında faydaları için saf işlevler kullanarak işlevsel dönüşüm açısından sorunlar hakkında düşünmeye değerli deneyimi sağlar. Bu yaklaşım, ayrıca program ve sınıf tasarımı üzerinde önemli bir etkisi olabilir. Bu, özellikle kendi yukarıda açıklandığı gibi bir veri dönüştürme çözüme uygundur bir sorun olduğunda geçerlidir.  
   
- Bu öğretici kapsamında olmasına rağmen işlev dönüştürme perspektife göre etkilenir tasarımları nesneleri aktörler olarak birden fazla işlemlerde merkezi eğilimindedir ve sonuçta elde edilen çözüm büyük ölçekli dizi olarak uygulanması eğilimindedir Dönüşümleri yerine tek tek nesne durum değişiklikleri.  
+ Bunlar bu Eğitimin kapsamı dışında olsa da, işlevsel dönüşüm perspektife göre etkileyen tasarımları üzerinde işlemler birden fazla aktör olarak nesnelerde merkezi eğilimindedir ve ortaya çıkan çözüm, büyük ölçekli dizi olarak uygulanması eğilimindedir değişiklikler tek tek bir nesne yerine dönüşümleri belirtin.  
   
- Yeniden, uygulamanız için en iyi tasarım öğeleri her ikisi de dahil şekilde Visual Basic kesinlik temelli ve işlevsel yaklaşımlar desteklediğini unutmayın.  
+ Yeniden uygulamanız için en iyi tasarım öğelerinin her ikisi de bir araya getirebilir için Visual Basic hem zorunlu hem de işlevsel yaklaşım desteklediğini unutmayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [İşlev dönüştürme XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
- [Saf işlevleri (Visual Basic) yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [(Visual Basic) XML işlevsel dönüşümü](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
+- [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9fe2f01b-f7d8-49a8-a185-d4472b9976c0
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d8c65be9135049be81694c3aa375df0b27641bf2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 328adccc2224d27230a06e8d98a691d12c5be218
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539057"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>UI Otomasyon Sağlayıcıda Olay Tetikleme
 > [!NOTE]
@@ -27,5 +27,5 @@ ms.locfileid: "47398975"
   
  [!code-csharp[UIAProvider_snip#150](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#150)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)

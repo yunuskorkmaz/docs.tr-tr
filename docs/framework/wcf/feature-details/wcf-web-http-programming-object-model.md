@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739371"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
 WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows Communication Foundation (WCF) Web Hizmetleri temel HTTP istekleri aracılığıyla kullanıma sunmak sağlar. WCF WEB HTTP programlama modeli, var olan WCF genişletilebilirlik model temelinde oluşturulmuştur. Aşağıdaki sınıfları tanımlar:  
@@ -94,15 +94,15 @@ WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows C
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> Sınıfının kullandığı <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> çağrıları hizmet işlemlerine gönderileceği sınıfları.  
   
 ## <a name="compatibility"></a>Uyumluluk  
- WCF WEB HTTP programlama modeli SOAP tabanlı iletileri kullanmaz ve bu nedenle WS - desteklemez * protokoller. Bununla birlikte, aynı sözleşme iki farklı uç noktası tarafından kullanıma sunma: SOAP ve diğer değil bir kullanarak SOAP kullanarak. Bkz: [nasıl yapılır: bir sözleşmeyi SOAP ve Web istemcilerine sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) örneği.  
+ WCF WEB HTTP programlama modeli SOAP tabanlı iletileri kullanmaz ve bu nedenle WS - desteklemez * protokoller. Bununla birlikte, aynı sözleşme iki farklı uç noktası tarafından kullanıma sunma: SOAP ve diğer değil bir kullanarak SOAP kullanarak. Bkz: [nasıl yapılır: Bir sözleşmeyi SOAP ve Web istemcilerine sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) örneği.  
   
 ## <a name="security"></a>Güvenlik  
  WCF WEB HTTP programlama modeli WS - desteklemediği için * protokolleri WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmeti güvenli hale getirmek için tek yolu olduğundan SSL kullanarak hizmetinize kullanıma sunmak için. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bkz [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740118"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex Metodu
-Belirtilen parametre tarafından belirtilen MethodDef belirteci temsil yöntemi temsil eden belirteci alır.  
+Belirtilen parametre tarafından belirtilen MethodDef belirteç temsil yöntemi temsil eden bir belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT GetParamForMethodIndex (
   
 #### <a name="parameters"></a>Parametreler  
  `md`  
- [in] İçin parametre belirteci döndürmek için yöntemini temsil eden bir belirteci.  
+ [in] Parametre belirtecini için döndürülecek yöntemi temsil eden bir belirteci.  
   
  `ulParamSeq`  
- [in] İstenen parametre oluştuğu sıralı konumu parametre listesi. Parametreleri birinden yöntemin dönüş değeri sıfır konumda ile başlayarak numaralandırılır.  
+ [in] İstenen parametre oluştuğu sıralı konumu parametre listesinde. Parametreleri bir, sıfır konumda yöntemin dönüş değeri ile başlayarak numaralandırılır.  
   
  `ppd`  
  [out] İstenen parametre temsil eden bir ParamDef belirteci için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492136"
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
 Çoğu durumda, çöp toplayıcı bir toplama işlemi gerçekleştirmek için en iyi zamanı belirleyebilir ve bunun bağımsız olarak çalışmasına izin vermelisiniz. Zorlanmış bir koleksiyonun, uygulamanızın performansını iyileştirebileceği bazı nadir durumlar vardır. Bu durumlarda, çöp toplama kullanarak zorlarsınız <xref:System.GC.Collect%2A?displayProperty=nameWithType> Çöp toplamayı zorlamak için yöntemi.  
@@ -38,5 +38,5 @@ ms.locfileid: "46003073"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gecikme Modları](../../../docs/standard/garbage-collection/latency.md)  
+- [Gecikme Modları](../../../docs/standard/garbage-collection/latency.md)
 - [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

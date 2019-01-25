@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt; &lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 188a71a0c270f5c0b28c22fb72b19e94376c5f1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732069"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;tcpTransport&gt; &lt;connectionPoolSettings&gt;
 TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.  
@@ -47,17 +47,17 @@ TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Connectionpoolsettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

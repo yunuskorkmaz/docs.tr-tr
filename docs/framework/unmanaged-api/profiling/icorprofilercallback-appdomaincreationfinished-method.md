@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0017cff43f7a1b1bdd90806f50abb374a96dadf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48d43d9107d010b12167b977acd2e500437c039f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501720"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished Yöntemi
-Profil Oluşturucu uygulama etki alanı oluşturulduğunu size bildirir.  
+Profil Oluşturucu, bir uygulama etki alanı oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +37,24 @@ HRESULT AppDomainCreationFinished(
   
 #### <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Oluşturulduktan sonra etki alanı tanımlar.  
+ [in] Oluşturulan etki alanı tanımlar.  
   
  `hrStatus`  
- [in] Uygulama etki alanı oluşturulması başarıyla tamamlandı olup olmadığını belirten bir HRESULT.  
+ [in] Uygulama etki alanı oluşturulmasını başarıyla tamamlanıp tamamlanmadığını belirten bir HRESULT.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulama Kimliği kadar herhangi bir bilgi istek için geçerli değil `AppDomainCreationFinished` yöntemi çağrılır.  
+ Uygulama Kimliği kadar herhangi bir bilgi isteği için geçerli değil. `AppDomainCreationFinished` yöntemi çağrılır.  
   
- Uygulama etki alanı yükleme bazı bölümleri sonra devam edebilir `AppDomainCreationFinished` geri çağırma. HRESULT hata içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca uygulama etki alanı oluşturma ilk bölümü başarılı olduğunu gösterir.  
+ Uygulama etki alanı yükleme bazı bölümleri sonra devam edebilir `AppDomainCreationFinished` geri çağırma. Bir hata HRESULT içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü, uygulama etki alanı oluşturma başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

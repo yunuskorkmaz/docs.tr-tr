@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663524"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach Yöntemi
 Hata ayıklayıcı sunucu çağrılan otomatik gerçekleştirir ekleyin.  
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in] Her zaman `GUID_NULL`.  
   
  `dwPid`  
- [in] İşlem kimliği, normalde ile alınan `GetCurrentProcessId` işlevi.  
+ [in] İşlem kimliği, normalde alınan `GetCurrentProcessId` işlevi.  
   
  `dwProgramType`  
  [in] Program türü: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, veya `AUTOATTACH_PROGRAM_UNKNOWN`.  
@@ -60,7 +60,7 @@ HRESULT AutoAttach
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** DbgAutoAttach.h  
+ **Üst bilgi:** DbgAutoAttach.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugAutoAttach Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IDebugAutoAttach Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

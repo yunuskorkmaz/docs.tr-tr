@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 74dd44e704836b209366a7975d08a43375318e90
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646600"
 ---
 # <a name="programming-pluggable-protocols"></a>Takılabilir protokoller programlama
 Özet <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları, takılabilir protokolleri temel sağlar. Protokole özgü sınıflarından türetme tarafından <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse>, bir uygulama bir Internet kaynağından veri istek ve yanıt kullanılan protokol belirtmeden okuyun.  
@@ -31,8 +31,8 @@ ms.locfileid: "50190794"
   
  Takılabilir protokoller yararlanmak için <xref:System.Net.WebRequest> alt öğeleri ayarlamak için protokole özgü özellikleri gerektirmeyen varsayılan bir istek ve yanıt işlem sağlamalıdır. Örneğin, <xref:System.Net.HttpWebRequest> sınıfını <xref:System.Net.WebRequest> sağlar, HTTP için sınıf bir `GET` isteği varsayılan ve döndürür bir <xref:System.Net.HttpWebResponse> Web sunucusundan döndürülen akış içeriyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)  
- [WebResponse’tan Türetme](../../../docs/framework/network-programming/deriving-from-webresponse.md)  
- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
- [Nasıl yapılır: WebRequest Türü Atayarak Protokole Özgü Özelliklere Erişim](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [WebResponse’tan Türetme](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
+- [Nasıl yapılır: Protokole özgü özelliklere erişim WebRequest türü atayarak](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

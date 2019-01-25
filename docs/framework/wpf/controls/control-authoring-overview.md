@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: ca11a5787dfd3e5f3089d44689d96ec64c75e4f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 503e9cb0ea0fcfb34b326e80930f5ac829c3b4db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585204"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimi modeli, yeni bir denetim oluşturmak için gereken önemli ölçüde azaltır. Ancak, bazı durumlarda, yine de özel bir denetim oluşturmak gerekebilir. Bu konuda bir özel denetim oluşturup farklı denetim modellerinde yazma gereksiniminizi en aza özellikleri anlatılmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konuda ayrıca yeni bir denetimin nasıl oluşturulacağını gösterir.  
@@ -268,7 +268,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  [!code-csharp[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
  [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)

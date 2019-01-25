@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f89a0ad79dbf46c6d75d56106ad05a683482a501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511611"
 ---
 # <a name="using-udp-services"></a>UDP Hizmetleri kullanma
 <xref:System.Net.Sockets.UdpClient> Sınıfı UDP kullanarak Ağ Hizmetleri ile iletişim kurar. Özellikleri ve yöntemleri <xref:System.Net.Sockets.UdpClient> oluşturma ayrıntıları soyut sınıf bir <xref:System.Net.Sockets.Socket> istemek ve UDP kullanarak verileri alma.
@@ -158,5 +158,6 @@ class Program
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Net.Sockets.UdpClient><xref:System.Net.IPAddress>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.Sockets.UdpClient>
+- <xref:System.Net.IPAddress>

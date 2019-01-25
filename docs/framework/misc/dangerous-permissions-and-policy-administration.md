@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b89792f9579da2d72c0a7f90a983308b172093fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536548"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Tehlikeli İzinler ve İlke Yönetimi
-.NET Framework izinleri sağlayan korumalı işlemlerinin birkaç olası circumvented bir güvenlik sistemi izin verebilirsiniz. Yalnızca güvenilir kod ve ardından yalnızca gerektiğinde bu tehlikeli izinleri verilmelidir. Aynı zamanda bu izinleri verildiğinde genellikle kötü amaçlı kod karşı savunma yoktur yoktur.  
+.NET Framework için izinleri sağlayan korumalı işlemlerinin birkaç olası circumvented güvenlik sistemi izin verebilirsiniz. Yalnızca güvenilir kod ve ardından yalnızca gerektiğinde bu tehlikeli izinleri verilmelidir. Aynı zamanda bu izinleri verdiyseniz genellikle kötü amaçlı kod karşı savunması yoktur yoktur.  
   
 > [!NOTE]
->  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], terminolojisi ve .NET Framework güvenlik modelinin önemli değişiklikler olmuştur. Bu değişiklikler hakkında daha fazla bilgi için bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+>  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], terminolojisi ve .NET Framework güvenlik modelinin önemli değişiklikler olmuştur. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  Tehlikeli izinler aşağıdaki tabloda açıklanmıştır.  
   
 |İzin|Riski|  
 |----------------|--------------------|  
 |<xref:System.Security.Permissions.SecurityPermission>||  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>|Tehlikeli görülür, yönetilmeyen koda çağırmak yönetilen kod sağlar.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Doğrulama kod herhangi bir şey yapabilirsiniz.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>|Yönetilen kodun çoğunlukla tehlikeli olduğu yönetilmeyen koda çağrı sağlar.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Doğrulama kod her şeyi yapabilirsiniz.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|Geçersiz kılınan kanıt güvenlik ilkesi kandırmaya.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Güvenlik ilkesini değiştirme olanağı güvenlik devre dışı bırakabilirsiniz.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Seri hale getirme kullanımını erişilebilirlik mekanizmaları atlayabilir. Ayrıntılar için bkz [güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md).|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Geçerli sorumlu ayarlamanıza olanak rol tabanlı güvenlik neden olabilir.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|İş parçacığı işleme iş parçacıkları ile ilişkili güvenlik durumu nedeniyle tehlikeli.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Güvenlik, güvenlik ilkesini değiştirmek için bu özelliği devre dışı bırakabilirsiniz.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Serileştirme kullanımını erişilebilirlik mekanizmaları atlayabilir. Ayrıntılar için bkz [güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md).|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Rol tabanlı güvenlik özelliğine geçerli sorumlu neden olabilir.|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|İşleme iş parçacıkları iş parçacıkları ile ilişkili güvenlik durumu nedeniyle tehlikelidir.|  
 |<xref:System.Security.Permissions.ReflectionPermission>||  
-|<xref:System.MemberAccessException>|Özel üyelerin erişilebilirlik mekanizmaları üstesinden gelmek için kullanabilirsiniz.|  
+|<xref:System.MemberAccessException>|Özel üyeler erişilebilirlik mekanizmalarını aşmak için kullanabilirsiniz.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir toplu işlemi (WCF Veri Hizmetleri) sorgularını Yürüt'
+title: 'Nasıl yapılır: Bir toplu işlemi (WCF Veri Hizmetleri) sorguları yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,22 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: d710d6539cf465624aa985ce19a67a6d8fb8ee8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611910"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Nasıl yapılır: bir toplu işlemi (WCF Veri Hizmetleri) sorgularını Yürüt
-Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, tek bir toplu işlemde birden fazla sorgu veri hizmeti karşı çalıştırabilirsiniz. Daha fazla bilgi için bkz: [toplu işlemleri](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Nasıl yapılır: Bir toplu işlemi (WCF Veri Hizmetleri) sorguları yürütme
+Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, tek bir toplu işlemde birden fazla sorgu veri hizmetinden yürütebilirsiniz. Daha fazla bilgi için [toplu işleme işlemlerini](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> bir dizi yürütülecek yöntem <xref:System.Data.Services.Client.DataServiceRequest%601> her ikisi de döndüren sorgular içeren nesneleri `Customers` ve `Products` Northwind veri hizmetinden nesneleri. Koleksiyonunu <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülen nesnelerin <xref:System.Data.Services.Client.DataServiceResponse> numaralandırılır ve her yer alan nesneleri koleksiyonu <xref:System.Data.Services.Client.QueryOperationResponse%601> de numaralandırılır.  
+ Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> dizisi yürütülecek yöntemi <xref:System.Data.Services.Client.DataServiceRequest%601> hem döndüren sorgular içeren nesneleri `Customers` ve `Products` Northwind verileri hizmeti nesneleri. Koleksiyonu <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülen nesneleri <xref:System.Data.Services.Client.DataServiceResponse> numaralandırılmış alan şeklinde ve her nesnelerinin koleksiyonunu <xref:System.Data.Services.Client.QueryOperationResponse%601> da numaralandırılmış alan şeklinde.  
   
  [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

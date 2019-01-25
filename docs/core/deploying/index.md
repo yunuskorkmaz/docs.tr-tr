@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e744d9a1f74dad18f6eb6ad4ce019c98fb18d6e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743794"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -98,7 +98,7 @@ CLI araçları ile .NET Core uygulamaları dağıtma hakkında adım adım örne
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md)
-* [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md)
-* [Paketler, Meta Paketler ve Çerçeveler](../packages.md)
-* [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+- [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md)
+- [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md)
+- [Paketler, Meta Paketler ve Çerçeveler](../packages.md)
+- [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

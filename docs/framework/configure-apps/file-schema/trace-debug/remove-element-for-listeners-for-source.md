@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654418"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;kaldırma&gt; öğesi için &lt;dinleyicileri&gt; için &lt;kaynak&gt;
 Bir dinleyicisinden kaldırır `Listeners` koleksiyonu için bir izleme kaynağı.  
@@ -81,9 +81,9 @@ Bir dinleyicisinden kaldırır `Listeners` koleksiyonu için bir izleme kaynağ�
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>  
- <xref:System.Diagnostics.TraceSource>  
- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<Temizleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.TraceSource.Listeners%2A>
+- <xref:System.Diagnostics.TraceSource>
+- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<Temizleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
+- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

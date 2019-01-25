@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726a4ed8ee3d451687e0af671d948eb7648f7f58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625867"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly Yöntemi
-Belirtilen derleme genel derleme önbelleğinde yükler.  
+Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğine yükler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +39,24 @@ HRESULT InstallAssembly (
   
 #### <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Fusion.idl içinde tanımlı bayrak. Aşağıdaki değerleri desteklenir:  
+ [in] Fusion.idl içinde tanımlanan bayraklar. Aşağıdaki değerleri desteklenir:  
   
 -   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)  
   
 -   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
   
  `pszManifestFilePath`  
- [in] Bildirim yüklemek derleme yolu.  
+ [in] Yüklenecek derlemenin bildirimi yolu.  
   
  `pRefData`  
- [in] A [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) yükleme için verileri içeren yapısı.  
+ [in] A [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) içeren yüklemesi için veri yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)"
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500635"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)
 Tanımlayıcı adlı bir yönetilen bütünleştirilmiş koddan tür bilgilerini katıştırma, sürüm bağımsızlığı elde etmek için bir uygulama türlerinde gevşek mümkündür. Diğer bir deyişle, programınız her sürüm için derlenmesi zorunda kalmadan bir yönetilen kitaplık birden çok sürümünden türler kullanmak üzere yazılabilir.  
@@ -232,9 +232,9 @@ Tanımlayıcı adlı bir yönetilen bütünleştirilmiş koddan tür bilgilerini
   
 6.  Dosya Gezgini'nde, çıkış yolu klasörü (örneğin, C:\TypeEquivalenceSample) açın. Programı çalıştırmak üzere TypeEquivalenceClient.exe çift tıklayın. Program, yeniden derlenen kalmadan TypeEquivalenceRuntime derlemenin yeni sürümü yansıtır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [/ Link (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
-- [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/ Link (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

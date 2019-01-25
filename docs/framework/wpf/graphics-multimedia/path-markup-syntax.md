@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671271"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışında](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak bu konuda yol belirtmek için kullanabileceğiniz güçlü ve karmaşık mini dil ayrıntılı olarak açıklanmaktadır. geometriler daha sıkı bir şekilde kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -47,13 +47,13 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 |StreamGeometry XAML öznitelik kullanımı|  
 |-----------------------------------------|  
-|`<` *Nesne* *özelliği* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Özniteliği için kullanım söz dizimine bir <xref:System.Windows.Media.PathFigureCollection> bir veya daha fazla şekil açıklamalarını oluşur.  
   
 |PathFigureCollection XAML öznitelik kullanımı|  
 |-----------------------------------------------|  
-|`<` *Nesne* *özelliği* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -88,7 +88,7 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 |Sözdizimi|  
 |------------|  
-|`L` *uç noktası*<br /><br /> - veya -<br /><br /> `l` *uç noktası*|  
+|`L` *endPoint*<br /><br /> - veya -<br /><br /> `l` *endPoint*|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` b
   
  Bilimsel gösterim de kullanabilir. Örneğin, `+1.e17` , geçerli bir değer.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

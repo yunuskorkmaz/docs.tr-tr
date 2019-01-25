@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732528"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Anonim Yöntemler (C# Programlama Kılavuzu)
 C# ' ın sürümlerinde 2.0, tek yolu bildirmek için önce bir [temsilci](../../../csharp/language-reference/keywords/delegate.md) kullanılmasıydır [yöntemleri adlı](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). Anonim yöntemler C# 2.0 kullanılmaya ve C# 3.0 ve sonraki sürümlerinde, lambda ifadeleri anonim yöntemler satır içi kod yazmak için tercih edilen yol geçersiz kılar. Ancak, bu konudaki anonim yöntemler hakkında bilgi, lambda ifadeleri için de geçerlidir. Anonim bir yöntem lambda ifadelerinde bulunamadı işlevselliği sağlayan bir durum yoktur. Anonim yöntemler parametre listesini atlamak etkinleştirin. Bu, anonim bir yöntem imzaları çeşitli temsilcilere dönüştürülebilir anlamına gelir. Bu, lambda ifadeleri ile mümkün değildir. Özellikle, lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -57,12 +57,12 @@ C# ' ın sürümlerinde 2.0, tek yolu bildirmek için önce bir [temsilci](../..
   
  [!code-csharp[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
-- [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
+- [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Temsilcilerin Adlandırılmış ve Anonim Yöntemlerde Karşılaştırılması](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

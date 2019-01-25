@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fd130759ab11b54b597d5c099c33dab93070ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733928"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly İşlevi
-Belirtilen derleme yönetilen olup olmadığını belirten bir değer alır.  
+Belirtilen derleme yönetilip yönetilmediğini belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,23 +42,23 @@ HRESULT IsFrameworkAssembly (
  [in] Denetlenecek derlemenin adı.  
   
  `pbIsFrameworkAssembly`  
- [out] Derleme yönetilen olup olmadığını gösteren bir Boole değeri.  
+ [out] Derleme yönetilip yönetilmediğini belirten bir Boole değeri.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Derleme benzersiz kimliğini içeren bir uncanonicalized dize.  
+ [in] Derlemenin benzersiz kimliği içeren uncanonicalized bir dize.  
   
  `pccSize`  
- [in] Boyutunu `pwzFrameworkAssemblyIdentity`.  
+ [in] Boyutu `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pwzAssemblyReference` Bir işaretçi bir derleme adını içeren bir karakter dizesi parametresidir.  
+ `pwzAssemblyReference` Parametresi, bir derlemenin adını içeren bir karakter dizesine bir işaretçi.  
   
- Bu derleme parçasıysa .NET Framework'ün `pbIsFrameworkAssembly` parametre bir Boole değeri içerecek `true`.  
+ Bu derleme parçasıysa .NET Framework'ün `pbIsFrameworkAssembly` parametresi bir Boolean değerini içerecek `true`.  
   
- Adlandırılmış derlemesi .NET Framework'ün bir parçası değilse veya `pwzAssemblyReference` parametre bir derleme adı değil `pbIsFrameworkAssembly` bir Boole değeri içerecektir `false`.  
+ Adlandırılmış derlemeyi .NET Framework'ün bir parçası değilse veya `pwzAssemblyReference` parametre, bir derleme adı değil `pbIsFrameworkAssembly` Boolean değerini içerecek `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
