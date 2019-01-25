@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691765"
 ---
-# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="9ab0e-102">IMetaDataImport::FindTypeRef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9ab0e-102">IMetaDataImport::FindTypeRef Method</span></span>
-<span data-ttu-id="9ab0e-103">Bir işaretçi TypeRef için belirteç alır <xref:System.Type> belirtilen kapsamında olduğunu ve belirtilen ada sahip başvurusu.</span><span class="sxs-lookup"><span data-stu-id="9ab0e-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
+# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="44802-102">IMetaDataImport::FindTypeRef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="44802-102">IMetaDataImport::FindTypeRef Method</span></span>
+<span data-ttu-id="44802-103">Bir işaretçi için TypeRef belirteci alır <xref:System.Type> Belirtilen kapsam içinde olan ve belirtilen ada sahip bir başvuru.</span><span class="sxs-lookup"><span data-stu-id="44802-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ab0e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9ab0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44802-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="44802-104">Syntax</span></span>  
   
 ```  
 HRESULT FindTypeRef (  
@@ -37,25 +37,25 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9ab0e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9ab0e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="44802-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="44802-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="9ab0e-106">[in] Modül, derleme veya tür, belirten ModuleRef, AssemblyRef veya TypeRef belirteç sırasıyla, hangi tür başvuru tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="9ab0e-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
+ <span data-ttu-id="44802-106">[in] Modül, derleme veya türünü belirten bir ModuleRef, AssemblyRef veya TypeRef belirteci sırasıyla, hangi tür başvurusu tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="44802-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
   
  `szName`  
- <span data-ttu-id="9ab0e-107">[in] Aranacak türü referansın adı.</span><span class="sxs-lookup"><span data-stu-id="9ab0e-107">[in] The name of the type reference to search for.</span></span>  
+ <span data-ttu-id="44802-107">[in] Aramak için türü başvuru adı.</span><span class="sxs-lookup"><span data-stu-id="44802-107">[in] The name of the type reference to search for.</span></span>  
   
  `ptr`  
- <span data-ttu-id="9ab0e-108">[out] Eşleşen TypeRef belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9ab0e-108">[out] A pointer to the matching TypeRef token.</span></span>  
+ <span data-ttu-id="44802-108">[out] Eşleşen TypeRef belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="44802-108">[out] A pointer to the matching TypeRef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ab0e-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9ab0e-109">Requirements</span></span>  
- <span data-ttu-id="9ab0e-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ab0e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44802-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="44802-109">Requirements</span></span>  
+ <span data-ttu-id="44802-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44802-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ab0e-111">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ab0e-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="44802-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="44802-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9ab0e-112">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="9ab0e-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="44802-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="44802-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9ab0e-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ab0e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="44802-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44802-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ab0e-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9ab0e-114">See Also</span></span>  
- [<span data-ttu-id="9ab0e-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9ab0e-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="9ab0e-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9ab0e-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="44802-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44802-114">See also</span></span>
+- [<span data-ttu-id="44802-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="44802-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="44802-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="44802-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

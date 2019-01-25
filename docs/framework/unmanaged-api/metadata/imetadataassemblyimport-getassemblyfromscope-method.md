@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7322b4d0fce36f5dbef7e82f35cf9e2a1cae24a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7914257d167d0f54d3625d252076576e5e40296b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634970"
 ---
-# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="eb57c-102">IMetaDataAssemblyImport::GetAssemblyFromScope Metodu</span><span class="sxs-lookup"><span data-stu-id="eb57c-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
-<span data-ttu-id="eb57c-103">Bir işaretçi derlemeye geçerli kapsamda alır.</span><span class="sxs-lookup"><span data-stu-id="eb57c-103">Gets a pointer to the assembly in the current scope.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="7a84f-102">IMetaDataAssemblyImport::GetAssemblyFromScope Metodu</span><span class="sxs-lookup"><span data-stu-id="7a84f-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
+<span data-ttu-id="7a84f-103">Bir işaretçi geçerli kapsamda derlemeye alır.</span><span class="sxs-lookup"><span data-stu-id="7a84f-103">Gets a pointer to the assembly in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb57c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eb57c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a84f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7a84f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyFromScope (  
@@ -35,18 +35,18 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eb57c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eb57c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7a84f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7a84f-105">Parameters</span></span>  
  `ptkAssembly`  
- <span data-ttu-id="eb57c-106">[out] Bir işaretçi alınan `mdAssembly` derleme tanımlayan belirteci.</span><span class="sxs-lookup"><span data-stu-id="eb57c-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
+ <span data-ttu-id="7a84f-106">[out] Alınan bir işaretçi `mdAssembly` derleme tanımlayan belirteci.</span><span class="sxs-lookup"><span data-stu-id="7a84f-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb57c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eb57c-107">Requirements</span></span>  
- <span data-ttu-id="eb57c-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb57c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a84f-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7a84f-107">Requirements</span></span>  
+ <span data-ttu-id="7a84f-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a84f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb57c-109">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eb57c-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a84f-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7a84f-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eb57c-110">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="eb57c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7a84f-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="7a84f-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="eb57c-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb57c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a84f-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a84f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb57c-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="eb57c-112">See Also</span></span>  
- [<span data-ttu-id="eb57c-113">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eb57c-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7a84f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a84f-112">See also</span></span>
+- [<span data-ttu-id="7a84f-113">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7a84f-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

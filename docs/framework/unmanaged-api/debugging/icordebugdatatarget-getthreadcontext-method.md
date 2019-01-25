@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab2fbf6bb08a33158ea450f0f19eca50e280d8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713437"
 ---
-# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="03e99-102">ICorDebugDataTarget::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="03e99-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="03e99-103">Belirtilen iş parçacığı için geçerli iş parçacığı bağlamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="03e99-103">Returns the current thread context for the specified thread.</span></span>  
+# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="428ba-102">ICorDebugDataTarget::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="428ba-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="428ba-103">Belirtilen iş parçacığı için geçerli iş parçacığı bağlamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="428ba-103">Returns the current thread context for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03e99-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="03e99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="428ba-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="428ba-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext(  
@@ -37,32 +37,32 @@ HRESULT GetThreadContext(
        [out, size_is(contextSize)] BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03e99-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="03e99-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="428ba-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="428ba-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="03e99-106">[in] Alınacak bağlamı olan iş parçacığı tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="03e99-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="03e99-107">Tanımlayıcı işletim sistemi tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="03e99-107">The identifier is defined by the operating system.</span></span>  
+ <span data-ttu-id="428ba-106">[in] Alınacak olan bağlamıdır iş parçacığı tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="428ba-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="428ba-107">Tanımlayıcı, işletim sistemi tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="428ba-107">The identifier is defined by the operating system.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="03e99-108">[in] Bağlamın bölümünü okumanız gereken belirtmek platforma bağımlı bayrakları Bitsel bir birleşimi.</span><span class="sxs-lookup"><span data-stu-id="03e99-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
+ <span data-ttu-id="428ba-108">[in] Bağlamın bölümünü okumalısınız belirtmek platforma bağımlı bayrakları Bitsel bir birleşimi.</span><span class="sxs-lookup"><span data-stu-id="428ba-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="03e99-109">[in] Boyutunu `pContext`.</span><span class="sxs-lookup"><span data-stu-id="03e99-109">[in] The size of `pContext`.</span></span>  
+ <span data-ttu-id="428ba-109">[in] Boyutu `pContext`.</span><span class="sxs-lookup"><span data-stu-id="428ba-109">[in] The size of `pContext`.</span></span>  
   
  `pContext`  
- <span data-ttu-id="03e99-110">[out] İş parçacığı içeriği depolanacağı arabelleği.</span><span class="sxs-lookup"><span data-stu-id="03e99-110">[out] The buffer where the thread context will be stored.</span></span>  
+ <span data-ttu-id="428ba-110">[out] İş parçacığı bağlamını depolanacağı arabelleği.</span><span class="sxs-lookup"><span data-stu-id="428ba-110">[out] The buffer where the thread context will be stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03e99-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="03e99-111">Remarks</span></span>  
- <span data-ttu-id="03e99-112">Windows platformlarında `pContext` olmalıdır bir `CONTEXT` tarafından belirtilen makine türü için uygun olduğunu (WinNT.h içinde tanımlanmıştır) yapısı [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="03e99-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="03e99-113">`contextFlags` aynı değerlere sahip olmalıdır `ContextFlags` alanını `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="03e99-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="03e99-114">`CONTEXT` Yapısı işlemciye özgü; ayrıntılar için WinNT.h dosyasına bakın.</span><span class="sxs-lookup"><span data-stu-id="03e99-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="428ba-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="428ba-111">Remarks</span></span>  
+ <span data-ttu-id="428ba-112">Windows platformlarında, `pContext` olmalıdır bir `CONTEXT` tarafından belirtilen makine türü için uygun olan (WinNT.h içinde tanımlanmıştır) yapısı [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="428ba-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="428ba-113">`contextFlags` aynı değerlere sahip olmalıdır `ContextFlags` alanını `CONTEXT` yapısı.</span><span class="sxs-lookup"><span data-stu-id="428ba-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="428ba-114">`CONTEXT` Yapısının olduğundan işlemciye özgü; ayrıntılar için WinNT.h dosyasına bakın.</span><span class="sxs-lookup"><span data-stu-id="428ba-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03e99-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03e99-115">Requirements</span></span>  
- <span data-ttu-id="03e99-116">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03e99-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="428ba-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="428ba-115">Requirements</span></span>  
+ <span data-ttu-id="428ba-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="428ba-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03e99-117">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03e99-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="428ba-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="428ba-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="03e99-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03e99-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="428ba-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="428ba-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03e99-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03e99-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="428ba-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="428ba-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03e99-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="03e99-120">See Also</span></span>  
- [<span data-ttu-id="03e99-121">ICorDebugDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03e99-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [<span data-ttu-id="03e99-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="03e99-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="03e99-123">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="03e99-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="428ba-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="428ba-120">See also</span></span>
+- [<span data-ttu-id="428ba-121">ICorDebugDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="428ba-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="428ba-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="428ba-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="428ba-123">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="428ba-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

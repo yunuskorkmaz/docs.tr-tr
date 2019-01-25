@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f44d50f6736e0698fd876eedab78dbf41434af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5767b60fa992b49fdc2a60feb243a26c0e2ea1ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534559"
 ---
-# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="c0d43-102">ISymUnmanagedBinder3::GetReaderFromCallback Metodu</span><span class="sxs-lookup"><span data-stu-id="c0d43-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
-<span data-ttu-id="c0d43-103">Uygulamak ya da geri çağırma ya da tedarik olanak tanır. bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizin bilgileri elde edilir.</span><span class="sxs-lookup"><span data-stu-id="c0d43-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
+# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="5b044-102">ISymUnmanagedBinder3::GetReaderFromCallback Metodu</span><span class="sxs-lookup"><span data-stu-id="5b044-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
+<span data-ttu-id="5b044-103">Uygulama veya geri çağırma ya da kaynağı izin verir bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizin bilgileri elde edilir.</span><span class="sxs-lookup"><span data-stu-id="5b044-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0d43-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c0d43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b044-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5b044-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromCallback(  
@@ -39,30 +39,30 @@ HRESULT GetReaderFromCallback(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c0d43-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c0d43-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5b044-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5b044-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="c0d43-106">[in] Meta veri alma arayüzü için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c0d43-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="5b044-106">[in] Meta veri alma arayüzü işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5b044-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="c0d43-107">[in] Dosya adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c0d43-107">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="5b044-107">[in] Dosya adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5b044-107">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="c0d43-108">[in] Arama yolu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c0d43-108">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="5b044-108">[in] Arama yolu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5b044-108">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="c0d43-109">[in] Değerini [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) bir simge Okuyucu için arama yaparken kullanılacak ilkeyi belirtir numaralandırması.</span><span class="sxs-lookup"><span data-stu-id="c0d43-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="5b044-109">[in] Değerini [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) sembol Okuyucu için arama yaparken kullanılacak ilkeyi belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="5b044-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `callback`  
- <span data-ttu-id="c0d43-110">[in] Geri çağırma işlevi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c0d43-110">[in] A pointer to the callback function.</span></span>  
+ <span data-ttu-id="5b044-110">[in] Geri çağırma işlevi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5b044-110">[in] A pointer to the callback function.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="c0d43-111">[out] Ayarlanmış bir işaretçi döndürülen için [Isymunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="c0d43-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="5b044-111">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="5b044-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c0d43-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c0d43-112">Return Value</span></span>  
- <span data-ttu-id="c0d43-113">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="c0d43-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5b044-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5b044-112">Return Value</span></span>  
+ <span data-ttu-id="5b044-113">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="5b044-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0d43-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c0d43-114">Requirements</span></span>  
- <span data-ttu-id="c0d43-115">**Başlık:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="c0d43-115">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b044-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5b044-114">Requirements</span></span>  
+ <span data-ttu-id="5b044-115">**Üst bilgi:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="5b044-115">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0d43-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c0d43-116">See Also</span></span>  
- [<span data-ttu-id="c0d43-117">ISymUnmanagedBinder3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c0d43-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5b044-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5b044-116">See also</span></span>
+- [<span data-ttu-id="5b044-117">ISymUnmanagedBinder3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5b044-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

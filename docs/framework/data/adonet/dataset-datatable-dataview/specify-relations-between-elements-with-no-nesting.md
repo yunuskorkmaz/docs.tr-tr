@@ -2,17 +2,17 @@
 title: İç içe yerleştirme içermeyen öğeler arasındaki ilişkileri belirtme
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e33a445d4ef969c73ab9756c5aa5116fae67ea66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739186"
 ---
-# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="fd99f-102">İç içe yerleştirme içermeyen öğeler arasındaki ilişkileri belirtme</span><span class="sxs-lookup"><span data-stu-id="fd99f-102">Specify Relations Between Elements with No Nesting</span></span>
-<span data-ttu-id="fd99f-103">Öğeleri iç içe değil, hiçbir örtük ilişkileri oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="fd99f-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="fd99f-104">Bununla birlikte, aşağıdakileri yapabilirsiniz açıkça belirtmeniz kullanarak iç içe olmayan öğeler arasındaki ilişkileri **msdata:Relationship** ek açıklama.</span><span class="sxs-lookup"><span data-stu-id="fd99f-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="0d197-102">İç içe yerleştirme içermeyen öğeler arasındaki ilişkileri belirtme</span><span class="sxs-lookup"><span data-stu-id="0d197-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="0d197-103">Öğeleri iç içe değil, hiçbir örtük ilişkileri oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="0d197-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="0d197-104">Bununla birlikte, aşağıdakileri yapabilirsiniz açıkça belirtmeniz kullanarak iç içe olmayan öğeler arasındaki ilişkileri **msdata:Relationship** ek açıklama.</span><span class="sxs-lookup"><span data-stu-id="0d197-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- <span data-ttu-id="fd99f-105">Aşağıdaki örnek bir XML Şeması gösterilmektedir **msdata:Relationship** arasında ek açıklaması belirtildiğinde **sipariş** ve **OrderDetail** olmayan öğeler iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="fd99f-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="fd99f-106">**Msdata:Relationship** ek açıklama alt öğesi olarak belirtilen **şema** öğesi.</span><span class="sxs-lookup"><span data-stu-id="fd99f-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
+ <span data-ttu-id="0d197-105">Aşağıdaki örnek bir XML Şeması gösterilmektedir **msdata:Relationship** arasında ek açıklaması belirtildiğinde **sipariş** ve **OrderDetail** olmayan öğeler iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="0d197-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="0d197-106">**Msdata:Relationship** ek açıklama alt öğesi olarak belirtilen **şema** öğesi.</span><span class="sxs-lookup"><span data-stu-id="0d197-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ ms.locfileid: "45609599"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="fd99f-107">XML Şeması Tanım Dili (XSD) şemaya eşleme işlemi oluşturur bir <xref:System.Data.DataSet> ile **sipariş** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki.</span><span class="sxs-lookup"><span data-stu-id="fd99f-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
+ <span data-ttu-id="0d197-107">XML Şeması Tanım Dili (XSD) şemaya eşleme işlemi oluşturur bir <xref:System.Data.DataSet> ile **sipariş** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki.</span><span class="sxs-lookup"><span data-stu-id="0d197-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -64,7 +64,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fd99f-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fd99f-108">See Also</span></span>  
- [<span data-ttu-id="fd99f-109">XML Şemasından (XSD) DataSet İlişkileri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fd99f-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="fd99f-110">XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme</span><span class="sxs-lookup"><span data-stu-id="fd99f-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [<span data-ttu-id="fd99f-111">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="fd99f-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0d197-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0d197-108">See also</span></span>
+- [<span data-ttu-id="0d197-109">XML Şemasından (XSD) DataSet İlişkileri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="0d197-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="0d197-110">XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme</span><span class="sxs-lookup"><span data-stu-id="0d197-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="0d197-111">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="0d197-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

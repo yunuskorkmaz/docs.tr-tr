@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730782"
 ---
-# <a name="corvalidateimage-function"></a><span data-ttu-id="e06f3-102">_CorValidateImage İşlevi</span><span class="sxs-lookup"><span data-stu-id="e06f3-102">_CorValidateImage Function</span></span>
-<span data-ttu-id="e06f3-103">Yönetilen modül görüntüleri doğrular ve bunlar yüklendikten sonra işletim sistemi yükleyicisi bildirir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
+# <a name="corvalidateimage-function"></a><span data-ttu-id="4853d-102">_CorValidateImage İşlevi</span><span class="sxs-lookup"><span data-stu-id="4853d-102">_CorValidateImage Function</span></span>
+<span data-ttu-id="4853d-103">Yönetilen modül görüntüleri doğrular ve bunlar yüklendikten sonra işletim sistemi yükleyicisi bildirir.</span><span class="sxs-lookup"><span data-stu-id="4853d-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e06f3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e06f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4853d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4853d-104">Syntax</span></span>  
   
 ```  
 STDAPI _CorValidateImage (   
@@ -35,52 +35,52 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e06f3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e06f3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4853d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4853d-105">Parameters</span></span>  
  `ImageBase`  
- <span data-ttu-id="e06f3-106">[in] Yönetilen kod bir işaretçi olarak doğrulamak için görüntüsünün başlangıç konumu.</span><span class="sxs-lookup"><span data-stu-id="e06f3-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="e06f3-107">Görüntü zaten belleğe yüklenmiş olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e06f3-107">The image must already be loaded into memory.</span></span>  
+ <span data-ttu-id="4853d-106">[in] Yönetilen kod bir işaretçi olarak doğrulamak için görüntüsünün başlangıç konumu.</span><span class="sxs-lookup"><span data-stu-id="4853d-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="4853d-107">Görüntü zaten belleğe yüklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="4853d-107">The image must already be loaded into memory.</span></span>  
   
  `FileName`  
- <span data-ttu-id="e06f3-108">[in] Yansıma Dosya adı.</span><span class="sxs-lookup"><span data-stu-id="e06f3-108">[in] The file name of the image.</span></span>  
+ <span data-ttu-id="4853d-108">[in] Görüntü dosyası adı.</span><span class="sxs-lookup"><span data-stu-id="4853d-108">[in] The file name of the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e06f3-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e06f3-109">Return Value</span></span>  
- <span data-ttu-id="e06f3-110">Bu işlev, standart değerleri döndürür `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, ve `E_FAIL`, aşağıdaki değerleri yanı sıra.</span><span class="sxs-lookup"><span data-stu-id="e06f3-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4853d-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4853d-109">Return Value</span></span>  
+ <span data-ttu-id="4853d-110">Bu işlev, standart değerleri döndürür `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, ve `E_FAIL`, aşağıdaki değerleri yanı sıra.</span><span class="sxs-lookup"><span data-stu-id="4853d-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
   
-|<span data-ttu-id="e06f3-111">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="e06f3-111">Return value</span></span>|<span data-ttu-id="e06f3-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e06f3-112">Description</span></span>|  
+|<span data-ttu-id="4853d-111">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="4853d-111">Return value</span></span>|<span data-ttu-id="4853d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4853d-112">Description</span></span>|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="e06f3-113">Görüntüsü geçersiz.</span><span class="sxs-lookup"><span data-stu-id="e06f3-113">The image is invalid.</span></span> <span data-ttu-id="e06f3-114">Bu değer HRESULT 0xC000007BL sahiptir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-114">This value has the HRESULT 0xC000007BL.</span></span>|  
-|`STATUS_SUCCESS`|<span data-ttu-id="e06f3-115">Görüntü geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="e06f3-115">The image is valid.</span></span> <span data-ttu-id="e06f3-116">Bu değer HRESULT 0x00000000L sahiptir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-116">This value has the HRESULT 0x00000000L.</span></span>|  
+|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="4853d-113">Görüntü geçersiz.</span><span class="sxs-lookup"><span data-stu-id="4853d-113">The image is invalid.</span></span> <span data-ttu-id="4853d-114">Bu değer, HRESULT 0xC000007BL sahiptir.</span><span class="sxs-lookup"><span data-stu-id="4853d-114">This value has the HRESULT 0xC000007BL.</span></span>|  
+|`STATUS_SUCCESS`|<span data-ttu-id="4853d-115">Görüntü geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="4853d-115">The image is valid.</span></span> <span data-ttu-id="4853d-116">Bu değer, HRESULT 0x00000000L sahiptir.</span><span class="sxs-lookup"><span data-stu-id="4853d-116">This value has the HRESULT 0x00000000L.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e06f3-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e06f3-117">Remarks</span></span>  
- <span data-ttu-id="e06f3-118">Windows XP ve sonraki sürümlerinde, işletim sistemi yükleyicisi ortak nesne dosya biçimi (COFF) üstbilgisinde COM tanımlayıcısı dizin bit inceleyerek yönetilen modülleri için denetler.</span><span class="sxs-lookup"><span data-stu-id="e06f3-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="e06f3-119">Yönetilen bir modül kümesini bit gösterir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="e06f3-120">Yükleyici yönetilen bir modül algılarsa, MsCorEE.dll ve çağrıları yüklerken `_CorValidateImage`, aşağıdaki eylemleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="e06f3-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4853d-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4853d-117">Remarks</span></span>  
+ <span data-ttu-id="4853d-118">Windows XP ve sonraki sürümlerinde, işletim sistemi yükleyicisi yönetilen modüller için ortak nesne dosyası biçimi (COFF) üst bilgisindeki COM tanımlayıcısı dizin bit inceleyerek denetler.</span><span class="sxs-lookup"><span data-stu-id="4853d-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="4853d-119">Yönetilen bir modül bit kümesinin gösterir.</span><span class="sxs-lookup"><span data-stu-id="4853d-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="4853d-120">Yükleyici, yönetilen bir modül algılarsa, MsCorEE.dll ve aramalar yükler `_CorValidateImage`, aşağıdaki eylemleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="4853d-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
   
--   <span data-ttu-id="e06f3-121">Görüntü geçerli bir yönetilen modül olduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="e06f3-121">Confirms that the image is a valid managed module.</span></span>  
+-   <span data-ttu-id="4853d-121">Görüntünün geçerli yönetilen bir modül olduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="4853d-121">Confirms that the image is a valid managed module.</span></span>  
   
--   <span data-ttu-id="e06f3-122">Ortak dil çalışma zamanı (CLR) bir giriş noktası için giriş noktası görüntüdeki değiştirir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
+-   <span data-ttu-id="4853d-122">Ortak dil çalışma zamanı (CLR) bir giriş noktası için giriş noktası görüntüde değiştirir.</span><span class="sxs-lookup"><span data-stu-id="4853d-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
   
--   <span data-ttu-id="e06f3-123">Windows'un 64 bit sürümleri için PE32 PE32 + biçimine dönüştürerek bellekte görüntüsü değiştirir.</span><span class="sxs-lookup"><span data-stu-id="e06f3-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
+-   <span data-ttu-id="4853d-123">Windows 64-bit sürümleri için bellekte PE32 je typu PE32 + biçimine dönüştürerek görüntü değiştirir.</span><span class="sxs-lookup"><span data-stu-id="4853d-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
   
--   <span data-ttu-id="e06f3-124">Yönetilen modül görüntüleri yüklendiğinde yükleyicisi geri döner.</span><span class="sxs-lookup"><span data-stu-id="e06f3-124">Returns to the loader when the managed module images are loaded.</span></span>  
+-   <span data-ttu-id="4853d-124">Yönetilen modül görüntüleri yüklendiğinde yükleyici geri döner.</span><span class="sxs-lookup"><span data-stu-id="4853d-124">Returns to the loader when the managed module images are loaded.</span></span>  
   
- <span data-ttu-id="e06f3-125">Yürütülebilir görüntüler, işletim sistemi yükleyicisi sonra çağırır [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevi, bağımsız olarak yürütülebilir dosya belirtilen giriş noktası.</span><span class="sxs-lookup"><span data-stu-id="e06f3-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="e06f3-126">DLL derleme görüntülerde yükleyicisi çağırır [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="e06f3-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
+ <span data-ttu-id="4853d-125">Yürütülebilir görüntüler için işletim sistemi yükleyicisi sonra çağıran [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevi, bağımsız yürütülebilir dosya belirtilen giriş noktası olarak.</span><span class="sxs-lookup"><span data-stu-id="4853d-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="4853d-126">DLL derleme görüntüler için yükleyici çağırır [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="4853d-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
   
- <span data-ttu-id="e06f3-127">`_CorExeMain` veya `_CorDllMain` aşağıdaki eylemleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="e06f3-127">`_CorExeMain` or `_CorDllMain` performs the following actions:</span></span>  
+ <span data-ttu-id="4853d-127">`_CorExeMain` veya `_CorDllMain` aşağıdaki eylemleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="4853d-127">`_CorExeMain` or `_CorDllMain` performs the following actions:</span></span>  
   
--   <span data-ttu-id="e06f3-128">CLR başlatır.</span><span class="sxs-lookup"><span data-stu-id="e06f3-128">Initializes the CLR.</span></span>  
+-   <span data-ttu-id="4853d-128">CLR'yi başlatır.</span><span class="sxs-lookup"><span data-stu-id="4853d-128">Initializes the CLR.</span></span>  
   
--   <span data-ttu-id="e06f3-129">Derlemenin CLR başlığından yönetilen giriş noktası bulur.</span><span class="sxs-lookup"><span data-stu-id="e06f3-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
+-   <span data-ttu-id="4853d-129">Derlemesinin CLR başlığındaki yönetilen giriş noktasını bulur.</span><span class="sxs-lookup"><span data-stu-id="4853d-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
   
--   <span data-ttu-id="e06f3-130">Yürütme başlar.</span><span class="sxs-lookup"><span data-stu-id="e06f3-130">Begins execution.</span></span>  
+-   <span data-ttu-id="4853d-130">Yürütmeyi başlatır.</span><span class="sxs-lookup"><span data-stu-id="4853d-130">Begins execution.</span></span>  
   
- <span data-ttu-id="e06f3-131">Yükleyici çağrıları [_corımageunloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) işlev yönetildiğinde modülü görüntüleri kaldırıldı.</span><span class="sxs-lookup"><span data-stu-id="e06f3-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="e06f3-132">Ancak, bu işlev, herhangi bir işlem gerçekleştirmez; yalnızca döndürür.</span><span class="sxs-lookup"><span data-stu-id="e06f3-132">However, this function does not perform any action; it just returns.</span></span>  
+ <span data-ttu-id="4853d-131">Yükleyici çağrıları [_corımageunloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) işlev yönetilen modül görüntüleri kaldırıldı.</span><span class="sxs-lookup"><span data-stu-id="4853d-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="4853d-132">Ancak, bu işlev, herhangi bir işlem gerçekleştirmez; hemen döndürür.</span><span class="sxs-lookup"><span data-stu-id="4853d-132">However, this function does not perform any action; it just returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e06f3-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e06f3-133">Requirements</span></span>  
- <span data-ttu-id="e06f3-134">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e06f3-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4853d-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4853d-133">Requirements</span></span>  
+ <span data-ttu-id="4853d-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4853d-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e06f3-135">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e06f3-135">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4853d-135">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4853d-135">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e06f3-136">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e06f3-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4853d-136">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="4853d-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e06f3-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e06f3-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4853d-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4853d-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e06f3-138">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e06f3-138">See Also</span></span>  
- [<span data-ttu-id="e06f3-139">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="e06f3-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4853d-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4853d-138">See also</span></span>
+- [<span data-ttu-id="4853d-139">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="4853d-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

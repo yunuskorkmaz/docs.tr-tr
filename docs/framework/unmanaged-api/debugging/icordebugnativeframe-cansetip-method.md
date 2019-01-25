@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93c8256ae95108f0800b56869d67570c4e42202e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204cfc110ec6c8a11ec37505f8cf0c70d619e4b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660820"
 ---
-# <a name="icordebugnativeframecansetip-method"></a><span data-ttu-id="9c3d2-102">ICorDebugNativeFrame::CanSetIP Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9c3d2-102">ICorDebugNativeFrame::CanSetIP Method</span></span>
-<span data-ttu-id="9c3d2-103">Yönerge işaretçisi (IP) belirtilen uzaklık konuma yerel kodda ayarlamak güvenli olup olmadığını belirten bir HRESULT alır.</span><span class="sxs-lookup"><span data-stu-id="9c3d2-103">Gets an HRESULT that indicates whether it is safe to set the instruction pointer (IP) to the specified offset location in native code.</span></span>  
+# <a name="icordebugnativeframecansetip-method"></a><span data-ttu-id="e0065-102">ICorDebugNativeFrame::CanSetIP Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e0065-102">ICorDebugNativeFrame::CanSetIP Method</span></span>
+<span data-ttu-id="e0065-103">Yönerge işaretçisi (IP) belirtilen uzaklık konuma yerel kodda ayarlamak güvenli olup olmadığını belirten bir HRESULT alır.</span><span class="sxs-lookup"><span data-stu-id="e0065-103">Gets an HRESULT that indicates whether it is safe to set the instruction pointer (IP) to the specified offset location in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c3d2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9c3d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0065-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e0065-104">Syntax</span></span>  
   
 ```  
 HRESULT CanSetIP (  
@@ -35,21 +35,21 @@ HRESULT CanSetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9c3d2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9c3d2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e0065-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e0065-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="9c3d2-106">[in] Yönerge işaretçisi istenen ayarı.</span><span class="sxs-lookup"><span data-stu-id="9c3d2-106">[in] The desired setting for the instruction pointer.</span></span>  
+ <span data-ttu-id="e0065-106">[in] Yönerge işaretçisi için istenen ayar.</span><span class="sxs-lookup"><span data-stu-id="e0065-106">[in] The desired setting for the instruction pointer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9c3d2-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9c3d2-107">Remarks</span></span>  
- <span data-ttu-id="9c3d2-108">Kullanım `CanSetIP` yöntemi çağrılmadan önce [Icordebugnativeframe::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9c3d2-108">Use the `CanSetIP` method prior to calling the [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) method.</span></span> <span data-ttu-id="9c3d2-109">Varsa `CanSetIP` herhangi HRESULT döndürür S_OK dışında hala çağırabilirsiniz `ICorDebugNativeFrame::SetIP`, ancak hata ayıklayıcı ayıklanacak kod güvenli ve doğru yürütülmesi devam edecek garantisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="9c3d2-109">If `CanSetIP` returns any HRESULT other than S_OK, you can still invoke `ICorDebugNativeFrame::SetIP`, but there is no guarantee that the debugger will continue the safe and correct execution of the code being debugged.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e0065-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e0065-107">Remarks</span></span>  
+ <span data-ttu-id="e0065-108">Kullanım `CanSetIP` yöntemi çağrılmadan önce [Icordebugnativeframe::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="e0065-108">Use the `CanSetIP` method prior to calling the [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) method.</span></span> <span data-ttu-id="e0065-109">Varsa `CanSetIP` herhangi HRESULT döndürür S_OK dışında yine de çağırabilirsiniz `ICorDebugNativeFrame::SetIP`, ancak hata ayıklayıcı hata ayıklaması yapılan kod güvenli ve doğru yürütmeyi devam edeceğini garanti yoktur.</span><span class="sxs-lookup"><span data-stu-id="e0065-109">If `CanSetIP` returns any HRESULT other than S_OK, you can still invoke `ICorDebugNativeFrame::SetIP`, but there is no guarantee that the debugger will continue the safe and correct execution of the code being debugged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c3d2-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9c3d2-110">Requirements</span></span>  
- <span data-ttu-id="9c3d2-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c3d2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0065-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e0065-110">Requirements</span></span>  
+ <span data-ttu-id="e0065-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0065-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c3d2-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9c3d2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e0065-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0065-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9c3d2-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c3d2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e0065-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0065-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c3d2-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c3d2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e0065-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0065-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c3d2-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9c3d2-115">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="e0065-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e0065-115">See also</span></span>
+

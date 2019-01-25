@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 5ae0204a3ef7141ebbc98ecc91a464116593981f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682975"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="768e1-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="768e1-102">DocumentViewer</span></span>
-<span data-ttu-id="768e1-103"><xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) numaralı bir biçimde.</span><span class="sxs-lookup"><span data-stu-id="768e1-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="d7530-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="d7530-102">DocumentViewer</span></span>
+<span data-ttu-id="d7530-103"><xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) sayfalandırılmış bir biçimde.</span><span class="sxs-lookup"><span data-stu-id="d7530-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="768e1-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="768e1-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d7530-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d7530-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="768e1-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="768e1-105">See Also</span></span>  
- [<span data-ttu-id="768e1-106">Belgeler</span><span class="sxs-lookup"><span data-stu-id="768e1-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="768e1-107">Belge Serileştirme ve Depolama</span><span class="sxs-lookup"><span data-stu-id="768e1-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="768e1-108">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="768e1-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d7530-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d7530-105">See also</span></span>
+- [<span data-ttu-id="d7530-106">Belgeler</span><span class="sxs-lookup"><span data-stu-id="d7530-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)
+- [<span data-ttu-id="d7530-107">Belge Serileştirme ve Depolama</span><span class="sxs-lookup"><span data-stu-id="d7530-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="d7530-108">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d7530-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

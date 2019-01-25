@@ -6,54 +6,54 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638788"
 ---
-# <a name="-main"></a><span data-ttu-id="b9550-102">-Ana</span><span class="sxs-lookup"><span data-stu-id="b9550-102">-main</span></span>
-<span data-ttu-id="b9550-103">Sınıf veya içeren modül belirtir `Sub Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b9550-103">Specifies the class or module that contains the `Sub Main` procedure.</span></span>  
+# <a name="-main"></a><span data-ttu-id="b109b-102">-Ana</span><span class="sxs-lookup"><span data-stu-id="b109b-102">-main</span></span>
+<span data-ttu-id="b109b-103">Sınıf veya içeren modül belirtir `Sub Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b109b-103">Specifies the class or module that contains the `Sub Main` procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9550-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b9550-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b109b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b109b-104">Syntax</span></span>  
   
 ```  
 -main:location  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b9550-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="b9550-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="b109b-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="b109b-105">Arguments</span></span>  
  `location`  
- <span data-ttu-id="b9550-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="b9550-106">Required.</span></span> <span data-ttu-id="b9550-107">Sınıf veya içeren modül adını `Sub Main` yordamı, program başladığında çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="b9550-107">The name of the class or module that contains the `Sub Main` procedure to be called when the program starts.</span></span> <span data-ttu-id="b9550-108">Bu biçiminde olabilir **-main: Modül** veya **-main:namespace.module**.</span><span class="sxs-lookup"><span data-stu-id="b9550-108">This may be in the form **-main:module** or **-main:namespace.module**.</span></span>  
+ <span data-ttu-id="b109b-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="b109b-106">Required.</span></span> <span data-ttu-id="b109b-107">Sınıf veya içeren modül adını `Sub Main` yordamı, program başladığında çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="b109b-107">The name of the class or module that contains the `Sub Main` procedure to be called when the program starts.</span></span> <span data-ttu-id="b109b-108">Bu biçiminde olabilir **-main: Modül** veya **-main:namespace.module**.</span><span class="sxs-lookup"><span data-stu-id="b109b-108">This may be in the form **-main:module** or **-main:namespace.module**.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b9550-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b9550-109">Remarks</span></span>  
- <span data-ttu-id="b9550-110">Bir yürütülebilir dosya ya da Windows yürütülebilir program oluşturduğunuzda bu seçeneği kullanın.</span><span class="sxs-lookup"><span data-stu-id="b9550-110">Use this option when you create an executable file or Windows executable program.</span></span> <span data-ttu-id="b9550-111">Varsa **-ana** seçeneği atlanırsa, derleyici için geçerli paylaşılan arar `Sub Main` tüm ortak sınıfları ve modüller.</span><span class="sxs-lookup"><span data-stu-id="b9550-111">If the **-main** option is omitted, the compiler searches for a valid shared `Sub Main` in all public classes and modules.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b109b-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b109b-109">Remarks</span></span>  
+ <span data-ttu-id="b109b-110">Bir yürütülebilir dosya ya da Windows yürütülebilir program oluşturduğunuzda bu seçeneği kullanın.</span><span class="sxs-lookup"><span data-stu-id="b109b-110">Use this option when you create an executable file or Windows executable program.</span></span> <span data-ttu-id="b109b-111">Varsa **-ana** seçeneği atlanırsa, derleyici için geçerli paylaşılan arar `Sub Main` tüm ortak sınıfları ve modüller.</span><span class="sxs-lookup"><span data-stu-id="b109b-111">If the **-main** option is omitted, the compiler searches for a valid shared `Sub Main` in all public classes and modules.</span></span>  
   
- <span data-ttu-id="b9550-112">Bkz: [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md) çeşitli türleri, bir irdelemesi `Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b9550-112">See [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) for a discussion of the various forms of the `Main` procedure.</span></span>  
+ <span data-ttu-id="b109b-112">Bkz: [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md) çeşitli türleri, bir irdelemesi `Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b109b-112">See [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) for a discussion of the various forms of the `Main` procedure.</span></span>  
   
- <span data-ttu-id="b9550-113">Zaman `location` devralan bir sınıf olan <xref:System.Windows.Forms.Form>, derleyici varsayılan bir ıloggerfactory sağlar `Main` sınıfı Hayır ise, uygulama başladığında yordamı `Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b9550-113">When `location` is a class that inherits from <xref:System.Windows.Forms.Form>, the compiler provides a default `Main` procedure that starts the application if the class has no `Main` procedure.</span></span> <span data-ttu-id="b9550-114">Bu, kodu geliştirme ortamında oluşturulmuş komut satırında derleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="b9550-114">This lets you compile code at the command line that was created in the development environment.</span></span>  
+ <span data-ttu-id="b109b-113">Zaman `location` devralan bir sınıf olan <xref:System.Windows.Forms.Form>, derleyici varsayılan bir ıloggerfactory sağlar `Main` sınıfı Hayır ise, uygulama başladığında yordamı `Main` yordamı.</span><span class="sxs-lookup"><span data-stu-id="b109b-113">When `location` is a class that inherits from <xref:System.Windows.Forms.Form>, the compiler provides a default `Main` procedure that starts the application if the class has no `Main` procedure.</span></span> <span data-ttu-id="b109b-114">Bu, kodu geliştirme ortamında oluşturulmuş komut satırında derleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="b109b-114">This lets you compile code at the command line that was created in the development environment.</span></span>  
   
  [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
-### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="b9550-115">-Ana Visual Studio tümleşik geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="b9550-115">To set -main in the Visual Studio integrated development environment</span></span>  
+### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="b109b-115">-Ana Visual Studio tümleşik geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="b109b-115">To set -main in the Visual Studio integrated development environment</span></span>  
   
-1.  <span data-ttu-id="b9550-116">Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="b9550-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="b9550-117">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="b9550-117">On the **Project** menu, click **Properties**.</span></span>  
+1.  <span data-ttu-id="b109b-116">Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="b109b-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="b109b-117">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="b109b-117">On the **Project** menu, click **Properties**.</span></span>  
   
-2.  <span data-ttu-id="b9550-118">Tıklayın **uygulama** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="b9550-118">Click the **Application** tab.</span></span>  
+2.  <span data-ttu-id="b109b-118">Tıklayın **uygulama** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="b109b-118">Click the **Application** tab.</span></span>  
   
-3.  <span data-ttu-id="b9550-119">Emin **etkinleştir uygulama çerçevesi** onay kutusu işaretli değildir.</span><span class="sxs-lookup"><span data-stu-id="b9550-119">Make sure the **Enable application framework** check box is not checked.</span></span>  
+3.  <span data-ttu-id="b109b-119">Emin **etkinleştir uygulama çerçevesi** onay kutusu işaretli değildir.</span><span class="sxs-lookup"><span data-stu-id="b109b-119">Make sure the **Enable application framework** check box is not checked.</span></span>  
   
-4.  <span data-ttu-id="b9550-120">Değer değiştirme **Başlangıç nesnesi** kutusu.</span><span class="sxs-lookup"><span data-stu-id="b9550-120">Modify the value in the **Startup object** box.</span></span>  
+4.  <span data-ttu-id="b109b-120">Değer değiştirme **Başlangıç nesnesi** kutusu.</span><span class="sxs-lookup"><span data-stu-id="b109b-120">Modify the value in the **Startup object** box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b9550-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="b9550-121">Example</span></span>  
- <span data-ttu-id="b9550-122">Aşağıdaki kod derlenir `T2.vb` ve `T3.vb`, belirtilmesi, `Sub Main` yordamı bulunan `Test2` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b9550-122">The following code compiles `T2.vb` and `T3.vb`, specifying that the `Sub Main` procedure will be found in the `Test2` class.</span></span>  
+## <a name="example"></a><span data-ttu-id="b109b-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="b109b-121">Example</span></span>  
+ <span data-ttu-id="b109b-122">Aşağıdaki kod derlenir `T2.vb` ve `T3.vb`, belirtilmesi, `Sub Main` yordamı bulunan `Test2` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b109b-122">The following code compiles `T2.vb` and `T3.vb`, specifying that the `Sub Main` procedure will be found in the `Test2` class.</span></span>  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b9550-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b9550-123">See Also</span></span>  
- [<span data-ttu-id="b9550-124">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="b9550-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="b9550-125">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9550-125">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
- [<span data-ttu-id="b9550-126">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="b9550-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [<span data-ttu-id="b9550-127">Visual Basic'de ana yordam</span><span class="sxs-lookup"><span data-stu-id="b9550-127">Main Procedure in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a><span data-ttu-id="b109b-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b109b-123">See also</span></span>
+- [<span data-ttu-id="b109b-124">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="b109b-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="b109b-125">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b109b-125">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="b109b-126">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="b109b-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="b109b-127">Visual Basic'de ana yordam</span><span class="sxs-lookup"><span data-stu-id="b109b-127">Main Procedure in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
