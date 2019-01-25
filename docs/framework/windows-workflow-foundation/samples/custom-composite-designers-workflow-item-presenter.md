@@ -2,32 +2,32 @@
 title: Özel bileşik tasarımcılar - iş akışı öğesi sunucu
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 7a3089f1b96cfc766143dd62d9f917fb014af636
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731016"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="c7e99-102">Özel bileşik tasarımcılar - iş akışı öğesi sunucu</span><span class="sxs-lookup"><span data-stu-id="c7e99-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="c7e99-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> İçin "bir bırakma bölgesi rastgele bir etkinlik nereye yerleştirilebileceğini" oluşturulmasına izin verir WF Tasarımcı programlama modeli içinde bir anahtar türü.</span><span class="sxs-lookup"><span data-stu-id="c7e99-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="c7e99-104">Bu örnek, bu yüzeyleri böyle bir "bırakma bölgesi." bir etkinlik Tasarımcısı oluşturma gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7e99-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="94742-102">Özel bileşik tasarımcılar - iş akışı öğesi sunucu</span><span class="sxs-lookup"><span data-stu-id="94742-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="94742-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> İçin "bir bırakma bölgesi rastgele bir etkinlik nereye yerleştirilebileceğini" oluşturulmasına izin verir WF Tasarımcı programlama modeli içinde bir anahtar türü.</span><span class="sxs-lookup"><span data-stu-id="94742-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="94742-104">Bu örnek, bu yüzeyleri böyle bir "bırakma bölgesi." bir etkinlik Tasarımcısı oluşturma gösterir.</span><span class="sxs-lookup"><span data-stu-id="94742-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>
 
- <span data-ttu-id="c7e99-105">Bu örnek gösterir:</span><span class="sxs-lookup"><span data-stu-id="c7e99-105">This sample demonstrates:</span></span>
+ <span data-ttu-id="94742-105">Bu örnek gösterir:</span><span class="sxs-lookup"><span data-stu-id="94742-105">This sample demonstrates:</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="c7e99-106">Gösteriler</span><span class="sxs-lookup"><span data-stu-id="c7e99-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="94742-106">Gösteriler</span><span class="sxs-lookup"><span data-stu-id="94742-106">Demonstrates</span></span>
 
--   <span data-ttu-id="c7e99-107">Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="c7e99-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
+-   <span data-ttu-id="94742-107">Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="94742-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
 
--   <span data-ttu-id="c7e99-108">Meta veri deposu kullanarak özel Tasarımcı kaydediliyor.</span><span class="sxs-lookup"><span data-stu-id="c7e99-108">Registering the custom designer using the metadata store.</span></span>
+-   <span data-ttu-id="94742-108">Meta veri deposu kullanarak özel Tasarımcı kaydediliyor.</span><span class="sxs-lookup"><span data-stu-id="94742-108">Registering the custom designer using the metadata store.</span></span>
 
--   <span data-ttu-id="c7e99-109">Yeniden barındırılan araç bildirimli olarak ve kesin programlama.</span><span class="sxs-lookup"><span data-stu-id="c7e99-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>
+-   <span data-ttu-id="94742-109">Yeniden barındırılan araç bildirimli olarak ve kesin programlama.</span><span class="sxs-lookup"><span data-stu-id="94742-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>
 
-## <a name="sample-details"></a><span data-ttu-id="c7e99-110">Örnek Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="c7e99-110">Sample Details</span></span>
- <span data-ttu-id="c7e99-111">Bu örneğe yönelik kodun gösterir:</span><span class="sxs-lookup"><span data-stu-id="c7e99-111">The code for this sample shows:</span></span>
+## <a name="sample-details"></a><span data-ttu-id="94742-110">Örnek Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="94742-110">Sample Details</span></span>
+ <span data-ttu-id="94742-111">Bu örneğe yönelik kodun gösterir:</span><span class="sxs-lookup"><span data-stu-id="94742-111">The code for this sample shows:</span></span>
 
--   <span data-ttu-id="c7e99-112">Özel Etkinlik Tasarımcısı oluşturulmuştur `SimpleNativeActivity` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="c7e99-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>
+-   <span data-ttu-id="94742-112">Özel Etkinlik Tasarımcısı oluşturulmuştur `SimpleNativeActivity` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="94742-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>
 
--   <span data-ttu-id="c7e99-113">Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="c7e99-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
+-   <span data-ttu-id="94742-113">Özel Etkinlik Tasarımcısı ile oluşturulmasını bir <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="94742-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -63,23 +63,23 @@ ms.locfileid: "48836702"
 </sap:ActivityDesigner>
 ```
 
- <span data-ttu-id="c7e99-114">WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="c7e99-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="c7e99-115">`ModelItem` özelliği açıktır <xref:System.Activities.Presentation.ActivityDesigner> Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="c7e99-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>
+ <span data-ttu-id="94742-114">WPF verilerini bağlama bağlamak için kullanımına dikkat edin `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="94742-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="94742-115">`ModelItem` özelliği açıktır <xref:System.Activities.Presentation.ActivityDesigner> Tasarımcı kullanılmıştır, bu durumda, arka plandaki nesneye başvuran **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="94742-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>
 
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="c7e99-116">Kurulum, derleme ve örneği çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="c7e99-116">To setup, build, and run the sample</span></span>
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="94742-116">Kurulum, derleme ve örneği çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="94742-116">To setup, build, and run the sample</span></span>
 
-1.  <span data-ttu-id="c7e99-117">Çözümü Visual Studio 2010'da açın.</span><span class="sxs-lookup"><span data-stu-id="c7e99-117">Open the solution in Visual Studio 2010.</span></span>
+1.  <span data-ttu-id="94742-117">Çözümü Visual Studio 2010'da açın.</span><span class="sxs-lookup"><span data-stu-id="94742-117">Open the solution in Visual Studio 2010.</span></span>
 
-2.  <span data-ttu-id="c7e99-118">Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="c7e99-118">Press F5 to compile and run the application.</span></span>
+2.  <span data-ttu-id="94742-118">Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="94742-118">Press F5 to compile and run the application.</span></span>
 
 > [!IMPORTANT]
->  <span data-ttu-id="c7e99-119">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="c7e99-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c7e99-120">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="c7e99-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="94742-119">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="94742-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="94742-120">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="94742-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="c7e99-121">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="c7e99-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c7e99-122">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="c7e99-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="94742-121">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="94742-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="94742-122">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="94742-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="c7e99-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c7e99-123">See Also</span></span>  
- <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [<span data-ttu-id="c7e99-124">İş Akışı Tasarımcısı ile Uygulama Geliştirme</span><span class="sxs-lookup"><span data-stu-id="c7e99-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+## <a name="see-also"></a><span data-ttu-id="94742-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94742-123">See also</span></span>
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>
+- [<span data-ttu-id="94742-124">İş Akışı Tasarımcısı ile Uygulama Geliştirme</span><span class="sxs-lookup"><span data-stu-id="94742-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

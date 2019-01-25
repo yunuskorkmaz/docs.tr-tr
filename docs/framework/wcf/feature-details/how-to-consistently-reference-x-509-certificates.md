@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: X.509 Sertifikalarına Tutarlı Olarak Başvuru Yapma'
+title: 'Nasıl yapılır: X.509 sertifikalarına tutarlı olarak başvuru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: efc4fb399224de7f03c6bffb606178184de1d467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2468faabfbca57e7d905a592b6743c43cb2ccd56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731978"
 ---
-# <a name="how-to-consistently-reference-x509-certificates"></a><span data-ttu-id="67196-102">Nasıl yapılır: X.509 Sertifikalarına Tutarlı Olarak Başvuru Yapma</span><span class="sxs-lookup"><span data-stu-id="67196-102">How to: Consistently Reference X.509 Certificates</span></span>
-<span data-ttu-id="67196-103">Bir sertifika çeşitli şekillerde tanımlayabilirsiniz: Sertifika Karması, veren ve seri numarası veya konu anahtarı tanımlayıcısı (SKI).</span><span class="sxs-lookup"><span data-stu-id="67196-103">You can identify a certificate in several ways: by the hash of the certificate, by the issuer and serial number, or by the subject key identifier (SKI).</span></span> <span data-ttu-id="67196-104">SKI ve XML dijital imza ile çalışırken sık kullanılan sertifikanın konu ortak anahtarı için benzersiz bir kimlik sağlar.</span><span class="sxs-lookup"><span data-stu-id="67196-104">The SKI provides a unique identification for the certificate's subject public key and is often used when working with XML digital signing.</span></span> <span data-ttu-id="67196-105">SKI değeri genellikle X.509 sertifikası olarak parçası olan bir *X.509 Sertifika uzantısı*.</span><span class="sxs-lookup"><span data-stu-id="67196-105">The SKI value is usually part of the X.509 certificate as an *X.509 certificate extension*.</span></span> <span data-ttu-id="67196-106">Windows Communication Foundation (WCF) sahip bir varsayılan *stili başvuran* , kullanıyorsa veren ve seri numarasını SKI uzantısı sertifikası eksik.</span><span class="sxs-lookup"><span data-stu-id="67196-106">Windows Communication Foundation (WCF) has a default *referencing style* that uses the issuer and serial number if the SKI extension is missing from the certificate.</span></span> <span data-ttu-id="67196-107">Sertifika SKI uzantısı içeriyorsa, stil başvuran varsayılan SKI sertifikaya işaret edecek şekilde kullanır.</span><span class="sxs-lookup"><span data-stu-id="67196-107">If the certificate contains the SKI extension, the default referencing style uses the SKI to point to the certificate.</span></span> <span data-ttu-id="67196-108">Orta yolu, bir uygulamanın geliştirilmesi aracılığıyla SKI uzantısı kullanan sertifikaları SKI uzantı kullanmayın sertifikaları kullanarak geçiş, WCF oluşturulan mesajlarında başvuru stili da değişir.</span><span class="sxs-lookup"><span data-stu-id="67196-108">If mid-way through development of an application, you switch from using certificates that do not use the SKI extension to certificates that use the SKI extension, the referencing style used in WCF-generated messages also changes.</span></span>  
+# <a name="how-to-consistently-reference-x509-certificates"></a><span data-ttu-id="503ef-102">Nasıl yapılır: X.509 sertifikalarına tutarlı olarak başvuru</span><span class="sxs-lookup"><span data-stu-id="503ef-102">How to: Consistently Reference X.509 Certificates</span></span>
+<span data-ttu-id="503ef-103">Sertifika çeşitli yollarla tanımlayabilirsiniz: Sertifika Karması, veren ve seri numarası veya konu anahtarı tanımlayıcısı (KAYAK).</span><span class="sxs-lookup"><span data-stu-id="503ef-103">You can identify a certificate in several ways: by the hash of the certificate, by the issuer and serial number, or by the subject key identifier (SKI).</span></span> <span data-ttu-id="503ef-104">KAYAK sertifikanın konu ortak anahtarı için benzersiz bir kimlik sağlar ve XML dijital imza ile çalışırken sık sık kullanılır.</span><span class="sxs-lookup"><span data-stu-id="503ef-104">The SKI provides a unique identification for the certificate's subject public key and is often used when working with XML digital signing.</span></span> <span data-ttu-id="503ef-105">KAYAK değeri genellikle X.509 sertifikası olarak bir parçası olan bir *X.509 Sertifika uzantısı*.</span><span class="sxs-lookup"><span data-stu-id="503ef-105">The SKI value is usually part of the X.509 certificate as an *X.509 certificate extension*.</span></span> <span data-ttu-id="503ef-106">Windows Communication Foundation (WCF) sahip bir varsayılan *stil başvuran* , kullanıyorsa veren ve seri numarasını KAYAK uzantı sertifikası eksik.</span><span class="sxs-lookup"><span data-stu-id="503ef-106">Windows Communication Foundation (WCF) has a default *referencing style* that uses the issuer and serial number if the SKI extension is missing from the certificate.</span></span> <span data-ttu-id="503ef-107">Sertifika KAYAK uzantısı içeriyorsa, varsayılan stili başvuran KAYAK sertifikanıza işaret edecek kullanır.</span><span class="sxs-lookup"><span data-stu-id="503ef-107">If the certificate contains the SKI extension, the default referencing style uses the SKI to point to the certificate.</span></span> <span data-ttu-id="503ef-108">Orta yolu, bir uygulamanın geliştirilmesi aracılığıyla KAYAK uzantısı kullanan sertifikaları için KAYAK uzantısı kullanmayın sertifikaları kullanarak, geçiş, WCF tarafından oluşturulan iletilerde kullanılan başvuru stili da değiştirir.</span><span class="sxs-lookup"><span data-stu-id="503ef-108">If mid-way through development of an application, you switch from using certificates that do not use the SKI extension to certificates that use the SKI extension, the referencing style used in WCF-generated messages also changes.</span></span>  
   
- <span data-ttu-id="67196-109">SKI uzantısı varlığı bağımsız olarak tutarlı bir başvuru stili gerekiyorsa, gerekli başvuru stili aşağıdaki kodda gösterildiği şekilde yapılandırmak mümkündür.</span><span class="sxs-lookup"><span data-stu-id="67196-109">If a consistent referencing style is required regardless of SKI extension presence, it is possible to configure the desired referencing style as shown in the following code.</span></span>  
+ <span data-ttu-id="503ef-109">KAYAK uzantısı varlığı bağımsız olarak tutarlı bir başvuru stili gerekiyorsa, aşağıdaki kodda gösterildiği gibi gerekli başvuru stili yapılandırmak mümkündür.</span><span class="sxs-lookup"><span data-stu-id="503ef-109">If a consistent referencing style is required regardless of SKI extension presence, it is possible to configure the desired referencing style as shown in the following code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67196-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="67196-110">Example</span></span>  
- <span data-ttu-id="67196-111">Aşağıdaki örnek, tek bir tutarlı başvuru stili, verenin adı ve seri numarasını kullanan bir özel güvenlik bağlama öğesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="67196-111">The following example creates a custom security binding element that uses a single consistent referencing style, the issuer name and serial number.</span></span>  
+## <a name="example"></a><span data-ttu-id="503ef-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="503ef-110">Example</span></span>  
+ <span data-ttu-id="503ef-111">Aşağıdaki örnek, tek bir tutarlı başvuru stili, verenin adı ve seri numarası kullanan bir özel güvenlik bağlama öğesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="503ef-111">The following example creates a custom security binding element that uses a single consistent referencing style, the issuer name and serial number.</span></span>  
   
  [!code-csharp[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_referencingcertificatesconsistently/cs/source.cs#1)]
  [!code-vb[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_referencingcertificatesconsistently/vb/source.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="67196-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="67196-112">Compiling the Code</span></span>  
- <span data-ttu-id="67196-113">Şu ad alanlarından Kodu derlemek için gereklidir:</span><span class="sxs-lookup"><span data-stu-id="67196-113">The following namespaces are required to compile the code:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="503ef-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="503ef-112">Compiling the Code</span></span>  
+ <span data-ttu-id="503ef-113">Aşağıdaki ad alanlarını, kodu derlemek için gereklidir:</span><span class="sxs-lookup"><span data-stu-id="503ef-113">The following namespaces are required to compile the code:</span></span>  
   
 -   <xref:System>  
   
@@ -36,5 +36,5 @@ ms.locfileid: "33489391"
   
 -   <xref:System.ServiceModel.Security.Tokens>  
   
-## <a name="see-also"></a><span data-ttu-id="67196-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="67196-114">See Also</span></span>  
- [<span data-ttu-id="67196-115">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="67196-115">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="503ef-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="503ef-114">See also</span></span>
+- [<span data-ttu-id="503ef-115">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="503ef-115">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

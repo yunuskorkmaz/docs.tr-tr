@@ -10,75 +10,75 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616205"
 ---
-# <a name="friend-visual-basic"></a><span data-ttu-id="f879d-102">Arkadaş (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f879d-102">Friend (Visual Basic)</span></span>
-<span data-ttu-id="f879d-103">Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütünleştirilmiş kodun içinde yalnızca üzerinden erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="f879d-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  
+# <a name="friend-visual-basic"></a><span data-ttu-id="aaecf-102">Arkadaş (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aaecf-102">Friend (Visual Basic)</span></span>
+<span data-ttu-id="aaecf-103">Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlemede yalnızca erişilebileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="aaecf-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f879d-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f879d-104">Remarks</span></span>  
- <span data-ttu-id="f879d-105">Çoğu durumda, sınıflar ve yapılar tüm derlemesi tarafından değil yalnızca bunları bildiren bileşen tarafından kullanılmak üzere gibi programlama istiyor.</span><span class="sxs-lookup"><span data-stu-id="f879d-105">In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them.</span></span> <span data-ttu-id="f879d-106">Ancak, siz bunları (örneğin, uygulama özel ise) derleme dışına kodu tarafından erişilebilmesi için istemeyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f879d-106">However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary).</span></span> <span data-ttu-id="f879d-107">Bu şekilde bir öğeyi erişimi sınırlamak istiyorsanız, bunu kullanarak bildirebilirsiniz `Friend` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f879d-107">If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aaecf-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aaecf-104">Remarks</span></span>  
+ <span data-ttu-id="aaecf-105">Çoğu durumda, sınıflar ve yapılar yalnızca bunları bildiren bileşen tarafından tüm derleme tarafından kullanılacak gibi öğeleri programlama istersiniz.</span><span class="sxs-lookup"><span data-stu-id="aaecf-105">In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them.</span></span> <span data-ttu-id="aaecf-106">Ancak, bunları (örneğin, uygulama özel ise) derleme dışındaki kod tarafından erişilebilmesi için istemeyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="aaecf-106">However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary).</span></span> <span data-ttu-id="aaecf-107">Bu şekilde bir öğe erişimi sınırlandırmak istiyorsanız, bunu kullanarak bildirebilirsiniz `Friend` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="aaecf-107">If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.</span></span>  
   
- <span data-ttu-id="f879d-108">Diğer sınıflar, yapılar ve aynı derlenmiş modüller kodda derleme tüm erişebilir `Friend` bu derleme öğeleri.</span><span class="sxs-lookup"><span data-stu-id="f879d-108">Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.</span></span>  
+ <span data-ttu-id="aaecf-108">Diğer sınıflar, yapılar ve aynı derlenmiş modüller kodda derleme tüm erişebilir `Friend` derlemeye öğeleri.</span><span class="sxs-lookup"><span data-stu-id="aaecf-108">Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.</span></span>  
   
- <span data-ttu-id="f879d-109">`Friend` erişim, genellikle bir uygulama programlama öğeleri için tercih edilen düzeyi ve `Friend` varsayılan erişim bir arabirim, bir modül, bir sınıf veya bir yapı düzeyinde gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="f879d-109">`Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.</span></span>  
+ <span data-ttu-id="aaecf-109">`Friend` erişim, genellikle uygulamanın programlama öğeleri için tercih edilen düzeyi ve `Friend` varsayılan bir arabirim, bir modül, bir sınıf veya yapı düzeyi erişimdir.</span><span class="sxs-lookup"><span data-stu-id="aaecf-109">`Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.</span></span>  
   
- <span data-ttu-id="f879d-110">Kullanabileceğiniz `Friend` modül, arabirim veya ad alanı düzeyinde yalnızca.</span><span class="sxs-lookup"><span data-stu-id="f879d-110">You can use `Friend` only at the module, interface, or namespace level.</span></span> <span data-ttu-id="f879d-111">Bu nedenle, bildirimi bağlamı için bir `Friend` kaynak dosyasını, bir ad alanı, bir arabirim, bir modül, bir sınıf veya bir yapı öğesi olması gerekir; bir yordam olamaz.</span><span class="sxs-lookup"><span data-stu-id="f879d-111">Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.</span></span>  
+ <span data-ttu-id="aaecf-110">Kullanabileceğiniz `Friend` modülü, arabirim veya ad alanı düzeyinde yalnızca.</span><span class="sxs-lookup"><span data-stu-id="aaecf-110">You can use `Friend` only at the module, interface, or namespace level.</span></span> <span data-ttu-id="aaecf-111">Bu nedenle, bildirimi bağlamı bir `Friend` öğesi bir kaynak dosyası, bir ad alanı, bir arabirim, bir modül, bir sınıf veya yapı olmalıdır; bir yordam olamaz.</span><span class="sxs-lookup"><span data-stu-id="aaecf-111">Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="f879d-112">Aynı zamanda [Protected Friend](protected-friend.md) sınıf üyesine bir sınıftaki, türetilen sınıflar ve sınıf tanımlanır aynı bütünleştirilmiş erişilebilir hale getirir erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f879d-112">You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.</span></span> <span data-ttu-id="f879d-113">Kendi sınıfı içinde ve aynı bütünleştirilmiş kodda türetilmiş sınıflardan üyeden erişimi kısıtlamak için kullandığınız [özel korumalı](private-protected.md) erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f879d-113">To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.</span></span>
+> <span data-ttu-id="aaecf-112">Ayrıca [Protected Friend](protected-friend.md) erişim değiştiricisi, bir sınıf üyesinin Bu sınıf, türetilen sınıflar ve sınıf tanımlanır aynı derleme içinde erişilebilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="aaecf-112">You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.</span></span> <span data-ttu-id="aaecf-113">Sınıfı içinde ve türetilen sınıfların aynı derlemedeki bir üye erişimi kısıtlamak için kullandığınız [Protected Private](private-protected.md) erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="aaecf-113">To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.</span></span>
 
- <span data-ttu-id="f879d-114">Bir karşılaştırması `Friend` ve diğer değiştiricileri erişmek için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="f879d-114">For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+ <span data-ttu-id="aaecf-114">Bir karşılaştırması `Friend` ve diğer erişim değiştiricilerine bkz [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="aaecf-114">For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f879d-115">Başka bir derleme tüm türleri ve olarak işaretlenmiş üyeleri erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`.</span><span class="sxs-lookup"><span data-stu-id="f879d-115">You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`.</span></span> <span data-ttu-id="f879d-116">Daha fazla bilgi için bkz: [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="f879d-116">For more information, see [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span></span>  
+>  <span data-ttu-id="aaecf-115">Başka bir derlemenin tüm türleri ve üyeleri olarak işaretlenmiş erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`.</span><span class="sxs-lookup"><span data-stu-id="aaecf-115">You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`.</span></span> <span data-ttu-id="aaecf-116">Daha fazla bilgi için [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="aaecf-116">For more information, see [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f879d-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="f879d-117">Example</span></span>  
- <span data-ttu-id="f879d-118">Aşağıdaki sınıf kullanır `Friend` diğer programlama öğeleri belirli üyeleri erişmek için aynı bütünleştirilmiş kod içinde izin vermek için değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="f879d-118">The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.</span></span>  
+## <a name="example"></a><span data-ttu-id="aaecf-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="aaecf-117">Example</span></span>  
+ <span data-ttu-id="aaecf-118">Aşağıdaki sınıf kullandığı `Friend` diğer programlama öğelerinin belirli üyelere erişmek için aynı bütünleştirilmiş kod içinde değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="aaecf-118">The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.</span></span>  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
-## <a name="usage"></a><span data-ttu-id="f879d-119">Kullanım</span><span class="sxs-lookup"><span data-stu-id="f879d-119">Usage</span></span>  
- <span data-ttu-id="f879d-120">Kullanabileceğiniz `Friend` bu bağlamlarında değiştiricisi:</span><span class="sxs-lookup"><span data-stu-id="f879d-120">You can use the `Friend` modifier in these contexts:</span></span>  
+## <a name="usage"></a><span data-ttu-id="aaecf-119">Kullanım</span><span class="sxs-lookup"><span data-stu-id="aaecf-119">Usage</span></span>  
+ <span data-ttu-id="aaecf-120">Kullanabileceğiniz `Friend` şu bağlamlarda değiştiricisi:</span><span class="sxs-lookup"><span data-stu-id="aaecf-120">You can use the `Friend` modifier in these contexts:</span></span>  
   
- [<span data-ttu-id="f879d-121">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-121">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="aaecf-121">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-121">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [<span data-ttu-id="f879d-122">Const Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="aaecf-122">Const Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [<span data-ttu-id="f879d-123">Declare Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-123">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="aaecf-123">Declare Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-123">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [<span data-ttu-id="f879d-124">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-124">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="aaecf-124">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-124">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [<span data-ttu-id="f879d-125">Dim Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-125">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="aaecf-125">Dim Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-125">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [<span data-ttu-id="f879d-126">Enum Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-126">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="aaecf-126">Enum Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-126">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [<span data-ttu-id="f879d-127">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-127">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="aaecf-127">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-127">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [<span data-ttu-id="f879d-128">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-128">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="aaecf-128">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-128">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="f879d-129">Interface Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-129">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="aaecf-129">Interface Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-129">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [<span data-ttu-id="f879d-130">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-130">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="aaecf-130">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-130">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [<span data-ttu-id="f879d-131">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-131">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="aaecf-131">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-131">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="f879d-132">Structure Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-132">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="aaecf-132">Structure Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-132">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [<span data-ttu-id="f879d-133">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="f879d-133">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="aaecf-133">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="aaecf-133">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f879d-134">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f879d-134">See Also</span></span>  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [<span data-ttu-id="f879d-135">Public</span><span class="sxs-lookup"><span data-stu-id="f879d-135">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
- [<span data-ttu-id="f879d-136">Protected</span><span class="sxs-lookup"><span data-stu-id="f879d-136">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
- [<span data-ttu-id="f879d-137">Private</span><span class="sxs-lookup"><span data-stu-id="f879d-137">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
- <span data-ttu-id="f879d-138">[Özel korumalı](./private-protected.md) </span><span class="sxs-lookup"><span data-stu-id="f879d-138">[Private Protected](./private-protected.md) </span></span>  
- <span data-ttu-id="f879d-139">[Korumalı Friend](./protected-friend.md) </span><span class="sxs-lookup"><span data-stu-id="f879d-139">[Protected Friend](./protected-friend.md) </span></span>  
- [<span data-ttu-id="f879d-140">Visual Basic'de erişim düzeyleri</span><span class="sxs-lookup"><span data-stu-id="f879d-140">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [<span data-ttu-id="f879d-141">Yordamlar</span><span class="sxs-lookup"><span data-stu-id="f879d-141">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [<span data-ttu-id="f879d-142">Yapılar</span><span class="sxs-lookup"><span data-stu-id="f879d-142">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [<span data-ttu-id="f879d-143">Nesneler ve Sınıflar</span><span class="sxs-lookup"><span data-stu-id="f879d-143">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="aaecf-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aaecf-134">See also</span></span>
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [<span data-ttu-id="aaecf-135">Public</span><span class="sxs-lookup"><span data-stu-id="aaecf-135">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
+- [<span data-ttu-id="aaecf-136">Protected</span><span class="sxs-lookup"><span data-stu-id="aaecf-136">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)
+- [<span data-ttu-id="aaecf-137">Private</span><span class="sxs-lookup"><span data-stu-id="aaecf-137">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
+- [<span data-ttu-id="aaecf-138">Private Protected</span><span class="sxs-lookup"><span data-stu-id="aaecf-138">Private Protected</span></span>](./private-protected.md)
+- [<span data-ttu-id="aaecf-139">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="aaecf-139">Protected Friend</span></span>](./protected-friend.md)
+- [<span data-ttu-id="aaecf-140">Visual Basic'de erişim düzeyleri</span><span class="sxs-lookup"><span data-stu-id="aaecf-140">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="aaecf-141">Yordamlar</span><span class="sxs-lookup"><span data-stu-id="aaecf-141">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [<span data-ttu-id="aaecf-142">Yapılar</span><span class="sxs-lookup"><span data-stu-id="aaecf-142">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="aaecf-143">Nesneler ve Sınıflar</span><span class="sxs-lookup"><span data-stu-id="aaecf-143">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

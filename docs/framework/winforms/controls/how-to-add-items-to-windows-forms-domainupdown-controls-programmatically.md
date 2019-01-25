@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme'
+title: 'Nasıl yapılır: Windows Forms DomainUpDown denetimlerine programlı olarak öğeleri Ekle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: 7359310b092e84b250c09153ef86d44c70d413fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865f569da561ec5883b0a0f08fcedb34fc84820c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738566"
 ---
-# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a><span data-ttu-id="630cf-102">Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme</span><span class="sxs-lookup"><span data-stu-id="630cf-102">How to: Add Items to Windows Forms DomainUpDown Controls Programmatically</span></span>
-<span data-ttu-id="630cf-103">Windows Forms öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.DomainUpDown> denetim kodu.</span><span class="sxs-lookup"><span data-stu-id="630cf-103">You can add items to the Windows Forms <xref:System.Windows.Forms.DomainUpDown> control in code.</span></span> <span data-ttu-id="630cf-104">Çağrı <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> denetimin öğeler eklemek için sınıfı <xref:System.Windows.Forms.DomainUpDown.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="630cf-104">Call the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> or <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class to add items to the control's <xref:System.Windows.Forms.DomainUpDown.Items%2A> property.</span></span> <span data-ttu-id="630cf-105"><xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Yöntemi, bir koleksiyonun sonuna bir öğe ekler sırada <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi, belirtilen konumda bir öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="630cf-105">The <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> method adds an item to the end of a collection, while the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method adds an item at a specified position.</span></span>  
+# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a><span data-ttu-id="74ce8-102">Nasıl yapılır: Windows Forms DomainUpDown denetimlerine programlı olarak öğeleri Ekle</span><span class="sxs-lookup"><span data-stu-id="74ce8-102">How to: Add Items to Windows Forms DomainUpDown Controls Programmatically</span></span>
+<span data-ttu-id="74ce8-103">Windows Forms için öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.DomainUpDown> kod denetimi.</span><span class="sxs-lookup"><span data-stu-id="74ce8-103">You can add items to the Windows Forms <xref:System.Windows.Forms.DomainUpDown> control in code.</span></span> <span data-ttu-id="74ce8-104">Çağrı <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> denetimin öğeleri eklemek için sınıfı <xref:System.Windows.Forms.DomainUpDown.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="74ce8-104">Call the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> or <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class to add items to the control's <xref:System.Windows.Forms.DomainUpDown.Items%2A> property.</span></span> <span data-ttu-id="74ce8-105"><xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Yöntemi, bir koleksiyonun sonuna bir öğe ekler sırada <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi, belirtilen konumda bir öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="74ce8-105">The <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> method adds an item to the end of a collection, while the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method adds an item at a specified position.</span></span>  
   
-### <a name="to-add-a-new-item"></a><span data-ttu-id="630cf-106">Yeni öğe eklemek için</span><span class="sxs-lookup"><span data-stu-id="630cf-106">To add a new item</span></span>  
+### <a name="to-add-a-new-item"></a><span data-ttu-id="74ce8-106">Yeni bir öğe eklemek için</span><span class="sxs-lookup"><span data-stu-id="74ce8-106">To add a new item</span></span>  
   
-1.  <span data-ttu-id="630cf-107">Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> yöntemi öğe listesinin sonuna bir öğe ekleyin.</span><span class="sxs-lookup"><span data-stu-id="630cf-107">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> method to add an item to the end of the list of items.</span></span>  
+1.  <span data-ttu-id="74ce8-107">Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> öğelerin listesini sonuna bir öğe eklemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="74ce8-107">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> method to add an item to the end of the list of items.</span></span>  
   
     ```vb  
     DomainUpDown1.Items.Add("noodles")  
@@ -35,9 +35,9 @@ ms.locfileid: "33526184"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     <span data-ttu-id="630cf-108">-veya-</span><span class="sxs-lookup"><span data-stu-id="630cf-108">-or-</span></span>  
+     <span data-ttu-id="74ce8-108">-veya-</span><span class="sxs-lookup"><span data-stu-id="74ce8-108">-or-</span></span>  
   
-2.  <span data-ttu-id="630cf-109">Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> listenin belirtilen konumda bir öğe eklemeye yöntemi.</span><span class="sxs-lookup"><span data-stu-id="630cf-109">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method to insert an item into the list at a specified position.</span></span>  
+2.  <span data-ttu-id="74ce8-109">Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> belirtilen konumda listeye bir öğe eklemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="74ce8-109">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> method to insert an item into the list at a specified position.</span></span>  
   
     ```vb  
     ' Inserts an item at the third position in the list  
@@ -54,9 +54,9 @@ ms.locfileid: "33526184"
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="630cf-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="630cf-110">See Also</span></span>  
- <xref:System.Windows.Forms.DomainUpDown>  
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>  
- <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="630cf-111">DomainUpDown Denetimi</span><span class="sxs-lookup"><span data-stu-id="630cf-111">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- [<span data-ttu-id="630cf-112">DomainUpDown Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="630cf-112">DomainUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="74ce8-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="74ce8-110">See also</span></span>
+- <xref:System.Windows.Forms.DomainUpDown>
+- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
+- <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="74ce8-111">DomainUpDown Denetimi</span><span class="sxs-lookup"><span data-stu-id="74ce8-111">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+- [<span data-ttu-id="74ce8-112">DomainUpDown Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="74ce8-112">DomainUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)

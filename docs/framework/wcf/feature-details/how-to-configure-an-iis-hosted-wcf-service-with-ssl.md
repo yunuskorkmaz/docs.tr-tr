@@ -1,68 +1,68 @@
 ---
-title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
+title: 'Nasıl yapılır: SSL ile bir IIS barındırılan WCF hizmetini yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639984"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="0c22a-102">Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0c22a-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
-<span data-ttu-id="0c22a-103">Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hizmeti kurmak açıklar.</span><span class="sxs-lookup"><span data-stu-id="0c22a-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="0c22a-104">HTTP aktarım güvenliği bir SSL sertifikası, IIS ile kayıtlı olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0c22a-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="0c22a-105">Bir SSL sertifikası yoksa, IIS bir test sertifikası oluşturmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0c22a-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="0c22a-106">Sonraki web sitesine bir SSL bağlaması ekleyin ve web sitesinin kimlik doğrulaması özelliklerini yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="0c22a-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="0c22a-107">Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="0c22a-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="010fb-102">Nasıl yapılır: SSL ile bir IIS barındırılan WCF hizmetini yapılandırma</span><span class="sxs-lookup"><span data-stu-id="010fb-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="010fb-103">Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hizmeti kurmak açıklar.</span><span class="sxs-lookup"><span data-stu-id="010fb-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="010fb-104">HTTP aktarım güvenliği bir SSL sertifikası, IIS ile kayıtlı olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="010fb-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="010fb-105">Bir SSL sertifikası yoksa, IIS bir test sertifikası oluşturmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="010fb-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="010fb-106">Sonraki web sitesine bir SSL bağlaması ekleyin ve web sitesinin kimlik doğrulaması özelliklerini yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="010fb-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="010fb-107">Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="010fb-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="0c22a-108">Otomatik olarak imzalanan sertifika oluşturma</span><span class="sxs-lookup"><span data-stu-id="0c22a-108">Creating a Self-Signed Certificate</span></span>  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="010fb-108">Otomatik olarak imzalanan sertifika oluşturma</span><span class="sxs-lookup"><span data-stu-id="010fb-108">Creating a Self-Signed Certificate</span></span>  
   
-1.  <span data-ttu-id="0c22a-109">Internet Information Services Manager (inetmgr.exe) açın ve sol taraftaki ağaç görünümü'nde, bilgisayar adını seçin.</span><span class="sxs-lookup"><span data-stu-id="0c22a-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="0c22a-110">Ekranın sağ tarafında sunucu sertifikası seç</span><span class="sxs-lookup"><span data-stu-id="0c22a-110">On the right-hand side of the screen select Server Certificates</span></span>  
+1.  <span data-ttu-id="010fb-109">Internet Information Services Manager (inetmgr.exe) açın ve sol taraftaki ağaç görünümü'nde, bilgisayar adını seçin.</span><span class="sxs-lookup"><span data-stu-id="010fb-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="010fb-110">Ekranın sağ tarafında sunucu sertifikası seç</span><span class="sxs-lookup"><span data-stu-id="010fb-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     <span data-ttu-id="0c22a-111">![IIS Manager giriş ekranı](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="0c22a-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
+     <span data-ttu-id="010fb-111">![IIS Manager giriş ekranı](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="010fb-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2.  <span data-ttu-id="0c22a-112">Sunucu sertifikaları pencerede **otomatik olarak imzalanan sertifika oluştur...**</span><span class="sxs-lookup"><span data-stu-id="0c22a-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="0c22a-113">bağlantı.</span><span class="sxs-lookup"><span data-stu-id="0c22a-113">Link.</span></span>  
+2.  <span data-ttu-id="010fb-112">Sunucu sertifikaları pencerede **otomatik olarak imzalanan sertifika oluştur...**</span><span class="sxs-lookup"><span data-stu-id="010fb-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="010fb-113">bağlantı.</span><span class="sxs-lookup"><span data-stu-id="010fb-113">Link.</span></span>  
   
-     <span data-ttu-id="0c22a-114">![Bir kendi kendini oluşturma&#45;IIS sertifikayla imzalanan](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="0c22a-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
+     <span data-ttu-id="010fb-114">![Bir kendi kendini oluşturma&#45;IIS sertifikayla imzalanan](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="010fb-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3.  <span data-ttu-id="0c22a-115">Otomatik olarak imzalanan sertifika için bir kolay ad girin ve tıklayın **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="0c22a-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
+3.  <span data-ttu-id="010fb-115">Otomatik olarak imzalanan sertifika için bir kolay ad girin ve tıklayın **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="010fb-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     <span data-ttu-id="0c22a-116">![Kendi kendine oluşturmak&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="0c22a-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
+     <span data-ttu-id="010fb-116">![Kendi kendine oluşturmak&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="010fb-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     <span data-ttu-id="0c22a-117">Yeni oluşturulan kendinden imzalı bir sertifika ayrıntılarını artık gösterilen **sunucu sertifikaları** penceresi.</span><span class="sxs-lookup"><span data-stu-id="0c22a-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
+     <span data-ttu-id="010fb-117">Yeni oluşturulan kendinden imzalı bir sertifika ayrıntılarını artık gösterilen **sunucu sertifikaları** penceresi.</span><span class="sxs-lookup"><span data-stu-id="010fb-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     <span data-ttu-id="0c22a-118">![Sunucu sertifikası penceresi](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="0c22a-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
+     <span data-ttu-id="010fb-118">![Sunucu sertifikası penceresi](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="010fb-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     <span data-ttu-id="0c22a-119">Oluşturulan sertifika, güvenilen kök sertifika yetkilileri deposunda yüklü depolayın.</span><span class="sxs-lookup"><span data-stu-id="0c22a-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
+     <span data-ttu-id="010fb-119">Oluşturulan sertifika, güvenilen kök sertifika yetkilileri deposunda yüklü depolayın.</span><span class="sxs-lookup"><span data-stu-id="010fb-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### <a name="add-ssl-binding"></a><span data-ttu-id="0c22a-120">SSL bağlaması Ekle</span><span class="sxs-lookup"><span data-stu-id="0c22a-120">Add SSL Binding</span></span>  
+### <a name="add-ssl-binding"></a><span data-ttu-id="010fb-120">SSL bağlaması Ekle</span><span class="sxs-lookup"><span data-stu-id="010fb-120">Add SSL Binding</span></span>  
   
-1.  <span data-ttu-id="0c22a-121">Hala Internet Bilgi Hizmetleri Yöneticisi'nde genişletin **siteleri** klasörünü ve ardından **varsayılan Web sitesi** ekranın sol tarafındaki ağaç görünümünde klasörü.</span><span class="sxs-lookup"><span data-stu-id="0c22a-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
+1.  <span data-ttu-id="010fb-121">Hala Internet Bilgi Hizmetleri Yöneticisi'nde genişletin **siteleri** klasörünü ve ardından **varsayılan Web sitesi** ekranın sol tarafındaki ağaç görünümünde klasörü.</span><span class="sxs-lookup"><span data-stu-id="010fb-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2.  <span data-ttu-id="0c22a-122">Tıklayın **bağlamaları...**</span><span class="sxs-lookup"><span data-stu-id="0c22a-122">Click the **Bindings….**</span></span> <span data-ttu-id="0c22a-123">Bağlantısını **eylemleri** pencerenin sağ üst taraftaki bölümünde bölümünde.</span><span class="sxs-lookup"><span data-stu-id="0c22a-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
+2.  <span data-ttu-id="010fb-122">Tıklayın **bağlamaları...**</span><span class="sxs-lookup"><span data-stu-id="010fb-122">Click the **Bindings….**</span></span> <span data-ttu-id="010fb-123">Bağlantısını **eylemleri** pencerenin sağ üst taraftaki bölümünde bölümünde.</span><span class="sxs-lookup"><span data-stu-id="010fb-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     <span data-ttu-id="0c22a-124">![Bir SSL bağlaması ekleniyor](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="0c22a-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
+     <span data-ttu-id="010fb-124">![Bir SSL bağlaması ekleniyor](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="010fb-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3.  <span data-ttu-id="0c22a-125">Site bağlamaları pencerede **Ekle** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="0c22a-125">In the Site Bindings window click the **Add** button.</span></span>  
+3.  <span data-ttu-id="010fb-125">Site bağlamaları pencerede **Ekle** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="010fb-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     <span data-ttu-id="0c22a-126">![Site bağlamaları iletişim](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="0c22a-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
+     <span data-ttu-id="010fb-126">![Site bağlamaları iletişim](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="010fb-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4.  <span data-ttu-id="0c22a-127">İçinde **Site bağlaması Ekle** türü ve kolay adı, tam otomatik olarak imzalanan sertifika için select https iletişim kutusunda, oluşturulan.</span><span class="sxs-lookup"><span data-stu-id="0c22a-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
+4.  <span data-ttu-id="010fb-127">İçinde **Site bağlaması Ekle** türü ve kolay adı, tam otomatik olarak imzalanan sertifika için select https iletişim kutusunda, oluşturulan.</span><span class="sxs-lookup"><span data-stu-id="010fb-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     <span data-ttu-id="0c22a-128">![Site bağlama örnek](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="0c22a-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
+     <span data-ttu-id="010fb-128">![Site bağlama örnek](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="010fb-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="0c22a-129">SSL için sanal dizin Yapılandır</span><span class="sxs-lookup"><span data-stu-id="0c22a-129">Configure Virtual Directory for SSL</span></span>  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="010fb-129">SSL için sanal dizin Yapılandır</span><span class="sxs-lookup"><span data-stu-id="010fb-129">Configure Virtual Directory for SSL</span></span>  
   
-1.  <span data-ttu-id="0c22a-130">Hala Internet Bilgi Hizmetleri Yöneticisi'nde güvenli WCF hizmetinizi içeren sanal dizini seçin.</span><span class="sxs-lookup"><span data-stu-id="0c22a-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
+1.  <span data-ttu-id="010fb-130">Hala Internet Bilgi Hizmetleri Yöneticisi'nde güvenli WCF hizmetinizi içeren sanal dizini seçin.</span><span class="sxs-lookup"><span data-stu-id="010fb-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2.  <span data-ttu-id="0c22a-131">Pencerenin Orta bölmede seçin **SSL ayarları** IIS bölümünde.</span><span class="sxs-lookup"><span data-stu-id="0c22a-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
+2.  <span data-ttu-id="010fb-131">Pencerenin Orta bölmede seçin **SSL ayarları** IIS bölümünde.</span><span class="sxs-lookup"><span data-stu-id="010fb-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     <span data-ttu-id="0c22a-132">![Sanal dizin için SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="0c22a-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
+     <span data-ttu-id="010fb-132">![Sanal dizin için SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="010fb-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3.  <span data-ttu-id="0c22a-133">SSL ayarları bölmesinde seçin **SSL iste** onay kutusunu tıklatıp **Uygula** bağlantısını **eylemleri** ekranın sağ tarafındaki bölümü.</span><span class="sxs-lookup"><span data-stu-id="0c22a-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
+3.  <span data-ttu-id="010fb-133">SSL ayarları bölmesinde seçin **SSL iste** onay kutusunu tıklatıp **Uygula** bağlantısını **eylemleri** ekranın sağ tarafındaki bölümü.</span><span class="sxs-lookup"><span data-stu-id="010fb-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     <span data-ttu-id="0c22a-134">![Sanal dizin SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="0c22a-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
+     <span data-ttu-id="010fb-134">![Sanal dizin SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="010fb-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="0c22a-135">HTTP aktarım güvenliği için WCF hizmetini yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0c22a-135">Configure WCF Service for HTTP Transport Security</span></span>  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="010fb-135">HTTP aktarım güvenliği için WCF hizmetini yapılandırma</span><span class="sxs-lookup"><span data-stu-id="010fb-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1.  <span data-ttu-id="0c22a-136">WCF'de hizmetin web.config aşağıdaki XML'de gösterildiği aktarım güvenliği kullanılacak HTTP bağlama yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="0c22a-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
+1.  <span data-ttu-id="010fb-136">WCF'de hizmetin web.config aşağıdaki XML'de gösterildiği aktarım güvenliği kullanılacak HTTP bağlama yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="010fb-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ ms.locfileid: "49086225"
     </bindings>  
     ```  
   
-2.  <span data-ttu-id="0c22a-137">Aşağıdaki XML dosyasında gösterildiği gibi hizmet ve hizmet uç noktası belirtin.</span><span class="sxs-lookup"><span data-stu-id="0c22a-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
+2.  <span data-ttu-id="010fb-137">Aşağıdaki XML dosyasında gösterildiği gibi hizmet ve hizmet uç noktası belirtin.</span><span class="sxs-lookup"><span data-stu-id="010fb-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
     ```xml  
     <services>  
@@ -93,8 +93,8 @@ ms.locfileid: "49086225"
     </services>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="0c22a-138">Örnek</span><span class="sxs-lookup"><span data-stu-id="0c22a-138">Example</span></span>  
- <span data-ttu-id="0c22a-139">HTTP aktarım güvenliği kullanarak bir WCF hizmeti için web.config dosyasının tam bir örnek verilmiştir</span><span class="sxs-lookup"><span data-stu-id="0c22a-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
+## <a name="example"></a><span data-ttu-id="010fb-138">Örnek</span><span class="sxs-lookup"><span data-stu-id="010fb-138">Example</span></span>  
+ <span data-ttu-id="010fb-139">HTTP aktarım güvenliği kullanarak bir WCF hizmeti için web.config dosyasının tam bir örnek verilmiştir</span><span class="sxs-lookup"><span data-stu-id="010fb-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -144,8 +144,8 @@ ms.locfileid: "49086225"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0c22a-140">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0c22a-140">See Also</span></span>  
-* [<span data-ttu-id="0c22a-141">Internet Information Services'te Barındırma</span><span class="sxs-lookup"><span data-stu-id="0c22a-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
-* [<span data-ttu-id="0c22a-142">Internet Information Service Barındırma Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="0c22a-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
-* [<span data-ttu-id="0c22a-143">Internet Information Services Barındırma En İyi Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="0c22a-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
-* [<span data-ttu-id="0c22a-144">Satır İçi Kod Kullanarak IIS Barındırma</span><span class="sxs-lookup"><span data-stu-id="0c22a-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a><span data-ttu-id="010fb-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="010fb-140">See also</span></span>
+- [<span data-ttu-id="010fb-141">Internet Information Services'te Barındırma</span><span class="sxs-lookup"><span data-stu-id="010fb-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [<span data-ttu-id="010fb-142">Internet Information Service Barındırma Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="010fb-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [<span data-ttu-id="010fb-143">Internet Information Services Barındırma En İyi Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="010fb-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [<span data-ttu-id="010fb-144">Satır İçi Kod Kullanarak IIS Barındırma</span><span class="sxs-lookup"><span data-stu-id="010fb-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

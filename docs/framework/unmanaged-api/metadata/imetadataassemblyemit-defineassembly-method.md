@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9115657c52f31d9b7b7da3c843338670343da26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747888"
 ---
-# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="13fa4-102">IMetaDataAssemblyEmit::DefineAssembly Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13fa4-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
-<span data-ttu-id="13fa4-103">Oluşturur bir `Assembly` için belirtilen derlemeyi meta veriler içeren yapısı ve ilişkili meta veri simgesi döndürür.</span><span class="sxs-lookup"><span data-stu-id="13fa4-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="a9863-102">IMetaDataAssemblyEmit::DefineAssembly Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a9863-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
+<span data-ttu-id="a9863-103">Oluşturur bir `Assembly` belirtilen derleme için meta veriler içeren yapı ve ilişkili meta veri belirteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="a9863-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13fa4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13fa4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9863-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a9863-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineAssembly (  
@@ -41,39 +41,39 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="13fa4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13fa4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a9863-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a9863-105">Parameters</span></span>  
  `pbPublicKey`  
- <span data-ttu-id="13fa4-106">[in] Derleme güçlü olarak adlandırılmamış, derleme ya da NULL yayımcıyı tanımlayan ortak anahtarı.</span><span class="sxs-lookup"><span data-stu-id="13fa4-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
+ <span data-ttu-id="a9863-106">[in] Derleme verilemiş, derleme veya NULL bir yayıncıyı ortak anahtarı.</span><span class="sxs-lookup"><span data-stu-id="a9863-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="13fa4-107">[in] Bayt cinsinden boyutu `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="13fa4-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="a9863-107">[in] Bayt cinsinden boyutu `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="a9863-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `uHashAlgId`  
- <span data-ttu-id="13fa4-108">[in] Derleme veya NULL SHA-1 algoritmasını belirtmek için dosyaları şifrelemek için kullanılacak karma algoritma tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="13fa4-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
+ <span data-ttu-id="a9863-108">[in] Derleme ya da NULL SHA-1 algoritmasını belirtmek için dosyaları şifrelemek için kullanılacak karma algoritması tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="a9863-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
   
  `szName`  
- <span data-ttu-id="13fa4-109">[in] Derleme okunabilir metni adı.</span><span class="sxs-lookup"><span data-stu-id="13fa4-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="13fa4-110">Bu değer 1024 karakterden uzun olamaz.</span><span class="sxs-lookup"><span data-stu-id="13fa4-110">This value must not exceed 1024 characters.</span></span>  
+ <span data-ttu-id="a9863-109">[in] Derleme kullanıcı tarafından okunabilen metin adı.</span><span class="sxs-lookup"><span data-stu-id="a9863-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="a9863-110">Bu değer, 1024 karakteri aşmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="a9863-110">This value must not exceed 1024 characters.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="13fa4-111">[in] Bir işaretçi ASSEMBLYMETADATA örneğine derleme için sürüm, platform ve yerel ayar bilgilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="13fa4-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="a9863-111">[in] Derleme sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA örneğine bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a9863-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="13fa4-112">[in] Bir birleşimini [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) derleme özelliklerini açıklayan değerleri.</span><span class="sxs-lookup"><span data-stu-id="13fa4-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
+ <span data-ttu-id="a9863-112">[in] Bir birleşimi [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerleri derleme özellikleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a9863-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
   
  `pmda`  
- <span data-ttu-id="13fa4-113">[out] Meta veri simgesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13fa4-113">[out] A pointer to the metadata token.</span></span>  
+ <span data-ttu-id="a9863-113">[out] Meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a9863-113">[out] A pointer to the metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="13fa4-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13fa4-114">Remarks</span></span>  
- <span data-ttu-id="13fa4-115">Yalnızca bir `Assembly` meta veri yapısı içinde bir bildirim tanımlanabilir.</span><span class="sxs-lookup"><span data-stu-id="13fa4-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9863-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a9863-114">Remarks</span></span>  
+ <span data-ttu-id="a9863-115">Yalnızca bir `Assembly` meta veri yapısı bir bildirimi içinde tanımlanabilir.</span><span class="sxs-lookup"><span data-stu-id="a9863-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13fa4-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13fa4-116">Requirements</span></span>  
- <span data-ttu-id="13fa4-117">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13fa4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9863-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a9863-116">Requirements</span></span>  
+ <span data-ttu-id="a9863-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9863-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13fa4-118">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="13fa4-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a9863-118">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="a9863-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="13fa4-119">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="13fa4-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a9863-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a9863-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="13fa4-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13fa4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9863-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9863-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13fa4-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="13fa4-121">See Also</span></span>  
- [<span data-ttu-id="13fa4-122">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13fa4-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a9863-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9863-121">See also</span></span>
+- [<span data-ttu-id="a9863-122">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a9863-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

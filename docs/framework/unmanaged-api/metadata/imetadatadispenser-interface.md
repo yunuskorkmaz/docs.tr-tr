@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b7c183a6ef61b97920fef5c80b4abad50da25bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32bf25140da66448bda1a8827aa40942d896d53f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734963"
 ---
-# <a name="imetadatadispenser-interface"></a><span data-ttu-id="0c775-102">IMetaDataDispenser Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0c775-102">IMetaDataDispenser Interface</span></span>
-<span data-ttu-id="0c775-103">Yeni bir meta veri kapsamı oluşturmak veya mevcut bir açmak için yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="0c775-103">Provides methods to create a new metadata scope, or open an existing one.</span></span>  
+# <a name="imetadatadispenser-interface"></a><span data-ttu-id="0fcc5-102">IMetaDataDispenser Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0fcc5-102">IMetaDataDispenser Interface</span></span>
+<span data-ttu-id="0fcc5-103">Yeni bir meta veri kapsamı oluşturduğunuzda veya mevcut bir için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-103">Provides methods to create a new metadata scope, or open an existing one.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0c775-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="0c775-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0fcc5-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="0fcc5-104">Methods</span></span>  
   
-|<span data-ttu-id="0c775-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="0c775-105">Method</span></span>|<span data-ttu-id="0c775-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0c775-106">Description</span></span>|  
+|<span data-ttu-id="0fcc5-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="0fcc5-105">Method</span></span>|<span data-ttu-id="0fcc5-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0fcc5-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0c775-107">DefineScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0c775-107">DefineScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|<span data-ttu-id="0c775-108">Yeni bir alan yeni meta oluşturabileceğiniz bellekte oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0c775-108">Creates a new area in memory where you can create new metadata.</span></span>|  
-|[<span data-ttu-id="0c775-109">OpenScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0c775-109">OpenScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|<span data-ttu-id="0c775-110">Var olan, disk üzerindeki bir dosyayı açar ve belleğe meta verilerini eşler.</span><span class="sxs-lookup"><span data-stu-id="0c775-110">Opens an existing, on-disk file and maps its metadata into memory.</span></span>|  
-|[<span data-ttu-id="0c775-111">OpenScopeOnMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0c775-111">OpenScopeOnMemory Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|<span data-ttu-id="0c775-112">Var olan meta veriler içeren bellek alanı açılır.</span><span class="sxs-lookup"><span data-stu-id="0c775-112">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="0c775-113">Diğer bir deyişle, bu yöntem belirtilen alan var olan verileri meta verileri kabul edilir bellek açar.</span><span class="sxs-lookup"><span data-stu-id="0c775-113">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>|  
+|[<span data-ttu-id="0fcc5-107">DefineScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0fcc5-107">DefineScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|<span data-ttu-id="0fcc5-108">Yeni meta veri oluşturabileceğiniz bellekte yeni bir alan oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-108">Creates a new area in memory where you can create new metadata.</span></span>|  
+|[<span data-ttu-id="0fcc5-109">OpenScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0fcc5-109">OpenScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|<span data-ttu-id="0fcc5-110">Var olan ve disk üzerindeki bir dosya açılır ve meta verileri belleğe eşler.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-110">Opens an existing, on-disk file and maps its metadata into memory.</span></span>|  
+|[<span data-ttu-id="0fcc5-111">OpenScopeOnMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0fcc5-111">OpenScopeOnMemory Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|<span data-ttu-id="0fcc5-112">Var olan meta veriler içeren belleği açılır.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-112">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="0fcc5-113">Diğer bir deyişle, bu yöntem, var olan verilere meta veri olarak kabul edilir bellek belirtilen bir alan açılır.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-113">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0c775-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0c775-114">Requirements</span></span>  
- <span data-ttu-id="0c775-115">**Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c775-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0fcc5-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0fcc5-114">Requirements</span></span>  
+ <span data-ttu-id="0fcc5-115">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0fcc5-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c775-116">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0c775-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0fcc5-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0fcc5-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0c775-117">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="0c775-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0fcc5-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="0fcc5-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0c775-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c775-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0fcc5-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0fcc5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c775-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0c775-119">See Also</span></span>  
- [<span data-ttu-id="0c775-120">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0c775-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [<span data-ttu-id="0c775-121">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="0c775-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0fcc5-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0fcc5-119">See also</span></span>
+- [<span data-ttu-id="0fcc5-120">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0fcc5-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="0fcc5-121">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="0fcc5-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

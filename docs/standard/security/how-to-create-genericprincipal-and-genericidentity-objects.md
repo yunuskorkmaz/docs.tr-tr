@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma'
+title: 'Nasıl yapılır: GenericPrincipal ve Genericıdentity nesneleri oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608069"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="560e0-102">Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="560e0-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
-<span data-ttu-id="560e0-103">Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı ile birlikte <xref:System.Security.Principal.GenericPrincipal> var olan bir Yetkilendirme düzeni bağımsız bir Windows etki alanı oluşturmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="560e0-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="8f0bf-102">Nasıl yapılır: GenericPrincipal ve Genericıdentity nesneleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="8f0bf-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
+<span data-ttu-id="8f0bf-103">Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı ile birlikte <xref:System.Security.Principal.GenericPrincipal> var olan bir Yetkilendirme düzeni bağımsız bir Windows etki alanı oluşturmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  
   
-### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="560e0-104">GenericPrincipal nesnesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="560e0-104">To create a GenericPrincipal object</span></span>  
+### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="8f0bf-104">GenericPrincipal nesnesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="8f0bf-104">To create a GenericPrincipal object</span></span>  
   
-1.  <span data-ttu-id="560e0-105">Kimlik sınıfının yeni bir örneğini oluşturun ve tutmak istediğiniz adı ile başlatın.</span><span class="sxs-lookup"><span data-stu-id="560e0-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="560e0-106">Aşağıdaki kod yeni bir oluşturur **Genericıdentity** adıyla başlatır ve nesne `MyUser`.</span><span class="sxs-lookup"><span data-stu-id="560e0-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>  
+1.  <span data-ttu-id="8f0bf-105">Kimlik sınıfının yeni bir örneğini oluşturun ve tutmak istediğiniz adı ile başlatın.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="8f0bf-106">Aşağıdaki kod yeni bir oluşturur **Genericıdentity** adıyla başlatır ve nesne `MyUser`.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -35,7 +35,7 @@ ms.locfileid: "48028774"
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  <span data-ttu-id="560e0-107">Yeni bir örneğini oluşturma **GenericPrincipal** sınıfı ve önceden oluşturulmuş başlatmak **Genericıdentity** nesne ve ilişkili istediğiniz rolleri temsil eden bir dize dizisi Bu asıl.</span><span class="sxs-lookup"><span data-stu-id="560e0-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="560e0-108">Aşağıdaki kod örneği, bir yönetici rolü ve bir kullanıcı rolünü temsil eden bir dize dizisi belirtir.</span><span class="sxs-lookup"><span data-stu-id="560e0-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="560e0-109">**GenericPrincipal** ardından önceki başlatılır **Genericıdentity** ve dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="560e0-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>  
+2.  <span data-ttu-id="8f0bf-107">Yeni bir örneğini oluşturma **GenericPrincipal** sınıfı ve önceden oluşturulmuş başlatmak **Genericıdentity** nesne ve ilişkili istediğiniz rolleri temsil eden bir dize dizisi Bu asıl.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="8f0bf-108">Aşağıdaki kod örneği, bir yönetici rolü ve bir kullanıcı rolünü temsil eden bir dize dizisi belirtir.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="8f0bf-109">**GenericPrincipal** ardından önceki başlatılır **Genericıdentity** ve dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -47,7 +47,7 @@ ms.locfileid: "48028774"
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  <span data-ttu-id="560e0-110">Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın.</span><span class="sxs-lookup"><span data-stu-id="560e0-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="560e0-111">Bu durumlarda, burada birkaç kez sorumlu doğrulanması gerekir, uygulamanızı çalıştıran başka bir kod tarafından doğrulanmalıdır veya tarafından doğrulanmalıdır değerli bir <xref:System.Security.Permissions.PrincipalPermission> nesne.</span><span class="sxs-lookup"><span data-stu-id="560e0-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="560e0-112">Rol tabanlı doğrulama hala asıl nesne üzerinde iş parçacığına eklemeden de gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="560e0-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="560e0-113">Daha fazla bilgi için [asıl nesneyi değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).</span><span class="sxs-lookup"><span data-stu-id="560e0-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>  
+3.  <span data-ttu-id="8f0bf-110">Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="8f0bf-111">Bu durumlarda, burada birkaç kez sorumlu doğrulanması gerekir, uygulamanızı çalıştıran başka bir kod tarafından doğrulanmalıdır veya tarafından doğrulanmalıdır değerli bir <xref:System.Security.Permissions.PrincipalPermission> nesne.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="8f0bf-112">Rol tabanlı doğrulama hala asıl nesne üzerinde iş parçacığına eklemeden de gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="8f0bf-113">Daha fazla bilgi için [asıl nesneyi değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).</span><span class="sxs-lookup"><span data-stu-id="8f0bf-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -57,8 +57,8 @@ ms.locfileid: "48028774"
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## <a name="example"></a><span data-ttu-id="560e0-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="560e0-114">Example</span></span>  
- <span data-ttu-id="560e0-115">Aşağıdaki kod örneği, bir örneğini oluşturmak gösterilmiştir bir **GenericPrincipal** ve **Genericıdentity**.</span><span class="sxs-lookup"><span data-stu-id="560e0-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="560e0-116">Bu kod, bu nesnelerin değerleri konsola görüntüler.</span><span class="sxs-lookup"><span data-stu-id="560e0-116">This code displays the values of these objects to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="8f0bf-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="8f0bf-114">Example</span></span>  
+ <span data-ttu-id="8f0bf-115">Aşağıdaki kod örneği, bir örneğini oluşturmak gösterilmiştir bir **GenericPrincipal** ve **Genericıdentity**.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="8f0bf-116">Bu kod, bu nesnelerin değerleri konsola görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-116">This code displays the values of these objects to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -132,7 +132,7 @@ public class Class1
 }  
 ```  
   
- <span data-ttu-id="560e0-117">Çalıştırıldığında, uygulama aşağıdakine benzer bir çıktı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="560e0-117">When executed, the application displays output similar to the following.</span></span>  
+ <span data-ttu-id="8f0bf-117">Çalıştırıldığında, uygulama aşağıdakine benzer bir çıktı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-117">When executed, the application displays output similar to the following.</span></span>  
   
 ```  
 The Name is: MyIdentity  
@@ -140,10 +140,10 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="560e0-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="560e0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f0bf-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8f0bf-118">See also</span></span>
 
-- <xref:System.Security.Principal.GenericIdentity>  
-- <xref:System.Security.Principal.GenericPrincipal>  
-- <xref:System.Security.Permissions.PrincipalPermission>  
-- [<span data-ttu-id="560e0-119">Sorumlu Nesnesini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="560e0-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [<span data-ttu-id="560e0-120">Sorumlu ve Kimlik Nesneleri</span><span class="sxs-lookup"><span data-stu-id="560e0-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)
+- <xref:System.Security.Principal.GenericIdentity>
+- <xref:System.Security.Principal.GenericPrincipal>
+- <xref:System.Security.Permissions.PrincipalPermission>
+- [<span data-ttu-id="8f0bf-119">Sorumlu Nesnesini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="8f0bf-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)
+- [<span data-ttu-id="8f0bf-120">Sorumlu ve Kimlik Nesneleri</span><span class="sxs-lookup"><span data-stu-id="8f0bf-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)

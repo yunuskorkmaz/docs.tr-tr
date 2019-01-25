@@ -7,57 +7,57 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492968"
 ---
-# <a name="handles-clause-visual-basic"></a><span data-ttu-id="8fc85-102">Handles Tümcesi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc85-102">Handles Clause (Visual Basic)</span></span>
-<span data-ttu-id="8fc85-103">Bir yordam belirtilen bir olay işleme bildirir.</span><span class="sxs-lookup"><span data-stu-id="8fc85-103">Declares that a procedure handles a specified event.</span></span>  
+# <a name="handles-clause-visual-basic"></a><span data-ttu-id="bc4c1-102">Handles Tümcesi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc4c1-102">Handles Clause (Visual Basic)</span></span>
+<span data-ttu-id="bc4c1-103">Bir yordamın belirtilmiş bir olayı işlediğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-103">Declares that a procedure handles a specified event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fc85-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8fc85-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc4c1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bc4c1-104">Syntax</span></span>  
   
 ```  
 proceduredeclaration Handles eventlist  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="8fc85-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="8fc85-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="bc4c1-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="bc4c1-105">Parts</span></span>  
  `proceduredeclaration`  
- <span data-ttu-id="8fc85-106">`Sub` Yordamı bildirimi olayı işleyecek bir yordam.</span><span class="sxs-lookup"><span data-stu-id="8fc85-106">The `Sub` procedure declaration for the procedure that will handle the event.</span></span>  
+ <span data-ttu-id="bc4c1-106">`Sub` Olayı işleyecek yordam için yordam bildirimi.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-106">The `Sub` procedure declaration for the procedure that will handle the event.</span></span>  
   
  `eventlist`  
- <span data-ttu-id="8fc85-107">Olayları listesi `proceduredeclaration` işlemek için virgülle ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="8fc85-107">List of the events for `proceduredeclaration` to handle, separated by commas.</span></span> <span data-ttu-id="8fc85-108">Olayları ya da taban sınıfı için geçerli sınıf veya kullanılarak bildirilen bir nesne tarafından oluşturulması `WithEvents` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="8fc85-108">The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.</span></span>  
+ <span data-ttu-id="bc4c1-107">Olayları listesi `proceduredeclaration` işlemek için virgülle ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-107">List of the events for `proceduredeclaration` to handle, separated by commas.</span></span> <span data-ttu-id="bc4c1-108">Olayları için geçerli sınıfın ya da temel sınıf veya kullanılarak bildirilen bir nesne oluşturulması `WithEvents` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-108">The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8fc85-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8fc85-109">Remarks</span></span>  
- <span data-ttu-id="8fc85-110">Kullanım `Handles` anahtar sözcüğü bir nesne değişkeni tarafından başlatılan olayları işlemek için neden bir yordam bildiriminin sonundaki kullanarak bildirilen `WithEvents` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="8fc85-110">Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span> <span data-ttu-id="8fc85-111">`Handles` Anahtar sözcüğü de türetilen bir sınıfta bir temel sınıf olayları işlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="8fc85-111">The `Handles` keyword can also be used in a derived class to handle events from a base class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc4c1-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bc4c1-109">Remarks</span></span>  
+ <span data-ttu-id="bc4c1-110">Kullanım `Handles` sonunda bir nesne değişkeni tarafından başlatılan olayları işlemek için neden bir yordam bildirimi, anahtar sözcüğü kullanılarak bildirilen `WithEvents` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-110">Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span> <span data-ttu-id="bc4c1-111">`Handles` Anahtar sözcüğü de türetilen bir sınıfta bir temel sınıf olayları işlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-111">The `Handles` keyword can also be used in a derived class to handle events from a base class.</span></span>  
   
- <span data-ttu-id="8fc85-112">`Handles` Anahtar sözcüğü ve `AddHandler` deyimi hem belirli yordamları belirli olayları işleme, ancak bazı farklılıklar vardır belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="8fc85-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="8fc85-113">Kullanım `Handles` , belirli bir olay işleme belirtmek için bir yordam tanımlarken anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="8fc85-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="8fc85-114">`AddHandler` Deyimi olaylarına yordamlar çalışma zamanında bağlanır.</span><span class="sxs-lookup"><span data-stu-id="8fc85-114">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="8fc85-115">Daha fazla bilgi için bkz: [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8fc85-115">For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span>  
+ <span data-ttu-id="bc4c1-112">`Handles` Anahtar sözcüğü ve `AddHandler` iki deyimi belirli bir yordam belirli olayları işleme, ancak bazı farklılıklar vardır belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="bc4c1-113">Kullanım `Handles` , belirli bir olay işleme belirtmek için bir yordam tanımlarken anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="bc4c1-114">`AddHandler` Deyimi olayları yordamları çalışma zamanında bağlanır.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-114">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="bc4c1-115">Daha fazla bilgi için [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="bc4c1-115">For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span>  
   
- <span data-ttu-id="8fc85-116">Özel olaylar için uygulama olay çağırır `AddHandler` olay işleyici yordamı eklediğinde erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="8fc85-116">For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler.</span></span> <span data-ttu-id="8fc85-117">Özel olaylar hakkında daha fazla bilgi için bkz: [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8fc85-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
+ <span data-ttu-id="bc4c1-116">Özel olaylar için uygulama olay çağırır `AddHandler` yordamı bir olay işleyicisi eklediğinde erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-116">For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler.</span></span> <span data-ttu-id="bc4c1-117">Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="bc4c1-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8fc85-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="8fc85-118">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bc4c1-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="bc4c1-118">Example</span></span>  
  [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
   
- <span data-ttu-id="8fc85-119">Aşağıdaki örnek, türetilmiş bir sınıf nasıl kullanabileceğinizi gösterir `Handles` temel sınıfından bir olayını işlemek için deyimi.</span><span class="sxs-lookup"><span data-stu-id="8fc85-119">The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.</span></span>  
+ <span data-ttu-id="bc4c1-119">Aşağıdaki örnek, türetilmiş bir sınıf nasıl kullanabileceğinizi gösterir. `Handles` deyimi bir temel sınıftan bir olayı işlemek için.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-119">The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.</span></span>  
   
  [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
-## <a name="example"></a><span data-ttu-id="8fc85-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="8fc85-120">Example</span></span>  
- <span data-ttu-id="8fc85-121">Aşağıdaki örnekte iki düğmesi olay işleyicilerini içeren bir **WPF uygulaması** projesi.</span><span class="sxs-lookup"><span data-stu-id="8fc85-121">The following example contains two button event handlers for a **WPF Application** project.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc4c1-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="bc4c1-120">Example</span></span>  
+ <span data-ttu-id="bc4c1-121">Aşağıdaki örnek iki düğme olay işleyicilerini içeren bir **WPF uygulaması** proje.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-121">The following example contains two button event handlers for a **WPF Application** project.</span></span>  
   
  [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
-## <a name="example"></a><span data-ttu-id="8fc85-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="8fc85-122">Example</span></span>  
- <span data-ttu-id="8fc85-123">Aşağıdaki örnek önceki örneğe eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="8fc85-123">The following example is equivalent to the previous example.</span></span> <span data-ttu-id="8fc85-124">`eventlist` İçinde `Handles` yan tümcesi hem düğmelerinin olaylarını içerir.</span><span class="sxs-lookup"><span data-stu-id="8fc85-124">The `eventlist` in the `Handles` clause contains the events for both buttons.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc4c1-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="bc4c1-122">Example</span></span>  
+ <span data-ttu-id="bc4c1-123">Aşağıdaki örnek önceki örneğe eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-123">The following example is equivalent to the previous example.</span></span> <span data-ttu-id="bc4c1-124">`eventlist` İçinde `Handles` yan tümcesi, iki düğme için olayları içerir.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-124">The `eventlist` in the `Handles` clause contains the events for both buttons.</span></span>  
   
  [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="8fc85-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8fc85-125">See Also</span></span>  
- [<span data-ttu-id="8fc85-126">WithEvents</span><span class="sxs-lookup"><span data-stu-id="8fc85-126">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [<span data-ttu-id="8fc85-127">AddHandler Deyimi</span><span class="sxs-lookup"><span data-stu-id="8fc85-127">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [<span data-ttu-id="8fc85-128">RemoveHandler Deyimi</span><span class="sxs-lookup"><span data-stu-id="8fc85-128">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [<span data-ttu-id="8fc85-129">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="8fc85-129">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
- [<span data-ttu-id="8fc85-130">RaiseEvent Deyimi</span><span class="sxs-lookup"><span data-stu-id="8fc85-130">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [<span data-ttu-id="8fc85-131">Olaylar</span><span class="sxs-lookup"><span data-stu-id="8fc85-131">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="bc4c1-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc4c1-125">See also</span></span>
+- [<span data-ttu-id="bc4c1-126">WithEvents</span><span class="sxs-lookup"><span data-stu-id="bc4c1-126">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [<span data-ttu-id="bc4c1-127">AddHandler Deyimi</span><span class="sxs-lookup"><span data-stu-id="bc4c1-127">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [<span data-ttu-id="bc4c1-128">RemoveHandler Deyimi</span><span class="sxs-lookup"><span data-stu-id="bc4c1-128">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [<span data-ttu-id="bc4c1-129">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="bc4c1-129">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="bc4c1-130">RaiseEvent Deyimi</span><span class="sxs-lookup"><span data-stu-id="bc4c1-130">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [<span data-ttu-id="bc4c1-131">Olaylar</span><span class="sxs-lookup"><span data-stu-id="bc4c1-131">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: febfe7df52a0c1f44cb156faf2da310d317e01a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576882"
 ---
-# <a name="icordebugcode3-interface"></a><span data-ttu-id="f1b55-102">ICorDebugCode3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f1b55-102">ICorDebugCode3 Interface</span></span>
-<span data-ttu-id="f1b55-103">Yönetilen bir dönüş değeri hakkında bilgi sağlamak için "ICorDebugCode" ve "ICorDebugCode2" genişleten bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="f1b55-103">Provides a method that extends "ICorDebugCode" and "ICorDebugCode2" to provide information about a managed return value.</span></span>  
+# <a name="icordebugcode3-interface"></a><span data-ttu-id="ce102-102">ICorDebugCode3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ce102-102">ICorDebugCode3 Interface</span></span>
+<span data-ttu-id="ce102-103">Yönetilen bir dönüş değeri hakkında bilgi sağlamak için "ICorDebugCode" ve "ICorDebugCode2" genişleten bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="ce102-103">Provides a method that extends "ICorDebugCode" and "ICorDebugCode2" to provide information about a managed return value.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f1b55-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="f1b55-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ce102-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="ce102-104">Methods</span></span>  
   
-|<span data-ttu-id="f1b55-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="f1b55-105">Method</span></span>|<span data-ttu-id="f1b55-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1b55-106">Description</span></span>|  
+|<span data-ttu-id="ce102-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ce102-105">Method</span></span>|<span data-ttu-id="ce102-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ce102-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f1b55-107">GetReturnValueLiveOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f1b55-107">GetReturnValueLiveOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|<span data-ttu-id="f1b55-108">Belirtilen bir IL uzaklığı, hata ayıklayıcı dönüş değeri bir işleve alabilmesi adına, bir kesme noktası nereye yerleştirileceğini yerel uzaklıkları alır.</span><span class="sxs-lookup"><span data-stu-id="f1b55-108">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>|  
+|[<span data-ttu-id="ce102-107">GetReturnValueLiveOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ce102-107">GetReturnValueLiveOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|<span data-ttu-id="ce102-108">Belirtilen IL uzaklığı için bir kesme noktası, hata ayıklayıcı bir işlevden dönüş değeri alabilmesi nereye yerleştirileceğini yerleşik uzaklıkları alır.</span><span class="sxs-lookup"><span data-stu-id="ce102-108">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1b55-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f1b55-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ce102-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ce102-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1b55-110">Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="f1b55-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="ce102-110">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="ce102-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1b55-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f1b55-111">Requirements</span></span>  
- <span data-ttu-id="f1b55-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1b55-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce102-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ce102-111">Requirements</span></span>  
+ <span data-ttu-id="ce102-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce102-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1b55-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1b55-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ce102-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ce102-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1b55-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1b55-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce102-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce102-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1b55-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1b55-115">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
+ <span data-ttu-id="ce102-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce102-115">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1b55-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1b55-116">See Also</span></span>  
-    
-    
-    
- [<span data-ttu-id="f1b55-117">ICorDebugILFrame3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f1b55-117">ICorDebugILFrame3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)  
- [<span data-ttu-id="f1b55-118">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f1b55-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ce102-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce102-116">See also</span></span>
+
+
+
+- [<span data-ttu-id="ce102-117">ICorDebugILFrame3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ce102-117">ICorDebugILFrame3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [<span data-ttu-id="ce102-118">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ce102-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

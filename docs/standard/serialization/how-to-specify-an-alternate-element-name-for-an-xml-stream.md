@@ -12,36 +12,36 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 08c686349acc5777343e8e6f2e6084be44a20fe1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517402"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="82504-102">Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin</span><span class="sxs-lookup"><span data-stu-id="82504-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="1969c-102">Nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin</span><span class="sxs-lookup"><span data-stu-id="1969c-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
   
-<span data-ttu-id="82504-103">Kullanarak [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), aynı sınıfları kümesi ile birden fazla XML akışı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="82504-103">Using the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="82504-104">İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="82504-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="82504-105">Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir.</span><span class="sxs-lookup"><span data-stu-id="82504-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="82504-106">Bir hizmet etiketi kullanır \<ISBN > Etiket ikinci kullanırken \<Bookıd >.</span><span class="sxs-lookup"><span data-stu-id="82504-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="82504-107">Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`.</span><span class="sxs-lookup"><span data-stu-id="82504-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="82504-108">Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız.</span><span class="sxs-lookup"><span data-stu-id="82504-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="82504-109">İlk XML Web hizmeti için beklendiği gibi budur.</span><span class="sxs-lookup"><span data-stu-id="82504-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="82504-110">Ancak etiketin öğe adı böylece XML akışı ikinci XML Web hizmetine göndermek için serileştirme geçersiz kılmanız gerekir `BookID`.</span><span class="sxs-lookup"><span data-stu-id="82504-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
+<span data-ttu-id="1969c-103">Kullanarak [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), aynı sınıfları kümesi ile birden fazla XML akışı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1969c-103">Using the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="1969c-104">İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1969c-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="1969c-105">Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir.</span><span class="sxs-lookup"><span data-stu-id="1969c-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="1969c-106">Bir hizmet etiketi kullanır \<ISBN > Etiket ikinci kullanırken \<Bookıd >.</span><span class="sxs-lookup"><span data-stu-id="1969c-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="1969c-107">Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`.</span><span class="sxs-lookup"><span data-stu-id="1969c-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="1969c-108">Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız.</span><span class="sxs-lookup"><span data-stu-id="1969c-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="1969c-109">İlk XML Web hizmeti için beklendiği gibi budur.</span><span class="sxs-lookup"><span data-stu-id="1969c-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="1969c-110">Ancak etiketin öğe adı böylece XML akışı ikinci XML Web hizmetine göndermek için serileştirme geçersiz kılmanız gerekir `BookID`.</span><span class="sxs-lookup"><span data-stu-id="1969c-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
   
-## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="82504-111">Bir alternatif öğe adı bir XML akışı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="82504-111">To create an XML stream with an alternate element name</span></span>  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="1969c-111">Bir alternatif öğe adı bir XML akışı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="1969c-111">To create an XML stream with an alternate element name</span></span>  
   
-1.  <span data-ttu-id="82504-112">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlElementAttribute> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="82504-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
+1.  <span data-ttu-id="1969c-112">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlElementAttribute> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="1969c-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
   
-2.  <span data-ttu-id="82504-113">Ayarlama <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> , <xref:System.Xml.Serialization.XmlElementAttribute> "BookID" için.</span><span class="sxs-lookup"><span data-stu-id="82504-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
+2.  <span data-ttu-id="1969c-113">Ayarlama <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> , <xref:System.Xml.Serialization.XmlElementAttribute> "BookID" için.</span><span class="sxs-lookup"><span data-stu-id="1969c-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
   
-3.  <span data-ttu-id="82504-114">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlAttributes> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="82504-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
+3.  <span data-ttu-id="1969c-114">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlAttributes> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="1969c-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
   
-4.  <span data-ttu-id="82504-115">Ekle `XmlElementAttribute` nesnesini aracılığıyla erişilebilen koleksiyonuna <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> özelliği <xref:System.Xml.Serialization.XmlAttributes> .</span><span class="sxs-lookup"><span data-stu-id="82504-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
+4.  <span data-ttu-id="1969c-115">Ekle `XmlElementAttribute` nesnesini aracılığıyla erişilebilen koleksiyonuna <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> özelliği <xref:System.Xml.Serialization.XmlAttributes> .</span><span class="sxs-lookup"><span data-stu-id="1969c-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
   
-5.  <span data-ttu-id="82504-116">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlAttributeOverrides> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="82504-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
+5.  <span data-ttu-id="1969c-116">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlAttributeOverrides> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="1969c-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
   
-6.  <span data-ttu-id="82504-117">Ekle `XmlAttributes` için <xref:System.Xml.Serialization.XmlAttributeOverrides>, geçersiz kılmak için nesne türü ve kılınmasını üyenin adını geçirerek.</span><span class="sxs-lookup"><span data-stu-id="82504-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
+6.  <span data-ttu-id="1969c-117">Ekle `XmlAttributes` için <xref:System.Xml.Serialization.XmlAttributeOverrides>, geçersiz kılmak için nesne türü ve kılınmasını üyenin adını geçirerek.</span><span class="sxs-lookup"><span data-stu-id="1969c-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
   
-7.  <span data-ttu-id="82504-118">Öğesinin bir örneğini oluşturur `XmlSerializer` ile `XmlAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="82504-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
+7.  <span data-ttu-id="1969c-118">Öğesinin bir örneğini oluşturur `XmlSerializer` ile `XmlAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="1969c-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
   
-8.  <span data-ttu-id="82504-119">Öğesinin bir örneğini oluşturur `Book` sınıfının ve serileştirmek veya bu seri.</span><span class="sxs-lookup"><span data-stu-id="82504-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
+8.  <span data-ttu-id="1969c-119">Öğesinin bir örneğini oluşturur `Book` sınıfının ve serileştirmek veya bu seri.</span><span class="sxs-lookup"><span data-stu-id="1969c-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="82504-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="82504-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1969c-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="1969c-120">Example</span></span>  
   
 ```vb  
 Public Class SerializeOverride()  
@@ -83,7 +83,7 @@ public class SerializeOverride()
 }  
 ```  
   
- <span data-ttu-id="82504-121">XML akışı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="82504-121">The XML stream might resemble the following.</span></span>  
+ <span data-ttu-id="1969c-121">XML akışı aşağıdakine benzer.</span><span class="sxs-lookup"><span data-stu-id="1969c-121">The XML stream might resemble the following.</span></span>  
   
 ```xml  
 <Book>  
@@ -91,13 +91,13 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="82504-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="82504-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1969c-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1969c-122">See also</span></span>
 
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [<span data-ttu-id="82504-123">XML ve SOAP Serileştirme</span><span class="sxs-lookup"><span data-stu-id="82504-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [<span data-ttu-id="82504-124">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="82504-124">XmlSerializer</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [<span data-ttu-id="82504-125">Nasıl yapılır: Bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="82504-125">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [<span data-ttu-id="82504-126">Nasıl yapılır: Bir nesneyi seri durumdan çıkarma</span><span class="sxs-lookup"><span data-stu-id="82504-126">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [<span data-ttu-id="82504-127">Nasıl yapılır: Bir nesneyi seri durumdan çıkarma</span><span class="sxs-lookup"><span data-stu-id="82504-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [<span data-ttu-id="1969c-123">XML ve SOAP Serileştirme</span><span class="sxs-lookup"><span data-stu-id="1969c-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="1969c-124">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="1969c-124">XmlSerializer</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [<span data-ttu-id="1969c-125">Nasıl yapılır: Bir nesneyi serileştirmek</span><span class="sxs-lookup"><span data-stu-id="1969c-125">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="1969c-126">Nasıl yapılır: Bir nesneyi seri durumdan çıkarma</span><span class="sxs-lookup"><span data-stu-id="1969c-126">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="1969c-127">Nasıl yapılır: Bir nesneyi seri durumdan çıkarma</span><span class="sxs-lookup"><span data-stu-id="1969c-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

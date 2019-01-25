@@ -1,13 +1,6 @@
 ---
-title: 'Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)'
-ms.custom: ''
+title: 'Nasıl yapılır: İşleçler (Visual Basic) tanımlayan bir sınıf kullanma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
 - procedures [Visual Basic], operator
@@ -18,44 +11,42 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640695"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="65582-102">Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65582-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
-<span data-ttu-id="65582-103">Bir sınıf veya kendi işleçleri tanımlayan yapı kullanıyorsanız, bu işleçler Visual Basic'ten erişebilir.</span><span class="sxs-lookup"><span data-stu-id="65582-103">If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.</span></span>  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="624fc-102">Nasıl yapılır: İşleçler (Visual Basic) tanımlayan bir sınıf kullanma</span><span class="sxs-lookup"><span data-stu-id="624fc-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
+<span data-ttu-id="624fc-103">Bir sınıf veya kendi işleçleri tanımlayan bir yapı kullanıyorsanız, bu işleçler Visual Basic'ten erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="624fc-103">If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.</span></span>  
   
- <span data-ttu-id="65582-104">Bir sınıf veya yapı bir işleci tanımlama olarak da adlandırılır *aşırı* işleci.</span><span class="sxs-lookup"><span data-stu-id="65582-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
+ <span data-ttu-id="624fc-104">Bir sınıf ya da yapı üzerinde operatör tanımlama olarak da adlandırılır *aşırı yükleme* işleci.</span><span class="sxs-lookup"><span data-stu-id="624fc-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="65582-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="65582-105">Example</span></span>  
- <span data-ttu-id="65582-106">Aşağıdaki örnek SQL yapısı erişen <xref:System.Data.SqlTypes.SqlString>, dönüşüm işleçleri tanımlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) bir SQL dizesi ve Visual Basic dize arasında iki yönlü.</span><span class="sxs-lookup"><span data-stu-id="65582-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string.</span></span> <span data-ttu-id="65582-107">Kullanım `CType(` *SQL dizesi ifadesini*, `String)` SQL dizesi bir Visual Basic dizeye dönüştürmek için ve `CType(` *Visual Basic dize ifadesi*, <xref:System.Data.SqlTypes.SqlString> `)` ters yönde dönüştürülemiyor.</span><span class="sxs-lookup"><span data-stu-id="65582-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
+## <a name="example"></a><span data-ttu-id="624fc-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="624fc-105">Example</span></span>  
+ <span data-ttu-id="624fc-106">Aşağıdaki örnek SQL yapısı erişen <xref:System.Data.SqlTypes.SqlString>, dönüştürme işleçlerini tanımlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) SQL dizesi ve bir Visual Basic dize arasında iki yönlü.</span><span class="sxs-lookup"><span data-stu-id="624fc-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string.</span></span> <span data-ttu-id="624fc-107">Kullanım `CType(` *SQL dize ifadesi*, `String)` SQL dizesi bir Visual Basic dizeye dönüştürmek için ve `CType(` *Visual Basic dize ifadesinin*, <xref:System.Data.SqlTypes.SqlString> `)` diğer yönde dönüştürülecek.</span><span class="sxs-lookup"><span data-stu-id="624fc-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- <span data-ttu-id="65582-108"><xref:System.Data.SqlTypes.SqlString> Yapısını tanımlayan bir dönüşüm işleci ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) gelen `String` için <xref:System.Data.SqlTypes.SqlString> ve başka bir <xref:System.Data.SqlTypes.SqlString> için `String`.</span><span class="sxs-lookup"><span data-stu-id="65582-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="65582-109">Atayan deyimi `title` için `jobTitle` ilk işleci kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlev çağrısı kullanır ikinci.</span><span class="sxs-lookup"><span data-stu-id="65582-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
+ <span data-ttu-id="624fc-108"><xref:System.Data.SqlTypes.SqlString> Yapısını tanımlayan bir dönüştürme operatörünün ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) öğesinden `String` için <xref:System.Data.SqlTypes.SqlString> ve başka bir uygulamadan <xref:System.Data.SqlTypes.SqlString> için `String`.</span><span class="sxs-lookup"><span data-stu-id="624fc-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="624fc-109">Atayan deyimi `title` için `jobTitle` ilk işlecini kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> ikinci işlev çağrısı kullanır.</span><span class="sxs-lookup"><span data-stu-id="624fc-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="65582-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="65582-110">Compiling the Code</span></span>  
- <span data-ttu-id="65582-111">Sınıf veya yapı kullanmakta olduğunuz kullanmak istediğiniz işleci tanımlar emin olun.</span><span class="sxs-lookup"><span data-stu-id="65582-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="65582-112">Sınıf veya yapı her işleci aşırı yükleme için kullanılabilir tanımlanmış varsayalım değil.</span><span class="sxs-lookup"><span data-stu-id="65582-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="65582-113">Kullanılabilir operatörler listesi için bkz: [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md).</span><span class="sxs-lookup"><span data-stu-id="65582-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="624fc-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="624fc-110">Compiling the Code</span></span>  
+ <span data-ttu-id="624fc-111">Kullanmak istediğiniz işleci tanımlar, sınıfın veya yapının kullanmakta olduğunuz emin olun.</span><span class="sxs-lookup"><span data-stu-id="624fc-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="624fc-112">Sınıfın veya yapının her işleci aşırı yükleme için kullanılabilir tanımladığı varsaymayın.</span><span class="sxs-lookup"><span data-stu-id="624fc-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="624fc-113">Kullanılabilir işleçlerin bir listesi için bkz. [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md).</span><span class="sxs-lookup"><span data-stu-id="624fc-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
- <span data-ttu-id="65582-114">Uygun dahil `Imports` başında SQL dizesi bildirimi kaynak dosyasının (Bu durumda <xref:System.Data.SqlTypes>).</span><span class="sxs-lookup"><span data-stu-id="65582-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
+ <span data-ttu-id="624fc-114">Uygun dahil `Imports` kaynak dosyasının başında SQL dizesi deyimi (Bu durumda <xref:System.Data.SqlTypes>).</span><span class="sxs-lookup"><span data-stu-id="624fc-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
   
- <span data-ttu-id="65582-115">Projenizi System.Data ve System.XML başvuruları olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="65582-115">Your project must have references to System.Data and System.XML.</span></span>  
+ <span data-ttu-id="624fc-115">Proje başvuruları System.Data ve System.XML olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="624fc-115">Your project must have references to System.Data and System.XML.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65582-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="65582-116">See Also</span></span>  
- [<span data-ttu-id="65582-117">İşleç Yordamları</span><span class="sxs-lookup"><span data-stu-id="65582-117">Operator Procedures</span></span>](./operator-procedures.md)  
- [<span data-ttu-id="65582-118">Nasıl yapılır: İşleç Tanımlama</span><span class="sxs-lookup"><span data-stu-id="65582-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
- [<span data-ttu-id="65582-119">Nasıl yapılır: Dönüştürme İşleci Tanımlama</span><span class="sxs-lookup"><span data-stu-id="65582-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
- [<span data-ttu-id="65582-120">Nasıl yapılır: Bir İşleç Yordamı Çağırma</span><span class="sxs-lookup"><span data-stu-id="65582-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
- [<span data-ttu-id="65582-121">Widening</span><span class="sxs-lookup"><span data-stu-id="65582-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [<span data-ttu-id="65582-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="65582-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [<span data-ttu-id="65582-123">Structure Deyimi</span><span class="sxs-lookup"><span data-stu-id="65582-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [<span data-ttu-id="65582-124">Nasıl yapılır: Bir Yapıyı Bildirme</span><span class="sxs-lookup"><span data-stu-id="65582-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [<span data-ttu-id="65582-125">Örtük ve Açık Dönüştürmeler</span><span class="sxs-lookup"><span data-stu-id="65582-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [<span data-ttu-id="65582-126">Genişletme ve Daraltma Dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="65582-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="624fc-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="624fc-116">See also</span></span>
+- [<span data-ttu-id="624fc-117">İşleç Yordamları</span><span class="sxs-lookup"><span data-stu-id="624fc-117">Operator Procedures</span></span>](./operator-procedures.md)
+- [<span data-ttu-id="624fc-118">Nasıl yapılır: Bir işleci tanımlama</span><span class="sxs-lookup"><span data-stu-id="624fc-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
+- [<span data-ttu-id="624fc-119">Nasıl yapılır: Bir dönüşüm işleci tanımlama</span><span class="sxs-lookup"><span data-stu-id="624fc-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)
+- [<span data-ttu-id="624fc-120">Nasıl yapılır: Bir işleç yordamı çağırma</span><span class="sxs-lookup"><span data-stu-id="624fc-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="624fc-121">Widening</span><span class="sxs-lookup"><span data-stu-id="624fc-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [<span data-ttu-id="624fc-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="624fc-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [<span data-ttu-id="624fc-123">Structure Deyimi</span><span class="sxs-lookup"><span data-stu-id="624fc-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="624fc-124">Nasıl yapılır: Yapıyı Bildirme</span><span class="sxs-lookup"><span data-stu-id="624fc-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="624fc-125">Örtük ve Açık Dönüştürmeler</span><span class="sxs-lookup"><span data-stu-id="624fc-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [<span data-ttu-id="624fc-126">Genişletme ve Daraltma Dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="624fc-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

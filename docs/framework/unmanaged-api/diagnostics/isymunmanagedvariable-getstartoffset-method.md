@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b25d072ab96b822e79c6f87f535096550e4bb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543217"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="e962f-102">ISymUnmanagedVariable::GetStartOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="e962f-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
-<span data-ttu-id="e962f-103">Bu değişken, üst içinde başlangıç uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="e962f-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="e962f-104">Bu kapsam içinde yerel bir değişken ise, başlangıç uzaklığı kapsam için tanımlanan uzaklıkları içinde döner.</span><span class="sxs-lookup"><span data-stu-id="e962f-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="2b493-102">ISymUnmanagedVariable::GetStartOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="2b493-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
+<span data-ttu-id="2b493-103">Bu değişkenin içinde üst başlangıç uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="2b493-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="2b493-104">Bu kapsam içinde yerel bir değişken ise, başlangıç uzaklığı kapsam için tanımlanan uzaklık içinde kalacak.</span><span class="sxs-lookup"><span data-stu-id="2b493-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e962f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e962f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b493-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2b493-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e962f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e962f-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2b493-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2b493-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="e962f-107">[out] Bir işaretçi bir `ULONG32` başlangıç uzaklığı alır.</span><span class="sxs-lookup"><span data-stu-id="e962f-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
+ <span data-ttu-id="2b493-107">[out] Bir işaretçi bir `ULONG32` , başlangıç uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="2b493-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e962f-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e962f-108">Return Value</span></span>  
- <span data-ttu-id="e962f-109">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="e962f-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2b493-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2b493-108">Return Value</span></span>  
+ <span data-ttu-id="2b493-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="2b493-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e962f-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e962f-110">Requirements</span></span>  
- <span data-ttu-id="e962f-111">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e962f-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b493-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2b493-110">Requirements</span></span>  
+ <span data-ttu-id="2b493-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2b493-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e962f-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e962f-112">See Also</span></span>  
- [<span data-ttu-id="e962f-113">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e962f-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [<span data-ttu-id="e962f-114">GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e962f-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+## <a name="see-also"></a><span data-ttu-id="2b493-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2b493-112">See also</span></span>
+- [<span data-ttu-id="2b493-113">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2b493-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="2b493-114">GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2b493-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06a4d5b1b108c15fa7ee4a7f5270b73f7adc1e6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be91591bfbbe4531c5518b90e560bc05457c92da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730171"
 ---
-# <a name="isymunmanagedbinder3-interface"></a><span data-ttu-id="03bbe-102">ISymUnmanagedBinder3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03bbe-102">ISymUnmanagedBinder3 Interface</span></span>
-<span data-ttu-id="03bbe-103">Sembol bağlayıcı arabirimi genişletir.</span><span class="sxs-lookup"><span data-stu-id="03bbe-103">Extends the symbol binder interface.</span></span> <span data-ttu-id="03bbe-104">Bu arabirim çağırarak elde `QueryInterface` uygulayan bir nesne üzerinde `ISymUnmanagedBinder` arabirimi.</span><span class="sxs-lookup"><span data-stu-id="03bbe-104">Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.</span></span>  
+# <a name="isymunmanagedbinder3-interface"></a><span data-ttu-id="da9fb-102">ISymUnmanagedBinder3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="da9fb-102">ISymUnmanagedBinder3 Interface</span></span>
+<span data-ttu-id="da9fb-103">Sembol bağlayıcı arabirimini genişletir.</span><span class="sxs-lookup"><span data-stu-id="da9fb-103">Extends the symbol binder interface.</span></span> <span data-ttu-id="da9fb-104">Bu arabirim çağırarak elde `QueryInterface` uygulayan bir nesne üzerinde `ISymUnmanagedBinder` arabirimi.</span><span class="sxs-lookup"><span data-stu-id="da9fb-104">Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="03bbe-105">Güvenilmeyen bir kaynaktan bir program veritabanı (PDB) dosyasını açmak için bir güvenlik riski oluşturur.</span><span class="sxs-lookup"><span data-stu-id="03bbe-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="da9fb-105">Bu, güvenilmeyen bir kaynaktan bir program veritabanı (PDB) dosyası açmak için bir güvenlik riski oluşturur.</span><span class="sxs-lookup"><span data-stu-id="da9fb-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="03bbe-106">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="03bbe-106">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="da9fb-106">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="da9fb-106">Methods</span></span>  
   
-|<span data-ttu-id="03bbe-107">Yöntem</span><span class="sxs-lookup"><span data-stu-id="03bbe-107">Method</span></span>|<span data-ttu-id="03bbe-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="03bbe-108">Description</span></span>|  
+|<span data-ttu-id="da9fb-107">Yöntem</span><span class="sxs-lookup"><span data-stu-id="da9fb-107">Method</span></span>|<span data-ttu-id="da9fb-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="da9fb-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="03bbe-109">GetReaderFromCallback Yöntemi</span><span class="sxs-lookup"><span data-stu-id="03bbe-109">GetReaderFromCallback Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|<span data-ttu-id="03bbe-110">Uygulama veya geri çağırma ya da sağlayın olanak tanır. bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizin bilgilerini almak için</span><span class="sxs-lookup"><span data-stu-id="03bbe-110">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory</span></span>|  
+|[<span data-ttu-id="da9fb-109">GetReaderFromCallback Yöntemi</span><span class="sxs-lookup"><span data-stu-id="da9fb-109">GetReaderFromCallback Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|<span data-ttu-id="da9fb-110">Uygulama veya geri çağırma ya da kaynağı izin verir bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizin bilgileri almak için</span><span class="sxs-lookup"><span data-stu-id="da9fb-110">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="03bbe-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03bbe-111">Requirements</span></span>  
- <span data-ttu-id="03bbe-112">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="03bbe-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da9fb-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="da9fb-111">Requirements</span></span>  
+ <span data-ttu-id="da9fb-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="da9fb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03bbe-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="03bbe-113">See Also</span></span>  
- [<span data-ttu-id="03bbe-114">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="03bbe-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="03bbe-115">ISymUnmanagedBinder Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03bbe-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- [<span data-ttu-id="03bbe-116">ISymUnmanagedBinder2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03bbe-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="da9fb-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="da9fb-113">See also</span></span>
+- [<span data-ttu-id="da9fb-114">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="da9fb-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="da9fb-115">ISymUnmanagedBinder Arabirimi</span><span class="sxs-lookup"><span data-stu-id="da9fb-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="da9fb-116">ISymUnmanagedBinder2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="da9fb-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
