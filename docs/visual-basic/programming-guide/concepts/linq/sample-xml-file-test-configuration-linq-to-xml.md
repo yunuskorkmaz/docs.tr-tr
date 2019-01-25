@@ -2,17 +2,17 @@
 title: 'Örnek XML dosyası: Test yapılandırması (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: 938916d568558738a703206d98fe42faca072f02
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a0046b11ea9717ee1b105d8cfbe8953948d3c857
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658695"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="b858b-102">Örnek XML dosyası: Test yapılandırması (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b858b-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="b858b-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="b858b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b858b-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="b858b-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="bf8f6-102">Örnek XML dosyası: Test yapılandırması (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bf8f6-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="bf8f6-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="bf8f6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bf8f6-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="bf8f6-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="b858b-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="b858b-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="bf8f6-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="bf8f6-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,5 +56,5 @@ ms.locfileid: "42751902"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b858b-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b858b-106">See Also</span></span>  
- [<span data-ttu-id="b858b-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b858b-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bf8f6-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf8f6-106">See also</span></span>
+- [<span data-ttu-id="bf8f6-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bf8f6-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

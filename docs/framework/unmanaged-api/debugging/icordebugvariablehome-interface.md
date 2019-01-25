@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome arabirimi
+title: Icordebugvariablehome arabirimi
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,30 +18,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae11cdbbdb0fa63d1b903d18aff133344fd17f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722024"
 ---
-# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="4402e-102">ICorDebugVariableHome arabirimi</span><span class="sxs-lookup"><span data-stu-id="4402e-102">ICorDebugVariableHome Interface</span></span>
-<span data-ttu-id="4402e-103">Yerel bir değişken veya işlev bağımsız değişkeni temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4402e-103">Represents a local variable or argument of a function.</span></span>  
+# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="909af-102">Icordebugvariablehome arabirimi</span><span class="sxs-lookup"><span data-stu-id="909af-102">ICorDebugVariableHome Interface</span></span>
+<span data-ttu-id="909af-103">Bir yerel değişken veya işlev bağımsız değişkeni temsil eder.</span><span class="sxs-lookup"><span data-stu-id="909af-103">Represents a local variable or argument of a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4402e-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="4402e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="909af-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="909af-104">Methods</span></span>  
   
-|<span data-ttu-id="4402e-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="4402e-105">Method</span></span>|<span data-ttu-id="4402e-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4402e-106">Description</span></span>|  
+|<span data-ttu-id="909af-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="909af-105">Method</span></span>|<span data-ttu-id="909af-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="909af-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4402e-107">GetArgumentIndex Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="4402e-108">Bir işlev bağımsız değişkeni dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="4402e-108">Gets the index of a function argument.</span></span>|  
-|[<span data-ttu-id="4402e-109">GetCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="4402e-110">Bu içeren "ICorDebugCode" örneği alır `ICorDebugVariableHome` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="4402e-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
-|[<span data-ttu-id="4402e-111">GetLiveRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="4402e-112">Bu değişken Canlı yerel aralığı alır.</span><span class="sxs-lookup"><span data-stu-id="4402e-112">Gets the native range over which this variable is live.</span></span>|  
-|[<span data-ttu-id="4402e-113">GetLocationType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="4402e-114">Değişkenin yerel konum türünü alır.</span><span class="sxs-lookup"><span data-stu-id="4402e-114">Gets the type of the variable's native location.</span></span>|  
-|[<span data-ttu-id="4402e-115">GetOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="4402e-116">Uzaklık bir değişken için temel kasadan alır.</span><span class="sxs-lookup"><span data-stu-id="4402e-116">Gets the offset from the base register for a variable.</span></span>|  
-|[<span data-ttu-id="4402e-117">GetRegister Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="4402e-118">Konum türüne sahip bir değişken içeriyor kayıt alır `VLT_REGISTER`ve temel kaydetme konumu türüne sahip bir değişken için `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="4402e-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
-|[<span data-ttu-id="4402e-119">GetSlotIndex Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4402e-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="4402e-120">Yönetilen yuvası dizin yerel değişken alır.</span><span class="sxs-lookup"><span data-stu-id="4402e-120">Gets the managed slot-index of a local variable.</span></span>|  
+|[<span data-ttu-id="909af-107">GetArgumentIndex Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="909af-108">İşlev bağımsız değişkeni dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="909af-108">Gets the index of a function argument.</span></span>|  
+|[<span data-ttu-id="909af-109">GetCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="909af-110">Bu içeren "ICorDebugCode" örneğini alır `ICorDebugVariableHome` nesne.</span><span class="sxs-lookup"><span data-stu-id="909af-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
+|[<span data-ttu-id="909af-111">GetLiveRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="909af-112">Bu değişken Canlı yerel aralığı alır.</span><span class="sxs-lookup"><span data-stu-id="909af-112">Gets the native range over which this variable is live.</span></span>|  
+|[<span data-ttu-id="909af-113">GetLocationType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="909af-114">Yerel değişkenin konumun türünü alır.</span><span class="sxs-lookup"><span data-stu-id="909af-114">Gets the type of the variable's native location.</span></span>|  
+|[<span data-ttu-id="909af-115">GetOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="909af-116">Uzaklık, bir değişken için temel kasadan alır.</span><span class="sxs-lookup"><span data-stu-id="909af-116">Gets the offset from the base register for a variable.</span></span>|  
+|[<span data-ttu-id="909af-117">GetRegister Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="909af-118">Konum türünde bir değişken içeren bir kayıt alır `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="909af-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
+|[<span data-ttu-id="909af-119">GetSlotIndex Yöntemi</span><span class="sxs-lookup"><span data-stu-id="909af-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="909af-120">Yerel değişken yönetilen yuvası dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="909af-120">Gets the managed slot-index of a local variable.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4402e-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="4402e-121">Example</span></span>  
- <span data-ttu-id="4402e-122">Aşağıdaki kod parçası kullanan [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) adlı nesne `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="4402e-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
+## <a name="example"></a><span data-ttu-id="909af-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="909af-121">Example</span></span>  
+ <span data-ttu-id="909af-122">Aşağıdaki kod parçası kullanan [Icordebugcode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) adlı nesne `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="909af-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -82,15 +82,15 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4402e-123">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4402e-123">Requirements</span></span>  
- <span data-ttu-id="4402e-124">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4402e-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="909af-123">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="909af-123">Requirements</span></span>  
+ <span data-ttu-id="909af-124">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="909af-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4402e-125">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4402e-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="909af-125">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="909af-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4402e-126">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4402e-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="909af-126">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="909af-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4402e-127">**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4402e-127">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="909af-127">**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="909af-127">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4402e-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4402e-128">See Also</span></span>  
- [<span data-ttu-id="4402e-129">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="4402e-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="4402e-130">ICorDebugVariableHomeEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4402e-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="909af-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="909af-128">See also</span></span>
+- [<span data-ttu-id="909af-129">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="909af-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="909af-130">ICorDebugVariableHomeEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="909af-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

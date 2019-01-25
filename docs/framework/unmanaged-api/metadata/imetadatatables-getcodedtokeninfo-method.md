@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7a36d14b67efb3934089dc16de41a3b80ea0c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669698"
 ---
-# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="0b441-102">IMetaDataTables::GetCodedTokenInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="0b441-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
-<span data-ttu-id="0b441-103">Belirtilen satır dizini ile ilişkili belirteçleri dizisi için bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="0b441-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
+# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="0a66d-102">IMetaDataTables::GetCodedTokenInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="0a66d-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
+<span data-ttu-id="0a66d-103">Belirteçlerin belirtilen satır dizini ile ilişkili bir diziye bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="0a66d-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b441-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b441-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a66d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0a66d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodedTokenInfo (   
@@ -38,28 +38,28 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0b441-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b441-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0a66d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0a66d-105">Parameters</span></span>  
  `ixCdTkn`  
- <span data-ttu-id="0b441-106">[in] Döndürülecek kodlanmış belirteci türü.</span><span class="sxs-lookup"><span data-stu-id="0b441-106">[in] The kind of coded token to return.</span></span>  
+ <span data-ttu-id="0a66d-106">[in] Döndürülecek kodlanmış Belirtecin türü.</span><span class="sxs-lookup"><span data-stu-id="0a66d-106">[in] The kind of coded token to return.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="0b441-107">[out] Bir işaretçi uzunluğu `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="0b441-107">[out] A pointer to the length of `ppTokens`.</span></span>  
+ <span data-ttu-id="0a66d-107">[out] Bir işaretçisi uzunluğuna `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="0a66d-107">[out] A pointer to the length of `ppTokens`.</span></span>  
   
  `ppTokens`  
- <span data-ttu-id="0b441-108">[out] Belirteçleri listesini içeren bir dizi için bir işaretçi bir işaretçi döndürdü.</span><span class="sxs-lookup"><span data-stu-id="0b441-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
+ <span data-ttu-id="0a66d-108">[out] Verilen belirteçlerin listesi içeren bir dizi işaretçisi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0a66d-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
   
  `ppName`  
- <span data-ttu-id="0b441-109">[out] Belirtecin adını gösteren bir işaretçi bir işaretçi `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="0b441-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
+ <span data-ttu-id="0a66d-109">[out] Bir işaretçi işaretçisi belirteç adını `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="0a66d-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b441-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b441-110">Requirements</span></span>  
- <span data-ttu-id="0b441-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b441-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a66d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0a66d-110">Requirements</span></span>  
+ <span data-ttu-id="0a66d-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a66d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b441-112">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0b441-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0a66d-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0a66d-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0b441-113">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="0b441-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0a66d-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="0a66d-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0b441-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b441-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0a66d-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a66d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b441-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0b441-115">See Also</span></span>  
- [<span data-ttu-id="0b441-116">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b441-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="0b441-117">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b441-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0a66d-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a66d-115">See also</span></span>
+- [<span data-ttu-id="0a66d-116">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a66d-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="0a66d-117">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a66d-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

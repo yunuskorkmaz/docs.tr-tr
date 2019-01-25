@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19d116825efc4eb2ec1de22f232f46f8fb0fdf18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b81ac93c67d59c294f22eb825527fa9982d9124
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721103"
 ---
-# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="59e61-102">ISymUnmanagedScope::GetStartOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="59e61-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
-<span data-ttu-id="59e61-103">Bu kapsam için başlangıç uzaklığı alır.</span><span class="sxs-lookup"><span data-stu-id="59e61-103">Gets the start offset for this scope.</span></span>  
+# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="d9677-102">ISymUnmanagedScope::GetStartOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="d9677-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
+<span data-ttu-id="d9677-103">Bu kapsam için başlangıç uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="d9677-103">Gets the start offset for this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59e61-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="59e61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9677-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d9677-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59e61-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="59e61-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9677-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d9677-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="59e61-106">[out] Bir işaretçi bir `ULONG32` başlangıç uzaklığı içerir.</span><span class="sxs-lookup"><span data-stu-id="59e61-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
+ <span data-ttu-id="d9677-106">[out] Bir işaretçi bir `ULONG32` içeren başlangıç uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="d9677-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="59e61-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="59e61-107">Return Value</span></span>  
- <span data-ttu-id="59e61-108">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="59e61-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d9677-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="d9677-107">Return Value</span></span>  
+ <span data-ttu-id="d9677-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="d9677-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59e61-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="59e61-109">Requirements</span></span>  
- <span data-ttu-id="59e61-110">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="59e61-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9677-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d9677-109">Requirements</span></span>  
+ <span data-ttu-id="d9677-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d9677-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59e61-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="59e61-111">See Also</span></span>  
- [<span data-ttu-id="59e61-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="59e61-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- [<span data-ttu-id="59e61-113">GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="59e61-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)
+## <a name="see-also"></a><span data-ttu-id="d9677-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9677-111">See also</span></span>
+- [<span data-ttu-id="d9677-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d9677-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="d9677-113">GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9677-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)

@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c30a666dcbac553d05cc5f54d5dbb326eb6a10e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706702"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="0280a-102">ICorProfilerInfo::ForceGC Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0280a-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="0280a-103">Ortak dil çalışma zamanı içinde (CLR) gerçekleşmesi için atık toplama zorlar.</span><span class="sxs-lookup"><span data-stu-id="0280a-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="7ef2d-102">ICorProfilerInfo::ForceGC Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7ef2d-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="7ef2d-103">Ortak dil çalışma zamanı içinde (CLR) gerçekleşmesi için çöp toplama zorlar.</span><span class="sxs-lookup"><span data-stu-id="7ef2d-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0280a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0280a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ef2d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7ef2d-104">Syntax</span></span>  
   
 ```  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0280a-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0280a-105">Remarks</span></span>  
- <span data-ttu-id="0280a-106">`ForceGC` Yöntemi çağrılır, yönetilen kod çalıştırılmadı ve tüm profil oluşturucu geri aramalar kendi yığında yok bir iş.</span><span class="sxs-lookup"><span data-stu-id="0280a-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="0280a-107">Çağıran profil oluşturucu içinde ayrı bir iş parçacığı oluşturmak için en uygun uygulamasıdır `ForceGC` erdiği zaman.</span><span class="sxs-lookup"><span data-stu-id="0280a-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7ef2d-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7ef2d-105">Remarks</span></span>  
+ <span data-ttu-id="7ef2d-106">`ForceGC` Yönetilen kod asla çalıştırıldı ve tüm profil oluşturucu geri aramaları, yığın üzerinde yok. bir iş parçacığından metodu çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7ef2d-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="7ef2d-107">Çağıran profil oluşturucu içinde ayrı bir iş parçacığı oluşturmak için en kolay uygulamadır `ForceGC` erdiği zaman.</span><span class="sxs-lookup"><span data-stu-id="7ef2d-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0280a-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0280a-108">Requirements</span></span>  
- <span data-ttu-id="0280a-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0280a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ef2d-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7ef2d-108">Requirements</span></span>  
+ <span data-ttu-id="7ef2d-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ef2d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0280a-110">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0280a-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7ef2d-110">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7ef2d-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0280a-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0280a-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7ef2d-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ef2d-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0280a-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0280a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7ef2d-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ef2d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0280a-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0280a-113">See Also</span></span>  
- [<span data-ttu-id="0280a-114">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0280a-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7ef2d-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7ef2d-113">See also</span></span>
+- [<span data-ttu-id="7ef2d-114">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7ef2d-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

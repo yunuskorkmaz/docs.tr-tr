@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670322"
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="71fd6-102">Çizimler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="71fd6-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="71fd6-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Media.Drawing> nesnelerinin şekil, görüntü veya metin çizmek için.</span><span class="sxs-lookup"><span data-stu-id="71fd6-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="35975-102">Çizimler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="35975-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="35975-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Media.Drawing> nesnelerini şekil, görüntü veya metin çizmek için.</span><span class="sxs-lookup"><span data-stu-id="35975-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="71fd6-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="71fd6-104">In This Section</span></span>  
- [<span data-ttu-id="71fd6-105">Çizime GuidelineSet Uygulama</span><span class="sxs-lookup"><span data-stu-id="71fd6-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="71fd6-106">Bileşik Çizim Oluşturma</span><span class="sxs-lookup"><span data-stu-id="71fd6-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="71fd6-107">GeometryDrawing Oluşturma</span><span class="sxs-lookup"><span data-stu-id="71fd6-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="71fd6-108">ImageDrawing Kullanarak Görüntü Çizme</span><span class="sxs-lookup"><span data-stu-id="71fd6-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="71fd6-109">VideoDrawing Kullanarak Medya Yürütme</span><span class="sxs-lookup"><span data-stu-id="71fd6-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="71fd6-110">Çizimi Görüntü Kaynağı Olarak Kullanma</span><span class="sxs-lookup"><span data-stu-id="71fd6-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="35975-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="35975-104">In This Section</span></span>  
+ [<span data-ttu-id="35975-105">Çizime GuidelineSet Uygulama</span><span class="sxs-lookup"><span data-stu-id="35975-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="35975-106">Bileşik Çizim Oluşturma</span><span class="sxs-lookup"><span data-stu-id="35975-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="35975-107">GeometryDrawing Oluşturma</span><span class="sxs-lookup"><span data-stu-id="35975-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="35975-108">ImageDrawing Kullanarak Görüntü Çizme</span><span class="sxs-lookup"><span data-stu-id="35975-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="35975-109">VideoDrawing Kullanarak Medya Yürütme</span><span class="sxs-lookup"><span data-stu-id="35975-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="35975-110">Çizimi Görüntü Kaynağı Olarak Kullanma</span><span class="sxs-lookup"><span data-stu-id="35975-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="71fd6-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="71fd6-111">See Also</span></span>  
- <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="71fd6-112">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="71fd6-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="71fd6-113">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="71fd6-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="71fd6-114">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="71fd6-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="35975-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35975-111">See also</span></span>
+- <xref:System.Windows.Media.Drawing>
+- [<span data-ttu-id="35975-112">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="35975-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="35975-113">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="35975-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="35975-114">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="35975-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
